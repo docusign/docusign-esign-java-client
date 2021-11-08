@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * EmailArchiveApi class.
+ *
+ **/
 public class EmailArchiveApi {
   private ApiClient apiClient;
 
+ /**
+  * EmailArchiveApi.
+  *
+  **/
   public EmailArchiveApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * EmailArchiveApi.
+  *
+  **/
   public EmailArchiveApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates a blind carbon copy email archive entry
+   * Creates a blind carbon copy email archive entry.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bccEmailArchive  (optional)
@@ -80,7 +102,7 @@ public class EmailArchiveApi {
       }
 
   /**
-   * Delete a blind carbon copy email archive for an account.
+   * Delete a blind carbon copy email archive for an account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bccEmailArchiveId  (required)
@@ -134,34 +156,51 @@ public class EmailArchiveApi {
   /// <summary>
   /// Get the blind carbon copy email archive history entries for the specified archive 
   /// </summary>
+
+ /**
+  * GetBCCEmailArchiveHistoryListOptions Class.
+  *
+  **/
   public class GetBCCEmailArchiveHistoryListOptions
   {
   private String count = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Get the blind carbon copy email archive history entries for the specified archive
+   * Get the blind carbon copy email archive history entries for the specified archive.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bccEmailArchiveId  (required)
@@ -172,7 +211,7 @@ public class EmailArchiveApi {
   }
 
   /**
-   * Get the blind carbon copy email archive history entries for the specified archive
+   * Get the blind carbon copy email archive history entries for the specified archive.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bccEmailArchiveId  (required)
@@ -232,34 +271,51 @@ public class EmailArchiveApi {
   /// <summary>
   /// Get the blind carbon copy email archive entries owned by the specified account 
   /// </summary>
+
+ /**
+  * GetBCCEmailArchiveListOptions Class.
+  *
+  **/
   public class GetBCCEmailArchiveListOptions
   {
   private String count = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Get the blind carbon copy email archive entries owned by the specified account
+   * Get the blind carbon copy email archive entries owned by the specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BccEmailArchiveList
@@ -269,7 +325,7 @@ public class EmailArchiveApi {
   }
 
   /**
-   * Get the blind carbon copy email archive entries owned by the specified account
+   * Get the blind carbon copy email archive entries owned by the specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.

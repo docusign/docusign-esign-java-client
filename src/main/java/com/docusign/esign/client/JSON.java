@@ -8,9 +8,19 @@ import java.text.DateFormat;
 import javax.ws.rs.ext.ContextResolver;
 
 
+
+/**
+ * JSON Class.
+ *
+ **/
+
 public class JSON implements ContextResolver<ObjectMapper> {
   private ObjectMapper mapper;
 
+ /**
+  * JSON Class constructor doc.
+  *
+  **/
   public JSON() {
     mapper = new ObjectMapper();
     mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);

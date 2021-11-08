@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * AccountsApi class.
+ *
+ **/
 public class AccountsApi {
   private ApiClient apiClient;
 
+ /**
+  * AccountsApi.
+  *
+  **/
   public AccountsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * AccountsApi.
+  *
+  **/
   public AccountsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,23 +55,34 @@ public class AccountsApi {
   /// <summary>
   /// Creates new accounts. Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
   /// </summary>
+
+ /**
+  * CreateOptions Class.
+  *
+  **/
   public class CreateOptions
   {
   private String previewBillingPlan = null;
-  /*
-   * When set to **true**, creates the account using a preview billing plan. 
-   */
+  
+ /**
+  * setPreviewBillingPlan method.
+  */
   public void setPreviewBillingPlan(String previewBillingPlan) {
     this.previewBillingPlan = previewBillingPlan;
   }
 
+ /**
+  * getPreviewBillingPlan method.
+  *
+  * @return String
+  */
   public String getPreviewBillingPlan() {
     return this.previewBillingPlan;
   }
   }
 
    /**
-   * Creates new accounts.
+   * Creates new accounts..
    * Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
    * @param newAccountDefinition  (optional)
    * @return NewAccountSummary
@@ -59,7 +92,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates new accounts.
+   * Creates new accounts..
    * Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
    * @param newAccountDefinition  (optional)
    * @param options for modifying the method behavior.
@@ -104,23 +137,34 @@ public class AccountsApi {
   /// <summary>
   /// Adds/updates one or more account signatures. This request may include images in multi-part format. 
   /// </summary>
+
+ /**
+  * CreateAccountSignaturesOptions Class.
+  *
+  **/
   public class CreateAccountSignaturesOptions
   {
   private String decodeOnly = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setDecodeOnly method.
+  */
   public void setDecodeOnly(String decodeOnly) {
     this.decodeOnly = decodeOnly;
   }
 
+ /**
+  * getDecodeOnly method.
+  *
+  * @return String
+  */
   public String getDecodeOnly() {
     return this.decodeOnly;
   }
   }
 
    /**
-   * Adds/updates one or more account signatures. This request may include images in multi-part format.
+   * Adds/updates one or more account signatures. This request may include images in multi-part format..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSignaturesInformation  (optional)
@@ -131,7 +175,7 @@ public class AccountsApi {
   }
 
   /**
-   * Adds/updates one or more account signatures. This request may include images in multi-part format.
+   * Adds/updates one or more account signatures. This request may include images in multi-part format..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSignaturesInformation  (optional)
@@ -182,7 +226,7 @@ public class AccountsApi {
       }
 
   /**
-   * Creates one or more brand profile files for the account.
+   * Creates one or more brand profile files for the account..
    * Creates one or more brand profile files for the account. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSig&#x60;) must be set to **true** for the account to use this call.  An error is returned if &#x60;brandId&#x60; property for a brand profile is already set for the account. To upload a new version of an existing brand profile, you must delete the profile and then upload the newer version.  When brand profile files are being uploaded, they must be combined into one zip file and the &#x60;Content-Type&#x60; must be &#x60;application/zip&#x60;.
    * @param accountId The external account number (int) or account ID GUID. (required)
    * @param brand  (optional)
@@ -231,23 +275,34 @@ public class AccountsApi {
   /// <summary>
   /// Creates an acount custom field. 
   /// </summary>
+
+ /**
+  * CreateCustomFieldOptions Class.
+  *
+  **/
   public class CreateCustomFieldOptions
   {
   private String applyToTemplates = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setApplyToTemplates method.
+  */
   public void setApplyToTemplates(String applyToTemplates) {
     this.applyToTemplates = applyToTemplates;
   }
 
+ /**
+  * getApplyToTemplates method.
+  *
+  * @return String
+  */
   public String getApplyToTemplates() {
     return this.applyToTemplates;
   }
   }
 
    /**
-   * Creates an acount custom field.
+   * Creates an acount custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customField  (optional)
@@ -258,7 +313,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates an acount custom field.
+   * Creates an acount custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customField  (optional)
@@ -310,23 +365,34 @@ public class AccountsApi {
   /// <summary>
   /// Creates a new permission profile in the specified account. 
   /// </summary>
+
+ /**
+  * CreatePermissionProfileOptions Class.
+  *
+  **/
   public class CreatePermissionProfileOptions
   {
   private String include = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
   }
 
    /**
-   * Creates a new permission profile in the specified account.
+   * Creates a new permission profile in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfile  (optional)
@@ -337,7 +403,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates a new permission profile in the specified account.
+   * Creates a new permission profile in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfile  (optional)
@@ -388,7 +454,7 @@ public class AccountsApi {
       }
 
   /**
-   * Creates a customized report
+   * Creates a customized report.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param reportInProductRunRequest  (optional)
@@ -436,7 +502,7 @@ public class AccountsApi {
       }
 
   /**
-   * Deletes the specified account.
+   * Deletes the specified account..
    * This closes the specified account. You must be an account admin to close your account. Once closed, an account must be reopened by DocuSign.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @throws ApiException if fails to make API call
@@ -482,7 +548,7 @@ public class AccountsApi {
   }
 
   /**
-   * Close the specified signature by Id.
+   * Close the specified signature by Id..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -535,7 +601,7 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes a signature, initials, or stamps image.
+   * Deletes a signature, initials, or stamps image..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -596,7 +662,7 @@ public class AccountsApi {
       }
 
   /**
-   * Removes a brand.
+   * Removes a brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -649,7 +715,7 @@ public class AccountsApi {
   }
 
   /**
-   * Delete one branding logo.
+   * Delete one branding logo..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -709,7 +775,7 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes one or more brand profiles.
+   * Deletes one or more brand profiles..
    * Deletes one or more brand profiles from an account. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;) must be set to **true** to use this call.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandsRequest  (optional)
@@ -757,7 +823,7 @@ public class AccountsApi {
       }
 
   /**
-   * Deletes the signature for one or more captive recipient records.
+   * Deletes the signature for one or more captive recipient records..
    * Deletes the signature for one or more captive recipient records; it is primarily used for testing. This provides a way to reset the signature associated with a client user ID so that a new signature can be created the next time the client user ID is used.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param recipientPart  (required)
@@ -813,23 +879,34 @@ public class AccountsApi {
   /// <summary>
   /// Delete an existing account custom field. 
   /// </summary>
+
+ /**
+  * DeleteCustomFieldOptions Class.
+  *
+  **/
   public class DeleteCustomFieldOptions
   {
   private String applyToTemplates = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setApplyToTemplates method.
+  */
   public void setApplyToTemplates(String applyToTemplates) {
     this.applyToTemplates = applyToTemplates;
   }
 
+ /**
+  * getApplyToTemplates method.
+  *
+  * @return String
+  */
   public String getApplyToTemplates() {
     return this.applyToTemplates;
   }
   }
 
    /**
-   * Delete an existing account custom field.
+   * Delete an existing account custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customFieldId  (required)
@@ -840,7 +917,7 @@ public class AccountsApi {
   }
 
   /**
-   * Delete an existing account custom field.
+   * Delete an existing account custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customFieldId  (required)
@@ -896,7 +973,7 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes configuration information for the eNote eOriginal integration.
+   * Deletes configuration information for the eNote eOriginal integration..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @throws ApiException if fails to make API call
@@ -943,23 +1020,34 @@ public class AccountsApi {
   /// <summary>
   /// Deletes a permissions profile within the specified account. 
   /// </summary>
+
+ /**
+  * DeletePermissionProfileOptions Class.
+  *
+  **/
   public class DeletePermissionProfileOptions
   {
   private String moveUsersTo = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setMoveUsersTo method.
+  */
   public void setMoveUsersTo(String moveUsersTo) {
     this.moveUsersTo = moveUsersTo;
   }
 
+ /**
+  * getMoveUsersTo method.
+  *
+  * @return String
+  */
   public String getMoveUsersTo() {
     return this.moveUsersTo;
   }
   }
 
    /**
-   * Deletes a permissions profile within the specified account.
+   * Deletes a permissions profile within the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -970,7 +1058,7 @@ public class AccountsApi {
   }
 
   /**
-   * Deletes a permissions profile within the specified account.
+   * Deletes a permissions profile within the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -1026,7 +1114,7 @@ public class AccountsApi {
   }
 
   /**
-   * Removes a customized report
+   * Removes a customized report.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param id  (required)
@@ -1080,7 +1168,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get the list of identity verification options for an account
+   * Get the list of identity verification options for an account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountIdentityVerificationResponse
@@ -1128,23 +1216,34 @@ public class AccountsApi {
   /// <summary>
   /// Retrieves the account information for the specified account. Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API. 
   /// </summary>
+
+ /**
+  * GetAccountInformationOptions Class.
+  *
+  **/
   public class GetAccountInformationOptions
   {
   private String includeAccountSettings = null;
-  /*
-   * When set to **true**, includes the account settings for the account in the response. 
-   */
+  
+ /**
+  * setIncludeAccountSettings method.
+  */
   public void setIncludeAccountSettings(String includeAccountSettings) {
     this.includeAccountSettings = includeAccountSettings;
   }
 
+ /**
+  * getIncludeAccountSettings method.
+  *
+  * @return String
+  */
   public String getIncludeAccountSettings() {
     return this.includeAccountSettings;
   }
   }
 
    /**
-   * Retrieves the account information for the specified account.
+   * Retrieves the account information for the specified account..
    * Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountInformation
@@ -1154,7 +1253,7 @@ public class AccountsApi {
   }
 
   /**
-   * Retrieves the account information for the specified account.
+   * Retrieves the account information for the specified account..
    * Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -1204,7 +1303,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns information about a single signature by specifed signatureId.
+   * Returns information about a single signature by specifed signatureId..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -1259,23 +1358,34 @@ public class AccountsApi {
   /// <summary>
   /// Returns a signature, initials, or stamps image. 
   /// </summary>
+
+ /**
+  * GetAccountSignatureImageOptions Class.
+  *
+  **/
   public class GetAccountSignatureImageOptions
   {
   private String includeChrome = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeChrome method.
+  */
   public void setIncludeChrome(String includeChrome) {
     this.includeChrome = includeChrome;
   }
 
+ /**
+  * getIncludeChrome method.
+  *
+  * @return String
+  */
   public String getIncludeChrome() {
     return this.includeChrome;
   }
   }
 
    /**
-   * Returns a signature, initials, or stamps image.
+   * Returns a signature, initials, or stamps image..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -1287,7 +1397,7 @@ public class AccountsApi {
   }
 
   /**
-   * Returns a signature, initials, or stamps image.
+   * Returns a signature, initials, or stamps image..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -1352,45 +1462,68 @@ public class AccountsApi {
   /// <summary>
   /// Returns the managed signature definitions for the account 
   /// </summary>
+
+ /**
+  * GetAccountSignaturesOptions Class.
+  *
+  **/
   public class GetAccountSignaturesOptions
   {
   private String stampFormat = null;
   private String stampName = null;
   private String stampType = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setStampFormat method.
+  */
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
 
+ /**
+  * getStampFormat method.
+  *
+  * @return String
+  */
   public String getStampFormat() {
     return this.stampFormat;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStampName method.
+  */
   public void setStampName(String stampName) {
     this.stampName = stampName;
   }
 
+ /**
+  * getStampName method.
+  *
+  * @return String
+  */
   public String getStampName() {
     return this.stampName;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStampType method.
+  */
   public void setStampType(String stampType) {
     this.stampType = stampType;
   }
 
+ /**
+  * getStampType method.
+  *
+  * @return String
+  */
   public String getStampType() {
     return this.stampType;
   }
   }
 
    /**
-   * Returns the managed signature definitions for the account
+   * Returns the managed signature definitions for the account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSignaturesInformation
@@ -1400,7 +1533,7 @@ public class AccountsApi {
   }
 
   /**
-   * Returns the managed signature definitions for the account
+   * Returns the managed signature definitions for the account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -1454,7 +1587,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns tab settings list for specified account
+   * Returns tab settings list for specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return TabAccountSettings
@@ -1501,7 +1634,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get all payment gateway account for the provided accountId
+   * Get all payment gateway account for the provided accountId.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return PaymentGatewayAccountsInfo
@@ -1549,23 +1682,34 @@ public class AccountsApi {
   /// <summary>
   /// Gets list of recurring and usage charges for the account. Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator 
   /// </summary>
+
+ /**
+  * GetBillingChargesOptions Class.
+  *
+  **/
   public class GetBillingChargesOptions
   {
   private String includeCharges = null;
-  /*
-   * Specifies which billing charges to return. Valid values are:  * envelopes * seats  
-   */
+  
+ /**
+  * setIncludeCharges method.
+  */
   public void setIncludeCharges(String includeCharges) {
     this.includeCharges = includeCharges;
   }
 
+ /**
+  * getIncludeCharges method.
+  *
+  * @return String
+  */
   public String getIncludeCharges() {
     return this.includeCharges;
   }
   }
 
    /**
-   * Gets list of recurring and usage charges for the account.
+   * Gets list of recurring and usage charges for the account..
    * Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BillingChargeResponse
@@ -1575,7 +1719,7 @@ public class AccountsApi {
   }
 
   /**
-   * Gets list of recurring and usage charges for the account.
+   * Gets list of recurring and usage charges for the account..
    * Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -1626,34 +1770,51 @@ public class AccountsApi {
   /// <summary>
   /// Get information for a specific brand. 
   /// </summary>
+
+ /**
+  * GetBrandOptions Class.
+  *
+  **/
   public class GetBrandOptions
   {
   private String includeExternalReferences = null;
   private String includeLogos = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeExternalReferences method.
+  */
   public void setIncludeExternalReferences(String includeExternalReferences) {
     this.includeExternalReferences = includeExternalReferences;
   }
 
+ /**
+  * getIncludeExternalReferences method.
+  *
+  * @return String
+  */
   public String getIncludeExternalReferences() {
     return this.includeExternalReferences;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeLogos method.
+  */
   public void setIncludeLogos(String includeLogos) {
     this.includeLogos = includeLogos;
   }
 
+ /**
+  * getIncludeLogos method.
+  *
+  * @return String
+  */
   public String getIncludeLogos() {
     return this.includeLogos;
   }
   }
 
    /**
-   * Get information for a specific brand.
+   * Get information for a specific brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1664,7 +1825,7 @@ public class AccountsApi {
   }
 
   /**
-   * Get information for a specific brand.
+   * Get information for a specific brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1723,7 +1884,7 @@ public class AccountsApi {
       }
 
   /**
-   * Export a specific brand.
+   * Export a specific brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1776,7 +1937,7 @@ public class AccountsApi {
   }
 
   /**
-   * Obtains the specified image for a brand.
+   * Obtains the specified image for a brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1837,7 +1998,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns the specified account&#39;s list of branding resources (metadata).
+   * Returns the specified account&#39;s list of branding resources (metadata)..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1892,34 +2053,51 @@ public class AccountsApi {
   /// <summary>
   /// Returns the specified branding resource file. 
   /// </summary>
+
+ /**
+  * GetBrandResourcesByContentTypeOptions Class.
+  *
+  **/
   public class GetBrandResourcesByContentTypeOptions
   {
   private String langcode = null;
   private String returnMaster = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setLangcode method.
+  */
   public void setLangcode(String langcode) {
     this.langcode = langcode;
   }
 
+ /**
+  * getLangcode method.
+  *
+  * @return String
+  */
   public String getLangcode() {
     return this.langcode;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setReturnMaster method.
+  */
   public void setReturnMaster(String returnMaster) {
     this.returnMaster = returnMaster;
   }
 
+ /**
+  * getReturnMaster method.
+  *
+  * @return String
+  */
   public String getReturnMaster() {
     return this.returnMaster;
   }
   }
 
    /**
-   * Returns the specified branding resource file.
+   * Returns the specified branding resource file..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1931,7 +2109,7 @@ public class AccountsApi {
   }
 
   /**
-   * Returns the specified branding resource file.
+   * Returns the specified branding resource file..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -1996,10 +2174,10 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Electronic Record and Signature Disclosure.
+   * Gets the Electronic Record and Signature Disclosure..
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be different than the current account disclosure depending on account settings, such as branding, and when the account disclosure was last updated. An optional query string can be included to return the language for the disclosure.  
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
@@ -2051,23 +2229,34 @@ public class AccountsApi {
   /// <summary>
   /// Gets the Electronic Record and Signature Disclosure for the account. Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
   /// </summary>
+
+ /**
+  * GetConsumerDisclosureDefaultOptions Class.
+  *
+  **/
   public class GetConsumerDisclosureDefaultOptions
   {
   private String langCode = null;
-  /*
-   * Specifies the language used in the response. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).  Additionally, the value can be set to &#x60;browser&#x60; to automatically detect the browser language being used by the viewer and display the disclosure in that language.  
-   */
+  
+ /**
+  * setLangCode method.
+  */
   public void setLangCode(String langCode) {
     this.langCode = langCode;
   }
 
+ /**
+  * getLangCode method.
+  *
+  * @return String
+  */
   public String getLangCode() {
     return this.langCode;
   }
   }
 
    /**
-   * Gets the Electronic Record and Signature Disclosure for the account.
+   * Gets the Electronic Record and Signature Disclosure for the account..
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return ConsumerDisclosure
@@ -2077,7 +2266,7 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Electronic Record and Signature Disclosure for the account.
+   * Gets the Electronic Record and Signature Disclosure for the account..
    * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -2127,7 +2316,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns the configuration information for the eNote eOriginal integration.
+   * Returns the configuration information for the eNote eOriginal integration..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return ENoteConfiguration
@@ -2174,7 +2363,7 @@ public class AccountsApi {
       }
 
   /**
-   * Select envelope purge configuration.
+   * Select envelope purge configuration..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return EnvelopePurgeConfiguration
@@ -2221,7 +2410,7 @@ public class AccountsApi {
       }
 
   /**
-   * Retrieves the list of favorited templates for this caller
+   * Retrieves the list of favorited templates for this caller.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return FavoriteTemplatesInfo
@@ -2268,7 +2457,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns default user level settings for a specified account
+   * Returns default user level settings for a specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return NotificationDefaults
@@ -2315,7 +2504,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get the password rules
+   * Get the password rules.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountPasswordRules
@@ -2362,7 +2551,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get membership account password rules
+   * Get membership account password rules.
    * 
    * @return UserPasswordRules
    * @throws ApiException if fails to make API call
@@ -2403,23 +2592,34 @@ public class AccountsApi {
   /// <summary>
   /// Returns a permissions profile in the specified account. 
   /// </summary>
+
+ /**
+  * GetPermissionProfileOptions Class.
+  *
+  **/
   public class GetPermissionProfileOptions
   {
   private String include = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
   }
 
    /**
-   * Returns a permissions profile in the specified account.
+   * Returns a permissions profile in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -2430,7 +2630,7 @@ public class AccountsApi {
   }
 
   /**
-   * Returns a permissions profile in the specified account.
+   * Returns a permissions profile in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -2487,7 +2687,7 @@ public class AccountsApi {
       }
 
   /**
-   * Retrieves the account provisioning information for the account.
+   * Retrieves the account provisioning information for the account..
    * Retrieves the account provisioning information for the account.
    * @return ProvisioningInformation
    * @throws ApiException if fails to make API call
@@ -2527,7 +2727,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets the specified report
+   * Gets the specified report.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param id  (required)
@@ -2581,7 +2781,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets the descriptors for all of an account&#39;s active reports (for listings)
+   * Gets the descriptors for all of an account&#39;s active reports (for listings).
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return ReportInProductList
@@ -2628,7 +2828,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets list of supported languages for recipient language setting.
+   * Gets list of supported languages for recipient language setting..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return SupportedLanguages
@@ -2675,7 +2875,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get watermark information.
+   * Get watermark information..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return Watermark
@@ -2722,7 +2922,7 @@ public class AccountsApi {
       }
 
   /**
-   * Get watermark preview.
+   * Get watermark preview..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param watermark  (optional)
@@ -2771,34 +2971,51 @@ public class AccountsApi {
   /// <summary>
   /// Gets a list of brand profiles. Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
   /// </summary>
+
+ /**
+  * ListBrandsOptions Class.
+  *
+  **/
   public class ListBrandsOptions
   {
   private String excludeDistributorBrand = null;
   private String includeLogos = null;
-  /*
-   * When set to **true**, excludes distributor brand information from the response set. 
-   */
+  
+ /**
+  * setExcludeDistributorBrand method.
+  */
   public void setExcludeDistributorBrand(String excludeDistributorBrand) {
     this.excludeDistributorBrand = excludeDistributorBrand;
   }
 
+ /**
+  * getExcludeDistributorBrand method.
+  *
+  * @return String
+  */
   public String getExcludeDistributorBrand() {
     return this.excludeDistributorBrand;
   }
-  /*
-   * When set to **true**, returns the logos associated with the brand. 
-   */
+  
+ /**
+  * setIncludeLogos method.
+  */
   public void setIncludeLogos(String includeLogos) {
     this.includeLogos = includeLogos;
   }
 
+ /**
+  * getIncludeLogos method.
+  *
+  * @return String
+  */
   public String getIncludeLogos() {
     return this.includeLogos;
   }
   }
 
    /**
-   * Gets a list of brand profiles.
+   * Gets a list of brand profiles..
    * Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BrandsResponse
@@ -2808,7 +3025,7 @@ public class AccountsApi {
   }
 
   /**
-   * Gets a list of brand profiles.
+   * Gets a list of brand profiles..
    * Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -2860,7 +3077,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets a list of custom fields associated with the account.
+   * Gets a list of custom fields associated with the account..
    * Retrieves a list of envelope custom fields associated with the account. You can use these fields in the envelopes for your account to record information about the envelope, help search for envelopes and track information. The envelope custom fields are shown in the Envelope Settings section when a user is creating an envelope in the DocuSign member console. The envelope custom fields are not seen by the envelope recipients.  There are two types of envelope custom fields, text, and list. A text custom field lets the sender enter the value for the field. The list custom field lets the sender select the value of the field from a list you provide.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return CustomFields
@@ -2908,23 +3125,34 @@ public class AccountsApi {
   /// <summary>
   /// Gets a list of permission profiles. Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
   /// </summary>
+
+ /**
+  * ListPermissionsOptions Class.
+  *
+  **/
   public class ListPermissionsOptions
   {
   private String include = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
   }
 
    /**
-   * Gets a list of permission profiles.
+   * Gets a list of permission profiles..
    * Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return PermissionProfileInformation
@@ -2934,7 +3162,7 @@ public class AccountsApi {
   }
 
   /**
-   * Gets a list of permission profiles.
+   * Gets a list of permission profiles..
    * Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -2985,23 +3213,34 @@ public class AccountsApi {
   /// <summary>
   /// Gets recipient names associated with an email address. Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
   /// </summary>
+
+ /**
+  * ListRecipientNamesByEmailOptions Class.
+  *
+  **/
   public class ListRecipientNamesByEmailOptions
   {
   private String email = null;
-  /*
-   * The email address for the user 
-   */
+  
+ /**
+  * setEmail method.
+  */
   public void setEmail(String email) {
     this.email = email;
   }
 
+ /**
+  * getEmail method.
+  *
+  * @return String
+  */
   public String getEmail() {
     return this.email;
   }
   }
 
    /**
-   * Gets recipient names associated with an email address.
+   * Gets recipient names associated with an email address..
    * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return RecipientNamesResponse
@@ -3011,7 +3250,7 @@ public class AccountsApi {
   }
 
   /**
-   * Gets recipient names associated with an email address.
+   * Gets recipient names associated with an email address..
    * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -3061,7 +3300,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets account settings information.
+   * Gets account settings information..
    * Retrieves the account settings information for the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSettingsInformation
@@ -3109,6 +3348,11 @@ public class AccountsApi {
   /// <summary>
   /// Reserved: Gets the shared item status for one or more users. Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
   /// </summary>
+
+ /**
+  * ListSharedAccessOptions Class.
+  *
+  **/
   public class ListSharedAccessOptions
   {
   private String count = null;
@@ -3119,90 +3363,138 @@ public class AccountsApi {
   private String shared = null;
   private String startPosition = null;
   private String userIds = null;
-  /*
-   * Specifies maximum number of results included in the response. If no value is specified, this defaults to 1000. 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setEnvelopesNotSharedUserStatus method.
+  */
   public void setEnvelopesNotSharedUserStatus(String envelopesNotSharedUserStatus) {
     this.envelopesNotSharedUserStatus = envelopesNotSharedUserStatus;
   }
 
+ /**
+  * getEnvelopesNotSharedUserStatus method.
+  *
+  * @return String
+  */
   public String getEnvelopesNotSharedUserStatus() {
     return this.envelopesNotSharedUserStatus;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setFolderIds method.
+  */
   public void setFolderIds(String folderIds) {
     this.folderIds = folderIds;
   }
 
+ /**
+  * getFolderIds method.
+  *
+  * @return String
+  */
   public String getFolderIds() {
     return this.folderIds;
   }
-  /*
-   * Specifies the type of shared item being requested. The accepted values are: -envelopes: returns information about envelope sharing between users. 
-   */
+  
+ /**
+  * setItemType method.
+  */
   public void setItemType(String itemType) {
     this.itemType = itemType;
   }
 
+ /**
+  * getItemType method.
+  *
+  * @return String
+  */
   public String getItemType() {
     return this.itemType;
   }
-  /*
-   * This can be used to filter user names in the response. The wild-card &#39;*&#39; (asterisk) can be used around the string. 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * Specifies which users should be included in the response. Multiple values can be used in the query by using a comma separated list of shared values. If the requestor does not have account administrator privileges, the shared_to value is used. Requestors that do not have account administrator privileges can only use the shared_to, any other setting will result in an error. The accepted values are:  -not_shared: Returns account users that the specified item type is not being shared with and that are not sharing the specified item type with the user.  User X (Share) X Account user  -shared_to: Returns account users that the specified item type is not being shared with and who are sharing the specified item type with the user (only shared to the user).  User X (Share) Account user  -shared_from: Returns account users that the specified item type is being shared with and who are not sharing the specified item type with the user (only shared from the user).  User (Share) &gt;&gt; Account user  -shared_to_and_from: Returns account users that the specified item type is being shared with and who are sharing the specified item type with the user.  User &lt;&lt; (Share) &gt;&gt; Account user 
-   */
+  
+ /**
+  * setShared method.
+  */
   public void setShared(String shared) {
     this.shared = shared;
   }
 
+ /**
+  * getShared method.
+  *
+  * @return String
+  */
   public String getShared() {
     return this.shared;
   }
-  /*
-   * If the response set exceeds Count, this can be used to specify that the method should return users starting at the specified index. The first index is 0, and should be used in the first GET call. Typically this number is a multiple of Count. If no value is specified, this defaults to be 0.  
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * A comma separated list of userIds for whom the shared item information is being requested.  
-   */
+  
+ /**
+  * setUserIds method.
+  */
   public void setUserIds(String userIds) {
     this.userIds = userIds;
   }
 
+ /**
+  * getUserIds method.
+  *
+  * @return String
+  */
   public String getUserIds() {
     return this.userIds;
   }
   }
 
    /**
-   * Reserved: Gets the shared item status for one or more users.
+   * Reserved: Gets the shared item status for one or more users..
    * Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSharedAccess
@@ -3212,7 +3504,7 @@ public class AccountsApi {
   }
 
   /**
-   * Reserved: Gets the shared item status for one or more users.
+   * Reserved: Gets the shared item status for one or more users..
    * Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -3276,7 +3568,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns Account available signature providers for specified account.
+   * Returns Account available signature providers for specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSignatureProviders
@@ -3323,7 +3615,7 @@ public class AccountsApi {
       }
 
   /**
-   * Gets a list of unsupported file types.
+   * Gets a list of unsupported file types..
    * Retrieves a list of file types (mime-types and file-extensions) that are not supported for upload through the DocuSign system.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return FileTypeList
@@ -3370,7 +3662,7 @@ public class AccountsApi {
       }
 
   /**
-   * Unfavorite a template
+   * Unfavorite a template.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param favoriteTemplatesInfo  (optional)
@@ -3418,7 +3710,7 @@ public class AccountsApi {
       }
 
   /**
-   * Updates a account signature.
+   * Updates a account signature..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSignaturesInformation  (optional)
@@ -3467,23 +3759,34 @@ public class AccountsApi {
   /// <summary>
   /// Updates a account signature. 
   /// </summary>
+
+ /**
+  * UpdateAccountSignatureByIdOptions Class.
+  *
+  **/
   public class UpdateAccountSignatureByIdOptions
   {
   private String closeExistingSignature = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCloseExistingSignature method.
+  */
   public void setCloseExistingSignature(String closeExistingSignature) {
     this.closeExistingSignature = closeExistingSignature;
   }
 
+ /**
+  * getCloseExistingSignature method.
+  *
+  * @return String
+  */
   public String getCloseExistingSignature() {
     return this.closeExistingSignature;
   }
   }
 
    /**
-   * Updates a account signature.
+   * Updates a account signature..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -3495,7 +3798,7 @@ public class AccountsApi {
   }
 
   /**
-   * Updates a account signature.
+   * Updates a account signature..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -3554,23 +3857,34 @@ public class AccountsApi {
   /// <summary>
   /// Sets a signature, initials, or stamps image. 
   /// </summary>
+
+ /**
+  * UpdateAccountSignatureImageOptions Class.
+  *
+  **/
   public class UpdateAccountSignatureImageOptions
   {
   private String transparentPng = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setTransparentPng method.
+  */
   public void setTransparentPng(String transparentPng) {
     this.transparentPng = transparentPng;
   }
 
+ /**
+  * getTransparentPng method.
+  *
+  * @return String
+  */
   public String getTransparentPng() {
     return this.transparentPng;
   }
   }
 
    /**
-   * Sets a signature, initials, or stamps image.
+   * Sets a signature, initials, or stamps image..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -3582,7 +3896,7 @@ public class AccountsApi {
   }
 
   /**
-   * Sets a signature, initials, or stamps image.
+   * Sets a signature, initials, or stamps image..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
@@ -3646,7 +3960,7 @@ public class AccountsApi {
       }
 
   /**
-   * Modifies tab settings for specified account
+   * Modifies tab settings for specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param tabAccountSettings  (optional)
@@ -3694,7 +4008,7 @@ public class AccountsApi {
       }
 
   /**
-   * Updates an existing brand.
+   * Updates an existing brand..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
@@ -3749,10 +4063,10 @@ public class AccountsApi {
       }
 
   /**
-   * Put one branding logo.
+   * Put one branding logo..
    * 
    * @param accountId The external account number (int) or account ID GUID. (required)
-   * @param brandId The id of the brand. (required)
+   * @param brandId The ID of the brand. (required)
    * @param logoType The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60; (required)
    * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
    * @throws ApiException if fails to make API call
@@ -3815,10 +4129,10 @@ public class AccountsApi {
   }
 
   /**
-   * Uploads a branding resource file.
+   * Uploads a branding resource file..
    * 
    * @param accountId The external account number (int) or account ID GUID. (required)
-   * @param brandId The id of the brand. (required)
+   * @param brandId The ID of the brand. (required)
    * @param resourceContentType The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60; (required)
    * @param fileXml Brand resource XML file. (required)
    * @return BrandResources
@@ -3885,26 +4199,37 @@ public class AccountsApi {
   /// <summary>
   /// Update Consumer Disclosure. 
   /// </summary>
+
+ /**
+  * UpdateConsumerDisclosureOptions Class.
+  *
+  **/
   public class UpdateConsumerDisclosureOptions
   {
   private String includeMetadata = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeMetadata method.
+  */
   public void setIncludeMetadata(String includeMetadata) {
     this.includeMetadata = includeMetadata;
   }
 
+ /**
+  * getIncludeMetadata method.
+  *
+  * @return String
+  */
   public String getIncludeMetadata() {
     return this.includeMetadata;
   }
   }
 
    /**
-   * Update Consumer Disclosure.
+   * Update Consumer Disclosure..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @return ConsumerDisclosure
    */ 
@@ -3913,10 +4238,10 @@ public class AccountsApi {
   }
 
   /**
-   * Update Consumer Disclosure.
+   * Update Consumer Disclosure..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to Ã¯Â¿Â½browserÃ¯Â¿Â½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param consumerDisclosure  (optional)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
@@ -3972,23 +4297,34 @@ public class AccountsApi {
   /// <summary>
   /// Updates an existing account custom field. 
   /// </summary>
+
+ /**
+  * UpdateCustomFieldOptions Class.
+  *
+  **/
   public class UpdateCustomFieldOptions
   {
   private String applyToTemplates = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setApplyToTemplates method.
+  */
   public void setApplyToTemplates(String applyToTemplates) {
     this.applyToTemplates = applyToTemplates;
   }
 
+ /**
+  * getApplyToTemplates method.
+  *
+  * @return String
+  */
   public String getApplyToTemplates() {
     return this.applyToTemplates;
   }
   }
 
    /**
-   * Updates an existing account custom field.
+   * Updates an existing account custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customFieldId  (required)
@@ -4000,7 +4336,7 @@ public class AccountsApi {
   }
 
   /**
-   * Updates an existing account custom field.
+   * Updates an existing account custom field..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customFieldId  (required)
@@ -4058,7 +4394,7 @@ public class AccountsApi {
       }
 
   /**
-   * Updates configuration information for the eNote eOriginal integration.
+   * Updates configuration information for the eNote eOriginal integration..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param eNoteConfiguration  (optional)
@@ -4106,7 +4442,7 @@ public class AccountsApi {
       }
 
   /**
-   * Updates envelope purge configuration.
+   * Updates envelope purge configuration..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopePurgeConfiguration  (optional)
@@ -4154,7 +4490,7 @@ public class AccountsApi {
       }
 
   /**
-   * Favorites a template
+   * Favorites a template.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param favoriteTemplatesInfo  (optional)
@@ -4202,7 +4538,7 @@ public class AccountsApi {
       }
 
   /**
-   * Updates default user level settings for a specified account
+   * Updates default user level settings for a specified account.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param notificationDefaults  (optional)
@@ -4250,7 +4586,7 @@ public class AccountsApi {
       }
 
   /**
-   * Update the password rules
+   * Update the password rules.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountPasswordRules  (optional)
@@ -4299,23 +4635,34 @@ public class AccountsApi {
   /// <summary>
   /// Updates a permission profile within the specified account. 
   /// </summary>
+
+ /**
+  * UpdatePermissionProfileOptions Class.
+  *
+  **/
   public class UpdatePermissionProfileOptions
   {
   private String include = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
   }
 
    /**
-   * Updates a permission profile within the specified account.
+   * Updates a permission profile within the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -4327,7 +4674,7 @@ public class AccountsApi {
   }
 
   /**
-   * Updates a permission profile within the specified account.
+   * Updates a permission profile within the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param permissionProfileId  (required)
@@ -4385,7 +4732,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns the result set from running the specified report
+   * Returns the result set from running the specified report.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param reportInProductRunRequest  (optional)
@@ -4433,7 +4780,7 @@ public class AccountsApi {
       }
 
   /**
-   * Saves a customized report
+   * Saves a customized report.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param id  (required)
@@ -4488,7 +4835,7 @@ public class AccountsApi {
       }
 
   /**
-   * Returns the specified report as a CSV string
+   * Returns the specified report as a CSV string.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param reportInProductCsvRunRequest  (optional)
@@ -4535,7 +4882,7 @@ public class AccountsApi {
   }
 
   /**
-   * Updates the account settings for an account.
+   * Updates the account settings for an account..
    * Updates the account settings for the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSettingsInformation  (optional)
@@ -4583,45 +4930,68 @@ public class AccountsApi {
   /// <summary>
   /// Reserved: Sets the shared access information for users. Reserved: Sets the shared access information for one or more users.
   /// </summary>
+
+ /**
+  * UpdateSharedAccessOptions Class.
+  *
+  **/
   public class UpdateSharedAccessOptions
   {
   private String itemType = null;
   private String preserveExistingSharedAccess = null;
   private String userIds = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setItemType method.
+  */
   public void setItemType(String itemType) {
     this.itemType = itemType;
   }
 
+ /**
+  * getItemType method.
+  *
+  * @return String
+  */
   public String getItemType() {
     return this.itemType;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setPreserveExistingSharedAccess method.
+  */
   public void setPreserveExistingSharedAccess(String preserveExistingSharedAccess) {
     this.preserveExistingSharedAccess = preserveExistingSharedAccess;
   }
 
+ /**
+  * getPreserveExistingSharedAccess method.
+  *
+  * @return String
+  */
   public String getPreserveExistingSharedAccess() {
     return this.preserveExistingSharedAccess;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setUserIds method.
+  */
   public void setUserIds(String userIds) {
     this.userIds = userIds;
   }
 
+ /**
+  * getUserIds method.
+  *
+  * @return String
+  */
   public String getUserIds() {
     return this.userIds;
   }
   }
 
    /**
-   * Reserved: Sets the shared access information for users.
+   * Reserved: Sets the shared access information for users..
    * Reserved: Sets the shared access information for one or more users.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSharedAccess  (optional)
@@ -4632,7 +5002,7 @@ public class AccountsApi {
   }
 
   /**
-   * Reserved: Sets the shared access information for users.
+   * Reserved: Sets the shared access information for users..
    * Reserved: Sets the shared access information for one or more users.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param accountSharedAccess  (optional)
@@ -4687,7 +5057,7 @@ public class AccountsApi {
       }
 
   /**
-   * Update watermark information.
+   * Update watermark information..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param watermark  (optional)

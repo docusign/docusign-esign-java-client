@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * CustomTabsApi class.
+ *
+ **/
 public class CustomTabsApi {
   private ApiClient apiClient;
 
+ /**
+  * CustomTabsApi.
+  *
+  **/
   public CustomTabsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * CustomTabsApi.
+  *
+  **/
   public CustomTabsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,23 +55,34 @@ public class CustomTabsApi {
   /// <summary>
   /// Gets a list of all account tabs. Retrieves a list of all tabs associated with the account.
   /// </summary>
+
+ /**
+  * CallListOptions Class.
+  *
+  **/
   public class CallListOptions
   {
   private String customTabOnly = null;
-  /*
-   * When set to **true**, only custom tabs are returned in the response.  
-   */
+  
+ /**
+  * setCustomTabOnly method.
+  */
   public void setCustomTabOnly(String customTabOnly) {
     this.customTabOnly = customTabOnly;
   }
 
+ /**
+  * getCustomTabOnly method.
+  *
+  * @return String
+  */
   public String getCustomTabOnly() {
     return this.customTabOnly;
   }
   }
 
    /**
-   * Gets a list of all account tabs.
+   * Gets a list of all account tabs..
    * Retrieves a list of all tabs associated with the account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return TabMetadataList
@@ -59,7 +92,7 @@ public class CustomTabsApi {
   }
 
   /**
-   * Gets a list of all account tabs.
+   * Gets a list of all account tabs..
    * Retrieves a list of all tabs associated with the account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -109,7 +142,7 @@ public class CustomTabsApi {
       }
 
   /**
-   * Creates a custom tab.
+   * Creates a custom tab..
    * Creates a tab with pre-defined properties, such as a text tab with a certain font type and validation pattern. Users can access the custom tabs when sending documents through the DocuSign web application.  Custom tabs can be created for approve, checkbox, company, date, date signed, decline, email, email address, envelope ID, first name, formula, full name, initial here, last name, list, note, number, radio, sign here, signer attachment, SSN, text, title, and zip tabs.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param tabMetadata  (optional)
@@ -157,7 +190,7 @@ public class CustomTabsApi {
       }
 
   /**
-   * Deletes custom tab information.
+   * Deletes custom tab information..
    * Deletes the custom from the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customTabId  (required)
@@ -210,7 +243,7 @@ public class CustomTabsApi {
   }
 
   /**
-   * Gets custom tab information.
+   * Gets custom tab information..
    * Retrieves information about the requested custom tab on the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customTabId  (required)
@@ -264,7 +297,7 @@ public class CustomTabsApi {
       }
 
   /**
-   * Updates custom tab information.  
+   * Updates custom tab information.  .
    * Updates the information in a custom tab for the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param customTabId  (required)

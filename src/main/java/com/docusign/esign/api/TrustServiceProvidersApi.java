@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * TrustServiceProvidersApi class.
+ *
+ **/
 public class TrustServiceProvidersApi {
   private ApiClient apiClient;
 
+ /**
+  * TrustServiceProvidersApi.
+  *
+  **/
   public TrustServiceProvidersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * TrustServiceProvidersApi.
+  *
+  **/
   public TrustServiceProvidersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Returns Account available seals for specified account.
+   * Returns Account available seals for specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSeals

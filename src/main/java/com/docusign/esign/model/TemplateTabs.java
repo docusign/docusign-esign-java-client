@@ -22,7 +22,7 @@ import com.docusign.esign.model.FormulaTab;
 import com.docusign.esign.model.FullName;
 import com.docusign.esign.model.InitialHere;
 import com.docusign.esign.model.LastName;
-import com.docusign.esign.model.ModelList;
+import com.docusign.esign.model.List;
 import com.docusign.esign.model.Notarize;
 import com.docusign.esign.model.NotarySeal;
 import com.docusign.esign.model.Note;
@@ -116,7 +116,7 @@ public class TemplateTabs {
   private java.util.List<LastName> lastNameTabs = null;
 
   @JsonProperty("listTabs")
-  private java.util.List<ModelList> listTabs = null;
+  private java.util.List<List> listTabs = null;
 
   @JsonProperty("notarizeTabs")
   private java.util.List<Notarize> notarizeTabs = null;
@@ -1015,7 +1015,7 @@ public class TemplateTabs {
    *
    * @return TemplateTabs
    **/
-  public TemplateTabs listTabs(java.util.List<ModelList> listTabs) {
+  public TemplateTabs listTabs(java.util.List<List> listTabs) {
     this.listTabs = listTabs;
     return this;
   }
@@ -1025,9 +1025,9 @@ public class TemplateTabs {
    *
    * @return TemplateTabs
    **/
-  public TemplateTabs addListTabsItem(ModelList listTabsItem) {
+  public TemplateTabs addListTabsItem(List listTabsItem) {
     if (this.listTabs == null) {
-      this.listTabs = new java.util.ArrayList<ModelList>();
+      this.listTabs = new java.util.ArrayList<List>();
     }
     this.listTabs.add(listTabsItem);
     return this;
@@ -1038,14 +1038,14 @@ public class TemplateTabs {
    * @return listTabs
    **/
   @ApiModelProperty(value = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
-  public java.util.List<ModelList> getListTabs() {
+  public java.util.List<List> getListTabs() {
     return listTabs;
   }
 
   /**
    * setListTabs.
    **/
-  public void setListTabs(java.util.List<ModelList> listTabs) {
+  public void setListTabs(java.util.List<List> listTabs) {
     this.listTabs = listTabs;
   }
 

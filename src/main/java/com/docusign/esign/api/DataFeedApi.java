@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * DataFeedApi class.
+ *
+ **/
 public class DataFeedApi {
   private ApiClient apiClient;
 
+ /**
+  * DataFeedApi.
+  *
+  **/
   public DataFeedApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * DataFeedApi.
+  *
+  **/
   public DataFeedApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Retrieves a Datafeed element by Id.
+   * Retrieves a Datafeed element by Id..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param dataFeedElementId  (required)

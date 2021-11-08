@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * NotaryApi class.
+ *
+ **/
 public class NotaryApi {
   private ApiClient apiClient;
 
+ /**
+  * NotaryApi.
+  *
+  **/
   public NotaryApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * NotaryApi.
+  *
+  **/
   public NotaryApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Add a notary to the system
+   * Add a notary to the system.
    * 
    * @param notary  (optional)
    * @return Notary
@@ -73,7 +95,7 @@ public class NotaryApi {
       }
 
   /**
-   * Add a notary jurisdiction to the system
+   * Add a notary jurisdiction to the system.
    * 
    * @param notaryJurisdiction  (optional)
    * @return NotaryJurisdiction
@@ -114,7 +136,7 @@ public class NotaryApi {
       }
 
   /**
-   * Delete a notary jurisdiction a specified user.
+   * Delete a notary jurisdiction a specified user..
    * 
    * @param jurisdictionId  (required)
    * @throws ApiException if fails to make API call
@@ -161,23 +183,34 @@ public class NotaryApi {
   /// <summary>
   /// Get notary settings for a user 
   /// </summary>
+
+ /**
+  * GetNotaryOptions Class.
+  *
+  **/
   public class GetNotaryOptions
   {
   private String includeJurisdictions = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeJurisdictions method.
+  */
   public void setIncludeJurisdictions(String includeJurisdictions) {
     this.includeJurisdictions = includeJurisdictions;
   }
 
+ /**
+  * getIncludeJurisdictions method.
+  *
+  * @return String
+  */
   public String getIncludeJurisdictions() {
     return this.includeJurisdictions;
   }
   }
 
    /**
-   * Get notary settings for a user
+   * Get notary settings for a user.
    * 
    * @return NotaryResult
    */ 
@@ -186,7 +219,7 @@ public class NotaryApi {
   }
 
   /**
-   * Get notary settings for a user
+   * Get notary settings for a user.
    * 
    * @param options for modifying the method behavior.
    * @return NotaryResult
@@ -229,7 +262,7 @@ public class NotaryApi {
       }
 
   /**
-   * Get notary a jurisdiction for a user
+   * Get notary a jurisdiction for a user.
    * 
    * @param jurisdictionId  (required)
    * @return NotaryJurisdiction
@@ -276,7 +309,7 @@ public class NotaryApi {
       }
 
   /**
-   * Get notary seal for a jurisdiction
+   * Get notary seal for a jurisdiction.
    * 
    * @param jurisdictionId  (required)
    * @throws ApiException if fails to make API call
@@ -322,7 +355,7 @@ public class NotaryApi {
   }
 
   /**
-   * Get notary jurisdictions for a user
+   * Get notary jurisdictions for a user.
    * 
    * @return NotaryJurisdictionList
    * @throws ApiException if fails to make API call
@@ -363,45 +396,68 @@ public class NotaryApi {
   /// <summary>
   /// Get notary jurisdictions for a user 
   /// </summary>
+
+ /**
+  * ListNotaryJournalsOptions Class.
+  *
+  **/
   public class ListNotaryJournalsOptions
   {
   private String count = null;
   private String searchText = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Get notary jurisdictions for a user
+   * Get notary jurisdictions for a user.
    * 
    * @return NotaryJournalList
    */ 
@@ -410,7 +466,7 @@ public class NotaryApi {
   }
 
   /**
-   * Get notary jurisdictions for a user
+   * Get notary jurisdictions for a user.
    * 
    * @param options for modifying the method behavior.
    * @return NotaryJournalList
@@ -457,7 +513,7 @@ public class NotaryApi {
       }
 
   /**
-   * Update a notary
+   * Update a notary.
    * 
    * @param notary  (optional)
    * @return Notary
@@ -498,7 +554,7 @@ public class NotaryApi {
       }
 
   /**
-   * Update a notary jurisdiction
+   * Update a notary jurisdiction.
    * 
    * @param jurisdictionId  (required)
    * @param notaryJurisdiction  (optional)
