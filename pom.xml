@@ -110,6 +110,8 @@
                 </execution>
         </executions>
         <configuration>
+            <source>1.9</source>
+            <detectJavaApiLink>false</detectJavaApiLink>
             <additionalOptions>
                 <additionalOption>-Xdoclint:none</additionalOption>
             </additionalOptions>
