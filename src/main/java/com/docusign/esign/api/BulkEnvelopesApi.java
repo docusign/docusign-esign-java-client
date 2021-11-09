@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * BulkEnvelopesApi class.
+ *
+ **/
 public class BulkEnvelopesApi {
   private ApiClient apiClient;
 
+ /**
+  * BulkEnvelopesApi.
+  *
+  **/
   public BulkEnvelopesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * BulkEnvelopesApi.
+  *
+  **/
   public BulkEnvelopesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates a new bulk send list
+   * Creates a new bulk send list.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendingList  (optional)
@@ -80,7 +102,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Uses the specified bulk send list to send the envelope specified in the payload
+   * Uses the specified bulk send list to send the envelope specified in the payload.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendListId  (required)
@@ -135,7 +157,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Tests whether the specified bulk sending list can be used to send an envelope
+   * Tests whether the specified bulk sending list can be used to send an envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendListId  (required)
@@ -190,7 +212,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Deletes an existing bulk send list
+   * Deletes an existing bulk send list.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendListId  (required)
@@ -245,6 +267,11 @@ public class BulkEnvelopesApi {
   /// <summary>
   /// Gets envelopes from a specific bulk send batch 
   /// </summary>
+
+ /**
+  * GetBulkSendBatchEnvelopesOptions Class.
+  *
+  **/
   public class GetBulkSendBatchEnvelopesOptions
   {
   private String count = null;
@@ -255,90 +282,138 @@ public class BulkEnvelopesApi {
   private String startPosition = null;
   private String status = null;
   private String userId = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setInclude method.
+  */
   public void setInclude(String include) {
     this.include = include;
   }
 
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
   public String getInclude() {
     return this.include;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStatus method.
+  */
   public void setStatus(String status) {
     this.status = status;
   }
 
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
   public String getStatus() {
     return this.status;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setUserId method.
+  */
   public void setUserId(String userId) {
     this.userId = userId;
   }
 
+ /**
+  * getUserId method.
+  *
+  * @return String
+  */
   public String getUserId() {
     return this.userId;
   }
   }
 
    /**
-   * Gets envelopes from a specific bulk send batch
+   * Gets envelopes from a specific bulk send batch.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendBatchId  (required)
@@ -349,7 +424,7 @@ public class BulkEnvelopesApi {
   }
 
   /**
-   * Gets envelopes from a specific bulk send batch
+   * Gets envelopes from a specific bulk send batch.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendBatchId  (required)
@@ -420,7 +495,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Gets a specific bulk send batch status
+   * Gets a specific bulk send batch status.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendBatchId  (required)
@@ -475,6 +550,11 @@ public class BulkEnvelopesApi {
   /// <summary>
   /// Returns a list of bulk send batch satuses initiated by account. 
   /// </summary>
+
+ /**
+  * GetBulkSendBatchesOptions Class.
+  *
+  **/
   public class GetBulkSendBatchesOptions
   {
   private String batchIds = null;
@@ -482,60 +562,90 @@ public class BulkEnvelopesApi {
   private String searchText = null;
   private String startPosition = null;
   private String status = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setBatchIds method.
+  */
   public void setBatchIds(String batchIds) {
     this.batchIds = batchIds;
   }
 
+ /**
+  * getBatchIds method.
+  *
+  * @return String
+  */
   public String getBatchIds() {
     return this.batchIds;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStatus method.
+  */
   public void setStatus(String status) {
     this.status = status;
   }
 
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
   public String getStatus() {
     return this.status;
   }
   }
 
    /**
-   * Returns a list of bulk send batch satuses initiated by account.
+   * Returns a list of bulk send batch satuses initiated by account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BulkSendBatchSummaries
@@ -545,7 +655,7 @@ public class BulkEnvelopesApi {
   }
 
   /**
-   * Returns a list of bulk send batch satuses initiated by account.
+   * Returns a list of bulk send batch satuses initiated by account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -603,7 +713,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Gets a specific bulk send list
+   * Gets a specific bulk send list.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendListId  (required)
@@ -657,7 +767,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Lists top-level details for all bulk send lists visible to the current user
+   * Lists top-level details for all bulk send lists visible to the current user.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BulkSendingListSummaries
@@ -704,7 +814,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Put/Update a specific bulk send batch status
+   * Put/Update a specific bulk send batch status.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendBatchId  (required)
@@ -759,7 +869,7 @@ public class BulkEnvelopesApi {
       }
 
   /**
-   * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope
+   * Updates an existing bulk send list.  If send_envelope query string value is provided, will accept an empty payload and try to send the specified envelope.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param bulkSendListId  (required)

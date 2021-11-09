@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * BillingApi class.
+ *
+ **/
 public class BillingApi {
   private ApiClient apiClient;
 
+ /**
+  * BillingApi.
+  *
+  **/
   public BillingApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * BillingApi.
+  *
+  **/
   public BillingApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Get the billing plan details.
+   * Get the billing plan details..
    * Retrieves the billing plan details for the specified billing plan ID.
    * @param billingPlanId The ID of the billing plan being accessed. (required)
    * @return BillingPlanResponse
@@ -79,7 +101,7 @@ public class BillingApi {
       }
 
   /**
-   * Get metadata for a given credit card.
+   * Get metadata for a given credit card..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return CreditCardInformation
@@ -126,7 +148,7 @@ public class BillingApi {
       }
 
   /**
-   * Returns downgrade plan information for the specified account.
+   * Returns downgrade plan information for the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return DowngradRequestBillingInfoResponse
@@ -173,8 +195,8 @@ public class BillingApi {
       }
 
   /**
-   * Retrieves a billing invoice.
-   * Retrieves the specified invoice.   ###### Note: If the &#x60;pdfAvailable&#x60; property in the response is set to *true*, you can download a PDF version of the invoice. To download the PDF, make the call again and change the value of the &#x60;Accept&#x60; property in the header to &#x60;Accept: application/pdf&#x60;.  Privileges required: account administrator  The response returns a list of charges and information about the charges. Quantities are usually shown as &#39;unlimited&#39; or an integer. Amounts are shown in the currency set for the account.  **Response** The following table provides a description of the different &#x60;chargeName&#x60; property values. The information will grow as more chargeable items are added to the system.  | chargeName | Description | | --- | --- | | id_check | IDÃÂÃÂÃÂÃÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge | 
+   * Retrieves a billing invoice..
+   * Retrieves the specified invoice.   ###### Note: If the &#x60;pdfAvailable&#x60; property in the response is set to *true*, you can download a PDF version of the invoice. To download the PDF, make the call again and change the value of the &#x60;Accept&#x60; property in the header to &#x60;Accept: application/pdf&#x60;.  Privileges required: account administrator  The response returns a list of charges and information about the charges. Quantities are usually shown as &#39;unlimited&#39; or an integer. Amounts are shown in the currency set for the account.  **Response** The following table provides a description of the different &#x60;chargeName&#x60; property values. The information will grow as more chargeable items are added to the system.  | chargeName | Description | | --- | --- | | id_check | IDÂ Check Charge | | in_person_signing | In Person Signing charge | | envelopes Included | Sent Envelopes for the account | | age_verify | Age verification check | | ofac | OFAC Check | | id_confirm | ID confirmation check | | student_authentication | STAN PIN authentication check | | wet_sign_fax | Pages for returning signed documents by fax | | attachment_fax | Pages for returning attachments by fax | | phone_authentication | Phone authentication charge | | powerforms | PowerForm envelopes sent | | signer_payments | Payment processing charge | | outbound_fax | Send by fax charge | | bulk_recipient_envelopes | Bulk Recipient Envelopes sent | | sms_authentications | SMS authentication charge | | saml_authentications | SAML authentication charge | | express_signer_certificate | DocuSign Express Certificate charge | | personal_signer_certificate | Personal Signer Certificate charge | | safe_certificate | SAFE BioPharma Signer Certificate charge | | seats | Included active seats charge | | open_trust_certificate | OpenTrust Signer Certificate charge | 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param invoiceId  (required)
    * @return BillingInvoice
@@ -227,7 +249,7 @@ public class BillingApi {
       }
 
   /**
-   * Gets billing payment information for a specific payment.
+   * Gets billing payment information for a specific payment..
    * Retrieves the information for a specified payment.   Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param paymentId  (required)
@@ -282,45 +304,85 @@ public class BillingApi {
   /// <summary>
   /// Get Account Billing Plan Retrieves the billing plan information for the specified account, including the current billing plan, successor plans, billing address, and billing credit card.  By default the successor plan and credit card information is included in the response. This information can be excluded from the response by adding the appropriate optional query string with the &#x60;setting&#x60; set to **false**.   Response  The response returns the billing plan information, including the currency code, for the plan. The &#x60;billingPlan&#x60; and &#x60;succesorPlans&#x60; property values are the same as those shown in the [ML:Get Billing Plan Details] reference. the &#x60;billingAddress&#x60; and &#x60;creditCardInformation&#x60; property values are the same as those shown in the [ML:Update Billing Plan] reference.  ###### Note: When credit card number information is shown, a mask is applied to the response so that only the last 4 digits of the card number are visible. 
   /// </summary>
+
+ /**
+  * GetPlanOptions Class.
+  *
+  **/
   public class GetPlanOptions
   {
   private String includeCreditCardInformation = null;
+  private String includeDowngradeInformation = null;
   private String includeMetadata = null;
   private String includeSuccessorPlans = null;
-  /*
-   * When set to **true**, excludes credit card information from the response. 
-   */
+  
+ /**
+  * setIncludeCreditCardInformation method.
+  */
   public void setIncludeCreditCardInformation(String includeCreditCardInformation) {
     this.includeCreditCardInformation = includeCreditCardInformation;
   }
 
+ /**
+  * getIncludeCreditCardInformation method.
+  *
+  * @return String
+  */
   public String getIncludeCreditCardInformation() {
     return this.includeCreditCardInformation;
   }
-  /*
-   * When set to **true**, the &#x60;canUpgrade&#x60; and &#x60;renewalStatus&#x60; properities are included the response and an array of &#x60;supportedCountries&#x60; property is added to the &#x60;billingAddress&#x60; information.  
-   */
+  
+ /**
+  * setIncludeDowngradeInformation method.
+  */
+  public void setIncludeDowngradeInformation(String includeDowngradeInformation) {
+    this.includeDowngradeInformation = includeDowngradeInformation;
+  }
+
+ /**
+  * getIncludeDowngradeInformation method.
+  *
+  * @return String
+  */
+  public String getIncludeDowngradeInformation() {
+    return this.includeDowngradeInformation;
+  }
+  
+ /**
+  * setIncludeMetadata method.
+  */
   public void setIncludeMetadata(String includeMetadata) {
     this.includeMetadata = includeMetadata;
   }
 
+ /**
+  * getIncludeMetadata method.
+  *
+  * @return String
+  */
   public String getIncludeMetadata() {
     return this.includeMetadata;
   }
-  /*
-   * When set to **true**, excludes successor information from the response. 
-   */
+  
+ /**
+  * setIncludeSuccessorPlans method.
+  */
   public void setIncludeSuccessorPlans(String includeSuccessorPlans) {
     this.includeSuccessorPlans = includeSuccessorPlans;
   }
 
+ /**
+  * getIncludeSuccessorPlans method.
+  *
+  * @return String
+  */
   public String getIncludeSuccessorPlans() {
     return this.includeSuccessorPlans;
   }
   }
 
    /**
-   * Get Account Billing Plan
+   * Get Account Billing Plan.
    * Retrieves the billing plan information for the specified account, including the current billing plan, successor plans, billing address, and billing credit card.  By default the successor plan and credit card information is included in the response. This information can be excluded from the response by adding the appropriate optional query string with the &#x60;setting&#x60; set to **false**.   Response  The response returns the billing plan information, including the currency code, for the plan. The &#x60;billingPlan&#x60; and &#x60;succesorPlans&#x60; property values are the same as those shown in the [ML:Get Billing Plan Details] reference. the &#x60;billingAddress&#x60; and &#x60;creditCardInformation&#x60; property values are the same as those shown in the [ML:Update Billing Plan] reference.  ###### Note: When credit card number information is shown, a mask is applied to the response so that only the last 4 digits of the card number are visible. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountBillingPlanResponse
@@ -330,7 +392,7 @@ public class BillingApi {
   }
 
   /**
-   * Get Account Billing Plan
+   * Get Account Billing Plan.
    * Retrieves the billing plan information for the specified account, including the current billing plan, successor plans, billing address, and billing credit card.  By default the successor plan and credit card information is included in the response. This information can be excluded from the response by adding the appropriate optional query string with the &#x60;setting&#x60; set to **false**.   Response  The response returns the billing plan information, including the currency code, for the plan. The &#x60;billingPlan&#x60; and &#x60;succesorPlans&#x60; property values are the same as those shown in the [ML:Get Billing Plan Details] reference. the &#x60;billingAddress&#x60; and &#x60;creditCardInformation&#x60; property values are the same as those shown in the [ML:Update Billing Plan] reference.  ###### Note: When credit card number information is shown, a mask is applied to the response so that only the last 4 digits of the card number are visible. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -358,6 +420,8 @@ public class BillingApi {
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_credit_card_information", options.includeCreditCardInformation));
     }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_downgrade_information", options.includeDowngradeInformation));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_metadata", options.includeMetadata));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_successor_plans", options.includeSuccessorPlans));
@@ -384,7 +448,7 @@ public class BillingApi {
       }
 
   /**
-   * Gets the list of available billing plans.
+   * Gets the list of available billing plans..
    * Retrieves a list of the billing plans associated with a distributor.
    * @return BillingPlansResponse
    * @throws ApiException if fails to make API call
@@ -425,34 +489,51 @@ public class BillingApi {
   /// <summary>
   /// Get a List of Billing Invoices Retrieves a list of invoices for the account. If the from date or to date queries are not specified, the response returns invoices for the last 365 days.  Privileges required: account administrator 
   /// </summary>
+
+ /**
+  * ListInvoicesOptions Class.
+  *
+  **/
   public class ListInvoicesOptions
   {
   private String fromDate = null;
   private String toDate = null;
-  /*
-   * Specifies the date/time of the earliest invoice in the account to retrieve. 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * Specifies the date/time of the latest invoice in the account to retrieve. 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Get a List of Billing Invoices
+   * Get a List of Billing Invoices.
    * Retrieves a list of invoices for the account. If the from date or to date queries are not specified, the response returns invoices for the last 365 days.  Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BillingInvoicesResponse
@@ -462,7 +543,7 @@ public class BillingApi {
   }
 
   /**
-   * Get a List of Billing Invoices
+   * Get a List of Billing Invoices.
    * Retrieves a list of invoices for the account. If the from date or to date queries are not specified, the response returns invoices for the last 365 days.  Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -514,7 +595,7 @@ public class BillingApi {
       }
 
   /**
-   * Get a list of past due invoices.
+   * Get a list of past due invoices..
    * Returns a list past due invoices for the account and notes if payment can be made through the REST API.   Privileges Required: account administrator
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BillingInvoicesSummary
@@ -562,34 +643,51 @@ public class BillingApi {
   /// <summary>
   /// Gets payment information for one or more payments. Retrieves a list containing information about one or more payments. If the from date or to date queries are not used, the response returns payment information for the last 365 days.   Privileges required: account administrator 
   /// </summary>
+
+ /**
+  * ListPaymentsOptions Class.
+  *
+  **/
   public class ListPaymentsOptions
   {
   private String fromDate = null;
   private String toDate = null;
-  /*
-   * Specifies the date/time of the earliest payment in the account to retrieve. 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * Specifies the date/time of the latest payment in the account to retrieve. 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Gets payment information for one or more payments.
+   * Gets payment information for one or more payments..
    * Retrieves a list containing information about one or more payments. If the from date or to date queries are not used, the response returns payment information for the last 365 days.   Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BillingPaymentsResponse
@@ -599,7 +697,7 @@ public class BillingApi {
   }
 
   /**
-   * Gets payment information for one or more payments.
+   * Gets payment information for one or more payments..
    * Retrieves a list containing information about one or more payments. If the from date or to date queries are not used, the response returns payment information for the last 365 days.   Privileges required: account administrator 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -651,7 +749,7 @@ public class BillingApi {
       }
 
   /**
-   * Posts a payment to a past due invoice.
+   * Posts a payment to a past due invoice..
    * Posts a payment to a past due invoice.   ###### Note: This can only be used if the &#x60;paymentAllowed&#x60; value for a past due invoice is true. This can be determined calling [ML:GetBillingInvoicesPastDue].  The response returns information for a single payment, if a payment ID was used in the endpoint, or a list of payments. If the from date or to date queries or payment ID are not used, the response returns payment information for the last 365 days. If the request was for a single payment ID, the &#x60;nextUri&#x60; and &#x60;previousUri&#x60; properties are not returned.  Privileges required: account administrator
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param billingPaymentRequest  (optional)
@@ -699,7 +797,7 @@ public class BillingApi {
       }
 
   /**
-   * Reserverd: Purchase additional envelopes.
+   * Reserverd: Purchase additional envelopes..
    * Reserved: At this time, this endpoint is limited to DocuSign internal use only. Completes the purchase of envelopes for your account. The actual purchase is done as part of an internal workflow interaction with an envelope vendor.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param purchasedEnvelopesInformation  (optional)
@@ -746,7 +844,7 @@ public class BillingApi {
   }
 
   /**
-   * Queues downgrade billing plan request for an account.
+   * Queues downgrade billing plan request for an account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param downgradeBillingPlanInformation  (optional)
@@ -795,23 +893,34 @@ public class BillingApi {
   /// <summary>
   /// Updates the account billing plan. Updates the billing plan information, billing address, and credit card information for the specified account.
   /// </summary>
+
+ /**
+  * UpdatePlanOptions Class.
+  *
+  **/
   public class UpdatePlanOptions
   {
   private String previewBillingPlan = null;
-  /*
-   * When set to **true**, updates the account using a preview billing plan. 
-   */
+  
+ /**
+  * setPreviewBillingPlan method.
+  */
   public void setPreviewBillingPlan(String previewBillingPlan) {
     this.previewBillingPlan = previewBillingPlan;
   }
 
+ /**
+  * getPreviewBillingPlan method.
+  *
+  * @return String
+  */
   public String getPreviewBillingPlan() {
     return this.previewBillingPlan;
   }
   }
 
    /**
-   * Updates the account billing plan.
+   * Updates the account billing plan..
    * Updates the billing plan information, billing address, and credit card information for the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param billingPlanInformation  (optional)
@@ -822,7 +931,7 @@ public class BillingApi {
   }
 
   /**
-   * Updates the account billing plan.
+   * Updates the account billing plan..
    * Updates the billing plan information, billing address, and credit card information for the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param billingPlanInformation  (optional)

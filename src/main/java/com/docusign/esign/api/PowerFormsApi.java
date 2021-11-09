@@ -11,28 +11,50 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * PowerFormsApi class.
+ *
+ **/
 public class PowerFormsApi {
   private ApiClient apiClient;
 
+ /**
+  * PowerFormsApi.
+  *
+  **/
   public PowerFormsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * PowerFormsApi.
+  *
+  **/
   public PowerFormsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
 
   /**
-   * Creates a new PowerForm.
+   * Creates a new PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerForm  (optional)
@@ -80,7 +102,7 @@ public class PowerFormsApi {
       }
 
   /**
-   * Delete a PowerForm.
+   * Delete a PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormId  (required)
@@ -133,7 +155,7 @@ public class PowerFormsApi {
   }
 
   /**
-   * Deletes one or more PowerForms
+   * Deletes one or more PowerForms.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormsRequest  (optional)
@@ -181,7 +203,7 @@ public class PowerFormsApi {
       }
 
   /**
-   * Returns a single PowerForm.
+   * Returns a single PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormId  (required)
@@ -236,45 +258,68 @@ public class PowerFormsApi {
   /// <summary>
   /// Returns the form data associated with the usage of a PowerForm. 
   /// </summary>
+
+ /**
+  * GetPowerFormDataOptions Class.
+  *
+  **/
   public class GetPowerFormDataOptions
   {
   private String dataLayout = null;
   private String fromDate = null;
   private String toDate = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setDataLayout method.
+  */
   public void setDataLayout(String dataLayout) {
     this.dataLayout = dataLayout;
   }
 
+ /**
+  * getDataLayout method.
+  *
+  * @return String
+  */
   public String getDataLayout() {
     return this.dataLayout;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Returns the form data associated with the usage of a PowerForm.
+   * Returns the form data associated with the usage of a PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormId  (required)
@@ -285,7 +330,7 @@ public class PowerFormsApi {
   }
 
   /**
-   * Returns the form data associated with the usage of a PowerForm.
+   * Returns the form data associated with the usage of a PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormId  (required)
@@ -347,23 +392,34 @@ public class PowerFormsApi {
   /// <summary>
   /// Returns the list of PowerForms available to the user. 
   /// </summary>
+
+ /**
+  * ListPowerFormSendersOptions Class.
+  *
+  **/
   public class ListPowerFormSendersOptions
   {
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Returns the list of PowerForms available to the user.
+   * Returns the list of PowerForms available to the user..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return PowerFormSendersResponse
@@ -373,7 +429,7 @@ public class PowerFormsApi {
   }
 
   /**
-   * Returns the list of PowerForms available to the user.
+   * Returns the list of PowerForms available to the user..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -424,56 +480,85 @@ public class PowerFormsApi {
   /// <summary>
   /// Returns the list of PowerForms available to the user. 
   /// </summary>
+
+ /**
+  * ListPowerFormsOptions Class.
+  *
+  **/
   public class ListPowerFormsOptions
   {
   private String fromDate = null;
   private String order = null;
   private String orderBy = null;
   private String toDate = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setFromDate method.
+  */
   public void setFromDate(String fromDate) {
     this.fromDate = fromDate;
   }
 
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
   public String getFromDate() {
     return this.fromDate;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setToDate method.
+  */
   public void setToDate(String toDate) {
     this.toDate = toDate;
   }
 
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
   public String getToDate() {
     return this.toDate;
   }
   }
 
    /**
-   * Returns the list of PowerForms available to the user.
+   * Returns the list of PowerForms available to the user..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return PowerFormsResponse
@@ -483,7 +568,7 @@ public class PowerFormsApi {
   }
 
   /**
-   * Returns the list of PowerForms available to the user.
+   * Returns the list of PowerForms available to the user..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -539,7 +624,7 @@ public class PowerFormsApi {
       }
 
   /**
-   * Creates a new PowerForm.
+   * Creates a new PowerForm..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param powerFormId  (required)

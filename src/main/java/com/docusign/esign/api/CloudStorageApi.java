@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * CloudStorageApi class.
+ *
+ **/
 public class CloudStorageApi {
   private ApiClient apiClient;
 
+ /**
+  * CloudStorageApi.
+  *
+  **/
   public CloudStorageApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * CloudStorageApi.
+  *
+  **/
   public CloudStorageApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,6 +55,11 @@ public class CloudStorageApi {
   /// <summary>
   /// Gets a list of all the items from the specified cloud storage provider. Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
   /// </summary>
+
+ /**
+  * CallListOptions Class.
+  *
+  **/
   public class CallListOptions
   {
   private String cloudStorageFolderPath = null;
@@ -42,80 +69,122 @@ public class CloudStorageApi {
   private String orderBy = null;
   private String searchText = null;
   private String startPosition = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCloudStorageFolderPath method.
+  */
   public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
     this.cloudStorageFolderPath = cloudStorageFolderPath;
   }
 
+ /**
+  * getCloudStorageFolderPath method.
+  *
+  * @return String
+  */
   public String getCloudStorageFolderPath() {
     return this.cloudStorageFolderPath;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setCloudStorageFolderidPlain method.
+  */
   public void setCloudStorageFolderidPlain(String cloudStorageFolderidPlain) {
     this.cloudStorageFolderidPlain = cloudStorageFolderidPlain;
   }
 
+ /**
+  * getCloudStorageFolderidPlain method.
+  *
+  * @return String
+  */
   public String getCloudStorageFolderidPlain() {
     return this.cloudStorageFolderidPlain;
   }
-  /*
-   * An optional value that sets how many items are included in the response.   The default setting for this is 25.  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc &#x3D; ascending sort order * desc &#x3D; descending sort order  
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name   
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.   
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Gets a list of all the items from the specified cloud storage provider.
+   * Gets a list of all the items from the specified cloud storage provider..
    * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -128,7 +197,7 @@ public class CloudStorageApi {
   }
 
   /**
-   * Gets a list of all the items from the specified cloud storage provider.
+   * Gets a list of all the items from the specified cloud storage provider..
    * Retrieves a list of all the items in all  the folders associated with the user from the specified cloud storage provider. You can limit the scope of the returned items by providing a comma separated list of folder IDs in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -211,7 +280,7 @@ public class CloudStorageApi {
       }
 
   /**
-   * Configures the redirect URL information  for one or more cloud storage providers for the specified user.
+   * Configures the redirect URL information  for one or more cloud storage providers for the specified user..
    * Configures the redirect URL information  for one or more cloud storage providers for the specified user. The redirect URL is added to the authentication URL to complete the return route.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -266,7 +335,7 @@ public class CloudStorageApi {
       }
 
   /**
-   * Deletes the user authentication information for the specified cloud storage provider.
+   * Deletes the user authentication information for the specified cloud storage provider..
    * Deletes the user authentication information for the specified cloud storage provider. The next time the user tries to access the cloud storage provider, they must pass normal authentication for this cloud storage provider.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -327,7 +396,7 @@ public class CloudStorageApi {
       }
 
   /**
-   * Deletes the user authentication information for one or more cloud storage providers.
+   * Deletes the user authentication information for one or more cloud storage providers..
    * Deletes the user authentication information for one or more cloud storage providers. The next time the user tries to access the cloud storage provider, they must pass normal authentication.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -383,23 +452,34 @@ public class CloudStorageApi {
   /// <summary>
   /// Gets the specified Cloud Storage Provider configuration for the User. Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.
   /// </summary>
+
+ /**
+  * GetProviderOptions Class.
+  *
+  **/
   public class GetProviderOptions
   {
   private String redirectUrl = null;
-  /*
-   *  The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.   
-   */
+  
+ /**
+  * setRedirectUrl method.
+  */
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
 
+ /**
+  * getRedirectUrl method.
+  *
+  * @return String
+  */
   public String getRedirectUrl() {
     return this.redirectUrl;
   }
   }
 
    /**
-   * Gets the specified Cloud Storage Provider configuration for the User.
+   * Gets the specified Cloud Storage Provider configuration for the User..
    * Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -411,7 +491,7 @@ public class CloudStorageApi {
   }
 
   /**
-   * Gets the specified Cloud Storage Provider configuration for the User.
+   * Gets the specified Cloud Storage Provider configuration for the User..
    * Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -476,6 +556,11 @@ public class CloudStorageApi {
   /// <summary>
   /// Retrieves a list of all the items in a specified folder from the specified cloud storage provider. Retrieves a list of all the items in a specified folder from the specified cloud storage provider. 
   /// </summary>
+
+ /**
+  * ListFoldersOptions Class.
+  *
+  **/
   public class ListFoldersOptions
   {
   private String cloudStorageFolderPath = null;
@@ -484,70 +569,106 @@ public class CloudStorageApi {
   private String orderBy = null;
   private String searchText = null;
   private String startPosition = null;
-  /*
-   * A comma separated list of folder IDs included in the request.  
-   */
+  
+ /**
+  * setCloudStorageFolderPath method.
+  */
   public void setCloudStorageFolderPath(String cloudStorageFolderPath) {
     this.cloudStorageFolderPath = cloudStorageFolderPath;
   }
 
+ /**
+  * getCloudStorageFolderPath method.
+  *
+  * @return String
+  */
   public String getCloudStorageFolderPath() {
     return this.cloudStorageFolderPath;
   }
-  /*
-   * An optional value that sets how many items are included in the response.   The default setting for this is 25.  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * An optional value that sets the direction order used to sort the item list.   Valid values are:   * asc &#x3D; ascending sort order * desc &#x3D; descending sort order  
-   */
+  
+ /**
+  * setOrder method.
+  */
   public void setOrder(String order) {
     this.order = order;
   }
 
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
   public String getOrder() {
     return this.order;
   }
-  /*
-   * An optional value that sets the file attribute used to sort the item list.   Valid values are:   * modified * name   
-   */
+  
+ /**
+  * setOrderBy method.
+  */
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
 
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
   public String getOrderBy() {
     return this.orderBy;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setSearchText method.
+  */
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
 
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
   public String getSearchText() {
     return this.searchText;
   }
-  /*
-   * Indicates the starting point of the first item included in the response set. It uses a 0-based index. The default setting for this is 0.   
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
   }
 
    /**
-   * Retrieves a list of all the items in a specified folder from the specified cloud storage provider.
+   * Retrieves a list of all the items in a specified folder from the specified cloud storage provider..
    * Retrieves a list of all the items in a specified folder from the specified cloud storage provider. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -559,7 +680,7 @@ public class CloudStorageApi {
   }
 
   /**
-   * Retrieves a list of all the items in a specified folder from the specified cloud storage provider.
+   * Retrieves a list of all the items in a specified folder from the specified cloud storage provider..
    * Retrieves a list of all the items in a specified folder from the specified cloud storage provider. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -634,23 +755,34 @@ public class CloudStorageApi {
   /// <summary>
   /// Get the Cloud Storage Provider configuration for the specified user. Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.  The {serviceId} parameter can be either the service name or serviceId.
   /// </summary>
+
+ /**
+  * ListProvidersOptions Class.
+  *
+  **/
   public class ListProvidersOptions
   {
   private String redirectUrl = null;
-  /*
-   *  The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.   
-   */
+  
+ /**
+  * setRedirectUrl method.
+  */
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
 
+ /**
+  * getRedirectUrl method.
+  *
+  * @return String
+  */
   public String getRedirectUrl() {
     return this.redirectUrl;
   }
   }
 
    /**
-   * Get the Cloud Storage Provider configuration for the specified user.
+   * Get the Cloud Storage Provider configuration for the specified user..
    * Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.  The {serviceId} parameter can be either the service name or serviceId.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -661,7 +793,7 @@ public class CloudStorageApi {
   }
 
   /**
-   * Get the Cloud Storage Provider configuration for the specified user.
+   * Get the Cloud Storage Provider configuration for the specified user..
    * Retrieves the list of cloud storage providers enabled for the account and the configuration information for the user.  The {serviceId} parameter can be either the service name or serviceId.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)

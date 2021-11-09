@@ -11,21 +11,43 @@ import com.docusign.esign.client.Pair;
 
 
 
+
+/**
+ * UsersApi class.
+ *
+ **/
 public class UsersApi {
   private ApiClient apiClient;
 
+ /**
+  * UsersApi.
+  *
+  **/
   public UsersApi() {
     this(Configuration.getDefaultApiClient());
   }
 
+ /**
+  * UsersApi.
+  *
+  **/
   public UsersApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
+ /**
+  * getApiClient Method.
+  *
+  * @return ApiClient
+  **/
   public ApiClient getApiClient() {
     return apiClient;
   }
 
+ /**
+  * setApiClient Method.
+  *
+  **/
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
@@ -33,6 +55,11 @@ public class UsersApi {
   /// <summary>
   /// Retrieves the list of users for the specified account. Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
   /// </summary>
+
+ /**
+  * CallListOptions Class.
+  *
+  **/
   public class CallListOptions
   {
   private String additionalInfo = null;
@@ -46,120 +73,186 @@ public class UsersApi {
   private String startPosition = null;
   private String status = null;
   private String userNameSubstring = null;
-  /*
-   * When set to **true**, the full list of user information is returned for each user in the account. 
-   */
+  
+ /**
+  * setAdditionalInfo method.
+  */
   public void setAdditionalInfo(String additionalInfo) {
     this.additionalInfo = additionalInfo;
   }
 
+ /**
+  * getAdditionalInfo method.
+  *
+  * @return String
+  */
   public String getAdditionalInfo() {
     return this.additionalInfo;
   }
-  /*
-   * Number of records to return. The number must be greater than 0 and less than or equal to 100.  
-   */
+  
+ /**
+  * setCount method.
+  */
   public void setCount(String count) {
     this.count = count;
   }
 
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
   public String getCount() {
     return this.count;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setEmail method.
+  */
   public void setEmail(String email) {
     this.email = email;
   }
 
+ /**
+  * getEmail method.
+  *
+  * @return String
+  */
   public String getEmail() {
     return this.email;
   }
-  /*
-   * Filters the returned user records by the email address or a sub-string of email address. 
-   */
+  
+ /**
+  * setEmailSubstring method.
+  */
   public void setEmailSubstring(String emailSubstring) {
     this.emailSubstring = emailSubstring;
   }
 
+ /**
+  * getEmailSubstring method.
+  *
+  * @return String
+  */
   public String getEmailSubstring() {
     return this.emailSubstring;
   }
-  /*
-   * Filters user records returned by one or more group Id&#39;s. 
-   */
+  
+ /**
+  * setGroupId method.
+  */
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
 
+ /**
+  * getGroupId method.
+  *
+  * @return String
+  */
   public String getGroupId() {
     return this.groupId;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeUsersettingsForCsv method.
+  */
   public void setIncludeUsersettingsForCsv(String includeUsersettingsForCsv) {
     this.includeUsersettingsForCsv = includeUsersettingsForCsv;
   }
 
+ /**
+  * getIncludeUsersettingsForCsv method.
+  *
+  * @return String
+  */
   public String getIncludeUsersettingsForCsv() {
     return this.includeUsersettingsForCsv;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setLoginStatus method.
+  */
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
 
+ /**
+  * getLoginStatus method.
+  *
+  * @return String
+  */
   public String getLoginStatus() {
     return this.loginStatus;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setNotGroupId method.
+  */
   public void setNotGroupId(String notGroupId) {
     this.notGroupId = notGroupId;
   }
 
+ /**
+  * getNotGroupId method.
+  *
+  * @return String
+  */
   public String getNotGroupId() {
     return this.notGroupId;
   }
-  /*
-   * Starting value for the list.  
-   */
+  
+ /**
+  * setStartPosition method.
+  */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
 
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
   public String getStartPosition() {
     return this.startPosition;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setStatus method.
+  */
   public void setStatus(String status) {
     this.status = status;
   }
 
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
   public String getStatus() {
     return this.status;
   }
-  /*
-   * Filters the user records returned by the user name or a sub-string of user name. 
-   */
+  
+ /**
+  * setUserNameSubstring method.
+  */
   public void setUserNameSubstring(String userNameSubstring) {
     this.userNameSubstring = userNameSubstring;
   }
 
+ /**
+  * getUserNameSubstring method.
+  *
+  * @return String
+  */
   public String getUserNameSubstring() {
     return this.userNameSubstring;
   }
   }
 
    /**
-   * Retrieves the list of users for the specified account.
+   * Retrieves the list of users for the specified account..
    * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return UserInformationList
@@ -169,7 +262,7 @@ public class UsersApi {
   }
 
   /**
-   * Retrieves the list of users for the specified account.
+   * Retrieves the list of users for the specified account..
    * Retrieves the list of users for the specified account.  The response returns the list of users for the account along with the information about the result set. If the &#x60;additional_info&#x60; query was added to the endpoint and set to **true**, the full user information is returned for each user
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
@@ -239,7 +332,7 @@ public class UsersApi {
       }
 
   /**
-   * Adds news user to the specified account.
+   * Adds news user to the specified account..
    * Adds new users to your account. Set the &#x60;userSettings&#x60; property in the request to specify the actions the users can perform on the account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param newUsersDefinition  (optional)
@@ -287,7 +380,7 @@ public class UsersApi {
       }
 
   /**
-   * Adds user Signature and initials images to a Signature.
+   * Adds user Signature and initials images to a Signature..
    * Adds a user signature image and/or user initials image to the specified user.   The userId property specified in the endpoint must match the authenticated user&#39;s userId and the user must be a member of the account.  The rules and processes associated with this are:  * If Content-Type is set to application/json, then the default behavior for creating a default signature image, based on the name and a DocuSign font, is used. * If Content-Type is set to multipart/form-data, then the request must contain a first part with the user signature information, followed by parts that contain the images.  For each Image part, the Content-Disposition header has a \&quot;filename\&quot; value that is used to map to the &#x60;signatureName&#x60; and/or &#x60;signatureInitials&#x60; properties in the JSON to the image.   For example:  &#x60;Content-Disposition: file; filename&#x3D;\&quot;Ron Test20121127083900\&quot;&#x60;  If no matching image (by filename value) is found, then the image is not set. One, both, or neither of the signature and initials images can be set with this call.  The Content-Transfer-Encoding: base64 header, set in the header for the part containing the image, can be set to indicate that the images are formatted as base64 instead of as binary.  If successful, 200-OK is returned, and a JSON structure containing the signature information is provided, note that the signatureId can change with each API POST, PUT, or DELETE since the changes to the signature structure cause the current signature to be closed, and a new signature record to be created.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -343,23 +436,34 @@ public class UsersApi {
   /// <summary>
   /// Removes users account privileges. This closes one or more user records in the account. Users are never deleted from an account, but closing a user prevents them from using account functions.  The response returns whether the API execution was successful (200 - OK) or  if it failed. The response contains a user structure similar to the request and includes the user changes. If an error occurred during the DELETE operation for any of the users, the response for that user contains an &#x60;errorDetails&#x60; node with &#x60;errorCode&#x60; and &#x60;message&#x60; properties.
   /// </summary>
+
+ /**
+  * DeleteOptions Class.
+  *
+  **/
   public class DeleteOptions
   {
   private String delete = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setDelete method.
+  */
   public void setDelete(String delete) {
     this.delete = delete;
   }
 
+ /**
+  * getDelete method.
+  *
+  * @return String
+  */
   public String getDelete() {
     return this.delete;
   }
   }
 
    /**
-   * Removes users account privileges.
+   * Removes users account privileges..
    * This closes one or more user records in the account. Users are never deleted from an account, but closing a user prevents them from using account functions.  The response returns whether the API execution was successful (200 - OK) or  if it failed. The response contains a user structure similar to the request and includes the user changes. If an error occurred during the DELETE operation for any of the users, the response for that user contains an &#x60;errorDetails&#x60; node with &#x60;errorCode&#x60; and &#x60;message&#x60; properties.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userInfoList  (optional)
@@ -370,7 +474,7 @@ public class UsersApi {
   }
 
   /**
-   * Removes users account privileges.
+   * Removes users account privileges..
    * This closes one or more user records in the account. Users are never deleted from an account, but closing a user prevents them from using account functions.  The response returns whether the API execution was successful (200 - OK) or  if it failed. The response contains a user structure similar to the request and includes the user changes. If an error occurred during the DELETE operation for any of the users, the response for that user contains an &#x60;errorDetails&#x60; node with &#x60;errorCode&#x60; and &#x60;message&#x60; properties.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userInfoList  (optional)
@@ -421,7 +525,7 @@ public class UsersApi {
       }
 
   /**
-   * Replaces a particular contact associated with an account for the DocuSign service.
+   * Replaces a particular contact associated with an account for the DocuSign service..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactId The unique identifier of a person in the contacts address book. (required)
@@ -475,7 +579,7 @@ public class UsersApi {
       }
 
   /**
-   * Delete contacts associated with an account for the DocuSign service.
+   * Delete contacts associated with an account for the DocuSign service..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactModRequest  (optional)
@@ -523,7 +627,7 @@ public class UsersApi {
       }
 
   /**
-   * Deletes custom user settings for a specified user.
+   * Deletes custom user settings for a specified user..
    * Deletes the specified custom user settings for a single user.  ###Deleting Grouped Custom User Settings###  If the custom user settings you want to delete are grouped, you must include the following information in the header, after Content-Type, in the request:  &#x60;X-DocuSign-User-Settings-Key:group_name&#x60;  Where the &#x60;group_name&#x60; is your designated name for the group of customer user settings.  If the extra header information is not included, only the custom user settings that were added without a group are deleted.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -578,7 +682,7 @@ public class UsersApi {
       }
 
   /**
-   * Deletes the user profile image for the specified user.
+   * Deletes the user profile image for the specified user..
    * Deletes the user profile image from the  specified user&#39;s profile.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -631,7 +735,7 @@ public class UsersApi {
   }
 
   /**
-   * Removes removes signature information for the specified user.
+   * Removes removes signature information for the specified user..
    * Removes the signature information for the user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -691,7 +795,7 @@ public class UsersApi {
   }
 
   /**
-   * Deletes the user initials image or the  user signature image for the specified user.
+   * Deletes the user initials image or the  user signature image for the specified user..
    * Deletes the specified initials image or signature image for the specified user.  The function deletes one or the other of the image types, to delete both the initials image and signature image you must call the endpoint twice.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -760,23 +864,34 @@ public class UsersApi {
   /// <summary>
   /// Gets a particular contact associated with the user&#39;s account. 
   /// </summary>
+
+ /**
+  * GetContactByIdOptions Class.
+  *
+  **/
   public class GetContactByIdOptions
   {
   private String cloudProvider = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setCloudProvider method.
+  */
   public void setCloudProvider(String cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
 
+ /**
+  * getCloudProvider method.
+  *
+  * @return String
+  */
   public String getCloudProvider() {
     return this.cloudProvider;
   }
   }
 
    /**
-   * Gets a particular contact associated with the user&#39;s account.
+   * Gets a particular contact associated with the user&#39;s account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactId The unique identifier of a person in the contacts address book. (required)
@@ -787,7 +902,7 @@ public class UsersApi {
   }
 
   /**
-   * Gets a particular contact associated with the user&#39;s account.
+   * Gets a particular contact associated with the user&#39;s account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactId The unique identifier of a person in the contacts address book. (required)
@@ -845,34 +960,51 @@ public class UsersApi {
   /// <summary>
   /// Gets the user information for a specified user. Retrieves the user information for the specified user.   To return additional user information that details the last login date, login status, and the user&#39;s password expiration date, set the optional &#x60;additional_info&#x60; query string parameter to **true**.
   /// </summary>
+
+ /**
+  * GetInformationOptions Class.
+  *
+  **/
   public class GetInformationOptions
   {
   private String additionalInfo = null;
   private String email = null;
-  /*
-   * When set to **true**, the full list of user information is returned for each user in the account. 
-   */
+  
+ /**
+  * setAdditionalInfo method.
+  */
   public void setAdditionalInfo(String additionalInfo) {
     this.additionalInfo = additionalInfo;
   }
 
+ /**
+  * getAdditionalInfo method.
+  *
+  * @return String
+  */
   public String getAdditionalInfo() {
     return this.additionalInfo;
   }
-  /*
-   * 
-   */
+  
+ /**
+  * setEmail method.
+  */
   public void setEmail(String email) {
     this.email = email;
   }
 
+ /**
+  * getEmail method.
+  *
+  * @return String
+  */
   public String getEmail() {
     return this.email;
   }
   }
 
    /**
-   * Gets the user information for a specified user.
+   * Gets the user information for a specified user..
    * Retrieves the user information for the specified user.   To return additional user information that details the last login date, login status, and the user&#39;s password expiration date, set the optional &#x60;additional_info&#x60; query string parameter to **true**.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -883,7 +1015,7 @@ public class UsersApi {
   }
 
   /**
-   * Gets the user information for a specified user.
+   * Gets the user information for a specified user..
    * Retrieves the user information for the specified user.   To return additional user information that details the last login date, login status, and the user&#39;s password expiration date, set the optional &#x60;additional_info&#x60; query string parameter to **true**.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -942,7 +1074,7 @@ public class UsersApi {
       }
 
   /**
-   * Retrieves the user profile for a specified user.
+   * Retrieves the user profile for a specified user..
    * Retrieves the user profile information, the privacy settings and personal information (address, phone number, etc.) for the specified user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -997,23 +1129,34 @@ public class UsersApi {
   /// <summary>
   /// Retrieves the user profile image for the specified user. Retrieves the user profile picture for the specified user. The image is returned in the same format as uploaded.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.  If successful, the response returns a 200 - OK and the user profile image.
   /// </summary>
+
+ /**
+  * GetProfileImageOptions Class.
+  *
+  **/
   public class GetProfileImageOptions
   {
   private String encoding = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setEncoding method.
+  */
   public void setEncoding(String encoding) {
     this.encoding = encoding;
   }
 
+ /**
+  * getEncoding method.
+  *
+  * @return String
+  */
   public String getEncoding() {
     return this.encoding;
   }
   }
 
    /**
-   * Retrieves the user profile image for the specified user.
+   * Retrieves the user profile image for the specified user..
    * Retrieves the user profile picture for the specified user. The image is returned in the same format as uploaded.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.  If successful, the response returns a 200 - OK and the user profile image.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1024,7 +1167,7 @@ public class UsersApi {
   }
 
   /**
-   * Retrieves the user profile image for the specified user.
+   * Retrieves the user profile image for the specified user..
    * Retrieves the user profile picture for the specified user. The image is returned in the same format as uploaded.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the specified account.  If successful, the response returns a 200 - OK and the user profile image.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1081,7 +1224,7 @@ public class UsersApi {
       }
 
   /**
-   * Gets the user account settings for a specified user.
+   * Gets the user account settings for a specified user..
    * Retrieves a list of the account settings and email notification information for the specified user.  The response returns the account setting name/value information and the email notification settings for the specified user. For more information about the different user settings, see the [ML:userSettings list].
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1135,7 +1278,7 @@ public class UsersApi {
       }
 
   /**
-   * Gets the user signature information for the specified user.
+   * Gets the user signature information for the specified user..
    * Retrieves the structure of a single signature with a known signature name.  The userId specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1197,23 +1340,34 @@ public class UsersApi {
   /// <summary>
   /// Retrieves the user initials image or the  user signature image for the specified user. Retrieves the specified initials image or signature image for the specified user. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.  ###### Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
   /// </summary>
+
+ /**
+  * GetSignatureImageOptions Class.
+  *
+  **/
   public class GetSignatureImageOptions
   {
   private String includeChrome = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setIncludeChrome method.
+  */
   public void setIncludeChrome(String includeChrome) {
     this.includeChrome = includeChrome;
   }
 
+ /**
+  * getIncludeChrome method.
+  *
+  * @return String
+  */
   public String getIncludeChrome() {
     return this.includeChrome;
   }
   }
 
    /**
-   * Retrieves the user initials image or the  user signature image for the specified user.
+   * Retrieves the user initials image or the  user signature image for the specified user..
    * Retrieves the specified initials image or signature image for the specified user. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.  ###### Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1226,7 +1380,7 @@ public class UsersApi {
   }
 
   /**
-   * Retrieves the user initials image or the  user signature image for the specified user.
+   * Retrieves the user initials image or the  user signature image for the specified user..
    * Retrieves the specified initials image or signature image for the specified user. The image is returned in the same format as uploaded. In the request you can specify if the chrome (the added line and identifier around the initial image) is returned with the image.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.  ###### Note: Older envelopes might only have chromed images. If getting the non-chromed image fails, try getting the chromed image.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1297,7 +1451,7 @@ public class UsersApi {
       }
 
   /**
-   * Retrieves the custom user settings for a specified user.
+   * Retrieves the custom user settings for a specified user..
    * Retrieves a list of custom user settings for a single user.  Custom settings provide a flexible way to store and retrieve custom user information that can be used in your own system.  ###### Note: Custom user settings are not the same as user account settings.  ###Getting Grouped Custom User Settings###  If the custom user settings you want to retrieve are grouped, you must include the following information in the header, after Content-Type, in the request:  &#x60;X-DocuSign-User-Settings-Key:group_name&#x60;  Where the &#x60;group_name&#x60; is your designated name for the group of customer user settings.  If the extra header information is not included, only the custom user settings that were added without a group are retrieved.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1352,23 +1506,34 @@ public class UsersApi {
   /// <summary>
   /// Retrieves a list of user signature definitions for a specified user. Retrieves the signature definitions for the specified user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
   /// </summary>
+
+ /**
+  * ListSignaturesOptions Class.
+  *
+  **/
   public class ListSignaturesOptions
   {
   private String stampType = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setStampType method.
+  */
   public void setStampType(String stampType) {
     this.stampType = stampType;
   }
 
+ /**
+  * getStampType method.
+  *
+  * @return String
+  */
   public String getStampType() {
     return this.stampType;
   }
   }
 
    /**
-   * Retrieves a list of user signature definitions for a specified user.
+   * Retrieves a list of user signature definitions for a specified user..
    * Retrieves the signature definitions for the specified user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1379,7 +1544,7 @@ public class UsersApi {
   }
 
   /**
-   * Retrieves a list of user signature definitions for a specified user.
+   * Retrieves a list of user signature definitions for a specified user..
    * Retrieves the signature definitions for the specified user.  The userId parameter specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1436,7 +1601,7 @@ public class UsersApi {
       }
 
   /**
-   * Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type).
+   * Imports multiple new contacts into the contacts collection from CSV, JSON, or XML (based on content type)..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactModRequest  (optional)
@@ -1484,7 +1649,7 @@ public class UsersApi {
       }
 
   /**
-   * Replaces contacts associated with an account for the DocuSign service.
+   * Replaces contacts associated with an account for the DocuSign service..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param contactModRequest  (optional)
@@ -1532,7 +1697,7 @@ public class UsersApi {
       }
 
   /**
-   * Adds or updates custom user settings for the specified user.
+   * Adds or updates custom user settings for the specified user..
    * Adds or updates custom user settings for the specified user.  ###### Note: Custom user settings are not the same as user account settings.  Custom settings provide a flexible way to store and retrieve custom user information that you can use in your own system.  **Important**: There is a limit on the size for all the custom user settings for a single user. The limit is 4,000 characters, which includes the XML and JSON structure for the settings.  ### Grouping Custom User Settings ###  You can group custom user settings when adding them. Grouping allows you to retrieve settings that are in a specific group, instead of retrieving all the user custom settings.  To group custom user settings, add the following information in the header, after Content-Type:  &#x60;X-DocuSign-User-Settings-Key:group_name&#x60;  Where the &#x60;group_name&#x60; is your designated name for the group of customer user settings. Grouping is shown in the Example Request Body below.  When getting or deleting grouped custom user settings, you must include the extra header information.  Grouping custom user settings is not required and if the extra header information is not included, the custom user settings are added normally and can be retrieved or deleted without including the additional header.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1587,7 +1752,7 @@ public class UsersApi {
       }
 
   /**
-   * Updates the user profile information for the specified user.
+   * Updates the user profile information for the specified user..
    * Updates the user&#39;s detail information, profile information, privacy settings, and personal information in the user ID card.  You can also change a user&#39;s name by changing the information in the &#x60;userDetails&#x60; property. When changing a user&#39;s name, you can either change the information in the &#x60;userName&#x60; property OR change the information in &#x60;firstName&#x60;, &#x60;middleName&#x60;, &#x60;lastName, suffixName&#x60;, and &#x60;title&#x60; properties. Changes to &#x60;firstName&#x60;, &#x60;middleName&#x60;, &#x60;lastName&#x60;, &#x60;suffixName&#x60;, and &#x60;title&#x60; properties take precedence over changes to the &#x60;userName&#x60; property.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1641,7 +1806,7 @@ public class UsersApi {
   }
 
   /**
-   * Updates the user profile image for a specified user.
+   * Updates the user profile image for a specified user..
    * Updates the user profile image by uploading an image to the user profile.  The supported image formats are: gif, png, jpeg, and bmp. The file must be less than 200K. For best viewing results, DocuSign recommends that the image is no more than 79 pixels wide and high.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1695,23 +1860,34 @@ public class UsersApi {
   /// <summary>
   /// Updates the user account settings for a specified user. Updates the account settings list and email notification types for the specified user.
   /// </summary>
+
+ /**
+  * UpdateSettingsOptions Class.
+  *
+  **/
   public class UpdateSettingsOptions
   {
   private String allowAllLanguages = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setAllowAllLanguages method.
+  */
   public void setAllowAllLanguages(String allowAllLanguages) {
     this.allowAllLanguages = allowAllLanguages;
   }
 
+ /**
+  * getAllowAllLanguages method.
+  *
+  * @return String
+  */
   public String getAllowAllLanguages() {
     return this.allowAllLanguages;
   }
   }
 
    /**
-   * Updates the user account settings for a specified user.
+   * Updates the user account settings for a specified user..
    * Updates the account settings list and email notification types for the specified user.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1723,7 +1899,7 @@ public class UsersApi {
   }
 
   /**
-   * Updates the user account settings for a specified user.
+   * Updates the user account settings for a specified user..
    * Updates the account settings list and email notification types for the specified user.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1781,23 +1957,34 @@ public class UsersApi {
   /// <summary>
   /// Updates the user signature for a specified user. Creates, or updates, the signature font and initials for the specified user. When creating a signature, you use this resource to create the signature name and then add the signature and initials images into the signature.  ###### Note: This will also create a default signature for the user when one does not exist.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
   /// </summary>
+
+ /**
+  * UpdateSignatureOptions Class.
+  *
+  **/
   public class UpdateSignatureOptions
   {
   private String closeExistingSignature = null;
-  /*
-   * When set to **true**, closes the current signature. 
-   */
+  
+ /**
+  * setCloseExistingSignature method.
+  */
   public void setCloseExistingSignature(String closeExistingSignature) {
     this.closeExistingSignature = closeExistingSignature;
   }
 
+ /**
+  * getCloseExistingSignature method.
+  *
+  * @return String
+  */
   public String getCloseExistingSignature() {
     return this.closeExistingSignature;
   }
   }
 
    /**
-   * Updates the user signature for a specified user.
+   * Updates the user signature for a specified user..
    * Creates, or updates, the signature font and initials for the specified user. When creating a signature, you use this resource to create the signature name and then add the signature and initials images into the signature.  ###### Note: This will also create a default signature for the user when one does not exist.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1810,7 +1997,7 @@ public class UsersApi {
   }
 
   /**
-   * Updates the user signature for a specified user.
+   * Updates the user signature for a specified user..
    * Creates, or updates, the signature font and initials for the specified user. When creating a signature, you use this resource to create the signature name and then add the signature and initials images into the signature.  ###### Note: This will also create a default signature for the user when one does not exist.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1876,23 +2063,34 @@ public class UsersApi {
   /// <summary>
   /// Updates the user signature image or user initials image for the specified user. Updates the user signature image or user initials image for the specified user. The supported image formats for this file are: gif, png, jpeg, and bmp. The file must be less than 200K.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;. 
   /// </summary>
+
+ /**
+  * UpdateSignatureImageOptions Class.
+  *
+  **/
   public class UpdateSignatureImageOptions
   {
   private String transparentPng = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setTransparentPng method.
+  */
   public void setTransparentPng(String transparentPng) {
     this.transparentPng = transparentPng;
   }
 
+ /**
+  * getTransparentPng method.
+  *
+  * @return String
+  */
   public String getTransparentPng() {
     return this.transparentPng;
   }
   }
 
    /**
-   * Updates the user signature image or user initials image for the specified user.
+   * Updates the user signature image or user initials image for the specified user..
    * Updates the user signature image or user initials image for the specified user. The supported image formats for this file are: gif, png, jpeg, and bmp. The file must be less than 200K.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1905,7 +2103,7 @@ public class UsersApi {
   }
 
   /**
-   * Updates the user signature image or user initials image for the specified user.
+   * Updates the user signature image or user initials image for the specified user..
    * Updates the user signature image or user initials image for the specified user. The supported image formats for this file are: gif, png, jpeg, and bmp. The file must be less than 200K.  The userId property specified in the endpoint must match the authenticated user&#39;s user ID and the user must be a member of the account.  The &#x60;signatureId&#x60; parameter accepts a signature ID or a signature name. DocuSign recommends you use signature ID (&#x60;signatureId&#x60;), since some names contain characters that do not properly encode into a URL. If you use the user name, it is likely that the name includes spaces. In that case, URL encode the name before using it in the endpoint.   For example encode \&quot;Bob Smith\&quot; as \&quot;Bob%20Smith\&quot;. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1976,7 +2174,7 @@ public class UsersApi {
       }
 
   /**
-   * Adds/updates a user signature.
+   * Adds/updates a user signature..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -2032,23 +2230,34 @@ public class UsersApi {
   /// <summary>
   /// Updates the specified user information. 
   /// </summary>
+
+ /**
+  * UpdateUserOptions Class.
+  *
+  **/
   public class UpdateUserOptions
   {
   private String allowAllLanguages = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setAllowAllLanguages method.
+  */
   public void setAllowAllLanguages(String allowAllLanguages) {
     this.allowAllLanguages = allowAllLanguages;
   }
 
+ /**
+  * getAllowAllLanguages method.
+  *
+  * @return String
+  */
   public String getAllowAllLanguages() {
     return this.allowAllLanguages;
   }
   }
 
    /**
-   * Updates the specified user information.
+   * Updates the specified user information..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -2060,7 +2269,7 @@ public class UsersApi {
   }
 
   /**
-   * Updates the specified user information.
+   * Updates the specified user information..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -2119,23 +2328,34 @@ public class UsersApi {
   /// <summary>
   /// Change one or more user in the specified account. 
   /// </summary>
+
+ /**
+  * UpdateUsersOptions Class.
+  *
+  **/
   public class UpdateUsersOptions
   {
   private String allowAllLanguages = null;
-  /*
-   * 
-   */
+  
+ /**
+  * setAllowAllLanguages method.
+  */
   public void setAllowAllLanguages(String allowAllLanguages) {
     this.allowAllLanguages = allowAllLanguages;
   }
 
+ /**
+  * getAllowAllLanguages method.
+  *
+  * @return String
+  */
   public String getAllowAllLanguages() {
     return this.allowAllLanguages;
   }
   }
 
    /**
-   * Change one or more user in the specified account.
+   * Change one or more user in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userInformationList  (optional)
@@ -2146,7 +2366,7 @@ public class UsersApi {
   }
 
   /**
-   * Change one or more user in the specified account.
+   * Change one or more user in the specified account..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userInformationList  (optional)
