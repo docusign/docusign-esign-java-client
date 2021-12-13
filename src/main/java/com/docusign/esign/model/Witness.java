@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.AuthenticationStatus;
+import com.docusign.esign.model.DelegationInfo;
 import com.docusign.esign.model.DocumentVisibility;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.FeatureAvailableMetadata;
@@ -87,6 +88,12 @@ public class Witness {
 
   @JsonProperty("defaultRecipient")
   private String defaultRecipient = null;
+
+  @JsonProperty("delegatedBy")
+  private DelegationInfo delegatedBy = null;
+
+  @JsonProperty("delegatedTo")
+  private java.util.List<DelegationInfo> delegatedTo = null;
 
   @JsonProperty("deliveredDateTime")
   private String deliveredDateTime = null;
@@ -183,6 +190,9 @@ public class Witness {
 
   @JsonProperty("notaryId")
   private String notaryId = null;
+
+  @JsonProperty("notarySignerEmailSent")
+  private String notarySignerEmailSent = null;
 
   @JsonProperty("note")
   private String note = null;
@@ -826,6 +836,73 @@ public class Witness {
    **/
   public void setDefaultRecipient(String defaultRecipient) {
     this.defaultRecipient = defaultRecipient;
+  }
+
+
+  /**
+   * delegatedBy.
+   *
+   * @return Witness
+   **/
+  public Witness delegatedBy(DelegationInfo delegatedBy) {
+    this.delegatedBy = delegatedBy;
+    return this;
+  }
+
+  /**
+   * Get delegatedBy.
+   * @return delegatedBy
+   **/
+  @ApiModelProperty(value = "")
+  public DelegationInfo getDelegatedBy() {
+    return delegatedBy;
+  }
+
+  /**
+   * setDelegatedBy.
+   **/
+  public void setDelegatedBy(DelegationInfo delegatedBy) {
+    this.delegatedBy = delegatedBy;
+  }
+
+
+  /**
+   * delegatedTo.
+   *
+   * @return Witness
+   **/
+  public Witness delegatedTo(java.util.List<DelegationInfo> delegatedTo) {
+    this.delegatedTo = delegatedTo;
+    return this;
+  }
+  
+  /**
+   * addDelegatedToItem.
+   *
+   * @return Witness
+   **/
+  public Witness addDelegatedToItem(DelegationInfo delegatedToItem) {
+    if (this.delegatedTo == null) {
+      this.delegatedTo = new java.util.ArrayList<DelegationInfo>();
+    }
+    this.delegatedTo.add(delegatedToItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return delegatedTo
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DelegationInfo> getDelegatedTo() {
+    return delegatedTo;
+  }
+
+  /**
+   * setDelegatedTo.
+   **/
+  public void setDelegatedTo(java.util.List<DelegationInfo> delegatedTo) {
+    this.delegatedTo = delegatedTo;
   }
 
 
@@ -1716,6 +1793,33 @@ public class Witness {
    **/
   public void setNotaryId(String notaryId) {
     this.notaryId = notaryId;
+  }
+
+
+  /**
+   * notarySignerEmailSent.
+   *
+   * @return Witness
+   **/
+  public Witness notarySignerEmailSent(String notarySignerEmailSent) {
+    this.notarySignerEmailSent = notarySignerEmailSent;
+    return this;
+  }
+
+  /**
+   * .
+   * @return notarySignerEmailSent
+   **/
+  @ApiModelProperty(value = "")
+  public String getNotarySignerEmailSent() {
+    return notarySignerEmailSent;
+  }
+
+  /**
+   * setNotarySignerEmailSent.
+   **/
+  public void setNotarySignerEmailSent(String notarySignerEmailSent) {
+    this.notarySignerEmailSent = notarySignerEmailSent;
   }
 
 
@@ -3004,6 +3108,8 @@ public class Witness {
         Objects.equals(this.declinedDateTime, witness.declinedDateTime) &&
         Objects.equals(this.declinedReason, witness.declinedReason) &&
         Objects.equals(this.defaultRecipient, witness.defaultRecipient) &&
+        Objects.equals(this.delegatedBy, witness.delegatedBy) &&
+        Objects.equals(this.delegatedTo, witness.delegatedTo) &&
         Objects.equals(this.deliveredDateTime, witness.deliveredDateTime) &&
         Objects.equals(this.deliveryMethod, witness.deliveryMethod) &&
         Objects.equals(this.deliveryMethodMetadata, witness.deliveryMethodMetadata) &&
@@ -3036,6 +3142,7 @@ public class Witness {
         Objects.equals(this.name, witness.name) &&
         Objects.equals(this.nameMetadata, witness.nameMetadata) &&
         Objects.equals(this.notaryId, witness.notaryId) &&
+        Objects.equals(this.notarySignerEmailSent, witness.notarySignerEmailSent) &&
         Objects.equals(this.note, witness.note) &&
         Objects.equals(this.noteMetadata, witness.noteMetadata) &&
         Objects.equals(this.offlineAttributes, witness.offlineAttributes) &&
@@ -3087,7 +3194,7 @@ public class Witness {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
 
 
@@ -3117,6 +3224,8 @@ public class Witness {
     sb.append("    declinedDateTime: ").append(toIndentedString(declinedDateTime)).append("\n");
     sb.append("    declinedReason: ").append(toIndentedString(declinedReason)).append("\n");
     sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
+    sb.append("    delegatedBy: ").append(toIndentedString(delegatedBy)).append("\n");
+    sb.append("    delegatedTo: ").append(toIndentedString(delegatedTo)).append("\n");
     sb.append("    deliveredDateTime: ").append(toIndentedString(deliveredDateTime)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
@@ -3149,6 +3258,7 @@ public class Witness {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    notaryId: ").append(toIndentedString(notaryId)).append("\n");
+    sb.append("    notarySignerEmailSent: ").append(toIndentedString(notarySignerEmailSent)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    offlineAttributes: ").append(toIndentedString(offlineAttributes)).append("\n");

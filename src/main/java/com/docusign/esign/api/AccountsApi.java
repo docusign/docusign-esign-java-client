@@ -454,54 +454,6 @@ public class AccountsApi {
       }
 
   /**
-   * Creates a customized report.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param reportInProductRunRequest  (optional)
-   * @return ReportInProductSaveResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ReportInProductSaveResponse createReportInProductCreate(String accountId, ReportInProductRunRequest reportInProductRunRequest) throws ApiException {
-    Object localVarPostBody = reportInProductRunRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createReportInProductCreate");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReportInProductSaveResponse> localVarReturnType = new GenericType<ReportInProductSaveResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
    * Deletes the specified account..
    * This closes the specified account. You must be an account admin to close your account. Once closed, an account must be reopened by DocuSign.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1112,60 +1064,6 @@ public class AccountsApi {
 
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
-
-  /**
-   * Removes a customized report.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param id  (required)
-   * @return ReportInProductSaveResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ReportInProductSaveResponse deleteReportInProduct(String accountId, String id) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteReportInProduct");
-    }
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling deleteReportInProduct");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports/{id}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReportInProductSaveResponse> localVarReturnType = new GenericType<ReportInProductSaveResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
 
   /**
    * Get the list of identity verification options for an account.
@@ -2725,78 +2623,63 @@ public class AccountsApi {
     GenericType<ProvisioningInformation> localVarReturnType = new GenericType<ProvisioningInformation>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
+  /// <summary>
+  /// Returns whether or not the specified email domain is reserved/claimed. 
+  /// </summary>
 
-  /**
-   * Gets the specified report.
+ /**
+  * GetReservedDomainExistenceOptions Class.
+  *
+  **/
+  public class GetReservedDomainExistenceOptions
+  {
+  private String emailDomain = null;
+  
+ /**
+  * setEmailDomain method.
+  */
+  public void setEmailDomain(String emailDomain) {
+    this.emailDomain = emailDomain;
+  }
+
+ /**
+  * getEmailDomain method.
+  *
+  * @return String
+  */
+  public String getEmailDomain() {
+    return this.emailDomain;
+  }
+  }
+
+   /**
+   * Returns whether or not the specified email domain is reserved/claimed..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param id  (required)
-   * @return ReportInProductGet
+   * @return ReservedDomainExistence
+   */ 
+  public ReservedDomainExistence getReservedDomainExistence(String accountId) throws ApiException {
+    return getReservedDomainExistence(accountId, null);
+  }
+
+  /**
+   * Returns whether or not the specified email domain is reserved/claimed..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return ReservedDomainExistence
    * @throws ApiException if fails to make API call
    */
-  public ReportInProductGet getReportInProduct(String accountId, String id) throws ApiException {
+  public ReservedDomainExistence getReservedDomainExistence(String accountId, AccountsApi.GetReservedDomainExistenceOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getReportInProduct");
-    }
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling getReportInProduct");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getReservedDomainExistence");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports/{id}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReportInProductGet> localVarReturnType = new GenericType<ReportInProductGet>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Gets the descriptors for all of an account&#39;s active reports (for listings).
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return ReportInProductList
-   * @throws ApiException if fails to make API call
-   */
-  public ReportInProductList getReportInProductList(String accountId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getReportInProductList");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports"
+    String localVarPath = "/v2.1/accounts/{accountId}/reserved_domains"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
@@ -2805,7 +2688,9 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_domain", options.emailDomain));
+    }
 
     
 
@@ -2823,7 +2708,7 @@ public class AccountsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
-    GenericType<ReportInProductList> localVarReturnType = new GenericType<ReportInProductList>() {};
+    GenericType<ReservedDomainExistence> localVarReturnType = new GenericType<ReservedDomainExistence>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
@@ -4730,156 +4615,6 @@ public class AccountsApi {
     GenericType<PermissionProfile> localVarReturnType = new GenericType<PermissionProfile>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
-
-  /**
-   * Returns the result set from running the specified report.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param reportInProductRunRequest  (optional)
-   * @return ReportInProductRunResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ReportInProductRunResponse updateReportInProductRunResults(String accountId, ReportInProductRunRequest reportInProductRunRequest) throws ApiException {
-    Object localVarPostBody = reportInProductRunRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateReportInProductRunResults");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports/report_results"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReportInProductRunResponse> localVarReturnType = new GenericType<ReportInProductRunResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Saves a customized report.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param id  (required)
-   * @param reportInProductRunRequest  (optional)
-   * @return ReportInProductSaveResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ReportInProductSaveResponse updateReportInProductSave(String accountId, String id, ReportInProductRunRequest reportInProductRunRequest) throws ApiException {
-    Object localVarPostBody = reportInProductRunRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateReportInProductSave");
-    }
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling updateReportInProductSave");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports/{id}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReportInProductSaveResponse> localVarReturnType = new GenericType<ReportInProductSaveResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
-   * Returns the specified report as a CSV string.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param reportInProductCsvRunRequest  (optional)
-   * @throws ApiException if fails to make API call
-   */
-  public void updateReportResultsCsv(String accountId, ReportInProductCsvRunRequest reportInProductCsvRunRequest) throws ApiException {
-    Object localVarPostBody = reportInProductCsvRunRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateReportResultsCsv");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reports/report_results_csv"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-  }
 
   /**
    * Updates the account settings for an account..

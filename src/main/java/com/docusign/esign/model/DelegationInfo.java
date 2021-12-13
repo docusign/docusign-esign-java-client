@@ -9,30 +9,30 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * ConnectUserInfo.
+ * DelegationInfo.
  *
  */
 
-public class ConnectUserInfo {
-  @JsonProperty("email")
+public class DelegationInfo {
+  @JsonProperty("Email")
   private String email = null;
 
-  @JsonProperty("isIncluded")
-  private String isIncluded = null;
+  @JsonProperty("Name")
+  private String name = null;
 
-  @JsonProperty("userId")
+  @JsonProperty("UserAuthorizationId")
+  private String userAuthorizationId = null;
+
+  @JsonProperty("UserId")
   private String userId = null;
-
-  @JsonProperty("userName")
-  private String userName = null;
 
 
   /**
    * email.
    *
-   * @return ConnectUserInfo
+   * @return DelegationInfo
    **/
-  public ConnectUserInfo email(String email) {
+  public DelegationInfo email(String email) {
     this.email = email;
     return this;
   }
@@ -55,38 +55,65 @@ public class ConnectUserInfo {
 
 
   /**
-   * isIncluded.
+   * name.
    *
-   * @return ConnectUserInfo
+   * @return DelegationInfo
    **/
-  public ConnectUserInfo isIncluded(String isIncluded) {
-    this.isIncluded = isIncluded;
+  public DelegationInfo name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
    * .
-   * @return isIncluded
+   * @return name
    **/
   @ApiModelProperty(value = "")
-  public String getIsIncluded() {
-    return isIncluded;
+  public String getName() {
+    return name;
   }
 
   /**
-   * setIsIncluded.
+   * setName.
    **/
-  public void setIsIncluded(String isIncluded) {
-    this.isIncluded = isIncluded;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  /**
+   * userAuthorizationId.
+   *
+   * @return DelegationInfo
+   **/
+  public DelegationInfo userAuthorizationId(String userAuthorizationId) {
+    this.userAuthorizationId = userAuthorizationId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return userAuthorizationId
+   **/
+  @ApiModelProperty(value = "")
+  public String getUserAuthorizationId() {
+    return userAuthorizationId;
+  }
+
+  /**
+   * setUserAuthorizationId.
+   **/
+  public void setUserAuthorizationId(String userAuthorizationId) {
+    this.userAuthorizationId = userAuthorizationId;
   }
 
 
   /**
    * userId.
    *
-   * @return ConnectUserInfo
+   * @return DelegationInfo
    **/
-  public ConnectUserInfo userId(String userId) {
+  public DelegationInfo userId(String userId) {
     this.userId = userId;
     return this;
   }
@@ -109,33 +136,6 @@ public class ConnectUserInfo {
 
 
   /**
-   * userName.
-   *
-   * @return ConnectUserInfo
-   **/
-  public ConnectUserInfo userName(String userName) {
-    this.userName = userName;
-    return this;
-  }
-
-  /**
-   * .
-   * @return userName
-   **/
-  @ApiModelProperty(value = "")
-  public String getUserName() {
-    return userName;
-  }
-
-  /**
-   * setUserName.
-   **/
-  public void setUserName(String userName) {
-    this.userName = userName;
-  }
-
-
-  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -148,11 +148,11 @@ public class ConnectUserInfo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ConnectUserInfo connectUserInfo = (ConnectUserInfo) o;
-    return Objects.equals(this.email, connectUserInfo.email) &&
-        Objects.equals(this.isIncluded, connectUserInfo.isIncluded) &&
-        Objects.equals(this.userId, connectUserInfo.userId) &&
-        Objects.equals(this.userName, connectUserInfo.userName);
+    DelegationInfo delegationInfo = (DelegationInfo) o;
+    return Objects.equals(this.email, delegationInfo.email) &&
+        Objects.equals(this.name, delegationInfo.name) &&
+        Objects.equals(this.userAuthorizationId, delegationInfo.userAuthorizationId) &&
+        Objects.equals(this.userId, delegationInfo.userId);
   }
 
   /**
@@ -160,7 +160,7 @@ public class ConnectUserInfo {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(email, isIncluded, userId, userName);
+    return Objects.hash(email, name, userAuthorizationId, userId);
   }
 
 
@@ -170,12 +170,12 @@ public class ConnectUserInfo {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ConnectUserInfo {\n");
+    sb.append("class DelegationInfo {\n");
     
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    isIncluded: ").append(toIndentedString(isIncluded)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    userAuthorizationId: ").append(toIndentedString(userAuthorizationId)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -60,74 +60,21 @@ public class OrganizationsApi {
    * @param reportCorrelationId  (required)
    * @throws ApiException if fails to make API call
    */
-  public void deleteReport(String organizationId, String reportCorrelationId) throws ApiException {
+  public void getReportV2(String organizationId, String reportCorrelationId) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'organizationId' is set
     if (organizationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'organizationId' when calling deleteReport");
+      throw new ApiException(400, "Missing the required parameter 'organizationId' when calling getReportV2");
     }
     
     // verify the required parameter 'reportCorrelationId' is set
     if (reportCorrelationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'reportCorrelationId' when calling deleteReport");
+      throw new ApiException(400, "Missing the required parameter 'reportCorrelationId' when calling getReportV2");
     }
     
     // create path and map variables
-    String localVarPath = "/v2.1/organization_reporting/{organizationId}/reports/{reportCorrelationId}"
-      .replaceAll("\\{" + "organizationId" + "\\}", apiClient.escapeString(organizationId.toString()))
-      .replaceAll("\\{" + "reportCorrelationId" + "\\}", apiClient.escapeString(reportCorrelationId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
-  }
-
-  /**
-   * Retrieves org level report by correlation id and site..
-   * 
-   * @param organizationId  (required)
-   * @param reportCorrelationId  (required)
-   * @throws ApiException if fails to make API call
-   */
-  public void getReport(String organizationId, String reportCorrelationId) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'organizationId' is set
-    if (organizationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'organizationId' when calling getReport");
-    }
-    
-    // verify the required parameter 'reportCorrelationId' is set
-    if (reportCorrelationId == null) {
-      throw new ApiException(400, "Missing the required parameter 'reportCorrelationId' when calling getReport");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/organization_reporting/{organizationId}/reports/{reportCorrelationId}"
+    String localVarPath = "/v2.1/organization_reporting/{organizationId}/reportsv2/{reportCorrelationId}"
       .replaceAll("\\{" + "organizationId" + "\\}", apiClient.escapeString(organizationId.toString()))
       .replaceAll("\\{" + "reportCorrelationId" + "\\}", apiClient.escapeString(reportCorrelationId.toString()));
 
