@@ -419,8 +419,8 @@ public class ConnectApi {
   public class GetConnectAllUsersOptions
   {
   private String count = null;
+  private String domainUsersOnly = null;
   private String emailSubstring = null;
-  private String isRecipientConnectConfig = null;
   private String startPosition = null;
   private String status = null;
   private String userNameSubstring = null;
@@ -442,6 +442,22 @@ public class ConnectApi {
   }
   
  /**
+  * setDomainUsersOnly method.
+  */
+  public void setDomainUsersOnly(String domainUsersOnly) {
+    this.domainUsersOnly = domainUsersOnly;
+  }
+
+ /**
+  * getDomainUsersOnly method.
+  *
+  * @return String
+  */
+  public String getDomainUsersOnly() {
+    return this.domainUsersOnly;
+  }
+  
+ /**
   * setEmailSubstring method.
   */
   public void setEmailSubstring(String emailSubstring) {
@@ -455,22 +471,6 @@ public class ConnectApi {
   */
   public String getEmailSubstring() {
     return this.emailSubstring;
-  }
-  
- /**
-  * setIsRecipientConnectConfig method.
-  */
-  public void setIsRecipientConnectConfig(String isRecipientConnectConfig) {
-    this.isRecipientConnectConfig = isRecipientConnectConfig;
-  }
-
- /**
-  * getIsRecipientConnectConfig method.
-  *
-  * @return String
-  */
-  public String getIsRecipientConnectConfig() {
-    return this.isRecipientConnectConfig;
   }
   
  /**
@@ -525,8 +525,8 @@ public class ConnectApi {
    /**
    * Returns all users from the configured Connect service..
    * 
-   * @param accountId  (required)
-   * @param connectId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param connectId The ID of the custom Connect configuration being accessed. (required)
    * @return IntegratedConnectUserInfoList
    */ 
   public IntegratedConnectUserInfoList getConnectAllUsers(String accountId, String connectId) throws ApiException {
@@ -536,8 +536,8 @@ public class ConnectApi {
   /**
    * Returns all users from the configured Connect service..
    * 
-   * @param accountId  (required)
-   * @param connectId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param connectId The ID of the custom Connect configuration being accessed. (required)
    * @param options for modifying the method behavior.
    * @return IntegratedConnectUserInfoList
    * @throws ApiException if fails to make API call
@@ -569,9 +569,9 @@ public class ConnectApi {
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
     }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
+      localVarQueryParams.addAll(apiClient.parameterToPair("domain_users_only", options.domainUsersOnly));
     }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("is_recipient_connect_config", options.isRecipientConnectConfig));
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }if (options != null) {

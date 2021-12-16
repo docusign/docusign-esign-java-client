@@ -43,6 +43,9 @@ public class ConnectCustomConfiguration {
   @JsonProperty("eventData")
   private ConnectEventData eventData = null;
 
+  @JsonProperty("events")
+  private java.util.List<String> events = null;
+
   @JsonProperty("externalFolderId")
   private String externalFolderId = null;
 
@@ -381,6 +384,46 @@ public class ConnectCustomConfiguration {
    **/
   public void setEventData(ConnectEventData eventData) {
     this.eventData = eventData;
+  }
+
+
+  /**
+   * events.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration events(java.util.List<String> events) {
+    this.events = events;
+    return this;
+  }
+  
+  /**
+   * addEventsItem.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration addEventsItem(String eventsItem) {
+    if (this.events == null) {
+      this.events = new java.util.ArrayList<String>();
+    }
+    this.events.add(eventsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return events
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<String> getEvents() {
+    return events;
+  }
+
+  /**
+   * setEvents.
+   **/
+  public void setEvents(java.util.List<String> events) {
+    this.events = events;
   }
 
 
@@ -1215,6 +1258,7 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.enableLog, connectCustomConfiguration.enableLog) &&
         Objects.equals(this.envelopeEvents, connectCustomConfiguration.envelopeEvents) &&
         Objects.equals(this.eventData, connectCustomConfiguration.eventData) &&
+        Objects.equals(this.events, connectCustomConfiguration.events) &&
         Objects.equals(this.externalFolderId, connectCustomConfiguration.externalFolderId) &&
         Objects.equals(this.externalFolderLabel, connectCustomConfiguration.externalFolderLabel) &&
         Objects.equals(this.includeCertificateOfCompletion, connectCustomConfiguration.includeCertificateOfCompletion) &&
@@ -1250,7 +1294,7 @@ public class ConnectCustomConfiguration {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, configurationType, connectId, deliveryMode, enableLog, envelopeEvents, eventData, externalFolderId, externalFolderLabel, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, configurationType, connectId, deliveryMode, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1271,6 +1315,7 @@ public class ConnectCustomConfiguration {
     sb.append("    enableLog: ").append(toIndentedString(enableLog)).append("\n");
     sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
     sb.append("    eventData: ").append(toIndentedString(eventData)).append("\n");
+    sb.append("    events: ").append(toIndentedString(events)).append("\n");
     sb.append("    externalFolderId: ").append(toIndentedString(externalFolderId)).append("\n");
     sb.append("    externalFolderLabel: ").append(toIndentedString(externalFolderLabel)).append("\n");
     sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");

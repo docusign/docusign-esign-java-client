@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ExternalPrimaryAccountRecipientAuthRequirements;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -25,6 +26,9 @@ public class LinkedExternalPrimaryAccount {
 
   @JsonProperty("linkId")
   private String linkId = null;
+
+  @JsonProperty("recipientAuthRequirements")
+  private ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements = null;
 
   @JsonProperty("status")
   private String status = null;
@@ -142,6 +146,33 @@ public class LinkedExternalPrimaryAccount {
 
 
   /**
+   * recipientAuthRequirements.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount recipientAuthRequirements(ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements) {
+    this.recipientAuthRequirements = recipientAuthRequirements;
+    return this;
+  }
+
+  /**
+   * Get recipientAuthRequirements.
+   * @return recipientAuthRequirements
+   **/
+  @ApiModelProperty(value = "")
+  public ExternalPrimaryAccountRecipientAuthRequirements getRecipientAuthRequirements() {
+    return recipientAuthRequirements;
+  }
+
+  /**
+   * setRecipientAuthRequirements.
+   **/
+  public void setRecipientAuthRequirements(ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements) {
+    this.recipientAuthRequirements = recipientAuthRequirements;
+  }
+
+
+  /**
    * status.
    *
    * @return LinkedExternalPrimaryAccount
@@ -213,6 +244,7 @@ public class LinkedExternalPrimaryAccount {
         Objects.equals(this.configurationId, linkedExternalPrimaryAccount.configurationId) &&
         Objects.equals(this.email, linkedExternalPrimaryAccount.email) &&
         Objects.equals(this.linkId, linkedExternalPrimaryAccount.linkId) &&
+        Objects.equals(this.recipientAuthRequirements, linkedExternalPrimaryAccount.recipientAuthRequirements) &&
         Objects.equals(this.status, linkedExternalPrimaryAccount.status) &&
         Objects.equals(this.userId, linkedExternalPrimaryAccount.userId);
   }
@@ -222,7 +254,7 @@ public class LinkedExternalPrimaryAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, configurationId, email, linkId, status, userId);
+    return Objects.hash(accountName, configurationId, email, linkId, recipientAuthRequirements, status, userId);
   }
 
 
@@ -238,6 +270,7 @@ public class LinkedExternalPrimaryAccount {
     sb.append("    configurationId: ").append(toIndentedString(configurationId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    linkId: ").append(toIndentedString(linkId)).append("\n");
+    sb.append("    recipientAuthRequirements: ").append(toIndentedString(recipientAuthRequirements)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");

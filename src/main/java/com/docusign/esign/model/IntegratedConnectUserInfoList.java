@@ -48,10 +48,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * The last position in the result set. .
    * @return endPosition
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -75,10 +75,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -102,10 +102,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * The postal code for the billing address..
    * @return previousUri
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -129,10 +129,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * The number of results returned in this response. .
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -156,10 +156,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * Starting position of the current result set..
    * @return startPosition
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -183,10 +183,10 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * .
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }

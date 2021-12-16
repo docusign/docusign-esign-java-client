@@ -3662,9 +3662,9 @@ public class EnvelopesApi {
    /**
    * Get Responsive HTML for a document in an envelope..
    * 
-   * @param accountId  (required)
-   * @param envelopeId  (required)
-   * @param documentId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
    * @return DocumentHtmlDefinitionOriginals
    */ 
   public DocumentHtmlDefinitionOriginals getDocumentResponsiveHtml(String accountId, String envelopeId, String documentId) throws ApiException {
@@ -3674,9 +3674,9 @@ public class EnvelopesApi {
   /**
    * Get Responsive HTML for a document in an envelope..
    * 
-   * @param accountId  (required)
-   * @param envelopeId  (required)
-   * @param documentId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param documentId The ID of the document being accessed. (required)
    * @param options for modifying the method behavior.
    * @return DocumentHtmlDefinitionOriginals
    * @throws ApiException if fails to make API call
@@ -5112,8 +5112,8 @@ public class EnvelopesApi {
    /**
    * Get Responsive HTML for all documents in an envelope..
    * 
-   * @param accountId  (required)
-   * @param envelopeId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @return DocumentHtmlDefinitionOriginals
    */ 
   public DocumentHtmlDefinitionOriginals getResponsiveHtml(String accountId, String envelopeId) throws ApiException {
@@ -5123,8 +5123,8 @@ public class EnvelopesApi {
   /**
    * Get Responsive HTML for all documents in an envelope..
    * 
-   * @param accountId  (required)
-   * @param envelopeId  (required)
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param options for modifying the method behavior.
    * @return DocumentHtmlDefinitionOriginals
    * @throws ApiException if fails to make API call
