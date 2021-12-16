@@ -46,6 +46,9 @@ public class Contact {
   @JsonProperty("organization")
   private String organization = null;
 
+  @JsonProperty("roomContactType")
+  private String roomContactType = null;
+
   @JsonProperty("shared")
   private String shared = null;
 
@@ -353,6 +356,33 @@ public class Contact {
 
 
   /**
+   * roomContactType.
+   *
+   * @return Contact
+   **/
+  public Contact roomContactType(String roomContactType) {
+    this.roomContactType = roomContactType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return roomContactType
+   **/
+  @ApiModelProperty(value = "")
+  public String getRoomContactType() {
+    return roomContactType;
+  }
+
+  /**
+   * setRoomContactType.
+   **/
+  public void setRoomContactType(String roomContactType) {
+    this.roomContactType = roomContactType;
+  }
+
+
+  /**
    * shared.
    *
    * @return Contact
@@ -457,6 +487,7 @@ public class Contact {
         Objects.equals(this.isOwner, contact.isOwner) &&
         Objects.equals(this.name, contact.name) &&
         Objects.equals(this.organization, contact.organization) &&
+        Objects.equals(this.roomContactType, contact.roomContactType) &&
         Objects.equals(this.shared, contact.shared) &&
         Objects.equals(this.signingGroup, contact.signingGroup) &&
         Objects.equals(this.signingGroupName, contact.signingGroupName);
@@ -467,7 +498,7 @@ public class Contact {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, organization, shared, signingGroup, signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, organization, roomContactType, shared, signingGroup, signingGroupName);
   }
 
 
@@ -489,6 +520,7 @@ public class Contact {
     sb.append("    isOwner: ").append(toIndentedString(isOwner)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
+    sb.append("    roomContactType: ").append(toIndentedString(roomContactType)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    signingGroup: ").append(toIndentedString(signingGroup)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");

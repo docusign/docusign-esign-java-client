@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.DelayedRoutingApiModel;
 import com.docusign.esign.model.RecipientRouting;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -20,6 +21,9 @@ public class WorkflowStep {
 
   @JsonProperty("completedDate")
   private String completedDate = null;
+
+  @JsonProperty("delayedRouting")
+  private DelayedRoutingApiModel delayedRouting = null;
 
   @JsonProperty("itemId")
   private String itemId = null;
@@ -91,6 +95,33 @@ public class WorkflowStep {
    **/
   public void setCompletedDate(String completedDate) {
     this.completedDate = completedDate;
+  }
+
+
+  /**
+   * delayedRouting.
+   *
+   * @return WorkflowStep
+   **/
+  public WorkflowStep delayedRouting(DelayedRoutingApiModel delayedRouting) {
+    this.delayedRouting = delayedRouting;
+    return this;
+  }
+
+  /**
+   * Get delayedRouting.
+   * @return delayedRouting
+   **/
+  @ApiModelProperty(value = "")
+  public DelayedRoutingApiModel getDelayedRouting() {
+    return delayedRouting;
+  }
+
+  /**
+   * setDelayedRouting.
+   **/
+  public void setDelayedRouting(DelayedRoutingApiModel delayedRouting) {
+    this.delayedRouting = delayedRouting;
   }
 
 
@@ -272,6 +303,7 @@ public class WorkflowStep {
     WorkflowStep workflowStep = (WorkflowStep) o;
     return Objects.equals(this.action, workflowStep.action) &&
         Objects.equals(this.completedDate, workflowStep.completedDate) &&
+        Objects.equals(this.delayedRouting, workflowStep.delayedRouting) &&
         Objects.equals(this.itemId, workflowStep.itemId) &&
         Objects.equals(this.recipientRouting, workflowStep.recipientRouting) &&
         Objects.equals(this.status, workflowStep.status) &&
@@ -285,7 +317,7 @@ public class WorkflowStep {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(action, completedDate, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
+    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
   }
 
 
@@ -299,6 +331,7 @@ public class WorkflowStep {
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    completedDate: ").append(toIndentedString(completedDate)).append("\n");
+    sb.append("    delayedRouting: ").append(toIndentedString(delayedRouting)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    recipientRouting: ").append(toIndentedString(recipientRouting)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");

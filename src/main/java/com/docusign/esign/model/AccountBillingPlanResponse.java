@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.AccountAddress;
 import com.docusign.esign.model.AccountBillingPlan;
+import com.docusign.esign.model.BillingEntityInformationResponse;
 import com.docusign.esign.model.BillingPlan;
 import com.docusign.esign.model.CreditCardInformation;
 import com.docusign.esign.model.DirectDebitProcessorInformation;
@@ -45,8 +46,8 @@ public class AccountBillingPlanResponse {
   @JsonProperty("downgradeRequestInformation")
   private DowngradeRequestInformation downgradeRequestInformation = null;
 
-  @JsonProperty("entityName")
-  private String entityName = null;
+  @JsonProperty("entityInformation")
+  private BillingEntityInformationResponse entityInformation = null;
 
   @JsonProperty("paymentMethod")
   private String paymentMethod = null;
@@ -251,29 +252,29 @@ public class AccountBillingPlanResponse {
 
 
   /**
-   * entityName.
+   * entityInformation.
    *
    * @return AccountBillingPlanResponse
    **/
-  public AccountBillingPlanResponse entityName(String entityName) {
-    this.entityName = entityName;
+  public AccountBillingPlanResponse entityInformation(BillingEntityInformationResponse entityInformation) {
+    this.entityInformation = entityInformation;
     return this;
   }
 
   /**
-   * .
-   * @return entityName
+   * Get entityInformation.
+   * @return entityInformation
    **/
   @ApiModelProperty(value = "")
-  public String getEntityName() {
-    return entityName;
+  public BillingEntityInformationResponse getEntityInformation() {
+    return entityInformation;
   }
 
   /**
-   * setEntityName.
+   * setEntityInformation.
    **/
-  public void setEntityName(String entityName) {
-    this.entityName = entityName;
+  public void setEntityInformation(BillingEntityInformationResponse entityInformation) {
+    this.entityInformation = entityInformation;
   }
 
 
@@ -419,7 +420,7 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation) &&
         Objects.equals(this.downgradePlanInformation, accountBillingPlanResponse.downgradePlanInformation) &&
         Objects.equals(this.downgradeRequestInformation, accountBillingPlanResponse.downgradeRequestInformation) &&
-        Objects.equals(this.entityName, accountBillingPlanResponse.entityName) &&
+        Objects.equals(this.entityInformation, accountBillingPlanResponse.entityInformation) &&
         Objects.equals(this.paymentMethod, accountBillingPlanResponse.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
         Objects.equals(this.referralInformation, accountBillingPlanResponse.referralInformation) &&
@@ -431,7 +432,7 @@ public class AccountBillingPlanResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityName, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
   }
 
 
@@ -450,7 +451,7 @@ public class AccountBillingPlanResponse {
     sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    downgradeRequestInformation: ").append(toIndentedString(downgradeRequestInformation)).append("\n");
-    sb.append("    entityName: ").append(toIndentedString(entityName)).append("\n");
+    sb.append("    entityInformation: ").append(toIndentedString(entityInformation)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");

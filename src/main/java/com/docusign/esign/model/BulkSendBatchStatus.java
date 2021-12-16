@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.BulkSendEnvelopesInfo;
 import com.docusign.esign.model.BulkSendErrorStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -29,6 +30,9 @@ public class BulkSendBatchStatus {
 
   @JsonProperty("envelopeIdOrTemplateId")
   private String envelopeIdOrTemplateId = null;
+
+  @JsonProperty("envelopesInfo")
+  private BulkSendEnvelopesInfo envelopesInfo = null;
 
   @JsonProperty("envelopesUri")
   private String envelopesUri = null;
@@ -203,6 +207,33 @@ public class BulkSendBatchStatus {
    **/
   public void setEnvelopeIdOrTemplateId(String envelopeIdOrTemplateId) {
     this.envelopeIdOrTemplateId = envelopeIdOrTemplateId;
+  }
+
+
+  /**
+   * envelopesInfo.
+   *
+   * @return BulkSendBatchStatus
+   **/
+  public BulkSendBatchStatus envelopesInfo(BulkSendEnvelopesInfo envelopesInfo) {
+    this.envelopesInfo = envelopesInfo;
+    return this;
+  }
+
+  /**
+   * Get envelopesInfo.
+   * @return envelopesInfo
+   **/
+  @ApiModelProperty(value = "")
+  public BulkSendEnvelopesInfo getEnvelopesInfo() {
+    return envelopesInfo;
+  }
+
+  /**
+   * setEnvelopesInfo.
+   **/
+  public void setEnvelopesInfo(BulkSendEnvelopesInfo envelopesInfo) {
+    this.envelopesInfo = envelopesInfo;
   }
 
 
@@ -468,6 +499,7 @@ public class BulkSendBatchStatus {
         Objects.equals(this.batchSize, bulkSendBatchStatus.batchSize) &&
         Objects.equals(this.bulkErrors, bulkSendBatchStatus.bulkErrors) &&
         Objects.equals(this.envelopeIdOrTemplateId, bulkSendBatchStatus.envelopeIdOrTemplateId) &&
+        Objects.equals(this.envelopesInfo, bulkSendBatchStatus.envelopesInfo) &&
         Objects.equals(this.envelopesUri, bulkSendBatchStatus.envelopesUri) &&
         Objects.equals(this.failed, bulkSendBatchStatus.failed) &&
         Objects.equals(this.mailingListId, bulkSendBatchStatus.mailingListId) &&
@@ -484,7 +516,7 @@ public class BulkSendBatchStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
+    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
   }
 
 
@@ -501,6 +533,7 @@ public class BulkSendBatchStatus {
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    bulkErrors: ").append(toIndentedString(bulkErrors)).append("\n");
     sb.append("    envelopeIdOrTemplateId: ").append(toIndentedString(envelopeIdOrTemplateId)).append("\n");
+    sb.append("    envelopesInfo: ").append(toIndentedString(envelopesInfo)).append("\n");
     sb.append("    envelopesUri: ").append(toIndentedString(envelopesUri)).append("\n");
     sb.append("    failed: ").append(toIndentedString(failed)).append("\n");
     sb.append("    mailingListId: ").append(toIndentedString(mailingListId)).append("\n");

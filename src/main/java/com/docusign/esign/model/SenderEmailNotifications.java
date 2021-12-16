@@ -17,6 +17,9 @@ public class SenderEmailNotifications {
   @JsonProperty("changedSigner")
   private String changedSigner = null;
 
+  @JsonProperty("clickwrapResponsesLimitNotificationEmail")
+  private String clickwrapResponsesLimitNotificationEmail = null;
+
   @JsonProperty("commentsOnlyPrivateAndMention")
   private String commentsOnlyPrivateAndMention = null;
 
@@ -72,6 +75,33 @@ public class SenderEmailNotifications {
    **/
   public void setChangedSigner(String changedSigner) {
     this.changedSigner = changedSigner;
+  }
+
+
+  /**
+   * clickwrapResponsesLimitNotificationEmail.
+   *
+   * @return SenderEmailNotifications
+   **/
+  public SenderEmailNotifications clickwrapResponsesLimitNotificationEmail(String clickwrapResponsesLimitNotificationEmail) {
+    this.clickwrapResponsesLimitNotificationEmail = clickwrapResponsesLimitNotificationEmail;
+    return this;
+  }
+
+  /**
+   * .
+   * @return clickwrapResponsesLimitNotificationEmail
+   **/
+  @ApiModelProperty(value = "")
+  public String getClickwrapResponsesLimitNotificationEmail() {
+    return clickwrapResponsesLimitNotificationEmail;
+  }
+
+  /**
+   * setClickwrapResponsesLimitNotificationEmail.
+   **/
+  public void setClickwrapResponsesLimitNotificationEmail(String clickwrapResponsesLimitNotificationEmail) {
+    this.clickwrapResponsesLimitNotificationEmail = clickwrapResponsesLimitNotificationEmail;
   }
 
 
@@ -360,6 +390,7 @@ public class SenderEmailNotifications {
     }
     SenderEmailNotifications senderEmailNotifications = (SenderEmailNotifications) o;
     return Objects.equals(this.changedSigner, senderEmailNotifications.changedSigner) &&
+        Objects.equals(this.clickwrapResponsesLimitNotificationEmail, senderEmailNotifications.clickwrapResponsesLimitNotificationEmail) &&
         Objects.equals(this.commentsOnlyPrivateAndMention, senderEmailNotifications.commentsOnlyPrivateAndMention) &&
         Objects.equals(this.commentsReceiveAll, senderEmailNotifications.commentsReceiveAll) &&
         Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
@@ -377,7 +408,7 @@ public class SenderEmailNotifications {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(changedSigner, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
+    return Objects.hash(changedSigner, clickwrapResponsesLimitNotificationEmail, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
 
 
@@ -390,6 +421,7 @@ public class SenderEmailNotifications {
     sb.append("class SenderEmailNotifications {\n");
     
     sb.append("    changedSigner: ").append(toIndentedString(changedSigner)).append("\n");
+    sb.append("    clickwrapResponsesLimitNotificationEmail: ").append(toIndentedString(clickwrapResponsesLimitNotificationEmail)).append("\n");
     sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention)).append("\n");
     sb.append("    commentsReceiveAll: ").append(toIndentedString(commentsReceiveAll)).append("\n");
     sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");

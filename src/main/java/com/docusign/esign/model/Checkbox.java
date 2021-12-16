@@ -177,6 +177,9 @@ public class Checkbox {
   @JsonProperty("nameMetadata")
   private PropertyMetadata nameMetadata = null;
 
+  @JsonProperty("originalValue")
+  private String originalValue = null;
+
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
@@ -290,6 +293,9 @@ public class Checkbox {
 
   @JsonProperty("underlineMetadata")
   private PropertyMetadata underlineMetadata = null;
+
+  @JsonProperty("value")
+  private String value = null;
 
   @JsonProperty("width")
   private String width = null;
@@ -1742,6 +1748,33 @@ public class Checkbox {
 
 
   /**
+   * originalValue.
+   *
+   * @return Checkbox
+   **/
+  public Checkbox originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
+
+  /**
+   * The initial value of the tab when it was sent to the recipient. .
+   * @return originalValue
+   **/
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  public String getOriginalValue() {
+    return originalValue;
+  }
+
+  /**
+   * setOriginalValue.
+   **/
+  public void setOriginalValue(String originalValue) {
+    this.originalValue = originalValue;
+  }
+
+
+  /**
    * pageNumber.
    *
    * @return Checkbox
@@ -2781,6 +2814,33 @@ public class Checkbox {
 
 
   /**
+   * value.
+   *
+   * @return Checkbox
+   **/
+  public Checkbox value(String value) {
+    this.value = value;
+    return this;
+  }
+
+  /**
+   * Specifies the value of the tab. .
+   * @return value
+   **/
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  public String getValue() {
+    return value;
+  }
+
+  /**
+   * setValue.
+   **/
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+
+  /**
    * width.
    *
    * @return Checkbox
@@ -3009,6 +3069,7 @@ public class Checkbox {
         Objects.equals(this.mergeFieldXml, checkbox.mergeFieldXml) &&
         Objects.equals(this.name, checkbox.name) &&
         Objects.equals(this.nameMetadata, checkbox.nameMetadata) &&
+        Objects.equals(this.originalValue, checkbox.originalValue) &&
         Objects.equals(this.pageNumber, checkbox.pageNumber) &&
         Objects.equals(this.pageNumberMetadata, checkbox.pageNumberMetadata) &&
         Objects.equals(this.recipientId, checkbox.recipientId) &&
@@ -3047,6 +3108,7 @@ public class Checkbox {
         Objects.equals(this.toolTipMetadata, checkbox.toolTipMetadata) &&
         Objects.equals(this.underline, checkbox.underline) &&
         Objects.equals(this.underlineMetadata, checkbox.underlineMetadata) &&
+        Objects.equals(this.value, checkbox.value) &&
         Objects.equals(this.width, checkbox.width) &&
         Objects.equals(this.widthMetadata, checkbox.widthMetadata) &&
         Objects.equals(this.xPosition, checkbox.xPosition) &&
@@ -3060,7 +3122,7 @@ public class Checkbox {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, selected, selectedMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, selected, selectedMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3125,6 +3187,7 @@ public class Checkbox {
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -3163,6 +3226,7 @@ public class Checkbox {
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ScheduledSendingApiModel;
 import com.docusign.esign.model.WorkflowStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -17,6 +18,12 @@ import io.swagger.annotations.ApiModelProperty;
 public class Workflow {
   @JsonProperty("currentWorkflowStepId")
   private String currentWorkflowStepId = null;
+
+  @JsonProperty("resumeDate")
+  private String resumeDate = null;
+
+  @JsonProperty("scheduledSending")
+  private ScheduledSendingApiModel scheduledSending = null;
 
   @JsonProperty("workflowStatus")
   private String workflowStatus = null;
@@ -49,6 +56,60 @@ public class Workflow {
    **/
   public void setCurrentWorkflowStepId(String currentWorkflowStepId) {
     this.currentWorkflowStepId = currentWorkflowStepId;
+  }
+
+
+  /**
+   * resumeDate.
+   *
+   * @return Workflow
+   **/
+  public Workflow resumeDate(String resumeDate) {
+    this.resumeDate = resumeDate;
+    return this;
+  }
+
+  /**
+   * .
+   * @return resumeDate
+   **/
+  @ApiModelProperty(value = "")
+  public String getResumeDate() {
+    return resumeDate;
+  }
+
+  /**
+   * setResumeDate.
+   **/
+  public void setResumeDate(String resumeDate) {
+    this.resumeDate = resumeDate;
+  }
+
+
+  /**
+   * scheduledSending.
+   *
+   * @return Workflow
+   **/
+  public Workflow scheduledSending(ScheduledSendingApiModel scheduledSending) {
+    this.scheduledSending = scheduledSending;
+    return this;
+  }
+
+  /**
+   * Get scheduledSending.
+   * @return scheduledSending
+   **/
+  @ApiModelProperty(value = "")
+  public ScheduledSendingApiModel getScheduledSending() {
+    return scheduledSending;
+  }
+
+  /**
+   * setScheduledSending.
+   **/
+  public void setScheduledSending(ScheduledSendingApiModel scheduledSending) {
+    this.scheduledSending = scheduledSending;
   }
 
 
@@ -134,6 +195,8 @@ public class Workflow {
     }
     Workflow workflow = (Workflow) o;
     return Objects.equals(this.currentWorkflowStepId, workflow.currentWorkflowStepId) &&
+        Objects.equals(this.resumeDate, workflow.resumeDate) &&
+        Objects.equals(this.scheduledSending, workflow.scheduledSending) &&
         Objects.equals(this.workflowStatus, workflow.workflowStatus) &&
         Objects.equals(this.workflowSteps, workflow.workflowSteps);
   }
@@ -143,7 +206,7 @@ public class Workflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currentWorkflowStepId, workflowStatus, workflowSteps);
+    return Objects.hash(currentWorkflowStepId, resumeDate, scheduledSending, workflowStatus, workflowSteps);
   }
 
 
@@ -156,6 +219,8 @@ public class Workflow {
     sb.append("class Workflow {\n");
     
     sb.append("    currentWorkflowStepId: ").append(toIndentedString(currentWorkflowStepId)).append("\n");
+    sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
+    sb.append("    scheduledSending: ").append(toIndentedString(scheduledSending)).append("\n");
     sb.append("    workflowStatus: ").append(toIndentedString(workflowStatus)).append("\n");
     sb.append("    workflowSteps: ").append(toIndentedString(workflowSteps)).append("\n");
     sb.append("}");

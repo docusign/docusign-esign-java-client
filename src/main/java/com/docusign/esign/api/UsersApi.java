@@ -64,6 +64,7 @@ public class UsersApi {
   {
   private String additionalInfo = null;
   private String count = null;
+  private String domainUsersOnly = null;
   private String email = null;
   private String emailSubstring = null;
   private String groupId = null;
@@ -104,6 +105,22 @@ public class UsersApi {
   */
   public String getCount() {
     return this.count;
+  }
+  
+ /**
+  * setDomainUsersOnly method.
+  */
+  public void setDomainUsersOnly(String domainUsersOnly) {
+    this.domainUsersOnly = domainUsersOnly;
+  }
+
+ /**
+  * getDomainUsersOnly method.
+  *
+  * @return String
+  */
+  public String getDomainUsersOnly() {
+    return this.domainUsersOnly;
   }
   
  /**
@@ -291,6 +308,8 @@ public class UsersApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("domain_users_only", options.domainUsersOnly));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
     }if (options != null) {
