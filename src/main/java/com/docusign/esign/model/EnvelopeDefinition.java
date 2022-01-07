@@ -7,6 +7,7 @@ import com.docusign.esign.model.CompositeTemplate;
 import com.docusign.esign.model.CustomFields;
 import com.docusign.esign.model.Document;
 import com.docusign.esign.model.EmailSettings;
+import com.docusign.esign.model.EnvelopeCustomMetadata;
 import com.docusign.esign.model.EnvelopeDocument;
 import com.docusign.esign.model.EnvelopeMetadata;
 import com.docusign.esign.model.EventNotification;
@@ -141,6 +142,9 @@ public class EnvelopeDefinition {
 
   @JsonProperty("envelopeAttachments")
   private java.util.List<Attachment> envelopeAttachments = null;
+
+  @JsonProperty("envelopeCustomMetadata")
+  private EnvelopeCustomMetadata envelopeCustomMetadata = null;
 
   @JsonProperty("envelopeDocuments")
   private java.util.List<EnvelopeDocument> envelopeDocuments = null;
@@ -1344,6 +1348,33 @@ public class EnvelopeDefinition {
    **/
   public void setEnvelopeAttachments(java.util.List<Attachment> envelopeAttachments) {
     this.envelopeAttachments = envelopeAttachments;
+  }
+
+
+  /**
+   * envelopeCustomMetadata.
+   *
+   * @return EnvelopeDefinition
+   **/
+  public EnvelopeDefinition envelopeCustomMetadata(EnvelopeCustomMetadata envelopeCustomMetadata) {
+    this.envelopeCustomMetadata = envelopeCustomMetadata;
+    return this;
+  }
+
+  /**
+   * Get envelopeCustomMetadata.
+   * @return envelopeCustomMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public EnvelopeCustomMetadata getEnvelopeCustomMetadata() {
+    return envelopeCustomMetadata;
+  }
+
+  /**
+   * setEnvelopeCustomMetadata.
+   **/
+  public void setEnvelopeCustomMetadata(EnvelopeCustomMetadata envelopeCustomMetadata) {
+    this.envelopeCustomMetadata = envelopeCustomMetadata;
   }
 
 
@@ -2827,6 +2858,7 @@ public class EnvelopeDefinition {
         Objects.equals(this.enableWetSign, envelopeDefinition.enableWetSign) &&
         Objects.equals(this.enforceSignerVisibility, envelopeDefinition.enforceSignerVisibility) &&
         Objects.equals(this.envelopeAttachments, envelopeDefinition.envelopeAttachments) &&
+        Objects.equals(this.envelopeCustomMetadata, envelopeDefinition.envelopeCustomMetadata) &&
         Objects.equals(this.envelopeDocuments, envelopeDefinition.envelopeDocuments) &&
         Objects.equals(this.envelopeId, envelopeDefinition.envelopeId) &&
         Objects.equals(this.envelopeIdStamping, envelopeDefinition.envelopeIdStamping) &&
@@ -2885,7 +2917,7 @@ public class EnvelopeDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -2934,6 +2966,7 @@ public class EnvelopeDefinition {
     sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
     sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
     sb.append("    envelopeAttachments: ").append(toIndentedString(envelopeAttachments)).append("\n");
+    sb.append("    envelopeCustomMetadata: ").append(toIndentedString(envelopeCustomMetadata)).append("\n");
     sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    envelopeIdStamping: ").append(toIndentedString(envelopeIdStamping)).append("\n");

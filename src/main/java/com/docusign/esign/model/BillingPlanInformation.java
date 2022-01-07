@@ -75,6 +75,9 @@ public class BillingPlanInformation {
   @JsonProperty("saleDiscountSeatPriceOverride")
   private String saleDiscountSeatPriceOverride = null;
 
+  @JsonProperty("taxExemptId")
+  private String taxExemptId = null;
+
 
   /**
    * appStoreReceipt.
@@ -563,6 +566,33 @@ public class BillingPlanInformation {
 
 
   /**
+   * taxExemptId.
+   *
+   * @return BillingPlanInformation
+   **/
+  public BillingPlanInformation taxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxExemptId
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxExemptId() {
+    return taxExemptId;
+  }
+
+  /**
+   * setTaxExemptId.
+   **/
+  public void setTaxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -593,7 +623,8 @@ public class BillingPlanInformation {
         Objects.equals(this.saleDiscountFixedAmount, billingPlanInformation.saleDiscountFixedAmount) &&
         Objects.equals(this.saleDiscountPercent, billingPlanInformation.saleDiscountPercent) &&
         Objects.equals(this.saleDiscountPeriods, billingPlanInformation.saleDiscountPeriods) &&
-        Objects.equals(this.saleDiscountSeatPriceOverride, billingPlanInformation.saleDiscountSeatPriceOverride);
+        Objects.equals(this.saleDiscountSeatPriceOverride, billingPlanInformation.saleDiscountSeatPriceOverride) &&
+        Objects.equals(this.taxExemptId, billingPlanInformation.taxExemptId);
   }
 
   /**
@@ -601,7 +632,7 @@ public class BillingPlanInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation, downgradeReason, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride);
+    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation, downgradeReason, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride, taxExemptId);
   }
 
 
@@ -631,6 +662,7 @@ public class BillingPlanInformation {
     sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
     sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
     sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
+    sb.append("    taxExemptId: ").append(toIndentedString(taxExemptId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

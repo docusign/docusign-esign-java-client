@@ -315,6 +315,7 @@ public class BillingApi {
   private String includeDowngradeInformation = null;
   private String includeMetadata = null;
   private String includeSuccessorPlans = null;
+  private String includeTaxExemptId = null;
   
  /**
   * setIncludeCreditCardInformation method.
@@ -379,6 +380,22 @@ public class BillingApi {
   public String getIncludeSuccessorPlans() {
     return this.includeSuccessorPlans;
   }
+  
+ /**
+  * setIncludeTaxExemptId method.
+  */
+  public void setIncludeTaxExemptId(String includeTaxExemptId) {
+    this.includeTaxExemptId = includeTaxExemptId;
+  }
+
+ /**
+  * getIncludeTaxExemptId method.
+  *
+  * @return String
+  */
+  public String getIncludeTaxExemptId() {
+    return this.includeTaxExemptId;
+  }
   }
 
    /**
@@ -425,6 +442,8 @@ public class BillingApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_metadata", options.includeMetadata));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_successor_plans", options.includeSuccessorPlans));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_tax_exempt_id", options.includeTaxExemptId));
     }
 
     

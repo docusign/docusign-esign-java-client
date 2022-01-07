@@ -65,6 +65,9 @@ public class NewAccountDefinition {
   @JsonProperty("socialAccountInformation")
   private SocialAccountInformation socialAccountInformation = null;
 
+  @JsonProperty("taxExemptId")
+  private String taxExemptId = null;
+
 
   /**
    * accountName.
@@ -445,6 +448,33 @@ public class NewAccountDefinition {
 
 
   /**
+   * taxExemptId.
+   *
+   * @return NewAccountDefinition
+   **/
+  public NewAccountDefinition taxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxExemptId
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxExemptId() {
+    return taxExemptId;
+  }
+
+  /**
+   * setTaxExemptId.
+   **/
+  public void setTaxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -471,7 +501,8 @@ public class NewAccountDefinition {
         Objects.equals(this.paymentProcessorInformation, newAccountDefinition.paymentProcessorInformation) &&
         Objects.equals(this.planInformation, newAccountDefinition.planInformation) &&
         Objects.equals(this.referralInformation, newAccountDefinition.referralInformation) &&
-        Objects.equals(this.socialAccountInformation, newAccountDefinition.socialAccountInformation);
+        Objects.equals(this.socialAccountInformation, newAccountDefinition.socialAccountInformation) &&
+        Objects.equals(this.taxExemptId, newAccountDefinition.taxExemptId);
   }
 
   /**
@@ -479,7 +510,7 @@ public class NewAccountDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, envelopePartitionId, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation);
+    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, envelopePartitionId, initialUser, paymentMethod, paymentProcessorInformation, planInformation, referralInformation, socialAccountInformation, taxExemptId);
   }
 
 
@@ -505,6 +536,7 @@ public class NewAccountDefinition {
     sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
     sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
+    sb.append("    taxExemptId: ").append(toIndentedString(taxExemptId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
