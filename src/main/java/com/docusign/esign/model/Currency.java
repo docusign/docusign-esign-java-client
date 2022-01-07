@@ -187,11 +187,17 @@ public class Currency {
   @JsonProperty("maxLengthMetadata")
   private PropertyMetadata maxLengthMetadata = null;
 
+  @JsonProperty("maxNumericalValue")
+  private String maxNumericalValue = null;
+
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
 
   @JsonProperty("mergeFieldXml")
   private String mergeFieldXml = null;
+
+  @JsonProperty("minNumericalValue")
+  private String minNumericalValue = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -1860,6 +1866,33 @@ public class Currency {
 
 
   /**
+   * maxNumericalValue.
+   *
+   * @return Currency
+   **/
+  public Currency maxNumericalValue(String maxNumericalValue) {
+    this.maxNumericalValue = maxNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return maxNumericalValue
+   **/
+  @ApiModelProperty(value = "")
+  public String getMaxNumericalValue() {
+    return maxNumericalValue;
+  }
+
+  /**
+   * setMaxNumericalValue.
+   **/
+  public void setMaxNumericalValue(String maxNumericalValue) {
+    this.maxNumericalValue = maxNumericalValue;
+  }
+
+
+  /**
    * mergeField.
    *
    * @return Currency
@@ -1910,6 +1943,33 @@ public class Currency {
    **/
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
+  }
+
+
+  /**
+   * minNumericalValue.
+   *
+   * @return Currency
+   **/
+  public Currency minNumericalValue(String minNumericalValue) {
+    this.minNumericalValue = minNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return minNumericalValue
+   **/
+  @ApiModelProperty(value = "")
+  public String getMinNumericalValue() {
+    return minNumericalValue;
+  }
+
+  /**
+   * setMinNumericalValue.
+   **/
+  public void setMinNumericalValue(String minNumericalValue) {
+    this.minNumericalValue = minNumericalValue;
   }
 
 
@@ -3373,8 +3433,10 @@ public class Currency {
         Objects.equals(this.lockedMetadata, currency.lockedMetadata) &&
         Objects.equals(this.maxLength, currency.maxLength) &&
         Objects.equals(this.maxLengthMetadata, currency.maxLengthMetadata) &&
+        Objects.equals(this.maxNumericalValue, currency.maxNumericalValue) &&
         Objects.equals(this.mergeField, currency.mergeField) &&
         Objects.equals(this.mergeFieldXml, currency.mergeFieldXml) &&
+        Objects.equals(this.minNumericalValue, currency.minNumericalValue) &&
         Objects.equals(this.name, currency.name) &&
         Objects.equals(this.nameMetadata, currency.nameMetadata) &&
         Objects.equals(this.numericalValue, currency.numericalValue) &&
@@ -3433,7 +3495,7 @@ public class Currency {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, numericalValue, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, maxNumericalValue, mergeField, mergeFieldXml, minNumericalValue, name, nameMetadata, numericalValue, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3501,8 +3563,10 @@ public class Currency {
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
     sb.append("    maxLength: ").append(toIndentedString(maxLength)).append("\n");
     sb.append("    maxLengthMetadata: ").append(toIndentedString(maxLengthMetadata)).append("\n");
+    sb.append("    maxNumericalValue: ").append(toIndentedString(maxNumericalValue)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
+    sb.append("    minNumericalValue: ").append(toIndentedString(minNumericalValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");

@@ -21,6 +21,12 @@ public class BulkSendBatchSummaries {
   @JsonProperty("bulkBatchSummaries")
   private java.util.List<BulkSendBatchSummary> bulkBatchSummaries = null;
 
+  @JsonProperty("bulkProcessQueueLimit")
+  private String bulkProcessQueueLimit = null;
+
+  @JsonProperty("bulkProcessTotalQueued")
+  private String bulkProcessTotalQueued = null;
+
   @JsonProperty("endPosition")
   private String endPosition = null;
 
@@ -110,6 +116,60 @@ public class BulkSendBatchSummaries {
    **/
   public void setBulkBatchSummaries(java.util.List<BulkSendBatchSummary> bulkBatchSummaries) {
     this.bulkBatchSummaries = bulkBatchSummaries;
+  }
+
+
+  /**
+   * bulkProcessQueueLimit.
+   *
+   * @return BulkSendBatchSummaries
+   **/
+  public BulkSendBatchSummaries bulkProcessQueueLimit(String bulkProcessQueueLimit) {
+    this.bulkProcessQueueLimit = bulkProcessQueueLimit;
+    return this;
+  }
+
+  /**
+   * .
+   * @return bulkProcessQueueLimit
+   **/
+  @ApiModelProperty(value = "")
+  public String getBulkProcessQueueLimit() {
+    return bulkProcessQueueLimit;
+  }
+
+  /**
+   * setBulkProcessQueueLimit.
+   **/
+  public void setBulkProcessQueueLimit(String bulkProcessQueueLimit) {
+    this.bulkProcessQueueLimit = bulkProcessQueueLimit;
+  }
+
+
+  /**
+   * bulkProcessTotalQueued.
+   *
+   * @return BulkSendBatchSummaries
+   **/
+  public BulkSendBatchSummaries bulkProcessTotalQueued(String bulkProcessTotalQueued) {
+    this.bulkProcessTotalQueued = bulkProcessTotalQueued;
+    return this;
+  }
+
+  /**
+   * .
+   * @return bulkProcessTotalQueued
+   **/
+  @ApiModelProperty(value = "")
+  public String getBulkProcessTotalQueued() {
+    return bulkProcessTotalQueued;
+  }
+
+  /**
+   * setBulkProcessTotalQueued.
+   **/
+  public void setBulkProcessTotalQueued(String bulkProcessTotalQueued) {
+    this.bulkProcessTotalQueued = bulkProcessTotalQueued;
   }
 
 
@@ -345,6 +405,8 @@ public class BulkSendBatchSummaries {
     BulkSendBatchSummaries bulkSendBatchSummaries = (BulkSendBatchSummaries) o;
     return Objects.equals(this.batchSizeLimit, bulkSendBatchSummaries.batchSizeLimit) &&
         Objects.equals(this.bulkBatchSummaries, bulkSendBatchSummaries.bulkBatchSummaries) &&
+        Objects.equals(this.bulkProcessQueueLimit, bulkSendBatchSummaries.bulkProcessQueueLimit) &&
+        Objects.equals(this.bulkProcessTotalQueued, bulkSendBatchSummaries.bulkProcessTotalQueued) &&
         Objects.equals(this.endPosition, bulkSendBatchSummaries.endPosition) &&
         Objects.equals(this.nextUri, bulkSendBatchSummaries.nextUri) &&
         Objects.equals(this.previousUri, bulkSendBatchSummaries.previousUri) &&
@@ -360,7 +422,7 @@ public class BulkSendBatchSummaries {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchSizeLimit, bulkBatchSummaries, endPosition, nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
+    return Objects.hash(batchSizeLimit, bulkBatchSummaries, bulkProcessQueueLimit, bulkProcessTotalQueued, endPosition, nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
   }
 
 
@@ -374,6 +436,8 @@ public class BulkSendBatchSummaries {
     
     sb.append("    batchSizeLimit: ").append(toIndentedString(batchSizeLimit)).append("\n");
     sb.append("    bulkBatchSummaries: ").append(toIndentedString(bulkBatchSummaries)).append("\n");
+    sb.append("    bulkProcessQueueLimit: ").append(toIndentedString(bulkProcessQueueLimit)).append("\n");
+    sb.append("    bulkProcessTotalQueued: ").append(toIndentedString(bulkProcessTotalQueued)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");

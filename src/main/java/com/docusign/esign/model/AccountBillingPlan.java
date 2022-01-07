@@ -103,6 +103,9 @@ public class AccountBillingPlan {
   @JsonProperty("supportPlanFee")
   private String supportPlanFee = null;
 
+  @JsonProperty("taxExemptId")
+  private String taxExemptId = null;
+
 
   /**
    * addOns.
@@ -900,6 +903,33 @@ public class AccountBillingPlan {
 
 
   /**
+   * taxExemptId.
+   *
+   * @return AccountBillingPlan
+   **/
+  public AccountBillingPlan taxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxExemptId
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxExemptId() {
+    return taxExemptId;
+  }
+
+  /**
+   * setTaxExemptId.
+   **/
+  public void setTaxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -940,7 +970,8 @@ public class AccountBillingPlan {
         Objects.equals(this.seatDiscounts, accountBillingPlan.seatDiscounts) &&
         Objects.equals(this.subscriptionStartDate, accountBillingPlan.subscriptionStartDate) &&
         Objects.equals(this.supportIncidentFee, accountBillingPlan.supportIncidentFee) &&
-        Objects.equals(this.supportPlanFee, accountBillingPlan.supportPlanFee);
+        Objects.equals(this.supportPlanFee, accountBillingPlan.supportPlanFee) &&
+        Objects.equals(this.taxExemptId, accountBillingPlan.taxExemptId);
   }
 
   /**
@@ -948,7 +979,7 @@ public class AccountBillingPlan {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, productId, renewalDate, renewalStatus, seatDiscounts, subscriptionStartDate, supportIncidentFee, supportPlanFee);
+    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, productId, renewalDate, renewalStatus, seatDiscounts, subscriptionStartDate, supportIncidentFee, supportPlanFee, taxExemptId);
   }
 
 
@@ -988,6 +1019,7 @@ public class AccountBillingPlan {
     sb.append("    subscriptionStartDate: ").append(toIndentedString(subscriptionStartDate)).append("\n");
     sb.append("    supportIncidentFee: ").append(toIndentedString(supportIncidentFee)).append("\n");
     sb.append("    supportPlanFee: ").append(toIndentedString(supportPlanFee)).append("\n");
+    sb.append("    taxExemptId: ").append(toIndentedString(taxExemptId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

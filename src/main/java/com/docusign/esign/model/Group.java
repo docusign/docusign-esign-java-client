@@ -16,6 +16,9 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class Group {
+  @JsonProperty("dsGroupId")
+  private String dsGroupId = null;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
@@ -36,6 +39,33 @@ public class Group {
 
   @JsonProperty("usersCount")
   private String usersCount = null;
+
+
+  /**
+   * dsGroupId.
+   *
+   * @return Group
+   **/
+  public Group dsGroupId(String dsGroupId) {
+    this.dsGroupId = dsGroupId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return dsGroupId
+   **/
+  @ApiModelProperty(value = "")
+  public String getDsGroupId() {
+    return dsGroupId;
+  }
+
+  /**
+   * setDsGroupId.
+   **/
+  public void setDsGroupId(String dsGroupId) {
+    this.dsGroupId = dsGroupId;
+  }
 
 
   /**
@@ -254,7 +284,8 @@ public class Group {
       return false;
     }
     Group group = (Group) o;
-    return Objects.equals(this.errorDetails, group.errorDetails) &&
+    return Objects.equals(this.dsGroupId, group.dsGroupId) &&
+        Objects.equals(this.errorDetails, group.errorDetails) &&
         Objects.equals(this.groupId, group.groupId) &&
         Objects.equals(this.groupName, group.groupName) &&
         Objects.equals(this.groupType, group.groupType) &&
@@ -268,7 +299,7 @@ public class Group {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
+    return Objects.hash(dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
 
@@ -280,6 +311,7 @@ public class Group {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
+    sb.append("    dsGroupId: ").append(toIndentedString(dsGroupId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");

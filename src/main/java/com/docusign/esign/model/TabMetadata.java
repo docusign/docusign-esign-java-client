@@ -107,8 +107,14 @@ public class TabMetadata {
   @JsonProperty("maximumLength")
   private String maximumLength = null;
 
+  @JsonProperty("maxNumericalValue")
+  private String maxNumericalValue = null;
+
   @JsonProperty("mergeField")
   private MergeField mergeField = null;
+
+  @JsonProperty("minNumericalValue")
+  private String minNumericalValue = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -992,6 +998,33 @@ public class TabMetadata {
 
 
   /**
+   * maxNumericalValue.
+   *
+   * @return TabMetadata
+   **/
+  public TabMetadata maxNumericalValue(String maxNumericalValue) {
+    this.maxNumericalValue = maxNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return maxNumericalValue
+   **/
+  @ApiModelProperty(value = "")
+  public String getMaxNumericalValue() {
+    return maxNumericalValue;
+  }
+
+  /**
+   * setMaxNumericalValue.
+   **/
+  public void setMaxNumericalValue(String maxNumericalValue) {
+    this.maxNumericalValue = maxNumericalValue;
+  }
+
+
+  /**
    * mergeField.
    *
    * @return TabMetadata
@@ -1015,6 +1048,33 @@ public class TabMetadata {
    **/
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
+  }
+
+
+  /**
+   * minNumericalValue.
+   *
+   * @return TabMetadata
+   **/
+  public TabMetadata minNumericalValue(String minNumericalValue) {
+    this.minNumericalValue = minNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return minNumericalValue
+   **/
+  @ApiModelProperty(value = "")
+  public String getMinNumericalValue() {
+    return minNumericalValue;
+  }
+
+  /**
+   * setMinNumericalValue.
+   **/
+  public void setMinNumericalValue(String minNumericalValue) {
+    this.minNumericalValue = minNumericalValue;
   }
 
 
@@ -1575,7 +1635,9 @@ public class TabMetadata {
         Objects.equals(this.localePolicy, tabMetadata.localePolicy) &&
         Objects.equals(this.locked, tabMetadata.locked) &&
         Objects.equals(this.maximumLength, tabMetadata.maximumLength) &&
+        Objects.equals(this.maxNumericalValue, tabMetadata.maxNumericalValue) &&
         Objects.equals(this.mergeField, tabMetadata.mergeField) &&
+        Objects.equals(this.minNumericalValue, tabMetadata.minNumericalValue) &&
         Objects.equals(this.name, tabMetadata.name) &&
         Objects.equals(this.numericalValue, tabMetadata.numericalValue) &&
         Objects.equals(this.paymentItemCode, tabMetadata.paymentItemCode) &&
@@ -1602,7 +1664,7 @@ public class TabMetadata {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, mergeField, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, maxNumericalValue, mergeField, minNumericalValue, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
   }
 
 
@@ -1644,7 +1706,9 @@ public class TabMetadata {
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
+    sb.append("    maxNumericalValue: ").append(toIndentedString(maxNumericalValue)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
+    sb.append("    minNumericalValue: ").append(toIndentedString(minNumericalValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");
     sb.append("    paymentItemCode: ").append(toIndentedString(paymentItemCode)).append("\n");

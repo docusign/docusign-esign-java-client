@@ -61,6 +61,9 @@ public class AccountBillingPlanResponse {
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
 
+  @JsonProperty("taxExemptId")
+  private String taxExemptId = null;
+
 
   /**
    * billingAddress.
@@ -400,6 +403,33 @@ public class AccountBillingPlanResponse {
 
 
   /**
+   * taxExemptId.
+   *
+   * @return AccountBillingPlanResponse
+   **/
+  public AccountBillingPlanResponse taxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxExemptId
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxExemptId() {
+    return taxExemptId;
+  }
+
+  /**
+   * setTaxExemptId.
+   **/
+  public void setTaxExemptId(String taxExemptId) {
+    this.taxExemptId = taxExemptId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -424,7 +454,8 @@ public class AccountBillingPlanResponse {
         Objects.equals(this.paymentMethod, accountBillingPlanResponse.paymentMethod) &&
         Objects.equals(this.paymentProcessorInformation, accountBillingPlanResponse.paymentProcessorInformation) &&
         Objects.equals(this.referralInformation, accountBillingPlanResponse.referralInformation) &&
-        Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans);
+        Objects.equals(this.successorPlans, accountBillingPlanResponse.successorPlans) &&
+        Objects.equals(this.taxExemptId, accountBillingPlanResponse.taxExemptId);
   }
 
   /**
@@ -432,7 +463,7 @@ public class AccountBillingPlanResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans, taxExemptId);
   }
 
 
@@ -456,6 +487,7 @@ public class AccountBillingPlanResponse {
     sb.append("    paymentProcessorInformation: ").append(toIndentedString(paymentProcessorInformation)).append("\n");
     sb.append("    referralInformation: ").append(toIndentedString(referralInformation)).append("\n");
     sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
+    sb.append("    taxExemptId: ").append(toIndentedString(taxExemptId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
