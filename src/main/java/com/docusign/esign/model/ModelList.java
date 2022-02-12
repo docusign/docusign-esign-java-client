@@ -3,6 +3,8 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ListItem;
+import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -13,11 +15,11 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Checkbox.
+ * ModelList.
  *
  */
 
-public class Checkbox {
+public class ModelList {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 
@@ -159,6 +161,18 @@ public class Checkbox {
   @JsonProperty("italicMetadata")
   private PropertyMetadata italicMetadata = null;
 
+  @JsonProperty("listItems")
+  private java.util.List<ListItem> listItems = null;
+
+  @JsonProperty("listSelectedValue")
+  private String listSelectedValue = null;
+
+  @JsonProperty("listSelectedValueMetadata")
+  private PropertyMetadata listSelectedValueMetadata = null;
+
+  @JsonProperty("localePolicy")
+  private LocalePolicyTab localePolicy = null;
+
   @JsonProperty("locked")
   private String locked = null;
 
@@ -170,12 +184,6 @@ public class Checkbox {
 
   @JsonProperty("mergeFieldXml")
   private String mergeFieldXml = null;
-
-  @JsonProperty("name")
-  private String name = null;
-
-  @JsonProperty("nameMetadata")
-  private PropertyMetadata nameMetadata = null;
 
   @JsonProperty("originalValue")
   private String originalValue = null;
@@ -201,6 +209,12 @@ public class Checkbox {
   @JsonProperty("recipientIdMetadata")
   private PropertyMetadata recipientIdMetadata = null;
 
+  @JsonProperty("requireAll")
+  private String requireAll = null;
+
+  @JsonProperty("requireAllMetadata")
+  private PropertyMetadata requireAllMetadata = null;
+
   @JsonProperty("required")
   private String required = null;
 
@@ -213,17 +227,11 @@ public class Checkbox {
   @JsonProperty("requireInitialOnSharedChangeMetadata")
   private PropertyMetadata requireInitialOnSharedChangeMetadata = null;
 
-  @JsonProperty("selected")
-  private String selected = null;
+  @JsonProperty("senderRequired")
+  private String senderRequired = null;
 
-  @JsonProperty("selectedMetadata")
-  private PropertyMetadata selectedMetadata = null;
-
-  @JsonProperty("selectedOriginal")
-  private String selectedOriginal = null;
-
-  @JsonProperty("selectedOriginalMetadata")
-  private PropertyMetadata selectedOriginalMetadata = null;
+  @JsonProperty("senderRequiredMetadata")
+  private PropertyMetadata senderRequiredMetadata = null;
 
   @JsonProperty("shared")
   private String shared = null;
@@ -331,9 +339,9 @@ public class Checkbox {
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
+  public ModelList anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
     return this;
   }
@@ -358,9 +366,9 @@ public class Checkbox {
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public ModelList anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
@@ -385,9 +393,9 @@ public class Checkbox {
   /**
    * anchorCaseSensitive.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorCaseSensitive(String anchorCaseSensitive) {
+  public ModelList anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
@@ -412,9 +420,9 @@ public class Checkbox {
   /**
    * anchorCaseSensitiveMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
+  public ModelList anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
     return this;
   }
@@ -439,9 +447,9 @@ public class Checkbox {
   /**
    * anchorHorizontalAlignment.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorHorizontalAlignment(String anchorHorizontalAlignment) {
+  public ModelList anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
@@ -466,9 +474,9 @@ public class Checkbox {
   /**
    * anchorHorizontalAlignmentMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  public ModelList anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
@@ -493,9 +501,9 @@ public class Checkbox {
   /**
    * anchorIgnoreIfNotPresent.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
+  public ModelList anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
   }
@@ -520,9 +528,9 @@ public class Checkbox {
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  public ModelList anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
     return this;
   }
@@ -547,9 +555,9 @@ public class Checkbox {
   /**
    * anchorMatchWholeWord.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorMatchWholeWord(String anchorMatchWholeWord) {
+  public ModelList anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
@@ -574,9 +582,9 @@ public class Checkbox {
   /**
    * anchorMatchWholeWordMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
+  public ModelList anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
     return this;
   }
@@ -601,9 +609,9 @@ public class Checkbox {
   /**
    * anchorString.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorString(String anchorString) {
+  public ModelList anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
   }
@@ -628,9 +636,9 @@ public class Checkbox {
   /**
    * anchorStringMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
+  public ModelList anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
     return this;
   }
@@ -655,9 +663,9 @@ public class Checkbox {
   /**
    * anchorTabProcessorVersion.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorTabProcessorVersion(String anchorTabProcessorVersion) {
+  public ModelList anchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
     return this;
   }
@@ -682,9 +690,9 @@ public class Checkbox {
   /**
    * anchorTabProcessorVersionMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+  public ModelList anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
@@ -709,9 +717,9 @@ public class Checkbox {
   /**
    * anchorUnits.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorUnits(String anchorUnits) {
+  public ModelList anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
@@ -736,9 +744,9 @@ public class Checkbox {
   /**
    * anchorUnitsMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
+  public ModelList anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
     return this;
   }
@@ -763,9 +771,9 @@ public class Checkbox {
   /**
    * anchorXOffset.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorXOffset(String anchorXOffset) {
+  public ModelList anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
   }
@@ -790,9 +798,9 @@ public class Checkbox {
   /**
    * anchorXOffsetMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
+  public ModelList anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
     return this;
   }
@@ -817,9 +825,9 @@ public class Checkbox {
   /**
    * anchorYOffset.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorYOffset(String anchorYOffset) {
+  public ModelList anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
   }
@@ -844,9 +852,9 @@ public class Checkbox {
   /**
    * anchorYOffsetMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
+  public ModelList anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
     return this;
   }
@@ -871,9 +879,9 @@ public class Checkbox {
   /**
    * bold.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox bold(String bold) {
+  public ModelList bold(String bold) {
     this.bold = bold;
     return this;
   }
@@ -898,9 +906,9 @@ public class Checkbox {
   /**
    * boldMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox boldMetadata(PropertyMetadata boldMetadata) {
+  public ModelList boldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
     return this;
   }
@@ -925,9 +933,9 @@ public class Checkbox {
   /**
    * conditionalParentLabel.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox conditionalParentLabel(String conditionalParentLabel) {
+  public ModelList conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
@@ -952,9 +960,9 @@ public class Checkbox {
   /**
    * conditionalParentLabelMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
+  public ModelList conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
     return this;
   }
@@ -979,9 +987,9 @@ public class Checkbox {
   /**
    * conditionalParentValue.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox conditionalParentValue(String conditionalParentValue) {
+  public ModelList conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
@@ -1006,9 +1014,9 @@ public class Checkbox {
   /**
    * conditionalParentValueMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
+  public ModelList conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
     return this;
   }
@@ -1033,9 +1041,9 @@ public class Checkbox {
   /**
    * customTabId.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox customTabId(String customTabId) {
+  public ModelList customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
@@ -1060,9 +1068,9 @@ public class Checkbox {
   /**
    * customTabIdMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
+  public ModelList customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
     return this;
   }
@@ -1087,9 +1095,9 @@ public class Checkbox {
   /**
    * documentId.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox documentId(String documentId) {
+  public ModelList documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
@@ -1114,9 +1122,9 @@ public class Checkbox {
   /**
    * documentIdMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox documentIdMetadata(PropertyMetadata documentIdMetadata) {
+  public ModelList documentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
     return this;
   }
@@ -1141,9 +1149,9 @@ public class Checkbox {
   /**
    * errorDetails.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox errorDetails(ErrorDetails errorDetails) {
+  public ModelList errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
@@ -1168,9 +1176,9 @@ public class Checkbox {
   /**
    * font.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox font(String font) {
+  public ModelList font(String font) {
     this.font = font;
     return this;
   }
@@ -1195,9 +1203,9 @@ public class Checkbox {
   /**
    * fontColor.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox fontColor(String fontColor) {
+  public ModelList fontColor(String fontColor) {
     this.fontColor = fontColor;
     return this;
   }
@@ -1222,9 +1230,9 @@ public class Checkbox {
   /**
    * fontColorMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox fontColorMetadata(PropertyMetadata fontColorMetadata) {
+  public ModelList fontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
     return this;
   }
@@ -1249,9 +1257,9 @@ public class Checkbox {
   /**
    * fontMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox fontMetadata(PropertyMetadata fontMetadata) {
+  public ModelList fontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
     return this;
   }
@@ -1276,9 +1284,9 @@ public class Checkbox {
   /**
    * fontSize.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox fontSize(String fontSize) {
+  public ModelList fontSize(String fontSize) {
     this.fontSize = fontSize;
     return this;
   }
@@ -1303,9 +1311,9 @@ public class Checkbox {
   /**
    * fontSizeMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
+  public ModelList fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
     return this;
   }
@@ -1330,9 +1338,9 @@ public class Checkbox {
   /**
    * formOrder.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formOrder(String formOrder) {
+  public ModelList formOrder(String formOrder) {
     this.formOrder = formOrder;
     return this;
   }
@@ -1357,9 +1365,9 @@ public class Checkbox {
   /**
    * formOrderMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formOrderMetadata(PropertyMetadata formOrderMetadata) {
+  public ModelList formOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
     return this;
   }
@@ -1384,9 +1392,9 @@ public class Checkbox {
   /**
    * formPageLabel.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formPageLabel(String formPageLabel) {
+  public ModelList formPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
     return this;
   }
@@ -1411,9 +1419,9 @@ public class Checkbox {
   /**
    * formPageLabelMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
+  public ModelList formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
     return this;
   }
@@ -1438,9 +1446,9 @@ public class Checkbox {
   /**
    * formPageNumber.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formPageNumber(String formPageNumber) {
+  public ModelList formPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
     return this;
   }
@@ -1465,9 +1473,9 @@ public class Checkbox {
   /**
    * formPageNumberMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
+  public ModelList formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
     return this;
   }
@@ -1492,9 +1500,9 @@ public class Checkbox {
   /**
    * height.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox height(String height) {
+  public ModelList height(String height) {
     this.height = height;
     return this;
   }
@@ -1519,9 +1527,9 @@ public class Checkbox {
   /**
    * heightMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox heightMetadata(PropertyMetadata heightMetadata) {
+  public ModelList heightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
     return this;
   }
@@ -1546,9 +1554,9 @@ public class Checkbox {
   /**
    * italic.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox italic(String italic) {
+  public ModelList italic(String italic) {
     this.italic = italic;
     return this;
   }
@@ -1573,9 +1581,9 @@ public class Checkbox {
   /**
    * italicMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox italicMetadata(PropertyMetadata italicMetadata) {
+  public ModelList italicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
     return this;
   }
@@ -1598,11 +1606,132 @@ public class Checkbox {
 
 
   /**
+   * listItems.
+   *
+   * @return ModelList
+   **/
+  public ModelList listItems(java.util.List<ListItem> listItems) {
+    this.listItems = listItems;
+    return this;
+  }
+  
+  /**
+   * addListItemsItem.
+   *
+   * @return ModelList
+   **/
+  public ModelList addListItemsItem(ListItem listItemsItem) {
+    if (this.listItems == null) {
+      this.listItems = new java.util.ArrayList<ListItem>();
+    }
+    this.listItems.add(listItemsItem);
+    return this;
+  }
+
+  /**
+   * The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  .
+   * @return listItems
+   **/
+  @ApiModelProperty(value = "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
+  public java.util.List<ListItem> getListItems() {
+    return listItems;
+  }
+
+  /**
+   * setListItems.
+   **/
+  public void setListItems(java.util.List<ListItem> listItems) {
+    this.listItems = listItems;
+  }
+
+
+  /**
+   * listSelectedValue.
+   *
+   * @return ModelList
+   **/
+  public ModelList listSelectedValue(String listSelectedValue) {
+    this.listSelectedValue = listSelectedValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return listSelectedValue
+   **/
+  @ApiModelProperty(value = "")
+  public String getListSelectedValue() {
+    return listSelectedValue;
+  }
+
+  /**
+   * setListSelectedValue.
+   **/
+  public void setListSelectedValue(String listSelectedValue) {
+    this.listSelectedValue = listSelectedValue;
+  }
+
+
+  /**
+   * listSelectedValueMetadata.
+   *
+   * @return ModelList
+   **/
+  public ModelList listSelectedValueMetadata(PropertyMetadata listSelectedValueMetadata) {
+    this.listSelectedValueMetadata = listSelectedValueMetadata;
+    return this;
+  }
+
+  /**
+   * Get listSelectedValueMetadata.
+   * @return listSelectedValueMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getListSelectedValueMetadata() {
+    return listSelectedValueMetadata;
+  }
+
+  /**
+   * setListSelectedValueMetadata.
+   **/
+  public void setListSelectedValueMetadata(PropertyMetadata listSelectedValueMetadata) {
+    this.listSelectedValueMetadata = listSelectedValueMetadata;
+  }
+
+
+  /**
+   * localePolicy.
+   *
+   * @return ModelList
+   **/
+  public ModelList localePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+    return this;
+  }
+
+  /**
+   * Get localePolicy.
+   * @return localePolicy
+   **/
+  @ApiModelProperty(value = "")
+  public LocalePolicyTab getLocalePolicy() {
+    return localePolicy;
+  }
+
+  /**
+   * setLocalePolicy.
+   **/
+  public void setLocalePolicy(LocalePolicyTab localePolicy) {
+    this.localePolicy = localePolicy;
+  }
+
+
+  /**
    * locked.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox locked(String locked) {
+  public ModelList locked(String locked) {
     this.locked = locked;
     return this;
   }
@@ -1627,9 +1756,9 @@ public class Checkbox {
   /**
    * lockedMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox lockedMetadata(PropertyMetadata lockedMetadata) {
+  public ModelList lockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
     return this;
   }
@@ -1654,9 +1783,9 @@ public class Checkbox {
   /**
    * mergeField.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox mergeField(MergeField mergeField) {
+  public ModelList mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
@@ -1681,9 +1810,9 @@ public class Checkbox {
   /**
    * mergeFieldXml.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox mergeFieldXml(String mergeFieldXml) {
+  public ModelList mergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
     return this;
   }
@@ -1706,65 +1835,11 @@ public class Checkbox {
 
 
   /**
-   * name.
-   *
-   * @return Checkbox
-   **/
-  public Checkbox name(String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Specifies the tool tip text for the tab..
-   * @return name
-   **/
-  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
-  public String getName() {
-    return name;
-  }
-
-  /**
-   * setName.
-   **/
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  /**
-   * nameMetadata.
-   *
-   * @return Checkbox
-   **/
-  public Checkbox nameMetadata(PropertyMetadata nameMetadata) {
-    this.nameMetadata = nameMetadata;
-    return this;
-  }
-
-  /**
-   * Get nameMetadata.
-   * @return nameMetadata
-   **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getNameMetadata() {
-    return nameMetadata;
-  }
-
-  /**
-   * setNameMetadata.
-   **/
-  public void setNameMetadata(PropertyMetadata nameMetadata) {
-    this.nameMetadata = nameMetadata;
-  }
-
-
-  /**
    * originalValue.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox originalValue(String originalValue) {
+  public ModelList originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
   }
@@ -1789,9 +1864,9 @@ public class Checkbox {
   /**
    * originalValueMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox originalValueMetadata(PropertyMetadata originalValueMetadata) {
+  public ModelList originalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
     return this;
   }
@@ -1816,9 +1891,9 @@ public class Checkbox {
   /**
    * pageNumber.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox pageNumber(String pageNumber) {
+  public ModelList pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
   }
@@ -1843,9 +1918,9 @@ public class Checkbox {
   /**
    * pageNumberMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
+  public ModelList pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
     return this;
   }
@@ -1870,9 +1945,9 @@ public class Checkbox {
   /**
    * recipientId.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox recipientId(String recipientId) {
+  public ModelList recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
@@ -1897,9 +1972,9 @@ public class Checkbox {
   /**
    * recipientIdGuid.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox recipientIdGuid(String recipientIdGuid) {
+  public ModelList recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
   }
@@ -1924,9 +1999,9 @@ public class Checkbox {
   /**
    * recipientIdGuidMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
+  public ModelList recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
     return this;
   }
@@ -1951,9 +2026,9 @@ public class Checkbox {
   /**
    * recipientIdMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
+  public ModelList recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
     return this;
   }
@@ -1976,11 +2051,65 @@ public class Checkbox {
 
 
   /**
+   * requireAll.
+   *
+   * @return ModelList
+   **/
+  public ModelList requireAll(String requireAll) {
+    this.requireAll = requireAll;
+    return this;
+  }
+
+  /**
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
+   * @return requireAll
+   **/
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  public String getRequireAll() {
+    return requireAll;
+  }
+
+  /**
+   * setRequireAll.
+   **/
+  public void setRequireAll(String requireAll) {
+    this.requireAll = requireAll;
+  }
+
+
+  /**
+   * requireAllMetadata.
+   *
+   * @return ModelList
+   **/
+  public ModelList requireAllMetadata(PropertyMetadata requireAllMetadata) {
+    this.requireAllMetadata = requireAllMetadata;
+    return this;
+  }
+
+  /**
+   * Get requireAllMetadata.
+   * @return requireAllMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getRequireAllMetadata() {
+    return requireAllMetadata;
+  }
+
+  /**
+   * setRequireAllMetadata.
+   **/
+  public void setRequireAllMetadata(PropertyMetadata requireAllMetadata) {
+    this.requireAllMetadata = requireAllMetadata;
+  }
+
+
+  /**
    * required.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox required(String required) {
+  public ModelList required(String required) {
     this.required = required;
     return this;
   }
@@ -2005,9 +2134,9 @@ public class Checkbox {
   /**
    * requiredMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox requiredMetadata(PropertyMetadata requiredMetadata) {
+  public ModelList requiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
     return this;
   }
@@ -2032,9 +2161,9 @@ public class Checkbox {
   /**
    * requireInitialOnSharedChange.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox requireInitialOnSharedChange(String requireInitialOnSharedChange) {
+  public ModelList requireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
     return this;
   }
@@ -2059,9 +2188,9 @@ public class Checkbox {
   /**
    * requireInitialOnSharedChangeMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox requireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
+  public ModelList requireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
     return this;
   }
@@ -2084,119 +2213,65 @@ public class Checkbox {
 
 
   /**
-   * selected.
+   * senderRequired.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox selected(String selected) {
-    this.selected = selected;
+  public ModelList senderRequired(String senderRequired) {
+    this.senderRequired = senderRequired;
     return this;
   }
 
   /**
-   * When set to **true**, the checkbox is selected..
-   * @return selected
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
+   * @return senderRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the checkbox is selected.")
-  public String getSelected() {
-    return selected;
+  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  public String getSenderRequired() {
+    return senderRequired;
   }
 
   /**
-   * setSelected.
+   * setSenderRequired.
    **/
-  public void setSelected(String selected) {
-    this.selected = selected;
+  public void setSenderRequired(String senderRequired) {
+    this.senderRequired = senderRequired;
   }
 
 
   /**
-   * selectedMetadata.
+   * senderRequiredMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox selectedMetadata(PropertyMetadata selectedMetadata) {
-    this.selectedMetadata = selectedMetadata;
+  public ModelList senderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
+    this.senderRequiredMetadata = senderRequiredMetadata;
     return this;
   }
 
   /**
-   * Get selectedMetadata.
-   * @return selectedMetadata
+   * Get senderRequiredMetadata.
+   * @return senderRequiredMetadata
    **/
   @ApiModelProperty(value = "")
-  public PropertyMetadata getSelectedMetadata() {
-    return selectedMetadata;
+  public PropertyMetadata getSenderRequiredMetadata() {
+    return senderRequiredMetadata;
   }
 
   /**
-   * setSelectedMetadata.
+   * setSenderRequiredMetadata.
    **/
-  public void setSelectedMetadata(PropertyMetadata selectedMetadata) {
-    this.selectedMetadata = selectedMetadata;
-  }
-
-
-  /**
-   * selectedOriginal.
-   *
-   * @return Checkbox
-   **/
-  public Checkbox selectedOriginal(String selectedOriginal) {
-    this.selectedOriginal = selectedOriginal;
-    return this;
-  }
-
-  /**
-   * .
-   * @return selectedOriginal
-   **/
-  @ApiModelProperty(value = "")
-  public String getSelectedOriginal() {
-    return selectedOriginal;
-  }
-
-  /**
-   * setSelectedOriginal.
-   **/
-  public void setSelectedOriginal(String selectedOriginal) {
-    this.selectedOriginal = selectedOriginal;
-  }
-
-
-  /**
-   * selectedOriginalMetadata.
-   *
-   * @return Checkbox
-   **/
-  public Checkbox selectedOriginalMetadata(PropertyMetadata selectedOriginalMetadata) {
-    this.selectedOriginalMetadata = selectedOriginalMetadata;
-    return this;
-  }
-
-  /**
-   * Get selectedOriginalMetadata.
-   * @return selectedOriginalMetadata
-   **/
-  @ApiModelProperty(value = "")
-  public PropertyMetadata getSelectedOriginalMetadata() {
-    return selectedOriginalMetadata;
-  }
-
-  /**
-   * setSelectedOriginalMetadata.
-   **/
-  public void setSelectedOriginalMetadata(PropertyMetadata selectedOriginalMetadata) {
-    this.selectedOriginalMetadata = selectedOriginalMetadata;
+  public void setSenderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
+    this.senderRequiredMetadata = senderRequiredMetadata;
   }
 
 
   /**
    * shared.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox shared(String shared) {
+  public ModelList shared(String shared) {
     this.shared = shared;
     return this;
   }
@@ -2221,9 +2296,9 @@ public class Checkbox {
   /**
    * sharedMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox sharedMetadata(PropertyMetadata sharedMetadata) {
+  public ModelList sharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
     return this;
   }
@@ -2248,9 +2323,9 @@ public class Checkbox {
   /**
    * shareToRecipients.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox shareToRecipients(String shareToRecipients) {
+  public ModelList shareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
     return this;
   }
@@ -2275,9 +2350,9 @@ public class Checkbox {
   /**
    * shareToRecipientsMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox shareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
+  public ModelList shareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
     return this;
   }
@@ -2302,9 +2377,9 @@ public class Checkbox {
   /**
    * smartContractInformation.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox smartContractInformation(SmartContractInformation smartContractInformation) {
+  public ModelList smartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
     return this;
   }
@@ -2329,9 +2404,9 @@ public class Checkbox {
   /**
    * source.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox source(String source) {
+  public ModelList source(String source) {
     this.source = source;
     return this;
   }
@@ -2356,9 +2431,9 @@ public class Checkbox {
   /**
    * status.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox status(String status) {
+  public ModelList status(String status) {
     this.status = status;
     return this;
   }
@@ -2383,9 +2458,9 @@ public class Checkbox {
   /**
    * statusMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox statusMetadata(PropertyMetadata statusMetadata) {
+  public ModelList statusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
     return this;
   }
@@ -2410,9 +2485,9 @@ public class Checkbox {
   /**
    * tabGroupLabels.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabGroupLabels(java.util.List<String> tabGroupLabels) {
+  public ModelList tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
@@ -2420,9 +2495,9 @@ public class Checkbox {
   /**
    * addTabGroupLabelsItem.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox addTabGroupLabelsItem(String tabGroupLabelsItem) {
+  public ModelList addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<String>();
     }
@@ -2450,9 +2525,9 @@ public class Checkbox {
   /**
    * tabGroupLabelsMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
+  public ModelList tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
     return this;
   }
@@ -2477,9 +2552,9 @@ public class Checkbox {
   /**
    * tabId.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabId(String tabId) {
+  public ModelList tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
@@ -2504,9 +2579,9 @@ public class Checkbox {
   /**
    * tabIdMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabIdMetadata(PropertyMetadata tabIdMetadata) {
+  public ModelList tabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
     return this;
   }
@@ -2531,9 +2606,9 @@ public class Checkbox {
   /**
    * tabLabel.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabLabel(String tabLabel) {
+  public ModelList tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
   }
@@ -2558,9 +2633,9 @@ public class Checkbox {
   /**
    * tabLabelMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
+  public ModelList tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
     return this;
   }
@@ -2585,9 +2660,9 @@ public class Checkbox {
   /**
    * tabOrder.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabOrder(String tabOrder) {
+  public ModelList tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
   }
@@ -2612,9 +2687,9 @@ public class Checkbox {
   /**
    * tabOrderMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
+  public ModelList tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
     return this;
   }
@@ -2639,9 +2714,9 @@ public class Checkbox {
   /**
    * tabType.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabType(String tabType) {
+  public ModelList tabType(String tabType) {
     this.tabType = tabType;
     return this;
   }
@@ -2666,9 +2741,9 @@ public class Checkbox {
   /**
    * tabTypeMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
+  public ModelList tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
     return this;
   }
@@ -2693,9 +2768,9 @@ public class Checkbox {
   /**
    * templateLocked.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox templateLocked(String templateLocked) {
+  public ModelList templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
@@ -2720,9 +2795,9 @@ public class Checkbox {
   /**
    * templateLockedMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
+  public ModelList templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
     return this;
   }
@@ -2747,9 +2822,9 @@ public class Checkbox {
   /**
    * templateRequired.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox templateRequired(String templateRequired) {
+  public ModelList templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
@@ -2774,9 +2849,9 @@ public class Checkbox {
   /**
    * templateRequiredMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
+  public ModelList templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
     return this;
   }
@@ -2801,9 +2876,9 @@ public class Checkbox {
   /**
    * tooltip.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox tooltip(String tooltip) {
+  public ModelList tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
   }
@@ -2828,9 +2903,9 @@ public class Checkbox {
   /**
    * toolTipMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox toolTipMetadata(PropertyMetadata toolTipMetadata) {
+  public ModelList toolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
     return this;
   }
@@ -2855,9 +2930,9 @@ public class Checkbox {
   /**
    * underline.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox underline(String underline) {
+  public ModelList underline(String underline) {
     this.underline = underline;
     return this;
   }
@@ -2882,9 +2957,9 @@ public class Checkbox {
   /**
    * underlineMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox underlineMetadata(PropertyMetadata underlineMetadata) {
+  public ModelList underlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
     return this;
   }
@@ -2909,18 +2984,18 @@ public class Checkbox {
   /**
    * value.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox value(String value) {
+  public ModelList value(String value) {
     this.value = value;
     return this;
   }
 
   /**
-   * Specifies the value of the tab. .
+   * The value to use when the item is selected..
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @ApiModelProperty(value = "The value to use when the item is selected.")
   public String getValue() {
     return value;
   }
@@ -2936,9 +3011,9 @@ public class Checkbox {
   /**
    * valueMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox valueMetadata(PropertyMetadata valueMetadata) {
+  public ModelList valueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
     return this;
   }
@@ -2963,9 +3038,9 @@ public class Checkbox {
   /**
    * width.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox width(String width) {
+  public ModelList width(String width) {
     this.width = width;
     return this;
   }
@@ -2990,9 +3065,9 @@ public class Checkbox {
   /**
    * widthMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox widthMetadata(PropertyMetadata widthMetadata) {
+  public ModelList widthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
     return this;
   }
@@ -3017,9 +3092,9 @@ public class Checkbox {
   /**
    * xPosition.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox xPosition(String xPosition) {
+  public ModelList xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
@@ -3044,9 +3119,9 @@ public class Checkbox {
   /**
    * xPositionMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox xPositionMetadata(PropertyMetadata xPositionMetadata) {
+  public ModelList xPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
     return this;
   }
@@ -3071,9 +3146,9 @@ public class Checkbox {
   /**
    * yPosition.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox yPosition(String yPosition) {
+  public ModelList yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
@@ -3098,9 +3173,9 @@ public class Checkbox {
   /**
    * yPositionMetadata.
    *
-   * @return Checkbox
+   * @return ModelList
    **/
-  public Checkbox yPositionMetadata(PropertyMetadata yPositionMetadata) {
+  public ModelList yPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
     return this;
   }
@@ -3135,110 +3210,112 @@ public class Checkbox {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Checkbox checkbox = (Checkbox) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, checkbox.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, checkbox.anchorAllowWhiteSpaceInCharactersMetadata) &&
-        Objects.equals(this.anchorCaseSensitive, checkbox.anchorCaseSensitive) &&
-        Objects.equals(this.anchorCaseSensitiveMetadata, checkbox.anchorCaseSensitiveMetadata) &&
-        Objects.equals(this.anchorHorizontalAlignment, checkbox.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorHorizontalAlignmentMetadata, checkbox.anchorHorizontalAlignmentMetadata) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, checkbox.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, checkbox.anchorIgnoreIfNotPresentMetadata) &&
-        Objects.equals(this.anchorMatchWholeWord, checkbox.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorMatchWholeWordMetadata, checkbox.anchorMatchWholeWordMetadata) &&
-        Objects.equals(this.anchorString, checkbox.anchorString) &&
-        Objects.equals(this.anchorStringMetadata, checkbox.anchorStringMetadata) &&
-        Objects.equals(this.anchorTabProcessorVersion, checkbox.anchorTabProcessorVersion) &&
-        Objects.equals(this.anchorTabProcessorVersionMetadata, checkbox.anchorTabProcessorVersionMetadata) &&
-        Objects.equals(this.anchorUnits, checkbox.anchorUnits) &&
-        Objects.equals(this.anchorUnitsMetadata, checkbox.anchorUnitsMetadata) &&
-        Objects.equals(this.anchorXOffset, checkbox.anchorXOffset) &&
-        Objects.equals(this.anchorXOffsetMetadata, checkbox.anchorXOffsetMetadata) &&
-        Objects.equals(this.anchorYOffset, checkbox.anchorYOffset) &&
-        Objects.equals(this.anchorYOffsetMetadata, checkbox.anchorYOffsetMetadata) &&
-        Objects.equals(this.bold, checkbox.bold) &&
-        Objects.equals(this.boldMetadata, checkbox.boldMetadata) &&
-        Objects.equals(this.conditionalParentLabel, checkbox.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentLabelMetadata, checkbox.conditionalParentLabelMetadata) &&
-        Objects.equals(this.conditionalParentValue, checkbox.conditionalParentValue) &&
-        Objects.equals(this.conditionalParentValueMetadata, checkbox.conditionalParentValueMetadata) &&
-        Objects.equals(this.customTabId, checkbox.customTabId) &&
-        Objects.equals(this.customTabIdMetadata, checkbox.customTabIdMetadata) &&
-        Objects.equals(this.documentId, checkbox.documentId) &&
-        Objects.equals(this.documentIdMetadata, checkbox.documentIdMetadata) &&
-        Objects.equals(this.errorDetails, checkbox.errorDetails) &&
-        Objects.equals(this.font, checkbox.font) &&
-        Objects.equals(this.fontColor, checkbox.fontColor) &&
-        Objects.equals(this.fontColorMetadata, checkbox.fontColorMetadata) &&
-        Objects.equals(this.fontMetadata, checkbox.fontMetadata) &&
-        Objects.equals(this.fontSize, checkbox.fontSize) &&
-        Objects.equals(this.fontSizeMetadata, checkbox.fontSizeMetadata) &&
-        Objects.equals(this.formOrder, checkbox.formOrder) &&
-        Objects.equals(this.formOrderMetadata, checkbox.formOrderMetadata) &&
-        Objects.equals(this.formPageLabel, checkbox.formPageLabel) &&
-        Objects.equals(this.formPageLabelMetadata, checkbox.formPageLabelMetadata) &&
-        Objects.equals(this.formPageNumber, checkbox.formPageNumber) &&
-        Objects.equals(this.formPageNumberMetadata, checkbox.formPageNumberMetadata) &&
-        Objects.equals(this.height, checkbox.height) &&
-        Objects.equals(this.heightMetadata, checkbox.heightMetadata) &&
-        Objects.equals(this.italic, checkbox.italic) &&
-        Objects.equals(this.italicMetadata, checkbox.italicMetadata) &&
-        Objects.equals(this.locked, checkbox.locked) &&
-        Objects.equals(this.lockedMetadata, checkbox.lockedMetadata) &&
-        Objects.equals(this.mergeField, checkbox.mergeField) &&
-        Objects.equals(this.mergeFieldXml, checkbox.mergeFieldXml) &&
-        Objects.equals(this.name, checkbox.name) &&
-        Objects.equals(this.nameMetadata, checkbox.nameMetadata) &&
-        Objects.equals(this.originalValue, checkbox.originalValue) &&
-        Objects.equals(this.originalValueMetadata, checkbox.originalValueMetadata) &&
-        Objects.equals(this.pageNumber, checkbox.pageNumber) &&
-        Objects.equals(this.pageNumberMetadata, checkbox.pageNumberMetadata) &&
-        Objects.equals(this.recipientId, checkbox.recipientId) &&
-        Objects.equals(this.recipientIdGuid, checkbox.recipientIdGuid) &&
-        Objects.equals(this.recipientIdGuidMetadata, checkbox.recipientIdGuidMetadata) &&
-        Objects.equals(this.recipientIdMetadata, checkbox.recipientIdMetadata) &&
-        Objects.equals(this.required, checkbox.required) &&
-        Objects.equals(this.requiredMetadata, checkbox.requiredMetadata) &&
-        Objects.equals(this.requireInitialOnSharedChange, checkbox.requireInitialOnSharedChange) &&
-        Objects.equals(this.requireInitialOnSharedChangeMetadata, checkbox.requireInitialOnSharedChangeMetadata) &&
-        Objects.equals(this.selected, checkbox.selected) &&
-        Objects.equals(this.selectedMetadata, checkbox.selectedMetadata) &&
-        Objects.equals(this.selectedOriginal, checkbox.selectedOriginal) &&
-        Objects.equals(this.selectedOriginalMetadata, checkbox.selectedOriginalMetadata) &&
-        Objects.equals(this.shared, checkbox.shared) &&
-        Objects.equals(this.sharedMetadata, checkbox.sharedMetadata) &&
-        Objects.equals(this.shareToRecipients, checkbox.shareToRecipients) &&
-        Objects.equals(this.shareToRecipientsMetadata, checkbox.shareToRecipientsMetadata) &&
-        Objects.equals(this.smartContractInformation, checkbox.smartContractInformation) &&
-        Objects.equals(this.source, checkbox.source) &&
-        Objects.equals(this.status, checkbox.status) &&
-        Objects.equals(this.statusMetadata, checkbox.statusMetadata) &&
-        Objects.equals(this.tabGroupLabels, checkbox.tabGroupLabels) &&
-        Objects.equals(this.tabGroupLabelsMetadata, checkbox.tabGroupLabelsMetadata) &&
-        Objects.equals(this.tabId, checkbox.tabId) &&
-        Objects.equals(this.tabIdMetadata, checkbox.tabIdMetadata) &&
-        Objects.equals(this.tabLabel, checkbox.tabLabel) &&
-        Objects.equals(this.tabLabelMetadata, checkbox.tabLabelMetadata) &&
-        Objects.equals(this.tabOrder, checkbox.tabOrder) &&
-        Objects.equals(this.tabOrderMetadata, checkbox.tabOrderMetadata) &&
-        Objects.equals(this.tabType, checkbox.tabType) &&
-        Objects.equals(this.tabTypeMetadata, checkbox.tabTypeMetadata) &&
-        Objects.equals(this.templateLocked, checkbox.templateLocked) &&
-        Objects.equals(this.templateLockedMetadata, checkbox.templateLockedMetadata) &&
-        Objects.equals(this.templateRequired, checkbox.templateRequired) &&
-        Objects.equals(this.templateRequiredMetadata, checkbox.templateRequiredMetadata) &&
-        Objects.equals(this.tooltip, checkbox.tooltip) &&
-        Objects.equals(this.toolTipMetadata, checkbox.toolTipMetadata) &&
-        Objects.equals(this.underline, checkbox.underline) &&
-        Objects.equals(this.underlineMetadata, checkbox.underlineMetadata) &&
-        Objects.equals(this.value, checkbox.value) &&
-        Objects.equals(this.valueMetadata, checkbox.valueMetadata) &&
-        Objects.equals(this.width, checkbox.width) &&
-        Objects.equals(this.widthMetadata, checkbox.widthMetadata) &&
-        Objects.equals(this.xPosition, checkbox.xPosition) &&
-        Objects.equals(this.xPositionMetadata, checkbox.xPositionMetadata) &&
-        Objects.equals(this.yPosition, checkbox.yPosition) &&
-        Objects.equals(this.yPositionMetadata, checkbox.yPositionMetadata);
+    ModelList _list = (ModelList) o;
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, _list.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, _list.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, _list.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, _list.anchorCaseSensitiveMetadata) &&
+        Objects.equals(this.anchorHorizontalAlignment, _list.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, _list.anchorHorizontalAlignmentMetadata) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, _list.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, _list.anchorIgnoreIfNotPresentMetadata) &&
+        Objects.equals(this.anchorMatchWholeWord, _list.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, _list.anchorMatchWholeWordMetadata) &&
+        Objects.equals(this.anchorString, _list.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, _list.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, _list.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, _list.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorUnits, _list.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, _list.anchorUnitsMetadata) &&
+        Objects.equals(this.anchorXOffset, _list.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, _list.anchorXOffsetMetadata) &&
+        Objects.equals(this.anchorYOffset, _list.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, _list.anchorYOffsetMetadata) &&
+        Objects.equals(this.bold, _list.bold) &&
+        Objects.equals(this.boldMetadata, _list.boldMetadata) &&
+        Objects.equals(this.conditionalParentLabel, _list.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, _list.conditionalParentLabelMetadata) &&
+        Objects.equals(this.conditionalParentValue, _list.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, _list.conditionalParentValueMetadata) &&
+        Objects.equals(this.customTabId, _list.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, _list.customTabIdMetadata) &&
+        Objects.equals(this.documentId, _list.documentId) &&
+        Objects.equals(this.documentIdMetadata, _list.documentIdMetadata) &&
+        Objects.equals(this.errorDetails, _list.errorDetails) &&
+        Objects.equals(this.font, _list.font) &&
+        Objects.equals(this.fontColor, _list.fontColor) &&
+        Objects.equals(this.fontColorMetadata, _list.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, _list.fontMetadata) &&
+        Objects.equals(this.fontSize, _list.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, _list.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, _list.formOrder) &&
+        Objects.equals(this.formOrderMetadata, _list.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, _list.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, _list.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, _list.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, _list.formPageNumberMetadata) &&
+        Objects.equals(this.height, _list.height) &&
+        Objects.equals(this.heightMetadata, _list.heightMetadata) &&
+        Objects.equals(this.italic, _list.italic) &&
+        Objects.equals(this.italicMetadata, _list.italicMetadata) &&
+        Objects.equals(this.listItems, _list.listItems) &&
+        Objects.equals(this.listSelectedValue, _list.listSelectedValue) &&
+        Objects.equals(this.listSelectedValueMetadata, _list.listSelectedValueMetadata) &&
+        Objects.equals(this.localePolicy, _list.localePolicy) &&
+        Objects.equals(this.locked, _list.locked) &&
+        Objects.equals(this.lockedMetadata, _list.lockedMetadata) &&
+        Objects.equals(this.mergeField, _list.mergeField) &&
+        Objects.equals(this.mergeFieldXml, _list.mergeFieldXml) &&
+        Objects.equals(this.originalValue, _list.originalValue) &&
+        Objects.equals(this.originalValueMetadata, _list.originalValueMetadata) &&
+        Objects.equals(this.pageNumber, _list.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, _list.pageNumberMetadata) &&
+        Objects.equals(this.recipientId, _list.recipientId) &&
+        Objects.equals(this.recipientIdGuid, _list.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, _list.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, _list.recipientIdMetadata) &&
+        Objects.equals(this.requireAll, _list.requireAll) &&
+        Objects.equals(this.requireAllMetadata, _list.requireAllMetadata) &&
+        Objects.equals(this.required, _list.required) &&
+        Objects.equals(this.requiredMetadata, _list.requiredMetadata) &&
+        Objects.equals(this.requireInitialOnSharedChange, _list.requireInitialOnSharedChange) &&
+        Objects.equals(this.requireInitialOnSharedChangeMetadata, _list.requireInitialOnSharedChangeMetadata) &&
+        Objects.equals(this.senderRequired, _list.senderRequired) &&
+        Objects.equals(this.senderRequiredMetadata, _list.senderRequiredMetadata) &&
+        Objects.equals(this.shared, _list.shared) &&
+        Objects.equals(this.sharedMetadata, _list.sharedMetadata) &&
+        Objects.equals(this.shareToRecipients, _list.shareToRecipients) &&
+        Objects.equals(this.shareToRecipientsMetadata, _list.shareToRecipientsMetadata) &&
+        Objects.equals(this.smartContractInformation, _list.smartContractInformation) &&
+        Objects.equals(this.source, _list.source) &&
+        Objects.equals(this.status, _list.status) &&
+        Objects.equals(this.statusMetadata, _list.statusMetadata) &&
+        Objects.equals(this.tabGroupLabels, _list.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, _list.tabGroupLabelsMetadata) &&
+        Objects.equals(this.tabId, _list.tabId) &&
+        Objects.equals(this.tabIdMetadata, _list.tabIdMetadata) &&
+        Objects.equals(this.tabLabel, _list.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, _list.tabLabelMetadata) &&
+        Objects.equals(this.tabOrder, _list.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, _list.tabOrderMetadata) &&
+        Objects.equals(this.tabType, _list.tabType) &&
+        Objects.equals(this.tabTypeMetadata, _list.tabTypeMetadata) &&
+        Objects.equals(this.templateLocked, _list.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, _list.templateLockedMetadata) &&
+        Objects.equals(this.templateRequired, _list.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, _list.templateRequiredMetadata) &&
+        Objects.equals(this.tooltip, _list.tooltip) &&
+        Objects.equals(this.toolTipMetadata, _list.toolTipMetadata) &&
+        Objects.equals(this.underline, _list.underline) &&
+        Objects.equals(this.underlineMetadata, _list.underlineMetadata) &&
+        Objects.equals(this.value, _list.value) &&
+        Objects.equals(this.valueMetadata, _list.valueMetadata) &&
+        Objects.equals(this.width, _list.width) &&
+        Objects.equals(this.widthMetadata, _list.widthMetadata) &&
+        Objects.equals(this.xPosition, _list.xPosition) &&
+        Objects.equals(this.xPositionMetadata, _list.xPositionMetadata) &&
+        Objects.equals(this.yPosition, _list.yPosition) &&
+        Objects.equals(this.yPositionMetadata, _list.yPositionMetadata);
   }
 
   /**
@@ -3246,7 +3323,7 @@ public class Checkbox {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, selected, selectedMetadata, selectedOriginal, selectedOriginalMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, listItems, listSelectedValue, listSelectedValueMetadata, localePolicy, locked, lockedMetadata, mergeField, mergeFieldXml, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3256,7 +3333,7 @@ public class Checkbox {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Checkbox {\n");
+    sb.append("class ModelList {\n");
     
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
@@ -3305,12 +3382,14 @@ public class Checkbox {
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
+    sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
+    sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
+    sb.append("    listSelectedValueMetadata: ").append(toIndentedString(listSelectedValueMetadata)).append("\n");
+    sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
     sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
@@ -3319,14 +3398,14 @@ public class Checkbox {
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
     sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
     sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
+    sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
+    sb.append("    requireAllMetadata: ").append(toIndentedString(requireAllMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
     sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
-    sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
-    sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
-    sb.append("    selectedOriginal: ").append(toIndentedString(selectedOriginal)).append("\n");
-    sb.append("    selectedOriginalMetadata: ").append(toIndentedString(selectedOriginalMetadata)).append("\n");
+    sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
+    sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    shareToRecipients: ").append(toIndentedString(shareToRecipients)).append("\n");

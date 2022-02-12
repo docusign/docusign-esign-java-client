@@ -16,6 +16,12 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class BulkSendBatchStatus {
+  @JsonProperty("action")
+  private String action = null;
+
+  @JsonProperty("actionStatus")
+  private String actionStatus = null;
+
   @JsonProperty("batchId")
   private String batchId = null;
 
@@ -60,6 +66,60 @@ public class BulkSendBatchStatus {
 
   @JsonProperty("submittedDate")
   private String submittedDate = null;
+
+
+  /**
+   * action.
+   *
+   * @return BulkSendBatchStatus
+   **/
+  public BulkSendBatchStatus action(String action) {
+    this.action = action;
+    return this;
+  }
+
+  /**
+   * .
+   * @return action
+   **/
+  @ApiModelProperty(value = "")
+  public String getAction() {
+    return action;
+  }
+
+  /**
+   * setAction.
+   **/
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+
+  /**
+   * actionStatus.
+   *
+   * @return BulkSendBatchStatus
+   **/
+  public BulkSendBatchStatus actionStatus(String actionStatus) {
+    this.actionStatus = actionStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return actionStatus
+   **/
+  @ApiModelProperty(value = "")
+  public String getActionStatus() {
+    return actionStatus;
+  }
+
+  /**
+   * setActionStatus.
+   **/
+  public void setActionStatus(String actionStatus) {
+    this.actionStatus = actionStatus;
+  }
 
 
   /**
@@ -494,7 +554,9 @@ public class BulkSendBatchStatus {
       return false;
     }
     BulkSendBatchStatus bulkSendBatchStatus = (BulkSendBatchStatus) o;
-    return Objects.equals(this.batchId, bulkSendBatchStatus.batchId) &&
+    return Objects.equals(this.action, bulkSendBatchStatus.action) &&
+        Objects.equals(this.actionStatus, bulkSendBatchStatus.actionStatus) &&
+        Objects.equals(this.batchId, bulkSendBatchStatus.batchId) &&
         Objects.equals(this.batchName, bulkSendBatchStatus.batchName) &&
         Objects.equals(this.batchSize, bulkSendBatchStatus.batchSize) &&
         Objects.equals(this.bulkErrors, bulkSendBatchStatus.bulkErrors) &&
@@ -516,7 +578,7 @@ public class BulkSendBatchStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
+    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, senderUserId, sent, submittedDate);
   }
 
 
@@ -528,6 +590,8 @@ public class BulkSendBatchStatus {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchStatus {\n");
     
+    sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    actionStatus: ").append(toIndentedString(actionStatus)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");

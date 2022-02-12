@@ -97,6 +97,9 @@ public class CarbonCopy {
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
 
+  @JsonProperty("emailRecipientPostSigningURL")
+  private String emailRecipientPostSigningURL = null;
+
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
 
@@ -890,6 +893,33 @@ public class CarbonCopy {
    **/
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
+  }
+
+
+  /**
+   * emailRecipientPostSigningURL.
+   *
+   * @return CarbonCopy
+   **/
+  public CarbonCopy emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
+    return this;
+  }
+
+  /**
+   * .
+   * @return emailRecipientPostSigningURL
+   **/
+  @ApiModelProperty(value = "")
+  public String getEmailRecipientPostSigningURL() {
+    return emailRecipientPostSigningURL;
+  }
+
+  /**
+   * setEmailRecipientPostSigningURL.
+   **/
+  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
 
@@ -2452,6 +2482,7 @@ public class CarbonCopy {
         Objects.equals(this.email, carbonCopy.email) &&
         Objects.equals(this.emailMetadata, carbonCopy.emailMetadata) &&
         Objects.equals(this.emailNotification, carbonCopy.emailNotification) &&
+        Objects.equals(this.emailRecipientPostSigningURL, carbonCopy.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, carbonCopy.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, carbonCopy.errorDetails) &&
         Objects.equals(this.excludedDocuments, carbonCopy.excludedDocuments) &&
@@ -2513,7 +2544,7 @@ public class CarbonCopy {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -2547,6 +2578,7 @@ public class CarbonCopy {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
+    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");
