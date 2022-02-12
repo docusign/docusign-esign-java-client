@@ -1,49 +1,8 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Approve;
-import com.docusign.esign.model.Checkbox;
-import com.docusign.esign.model.CommentThread;
-import com.docusign.esign.model.CommissionCounty;
-import com.docusign.esign.model.CommissionExpiration;
-import com.docusign.esign.model.CommissionNumber;
-import com.docusign.esign.model.CommissionState;
-import com.docusign.esign.model.Company;
-import com.docusign.esign.model.Currency;
-import com.docusign.esign.model.DateSigned;
-import com.docusign.esign.model.Decline;
-import com.docusign.esign.model.Draw;
-import com.docusign.esign.model.Email;
-import com.docusign.esign.model.EmailAddress;
-import com.docusign.esign.model.EnvelopeId;
-import com.docusign.esign.model.FirstName;
-import com.docusign.esign.model.FormulaTab;
-import com.docusign.esign.model.FullName;
-import com.docusign.esign.model.InitialHere;
-import com.docusign.esign.model.LastName;
-import com.docusign.esign.model.ModelList;
-import com.docusign.esign.model.Notarize;
-import com.docusign.esign.model.NotarySeal;
-import com.docusign.esign.model.Note;
-import com.docusign.esign.model.Number;
-import com.docusign.esign.model.PhoneNumber;
-import com.docusign.esign.model.PolyLineOverlay;
-import com.docusign.esign.model.PrefillTabs;
-import com.docusign.esign.model.RadioGroup;
-import com.docusign.esign.model.SignHere;
-import com.docusign.esign.model.SignerAttachment;
-import com.docusign.esign.model.SmartSection;
-import com.docusign.esign.model.Ssn;
-import com.docusign.esign.model.TabGroup;
-import com.docusign.esign.model.Text;
-import com.docusign.esign.model.Title;
-import com.docusign.esign.model.View;
-import com.docusign.esign.model.Zip;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -116,7 +75,7 @@ public class Tabs {
   private java.util.List<LastName> lastNameTabs = null;
 
   @JsonProperty("listTabs")
-  private java.util.List<ModelList> listTabs = null;
+  private java.util.List<List> listTabs = null;
 
   @JsonProperty("notarizeTabs")
   private java.util.List<Notarize> notarizeTabs = null;
@@ -179,7 +138,7 @@ public class Tabs {
     this.approveTabs = approveTabs;
     return this;
   }
-  
+
   /**
    * addApproveTabsItem.
    *
@@ -219,7 +178,7 @@ public class Tabs {
     this.checkboxTabs = checkboxTabs;
     return this;
   }
-  
+
   /**
    * addCheckboxTabsItem.
    *
@@ -259,7 +218,7 @@ public class Tabs {
     this.commentThreadTabs = commentThreadTabs;
     return this;
   }
-  
+
   /**
    * addCommentThreadTabsItem.
    *
@@ -299,7 +258,7 @@ public class Tabs {
     this.commissionCountyTabs = commissionCountyTabs;
     return this;
   }
-  
+
   /**
    * addCommissionCountyTabsItem.
    *
@@ -339,7 +298,7 @@ public class Tabs {
     this.commissionExpirationTabs = commissionExpirationTabs;
     return this;
   }
-  
+
   /**
    * addCommissionExpirationTabsItem.
    *
@@ -379,7 +338,7 @@ public class Tabs {
     this.commissionNumberTabs = commissionNumberTabs;
     return this;
   }
-  
+
   /**
    * addCommissionNumberTabsItem.
    *
@@ -419,7 +378,7 @@ public class Tabs {
     this.commissionStateTabs = commissionStateTabs;
     return this;
   }
-  
+
   /**
    * addCommissionStateTabsItem.
    *
@@ -459,7 +418,7 @@ public class Tabs {
     this.companyTabs = companyTabs;
     return this;
   }
-  
+
   /**
    * addCompanyTabsItem.
    *
@@ -499,7 +458,7 @@ public class Tabs {
     this.currencyTabs = currencyTabs;
     return this;
   }
-  
+
   /**
    * addCurrencyTabsItem.
    *
@@ -539,7 +498,7 @@ public class Tabs {
     this.dateSignedTabs = dateSignedTabs;
     return this;
   }
-  
+
   /**
    * addDateSignedTabsItem.
    *
@@ -579,7 +538,7 @@ public class Tabs {
     this.dateTabs = dateTabs;
     return this;
   }
-  
+
   /**
    * addDateTabsItem.
    *
@@ -619,7 +578,7 @@ public class Tabs {
     this.declineTabs = declineTabs;
     return this;
   }
-  
+
   /**
    * addDeclineTabsItem.
    *
@@ -659,7 +618,7 @@ public class Tabs {
     this.drawTabs = drawTabs;
     return this;
   }
-  
+
   /**
    * addDrawTabsItem.
    *
@@ -699,7 +658,7 @@ public class Tabs {
     this.emailAddressTabs = emailAddressTabs;
     return this;
   }
-  
+
   /**
    * addEmailAddressTabsItem.
    *
@@ -739,7 +698,7 @@ public class Tabs {
     this.emailTabs = emailTabs;
     return this;
   }
-  
+
   /**
    * addEmailTabsItem.
    *
@@ -779,7 +738,7 @@ public class Tabs {
     this.envelopeIdTabs = envelopeIdTabs;
     return this;
   }
-  
+
   /**
    * addEnvelopeIdTabsItem.
    *
@@ -819,7 +778,7 @@ public class Tabs {
     this.firstNameTabs = firstNameTabs;
     return this;
   }
-  
+
   /**
    * addFirstNameTabsItem.
    *
@@ -859,7 +818,7 @@ public class Tabs {
     this.formulaTabs = formulaTabs;
     return this;
   }
-  
+
   /**
    * addFormulaTabsItem.
    *
@@ -899,7 +858,7 @@ public class Tabs {
     this.fullNameTabs = fullNameTabs;
     return this;
   }
-  
+
   /**
    * addFullNameTabsItem.
    *
@@ -939,7 +898,7 @@ public class Tabs {
     this.initialHereTabs = initialHereTabs;
     return this;
   }
-  
+
   /**
    * addInitialHereTabsItem.
    *
@@ -979,7 +938,7 @@ public class Tabs {
     this.lastNameTabs = lastNameTabs;
     return this;
   }
-  
+
   /**
    * addLastNameTabsItem.
    *
@@ -1015,19 +974,19 @@ public class Tabs {
    *
    * @return Tabs
    **/
-  public Tabs listTabs(java.util.List<ModelList> listTabs) {
+  public Tabs listTabs(java.util.List<List> listTabs) {
     this.listTabs = listTabs;
     return this;
   }
-  
+
   /**
    * addListTabsItem.
    *
    * @return Tabs
    **/
-  public Tabs addListTabsItem(ModelList listTabsItem) {
+  public Tabs addListTabsItem(List listTabsItem) {
     if (this.listTabs == null) {
-      this.listTabs = new java.util.ArrayList<ModelList>();
+      this.listTabs = new java.util.ArrayList<List>();
     }
     this.listTabs.add(listTabsItem);
     return this;
@@ -1038,14 +997,14 @@ public class Tabs {
    * @return listTabs
    **/
   @ApiModelProperty(value = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
-  public java.util.List<ModelList> getListTabs() {
+  public java.util.List<List> getListTabs() {
     return listTabs;
   }
 
   /**
    * setListTabs.
    **/
-  public void setListTabs(java.util.List<ModelList> listTabs) {
+  public void setListTabs(java.util.List<List> listTabs) {
     this.listTabs = listTabs;
   }
 
@@ -1059,7 +1018,7 @@ public class Tabs {
     this.notarizeTabs = notarizeTabs;
     return this;
   }
-  
+
   /**
    * addNotarizeTabsItem.
    *
@@ -1099,7 +1058,7 @@ public class Tabs {
     this.notarySealTabs = notarySealTabs;
     return this;
   }
-  
+
   /**
    * addNotarySealTabsItem.
    *
@@ -1139,7 +1098,7 @@ public class Tabs {
     this.noteTabs = noteTabs;
     return this;
   }
-  
+
   /**
    * addNoteTabsItem.
    *
@@ -1179,7 +1138,7 @@ public class Tabs {
     this.numberTabs = numberTabs;
     return this;
   }
-  
+
   /**
    * addNumberTabsItem.
    *
@@ -1219,7 +1178,7 @@ public class Tabs {
     this.phoneNumberTabs = phoneNumberTabs;
     return this;
   }
-  
+
   /**
    * addPhoneNumberTabsItem.
    *
@@ -1259,7 +1218,7 @@ public class Tabs {
     this.polyLineOverlayTabs = polyLineOverlayTabs;
     return this;
   }
-  
+
   /**
    * addPolyLineOverlayTabsItem.
    *
@@ -1326,7 +1285,7 @@ public class Tabs {
     this.radioGroupTabs = radioGroupTabs;
     return this;
   }
-  
+
   /**
    * addRadioGroupTabsItem.
    *
@@ -1366,7 +1325,7 @@ public class Tabs {
     this.signerAttachmentTabs = signerAttachmentTabs;
     return this;
   }
-  
+
   /**
    * addSignerAttachmentTabsItem.
    *
@@ -1406,7 +1365,7 @@ public class Tabs {
     this.signHereTabs = signHereTabs;
     return this;
   }
-  
+
   /**
    * addSignHereTabsItem.
    *
@@ -1446,7 +1405,7 @@ public class Tabs {
     this.smartSectionTabs = smartSectionTabs;
     return this;
   }
-  
+
   /**
    * addSmartSectionTabsItem.
    *
@@ -1486,7 +1445,7 @@ public class Tabs {
     this.ssnTabs = ssnTabs;
     return this;
   }
-  
+
   /**
    * addSsnTabsItem.
    *
@@ -1526,7 +1485,7 @@ public class Tabs {
     this.tabGroups = tabGroups;
     return this;
   }
-  
+
   /**
    * addTabGroupsItem.
    *
@@ -1566,7 +1525,7 @@ public class Tabs {
     this.textTabs = textTabs;
     return this;
   }
-  
+
   /**
    * addTextTabsItem.
    *
@@ -1606,7 +1565,7 @@ public class Tabs {
     this.titleTabs = titleTabs;
     return this;
   }
-  
+
   /**
    * addTitleTabsItem.
    *
@@ -1646,7 +1605,7 @@ public class Tabs {
     this.viewTabs = viewTabs;
     return this;
   }
-  
+
   /**
    * addViewTabsItem.
    *
@@ -1686,7 +1645,7 @@ public class Tabs {
     this.zipTabs = zipTabs;
     return this;
   }
-  
+
   /**
    * addZipTabsItem.
    *
@@ -1788,7 +1747,7 @@ public class Tabs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Tabs {\n");
-    
+
     sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    commentThreadTabs: ").append(toIndentedString(commentThreadTabs)).append("\n");
