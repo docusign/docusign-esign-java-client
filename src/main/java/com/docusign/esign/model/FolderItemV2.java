@@ -39,6 +39,9 @@ public class FolderItemV2 {
   @JsonProperty("is21CFRPart11")
   private String is21CFRPart11 = null;
 
+  @JsonProperty("lastModifiedDateTime")
+  private String lastModifiedDateTime = null;
+
   @JsonProperty("ownerName")
   private String ownerName = null;
 
@@ -289,6 +292,33 @@ public class FolderItemV2 {
    **/
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
+  }
+
+
+  /**
+   * lastModifiedDateTime.
+   *
+   * @return FolderItemV2
+   **/
+  public FolderItemV2 lastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
+    return this;
+  }
+
+  /**
+   * The date and time the item was last modified..
+   * @return lastModifiedDateTime
+   **/
+  @ApiModelProperty(value = "The date and time the item was last modified.")
+  public String getLastModifiedDateTime() {
+    return lastModifiedDateTime;
+  }
+
+  /**
+   * setLastModifiedDateTime.
+   **/
+  public void setLastModifiedDateTime(String lastModifiedDateTime) {
+    this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
 
@@ -638,6 +668,7 @@ public class FolderItemV2 {
         Objects.equals(this.folderId, folderItemV2.folderId) &&
         Objects.equals(this.folderUri, folderItemV2.folderUri) &&
         Objects.equals(this.is21CFRPart11, folderItemV2.is21CFRPart11) &&
+        Objects.equals(this.lastModifiedDateTime, folderItemV2.lastModifiedDateTime) &&
         Objects.equals(this.ownerName, folderItemV2.ownerName) &&
         Objects.equals(this.recipients, folderItemV2.recipients) &&
         Objects.equals(this.recipientsUri, folderItemV2.recipientsUri) &&
@@ -657,7 +688,7 @@ public class FolderItemV2 {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
+    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
   }
 
 
@@ -677,6 +708,7 @@ public class FolderItemV2 {
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    folderUri: ").append(toIndentedString(folderUri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
     sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("    recipientsUri: ").append(toIndentedString(recipientsUri)).append("\n");

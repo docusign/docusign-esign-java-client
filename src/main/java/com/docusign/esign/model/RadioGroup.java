@@ -40,6 +40,12 @@ public class RadioGroup {
   @JsonProperty("groupNameMetadata")
   private PropertyMetadata groupNameMetadata = null;
 
+  @JsonProperty("originalValue")
+  private String originalValue = null;
+
+  @JsonProperty("originalValueMetadata")
+  private PropertyMetadata originalValueMetadata = null;
+
   @JsonProperty("radios")
   private java.util.List<Radio> radios = null;
 
@@ -102,6 +108,12 @@ public class RadioGroup {
 
   @JsonProperty("tooltipMetadata")
   private PropertyMetadata tooltipMetadata = null;
+
+  @JsonProperty("value")
+  private String value = null;
+
+  @JsonProperty("valueMetadata")
+  private PropertyMetadata valueMetadata = null;
 
 
   /**
@@ -317,6 +329,60 @@ public class RadioGroup {
    **/
   public void setGroupNameMetadata(PropertyMetadata groupNameMetadata) {
     this.groupNameMetadata = groupNameMetadata;
+  }
+
+
+  /**
+   * originalValue.
+   *
+   * @return RadioGroup
+   **/
+  public RadioGroup originalValue(String originalValue) {
+    this.originalValue = originalValue;
+    return this;
+  }
+
+  /**
+   * The initial value of the tab when it was sent to the recipient. .
+   * @return originalValue
+   **/
+  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  public String getOriginalValue() {
+    return originalValue;
+  }
+
+  /**
+   * setOriginalValue.
+   **/
+  public void setOriginalValue(String originalValue) {
+    this.originalValue = originalValue;
+  }
+
+
+  /**
+   * originalValueMetadata.
+   *
+   * @return RadioGroup
+   **/
+  public RadioGroup originalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
+    return this;
+  }
+
+  /**
+   * Get originalValueMetadata.
+   * @return originalValueMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getOriginalValueMetadata() {
+    return originalValueMetadata;
+  }
+
+  /**
+   * setOriginalValueMetadata.
+   **/
+  public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
+    this.originalValueMetadata = originalValueMetadata;
   }
 
 
@@ -901,6 +967,60 @@ public class RadioGroup {
 
 
   /**
+   * value.
+   *
+   * @return RadioGroup
+   **/
+  public RadioGroup value(String value) {
+    this.value = value;
+    return this;
+  }
+
+  /**
+   * Specifies the value of the tab. .
+   * @return value
+   **/
+  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  public String getValue() {
+    return value;
+  }
+
+  /**
+   * setValue.
+   **/
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+
+  /**
+   * valueMetadata.
+   *
+   * @return RadioGroup
+   **/
+  public RadioGroup valueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+    return this;
+  }
+
+  /**
+   * Get valueMetadata.
+   * @return valueMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public PropertyMetadata getValueMetadata() {
+    return valueMetadata;
+  }
+
+  /**
+   * setValueMetadata.
+   **/
+  public void setValueMetadata(PropertyMetadata valueMetadata) {
+    this.valueMetadata = valueMetadata;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -922,6 +1042,8 @@ public class RadioGroup {
         Objects.equals(this.documentIdMetadata, radioGroup.documentIdMetadata) &&
         Objects.equals(this.groupName, radioGroup.groupName) &&
         Objects.equals(this.groupNameMetadata, radioGroup.groupNameMetadata) &&
+        Objects.equals(this.originalValue, radioGroup.originalValue) &&
+        Objects.equals(this.originalValueMetadata, radioGroup.originalValueMetadata) &&
         Objects.equals(this.radios, radioGroup.radios) &&
         Objects.equals(this.recipientId, radioGroup.recipientId) &&
         Objects.equals(this.recipientIdGuid, radioGroup.recipientIdGuid) &&
@@ -942,7 +1064,9 @@ public class RadioGroup {
         Objects.equals(this.templateRequired, radioGroup.templateRequired) &&
         Objects.equals(this.templateRequiredMetadata, radioGroup.templateRequiredMetadata) &&
         Objects.equals(this.tooltip, radioGroup.tooltip) &&
-        Objects.equals(this.tooltipMetadata, radioGroup.tooltipMetadata);
+        Objects.equals(this.tooltipMetadata, radioGroup.tooltipMetadata) &&
+        Objects.equals(this.value, radioGroup.value) &&
+        Objects.equals(this.valueMetadata, radioGroup.valueMetadata);
   }
 
   /**
@@ -950,7 +1074,7 @@ public class RadioGroup {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata);
+    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, originalValue, originalValueMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata, value, valueMetadata);
   }
 
 
@@ -970,6 +1094,8 @@ public class RadioGroup {
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    groupNameMetadata: ").append(toIndentedString(groupNameMetadata)).append("\n");
+    sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
+    sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    radios: ").append(toIndentedString(radios)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
@@ -991,6 +1117,8 @@ public class RadioGroup {
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    tooltipMetadata: ").append(toIndentedString(tooltipMetadata)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

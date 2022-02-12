@@ -15,13 +15,13 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class DelayedRoutingApiModel {
-  @JsonProperty("ResumeDate")
+  @JsonProperty("resumeDate")
   private String resumeDate = null;
 
-  @JsonProperty("Rules")
+  @JsonProperty("rules")
   private java.util.List<EnvelopeDelayRuleApiModel> rules = null;
 
-  @JsonProperty("Status")
+  @JsonProperty("status")
   private String status = null;
 
 
@@ -36,10 +36,10 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * .
+   * An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step..
    * @return resumeDate
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.")
   public String getResumeDate() {
     return resumeDate;
   }
@@ -76,10 +76,10 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * .
+   * A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified..
    * @return rules
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.")
   public java.util.List<EnvelopeDelayRuleApiModel> getRules() {
     return rules;
   }
@@ -103,10 +103,10 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * \"pending\" if the current workflow step has not been reached and the delay has not yet started. \"started\" if the delay is in progress. \"completed\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients..
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "\"pending\" if the current workflow step has not been reached and the delay has not yet started. \"started\" if the delay is in progress. \"completed\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
   public String getStatus() {
     return status;
   }

@@ -122,6 +122,9 @@ public class NotaryRecipient {
   @JsonProperty("emailNotification")
   private RecipientEmailNotification emailNotification = null;
 
+  @JsonProperty("emailRecipientPostSigningURL")
+  private String emailRecipientPostSigningURL = null;
+
   @JsonProperty("embeddedRecipientStartURL")
   private String embeddedRecipientStartURL = null;
 
@@ -1162,6 +1165,33 @@ public class NotaryRecipient {
    **/
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
+  }
+
+
+  /**
+   * emailRecipientPostSigningURL.
+   *
+   * @return NotaryRecipient
+   **/
+  public NotaryRecipient emailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
+    return this;
+  }
+
+  /**
+   * .
+   * @return emailRecipientPostSigningURL
+   **/
+  @ApiModelProperty(value = "")
+  public String getEmailRecipientPostSigningURL() {
+    return emailRecipientPostSigningURL;
+  }
+
+  /**
+   * setEmailRecipientPostSigningURL.
+   **/
+  public void setEmailRecipientPostSigningURL(String emailRecipientPostSigningURL) {
+    this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
 
@@ -3162,6 +3192,7 @@ public class NotaryRecipient {
         Objects.equals(this.email, notaryRecipient.email) &&
         Objects.equals(this.emailMetadata, notaryRecipient.emailMetadata) &&
         Objects.equals(this.emailNotification, notaryRecipient.emailNotification) &&
+        Objects.equals(this.emailRecipientPostSigningURL, notaryRecipient.emailRecipientPostSigningURL) &&
         Objects.equals(this.embeddedRecipientStartURL, notaryRecipient.embeddedRecipientStartURL) &&
         Objects.equals(this.errorDetails, notaryRecipient.errorDetails) &&
         Objects.equals(this.excludedDocuments, notaryRecipient.excludedDocuments) &&
@@ -3238,7 +3269,7 @@ public class NotaryRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -3279,6 +3310,7 @@ public class NotaryRecipient {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
+    sb.append("    emailRecipientPostSigningURL: ").append(toIndentedString(emailRecipientPostSigningURL)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    excludedDocuments: ").append(toIndentedString(excludedDocuments)).append("\n");

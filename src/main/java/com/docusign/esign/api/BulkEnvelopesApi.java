@@ -814,6 +814,68 @@ public class BulkEnvelopesApi {
       }
 
   /**
+   * Initiate a specific bulk send batch action.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param bulkSendBatchId  (required)
+   * @param bulkAction  (required)
+   * @param bulkSendBatchActionRequest  (optional)
+   * @return BulkSendBatchStatus
+   * @throws ApiException if fails to make API call
+   */
+  public BulkSendBatchStatus updateBulkSendBatchAction(String accountId, String bulkSendBatchId, String bulkAction, BulkSendBatchActionRequest bulkSendBatchActionRequest) throws ApiException {
+    Object localVarPostBody = bulkSendBatchActionRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBulkSendBatchAction");
+    }
+    
+    // verify the required parameter 'bulkSendBatchId' is set
+    if (bulkSendBatchId == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkSendBatchId' when calling updateBulkSendBatchAction");
+    }
+    
+    // verify the required parameter 'bulkAction' is set
+    if (bulkAction == null) {
+      throw new ApiException(400, "Missing the required parameter 'bulkAction' when calling updateBulkSendBatchAction");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/bulk_send_batch/{bulkSendBatchId}/{bulkAction}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "bulkSendBatchId" + "\\}", apiClient.escapeString(bulkSendBatchId.toString()))
+      .replaceAll("\\{" + "bulkAction" + "\\}", apiClient.escapeString(bulkAction.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<BulkSendBatchStatus> localVarReturnType = new GenericType<BulkSendBatchStatus>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
    * Put/Update a specific bulk send batch status.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)

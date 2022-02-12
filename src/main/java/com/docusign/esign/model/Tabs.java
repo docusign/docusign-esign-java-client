@@ -1,8 +1,49 @@
 package com.docusign.esign.model;
 
 import java.util.Objects;
-
+import java.util.Arrays;
+import com.docusign.esign.model.Approve;
+import com.docusign.esign.model.Checkbox;
+import com.docusign.esign.model.CommentThread;
+import com.docusign.esign.model.CommissionCounty;
+import com.docusign.esign.model.CommissionExpiration;
+import com.docusign.esign.model.CommissionNumber;
+import com.docusign.esign.model.CommissionState;
+import com.docusign.esign.model.Company;
+import com.docusign.esign.model.Currency;
+import com.docusign.esign.model.DateSigned;
+import com.docusign.esign.model.Decline;
+import com.docusign.esign.model.Draw;
+import com.docusign.esign.model.Email;
+import com.docusign.esign.model.EmailAddress;
+import com.docusign.esign.model.EnvelopeId;
+import com.docusign.esign.model.FirstName;
+import com.docusign.esign.model.FormulaTab;
+import com.docusign.esign.model.FullName;
+import com.docusign.esign.model.InitialHere;
+import com.docusign.esign.model.LastName;
+import com.docusign.esign.model.ModelList;
+import com.docusign.esign.model.Notarize;
+import com.docusign.esign.model.NotarySeal;
+import com.docusign.esign.model.Note;
+import com.docusign.esign.model.Number;
+import com.docusign.esign.model.PhoneNumber;
+import com.docusign.esign.model.PolyLineOverlay;
+import com.docusign.esign.model.PrefillTabs;
+import com.docusign.esign.model.RadioGroup;
+import com.docusign.esign.model.SignHere;
+import com.docusign.esign.model.SignerAttachment;
+import com.docusign.esign.model.SmartSection;
+import com.docusign.esign.model.Ssn;
+import com.docusign.esign.model.TabGroup;
+import com.docusign.esign.model.Text;
+import com.docusign.esign.model.Title;
+import com.docusign.esign.model.View;
+import com.docusign.esign.model.Zip;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
@@ -75,7 +116,7 @@ public class Tabs {
   private java.util.List<LastName> lastNameTabs = null;
 
   @JsonProperty("listTabs")
-  private java.util.List<List> listTabs = null;
+  private java.util.List<ModelList> listTabs = null;
 
   @JsonProperty("notarizeTabs")
   private java.util.List<Notarize> notarizeTabs = null;
@@ -974,7 +1015,7 @@ public class Tabs {
    *
    * @return Tabs
    **/
-  public Tabs listTabs(java.util.List<List> listTabs) {
+  public Tabs listTabs(java.util.List<ModelList> listTabs) {
     this.listTabs = listTabs;
     return this;
   }
@@ -984,9 +1025,9 @@ public class Tabs {
    *
    * @return Tabs
    **/
-  public Tabs addListTabsItem(List listTabsItem) {
+  public Tabs addListTabsItem(ModelList listTabsItem) {
     if (this.listTabs == null) {
-      this.listTabs = new java.util.ArrayList<List>();
+      this.listTabs = new java.util.ArrayList<ModelList>();
     }
     this.listTabs.add(listTabsItem);
     return this;
@@ -997,14 +1038,14 @@ public class Tabs {
    * @return listTabs
    **/
   @ApiModelProperty(value = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
-  public java.util.List<List> getListTabs() {
+  public java.util.List<ModelList> getListTabs() {
     return listTabs;
   }
 
   /**
    * setListTabs.
    **/
-  public void setListTabs(java.util.List<List> listTabs) {
+  public void setListTabs(java.util.List<ModelList> listTabs) {
     this.listTabs = listTabs;
   }
 

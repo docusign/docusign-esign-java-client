@@ -66,6 +66,9 @@ public class PaymentDetails {
   @JsonProperty("status")
   private String status = null;
 
+  @JsonProperty("subGatewayName")
+  private String subGatewayName = null;
+
   @JsonProperty("total")
   private Money total = null;
 
@@ -529,6 +532,33 @@ public class PaymentDetails {
 
 
   /**
+   * subGatewayName.
+   *
+   * @return PaymentDetails
+   **/
+  public PaymentDetails subGatewayName(String subGatewayName) {
+    this.subGatewayName = subGatewayName;
+    return this;
+  }
+
+  /**
+   * .
+   * @return subGatewayName
+   **/
+  @ApiModelProperty(value = "")
+  public String getSubGatewayName() {
+    return subGatewayName;
+  }
+
+  /**
+   * setSubGatewayName.
+   **/
+  public void setSubGatewayName(String subGatewayName) {
+    this.subGatewayName = subGatewayName;
+  }
+
+
+  /**
    * total.
    *
    * @return PaymentDetails
@@ -585,6 +615,7 @@ public class PaymentDetails {
         Objects.equals(this.paymentSourceId, paymentDetails.paymentSourceId) &&
         Objects.equals(this.signerValues, paymentDetails.signerValues) &&
         Objects.equals(this.status, paymentDetails.status) &&
+        Objects.equals(this.subGatewayName, paymentDetails.subGatewayName) &&
         Objects.equals(this.total, paymentDetails.total);
   }
 
@@ -593,7 +624,7 @@ public class PaymentDetails {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, signerValues, status, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, signerValues, status, subGatewayName, total);
   }
 
 
@@ -621,6 +652,7 @@ public class PaymentDetails {
     sb.append("    paymentSourceId: ").append(toIndentedString(paymentSourceId)).append("\n");
     sb.append("    signerValues: ").append(toIndentedString(signerValues)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    subGatewayName: ").append(toIndentedString(subGatewayName)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
     return sb.toString();

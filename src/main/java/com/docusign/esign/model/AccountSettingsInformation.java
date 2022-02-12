@@ -2908,10 +2908,10 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * .
+   * \"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise..
    * @return allowDelayedRouting
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "\"true\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \"false\" otherwise.")
   public String getAllowDelayedRouting() {
     return allowDelayedRouting;
   }
@@ -5446,10 +5446,10 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * .
+   * \"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise..
    * @return allowScheduledSending
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "\"true\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \"false\" otherwise.")
   public String getAllowScheduledSending() {
     return allowScheduledSending;
   }

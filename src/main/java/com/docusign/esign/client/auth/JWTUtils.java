@@ -82,7 +82,7 @@ public class JWTUtils {
     }
     return builder.sign(algorithm);
   }
-  
+
   /**
    * Helper method to create a JWT token for the JWT flow.
    *
@@ -98,12 +98,40 @@ public class JWTUtils {
    * @throws IOException if there is an issue with either the public or private file
    */
   public static String generateJWTAssertion(
+          String publicKeyFilename,
+          String privateKeyFilename,
+          String oAuthBasePath,
+          String clientId,
+          String userId,
+          long expiresIn)
+          throws JWTCreationException, IOException {
+    return generateJWTAssertion(publicKeyFilename, privateKeyFilename, oAuthBasePath, clientId, userId, expiresIn, "signature");
+  }
+
+  /**
+   * Helper method to create a JWT token for the JWT flow.
+   *
+   * @param publicKeyFilename the filename of the RSA public key
+   * @param privateKeyFilename the filename of the RSA private key
+   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   *     and account.docusign.com for the production platform)
+   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
+   * @param scopes space-separated string that represents the list of scopes to grant to the OAuth
+   *    token.
+   * @return a fresh JWT token
+   * @throws JWTCreationException if not able to create a JWT token from the input parameters
+   * @throws IOException if there is an issue with either the public or private file
+   */
+  public static String generateJWTAssertion(
       String publicKeyFilename,
       String privateKeyFilename,
       String oAuthBasePath,
       String clientId,
       String userId,
-      long expiresIn)
+      long expiresIn,
+      String scopes)
       throws JWTCreationException, IOException {
     String token = null;
     if (expiresIn <= 0L) {
@@ -134,7 +162,7 @@ public class JWTUtils {
               .withAudience(oAuthBasePath)
               .withNotBefore(new Date(now))
               .withExpiresAt(new Date(now + expiresIn * 1000))
-              .withClaim("scope", "signature")
+              .withClaim("scope", scopes)
               .sign(algorithm);
     } catch (JWTCreationException e) {
       throw e;

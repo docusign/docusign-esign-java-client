@@ -30,10 +30,14 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M3</version>
         <configuration>
+          <runOrder>alphabetical</runOrder>
           <argLine>-Xms512m -Xmx1500m</argLine>
           <parallel>methods</parallel>
           <useUnlimitedThreads>true</useUnlimitedThreads>
-          <forkMode>pertest</forkMode>
+          <forkCount>1</forkCount>
+          <reuseForks>false</reuseForks>
+          <threadCount>1</threadCount>
+          <perCoreThreadCount>false</perCoreThreadCount>
           <includes>
             <include>**/*Tests.java</include>
           </includes>
@@ -141,7 +145,7 @@
           <serverId>ossrh</serverId>
           <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>                        
+        </configuration>
       </plugin>
 
       <plugin>
