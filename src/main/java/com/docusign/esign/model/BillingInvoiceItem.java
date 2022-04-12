@@ -27,6 +27,12 @@ public class BillingInvoiceItem {
   @JsonProperty("quantity")
   private String quantity = null;
 
+  @JsonProperty("taxAmount")
+  private String taxAmount = null;
+
+  @JsonProperty("taxExemptAmount")
+  private String taxExemptAmount = null;
+
   @JsonProperty("unitPrice")
   private String unitPrice = null;
 
@@ -140,6 +146,60 @@ public class BillingInvoiceItem {
 
 
   /**
+   * taxAmount.
+   *
+   * @return BillingInvoiceItem
+   **/
+  public BillingInvoiceItem taxAmount(String taxAmount) {
+    this.taxAmount = taxAmount;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxAmount
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxAmount() {
+    return taxAmount;
+  }
+
+  /**
+   * setTaxAmount.
+   **/
+  public void setTaxAmount(String taxAmount) {
+    this.taxAmount = taxAmount;
+  }
+
+
+  /**
+   * taxExemptAmount.
+   *
+   * @return BillingInvoiceItem
+   **/
+  public BillingInvoiceItem taxExemptAmount(String taxExemptAmount) {
+    this.taxExemptAmount = taxExemptAmount;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taxExemptAmount
+   **/
+  @ApiModelProperty(value = "")
+  public String getTaxExemptAmount() {
+    return taxExemptAmount;
+  }
+
+  /**
+   * setTaxExemptAmount.
+   **/
+  public void setTaxExemptAmount(String taxExemptAmount) {
+    this.taxExemptAmount = taxExemptAmount;
+  }
+
+
+  /**
    * unitPrice.
    *
    * @return BillingInvoiceItem
@@ -184,6 +244,8 @@ public class BillingInvoiceItem {
         Objects.equals(this.chargeName, billingInvoiceItem.chargeName) &&
         Objects.equals(this.invoiceItemId, billingInvoiceItem.invoiceItemId) &&
         Objects.equals(this.quantity, billingInvoiceItem.quantity) &&
+        Objects.equals(this.taxAmount, billingInvoiceItem.taxAmount) &&
+        Objects.equals(this.taxExemptAmount, billingInvoiceItem.taxExemptAmount) &&
         Objects.equals(this.unitPrice, billingInvoiceItem.unitPrice);
   }
 
@@ -192,7 +254,7 @@ public class BillingInvoiceItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(chargeAmount, chargeName, invoiceItemId, quantity, unitPrice);
+    return Objects.hash(chargeAmount, chargeName, invoiceItemId, quantity, taxAmount, taxExemptAmount, unitPrice);
   }
 
 
@@ -208,6 +270,8 @@ public class BillingInvoiceItem {
     sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
     sb.append("    invoiceItemId: ").append(toIndentedString(invoiceItemId)).append("\n");
     sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    taxAmount: ").append(toIndentedString(taxAmount)).append("\n");
+    sb.append("    taxExemptAmount: ").append(toIndentedString(taxExemptAmount)).append("\n");
     sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
     sb.append("}");
     return sb.toString();

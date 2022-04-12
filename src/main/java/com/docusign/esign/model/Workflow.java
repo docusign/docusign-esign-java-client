@@ -2,7 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.esign.model.ScheduledSendingApiModel;
+import com.docusign.esign.model.ScheduledSending;
 import com.docusign.esign.model.WorkflowStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -19,11 +19,14 @@ public class Workflow {
   @JsonProperty("currentWorkflowStepId")
   private String currentWorkflowStepId = null;
 
+  @JsonProperty("overwriteUpdateMode")
+  private String overwriteUpdateMode = null;
+
   @JsonProperty("resumeDate")
   private String resumeDate = null;
 
   @JsonProperty("scheduledSending")
-  private ScheduledSendingApiModel scheduledSending = null;
+  private ScheduledSending scheduledSending = null;
 
   @JsonProperty("workflowStatus")
   private String workflowStatus = null;
@@ -60,6 +63,33 @@ public class Workflow {
 
 
   /**
+   * overwriteUpdateMode.
+   *
+   * @return Workflow
+   **/
+  public Workflow overwriteUpdateMode(String overwriteUpdateMode) {
+    this.overwriteUpdateMode = overwriteUpdateMode;
+    return this;
+  }
+
+  /**
+   * .
+   * @return overwriteUpdateMode
+   **/
+  @ApiModelProperty(value = "")
+  public String getOverwriteUpdateMode() {
+    return overwriteUpdateMode;
+  }
+
+  /**
+   * setOverwriteUpdateMode.
+   **/
+  public void setOverwriteUpdateMode(String overwriteUpdateMode) {
+    this.overwriteUpdateMode = overwriteUpdateMode;
+  }
+
+
+  /**
    * resumeDate.
    *
    * @return Workflow
@@ -91,7 +121,7 @@ public class Workflow {
    *
    * @return Workflow
    **/
-  public Workflow scheduledSending(ScheduledSendingApiModel scheduledSending) {
+  public Workflow scheduledSending(ScheduledSending scheduledSending) {
     this.scheduledSending = scheduledSending;
     return this;
   }
@@ -101,14 +131,14 @@ public class Workflow {
    * @return scheduledSending
    **/
   @ApiModelProperty(value = "")
-  public ScheduledSendingApiModel getScheduledSending() {
+  public ScheduledSending getScheduledSending() {
     return scheduledSending;
   }
 
   /**
    * setScheduledSending.
    **/
-  public void setScheduledSending(ScheduledSendingApiModel scheduledSending) {
+  public void setScheduledSending(ScheduledSending scheduledSending) {
     this.scheduledSending = scheduledSending;
   }
 
@@ -195,6 +225,7 @@ public class Workflow {
     }
     Workflow workflow = (Workflow) o;
     return Objects.equals(this.currentWorkflowStepId, workflow.currentWorkflowStepId) &&
+        Objects.equals(this.overwriteUpdateMode, workflow.overwriteUpdateMode) &&
         Objects.equals(this.resumeDate, workflow.resumeDate) &&
         Objects.equals(this.scheduledSending, workflow.scheduledSending) &&
         Objects.equals(this.workflowStatus, workflow.workflowStatus) &&
@@ -206,7 +237,7 @@ public class Workflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currentWorkflowStepId, resumeDate, scheduledSending, workflowStatus, workflowSteps);
+    return Objects.hash(currentWorkflowStepId, overwriteUpdateMode, resumeDate, scheduledSending, workflowStatus, workflowSteps);
   }
 
 
@@ -219,6 +250,7 @@ public class Workflow {
     sb.append("class Workflow {\n");
     
     sb.append("    currentWorkflowStepId: ").append(toIndentedString(currentWorkflowStepId)).append("\n");
+    sb.append("    overwriteUpdateMode: ").append(toIndentedString(overwriteUpdateMode)).append("\n");
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("    scheduledSending: ").append(toIndentedString(scheduledSending)).append("\n");
     sb.append("    workflowStatus: ").append(toIndentedString(workflowStatus)).append("\n");

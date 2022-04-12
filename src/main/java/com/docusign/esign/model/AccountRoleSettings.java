@@ -240,6 +240,12 @@ public class AccountRoleSettings {
   @JsonProperty("vaultingModeMetadata")
   private SettingsMetadata vaultingModeMetadata = null;
 
+  @JsonProperty("webForms")
+  private String webForms = null;
+
+  @JsonProperty("webFormsMetadata")
+  private SettingsMetadata webFormsMetadata = null;
+
 
   /**
    * allowAccountManagement.
@@ -2267,6 +2273,60 @@ public class AccountRoleSettings {
 
 
   /**
+   * webForms.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings webForms(String webForms) {
+    this.webForms = webForms;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webForms
+   **/
+  @ApiModelProperty(value = "")
+  public String getWebForms() {
+    return webForms;
+  }
+
+  /**
+   * setWebForms.
+   **/
+  public void setWebForms(String webForms) {
+    this.webForms = webForms;
+  }
+
+
+  /**
+   * webFormsMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings webFormsMetadata(SettingsMetadata webFormsMetadata) {
+    this.webFormsMetadata = webFormsMetadata;
+    return this;
+  }
+
+  /**
+   * Get webFormsMetadata.
+   * @return webFormsMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getWebFormsMetadata() {
+    return webFormsMetadata;
+  }
+
+  /**
+   * setWebFormsMetadata.
+   **/
+  public void setWebFormsMetadata(SettingsMetadata webFormsMetadata) {
+    this.webFormsMetadata = webFormsMetadata;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -2354,7 +2414,9 @@ public class AccountRoleSettings {
         Objects.equals(this.useNewSendingInterface, accountRoleSettings.useNewSendingInterface) &&
         Objects.equals(this.useNewSendingInterfaceMetadata, accountRoleSettings.useNewSendingInterfaceMetadata) &&
         Objects.equals(this.vaultingMode, accountRoleSettings.vaultingMode) &&
-        Objects.equals(this.vaultingModeMetadata, accountRoleSettings.vaultingModeMetadata);
+        Objects.equals(this.vaultingModeMetadata, accountRoleSettings.vaultingModeMetadata) &&
+        Objects.equals(this.webForms, accountRoleSettings.webForms) &&
+        Objects.equals(this.webFormsMetadata, accountRoleSettings.webFormsMetadata);
   }
 
   /**
@@ -2362,7 +2424,7 @@ public class AccountRoleSettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -2449,6 +2511,8 @@ public class AccountRoleSettings {
     sb.append("    useNewSendingInterfaceMetadata: ").append(toIndentedString(useNewSendingInterfaceMetadata)).append("\n");
     sb.append("    vaultingMode: ").append(toIndentedString(vaultingMode)).append("\n");
     sb.append("    vaultingModeMetadata: ").append(toIndentedString(vaultingModeMetadata)).append("\n");
+    sb.append("    webForms: ").append(toIndentedString(webForms)).append("\n");
+    sb.append("    webFormsMetadata: ").append(toIndentedString(webFormsMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

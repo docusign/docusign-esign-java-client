@@ -1,6 +1,17 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v3.18.0] - eSignature API v2.1-22.1.01.00 - 2022-04-08
+### Changed
+- Added support for version v2.1-22.1.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+### Breaking
+- Following models are renamed
+
+    - `ScheduledSendingApiModel` is renamed to `ScheduledSending`
+    - `DelayedRoutingApiModel` is renamed to `DelayedRouting`
+
 ## [v3.17.1] - eSignature API v2.1-21.4.02.00 - 2022-02-12
 ### Changed
 - Added support for version v2.1-21.4.02.00 of the DocuSign ESignature API.

@@ -72,6 +72,9 @@ public class UserInformation {
   @JsonProperty("isAdmin")
   private String isAdmin = null;
 
+  @JsonProperty("isAlternateAdmin")
+  private String isAlternateAdmin = null;
+
   @JsonProperty("isNAREnabled")
   private String isNAREnabled = null;
 
@@ -646,6 +649,33 @@ public class UserInformation {
    **/
   public void setIsAdmin(String isAdmin) {
     this.isAdmin = isAdmin;
+  }
+
+
+  /**
+   * isAlternateAdmin.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation isAlternateAdmin(String isAlternateAdmin) {
+    this.isAlternateAdmin = isAlternateAdmin;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isAlternateAdmin
+   **/
+  @ApiModelProperty(value = "")
+  public String getIsAlternateAdmin() {
+    return isAlternateAdmin;
+  }
+
+  /**
+   * setIsAlternateAdmin.
+   **/
+  public void setIsAlternateAdmin(String isAlternateAdmin) {
+    this.isAlternateAdmin = isAlternateAdmin;
   }
 
 
@@ -1382,6 +1412,7 @@ public class UserInformation {
         Objects.equals(this.homeAddress, userInformation.homeAddress) &&
         Objects.equals(this.initialsImageUri, userInformation.initialsImageUri) &&
         Objects.equals(this.isAdmin, userInformation.isAdmin) &&
+        Objects.equals(this.isAlternateAdmin, userInformation.isAlternateAdmin) &&
         Objects.equals(this.isNAREnabled, userInformation.isNAREnabled) &&
         Objects.equals(this.jobTitle, userInformation.jobTitle) &&
         Objects.equals(this.lastLogin, userInformation.lastLogin) &&
@@ -1415,7 +1446,7 @@ public class UserInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
@@ -1444,6 +1475,7 @@ public class UserInformation {
     sb.append("    homeAddress: ").append(toIndentedString(homeAddress)).append("\n");
     sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
     sb.append("    isAdmin: ").append(toIndentedString(isAdmin)).append("\n");
+    sb.append("    isAlternateAdmin: ").append(toIndentedString(isAlternateAdmin)).append("\n");
     sb.append("    isNAREnabled: ").append(toIndentedString(isNAREnabled)).append("\n");
     sb.append("    jobTitle: ").append(toIndentedString(jobTitle)).append("\n");
     sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");

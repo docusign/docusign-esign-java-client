@@ -281,7 +281,6 @@ public class BulkEnvelopesApi {
   private String searchText = null;
   private String startPosition = null;
   private String status = null;
-  private String userId = null;
   
  /**
   * setCount method.
@@ -394,22 +393,6 @@ public class BulkEnvelopesApi {
   public String getStatus() {
     return this.status;
   }
-  
- /**
-  * setUserId method.
-  */
-  public void setUserId(String userId) {
-    this.userId = userId;
-  }
-
- /**
-  * getUserId method.
-  *
-  * @return String
-  */
-  public String getUserId() {
-    return this.userId;
-  }
   }
 
    /**
@@ -470,8 +453,6 @@ public class BulkEnvelopesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("user_id", options.userId));
     }
 
     
@@ -559,9 +540,12 @@ public class BulkEnvelopesApi {
   {
   private String batchIds = null;
   private String count = null;
+  private String fromDate = null;
   private String searchText = null;
   private String startPosition = null;
   private String status = null;
+  private String toDate = null;
+  private String userId = null;
   
  /**
   * setBatchIds method.
@@ -593,6 +577,22 @@ public class BulkEnvelopesApi {
   */
   public String getCount() {
     return this.count;
+  }
+  
+ /**
+  * setFromDate method.
+  */
+  public void setFromDate(String fromDate) {
+    this.fromDate = fromDate;
+  }
+
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
+  public String getFromDate() {
+    return this.fromDate;
   }
   
  /**
@@ -642,6 +642,38 @@ public class BulkEnvelopesApi {
   public String getStatus() {
     return this.status;
   }
+  
+ /**
+  * setToDate method.
+  */
+  public void setToDate(String toDate) {
+    this.toDate = toDate;
+  }
+
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
+  public String getToDate() {
+    return this.toDate;
+  }
+  
+ /**
+  * setUserId method.
+  */
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
+
+ /**
+  * getUserId method.
+  *
+  * @return String
+  */
+  public String getUserId() {
+    return this.userId;
+  }
   }
 
    /**
@@ -685,11 +717,17 @@ public class BulkEnvelopesApi {
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
     }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_id", options.userId));
     }
 
     
