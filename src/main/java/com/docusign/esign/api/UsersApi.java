@@ -63,6 +63,7 @@ public class UsersApi {
   public class CallListOptions
   {
   private String additionalInfo = null;
+  private String alternateAdminsOnly = null;
   private String count = null;
   private String domainUsersOnly = null;
   private String email = null;
@@ -89,6 +90,22 @@ public class UsersApi {
   */
   public String getAdditionalInfo() {
     return this.additionalInfo;
+  }
+  
+ /**
+  * setAlternateAdminsOnly method.
+  */
+  public void setAlternateAdminsOnly(String alternateAdminsOnly) {
+    this.alternateAdminsOnly = alternateAdminsOnly;
+  }
+
+ /**
+  * getAlternateAdminsOnly method.
+  *
+  * @return String
+  */
+  public String getAlternateAdminsOnly() {
+    return this.alternateAdminsOnly;
   }
   
  /**
@@ -306,6 +323,8 @@ public class UsersApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("alternate_admins_only", options.alternateAdminsOnly));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
     }if (options != null) {

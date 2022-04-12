@@ -383,6 +383,12 @@ public class UserSettingsInformation {
   @JsonProperty("vaultingModeMetadata")
   private SettingsMetadata vaultingModeMetadata = null;
 
+  @JsonProperty("webForms")
+  private String webForms = null;
+
+  @JsonProperty("webFormsMetadata")
+  private SettingsMetadata webFormsMetadata = null;
+
 
   /**
    * accountManagementGranular.
@@ -3665,6 +3671,60 @@ public class UserSettingsInformation {
 
 
   /**
+   * webForms.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation webForms(String webForms) {
+    this.webForms = webForms;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webForms
+   **/
+  @ApiModelProperty(value = "")
+  public String getWebForms() {
+    return webForms;
+  }
+
+  /**
+   * setWebForms.
+   **/
+  public void setWebForms(String webForms) {
+    this.webForms = webForms;
+  }
+
+
+  /**
+   * webFormsMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation webFormsMetadata(SettingsMetadata webFormsMetadata) {
+    this.webFormsMetadata = webFormsMetadata;
+    return this;
+  }
+
+  /**
+   * Get webFormsMetadata.
+   * @return webFormsMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getWebFormsMetadata() {
+    return webFormsMetadata;
+  }
+
+  /**
+   * setWebFormsMetadata.
+   **/
+  public void setWebFormsMetadata(SettingsMetadata webFormsMetadata) {
+    this.webFormsMetadata = webFormsMetadata;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -3798,7 +3858,9 @@ public class UserSettingsInformation {
         Objects.equals(this.transactionPointUserName, userSettingsInformation.transactionPointUserName) &&
         Objects.equals(this.transactionPointUserNameMetadata, userSettingsInformation.transactionPointUserNameMetadata) &&
         Objects.equals(this.vaultingMode, userSettingsInformation.vaultingMode) &&
-        Objects.equals(this.vaultingModeMetadata, userSettingsInformation.vaultingModeMetadata);
+        Objects.equals(this.vaultingModeMetadata, userSettingsInformation.vaultingModeMetadata) &&
+        Objects.equals(this.webForms, userSettingsInformation.webForms) &&
+        Objects.equals(this.webFormsMetadata, userSettingsInformation.webFormsMetadata);
   }
 
   /**
@@ -3806,7 +3868,7 @@ public class UserSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -3939,6 +4001,8 @@ public class UserSettingsInformation {
     sb.append("    transactionPointUserNameMetadata: ").append(toIndentedString(transactionPointUserNameMetadata)).append("\n");
     sb.append("    vaultingMode: ").append(toIndentedString(vaultingMode)).append("\n");
     sb.append("    vaultingModeMetadata: ").append(toIndentedString(vaultingModeMetadata)).append("\n");
+    sb.append("    webForms: ").append(toIndentedString(webForms)).append("\n");
+    sb.append("    webFormsMetadata: ").append(toIndentedString(webFormsMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

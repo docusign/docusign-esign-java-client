@@ -3603,68 +3603,6 @@ public class TemplatesApi {
       }
 
   /**
-   * Adds or replaces the bulk recipients list in a template..
-   * Updates the bulk recipients in a template using a file upload. The Content-Type supported for uploading a bulk recipient file is CSV (text/csv).  The REST API does not support modifying individual rows or values in the bulk recipients file. It only allows the entire file to be added or replaced with a new file.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param templateId The ID of the template being accessed. (required)
-   * @param recipientId The ID of the recipient being accessed. (required)
-   * @param bulkRecipientsRequest  (optional)
-   * @return BulkRecipientsSummaryResponse
-   * @throws ApiException if fails to make API call
-   */
-  public BulkRecipientsSummaryResponse updateBulkRecipients(String accountId, String templateId, String recipientId, BulkRecipientsRequest bulkRecipientsRequest) throws ApiException {
-    Object localVarPostBody = bulkRecipientsRequest;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBulkRecipients");
-    }
-    
-    // verify the required parameter 'templateId' is set
-    if (templateId == null) {
-      throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateBulkRecipients");
-    }
-    
-    // verify the required parameter 'recipientId' is set
-    if (recipientId == null) {
-      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling updateBulkRecipients");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/recipients/{recipientId}/bulk_recipients"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()))
-      .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<BulkRecipientsSummaryResponse> localVarReturnType = new GenericType<BulkRecipientsSummaryResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-
-  /**
    * Updates envelope custom fields in a template..
    * Updates the custom fields in a template.  Each custom field used in a template must have a unique name.
    * @param accountId The external account number (int) or account ID Guid. (required)

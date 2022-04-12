@@ -27,6 +27,9 @@ public class LinkedExternalPrimaryAccount {
   @JsonProperty("linkId")
   private String linkId = null;
 
+  @JsonProperty("pdfFieldHandlingOption")
+  private String pdfFieldHandlingOption = null;
+
   @JsonProperty("recipientAuthRequirements")
   private ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements = null;
 
@@ -146,6 +149,33 @@ public class LinkedExternalPrimaryAccount {
 
 
   /**
+   * pdfFieldHandlingOption.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount pdfFieldHandlingOption(String pdfFieldHandlingOption) {
+    this.pdfFieldHandlingOption = pdfFieldHandlingOption;
+    return this;
+  }
+
+  /**
+   * .
+   * @return pdfFieldHandlingOption
+   **/
+  @ApiModelProperty(value = "")
+  public String getPdfFieldHandlingOption() {
+    return pdfFieldHandlingOption;
+  }
+
+  /**
+   * setPdfFieldHandlingOption.
+   **/
+  public void setPdfFieldHandlingOption(String pdfFieldHandlingOption) {
+    this.pdfFieldHandlingOption = pdfFieldHandlingOption;
+  }
+
+
+  /**
    * recipientAuthRequirements.
    *
    * @return LinkedExternalPrimaryAccount
@@ -244,6 +274,7 @@ public class LinkedExternalPrimaryAccount {
         Objects.equals(this.configurationId, linkedExternalPrimaryAccount.configurationId) &&
         Objects.equals(this.email, linkedExternalPrimaryAccount.email) &&
         Objects.equals(this.linkId, linkedExternalPrimaryAccount.linkId) &&
+        Objects.equals(this.pdfFieldHandlingOption, linkedExternalPrimaryAccount.pdfFieldHandlingOption) &&
         Objects.equals(this.recipientAuthRequirements, linkedExternalPrimaryAccount.recipientAuthRequirements) &&
         Objects.equals(this.status, linkedExternalPrimaryAccount.status) &&
         Objects.equals(this.userId, linkedExternalPrimaryAccount.userId);
@@ -254,7 +285,7 @@ public class LinkedExternalPrimaryAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, configurationId, email, linkId, recipientAuthRequirements, status, userId);
+    return Objects.hash(accountName, configurationId, email, linkId, pdfFieldHandlingOption, recipientAuthRequirements, status, userId);
   }
 
 
@@ -270,6 +301,7 @@ public class LinkedExternalPrimaryAccount {
     sb.append("    configurationId: ").append(toIndentedString(configurationId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    linkId: ").append(toIndentedString(linkId)).append("\n");
+    sb.append("    pdfFieldHandlingOption: ").append(toIndentedString(pdfFieldHandlingOption)).append("\n");
     sb.append("    recipientAuthRequirements: ").append(toIndentedString(recipientAuthRequirements)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");

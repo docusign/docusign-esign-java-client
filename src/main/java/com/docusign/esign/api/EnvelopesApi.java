@@ -3631,110 +3631,6 @@ public class EnvelopesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /// <summary>
-  /// Get Responsive HTML for a document in an envelope. 
-  /// </summary>
-
- /**
-  * GetDocumentResponsiveHtmlOptions Class.
-  *
-  **/
-  public class GetDocumentResponsiveHtmlOptions
-  {
-  private String includeAnchorTabLocations = null;
-  
- /**
-  * setIncludeAnchorTabLocations method.
-  */
-  public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
-    this.includeAnchorTabLocations = includeAnchorTabLocations;
-  }
-
- /**
-  * getIncludeAnchorTabLocations method.
-  *
-  * @return String
-  */
-  public String getIncludeAnchorTabLocations() {
-    return this.includeAnchorTabLocations;
-  }
-  }
-
-   /**
-   * Get Responsive HTML for a document in an envelope..
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param documentId The ID of the document being accessed. (required)
-   * @return DocumentHtmlDefinitionOriginals
-   */ 
-  public DocumentHtmlDefinitionOriginals getDocumentResponsiveHtml(String accountId, String envelopeId, String documentId) throws ApiException {
-    return getDocumentResponsiveHtml(accountId, envelopeId, documentId, null);
-  }
-
-  /**
-   * Get Responsive HTML for a document in an envelope..
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param documentId The ID of the document being accessed. (required)
-   * @param options for modifying the method behavior.
-   * @return DocumentHtmlDefinitionOriginals
-   * @throws ApiException if fails to make API call
-   */
-  public DocumentHtmlDefinitionOriginals getDocumentResponsiveHtml(String accountId, String envelopeId, String documentId, EnvelopesApi.GetDocumentResponsiveHtmlOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getDocumentResponsiveHtml");
-    }
-    
-    // verify the required parameter 'envelopeId' is set
-    if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getDocumentResponsiveHtml");
-    }
-    
-    // verify the required parameter 'documentId' is set
-    if (documentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getDocumentResponsiveHtml");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{documentId}/responsive_html"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
   /// Returns tabs on the document. 
   /// </summary>
 
@@ -5078,102 +4974,6 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Get Responsive HTML for all documents in an envelope. 
-  /// </summary>
-
- /**
-  * GetResponsiveHtmlOptions Class.
-  *
-  **/
-  public class GetResponsiveHtmlOptions
-  {
-  private String includeAnchorTabLocations = null;
-  
- /**
-  * setIncludeAnchorTabLocations method.
-  */
-  public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
-    this.includeAnchorTabLocations = includeAnchorTabLocations;
-  }
-
- /**
-  * getIncludeAnchorTabLocations method.
-  *
-  * @return String
-  */
-  public String getIncludeAnchorTabLocations() {
-    return this.includeAnchorTabLocations;
-  }
-  }
-
-   /**
-   * Get Responsive HTML for all documents in an envelope..
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @return DocumentHtmlDefinitionOriginals
-   */ 
-  public DocumentHtmlDefinitionOriginals getResponsiveHtml(String accountId, String envelopeId) throws ApiException {
-    return getResponsiveHtml(accountId, envelopeId, null);
-  }
-
-  /**
-   * Get Responsive HTML for all documents in an envelope..
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param options for modifying the method behavior.
-   * @return DocumentHtmlDefinitionOriginals
-   * @throws ApiException if fails to make API call
-   */
-  public DocumentHtmlDefinitionOriginals getResponsiveHtml(String accountId, String envelopeId, EnvelopesApi.GetResponsiveHtmlOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getResponsiveHtml");
-    }
-    
-    // verify the required parameter 'envelopeId' is set
-    if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getResponsiveHtml");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/responsive_html"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<DocumentHtmlDefinitionOriginals> localVarReturnType = new GenericType<DocumentHtmlDefinitionOriginals>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 
@@ -8567,6 +8367,68 @@ public class EnvelopesApi {
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
 
     GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
+    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+
+  /**
+   * Retrieves a PDF document from the envelope with no CoC..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param regenDocumentId  (required)
+   * @param document  (optional)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] updateRegenDocument(String accountId, String envelopeId, String regenDocumentId, Document document) throws ApiException {
+    Object localVarPostBody = document;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRegenDocument");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRegenDocument");
+    }
+    
+    // verify the required parameter 'regenDocumentId' is set
+    if (regenDocumentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'regenDocumentId' when calling updateRegenDocument");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "regenDocumentId" + "\\}", apiClient.escapeString(regenDocumentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/pdf"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
 

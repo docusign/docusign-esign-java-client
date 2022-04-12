@@ -1347,7 +1347,39 @@ public class SdkUnitTests {
             Assert.fail("Exception: " + e.getLocalizedMessage());
         }
     }
-	
+
+    @Test
+    public void CustomApiClientTest() {
+        System.out.println("\nCustomApiClientTest:\n" + "===========================================");
+
+        class CustomApiClient extends ApiClient {
+        	private CustomApiClient(String basePath) {
+        		super(basePath);
+        		// your ApiClient customizations go here
+			}
+		}
+
+        try {
+        	CustomApiClient customApiClient = new CustomApiClient(BaseUrl);
+			List<String> scopes = new ArrayList<>();
+			scopes.add(OAuth.Scope_SIGNATURE);
+
+			OAuth.OAuthToken oAuthToken = customApiClient.requestJWTUserToken(IntegratorKey, UserId, scopes, privateKeyBytes, 3600);
+			customApiClient.setAccessToken(oAuthToken.getAccessToken(), oAuthToken.getExpiresIn());
+
+			EnvelopesApi envelopesApi = new EnvelopesApi(customApiClient);
+			EnvelopeDocumentsResult docsList = envelopesApi.listDocuments(AccountId, envelopeIds[0]);
+			Assert.assertNotNull(docsList);
+			Assert.assertEquals(envelopeIds[0], docsList.getEnvelopeId());
+
+			System.out.println("EnvelopeDocumentsResult: " + docsList);
+        } catch (ApiException ex) {
+            Assert.fail("Exception: " + ex);
+        } catch (Exception e) {
+            Assert.fail("Exception: " + e.getLocalizedMessage());
+        }
+    }
+
 	private String[] getLastTenEnvelopeIds() {
 		String [] envelopeIds = new String[0];
 

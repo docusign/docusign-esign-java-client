@@ -2,7 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.docusign.esign.model.DelayedRoutingApiModel;
+import com.docusign.esign.model.DelayedRouting;
 import com.docusign.esign.model.RecipientRouting;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -23,7 +23,7 @@ public class WorkflowStep {
   private String completedDate = null;
 
   @JsonProperty("delayedRouting")
-  private DelayedRoutingApiModel delayedRouting = null;
+  private DelayedRouting delayedRouting = null;
 
   @JsonProperty("itemId")
   private String itemId = null;
@@ -103,7 +103,7 @@ public class WorkflowStep {
    *
    * @return WorkflowStep
    **/
-  public WorkflowStep delayedRouting(DelayedRoutingApiModel delayedRouting) {
+  public WorkflowStep delayedRouting(DelayedRouting delayedRouting) {
     this.delayedRouting = delayedRouting;
     return this;
   }
@@ -113,14 +113,14 @@ public class WorkflowStep {
    * @return delayedRouting
    **/
   @ApiModelProperty(value = "")
-  public DelayedRoutingApiModel getDelayedRouting() {
+  public DelayedRouting getDelayedRouting() {
     return delayedRouting;
   }
 
   /**
    * setDelayedRouting.
    **/
-  public void setDelayedRouting(DelayedRoutingApiModel delayedRouting) {
+  public void setDelayedRouting(DelayedRouting delayedRouting) {
     this.delayedRouting = delayedRouting;
   }
 
