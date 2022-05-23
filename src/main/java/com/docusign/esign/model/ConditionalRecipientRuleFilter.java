@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ConditionalRecipientRuleFilter.
- *
- */
-
+/** ConditionalRecipientRuleFilter. */
 public class ConditionalRecipientRuleFilter {
   @JsonProperty("operator")
   private String operator = null;
@@ -35,12 +27,11 @@ public class ConditionalRecipientRuleFilter {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * operator.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter operator(String operator) {
     this.operator = operator;
     return this;
@@ -48,53 +39,52 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   *
    * @return operator
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getOperator() {
     return operator;
   }
 
-  /**
-   * setOperator.
-   **/
+  /** setOperator. */
   public void setOperator(String operator) {
     this.operator = operator;
   }
-
 
   /**
    * recipientId.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * the Document..
+   *
    * @return recipientId
-   **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   */
+  @ApiModelProperty(
+      value =
+          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
-  /**
-   * setRecipientId.
-   **/
+  /** setRecipientId. */
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * scope.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter scope(String scope) {
     this.scope = scope;
     return this;
@@ -102,53 +92,51 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   *
    * @return scope
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScope() {
     return scope;
   }
 
-  /**
-   * setScope.
-   **/
+  /** setScope. */
   public void setScope(String scope) {
     this.scope = scope;
   }
-
 
   /**
    * tabId.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. .
+   *
    * @return tabId
-   **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+   */
+  @ApiModelProperty(
+      value =
+          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
-  /**
-   * setTabId.
-   **/
+  /** setTabId. */
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabLabel.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
@@ -156,26 +144,24 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * The label string associated with the tab..
+   *
    * @return tabLabel
-   **/
+   */
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
 
-  /**
-   * setTabLabel.
-   **/
+  /** setTabLabel. */
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabType.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter tabType(String tabType) {
     this.tabType = tabType;
     return this;
@@ -183,26 +169,24 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   *
    * @return tabType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
 
-  /**
-   * setTabType.
-   **/
+  /** setTabType. */
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * value.
    *
    * @return ConditionalRecipientRuleFilter
-   **/
+   */
   public ConditionalRecipientRuleFilter value(String value) {
     this.value = value;
     return this;
@@ -210,20 +194,18 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * Specifies the value of the tab. .
+   *
    * @return value
-   **/
+   */
   @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
 
-  /**
-   * setValue.
-   **/
+  /** setValue. */
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -238,33 +220,29 @@ public class ConditionalRecipientRuleFilter {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ConditionalRecipientRuleFilter conditionalRecipientRuleFilter = (ConditionalRecipientRuleFilter) o;
-    return Objects.equals(this.operator, conditionalRecipientRuleFilter.operator) &&
-        Objects.equals(this.recipientId, conditionalRecipientRuleFilter.recipientId) &&
-        Objects.equals(this.scope, conditionalRecipientRuleFilter.scope) &&
-        Objects.equals(this.tabId, conditionalRecipientRuleFilter.tabId) &&
-        Objects.equals(this.tabLabel, conditionalRecipientRuleFilter.tabLabel) &&
-        Objects.equals(this.tabType, conditionalRecipientRuleFilter.tabType) &&
-        Objects.equals(this.value, conditionalRecipientRuleFilter.value);
+    ConditionalRecipientRuleFilter conditionalRecipientRuleFilter =
+        (ConditionalRecipientRuleFilter) o;
+    return Objects.equals(this.operator, conditionalRecipientRuleFilter.operator)
+        && Objects.equals(this.recipientId, conditionalRecipientRuleFilter.recipientId)
+        && Objects.equals(this.scope, conditionalRecipientRuleFilter.scope)
+        && Objects.equals(this.tabId, conditionalRecipientRuleFilter.tabId)
+        && Objects.equals(this.tabLabel, conditionalRecipientRuleFilter.tabLabel)
+        && Objects.equals(this.tabType, conditionalRecipientRuleFilter.tabType)
+        && Objects.equals(this.value, conditionalRecipientRuleFilter.value);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(operator, recipientId, scope, tabId, tabLabel, tabType, value);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRuleFilter {\n");
-    
+
     sb.append("    operator: ").append(toIndentedString(operator)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
@@ -277,8 +255,7 @@ public class ConditionalRecipientRuleFilter {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -286,6 +263,4 @@ public class ConditionalRecipientRuleFilter {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

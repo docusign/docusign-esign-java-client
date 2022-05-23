@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignatureProperties
- */
-
+/** SignatureProperties */
 public class SignatureProperties {
   @JsonProperty("filter")
   private String filter = null;
@@ -24,10 +17,7 @@ public class SignatureProperties {
     return this;
   }
 
-   /**
-   * 
-   * @return filter
-  **/
+  /** @return filter */
   @ApiModelProperty(value = "")
   public String getFilter() {
     return filter;
@@ -42,10 +32,7 @@ public class SignatureProperties {
     return this;
   }
 
-   /**
-   * 
-   * @return subFilter
-  **/
+  /** @return subFilter */
   @ApiModelProperty(value = "")
   public String getSubFilter() {
     return subFilter;
@@ -54,7 +41,6 @@ public class SignatureProperties {
   public void setSubFilter(String subFilter) {
     this.subFilter = subFilter;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -65,8 +51,8 @@ public class SignatureProperties {
       return false;
     }
     SignatureProperties signatureProperties = (SignatureProperties) o;
-    return Objects.equals(this.filter, signatureProperties.filter) &&
-        Objects.equals(this.subFilter, signatureProperties.subFilter);
+    return Objects.equals(this.filter, signatureProperties.filter)
+        && Objects.equals(this.subFilter, signatureProperties.subFilter);
   }
 
   @Override
@@ -74,12 +60,11 @@ public class SignatureProperties {
     return Objects.hash(filter, subFilter);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProperties {\n");
-    
+
     sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
     sb.append("    subFilter: ").append(toIndentedString(subFilter)).append("\n");
     sb.append("}");
@@ -87,8 +72,7 @@ public class SignatureProperties {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -96,6 +80,4 @@ public class SignatureProperties {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

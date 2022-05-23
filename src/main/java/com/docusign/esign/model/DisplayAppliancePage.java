@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayAppliancePage
- */
-
+/** DisplayAppliancePage */
 public class DisplayAppliancePage {
   @JsonProperty("documentId")
   private String documentId = null;
@@ -46,11 +41,16 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Document's ID attribute.
+   *
    * @return documentId
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -64,10 +64,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return documentName
-  **/
+  /** @return documentName */
   @ApiModelProperty(example = "null", value = "")
   public String getDocumentName() {
     return documentName;
@@ -82,10 +79,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return externalDocumentId
-  **/
+  /** @return externalDocumentId */
   @ApiModelProperty(example = "null", value = "")
   public String getExternalDocumentId() {
     return externalDocumentId;
@@ -100,10 +94,11 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
+  /**
    * Height of the tab in pixels.
+   *
    * @return height
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
   public Integer getHeight() {
     return height;
@@ -118,10 +113,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return isFirstPage
-  **/
+  /** @return isFirstPage */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIsFirstPage() {
     return isFirstPage;
@@ -136,10 +128,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return pageId
-  **/
+  /** @return pageId */
   @ApiModelProperty(example = "null", value = "")
   public String getPageId() {
     return pageId;
@@ -154,10 +143,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return pageNo
-  **/
+  /** @return pageNo */
   @ApiModelProperty(example = "null", value = "")
   public Integer getPageNo() {
     return pageNo;
@@ -172,10 +158,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return pageStatus
-  **/
+  /** @return pageStatus */
   @ApiModelProperty(example = "null", value = "")
   public String getPageStatus() {
     return pageStatus;
@@ -190,10 +173,7 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
-   * 
-   * @return pageType
-  **/
+  /** @return pageType */
   @ApiModelProperty(example = "null", value = "")
   public String getPageType() {
     return pageType;
@@ -208,10 +188,11 @@ public class DisplayAppliancePage {
     return this;
   }
 
-   /**
+  /**
    * Width of the tab in pixels.
+   *
    * @return width
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
   public Integer getWidth() {
     return width;
@@ -220,7 +201,6 @@ public class DisplayAppliancePage {
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -231,29 +211,38 @@ public class DisplayAppliancePage {
       return false;
     }
     DisplayAppliancePage displayAppliancePage = (DisplayAppliancePage) o;
-    return Objects.equals(this.documentId, displayAppliancePage.documentId) &&
-        Objects.equals(this.documentName, displayAppliancePage.documentName) &&
-        Objects.equals(this.externalDocumentId, displayAppliancePage.externalDocumentId) &&
-        Objects.equals(this.height, displayAppliancePage.height) &&
-        Objects.equals(this.isFirstPage, displayAppliancePage.isFirstPage) &&
-        Objects.equals(this.pageId, displayAppliancePage.pageId) &&
-        Objects.equals(this.pageNo, displayAppliancePage.pageNo) &&
-        Objects.equals(this.pageStatus, displayAppliancePage.pageStatus) &&
-        Objects.equals(this.pageType, displayAppliancePage.pageType) &&
-        Objects.equals(this.width, displayAppliancePage.width);
+    return Objects.equals(this.documentId, displayAppliancePage.documentId)
+        && Objects.equals(this.documentName, displayAppliancePage.documentName)
+        && Objects.equals(this.externalDocumentId, displayAppliancePage.externalDocumentId)
+        && Objects.equals(this.height, displayAppliancePage.height)
+        && Objects.equals(this.isFirstPage, displayAppliancePage.isFirstPage)
+        && Objects.equals(this.pageId, displayAppliancePage.pageId)
+        && Objects.equals(this.pageNo, displayAppliancePage.pageNo)
+        && Objects.equals(this.pageStatus, displayAppliancePage.pageStatus)
+        && Objects.equals(this.pageType, displayAppliancePage.pageType)
+        && Objects.equals(this.width, displayAppliancePage.width);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documentId, documentName, externalDocumentId, height, isFirstPage, pageId, pageNo, pageStatus, pageType, width);
+    return Objects.hash(
+        documentId,
+        documentName,
+        externalDocumentId,
+        height,
+        isFirstPage,
+        pageId,
+        pageNo,
+        pageStatus,
+        pageType,
+        width);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayAppliancePage {\n");
-    
+
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    externalDocumentId: ").append(toIndentedString(externalDocumentId)).append("\n");
@@ -269,8 +258,7 @@ public class DisplayAppliancePage {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -278,6 +266,4 @@ public class DisplayAppliancePage {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

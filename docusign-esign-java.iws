@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bf8676f-704c-4451-8b99-980490bc43d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusign-esign-java.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/docusign-esign-java.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/AccountsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/AccountsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/AuthenticationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/AuthenticationApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BillingApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BillingApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkEnvelopesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkEnvelopesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkProcessDataApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkProcessDataApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkProcessDataSendApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/BulkProcessDataSendApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/CloudStorageApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/CloudStorageApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/ConnectApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/ConnectApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/CustomTabsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/CustomTabsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/DataFeedApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/DataFeedApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/DiagnosticsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/DiagnosticsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/EmailArchiveApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/EmailArchiveApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/EnvelopesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/EnvelopesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/FoldersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/FoldersApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/GroupsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/GroupsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/NotaryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/NotaryApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/OrganizationsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/OrganizationsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/PowerFormsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/PowerFormsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/SignatureApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/SignatureApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/SigningGroupsApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/SigningGroupsApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/TemplatesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/TemplatesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/TrustServiceProvidersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/TrustServiceProvidersApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/UsersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/UsersApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/WorkspacesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/api/WorkspacesApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/JSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/JSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/RFC3339DateFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/RFC3339DateFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/ApiKeyAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/ApiKeyAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/Authentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/Authentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/HttpBasicAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/HttpBasicAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/JWTUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/OAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/OAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/OAuthFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/auth/OAuthFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccessCodeFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccessCodeFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountBillingPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountBillingPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountBillingPlanResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountBillingPlanResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityInputOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityInputOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationWorkflow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountIdentityVerificationWorkflow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountMinimumPasswordLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountMinimumPasswordLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordExpirePasswordDays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordExpirePasswordDays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordLockoutDurationMinutes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordLockoutDurationMinutes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordLockoutDurationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordLockoutDurationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordMinimumPasswordAgeDays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordMinimumPasswordAgeDays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordQuestionsRequired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordQuestionsRequired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordStrengthType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordStrengthType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordStrengthTypeOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountPasswordStrengthTypeOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountRoleSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountRoleSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSeals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSeals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSettingsInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSettingsInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSharedAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSharedAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProviderOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProviderOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignatureProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignaturesInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountSignaturesInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountUISettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AccountUISettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddOn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddOn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformationInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformationInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformationV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AddressInformationV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AdminMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AdminMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ApiRequestLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ApiRequestLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ApiRequestLogsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ApiRequestLogsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AppStoreProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AppStoreProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AppStoreReceipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AppStoreReceipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Approve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Approve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AskAnAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AskAnAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Attachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Attachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AuthenticationMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AuthenticationMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AuthenticationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/AuthenticationStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveHistoryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveHistoryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BccEmailArchiveList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingCharge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingCharge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingChargeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingChargeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingEntityInformationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingEntityInformationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoiceItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoiceItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoicesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoicesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoicesSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingInvoicesSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPaymentsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanPreview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanPreview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlanUpdateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlansResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPlansResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BillingPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandEmailContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandEmailContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandLogos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandLogos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResourceUrls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResourceUrls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResourcesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandResourcesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BrandsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelopeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelopeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelopesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkEnvelopesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingListSummaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingListSummaries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingListSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingListSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkProcessingLists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientSignatureProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientSignatureProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientTabLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientTabLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsSummaryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsSummaryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkRecipientsUpdateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchActionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchActionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchSummaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchSummaries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendBatchSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendEnvelopesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendEnvelopesInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendErrorStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendErrorStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendTestResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendTestResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyCustomField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyCustomField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingCopyTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingListSummaries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingListSummaries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingListSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/BulkSendingListSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CaptiveRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CaptiveRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CaptiveRecipientInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CaptiveRecipientInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CarbonCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CarbonCopy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CertifiedDelivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CertifiedDelivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Checkbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Checkbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadPart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ChunkedUploadResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CloudStorageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CloudStorageProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CloudStorageProviders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CloudStorageProviders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentHistoryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentHistoryResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentPublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentPublish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentsPublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommentsPublish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionCounty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionCounty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionExpiration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionExpiration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CommissionState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompleteSignHashResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompleteSignHashResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompleteSignRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompleteSignRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompositeTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CompositeTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConciergeQueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConciergeQueryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConciergeQueryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConciergeQueryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRuleCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRuleCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRuleFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConditionalRecipientRuleFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectConfigResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectConfigResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectCustomConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectCustomConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectDebugLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectDebugLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectDeleteFailureResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectDeleteFailureResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectEventData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectEventData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectFailureResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectLogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectLogs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectSalesforceField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectSalesforceField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectSalesforceObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectSalesforceObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectUserObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConnectUserObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConsoleViewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConsoleViewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConsumerDisclosure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ConsumerDisclosure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactGetResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactGetResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactModRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactModRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactPhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactPhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ContactUpdateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CorrectViewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CorrectViewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Country.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Credential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Credential.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CreditCardInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CreditCardInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CreditCardTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CreditCardTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CurrencyFeatureSetPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CurrencyFeatureSetPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CurrencyPlanPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CurrencyPlanPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFieldV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFieldV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFieldsEnvelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomFieldsEnvelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomSettingsInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/CustomSettingsInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DateSigned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DateSigned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DateStampProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DateStampProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Decline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Decline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelayedRouting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelayedRouting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelayedRoutingApiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelayedRoutingApiModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelegationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DelegationInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DiagnosticsSettingsInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DiagnosticsSettingsInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DirectDebitProcessorInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DirectDebitProcessorInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceDocumentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceDocumentPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceEnvelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceEnvelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayAppliancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayAppliancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayAppliancePdf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayAppliancePdf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceSignerAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DisplayApplianceSignerAttachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DobInformationInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DobInformationInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentFieldsInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentFieldsInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlCollapsibleDisplaySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlCollapsibleDisplaySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitionOriginal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitionOriginal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitionOriginals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitionOriginals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDisplayAnchor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDisplayAnchor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDisplaySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentHtmlDisplaySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentSecurityStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentSecurityStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentTemplateList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentTemplateList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentUpdateInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentUpdateInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentVisibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentVisibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentVisibilityList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DocumentVisibilityList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradRequestBillingInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradRequestBillingInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradeBillingPlanInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradeBillingPlanInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradePlanUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradePlanUpdateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradeRequestInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/DowngradeRequestInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Draw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Draw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ENoteConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ENoteConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Email.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Email.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EmailAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EmailAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EmailSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EmailSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Envelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Envelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachmentsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachmentsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachmentsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAttachmentsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAuditEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAuditEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAuditEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeAuditEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeCustomMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeCustomMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDelayRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDelayRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDelayRuleApiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDelayRuleApiModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDocumentsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeDocumentsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeFormData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeFormData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeFormDataPrefillFormData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeFormDataPrefillFormData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeIdsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeIdsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeNotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeNotificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransactionErrorRollup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransactionErrorRollup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransactionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePublishTransactionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePurgeConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopePurgeConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTemplateResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRuleInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRuleInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRuleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeTransferRuleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeUpdateSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopeUpdateSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopesInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EnvelopesInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ErrorDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EventNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EventNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EventResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/EventResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Expirations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Expirations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalClaim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalClaim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalDocServiceErrorDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalDocServiceErrorDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalDocumentSources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalDocumentSources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalFolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalFolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalPrimaryAccountRecipientAuthRequirements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ExternalPrimaryAccountRecipientAuthRequirements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FavoriteTemplatesContentItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FavoriteTemplatesContentItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FavoriteTemplatesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FavoriteTemplatesInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FeatureAvailableMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FeatureAvailableMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FeatureSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FeatureSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FileTypeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FileTypeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FirstName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FirstName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Folder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderItemsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderSharedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FolderSharedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FoldersRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FoldersRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FoldersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FoldersResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ForgottenPasswordInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ForgottenPasswordInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FormDataItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FormDataItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FormulaTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FormulaTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FullName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/FullName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GraphicsContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GraphicsContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GroupBrands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GroupBrands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GroupInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/GroupInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckInformationInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckInformationInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckSecurityStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdCheckSecurityStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdEvidenceResourceToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdEvidenceResourceToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdEvidenceViewLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IdEvidenceViewLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InPersonSigner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InPersonSigner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InitialHere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InitialHere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InlineTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/InlineTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IntegratedConnectUserInfoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IntegratedConnectUserInfoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IntegratedUserInfoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/IntegratedUserInfoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Intermediary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Intermediary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Jurisdiction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Jurisdiction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LastName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LastName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LinkedExternalPrimaryAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LinkedExternalPrimaryAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ListCustomField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ListCustomField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LocalePolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LocalePolicy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LocalePolicyTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LocalePolicyTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LockInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LockInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LockRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LockRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LoginAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LoginAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LoginInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/LoginInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MatchBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MatchBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MemberGroupSharedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MemberGroupSharedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MemberSharedItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MemberSharedItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MergeField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MergeField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MobileNotifierConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MobileNotifierConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MobileNotifierConfigurationInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/MobileNotifierConfigurationInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ModelList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ModelList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NameValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NameValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewAccountDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewAccountDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewAccountSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewAccountSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUsersDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUsersDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUsersSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NewUsersSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notarize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notarize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryCertificate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryCertificate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryHost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalCredibleWitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalCredibleWitness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJournalMetaData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJurisdiction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJurisdiction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJurisdictionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryJurisdictionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotaryResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotarySeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotarySeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotificationDefaultSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotificationDefaultSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotificationDefaults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/NotificationDefaults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OauthAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OauthAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OcrRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OcrRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OfflineAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/OfflineAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageImages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PageSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Participant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PathExtendedElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PathExtendedElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PayPalLegacySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PayPalLegacySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccountSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccountSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccountsInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentGatewayAccountsInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentLineItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentLineItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentMethodWithOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentMethodWithOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentProcessorInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentProcessorInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentSignerValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PaymentSignerValues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PermissionProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PermissionProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PermissionProfileInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PermissionProfileInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PlanInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PlanInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PolyLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PolyLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PolyLineOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PolyLineOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PostTransactionsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PostTransactionsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PostTransactionsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PostTransactionsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormFormDataEnvelope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormFormDataEnvelope.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormFormDataRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormFormDataRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormSendersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormSendersResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsFormDataResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsFormDataResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PowerFormsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PrefillFormData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PrefillFormData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PrefillTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PrefillTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProofServiceResourceToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProofServiceResourceToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProofServiceViewLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProofServiceViewLink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PropertyMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PropertyMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Province.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProvisioningInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ProvisioningInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PurchasedEnvelopesInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/PurchasedEnvelopesInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Radio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Radio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RadioGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RadioGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientAdditionalNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientAdditionalNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientAttachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientDomain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEmailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEmailNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientFormData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientFormData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityInputOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityInputOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityPhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityPhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityVerification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientIdentityVerification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientNamesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientNamesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPhoneAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPhoneAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPreviewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientPreviewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientProofFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientProofFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientRouting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientRouting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSAMLAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSAMLAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSMSAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSMSAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureProviderOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientSignatureProviderOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientTokenClientURLs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientTokenClientURLs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientUpdateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientUpdateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientViewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientViewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Recipients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Recipients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientsUpdateSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/RecipientsUpdateSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReferralInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReferralInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Reminders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Reminders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductCsvRunRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductCsvRunRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductGet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponseRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponseRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponseRowFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductRunResponseRowFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductSaveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductSaveResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductSentByDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReportInProductSentByDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReservedDomainExistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReservedDomainExistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ResourceInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ResourceInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReturnUrlRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ReturnUrlRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Revision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Revision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SamlAssertionAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SamlAssertionAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ScheduledSending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ScheduledSending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ScheduledSendingApiModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ScheduledSendingApiModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Seal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Seal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SealIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SealIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SealSign.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SealSign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SeatDiscount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SeatDiscount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderCompany.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderCompany.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderEmailNotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderEmailNotifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SenderName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServerTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServerTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServiceInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServiceInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServiceVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ServiceVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SettingsMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SettingsMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SharedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SharedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHashDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHashDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHashSessionInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHashSessionInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignHere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignSessionInfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignSessionInfoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureDataInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureDataInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureGroupDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureGroupDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureProviderRequiredOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureProviderRequiredOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureUserDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignatureUserDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Signer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Signer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignerAttachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignerAttachment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignerEmailNotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SignerEmailNotifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SigningGroupUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartContractInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartContractInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionAnchorPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionAnchorPosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionCollapsibleDisplaySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionCollapsibleDisplaySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionDisplaySettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SmartSectionDisplaySettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SocialAccountInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SocialAccountInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SocialAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SocialAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn4InformationInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn4InformationInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn9InformationInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Ssn9InformationInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Stamp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Stamp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SupportedLanguages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/SupportedLanguages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabAccountSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabAccountSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabMetadataList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TabMetadataList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Tabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Tabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateCustomFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateCustomFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateDocumentVisibilityList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateDocumentVisibilityList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateDocumentsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateDocumentsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateNotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateNotificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateRecipients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateRecipients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateSharedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateSharedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateTabs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateTabs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateUpdateSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TemplateUpdateSummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TextCustomField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TextCustomField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TimeStampField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TimeStampField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Title.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TspHealthCheckRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TspHealthCheckRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TspHealthCheckStatusDescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/TspHealthCheckStatusDescription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UpdateTransactionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UpdateTransactionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UpdateTransactionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UpdateTransactionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UsageHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UsageHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserAccountManagementGranularInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserAccountManagementGranularInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfoList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfoList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInformationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserInformationList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserPasswordInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserPasswordInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserPasswordRules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserPasswordRules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSettingsInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSettingsInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSharedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSharedItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignatureDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignatureDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignaturesInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSignaturesInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSocialIdResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UserSocialIdResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UsersResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/UsersResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ViewLinkRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ViewLinkRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ViewUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/ViewUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Watermark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Watermark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Witness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Witness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Workflow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Workflow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkflowStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkflowStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Workspace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Workspace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceFolderContents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceFolderContents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceItemList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceUserAuthorization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/WorkspaceUserAuthorization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Zip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docusign/esign/model/Zip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SdkUnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SdkUnitTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="651" column="34" lean-forward="true" selection-start-line="651" selection-start-column="34" selection-end-line="651" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SdkUnitTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="1353" column="54" lean-forward="true" selection-start-line="1353" selection-start-column="54" selection-end-line="1353" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Base64</find>
+      <find>Base64.get</find>
+      <find>CreateUserTest</find>
+      <find>SDK Test</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/com/docusign/</dir>
+      <dir>$PROJECT_DIR$/src/main/java/com/docusign/esign/client</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiClient.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SdkUnitTests.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
+    <option name="width" value="850" />
+    <option name="height" value="1025" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="docusign-esign-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docusign-esign-java-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/docusign/esign/client" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bf8676f-704c-4451-8b99-980490bc43d9" name="Default Changelist" comment="" />
+      <created>1653106509985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653106509985</updated>
+      <workItem from="1653106514042" duration="412000" />
+      <workItem from="1653107084149" duration="84000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="496000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1680" height="1025" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17704518" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32964602" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Mongo Explorer" order="6" />
+      <window_info anchor="right" id="SciView" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docusign/esign/client/ApiClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="651" column="34" lean-forward="true" selection-start-line="651" selection-start-column="34" selection-end-line="651" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SdkUnitTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="1353" column="54" lean-forward="true" selection-start-line="1353" selection-start-column="54" selection-end-line="1353" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

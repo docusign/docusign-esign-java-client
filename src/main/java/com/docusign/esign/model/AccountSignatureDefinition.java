@@ -1,21 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DateStampProperties;
-import com.docusign.esign.model.SignatureGroupDef;
-import com.docusign.esign.model.SignatureUserDef;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * AccountSignatureDefinition.
- *
- */
-
+/** AccountSignatureDefinition. */
 public class AccountSignatureDefinition {
   @JsonProperty("dateStampProperties")
   private DateStampProperties dateStampProperties = null;
@@ -68,12 +57,11 @@ public class AccountSignatureDefinition {
   @JsonProperty("stampSizeMM")
   private String stampSizeMM = null;
 
-
   /**
    * dateStampProperties.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition dateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
     return this;
@@ -81,26 +69,24 @@ public class AccountSignatureDefinition {
 
   /**
    * Get dateStampProperties.
+   *
    * @return dateStampProperties
-   **/
+   */
   @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
 
-  /**
-   * setDateStampProperties.
-   **/
+  /** setDateStampProperties. */
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
-
 
   /**
    * disallowUserResizeStamp.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition disallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
     return this;
@@ -108,26 +94,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return disallowUserResizeStamp
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
 
-  /**
-   * setDisallowUserResizeStamp.
-   **/
+  /** setDisallowUserResizeStamp. */
   public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
-
 
   /**
    * externalID.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition externalID(String externalID) {
     this.externalID = externalID;
     return this;
@@ -135,26 +119,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return externalID
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
 
-  /**
-   * setExternalID.
-   **/
+  /** setExternalID. */
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
-
 
   /**
    * imageType.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition imageType(String imageType) {
     this.imageType = imageType;
     return this;
@@ -162,26 +144,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return imageType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
 
-  /**
-   * setImageType.
-   **/
+  /** setImageType. */
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
-
 
   /**
    * isDefault.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
@@ -189,26 +169,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return isDefault
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
 
-  /**
-   * setIsDefault.
-   **/
+  /** setIsDefault. */
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * nrdsId.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition nrdsId(String nrdsId) {
     this.nrdsId = nrdsId;
     return this;
@@ -216,26 +194,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return nrdsId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getNrdsId() {
     return nrdsId;
   }
 
-  /**
-   * setNrdsId.
-   **/
+  /** setNrdsId. */
   public void setNrdsId(String nrdsId) {
     this.nrdsId = nrdsId;
   }
-
 
   /**
    * nrdsLastName.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition nrdsLastName(String nrdsLastName) {
     this.nrdsLastName = nrdsLastName;
     return this;
@@ -243,26 +219,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return nrdsLastName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getNrdsLastName() {
     return nrdsLastName;
   }
 
-  /**
-   * setNrdsLastName.
-   **/
+  /** setNrdsLastName. */
   public void setNrdsLastName(String nrdsLastName) {
     this.nrdsLastName = nrdsLastName;
   }
-
 
   /**
    * phoneticName.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition phoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
     return this;
@@ -270,26 +244,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return phoneticName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
 
-  /**
-   * setPhoneticName.
-   **/
+  /** setPhoneticName. */
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
-
 
   /**
    * signatureFont.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition signatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
     return this;
@@ -297,39 +269,38 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return signatureFont
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignatureFont() {
     return signatureFont;
   }
 
-  /**
-   * setSignatureFont.
-   **/
+  /** setSignatureFont. */
   public void setSignatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
   }
-
 
   /**
    * signatureGroups.
    *
    * @return AccountSignatureDefinition
-   **/
-  public AccountSignatureDefinition signatureGroups(java.util.List<SignatureGroupDef> signatureGroups) {
+   */
+  public AccountSignatureDefinition signatureGroups(
+      java.util.List<SignatureGroupDef> signatureGroups) {
     this.signatureGroups = signatureGroups;
     return this;
   }
-  
+
   /**
    * addSignatureGroupsItem.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition addSignatureGroupsItem(SignatureGroupDef signatureGroupsItem) {
     if (this.signatureGroups == null) {
-      this.signatureGroups = new java.util.ArrayList<SignatureGroupDef>();
+      this.signatureGroups = new java.util.ArrayList<>();
     }
     this.signatureGroups.add(signatureGroupsItem);
     return this;
@@ -337,53 +308,55 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return signatureGroups
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<SignatureGroupDef> getSignatureGroups() {
     return signatureGroups;
   }
 
-  /**
-   * setSignatureGroups.
-   **/
+  /** setSignatureGroups. */
   public void setSignatureGroups(java.util.List<SignatureGroupDef> signatureGroups) {
     this.signatureGroups = signatureGroups;
   }
-
 
   /**
    * signatureId.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition signatureId(String signatureId) {
     this.signatureId = signatureId;
     return this;
   }
 
   /**
-   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
+   * Specifies the signature ID associated with the signature name. You can use the signature ID in
+   * the URI in place of the signature name, and the value stored in the `signatureName` property in
+   * the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a
+   * the signature name. Note that with each update to signatures, the returned signature ID might
+   * change, so the caller will need to trigger off the signature name to get the new signature ID..
+   *
    * @return signatureId
-   **/
-  @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
 
-  /**
-   * setSignatureId.
-   **/
+  /** setSignatureId. */
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
-
 
   /**
    * signatureInitials.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition signatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
     return this;
@@ -391,26 +364,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return signatureInitials
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
 
-  /**
-   * setSignatureInitials.
-   **/
+  /** setSignatureInitials. */
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
-
 
   /**
    * signatureName.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
@@ -418,26 +389,24 @@ public class AccountSignatureDefinition {
 
   /**
    * Specifies the user signature name..
+   *
    * @return signatureName
-   **/
+   */
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
-  /**
-   * setSignatureName.
-   **/
+  /** setSignatureName. */
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
-
 
   /**
    * signatureType.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
@@ -445,39 +414,38 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return signatureType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
 
-  /**
-   * setSignatureType.
-   **/
+  /** setSignatureType. */
   public void setSignatureType(String signatureType) {
     this.signatureType = signatureType;
   }
-
 
   /**
    * signatureUsers.
    *
    * @return AccountSignatureDefinition
-   **/
-  public AccountSignatureDefinition signatureUsers(java.util.List<SignatureUserDef> signatureUsers) {
+   */
+  public AccountSignatureDefinition signatureUsers(
+      java.util.List<SignatureUserDef> signatureUsers) {
     this.signatureUsers = signatureUsers;
     return this;
   }
-  
+
   /**
    * addSignatureUsersItem.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition addSignatureUsersItem(SignatureUserDef signatureUsersItem) {
     if (this.signatureUsers == null) {
-      this.signatureUsers = new java.util.ArrayList<SignatureUserDef>();
+      this.signatureUsers = new java.util.ArrayList<>();
     }
     this.signatureUsers.add(signatureUsersItem);
     return this;
@@ -485,26 +453,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return signatureUsers
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<SignatureUserDef> getSignatureUsers() {
     return signatureUsers;
   }
 
-  /**
-   * setSignatureUsers.
-   **/
+  /** setSignatureUsers. */
   public void setSignatureUsers(java.util.List<SignatureUserDef> signatureUsers) {
     this.signatureUsers = signatureUsers;
   }
-
 
   /**
    * stampFormat.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition stampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
     return this;
@@ -512,26 +478,24 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return stampFormat
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
 
-  /**
-   * setStampFormat.
-   **/
+  /** setStampFormat. */
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
-
 
   /**
    * stampSizeMM.
    *
    * @return AccountSignatureDefinition
-   **/
+   */
   public AccountSignatureDefinition stampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
     return this;
@@ -539,20 +503,18 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   *
    * @return stampSizeMM
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
 
-  /**
-   * setStampSizeMM.
-   **/
+  /** setStampSizeMM. */
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
-
 
   /**
    * Compares objects.
@@ -568,44 +530,61 @@ public class AccountSignatureDefinition {
       return false;
     }
     AccountSignatureDefinition accountSignatureDefinition = (AccountSignatureDefinition) o;
-    return Objects.equals(this.dateStampProperties, accountSignatureDefinition.dateStampProperties) &&
-        Objects.equals(this.disallowUserResizeStamp, accountSignatureDefinition.disallowUserResizeStamp) &&
-        Objects.equals(this.externalID, accountSignatureDefinition.externalID) &&
-        Objects.equals(this.imageType, accountSignatureDefinition.imageType) &&
-        Objects.equals(this.isDefault, accountSignatureDefinition.isDefault) &&
-        Objects.equals(this.nrdsId, accountSignatureDefinition.nrdsId) &&
-        Objects.equals(this.nrdsLastName, accountSignatureDefinition.nrdsLastName) &&
-        Objects.equals(this.phoneticName, accountSignatureDefinition.phoneticName) &&
-        Objects.equals(this.signatureFont, accountSignatureDefinition.signatureFont) &&
-        Objects.equals(this.signatureGroups, accountSignatureDefinition.signatureGroups) &&
-        Objects.equals(this.signatureId, accountSignatureDefinition.signatureId) &&
-        Objects.equals(this.signatureInitials, accountSignatureDefinition.signatureInitials) &&
-        Objects.equals(this.signatureName, accountSignatureDefinition.signatureName) &&
-        Objects.equals(this.signatureType, accountSignatureDefinition.signatureType) &&
-        Objects.equals(this.signatureUsers, accountSignatureDefinition.signatureUsers) &&
-        Objects.equals(this.stampFormat, accountSignatureDefinition.stampFormat) &&
-        Objects.equals(this.stampSizeMM, accountSignatureDefinition.stampSizeMM);
+    return Objects.equals(this.dateStampProperties, accountSignatureDefinition.dateStampProperties)
+        && Objects.equals(
+            this.disallowUserResizeStamp, accountSignatureDefinition.disallowUserResizeStamp)
+        && Objects.equals(this.externalID, accountSignatureDefinition.externalID)
+        && Objects.equals(this.imageType, accountSignatureDefinition.imageType)
+        && Objects.equals(this.isDefault, accountSignatureDefinition.isDefault)
+        && Objects.equals(this.nrdsId, accountSignatureDefinition.nrdsId)
+        && Objects.equals(this.nrdsLastName, accountSignatureDefinition.nrdsLastName)
+        && Objects.equals(this.phoneticName, accountSignatureDefinition.phoneticName)
+        && Objects.equals(this.signatureFont, accountSignatureDefinition.signatureFont)
+        && Objects.equals(this.signatureGroups, accountSignatureDefinition.signatureGroups)
+        && Objects.equals(this.signatureId, accountSignatureDefinition.signatureId)
+        && Objects.equals(this.signatureInitials, accountSignatureDefinition.signatureInitials)
+        && Objects.equals(this.signatureName, accountSignatureDefinition.signatureName)
+        && Objects.equals(this.signatureType, accountSignatureDefinition.signatureType)
+        && Objects.equals(this.signatureUsers, accountSignatureDefinition.signatureUsers)
+        && Objects.equals(this.stampFormat, accountSignatureDefinition.stampFormat)
+        && Objects.equals(this.stampSizeMM, accountSignatureDefinition.stampSizeMM);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureGroups, signatureId, signatureInitials, signatureName, signatureType, signatureUsers, stampFormat, stampSizeMM);
+    return Objects.hash(
+        dateStampProperties,
+        disallowUserResizeStamp,
+        externalID,
+        imageType,
+        isDefault,
+        nrdsId,
+        nrdsLastName,
+        phoneticName,
+        signatureFont,
+        signatureGroups,
+        signatureId,
+        signatureInitials,
+        signatureName,
+        signatureType,
+        signatureUsers,
+        stampFormat,
+        stampSizeMM);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureDefinition {\n");
-    
-    sb.append("    dateStampProperties: ").append(toIndentedString(dateStampProperties)).append("\n");
-    sb.append("    disallowUserResizeStamp: ").append(toIndentedString(disallowUserResizeStamp)).append("\n");
+
+    sb.append("    dateStampProperties: ")
+        .append(toIndentedString(dateStampProperties))
+        .append("\n");
+    sb.append("    disallowUserResizeStamp: ")
+        .append(toIndentedString(disallowUserResizeStamp))
+        .append("\n");
     sb.append("    externalID: ").append(toIndentedString(externalID)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
@@ -626,8 +605,7 @@ public class AccountSignatureDefinition {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -635,6 +613,4 @@ public class AccountSignatureDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

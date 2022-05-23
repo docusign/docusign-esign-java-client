@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Credential;
-import com.docusign.esign.model.ExternalClaim;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * User
- */
-
+/** User */
 public class User {
   @JsonProperty("cellPhoneNumber")
   private String cellPhoneNumber = null;
@@ -38,10 +29,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return cellPhoneNumber
-  **/
+  /** @return cellPhoneNumber */
   @ApiModelProperty(value = "")
   public String getCellPhoneNumber() {
     return cellPhoneNumber;
@@ -56,10 +44,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return countryCode
-  **/
+  /** @return countryCode */
   @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
@@ -82,10 +67,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return credentials
-  **/
+  /** @return credentials */
   @ApiModelProperty(value = "")
   public java.util.List<Credential> getCredentials() {
     return credentials;
@@ -100,10 +82,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return displayName
-  **/
+  /** @return displayName */
   @ApiModelProperty(value = "")
   public String getDisplayName() {
     return displayName;
@@ -118,10 +97,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return email
-  **/
+  /** @return email */
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
@@ -144,10 +120,7 @@ public class User {
     return this;
   }
 
-   /**
-   * 
-   * @return externalClaims
-  **/
+  /** @return externalClaims */
   @ApiModelProperty(value = "")
   public java.util.List<ExternalClaim> getExternalClaims() {
     return externalClaims;
@@ -156,7 +129,6 @@ public class User {
   public void setExternalClaims(java.util.List<ExternalClaim> externalClaims) {
     this.externalClaims = externalClaims;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -167,25 +139,25 @@ public class User {
       return false;
     }
     User user = (User) o;
-    return Objects.equals(this.cellPhoneNumber, user.cellPhoneNumber) &&
-        Objects.equals(this.countryCode, user.countryCode) &&
-        Objects.equals(this.credentials, user.credentials) &&
-        Objects.equals(this.displayName, user.displayName) &&
-        Objects.equals(this.email, user.email) &&
-        Objects.equals(this.externalClaims, user.externalClaims);
+    return Objects.equals(this.cellPhoneNumber, user.cellPhoneNumber)
+        && Objects.equals(this.countryCode, user.countryCode)
+        && Objects.equals(this.credentials, user.credentials)
+        && Objects.equals(this.displayName, user.displayName)
+        && Objects.equals(this.email, user.email)
+        && Objects.equals(this.externalClaims, user.externalClaims);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cellPhoneNumber, countryCode, credentials, displayName, email, externalClaims);
+    return Objects.hash(
+        cellPhoneNumber, countryCode, credentials, displayName, email, externalClaims);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class User {\n");
-    
+
     sb.append("    cellPhoneNumber: ").append(toIndentedString(cellPhoneNumber)).append("\n");
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");
@@ -197,8 +169,7 @@ public class User {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -206,6 +177,4 @@ public class User {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

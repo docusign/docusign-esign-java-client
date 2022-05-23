@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Revision;
-import com.docusign.esign.model.SignatureProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignHashDocument
- */
-
+/** SignHashDocument */
 public class SignHashDocument {
   @JsonProperty("data")
   private String data = null;
@@ -44,10 +35,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return data
-  **/
+  /** @return data */
   @ApiModelProperty(value = "")
   public String getData() {
     return data;
@@ -62,11 +50,15 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Document's ID attribute.
+   *
    * @return documentId
-  **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -80,10 +72,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return format
-  **/
+  /** @return format */
   @ApiModelProperty(value = "")
   public String getFormat() {
     return format;
@@ -98,10 +87,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return name
-  **/
+  /** @return name */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
@@ -116,10 +102,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return remainingSignatures
-  **/
+  /** @return remainingSignatures */
   @ApiModelProperty(value = "")
   public Long getRemainingSignatures() {
     return remainingSignatures;
@@ -142,10 +125,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return revisions
-  **/
+  /** @return revisions */
   @ApiModelProperty(value = "")
   public java.util.List<Revision> getRevisions() {
     return revisions;
@@ -160,10 +140,11 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
+  /**
    * Get signatureProperties
+   *
    * @return signatureProperties
-  **/
+   */
   @ApiModelProperty(value = "")
   public SignatureProperties getSignatureProperties() {
     return signatureProperties;
@@ -178,10 +159,7 @@ public class SignHashDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return signatureType
-  **/
+  /** @return signatureType */
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
@@ -190,7 +168,6 @@ public class SignHashDocument {
   public void setSignatureType(String signatureType) {
     this.signatureType = signatureType;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -201,42 +178,52 @@ public class SignHashDocument {
       return false;
     }
     SignHashDocument signHashDocument = (SignHashDocument) o;
-    return Objects.equals(this.data, signHashDocument.data) &&
-        Objects.equals(this.documentId, signHashDocument.documentId) &&
-        Objects.equals(this.format, signHashDocument.format) &&
-        Objects.equals(this.name, signHashDocument.name) &&
-        Objects.equals(this.remainingSignatures, signHashDocument.remainingSignatures) &&
-        Objects.equals(this.revisions, signHashDocument.revisions) &&
-        Objects.equals(this.signatureProperties, signHashDocument.signatureProperties) &&
-        Objects.equals(this.signatureType, signHashDocument.signatureType);
+    return Objects.equals(this.data, signHashDocument.data)
+        && Objects.equals(this.documentId, signHashDocument.documentId)
+        && Objects.equals(this.format, signHashDocument.format)
+        && Objects.equals(this.name, signHashDocument.name)
+        && Objects.equals(this.remainingSignatures, signHashDocument.remainingSignatures)
+        && Objects.equals(this.revisions, signHashDocument.revisions)
+        && Objects.equals(this.signatureProperties, signHashDocument.signatureProperties)
+        && Objects.equals(this.signatureType, signHashDocument.signatureType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, documentId, format, name, remainingSignatures, revisions, signatureProperties, signatureType);
+    return Objects.hash(
+        data,
+        documentId,
+        format,
+        name,
+        remainingSignatures,
+        revisions,
+        signatureProperties,
+        signatureType);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignHashDocument {\n");
-    
+
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    format: ").append(toIndentedString(format)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    remainingSignatures: ").append(toIndentedString(remainingSignatures)).append("\n");
+    sb.append("    remainingSignatures: ")
+        .append(toIndentedString(remainingSignatures))
+        .append("\n");
     sb.append("    revisions: ").append(toIndentedString(revisions)).append("\n");
-    sb.append("    signatureProperties: ").append(toIndentedString(signatureProperties)).append("\n");
+    sb.append("    signatureProperties: ")
+        .append(toIndentedString(signatureProperties))
+        .append("\n");
     sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -244,6 +231,4 @@ public class SignHashDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

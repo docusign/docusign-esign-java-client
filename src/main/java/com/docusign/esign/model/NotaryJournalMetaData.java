@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.NotaryJournalCredibleWitness;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * NotaryJournalMetaData.
- *
- */
-
+/** NotaryJournalMetaData. */
 public class NotaryJournalMetaData {
   @JsonProperty("comment")
   private String comment = null;
@@ -27,12 +18,11 @@ public class NotaryJournalMetaData {
   @JsonProperty("signerIdType")
   private String signerIdType = null;
 
-
   /**
    * comment.
    *
    * @return NotaryJournalMetaData
-   **/
+   */
   public NotaryJournalMetaData comment(String comment) {
     this.comment = comment;
     return this;
@@ -40,39 +30,39 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   *
    * @return comment
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getComment() {
     return comment;
   }
 
-  /**
-   * setComment.
-   **/
+  /** setComment. */
   public void setComment(String comment) {
     this.comment = comment;
   }
-
 
   /**
    * credibleWitnesses.
    *
    * @return NotaryJournalMetaData
-   **/
-  public NotaryJournalMetaData credibleWitnesses(java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
+   */
+  public NotaryJournalMetaData credibleWitnesses(
+      java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
     this.credibleWitnesses = credibleWitnesses;
     return this;
   }
-  
+
   /**
    * addCredibleWitnessesItem.
    *
    * @return NotaryJournalMetaData
-   **/
-  public NotaryJournalMetaData addCredibleWitnessesItem(NotaryJournalCredibleWitness credibleWitnessesItem) {
+   */
+  public NotaryJournalMetaData addCredibleWitnessesItem(
+      NotaryJournalCredibleWitness credibleWitnessesItem) {
     if (this.credibleWitnesses == null) {
-      this.credibleWitnesses = new java.util.ArrayList<NotaryJournalCredibleWitness>();
+      this.credibleWitnesses = new java.util.ArrayList<>();
     }
     this.credibleWitnesses.add(credibleWitnessesItem);
     return this;
@@ -80,26 +70,24 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   *
    * @return credibleWitnesses
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<NotaryJournalCredibleWitness> getCredibleWitnesses() {
     return credibleWitnesses;
   }
 
-  /**
-   * setCredibleWitnesses.
-   **/
+  /** setCredibleWitnesses. */
   public void setCredibleWitnesses(java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
     this.credibleWitnesses = credibleWitnesses;
   }
-
 
   /**
    * signatureImage.
    *
    * @return NotaryJournalMetaData
-   **/
+   */
   public NotaryJournalMetaData signatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
     return this;
@@ -107,26 +95,24 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   *
    * @return signatureImage
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignatureImage() {
     return signatureImage;
   }
 
-  /**
-   * setSignatureImage.
-   **/
+  /** setSignatureImage. */
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
-
 
   /**
    * signerIdType.
    *
    * @return NotaryJournalMetaData
-   **/
+   */
   public NotaryJournalMetaData signerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
     return this;
@@ -134,20 +120,18 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   *
    * @return signerIdType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignerIdType() {
     return signerIdType;
   }
 
-  /**
-   * setSignerIdType.
-   **/
+  /** setSignerIdType. */
   public void setSignerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
   }
-
 
   /**
    * Compares objects.
@@ -163,29 +147,24 @@ public class NotaryJournalMetaData {
       return false;
     }
     NotaryJournalMetaData notaryJournalMetaData = (NotaryJournalMetaData) o;
-    return Objects.equals(this.comment, notaryJournalMetaData.comment) &&
-        Objects.equals(this.credibleWitnesses, notaryJournalMetaData.credibleWitnesses) &&
-        Objects.equals(this.signatureImage, notaryJournalMetaData.signatureImage) &&
-        Objects.equals(this.signerIdType, notaryJournalMetaData.signerIdType);
+    return Objects.equals(this.comment, notaryJournalMetaData.comment)
+        && Objects.equals(this.credibleWitnesses, notaryJournalMetaData.credibleWitnesses)
+        && Objects.equals(this.signatureImage, notaryJournalMetaData.signatureImage)
+        && Objects.equals(this.signerIdType, notaryJournalMetaData.signerIdType);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(comment, credibleWitnesses, signatureImage, signerIdType);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalMetaData {\n");
-    
+
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    credibleWitnesses: ").append(toIndentedString(credibleWitnesses)).append("\n");
     sb.append("    signatureImage: ").append(toIndentedString(signatureImage)).append("\n");
@@ -195,8 +174,7 @@ public class NotaryJournalMetaData {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -204,6 +182,4 @@ public class NotaryJournalMetaData {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

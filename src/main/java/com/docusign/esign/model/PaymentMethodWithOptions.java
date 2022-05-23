@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * PaymentMethodWithOptions.
- *
- */
-
+/** PaymentMethodWithOptions. */
 public class PaymentMethodWithOptions {
   @JsonProperty("supportedCurrencies")
   private java.util.List<String> supportedCurrencies = null;
@@ -23,25 +15,24 @@ public class PaymentMethodWithOptions {
   @JsonProperty("type")
   private String type = null;
 
-
   /**
    * supportedCurrencies.
    *
    * @return PaymentMethodWithOptions
-   **/
+   */
   public PaymentMethodWithOptions supportedCurrencies(java.util.List<String> supportedCurrencies) {
     this.supportedCurrencies = supportedCurrencies;
     return this;
   }
-  
+
   /**
    * addSupportedCurrenciesItem.
    *
    * @return PaymentMethodWithOptions
-   **/
+   */
   public PaymentMethodWithOptions addSupportedCurrenciesItem(String supportedCurrenciesItem) {
     if (this.supportedCurrencies == null) {
-      this.supportedCurrencies = new java.util.ArrayList<String>();
+      this.supportedCurrencies = new java.util.ArrayList<>();
     }
     this.supportedCurrencies.add(supportedCurrenciesItem);
     return this;
@@ -49,39 +40,37 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   *
    * @return supportedCurrencies
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedCurrencies() {
     return supportedCurrencies;
   }
 
-  /**
-   * setSupportedCurrencies.
-   **/
+  /** setSupportedCurrencies. */
   public void setSupportedCurrencies(java.util.List<String> supportedCurrencies) {
     this.supportedCurrencies = supportedCurrencies;
   }
-
 
   /**
    * supportedOptions.
    *
    * @return PaymentMethodWithOptions
-   **/
+   */
   public PaymentMethodWithOptions supportedOptions(java.util.List<String> supportedOptions) {
     this.supportedOptions = supportedOptions;
     return this;
   }
-  
+
   /**
    * addSupportedOptionsItem.
    *
    * @return PaymentMethodWithOptions
-   **/
+   */
   public PaymentMethodWithOptions addSupportedOptionsItem(String supportedOptionsItem) {
     if (this.supportedOptions == null) {
-      this.supportedOptions = new java.util.ArrayList<String>();
+      this.supportedOptions = new java.util.ArrayList<>();
     }
     this.supportedOptions.add(supportedOptionsItem);
     return this;
@@ -89,26 +78,24 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   *
    * @return supportedOptions
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<String> getSupportedOptions() {
     return supportedOptions;
   }
 
-  /**
-   * setSupportedOptions.
-   **/
+  /** setSupportedOptions. */
   public void setSupportedOptions(java.util.List<String> supportedOptions) {
     this.supportedOptions = supportedOptions;
   }
-
 
   /**
    * type.
    *
    * @return PaymentMethodWithOptions
-   **/
+   */
   public PaymentMethodWithOptions type(String type) {
     this.type = type;
     return this;
@@ -116,20 +103,18 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   *
    * @return type
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
-  /**
-   * setType.
-   **/
+  /** setType. */
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -145,29 +130,26 @@ public class PaymentMethodWithOptions {
       return false;
     }
     PaymentMethodWithOptions paymentMethodWithOptions = (PaymentMethodWithOptions) o;
-    return Objects.equals(this.supportedCurrencies, paymentMethodWithOptions.supportedCurrencies) &&
-        Objects.equals(this.supportedOptions, paymentMethodWithOptions.supportedOptions) &&
-        Objects.equals(this.type, paymentMethodWithOptions.type);
+    return Objects.equals(this.supportedCurrencies, paymentMethodWithOptions.supportedCurrencies)
+        && Objects.equals(this.supportedOptions, paymentMethodWithOptions.supportedOptions)
+        && Objects.equals(this.type, paymentMethodWithOptions.type);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(supportedCurrencies, supportedOptions, type);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentMethodWithOptions {\n");
-    
-    sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
+
+    sb.append("    supportedCurrencies: ")
+        .append(toIndentedString(supportedCurrencies))
+        .append("\n");
     sb.append("    supportedOptions: ").append(toIndentedString(supportedOptions)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -175,8 +157,7 @@ public class PaymentMethodWithOptions {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -184,6 +165,4 @@ public class PaymentMethodWithOptions {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

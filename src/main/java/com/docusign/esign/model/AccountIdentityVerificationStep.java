@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * AccountIdentityVerificationStep.
- *
- */
-
+/** AccountIdentityVerificationStep. */
 public class AccountIdentityVerificationStep {
   @JsonProperty("name")
   private String name = null;
@@ -20,12 +12,11 @@ public class AccountIdentityVerificationStep {
   @JsonProperty("type")
   private String type = null;
 
-
   /**
    * name.
    *
    * @return AccountIdentityVerificationStep
-   **/
+   */
   public AccountIdentityVerificationStep name(String name) {
     this.name = name;
     return this;
@@ -33,26 +24,24 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
+   *
    * @return name
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /**
-   * setName.
-   **/
+  /** setName. */
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * type.
    *
    * @return AccountIdentityVerificationStep
-   **/
+   */
   public AccountIdentityVerificationStep type(String type) {
     this.type = type;
     return this;
@@ -60,20 +49,18 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
+   *
    * @return type
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
-  /**
-   * setType.
-   **/
+  /** setType. */
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -88,28 +75,24 @@ public class AccountIdentityVerificationStep {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AccountIdentityVerificationStep accountIdentityVerificationStep = (AccountIdentityVerificationStep) o;
-    return Objects.equals(this.name, accountIdentityVerificationStep.name) &&
-        Objects.equals(this.type, accountIdentityVerificationStep.type);
+    AccountIdentityVerificationStep accountIdentityVerificationStep =
+        (AccountIdentityVerificationStep) o;
+    return Objects.equals(this.name, accountIdentityVerificationStep.name)
+        && Objects.equals(this.type, accountIdentityVerificationStep.type);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(name, type);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationStep {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -117,8 +100,7 @@ public class AccountIdentityVerificationStep {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -126,6 +108,4 @@ public class AccountIdentityVerificationStep {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

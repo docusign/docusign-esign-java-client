@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductListItem.
- *
- */
-
+/** ReportInProductListItem. */
 public class ReportInProductListItem {
   @JsonProperty("getUri")
   private String getUri = null;
@@ -56,12 +48,11 @@ public class ReportInProductListItem {
   @JsonProperty("scheduleRenewDurationDays")
   private String scheduleRenewDurationDays = null;
 
-
   /**
    * getUri.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem getUri(String getUri) {
     this.getUri = getUri;
     return this;
@@ -69,26 +60,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return getUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getGetUri() {
     return getUri;
   }
 
-  /**
-   * setGetUri.
-   **/
+  /** setGetUri. */
   public void setGetUri(String getUri) {
     this.getUri = getUri;
   }
-
 
   /**
    * lastScheduledExecutionDate.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem lastScheduledExecutionDate(String lastScheduledExecutionDate) {
     this.lastScheduledExecutionDate = lastScheduledExecutionDate;
     return this;
@@ -96,53 +85,50 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return lastScheduledExecutionDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastScheduledExecutionDate() {
     return lastScheduledExecutionDate;
   }
 
-  /**
-   * setLastScheduledExecutionDate.
-   **/
+  /** setLastScheduledExecutionDate. */
   public void setLastScheduledExecutionDate(String lastScheduledExecutionDate) {
     this.lastScheduledExecutionDate = lastScheduledExecutionDate;
   }
-
 
   /**
    * lastScheduledExecutionSuccessDate.
    *
    * @return ReportInProductListItem
-   **/
-  public ReportInProductListItem lastScheduledExecutionSuccessDate(String lastScheduledExecutionSuccessDate) {
+   */
+  public ReportInProductListItem lastScheduledExecutionSuccessDate(
+      String lastScheduledExecutionSuccessDate) {
     this.lastScheduledExecutionSuccessDate = lastScheduledExecutionSuccessDate;
     return this;
   }
 
   /**
    * .
+   *
    * @return lastScheduledExecutionSuccessDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastScheduledExecutionSuccessDate() {
     return lastScheduledExecutionSuccessDate;
   }
 
-  /**
-   * setLastScheduledExecutionSuccessDate.
-   **/
+  /** setLastScheduledExecutionSuccessDate. */
   public void setLastScheduledExecutionSuccessDate(String lastScheduledExecutionSuccessDate) {
     this.lastScheduledExecutionSuccessDate = lastScheduledExecutionSuccessDate;
   }
-
 
   /**
    * reportCustomizedId.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem reportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
     return this;
@@ -150,26 +136,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return reportCustomizedId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
 
-  /**
-   * setReportCustomizedId.
-   **/
+  /** setReportCustomizedId. */
   public void setReportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
   }
-
 
   /**
    * reportDescription.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem reportDescription(String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
@@ -177,26 +161,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return reportDescription
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportDescription() {
     return reportDescription;
   }
 
-  /**
-   * setReportDescription.
-   **/
+  /** setReportDescription. */
   public void setReportDescription(String reportDescription) {
     this.reportDescription = reportDescription;
   }
-
 
   /**
    * reportId.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem reportId(String reportId) {
     this.reportId = reportId;
     return this;
@@ -204,26 +186,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return reportId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportId() {
     return reportId;
   }
 
-  /**
-   * setReportId.
-   **/
+  /** setReportId. */
   public void setReportId(String reportId) {
     this.reportId = reportId;
   }
-
 
   /**
    * reportName.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem reportName(String reportName) {
     this.reportName = reportName;
     return this;
@@ -231,26 +211,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return reportName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportName() {
     return reportName;
   }
 
-  /**
-   * setReportName.
-   **/
+  /** setReportName. */
   public void setReportName(String reportName) {
     this.reportName = reportName;
   }
-
 
   /**
    * reportType.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem reportType(String reportType) {
     this.reportType = reportType;
     return this;
@@ -258,26 +236,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return reportType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportType() {
     return reportType;
   }
 
-  /**
-   * setReportType.
-   **/
+  /** setReportType. */
   public void setReportType(String reportType) {
     this.reportType = reportType;
   }
-
 
   /**
    * runUri.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem runUri(String runUri) {
     this.runUri = runUri;
     return this;
@@ -285,26 +261,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return runUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getRunUri() {
     return runUri;
   }
 
-  /**
-   * setRunUri.
-   **/
+  /** setRunUri. */
   public void setRunUri(String runUri) {
     this.runUri = runUri;
   }
-
 
   /**
    * saveUri.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem saveUri(String saveUri) {
     this.saveUri = saveUri;
     return this;
@@ -312,26 +286,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return saveUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSaveUri() {
     return saveUri;
   }
 
-  /**
-   * setSaveUri.
-   **/
+  /** setSaveUri. */
   public void setSaveUri(String saveUri) {
     this.saveUri = saveUri;
   }
-
 
   /**
    * scheduleCreateDate.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem scheduleCreateDate(String scheduleCreateDate) {
     this.scheduleCreateDate = scheduleCreateDate;
     return this;
@@ -339,26 +311,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return scheduleCreateDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScheduleCreateDate() {
     return scheduleCreateDate;
   }
 
-  /**
-   * setScheduleCreateDate.
-   **/
+  /** setScheduleCreateDate. */
   public void setScheduleCreateDate(String scheduleCreateDate) {
     this.scheduleCreateDate = scheduleCreateDate;
   }
-
 
   /**
    * scheduleEndDate.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem scheduleEndDate(String scheduleEndDate) {
     this.scheduleEndDate = scheduleEndDate;
     return this;
@@ -366,26 +336,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return scheduleEndDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScheduleEndDate() {
     return scheduleEndDate;
   }
 
-  /**
-   * setScheduleEndDate.
-   **/
+  /** setScheduleEndDate. */
   public void setScheduleEndDate(String scheduleEndDate) {
     this.scheduleEndDate = scheduleEndDate;
   }
-
 
   /**
    * scheduleId.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem scheduleId(String scheduleId) {
     this.scheduleId = scheduleId;
     return this;
@@ -393,26 +361,24 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return scheduleId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScheduleId() {
     return scheduleId;
   }
 
-  /**
-   * setScheduleId.
-   **/
+  /** setScheduleId. */
   public void setScheduleId(String scheduleId) {
     this.scheduleId = scheduleId;
   }
-
 
   /**
    * scheduleRenewDurationDays.
    *
    * @return ReportInProductListItem
-   **/
+   */
   public ReportInProductListItem scheduleRenewDurationDays(String scheduleRenewDurationDays) {
     this.scheduleRenewDurationDays = scheduleRenewDurationDays;
     return this;
@@ -420,20 +386,18 @@ public class ReportInProductListItem {
 
   /**
    * .
+   *
    * @return scheduleRenewDurationDays
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScheduleRenewDurationDays() {
     return scheduleRenewDurationDays;
   }
 
-  /**
-   * setScheduleRenewDurationDays.
-   **/
+  /** setScheduleRenewDurationDays. */
   public void setScheduleRenewDurationDays(String scheduleRenewDurationDays) {
     this.scheduleRenewDurationDays = scheduleRenewDurationDays;
   }
-
 
   /**
    * Compares objects.
@@ -449,42 +413,59 @@ public class ReportInProductListItem {
       return false;
     }
     ReportInProductListItem reportInProductListItem = (ReportInProductListItem) o;
-    return Objects.equals(this.getUri, reportInProductListItem.getUri) &&
-        Objects.equals(this.lastScheduledExecutionDate, reportInProductListItem.lastScheduledExecutionDate) &&
-        Objects.equals(this.lastScheduledExecutionSuccessDate, reportInProductListItem.lastScheduledExecutionSuccessDate) &&
-        Objects.equals(this.reportCustomizedId, reportInProductListItem.reportCustomizedId) &&
-        Objects.equals(this.reportDescription, reportInProductListItem.reportDescription) &&
-        Objects.equals(this.reportId, reportInProductListItem.reportId) &&
-        Objects.equals(this.reportName, reportInProductListItem.reportName) &&
-        Objects.equals(this.reportType, reportInProductListItem.reportType) &&
-        Objects.equals(this.runUri, reportInProductListItem.runUri) &&
-        Objects.equals(this.saveUri, reportInProductListItem.saveUri) &&
-        Objects.equals(this.scheduleCreateDate, reportInProductListItem.scheduleCreateDate) &&
-        Objects.equals(this.scheduleEndDate, reportInProductListItem.scheduleEndDate) &&
-        Objects.equals(this.scheduleId, reportInProductListItem.scheduleId) &&
-        Objects.equals(this.scheduleRenewDurationDays, reportInProductListItem.scheduleRenewDurationDays);
+    return Objects.equals(this.getUri, reportInProductListItem.getUri)
+        && Objects.equals(
+            this.lastScheduledExecutionDate, reportInProductListItem.lastScheduledExecutionDate)
+        && Objects.equals(
+            this.lastScheduledExecutionSuccessDate,
+            reportInProductListItem.lastScheduledExecutionSuccessDate)
+        && Objects.equals(this.reportCustomizedId, reportInProductListItem.reportCustomizedId)
+        && Objects.equals(this.reportDescription, reportInProductListItem.reportDescription)
+        && Objects.equals(this.reportId, reportInProductListItem.reportId)
+        && Objects.equals(this.reportName, reportInProductListItem.reportName)
+        && Objects.equals(this.reportType, reportInProductListItem.reportType)
+        && Objects.equals(this.runUri, reportInProductListItem.runUri)
+        && Objects.equals(this.saveUri, reportInProductListItem.saveUri)
+        && Objects.equals(this.scheduleCreateDate, reportInProductListItem.scheduleCreateDate)
+        && Objects.equals(this.scheduleEndDate, reportInProductListItem.scheduleEndDate)
+        && Objects.equals(this.scheduleId, reportInProductListItem.scheduleId)
+        && Objects.equals(
+            this.scheduleRenewDurationDays, reportInProductListItem.scheduleRenewDurationDays);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(getUri, lastScheduledExecutionDate, lastScheduledExecutionSuccessDate, reportCustomizedId, reportDescription, reportId, reportName, reportType, runUri, saveUri, scheduleCreateDate, scheduleEndDate, scheduleId, scheduleRenewDurationDays);
+    return Objects.hash(
+        getUri,
+        lastScheduledExecutionDate,
+        lastScheduledExecutionSuccessDate,
+        reportCustomizedId,
+        reportDescription,
+        reportId,
+        reportName,
+        reportType,
+        runUri,
+        saveUri,
+        scheduleCreateDate,
+        scheduleEndDate,
+        scheduleId,
+        scheduleRenewDurationDays);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductListItem {\n");
-    
+
     sb.append("    getUri: ").append(toIndentedString(getUri)).append("\n");
-    sb.append("    lastScheduledExecutionDate: ").append(toIndentedString(lastScheduledExecutionDate)).append("\n");
-    sb.append("    lastScheduledExecutionSuccessDate: ").append(toIndentedString(lastScheduledExecutionSuccessDate)).append("\n");
+    sb.append("    lastScheduledExecutionDate: ")
+        .append(toIndentedString(lastScheduledExecutionDate))
+        .append("\n");
+    sb.append("    lastScheduledExecutionSuccessDate: ")
+        .append(toIndentedString(lastScheduledExecutionSuccessDate))
+        .append("\n");
     sb.append("    reportCustomizedId: ").append(toIndentedString(reportCustomizedId)).append("\n");
     sb.append("    reportDescription: ").append(toIndentedString(reportDescription)).append("\n");
     sb.append("    reportId: ").append(toIndentedString(reportId)).append("\n");
@@ -495,14 +476,15 @@ public class ReportInProductListItem {
     sb.append("    scheduleCreateDate: ").append(toIndentedString(scheduleCreateDate)).append("\n");
     sb.append("    scheduleEndDate: ").append(toIndentedString(scheduleEndDate)).append("\n");
     sb.append("    scheduleId: ").append(toIndentedString(scheduleId)).append("\n");
-    sb.append("    scheduleRenewDurationDays: ").append(toIndentedString(scheduleRenewDurationDays)).append("\n");
+    sb.append("    scheduleRenewDurationDays: ")
+        .append(toIndentedString(scheduleRenewDurationDays))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -510,6 +492,4 @@ public class ReportInProductListItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

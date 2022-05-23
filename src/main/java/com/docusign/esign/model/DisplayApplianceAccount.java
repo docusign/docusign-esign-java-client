@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayApplianceAccount
- */
-
+/** DisplayApplianceAccount */
 public class DisplayApplianceAccount {
   @JsonProperty("accountId")
   private String accountId = null;
@@ -33,10 +26,11 @@ public class DisplayApplianceAccount {
     return this;
   }
 
-   /**
+  /**
    * The account ID associated with the envelope.
+   *
    * @return accountId
-  **/
+   */
   @ApiModelProperty(value = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
@@ -46,15 +40,13 @@ public class DisplayApplianceAccount {
     this.accountId = accountId;
   }
 
-  public DisplayApplianceAccount optOutAutoNavTextAndTabColorUpdates(Boolean optOutAutoNavTextAndTabColorUpdates) {
+  public DisplayApplianceAccount optOutAutoNavTextAndTabColorUpdates(
+      Boolean optOutAutoNavTextAndTabColorUpdates) {
     this.optOutAutoNavTextAndTabColorUpdates = optOutAutoNavTextAndTabColorUpdates;
     return this;
   }
 
-   /**
-   * 
-   * @return optOutAutoNavTextAndTabColorUpdates
-  **/
+  /** @return optOutAutoNavTextAndTabColorUpdates */
   @ApiModelProperty(value = "")
   public Boolean isOptOutAutoNavTextAndTabColorUpdates() {
     return optOutAutoNavTextAndTabColorUpdates;
@@ -64,15 +56,13 @@ public class DisplayApplianceAccount {
     this.optOutAutoNavTextAndTabColorUpdates = optOutAutoNavTextAndTabColorUpdates;
   }
 
-  public DisplayApplianceAccount showInitialConditionalFields(Boolean showInitialConditionalFields) {
+  public DisplayApplianceAccount showInitialConditionalFields(
+      Boolean showInitialConditionalFields) {
     this.showInitialConditionalFields = showInitialConditionalFields;
     return this;
   }
 
-   /**
-   * 
-   * @return showInitialConditionalFields
-  **/
+  /** @return showInitialConditionalFields */
   @ApiModelProperty(value = "")
   public Boolean isShowInitialConditionalFields() {
     return showInitialConditionalFields;
@@ -87,10 +77,7 @@ public class DisplayApplianceAccount {
     return this;
   }
 
-   /**
-   * 
-   * @return signingVersion
-  **/
+  /** @return signingVersion */
   @ApiModelProperty(value = "")
   public String getSigningVersion() {
     return signingVersion;
@@ -105,10 +92,7 @@ public class DisplayApplianceAccount {
     return this;
   }
 
-   /**
-   * 
-   * @return tagHasSigBlock
-  **/
+  /** @return tagHasSigBlock */
   @ApiModelProperty(value = "")
   public Boolean isTagHasSigBlock() {
     return tagHasSigBlock;
@@ -117,7 +101,6 @@ public class DisplayApplianceAccount {
   public void setTagHasSigBlock(Boolean tagHasSigBlock) {
     this.tagHasSigBlock = tagHasSigBlock;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -128,27 +111,38 @@ public class DisplayApplianceAccount {
       return false;
     }
     DisplayApplianceAccount displayApplianceAccount = (DisplayApplianceAccount) o;
-    return Objects.equals(this.accountId, displayApplianceAccount.accountId) &&
-        Objects.equals(this.optOutAutoNavTextAndTabColorUpdates, displayApplianceAccount.optOutAutoNavTextAndTabColorUpdates) &&
-        Objects.equals(this.showInitialConditionalFields, displayApplianceAccount.showInitialConditionalFields) &&
-        Objects.equals(this.signingVersion, displayApplianceAccount.signingVersion) &&
-        Objects.equals(this.tagHasSigBlock, displayApplianceAccount.tagHasSigBlock);
+    return Objects.equals(this.accountId, displayApplianceAccount.accountId)
+        && Objects.equals(
+            this.optOutAutoNavTextAndTabColorUpdates,
+            displayApplianceAccount.optOutAutoNavTextAndTabColorUpdates)
+        && Objects.equals(
+            this.showInitialConditionalFields, displayApplianceAccount.showInitialConditionalFields)
+        && Objects.equals(this.signingVersion, displayApplianceAccount.signingVersion)
+        && Objects.equals(this.tagHasSigBlock, displayApplianceAccount.tagHasSigBlock);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, optOutAutoNavTextAndTabColorUpdates, showInitialConditionalFields, signingVersion, tagHasSigBlock);
+    return Objects.hash(
+        accountId,
+        optOutAutoNavTextAndTabColorUpdates,
+        showInitialConditionalFields,
+        signingVersion,
+        tagHasSigBlock);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayApplianceAccount {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
-    sb.append("    optOutAutoNavTextAndTabColorUpdates: ").append(toIndentedString(optOutAutoNavTextAndTabColorUpdates)).append("\n");
-    sb.append("    showInitialConditionalFields: ").append(toIndentedString(showInitialConditionalFields)).append("\n");
+    sb.append("    optOutAutoNavTextAndTabColorUpdates: ")
+        .append(toIndentedString(optOutAutoNavTextAndTabColorUpdates))
+        .append("\n");
+    sb.append("    showInitialConditionalFields: ")
+        .append(toIndentedString(showInitialConditionalFields))
+        .append("\n");
     sb.append("    signingVersion: ").append(toIndentedString(signingVersion)).append("\n");
     sb.append("    tagHasSigBlock: ").append(toIndentedString(tagHasSigBlock)).append("\n");
     sb.append("}");
@@ -156,8 +150,7 @@ public class DisplayApplianceAccount {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -165,6 +158,4 @@ public class DisplayApplianceAccount {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

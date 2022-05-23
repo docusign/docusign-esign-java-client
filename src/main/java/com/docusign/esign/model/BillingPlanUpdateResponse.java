@@ -1,20 +1,12 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Defines a billing plan update response object..
- *
- */
+/** Defines a billing plan update response object.. */
 @ApiModel(description = "Defines a billing plan update response object.")
-
 public class BillingPlanUpdateResponse {
   @JsonProperty("accountPaymentMethod")
   private String accountPaymentMethod = null;
@@ -40,12 +32,11 @@ public class BillingPlanUpdateResponse {
   @JsonProperty("planName")
   private String planName = null;
 
-
   /**
    * accountPaymentMethod.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse accountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
     return this;
@@ -53,26 +44,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   *
    * @return accountPaymentMethod
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
 
-  /**
-   * setAccountPaymentMethod.
-   **/
+  /** setAccountPaymentMethod. */
   public void setAccountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
   }
-
 
   /**
    * billingPlanPreview.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse billingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
     return this;
@@ -80,26 +69,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * Get billingPlanPreview.
+   *
    * @return billingPlanPreview
-   **/
+   */
   @ApiModelProperty(value = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
 
-  /**
-   * setBillingPlanPreview.
-   **/
+  /** setBillingPlanPreview. */
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
-
 
   /**
    * currencyCode.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse currencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
     return this;
@@ -107,26 +94,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * Specifies the ISO currency code for the account..
+   *
    * @return currencyCode
-   **/
+   */
   @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
 
-  /**
-   * setCurrencyCode.
-   **/
+  /** setCurrencyCode. */
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * includedSeats.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse includedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
     return this;
@@ -134,26 +119,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * The number of seats (users) included..
+   *
    * @return includedSeats
-   **/
+   */
   @ApiModelProperty(value = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
 
-  /**
-   * setIncludedSeats.
-   **/
+  /** setIncludedSeats. */
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
-
 
   /**
    * paymentCycle.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse paymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
     return this;
@@ -161,26 +144,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   *
    * @return paymentCycle
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
 
-  /**
-   * setPaymentCycle.
-   **/
+  /** setPaymentCycle. */
   public void setPaymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
   }
-
 
   /**
    * paymentMethod.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse paymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
     return this;
@@ -188,26 +169,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   *
    * @return paymentMethod
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
 
-  /**
-   * setPaymentMethod.
-   **/
+  /** setPaymentMethod. */
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
-
 
   /**
    * planId.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse planId(String planId) {
     this.planId = planId;
     return this;
@@ -215,26 +194,24 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   *
    * @return planId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPlanId() {
     return planId;
   }
 
-  /**
-   * setPlanId.
-   **/
+  /** setPlanId. */
   public void setPlanId(String planId) {
     this.planId = planId;
   }
-
 
   /**
    * planName.
    *
    * @return BillingPlanUpdateResponse
-   **/
+   */
   public BillingPlanUpdateResponse planName(String planName) {
     this.planName = planName;
     return this;
@@ -242,20 +219,18 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   *
    * @return planName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPlanName() {
     return planName;
   }
 
-  /**
-   * setPlanName.
-   **/
+  /** setPlanName. */
   public void setPlanName(String planName) {
     this.planName = planName;
   }
-
 
   /**
    * Compares objects.
@@ -271,34 +246,39 @@ public class BillingPlanUpdateResponse {
       return false;
     }
     BillingPlanUpdateResponse billingPlanUpdateResponse = (BillingPlanUpdateResponse) o;
-    return Objects.equals(this.accountPaymentMethod, billingPlanUpdateResponse.accountPaymentMethod) &&
-        Objects.equals(this.billingPlanPreview, billingPlanUpdateResponse.billingPlanPreview) &&
-        Objects.equals(this.currencyCode, billingPlanUpdateResponse.currencyCode) &&
-        Objects.equals(this.includedSeats, billingPlanUpdateResponse.includedSeats) &&
-        Objects.equals(this.paymentCycle, billingPlanUpdateResponse.paymentCycle) &&
-        Objects.equals(this.paymentMethod, billingPlanUpdateResponse.paymentMethod) &&
-        Objects.equals(this.planId, billingPlanUpdateResponse.planId) &&
-        Objects.equals(this.planName, billingPlanUpdateResponse.planName);
+    return Objects.equals(this.accountPaymentMethod, billingPlanUpdateResponse.accountPaymentMethod)
+        && Objects.equals(this.billingPlanPreview, billingPlanUpdateResponse.billingPlanPreview)
+        && Objects.equals(this.currencyCode, billingPlanUpdateResponse.currencyCode)
+        && Objects.equals(this.includedSeats, billingPlanUpdateResponse.includedSeats)
+        && Objects.equals(this.paymentCycle, billingPlanUpdateResponse.paymentCycle)
+        && Objects.equals(this.paymentMethod, billingPlanUpdateResponse.paymentMethod)
+        && Objects.equals(this.planId, billingPlanUpdateResponse.planId)
+        && Objects.equals(this.planName, billingPlanUpdateResponse.planName);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
+    return Objects.hash(
+        accountPaymentMethod,
+        billingPlanPreview,
+        currencyCode,
+        includedSeats,
+        paymentCycle,
+        paymentMethod,
+        planId,
+        planName);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanUpdateResponse {\n");
-    
-    sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
+
+    sb.append("    accountPaymentMethod: ")
+        .append(toIndentedString(accountPaymentMethod))
+        .append("\n");
     sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    includedSeats: ").append(toIndentedString(includedSeats)).append("\n");
@@ -311,8 +291,7 @@ public class BillingPlanUpdateResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -320,6 +299,4 @@ public class BillingPlanUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

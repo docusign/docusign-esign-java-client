@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ProofServiceResourceToken.
- *
- */
-
+/** ProofServiceResourceToken. */
 public class ProofServiceResourceToken {
   @JsonProperty("proofBaseURI")
   private String proofBaseURI = null;
@@ -20,12 +12,11 @@ public class ProofServiceResourceToken {
   @JsonProperty("resourceToken")
   private String resourceToken = null;
 
-
   /**
    * proofBaseURI.
    *
    * @return ProofServiceResourceToken
-   **/
+   */
   public ProofServiceResourceToken proofBaseURI(String proofBaseURI) {
     this.proofBaseURI = proofBaseURI;
     return this;
@@ -33,26 +24,24 @@ public class ProofServiceResourceToken {
 
   /**
    * .
+   *
    * @return proofBaseURI
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getProofBaseURI() {
     return proofBaseURI;
   }
 
-  /**
-   * setProofBaseURI.
-   **/
+  /** setProofBaseURI. */
   public void setProofBaseURI(String proofBaseURI) {
     this.proofBaseURI = proofBaseURI;
   }
-
 
   /**
    * resourceToken.
    *
    * @return ProofServiceResourceToken
-   **/
+   */
   public ProofServiceResourceToken resourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
     return this;
@@ -60,20 +49,18 @@ public class ProofServiceResourceToken {
 
   /**
    * .
+   *
    * @return resourceToken
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getResourceToken() {
     return resourceToken;
   }
 
-  /**
-   * setResourceToken.
-   **/
+  /** setResourceToken. */
   public void setResourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
   }
-
 
   /**
    * Compares objects.
@@ -89,27 +76,22 @@ public class ProofServiceResourceToken {
       return false;
     }
     ProofServiceResourceToken proofServiceResourceToken = (ProofServiceResourceToken) o;
-    return Objects.equals(this.proofBaseURI, proofServiceResourceToken.proofBaseURI) &&
-        Objects.equals(this.resourceToken, proofServiceResourceToken.resourceToken);
+    return Objects.equals(this.proofBaseURI, proofServiceResourceToken.proofBaseURI)
+        && Objects.equals(this.resourceToken, proofServiceResourceToken.resourceToken);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(proofBaseURI, resourceToken);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProofServiceResourceToken {\n");
-    
+
     sb.append("    proofBaseURI: ").append(toIndentedString(proofBaseURI)).append("\n");
     sb.append("    resourceToken: ").append(toIndentedString(resourceToken)).append("\n");
     sb.append("}");
@@ -117,8 +99,7 @@ public class ProofServiceResourceToken {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -126,6 +107,4 @@ public class ProofServiceResourceToken {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

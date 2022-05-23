@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * UpdateTransactionRequest
- */
-
+/** UpdateTransactionRequest */
 public class UpdateTransactionRequest {
   @JsonProperty("code")
   private String code = null;
@@ -27,10 +20,7 @@ public class UpdateTransactionRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return code
-  **/
+  /** @return code */
   @ApiModelProperty(value = "")
   public String getCode() {
     return code;
@@ -45,10 +35,7 @@ public class UpdateTransactionRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return message
-  **/
+  /** @return message */
   @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
@@ -63,10 +50,11 @@ public class UpdateTransactionRequest {
     return this;
   }
 
-   /**
+  /**
    * The state or province associated with the address.
+   *
    * @return state
-  **/
+   */
   @ApiModelProperty(value = "The state or province associated with the address.")
   public String getState() {
     return state;
@@ -75,7 +63,6 @@ public class UpdateTransactionRequest {
   public void setState(String state) {
     this.state = state;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,9 +73,9 @@ public class UpdateTransactionRequest {
       return false;
     }
     UpdateTransactionRequest updateTransactionRequest = (UpdateTransactionRequest) o;
-    return Objects.equals(this.code, updateTransactionRequest.code) &&
-        Objects.equals(this.message, updateTransactionRequest.message) &&
-        Objects.equals(this.state, updateTransactionRequest.state);
+    return Objects.equals(this.code, updateTransactionRequest.code)
+        && Objects.equals(this.message, updateTransactionRequest.message)
+        && Objects.equals(this.state, updateTransactionRequest.state);
   }
 
   @Override
@@ -96,12 +83,11 @@ public class UpdateTransactionRequest {
     return Objects.hash(code, message, state);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UpdateTransactionRequest {\n");
-    
+
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
@@ -110,8 +96,7 @@ public class UpdateTransactionRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -119,6 +104,4 @@ public class UpdateTransactionRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

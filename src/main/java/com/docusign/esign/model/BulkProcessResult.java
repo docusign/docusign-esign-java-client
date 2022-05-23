@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.BulkSendBatchError;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BulkProcessResult.
- *
- */
-
+/** BulkProcessResult. */
 public class BulkProcessResult {
   @JsonProperty("errors")
   private java.util.List<BulkSendBatchError> errors = null;
@@ -24,25 +15,24 @@ public class BulkProcessResult {
   @JsonProperty("success")
   private String success = null;
 
-
   /**
    * errors.
    *
    * @return BulkProcessResult
-   **/
+   */
   public BulkProcessResult errors(java.util.List<BulkSendBatchError> errors) {
     this.errors = errors;
     return this;
   }
-  
+
   /**
    * addErrorsItem.
    *
    * @return BulkProcessResult
-   **/
+   */
   public BulkProcessResult addErrorsItem(BulkSendBatchError errorsItem) {
     if (this.errors == null) {
-      this.errors = new java.util.ArrayList<BulkSendBatchError>();
+      this.errors = new java.util.ArrayList<>();
     }
     this.errors.add(errorsItem);
     return this;
@@ -50,26 +40,24 @@ public class BulkProcessResult {
 
   /**
    * .
+   *
    * @return errors
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<BulkSendBatchError> getErrors() {
     return errors;
   }
 
-  /**
-   * setErrors.
-   **/
+  /** setErrors. */
   public void setErrors(java.util.List<BulkSendBatchError> errors) {
     this.errors = errors;
   }
-
 
   /**
    * listId.
    *
    * @return BulkProcessResult
-   **/
+   */
   public BulkProcessResult listId(String listId) {
     this.listId = listId;
     return this;
@@ -77,26 +65,24 @@ public class BulkProcessResult {
 
   /**
    * .
+   *
    * @return listId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getListId() {
     return listId;
   }
 
-  /**
-   * setListId.
-   **/
+  /** setListId. */
   public void setListId(String listId) {
     this.listId = listId;
   }
-
 
   /**
    * success.
    *
    * @return BulkProcessResult
-   **/
+   */
   public BulkProcessResult success(String success) {
     this.success = success;
     return this;
@@ -104,20 +90,18 @@ public class BulkProcessResult {
 
   /**
    * .
+   *
    * @return success
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSuccess() {
     return success;
   }
 
-  /**
-   * setSuccess.
-   **/
+  /** setSuccess. */
   public void setSuccess(String success) {
     this.success = success;
   }
-
 
   /**
    * Compares objects.
@@ -133,28 +117,23 @@ public class BulkProcessResult {
       return false;
     }
     BulkProcessResult bulkProcessResult = (BulkProcessResult) o;
-    return Objects.equals(this.errors, bulkProcessResult.errors) &&
-        Objects.equals(this.listId, bulkProcessResult.listId) &&
-        Objects.equals(this.success, bulkProcessResult.success);
+    return Objects.equals(this.errors, bulkProcessResult.errors)
+        && Objects.equals(this.listId, bulkProcessResult.listId)
+        && Objects.equals(this.success, bulkProcessResult.success);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(errors, listId, success);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessResult {\n");
-    
+
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
@@ -163,8 +142,7 @@ public class BulkProcessResult {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -172,6 +150,4 @@ public class BulkProcessResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,49 +1,41 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BillingPaymentRequest.
- *
- */
-
+/** BillingPaymentRequest. */
 public class BillingPaymentRequest {
   @JsonProperty("paymentAmount")
   private String paymentAmount = null;
-
 
   /**
    * paymentAmount.
    *
    * @return BillingPaymentRequest
-   **/
+   */
   public BillingPaymentRequest paymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
     return this;
   }
 
   /**
-   * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices..
+   * The payment amount for the past due invoices. This value must match the pastDueBalance value
+   * retrieved using Get Past Due Invoices..
+   *
    * @return paymentAmount
-   **/
-  @ApiModelProperty(value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
+   */
+  @ApiModelProperty(
+      value =
+          "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
   public String getPaymentAmount() {
     return paymentAmount;
   }
 
-  /**
-   * setPaymentAmount.
-   **/
+  /** setPaymentAmount. */
   public void setPaymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
   }
-
 
   /**
    * Compares objects.
@@ -62,31 +54,25 @@ public class BillingPaymentRequest {
     return Objects.equals(this.paymentAmount, billingPaymentRequest.paymentAmount);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(paymentAmount);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentRequest {\n");
-    
+
     sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +80,4 @@ public class BillingPaymentRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

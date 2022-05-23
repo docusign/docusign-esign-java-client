@@ -1,42 +1,34 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DocumentHtmlDefinitionOriginal;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DocumentHtmlDefinitionOriginals.
- *
- */
-
+/** DocumentHtmlDefinitionOriginals. */
 public class DocumentHtmlDefinitionOriginals {
   @JsonProperty("htmlDefinitions")
   private java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions = null;
-
 
   /**
    * htmlDefinitions.
    *
    * @return DocumentHtmlDefinitionOriginals
-   **/
-  public DocumentHtmlDefinitionOriginals htmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
+   */
+  public DocumentHtmlDefinitionOriginals htmlDefinitions(
+      java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-  
+
   /**
    * addHtmlDefinitionsItem.
    *
    * @return DocumentHtmlDefinitionOriginals
-   **/
-  public DocumentHtmlDefinitionOriginals addHtmlDefinitionsItem(DocumentHtmlDefinitionOriginal htmlDefinitionsItem) {
+   */
+  public DocumentHtmlDefinitionOriginals addHtmlDefinitionsItem(
+      DocumentHtmlDefinitionOriginal htmlDefinitionsItem) {
     if (this.htmlDefinitions == null) {
-      this.htmlDefinitions = new java.util.ArrayList<DocumentHtmlDefinitionOriginal>();
+      this.htmlDefinitions = new java.util.ArrayList<>();
     }
     this.htmlDefinitions.add(htmlDefinitionsItem);
     return this;
@@ -44,20 +36,18 @@ public class DocumentHtmlDefinitionOriginals {
 
   /**
    * .
+   *
    * @return htmlDefinitions
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<DocumentHtmlDefinitionOriginal> getHtmlDefinitions() {
     return htmlDefinitions;
   }
 
-  /**
-   * setHtmlDefinitions.
-   **/
+  /** setHtmlDefinitions. */
   public void setHtmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
-
 
   /**
    * Compares objects.
@@ -72,35 +62,30 @@ public class DocumentHtmlDefinitionOriginals {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DocumentHtmlDefinitionOriginals documentHtmlDefinitionOriginals = (DocumentHtmlDefinitionOriginals) o;
+    DocumentHtmlDefinitionOriginals documentHtmlDefinitionOriginals =
+        (DocumentHtmlDefinitionOriginals) o;
     return Objects.equals(this.htmlDefinitions, documentHtmlDefinitionOriginals.htmlDefinitions);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(htmlDefinitions);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitionOriginals {\n");
-    
+
     sb.append("    htmlDefinitions: ").append(toIndentedString(htmlDefinitions)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,6 +93,4 @@ public class DocumentHtmlDefinitionOriginals {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

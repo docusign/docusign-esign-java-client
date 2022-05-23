@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * AddressInformationV2
- */
-
+/** AddressInformationV2 */
 public class AddressInformationV2 {
   @JsonProperty("address1")
   private String address1 = null;
@@ -40,11 +35,14 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
+  /**
    * First Line of the address. Maximum length: 100 characters.
+   *
    * @return address1
-  **/
-  @ApiModelProperty(example = "null", value = "First Line of the address. Maximum length: 100 characters.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -58,11 +56,14 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
+  /**
    * Second Line of the address. Maximum length: 100 characters.
+   *
    * @return address2
-  **/
-  @ApiModelProperty(example = "null", value = "Second Line of the address. Maximum length: 100 characters.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -76,10 +77,7 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return city
-  **/
+  /** @return city */
   @ApiModelProperty(example = "null", value = "")
   public String getCity() {
     return city;
@@ -94,10 +92,11 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
+  /**
    * Specifies the country associated with the address.
+   *
    * @return country
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
@@ -112,10 +111,7 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return fax
-  **/
+  /** @return fax */
   @ApiModelProperty(example = "null", value = "")
   public String getFax() {
     return fax;
@@ -130,10 +126,7 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return phone
-  **/
+  /** @return phone */
   @ApiModelProperty(example = "null", value = "")
   public String getPhone() {
     return phone;
@@ -148,10 +141,7 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return postalCode
-  **/
+  /** @return postalCode */
   @ApiModelProperty(example = "null", value = "")
   public String getPostalCode() {
     return postalCode;
@@ -166,10 +156,11 @@ public class AddressInformationV2 {
     return this;
   }
 
-   /**
+  /**
    * The state or province associated with the address.
+   *
    * @return stateOrProvince
-  **/
+   */
   @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
   public String getStateOrProvince() {
     return stateOrProvince;
@@ -178,7 +169,6 @@ public class AddressInformationV2 {
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -189,14 +179,14 @@ public class AddressInformationV2 {
       return false;
     }
     AddressInformationV2 addressInformationV2 = (AddressInformationV2) o;
-    return Objects.equals(this.address1, addressInformationV2.address1) &&
-        Objects.equals(this.address2, addressInformationV2.address2) &&
-        Objects.equals(this.city, addressInformationV2.city) &&
-        Objects.equals(this.country, addressInformationV2.country) &&
-        Objects.equals(this.fax, addressInformationV2.fax) &&
-        Objects.equals(this.phone, addressInformationV2.phone) &&
-        Objects.equals(this.postalCode, addressInformationV2.postalCode) &&
-        Objects.equals(this.stateOrProvince, addressInformationV2.stateOrProvince);
+    return Objects.equals(this.address1, addressInformationV2.address1)
+        && Objects.equals(this.address2, addressInformationV2.address2)
+        && Objects.equals(this.city, addressInformationV2.city)
+        && Objects.equals(this.country, addressInformationV2.country)
+        && Objects.equals(this.fax, addressInformationV2.fax)
+        && Objects.equals(this.phone, addressInformationV2.phone)
+        && Objects.equals(this.postalCode, addressInformationV2.postalCode)
+        && Objects.equals(this.stateOrProvince, addressInformationV2.stateOrProvince);
   }
 
   @Override
@@ -204,12 +194,11 @@ public class AddressInformationV2 {
     return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformationV2 {\n");
-    
+
     sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
     sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
@@ -223,8 +212,7 @@ public class AddressInformationV2 {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -232,6 +220,4 @@ public class AddressInformationV2 {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

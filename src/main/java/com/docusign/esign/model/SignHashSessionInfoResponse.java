@@ -1,21 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Seal;
-import com.docusign.esign.model.Sender;
-import com.docusign.esign.model.SignHashDocument;
-import com.docusign.esign.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignHashSessionInfoResponse
- */
-
+/** SignHashSessionInfoResponse */
 public class SignHashSessionInfoResponse {
   @JsonProperty("documents")
   private java.util.List<SignHashDocument> documents = null;
@@ -54,11 +43,13 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Complex element contains the details on the documents in the envelope.
+   *
    * @return documents
-  **/
-  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
+   */
+  @ApiModelProperty(
+      value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -72,10 +63,11 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * The envelope ID of the envelope status that failed to post.
+   *
    * @return envelopeId
-  **/
+   */
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
@@ -90,10 +82,7 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return language
-  **/
+  /** @return language */
   @ApiModelProperty(value = "")
   public String getLanguage() {
     return language;
@@ -108,10 +97,7 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return redirectionUrl
-  **/
+  /** @return redirectionUrl */
   @ApiModelProperty(value = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
@@ -126,10 +112,7 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return remainingSignatureRequests
-  **/
+  /** @return remainingSignatureRequests */
   @ApiModelProperty(value = "")
   public Long getRemainingSignatureRequests() {
     return remainingSignatureRequests;
@@ -144,10 +127,11 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get seal
+   *
    * @return seal
-  **/
+   */
   @ApiModelProperty(value = "")
   public Seal getSeal() {
     return seal;
@@ -162,10 +146,11 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get sender
+   *
    * @return sender
-  **/
+   */
   @ApiModelProperty(value = "")
   public Sender getSender() {
     return sender;
@@ -180,10 +165,11 @@ public class SignHashSessionInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get user
+   *
    * @return user
-  **/
+   */
   @ApiModelProperty(value = "")
   public User getUser() {
     return user;
@@ -192,7 +178,6 @@ public class SignHashSessionInfoResponse {
   public void setUser(User user) {
     this.user = user;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -203,32 +188,42 @@ public class SignHashSessionInfoResponse {
       return false;
     }
     SignHashSessionInfoResponse signHashSessionInfoResponse = (SignHashSessionInfoResponse) o;
-    return Objects.equals(this.documents, signHashSessionInfoResponse.documents) &&
-        Objects.equals(this.envelopeId, signHashSessionInfoResponse.envelopeId) &&
-        Objects.equals(this.language, signHashSessionInfoResponse.language) &&
-        Objects.equals(this.redirectionUrl, signHashSessionInfoResponse.redirectionUrl) &&
-        Objects.equals(this.remainingSignatureRequests, signHashSessionInfoResponse.remainingSignatureRequests) &&
-        Objects.equals(this.seal, signHashSessionInfoResponse.seal) &&
-        Objects.equals(this.sender, signHashSessionInfoResponse.sender) &&
-        Objects.equals(this.user, signHashSessionInfoResponse.user);
+    return Objects.equals(this.documents, signHashSessionInfoResponse.documents)
+        && Objects.equals(this.envelopeId, signHashSessionInfoResponse.envelopeId)
+        && Objects.equals(this.language, signHashSessionInfoResponse.language)
+        && Objects.equals(this.redirectionUrl, signHashSessionInfoResponse.redirectionUrl)
+        && Objects.equals(
+            this.remainingSignatureRequests, signHashSessionInfoResponse.remainingSignatureRequests)
+        && Objects.equals(this.seal, signHashSessionInfoResponse.seal)
+        && Objects.equals(this.sender, signHashSessionInfoResponse.sender)
+        && Objects.equals(this.user, signHashSessionInfoResponse.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(documents, envelopeId, language, redirectionUrl, remainingSignatureRequests, seal, sender, user);
+    return Objects.hash(
+        documents,
+        envelopeId,
+        language,
+        redirectionUrl,
+        remainingSignatureRequests,
+        seal,
+        sender,
+        user);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignHashSessionInfoResponse {\n");
-    
+
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
-    sb.append("    remainingSignatureRequests: ").append(toIndentedString(remainingSignatureRequests)).append("\n");
+    sb.append("    remainingSignatureRequests: ")
+        .append(toIndentedString(remainingSignatureRequests))
+        .append("\n");
     sb.append("    seal: ").append(toIndentedString(seal)).append("\n");
     sb.append("    sender: ").append(toIndentedString(sender)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -237,8 +232,7 @@ public class SignHashSessionInfoResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -246,6 +240,4 @@ public class SignHashSessionInfoResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

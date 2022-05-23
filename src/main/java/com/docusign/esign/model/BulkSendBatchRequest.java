@@ -1,28 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BulkSendBatchRequest.
- *
- */
-
+/** BulkSendBatchRequest. */
 public class BulkSendBatchRequest {
   @JsonProperty("batchName")
   private String batchName = null;
-
 
   /**
    * batchName.
    *
    * @return BulkSendBatchRequest
-   **/
+   */
   public BulkSendBatchRequest batchName(String batchName) {
     this.batchName = batchName;
     return this;
@@ -30,20 +21,18 @@ public class BulkSendBatchRequest {
 
   /**
    * .
+   *
    * @return batchName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBatchName() {
     return batchName;
   }
 
-  /**
-   * setBatchName.
-   **/
+  /** setBatchName. */
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * Compares objects.
@@ -62,31 +51,25 @@ public class BulkSendBatchRequest {
     return Objects.equals(this.batchName, bulkSendBatchRequest.batchName);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(batchName);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchRequest {\n");
-    
+
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +77,4 @@ public class BulkSendBatchRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

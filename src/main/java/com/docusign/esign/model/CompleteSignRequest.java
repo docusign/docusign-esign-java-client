@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DocumentUpdateInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * CompleteSignRequest
- */
-
+/** CompleteSignRequest */
 public class CompleteSignRequest {
   @JsonProperty("certificate")
   private String certificate = null;
@@ -37,10 +29,7 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return certificate
-  **/
+  /** @return certificate */
   @ApiModelProperty(value = "")
   public String getCertificate() {
     return certificate;
@@ -55,10 +44,7 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return correlationId
-  **/
+  /** @return correlationId */
   @ApiModelProperty(value = "")
   public String getCorrelationId() {
     return correlationId;
@@ -68,12 +54,14 @@ public class CompleteSignRequest {
     this.correlationId = correlationId;
   }
 
-  public CompleteSignRequest documentUpdateInfos(java.util.List<DocumentUpdateInfo> documentUpdateInfos) {
+  public CompleteSignRequest documentUpdateInfos(
+      java.util.List<DocumentUpdateInfo> documentUpdateInfos) {
     this.documentUpdateInfos = documentUpdateInfos;
     return this;
   }
 
-  public CompleteSignRequest addDocumentUpdateInfosItem(DocumentUpdateInfo documentUpdateInfosItem) {
+  public CompleteSignRequest addDocumentUpdateInfosItem(
+      DocumentUpdateInfo documentUpdateInfosItem) {
     if (this.documentUpdateInfos == null) {
       this.documentUpdateInfos = new java.util.ArrayList<DocumentUpdateInfo>();
     }
@@ -81,10 +69,7 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return documentUpdateInfos
-  **/
+  /** @return documentUpdateInfos */
   @ApiModelProperty(value = "")
   public java.util.List<DocumentUpdateInfo> getDocumentUpdateInfos() {
     return documentUpdateInfos;
@@ -99,10 +84,7 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return maxSignatureLength
-  **/
+  /** @return maxSignatureLength */
   @ApiModelProperty(value = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
@@ -117,11 +99,15 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+  /**
+   * Specifies the physical location where the signing takes place. It can have two enumeration
+   * values; InPerson and Online. The default value is Online.
+   *
    * @return signingLocation
-  **/
-  @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   public String getSigningLocation() {
     return signingLocation;
   }
@@ -135,11 +121,18 @@ public class CompleteSignRequest {
     return this;
   }
 
-   /**
-   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.
+  /**
+   * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign
+   * system for 7 days. It is recommended that a transaction ID is used for offline signing to
+   * ensure that an envelope is not sent multiple times. The `transactionId` property can be used
+   * determine an envelope's status (i.e. was it created or not) in cases where the internet
+   * connection was lost before the envelope status was returned.
+   *
    * @return transactionId
-  **/
-  @ApiModelProperty(value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
+   */
+  @ApiModelProperty(
+      value =
+          " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   public String getTransactionId() {
     return transactionId;
   }
@@ -147,7 +140,6 @@ public class CompleteSignRequest {
   public void setTransactionId(String transactionId) {
     this.transactionId = transactionId;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -158,28 +150,35 @@ public class CompleteSignRequest {
       return false;
     }
     CompleteSignRequest completeSignRequest = (CompleteSignRequest) o;
-    return Objects.equals(this.certificate, completeSignRequest.certificate) &&
-        Objects.equals(this.correlationId, completeSignRequest.correlationId) &&
-        Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos) &&
-        Objects.equals(this.maxSignatureLength, completeSignRequest.maxSignatureLength) &&
-        Objects.equals(this.signingLocation, completeSignRequest.signingLocation) &&
-        Objects.equals(this.transactionId, completeSignRequest.transactionId);
+    return Objects.equals(this.certificate, completeSignRequest.certificate)
+        && Objects.equals(this.correlationId, completeSignRequest.correlationId)
+        && Objects.equals(this.documentUpdateInfos, completeSignRequest.documentUpdateInfos)
+        && Objects.equals(this.maxSignatureLength, completeSignRequest.maxSignatureLength)
+        && Objects.equals(this.signingLocation, completeSignRequest.signingLocation)
+        && Objects.equals(this.transactionId, completeSignRequest.transactionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(certificate, correlationId, documentUpdateInfos, maxSignatureLength, signingLocation, transactionId);
+    return Objects.hash(
+        certificate,
+        correlationId,
+        documentUpdateInfos,
+        maxSignatureLength,
+        signingLocation,
+        transactionId);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CompleteSignRequest {\n");
-    
+
     sb.append("    certificate: ").append(toIndentedString(certificate)).append("\n");
     sb.append("    correlationId: ").append(toIndentedString(correlationId)).append("\n");
-    sb.append("    documentUpdateInfos: ").append(toIndentedString(documentUpdateInfos)).append("\n");
+    sb.append("    documentUpdateInfos: ")
+        .append(toIndentedString(documentUpdateInfos))
+        .append("\n");
     sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    transactionId: ").append(toIndentedString(transactionId)).append("\n");
@@ -188,8 +187,7 @@ public class CompleteSignRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -197,6 +195,4 @@ public class CompleteSignRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

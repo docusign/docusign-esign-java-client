@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ConciergeQueryResponse
- */
-
+/** ConciergeQueryResponse */
 public class ConciergeQueryResponse {
   @JsonProperty("entityLocale")
   private String entityLocale = null;
@@ -28,10 +23,7 @@ public class ConciergeQueryResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return entityLocale
-  **/
+  /** @return entityLocale */
   @ApiModelProperty(example = "null", value = "")
   public String getEntityLocale() {
     return entityLocale;
@@ -46,10 +38,7 @@ public class ConciergeQueryResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return entityTimeZone
-  **/
+  /** @return entityTimeZone */
   @ApiModelProperty(example = "null", value = "")
   public String getEntityTimeZone() {
     return entityTimeZone;
@@ -64,10 +53,7 @@ public class ConciergeQueryResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return message
-  **/
+  /** @return message */
   @ApiModelProperty(example = "null", value = "")
   public String getMessage() {
     return message;
@@ -82,10 +68,7 @@ public class ConciergeQueryResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return zuoraEntityName
-  **/
+  /** @return zuoraEntityName */
   @ApiModelProperty(example = "null", value = "")
   public String getZuoraEntityName() {
     return zuoraEntityName;
@@ -94,7 +77,6 @@ public class ConciergeQueryResponse {
   public void setZuoraEntityName(String zuoraEntityName) {
     this.zuoraEntityName = zuoraEntityName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,10 +87,10 @@ public class ConciergeQueryResponse {
       return false;
     }
     ConciergeQueryResponse conciergeQueryResponse = (ConciergeQueryResponse) o;
-    return Objects.equals(this.entityLocale, conciergeQueryResponse.entityLocale) &&
-        Objects.equals(this.entityTimeZone, conciergeQueryResponse.entityTimeZone) &&
-        Objects.equals(this.message, conciergeQueryResponse.message) &&
-        Objects.equals(this.zuoraEntityName, conciergeQueryResponse.zuoraEntityName);
+    return Objects.equals(this.entityLocale, conciergeQueryResponse.entityLocale)
+        && Objects.equals(this.entityTimeZone, conciergeQueryResponse.entityTimeZone)
+        && Objects.equals(this.message, conciergeQueryResponse.message)
+        && Objects.equals(this.zuoraEntityName, conciergeQueryResponse.zuoraEntityName);
   }
 
   @Override
@@ -116,12 +98,11 @@ public class ConciergeQueryResponse {
     return Objects.hash(entityLocale, entityTimeZone, message, zuoraEntityName);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConciergeQueryResponse {\n");
-    
+
     sb.append("    entityLocale: ").append(toIndentedString(entityLocale)).append("\n");
     sb.append("    entityTimeZone: ").append(toIndentedString(entityTimeZone)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
@@ -131,8 +112,7 @@ public class ConciergeQueryResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -140,6 +120,4 @@ public class ConciergeQueryResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

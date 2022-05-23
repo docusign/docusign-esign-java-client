@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ReportInProductRunResponseRow;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductRunResponse.
- *
- */
-
+/** ReportInProductRunResponse. */
 public class ReportInProductRunResponse {
   @JsonProperty("endPosition")
   private String endPosition = null;
@@ -36,12 +27,11 @@ public class ReportInProductRunResponse {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * endPosition.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
@@ -49,26 +39,24 @@ public class ReportInProductRunResponse {
 
   /**
    * The last position in the result set. .
+   *
    * @return endPosition
-   **/
+   */
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
-  /**
-   * setEndPosition.
-   **/
+  /** setEndPosition. */
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * exceededMaxResults.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse exceededMaxResults(String exceededMaxResults) {
     this.exceededMaxResults = exceededMaxResults;
     return this;
@@ -76,53 +64,50 @@ public class ReportInProductRunResponse {
 
   /**
    * .
+   *
    * @return exceededMaxResults
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getExceededMaxResults() {
     return exceededMaxResults;
   }
 
-  /**
-   * setExceededMaxResults.
-   **/
+  /** setExceededMaxResults. */
   public void setExceededMaxResults(String exceededMaxResults) {
     this.exceededMaxResults = exceededMaxResults;
   }
-
 
   /**
    * lastWarehouseRefreshDateTime.
    *
    * @return ReportInProductRunResponse
-   **/
-  public ReportInProductRunResponse lastWarehouseRefreshDateTime(String lastWarehouseRefreshDateTime) {
+   */
+  public ReportInProductRunResponse lastWarehouseRefreshDateTime(
+      String lastWarehouseRefreshDateTime) {
     this.lastWarehouseRefreshDateTime = lastWarehouseRefreshDateTime;
     return this;
   }
 
   /**
    * .
+   *
    * @return lastWarehouseRefreshDateTime
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastWarehouseRefreshDateTime() {
     return lastWarehouseRefreshDateTime;
   }
 
-  /**
-   * setLastWarehouseRefreshDateTime.
-   **/
+  /** setLastWarehouseRefreshDateTime. */
   public void setLastWarehouseRefreshDateTime(String lastWarehouseRefreshDateTime) {
     this.lastWarehouseRefreshDateTime = lastWarehouseRefreshDateTime;
   }
-
 
   /**
    * resultSetSize.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
@@ -130,36 +115,34 @@ public class ReportInProductRunResponse {
 
   /**
    * The number of results returned in this response. .
+   *
    * @return resultSetSize
-   **/
+   */
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
-  /**
-   * setResultSetSize.
-   **/
+  /** setResultSetSize. */
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * rows.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse rows(java.util.List<ReportInProductRunResponseRow> rows) {
     this.rows = rows;
     return this;
   }
-  
+
   /**
    * addRowsItem.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse addRowsItem(ReportInProductRunResponseRow rowsItem) {
     if (this.rows == null) {
       this.rows = new java.util.ArrayList<ReportInProductRunResponseRow>();
@@ -170,26 +153,24 @@ public class ReportInProductRunResponse {
 
   /**
    * .
+   *
    * @return rows
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<ReportInProductRunResponseRow> getRows() {
     return rows;
   }
 
-  /**
-   * setRows.
-   **/
+  /** setRows. */
   public void setRows(java.util.List<ReportInProductRunResponseRow> rows) {
     this.rows = rows;
   }
-
 
   /**
    * startPosition.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
@@ -197,47 +178,46 @@ public class ReportInProductRunResponse {
 
   /**
    * Starting position of the current result set..
+   *
    * @return startPosition
-   **/
+   */
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
-  /**
-   * setStartPosition.
-   **/
+  /** setStartPosition. */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
    *
    * @return ReportInProductRunResponse
-   **/
+   */
   public ReportInProductRunResponse totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be greater than or
+   * equal to the value of the property returning the results in the in the response..
+   *
    * @return totalSetSize
-   **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+   */
+  @ApiModelProperty(
+      value =
+          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
-  /**
-   * setTotalSetSize.
-   **/
+  /** setTotalSetSize. */
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -253,35 +233,41 @@ public class ReportInProductRunResponse {
       return false;
     }
     ReportInProductRunResponse reportInProductRunResponse = (ReportInProductRunResponse) o;
-    return Objects.equals(this.endPosition, reportInProductRunResponse.endPosition) &&
-        Objects.equals(this.exceededMaxResults, reportInProductRunResponse.exceededMaxResults) &&
-        Objects.equals(this.lastWarehouseRefreshDateTime, reportInProductRunResponse.lastWarehouseRefreshDateTime) &&
-        Objects.equals(this.resultSetSize, reportInProductRunResponse.resultSetSize) &&
-        Objects.equals(this.rows, reportInProductRunResponse.rows) &&
-        Objects.equals(this.startPosition, reportInProductRunResponse.startPosition) &&
-        Objects.equals(this.totalSetSize, reportInProductRunResponse.totalSetSize);
+    return Objects.equals(this.endPosition, reportInProductRunResponse.endPosition)
+        && Objects.equals(this.exceededMaxResults, reportInProductRunResponse.exceededMaxResults)
+        && Objects.equals(
+            this.lastWarehouseRefreshDateTime,
+            reportInProductRunResponse.lastWarehouseRefreshDateTime)
+        && Objects.equals(this.resultSetSize, reportInProductRunResponse.resultSetSize)
+        && Objects.equals(this.rows, reportInProductRunResponse.rows)
+        && Objects.equals(this.startPosition, reportInProductRunResponse.startPosition)
+        && Objects.equals(this.totalSetSize, reportInProductRunResponse.totalSetSize);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, exceededMaxResults, lastWarehouseRefreshDateTime, resultSetSize, rows, startPosition, totalSetSize);
+    return Objects.hash(
+        endPosition,
+        exceededMaxResults,
+        lastWarehouseRefreshDateTime,
+        resultSetSize,
+        rows,
+        startPosition,
+        totalSetSize);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductRunResponse {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    exceededMaxResults: ").append(toIndentedString(exceededMaxResults)).append("\n");
-    sb.append("    lastWarehouseRefreshDateTime: ").append(toIndentedString(lastWarehouseRefreshDateTime)).append("\n");
+    sb.append("    lastWarehouseRefreshDateTime: ")
+        .append(toIndentedString(lastWarehouseRefreshDateTime))
+        .append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
     sb.append("    rows: ").append(toIndentedString(rows)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
@@ -291,8 +277,7 @@ public class ReportInProductRunResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -300,6 +285,4 @@ public class ReportInProductRunResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

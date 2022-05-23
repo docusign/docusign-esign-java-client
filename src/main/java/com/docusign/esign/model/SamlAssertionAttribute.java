@@ -1,16 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SamlAssertionAttribute
- */
-
+/** SamlAssertionAttribute */
 public class SamlAssertionAttribute {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -29,10 +23,11 @@ public class SamlAssertionAttribute {
     return this;
   }
 
-   /**
+  /**
    * Get errorDetails
+   *
    * @return errorDetails
-  **/
+   */
   @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -47,10 +42,7 @@ public class SamlAssertionAttribute {
     return this;
   }
 
-   /**
-   * 
-   * @return name
-  **/
+  /** @return name */
   @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
@@ -65,11 +57,14 @@ public class SamlAssertionAttribute {
     return this;
   }
 
-   /**
-   * The initial value of the tab when it was sent to the recipient. 
+  /**
+   * The initial value of the tab when it was sent to the recipient.
+   *
    * @return originalValue
-  **/
-  @ApiModelProperty(example = "null", value = "The initial value of the tab when it was sent to the recipient. ")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -83,11 +78,14 @@ public class SamlAssertionAttribute {
     return this;
   }
 
-   /**
+  /**
    * The value associated with the named SAML assertion attribute
+   *
    * @return value
-  **/
-  @ApiModelProperty(example = "null", value = "The value associated with the named SAML assertion attribute")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "The value associated with the named SAML assertion attribute")
   public String getValue() {
     return value;
   }
@@ -95,7 +93,6 @@ public class SamlAssertionAttribute {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -106,10 +103,10 @@ public class SamlAssertionAttribute {
       return false;
     }
     SamlAssertionAttribute samlAssertionAttribute = (SamlAssertionAttribute) o;
-    return Objects.equals(this.errorDetails, samlAssertionAttribute.errorDetails) &&
-        Objects.equals(this.name, samlAssertionAttribute.name) &&
-        Objects.equals(this.originalValue, samlAssertionAttribute.originalValue) &&
-        Objects.equals(this.value, samlAssertionAttribute.value);
+    return Objects.equals(this.errorDetails, samlAssertionAttribute.errorDetails)
+        && Objects.equals(this.name, samlAssertionAttribute.name)
+        && Objects.equals(this.originalValue, samlAssertionAttribute.originalValue)
+        && Objects.equals(this.value, samlAssertionAttribute.value);
   }
 
   @Override
@@ -117,12 +114,11 @@ public class SamlAssertionAttribute {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SamlAssertionAttribute {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
@@ -132,8 +128,7 @@ public class SamlAssertionAttribute {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -141,6 +136,4 @@ public class SamlAssertionAttribute {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

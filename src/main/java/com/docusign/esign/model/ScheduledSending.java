@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.EnvelopeDelayRule;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ScheduledSending.
- *
- */
-
+/** ScheduledSending. */
 public class ScheduledSending {
   @JsonProperty("resumeDate")
   private String resumeDate = null;
@@ -24,12 +15,11 @@ public class ScheduledSending {
   @JsonProperty("status")
   private String status = null;
 
-
   /**
    * resumeDate.
    *
    * @return ScheduledSending
-   **/
+   */
   public ScheduledSending resumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
     return this;
@@ -37,39 +27,37 @@ public class ScheduledSending {
 
   /**
    * .
+   *
    * @return resumeDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getResumeDate() {
     return resumeDate;
   }
 
-  /**
-   * setResumeDate.
-   **/
+  /** setResumeDate. */
   public void setResumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
   }
-
 
   /**
    * rules.
    *
    * @return ScheduledSending
-   **/
+   */
   public ScheduledSending rules(java.util.List<EnvelopeDelayRule> rules) {
     this.rules = rules;
     return this;
   }
-  
+
   /**
    * addRulesItem.
    *
    * @return ScheduledSending
-   **/
+   */
   public ScheduledSending addRulesItem(EnvelopeDelayRule rulesItem) {
     if (this.rules == null) {
-      this.rules = new java.util.ArrayList<EnvelopeDelayRule>();
+      this.rules = new java.util.ArrayList<>();
     }
     this.rules.add(rulesItem);
     return this;
@@ -77,47 +65,46 @@ public class ScheduledSending {
 
   /**
    * .
+   *
    * @return rules
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<EnvelopeDelayRule> getRules() {
     return rules;
   }
 
-  /**
-   * setRules.
-   **/
+  /** setRules. */
   public void setRules(java.util.List<EnvelopeDelayRule> rules) {
     this.rules = rules;
   }
-
 
   /**
    * status.
    *
    * @return ScheduledSending
-   **/
+   */
   public ScheduledSending status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
+   *
    * @return status
-   **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /**
-   * setStatus.
-   **/
+  /** setStatus. */
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * Compares objects.
@@ -133,28 +120,23 @@ public class ScheduledSending {
       return false;
     }
     ScheduledSending scheduledSending = (ScheduledSending) o;
-    return Objects.equals(this.resumeDate, scheduledSending.resumeDate) &&
-        Objects.equals(this.rules, scheduledSending.rules) &&
-        Objects.equals(this.status, scheduledSending.status);
+    return Objects.equals(this.resumeDate, scheduledSending.resumeDate)
+        && Objects.equals(this.rules, scheduledSending.rules)
+        && Objects.equals(this.status, scheduledSending.status);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(resumeDate, rules, status);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ScheduledSending {\n");
-    
+
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -163,8 +145,7 @@ public class ScheduledSending {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -172,6 +153,4 @@ public class ScheduledSending {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

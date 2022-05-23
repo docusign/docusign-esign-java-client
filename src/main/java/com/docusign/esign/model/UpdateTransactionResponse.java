@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * UpdateTransactionResponse
- */
-
+/** UpdateTransactionResponse */
 public class UpdateTransactionResponse {
   @JsonProperty("redirectionUrl")
   private String redirectionUrl = null;
@@ -21,10 +14,7 @@ public class UpdateTransactionResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return redirectionUrl
-  **/
+  /** @return redirectionUrl */
   @ApiModelProperty(value = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
@@ -33,7 +23,6 @@ public class UpdateTransactionResponse {
   public void setRedirectionUrl(String redirectionUrl) {
     this.redirectionUrl = redirectionUrl;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -52,20 +41,18 @@ public class UpdateTransactionResponse {
     return Objects.hash(redirectionUrl);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UpdateTransactionResponse {\n");
-    
+
     sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -73,6 +60,4 @@ public class UpdateTransactionResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

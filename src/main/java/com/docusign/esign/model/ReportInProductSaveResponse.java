@@ -1,28 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductSaveResponse.
- *
- */
-
+/** ReportInProductSaveResponse. */
 public class ReportInProductSaveResponse {
   @JsonProperty("reportCustomizedId")
   private String reportCustomizedId = null;
-
 
   /**
    * reportCustomizedId.
    *
    * @return ReportInProductSaveResponse
-   **/
+   */
   public ReportInProductSaveResponse reportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
     return this;
@@ -30,20 +21,18 @@ public class ReportInProductSaveResponse {
 
   /**
    * .
+   *
    * @return reportCustomizedId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
 
-  /**
-   * setReportCustomizedId.
-   **/
+  /** setReportCustomizedId. */
   public void setReportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
   }
-
 
   /**
    * Compares objects.
@@ -62,31 +51,25 @@ public class ReportInProductSaveResponse {
     return Objects.equals(this.reportCustomizedId, reportInProductSaveResponse.reportCustomizedId);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(reportCustomizedId);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductSaveResponse {\n");
-    
+
     sb.append("    reportCustomizedId: ").append(toIndentedString(reportCustomizedId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +77,4 @@ public class ReportInProductSaveResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

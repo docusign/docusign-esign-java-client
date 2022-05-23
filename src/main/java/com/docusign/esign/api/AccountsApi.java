@@ -1,90 +1,87 @@
-
 package com.docusign.esign.api;
 
+import com.docusign.esign.client.ApiClient;
+import com.docusign.esign.client.ApiException;
+import com.docusign.esign.client.Configuration;
+import com.docusign.esign.client.Pair;
+import com.docusign.esign.model.*;
 import javax.ws.rs.core.GenericType;
 
-import com.docusign.esign.client.ApiException;
-import com.docusign.esign.client.ApiClient;
-import com.docusign.esign.client.Configuration;
-import com.docusign.esign.model.*;
-import com.docusign.esign.client.Pair;
-
-
-
-
-/**
- * AccountsApi class.
- *
- **/
+/** AccountsApi class. */
 public class AccountsApi {
   private ApiClient apiClient;
 
- /**
-  * AccountsApi.
-  *
-  **/
+  /** AccountsApi. */
   public AccountsApi() {
     this(Configuration.getDefaultApiClient());
   }
 
- /**
-  * AccountsApi.
-  *
-  **/
+  /** AccountsApi. */
   public AccountsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
- /**
-  * getApiClient Method.
-  *
-  * @return ApiClient
-  **/
+  /**
+   * getApiClient Method.
+   *
+   * @return ApiClient
+   */
   public ApiClient getApiClient() {
     return apiClient;
   }
 
- /**
-  * setApiClient Method.
-  *
-  **/
+  /** setApiClient Method. */
   public void setApiClient(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
   /// <summary>
-  /// Creates new accounts. Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
+  /// Creates new accounts. Creates new DocuSign service accounts.  This is used to create multiple
+  // DocuSign accounts with one call. It uses the same information and formats as the normal a
+  // [Accounts:create](accounts_create) call with the information included within a
+  // &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one
+  // time.  Note that the structure of the XML request is slightly different than the JSON request,
+  // in that the new account information is included in a &#x60;newAccountDefinition&#x60; property
+  // inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new
+  // account ID, password and the default user information for each newly created account.  A 201
+  // code is returned if the call succeeded.  While the call may have succeed, some of the
+  // individual account requests may have failed. In the case of failures to create the account,  an
+  // &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
   /// </summary>
 
- /**
-  * CreateOptions Class.
-  *
-  **/
-  public class CreateOptions
-  {
-  private String previewBillingPlan = null;
+  /** CreateOptions Class. */
+  public class CreateOptions {
+    private String previewBillingPlan = null;
 
- /**
-  * setPreviewBillingPlan method.
-  */
-  public void setPreviewBillingPlan(String previewBillingPlan) {
-    this.previewBillingPlan = previewBillingPlan;
+    /** setPreviewBillingPlan method. */
+    public void setPreviewBillingPlan(String previewBillingPlan) {
+      this.previewBillingPlan = previewBillingPlan;
+    }
+
+    /**
+     * getPreviewBillingPlan method.
+     *
+     * @return String
+     */
+    public String getPreviewBillingPlan() {
+      return this.previewBillingPlan;
+    }
   }
 
- /**
-  * getPreviewBillingPlan method.
-  *
-  * @return String
-  */
-  public String getPreviewBillingPlan() {
-    return this.previewBillingPlan;
-  }
-  }
-
-   /**
-   * Creates new accounts..
-   * Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
-   * @param newAccountDefinition  (optional)
+  /**
+   * Creates new accounts.. Creates new DocuSign service accounts. This is used to create multiple
+   * DocuSign accounts with one call. It uses the same information and formats as the normal a
+   * [Accounts:create](accounts_create) call with the information included within a
+   * &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one
+   * time. Note that the structure of the XML request is slightly different than the JSON request,
+   * in that the new account information is included in a &#x60;newAccountDefinition&#x60; property
+   * inside the &#x60;newAccountRequests&#x60; element. Response The response returns the new
+   * account ID, password and the default user information for each newly created account. A 201
+   * code is returned if the call succeeded. While the call may have succeed, some of the individual
+   * account requests may have failed. In the case of failures to create the account, an
+   * &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
+   *
+   * @param newAccountDefinition (optional)
    * @return NewAccountSummary
    */
   public NewAccountSummary create(NewAccountDefinition newAccountDefinition) throws ApiException {
@@ -92,14 +89,26 @@ public class AccountsApi {
   }
 
   /**
-   * Creates new accounts..
-   * Creates new DocuSign service accounts.  This is used to create multiple DocuSign accounts with one call. It uses the same information and formats as the normal a  [Accounts:create](accounts_create) call with the information included within a &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one time.  Note that the structure of the XML request is slightly different than the JSON request, in that the new account information is included in a &#x60;newAccountDefinition&#x60; property inside the &#x60;newAccountRequests&#x60; element. Response  The response returns the new account ID, password and the default user information for each newly created account.  A 201 code is returned if the call succeeded.  While the call may have succeed, some of the individual account requests may have failed. In the case of failures to create the account,  an &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
-   * @param newAccountDefinition  (optional)
+   * Creates new accounts.. Creates new DocuSign service accounts. This is used to create multiple
+   * DocuSign accounts with one call. It uses the same information and formats as the normal a
+   * [Accounts:create](accounts_create) call with the information included within a
+   * &#x60;newAccountRequests&#x60; element. A maximum of 100 new accounts can be created at one
+   * time. Note that the structure of the XML request is slightly different than the JSON request,
+   * in that the new account information is included in a &#x60;newAccountDefinition&#x60; property
+   * inside the &#x60;newAccountRequests&#x60; element. Response The response returns the new
+   * account ID, password and the default user information for each newly created account. A 201
+   * code is returned if the call succeeded. While the call may have succeed, some of the individual
+   * account requests may have failed. In the case of failures to create the account, an
+   * &#x60;errorDetails&#x60; node is added in the response to each specific request that failed.
+   *
+   * @param newAccountDefinition (optional)
    * @param options for modifying the method behavior.
    * @return NewAccountSummary
    * @throws ApiException if fails to make API call
    */
-  public NewAccountSummary create(NewAccountDefinition newAccountDefinition, AccountsApi.CreateOptions options) throws ApiException {
+  public NewAccountSummary create(
+      NewAccountDefinition newAccountDefinition, AccountsApi.CreateOptions options)
+      throws ApiException {
     Object localVarPostBody = newAccountDefinition;
 
     // create path and map variables
@@ -112,88 +121,98 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("preview_billing_plan", options.previewBillingPlan));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("preview_billing_plan", options.previewBillingPlan));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<NewAccountSummary> localVarReturnType = new GenericType<NewAccountSummary>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Adds/updates one or more account signatures. This request may include images in multi-part format.
+  /// Adds/updates one or more account signatures. This request may include images in multi-part
+  // format.
   /// </summary>
 
- /**
-  * CreateAccountSignaturesOptions Class.
-  *
-  **/
-  public class CreateAccountSignaturesOptions
-  {
-  private String decodeOnly = null;
+  /** CreateAccountSignaturesOptions Class. */
+  public class CreateAccountSignaturesOptions {
+    private String decodeOnly = null;
 
- /**
-  * setDecodeOnly method.
-  */
-  public void setDecodeOnly(String decodeOnly) {
-    this.decodeOnly = decodeOnly;
+    /** setDecodeOnly method. */
+    public void setDecodeOnly(String decodeOnly) {
+      this.decodeOnly = decodeOnly;
+    }
+
+    /**
+     * getDecodeOnly method.
+     *
+     * @return String
+     */
+    public String getDecodeOnly() {
+      return this.decodeOnly;
+    }
   }
 
- /**
-  * getDecodeOnly method.
-  *
-  * @return String
-  */
-  public String getDecodeOnly() {
-    return this.decodeOnly;
-  }
-  }
-
-   /**
-   * Adds/updates one or more account signatures. This request may include images in multi-part format..
+  /**
+   * Adds/updates one or more account signatures. This request may include images in multi-part
+   * format..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSignaturesInformation  (optional)
+   * @param accountSignaturesInformation (optional)
    * @return AccountSignaturesInformation
    */
-  public AccountSignaturesInformation createAccountSignatures(String accountId, AccountSignaturesInformation accountSignaturesInformation) throws ApiException {
+  public AccountSignaturesInformation createAccountSignatures(
+      String accountId, AccountSignaturesInformation accountSignaturesInformation)
+      throws ApiException {
     return createAccountSignatures(accountId, accountSignaturesInformation, null);
   }
 
   /**
-   * Adds/updates one or more account signatures. This request may include images in multi-part format..
+   * Adds/updates one or more account signatures. This request may include images in multi-part
+   * format..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSignaturesInformation  (optional)
+   * @param accountSignaturesInformation (optional)
    * @param options for modifying the method behavior.
    * @return AccountSignaturesInformation
    * @throws ApiException if fails to make API call
    */
-  public AccountSignaturesInformation createAccountSignatures(String accountId, AccountSignaturesInformation accountSignaturesInformation, AccountsApi.CreateAccountSignaturesOptions options) throws ApiException {
+  public AccountSignaturesInformation createAccountSignatures(
+      String accountId,
+      AccountSignaturesInformation accountSignaturesInformation,
+      AccountsApi.CreateAccountSignaturesOptions options)
+      throws ApiException {
     Object localVarPostBody = accountSignaturesInformation;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createAccountSignatures");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling createAccountSignatures");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -205,31 +224,43 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("decode_only", options.decodeOnly));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountSignaturesInformation> localVarReturnType =
+        new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Creates one or more brand profile files for the account..
-   * Creates one or more brand profile files for the account. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSig&#x60;) must be set to **true** for the account to use this call.  An error is returned if &#x60;brandId&#x60; property for a brand profile is already set for the account. To upload a new version of an existing brand profile, you must delete the profile and then upload the newer version.  When brand profile files are being uploaded, they must be combined into one zip file and the &#x60;Content-Type&#x60; must be &#x60;application/zip&#x60;.
+   * Creates one or more brand profile files for the account.. Creates one or more brand profile
+   * files for the account. The Account Branding feature (accountSettings properties
+   * &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSig&#x60;) must be set to **true** for the
+   * account to use this call. An error is returned if &#x60;brandId&#x60; property for a brand
+   * profile is already set for the account. To upload a new version of an existing brand profile,
+   * you must delete the profile and then upload the newer version. When brand profile files are
+   * being uploaded, they must be combined into one zip file and the &#x60;Content-Type&#x60; must
+   * be &#x60;application/zip&#x60;.
+   *
    * @param accountId The external account number (int) or account ID GUID. (required)
-   * @param brand  (optional)
+   * @param brand (optional)
    * @return BrandsResponse
    * @throws ApiException if fails to make API call
    */
@@ -238,12 +269,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling createBrand");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -251,64 +284,61 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Creates an acount custom field.
   /// </summary>
 
- /**
-  * CreateCustomFieldOptions Class.
-  *
-  **/
-  public class CreateCustomFieldOptions
-  {
-  private String applyToTemplates = null;
+  /** CreateCustomFieldOptions Class. */
+  public class CreateCustomFieldOptions {
+    private String applyToTemplates = null;
 
- /**
-  * setApplyToTemplates method.
-  */
-  public void setApplyToTemplates(String applyToTemplates) {
-    this.applyToTemplates = applyToTemplates;
+    /** setApplyToTemplates method. */
+    public void setApplyToTemplates(String applyToTemplates) {
+      this.applyToTemplates = applyToTemplates;
+    }
+
+    /**
+     * getApplyToTemplates method.
+     *
+     * @return String
+     */
+    public String getApplyToTemplates() {
+      return this.applyToTemplates;
+    }
   }
 
- /**
-  * getApplyToTemplates method.
-  *
-  * @return String
-  */
-  public String getApplyToTemplates() {
-    return this.applyToTemplates;
-  }
-  }
-
-   /**
+  /**
    * Creates an acount custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customField  (optional)
+   * @param customField (optional)
    * @return CustomFields
    */
-  public CustomFields createCustomField(String accountId, CustomField customField) throws ApiException {
+  public CustomFields createCustomField(String accountId, CustomField customField)
+      throws ApiException {
     return createCustomField(accountId, customField, null);
   }
 
@@ -316,22 +346,26 @@ public class AccountsApi {
    * Creates an acount custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customField  (optional)
+   * @param customField (optional)
    * @param options for modifying the method behavior.
    * @return CustomFields
    * @throws ApiException if fails to make API call
    */
-  public CustomFields createCustomField(String accountId, CustomField customField, AccountsApi.CreateCustomFieldOptions options) throws ApiException {
+  public CustomFields createCustomField(
+      String accountId, CustomField customField, AccountsApi.CreateCustomFieldOptions options)
+      throws ApiException {
     Object localVarPostBody = customField;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createCustomField");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling createCustomField");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/custom_fields"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -340,65 +374,65 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Creates a new permission profile in the specified account.
   /// </summary>
 
- /**
-  * CreatePermissionProfileOptions Class.
-  *
-  **/
-  public class CreatePermissionProfileOptions
-  {
-  private String include = null;
+  /** CreatePermissionProfileOptions Class. */
+  public class CreatePermissionProfileOptions {
+    private String include = null;
 
- /**
-  * setInclude method.
-  */
-  public void setInclude(String include) {
-    this.include = include;
+    /** setInclude method. */
+    public void setInclude(String include) {
+      this.include = include;
+    }
+
+    /**
+     * getInclude method.
+     *
+     * @return String
+     */
+    public String getInclude() {
+      return this.include;
+    }
   }
 
- /**
-  * getInclude method.
-  *
-  * @return String
-  */
-  public String getInclude() {
-    return this.include;
-  }
-  }
-
-   /**
+  /**
    * Creates a new permission profile in the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfile  (optional)
+   * @param permissionProfile (optional)
    * @return PermissionProfile
    */
-  public PermissionProfile createPermissionProfile(String accountId, PermissionProfile permissionProfile) throws ApiException {
+  public PermissionProfile createPermissionProfile(
+      String accountId, PermissionProfile permissionProfile) throws ApiException {
     return createPermissionProfile(accountId, permissionProfile, null);
   }
 
@@ -406,22 +440,28 @@ public class AccountsApi {
    * Creates a new permission profile in the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfile  (optional)
+   * @param permissionProfile (optional)
    * @param options for modifying the method behavior.
    * @return PermissionProfile
    * @throws ApiException if fails to make API call
    */
-  public PermissionProfile createPermissionProfile(String accountId, PermissionProfile permissionProfile, AccountsApi.CreatePermissionProfileOptions options) throws ApiException {
+  public PermissionProfile createPermissionProfile(
+      String accountId,
+      PermissionProfile permissionProfile,
+      AccountsApi.CreatePermissionProfileOptions options)
+      throws ApiException {
     Object localVarPostBody = permissionProfile;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createPermissionProfile");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling createPermissionProfile");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/permission_profiles"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -433,29 +473,34 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<PermissionProfile> localVarReturnType = new GenericType<PermissionProfile>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Deletes the specified account..
-   * This closes the specified account. You must be an account admin to close your account. Once closed, an account must be reopened by DocuSign.
+   * Deletes the specified account.. This closes the specified account. You must be an account admin
+   * to close your account. Once closed, an account must be reopened by DocuSign.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @throws ApiException if fails to make API call
    */
@@ -468,8 +513,9 @@ public class AccountsApi {
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -477,26 +523,27 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -511,18 +558,22 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAccountSignature");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteAccountSignature");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteAccountSignature");
+      throw new ApiException(
+          400, "Missing the required parameter 'signatureId' when calling deleteAccountSignature");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -530,26 +581,27 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -561,29 +613,38 @@ public class AccountsApi {
    * @return AccountSignature
    * @throws ApiException if fails to make API call
    */
-  public AccountSignature deleteAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+  public AccountSignature deleteAccountSignatureImage(
+      String accountId, String signatureId, String imageType) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling deleteAccountSignatureImage");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling deleteAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'signatureId' when calling deleteAccountSignatureImage");
     }
 
     // verify the required parameter 'imageType' is set
     if (imageType == null) {
-      throw new ApiException(400, "Missing the required parameter 'imageType' when calling deleteAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'imageType' when calling deleteAccountSignatureImage");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
-      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+            .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -591,27 +652,29 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Removes a brand..
@@ -625,18 +688,21 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteBrand");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling deleteBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling deleteBrand");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -644,26 +710,27 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -674,29 +741,34 @@ public class AccountsApi {
    * @param logoType One of **Primary**, **Secondary** or **Email**. (required)
    * @throws ApiException if fails to make API call
    */
-  public void deleteBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
+  public void deleteBrandLogoByType(String accountId, String brandId, String logoType)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteBrandLogoByType");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling deleteBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling deleteBrandLogoByType");
     }
 
     // verify the required parameter 'logoType' is set
     if (logoType == null) {
-      throw new ApiException(400, "Missing the required parameter 'logoType' when calling deleteBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'logoType' when calling deleteBrandLogoByType");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
-      .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
+            .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -704,47 +776,53 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
-   * Deletes one or more brand profiles..
-   * Deletes one or more brand profiles from an account. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;) must be set to **true** to use this call.
+   * Deletes one or more brand profiles.. Deletes one or more brand profiles from an account. The
+   * Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and
+   * &#x60;canSelfBrandSend&#x60;) must be set to **true** to use this call.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param brandsRequest  (optional)
+   * @param brandsRequest (optional)
    * @return BrandsResponse
    * @throws ApiException if fails to make API call
    */
-  public BrandsResponse deleteBrands(String accountId, BrandsRequest brandsRequest) throws ApiException {
+  public BrandsResponse deleteBrands(String accountId, BrandsRequest brandsRequest)
+      throws ApiException {
     Object localVarPostBody = brandsRequest;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteBrands");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteBrands");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -752,54 +830,68 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Deletes the signature for one or more captive recipient records..
-   * Deletes the signature for one or more captive recipient records; it is primarily used for testing. This provides a way to reset the signature associated with a client user ID so that a new signature can be created the next time the client user ID is used.
+   * Deletes the signature for one or more captive recipient records.. Deletes the signature for one
+   * or more captive recipient records; it is primarily used for testing. This provides a way to
+   * reset the signature associated with a client user ID so that a new signature can be created the
+   * next time the client user ID is used.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param recipientPart  (required)
-   * @param captiveRecipientInformation  (optional)
+   * @param recipientPart (required)
+   * @param captiveRecipientInformation (optional)
    * @return CaptiveRecipientInformation
    * @throws ApiException if fails to make API call
    */
-  public CaptiveRecipientInformation deleteCaptiveRecipient(String accountId, String recipientPart, CaptiveRecipientInformation captiveRecipientInformation) throws ApiException {
+  public CaptiveRecipientInformation deleteCaptiveRecipient(
+      String accountId,
+      String recipientPart,
+      CaptiveRecipientInformation captiveRecipientInformation)
+      throws ApiException {
     Object localVarPostBody = captiveRecipientInformation;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCaptiveRecipient");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteCaptiveRecipient");
     }
 
     // verify the required parameter 'recipientPart' is set
     if (recipientPart == null) {
-      throw new ApiException(400, "Missing the required parameter 'recipientPart' when calling deleteCaptiveRecipient");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'recipientPart' when calling deleteCaptiveRecipient");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/captive_recipients/{recipientPart}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "recipientPart" + "\\}", apiClient.escapeString(recipientPart.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/captive_recipients/{recipientPart}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "recipientPart" + "\\}", apiClient.escapeString(recipientPart.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -807,61 +899,58 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<CaptiveRecipientInformation> localVarReturnType = new GenericType<CaptiveRecipientInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<CaptiveRecipientInformation> localVarReturnType =
+        new GenericType<CaptiveRecipientInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Delete an existing account custom field.
   /// </summary>
 
- /**
-  * DeleteCustomFieldOptions Class.
-  *
-  **/
-  public class DeleteCustomFieldOptions
-  {
-  private String applyToTemplates = null;
+  /** DeleteCustomFieldOptions Class. */
+  public class DeleteCustomFieldOptions {
+    private String applyToTemplates = null;
 
- /**
-  * setApplyToTemplates method.
-  */
-  public void setApplyToTemplates(String applyToTemplates) {
-    this.applyToTemplates = applyToTemplates;
+    /** setApplyToTemplates method. */
+    public void setApplyToTemplates(String applyToTemplates) {
+      this.applyToTemplates = applyToTemplates;
+    }
+
+    /**
+     * getApplyToTemplates method.
+     *
+     * @return String
+     */
+    public String getApplyToTemplates() {
+      return this.applyToTemplates;
+    }
   }
 
- /**
-  * getApplyToTemplates method.
-  *
-  * @return String
-  */
-  public String getApplyToTemplates() {
-    return this.applyToTemplates;
-  }
-  }
-
-   /**
+  /**
    * Delete an existing account custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customFieldId  (required)
+   * @param customFieldId (required)
    * @return void
    */
   public void deleteCustomField(String accountId, String customFieldId) throws ApiException {
@@ -872,27 +961,33 @@ public class AccountsApi {
    * Delete an existing account custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customFieldId  (required)
+   * @param customFieldId (required)
    * @param options for modifying the method behavior.
    * @throws ApiException if fails to make API call
    */
-  public void deleteCustomField(String accountId, String customFieldId, AccountsApi.DeleteCustomFieldOptions options) throws ApiException {
+  public void deleteCustomField(
+      String accountId, String customFieldId, AccountsApi.DeleteCustomFieldOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteCustomField");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteCustomField");
     }
 
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
-      throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling deleteCustomField");
+      throw new ApiException(
+          400, "Missing the required parameter 'customFieldId' when calling deleteCustomField");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -901,27 +996,31 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -935,12 +1034,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteENoteConfiguration");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deleteENoteConfiguration");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/enote_configuration"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -948,64 +1049,60 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
   /// <summary>
   /// Deletes a permissions profile within the specified account.
   /// </summary>
 
- /**
-  * DeletePermissionProfileOptions Class.
-  *
-  **/
-  public class DeletePermissionProfileOptions
-  {
-  private String moveUsersTo = null;
+  /** DeletePermissionProfileOptions Class. */
+  public class DeletePermissionProfileOptions {
+    private String moveUsersTo = null;
 
- /**
-  * setMoveUsersTo method.
-  */
-  public void setMoveUsersTo(String moveUsersTo) {
-    this.moveUsersTo = moveUsersTo;
+    /** setMoveUsersTo method. */
+    public void setMoveUsersTo(String moveUsersTo) {
+      this.moveUsersTo = moveUsersTo;
+    }
+
+    /**
+     * getMoveUsersTo method.
+     *
+     * @return String
+     */
+    public String getMoveUsersTo() {
+      return this.moveUsersTo;
+    }
   }
 
- /**
-  * getMoveUsersTo method.
-  *
-  * @return String
-  */
-  public String getMoveUsersTo() {
-    return this.moveUsersTo;
-  }
-  }
-
-   /**
+  /**
    * Deletes a permissions profile within the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
+   * @param permissionProfileId (required)
    * @return void
    */
-  public void deletePermissionProfile(String accountId, String permissionProfileId) throws ApiException {
+  public void deletePermissionProfile(String accountId, String permissionProfileId)
+      throws ApiException {
     deletePermissionProfile(accountId, permissionProfileId, null);
   }
 
@@ -1013,27 +1110,37 @@ public class AccountsApi {
    * Deletes a permissions profile within the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
+   * @param permissionProfileId (required)
    * @param options for modifying the method behavior.
    * @throws ApiException if fails to make API call
    */
-  public void deletePermissionProfile(String accountId, String permissionProfileId, AccountsApi.DeletePermissionProfileOptions options) throws ApiException {
+  public void deletePermissionProfile(
+      String accountId,
+      String permissionProfileId,
+      AccountsApi.DeletePermissionProfileOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deletePermissionProfile");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling deletePermissionProfile");
     }
 
     // verify the required parameter 'permissionProfileId' is set
     if (permissionProfileId == null) {
-      throw new ApiException(400, "Missing the required parameter 'permissionProfileId' when calling deletePermissionProfile");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'permissionProfileId' when calling deletePermissionProfile");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "permissionProfileId" + "\\}",
+                apiClient.escapeString(permissionProfileId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1045,24 +1152,27 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("move_users_to", options.moveUsersTo));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -1072,17 +1182,21 @@ public class AccountsApi {
    * @return AccountIdentityVerificationResponse
    * @throws ApiException if fails to make API call
    */
-  public AccountIdentityVerificationResponse getAccountIdentityVerification(String accountId) throws ApiException {
+  public AccountIdentityVerificationResponse getAccountIdentityVerification(String accountId)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountIdentityVerification");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling getAccountIdentityVerification");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/identity_verification"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/identity_verification"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1090,59 +1204,60 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountIdentityVerificationResponse> localVarReturnType = new GenericType<AccountIdentityVerificationResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountIdentityVerificationResponse> localVarReturnType =
+        new GenericType<AccountIdentityVerificationResponse>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Retrieves the account information for the specified account. Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API.
+  /// Retrieves the account information for the specified account. Retrieves the account information
+  // for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a
+  // Boolean that indicates whether the account can be upgraded through the API.
   /// </summary>
 
- /**
-  * GetAccountInformationOptions Class.
-  *
-  **/
-  public class GetAccountInformationOptions
-  {
-  private String includeAccountSettings = null;
+  /** GetAccountInformationOptions Class. */
+  public class GetAccountInformationOptions {
+    private String includeAccountSettings = null;
 
- /**
-  * setIncludeAccountSettings method.
-  */
-  public void setIncludeAccountSettings(String includeAccountSettings) {
-    this.includeAccountSettings = includeAccountSettings;
+    /** setIncludeAccountSettings method. */
+    public void setIncludeAccountSettings(String includeAccountSettings) {
+      this.includeAccountSettings = includeAccountSettings;
+    }
+
+    /**
+     * getIncludeAccountSettings method.
+     *
+     * @return String
+     */
+    public String getIncludeAccountSettings() {
+      return this.includeAccountSettings;
+    }
   }
 
- /**
-  * getIncludeAccountSettings method.
-  *
-  * @return String
-  */
-  public String getIncludeAccountSettings() {
-    return this.includeAccountSettings;
-  }
-  }
-
-   /**
-   * Retrieves the account information for the specified account..
-   * Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API.
+  /**
+   * Retrieves the account information for the specified account.. Retrieves the account information
+   * for the specified account. **Response** The &#x60;canUpgrade&#x60; property contains is a
+   * Boolean that indicates whether the account can be upgraded through the API.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountInformation
    */
@@ -1151,24 +1266,29 @@ public class AccountsApi {
   }
 
   /**
-   * Retrieves the account information for the specified account..
-   * Retrieves the account information for the specified account.  **Response** The &#x60;canUpgrade&#x60; property contains is a Boolean that indicates whether the account can be upgraded through the API.
+   * Retrieves the account information for the specified account.. Retrieves the account information
+   * for the specified account. **Response** The &#x60;canUpgrade&#x60; property contains is a
+   * Boolean that indicates whether the account can be upgraded through the API.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return AccountInformation
    * @throws ApiException if fails to make API call
    */
-  public AccountInformation getAccountInformation(String accountId, AccountsApi.GetAccountInformationOptions options) throws ApiException {
+  public AccountInformation getAccountInformation(
+      String accountId, AccountsApi.GetAccountInformationOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountInformation");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getAccountInformation");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1177,28 +1297,33 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_account_settings", options.includeAccountSettings));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("include_account_settings", options.includeAccountSettings));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountInformation> localVarReturnType = new GenericType<AccountInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns information about a single signature by specifed signatureId..
@@ -1208,23 +1333,28 @@ public class AccountsApi {
    * @return AccountSignature
    * @throws ApiException if fails to make API call
    */
-  public AccountSignature getAccountSignature(String accountId, String signatureId) throws ApiException {
+  public AccountSignature getAccountSignature(String accountId, String signatureId)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignature");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getAccountSignature");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getAccountSignature");
+      throw new ApiException(
+          400, "Missing the required parameter 'signatureId' when calling getAccountSignature");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1232,57 +1362,53 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Returns a signature, initials, or stamps image.
   /// </summary>
 
- /**
-  * GetAccountSignatureImageOptions Class.
-  *
-  **/
-  public class GetAccountSignatureImageOptions
-  {
-  private String includeChrome = null;
+  /** GetAccountSignatureImageOptions Class. */
+  public class GetAccountSignatureImageOptions {
+    private String includeChrome = null;
 
- /**
-  * setIncludeChrome method.
-  */
-  public void setIncludeChrome(String includeChrome) {
-    this.includeChrome = includeChrome;
+    /** setIncludeChrome method. */
+    public void setIncludeChrome(String includeChrome) {
+      this.includeChrome = includeChrome;
+    }
+
+    /**
+     * getIncludeChrome method.
+     *
+     * @return String
+     */
+    public String getIncludeChrome() {
+      return this.includeChrome;
+    }
   }
 
- /**
-  * getIncludeChrome method.
-  *
-  * @return String
-  */
-  public String getIncludeChrome() {
-    return this.includeChrome;
-  }
-  }
-
-   /**
+  /**
    * Returns a signature, initials, or stamps image..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1290,7 +1416,8 @@ public class AccountsApi {
    * @param imageType One of **signature_image** or **initials_image**. (required)
    * @return byte[]
    */
-  public byte[] getAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+  public byte[] getAccountSignatureImage(String accountId, String signatureId, String imageType)
+      throws ApiException {
     return getAccountSignatureImage(accountId, signatureId, imageType, null);
   }
 
@@ -1304,29 +1431,40 @@ public class AccountsApi {
    * @return byte[]
    * @throws ApiException if fails to make API call
    */
-  public byte[] getAccountSignatureImage(String accountId, String signatureId, String imageType, AccountsApi.GetAccountSignatureImageOptions options) throws ApiException {
+  public byte[] getAccountSignatureImage(
+      String accountId,
+      String signatureId,
+      String imageType,
+      AccountsApi.GetAccountSignatureImageOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignatureImage");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getAccountSignatureImage");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling getAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'signatureId' when calling getAccountSignatureImage");
     }
 
     // verify the required parameter 'imageType' is set
     if (imageType == null) {
-      throw new ApiException(400, "Missing the required parameter 'imageType' when calling getAccountSignatureImage");
+      throw new ApiException(
+          400, "Missing the required parameter 'imageType' when calling getAccountSignatureImage");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
-      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+            .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1335,92 +1473,87 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_chrome", options.includeChrome));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("include_chrome", options.includeChrome));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "image/gif"
-    };
+    final String[] localVarAccepts = {"image/gif"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Returns the managed signature definitions for the account
   /// </summary>
 
- /**
-  * GetAccountSignaturesOptions Class.
-  *
-  **/
-  public class GetAccountSignaturesOptions
-  {
-  private String stampFormat = null;
-  private String stampName = null;
-  private String stampType = null;
+  /** GetAccountSignaturesOptions Class. */
+  public class GetAccountSignaturesOptions {
+    private String stampFormat = null;
+    private String stampName = null;
+    private String stampType = null;
 
- /**
-  * setStampFormat method.
-  */
-  public void setStampFormat(String stampFormat) {
-    this.stampFormat = stampFormat;
+    /** setStampFormat method. */
+    public void setStampFormat(String stampFormat) {
+      this.stampFormat = stampFormat;
+    }
+
+    /**
+     * getStampFormat method.
+     *
+     * @return String
+     */
+    public String getStampFormat() {
+      return this.stampFormat;
+    }
+
+    /** setStampName method. */
+    public void setStampName(String stampName) {
+      this.stampName = stampName;
+    }
+
+    /**
+     * getStampName method.
+     *
+     * @return String
+     */
+    public String getStampName() {
+      return this.stampName;
+    }
+
+    /** setStampType method. */
+    public void setStampType(String stampType) {
+      this.stampType = stampType;
+    }
+
+    /**
+     * getStampType method.
+     *
+     * @return String
+     */
+    public String getStampType() {
+      return this.stampType;
+    }
   }
 
- /**
-  * getStampFormat method.
-  *
-  * @return String
-  */
-  public String getStampFormat() {
-    return this.stampFormat;
-  }
-
- /**
-  * setStampName method.
-  */
-  public void setStampName(String stampName) {
-    this.stampName = stampName;
-  }
-
- /**
-  * getStampName method.
-  *
-  * @return String
-  */
-  public String getStampName() {
-    return this.stampName;
-  }
-
- /**
-  * setStampType method.
-  */
-  public void setStampType(String stampType) {
-    this.stampType = stampType;
-  }
-
- /**
-  * getStampType method.
-  *
-  * @return String
-  */
-  public String getStampType() {
-    return this.stampType;
-  }
-  }
-
-   /**
+  /**
    * Returns the managed signature definitions for the account.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1438,17 +1571,20 @@ public class AccountsApi {
    * @return AccountSignaturesInformation
    * @throws ApiException if fails to make API call
    */
-  public AccountSignaturesInformation getAccountSignatures(String accountId, AccountsApi.GetAccountSignaturesOptions options) throws ApiException {
+  public AccountSignaturesInformation getAccountSignatures(
+      String accountId, AccountsApi.GetAccountSignaturesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountSignatures");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getAccountSignatures");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1458,31 +1594,38 @@ public class AccountsApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("stamp_format", options.stampFormat));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("stamp_name", options.stampName));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("stamp_type", options.stampType));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountSignaturesInformation> localVarReturnType =
+        new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns tab settings list for specified account.
@@ -1496,12 +1639,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAccountTabSettings");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getAccountTabSettings");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/tabs"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/tabs"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1509,27 +1654,29 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<TabAccountSettings> localVarReturnType = new GenericType<TabAccountSettings>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Get all payment gateway account for the provided accountId.
@@ -1538,17 +1685,21 @@ public class AccountsApi {
    * @return PaymentGatewayAccountsInfo
    * @throws ApiException if fails to make API call
    */
-  public PaymentGatewayAccountsInfo getAllPaymentGatewayAccounts(String accountId) throws ApiException {
+  public PaymentGatewayAccountsInfo getAllPaymentGatewayAccounts(String accountId)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAllPaymentGatewayAccounts");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling getAllPaymentGatewayAccounts");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/payment_gateway_accounts"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/payment_gateway_accounts"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1556,59 +1707,60 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<PaymentGatewayAccountsInfo> localVarReturnType = new GenericType<PaymentGatewayAccountsInfo>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<PaymentGatewayAccountsInfo> localVarReturnType =
+        new GenericType<PaymentGatewayAccountsInfo>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Gets list of recurring and usage charges for the account. Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator
+  /// Gets list of recurring and usage charges for the account. Retrieves the list of recurring and
+  // usage charges for the account. This can be used to determine the charge structure and usage of
+  // charge plan items.   Privileges required: account administrator
   /// </summary>
 
- /**
-  * GetBillingChargesOptions Class.
-  *
-  **/
-  public class GetBillingChargesOptions
-  {
-  private String includeCharges = null;
+  /** GetBillingChargesOptions Class. */
+  public class GetBillingChargesOptions {
+    private String includeCharges = null;
 
- /**
-  * setIncludeCharges method.
-  */
-  public void setIncludeCharges(String includeCharges) {
-    this.includeCharges = includeCharges;
+    /** setIncludeCharges method. */
+    public void setIncludeCharges(String includeCharges) {
+      this.includeCharges = includeCharges;
+    }
+
+    /**
+     * getIncludeCharges method.
+     *
+     * @return String
+     */
+    public String getIncludeCharges() {
+      return this.includeCharges;
+    }
   }
 
- /**
-  * getIncludeCharges method.
-  *
-  * @return String
-  */
-  public String getIncludeCharges() {
-    return this.includeCharges;
-  }
-  }
-
-   /**
-   * Gets list of recurring and usage charges for the account..
-   * Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator
+  /**
+   * Gets list of recurring and usage charges for the account.. Retrieves the list of recurring and
+   * usage charges for the account. This can be used to determine the charge structure and usage of
+   * charge plan items. Privileges required: account administrator
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BillingChargeResponse
    */
@@ -1617,24 +1769,29 @@ public class AccountsApi {
   }
 
   /**
-   * Gets list of recurring and usage charges for the account..
-   * Retrieves the list of recurring and usage charges for the account. This can be used to determine the charge structure and usage of charge plan items.   Privileges required: account administrator
+   * Gets list of recurring and usage charges for the account.. Retrieves the list of recurring and
+   * usage charges for the account. This can be used to determine the charge structure and usage of
+   * charge plan items. Privileges required: account administrator
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return BillingChargeResponse
    * @throws ApiException if fails to make API call
    */
-  public BillingChargeResponse getBillingCharges(String accountId, AccountsApi.GetBillingChargesOptions options) throws ApiException {
+  public BillingChargeResponse getBillingCharges(
+      String accountId, AccountsApi.GetBillingChargesOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBillingCharges");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getBillingCharges");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/billing_charges"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/billing_charges"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1643,75 +1800,73 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_charges", options.includeCharges));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("include_charges", options.includeCharges));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<BillingChargeResponse> localVarReturnType = new GenericType<BillingChargeResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<BillingChargeResponse> localVarReturnType =
+        new GenericType<BillingChargeResponse>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Get information for a specific brand.
   /// </summary>
 
- /**
-  * GetBrandOptions Class.
-  *
-  **/
-  public class GetBrandOptions
-  {
-  private String includeExternalReferences = null;
-  private String includeLogos = null;
+  /** GetBrandOptions Class. */
+  public class GetBrandOptions {
+    private String includeExternalReferences = null;
+    private String includeLogos = null;
 
- /**
-  * setIncludeExternalReferences method.
-  */
-  public void setIncludeExternalReferences(String includeExternalReferences) {
-    this.includeExternalReferences = includeExternalReferences;
+    /** setIncludeExternalReferences method. */
+    public void setIncludeExternalReferences(String includeExternalReferences) {
+      this.includeExternalReferences = includeExternalReferences;
+    }
+
+    /**
+     * getIncludeExternalReferences method.
+     *
+     * @return String
+     */
+    public String getIncludeExternalReferences() {
+      return this.includeExternalReferences;
+    }
+
+    /** setIncludeLogos method. */
+    public void setIncludeLogos(String includeLogos) {
+      this.includeLogos = includeLogos;
+    }
+
+    /**
+     * getIncludeLogos method.
+     *
+     * @return String
+     */
+    public String getIncludeLogos() {
+      return this.includeLogos;
+    }
   }
 
- /**
-  * getIncludeExternalReferences method.
-  *
-  * @return String
-  */
-  public String getIncludeExternalReferences() {
-    return this.includeExternalReferences;
-  }
-
- /**
-  * setIncludeLogos method.
-  */
-  public void setIncludeLogos(String includeLogos) {
-    this.includeLogos = includeLogos;
-  }
-
- /**
-  * getIncludeLogos method.
-  *
-  * @return String
-  */
-  public String getIncludeLogos() {
-    return this.includeLogos;
-  }
-  }
-
-   /**
+  /**
    * Get information for a specific brand..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1731,12 +1886,14 @@ public class AccountsApi {
    * @return Brand
    * @throws ApiException if fails to make API call
    */
-  public Brand getBrand(String accountId, String brandId, AccountsApi.GetBrandOptions options) throws ApiException {
+  public Brand getBrand(String accountId, String brandId, AccountsApi.GetBrandOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getBrand");
     }
 
     // verify the required parameter 'brandId' is set
@@ -1745,9 +1902,10 @@ public class AccountsApi {
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1756,30 +1914,37 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_external_references", options.includeExternalReferences));
-    }if (options != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "include_external_references", options.includeExternalReferences));
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_logos", options.includeLogos));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<Brand> localVarReturnType = new GenericType<Brand>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Export a specific brand..
@@ -1793,18 +1958,21 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBrandExportFile");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getBrandExportFile");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling getBrandExportFile");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling getBrandExportFile");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/file"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/file"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1812,26 +1980,27 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -1843,29 +2012,34 @@ public class AccountsApi {
    * @return byte[]
    * @throws ApiException if fails to make API call
    */
-  public byte[] getBrandLogoByType(String accountId, String brandId, String logoType) throws ApiException {
+  public byte[] getBrandLogoByType(String accountId, String brandId, String logoType)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getBrandLogoByType");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling getBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling getBrandLogoByType");
     }
 
     // verify the required parameter 'logoType' is set
     if (logoType == null) {
-      throw new ApiException(400, "Missing the required parameter 'logoType' when calling getBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'logoType' when calling getBrandLogoByType");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
-      .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
+            .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1873,27 +2047,29 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "image/png"
-    };
+    final String[] localVarAccepts = {"image/png"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns the specified account&#39;s list of branding resources (metadata)..
@@ -1903,23 +2079,27 @@ public class AccountsApi {
    * @return BrandResourcesList
    * @throws ApiException if fails to make API call
    */
-  public BrandResourcesList getBrandResources(String accountId, String brandId) throws ApiException {
+  public BrandResourcesList getBrandResources(String accountId, String brandId)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBrandResources");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getBrandResources");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling getBrandResources");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling getBrandResources");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/resources"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -1927,82 +2107,77 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<BrandResourcesList> localVarReturnType = new GenericType<BrandResourcesList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Returns the specified branding resource file.
   /// </summary>
 
- /**
-  * GetBrandResourcesByContentTypeOptions Class.
-  *
-  **/
-  public class GetBrandResourcesByContentTypeOptions
-  {
-  private String langcode = null;
-  private String returnMaster = null;
+  /** GetBrandResourcesByContentTypeOptions Class. */
+  public class GetBrandResourcesByContentTypeOptions {
+    private String langcode = null;
+    private String returnMaster = null;
 
- /**
-  * setLangcode method.
-  */
-  public void setLangcode(String langcode) {
-    this.langcode = langcode;
+    /** setLangcode method. */
+    public void setLangcode(String langcode) {
+      this.langcode = langcode;
+    }
+
+    /**
+     * getLangcode method.
+     *
+     * @return String
+     */
+    public String getLangcode() {
+      return this.langcode;
+    }
+
+    /** setReturnMaster method. */
+    public void setReturnMaster(String returnMaster) {
+      this.returnMaster = returnMaster;
+    }
+
+    /**
+     * getReturnMaster method.
+     *
+     * @return String
+     */
+    public String getReturnMaster() {
+      return this.returnMaster;
+    }
   }
 
- /**
-  * getLangcode method.
-  *
-  * @return String
-  */
-  public String getLangcode() {
-    return this.langcode;
-  }
-
- /**
-  * setReturnMaster method.
-  */
-  public void setReturnMaster(String returnMaster) {
-    this.returnMaster = returnMaster;
-  }
-
- /**
-  * getReturnMaster method.
-  *
-  * @return String
-  */
-  public String getReturnMaster() {
-    return this.returnMaster;
-  }
-  }
-
-   /**
+  /**
    * Returns the specified branding resource file..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
-   * @param resourceContentType  (required)
+   * @param resourceContentType (required)
    * @return void
    */
-  public void getBrandResourcesByContentType(String accountId, String brandId, String resourceContentType) throws ApiException {
+  public void getBrandResourcesByContentType(
+      String accountId, String brandId, String resourceContentType) throws ApiException {
     getBrandResourcesByContentType(accountId, brandId, resourceContentType, null);
   }
 
@@ -2011,33 +2186,47 @@ public class AccountsApi {
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
-   * @param resourceContentType  (required)
+   * @param resourceContentType (required)
    * @param options for modifying the method behavior.
    * @throws ApiException if fails to make API call
    */
-  public void getBrandResourcesByContentType(String accountId, String brandId, String resourceContentType, AccountsApi.GetBrandResourcesByContentTypeOptions options) throws ApiException {
+  public void getBrandResourcesByContentType(
+      String accountId,
+      String brandId,
+      String resourceContentType,
+      AccountsApi.GetBrandResourcesByContentTypeOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling getBrandResourcesByContentType");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling getBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'brandId' when calling getBrandResourcesByContentType");
     }
 
     // verify the required parameter 'resourceContentType' is set
     if (resourceContentType == null) {
-      throw new ApiException(400, "Missing the required parameter 'resourceContentType' when calling getBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'resourceContentType' when calling getBrandResourcesByContentType");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
-      .replaceAll("\\{" + "resourceContentType" + "\\}", apiClient.escapeString(resourceContentType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
+            .replaceAll(
+                "\\{" + "resourceContentType" + "\\}",
+                apiClient.escapeString(resourceContentType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2047,55 +2236,78 @@ public class AccountsApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("langcode", options.langcode));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("return_master", options.returnMaster));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
-   * Gets the Electronic Record and Signature Disclosure..
-   * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be different than the current account disclosure depending on account settings, such as branding, and when the account disclosure was last updated. An optional query string can be included to return the language for the disclosure.
+   * Gets the Electronic Record and Signature Disclosure.. Retrieves the Electronic Record and
+   * Signature Disclosure, with HTML formatting, for the requested envelope recipient. This might be
+   * different than the current account disclosure depending on account settings, such as branding,
+   * and when the account disclosure was last updated. An optional query string can be included to
+   * return the language for the disclosure.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported
+   *     languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy),
+   *     Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW),
+   *     Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et),
+   *     Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el),
+   *     Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese
+   *     (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no),
+   *     Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru),
+   *     Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX),
+   *     Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally,
+   *     the value can be set to ï¿½browserï¿½ to automatically detect the browser language being
+   *     used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
-  public ConsumerDisclosure getConsumerDisclosure(String accountId, String langCode) throws ApiException {
+  public ConsumerDisclosure getConsumerDisclosure(String accountId, String langCode)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosure");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getConsumerDisclosure");
     }
 
     // verify the required parameter 'langCode' is set
     if (langCode == null) {
-      throw new ApiException(400, "Missing the required parameter 'langCode' when calling getConsumerDisclosure");
+      throw new ApiException(
+          400, "Missing the required parameter 'langCode' when calling getConsumerDisclosure");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2103,59 +2315,59 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<ConsumerDisclosure> localVarReturnType = new GenericType<ConsumerDisclosure>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Gets the Electronic Record and Signature Disclosure for the account. Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+  /// Gets the Electronic Record and Signature Disclosure for the account. Retrieves the Electronic
+  // Record and Signature Disclosure, with HTML formatting, associated with the account. You can use
+  // an optional query string to set the language for the disclosure.
   /// </summary>
 
- /**
-  * GetConsumerDisclosureDefaultOptions Class.
-  *
-  **/
-  public class GetConsumerDisclosureDefaultOptions
-  {
-  private String langCode = null;
+  /** GetConsumerDisclosureDefaultOptions Class. */
+  public class GetConsumerDisclosureDefaultOptions {
+    private String langCode = null;
 
- /**
-  * setLangCode method.
-  */
-  public void setLangCode(String langCode) {
-    this.langCode = langCode;
+    /** setLangCode method. */
+    public void setLangCode(String langCode) {
+      this.langCode = langCode;
+    }
+
+    /**
+     * getLangCode method.
+     *
+     * @return String
+     */
+    public String getLangCode() {
+      return this.langCode;
+    }
   }
 
- /**
-  * getLangCode method.
-  *
-  * @return String
-  */
-  public String getLangCode() {
-    return this.langCode;
-  }
-  }
-
-   /**
-   * Gets the Electronic Record and Signature Disclosure for the account..
-   * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+  /**
+   * Gets the Electronic Record and Signature Disclosure for the account.. Retrieves the Electronic
+   * Record and Signature Disclosure, with HTML formatting, associated with the account. You can use
+   * an optional query string to set the language for the disclosure.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return ConsumerDisclosure
    */
@@ -2164,24 +2376,31 @@ public class AccountsApi {
   }
 
   /**
-   * Gets the Electronic Record and Signature Disclosure for the account..
-   * Retrieves the Electronic Record and Signature Disclosure, with HTML formatting, associated with the account. You can use an optional query string to set the language for the disclosure.
+   * Gets the Electronic Record and Signature Disclosure for the account.. Retrieves the Electronic
+   * Record and Signature Disclosure, with HTML formatting, associated with the account. You can use
+   * an optional query string to set the language for the disclosure.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
-  public ConsumerDisclosure getConsumerDisclosureDefault(String accountId, AccountsApi.GetConsumerDisclosureDefaultOptions options) throws ApiException {
+  public ConsumerDisclosure getConsumerDisclosureDefault(
+      String accountId, AccountsApi.GetConsumerDisclosureDefaultOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConsumerDisclosureDefault");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling getConsumerDisclosureDefault");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/consumer_disclosure"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2193,25 +2412,29 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("langCode", options.langCode));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<ConsumerDisclosure> localVarReturnType = new GenericType<ConsumerDisclosure>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns the configuration information for the eNote eOriginal integration..
@@ -2225,12 +2448,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getENoteConfiguration");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getENoteConfiguration");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/enote_configuration"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2238,27 +2463,29 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<ENoteConfiguration> localVarReturnType = new GenericType<ENoteConfiguration>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Select envelope purge configuration..
@@ -2267,17 +2494,21 @@ public class AccountsApi {
    * @return EnvelopePurgeConfiguration
    * @throws ApiException if fails to make API call
    */
-  public EnvelopePurgeConfiguration getEnvelopePurgeConfiguration(String accountId) throws ApiException {
+  public EnvelopePurgeConfiguration getEnvelopePurgeConfiguration(String accountId)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopePurgeConfiguration");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling getEnvelopePurgeConfiguration");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2285,27 +2516,30 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<EnvelopePurgeConfiguration> localVarReturnType = new GenericType<EnvelopePurgeConfiguration>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<EnvelopePurgeConfiguration> localVarReturnType =
+        new GenericType<EnvelopePurgeConfiguration>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Retrieves the list of favorited templates for this caller.
@@ -2319,12 +2553,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getFavoriteTemplates");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getFavoriteTemplates");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/favorite_templates"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2332,27 +2568,30 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<FavoriteTemplatesInfo> localVarReturnType =
+        new GenericType<FavoriteTemplatesInfo>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns default user level settings for a specified account.
@@ -2366,12 +2605,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getNotificationDefaults");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getNotificationDefaults");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/notification_defaults"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/notification_defaults"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2379,27 +2620,30 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<NotificationDefaults> localVarReturnType = new GenericType<NotificationDefaults>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<NotificationDefaults> localVarReturnType =
+        new GenericType<NotificationDefaults>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Get the password rules.
@@ -2413,12 +2657,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPasswordRules");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getPasswordRules");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/password_rules"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/password_rules"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2426,27 +2672,30 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountPasswordRules> localVarReturnType =
+        new GenericType<AccountPasswordRules>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Get membership account password rules.
@@ -2466,64 +2715,61 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<UserPasswordRules> localVarReturnType = new GenericType<UserPasswordRules>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Returns a permissions profile in the specified account.
   /// </summary>
 
- /**
-  * GetPermissionProfileOptions Class.
-  *
-  **/
-  public class GetPermissionProfileOptions
-  {
-  private String include = null;
+  /** GetPermissionProfileOptions Class. */
+  public class GetPermissionProfileOptions {
+    private String include = null;
 
- /**
-  * setInclude method.
-  */
-  public void setInclude(String include) {
-    this.include = include;
+    /** setInclude method. */
+    public void setInclude(String include) {
+      this.include = include;
+    }
+
+    /**
+     * getInclude method.
+     *
+     * @return String
+     */
+    public String getInclude() {
+      return this.include;
+    }
   }
 
- /**
-  * getInclude method.
-  *
-  * @return String
-  */
-  public String getInclude() {
-    return this.include;
-  }
-  }
-
-   /**
+  /**
    * Returns a permissions profile in the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
+   * @param permissionProfileId (required)
    * @return PermissionProfile
    */
-  public PermissionProfile getPermissionProfile(String accountId, String permissionProfileId) throws ApiException {
+  public PermissionProfile getPermissionProfile(String accountId, String permissionProfileId)
+      throws ApiException {
     return getPermissionProfile(accountId, permissionProfileId, null);
   }
 
@@ -2531,28 +2777,36 @@ public class AccountsApi {
    * Returns a permissions profile in the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
+   * @param permissionProfileId (required)
    * @param options for modifying the method behavior.
    * @return PermissionProfile
    * @throws ApiException if fails to make API call
    */
-  public PermissionProfile getPermissionProfile(String accountId, String permissionProfileId, AccountsApi.GetPermissionProfileOptions options) throws ApiException {
+  public PermissionProfile getPermissionProfile(
+      String accountId, String permissionProfileId, AccountsApi.GetPermissionProfileOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPermissionProfile");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getPermissionProfile");
     }
 
     // verify the required parameter 'permissionProfileId' is set
     if (permissionProfileId == null) {
-      throw new ApiException(400, "Missing the required parameter 'permissionProfileId' when calling getPermissionProfile");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'permissionProfileId' when calling getPermissionProfile");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "permissionProfileId" + "\\}",
+                apiClient.escapeString(permissionProfileId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2564,29 +2818,34 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<PermissionProfile> localVarReturnType = new GenericType<PermissionProfile>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Retrieves the account provisioning information for the account..
-   * Retrieves the account provisioning information for the account.
+   * Retrieves the account provisioning information for the account.. Retrieves the account
+   * provisioning information for the account.
+   *
    * @return ProvisioningInformation
    * @throws ApiException if fails to make API call
    */
@@ -2602,115 +2861,30 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<ProvisioningInformation> localVarReturnType = new GenericType<ProvisioningInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /// <summary>
-  /// Returns whether or not the specified email domain is reserved/claimed.
-  /// </summary>
-
- /**
-  * GetReservedDomainExistenceOptions Class.
-  *
-  **/
-  public class GetReservedDomainExistenceOptions
-  {
-  private String emailDomain = null;
-
- /**
-  * setEmailDomain method.
-  */
-  public void setEmailDomain(String emailDomain) {
-    this.emailDomain = emailDomain;
+    GenericType<ProvisioningInformation> localVarReturnType =
+        new GenericType<ProvisioningInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
   }
-
- /**
-  * getEmailDomain method.
-  *
-  * @return String
-  */
-  public String getEmailDomain() {
-    return this.emailDomain;
-  }
-  }
-
-   /**
-   * Returns whether or not the specified email domain is reserved/claimed..
-   *
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return ReservedDomainExistence
-   */
-  public ReservedDomainExistence getReservedDomainExistence(String accountId) throws ApiException {
-    return getReservedDomainExistence(accountId, null);
-  }
-
-  /**
-   * Returns whether or not the specified email domain is reserved/claimed..
-   *
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return ReservedDomainExistence
-   * @throws ApiException if fails to make API call
-   */
-  public ReservedDomainExistence getReservedDomainExistence(String accountId, AccountsApi.GetReservedDomainExistenceOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getReservedDomainExistence");
-    }
-
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/reserved_domains"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("email_domain", options.emailDomain));
-    }
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-
-    GenericType<ReservedDomainExistence> localVarReturnType = new GenericType<ReservedDomainExistence>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
 
   /**
    * Gets list of supported languages for recipient language setting..
@@ -2724,12 +2898,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSupportedLanguages");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getSupportedLanguages");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/supported_languages"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/supported_languages"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2737,27 +2913,29 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<SupportedLanguages> localVarReturnType = new GenericType<SupportedLanguages>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Get watermark information..
@@ -2771,12 +2949,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getWatermark");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getWatermark");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/watermark"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/watermark"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2784,33 +2964,35 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<Watermark> localVarReturnType = new GenericType<Watermark>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Get watermark preview..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param watermark  (optional)
+   * @param watermark (optional)
    * @return Watermark
    * @throws ApiException if fails to make API call
    */
@@ -2819,12 +3001,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getWatermarkPreview");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling getWatermarkPreview");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/watermark/preview"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/watermark/preview"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2832,76 +3016,76 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<Watermark> localVarReturnType = new GenericType<Watermark>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Gets a list of brand profiles. Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
+  /// Gets a list of brand profiles. Retrieves the list of brand profiles associated with the
+  // account and the default brand profiles. The Account Branding feature (accountSettings
+  // properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to
+  // **true** for the account to use this call.
   /// </summary>
 
- /**
-  * ListBrandsOptions Class.
-  *
-  **/
-  public class ListBrandsOptions
-  {
-  private String excludeDistributorBrand = null;
-  private String includeLogos = null;
+  /** ListBrandsOptions Class. */
+  public class ListBrandsOptions {
+    private String excludeDistributorBrand = null;
+    private String includeLogos = null;
 
- /**
-  * setExcludeDistributorBrand method.
-  */
-  public void setExcludeDistributorBrand(String excludeDistributorBrand) {
-    this.excludeDistributorBrand = excludeDistributorBrand;
+    /** setExcludeDistributorBrand method. */
+    public void setExcludeDistributorBrand(String excludeDistributorBrand) {
+      this.excludeDistributorBrand = excludeDistributorBrand;
+    }
+
+    /**
+     * getExcludeDistributorBrand method.
+     *
+     * @return String
+     */
+    public String getExcludeDistributorBrand() {
+      return this.excludeDistributorBrand;
+    }
+
+    /** setIncludeLogos method. */
+    public void setIncludeLogos(String includeLogos) {
+      this.includeLogos = includeLogos;
+    }
+
+    /**
+     * getIncludeLogos method.
+     *
+     * @return String
+     */
+    public String getIncludeLogos() {
+      return this.includeLogos;
+    }
   }
 
- /**
-  * getExcludeDistributorBrand method.
-  *
-  * @return String
-  */
-  public String getExcludeDistributorBrand() {
-    return this.excludeDistributorBrand;
-  }
-
- /**
-  * setIncludeLogos method.
-  */
-  public void setIncludeLogos(String includeLogos) {
-    this.includeLogos = includeLogos;
-  }
-
- /**
-  * getIncludeLogos method.
-  *
-  * @return String
-  */
-  public String getIncludeLogos() {
-    return this.includeLogos;
-  }
-  }
-
-   /**
-   * Gets a list of brand profiles..
-   * Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
+  /**
+   * Gets a list of brand profiles.. Retrieves the list of brand profiles associated with the
+   * account and the default brand profiles. The Account Branding feature (accountSettings
+   * properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;) must be set to
+   * **true** for the account to use this call.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return BrandsResponse
    */
@@ -2910,24 +3094,30 @@ public class AccountsApi {
   }
 
   /**
-   * Gets a list of brand profiles..
-   * Retrieves the list of brand profiles associated with the account and the default brand profiles. The Account Branding feature (accountSettings properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;)  must be set to **true** for the account to use this call.
+   * Gets a list of brand profiles.. Retrieves the list of brand profiles associated with the
+   * account and the default brand profiles. The Account Branding feature (accountSettings
+   * properties &#x60;canSelfBrandSend&#x60; and &#x60;canSelfBrandSend&#x60;) must be set to
+   * **true** for the account to use this call.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return BrandsResponse
    * @throws ApiException if fails to make API call
    */
-  public BrandsResponse listBrands(String accountId, AccountsApi.ListBrandsOptions options) throws ApiException {
+  public BrandsResponse listBrands(String accountId, AccountsApi.ListBrandsOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listBrands");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listBrands");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2936,34 +3126,47 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("exclude_distributor_brand", options.excludeDistributorBrand));
-    }if (options != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("exclude_distributor_brand", options.excludeDistributorBrand));
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_logos", options.includeLogos));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<BrandsResponse> localVarReturnType = new GenericType<BrandsResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Gets a list of custom fields associated with the account..
-   * Retrieves a list of envelope custom fields associated with the account. You can use these fields in the envelopes for your account to record information about the envelope, help search for envelopes and track information. The envelope custom fields are shown in the Envelope Settings section when a user is creating an envelope in the DocuSign member console. The envelope custom fields are not seen by the envelope recipients.  There are two types of envelope custom fields, text, and list. A text custom field lets the sender enter the value for the field. The list custom field lets the sender select the value of the field from a list you provide.
+   * Gets a list of custom fields associated with the account.. Retrieves a list of envelope custom
+   * fields associated with the account. You can use these fields in the envelopes for your account
+   * to record information about the envelope, help search for envelopes and track information. The
+   * envelope custom fields are shown in the Envelope Settings section when a user is creating an
+   * envelope in the DocuSign member console. The envelope custom fields are not seen by the
+   * envelope recipients. There are two types of envelope custom fields, text, and list. A text
+   * custom field lets the sender enter the value for the field. The list custom field lets the
+   * sender select the value of the field from a list you provide.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return CustomFields
    * @throws ApiException if fails to make API call
@@ -2973,12 +3176,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listCustomFields");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listCustomFields");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/custom_fields"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -2986,59 +3191,63 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Gets a list of permission profiles. Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
+  /// Gets a list of permission profiles. Retrieves a list of Permission Profiles. Permission
+  // Profiles are a standard set of user permissions that you can apply to individual users or users
+  // in a Group. This makes it easier to manage user permissions for a large number of users,
+  // without having to change permissions on a user-by-user basis.  Currently, Permission Profiles
+  // can only be created and modified in the DocuSign console.
   /// </summary>
 
- /**
-  * ListPermissionsOptions Class.
-  *
-  **/
-  public class ListPermissionsOptions
-  {
-  private String include = null;
+  /** ListPermissionsOptions Class. */
+  public class ListPermissionsOptions {
+    private String include = null;
 
- /**
-  * setInclude method.
-  */
-  public void setInclude(String include) {
-    this.include = include;
+    /** setInclude method. */
+    public void setInclude(String include) {
+      this.include = include;
+    }
+
+    /**
+     * getInclude method.
+     *
+     * @return String
+     */
+    public String getInclude() {
+      return this.include;
+    }
   }
 
- /**
-  * getInclude method.
-  *
-  * @return String
-  */
-  public String getInclude() {
-    return this.include;
-  }
-  }
-
-   /**
-   * Gets a list of permission profiles..
-   * Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
+  /**
+   * Gets a list of permission profiles.. Retrieves a list of Permission Profiles. Permission
+   * Profiles are a standard set of user permissions that you can apply to individual users or users
+   * in a Group. This makes it easier to manage user permissions for a large number of users,
+   * without having to change permissions on a user-by-user basis. Currently, Permission Profiles
+   * can only be created and modified in the DocuSign console.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return PermissionProfileInformation
    */
@@ -3047,24 +3256,31 @@ public class AccountsApi {
   }
 
   /**
-   * Gets a list of permission profiles..
-   * Retrieves a list of Permission Profiles. Permission Profiles are a standard set of user permissions that you can apply to individual users or users in a Group. This makes it easier to manage user permissions for a large number of users, without having to change permissions on a user-by-user basis.  Currently, Permission Profiles can only be created and modified in the DocuSign console.
+   * Gets a list of permission profiles.. Retrieves a list of Permission Profiles. Permission
+   * Profiles are a standard set of user permissions that you can apply to individual users or users
+   * in a Group. This makes it easier to manage user permissions for a large number of users,
+   * without having to change permissions on a user-by-user basis. Currently, Permission Profiles
+   * can only be created and modified in the DocuSign console.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return PermissionProfileInformation
    * @throws ApiException if fails to make API call
    */
-  public PermissionProfileInformation listPermissions(String accountId, AccountsApi.ListPermissionsOptions options) throws ApiException {
+  public PermissionProfileInformation listPermissions(
+      String accountId, AccountsApi.ListPermissionsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listPermissions");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listPermissions");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/permission_profiles"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3076,57 +3292,58 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<PermissionProfileInformation> localVarReturnType = new GenericType<PermissionProfileInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<PermissionProfileInformation> localVarReturnType =
+        new GenericType<PermissionProfileInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Gets recipient names associated with an email address. Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
+  /// Gets recipient names associated with an email address. Retrieves a list of recipients in the
+  // specified account that are associated with a email address supplied in the query string.
   /// </summary>
 
- /**
-  * ListRecipientNamesByEmailOptions Class.
-  *
-  **/
-  public class ListRecipientNamesByEmailOptions
-  {
-  private String email = null;
+  /** ListRecipientNamesByEmailOptions Class. */
+  public class ListRecipientNamesByEmailOptions {
+    private String email = null;
 
- /**
-  * setEmail method.
-  */
-  public void setEmail(String email) {
-    this.email = email;
+    /** setEmail method. */
+    public void setEmail(String email) {
+      this.email = email;
+    }
+
+    /**
+     * getEmail method.
+     *
+     * @return String
+     */
+    public String getEmail() {
+      return this.email;
+    }
   }
 
- /**
-  * getEmail method.
-  *
-  * @return String
-  */
-  public String getEmail() {
-    return this.email;
-  }
-  }
-
-   /**
-   * Gets recipient names associated with an email address..
-   * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
+  /**
+   * Gets recipient names associated with an email address.. Retrieves a list of recipients in the
+   * specified account that are associated with a email address supplied in the query string.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return RecipientNamesResponse
    */
@@ -3135,24 +3352,28 @@ public class AccountsApi {
   }
 
   /**
-   * Gets recipient names associated with an email address..
-   * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
+   * Gets recipient names associated with an email address.. Retrieves a list of recipients in the
+   * specified account that are associated with a email address supplied in the query string.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return RecipientNamesResponse
    * @throws ApiException if fails to make API call
    */
-  public RecipientNamesResponse listRecipientNamesByEmail(String accountId, AccountsApi.ListRecipientNamesByEmailOptions options) throws ApiException {
+  public RecipientNamesResponse listRecipientNamesByEmail(
+      String accountId, AccountsApi.ListRecipientNamesByEmailOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listRecipientNamesByEmail");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listRecipientNamesByEmail");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/recipient_names"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/recipient_names"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3164,29 +3385,35 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<RecipientNamesResponse> localVarReturnType = new GenericType<RecipientNamesResponse>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<RecipientNamesResponse> localVarReturnType =
+        new GenericType<RecipientNamesResponse>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Gets account settings information..
-   * Retrieves the account settings information for the specified account.
+   * Gets account settings information.. Retrieves the account settings information for the
+   * specified account.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSettingsInformation
    * @throws ApiException if fails to make API call
@@ -3196,12 +3423,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSettings");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listSettings");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3209,178 +3438,173 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountSettingsInformation> localVarReturnType = new GenericType<AccountSettingsInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountSettingsInformation> localVarReturnType =
+        new GenericType<AccountSettingsInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
-  /// Reserved: Gets the shared item status for one or more users. Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
+  /// Reserved: Gets the shared item status for one or more users. Reserved: Retrieves shared item
+  // status for one or more users and types of items.  Users with account administration privileges
+  // can retrieve shared access information for all account users. Users without account
+  // administrator privileges can only retrieve shared access information for themselves and the
+  // returned information is limited to the retrieving the status of all members of the account that
+  // are sharing their folders to the user. This is equivalent to setting the
+  // shared&#x3D;shared_from.
   /// </summary>
 
- /**
-  * ListSharedAccessOptions Class.
-  *
-  **/
-  public class ListSharedAccessOptions
-  {
-  private String count = null;
-  private String envelopesNotSharedUserStatus = null;
-  private String folderIds = null;
-  private String itemType = null;
-  private String searchText = null;
-  private String shared = null;
-  private String startPosition = null;
-  private String userIds = null;
+  /** ListSharedAccessOptions Class. */
+  public class ListSharedAccessOptions {
+    private String count = null;
+    private String envelopesNotSharedUserStatus = null;
+    private String folderIds = null;
+    private String itemType = null;
+    private String searchText = null;
+    private String shared = null;
+    private String startPosition = null;
+    private String userIds = null;
 
- /**
-  * setCount method.
-  */
-  public void setCount(String count) {
-    this.count = count;
+    /** setCount method. */
+    public void setCount(String count) {
+      this.count = count;
+    }
+
+    /**
+     * getCount method.
+     *
+     * @return String
+     */
+    public String getCount() {
+      return this.count;
+    }
+
+    /** setEnvelopesNotSharedUserStatus method. */
+    public void setEnvelopesNotSharedUserStatus(String envelopesNotSharedUserStatus) {
+      this.envelopesNotSharedUserStatus = envelopesNotSharedUserStatus;
+    }
+
+    /**
+     * getEnvelopesNotSharedUserStatus method.
+     *
+     * @return String
+     */
+    public String getEnvelopesNotSharedUserStatus() {
+      return this.envelopesNotSharedUserStatus;
+    }
+
+    /** setFolderIds method. */
+    public void setFolderIds(String folderIds) {
+      this.folderIds = folderIds;
+    }
+
+    /**
+     * getFolderIds method.
+     *
+     * @return String
+     */
+    public String getFolderIds() {
+      return this.folderIds;
+    }
+
+    /** setItemType method. */
+    public void setItemType(String itemType) {
+      this.itemType = itemType;
+    }
+
+    /**
+     * getItemType method.
+     *
+     * @return String
+     */
+    public String getItemType() {
+      return this.itemType;
+    }
+
+    /** setSearchText method. */
+    public void setSearchText(String searchText) {
+      this.searchText = searchText;
+    }
+
+    /**
+     * getSearchText method.
+     *
+     * @return String
+     */
+    public String getSearchText() {
+      return this.searchText;
+    }
+
+    /** setShared method. */
+    public void setShared(String shared) {
+      this.shared = shared;
+    }
+
+    /**
+     * getShared method.
+     *
+     * @return String
+     */
+    public String getShared() {
+      return this.shared;
+    }
+
+    /** setStartPosition method. */
+    public void setStartPosition(String startPosition) {
+      this.startPosition = startPosition;
+    }
+
+    /**
+     * getStartPosition method.
+     *
+     * @return String
+     */
+    public String getStartPosition() {
+      return this.startPosition;
+    }
+
+    /** setUserIds method. */
+    public void setUserIds(String userIds) {
+      this.userIds = userIds;
+    }
+
+    /**
+     * getUserIds method.
+     *
+     * @return String
+     */
+    public String getUserIds() {
+      return this.userIds;
+    }
   }
 
- /**
-  * getCount method.
-  *
-  * @return String
-  */
-  public String getCount() {
-    return this.count;
-  }
-
- /**
-  * setEnvelopesNotSharedUserStatus method.
-  */
-  public void setEnvelopesNotSharedUserStatus(String envelopesNotSharedUserStatus) {
-    this.envelopesNotSharedUserStatus = envelopesNotSharedUserStatus;
-  }
-
- /**
-  * getEnvelopesNotSharedUserStatus method.
-  *
-  * @return String
-  */
-  public String getEnvelopesNotSharedUserStatus() {
-    return this.envelopesNotSharedUserStatus;
-  }
-
- /**
-  * setFolderIds method.
-  */
-  public void setFolderIds(String folderIds) {
-    this.folderIds = folderIds;
-  }
-
- /**
-  * getFolderIds method.
-  *
-  * @return String
-  */
-  public String getFolderIds() {
-    return this.folderIds;
-  }
-
- /**
-  * setItemType method.
-  */
-  public void setItemType(String itemType) {
-    this.itemType = itemType;
-  }
-
- /**
-  * getItemType method.
-  *
-  * @return String
-  */
-  public String getItemType() {
-    return this.itemType;
-  }
-
- /**
-  * setSearchText method.
-  */
-  public void setSearchText(String searchText) {
-    this.searchText = searchText;
-  }
-
- /**
-  * getSearchText method.
-  *
-  * @return String
-  */
-  public String getSearchText() {
-    return this.searchText;
-  }
-
- /**
-  * setShared method.
-  */
-  public void setShared(String shared) {
-    this.shared = shared;
-  }
-
- /**
-  * getShared method.
-  *
-  * @return String
-  */
-  public String getShared() {
-    return this.shared;
-  }
-
- /**
-  * setStartPosition method.
-  */
-  public void setStartPosition(String startPosition) {
-    this.startPosition = startPosition;
-  }
-
- /**
-  * getStartPosition method.
-  *
-  * @return String
-  */
-  public String getStartPosition() {
-    return this.startPosition;
-  }
-
- /**
-  * setUserIds method.
-  */
-  public void setUserIds(String userIds) {
-    this.userIds = userIds;
-  }
-
- /**
-  * getUserIds method.
-  *
-  * @return String
-  */
-  public String getUserIds() {
-    return this.userIds;
-  }
-  }
-
-   /**
-   * Reserved: Gets the shared item status for one or more users..
-   * Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
+  /**
+   * Reserved: Gets the shared item status for one or more users.. Reserved: Retrieves shared item
+   * status for one or more users and types of items. Users with account administration privileges
+   * can retrieve shared access information for all account users. Users without account
+   * administrator privileges can only retrieve shared access information for themselves and the
+   * returned information is limited to the retrieving the status of all members of the account that
+   * are sharing their folders to the user. This is equivalent to setting the
+   * shared&#x3D;shared_from.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return AccountSharedAccess
    */
@@ -3389,24 +3613,33 @@ public class AccountsApi {
   }
 
   /**
-   * Reserved: Gets the shared item status for one or more users..
-   * Reserved: Retrieves shared item status for one or more users and types of items.  Users with account administration privileges can retrieve shared access information for all account users. Users without account administrator privileges can only retrieve shared access information for themselves and the returned information is limited to the retrieving the status of all members of the account that are sharing their folders to the user. This is equivalent to setting the shared&#x3D;shared_from.
+   * Reserved: Gets the shared item status for one or more users.. Reserved: Retrieves shared item
+   * status for one or more users and types of items. Users with account administration privileges
+   * can retrieve shared access information for all account users. Users without account
+   * administrator privileges can only retrieve shared access information for themselves and the
+   * returned information is limited to the retrieving the status of all members of the account that
+   * are sharing their folders to the user. This is equivalent to setting the
+   * shared&#x3D;shared_from.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param options for modifying the method behavior.
    * @return AccountSharedAccess
    * @throws ApiException if fails to make API call
    */
-  public AccountSharedAccess listSharedAccess(String accountId, AccountsApi.ListSharedAccessOptions options) throws ApiException {
+  public AccountSharedAccess listSharedAccess(
+      String accountId, AccountsApi.ListSharedAccessOptions options) throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSharedAccess");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listSharedAccess");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/shared_access"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/shared_access"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3416,41 +3649,55 @@ public class AccountsApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("envelopes_not_shared_user_status", options.envelopesNotSharedUserStatus));
-    }if (options != null) {
+    }
+    if (options != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "envelopes_not_shared_user_status", options.envelopesNotSharedUserStatus));
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("folder_ids", options.folderIds));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("item_type", options.itemType));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
-    }if (options != null) {
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("shared", options.shared));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
-    }if (options != null) {
+    }
+    if (options != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("start_position", options.startPosition));
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("user_ids", options.userIds));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSharedAccess> localVarReturnType = new GenericType<AccountSharedAccess>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Returns Account available signature providers for specified account..
@@ -3464,12 +3711,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listSignatureProviders");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listSignatureProviders");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatureProviders"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatureProviders"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3477,31 +3726,35 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountSignatureProviders> localVarReturnType = new GenericType<AccountSignatureProviders>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountSignatureProviders> localVarReturnType =
+        new GenericType<AccountSignatureProviders>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Gets a list of unsupported file types..
-   * Retrieves a list of file types (mime-types and file-extensions) that are not supported for upload through the DocuSign system.
+   * Gets a list of unsupported file types.. Retrieves a list of file types (mime-types and
+   * file-extensions) that are not supported for upload through the DocuSign system.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @return FileTypeList
    * @throws ApiException if fails to make API call
@@ -3511,12 +3764,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listUnsupportedFileTypes");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling listUnsupportedFileTypes");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/unsupported_file_types"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/unsupported_file_types"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3524,47 +3779,52 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<FileTypeList> localVarReturnType = new GenericType<FileTypeList>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Unfavorite a template.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param favoriteTemplatesInfo  (optional)
+   * @param favoriteTemplatesInfo (optional)
    * @return FavoriteTemplatesInfo
    * @throws ApiException if fails to make API call
    */
-  public FavoriteTemplatesInfo unFavoriteTemplate(String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
+  public FavoriteTemplatesInfo unFavoriteTemplate(
+      String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
     Object localVarPostBody = favoriteTemplatesInfo;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling unFavoriteTemplate");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling unFavoriteTemplate");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/favorite_templates"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3572,47 +3832,54 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
-    return apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<FavoriteTemplatesInfo> localVarReturnType =
+        new GenericType<FavoriteTemplatesInfo>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "DELETE",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Updates a account signature..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSignaturesInformation  (optional)
+   * @param accountSignaturesInformation (optional)
    * @return AccountSignaturesInformation
    * @throws ApiException if fails to make API call
    */
-  public AccountSignaturesInformation updateAccountSignature(String accountId, AccountSignaturesInformation accountSignaturesInformation) throws ApiException {
+  public AccountSignaturesInformation updateAccountSignature(
+      String accountId, AccountSignaturesInformation accountSignaturesInformation)
+      throws ApiException {
     Object localVarPostBody = accountSignaturesInformation;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignature");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateAccountSignature");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3620,65 +3887,64 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountSignaturesInformation> localVarReturnType = new GenericType<AccountSignaturesInformation>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountSignaturesInformation> localVarReturnType =
+        new GenericType<AccountSignaturesInformation>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Updates a account signature.
   /// </summary>
 
- /**
-  * UpdateAccountSignatureByIdOptions Class.
-  *
-  **/
-  public class UpdateAccountSignatureByIdOptions
-  {
-  private String closeExistingSignature = null;
+  /** UpdateAccountSignatureByIdOptions Class. */
+  public class UpdateAccountSignatureByIdOptions {
+    private String closeExistingSignature = null;
 
- /**
-  * setCloseExistingSignature method.
-  */
-  public void setCloseExistingSignature(String closeExistingSignature) {
-    this.closeExistingSignature = closeExistingSignature;
+    /** setCloseExistingSignature method. */
+    public void setCloseExistingSignature(String closeExistingSignature) {
+      this.closeExistingSignature = closeExistingSignature;
+    }
+
+    /**
+     * getCloseExistingSignature method.
+     *
+     * @return String
+     */
+    public String getCloseExistingSignature() {
+      return this.closeExistingSignature;
+    }
   }
 
- /**
-  * getCloseExistingSignature method.
-  *
-  * @return String
-  */
-  public String getCloseExistingSignature() {
-    return this.closeExistingSignature;
-  }
-  }
-
-   /**
+  /**
    * Updates a account signature..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
-   * @param accountSignatureDefinition  (optional)
+   * @param accountSignatureDefinition (optional)
    * @return AccountSignature
    */
-  public AccountSignature updateAccountSignatureById(String accountId, String signatureId, AccountSignatureDefinition accountSignatureDefinition) throws ApiException {
+  public AccountSignature updateAccountSignatureById(
+      String accountId, String signatureId, AccountSignatureDefinition accountSignatureDefinition)
+      throws ApiException {
     return updateAccountSignatureById(accountId, signatureId, accountSignatureDefinition, null);
   }
 
@@ -3687,28 +3953,39 @@ public class AccountsApi {
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param signatureId The ID of the signature being accessed. (required)
-   * @param accountSignatureDefinition  (optional)
+   * @param accountSignatureDefinition (optional)
    * @param options for modifying the method behavior.
    * @return AccountSignature
    * @throws ApiException if fails to make API call
    */
-  public AccountSignature updateAccountSignatureById(String accountId, String signatureId, AccountSignatureDefinition accountSignatureDefinition, AccountsApi.UpdateAccountSignatureByIdOptions options) throws ApiException {
+  public AccountSignature updateAccountSignatureById(
+      String accountId,
+      String signatureId,
+      AccountSignatureDefinition accountSignatureDefinition,
+      AccountsApi.UpdateAccountSignatureByIdOptions options)
+      throws ApiException {
     Object localVarPostBody = accountSignatureDefinition;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignatureById");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling updateAccountSignatureById");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateAccountSignatureById");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'signatureId' when calling updateAccountSignatureById");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3717,58 +3994,57 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("close_existing_signature", options.closeExistingSignature));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("close_existing_signature", options.closeExistingSignature));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Sets a signature, initials, or stamps image.
   /// </summary>
 
- /**
-  * UpdateAccountSignatureImageOptions Class.
-  *
-  **/
-  public class UpdateAccountSignatureImageOptions
-  {
-  private String transparentPng = null;
+  /** UpdateAccountSignatureImageOptions Class. */
+  public class UpdateAccountSignatureImageOptions {
+    private String transparentPng = null;
 
- /**
-  * setTransparentPng method.
-  */
-  public void setTransparentPng(String transparentPng) {
-    this.transparentPng = transparentPng;
+    /** setTransparentPng method. */
+    public void setTransparentPng(String transparentPng) {
+      this.transparentPng = transparentPng;
+    }
+
+    /**
+     * getTransparentPng method.
+     *
+     * @return String
+     */
+    public String getTransparentPng() {
+      return this.transparentPng;
+    }
   }
 
- /**
-  * getTransparentPng method.
-  *
-  * @return String
-  */
-  public String getTransparentPng() {
-    return this.transparentPng;
-  }
-  }
-
-   /**
+  /**
    * Sets a signature, initials, or stamps image..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -3776,7 +4052,8 @@ public class AccountsApi {
    * @param imageType One of **signature_image** or **initials_image**. (required)
    * @return AccountSignature
    */
-  public AccountSignature updateAccountSignatureImage(String accountId, String signatureId, String imageType) throws ApiException {
+  public AccountSignature updateAccountSignatureImage(
+      String accountId, String signatureId, String imageType) throws ApiException {
     return updateAccountSignatureImage(accountId, signatureId, imageType, null);
   }
 
@@ -3790,29 +4067,42 @@ public class AccountsApi {
    * @return AccountSignature
    * @throws ApiException if fails to make API call
    */
-  public AccountSignature updateAccountSignatureImage(String accountId, String signatureId, String imageType, AccountsApi.UpdateAccountSignatureImageOptions options) throws ApiException {
+  public AccountSignature updateAccountSignatureImage(
+      String accountId,
+      String signatureId,
+      String imageType,
+      AccountsApi.UpdateAccountSignatureImageOptions options)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling updateAccountSignatureImage");
     }
 
     // verify the required parameter 'signatureId' is set
     if (signatureId == null) {
-      throw new ApiException(400, "Missing the required parameter 'signatureId' when calling updateAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'signatureId' when calling updateAccountSignatureImage");
     }
 
     // verify the required parameter 'imageType' is set
     if (imageType == null) {
-      throw new ApiException(400, "Missing the required parameter 'imageType' when calling updateAccountSignatureImage");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'imageType' when calling updateAccountSignatureImage");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
-      .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/signatures/{signatureId}/{imageType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "signatureId" + "\\}", apiClient.escapeString(signatureId.toString()))
+            .replaceAll("\\{" + "imageType" + "\\}", apiClient.escapeString(imageType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3821,48 +4111,55 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("transparent_png", options.transparentPng));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("transparent_png", options.transparentPng));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
-      "image/gif"
-    };
+    final String[] localVarContentTypes = {"image/gif"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSignature> localVarReturnType = new GenericType<AccountSignature>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Modifies tab settings for specified account.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param tabAccountSettings  (optional)
+   * @param tabAccountSettings (optional)
    * @return TabAccountSettings
    * @throws ApiException if fails to make API call
    */
-  public TabAccountSettings updateAccountTabSettings(String accountId, TabAccountSettings tabAccountSettings) throws ApiException {
+  public TabAccountSettings updateAccountTabSettings(
+      String accountId, TabAccountSettings tabAccountSettings) throws ApiException {
     Object localVarPostBody = tabAccountSettings;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateAccountTabSettings");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateAccountTabSettings");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/tabs"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/tabs"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3870,54 +4167,96 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<TabAccountSettings> localVarReturnType = new GenericType<TabAccountSettings>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
+  /// <summary>
+  /// Updates an existing brand.
+  /// </summary>
+
+  /** UpdateBrandOptions Class. */
+  public class UpdateBrandOptions {
+    private String replaceBrand = null;
+
+    /** setReplaceBrand method. */
+    public void setReplaceBrand(String replaceBrand) {
+      this.replaceBrand = replaceBrand;
+    }
+
+    /**
+     * getReplaceBrand method.
+     *
+     * @return String
+     */
+    public String getReplaceBrand() {
+      return this.replaceBrand;
+    }
+  }
 
   /**
    * Updates an existing brand..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param brandId The unique identifier of a brand. (required)
-   * @param brand  (optional)
+   * @param brand (optional)
+   * @return Brand
+   */
+  public Brand updateBrand(String accountId, String brandId, Brand brand) throws ApiException {
+    return updateBrand(accountId, brandId, brand, null);
+  }
+
+  /**
+   * Updates an existing brand..
+   *
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param brandId The unique identifier of a brand. (required)
+   * @param brand (optional)
+   * @param options for modifying the method behavior.
    * @return Brand
    * @throws ApiException if fails to make API call
    */
-  public Brand updateBrand(String accountId, String brandId, Brand brand) throws ApiException {
+  public Brand updateBrand(
+      String accountId, String brandId, Brand brand, AccountsApi.UpdateBrandOptions options)
+      throws ApiException {
     Object localVarPostBody = brand;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateBrand");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling updateBrand");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling updateBrand");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3925,65 +4264,80 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("replace_brand", options.replaceBrand));
+    }
 
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<Brand> localVarReturnType = new GenericType<Brand>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Put one branding logo..
    *
    * @param accountId The external account number (int) or account ID GUID. (required)
    * @param brandId The ID of the brand. (required)
-   * @param logoType The type of logo. Valid values are:  - &#x60;primary&#x60;  - &#x60;secondary&#x60;  - &#x60;email&#x60; (required)
-   * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized). Changes may take up to one hour to display in all places (required)
+   * @param logoType The type of logo. Valid values are: - &#x60;primary&#x60; -
+   *     &#x60;secondary&#x60; - &#x60;email&#x60; (required)
+   * @param logoFileBytes Brand logo binary Stream. Supported formats: JPG, GIF, PNG. Maximum file
+   *     size: 300 KB. Recommended dimensions: 296 x 76 pixels (larger images will be resized).
+   *     Changes may take up to one hour to display in all places (required)
    * @throws ApiException if fails to make API call
    */
-  public void updateBrandLogoByType(String accountId, String brandId, String logoType, byte[] logoFileBytes) throws ApiException {
+  public void updateBrandLogoByType(
+      String accountId, String brandId, String logoType, byte[] logoFileBytes) throws ApiException {
     Object localVarPostBody = logoFileBytes;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateBrandLogoByType");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling updateBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'brandId' when calling updateBrandLogoByType");
     }
 
     // verify the required parameter 'logoType' is set
     if (logoType == null) {
-      throw new ApiException(400, "Missing the required parameter 'logoType' when calling updateBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'logoType' when calling updateBrandLogoByType");
     }
 
     // verify the required parameter 'logoFileBytes' is set
     if (logoFileBytes == null) {
-      throw new ApiException(400, "Missing the required parameter 'logoFileBytes' when calling updateBrandLogoByType");
+      throw new ApiException(
+          400, "Missing the required parameter 'logoFileBytes' when calling updateBrandLogoByType");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
-      .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/logos/{logoType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
+            .replaceAll("\\{" + "logoType" + "\\}", apiClient.escapeString(logoType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -3991,26 +4345,26 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
-      "image/png"
-    };
+    final String[] localVarContentTypes = {"image/png"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
 
   /**
@@ -4018,39 +4372,47 @@ public class AccountsApi {
    *
    * @param accountId The external account number (int) or account ID GUID. (required)
    * @param brandId The ID of the brand. (required)
-   * @param resourceContentType The type of brand resource file that you are updating. Valid values are:  - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; - &#x60;signing_captive&#x60; (required)
+   * @param resourceContentType The type of brand resource file that you are updating. Valid values
+   *     are: - &#x60;sending&#x60; - &#x60;signing&#x60; - &#x60;email&#x60; -
+   *     &#x60;signing_captive&#x60; (required)
    * @param fileXml Brand resource XML file. (required)
    * @return BrandResources
    * @throws ApiException if fails to make API call
    */
-  public BrandResources updateBrandResourcesByContentType(String accountId, String brandId, String resourceContentType, byte[] fileXml) throws ApiException {
+  public BrandResources updateBrandResourcesByContentType(
+      String accountId, String brandId, String resourceContentType, byte[] fileXml)
+      throws ApiException {
     Object localVarPostBody = "{}";
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling updateBrandResourcesByContentType");
     }
 
     // verify the required parameter 'brandId' is set
     if (brandId == null) {
-      throw new ApiException(400, "Missing the required parameter 'brandId' when calling updateBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'brandId' when calling updateBrandResourcesByContentType");
     }
 
     // verify the required parameter 'resourceContentType' is set
     if (resourceContentType == null) {
-      throw new ApiException(400, "Missing the required parameter 'resourceContentType' when calling updateBrandResourcesByContentType");
-    }
-
-    // verify the required parameter 'fileXml' is set
-    if (fileXml == null) {
-      throw new ApiException(400, "Missing the required parameter 'fileXml' when calling updateBrandResourcesByContentType");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'resourceContentType' when calling updateBrandResourcesByContentType");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
-      .replaceAll("\\{" + "resourceContentType" + "\\}", apiClient.escapeString(resourceContentType.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/brands/{brandId}/resources/{resourceContentType}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "brandId" + "\\}", apiClient.escapeString(brandId.toString()))
+            .replaceAll(
+                "\\{" + "resourceContentType" + "\\}",
+                apiClient.escapeString(resourceContentType.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4058,67 +4420,77 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
     if (fileXml != null) {
       localVarFormParams.put("file.xml", fileXml);
     }
 
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
-      "multipart/form-data"
-    };
+    final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<BrandResources> localVarReturnType = new GenericType<BrandResources>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Update Consumer Disclosure.
   /// </summary>
 
- /**
-  * UpdateConsumerDisclosureOptions Class.
-  *
-  **/
-  public class UpdateConsumerDisclosureOptions
-  {
-  private String includeMetadata = null;
+  /** UpdateConsumerDisclosureOptions Class. */
+  public class UpdateConsumerDisclosureOptions {
+    private String includeMetadata = null;
 
- /**
-  * setIncludeMetadata method.
-  */
-  public void setIncludeMetadata(String includeMetadata) {
-    this.includeMetadata = includeMetadata;
+    /** setIncludeMetadata method. */
+    public void setIncludeMetadata(String includeMetadata) {
+      this.includeMetadata = includeMetadata;
+    }
+
+    /**
+     * getIncludeMetadata method.
+     *
+     * @return String
+     */
+    public String getIncludeMetadata() {
+      return this.includeMetadata;
+    }
   }
 
- /**
-  * getIncludeMetadata method.
-  *
-  * @return String
-  */
-  public String getIncludeMetadata() {
-    return this.includeMetadata;
-  }
-  }
-
-   /**
+  /**
    * Update Consumer Disclosure..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
-   * @param consumerDisclosure  (optional)
+   * @param langCode The simple type enumeration the language used in the response. The supported
+   *     languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy),
+   *     Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW),
+   *     Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et),
+   *     Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el),
+   *     Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese
+   *     (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no),
+   *     Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru),
+   *     Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX),
+   *     Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally,
+   *     the value can be set to ï¿½browserï¿½ to automatically detect the browser language being
+   *     used by the viewer and display the disclosure in that language. (required)
+   * @param consumerDisclosure (optional)
    * @return ConsumerDisclosure
    */
-  public ConsumerDisclosure updateConsumerDisclosure(String accountId, String langCode, ConsumerDisclosure consumerDisclosure) throws ApiException {
+  public ConsumerDisclosure updateConsumerDisclosure(
+      String accountId, String langCode, ConsumerDisclosure consumerDisclosure)
+      throws ApiException {
     return updateConsumerDisclosure(accountId, langCode, consumerDisclosure, null);
   }
 
@@ -4126,29 +4498,48 @@ public class AccountsApi {
    * Update Consumer Disclosure..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
-   * @param consumerDisclosure  (optional)
+   * @param langCode The simple type enumeration the language used in the response. The supported
+   *     languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy),
+   *     Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW),
+   *     Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et),
+   *     Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el),
+   *     Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese
+   *     (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no),
+   *     Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru),
+   *     Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX),
+   *     Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally,
+   *     the value can be set to ï¿½browserï¿½ to automatically detect the browser language being
+   *     used by the viewer and display the disclosure in that language. (required)
+   * @param consumerDisclosure (optional)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
    */
-  public ConsumerDisclosure updateConsumerDisclosure(String accountId, String langCode, ConsumerDisclosure consumerDisclosure, AccountsApi.UpdateConsumerDisclosureOptions options) throws ApiException {
+  public ConsumerDisclosure updateConsumerDisclosure(
+      String accountId,
+      String langCode,
+      ConsumerDisclosure consumerDisclosure,
+      AccountsApi.UpdateConsumerDisclosureOptions options)
+      throws ApiException {
     Object localVarPostBody = consumerDisclosure;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateConsumerDisclosure");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateConsumerDisclosure");
     }
 
     // verify the required parameter 'langCode' is set
     if (langCode == null) {
-      throw new ApiException(400, "Missing the required parameter 'langCode' when calling updateConsumerDisclosure");
+      throw new ApiException(
+          400, "Missing the required parameter 'langCode' when calling updateConsumerDisclosure");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/consumer_disclosure/{langCode}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll("\\{" + "langCode" + "\\}", apiClient.escapeString(langCode.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4157,66 +4548,66 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("include_metadata", options.includeMetadata));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("include_metadata", options.includeMetadata));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<ConsumerDisclosure> localVarReturnType = new GenericType<ConsumerDisclosure>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Updates an existing account custom field.
   /// </summary>
 
- /**
-  * UpdateCustomFieldOptions Class.
-  *
-  **/
-  public class UpdateCustomFieldOptions
-  {
-  private String applyToTemplates = null;
+  /** UpdateCustomFieldOptions Class. */
+  public class UpdateCustomFieldOptions {
+    private String applyToTemplates = null;
 
- /**
-  * setApplyToTemplates method.
-  */
-  public void setApplyToTemplates(String applyToTemplates) {
-    this.applyToTemplates = applyToTemplates;
+    /** setApplyToTemplates method. */
+    public void setApplyToTemplates(String applyToTemplates) {
+      this.applyToTemplates = applyToTemplates;
+    }
+
+    /**
+     * getApplyToTemplates method.
+     *
+     * @return String
+     */
+    public String getApplyToTemplates() {
+      return this.applyToTemplates;
+    }
   }
 
- /**
-  * getApplyToTemplates method.
-  *
-  * @return String
-  */
-  public String getApplyToTemplates() {
-    return this.applyToTemplates;
-  }
-  }
-
-   /**
+  /**
    * Updates an existing account custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customFieldId  (required)
-   * @param customField  (optional)
+   * @param customFieldId (required)
+   * @param customField (optional)
    * @return CustomFields
    */
-  public CustomFields updateCustomField(String accountId, String customFieldId, CustomField customField) throws ApiException {
+  public CustomFields updateCustomField(
+      String accountId, String customFieldId, CustomField customField) throws ApiException {
     return updateCustomField(accountId, customFieldId, customField, null);
   }
 
@@ -4224,29 +4615,38 @@ public class AccountsApi {
    * Updates an existing account custom field..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param customFieldId  (required)
-   * @param customField  (optional)
+   * @param customFieldId (required)
+   * @param customField (optional)
    * @param options for modifying the method behavior.
    * @return CustomFields
    * @throws ApiException if fails to make API call
    */
-  public CustomFields updateCustomField(String accountId, String customFieldId, CustomField customField, AccountsApi.UpdateCustomFieldOptions options) throws ApiException {
+  public CustomFields updateCustomField(
+      String accountId,
+      String customFieldId,
+      CustomField customField,
+      AccountsApi.UpdateCustomFieldOptions options)
+      throws ApiException {
     Object localVarPostBody = customField;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateCustomField");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateCustomField");
     }
 
     // verify the required parameter 'customFieldId' is set
     if (customFieldId == null) {
-      throw new ApiException(400, "Missing the required parameter 'customFieldId' when calling updateCustomField");
+      throw new ApiException(
+          400, "Missing the required parameter 'customFieldId' when calling updateCustomField");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/custom_fields/{customFieldId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "customFieldId" + "\\}", apiClient.escapeString(customFieldId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4255,48 +4655,56 @@ public class AccountsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("apply_to_templates", options.applyToTemplates));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<CustomFields> localVarReturnType = new GenericType<CustomFields>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Updates configuration information for the eNote eOriginal integration..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param eNoteConfiguration  (optional)
+   * @param eNoteConfiguration (optional)
    * @return ENoteConfiguration
    * @throws ApiException if fails to make API call
    */
-  public ENoteConfiguration updateENoteConfiguration(String accountId, ENoteConfiguration eNoteConfiguration) throws ApiException {
+  public ENoteConfiguration updateENoteConfiguration(
+      String accountId, ENoteConfiguration eNoteConfiguration) throws ApiException {
     Object localVarPostBody = eNoteConfiguration;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateENoteConfiguration");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateENoteConfiguration");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/enote_configuration"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/enote_configuration"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4304,47 +4712,53 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<ENoteConfiguration> localVarReturnType = new GenericType<ENoteConfiguration>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Updates envelope purge configuration..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopePurgeConfiguration  (optional)
+   * @param envelopePurgeConfiguration (optional)
    * @return EnvelopePurgeConfiguration
    * @throws ApiException if fails to make API call
    */
-  public EnvelopePurgeConfiguration updateEnvelopePurgeConfiguration(String accountId, EnvelopePurgeConfiguration envelopePurgeConfiguration) throws ApiException {
+  public EnvelopePurgeConfiguration updateEnvelopePurgeConfiguration(
+      String accountId, EnvelopePurgeConfiguration envelopePurgeConfiguration) throws ApiException {
     Object localVarPostBody = envelopePurgeConfiguration;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopePurgeConfiguration");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling updateEnvelopePurgeConfiguration");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/envelope_purge_configuration"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4352,47 +4766,53 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<EnvelopePurgeConfiguration> localVarReturnType = new GenericType<EnvelopePurgeConfiguration>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<EnvelopePurgeConfiguration> localVarReturnType =
+        new GenericType<EnvelopePurgeConfiguration>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Favorites a template.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param favoriteTemplatesInfo  (optional)
+   * @param favoriteTemplatesInfo (optional)
    * @return FavoriteTemplatesInfo
    * @throws ApiException if fails to make API call
    */
-  public FavoriteTemplatesInfo updateFavoriteTemplate(String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
+  public FavoriteTemplatesInfo updateFavoriteTemplate(
+      String accountId, FavoriteTemplatesInfo favoriteTemplatesInfo) throws ApiException {
     Object localVarPostBody = favoriteTemplatesInfo;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateFavoriteTemplate");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateFavoriteTemplate");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/favorite_templates"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/favorite_templates"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4400,47 +4820,54 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<FavoriteTemplatesInfo> localVarReturnType = new GenericType<FavoriteTemplatesInfo>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<FavoriteTemplatesInfo> localVarReturnType =
+        new GenericType<FavoriteTemplatesInfo>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Updates default user level settings for a specified account.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param notificationDefaults  (optional)
+   * @param notificationDefaults (optional)
    * @return NotificationDefaults
    * @throws ApiException if fails to make API call
    */
-  public NotificationDefaults updateNotificationDefaults(String accountId, NotificationDefaults notificationDefaults) throws ApiException {
+  public NotificationDefaults updateNotificationDefaults(
+      String accountId, NotificationDefaults notificationDefaults) throws ApiException {
     Object localVarPostBody = notificationDefaults;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateNotificationDefaults");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'accountId' when calling updateNotificationDefaults");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/notification_defaults"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/notification_defaults"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4448,47 +4875,53 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<NotificationDefaults> localVarReturnType = new GenericType<NotificationDefaults>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<NotificationDefaults> localVarReturnType =
+        new GenericType<NotificationDefaults>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Update the password rules.
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountPasswordRules  (optional)
+   * @param accountPasswordRules (optional)
    * @return AccountPasswordRules
    * @throws ApiException if fails to make API call
    */
-  public AccountPasswordRules updatePasswordRules(String accountId, AccountPasswordRules accountPasswordRules) throws ApiException {
+  public AccountPasswordRules updatePasswordRules(
+      String accountId, AccountPasswordRules accountPasswordRules) throws ApiException {
     Object localVarPostBody = accountPasswordRules;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updatePasswordRules");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updatePasswordRules");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings/password_rules"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings/password_rules"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4496,65 +4929,64 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-    GenericType<AccountPasswordRules> localVarReturnType = new GenericType<AccountPasswordRules>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    GenericType<AccountPasswordRules> localVarReturnType =
+        new GenericType<AccountPasswordRules>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
   /// <summary>
   /// Updates a permission profile within the specified account.
   /// </summary>
 
- /**
-  * UpdatePermissionProfileOptions Class.
-  *
-  **/
-  public class UpdatePermissionProfileOptions
-  {
-  private String include = null;
+  /** UpdatePermissionProfileOptions Class. */
+  public class UpdatePermissionProfileOptions {
+    private String include = null;
 
- /**
-  * setInclude method.
-  */
-  public void setInclude(String include) {
-    this.include = include;
+    /** setInclude method. */
+    public void setInclude(String include) {
+      this.include = include;
+    }
+
+    /**
+     * getInclude method.
+     *
+     * @return String
+     */
+    public String getInclude() {
+      return this.include;
+    }
   }
 
- /**
-  * getInclude method.
-  *
-  * @return String
-  */
-  public String getInclude() {
-    return this.include;
-  }
-  }
-
-   /**
+  /**
    * Updates a permission profile within the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
-   * @param permissionProfile  (optional)
+   * @param permissionProfileId (required)
+   * @param permissionProfile (optional)
    * @return PermissionProfile
    */
-  public PermissionProfile updatePermissionProfile(String accountId, String permissionProfileId, PermissionProfile permissionProfile) throws ApiException {
+  public PermissionProfile updatePermissionProfile(
+      String accountId, String permissionProfileId, PermissionProfile permissionProfile)
+      throws ApiException {
     return updatePermissionProfile(accountId, permissionProfileId, permissionProfile, null);
   }
 
@@ -4562,29 +4994,40 @@ public class AccountsApi {
    * Updates a permission profile within the specified account..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param permissionProfileId  (required)
-   * @param permissionProfile  (optional)
+   * @param permissionProfileId (required)
+   * @param permissionProfile (optional)
    * @param options for modifying the method behavior.
    * @return PermissionProfile
    * @throws ApiException if fails to make API call
    */
-  public PermissionProfile updatePermissionProfile(String accountId, String permissionProfileId, PermissionProfile permissionProfile, AccountsApi.UpdatePermissionProfileOptions options) throws ApiException {
+  public PermissionProfile updatePermissionProfile(
+      String accountId,
+      String permissionProfileId,
+      PermissionProfile permissionProfile,
+      AccountsApi.UpdatePermissionProfileOptions options)
+      throws ApiException {
     Object localVarPostBody = permissionProfile;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updatePermissionProfile");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updatePermissionProfile");
     }
 
     // verify the required parameter 'permissionProfileId' is set
     if (permissionProfileId == null) {
-      throw new ApiException(400, "Missing the required parameter 'permissionProfileId' when calling updatePermissionProfile");
+      throw new ApiException(
+          400,
+          "Missing the required parameter 'permissionProfileId' when calling updatePermissionProfile");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "permissionProfileId" + "\\}", apiClient.escapeString(permissionProfileId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/permission_profiles/{permissionProfileId}"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+            .replaceAll(
+                "\\{" + "permissionProfileId" + "\\}",
+                apiClient.escapeString(permissionProfileId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4596,44 +5039,52 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<PermissionProfile> localVarReturnType = new GenericType<PermissionProfile>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
-   * Updates the account settings for an account..
-   * Updates the account settings for the specified account.
+   * Updates the account settings for an account.. Updates the account settings for the specified
+   * account.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSettingsInformation  (optional)
+   * @param accountSettingsInformation (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateSettings(String accountId, AccountSettingsInformation accountSettingsInformation) throws ApiException {
+  public void updateSettings(
+      String accountId, AccountSettingsInformation accountSettingsInformation) throws ApiException {
     Object localVarPostBody = accountSettingsInformation;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSettings");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateSettings");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/settings"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/settings"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4641,121 +5092,122 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
-
-    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        null);
   }
   /// <summary>
-  /// Reserved: Sets the shared access information for users. Reserved: Sets the shared access information for one or more users.
+  /// Reserved: Sets the shared access information for users. Reserved: Sets the shared access
+  // information for one or more users.
   /// </summary>
 
- /**
-  * UpdateSharedAccessOptions Class.
-  *
-  **/
-  public class UpdateSharedAccessOptions
-  {
-  private String itemType = null;
-  private String preserveExistingSharedAccess = null;
-  private String userIds = null;
+  /** UpdateSharedAccessOptions Class. */
+  public class UpdateSharedAccessOptions {
+    private String itemType = null;
+    private String preserveExistingSharedAccess = null;
+    private String userIds = null;
 
- /**
-  * setItemType method.
-  */
-  public void setItemType(String itemType) {
-    this.itemType = itemType;
+    /** setItemType method. */
+    public void setItemType(String itemType) {
+      this.itemType = itemType;
+    }
+
+    /**
+     * getItemType method.
+     *
+     * @return String
+     */
+    public String getItemType() {
+      return this.itemType;
+    }
+
+    /** setPreserveExistingSharedAccess method. */
+    public void setPreserveExistingSharedAccess(String preserveExistingSharedAccess) {
+      this.preserveExistingSharedAccess = preserveExistingSharedAccess;
+    }
+
+    /**
+     * getPreserveExistingSharedAccess method.
+     *
+     * @return String
+     */
+    public String getPreserveExistingSharedAccess() {
+      return this.preserveExistingSharedAccess;
+    }
+
+    /** setUserIds method. */
+    public void setUserIds(String userIds) {
+      this.userIds = userIds;
+    }
+
+    /**
+     * getUserIds method.
+     *
+     * @return String
+     */
+    public String getUserIds() {
+      return this.userIds;
+    }
   }
 
- /**
-  * getItemType method.
-  *
-  * @return String
-  */
-  public String getItemType() {
-    return this.itemType;
-  }
-
- /**
-  * setPreserveExistingSharedAccess method.
-  */
-  public void setPreserveExistingSharedAccess(String preserveExistingSharedAccess) {
-    this.preserveExistingSharedAccess = preserveExistingSharedAccess;
-  }
-
- /**
-  * getPreserveExistingSharedAccess method.
-  *
-  * @return String
-  */
-  public String getPreserveExistingSharedAccess() {
-    return this.preserveExistingSharedAccess;
-  }
-
- /**
-  * setUserIds method.
-  */
-  public void setUserIds(String userIds) {
-    this.userIds = userIds;
-  }
-
- /**
-  * getUserIds method.
-  *
-  * @return String
-  */
-  public String getUserIds() {
-    return this.userIds;
-  }
-  }
-
-   /**
-   * Reserved: Sets the shared access information for users..
-   * Reserved: Sets the shared access information for one or more users.
+  /**
+   * Reserved: Sets the shared access information for users.. Reserved: Sets the shared access
+   * information for one or more users.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSharedAccess  (optional)
+   * @param accountSharedAccess (optional)
    * @return AccountSharedAccess
    */
-  public AccountSharedAccess updateSharedAccess(String accountId, AccountSharedAccess accountSharedAccess) throws ApiException {
+  public AccountSharedAccess updateSharedAccess(
+      String accountId, AccountSharedAccess accountSharedAccess) throws ApiException {
     return updateSharedAccess(accountId, accountSharedAccess, null);
   }
 
   /**
-   * Reserved: Sets the shared access information for users..
-   * Reserved: Sets the shared access information for one or more users.
+   * Reserved: Sets the shared access information for users.. Reserved: Sets the shared access
+   * information for one or more users.
+   *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param accountSharedAccess  (optional)
+   * @param accountSharedAccess (optional)
    * @param options for modifying the method behavior.
    * @return AccountSharedAccess
    * @throws ApiException if fails to make API call
    */
-  public AccountSharedAccess updateSharedAccess(String accountId, AccountSharedAccess accountSharedAccess, AccountsApi.UpdateSharedAccessOptions options) throws ApiException {
+  public AccountSharedAccess updateSharedAccess(
+      String accountId,
+      AccountSharedAccess accountSharedAccess,
+      AccountsApi.UpdateSharedAccessOptions options)
+      throws ApiException {
     Object localVarPostBody = accountSharedAccess;
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateSharedAccess");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateSharedAccess");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/shared_access"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/shared_access"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4765,37 +5217,45 @@ public class AccountsApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("item_type", options.itemType));
-    }if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("preserve_existing_shared_access", options.preserveExistingSharedAccess));
-    }if (options != null) {
+    }
+    if (options != null) {
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "preserve_existing_shared_access", options.preserveExistingSharedAccess));
+    }
+    if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("user_ids", options.userIds));
     }
 
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<AccountSharedAccess> localVarReturnType = new GenericType<AccountSharedAccess>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 
   /**
    * Update watermark information..
    *
    * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param watermark  (optional)
+   * @param watermark (optional)
    * @return Watermark
    * @throws ApiException if fails to make API call
    */
@@ -4804,12 +5264,14 @@ public class AccountsApi {
 
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateWatermark");
+      throw new ApiException(
+          400, "Missing the required parameter 'accountId' when calling updateWatermark");
     }
 
     // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/watermark"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+    String localVarPath =
+        "/v2.1/accounts/{accountId}/watermark"
+            .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -4817,25 +5279,27 @@ public class AccountsApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-
-
-
-
-
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
+    final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
-    final String[] localVarContentTypes = {
+    final String[] localVarContentTypes = {};
 
-    };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    String[] localVarAuthNames = new String[] {"docusignAccessCode"};
 
     GenericType<Watermark> localVarReturnType = new GenericType<Watermark>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+    return apiClient.invokeAPI(
+        localVarPath,
+        "PUT",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType);
+  }
 }

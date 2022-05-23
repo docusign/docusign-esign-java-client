@@ -1,20 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ListCustomField;
-import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * CustomFieldsEnvelope.
- *
- */
-
+/** CustomFieldsEnvelope. */
 public class CustomFieldsEnvelope {
   @JsonProperty("listCustomFields")
   private java.util.List<ListCustomField> listCustomFields = null;
@@ -22,25 +12,24 @@ public class CustomFieldsEnvelope {
   @JsonProperty("textCustomFields")
   private java.util.List<TextCustomField> textCustomFields = null;
 
-
   /**
    * listCustomFields.
    *
    * @return CustomFieldsEnvelope
-   **/
+   */
   public CustomFieldsEnvelope listCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
     return this;
   }
-  
+
   /**
    * addListCustomFieldsItem.
    *
    * @return CustomFieldsEnvelope
-   **/
+   */
   public CustomFieldsEnvelope addListCustomFieldsItem(ListCustomField listCustomFieldsItem) {
     if (this.listCustomFields == null) {
-      this.listCustomFields = new java.util.ArrayList<ListCustomField>();
+      this.listCustomFields = new java.util.ArrayList<>();
     }
     this.listCustomFields.add(listCustomFieldsItem);
     return this;
@@ -48,39 +37,37 @@ public class CustomFieldsEnvelope {
 
   /**
    * An array of list custom fields..
+   *
    * @return listCustomFields
-   **/
+   */
   @ApiModelProperty(value = "An array of list custom fields.")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
 
-  /**
-   * setListCustomFields.
-   **/
+  /** setListCustomFields. */
   public void setListCustomFields(java.util.List<ListCustomField> listCustomFields) {
     this.listCustomFields = listCustomFields;
   }
-
 
   /**
    * textCustomFields.
    *
    * @return CustomFieldsEnvelope
-   **/
+   */
   public CustomFieldsEnvelope textCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
     return this;
   }
-  
+
   /**
    * addTextCustomFieldsItem.
    *
    * @return CustomFieldsEnvelope
-   **/
+   */
   public CustomFieldsEnvelope addTextCustomFieldsItem(TextCustomField textCustomFieldsItem) {
     if (this.textCustomFields == null) {
-      this.textCustomFields = new java.util.ArrayList<TextCustomField>();
+      this.textCustomFields = new java.util.ArrayList<>();
     }
     this.textCustomFields.add(textCustomFieldsItem);
     return this;
@@ -88,20 +75,18 @@ public class CustomFieldsEnvelope {
 
   /**
    * An array of text custom fields..
+   *
    * @return textCustomFields
-   **/
+   */
   @ApiModelProperty(value = "An array of text custom fields.")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
   }
 
-  /**
-   * setTextCustomFields.
-   **/
+  /** setTextCustomFields. */
   public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
   }
-
 
   /**
    * Compares objects.
@@ -117,27 +102,22 @@ public class CustomFieldsEnvelope {
       return false;
     }
     CustomFieldsEnvelope customFieldsEnvelope = (CustomFieldsEnvelope) o;
-    return Objects.equals(this.listCustomFields, customFieldsEnvelope.listCustomFields) &&
-        Objects.equals(this.textCustomFields, customFieldsEnvelope.textCustomFields);
+    return Objects.equals(this.listCustomFields, customFieldsEnvelope.listCustomFields)
+        && Objects.equals(this.textCustomFields, customFieldsEnvelope.textCustomFields);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(listCustomFields, textCustomFields);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFieldsEnvelope {\n");
-    
+
     sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
     sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
@@ -145,8 +125,7 @@ public class CustomFieldsEnvelope {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -154,6 +133,4 @@ public class CustomFieldsEnvelope {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

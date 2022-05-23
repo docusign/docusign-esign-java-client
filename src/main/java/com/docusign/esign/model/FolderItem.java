@@ -1,16 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.CustomFieldV2;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * FolderItem
- */
-
+/** FolderItem */
 public class FolderItem {
   @JsonProperty("completedDateTime")
   private String completedDateTime = null;
@@ -80,11 +74,14 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * Specifies the date and time this item was completed.
+   *
    * @return completedDateTime
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the date and time this item was completed.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
@@ -98,10 +95,11 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * Indicates the date and time the item was created.
+   *
    * @return createdDateTime
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
@@ -121,11 +119,17 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.
+  /**
+   * An optional array of strings that allows the sender to provide custom data about the recipient.
+   * This information is returned in the envelope status but otherwise not used by DocuSign. Each
+   * customField string can be a maximum of 100 characters.
+   *
    * @return customFields
-  **/
-  @ApiModelProperty(example = "null", value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<CustomFieldV2> getCustomFields() {
     return customFields;
   }
@@ -139,10 +143,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return description
-  **/
+  /** @return description */
   @ApiModelProperty(example = "null", value = "")
   public String getDescription() {
     return description;
@@ -157,11 +158,14 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * The envelope ID of the envelope status that failed to post.
+   *
    * @return envelopeId
-  **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -175,11 +179,15 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+   *
    * @return envelopeUri
-  **/
-  @ApiModelProperty(example = "null", value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -193,11 +201,14 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, indicates that this module is enabled on the account.
+   *
    * @return is21CFRPart11
-  **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, indicates that this module is enabled on the account.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -211,10 +222,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return isSignatureProviderEnvelope
-  **/
+  /** @return isSignatureProviderEnvelope */
   @ApiModelProperty(example = "null", value = "")
   public String getIsSignatureProviderEnvelope() {
     return isSignatureProviderEnvelope;
@@ -229,10 +237,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return lastModified
-  **/
+  /** @return lastModified */
   @ApiModelProperty(example = "null", value = "")
   public String getLastModified() {
     return lastModified;
@@ -247,10 +252,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return name
-  **/
+  /** @return name */
   @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
@@ -265,10 +267,11 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * Name of the envelope owner.
+   *
    * @return ownerName
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Name of the envelope owner.")
   public String getOwnerName() {
     return ownerName;
@@ -283,10 +286,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return pageCount
-  **/
+  /** @return pageCount */
   @ApiModelProperty(example = "null", value = "")
   public Integer getPageCount() {
     return pageCount;
@@ -301,10 +301,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return password
-  **/
+  /** @return password */
   @ApiModelProperty(example = "null", value = "")
   public String getPassword() {
     return password;
@@ -319,10 +316,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return senderEmail
-  **/
+  /** @return senderEmail */
   @ApiModelProperty(example = "null", value = "")
   public String getSenderEmail() {
     return senderEmail;
@@ -337,10 +331,11 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * Name of the envelope sender.
+   *
    * @return senderName
-  **/
+   */
   @ApiModelProperty(example = "null", value = "Name of the envelope sender.")
   public String getSenderName() {
     return senderName;
@@ -355,10 +350,11 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * The date and time the envelope was sent.
+   *
    * @return sentDateTime
-  **/
+   */
   @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
@@ -373,10 +369,11 @@ public class FolderItem {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, this custom tab is shared.
+   *
    * @return shared
-  **/
+   */
   @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
@@ -391,11 +388,16 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   *
    * @return status
-  **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -409,10 +411,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return subject
-  **/
+  /** @return subject */
   @ApiModelProperty(example = "null", value = "")
   public String getSubject() {
     return subject;
@@ -427,11 +426,15 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. 
+  /**
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   *
    * @return templateId
-  **/
-  @ApiModelProperty(example = "null", value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -445,10 +448,7 @@ public class FolderItem {
     return this;
   }
 
-   /**
-   * 
-   * @return uri
-  **/
+  /** @return uri */
   @ApiModelProperty(example = "null", value = "")
   public String getUri() {
     return uri;
@@ -457,7 +457,6 @@ public class FolderItem {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -468,40 +467,60 @@ public class FolderItem {
       return false;
     }
     FolderItem folderItem = (FolderItem) o;
-    return Objects.equals(this.completedDateTime, folderItem.completedDateTime) &&
-        Objects.equals(this.createdDateTime, folderItem.createdDateTime) &&
-        Objects.equals(this.customFields, folderItem.customFields) &&
-        Objects.equals(this.description, folderItem.description) &&
-        Objects.equals(this.envelopeId, folderItem.envelopeId) &&
-        Objects.equals(this.envelopeUri, folderItem.envelopeUri) &&
-        Objects.equals(this.is21CFRPart11, folderItem.is21CFRPart11) &&
-        Objects.equals(this.isSignatureProviderEnvelope, folderItem.isSignatureProviderEnvelope) &&
-        Objects.equals(this.lastModified, folderItem.lastModified) &&
-        Objects.equals(this.name, folderItem.name) &&
-        Objects.equals(this.ownerName, folderItem.ownerName) &&
-        Objects.equals(this.pageCount, folderItem.pageCount) &&
-        Objects.equals(this.password, folderItem.password) &&
-        Objects.equals(this.senderEmail, folderItem.senderEmail) &&
-        Objects.equals(this.senderName, folderItem.senderName) &&
-        Objects.equals(this.sentDateTime, folderItem.sentDateTime) &&
-        Objects.equals(this.shared, folderItem.shared) &&
-        Objects.equals(this.status, folderItem.status) &&
-        Objects.equals(this.subject, folderItem.subject) &&
-        Objects.equals(this.templateId, folderItem.templateId) &&
-        Objects.equals(this.uri, folderItem.uri);
+    return Objects.equals(this.completedDateTime, folderItem.completedDateTime)
+        && Objects.equals(this.createdDateTime, folderItem.createdDateTime)
+        && Objects.equals(this.customFields, folderItem.customFields)
+        && Objects.equals(this.description, folderItem.description)
+        && Objects.equals(this.envelopeId, folderItem.envelopeId)
+        && Objects.equals(this.envelopeUri, folderItem.envelopeUri)
+        && Objects.equals(this.is21CFRPart11, folderItem.is21CFRPart11)
+        && Objects.equals(this.isSignatureProviderEnvelope, folderItem.isSignatureProviderEnvelope)
+        && Objects.equals(this.lastModified, folderItem.lastModified)
+        && Objects.equals(this.name, folderItem.name)
+        && Objects.equals(this.ownerName, folderItem.ownerName)
+        && Objects.equals(this.pageCount, folderItem.pageCount)
+        && Objects.equals(this.password, folderItem.password)
+        && Objects.equals(this.senderEmail, folderItem.senderEmail)
+        && Objects.equals(this.senderName, folderItem.senderName)
+        && Objects.equals(this.sentDateTime, folderItem.sentDateTime)
+        && Objects.equals(this.shared, folderItem.shared)
+        && Objects.equals(this.status, folderItem.status)
+        && Objects.equals(this.subject, folderItem.subject)
+        && Objects.equals(this.templateId, folderItem.templateId)
+        && Objects.equals(this.uri, folderItem.uri);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(completedDateTime, createdDateTime, customFields, description, envelopeId, envelopeUri, is21CFRPart11, isSignatureProviderEnvelope, lastModified, name, ownerName, pageCount, password, senderEmail, senderName, sentDateTime, shared, status, subject, templateId, uri);
+    return Objects.hash(
+        completedDateTime,
+        createdDateTime,
+        customFields,
+        description,
+        envelopeId,
+        envelopeUri,
+        is21CFRPart11,
+        isSignatureProviderEnvelope,
+        lastModified,
+        name,
+        ownerName,
+        pageCount,
+        password,
+        senderEmail,
+        senderName,
+        sentDateTime,
+        shared,
+        status,
+        subject,
+        templateId,
+        uri);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItem {\n");
-    
+
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
@@ -509,7 +528,9 @@ public class FolderItem {
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    envelopeUri: ").append(toIndentedString(envelopeUri)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
-    sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");
+    sb.append("    isSignatureProviderEnvelope: ")
+        .append(toIndentedString(isSignatureProviderEnvelope))
+        .append("\n");
     sb.append("    lastModified: ").append(toIndentedString(lastModified)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    ownerName: ").append(toIndentedString(ownerName)).append("\n");
@@ -528,8 +549,7 @@ public class FolderItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -537,6 +557,4 @@ public class FolderItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

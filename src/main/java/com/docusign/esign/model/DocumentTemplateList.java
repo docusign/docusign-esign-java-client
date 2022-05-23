@@ -1,42 +1,33 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DocumentTemplate;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DocumentTemplateList.
- *
- */
-
+/** DocumentTemplateList. */
 public class DocumentTemplateList {
   @JsonProperty("documentTemplates")
   private java.util.List<DocumentTemplate> documentTemplates = null;
-
 
   /**
    * documentTemplates.
    *
    * @return DocumentTemplateList
-   **/
-  public DocumentTemplateList documentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
+   */
+  public DocumentTemplateList documentTemplates(
+      java.util.List<DocumentTemplate> documentTemplates) {
     this.documentTemplates = documentTemplates;
     return this;
   }
-  
+
   /**
    * addDocumentTemplatesItem.
    *
    * @return DocumentTemplateList
-   **/
+   */
   public DocumentTemplateList addDocumentTemplatesItem(DocumentTemplate documentTemplatesItem) {
     if (this.documentTemplates == null) {
-      this.documentTemplates = new java.util.ArrayList<DocumentTemplate>();
+      this.documentTemplates = new java.util.ArrayList<>();
     }
     this.documentTemplates.add(documentTemplatesItem);
     return this;
@@ -44,20 +35,18 @@ public class DocumentTemplateList {
 
   /**
    * .
+   *
    * @return documentTemplates
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<DocumentTemplate> getDocumentTemplates() {
     return documentTemplates;
   }
 
-  /**
-   * setDocumentTemplates.
-   **/
+  /** setDocumentTemplates. */
   public void setDocumentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
     this.documentTemplates = documentTemplates;
   }
-
 
   /**
    * Compares objects.
@@ -76,31 +65,25 @@ public class DocumentTemplateList {
     return Objects.equals(this.documentTemplates, documentTemplateList.documentTemplates);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(documentTemplates);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
-    
+
     sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,6 +91,4 @@ public class DocumentTemplateList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

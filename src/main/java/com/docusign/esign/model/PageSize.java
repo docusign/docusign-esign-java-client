@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * PageSize
- */
-
+/** PageSize */
 public class PageSize {
   @JsonProperty("pageHeight")
   private String pageHeight = null;
@@ -22,10 +17,7 @@ public class PageSize {
     return this;
   }
 
-   /**
-   * 
-   * @return pageHeight
-  **/
+  /** @return pageHeight */
   @ApiModelProperty(example = "null", value = "")
   public String getPageHeight() {
     return pageHeight;
@@ -40,10 +32,7 @@ public class PageSize {
     return this;
   }
 
-   /**
-   * 
-   * @return pageWidth
-  **/
+  /** @return pageWidth */
   @ApiModelProperty(example = "null", value = "")
   public String getPageWidth() {
     return pageWidth;
@@ -52,7 +41,6 @@ public class PageSize {
   public void setPageWidth(String pageWidth) {
     this.pageWidth = pageWidth;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -63,8 +51,8 @@ public class PageSize {
       return false;
     }
     PageSize pageSize = (PageSize) o;
-    return Objects.equals(this.pageHeight, pageSize.pageHeight) &&
-        Objects.equals(this.pageWidth, pageSize.pageWidth);
+    return Objects.equals(this.pageHeight, pageSize.pageHeight)
+        && Objects.equals(this.pageWidth, pageSize.pageWidth);
   }
 
   @Override
@@ -72,12 +60,11 @@ public class PageSize {
     return Objects.hash(pageHeight, pageWidth);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageSize {\n");
-    
+
     sb.append("    pageHeight: ").append(toIndentedString(pageHeight)).append("\n");
     sb.append("    pageWidth: ").append(toIndentedString(pageWidth)).append("\n");
     sb.append("}");
@@ -85,8 +72,7 @@ public class PageSize {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +80,4 @@ public class PageSize {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

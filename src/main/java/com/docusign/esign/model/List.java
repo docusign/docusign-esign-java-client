@@ -1,23 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.ListItem;
-import com.docusign.esign.model.LocalePolicyTab;
-import com.docusign.esign.model.MergeField;
-import com.docusign.esign.model.PropertyMetadata;
-import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * List
- */
-
+/** List */
 public class List {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -327,10 +314,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return anchorAllowWhiteSpaceInCharacters
-  **/
+  /** @return anchorAllowWhiteSpaceInCharacters */
   @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
@@ -340,21 +324,24 @@ public class List {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-  public List anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public List anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
-   /**
+  /**
    * Get anchorAllowWhiteSpaceInCharactersMetadata
+   *
    * @return anchorAllowWhiteSpaceInCharactersMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
-  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
@@ -363,11 +350,15 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.
+  /**
+   * When set to **true**, the anchor string does not consider case when matching strings in the
+   * document. The default value is **true**.
+   *
    * @return anchorCaseSensitive
-  **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -381,10 +372,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorCaseSensitiveMetadata
+   *
    * @return anchorCaseSensitiveMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
@@ -399,11 +391,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.
+  /**
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or
+   * **right**. The default value is **left**.
+   *
    * @return anchorHorizontalAlignment
-  **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -412,21 +408,24 @@ public class List {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
-  public List anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  public List anchorHorizontalAlignmentMetadata(
+      PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
 
-   /**
+  /**
    * Get anchorHorizontalAlignmentMetadata
+   *
    * @return anchorHorizontalAlignmentMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
 
-  public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  public void setAnchorHorizontalAlignmentMetadata(
+      PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
@@ -435,11 +434,14 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document.
+   *
    * @return anchorIgnoreIfNotPresent
-  **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -453,16 +455,18 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorIgnoreIfNotPresentMetadata
+   *
    * @return anchorIgnoreIfNotPresentMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
 
-  public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  public void setAnchorIgnoreIfNotPresentMetadata(
+      PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
@@ -471,11 +475,15 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.
+  /**
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded
+   * in other strings are ignored.) The default value is **true**.
+   *
    * @return anchorMatchWholeWord
-  **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -489,10 +497,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorMatchWholeWordMetadata
+   *
    * @return anchorMatchWholeWordMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
@@ -507,10 +516,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Anchor text information for a radio button.
+   *
    * @return anchorString
-  **/
+   */
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
@@ -525,10 +535,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorStringMetadata
+   *
    * @return anchorStringMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
@@ -543,10 +554,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return anchorTabProcessorVersion
-  **/
+  /** @return anchorTabProcessorVersion */
   @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
@@ -556,21 +564,24 @@ public class List {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
-  public List anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+  public List anchorTabProcessorVersionMetadata(
+      PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
 
-   /**
+  /**
    * Get anchorTabProcessorVersionMetadata
+   *
    * @return anchorTabProcessorVersionMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
 
-  public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
+  public void setAnchorTabProcessorVersionMetadata(
+      PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
@@ -579,11 +590,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.
+  /**
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or
+   * inches.
+   *
    * @return anchorUnits
-  **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -597,10 +612,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorUnitsMetadata
+   *
    * @return anchorUnitsMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
@@ -615,11 +631,14 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+   *
    * @return anchorXOffset
-  **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -633,10 +652,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorXOffsetMetadata
+   *
    * @return anchorXOffsetMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
@@ -651,11 +671,14 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+   *
    * @return anchorYOffset
-  **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -669,10 +692,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get anchorYOffsetMetadata
+   *
    * @return anchorYOffsetMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
@@ -687,10 +711,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the information in the tab is bold.
+   *
    * @return bold
-  **/
+   */
   @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
@@ -705,10 +730,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get boldMetadata
+   *
    * @return boldMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
@@ -723,11 +749,15 @@ public class List {
     return this;
   }
 
-   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.
+  /**
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's
+   * visibility.
+   *
    * @return conditionalParentLabel
-  **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+   */
+  @ApiModelProperty(
+      value =
+          "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -741,10 +771,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get conditionalParentLabelMetadata
+   *
    * @return conditionalParentLabelMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
@@ -759,11 +790,16 @@ public class List {
     return this;
   }
 
-   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. 
+  /**
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.
+   * If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use
+   * \"on\" as the value to show that the parent tab is active.
+   *
    * @return conditionalParentValue
-  **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+   */
+  @ApiModelProperty(
+      value =
+          "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -777,10 +813,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get conditionalParentValueMetadata
+   *
    * @return conditionalParentValueMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
@@ -795,11 +832,16 @@ public class List {
     return this;
   }
 
-   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.
+  /**
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used
+   * when adding new tabs for a recipient. When used, the new tab inherits all the custom tab
+   * properties.
+   *
    * @return customTabId
-  **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+   */
+  @ApiModelProperty(
+      value =
+          "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -813,10 +855,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get customTabIdMetadata
+   *
    * @return customTabIdMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
@@ -831,11 +874,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Document's ID attribute.
+   *
    * @return documentId
-  **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -849,10 +896,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get documentIdMetadata
+   *
    * @return documentIdMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
@@ -867,10 +915,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get errorDetails
+   *
    * @return errorDetails
-  **/
+   */
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -885,11 +934,16 @@ public class List {
     return this;
   }
 
-   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.
+  /**
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri,
+   * CourierNew, Garamond, Georgia, Helvetica, LucidaConsole, Tahoma, TimesNewRoman, Trebuchet,
+   * Verdana, MSGothic, MSMincho, Default.
+   *
    * @return font
-  **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+   */
+  @ApiModelProperty(
+      value =
+          "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -903,11 +957,15 @@ public class List {
     return this;
   }
 
-   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+  /**
+   * The font color used for the information in the tab. Possible values are: Black, BrightBlue,
+   * BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
+   *
    * @return fontColor
-  **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+   */
+  @ApiModelProperty(
+      value =
+          "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -921,10 +979,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get fontColorMetadata
+   *
    * @return fontColorMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
@@ -939,10 +998,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get fontMetadata
+   *
    * @return fontMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
@@ -957,11 +1017,16 @@ public class List {
     return this;
   }
 
-   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.
+  /**
+   * The font size used for the information in the tab. Possible values are: Size7, Size8, Size9,
+   * Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36,
+   * Size48, or Size72.
+   *
    * @return fontSize
-  **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+   */
+  @ApiModelProperty(
+      value =
+          "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -975,10 +1040,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get fontSizeMetadata
+   *
    * @return fontSizeMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
@@ -993,10 +1059,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return formOrder
-  **/
+  /** @return formOrder */
   @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
@@ -1011,10 +1074,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get formOrderMetadata
+   *
    * @return formOrderMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
@@ -1029,10 +1093,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return formPageLabel
-  **/
+  /** @return formPageLabel */
   @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
@@ -1047,10 +1108,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get formPageLabelMetadata
+   *
    * @return formPageLabelMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
@@ -1065,10 +1127,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return formPageNumber
-  **/
+  /** @return formPageNumber */
   @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
@@ -1083,10 +1142,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get formPageNumberMetadata
+   *
    * @return formPageNumberMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
@@ -1101,10 +1161,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Height of the tab in pixels.
+   *
    * @return height
-  **/
+   */
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
@@ -1119,10 +1180,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get heightMetadata
+   *
    * @return heightMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
@@ -1137,10 +1199,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the information in the tab is italic.
+   *
    * @return italic
-  **/
+   */
   @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
@@ -1155,10 +1218,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get italicMetadata
+   *
    * @return italicMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
@@ -1181,11 +1245,16 @@ public class List {
     return this;
   }
 
-   /**
-   * The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  
+  /**
+   * The list of values that can be selected by senders. The list values are separated by
+   * semi-colons. Example: [one;two;three;four] Maximum Length of listItems: 2048 characters.
+   * Maximum Length of items in the list: 100 characters.
+   *
    * @return listItems
-  **/
-  @ApiModelProperty(value = "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
+   */
+  @ApiModelProperty(
+      value =
+          "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
   public java.util.List<ListItem> getListItems() {
     return listItems;
   }
@@ -1199,10 +1268,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return listSelectedValue
-  **/
+  /** @return listSelectedValue */
   @ApiModelProperty(value = "")
   public String getListSelectedValue() {
     return listSelectedValue;
@@ -1217,10 +1283,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get listSelectedValueMetadata
+   *
    * @return listSelectedValueMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getListSelectedValueMetadata() {
     return listSelectedValueMetadata;
@@ -1235,10 +1302,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get localePolicy
+   *
    * @return localePolicy
-  **/
+   */
   @ApiModelProperty(value = "")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
@@ -1253,11 +1321,13 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the signer cannot change the data of the custom tab.
+   *
    * @return locked
-  **/
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+   */
+  @ApiModelProperty(
+      value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1271,10 +1341,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get lockedMetadata
+   *
    * @return lockedMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
@@ -1289,10 +1360,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get mergeField
+   *
    * @return mergeField
-  **/
+   */
   @ApiModelProperty(value = "")
   public MergeField getMergeField() {
     return mergeField;
@@ -1307,10 +1379,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return mergeFieldXml
-  **/
+  /** @return mergeFieldXml */
   @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
@@ -1325,10 +1394,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Specifies the page number on which the tab is located.
+   *
    * @return pageNumber
-  **/
+   */
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
@@ -1343,10 +1413,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get pageNumberMetadata
+   *
    * @return pageNumberMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
@@ -1361,11 +1432,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * the Document.
+   *
    * @return recipientId
-  **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   */
+  @ApiModelProperty(
+      value =
+          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1379,10 +1454,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return recipientIdGuid
-  **/
+  /** @return recipientIdGuid */
   @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
@@ -1397,10 +1469,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get recipientIdGuidMetadata
+   *
    * @return recipientIdGuidMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
@@ -1415,10 +1488,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get recipientIdMetadata
+   *
    * @return recipientIdMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
@@ -1433,11 +1507,15 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. 
+  /**
+   * When set to **true** and shared is true, information must be entered in this field to complete
+   * the envelope.
+   *
    * @return requireAll
-  **/
-  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -1451,10 +1529,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get requireAllMetadata
+   *
    * @return requireAllMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
@@ -1469,10 +1548,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the signer is required to fill out this tab
+   *
    * @return required
-  **/
+   */
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
@@ -1487,10 +1567,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get requiredMetadata
+   *
    * @return requiredMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
@@ -1505,11 +1586,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.
+  /**
+   * Optional element for field markup. When set to **true**, the signer is required to initial when
+   * they modify a shared field.
+   *
    * @return requireInitialOnSharedChange
-  **/
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+   */
+  @ApiModelProperty(
+      value =
+          "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -1518,21 +1603,24 @@ public class List {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
-  public List requireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
+  public List requireInitialOnSharedChangeMetadata(
+      PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
     return this;
   }
 
-   /**
+  /**
    * Get requireInitialOnSharedChangeMetadata
+   *
    * @return requireInitialOnSharedChangeMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
 
-  public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
+  public void setRequireInitialOnSharedChangeMetadata(
+      PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
 
@@ -1541,11 +1629,16 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.
+  /**
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the
+   * template. This value tab can only be changed by modifying (PUT) the template. Tabs with a
+   * `senderRequired` value of true cannot be deleted from an envelope.
+   *
    * @return senderRequired
-  **/
-  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
@@ -1559,10 +1652,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get senderRequiredMetadata
+   *
    * @return senderRequiredMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
@@ -1577,10 +1671,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, this custom tab is shared.
+   *
    * @return shared
-  **/
+   */
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
@@ -1595,10 +1690,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get sharedMetadata
+   *
    * @return sharedMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
@@ -1613,10 +1709,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get smartContractInformation
+   *
    * @return smartContractInformation
-  **/
+   */
   @ApiModelProperty(value = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
@@ -1631,10 +1728,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return source
-  **/
+  /** @return source */
   @ApiModelProperty(value = "")
   public String getSource() {
     return source;
@@ -1649,11 +1743,15 @@ public class List {
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   *
    * @return status
-  **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1667,10 +1765,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get statusMetadata
+   *
    * @return statusMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
@@ -1693,10 +1792,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return tabGroupLabels
-  **/
+  /** @return tabGroupLabels */
   @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
@@ -1711,10 +1807,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get tabGroupLabelsMetadata
+   *
    * @return tabGroupLabelsMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
@@ -1729,11 +1826,14 @@ public class List {
     return this;
   }
 
-   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     
+  /**
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   *
    * @return tabId
-  **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+   */
+  @ApiModelProperty(
+      value =
+          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1747,10 +1847,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get tabIdMetadata
+   *
    * @return tabIdMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
@@ -1765,10 +1866,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * The label string associated with the tab.
+   *
    * @return tabLabel
-  **/
+   */
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
@@ -1783,10 +1885,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get tabLabelMetadata
+   *
    * @return tabLabelMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
@@ -1801,10 +1904,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return tabOrder
-  **/
+  /** @return tabOrder */
   @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
@@ -1819,10 +1919,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get tabOrderMetadata
+   *
    * @return tabOrderMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
@@ -1837,10 +1938,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return tabType
-  **/
+  /** @return tabType */
   @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
@@ -1855,10 +1953,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get tabTypeMetadata
+   *
    * @return tabTypeMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
@@ -1873,11 +1972,15 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. 
+  /**
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
+   * working with template recipients.
+   *
    * @return templateLocked
-  **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1891,10 +1994,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get templateLockedMetadata
+   *
    * @return templateLockedMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
@@ -1909,11 +2013,15 @@ public class List {
     return this;
   }
 
-   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.
+  /**
+   * When set to **true**, the sender may not remove the recipient. Used only when working with
+   * template recipients.
+   *
    * @return templateRequired
-  **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1927,10 +2035,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get templateRequiredMetadata
+   *
    * @return templateRequiredMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
@@ -1945,10 +2054,7 @@ public class List {
     return this;
   }
 
-   /**
-   * 
-   * @return tooltip
-  **/
+  /** @return tooltip */
   @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
@@ -1963,10 +2069,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get toolTipMetadata
+   *
    * @return toolTipMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
@@ -1981,10 +2088,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the information in the tab is underlined.
+   *
    * @return underline
-  **/
+   */
   @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
@@ -1999,10 +2107,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get underlineMetadata
+   *
    * @return underlineMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
@@ -2017,10 +2126,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * The value to use when the item is selected.
+   *
    * @return value
-  **/
+   */
   @ApiModelProperty(value = "The value to use when the item is selected.")
   public String getValue() {
     return value;
@@ -2035,10 +2145,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get valueMetadata
+   *
    * @return valueMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
@@ -2053,10 +2164,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Width of the tab in pixels.
+   *
    * @return width
-  **/
+   */
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
@@ -2071,10 +2183,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get widthMetadata
+   *
    * @return widthMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
@@ -2089,11 +2202,15 @@ public class List {
     return this;
   }
 
-   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
+   * determining position.
+   *
    * @return xPosition
-  **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   */
+  @ApiModelProperty(
+      value =
+          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2107,10 +2224,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get xPositionMetadata
+   *
    * @return xPositionMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
@@ -2125,11 +2243,15 @@ public class List {
     return this;
   }
 
-   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.
+  /**
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
+   * determining position.
+   *
    * @return yPosition
-  **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   */
+  @ApiModelProperty(
+      value =
+          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -2143,10 +2265,11 @@ public class List {
     return this;
   }
 
-   /**
+  /**
    * Get yPositionMetadata
+   *
    * @return yPositionMetadata
-  **/
+   */
   @ApiModelProperty(value = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
@@ -2155,7 +2278,6 @@ public class List {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -2166,148 +2288,297 @@ public class List {
       return false;
     }
     List list = (List) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, list.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, list.anchorAllowWhiteSpaceInCharactersMetadata) &&
-        Objects.equals(this.anchorCaseSensitive, list.anchorCaseSensitive) &&
-        Objects.equals(this.anchorCaseSensitiveMetadata, list.anchorCaseSensitiveMetadata) &&
-        Objects.equals(this.anchorHorizontalAlignment, list.anchorHorizontalAlignment) &&
-        Objects.equals(this.anchorHorizontalAlignmentMetadata, list.anchorHorizontalAlignmentMetadata) &&
-        Objects.equals(this.anchorIgnoreIfNotPresent, list.anchorIgnoreIfNotPresent) &&
-        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, list.anchorIgnoreIfNotPresentMetadata) &&
-        Objects.equals(this.anchorMatchWholeWord, list.anchorMatchWholeWord) &&
-        Objects.equals(this.anchorMatchWholeWordMetadata, list.anchorMatchWholeWordMetadata) &&
-        Objects.equals(this.anchorString, list.anchorString) &&
-        Objects.equals(this.anchorStringMetadata, list.anchorStringMetadata) &&
-        Objects.equals(this.anchorTabProcessorVersion, list.anchorTabProcessorVersion) &&
-        Objects.equals(this.anchorTabProcessorVersionMetadata, list.anchorTabProcessorVersionMetadata) &&
-        Objects.equals(this.anchorUnits, list.anchorUnits) &&
-        Objects.equals(this.anchorUnitsMetadata, list.anchorUnitsMetadata) &&
-        Objects.equals(this.anchorXOffset, list.anchorXOffset) &&
-        Objects.equals(this.anchorXOffsetMetadata, list.anchorXOffsetMetadata) &&
-        Objects.equals(this.anchorYOffset, list.anchorYOffset) &&
-        Objects.equals(this.anchorYOffsetMetadata, list.anchorYOffsetMetadata) &&
-        Objects.equals(this.bold, list.bold) &&
-        Objects.equals(this.boldMetadata, list.boldMetadata) &&
-        Objects.equals(this.conditionalParentLabel, list.conditionalParentLabel) &&
-        Objects.equals(this.conditionalParentLabelMetadata, list.conditionalParentLabelMetadata) &&
-        Objects.equals(this.conditionalParentValue, list.conditionalParentValue) &&
-        Objects.equals(this.conditionalParentValueMetadata, list.conditionalParentValueMetadata) &&
-        Objects.equals(this.customTabId, list.customTabId) &&
-        Objects.equals(this.customTabIdMetadata, list.customTabIdMetadata) &&
-        Objects.equals(this.documentId, list.documentId) &&
-        Objects.equals(this.documentIdMetadata, list.documentIdMetadata) &&
-        Objects.equals(this.errorDetails, list.errorDetails) &&
-        Objects.equals(this.font, list.font) &&
-        Objects.equals(this.fontColor, list.fontColor) &&
-        Objects.equals(this.fontColorMetadata, list.fontColorMetadata) &&
-        Objects.equals(this.fontMetadata, list.fontMetadata) &&
-        Objects.equals(this.fontSize, list.fontSize) &&
-        Objects.equals(this.fontSizeMetadata, list.fontSizeMetadata) &&
-        Objects.equals(this.formOrder, list.formOrder) &&
-        Objects.equals(this.formOrderMetadata, list.formOrderMetadata) &&
-        Objects.equals(this.formPageLabel, list.formPageLabel) &&
-        Objects.equals(this.formPageLabelMetadata, list.formPageLabelMetadata) &&
-        Objects.equals(this.formPageNumber, list.formPageNumber) &&
-        Objects.equals(this.formPageNumberMetadata, list.formPageNumberMetadata) &&
-        Objects.equals(this.height, list.height) &&
-        Objects.equals(this.heightMetadata, list.heightMetadata) &&
-        Objects.equals(this.italic, list.italic) &&
-        Objects.equals(this.italicMetadata, list.italicMetadata) &&
-        Objects.equals(this.listItems, list.listItems) &&
-        Objects.equals(this.listSelectedValue, list.listSelectedValue) &&
-        Objects.equals(this.listSelectedValueMetadata, list.listSelectedValueMetadata) &&
-        Objects.equals(this.localePolicy, list.localePolicy) &&
-        Objects.equals(this.locked, list.locked) &&
-        Objects.equals(this.lockedMetadata, list.lockedMetadata) &&
-        Objects.equals(this.mergeField, list.mergeField) &&
-        Objects.equals(this.mergeFieldXml, list.mergeFieldXml) &&
-        Objects.equals(this.pageNumber, list.pageNumber) &&
-        Objects.equals(this.pageNumberMetadata, list.pageNumberMetadata) &&
-        Objects.equals(this.recipientId, list.recipientId) &&
-        Objects.equals(this.recipientIdGuid, list.recipientIdGuid) &&
-        Objects.equals(this.recipientIdGuidMetadata, list.recipientIdGuidMetadata) &&
-        Objects.equals(this.recipientIdMetadata, list.recipientIdMetadata) &&
-        Objects.equals(this.requireAll, list.requireAll) &&
-        Objects.equals(this.requireAllMetadata, list.requireAllMetadata) &&
-        Objects.equals(this.required, list.required) &&
-        Objects.equals(this.requiredMetadata, list.requiredMetadata) &&
-        Objects.equals(this.requireInitialOnSharedChange, list.requireInitialOnSharedChange) &&
-        Objects.equals(this.requireInitialOnSharedChangeMetadata, list.requireInitialOnSharedChangeMetadata) &&
-        Objects.equals(this.senderRequired, list.senderRequired) &&
-        Objects.equals(this.senderRequiredMetadata, list.senderRequiredMetadata) &&
-        Objects.equals(this.shared, list.shared) &&
-        Objects.equals(this.sharedMetadata, list.sharedMetadata) &&
-        Objects.equals(this.smartContractInformation, list.smartContractInformation) &&
-        Objects.equals(this.source, list.source) &&
-        Objects.equals(this.status, list.status) &&
-        Objects.equals(this.statusMetadata, list.statusMetadata) &&
-        Objects.equals(this.tabGroupLabels, list.tabGroupLabels) &&
-        Objects.equals(this.tabGroupLabelsMetadata, list.tabGroupLabelsMetadata) &&
-        Objects.equals(this.tabId, list.tabId) &&
-        Objects.equals(this.tabIdMetadata, list.tabIdMetadata) &&
-        Objects.equals(this.tabLabel, list.tabLabel) &&
-        Objects.equals(this.tabLabelMetadata, list.tabLabelMetadata) &&
-        Objects.equals(this.tabOrder, list.tabOrder) &&
-        Objects.equals(this.tabOrderMetadata, list.tabOrderMetadata) &&
-        Objects.equals(this.tabType, list.tabType) &&
-        Objects.equals(this.tabTypeMetadata, list.tabTypeMetadata) &&
-        Objects.equals(this.templateLocked, list.templateLocked) &&
-        Objects.equals(this.templateLockedMetadata, list.templateLockedMetadata) &&
-        Objects.equals(this.templateRequired, list.templateRequired) &&
-        Objects.equals(this.templateRequiredMetadata, list.templateRequiredMetadata) &&
-        Objects.equals(this.tooltip, list.tooltip) &&
-        Objects.equals(this.toolTipMetadata, list.toolTipMetadata) &&
-        Objects.equals(this.underline, list.underline) &&
-        Objects.equals(this.underlineMetadata, list.underlineMetadata) &&
-        Objects.equals(this.value, list.value) &&
-        Objects.equals(this.valueMetadata, list.valueMetadata) &&
-        Objects.equals(this.width, list.width) &&
-        Objects.equals(this.widthMetadata, list.widthMetadata) &&
-        Objects.equals(this.xPosition, list.xPosition) &&
-        Objects.equals(this.xPositionMetadata, list.xPositionMetadata) &&
-        Objects.equals(this.yPosition, list.yPosition) &&
-        Objects.equals(this.yPositionMetadata, list.yPositionMetadata);
+    return Objects.equals(
+            this.anchorAllowWhiteSpaceInCharacters, list.anchorAllowWhiteSpaceInCharacters)
+        && Objects.equals(
+            this.anchorAllowWhiteSpaceInCharactersMetadata,
+            list.anchorAllowWhiteSpaceInCharactersMetadata)
+        && Objects.equals(this.anchorCaseSensitive, list.anchorCaseSensitive)
+        && Objects.equals(this.anchorCaseSensitiveMetadata, list.anchorCaseSensitiveMetadata)
+        && Objects.equals(this.anchorHorizontalAlignment, list.anchorHorizontalAlignment)
+        && Objects.equals(
+            this.anchorHorizontalAlignmentMetadata, list.anchorHorizontalAlignmentMetadata)
+        && Objects.equals(this.anchorIgnoreIfNotPresent, list.anchorIgnoreIfNotPresent)
+        && Objects.equals(
+            this.anchorIgnoreIfNotPresentMetadata, list.anchorIgnoreIfNotPresentMetadata)
+        && Objects.equals(this.anchorMatchWholeWord, list.anchorMatchWholeWord)
+        && Objects.equals(this.anchorMatchWholeWordMetadata, list.anchorMatchWholeWordMetadata)
+        && Objects.equals(this.anchorString, list.anchorString)
+        && Objects.equals(this.anchorStringMetadata, list.anchorStringMetadata)
+        && Objects.equals(this.anchorTabProcessorVersion, list.anchorTabProcessorVersion)
+        && Objects.equals(
+            this.anchorTabProcessorVersionMetadata, list.anchorTabProcessorVersionMetadata)
+        && Objects.equals(this.anchorUnits, list.anchorUnits)
+        && Objects.equals(this.anchorUnitsMetadata, list.anchorUnitsMetadata)
+        && Objects.equals(this.anchorXOffset, list.anchorXOffset)
+        && Objects.equals(this.anchorXOffsetMetadata, list.anchorXOffsetMetadata)
+        && Objects.equals(this.anchorYOffset, list.anchorYOffset)
+        && Objects.equals(this.anchorYOffsetMetadata, list.anchorYOffsetMetadata)
+        && Objects.equals(this.bold, list.bold)
+        && Objects.equals(this.boldMetadata, list.boldMetadata)
+        && Objects.equals(this.conditionalParentLabel, list.conditionalParentLabel)
+        && Objects.equals(this.conditionalParentLabelMetadata, list.conditionalParentLabelMetadata)
+        && Objects.equals(this.conditionalParentValue, list.conditionalParentValue)
+        && Objects.equals(this.conditionalParentValueMetadata, list.conditionalParentValueMetadata)
+        && Objects.equals(this.customTabId, list.customTabId)
+        && Objects.equals(this.customTabIdMetadata, list.customTabIdMetadata)
+        && Objects.equals(this.documentId, list.documentId)
+        && Objects.equals(this.documentIdMetadata, list.documentIdMetadata)
+        && Objects.equals(this.errorDetails, list.errorDetails)
+        && Objects.equals(this.font, list.font)
+        && Objects.equals(this.fontColor, list.fontColor)
+        && Objects.equals(this.fontColorMetadata, list.fontColorMetadata)
+        && Objects.equals(this.fontMetadata, list.fontMetadata)
+        && Objects.equals(this.fontSize, list.fontSize)
+        && Objects.equals(this.fontSizeMetadata, list.fontSizeMetadata)
+        && Objects.equals(this.formOrder, list.formOrder)
+        && Objects.equals(this.formOrderMetadata, list.formOrderMetadata)
+        && Objects.equals(this.formPageLabel, list.formPageLabel)
+        && Objects.equals(this.formPageLabelMetadata, list.formPageLabelMetadata)
+        && Objects.equals(this.formPageNumber, list.formPageNumber)
+        && Objects.equals(this.formPageNumberMetadata, list.formPageNumberMetadata)
+        && Objects.equals(this.height, list.height)
+        && Objects.equals(this.heightMetadata, list.heightMetadata)
+        && Objects.equals(this.italic, list.italic)
+        && Objects.equals(this.italicMetadata, list.italicMetadata)
+        && Objects.equals(this.listItems, list.listItems)
+        && Objects.equals(this.listSelectedValue, list.listSelectedValue)
+        && Objects.equals(this.listSelectedValueMetadata, list.listSelectedValueMetadata)
+        && Objects.equals(this.localePolicy, list.localePolicy)
+        && Objects.equals(this.locked, list.locked)
+        && Objects.equals(this.lockedMetadata, list.lockedMetadata)
+        && Objects.equals(this.mergeField, list.mergeField)
+        && Objects.equals(this.mergeFieldXml, list.mergeFieldXml)
+        && Objects.equals(this.pageNumber, list.pageNumber)
+        && Objects.equals(this.pageNumberMetadata, list.pageNumberMetadata)
+        && Objects.equals(this.recipientId, list.recipientId)
+        && Objects.equals(this.recipientIdGuid, list.recipientIdGuid)
+        && Objects.equals(this.recipientIdGuidMetadata, list.recipientIdGuidMetadata)
+        && Objects.equals(this.recipientIdMetadata, list.recipientIdMetadata)
+        && Objects.equals(this.requireAll, list.requireAll)
+        && Objects.equals(this.requireAllMetadata, list.requireAllMetadata)
+        && Objects.equals(this.required, list.required)
+        && Objects.equals(this.requiredMetadata, list.requiredMetadata)
+        && Objects.equals(this.requireInitialOnSharedChange, list.requireInitialOnSharedChange)
+        && Objects.equals(
+            this.requireInitialOnSharedChangeMetadata, list.requireInitialOnSharedChangeMetadata)
+        && Objects.equals(this.senderRequired, list.senderRequired)
+        && Objects.equals(this.senderRequiredMetadata, list.senderRequiredMetadata)
+        && Objects.equals(this.shared, list.shared)
+        && Objects.equals(this.sharedMetadata, list.sharedMetadata)
+        && Objects.equals(this.smartContractInformation, list.smartContractInformation)
+        && Objects.equals(this.source, list.source)
+        && Objects.equals(this.status, list.status)
+        && Objects.equals(this.statusMetadata, list.statusMetadata)
+        && Objects.equals(this.tabGroupLabels, list.tabGroupLabels)
+        && Objects.equals(this.tabGroupLabelsMetadata, list.tabGroupLabelsMetadata)
+        && Objects.equals(this.tabId, list.tabId)
+        && Objects.equals(this.tabIdMetadata, list.tabIdMetadata)
+        && Objects.equals(this.tabLabel, list.tabLabel)
+        && Objects.equals(this.tabLabelMetadata, list.tabLabelMetadata)
+        && Objects.equals(this.tabOrder, list.tabOrder)
+        && Objects.equals(this.tabOrderMetadata, list.tabOrderMetadata)
+        && Objects.equals(this.tabType, list.tabType)
+        && Objects.equals(this.tabTypeMetadata, list.tabTypeMetadata)
+        && Objects.equals(this.templateLocked, list.templateLocked)
+        && Objects.equals(this.templateLockedMetadata, list.templateLockedMetadata)
+        && Objects.equals(this.templateRequired, list.templateRequired)
+        && Objects.equals(this.templateRequiredMetadata, list.templateRequiredMetadata)
+        && Objects.equals(this.tooltip, list.tooltip)
+        && Objects.equals(this.toolTipMetadata, list.toolTipMetadata)
+        && Objects.equals(this.underline, list.underline)
+        && Objects.equals(this.underlineMetadata, list.underlineMetadata)
+        && Objects.equals(this.value, list.value)
+        && Objects.equals(this.valueMetadata, list.valueMetadata)
+        && Objects.equals(this.width, list.width)
+        && Objects.equals(this.widthMetadata, list.widthMetadata)
+        && Objects.equals(this.xPosition, list.xPosition)
+        && Objects.equals(this.xPositionMetadata, list.xPositionMetadata)
+        && Objects.equals(this.yPosition, list.yPosition)
+        && Objects.equals(this.yPositionMetadata, list.yPositionMetadata);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, listItems, listSelectedValue, listSelectedValueMetadata, localePolicy, locked, lockedMetadata, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(
+        anchorAllowWhiteSpaceInCharacters,
+        anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive,
+        anchorCaseSensitiveMetadata,
+        anchorHorizontalAlignment,
+        anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent,
+        anchorIgnoreIfNotPresentMetadata,
+        anchorMatchWholeWord,
+        anchorMatchWholeWordMetadata,
+        anchorString,
+        anchorStringMetadata,
+        anchorTabProcessorVersion,
+        anchorTabProcessorVersionMetadata,
+        anchorUnits,
+        anchorUnitsMetadata,
+        anchorXOffset,
+        anchorXOffsetMetadata,
+        anchorYOffset,
+        anchorYOffsetMetadata,
+        bold,
+        boldMetadata,
+        conditionalParentLabel,
+        conditionalParentLabelMetadata,
+        conditionalParentValue,
+        conditionalParentValueMetadata,
+        customTabId,
+        customTabIdMetadata,
+        documentId,
+        documentIdMetadata,
+        errorDetails,
+        font,
+        fontColor,
+        fontColorMetadata,
+        fontMetadata,
+        fontSize,
+        fontSizeMetadata,
+        formOrder,
+        formOrderMetadata,
+        formPageLabel,
+        formPageLabelMetadata,
+        formPageNumber,
+        formPageNumberMetadata,
+        height,
+        heightMetadata,
+        italic,
+        italicMetadata,
+        listItems,
+        listSelectedValue,
+        listSelectedValueMetadata,
+        localePolicy,
+        locked,
+        lockedMetadata,
+        mergeField,
+        mergeFieldXml,
+        pageNumber,
+        pageNumberMetadata,
+        recipientId,
+        recipientIdGuid,
+        recipientIdGuidMetadata,
+        recipientIdMetadata,
+        requireAll,
+        requireAllMetadata,
+        required,
+        requiredMetadata,
+        requireInitialOnSharedChange,
+        requireInitialOnSharedChangeMetadata,
+        senderRequired,
+        senderRequiredMetadata,
+        shared,
+        sharedMetadata,
+        smartContractInformation,
+        source,
+        status,
+        statusMetadata,
+        tabGroupLabels,
+        tabGroupLabelsMetadata,
+        tabId,
+        tabIdMetadata,
+        tabLabel,
+        tabLabelMetadata,
+        tabOrder,
+        tabOrderMetadata,
+        tabType,
+        tabTypeMetadata,
+        templateLocked,
+        templateLockedMetadata,
+        templateRequired,
+        templateRequiredMetadata,
+        tooltip,
+        toolTipMetadata,
+        underline,
+        underlineMetadata,
+        value,
+        valueMetadata,
+        width,
+        widthMetadata,
+        xPosition,
+        xPositionMetadata,
+        yPosition,
+        yPositionMetadata);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class List {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
-    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
-    sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
-    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
-    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
-    sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata))
+        .append("\n");
+    sb.append("    anchorCaseSensitive: ")
+        .append(toIndentedString(anchorCaseSensitive))
+        .append("\n");
+    sb.append("    anchorCaseSensitiveMetadata: ")
+        .append(toIndentedString(anchorCaseSensitiveMetadata))
+        .append("\n");
+    sb.append("    anchorHorizontalAlignment: ")
+        .append(toIndentedString(anchorHorizontalAlignment))
+        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ")
+        .append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ")
+        .append(toIndentedString(anchorIgnoreIfNotPresent))
+        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ")
+        .append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
+    sb.append("    anchorMatchWholeWord: ")
+        .append(toIndentedString(anchorMatchWholeWord))
+        .append("\n");
+    sb.append("    anchorMatchWholeWordMetadata: ")
+        .append(toIndentedString(anchorMatchWholeWordMetadata))
+        .append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
-    sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
-    sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorStringMetadata: ")
+        .append(toIndentedString(anchorStringMetadata))
+        .append("\n");
+    sb.append("    anchorTabProcessorVersion: ")
+        .append(toIndentedString(anchorTabProcessorVersion))
+        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ")
+        .append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
+    sb.append("    anchorUnitsMetadata: ")
+        .append(toIndentedString(anchorUnitsMetadata))
+        .append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
+    sb.append("    anchorXOffsetMetadata: ")
+        .append(toIndentedString(anchorXOffsetMetadata))
+        .append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
+    sb.append("    anchorYOffsetMetadata: ")
+        .append(toIndentedString(anchorYOffsetMetadata))
+        .append("\n");
     sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
     sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
-    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
-    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentLabel: ")
+        .append(toIndentedString(conditionalParentLabel))
+        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ")
+        .append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
+    sb.append("    conditionalParentValue: ")
+        .append(toIndentedString(conditionalParentValue))
+        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ")
+        .append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
+    sb.append("    customTabIdMetadata: ")
+        .append(toIndentedString(customTabIdMetadata))
+        .append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -2320,16 +2591,22 @@ public class List {
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
-    sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
+    sb.append("    formPageLabelMetadata: ")
+        .append(toIndentedString(formPageLabelMetadata))
+        .append("\n");
     sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
-    sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
+    sb.append("    formPageNumberMetadata: ")
+        .append(toIndentedString(formPageNumberMetadata))
+        .append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
     sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
     sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
-    sb.append("    listSelectedValueMetadata: ").append(toIndentedString(listSelectedValueMetadata)).append("\n");
+    sb.append("    listSelectedValueMetadata: ")
+        .append(toIndentedString(listSelectedValueMetadata))
+        .append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
@@ -2339,24 +2616,38 @@ public class List {
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
-    sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
-    sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
+    sb.append("    recipientIdGuidMetadata: ")
+        .append(toIndentedString(recipientIdGuidMetadata))
+        .append("\n");
+    sb.append("    recipientIdMetadata: ")
+        .append(toIndentedString(recipientIdMetadata))
+        .append("\n");
     sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
     sb.append("    requireAllMetadata: ").append(toIndentedString(requireAllMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
-    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChange: ")
+        .append(toIndentedString(requireInitialOnSharedChange))
+        .append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ")
+        .append(toIndentedString(requireInitialOnSharedChangeMetadata))
+        .append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
-    sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
+    sb.append("    senderRequiredMetadata: ")
+        .append(toIndentedString(senderRequiredMetadata))
+        .append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
-    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
+    sb.append("    smartContractInformation: ")
+        .append(toIndentedString(smartContractInformation))
+        .append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
-    sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
+    sb.append("    tabGroupLabelsMetadata: ")
+        .append(toIndentedString(tabGroupLabelsMetadata))
+        .append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabIdMetadata: ").append(toIndentedString(tabIdMetadata)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
@@ -2366,9 +2657,13 @@ public class List {
     sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
     sb.append("    tabTypeMetadata: ").append(toIndentedString(tabTypeMetadata)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateLockedMetadata: ").append(toIndentedString(templateLockedMetadata)).append("\n");
+    sb.append("    templateLockedMetadata: ")
+        .append(toIndentedString(templateLockedMetadata))
+        .append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
+    sb.append("    templateRequiredMetadata: ")
+        .append(toIndentedString(templateRequiredMetadata))
+        .append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
@@ -2386,8 +2681,7 @@ public class List {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -2395,6 +2689,4 @@ public class List {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

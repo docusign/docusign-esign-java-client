@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.NotaryJournal;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * NotaryJournalList.
- *
- */
-
+/** NotaryJournalList. */
 public class NotaryJournalList {
   @JsonProperty("endPosition")
   private String endPosition = null;
@@ -36,12 +27,11 @@ public class NotaryJournalList {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * endPosition.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
@@ -49,66 +39,65 @@ public class NotaryJournalList {
 
   /**
    * The last position in the result set. .
+   *
    * @return endPosition
-   **/
+   */
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
-  /**
-   * setEndPosition.
-   **/
+  /** setEndPosition. */
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * nextUri.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the endPosition is the
+   * entire results of the search, this is null. .
+   *
    * @return nextUri
-   **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+   */
+  @ApiModelProperty(
+      value =
+          "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
-  /**
-   * setNextUri.
-   **/
+  /** setNextUri. */
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * notaryJournals.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList notaryJournals(java.util.List<NotaryJournal> notaryJournals) {
     this.notaryJournals = notaryJournals;
     return this;
   }
-  
+
   /**
    * addNotaryJournalsItem.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList addNotaryJournalsItem(NotaryJournal notaryJournalsItem) {
     if (this.notaryJournals == null) {
-      this.notaryJournals = new java.util.ArrayList<NotaryJournal>();
+      this.notaryJournals = new java.util.ArrayList<>();
     }
     this.notaryJournals.add(notaryJournalsItem);
     return this;
@@ -116,26 +105,24 @@ public class NotaryJournalList {
 
   /**
    * .
+   *
    * @return notaryJournals
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<NotaryJournal> getNotaryJournals() {
     return notaryJournals;
   }
 
-  /**
-   * setNotaryJournals.
-   **/
+  /** setNotaryJournals. */
   public void setNotaryJournals(java.util.List<NotaryJournal> notaryJournals) {
     this.notaryJournals = notaryJournals;
   }
-
 
   /**
    * previousUri.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
@@ -143,26 +130,24 @@ public class NotaryJournalList {
 
   /**
    * The postal code for the billing address..
+   *
    * @return previousUri
-   **/
+   */
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
-  /**
-   * setPreviousUri.
-   **/
+  /** setPreviousUri. */
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
@@ -170,26 +155,24 @@ public class NotaryJournalList {
 
   /**
    * The number of results returned in this response. .
+   *
    * @return resultSetSize
-   **/
+   */
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
-  /**
-   * setResultSetSize.
-   **/
+  /** setResultSetSize. */
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
@@ -197,47 +180,46 @@ public class NotaryJournalList {
 
   /**
    * Starting position of the current result set..
+   *
    * @return startPosition
-   **/
+   */
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
-  /**
-   * setStartPosition.
-   **/
+  /** setStartPosition. */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
    *
    * @return NotaryJournalList
-   **/
+   */
   public NotaryJournalList totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be greater than or
+   * equal to the value of the property returning the results in the in the response..
+   *
    * @return totalSetSize
-   **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+   */
+  @ApiModelProperty(
+      value =
+          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
-  /**
-   * setTotalSetSize.
-   **/
+  /** setTotalSetSize. */
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -253,32 +235,34 @@ public class NotaryJournalList {
       return false;
     }
     NotaryJournalList notaryJournalList = (NotaryJournalList) o;
-    return Objects.equals(this.endPosition, notaryJournalList.endPosition) &&
-        Objects.equals(this.nextUri, notaryJournalList.nextUri) &&
-        Objects.equals(this.notaryJournals, notaryJournalList.notaryJournals) &&
-        Objects.equals(this.previousUri, notaryJournalList.previousUri) &&
-        Objects.equals(this.resultSetSize, notaryJournalList.resultSetSize) &&
-        Objects.equals(this.startPosition, notaryJournalList.startPosition) &&
-        Objects.equals(this.totalSetSize, notaryJournalList.totalSetSize);
+    return Objects.equals(this.endPosition, notaryJournalList.endPosition)
+        && Objects.equals(this.nextUri, notaryJournalList.nextUri)
+        && Objects.equals(this.notaryJournals, notaryJournalList.notaryJournals)
+        && Objects.equals(this.previousUri, notaryJournalList.previousUri)
+        && Objects.equals(this.resultSetSize, notaryJournalList.resultSetSize)
+        && Objects.equals(this.startPosition, notaryJournalList.startPosition)
+        && Objects.equals(this.totalSetSize, notaryJournalList.totalSetSize);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, nextUri, notaryJournals, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(
+        endPosition,
+        nextUri,
+        notaryJournals,
+        previousUri,
+        resultSetSize,
+        startPosition,
+        totalSetSize);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalList {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    notaryJournals: ").append(toIndentedString(notaryJournals)).append("\n");
@@ -291,8 +275,7 @@ public class NotaryJournalList {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -300,6 +283,4 @@ public class NotaryJournalList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

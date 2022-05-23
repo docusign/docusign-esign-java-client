@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayApplianceEnvelope
- */
-
+/** DisplayApplianceEnvelope */
 public class DisplayApplianceEnvelope {
   @JsonProperty("addDemoStamp")
   private Boolean addDemoStamp = null;
@@ -61,10 +56,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return addDemoStamp
-  **/
+  /** @return addDemoStamp */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getAddDemoStamp() {
     return addDemoStamp;
@@ -79,10 +71,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return allowMultipleAttachments
-  **/
+  /** @return allowMultipleAttachments */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getAllowMultipleAttachments() {
     return allowMultipleAttachments;
@@ -97,10 +86,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return burnDefaultTabData
-  **/
+  /** @return burnDefaultTabData */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getBurnDefaultTabData() {
     return burnDefaultTabData;
@@ -115,10 +101,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return convertPdfFields
-  **/
+  /** @return convertPdfFields */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getConvertPdfFields() {
     return convertPdfFields;
@@ -133,11 +116,14 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
+  /**
    * The envelope ID of the envelope status that failed to post.
+   *
    * @return envelopeId
-  **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -151,10 +137,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return envelopeType
-  **/
+  /** @return envelopeType */
   @ApiModelProperty(example = "null", value = "")
   public String getEnvelopeType() {
     return envelopeType;
@@ -169,10 +152,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return includeSigsBeforeComplete
-  **/
+  /** @return includeSigsBeforeComplete */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIncludeSigsBeforeComplete() {
     return includeSigsBeforeComplete;
@@ -187,10 +167,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return isConcatMode
-  **/
+  /** @return isConcatMode */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIsConcatMode() {
     return isConcatMode;
@@ -205,10 +182,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return isEnvelopeIDStampingEnabled
-  **/
+  /** @return isEnvelopeIDStampingEnabled */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIsEnvelopeIDStampingEnabled() {
     return isEnvelopeIDStampingEnabled;
@@ -218,15 +192,13 @@ public class DisplayApplianceEnvelope {
     this.isEnvelopeIDStampingEnabled = isEnvelopeIDStampingEnabled;
   }
 
-  public DisplayApplianceEnvelope pdfFormConversionFontScale100(Boolean pdfFormConversionFontScale100) {
+  public DisplayApplianceEnvelope pdfFormConversionFontScale100(
+      Boolean pdfFormConversionFontScale100) {
     this.pdfFormConversionFontScale100 = pdfFormConversionFontScale100;
     return this;
   }
 
-   /**
-   * 
-   * @return pdfFormConversionFontScale100
-  **/
+  /** @return pdfFormConversionFontScale100 */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getPdfFormConversionFontScale100() {
     return pdfFormConversionFontScale100;
@@ -241,10 +213,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return shouldFlatten
-  **/
+  /** @return shouldFlatten */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getShouldFlatten() {
     return shouldFlatten;
@@ -259,10 +228,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return showEnvelopeChanges
-  **/
+  /** @return showEnvelopeChanges */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getShowEnvelopeChanges() {
     return showEnvelopeChanges;
@@ -277,10 +243,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return signOnline
-  **/
+  /** @return signOnline */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getSignOnline() {
     return signOnline;
@@ -295,11 +258,16 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   *
    * @return status
-  **/
-  @ApiModelProperty(example = "null", value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -313,10 +281,7 @@ public class DisplayApplianceEnvelope {
     return this;
   }
 
-   /**
-   * 
-   * @return userId
-  **/
+  /** @return userId */
   @ApiModelProperty(example = "null", value = "")
   public String getUserId() {
     return userId;
@@ -325,7 +290,6 @@ public class DisplayApplianceEnvelope {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -336,46 +300,75 @@ public class DisplayApplianceEnvelope {
       return false;
     }
     DisplayApplianceEnvelope displayApplianceEnvelope = (DisplayApplianceEnvelope) o;
-    return Objects.equals(this.addDemoStamp, displayApplianceEnvelope.addDemoStamp) &&
-        Objects.equals(this.allowMultipleAttachments, displayApplianceEnvelope.allowMultipleAttachments) &&
-        Objects.equals(this.burnDefaultTabData, displayApplianceEnvelope.burnDefaultTabData) &&
-        Objects.equals(this.convertPdfFields, displayApplianceEnvelope.convertPdfFields) &&
-        Objects.equals(this.envelopeId, displayApplianceEnvelope.envelopeId) &&
-        Objects.equals(this.envelopeType, displayApplianceEnvelope.envelopeType) &&
-        Objects.equals(this.includeSigsBeforeComplete, displayApplianceEnvelope.includeSigsBeforeComplete) &&
-        Objects.equals(this.isConcatMode, displayApplianceEnvelope.isConcatMode) &&
-        Objects.equals(this.isEnvelopeIDStampingEnabled, displayApplianceEnvelope.isEnvelopeIDStampingEnabled) &&
-        Objects.equals(this.pdfFormConversionFontScale100, displayApplianceEnvelope.pdfFormConversionFontScale100) &&
-        Objects.equals(this.shouldFlatten, displayApplianceEnvelope.shouldFlatten) &&
-        Objects.equals(this.showEnvelopeChanges, displayApplianceEnvelope.showEnvelopeChanges) &&
-        Objects.equals(this.signOnline, displayApplianceEnvelope.signOnline) &&
-        Objects.equals(this.status, displayApplianceEnvelope.status) &&
-        Objects.equals(this.userId, displayApplianceEnvelope.userId);
+    return Objects.equals(this.addDemoStamp, displayApplianceEnvelope.addDemoStamp)
+        && Objects.equals(
+            this.allowMultipleAttachments, displayApplianceEnvelope.allowMultipleAttachments)
+        && Objects.equals(this.burnDefaultTabData, displayApplianceEnvelope.burnDefaultTabData)
+        && Objects.equals(this.convertPdfFields, displayApplianceEnvelope.convertPdfFields)
+        && Objects.equals(this.envelopeId, displayApplianceEnvelope.envelopeId)
+        && Objects.equals(this.envelopeType, displayApplianceEnvelope.envelopeType)
+        && Objects.equals(
+            this.includeSigsBeforeComplete, displayApplianceEnvelope.includeSigsBeforeComplete)
+        && Objects.equals(this.isConcatMode, displayApplianceEnvelope.isConcatMode)
+        && Objects.equals(
+            this.isEnvelopeIDStampingEnabled, displayApplianceEnvelope.isEnvelopeIDStampingEnabled)
+        && Objects.equals(
+            this.pdfFormConversionFontScale100,
+            displayApplianceEnvelope.pdfFormConversionFontScale100)
+        && Objects.equals(this.shouldFlatten, displayApplianceEnvelope.shouldFlatten)
+        && Objects.equals(this.showEnvelopeChanges, displayApplianceEnvelope.showEnvelopeChanges)
+        && Objects.equals(this.signOnline, displayApplianceEnvelope.signOnline)
+        && Objects.equals(this.status, displayApplianceEnvelope.status)
+        && Objects.equals(this.userId, displayApplianceEnvelope.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(addDemoStamp, allowMultipleAttachments, burnDefaultTabData, convertPdfFields, envelopeId, envelopeType, includeSigsBeforeComplete, isConcatMode, isEnvelopeIDStampingEnabled, pdfFormConversionFontScale100, shouldFlatten, showEnvelopeChanges, signOnline, status, userId);
+    return Objects.hash(
+        addDemoStamp,
+        allowMultipleAttachments,
+        burnDefaultTabData,
+        convertPdfFields,
+        envelopeId,
+        envelopeType,
+        includeSigsBeforeComplete,
+        isConcatMode,
+        isEnvelopeIDStampingEnabled,
+        pdfFormConversionFontScale100,
+        shouldFlatten,
+        showEnvelopeChanges,
+        signOnline,
+        status,
+        userId);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayApplianceEnvelope {\n");
-    
+
     sb.append("    addDemoStamp: ").append(toIndentedString(addDemoStamp)).append("\n");
-    sb.append("    allowMultipleAttachments: ").append(toIndentedString(allowMultipleAttachments)).append("\n");
+    sb.append("    allowMultipleAttachments: ")
+        .append(toIndentedString(allowMultipleAttachments))
+        .append("\n");
     sb.append("    burnDefaultTabData: ").append(toIndentedString(burnDefaultTabData)).append("\n");
     sb.append("    convertPdfFields: ").append(toIndentedString(convertPdfFields)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    envelopeType: ").append(toIndentedString(envelopeType)).append("\n");
-    sb.append("    includeSigsBeforeComplete: ").append(toIndentedString(includeSigsBeforeComplete)).append("\n");
+    sb.append("    includeSigsBeforeComplete: ")
+        .append(toIndentedString(includeSigsBeforeComplete))
+        .append("\n");
     sb.append("    isConcatMode: ").append(toIndentedString(isConcatMode)).append("\n");
-    sb.append("    isEnvelopeIDStampingEnabled: ").append(toIndentedString(isEnvelopeIDStampingEnabled)).append("\n");
-    sb.append("    pdfFormConversionFontScale100: ").append(toIndentedString(pdfFormConversionFontScale100)).append("\n");
+    sb.append("    isEnvelopeIDStampingEnabled: ")
+        .append(toIndentedString(isEnvelopeIDStampingEnabled))
+        .append("\n");
+    sb.append("    pdfFormConversionFontScale100: ")
+        .append(toIndentedString(pdfFormConversionFontScale100))
+        .append("\n");
     sb.append("    shouldFlatten: ").append(toIndentedString(shouldFlatten)).append("\n");
-    sb.append("    showEnvelopeChanges: ").append(toIndentedString(showEnvelopeChanges)).append("\n");
+    sb.append("    showEnvelopeChanges: ")
+        .append(toIndentedString(showEnvelopeChanges))
+        .append("\n");
     sb.append("    signOnline: ").append(toIndentedString(signOnline)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -384,8 +377,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -393,6 +385,4 @@ public class DisplayApplianceEnvelope {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

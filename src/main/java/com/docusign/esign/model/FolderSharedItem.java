@@ -1,22 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ErrorDetails;
-import com.docusign.esign.model.MemberGroupSharedItem;
-import com.docusign.esign.model.UserInfo;
-import com.docusign.esign.model.UserSharedItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * FolderSharedItem.
- *
- */
-
+/** FolderSharedItem. */
 public class FolderSharedItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -51,12 +39,11 @@ public class FolderSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
-
   /**
    * errorDetails.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -64,26 +51,24 @@ public class FolderSharedItem {
 
   /**
    * Get errorDetails.
+   *
    * @return errorDetails
-   **/
+   */
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /**
-   * setErrorDetails.
-   **/
+  /** setErrorDetails. */
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * folderId.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem folderId(String folderId) {
     this.folderId = folderId;
     return this;
@@ -91,26 +76,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return folderId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getFolderId() {
     return folderId;
   }
 
-  /**
-   * setFolderId.
-   **/
+  /** setFolderId. */
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
-
 
   /**
    * name.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem name(String name) {
     this.name = name;
     return this;
@@ -118,26 +101,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return name
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /**
-   * setName.
-   **/
+  /** setName. */
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * owner.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem owner(UserInfo owner) {
     this.owner = owner;
     return this;
@@ -145,26 +126,24 @@ public class FolderSharedItem {
 
   /**
    * Get owner.
+   *
    * @return owner
-   **/
+   */
   @ApiModelProperty(value = "")
   public UserInfo getOwner() {
     return owner;
   }
 
-  /**
-   * setOwner.
-   **/
+  /** setOwner. */
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
-
 
   /**
    * parentFolderId.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem parentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
     return this;
@@ -172,26 +151,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return parentFolderId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getParentFolderId() {
     return parentFolderId;
   }
 
-  /**
-   * setParentFolderId.
-   **/
+  /** setParentFolderId. */
   public void setParentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
   }
-
 
   /**
    * parentFolderUri.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem parentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
     return this;
@@ -199,26 +176,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return parentFolderUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
 
-  /**
-   * setParentFolderUri.
-   **/
+  /** setParentFolderUri. */
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
-
 
   /**
    * shared.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem shared(String shared) {
     this.shared = shared;
     return this;
@@ -226,39 +201,37 @@ public class FolderSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
+   *
    * @return shared
-   **/
+   */
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /**
-   * setShared.
-   **/
+  /** setShared. */
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * sharedGroups.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem sharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
     return this;
   }
-  
+
   /**
    * addSharedGroupsItem.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
     if (this.sharedGroups == null) {
-      this.sharedGroups = new java.util.ArrayList<MemberGroupSharedItem>();
+      this.sharedGroups = new java.util.ArrayList<>();
     }
     this.sharedGroups.add(sharedGroupsItem);
     return this;
@@ -266,39 +239,37 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return sharedGroups
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
 
-  /**
-   * setSharedGroups.
-   **/
+  /** setSharedGroups. */
   public void setSharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
   }
-
 
   /**
    * sharedUsers.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem sharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
     return this;
   }
-  
+
   /**
    * addSharedUsersItem.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
     if (this.sharedUsers == null) {
-      this.sharedUsers = new java.util.ArrayList<UserSharedItem>();
+      this.sharedUsers = new java.util.ArrayList<>();
     }
     this.sharedUsers.add(sharedUsersItem);
     return this;
@@ -306,26 +277,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return sharedUsers
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
 
-  /**
-   * setSharedUsers.
-   **/
+  /** setSharedUsers. */
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
-
 
   /**
    * uri.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem uri(String uri) {
     this.uri = uri;
     return this;
@@ -333,26 +302,24 @@ public class FolderSharedItem {
 
   /**
    * .
+   *
    * @return uri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
-  /**
-   * setUri.
-   **/
+  /** setUri. */
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * user.
    *
    * @return FolderSharedItem
-   **/
+   */
   public FolderSharedItem user(UserInfo user) {
     this.user = user;
     return this;
@@ -360,20 +327,18 @@ public class FolderSharedItem {
 
   /**
    * Get user.
+   *
    * @return user
-   **/
+   */
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
-  /**
-   * setUser.
-   **/
+  /** setUser. */
   public void setUser(UserInfo user) {
     this.user = user;
   }
-
 
   /**
    * Compares objects.
@@ -389,36 +354,42 @@ public class FolderSharedItem {
       return false;
     }
     FolderSharedItem folderSharedItem = (FolderSharedItem) o;
-    return Objects.equals(this.errorDetails, folderSharedItem.errorDetails) &&
-        Objects.equals(this.folderId, folderSharedItem.folderId) &&
-        Objects.equals(this.name, folderSharedItem.name) &&
-        Objects.equals(this.owner, folderSharedItem.owner) &&
-        Objects.equals(this.parentFolderId, folderSharedItem.parentFolderId) &&
-        Objects.equals(this.parentFolderUri, folderSharedItem.parentFolderUri) &&
-        Objects.equals(this.shared, folderSharedItem.shared) &&
-        Objects.equals(this.sharedGroups, folderSharedItem.sharedGroups) &&
-        Objects.equals(this.sharedUsers, folderSharedItem.sharedUsers) &&
-        Objects.equals(this.uri, folderSharedItem.uri) &&
-        Objects.equals(this.user, folderSharedItem.user);
+    return Objects.equals(this.errorDetails, folderSharedItem.errorDetails)
+        && Objects.equals(this.folderId, folderSharedItem.folderId)
+        && Objects.equals(this.name, folderSharedItem.name)
+        && Objects.equals(this.owner, folderSharedItem.owner)
+        && Objects.equals(this.parentFolderId, folderSharedItem.parentFolderId)
+        && Objects.equals(this.parentFolderUri, folderSharedItem.parentFolderUri)
+        && Objects.equals(this.shared, folderSharedItem.shared)
+        && Objects.equals(this.sharedGroups, folderSharedItem.sharedGroups)
+        && Objects.equals(this.sharedUsers, folderSharedItem.sharedUsers)
+        && Objects.equals(this.uri, folderSharedItem.uri)
+        && Objects.equals(this.user, folderSharedItem.user);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups, sharedUsers, uri, user);
+    return Objects.hash(
+        errorDetails,
+        folderId,
+        name,
+        owner,
+        parentFolderId,
+        parentFolderUri,
+        shared,
+        sharedGroups,
+        sharedUsers,
+        uri,
+        user);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderSharedItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -435,8 +406,7 @@ public class FolderSharedItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -444,6 +414,4 @@ public class FolderSharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

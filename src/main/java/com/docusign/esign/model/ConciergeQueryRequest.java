@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ConciergeQueryRequest
- */
-
+/** ConciergeQueryRequest */
 public class ConciergeQueryRequest {
   @JsonProperty("accountManagementRepCountry")
   private String accountManagementRepCountry = null;
@@ -31,10 +26,7 @@ public class ConciergeQueryRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return accountManagementRepCountry
-  **/
+  /** @return accountManagementRepCountry */
   @ApiModelProperty(example = "null", value = "")
   public String getAccountManagementRepCountry() {
     return accountManagementRepCountry;
@@ -49,10 +41,7 @@ public class ConciergeQueryRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return contractCountry
-  **/
+  /** @return contractCountry */
   @ApiModelProperty(example = "null", value = "")
   public String getContractCountry() {
     return contractCountry;
@@ -67,10 +56,7 @@ public class ConciergeQueryRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return planId
-  **/
+  /** @return planId */
   @ApiModelProperty(example = "null", value = "")
   public String getPlanId() {
     return planId;
@@ -85,10 +71,7 @@ public class ConciergeQueryRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return region
-  **/
+  /** @return region */
   @ApiModelProperty(example = "null", value = "")
   public String getRegion() {
     return region;
@@ -103,10 +86,7 @@ public class ConciergeQueryRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return shippingCountry
-  **/
+  /** @return shippingCountry */
   @ApiModelProperty(example = "null", value = "")
   public String getShippingCountry() {
     return shippingCountry;
@@ -115,7 +95,6 @@ public class ConciergeQueryRequest {
   public void setShippingCountry(String shippingCountry) {
     this.shippingCountry = shippingCountry;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -126,25 +105,28 @@ public class ConciergeQueryRequest {
       return false;
     }
     ConciergeQueryRequest conciergeQueryRequest = (ConciergeQueryRequest) o;
-    return Objects.equals(this.accountManagementRepCountry, conciergeQueryRequest.accountManagementRepCountry) &&
-        Objects.equals(this.contractCountry, conciergeQueryRequest.contractCountry) &&
-        Objects.equals(this.planId, conciergeQueryRequest.planId) &&
-        Objects.equals(this.region, conciergeQueryRequest.region) &&
-        Objects.equals(this.shippingCountry, conciergeQueryRequest.shippingCountry);
+    return Objects.equals(
+            this.accountManagementRepCountry, conciergeQueryRequest.accountManagementRepCountry)
+        && Objects.equals(this.contractCountry, conciergeQueryRequest.contractCountry)
+        && Objects.equals(this.planId, conciergeQueryRequest.planId)
+        && Objects.equals(this.region, conciergeQueryRequest.region)
+        && Objects.equals(this.shippingCountry, conciergeQueryRequest.shippingCountry);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementRepCountry, contractCountry, planId, region, shippingCountry);
+    return Objects.hash(
+        accountManagementRepCountry, contractCountry, planId, region, shippingCountry);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConciergeQueryRequest {\n");
-    
-    sb.append("    accountManagementRepCountry: ").append(toIndentedString(accountManagementRepCountry)).append("\n");
+
+    sb.append("    accountManagementRepCountry: ")
+        .append(toIndentedString(accountManagementRepCountry))
+        .append("\n");
     sb.append("    contractCountry: ").append(toIndentedString(contractCountry)).append("\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
     sb.append("    region: ").append(toIndentedString(region)).append("\n");
@@ -154,8 +136,7 @@ public class ConciergeQueryRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -163,6 +144,4 @@ public class ConciergeQueryRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

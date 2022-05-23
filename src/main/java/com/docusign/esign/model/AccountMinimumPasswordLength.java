@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * AccountMinimumPasswordLength.
- *
- */
-
+/** AccountMinimumPasswordLength. */
 public class AccountMinimumPasswordLength {
   @JsonProperty("maximumLength")
   private String maximumLength = null;
@@ -20,12 +12,11 @@ public class AccountMinimumPasswordLength {
   @JsonProperty("minimumLength")
   private String minimumLength = null;
 
-
   /**
    * maximumLength.
    *
    * @return AccountMinimumPasswordLength
-   **/
+   */
   public AccountMinimumPasswordLength maximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
     return this;
@@ -33,26 +24,24 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
+   *
    * @return maximumLength
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getMaximumLength() {
     return maximumLength;
   }
 
-  /**
-   * setMaximumLength.
-   **/
+  /** setMaximumLength. */
   public void setMaximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
   }
-
 
   /**
    * minimumLength.
    *
    * @return AccountMinimumPasswordLength
-   **/
+   */
   public AccountMinimumPasswordLength minimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
     return this;
@@ -60,20 +49,18 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
+   *
    * @return minimumLength
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getMinimumLength() {
     return minimumLength;
   }
 
-  /**
-   * setMinimumLength.
-   **/
+  /** setMinimumLength. */
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
-
 
   /**
    * Compares objects.
@@ -89,27 +76,22 @@ public class AccountMinimumPasswordLength {
       return false;
     }
     AccountMinimumPasswordLength accountMinimumPasswordLength = (AccountMinimumPasswordLength) o;
-    return Objects.equals(this.maximumLength, accountMinimumPasswordLength.maximumLength) &&
-        Objects.equals(this.minimumLength, accountMinimumPasswordLength.minimumLength);
+    return Objects.equals(this.maximumLength, accountMinimumPasswordLength.maximumLength)
+        && Objects.equals(this.minimumLength, accountMinimumPasswordLength.minimumLength);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(maximumLength, minimumLength);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountMinimumPasswordLength {\n");
-    
+
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
     sb.append("    minimumLength: ").append(toIndentedString(minimumLength)).append("\n");
     sb.append("}");
@@ -117,8 +99,7 @@ public class AccountMinimumPasswordLength {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -126,6 +107,4 @@ public class AccountMinimumPasswordLength {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

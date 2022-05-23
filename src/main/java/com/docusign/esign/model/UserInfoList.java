@@ -1,42 +1,32 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * UserInfoList.
- *
- */
-
+/** UserInfoList. */
 public class UserInfoList {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
-
 
   /**
    * users.
    *
    * @return UserInfoList
-   **/
+   */
   public UserInfoList users(java.util.List<UserInfo> users) {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
    * @return UserInfoList
-   **/
+   */
   public UserInfoList addUsersItem(UserInfo usersItem) {
     if (this.users == null) {
-      this.users = new java.util.ArrayList<UserInfo>();
+      this.users = new java.util.ArrayList<>();
     }
     this.users.add(usersItem);
     return this;
@@ -44,20 +34,18 @@ public class UserInfoList {
 
   /**
    * .
+   *
    * @return users
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
 
-  /**
-   * setUsers.
-   **/
+  /** setUsers. */
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
-
 
   /**
    * Compares objects.
@@ -76,31 +64,25 @@ public class UserInfoList {
     return Objects.equals(this.users, userInfoList.users);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(users);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfoList {\n");
-    
+
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,6 +90,4 @@ public class UserInfoList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

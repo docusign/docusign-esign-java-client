@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayApplianceDocumentPage
- */
-
+/** DisplayApplianceDocumentPage */
 public class DisplayApplianceDocumentPage {
   @JsonProperty("docPageCountTotal")
   private Integer docPageCountTotal = null;
@@ -46,10 +41,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return docPageCountTotal
-  **/
+  /** @return docPageCountTotal */
   @ApiModelProperty(example = "null", value = "")
   public Integer getDocPageCountTotal() {
     return docPageCountTotal;
@@ -64,11 +56,16 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Document's ID attribute.
+   *
    * @return documentId
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -82,10 +79,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return documentName
-  **/
+  /** @return documentName */
   @ApiModelProperty(example = "null", value = "")
   public String getDocumentName() {
     return documentName;
@@ -100,10 +94,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return extension
-  **/
+  /** @return extension */
   @ApiModelProperty(example = "null", value = "")
   public String getExtension() {
     return extension;
@@ -118,10 +109,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return height72DPI
-  **/
+  /** @return height72DPI */
   @ApiModelProperty(example = "null", value = "")
   public Integer getHeight72DPI() {
     return height72DPI;
@@ -136,10 +124,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return isAttachmentType
-  **/
+  /** @return isAttachmentType */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIsAttachmentType() {
     return isAttachmentType;
@@ -154,10 +139,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return page
-  **/
+  /** @return page */
   @ApiModelProperty(example = "null", value = "")
   public Integer getPage() {
     return page;
@@ -172,10 +154,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return pageId
-  **/
+  /** @return pageId */
   @ApiModelProperty(example = "null", value = "")
   public String getPageId() {
     return pageId;
@@ -190,10 +169,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return type
-  **/
+  /** @return type */
   @ApiModelProperty(example = "null", value = "")
   public String getType() {
     return type;
@@ -208,10 +184,7 @@ public class DisplayApplianceDocumentPage {
     return this;
   }
 
-   /**
-   * 
-   * @return width72DPI
-  **/
+  /** @return width72DPI */
   @ApiModelProperty(example = "null", value = "")
   public Integer getWidth72DPI() {
     return width72DPI;
@@ -220,7 +193,6 @@ public class DisplayApplianceDocumentPage {
   public void setWidth72DPI(Integer width72DPI) {
     this.width72DPI = width72DPI;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -231,29 +203,38 @@ public class DisplayApplianceDocumentPage {
       return false;
     }
     DisplayApplianceDocumentPage displayApplianceDocumentPage = (DisplayApplianceDocumentPage) o;
-    return Objects.equals(this.docPageCountTotal, displayApplianceDocumentPage.docPageCountTotal) &&
-        Objects.equals(this.documentId, displayApplianceDocumentPage.documentId) &&
-        Objects.equals(this.documentName, displayApplianceDocumentPage.documentName) &&
-        Objects.equals(this.extension, displayApplianceDocumentPage.extension) &&
-        Objects.equals(this.height72DPI, displayApplianceDocumentPage.height72DPI) &&
-        Objects.equals(this.isAttachmentType, displayApplianceDocumentPage.isAttachmentType) &&
-        Objects.equals(this.page, displayApplianceDocumentPage.page) &&
-        Objects.equals(this.pageId, displayApplianceDocumentPage.pageId) &&
-        Objects.equals(this.type, displayApplianceDocumentPage.type) &&
-        Objects.equals(this.width72DPI, displayApplianceDocumentPage.width72DPI);
+    return Objects.equals(this.docPageCountTotal, displayApplianceDocumentPage.docPageCountTotal)
+        && Objects.equals(this.documentId, displayApplianceDocumentPage.documentId)
+        && Objects.equals(this.documentName, displayApplianceDocumentPage.documentName)
+        && Objects.equals(this.extension, displayApplianceDocumentPage.extension)
+        && Objects.equals(this.height72DPI, displayApplianceDocumentPage.height72DPI)
+        && Objects.equals(this.isAttachmentType, displayApplianceDocumentPage.isAttachmentType)
+        && Objects.equals(this.page, displayApplianceDocumentPage.page)
+        && Objects.equals(this.pageId, displayApplianceDocumentPage.pageId)
+        && Objects.equals(this.type, displayApplianceDocumentPage.type)
+        && Objects.equals(this.width72DPI, displayApplianceDocumentPage.width72DPI);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(docPageCountTotal, documentId, documentName, extension, height72DPI, isAttachmentType, page, pageId, type, width72DPI);
+    return Objects.hash(
+        docPageCountTotal,
+        documentId,
+        documentName,
+        extension,
+        height72DPI,
+        isAttachmentType,
+        page,
+        pageId,
+        type,
+        width72DPI);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayApplianceDocumentPage {\n");
-    
+
     sb.append("    docPageCountTotal: ").append(toIndentedString(docPageCountTotal)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
@@ -269,8 +250,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -278,6 +258,4 @@ public class DisplayApplianceDocumentPage {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

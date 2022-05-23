@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Seal
- */
-
+/** Seal */
 public class Seal {
   @JsonProperty("configuration")
   private java.util.Map<String, String> _configuration = null;
@@ -32,10 +25,7 @@ public class Seal {
     return this;
   }
 
-   /**
-   * 
-   * @return _configuration
-  **/
+  /** @return _configuration */
   @ApiModelProperty(value = "")
   public java.util.Map<String, String> getConfiguration() {
     return _configuration;
@@ -50,10 +40,7 @@ public class Seal {
     return this;
   }
 
-   /**
-   * 
-   * @return sealIdentifier
-  **/
+  /** @return sealIdentifier */
   @ApiModelProperty(value = "")
   public String getSealIdentifier() {
     return sealIdentifier;
@@ -62,7 +49,6 @@ public class Seal {
   public void setSealIdentifier(String sealIdentifier) {
     this.sealIdentifier = sealIdentifier;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -73,8 +59,8 @@ public class Seal {
       return false;
     }
     Seal seal = (Seal) o;
-    return Objects.equals(this._configuration, seal._configuration) &&
-        Objects.equals(this.sealIdentifier, seal.sealIdentifier);
+    return Objects.equals(this._configuration, seal._configuration)
+        && Objects.equals(this.sealIdentifier, seal.sealIdentifier);
   }
 
   @Override
@@ -82,12 +68,11 @@ public class Seal {
     return Objects.hash(_configuration, sealIdentifier);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Seal {\n");
-    
+
     sb.append("    _configuration: ").append(toIndentedString(_configuration)).append("\n");
     sb.append("    sealIdentifier: ").append(toIndentedString(sealIdentifier)).append("\n");
     sb.append("}");
@@ -95,8 +80,7 @@ public class Seal {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -104,6 +88,4 @@ public class Seal {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,42 +1,32 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.FileType;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * FileTypeList.
- *
- */
-
+/** FileTypeList. */
 public class FileTypeList {
   @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = null;
-
 
   /**
    * fileTypes.
    *
    * @return FileTypeList
-   **/
+   */
   public FileTypeList fileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
     return this;
   }
-  
+
   /**
    * addFileTypesItem.
    *
    * @return FileTypeList
-   **/
+   */
   public FileTypeList addFileTypesItem(FileType fileTypesItem) {
     if (this.fileTypes == null) {
-      this.fileTypes = new java.util.ArrayList<FileType>();
+      this.fileTypes = new java.util.ArrayList<>();
     }
     this.fileTypes.add(fileTypesItem);
     return this;
@@ -44,20 +34,18 @@ public class FileTypeList {
 
   /**
    * A collection of file types..
+   *
    * @return fileTypes
-   **/
+   */
   @ApiModelProperty(value = "A collection of file types.")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
   }
 
-  /**
-   * setFileTypes.
-   **/
+  /** setFileTypes. */
   public void setFileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
   }
-
 
   /**
    * Compares objects.
@@ -76,31 +64,25 @@ public class FileTypeList {
     return Objects.equals(this.fileTypes, fileTypeList.fileTypes);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(fileTypes);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileTypeList {\n");
-    
+
     sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,6 +90,4 @@ public class FileTypeList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

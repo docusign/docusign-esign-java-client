@@ -41,7 +41,6 @@ This client has the following external dependencies:
 *   com.fasterxml.jackson.core:jackson-core:jar:2.12.1
 *   com.fasterxml.jackson.core:jackson-annotations:jar:2.12.1
 *   com.fasterxml.jackson.core:jackson-databind:2.12.1
-*   com.brsanthu:migbase64:2.2
 *   junit:junit:jar:4.13.1
 *   com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
 *   com.auth0:java-jwt:3.4.1

@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * OcrRequest
- */
-
+/** OcrRequest */
 public class OcrRequest {
   @JsonProperty("ocrLanguage")
   private String ocrLanguage = null;
@@ -34,10 +29,7 @@ public class OcrRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return ocrLanguage
-  **/
+  /** @return ocrLanguage */
   @ApiModelProperty(example = "null", value = "")
   public String getOcrLanguage() {
     return ocrLanguage;
@@ -52,10 +44,7 @@ public class OcrRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return pageSelection
-  **/
+  /** @return pageSelection */
   @ApiModelProperty(example = "null", value = "")
   public String getPageSelection() {
     return pageSelection;
@@ -70,10 +59,7 @@ public class OcrRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return setPageOrientation
-  **/
+  /** @return setPageOrientation */
   @ApiModelProperty(example = "null", value = "")
   public String getSetPageOrientation() {
     return setPageOrientation;
@@ -88,10 +74,7 @@ public class OcrRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return showFrames
-  **/
+  /** @return showFrames */
   @ApiModelProperty(example = "null", value = "")
   public String getShowFrames() {
     return showFrames;
@@ -106,10 +89,7 @@ public class OcrRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return showText
-  **/
+  /** @return showText */
   @ApiModelProperty(example = "null", value = "")
   public String getShowText() {
     return showText;
@@ -119,24 +99,22 @@ public class OcrRequest {
     this.showText = showText;
   }
 
-  public OcrRequest skipPagesHavingExistingExtractableText(String skipPagesHavingExistingExtractableText) {
+  public OcrRequest skipPagesHavingExistingExtractableText(
+      String skipPagesHavingExistingExtractableText) {
     this.skipPagesHavingExistingExtractableText = skipPagesHavingExistingExtractableText;
     return this;
   }
 
-   /**
-   * 
-   * @return skipPagesHavingExistingExtractableText
-  **/
+  /** @return skipPagesHavingExistingExtractableText */
   @ApiModelProperty(example = "null", value = "")
   public String getSkipPagesHavingExistingExtractableText() {
     return skipPagesHavingExistingExtractableText;
   }
 
-  public void setSkipPagesHavingExistingExtractableText(String skipPagesHavingExistingExtractableText) {
+  public void setSkipPagesHavingExistingExtractableText(
+      String skipPagesHavingExistingExtractableText) {
     this.skipPagesHavingExistingExtractableText = skipPagesHavingExistingExtractableText;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -147,38 +125,46 @@ public class OcrRequest {
       return false;
     }
     OcrRequest ocrRequest = (OcrRequest) o;
-    return Objects.equals(this.ocrLanguage, ocrRequest.ocrLanguage) &&
-        Objects.equals(this.pageSelection, ocrRequest.pageSelection) &&
-        Objects.equals(this.setPageOrientation, ocrRequest.setPageOrientation) &&
-        Objects.equals(this.showFrames, ocrRequest.showFrames) &&
-        Objects.equals(this.showText, ocrRequest.showText) &&
-        Objects.equals(this.skipPagesHavingExistingExtractableText, ocrRequest.skipPagesHavingExistingExtractableText);
+    return Objects.equals(this.ocrLanguage, ocrRequest.ocrLanguage)
+        && Objects.equals(this.pageSelection, ocrRequest.pageSelection)
+        && Objects.equals(this.setPageOrientation, ocrRequest.setPageOrientation)
+        && Objects.equals(this.showFrames, ocrRequest.showFrames)
+        && Objects.equals(this.showText, ocrRequest.showText)
+        && Objects.equals(
+            this.skipPagesHavingExistingExtractableText,
+            ocrRequest.skipPagesHavingExistingExtractableText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ocrLanguage, pageSelection, setPageOrientation, showFrames, showText, skipPagesHavingExistingExtractableText);
+    return Objects.hash(
+        ocrLanguage,
+        pageSelection,
+        setPageOrientation,
+        showFrames,
+        showText,
+        skipPagesHavingExistingExtractableText);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OcrRequest {\n");
-    
+
     sb.append("    ocrLanguage: ").append(toIndentedString(ocrLanguage)).append("\n");
     sb.append("    pageSelection: ").append(toIndentedString(pageSelection)).append("\n");
     sb.append("    setPageOrientation: ").append(toIndentedString(setPageOrientation)).append("\n");
     sb.append("    showFrames: ").append(toIndentedString(showFrames)).append("\n");
     sb.append("    showText: ").append(toIndentedString(showText)).append("\n");
-    sb.append("    skipPagesHavingExistingExtractableText: ").append(toIndentedString(skipPagesHavingExistingExtractableText)).append("\n");
+    sb.append("    skipPagesHavingExistingExtractableText: ")
+        .append(toIndentedString(skipPagesHavingExistingExtractableText))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -186,6 +172,4 @@ public class OcrRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

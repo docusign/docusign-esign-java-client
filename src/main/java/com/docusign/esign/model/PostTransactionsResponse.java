@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * PostTransactionsResponse
- */
-
+/** PostTransactionsResponse */
 public class PostTransactionsResponse {
   @JsonProperty("documentData")
   private String documentData = null;
@@ -22,10 +17,7 @@ public class PostTransactionsResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return documentData
-  **/
+  /** @return documentData */
   @ApiModelProperty(example = "null", value = "")
   public String getDocumentData() {
     return documentData;
@@ -40,10 +32,7 @@ public class PostTransactionsResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return transactionSid
-  **/
+  /** @return transactionSid */
   @ApiModelProperty(example = "null", value = "")
   public String getTransactionSid() {
     return transactionSid;
@@ -52,7 +41,6 @@ public class PostTransactionsResponse {
   public void setTransactionSid(String transactionSid) {
     this.transactionSid = transactionSid;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -63,8 +51,8 @@ public class PostTransactionsResponse {
       return false;
     }
     PostTransactionsResponse postTransactionsResponse = (PostTransactionsResponse) o;
-    return Objects.equals(this.documentData, postTransactionsResponse.documentData) &&
-        Objects.equals(this.transactionSid, postTransactionsResponse.transactionSid);
+    return Objects.equals(this.documentData, postTransactionsResponse.documentData)
+        && Objects.equals(this.transactionSid, postTransactionsResponse.transactionSid);
   }
 
   @Override
@@ -72,12 +60,11 @@ public class PostTransactionsResponse {
     return Objects.hash(documentData, transactionSid);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PostTransactionsResponse {\n");
-    
+
     sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    transactionSid: ").append(toIndentedString(transactionSid)).append("\n");
     sb.append("}");
@@ -85,8 +72,7 @@ public class PostTransactionsResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +80,4 @@ public class PostTransactionsResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

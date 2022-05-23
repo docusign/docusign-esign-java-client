@@ -1,20 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Jurisdiction;
-import com.docusign.esign.model.NotaryJournalMetaData;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * NotaryJournal.
- *
- */
-
+/** NotaryJournal. */
 public class NotaryJournal {
   @JsonProperty("createdDate")
   private String createdDate = null;
@@ -34,12 +24,11 @@ public class NotaryJournal {
   @JsonProperty("signerName")
   private String signerName = null;
 
-
   /**
    * createdDate.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
@@ -47,26 +36,24 @@ public class NotaryJournal {
 
   /**
    * .
+   *
    * @return createdDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
-  /**
-   * setCreatedDate.
-   **/
+  /** setCreatedDate. */
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * documentName.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal documentName(String documentName) {
     this.documentName = documentName;
     return this;
@@ -74,26 +61,24 @@ public class NotaryJournal {
 
   /**
    * .
+   *
    * @return documentName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDocumentName() {
     return documentName;
   }
 
-  /**
-   * setDocumentName.
-   **/
+  /** setDocumentName. */
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
   }
-
 
   /**
    * jurisdiction.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal jurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
     return this;
@@ -101,26 +86,24 @@ public class NotaryJournal {
 
   /**
    * Get jurisdiction.
+   *
    * @return jurisdiction
-   **/
+   */
   @ApiModelProperty(value = "")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
 
-  /**
-   * setJurisdiction.
-   **/
+  /** setJurisdiction. */
   public void setJurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
   }
-
 
   /**
    * notaryJournalId.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal notaryJournalId(String notaryJournalId) {
     this.notaryJournalId = notaryJournalId;
     return this;
@@ -128,26 +111,24 @@ public class NotaryJournal {
 
   /**
    * .
+   *
    * @return notaryJournalId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getNotaryJournalId() {
     return notaryJournalId;
   }
 
-  /**
-   * setNotaryJournalId.
-   **/
+  /** setNotaryJournalId. */
   public void setNotaryJournalId(String notaryJournalId) {
     this.notaryJournalId = notaryJournalId;
   }
-
 
   /**
    * notaryJournalMetaData.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal notaryJournalMetaData(NotaryJournalMetaData notaryJournalMetaData) {
     this.notaryJournalMetaData = notaryJournalMetaData;
     return this;
@@ -155,26 +136,24 @@ public class NotaryJournal {
 
   /**
    * Get notaryJournalMetaData.
+   *
    * @return notaryJournalMetaData
-   **/
+   */
   @ApiModelProperty(value = "")
   public NotaryJournalMetaData getNotaryJournalMetaData() {
     return notaryJournalMetaData;
   }
 
-  /**
-   * setNotaryJournalMetaData.
-   **/
+  /** setNotaryJournalMetaData. */
   public void setNotaryJournalMetaData(NotaryJournalMetaData notaryJournalMetaData) {
     this.notaryJournalMetaData = notaryJournalMetaData;
   }
-
 
   /**
    * signerName.
    *
    * @return NotaryJournal
-   **/
+   */
   public NotaryJournal signerName(String signerName) {
     this.signerName = signerName;
     return this;
@@ -182,20 +161,18 @@ public class NotaryJournal {
 
   /**
    * .
+   *
    * @return signerName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSignerName() {
     return signerName;
   }
 
-  /**
-   * setSignerName.
-   **/
+  /** setSignerName. */
   public void setSignerName(String signerName) {
     this.signerName = signerName;
   }
-
 
   /**
    * Compares objects.
@@ -211,44 +188,46 @@ public class NotaryJournal {
       return false;
     }
     NotaryJournal notaryJournal = (NotaryJournal) o;
-    return Objects.equals(this.createdDate, notaryJournal.createdDate) &&
-        Objects.equals(this.documentName, notaryJournal.documentName) &&
-        Objects.equals(this.jurisdiction, notaryJournal.jurisdiction) &&
-        Objects.equals(this.notaryJournalId, notaryJournal.notaryJournalId) &&
-        Objects.equals(this.notaryJournalMetaData, notaryJournal.notaryJournalMetaData) &&
-        Objects.equals(this.signerName, notaryJournal.signerName);
+    return Objects.equals(this.createdDate, notaryJournal.createdDate)
+        && Objects.equals(this.documentName, notaryJournal.documentName)
+        && Objects.equals(this.jurisdiction, notaryJournal.jurisdiction)
+        && Objects.equals(this.notaryJournalId, notaryJournal.notaryJournalId)
+        && Objects.equals(this.notaryJournalMetaData, notaryJournal.notaryJournalMetaData)
+        && Objects.equals(this.signerName, notaryJournal.signerName);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(createdDate, documentName, jurisdiction, notaryJournalId, notaryJournalMetaData, signerName);
+    return Objects.hash(
+        createdDate,
+        documentName,
+        jurisdiction,
+        notaryJournalId,
+        notaryJournalMetaData,
+        signerName);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournal {\n");
-    
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    jurisdiction: ").append(toIndentedString(jurisdiction)).append("\n");
     sb.append("    notaryJournalId: ").append(toIndentedString(notaryJournalId)).append("\n");
-    sb.append("    notaryJournalMetaData: ").append(toIndentedString(notaryJournalMetaData)).append("\n");
+    sb.append("    notaryJournalMetaData: ")
+        .append(toIndentedString(notaryJournalMetaData))
+        .append("\n");
     sb.append("    signerName: ").append(toIndentedString(signerName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -256,6 +235,4 @@ public class NotaryJournal {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

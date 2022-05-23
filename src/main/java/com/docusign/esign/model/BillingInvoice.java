@@ -1,20 +1,12 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.BillingInvoiceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Contains information about a billing invoice..
- *
- */
+/** Contains information about a billing invoice.. */
 @ApiModel(description = "Contains information about a billing invoice.")
-
 public class BillingInvoice {
   @JsonProperty("amount")
   private String amount = null;
@@ -46,12 +38,11 @@ public class BillingInvoice {
   @JsonProperty("taxableAmount")
   private String taxableAmount = null;
 
-
   /**
    * amount.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice amount(String amount) {
     this.amount = amount;
     return this;
@@ -59,26 +50,24 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return amount
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
 
-  /**
-   * setAmount.
-   **/
+  /** setAmount. */
   public void setAmount(String amount) {
     this.amount = amount;
   }
-
 
   /**
    * balance.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice balance(String balance) {
     this.balance = balance;
     return this;
@@ -86,26 +75,24 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return balance
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBalance() {
     return balance;
   }
 
-  /**
-   * setBalance.
-   **/
+  /** setBalance. */
   public void setBalance(String balance) {
     this.balance = balance;
   }
-
 
   /**
    * dueDate.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice dueDate(String dueDate) {
     this.dueDate = dueDate;
     return this;
@@ -113,26 +100,24 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return dueDate
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getDueDate() {
     return dueDate;
   }
 
-  /**
-   * setDueDate.
-   **/
+  /** setDueDate. */
   public void setDueDate(String dueDate) {
     this.dueDate = dueDate;
   }
-
 
   /**
    * invoiceId.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice invoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
     return this;
@@ -140,39 +125,37 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return invoiceId
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
 
-  /**
-   * setInvoiceId.
-   **/
+  /** setInvoiceId. */
   public void setInvoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
   }
-
 
   /**
    * invoiceItems.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice invoiceItems(java.util.List<BillingInvoiceItem> invoiceItems) {
     this.invoiceItems = invoiceItems;
     return this;
   }
-  
+
   /**
    * addInvoiceItemsItem.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice addInvoiceItemsItem(BillingInvoiceItem invoiceItemsItem) {
     if (this.invoiceItems == null) {
-      this.invoiceItems = new java.util.ArrayList<BillingInvoiceItem>();
+      this.invoiceItems = new java.util.ArrayList<>();
     }
     this.invoiceItems.add(invoiceItemsItem);
     return this;
@@ -180,26 +163,24 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return invoiceItems
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<BillingInvoiceItem> getInvoiceItems() {
     return invoiceItems;
   }
 
-  /**
-   * setInvoiceItems.
-   **/
+  /** setInvoiceItems. */
   public void setInvoiceItems(java.util.List<BillingInvoiceItem> invoiceItems) {
     this.invoiceItems = invoiceItems;
   }
-
 
   /**
    * invoiceNumber.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice invoiceNumber(String invoiceNumber) {
     this.invoiceNumber = invoiceNumber;
     return this;
@@ -207,26 +188,24 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   *
    * @return invoiceNumber
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getInvoiceNumber() {
     return invoiceNumber;
   }
 
-  /**
-   * setInvoiceNumber.
-   **/
+  /** setInvoiceNumber. */
   public void setInvoiceNumber(String invoiceNumber) {
     this.invoiceNumber = invoiceNumber;
   }
-
 
   /**
    * invoiceUri.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice invoiceUri(String invoiceUri) {
     this.invoiceUri = invoiceUri;
     return this;
@@ -234,26 +213,25 @@ public class BillingInvoice {
 
   /**
    * Contains a URI for an endpoint that you can use to retrieve invoice information..
+   *
    * @return invoiceUri
-   **/
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
+   */
+  @ApiModelProperty(
+      value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
   public String getInvoiceUri() {
     return invoiceUri;
   }
 
-  /**
-   * setInvoiceUri.
-   **/
+  /** setInvoiceUri. */
   public void setInvoiceUri(String invoiceUri) {
     this.invoiceUri = invoiceUri;
   }
-
 
   /**
    * nonTaxableAmount.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice nonTaxableAmount(String nonTaxableAmount) {
     this.nonTaxableAmount = nonTaxableAmount;
     return this;
@@ -261,26 +239,24 @@ public class BillingInvoice {
 
   /**
    * .
+   *
    * @return nonTaxableAmount
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getNonTaxableAmount() {
     return nonTaxableAmount;
   }
 
-  /**
-   * setNonTaxableAmount.
-   **/
+  /** setNonTaxableAmount. */
   public void setNonTaxableAmount(String nonTaxableAmount) {
     this.nonTaxableAmount = nonTaxableAmount;
   }
-
 
   /**
    * pdfAvailable.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice pdfAvailable(String pdfAvailable) {
     this.pdfAvailable = pdfAvailable;
     return this;
@@ -288,26 +264,24 @@ public class BillingInvoice {
 
   /**
    * .
+   *
    * @return pdfAvailable
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPdfAvailable() {
     return pdfAvailable;
   }
 
-  /**
-   * setPdfAvailable.
-   **/
+  /** setPdfAvailable. */
   public void setPdfAvailable(String pdfAvailable) {
     this.pdfAvailable = pdfAvailable;
   }
-
 
   /**
    * taxableAmount.
    *
    * @return BillingInvoice
-   **/
+   */
   public BillingInvoice taxableAmount(String taxableAmount) {
     this.taxableAmount = taxableAmount;
     return this;
@@ -315,20 +289,18 @@ public class BillingInvoice {
 
   /**
    * .
+   *
    * @return taxableAmount
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getTaxableAmount() {
     return taxableAmount;
   }
 
-  /**
-   * setTaxableAmount.
-   **/
+  /** setTaxableAmount. */
   public void setTaxableAmount(String taxableAmount) {
     this.taxableAmount = taxableAmount;
   }
-
 
   /**
    * Compares objects.
@@ -344,35 +316,40 @@ public class BillingInvoice {
       return false;
     }
     BillingInvoice billingInvoice = (BillingInvoice) o;
-    return Objects.equals(this.amount, billingInvoice.amount) &&
-        Objects.equals(this.balance, billingInvoice.balance) &&
-        Objects.equals(this.dueDate, billingInvoice.dueDate) &&
-        Objects.equals(this.invoiceId, billingInvoice.invoiceId) &&
-        Objects.equals(this.invoiceItems, billingInvoice.invoiceItems) &&
-        Objects.equals(this.invoiceNumber, billingInvoice.invoiceNumber) &&
-        Objects.equals(this.invoiceUri, billingInvoice.invoiceUri) &&
-        Objects.equals(this.nonTaxableAmount, billingInvoice.nonTaxableAmount) &&
-        Objects.equals(this.pdfAvailable, billingInvoice.pdfAvailable) &&
-        Objects.equals(this.taxableAmount, billingInvoice.taxableAmount);
+    return Objects.equals(this.amount, billingInvoice.amount)
+        && Objects.equals(this.balance, billingInvoice.balance)
+        && Objects.equals(this.dueDate, billingInvoice.dueDate)
+        && Objects.equals(this.invoiceId, billingInvoice.invoiceId)
+        && Objects.equals(this.invoiceItems, billingInvoice.invoiceItems)
+        && Objects.equals(this.invoiceNumber, billingInvoice.invoiceNumber)
+        && Objects.equals(this.invoiceUri, billingInvoice.invoiceUri)
+        && Objects.equals(this.nonTaxableAmount, billingInvoice.nonTaxableAmount)
+        && Objects.equals(this.pdfAvailable, billingInvoice.pdfAvailable)
+        && Objects.equals(this.taxableAmount, billingInvoice.taxableAmount);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount, pdfAvailable, taxableAmount);
+    return Objects.hash(
+        amount,
+        balance,
+        dueDate,
+        invoiceId,
+        invoiceItems,
+        invoiceNumber,
+        invoiceUri,
+        nonTaxableAmount,
+        pdfAvailable,
+        taxableAmount);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoice {\n");
-    
+
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
@@ -388,8 +365,7 @@ public class BillingInvoice {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -397,6 +373,4 @@ public class BillingInvoice {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BulkSendBatchError.
- *
- */
-
+/** BulkSendBatchError. */
 public class BulkSendBatchError {
   @JsonProperty("error")
   private String error = null;
@@ -20,12 +12,11 @@ public class BulkSendBatchError {
   @JsonProperty("errorDetail")
   private String errorDetail = null;
 
-
   /**
    * error.
    *
    * @return BulkSendBatchError
-   **/
+   */
   public BulkSendBatchError error(String error) {
     this.error = error;
     return this;
@@ -33,26 +24,24 @@ public class BulkSendBatchError {
 
   /**
    * .
+   *
    * @return error
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getError() {
     return error;
   }
 
-  /**
-   * setError.
-   **/
+  /** setError. */
   public void setError(String error) {
     this.error = error;
   }
-
 
   /**
    * errorDetail.
    *
    * @return BulkSendBatchError
-   **/
+   */
   public BulkSendBatchError errorDetail(String errorDetail) {
     this.errorDetail = errorDetail;
     return this;
@@ -60,20 +49,18 @@ public class BulkSendBatchError {
 
   /**
    * .
+   *
    * @return errorDetail
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getErrorDetail() {
     return errorDetail;
   }
 
-  /**
-   * setErrorDetail.
-   **/
+  /** setErrorDetail. */
   public void setErrorDetail(String errorDetail) {
     this.errorDetail = errorDetail;
   }
-
 
   /**
    * Compares objects.
@@ -89,27 +76,22 @@ public class BulkSendBatchError {
       return false;
     }
     BulkSendBatchError bulkSendBatchError = (BulkSendBatchError) o;
-    return Objects.equals(this.error, bulkSendBatchError.error) &&
-        Objects.equals(this.errorDetail, bulkSendBatchError.errorDetail);
+    return Objects.equals(this.error, bulkSendBatchError.error)
+        && Objects.equals(this.errorDetail, bulkSendBatchError.errorDetail);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(error, errorDetail);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchError {\n");
-    
+
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    errorDetail: ").append(toIndentedString(errorDetail)).append("\n");
     sb.append("}");
@@ -117,8 +99,7 @@ public class BulkSendBatchError {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -126,6 +107,4 @@ public class BulkSendBatchError {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-
