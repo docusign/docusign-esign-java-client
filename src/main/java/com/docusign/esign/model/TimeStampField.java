@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DocumentSecurityStore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * TimeStampField
- */
-
+/** TimeStampField */
 public class TimeStampField {
   @JsonProperty("documentSecurityStore")
   private DocumentSecurityStore documentSecurityStore = null;
@@ -28,10 +20,11 @@ public class TimeStampField {
     return this;
   }
 
-   /**
+  /**
    * Get documentSecurityStore
+   *
    * @return documentSecurityStore
-  **/
+   */
   @ApiModelProperty(value = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
@@ -46,10 +39,7 @@ public class TimeStampField {
     return this;
   }
 
-   /**
-   * 
-   * @return maxTimeStampSignatureLength
-  **/
+  /** @return maxTimeStampSignatureLength */
   @ApiModelProperty(value = "")
   public String getMaxTimeStampSignatureLength() {
     return maxTimeStampSignatureLength;
@@ -64,10 +54,7 @@ public class TimeStampField {
     return this;
   }
 
-   /**
-   * 
-   * @return timeStampFieldName
-  **/
+  /** @return timeStampFieldName */
   @ApiModelProperty(value = "")
   public String getTimeStampFieldName() {
     return timeStampFieldName;
@@ -76,7 +63,6 @@ public class TimeStampField {
   public void setTimeStampFieldName(String timeStampFieldName) {
     this.timeStampFieldName = timeStampFieldName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,9 +73,10 @@ public class TimeStampField {
       return false;
     }
     TimeStampField timeStampField = (TimeStampField) o;
-    return Objects.equals(this.documentSecurityStore, timeStampField.documentSecurityStore) &&
-        Objects.equals(this.maxTimeStampSignatureLength, timeStampField.maxTimeStampSignatureLength) &&
-        Objects.equals(this.timeStampFieldName, timeStampField.timeStampFieldName);
+    return Objects.equals(this.documentSecurityStore, timeStampField.documentSecurityStore)
+        && Objects.equals(
+            this.maxTimeStampSignatureLength, timeStampField.maxTimeStampSignatureLength)
+        && Objects.equals(this.timeStampFieldName, timeStampField.timeStampFieldName);
   }
 
   @Override
@@ -97,22 +84,24 @@ public class TimeStampField {
     return Objects.hash(documentSecurityStore, maxTimeStampSignatureLength, timeStampFieldName);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TimeStampField {\n");
-    
-    sb.append("    documentSecurityStore: ").append(toIndentedString(documentSecurityStore)).append("\n");
-    sb.append("    maxTimeStampSignatureLength: ").append(toIndentedString(maxTimeStampSignatureLength)).append("\n");
+
+    sb.append("    documentSecurityStore: ")
+        .append(toIndentedString(documentSecurityStore))
+        .append("\n");
+    sb.append("    maxTimeStampSignatureLength: ")
+        .append(toIndentedString(maxTimeStampSignatureLength))
+        .append("\n");
     sb.append("    timeStampFieldName: ").append(toIndentedString(timeStampFieldName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -120,6 +109,4 @@ public class TimeStampField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

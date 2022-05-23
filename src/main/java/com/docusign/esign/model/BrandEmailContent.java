@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BrandEmailContent.
- *
- */
-
+/** BrandEmailContent. */
 public class BrandEmailContent {
   @JsonProperty("content")
   private String content = null;
@@ -26,12 +18,11 @@ public class BrandEmailContent {
   @JsonProperty("linkText")
   private String linkText = null;
 
-
   /**
    * content.
    *
    * @return BrandEmailContent
-   **/
+   */
   public BrandEmailContent content(String content) {
     this.content = content;
     return this;
@@ -39,26 +30,24 @@ public class BrandEmailContent {
 
   /**
    * .
+   *
    * @return content
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getContent() {
     return content;
   }
 
-  /**
-   * setContent.
-   **/
+  /** setContent. */
   public void setContent(String content) {
     this.content = content;
   }
-
 
   /**
    * emailContentType.
    *
    * @return BrandEmailContent
-   **/
+   */
   public BrandEmailContent emailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
     return this;
@@ -66,26 +55,24 @@ public class BrandEmailContent {
 
   /**
    * .
+   *
    * @return emailContentType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEmailContentType() {
     return emailContentType;
   }
 
-  /**
-   * setEmailContentType.
-   **/
+  /** setEmailContentType. */
   public void setEmailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
   }
-
 
   /**
    * emailToLink.
    *
    * @return BrandEmailContent
-   **/
+   */
   public BrandEmailContent emailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
     return this;
@@ -93,26 +80,24 @@ public class BrandEmailContent {
 
   /**
    * .
+   *
    * @return emailToLink
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEmailToLink() {
     return emailToLink;
   }
 
-  /**
-   * setEmailToLink.
-   **/
+  /** setEmailToLink. */
   public void setEmailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
   }
-
 
   /**
    * linkText.
    *
    * @return BrandEmailContent
-   **/
+   */
   public BrandEmailContent linkText(String linkText) {
     this.linkText = linkText;
     return this;
@@ -120,20 +105,18 @@ public class BrandEmailContent {
 
   /**
    * .
+   *
    * @return linkText
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLinkText() {
     return linkText;
   }
 
-  /**
-   * setLinkText.
-   **/
+  /** setLinkText. */
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
-
 
   /**
    * Compares objects.
@@ -149,29 +132,24 @@ public class BrandEmailContent {
       return false;
     }
     BrandEmailContent brandEmailContent = (BrandEmailContent) o;
-    return Objects.equals(this.content, brandEmailContent.content) &&
-        Objects.equals(this.emailContentType, brandEmailContent.emailContentType) &&
-        Objects.equals(this.emailToLink, brandEmailContent.emailToLink) &&
-        Objects.equals(this.linkText, brandEmailContent.linkText);
+    return Objects.equals(this.content, brandEmailContent.content)
+        && Objects.equals(this.emailContentType, brandEmailContent.emailContentType)
+        && Objects.equals(this.emailToLink, brandEmailContent.emailToLink)
+        && Objects.equals(this.linkText, brandEmailContent.linkText);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(content, emailContentType, emailToLink, linkText);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandEmailContent {\n");
-    
+
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
     sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
@@ -181,8 +159,7 @@ public class BrandEmailContent {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -190,6 +167,4 @@ public class BrandEmailContent {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayApplianceRecipient
- */
-
+/** DisplayApplianceRecipient */
 public class DisplayApplianceRecipient {
   @JsonProperty("cfrPart11")
   private Boolean cfrPart11 = null;
@@ -79,10 +74,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return cfrPart11
-  **/
+  /** @return cfrPart11 */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getCfrPart11() {
     return cfrPart11;
@@ -97,10 +89,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return company
-  **/
+  /** @return company */
   @ApiModelProperty(example = "null", value = "")
   public String getCompany() {
     return company;
@@ -115,10 +104,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return digitalSignatureBase64
-  **/
+  /** @return digitalSignatureBase64 */
   @ApiModelProperty(example = "null", value = "")
   public String getDigitalSignatureBase64() {
     return digitalSignatureBase64;
@@ -133,10 +119,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return email
-  **/
+  /** @return email */
   @ApiModelProperty(example = "null", value = "")
   public String getEmail() {
     return email;
@@ -151,10 +134,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return fullName
-  **/
+  /** @return fullName */
   @ApiModelProperty(example = "null", value = "")
   public String getFullName() {
     return fullName;
@@ -169,10 +149,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return initialsBase64
-  **/
+  /** @return initialsBase64 */
   @ApiModelProperty(example = "null", value = "")
   public String getInitialsBase64() {
     return initialsBase64;
@@ -187,10 +164,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return inPersonEmail
-  **/
+  /** @return inPersonEmail */
   @ApiModelProperty(example = "null", value = "")
   public String getInPersonEmail() {
     return inPersonEmail;
@@ -205,10 +179,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return isNotary
-  **/
+  /** @return isNotary */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getIsNotary() {
     return isNotary;
@@ -223,10 +194,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return notarySealBase64
-  **/
+  /** @return notarySealBase64 */
   @ApiModelProperty(example = "null", value = "")
   public String getNotarySealBase64() {
     return notarySealBase64;
@@ -241,10 +209,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return phoneNumber
-  **/
+  /** @return phoneNumber */
   @ApiModelProperty(example = "null", value = "")
   public String getPhoneNumber() {
     return phoneNumber;
@@ -259,10 +224,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return recipientCompleteCount
-  **/
+  /** @return recipientCompleteCount */
   @ApiModelProperty(example = "null", value = "")
   public Integer getRecipientCompleteCount() {
     return recipientCompleteCount;
@@ -277,10 +239,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return recipientGuidId
-  **/
+  /** @return recipientGuidId */
   @ApiModelProperty(example = "null", value = "")
   public String getRecipientGuidId() {
     return recipientGuidId;
@@ -295,11 +254,16 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.
+  /**
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * the Document.
+   *
    * @return recipientId
-  **/
-  @ApiModelProperty(example = "null", value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -313,10 +277,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return recipientStatus
-  **/
+  /** @return recipientStatus */
   @ApiModelProperty(example = "null", value = "")
   public String getRecipientStatus() {
     return recipientStatus;
@@ -331,10 +292,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return recipientType
-  **/
+  /** @return recipientType */
   @ApiModelProperty(example = "null", value = "")
   public String getRecipientType() {
     return recipientType;
@@ -349,10 +307,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return rowState
-  **/
+  /** @return rowState */
   @ApiModelProperty(example = "null", value = "")
   public String getRowState() {
     return rowState;
@@ -367,10 +322,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return signatureBase64
-  **/
+  /** @return signatureBase64 */
   @ApiModelProperty(example = "null", value = "")
   public String getSignatureBase64() {
     return signatureBase64;
@@ -385,10 +337,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return signed
-  **/
+  /** @return signed */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getSigned() {
     return signed;
@@ -403,10 +352,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return signerApplyTabs
-  **/
+  /** @return signerApplyTabs */
   @ApiModelProperty(example = "null", value = "")
   public Boolean getSignerApplyTabs() {
     return signerApplyTabs;
@@ -421,10 +367,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return signerAttachmentBase64
-  **/
+  /** @return signerAttachmentBase64 */
   @ApiModelProperty(example = "null", value = "")
   public String getSignerAttachmentBase64() {
     return signerAttachmentBase64;
@@ -439,10 +382,7 @@ public class DisplayApplianceRecipient {
     return this;
   }
 
-   /**
-   * 
-   * @return userName
-  **/
+  /** @return userName */
   @ApiModelProperty(example = "null", value = "")
   public String getUserName() {
     return userName;
@@ -451,7 +391,6 @@ public class DisplayApplianceRecipient {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -462,43 +401,68 @@ public class DisplayApplianceRecipient {
       return false;
     }
     DisplayApplianceRecipient displayApplianceRecipient = (DisplayApplianceRecipient) o;
-    return Objects.equals(this.cfrPart11, displayApplianceRecipient.cfrPart11) &&
-        Objects.equals(this.company, displayApplianceRecipient.company) &&
-        Objects.equals(this.digitalSignatureBase64, displayApplianceRecipient.digitalSignatureBase64) &&
-        Objects.equals(this.email, displayApplianceRecipient.email) &&
-        Objects.equals(this.fullName, displayApplianceRecipient.fullName) &&
-        Objects.equals(this.initialsBase64, displayApplianceRecipient.initialsBase64) &&
-        Objects.equals(this.inPersonEmail, displayApplianceRecipient.inPersonEmail) &&
-        Objects.equals(this.isNotary, displayApplianceRecipient.isNotary) &&
-        Objects.equals(this.notarySealBase64, displayApplianceRecipient.notarySealBase64) &&
-        Objects.equals(this.phoneNumber, displayApplianceRecipient.phoneNumber) &&
-        Objects.equals(this.recipientCompleteCount, displayApplianceRecipient.recipientCompleteCount) &&
-        Objects.equals(this.recipientGuidId, displayApplianceRecipient.recipientGuidId) &&
-        Objects.equals(this.recipientId, displayApplianceRecipient.recipientId) &&
-        Objects.equals(this.recipientStatus, displayApplianceRecipient.recipientStatus) &&
-        Objects.equals(this.recipientType, displayApplianceRecipient.recipientType) &&
-        Objects.equals(this.rowState, displayApplianceRecipient.rowState) &&
-        Objects.equals(this.signatureBase64, displayApplianceRecipient.signatureBase64) &&
-        Objects.equals(this.signed, displayApplianceRecipient.signed) &&
-        Objects.equals(this.signerApplyTabs, displayApplianceRecipient.signerApplyTabs) &&
-        Objects.equals(this.signerAttachmentBase64, displayApplianceRecipient.signerAttachmentBase64) &&
-        Objects.equals(this.userName, displayApplianceRecipient.userName);
+    return Objects.equals(this.cfrPart11, displayApplianceRecipient.cfrPart11)
+        && Objects.equals(this.company, displayApplianceRecipient.company)
+        && Objects.equals(
+            this.digitalSignatureBase64, displayApplianceRecipient.digitalSignatureBase64)
+        && Objects.equals(this.email, displayApplianceRecipient.email)
+        && Objects.equals(this.fullName, displayApplianceRecipient.fullName)
+        && Objects.equals(this.initialsBase64, displayApplianceRecipient.initialsBase64)
+        && Objects.equals(this.inPersonEmail, displayApplianceRecipient.inPersonEmail)
+        && Objects.equals(this.isNotary, displayApplianceRecipient.isNotary)
+        && Objects.equals(this.notarySealBase64, displayApplianceRecipient.notarySealBase64)
+        && Objects.equals(this.phoneNumber, displayApplianceRecipient.phoneNumber)
+        && Objects.equals(
+            this.recipientCompleteCount, displayApplianceRecipient.recipientCompleteCount)
+        && Objects.equals(this.recipientGuidId, displayApplianceRecipient.recipientGuidId)
+        && Objects.equals(this.recipientId, displayApplianceRecipient.recipientId)
+        && Objects.equals(this.recipientStatus, displayApplianceRecipient.recipientStatus)
+        && Objects.equals(this.recipientType, displayApplianceRecipient.recipientType)
+        && Objects.equals(this.rowState, displayApplianceRecipient.rowState)
+        && Objects.equals(this.signatureBase64, displayApplianceRecipient.signatureBase64)
+        && Objects.equals(this.signed, displayApplianceRecipient.signed)
+        && Objects.equals(this.signerApplyTabs, displayApplianceRecipient.signerApplyTabs)
+        && Objects.equals(
+            this.signerAttachmentBase64, displayApplianceRecipient.signerAttachmentBase64)
+        && Objects.equals(this.userName, displayApplianceRecipient.userName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cfrPart11, company, digitalSignatureBase64, email, fullName, initialsBase64, inPersonEmail, isNotary, notarySealBase64, phoneNumber, recipientCompleteCount, recipientGuidId, recipientId, recipientStatus, recipientType, rowState, signatureBase64, signed, signerApplyTabs, signerAttachmentBase64, userName);
+    return Objects.hash(
+        cfrPart11,
+        company,
+        digitalSignatureBase64,
+        email,
+        fullName,
+        initialsBase64,
+        inPersonEmail,
+        isNotary,
+        notarySealBase64,
+        phoneNumber,
+        recipientCompleteCount,
+        recipientGuidId,
+        recipientId,
+        recipientStatus,
+        recipientType,
+        rowState,
+        signatureBase64,
+        signed,
+        signerApplyTabs,
+        signerAttachmentBase64,
+        userName);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayApplianceRecipient {\n");
-    
+
     sb.append("    cfrPart11: ").append(toIndentedString(cfrPart11)).append("\n");
     sb.append("    company: ").append(toIndentedString(company)).append("\n");
-    sb.append("    digitalSignatureBase64: ").append(toIndentedString(digitalSignatureBase64)).append("\n");
+    sb.append("    digitalSignatureBase64: ")
+        .append(toIndentedString(digitalSignatureBase64))
+        .append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    initialsBase64: ").append(toIndentedString(initialsBase64)).append("\n");
@@ -506,7 +470,9 @@ public class DisplayApplianceRecipient {
     sb.append("    isNotary: ").append(toIndentedString(isNotary)).append("\n");
     sb.append("    notarySealBase64: ").append(toIndentedString(notarySealBase64)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    recipientCompleteCount: ").append(toIndentedString(recipientCompleteCount)).append("\n");
+    sb.append("    recipientCompleteCount: ")
+        .append(toIndentedString(recipientCompleteCount))
+        .append("\n");
     sb.append("    recipientGuidId: ").append(toIndentedString(recipientGuidId)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientStatus: ").append(toIndentedString(recipientStatus)).append("\n");
@@ -515,15 +481,16 @@ public class DisplayApplianceRecipient {
     sb.append("    signatureBase64: ").append(toIndentedString(signatureBase64)).append("\n");
     sb.append("    signed: ").append(toIndentedString(signed)).append("\n");
     sb.append("    signerApplyTabs: ").append(toIndentedString(signerApplyTabs)).append("\n");
-    sb.append("    signerAttachmentBase64: ").append(toIndentedString(signerAttachmentBase64)).append("\n");
+    sb.append("    signerAttachmentBase64: ")
+        .append(toIndentedString(signerAttachmentBase64))
+        .append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -531,6 +498,4 @@ public class DisplayApplianceRecipient {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

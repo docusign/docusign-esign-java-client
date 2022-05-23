@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.BccEmailArchiveHistory;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BccEmailArchiveHistoryList.
- *
- */
-
+/** BccEmailArchiveHistoryList. */
 public class BccEmailArchiveHistoryList {
   @JsonProperty("bccEmailArchiveHistory")
   private java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory = null;
@@ -36,25 +27,26 @@ public class BccEmailArchiveHistoryList {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * bccEmailArchiveHistory.
    *
    * @return BccEmailArchiveHistoryList
-   **/
-  public BccEmailArchiveHistoryList bccEmailArchiveHistory(java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory) {
+   */
+  public BccEmailArchiveHistoryList bccEmailArchiveHistory(
+      java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory) {
     this.bccEmailArchiveHistory = bccEmailArchiveHistory;
     return this;
   }
-  
+
   /**
    * addBccEmailArchiveHistoryItem.
    *
    * @return BccEmailArchiveHistoryList
-   **/
-  public BccEmailArchiveHistoryList addBccEmailArchiveHistoryItem(BccEmailArchiveHistory bccEmailArchiveHistoryItem) {
+   */
+  public BccEmailArchiveHistoryList addBccEmailArchiveHistoryItem(
+      BccEmailArchiveHistory bccEmailArchiveHistoryItem) {
     if (this.bccEmailArchiveHistory == null) {
-      this.bccEmailArchiveHistory = new java.util.ArrayList<BccEmailArchiveHistory>();
+      this.bccEmailArchiveHistory = new java.util.ArrayList<>();
     }
     this.bccEmailArchiveHistory.add(bccEmailArchiveHistoryItem);
     return this;
@@ -62,26 +54,25 @@ public class BccEmailArchiveHistoryList {
 
   /**
    * .
+   *
    * @return bccEmailArchiveHistory
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<BccEmailArchiveHistory> getBccEmailArchiveHistory() {
     return bccEmailArchiveHistory;
   }
 
-  /**
-   * setBccEmailArchiveHistory.
-   **/
-  public void setBccEmailArchiveHistory(java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory) {
+  /** setBccEmailArchiveHistory. */
+  public void setBccEmailArchiveHistory(
+      java.util.List<BccEmailArchiveHistory> bccEmailArchiveHistory) {
     this.bccEmailArchiveHistory = bccEmailArchiveHistory;
   }
-
 
   /**
    * endPosition.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
@@ -89,53 +80,52 @@ public class BccEmailArchiveHistoryList {
 
   /**
    * The last position in the result set. .
+   *
    * @return endPosition
-   **/
+   */
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
-  /**
-   * setEndPosition.
-   **/
+  /** setEndPosition. */
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * nextUri.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the endPosition is the
+   * entire results of the search, this is null. .
+   *
    * @return nextUri
-   **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+   */
+  @ApiModelProperty(
+      value =
+          "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
-  /**
-   * setNextUri.
-   **/
+  /** setNextUri. */
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
@@ -143,26 +133,24 @@ public class BccEmailArchiveHistoryList {
 
   /**
    * The postal code for the billing address..
+   *
    * @return previousUri
-   **/
+   */
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
-  /**
-   * setPreviousUri.
-   **/
+  /** setPreviousUri. */
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
@@ -170,26 +158,24 @@ public class BccEmailArchiveHistoryList {
 
   /**
    * The number of results returned in this response. .
+   *
    * @return resultSetSize
-   **/
+   */
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
-  /**
-   * setResultSetSize.
-   **/
+  /** setResultSetSize. */
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
@@ -197,47 +183,46 @@ public class BccEmailArchiveHistoryList {
 
   /**
    * Starting position of the current result set..
+   *
    * @return startPosition
-   **/
+   */
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
-  /**
-   * setStartPosition.
-   **/
+  /** setStartPosition. */
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
    *
    * @return BccEmailArchiveHistoryList
-   **/
+   */
   public BccEmailArchiveHistoryList totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be greater than or
+   * equal to the value of the property returning the results in the in the response..
+   *
    * @return totalSetSize
-   **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+   */
+  @ApiModelProperty(
+      value =
+          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
-  /**
-   * setTotalSetSize.
-   **/
+  /** setTotalSetSize. */
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -253,33 +238,38 @@ public class BccEmailArchiveHistoryList {
       return false;
     }
     BccEmailArchiveHistoryList bccEmailArchiveHistoryList = (BccEmailArchiveHistoryList) o;
-    return Objects.equals(this.bccEmailArchiveHistory, bccEmailArchiveHistoryList.bccEmailArchiveHistory) &&
-        Objects.equals(this.endPosition, bccEmailArchiveHistoryList.endPosition) &&
-        Objects.equals(this.nextUri, bccEmailArchiveHistoryList.nextUri) &&
-        Objects.equals(this.previousUri, bccEmailArchiveHistoryList.previousUri) &&
-        Objects.equals(this.resultSetSize, bccEmailArchiveHistoryList.resultSetSize) &&
-        Objects.equals(this.startPosition, bccEmailArchiveHistoryList.startPosition) &&
-        Objects.equals(this.totalSetSize, bccEmailArchiveHistoryList.totalSetSize);
+    return Objects.equals(
+            this.bccEmailArchiveHistory, bccEmailArchiveHistoryList.bccEmailArchiveHistory)
+        && Objects.equals(this.endPosition, bccEmailArchiveHistoryList.endPosition)
+        && Objects.equals(this.nextUri, bccEmailArchiveHistoryList.nextUri)
+        && Objects.equals(this.previousUri, bccEmailArchiveHistoryList.previousUri)
+        && Objects.equals(this.resultSetSize, bccEmailArchiveHistoryList.resultSetSize)
+        && Objects.equals(this.startPosition, bccEmailArchiveHistoryList.startPosition)
+        && Objects.equals(this.totalSetSize, bccEmailArchiveHistoryList.totalSetSize);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(bccEmailArchiveHistory, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(
+        bccEmailArchiveHistory,
+        endPosition,
+        nextUri,
+        previousUri,
+        resultSetSize,
+        startPosition,
+        totalSetSize);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchiveHistoryList {\n");
-    
-    sb.append("    bccEmailArchiveHistory: ").append(toIndentedString(bccEmailArchiveHistory)).append("\n");
+
+    sb.append("    bccEmailArchiveHistory: ")
+        .append(toIndentedString(bccEmailArchiveHistory))
+        .append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -291,8 +281,7 @@ public class BccEmailArchiveHistoryList {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -300,6 +289,4 @@ public class BccEmailArchiveHistoryList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

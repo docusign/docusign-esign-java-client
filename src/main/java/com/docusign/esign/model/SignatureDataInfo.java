@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.DocumentSecurityStore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignatureDataInfo
- */
-
+/** SignatureDataInfo */
 public class SignatureDataInfo {
   @JsonProperty("documentSecurityStore")
   private DocumentSecurityStore documentSecurityStore = null;
@@ -28,10 +20,11 @@ public class SignatureDataInfo {
     return this;
   }
 
-   /**
+  /**
    * Get documentSecurityStore
+   *
    * @return documentSecurityStore
-  **/
+   */
   @ApiModelProperty(value = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
@@ -46,10 +39,7 @@ public class SignatureDataInfo {
     return this;
   }
 
-   /**
-   * 
-   * @return signatureData
-  **/
+  /** @return signatureData */
   @ApiModelProperty(value = "")
   public String getSignatureData() {
     return signatureData;
@@ -64,10 +54,7 @@ public class SignatureDataInfo {
     return this;
   }
 
-   /**
-   * 
-   * @return signatureFieldName
-  **/
+  /** @return signatureFieldName */
   @ApiModelProperty(value = "")
   public String getSignatureFieldName() {
     return signatureFieldName;
@@ -76,7 +63,6 @@ public class SignatureDataInfo {
   public void setSignatureFieldName(String signatureFieldName) {
     this.signatureFieldName = signatureFieldName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -87,9 +73,9 @@ public class SignatureDataInfo {
       return false;
     }
     SignatureDataInfo signatureDataInfo = (SignatureDataInfo) o;
-    return Objects.equals(this.documentSecurityStore, signatureDataInfo.documentSecurityStore) &&
-        Objects.equals(this.signatureData, signatureDataInfo.signatureData) &&
-        Objects.equals(this.signatureFieldName, signatureDataInfo.signatureFieldName);
+    return Objects.equals(this.documentSecurityStore, signatureDataInfo.documentSecurityStore)
+        && Objects.equals(this.signatureData, signatureDataInfo.signatureData)
+        && Objects.equals(this.signatureFieldName, signatureDataInfo.signatureFieldName);
   }
 
   @Override
@@ -97,13 +83,14 @@ public class SignatureDataInfo {
     return Objects.hash(documentSecurityStore, signatureData, signatureFieldName);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureDataInfo {\n");
-    
-    sb.append("    documentSecurityStore: ").append(toIndentedString(documentSecurityStore)).append("\n");
+
+    sb.append("    documentSecurityStore: ")
+        .append(toIndentedString(documentSecurityStore))
+        .append("\n");
     sb.append("    signatureData: ").append(toIndentedString(signatureData)).append("\n");
     sb.append("    signatureFieldName: ").append(toIndentedString(signatureFieldName)).append("\n");
     sb.append("}");
@@ -111,8 +98,7 @@ public class SignatureDataInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -120,6 +106,4 @@ public class SignatureDataInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

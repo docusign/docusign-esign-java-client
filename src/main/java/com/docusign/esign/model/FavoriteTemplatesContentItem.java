@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * FavoriteTemplatesContentItem.
- *
- */
-
+/** FavoriteTemplatesContentItem. */
 public class FavoriteTemplatesContentItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -24,12 +15,11 @@ public class FavoriteTemplatesContentItem {
   @JsonProperty("templateId")
   private String templateId = null;
 
-
   /**
    * errorDetails.
    *
    * @return FavoriteTemplatesContentItem
-   **/
+   */
   public FavoriteTemplatesContentItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -37,26 +27,24 @@ public class FavoriteTemplatesContentItem {
 
   /**
    * Get errorDetails.
+   *
    * @return errorDetails
-   **/
+   */
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /**
-   * setErrorDetails.
-   **/
+  /** setErrorDetails. */
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * favoritedDate.
    *
    * @return FavoriteTemplatesContentItem
-   **/
+   */
   public FavoriteTemplatesContentItem favoritedDate(String favoritedDate) {
     this.favoritedDate = favoritedDate;
     return this;
@@ -64,47 +52,46 @@ public class FavoriteTemplatesContentItem {
 
   /**
    * .
+   *
    * @return favoritedDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getFavoritedDate() {
     return favoritedDate;
   }
 
-  /**
-   * setFavoritedDate.
-   **/
+  /** setFavoritedDate. */
   public void setFavoritedDate(String favoritedDate) {
     this.favoritedDate = favoritedDate;
   }
-
 
   /**
    * templateId.
    *
    * @return FavoriteTemplatesContentItem
-   **/
+   */
   public FavoriteTemplatesContentItem templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * .
+   *
    * @return templateId
-   **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+   */
+  @ApiModelProperty(
+      value =
+          "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
 
-  /**
-   * setTemplateId.
-   **/
+  /** setTemplateId. */
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * Compares objects.
@@ -120,28 +107,23 @@ public class FavoriteTemplatesContentItem {
       return false;
     }
     FavoriteTemplatesContentItem favoriteTemplatesContentItem = (FavoriteTemplatesContentItem) o;
-    return Objects.equals(this.errorDetails, favoriteTemplatesContentItem.errorDetails) &&
-        Objects.equals(this.favoritedDate, favoriteTemplatesContentItem.favoritedDate) &&
-        Objects.equals(this.templateId, favoriteTemplatesContentItem.templateId);
+    return Objects.equals(this.errorDetails, favoriteTemplatesContentItem.errorDetails)
+        && Objects.equals(this.favoritedDate, favoriteTemplatesContentItem.favoritedDate)
+        && Objects.equals(this.templateId, favoriteTemplatesContentItem.templateId);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, favoritedDate, templateId);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FavoriteTemplatesContentItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    favoritedDate: ").append(toIndentedString(favoritedDate)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
@@ -150,8 +132,7 @@ public class FavoriteTemplatesContentItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -159,6 +140,4 @@ public class FavoriteTemplatesContentItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

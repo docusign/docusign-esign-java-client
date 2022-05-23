@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * PostTransactionsRequest
- */
-
+/** PostTransactionsRequest */
 public class PostTransactionsRequest {
   @JsonProperty("documentData")
   private String documentData = null;
@@ -28,10 +23,7 @@ public class PostTransactionsRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return documentData
-  **/
+  /** @return documentData */
   @ApiModelProperty(example = "null", value = "")
   public String getDocumentData() {
     return documentData;
@@ -46,10 +38,7 @@ public class PostTransactionsRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return dptName
-  **/
+  /** @return dptName */
   @ApiModelProperty(example = "null", value = "")
   public String getDptName() {
     return dptName;
@@ -64,10 +53,7 @@ public class PostTransactionsRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return transactionName
-  **/
+  /** @return transactionName */
   @ApiModelProperty(example = "null", value = "")
   public String getTransactionName() {
     return transactionName;
@@ -82,10 +68,7 @@ public class PostTransactionsRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return transactionTypeName
-  **/
+  /** @return transactionTypeName */
   @ApiModelProperty(example = "null", value = "")
   public String getTransactionTypeName() {
     return transactionTypeName;
@@ -94,7 +77,6 @@ public class PostTransactionsRequest {
   public void setTransactionTypeName(String transactionTypeName) {
     this.transactionTypeName = transactionTypeName;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -105,10 +87,10 @@ public class PostTransactionsRequest {
       return false;
     }
     PostTransactionsRequest postTransactionsRequest = (PostTransactionsRequest) o;
-    return Objects.equals(this.documentData, postTransactionsRequest.documentData) &&
-        Objects.equals(this.dptName, postTransactionsRequest.dptName) &&
-        Objects.equals(this.transactionName, postTransactionsRequest.transactionName) &&
-        Objects.equals(this.transactionTypeName, postTransactionsRequest.transactionTypeName);
+    return Objects.equals(this.documentData, postTransactionsRequest.documentData)
+        && Objects.equals(this.dptName, postTransactionsRequest.dptName)
+        && Objects.equals(this.transactionName, postTransactionsRequest.transactionName)
+        && Objects.equals(this.transactionTypeName, postTransactionsRequest.transactionTypeName);
   }
 
   @Override
@@ -116,23 +98,23 @@ public class PostTransactionsRequest {
     return Objects.hash(documentData, dptName, transactionName, transactionTypeName);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PostTransactionsRequest {\n");
-    
+
     sb.append("    documentData: ").append(toIndentedString(documentData)).append("\n");
     sb.append("    dptName: ").append(toIndentedString(dptName)).append("\n");
     sb.append("    transactionName: ").append(toIndentedString(transactionName)).append("\n");
-    sb.append("    transactionTypeName: ").append(toIndentedString(transactionTypeName)).append("\n");
+    sb.append("    transactionTypeName: ")
+        .append(toIndentedString(transactionTypeName))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -140,6 +122,4 @@ public class PostTransactionsRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

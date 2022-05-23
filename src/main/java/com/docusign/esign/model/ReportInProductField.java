@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductField.
- *
- */
-
+/** ReportInProductField. */
 public class ReportInProductField {
   @JsonProperty("displayOrder")
   private String displayOrder = null;
@@ -26,12 +18,11 @@ public class ReportInProductField {
   @JsonProperty("selected")
   private String selected = null;
 
-
   /**
    * displayOrder.
    *
    * @return ReportInProductField
-   **/
+   */
   public ReportInProductField displayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
     return this;
@@ -39,26 +30,24 @@ public class ReportInProductField {
 
   /**
    * .
+   *
    * @return displayOrder
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
 
-  /**
-   * setDisplayOrder.
-   **/
+  /** setDisplayOrder. */
   public void setDisplayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
   }
-
 
   /**
    * fieldVersion.
    *
    * @return ReportInProductField
-   **/
+   */
   public ReportInProductField fieldVersion(String fieldVersion) {
     this.fieldVersion = fieldVersion;
     return this;
@@ -66,26 +55,24 @@ public class ReportInProductField {
 
   /**
    * .
+   *
    * @return fieldVersion
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getFieldVersion() {
     return fieldVersion;
   }
 
-  /**
-   * setFieldVersion.
-   **/
+  /** setFieldVersion. */
   public void setFieldVersion(String fieldVersion) {
     this.fieldVersion = fieldVersion;
   }
-
 
   /**
    * name.
    *
    * @return ReportInProductField
-   **/
+   */
   public ReportInProductField name(String name) {
     this.name = name;
     return this;
@@ -93,26 +80,24 @@ public class ReportInProductField {
 
   /**
    * .
+   *
    * @return name
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /**
-   * setName.
-   **/
+  /** setName. */
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * selected.
    *
    * @return ReportInProductField
-   **/
+   */
   public ReportInProductField selected(String selected) {
     this.selected = selected;
     return this;
@@ -120,20 +105,18 @@ public class ReportInProductField {
 
   /**
    * .
+   *
    * @return selected
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSelected() {
     return selected;
   }
 
-  /**
-   * setSelected.
-   **/
+  /** setSelected. */
   public void setSelected(String selected) {
     this.selected = selected;
   }
-
 
   /**
    * Compares objects.
@@ -149,29 +132,24 @@ public class ReportInProductField {
       return false;
     }
     ReportInProductField reportInProductField = (ReportInProductField) o;
-    return Objects.equals(this.displayOrder, reportInProductField.displayOrder) &&
-        Objects.equals(this.fieldVersion, reportInProductField.fieldVersion) &&
-        Objects.equals(this.name, reportInProductField.name) &&
-        Objects.equals(this.selected, reportInProductField.selected);
+    return Objects.equals(this.displayOrder, reportInProductField.displayOrder)
+        && Objects.equals(this.fieldVersion, reportInProductField.fieldVersion)
+        && Objects.equals(this.name, reportInProductField.name)
+        && Objects.equals(this.selected, reportInProductField.selected);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(displayOrder, fieldVersion, name, selected);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductField {\n");
-    
+
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    fieldVersion: ").append(toIndentedString(fieldVersion)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -181,8 +159,7 @@ public class ReportInProductField {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -190,6 +167,4 @@ public class ReportInProductField {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

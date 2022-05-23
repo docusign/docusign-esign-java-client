@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.TspHealthCheckStatusDescription;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * TspHealthCheckRequest
- */
-
+/** TspHealthCheckRequest */
 public class TspHealthCheckRequest {
   @JsonProperty("appVersion")
   private String appVersion = null;
@@ -34,10 +26,7 @@ public class TspHealthCheckRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return appVersion
-  **/
+  /** @return appVersion */
   @ApiModelProperty(value = "")
   public String getAppVersion() {
     return appVersion;
@@ -52,10 +41,7 @@ public class TspHealthCheckRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return description
-  **/
+  /** @return description */
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
@@ -70,10 +56,7 @@ public class TspHealthCheckRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return error
-  **/
+  /** @return error */
   @ApiModelProperty(value = "")
   public String getError() {
     return error;
@@ -88,11 +71,15 @@ public class TspHealthCheckRequest {
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   *
    * @return status
-  **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -101,12 +88,14 @@ public class TspHealthCheckRequest {
     this.status = status;
   }
 
-  public TspHealthCheckRequest statusDescription(java.util.List<TspHealthCheckStatusDescription> statusDescription) {
+  public TspHealthCheckRequest statusDescription(
+      java.util.List<TspHealthCheckStatusDescription> statusDescription) {
     this.statusDescription = statusDescription;
     return this;
   }
 
-  public TspHealthCheckRequest addStatusDescriptionItem(TspHealthCheckStatusDescription statusDescriptionItem) {
+  public TspHealthCheckRequest addStatusDescriptionItem(
+      TspHealthCheckStatusDescription statusDescriptionItem) {
     if (this.statusDescription == null) {
       this.statusDescription = new java.util.ArrayList<TspHealthCheckStatusDescription>();
     }
@@ -114,19 +103,16 @@ public class TspHealthCheckRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return statusDescription
-  **/
+  /** @return statusDescription */
   @ApiModelProperty(value = "")
   public java.util.List<TspHealthCheckStatusDescription> getStatusDescription() {
     return statusDescription;
   }
 
-  public void setStatusDescription(java.util.List<TspHealthCheckStatusDescription> statusDescription) {
+  public void setStatusDescription(
+      java.util.List<TspHealthCheckStatusDescription> statusDescription) {
     this.statusDescription = statusDescription;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,11 +123,11 @@ public class TspHealthCheckRequest {
       return false;
     }
     TspHealthCheckRequest tspHealthCheckRequest = (TspHealthCheckRequest) o;
-    return Objects.equals(this.appVersion, tspHealthCheckRequest.appVersion) &&
-        Objects.equals(this.description, tspHealthCheckRequest.description) &&
-        Objects.equals(this.error, tspHealthCheckRequest.error) &&
-        Objects.equals(this.status, tspHealthCheckRequest.status) &&
-        Objects.equals(this.statusDescription, tspHealthCheckRequest.statusDescription);
+    return Objects.equals(this.appVersion, tspHealthCheckRequest.appVersion)
+        && Objects.equals(this.description, tspHealthCheckRequest.description)
+        && Objects.equals(this.error, tspHealthCheckRequest.error)
+        && Objects.equals(this.status, tspHealthCheckRequest.status)
+        && Objects.equals(this.statusDescription, tspHealthCheckRequest.statusDescription);
   }
 
   @Override
@@ -149,12 +135,11 @@ public class TspHealthCheckRequest {
     return Objects.hash(appVersion, description, error, status, statusDescription);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TspHealthCheckRequest {\n");
-    
+
     sb.append("    appVersion: ").append(toIndentedString(appVersion)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
@@ -165,8 +150,7 @@ public class TspHealthCheckRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -174,6 +158,4 @@ public class TspHealthCheckRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,19 +1,12 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Defines a billing payment request object..
- *
- */
+/** Defines a billing payment request object.. */
 @ApiModel(description = "Defines a billing payment request object.")
-
 public class BillingPaymentItem {
   @JsonProperty("amount")
   private String amount = null;
@@ -30,12 +23,11 @@ public class BillingPaymentItem {
   @JsonProperty("paymentNumber")
   private String paymentNumber = null;
 
-
   /**
    * amount.
    *
    * @return BillingPaymentItem
-   **/
+   */
   public BillingPaymentItem amount(String amount) {
     this.amount = amount;
     return this;
@@ -43,26 +35,24 @@ public class BillingPaymentItem {
 
   /**
    * Reserved: TBD.
+   *
    * @return amount
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
 
-  /**
-   * setAmount.
-   **/
+  /** setAmount. */
   public void setAmount(String amount) {
     this.amount = amount;
   }
-
 
   /**
    * description.
    *
    * @return BillingPaymentItem
-   **/
+   */
   public BillingPaymentItem description(String description) {
     this.description = description;
     return this;
@@ -70,26 +60,24 @@ public class BillingPaymentItem {
 
   /**
    * .
+   *
    * @return description
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
 
-  /**
-   * setDescription.
-   **/
+  /** setDescription. */
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   /**
    * paymentDate.
    *
    * @return BillingPaymentItem
-   **/
+   */
   public BillingPaymentItem paymentDate(String paymentDate) {
     this.paymentDate = paymentDate;
     return this;
@@ -97,26 +85,24 @@ public class BillingPaymentItem {
 
   /**
    * .
+   *
    * @return paymentDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPaymentDate() {
     return paymentDate;
   }
 
-  /**
-   * setPaymentDate.
-   **/
+  /** setPaymentDate. */
   public void setPaymentDate(String paymentDate) {
     this.paymentDate = paymentDate;
   }
-
 
   /**
    * paymentId.
    *
    * @return BillingPaymentItem
-   **/
+   */
   public BillingPaymentItem paymentId(String paymentId) {
     this.paymentId = paymentId;
     return this;
@@ -124,47 +110,46 @@ public class BillingPaymentItem {
 
   /**
    * .
+   *
    * @return paymentId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPaymentId() {
     return paymentId;
   }
 
-  /**
-   * setPaymentId.
-   **/
+  /** setPaymentId. */
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
-
 
   /**
    * paymentNumber.
    *
    * @return BillingPaymentItem
-   **/
+   */
   public BillingPaymentItem paymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
     return this;
   }
 
   /**
-   * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\"..
+   * When set to **true**, a PDF version of the invoice is available. To get the PDF, make the call
+   * again and change \"Accept:\" in the header to \"Accept: application/pdf\"..
+   *
    * @return paymentNumber
-   **/
-  @ApiModelProperty(value = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
+   */
+  @ApiModelProperty(
+      value =
+          "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
   public String getPaymentNumber() {
     return paymentNumber;
   }
 
-  /**
-   * setPaymentNumber.
-   **/
+  /** setPaymentNumber. */
   public void setPaymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
   }
-
 
   /**
    * Compares objects.
@@ -180,30 +165,25 @@ public class BillingPaymentItem {
       return false;
     }
     BillingPaymentItem billingPaymentItem = (BillingPaymentItem) o;
-    return Objects.equals(this.amount, billingPaymentItem.amount) &&
-        Objects.equals(this.description, billingPaymentItem.description) &&
-        Objects.equals(this.paymentDate, billingPaymentItem.paymentDate) &&
-        Objects.equals(this.paymentId, billingPaymentItem.paymentId) &&
-        Objects.equals(this.paymentNumber, billingPaymentItem.paymentNumber);
+    return Objects.equals(this.amount, billingPaymentItem.amount)
+        && Objects.equals(this.description, billingPaymentItem.description)
+        && Objects.equals(this.paymentDate, billingPaymentItem.paymentDate)
+        && Objects.equals(this.paymentId, billingPaymentItem.paymentId)
+        && Objects.equals(this.paymentNumber, billingPaymentItem.paymentNumber);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(amount, description, paymentDate, paymentId, paymentNumber);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentItem {\n");
-    
+
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    paymentDate: ").append(toIndentedString(paymentDate)).append("\n");
@@ -214,8 +194,7 @@ public class BillingPaymentItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -223,6 +202,4 @@ public class BillingPaymentItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SmartContractInformation.
- *
- */
-
+/** SmartContractInformation. */
 public class SmartContractInformation {
   @JsonProperty("code")
   private String code = null;
@@ -20,12 +12,11 @@ public class SmartContractInformation {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * code.
    *
    * @return SmartContractInformation
-   **/
+   */
   public SmartContractInformation code(String code) {
     this.code = code;
     return this;
@@ -33,26 +24,24 @@ public class SmartContractInformation {
 
   /**
    * .
+   *
    * @return code
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCode() {
     return code;
   }
 
-  /**
-   * setCode.
-   **/
+  /** setCode. */
   public void setCode(String code) {
     this.code = code;
   }
-
 
   /**
    * uri.
    *
    * @return SmartContractInformation
-   **/
+   */
   public SmartContractInformation uri(String uri) {
     this.uri = uri;
     return this;
@@ -60,20 +49,18 @@ public class SmartContractInformation {
 
   /**
    * .
+   *
    * @return uri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
-  /**
-   * setUri.
-   **/
+  /** setUri. */
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -89,27 +76,22 @@ public class SmartContractInformation {
       return false;
     }
     SmartContractInformation smartContractInformation = (SmartContractInformation) o;
-    return Objects.equals(this.code, smartContractInformation.code) &&
-        Objects.equals(this.uri, smartContractInformation.uri);
+    return Objects.equals(this.code, smartContractInformation.code)
+        && Objects.equals(this.uri, smartContractInformation.uri);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(code, uri);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartContractInformation {\n");
-    
+
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
@@ -117,8 +99,7 @@ public class SmartContractInformation {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -126,6 +107,4 @@ public class SmartContractInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

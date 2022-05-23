@@ -1,16 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * CustomFieldV2
- */
-
+/** CustomFieldV2 */
 public class CustomFieldV2 {
   @JsonProperty("configurationType")
   private String configurationType = null;
@@ -38,11 +32,16 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
-   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.
+  /**
+   * If merge field's are being used, specifies the type of the merge field. The only supported
+   * value is **salesforce**.
+   *
    * @return configurationType
-  **/
-  @ApiModelProperty(example = "null", value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -56,10 +55,11 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
+  /**
    * Get errorDetails
+   *
    * @return errorDetails
-  **/
+   */
   @ApiModelProperty(example = "null", value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
@@ -74,10 +74,7 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return fieldId
-  **/
+  /** @return fieldId */
   @ApiModelProperty(example = "null", value = "")
   public String getFieldId() {
     return fieldId;
@@ -92,10 +89,7 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return name
-  **/
+  /** @return name */
   @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
@@ -110,11 +104,14 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
+  /**
    * When set to **true**, the signer is required to fill out this tab
+   *
    * @return required
-  **/
-  @ApiModelProperty(example = "null", value = "When set to **true**, the signer is required to fill out this tab")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -128,10 +125,7 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
-   * 
-   * @return show
-  **/
+  /** @return show */
   @ApiModelProperty(example = "null", value = "")
   public String getShow() {
     return show;
@@ -146,10 +140,11 @@ public class CustomFieldV2 {
     return this;
   }
 
-   /**
+  /**
    * The value of the custom field.
+   *
    * @return value
-  **/
+   */
   @ApiModelProperty(example = "null", value = "The value of the custom field.")
   public String getValue() {
     return value;
@@ -158,7 +153,6 @@ public class CustomFieldV2 {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -169,13 +163,13 @@ public class CustomFieldV2 {
       return false;
     }
     CustomFieldV2 customFieldV2 = (CustomFieldV2) o;
-    return Objects.equals(this.configurationType, customFieldV2.configurationType) &&
-        Objects.equals(this.errorDetails, customFieldV2.errorDetails) &&
-        Objects.equals(this.fieldId, customFieldV2.fieldId) &&
-        Objects.equals(this.name, customFieldV2.name) &&
-        Objects.equals(this.required, customFieldV2.required) &&
-        Objects.equals(this.show, customFieldV2.show) &&
-        Objects.equals(this.value, customFieldV2.value);
+    return Objects.equals(this.configurationType, customFieldV2.configurationType)
+        && Objects.equals(this.errorDetails, customFieldV2.errorDetails)
+        && Objects.equals(this.fieldId, customFieldV2.fieldId)
+        && Objects.equals(this.name, customFieldV2.name)
+        && Objects.equals(this.required, customFieldV2.required)
+        && Objects.equals(this.show, customFieldV2.show)
+        && Objects.equals(this.value, customFieldV2.value);
   }
 
   @Override
@@ -183,12 +177,11 @@ public class CustomFieldV2 {
     return Objects.hash(configurationType, errorDetails, fieldId, name, required, show, value);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFieldV2 {\n");
-    
+
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -201,8 +194,7 @@ public class CustomFieldV2 {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -210,6 +202,4 @@ public class CustomFieldV2 {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

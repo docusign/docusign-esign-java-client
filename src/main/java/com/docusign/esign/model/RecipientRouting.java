@@ -1,29 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.RecipientRules;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * RecipientRouting.
- *
- */
-
+/** RecipientRouting. */
 public class RecipientRouting {
   @JsonProperty("rules")
   private RecipientRules rules = null;
-
 
   /**
    * rules.
    *
    * @return RecipientRouting
-   **/
+   */
   public RecipientRouting rules(RecipientRules rules) {
     this.rules = rules;
     return this;
@@ -31,20 +21,18 @@ public class RecipientRouting {
 
   /**
    * Get rules.
+   *
    * @return rules
-   **/
+   */
   @ApiModelProperty(value = "")
   public RecipientRules getRules() {
     return rules;
   }
 
-  /**
-   * setRules.
-   **/
+  /** setRules. */
   public void setRules(RecipientRules rules) {
     this.rules = rules;
   }
-
 
   /**
    * Compares objects.
@@ -63,31 +51,25 @@ public class RecipientRouting {
     return Objects.equals(this.rules, recipientRouting.rules);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(rules);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientRouting {\n");
-    
+
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -95,6 +77,4 @@ public class RecipientRouting {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

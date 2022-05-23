@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.SignHashDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * CompleteSignHashResponse
- */
-
+/** CompleteSignHashResponse */
 public class CompleteSignHashResponse {
   @JsonProperty("documents")
   private java.util.List<SignHashDocument> documents = null;
@@ -36,11 +28,13 @@ public class CompleteSignHashResponse {
     return this;
   }
 
-   /**
+  /**
    * Complex element contains the details on the documents in the envelope.
+   *
    * @return documents
-  **/
-  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
+   */
+  @ApiModelProperty(
+      value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -54,10 +48,7 @@ public class CompleteSignHashResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return redirectionUrl
-  **/
+  /** @return redirectionUrl */
   @ApiModelProperty(value = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
@@ -72,10 +63,7 @@ public class CompleteSignHashResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return remainingSignatureRequests
-  **/
+  /** @return remainingSignatureRequests */
   @ApiModelProperty(value = "")
   public String getRemainingSignatureRequests() {
     return remainingSignatureRequests;
@@ -84,7 +72,6 @@ public class CompleteSignHashResponse {
   public void setRemainingSignatureRequests(String remainingSignatureRequests) {
     this.remainingSignatureRequests = remainingSignatureRequests;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -95,9 +82,10 @@ public class CompleteSignHashResponse {
       return false;
     }
     CompleteSignHashResponse completeSignHashResponse = (CompleteSignHashResponse) o;
-    return Objects.equals(this.documents, completeSignHashResponse.documents) &&
-        Objects.equals(this.redirectionUrl, completeSignHashResponse.redirectionUrl) &&
-        Objects.equals(this.remainingSignatureRequests, completeSignHashResponse.remainingSignatureRequests);
+    return Objects.equals(this.documents, completeSignHashResponse.documents)
+        && Objects.equals(this.redirectionUrl, completeSignHashResponse.redirectionUrl)
+        && Objects.equals(
+            this.remainingSignatureRequests, completeSignHashResponse.remainingSignatureRequests);
   }
 
   @Override
@@ -105,22 +93,22 @@ public class CompleteSignHashResponse {
     return Objects.hash(documents, redirectionUrl, remainingSignatureRequests);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CompleteSignHashResponse {\n");
-    
+
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    redirectionUrl: ").append(toIndentedString(redirectionUrl)).append("\n");
-    sb.append("    remainingSignatureRequests: ").append(toIndentedString(remainingSignatureRequests)).append("\n");
+    sb.append("    remainingSignatureRequests: ")
+        .append(toIndentedString(remainingSignatureRequests))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -128,6 +116,4 @@ public class CompleteSignHashResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

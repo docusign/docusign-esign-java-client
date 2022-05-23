@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.SignatureProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Revision
- */
-
+/** Revision */
 public class Revision {
   @JsonProperty("endData")
   private String endData = null;
@@ -37,10 +29,7 @@ public class Revision {
     return this;
   }
 
-   /**
-   * 
-   * @return endData
-  **/
+  /** @return endData */
   @ApiModelProperty(value = "")
   public String getEndData() {
     return endData;
@@ -55,10 +44,7 @@ public class Revision {
     return this;
   }
 
-   /**
-   * 
-   * @return fieldName
-  **/
+  /** @return fieldName */
   @ApiModelProperty(value = "")
   public String getFieldName() {
     return fieldName;
@@ -73,10 +59,7 @@ public class Revision {
     return this;
   }
 
-   /**
-   * 
-   * @return maxSignatureLength
-  **/
+  /** @return maxSignatureLength */
   @ApiModelProperty(value = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
@@ -91,10 +74,11 @@ public class Revision {
     return this;
   }
 
-   /**
+  /**
    * Get signatureProperties
+   *
    * @return signatureProperties
-  **/
+   */
   @ApiModelProperty(value = "")
   public SignatureProperties getSignatureProperties() {
     return signatureProperties;
@@ -109,10 +93,7 @@ public class Revision {
     return this;
   }
 
-   /**
-   * 
-   * @return signatureType
-  **/
+  /** @return signatureType */
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
@@ -127,10 +108,7 @@ public class Revision {
     return this;
   }
 
-   /**
-   * 
-   * @return startData
-  **/
+  /** @return startData */
   @ApiModelProperty(value = "")
   public String getStartData() {
     return startData;
@@ -139,7 +117,6 @@ public class Revision {
   public void setStartData(String startData) {
     this.startData = startData;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -150,29 +127,31 @@ public class Revision {
       return false;
     }
     Revision revision = (Revision) o;
-    return Objects.equals(this.endData, revision.endData) &&
-        Objects.equals(this.fieldName, revision.fieldName) &&
-        Objects.equals(this.maxSignatureLength, revision.maxSignatureLength) &&
-        Objects.equals(this.signatureProperties, revision.signatureProperties) &&
-        Objects.equals(this.signatureType, revision.signatureType) &&
-        Objects.equals(this.startData, revision.startData);
+    return Objects.equals(this.endData, revision.endData)
+        && Objects.equals(this.fieldName, revision.fieldName)
+        && Objects.equals(this.maxSignatureLength, revision.maxSignatureLength)
+        && Objects.equals(this.signatureProperties, revision.signatureProperties)
+        && Objects.equals(this.signatureType, revision.signatureType)
+        && Objects.equals(this.startData, revision.startData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(endData, fieldName, maxSignatureLength, signatureProperties, signatureType, startData);
+    return Objects.hash(
+        endData, fieldName, maxSignatureLength, signatureProperties, signatureType, startData);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Revision {\n");
-    
+
     sb.append("    endData: ").append(toIndentedString(endData)).append("\n");
     sb.append("    fieldName: ").append(toIndentedString(fieldName)).append("\n");
     sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
-    sb.append("    signatureProperties: ").append(toIndentedString(signatureProperties)).append("\n");
+    sb.append("    signatureProperties: ")
+        .append(toIndentedString(signatureProperties))
+        .append("\n");
     sb.append("    signatureType: ").append(toIndentedString(signatureType)).append("\n");
     sb.append("    startData: ").append(toIndentedString(startData)).append("\n");
     sb.append("}");
@@ -180,8 +159,7 @@ public class Revision {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -189,6 +167,4 @@ public class Revision {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * TspHealthCheckStatusDescription
- */
-
+/** TspHealthCheckStatusDescription */
 public class TspHealthCheckStatusDescription {
   @JsonProperty("description")
   private String description = null;
@@ -36,10 +29,7 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * 
-   * @return description
-  **/
+  /** @return description */
   @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
@@ -54,10 +44,7 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * 
-   * @return error
-  **/
+  /** @return error */
   @ApiModelProperty(value = "")
   public String getError() {
     return error;
@@ -72,10 +59,7 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * 
-   * @return hostname
-  **/
+  /** @return hostname */
   @ApiModelProperty(value = "")
   public String getHostname() {
     return hostname;
@@ -90,10 +74,7 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * 
-   * @return responseSeconds
-  **/
+  /** @return responseSeconds */
   @ApiModelProperty(value = "")
   public String getResponseSeconds() {
     return responseSeconds;
@@ -108,11 +89,15 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.
+  /**
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   *
    * @return status
-  **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -126,10 +111,7 @@ public class TspHealthCheckStatusDescription {
     return this;
   }
 
-   /**
-   * 
-   * @return type
-  **/
+  /** @return type */
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
@@ -139,7 +121,6 @@ public class TspHealthCheckStatusDescription {
     this.type = type;
   }
 
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -148,13 +129,14 @@ public class TspHealthCheckStatusDescription {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TspHealthCheckStatusDescription tspHealthCheckStatusDescription = (TspHealthCheckStatusDescription) o;
-    return Objects.equals(this.description, tspHealthCheckStatusDescription.description) &&
-        Objects.equals(this.error, tspHealthCheckStatusDescription.error) &&
-        Objects.equals(this.hostname, tspHealthCheckStatusDescription.hostname) &&
-        Objects.equals(this.responseSeconds, tspHealthCheckStatusDescription.responseSeconds) &&
-        Objects.equals(this.status, tspHealthCheckStatusDescription.status) &&
-        Objects.equals(this.type, tspHealthCheckStatusDescription.type);
+    TspHealthCheckStatusDescription tspHealthCheckStatusDescription =
+        (TspHealthCheckStatusDescription) o;
+    return Objects.equals(this.description, tspHealthCheckStatusDescription.description)
+        && Objects.equals(this.error, tspHealthCheckStatusDescription.error)
+        && Objects.equals(this.hostname, tspHealthCheckStatusDescription.hostname)
+        && Objects.equals(this.responseSeconds, tspHealthCheckStatusDescription.responseSeconds)
+        && Objects.equals(this.status, tspHealthCheckStatusDescription.status)
+        && Objects.equals(this.type, tspHealthCheckStatusDescription.type);
   }
 
   @Override
@@ -162,12 +144,11 @@ public class TspHealthCheckStatusDescription {
     return Objects.hash(description, error, hostname, responseSeconds, status, type);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TspHealthCheckStatusDescription {\n");
-    
+
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    hostname: ").append(toIndentedString(hostname)).append("\n");
@@ -179,8 +160,7 @@ public class TspHealthCheckStatusDescription {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -188,6 +168,4 @@ public class TspHealthCheckStatusDescription {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

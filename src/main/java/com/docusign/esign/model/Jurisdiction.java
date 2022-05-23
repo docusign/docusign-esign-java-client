@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Jurisdiction.
- *
- */
-
+/** Jurisdiction. */
 public class Jurisdiction {
   @JsonProperty("allowSystemCreatedSeal")
   private String allowSystemCreatedSeal = null;
@@ -44,12 +36,11 @@ public class Jurisdiction {
   @JsonProperty("stateNameInSeal")
   private String stateNameInSeal = null;
 
-
   /**
    * allowSystemCreatedSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction allowSystemCreatedSeal(String allowSystemCreatedSeal) {
     this.allowSystemCreatedSeal = allowSystemCreatedSeal;
     return this;
@@ -57,26 +48,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return allowSystemCreatedSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getAllowSystemCreatedSeal() {
     return allowSystemCreatedSeal;
   }
 
-  /**
-   * setAllowSystemCreatedSeal.
-   **/
+  /** setAllowSystemCreatedSeal. */
   public void setAllowSystemCreatedSeal(String allowSystemCreatedSeal) {
     this.allowSystemCreatedSeal = allowSystemCreatedSeal;
   }
-
 
   /**
    * allowUserUploadedSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction allowUserUploadedSeal(String allowUserUploadedSeal) {
     this.allowUserUploadedSeal = allowUserUploadedSeal;
     return this;
@@ -84,26 +73,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return allowUserUploadedSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getAllowUserUploadedSeal() {
     return allowUserUploadedSeal;
   }
 
-  /**
-   * setAllowUserUploadedSeal.
-   **/
+  /** setAllowUserUploadedSeal. */
   public void setAllowUserUploadedSeal(String allowUserUploadedSeal) {
     this.allowUserUploadedSeal = allowUserUploadedSeal;
   }
-
 
   /**
    * commissionIdInSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction commissionIdInSeal(String commissionIdInSeal) {
     this.commissionIdInSeal = commissionIdInSeal;
     return this;
@@ -111,26 +98,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return commissionIdInSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCommissionIdInSeal() {
     return commissionIdInSeal;
   }
 
-  /**
-   * setCommissionIdInSeal.
-   **/
+  /** setCommissionIdInSeal. */
   public void setCommissionIdInSeal(String commissionIdInSeal) {
     this.commissionIdInSeal = commissionIdInSeal;
   }
-
 
   /**
    * county.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction county(String county) {
     this.county = county;
     return this;
@@ -138,26 +123,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return county
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCounty() {
     return county;
   }
 
-  /**
-   * setCounty.
-   **/
+  /** setCounty. */
   public void setCounty(String county) {
     this.county = county;
   }
-
 
   /**
    * countyInSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction countyInSeal(String countyInSeal) {
     this.countyInSeal = countyInSeal;
     return this;
@@ -165,26 +148,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return countyInSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCountyInSeal() {
     return countyInSeal;
   }
 
-  /**
-   * setCountyInSeal.
-   **/
+  /** setCountyInSeal. */
   public void setCountyInSeal(String countyInSeal) {
     this.countyInSeal = countyInSeal;
   }
-
 
   /**
    * enabled.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction enabled(String enabled) {
     this.enabled = enabled;
     return this;
@@ -192,26 +173,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return enabled
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEnabled() {
     return enabled;
   }
 
-  /**
-   * setEnabled.
-   **/
+  /** setEnabled. */
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
-
 
   /**
    * jurisdictionId.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction jurisdictionId(String jurisdictionId) {
     this.jurisdictionId = jurisdictionId;
     return this;
@@ -219,26 +198,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return jurisdictionId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getJurisdictionId() {
     return jurisdictionId;
   }
 
-  /**
-   * setJurisdictionId.
-   **/
+  /** setJurisdictionId. */
   public void setJurisdictionId(String jurisdictionId) {
     this.jurisdictionId = jurisdictionId;
   }
-
 
   /**
    * name.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction name(String name) {
     this.name = name;
     return this;
@@ -246,26 +223,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return name
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /**
-   * setName.
-   **/
+  /** setName. */
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * notaryPublicInSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction notaryPublicInSeal(String notaryPublicInSeal) {
     this.notaryPublicInSeal = notaryPublicInSeal;
     return this;
@@ -273,26 +248,24 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return notaryPublicInSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getNotaryPublicInSeal() {
     return notaryPublicInSeal;
   }
 
-  /**
-   * setNotaryPublicInSeal.
-   **/
+  /** setNotaryPublicInSeal. */
   public void setNotaryPublicInSeal(String notaryPublicInSeal) {
     this.notaryPublicInSeal = notaryPublicInSeal;
   }
-
 
   /**
    * stateNameInSeal.
    *
    * @return Jurisdiction
-   **/
+   */
   public Jurisdiction stateNameInSeal(String stateNameInSeal) {
     this.stateNameInSeal = stateNameInSeal;
     return this;
@@ -300,20 +273,18 @@ public class Jurisdiction {
 
   /**
    * .
+   *
    * @return stateNameInSeal
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getStateNameInSeal() {
     return stateNameInSeal;
   }
 
-  /**
-   * setStateNameInSeal.
-   **/
+  /** setStateNameInSeal. */
   public void setStateNameInSeal(String stateNameInSeal) {
     this.stateNameInSeal = stateNameInSeal;
   }
-
 
   /**
    * Compares objects.
@@ -329,37 +300,46 @@ public class Jurisdiction {
       return false;
     }
     Jurisdiction jurisdiction = (Jurisdiction) o;
-    return Objects.equals(this.allowSystemCreatedSeal, jurisdiction.allowSystemCreatedSeal) &&
-        Objects.equals(this.allowUserUploadedSeal, jurisdiction.allowUserUploadedSeal) &&
-        Objects.equals(this.commissionIdInSeal, jurisdiction.commissionIdInSeal) &&
-        Objects.equals(this.county, jurisdiction.county) &&
-        Objects.equals(this.countyInSeal, jurisdiction.countyInSeal) &&
-        Objects.equals(this.enabled, jurisdiction.enabled) &&
-        Objects.equals(this.jurisdictionId, jurisdiction.jurisdictionId) &&
-        Objects.equals(this.name, jurisdiction.name) &&
-        Objects.equals(this.notaryPublicInSeal, jurisdiction.notaryPublicInSeal) &&
-        Objects.equals(this.stateNameInSeal, jurisdiction.stateNameInSeal);
+    return Objects.equals(this.allowSystemCreatedSeal, jurisdiction.allowSystemCreatedSeal)
+        && Objects.equals(this.allowUserUploadedSeal, jurisdiction.allowUserUploadedSeal)
+        && Objects.equals(this.commissionIdInSeal, jurisdiction.commissionIdInSeal)
+        && Objects.equals(this.county, jurisdiction.county)
+        && Objects.equals(this.countyInSeal, jurisdiction.countyInSeal)
+        && Objects.equals(this.enabled, jurisdiction.enabled)
+        && Objects.equals(this.jurisdictionId, jurisdiction.jurisdictionId)
+        && Objects.equals(this.name, jurisdiction.name)
+        && Objects.equals(this.notaryPublicInSeal, jurisdiction.notaryPublicInSeal)
+        && Objects.equals(this.stateNameInSeal, jurisdiction.stateNameInSeal);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(allowSystemCreatedSeal, allowUserUploadedSeal, commissionIdInSeal, county, countyInSeal, enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
+    return Objects.hash(
+        allowSystemCreatedSeal,
+        allowUserUploadedSeal,
+        commissionIdInSeal,
+        county,
+        countyInSeal,
+        enabled,
+        jurisdictionId,
+        name,
+        notaryPublicInSeal,
+        stateNameInSeal);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Jurisdiction {\n");
-    
-    sb.append("    allowSystemCreatedSeal: ").append(toIndentedString(allowSystemCreatedSeal)).append("\n");
-    sb.append("    allowUserUploadedSeal: ").append(toIndentedString(allowUserUploadedSeal)).append("\n");
+
+    sb.append("    allowSystemCreatedSeal: ")
+        .append(toIndentedString(allowSystemCreatedSeal))
+        .append("\n");
+    sb.append("    allowUserUploadedSeal: ")
+        .append(toIndentedString(allowUserUploadedSeal))
+        .append("\n");
     sb.append("    commissionIdInSeal: ").append(toIndentedString(commissionIdInSeal)).append("\n");
     sb.append("    county: ").append(toIndentedString(county)).append("\n");
     sb.append("    countyInSeal: ").append(toIndentedString(countyInSeal)).append("\n");
@@ -373,8 +353,7 @@ public class Jurisdiction {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -382,6 +361,4 @@ public class Jurisdiction {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

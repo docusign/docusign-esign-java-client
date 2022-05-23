@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DocumentSecurityStore
- */
-
+/** DocumentSecurityStore */
 public class DocumentSecurityStore {
   @JsonProperty("certificates")
   private java.util.List<String> certificates = null;
@@ -35,10 +28,7 @@ public class DocumentSecurityStore {
     return this;
   }
 
-   /**
-   * 
-   * @return certificates
-  **/
+  /** @return certificates */
   @ApiModelProperty(value = "")
   public java.util.List<String> getCertificates() {
     return certificates;
@@ -61,10 +51,7 @@ public class DocumentSecurityStore {
     return this;
   }
 
-   /**
-   * 
-   * @return crls
-  **/
+  /** @return crls */
   @ApiModelProperty(value = "")
   public java.util.List<String> getCrls() {
     return crls;
@@ -87,10 +74,7 @@ public class DocumentSecurityStore {
     return this;
   }
 
-   /**
-   * 
-   * @return ocsps
-  **/
+  /** @return ocsps */
   @ApiModelProperty(value = "")
   public java.util.List<String> getOcsps() {
     return ocsps;
@@ -99,7 +83,6 @@ public class DocumentSecurityStore {
   public void setOcsps(java.util.List<String> ocsps) {
     this.ocsps = ocsps;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -110,9 +93,9 @@ public class DocumentSecurityStore {
       return false;
     }
     DocumentSecurityStore documentSecurityStore = (DocumentSecurityStore) o;
-    return Objects.equals(this.certificates, documentSecurityStore.certificates) &&
-        Objects.equals(this.crls, documentSecurityStore.crls) &&
-        Objects.equals(this.ocsps, documentSecurityStore.ocsps);
+    return Objects.equals(this.certificates, documentSecurityStore.certificates)
+        && Objects.equals(this.crls, documentSecurityStore.crls)
+        && Objects.equals(this.ocsps, documentSecurityStore.ocsps);
   }
 
   @Override
@@ -120,12 +103,11 @@ public class DocumentSecurityStore {
     return Objects.hash(certificates, crls, ocsps);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentSecurityStore {\n");
-    
+
     sb.append("    certificates: ").append(toIndentedString(certificates)).append("\n");
     sb.append("    crls: ").append(toIndentedString(crls)).append("\n");
     sb.append("    ocsps: ").append(toIndentedString(ocsps)).append("\n");
@@ -134,8 +116,7 @@ public class DocumentSecurityStore {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -143,6 +124,4 @@ public class DocumentSecurityStore {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

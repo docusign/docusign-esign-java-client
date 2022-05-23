@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SmartSectionCollapsibleDisplaySettings.
- *
- */
-
+/** SmartSectionCollapsibleDisplaySettings. */
 public class SmartSectionCollapsibleDisplaySettings {
   @JsonProperty("arrowClosed")
   private String arrowClosed = null;
@@ -44,12 +36,11 @@ public class SmartSectionCollapsibleDisplaySettings {
   @JsonProperty("outerLabelAndArrowStyle")
   private String outerLabelAndArrowStyle = null;
 
-
   /**
    * arrowClosed.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
     return this;
@@ -57,26 +48,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowClosed
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowClosed() {
     return arrowClosed;
   }
 
-  /**
-   * setArrowClosed.
-   **/
+  /** setArrowClosed. */
   public void setArrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
   }
-
 
   /**
    * arrowColor.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
     return this;
@@ -84,26 +73,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowColor
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowColor() {
     return arrowColor;
   }
 
-  /**
-   * setArrowColor.
-   **/
+  /** setArrowColor. */
   public void setArrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
   }
-
 
   /**
    * arrowLocation.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
     return this;
@@ -111,26 +98,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowLocation
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowLocation() {
     return arrowLocation;
   }
 
-  /**
-   * setArrowLocation.
-   **/
+  /** setArrowLocation. */
   public void setArrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
   }
-
 
   /**
    * arrowOpen.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
     return this;
@@ -138,26 +123,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowOpen
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowOpen() {
     return arrowOpen;
   }
 
-  /**
-   * setArrowOpen.
-   **/
+  /** setArrowOpen. */
   public void setArrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
   }
-
 
   /**
    * arrowSize.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
     return this;
@@ -165,26 +148,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowSize
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowSize() {
     return arrowSize;
   }
 
-  /**
-   * setArrowSize.
-   **/
+  /** setArrowSize. */
   public void setArrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
   }
-
 
   /**
    * arrowStyle.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings arrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
     return this;
@@ -192,26 +173,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return arrowStyle
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getArrowStyle() {
     return arrowStyle;
   }
 
-  /**
-   * setArrowStyle.
-   **/
+  /** setArrowStyle. */
   public void setArrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
   }
-
 
   /**
    * containerStyle.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings containerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
     return this;
@@ -219,26 +198,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return containerStyle
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getContainerStyle() {
     return containerStyle;
   }
 
-  /**
-   * setContainerStyle.
-   **/
+  /** setContainerStyle. */
   public void setContainerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
   }
-
 
   /**
    * labelStyle.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings labelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
     return this;
@@ -246,26 +223,24 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return labelStyle
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLabelStyle() {
     return labelStyle;
   }
 
-  /**
-   * setLabelStyle.
-   **/
+  /** setLabelStyle. */
   public void setLabelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
   }
-
 
   /**
    * onlyArrowIsClickable.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
+   */
   public SmartSectionCollapsibleDisplaySettings onlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
     return this;
@@ -273,47 +248,44 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   *
    * @return onlyArrowIsClickable
-   **/
+   */
   @ApiModelProperty(value = "")
   public Boolean isOnlyArrowIsClickable() {
     return onlyArrowIsClickable;
   }
 
-  /**
-   * setOnlyArrowIsClickable.
-   **/
+  /** setOnlyArrowIsClickable. */
   public void setOnlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
   }
-
 
   /**
    * outerLabelAndArrowStyle.
    *
    * @return SmartSectionCollapsibleDisplaySettings
-   **/
-  public SmartSectionCollapsibleDisplaySettings outerLabelAndArrowStyle(String outerLabelAndArrowStyle) {
+   */
+  public SmartSectionCollapsibleDisplaySettings outerLabelAndArrowStyle(
+      String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
     return this;
   }
 
   /**
    * .
+   *
    * @return outerLabelAndArrowStyle
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getOuterLabelAndArrowStyle() {
     return outerLabelAndArrowStyle;
   }
 
-  /**
-   * setOuterLabelAndArrowStyle.
-   **/
+  /** setOuterLabelAndArrowStyle. */
   public void setOuterLabelAndArrowStyle(String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
   }
-
 
   /**
    * Compares objects.
@@ -328,36 +300,46 @@ public class SmartSectionCollapsibleDisplaySettings {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SmartSectionCollapsibleDisplaySettings smartSectionCollapsibleDisplaySettings = (SmartSectionCollapsibleDisplaySettings) o;
-    return Objects.equals(this.arrowClosed, smartSectionCollapsibleDisplaySettings.arrowClosed) &&
-        Objects.equals(this.arrowColor, smartSectionCollapsibleDisplaySettings.arrowColor) &&
-        Objects.equals(this.arrowLocation, smartSectionCollapsibleDisplaySettings.arrowLocation) &&
-        Objects.equals(this.arrowOpen, smartSectionCollapsibleDisplaySettings.arrowOpen) &&
-        Objects.equals(this.arrowSize, smartSectionCollapsibleDisplaySettings.arrowSize) &&
-        Objects.equals(this.arrowStyle, smartSectionCollapsibleDisplaySettings.arrowStyle) &&
-        Objects.equals(this.containerStyle, smartSectionCollapsibleDisplaySettings.containerStyle) &&
-        Objects.equals(this.labelStyle, smartSectionCollapsibleDisplaySettings.labelStyle) &&
-        Objects.equals(this.onlyArrowIsClickable, smartSectionCollapsibleDisplaySettings.onlyArrowIsClickable) &&
-        Objects.equals(this.outerLabelAndArrowStyle, smartSectionCollapsibleDisplaySettings.outerLabelAndArrowStyle);
+    SmartSectionCollapsibleDisplaySettings smartSectionCollapsibleDisplaySettings =
+        (SmartSectionCollapsibleDisplaySettings) o;
+    return Objects.equals(this.arrowClosed, smartSectionCollapsibleDisplaySettings.arrowClosed)
+        && Objects.equals(this.arrowColor, smartSectionCollapsibleDisplaySettings.arrowColor)
+        && Objects.equals(this.arrowLocation, smartSectionCollapsibleDisplaySettings.arrowLocation)
+        && Objects.equals(this.arrowOpen, smartSectionCollapsibleDisplaySettings.arrowOpen)
+        && Objects.equals(this.arrowSize, smartSectionCollapsibleDisplaySettings.arrowSize)
+        && Objects.equals(this.arrowStyle, smartSectionCollapsibleDisplaySettings.arrowStyle)
+        && Objects.equals(
+            this.containerStyle, smartSectionCollapsibleDisplaySettings.containerStyle)
+        && Objects.equals(this.labelStyle, smartSectionCollapsibleDisplaySettings.labelStyle)
+        && Objects.equals(
+            this.onlyArrowIsClickable, smartSectionCollapsibleDisplaySettings.onlyArrowIsClickable)
+        && Objects.equals(
+            this.outerLabelAndArrowStyle,
+            smartSectionCollapsibleDisplaySettings.outerLabelAndArrowStyle);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle, labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
+    return Objects.hash(
+        arrowClosed,
+        arrowColor,
+        arrowLocation,
+        arrowOpen,
+        arrowSize,
+        arrowStyle,
+        containerStyle,
+        labelStyle,
+        onlyArrowIsClickable,
+        outerLabelAndArrowStyle);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartSectionCollapsibleDisplaySettings {\n");
-    
+
     sb.append("    arrowClosed: ").append(toIndentedString(arrowClosed)).append("\n");
     sb.append("    arrowColor: ").append(toIndentedString(arrowColor)).append("\n");
     sb.append("    arrowLocation: ").append(toIndentedString(arrowLocation)).append("\n");
@@ -366,15 +348,18 @@ public class SmartSectionCollapsibleDisplaySettings {
     sb.append("    arrowStyle: ").append(toIndentedString(arrowStyle)).append("\n");
     sb.append("    containerStyle: ").append(toIndentedString(containerStyle)).append("\n");
     sb.append("    labelStyle: ").append(toIndentedString(labelStyle)).append("\n");
-    sb.append("    onlyArrowIsClickable: ").append(toIndentedString(onlyArrowIsClickable)).append("\n");
-    sb.append("    outerLabelAndArrowStyle: ").append(toIndentedString(outerLabelAndArrowStyle)).append("\n");
+    sb.append("    onlyArrowIsClickable: ")
+        .append(toIndentedString(onlyArrowIsClickable))
+        .append("\n");
+    sb.append("    outerLabelAndArrowStyle: ")
+        .append(toIndentedString(outerLabelAndArrowStyle))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -382,6 +367,4 @@ public class SmartSectionCollapsibleDisplaySettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

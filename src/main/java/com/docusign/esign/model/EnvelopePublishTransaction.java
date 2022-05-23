@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import com.docusign.esign.model.EnvelopePublishTransactionErrorRollup;
-import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * EnvelopePublishTransaction
- */
-
+/** EnvelopePublishTransaction */
 public class EnvelopePublishTransaction {
   @JsonProperty("applyConnectSettings")
   private String applyConnectSettings = null;
@@ -20,7 +13,8 @@ public class EnvelopePublishTransaction {
   private String envelopeCount = null;
 
   @JsonProperty("envelopeLevelErrorRollups")
-  private java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups = new java.util.ArrayList<EnvelopePublishTransactionErrorRollup>();
+  private java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups =
+      new java.util.ArrayList<EnvelopePublishTransactionErrorRollup>();
 
   @JsonProperty("envelopePublishTransactionId")
   private String envelopePublishTransactionId = null;
@@ -57,10 +51,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return applyConnectSettings
-  **/
+  /** @return applyConnectSettings */
   @ApiModelProperty(example = "null", value = "")
   public String getApplyConnectSettings() {
     return applyConnectSettings;
@@ -75,10 +66,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return envelopeCount
-  **/
+  /** @return envelopeCount */
   @ApiModelProperty(example = "null", value = "")
   public String getEnvelopeCount() {
     return envelopeCount;
@@ -88,38 +76,36 @@ public class EnvelopePublishTransaction {
     this.envelopeCount = envelopeCount;
   }
 
-  public EnvelopePublishTransaction envelopeLevelErrorRollups(java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
+  public EnvelopePublishTransaction envelopeLevelErrorRollups(
+      java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
     this.envelopeLevelErrorRollups = envelopeLevelErrorRollups;
     return this;
   }
 
-  public EnvelopePublishTransaction addEnvelopeLevelErrorRollupsItem(EnvelopePublishTransactionErrorRollup envelopeLevelErrorRollupsItem) {
+  public EnvelopePublishTransaction addEnvelopeLevelErrorRollupsItem(
+      EnvelopePublishTransactionErrorRollup envelopeLevelErrorRollupsItem) {
     this.envelopeLevelErrorRollups.add(envelopeLevelErrorRollupsItem);
     return this;
   }
 
-   /**
-   * 
-   * @return envelopeLevelErrorRollups
-  **/
+  /** @return envelopeLevelErrorRollups */
   @ApiModelProperty(example = "null", value = "")
   public java.util.List<EnvelopePublishTransactionErrorRollup> getEnvelopeLevelErrorRollups() {
     return envelopeLevelErrorRollups;
   }
 
-  public void setEnvelopeLevelErrorRollups(java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
+  public void setEnvelopeLevelErrorRollups(
+      java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
     this.envelopeLevelErrorRollups = envelopeLevelErrorRollups;
   }
 
-  public EnvelopePublishTransaction envelopePublishTransactionId(String envelopePublishTransactionId) {
+  public EnvelopePublishTransaction envelopePublishTransactionId(
+      String envelopePublishTransactionId) {
     this.envelopePublishTransactionId = envelopePublishTransactionId;
     return this;
   }
 
-   /**
-   * 
-   * @return envelopePublishTransactionId
-  **/
+  /** @return envelopePublishTransactionId */
   @ApiModelProperty(example = "null", value = "")
   public String getEnvelopePublishTransactionId() {
     return envelopePublishTransactionId;
@@ -134,10 +120,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return errorCount
-  **/
+  /** @return errorCount */
   @ApiModelProperty(example = "null", value = "")
   public String getErrorCount() {
     return errorCount;
@@ -157,10 +140,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return fileLevelErrors
-  **/
+  /** @return fileLevelErrors */
   @ApiModelProperty(example = "null", value = "")
   public java.util.List<String> getFileLevelErrors() {
     return fileLevelErrors;
@@ -170,15 +150,13 @@ public class EnvelopePublishTransaction {
     this.fileLevelErrors = fileLevelErrors;
   }
 
-  public EnvelopePublishTransaction noActionRequiredEnvelopeCount(String noActionRequiredEnvelopeCount) {
+  public EnvelopePublishTransaction noActionRequiredEnvelopeCount(
+      String noActionRequiredEnvelopeCount) {
     this.noActionRequiredEnvelopeCount = noActionRequiredEnvelopeCount;
     return this;
   }
 
-   /**
-   * 
-   * @return noActionRequiredEnvelopeCount
-  **/
+  /** @return noActionRequiredEnvelopeCount */
   @ApiModelProperty(example = "null", value = "")
   public String getNoActionRequiredEnvelopeCount() {
     return noActionRequiredEnvelopeCount;
@@ -193,10 +171,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return processedEnvelopeCount
-  **/
+  /** @return processedEnvelopeCount */
   @ApiModelProperty(example = "null", value = "")
   public String getProcessedEnvelopeCount() {
     return processedEnvelopeCount;
@@ -211,10 +186,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return processingStatus
-  **/
+  /** @return processingStatus */
   @ApiModelProperty(example = "null", value = "")
   public String getProcessingStatus() {
     return processingStatus;
@@ -229,10 +201,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return resultsUri
-  **/
+  /** @return resultsUri */
   @ApiModelProperty(example = "null", value = "")
   public String getResultsUri() {
     return resultsUri;
@@ -247,10 +216,7 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
-   * 
-   * @return submissionDate
-  **/
+  /** @return submissionDate */
   @ApiModelProperty(example = "null", value = "")
   public String getSubmissionDate() {
     return submissionDate;
@@ -265,10 +231,11 @@ public class EnvelopePublishTransaction {
     return this;
   }
 
-   /**
+  /**
    * Get submittedByUserInfo
+   *
    * @return submittedByUserInfo
-  **/
+   */
   @ApiModelProperty(example = "null", value = "")
   public UserInfo getSubmittedByUserInfo() {
     return submittedByUserInfo;
@@ -278,15 +245,13 @@ public class EnvelopePublishTransaction {
     this.submittedByUserInfo = submittedByUserInfo;
   }
 
-  public EnvelopePublishTransaction submittedForPublishingEnvelopeCount(String submittedForPublishingEnvelopeCount) {
+  public EnvelopePublishTransaction submittedForPublishingEnvelopeCount(
+      String submittedForPublishingEnvelopeCount) {
     this.submittedForPublishingEnvelopeCount = submittedForPublishingEnvelopeCount;
     return this;
   }
 
-   /**
-   * 
-   * @return submittedForPublishingEnvelopeCount
-  **/
+  /** @return submittedForPublishingEnvelopeCount */
   @ApiModelProperty(example = "null", value = "")
   public String getSubmittedForPublishingEnvelopeCount() {
     return submittedForPublishingEnvelopeCount;
@@ -295,7 +260,6 @@ public class EnvelopePublishTransaction {
   public void setSubmittedForPublishingEnvelopeCount(String submittedForPublishingEnvelopeCount) {
     this.submittedForPublishingEnvelopeCount = submittedForPublishingEnvelopeCount;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -306,52 +270,86 @@ public class EnvelopePublishTransaction {
       return false;
     }
     EnvelopePublishTransaction envelopePublishTransaction = (EnvelopePublishTransaction) o;
-    return Objects.equals(this.applyConnectSettings, envelopePublishTransaction.applyConnectSettings) &&
-        Objects.equals(this.envelopeCount, envelopePublishTransaction.envelopeCount) &&
-        Objects.equals(this.envelopeLevelErrorRollups, envelopePublishTransaction.envelopeLevelErrorRollups) &&
-        Objects.equals(this.envelopePublishTransactionId, envelopePublishTransaction.envelopePublishTransactionId) &&
-        Objects.equals(this.errorCount, envelopePublishTransaction.errorCount) &&
-        Objects.equals(this.fileLevelErrors, envelopePublishTransaction.fileLevelErrors) &&
-        Objects.equals(this.noActionRequiredEnvelopeCount, envelopePublishTransaction.noActionRequiredEnvelopeCount) &&
-        Objects.equals(this.processedEnvelopeCount, envelopePublishTransaction.processedEnvelopeCount) &&
-        Objects.equals(this.processingStatus, envelopePublishTransaction.processingStatus) &&
-        Objects.equals(this.resultsUri, envelopePublishTransaction.resultsUri) &&
-        Objects.equals(this.submissionDate, envelopePublishTransaction.submissionDate) &&
-        Objects.equals(this.submittedByUserInfo, envelopePublishTransaction.submittedByUserInfo) &&
-        Objects.equals(this.submittedForPublishingEnvelopeCount, envelopePublishTransaction.submittedForPublishingEnvelopeCount);
+    return Objects.equals(
+            this.applyConnectSettings, envelopePublishTransaction.applyConnectSettings)
+        && Objects.equals(this.envelopeCount, envelopePublishTransaction.envelopeCount)
+        && Objects.equals(
+            this.envelopeLevelErrorRollups, envelopePublishTransaction.envelopeLevelErrorRollups)
+        && Objects.equals(
+            this.envelopePublishTransactionId,
+            envelopePublishTransaction.envelopePublishTransactionId)
+        && Objects.equals(this.errorCount, envelopePublishTransaction.errorCount)
+        && Objects.equals(this.fileLevelErrors, envelopePublishTransaction.fileLevelErrors)
+        && Objects.equals(
+            this.noActionRequiredEnvelopeCount,
+            envelopePublishTransaction.noActionRequiredEnvelopeCount)
+        && Objects.equals(
+            this.processedEnvelopeCount, envelopePublishTransaction.processedEnvelopeCount)
+        && Objects.equals(this.processingStatus, envelopePublishTransaction.processingStatus)
+        && Objects.equals(this.resultsUri, envelopePublishTransaction.resultsUri)
+        && Objects.equals(this.submissionDate, envelopePublishTransaction.submissionDate)
+        && Objects.equals(this.submittedByUserInfo, envelopePublishTransaction.submittedByUserInfo)
+        && Objects.equals(
+            this.submittedForPublishingEnvelopeCount,
+            envelopePublishTransaction.submittedForPublishingEnvelopeCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(applyConnectSettings, envelopeCount, envelopeLevelErrorRollups, envelopePublishTransactionId, errorCount, fileLevelErrors, noActionRequiredEnvelopeCount, processedEnvelopeCount, processingStatus, resultsUri, submissionDate, submittedByUserInfo, submittedForPublishingEnvelopeCount);
+    return Objects.hash(
+        applyConnectSettings,
+        envelopeCount,
+        envelopeLevelErrorRollups,
+        envelopePublishTransactionId,
+        errorCount,
+        fileLevelErrors,
+        noActionRequiredEnvelopeCount,
+        processedEnvelopeCount,
+        processingStatus,
+        resultsUri,
+        submissionDate,
+        submittedByUserInfo,
+        submittedForPublishingEnvelopeCount);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePublishTransaction {\n");
-    
-    sb.append("    applyConnectSettings: ").append(toIndentedString(applyConnectSettings)).append("\n");
+
+    sb.append("    applyConnectSettings: ")
+        .append(toIndentedString(applyConnectSettings))
+        .append("\n");
     sb.append("    envelopeCount: ").append(toIndentedString(envelopeCount)).append("\n");
-    sb.append("    envelopeLevelErrorRollups: ").append(toIndentedString(envelopeLevelErrorRollups)).append("\n");
-    sb.append("    envelopePublishTransactionId: ").append(toIndentedString(envelopePublishTransactionId)).append("\n");
+    sb.append("    envelopeLevelErrorRollups: ")
+        .append(toIndentedString(envelopeLevelErrorRollups))
+        .append("\n");
+    sb.append("    envelopePublishTransactionId: ")
+        .append(toIndentedString(envelopePublishTransactionId))
+        .append("\n");
     sb.append("    errorCount: ").append(toIndentedString(errorCount)).append("\n");
     sb.append("    fileLevelErrors: ").append(toIndentedString(fileLevelErrors)).append("\n");
-    sb.append("    noActionRequiredEnvelopeCount: ").append(toIndentedString(noActionRequiredEnvelopeCount)).append("\n");
-    sb.append("    processedEnvelopeCount: ").append(toIndentedString(processedEnvelopeCount)).append("\n");
+    sb.append("    noActionRequiredEnvelopeCount: ")
+        .append(toIndentedString(noActionRequiredEnvelopeCount))
+        .append("\n");
+    sb.append("    processedEnvelopeCount: ")
+        .append(toIndentedString(processedEnvelopeCount))
+        .append("\n");
     sb.append("    processingStatus: ").append(toIndentedString(processingStatus)).append("\n");
     sb.append("    resultsUri: ").append(toIndentedString(resultsUri)).append("\n");
     sb.append("    submissionDate: ").append(toIndentedString(submissionDate)).append("\n");
-    sb.append("    submittedByUserInfo: ").append(toIndentedString(submittedByUserInfo)).append("\n");
-    sb.append("    submittedForPublishingEnvelopeCount: ").append(toIndentedString(submittedForPublishingEnvelopeCount)).append("\n");
+    sb.append("    submittedByUserInfo: ")
+        .append(toIndentedString(submittedByUserInfo))
+        .append("\n");
+    sb.append("    submittedForPublishingEnvelopeCount: ")
+        .append(toIndentedString(submittedForPublishingEnvelopeCount))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -359,6 +357,4 @@ public class EnvelopePublishTransaction {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

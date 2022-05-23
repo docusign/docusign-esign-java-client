@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignSessionInfoRequest
- */
-
+/** SignSessionInfoRequest */
 public class SignSessionInfoRequest {
   @JsonProperty("certificate")
   private String certificate = null;
@@ -30,10 +23,7 @@ public class SignSessionInfoRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return certificate
-  **/
+  /** @return certificate */
   @ApiModelProperty(value = "")
   public String getCertificate() {
     return certificate;
@@ -48,10 +38,7 @@ public class SignSessionInfoRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return maxSignatureLength
-  **/
+  /** @return maxSignatureLength */
   @ApiModelProperty(value = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
@@ -66,10 +53,7 @@ public class SignSessionInfoRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return returnFormat
-  **/
+  /** @return returnFormat */
   @ApiModelProperty(value = "")
   public String getReturnFormat() {
     return returnFormat;
@@ -84,11 +68,15 @@ public class SignSessionInfoRequest {
     return this;
   }
 
-   /**
-   * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.
+  /**
+   * Specifies the physical location where the signing takes place. It can have two enumeration
+   * values; InPerson and Online. The default value is Online.
+   *
    * @return signingLocation
-  **/
-  @ApiModelProperty(value = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+   */
+  @ApiModelProperty(
+      value =
+          "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   public String getSigningLocation() {
     return signingLocation;
   }
@@ -96,7 +84,6 @@ public class SignSessionInfoRequest {
   public void setSigningLocation(String signingLocation) {
     this.signingLocation = signingLocation;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,10 +94,10 @@ public class SignSessionInfoRequest {
       return false;
     }
     SignSessionInfoRequest signSessionInfoRequest = (SignSessionInfoRequest) o;
-    return Objects.equals(this.certificate, signSessionInfoRequest.certificate) &&
-        Objects.equals(this.maxSignatureLength, signSessionInfoRequest.maxSignatureLength) &&
-        Objects.equals(this.returnFormat, signSessionInfoRequest.returnFormat) &&
-        Objects.equals(this.signingLocation, signSessionInfoRequest.signingLocation);
+    return Objects.equals(this.certificate, signSessionInfoRequest.certificate)
+        && Objects.equals(this.maxSignatureLength, signSessionInfoRequest.maxSignatureLength)
+        && Objects.equals(this.returnFormat, signSessionInfoRequest.returnFormat)
+        && Objects.equals(this.signingLocation, signSessionInfoRequest.signingLocation);
   }
 
   @Override
@@ -118,12 +105,11 @@ public class SignSessionInfoRequest {
     return Objects.hash(certificate, maxSignatureLength, returnFormat, signingLocation);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignSessionInfoRequest {\n");
-    
+
     sb.append("    certificate: ").append(toIndentedString(certificate)).append("\n");
     sb.append("    maxSignatureLength: ").append(toIndentedString(maxSignatureLength)).append("\n");
     sb.append("    returnFormat: ").append(toIndentedString(returnFormat)).append("\n");
@@ -133,8 +119,7 @@ public class SignSessionInfoRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -142,6 +127,4 @@ public class SignSessionInfoRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

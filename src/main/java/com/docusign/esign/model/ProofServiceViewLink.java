@@ -1,28 +1,19 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ProofServiceViewLink.
- *
- */
-
+/** ProofServiceViewLink. */
 public class ProofServiceViewLink {
   @JsonProperty("ViewLink")
   private String viewLink = null;
-
 
   /**
    * viewLink.
    *
    * @return ProofServiceViewLink
-   **/
+   */
   public ProofServiceViewLink viewLink(String viewLink) {
     this.viewLink = viewLink;
     return this;
@@ -30,20 +21,18 @@ public class ProofServiceViewLink {
 
   /**
    * .
+   *
    * @return viewLink
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getViewLink() {
     return viewLink;
   }
 
-  /**
-   * setViewLink.
-   **/
+  /** setViewLink. */
   public void setViewLink(String viewLink) {
     this.viewLink = viewLink;
   }
-
 
   /**
    * Compares objects.
@@ -62,31 +51,25 @@ public class ProofServiceViewLink {
     return Objects.equals(this.viewLink, proofServiceViewLink.viewLink);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(viewLink);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProofServiceViewLink {\n");
-    
+
     sb.append("    viewLink: ").append(toIndentedString(viewLink)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +77,4 @@ public class ProofServiceViewLink {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * BulkSendingListSummary.
- *
- */
-
+/** BulkSendingListSummary. */
 public class BulkSendingListSummary {
   @JsonProperty("bulkSendListId")
   private String bulkSendListId = null;
@@ -26,12 +18,11 @@ public class BulkSendingListSummary {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * bulkSendListId.
    *
    * @return BulkSendingListSummary
-   **/
+   */
   public BulkSendingListSummary bulkSendListId(String bulkSendListId) {
     this.bulkSendListId = bulkSendListId;
     return this;
@@ -39,26 +30,24 @@ public class BulkSendingListSummary {
 
   /**
    * .
+   *
    * @return bulkSendListId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBulkSendListId() {
     return bulkSendListId;
   }
 
-  /**
-   * setBulkSendListId.
-   **/
+  /** setBulkSendListId. */
   public void setBulkSendListId(String bulkSendListId) {
     this.bulkSendListId = bulkSendListId;
   }
-
 
   /**
    * createdByUser.
    *
    * @return BulkSendingListSummary
-   **/
+   */
   public BulkSendingListSummary createdByUser(String createdByUser) {
     this.createdByUser = createdByUser;
     return this;
@@ -66,26 +55,24 @@ public class BulkSendingListSummary {
 
   /**
    * .
+   *
    * @return createdByUser
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCreatedByUser() {
     return createdByUser;
   }
 
-  /**
-   * setCreatedByUser.
-   **/
+  /** setCreatedByUser. */
   public void setCreatedByUser(String createdByUser) {
     this.createdByUser = createdByUser;
   }
-
 
   /**
    * createdDate.
    *
    * @return BulkSendingListSummary
-   **/
+   */
   public BulkSendingListSummary createdDate(String createdDate) {
     this.createdDate = createdDate;
     return this;
@@ -93,26 +80,24 @@ public class BulkSendingListSummary {
 
   /**
    * .
+   *
    * @return createdDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCreatedDate() {
     return createdDate;
   }
 
-  /**
-   * setCreatedDate.
-   **/
+  /** setCreatedDate. */
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * name.
    *
    * @return BulkSendingListSummary
-   **/
+   */
   public BulkSendingListSummary name(String name) {
     this.name = name;
     return this;
@@ -120,20 +105,18 @@ public class BulkSendingListSummary {
 
   /**
    * .
+   *
    * @return name
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /**
-   * setName.
-   **/
+  /** setName. */
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -149,29 +132,24 @@ public class BulkSendingListSummary {
       return false;
     }
     BulkSendingListSummary bulkSendingListSummary = (BulkSendingListSummary) o;
-    return Objects.equals(this.bulkSendListId, bulkSendingListSummary.bulkSendListId) &&
-        Objects.equals(this.createdByUser, bulkSendingListSummary.createdByUser) &&
-        Objects.equals(this.createdDate, bulkSendingListSummary.createdDate) &&
-        Objects.equals(this.name, bulkSendingListSummary.name);
+    return Objects.equals(this.bulkSendListId, bulkSendingListSummary.bulkSendListId)
+        && Objects.equals(this.createdByUser, bulkSendingListSummary.createdByUser)
+        && Objects.equals(this.createdDate, bulkSendingListSummary.createdDate)
+        && Objects.equals(this.name, bulkSendingListSummary.name);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(bulkSendListId, createdByUser, createdDate, name);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingListSummary {\n");
-    
+
     sb.append("    bulkSendListId: ").append(toIndentedString(bulkSendListId)).append("\n");
     sb.append("    createdByUser: ").append(toIndentedString(createdByUser)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -181,8 +159,7 @@ public class BulkSendingListSummary {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -190,6 +167,4 @@ public class BulkSendingListSummary {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

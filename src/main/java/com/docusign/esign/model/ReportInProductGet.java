@@ -1,20 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ReportInProductField;
-import com.docusign.esign.model.ReportInProductSentByDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductGet.
- *
- */
-
+/** ReportInProductGet. */
 public class ReportInProductGet {
   @JsonProperty("authenticationSuccessFilter")
   private String authenticationSuccessFilter = null;
@@ -109,12 +99,11 @@ public class ReportInProductGet {
   @JsonProperty("verificationStatusFilter")
   private String verificationStatusFilter = null;
 
-
   /**
    * authenticationSuccessFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet authenticationSuccessFilter(String authenticationSuccessFilter) {
     this.authenticationSuccessFilter = authenticationSuccessFilter;
     return this;
@@ -122,26 +111,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return authenticationSuccessFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getAuthenticationSuccessFilter() {
     return authenticationSuccessFilter;
   }
 
-  /**
-   * setAuthenticationSuccessFilter.
-   **/
+  /** setAuthenticationSuccessFilter. */
   public void setAuthenticationSuccessFilter(String authenticationSuccessFilter) {
     this.authenticationSuccessFilter = authenticationSuccessFilter;
   }
-
 
   /**
    * customFieldFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet customFieldFilter(String customFieldFilter) {
     this.customFieldFilter = customFieldFilter;
     return this;
@@ -149,26 +136,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return customFieldFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCustomFieldFilter() {
     return customFieldFilter;
   }
 
-  /**
-   * setCustomFieldFilter.
-   **/
+  /** setCustomFieldFilter. */
   public void setCustomFieldFilter(String customFieldFilter) {
     this.customFieldFilter = customFieldFilter;
   }
-
 
   /**
    * dateRangeCustomFromDate.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet dateRangeCustomFromDate(String dateRangeCustomFromDate) {
     this.dateRangeCustomFromDate = dateRangeCustomFromDate;
     return this;
@@ -176,26 +161,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return dateRangeCustomFromDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDateRangeCustomFromDate() {
     return dateRangeCustomFromDate;
   }
 
-  /**
-   * setDateRangeCustomFromDate.
-   **/
+  /** setDateRangeCustomFromDate. */
   public void setDateRangeCustomFromDate(String dateRangeCustomFromDate) {
     this.dateRangeCustomFromDate = dateRangeCustomFromDate;
   }
-
 
   /**
    * dateRangeCustomToDate.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet dateRangeCustomToDate(String dateRangeCustomToDate) {
     this.dateRangeCustomToDate = dateRangeCustomToDate;
     return this;
@@ -203,26 +186,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return dateRangeCustomToDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDateRangeCustomToDate() {
     return dateRangeCustomToDate;
   }
 
-  /**
-   * setDateRangeCustomToDate.
-   **/
+  /** setDateRangeCustomToDate. */
   public void setDateRangeCustomToDate(String dateRangeCustomToDate) {
     this.dateRangeCustomToDate = dateRangeCustomToDate;
   }
-
 
   /**
    * dateRangeFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet dateRangeFilter(String dateRangeFilter) {
     this.dateRangeFilter = dateRangeFilter;
     return this;
@@ -230,26 +211,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return dateRangeFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDateRangeFilter() {
     return dateRangeFilter;
   }
 
-  /**
-   * setDateRangeFilter.
-   **/
+  /** setDateRangeFilter. */
   public void setDateRangeFilter(String dateRangeFilter) {
     this.dateRangeFilter = dateRangeFilter;
   }
-
 
   /**
    * displayOrder.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet displayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
     return this;
@@ -257,26 +236,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return displayOrder
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
 
-  /**
-   * setDisplayOrder.
-   **/
+  /** setDisplayOrder. */
   public void setDisplayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
   }
-
 
   /**
    * envelopeDateTypeFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet envelopeDateTypeFilter(String envelopeDateTypeFilter) {
     this.envelopeDateTypeFilter = envelopeDateTypeFilter;
     return this;
@@ -284,53 +261,50 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return envelopeDateTypeFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEnvelopeDateTypeFilter() {
     return envelopeDateTypeFilter;
   }
 
-  /**
-   * setEnvelopeDateTypeFilter.
-   **/
+  /** setEnvelopeDateTypeFilter. */
   public void setEnvelopeDateTypeFilter(String envelopeDateTypeFilter) {
     this.envelopeDateTypeFilter = envelopeDateTypeFilter;
   }
-
 
   /**
    * envelopeRecipientNameContainsFilter.
    *
    * @return ReportInProductGet
-   **/
-  public ReportInProductGet envelopeRecipientNameContainsFilter(String envelopeRecipientNameContainsFilter) {
+   */
+  public ReportInProductGet envelopeRecipientNameContainsFilter(
+      String envelopeRecipientNameContainsFilter) {
     this.envelopeRecipientNameContainsFilter = envelopeRecipientNameContainsFilter;
     return this;
   }
 
   /**
    * .
+   *
    * @return envelopeRecipientNameContainsFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEnvelopeRecipientNameContainsFilter() {
     return envelopeRecipientNameContainsFilter;
   }
 
-  /**
-   * setEnvelopeRecipientNameContainsFilter.
-   **/
+  /** setEnvelopeRecipientNameContainsFilter. */
   public void setEnvelopeRecipientNameContainsFilter(String envelopeRecipientNameContainsFilter) {
     this.envelopeRecipientNameContainsFilter = envelopeRecipientNameContainsFilter;
   }
-
 
   /**
    * envelopeStatusFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet envelopeStatusFilter(String envelopeStatusFilter) {
     this.envelopeStatusFilter = envelopeStatusFilter;
     return this;
@@ -338,26 +312,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return envelopeStatusFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEnvelopeStatusFilter() {
     return envelopeStatusFilter;
   }
 
-  /**
-   * setEnvelopeStatusFilter.
-   **/
+  /** setEnvelopeStatusFilter. */
   public void setEnvelopeStatusFilter(String envelopeStatusFilter) {
     this.envelopeStatusFilter = envelopeStatusFilter;
   }
-
 
   /**
    * envelopeSubjectContainsFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet envelopeSubjectContainsFilter(String envelopeSubjectContainsFilter) {
     this.envelopeSubjectContainsFilter = envelopeSubjectContainsFilter;
     return this;
@@ -365,36 +337,34 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return envelopeSubjectContainsFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEnvelopeSubjectContainsFilter() {
     return envelopeSubjectContainsFilter;
   }
 
-  /**
-   * setEnvelopeSubjectContainsFilter.
-   **/
+  /** setEnvelopeSubjectContainsFilter. */
   public void setEnvelopeSubjectContainsFilter(String envelopeSubjectContainsFilter) {
     this.envelopeSubjectContainsFilter = envelopeSubjectContainsFilter;
   }
-
 
   /**
    * fields.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet fields(java.util.List<ReportInProductField> fields) {
     this.fields = fields;
     return this;
   }
-  
+
   /**
    * addFieldsItem.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet addFieldsItem(ReportInProductField fieldsItem) {
     if (this.fields == null) {
       this.fields = new java.util.ArrayList<ReportInProductField>();
@@ -405,26 +375,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return fields
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<ReportInProductField> getFields() {
     return fields;
   }
 
-  /**
-   * setFields.
-   **/
+  /** setFields. */
   public void setFields(java.util.List<ReportInProductField> fields) {
     this.fields = fields;
   }
-
 
   /**
    * lastScheduledExecutionDate.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet lastScheduledExecutionDate(String lastScheduledExecutionDate) {
     this.lastScheduledExecutionDate = lastScheduledExecutionDate;
     return this;
@@ -432,53 +400,50 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return lastScheduledExecutionDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastScheduledExecutionDate() {
     return lastScheduledExecutionDate;
   }
 
-  /**
-   * setLastScheduledExecutionDate.
-   **/
+  /** setLastScheduledExecutionDate. */
   public void setLastScheduledExecutionDate(String lastScheduledExecutionDate) {
     this.lastScheduledExecutionDate = lastScheduledExecutionDate;
   }
-
 
   /**
    * lastScheduledExecutionSuccessDate.
    *
    * @return ReportInProductGet
-   **/
-  public ReportInProductGet lastScheduledExecutionSuccessDate(String lastScheduledExecutionSuccessDate) {
+   */
+  public ReportInProductGet lastScheduledExecutionSuccessDate(
+      String lastScheduledExecutionSuccessDate) {
     this.lastScheduledExecutionSuccessDate = lastScheduledExecutionSuccessDate;
     return this;
   }
 
   /**
    * .
+   *
    * @return lastScheduledExecutionSuccessDate
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastScheduledExecutionSuccessDate() {
     return lastScheduledExecutionSuccessDate;
   }
 
-  /**
-   * setLastScheduledExecutionSuccessDate.
-   **/
+  /** setLastScheduledExecutionSuccessDate. */
   public void setLastScheduledExecutionSuccessDate(String lastScheduledExecutionSuccessDate) {
     this.lastScheduledExecutionSuccessDate = lastScheduledExecutionSuccessDate;
   }
-
 
   /**
    * maxDownloadRows.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet maxDownloadRows(String maxDownloadRows) {
     this.maxDownloadRows = maxDownloadRows;
     return this;
@@ -486,26 +451,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return maxDownloadRows
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getMaxDownloadRows() {
     return maxDownloadRows;
   }
 
-  /**
-   * setMaxDownloadRows.
-   **/
+  /** setMaxDownloadRows. */
   public void setMaxDownloadRows(String maxDownloadRows) {
     this.maxDownloadRows = maxDownloadRows;
   }
-
 
   /**
    * maxGridRows.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet maxGridRows(String maxGridRows) {
     this.maxGridRows = maxGridRows;
     return this;
@@ -513,26 +476,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return maxGridRows
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getMaxGridRows() {
     return maxGridRows;
   }
 
-  /**
-   * setMaxGridRows.
-   **/
+  /** setMaxGridRows. */
   public void setMaxGridRows(String maxGridRows) {
     this.maxGridRows = maxGridRows;
   }
-
 
   /**
    * maxScheduledRows.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet maxScheduledRows(String maxScheduledRows) {
     this.maxScheduledRows = maxScheduledRows;
     return this;
@@ -540,26 +501,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return maxScheduledRows
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getMaxScheduledRows() {
     return maxScheduledRows;
   }
 
-  /**
-   * setMaxScheduledRows.
-   **/
+  /** setMaxScheduledRows. */
   public void setMaxScheduledRows(String maxScheduledRows) {
     this.maxScheduledRows = maxScheduledRows;
   }
-
 
   /**
    * periodLengthFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet periodLengthFilter(String periodLengthFilter) {
     this.periodLengthFilter = periodLengthFilter;
     return this;
@@ -567,26 +526,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return periodLengthFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getPeriodLengthFilter() {
     return periodLengthFilter;
   }
 
-  /**
-   * setPeriodLengthFilter.
-   **/
+  /** setPeriodLengthFilter. */
   public void setPeriodLengthFilter(String periodLengthFilter) {
     this.periodLengthFilter = periodLengthFilter;
   }
-
 
   /**
    * reportCustomizedId.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet reportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
     return this;
@@ -594,26 +551,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return reportCustomizedId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
 
-  /**
-   * setReportCustomizedId.
-   **/
+  /** setReportCustomizedId. */
   public void setReportCustomizedId(String reportCustomizedId) {
     this.reportCustomizedId = reportCustomizedId;
   }
-
 
   /**
    * reportDescription.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet reportDescription(String reportDescription) {
     this.reportDescription = reportDescription;
     return this;
@@ -621,26 +576,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return reportDescription
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportDescription() {
     return reportDescription;
   }
 
-  /**
-   * setReportDescription.
-   **/
+  /** setReportDescription. */
   public void setReportDescription(String reportDescription) {
     this.reportDescription = reportDescription;
   }
-
 
   /**
    * reportId.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet reportId(String reportId) {
     this.reportId = reportId;
     return this;
@@ -648,26 +601,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return reportId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportId() {
     return reportId;
   }
 
-  /**
-   * setReportId.
-   **/
+  /** setReportId. */
   public void setReportId(String reportId) {
     this.reportId = reportId;
   }
-
 
   /**
    * reportName.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet reportName(String reportName) {
     this.reportName = reportName;
     return this;
@@ -675,26 +626,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return reportName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportName() {
     return reportName;
   }
 
-  /**
-   * setReportName.
-   **/
+  /** setReportName. */
   public void setReportName(String reportName) {
     this.reportName = reportName;
   }
-
 
   /**
    * reportType.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet reportType(String reportType) {
     this.reportType = reportType;
     return this;
@@ -702,26 +651,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return reportType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getReportType() {
     return reportType;
   }
 
-  /**
-   * setReportType.
-   **/
+  /** setReportType. */
   public void setReportType(String reportType) {
     this.reportType = reportType;
   }
-
 
   /**
    * runUri.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet runUri(String runUri) {
     this.runUri = runUri;
     return this;
@@ -729,26 +676,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return runUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getRunUri() {
     return runUri;
   }
 
-  /**
-   * setRunUri.
-   **/
+  /** setRunUri. */
   public void setRunUri(String runUri) {
     this.runUri = runUri;
   }
-
 
   /**
    * saveUri.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet saveUri(String saveUri) {
     this.saveUri = saveUri;
     return this;
@@ -756,26 +701,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return saveUri
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSaveUri() {
     return saveUri;
   }
 
-  /**
-   * setSaveUri.
-   **/
+  /** setSaveUri. */
   public void setSaveUri(String saveUri) {
     this.saveUri = saveUri;
   }
-
 
   /**
    * scheduleId.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet scheduleId(String scheduleId) {
     this.scheduleId = scheduleId;
     return this;
@@ -783,26 +726,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return scheduleId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getScheduleId() {
     return scheduleId;
   }
 
-  /**
-   * setScheduleId.
-   **/
+  /** setScheduleId. */
   public void setScheduleId(String scheduleId) {
     this.scheduleId = scheduleId;
   }
-
 
   /**
    * sentByDetails.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet sentByDetails(ReportInProductSentByDetails sentByDetails) {
     this.sentByDetails = sentByDetails;
     return this;
@@ -810,26 +751,24 @@ public class ReportInProductGet {
 
   /**
    * Get sentByDetails.
+   *
    * @return sentByDetails
-   **/
+   */
   @ApiModelProperty(value = "")
   public ReportInProductSentByDetails getSentByDetails() {
     return sentByDetails;
   }
 
-  /**
-   * setSentByDetails.
-   **/
+  /** setSentByDetails. */
   public void setSentByDetails(ReportInProductSentByDetails sentByDetails) {
     this.sentByDetails = sentByDetails;
   }
-
 
   /**
    * sentByFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet sentByFilter(String sentByFilter) {
     this.sentByFilter = sentByFilter;
     return this;
@@ -837,26 +776,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return sentByFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSentByFilter() {
     return sentByFilter;
   }
 
-  /**
-   * setSentByFilter.
-   **/
+  /** setSentByFilter. */
   public void setSentByFilter(String sentByFilter) {
     this.sentByFilter = sentByFilter;
   }
-
 
   /**
    * sentByIds.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet sentByIds(String sentByIds) {
     this.sentByIds = sentByIds;
     return this;
@@ -864,26 +801,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return sentByIds
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSentByIds() {
     return sentByIds;
   }
 
-  /**
-   * setSentByIds.
-   **/
+  /** setSentByIds. */
   public void setSentByIds(String sentByIds) {
     this.sentByIds = sentByIds;
   }
-
 
   /**
    * sortFieldDirection.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet sortFieldDirection(String sortFieldDirection) {
     this.sortFieldDirection = sortFieldDirection;
     return this;
@@ -891,26 +826,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return sortFieldDirection
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSortFieldDirection() {
     return sortFieldDirection;
   }
 
-  /**
-   * setSortFieldDirection.
-   **/
+  /** setSortFieldDirection. */
   public void setSortFieldDirection(String sortFieldDirection) {
     this.sortFieldDirection = sortFieldDirection;
   }
-
 
   /**
    * sortFieldName.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet sortFieldName(String sortFieldName) {
     this.sortFieldName = sortFieldName;
     return this;
@@ -918,26 +851,24 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return sortFieldName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getSortFieldName() {
     return sortFieldName;
   }
 
-  /**
-   * setSortFieldName.
-   **/
+  /** setSortFieldName. */
   public void setSortFieldName(String sortFieldName) {
     this.sortFieldName = sortFieldName;
   }
-
 
   /**
    * verificationStatusFilter.
    *
    * @return ReportInProductGet
-   **/
+   */
   public ReportInProductGet verificationStatusFilter(String verificationStatusFilter) {
     this.verificationStatusFilter = verificationStatusFilter;
     return this;
@@ -945,20 +876,18 @@ public class ReportInProductGet {
 
   /**
    * .
+   *
    * @return verificationStatusFilter
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getVerificationStatusFilter() {
     return verificationStatusFilter;
   }
 
-  /**
-   * setVerificationStatusFilter.
-   **/
+  /** setVerificationStatusFilter. */
   public void setVerificationStatusFilter(String verificationStatusFilter) {
     this.verificationStatusFilter = verificationStatusFilter;
   }
-
 
   /**
    * Compares objects.
@@ -974,69 +903,121 @@ public class ReportInProductGet {
       return false;
     }
     ReportInProductGet reportInProductGet = (ReportInProductGet) o;
-    return Objects.equals(this.authenticationSuccessFilter, reportInProductGet.authenticationSuccessFilter) &&
-        Objects.equals(this.customFieldFilter, reportInProductGet.customFieldFilter) &&
-        Objects.equals(this.dateRangeCustomFromDate, reportInProductGet.dateRangeCustomFromDate) &&
-        Objects.equals(this.dateRangeCustomToDate, reportInProductGet.dateRangeCustomToDate) &&
-        Objects.equals(this.dateRangeFilter, reportInProductGet.dateRangeFilter) &&
-        Objects.equals(this.displayOrder, reportInProductGet.displayOrder) &&
-        Objects.equals(this.envelopeDateTypeFilter, reportInProductGet.envelopeDateTypeFilter) &&
-        Objects.equals(this.envelopeRecipientNameContainsFilter, reportInProductGet.envelopeRecipientNameContainsFilter) &&
-        Objects.equals(this.envelopeStatusFilter, reportInProductGet.envelopeStatusFilter) &&
-        Objects.equals(this.envelopeSubjectContainsFilter, reportInProductGet.envelopeSubjectContainsFilter) &&
-        Objects.equals(this.fields, reportInProductGet.fields) &&
-        Objects.equals(this.lastScheduledExecutionDate, reportInProductGet.lastScheduledExecutionDate) &&
-        Objects.equals(this.lastScheduledExecutionSuccessDate, reportInProductGet.lastScheduledExecutionSuccessDate) &&
-        Objects.equals(this.maxDownloadRows, reportInProductGet.maxDownloadRows) &&
-        Objects.equals(this.maxGridRows, reportInProductGet.maxGridRows) &&
-        Objects.equals(this.maxScheduledRows, reportInProductGet.maxScheduledRows) &&
-        Objects.equals(this.periodLengthFilter, reportInProductGet.periodLengthFilter) &&
-        Objects.equals(this.reportCustomizedId, reportInProductGet.reportCustomizedId) &&
-        Objects.equals(this.reportDescription, reportInProductGet.reportDescription) &&
-        Objects.equals(this.reportId, reportInProductGet.reportId) &&
-        Objects.equals(this.reportName, reportInProductGet.reportName) &&
-        Objects.equals(this.reportType, reportInProductGet.reportType) &&
-        Objects.equals(this.runUri, reportInProductGet.runUri) &&
-        Objects.equals(this.saveUri, reportInProductGet.saveUri) &&
-        Objects.equals(this.scheduleId, reportInProductGet.scheduleId) &&
-        Objects.equals(this.sentByDetails, reportInProductGet.sentByDetails) &&
-        Objects.equals(this.sentByFilter, reportInProductGet.sentByFilter) &&
-        Objects.equals(this.sentByIds, reportInProductGet.sentByIds) &&
-        Objects.equals(this.sortFieldDirection, reportInProductGet.sortFieldDirection) &&
-        Objects.equals(this.sortFieldName, reportInProductGet.sortFieldName) &&
-        Objects.equals(this.verificationStatusFilter, reportInProductGet.verificationStatusFilter);
+    return Objects.equals(
+            this.authenticationSuccessFilter, reportInProductGet.authenticationSuccessFilter)
+        && Objects.equals(this.customFieldFilter, reportInProductGet.customFieldFilter)
+        && Objects.equals(this.dateRangeCustomFromDate, reportInProductGet.dateRangeCustomFromDate)
+        && Objects.equals(this.dateRangeCustomToDate, reportInProductGet.dateRangeCustomToDate)
+        && Objects.equals(this.dateRangeFilter, reportInProductGet.dateRangeFilter)
+        && Objects.equals(this.displayOrder, reportInProductGet.displayOrder)
+        && Objects.equals(this.envelopeDateTypeFilter, reportInProductGet.envelopeDateTypeFilter)
+        && Objects.equals(
+            this.envelopeRecipientNameContainsFilter,
+            reportInProductGet.envelopeRecipientNameContainsFilter)
+        && Objects.equals(this.envelopeStatusFilter, reportInProductGet.envelopeStatusFilter)
+        && Objects.equals(
+            this.envelopeSubjectContainsFilter, reportInProductGet.envelopeSubjectContainsFilter)
+        && Objects.equals(this.fields, reportInProductGet.fields)
+        && Objects.equals(
+            this.lastScheduledExecutionDate, reportInProductGet.lastScheduledExecutionDate)
+        && Objects.equals(
+            this.lastScheduledExecutionSuccessDate,
+            reportInProductGet.lastScheduledExecutionSuccessDate)
+        && Objects.equals(this.maxDownloadRows, reportInProductGet.maxDownloadRows)
+        && Objects.equals(this.maxGridRows, reportInProductGet.maxGridRows)
+        && Objects.equals(this.maxScheduledRows, reportInProductGet.maxScheduledRows)
+        && Objects.equals(this.periodLengthFilter, reportInProductGet.periodLengthFilter)
+        && Objects.equals(this.reportCustomizedId, reportInProductGet.reportCustomizedId)
+        && Objects.equals(this.reportDescription, reportInProductGet.reportDescription)
+        && Objects.equals(this.reportId, reportInProductGet.reportId)
+        && Objects.equals(this.reportName, reportInProductGet.reportName)
+        && Objects.equals(this.reportType, reportInProductGet.reportType)
+        && Objects.equals(this.runUri, reportInProductGet.runUri)
+        && Objects.equals(this.saveUri, reportInProductGet.saveUri)
+        && Objects.equals(this.scheduleId, reportInProductGet.scheduleId)
+        && Objects.equals(this.sentByDetails, reportInProductGet.sentByDetails)
+        && Objects.equals(this.sentByFilter, reportInProductGet.sentByFilter)
+        && Objects.equals(this.sentByIds, reportInProductGet.sentByIds)
+        && Objects.equals(this.sortFieldDirection, reportInProductGet.sortFieldDirection)
+        && Objects.equals(this.sortFieldName, reportInProductGet.sortFieldName)
+        && Objects.equals(
+            this.verificationStatusFilter, reportInProductGet.verificationStatusFilter);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(authenticationSuccessFilter, customFieldFilter, dateRangeCustomFromDate, dateRangeCustomToDate, dateRangeFilter, displayOrder, envelopeDateTypeFilter, envelopeRecipientNameContainsFilter, envelopeStatusFilter, envelopeSubjectContainsFilter, fields, lastScheduledExecutionDate, lastScheduledExecutionSuccessDate, maxDownloadRows, maxGridRows, maxScheduledRows, periodLengthFilter, reportCustomizedId, reportDescription, reportId, reportName, reportType, runUri, saveUri, scheduleId, sentByDetails, sentByFilter, sentByIds, sortFieldDirection, sortFieldName, verificationStatusFilter);
+    return Objects.hash(
+        authenticationSuccessFilter,
+        customFieldFilter,
+        dateRangeCustomFromDate,
+        dateRangeCustomToDate,
+        dateRangeFilter,
+        displayOrder,
+        envelopeDateTypeFilter,
+        envelopeRecipientNameContainsFilter,
+        envelopeStatusFilter,
+        envelopeSubjectContainsFilter,
+        fields,
+        lastScheduledExecutionDate,
+        lastScheduledExecutionSuccessDate,
+        maxDownloadRows,
+        maxGridRows,
+        maxScheduledRows,
+        periodLengthFilter,
+        reportCustomizedId,
+        reportDescription,
+        reportId,
+        reportName,
+        reportType,
+        runUri,
+        saveUri,
+        scheduleId,
+        sentByDetails,
+        sentByFilter,
+        sentByIds,
+        sortFieldDirection,
+        sortFieldName,
+        verificationStatusFilter);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductGet {\n");
-    
-    sb.append("    authenticationSuccessFilter: ").append(toIndentedString(authenticationSuccessFilter)).append("\n");
+
+    sb.append("    authenticationSuccessFilter: ")
+        .append(toIndentedString(authenticationSuccessFilter))
+        .append("\n");
     sb.append("    customFieldFilter: ").append(toIndentedString(customFieldFilter)).append("\n");
-    sb.append("    dateRangeCustomFromDate: ").append(toIndentedString(dateRangeCustomFromDate)).append("\n");
-    sb.append("    dateRangeCustomToDate: ").append(toIndentedString(dateRangeCustomToDate)).append("\n");
+    sb.append("    dateRangeCustomFromDate: ")
+        .append(toIndentedString(dateRangeCustomFromDate))
+        .append("\n");
+    sb.append("    dateRangeCustomToDate: ")
+        .append(toIndentedString(dateRangeCustomToDate))
+        .append("\n");
     sb.append("    dateRangeFilter: ").append(toIndentedString(dateRangeFilter)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
-    sb.append("    envelopeDateTypeFilter: ").append(toIndentedString(envelopeDateTypeFilter)).append("\n");
-    sb.append("    envelopeRecipientNameContainsFilter: ").append(toIndentedString(envelopeRecipientNameContainsFilter)).append("\n");
-    sb.append("    envelopeStatusFilter: ").append(toIndentedString(envelopeStatusFilter)).append("\n");
-    sb.append("    envelopeSubjectContainsFilter: ").append(toIndentedString(envelopeSubjectContainsFilter)).append("\n");
+    sb.append("    envelopeDateTypeFilter: ")
+        .append(toIndentedString(envelopeDateTypeFilter))
+        .append("\n");
+    sb.append("    envelopeRecipientNameContainsFilter: ")
+        .append(toIndentedString(envelopeRecipientNameContainsFilter))
+        .append("\n");
+    sb.append("    envelopeStatusFilter: ")
+        .append(toIndentedString(envelopeStatusFilter))
+        .append("\n");
+    sb.append("    envelopeSubjectContainsFilter: ")
+        .append(toIndentedString(envelopeSubjectContainsFilter))
+        .append("\n");
     sb.append("    fields: ").append(toIndentedString(fields)).append("\n");
-    sb.append("    lastScheduledExecutionDate: ").append(toIndentedString(lastScheduledExecutionDate)).append("\n");
-    sb.append("    lastScheduledExecutionSuccessDate: ").append(toIndentedString(lastScheduledExecutionSuccessDate)).append("\n");
+    sb.append("    lastScheduledExecutionDate: ")
+        .append(toIndentedString(lastScheduledExecutionDate))
+        .append("\n");
+    sb.append("    lastScheduledExecutionSuccessDate: ")
+        .append(toIndentedString(lastScheduledExecutionSuccessDate))
+        .append("\n");
     sb.append("    maxDownloadRows: ").append(toIndentedString(maxDownloadRows)).append("\n");
     sb.append("    maxGridRows: ").append(toIndentedString(maxGridRows)).append("\n");
     sb.append("    maxScheduledRows: ").append(toIndentedString(maxScheduledRows)).append("\n");
@@ -1054,14 +1035,15 @@ public class ReportInProductGet {
     sb.append("    sentByIds: ").append(toIndentedString(sentByIds)).append("\n");
     sb.append("    sortFieldDirection: ").append(toIndentedString(sortFieldDirection)).append("\n");
     sb.append("    sortFieldName: ").append(toIndentedString(sortFieldName)).append("\n");
-    sb.append("    verificationStatusFilter: ").append(toIndentedString(verificationStatusFilter)).append("\n");
+    sb.append("    verificationStatusFilter: ")
+        .append(toIndentedString(verificationStatusFilter))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -1069,6 +1051,4 @@ public class ReportInProductGet {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

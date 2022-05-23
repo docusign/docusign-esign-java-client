@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DisplayApplianceDocument
- */
-
+/** DisplayApplianceDocument */
 public class DisplayApplianceDocument {
   @JsonProperty("attachmentDescription")
   private String attachmentDescription = null;
@@ -40,10 +35,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return attachmentDescription
-  **/
+  /** @return attachmentDescription */
   @ApiModelProperty(example = "null", value = "")
   public String getAttachmentDescription() {
     return attachmentDescription;
@@ -58,11 +50,16 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.
+  /**
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Document's ID attribute.
+   *
    * @return documentId
-  **/
-  @ApiModelProperty(example = "null", value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value =
+          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -76,10 +73,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return documentType
-  **/
+  /** @return documentType */
   @ApiModelProperty(example = "null", value = "")
   public String getDocumentType() {
     return documentType;
@@ -94,11 +88,14 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
+  /**
    * The envelope ID of the envelope status that failed to post.
+   *
    * @return envelopeId
-  **/
-  @ApiModelProperty(example = "null", value = "The envelope ID of the envelope status that failed to post.")
+   */
+  @ApiModelProperty(
+      example = "null",
+      value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -112,10 +109,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return externalDocumentId
-  **/
+  /** @return externalDocumentId */
   @ApiModelProperty(example = "null", value = "")
   public String getExternalDocumentId() {
     return externalDocumentId;
@@ -130,10 +124,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return latestPDFId
-  **/
+  /** @return latestPDFId */
   @ApiModelProperty(example = "null", value = "")
   public String getLatestPDFId() {
     return latestPDFId;
@@ -148,10 +139,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return name
-  **/
+  /** @return name */
   @ApiModelProperty(example = "null", value = "")
   public String getName() {
     return name;
@@ -166,10 +154,7 @@ public class DisplayApplianceDocument {
     return this;
   }
 
-   /**
-   * 
-   * @return pages
-  **/
+  /** @return pages */
   @ApiModelProperty(example = "null", value = "")
   public Integer getPages() {
     return pages;
@@ -178,7 +163,6 @@ public class DisplayApplianceDocument {
   public void setPages(Integer pages) {
     this.pages = pages;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -189,28 +173,38 @@ public class DisplayApplianceDocument {
       return false;
     }
     DisplayApplianceDocument displayApplianceDocument = (DisplayApplianceDocument) o;
-    return Objects.equals(this.attachmentDescription, displayApplianceDocument.attachmentDescription) &&
-        Objects.equals(this.documentId, displayApplianceDocument.documentId) &&
-        Objects.equals(this.documentType, displayApplianceDocument.documentType) &&
-        Objects.equals(this.envelopeId, displayApplianceDocument.envelopeId) &&
-        Objects.equals(this.externalDocumentId, displayApplianceDocument.externalDocumentId) &&
-        Objects.equals(this.latestPDFId, displayApplianceDocument.latestPDFId) &&
-        Objects.equals(this.name, displayApplianceDocument.name) &&
-        Objects.equals(this.pages, displayApplianceDocument.pages);
+    return Objects.equals(
+            this.attachmentDescription, displayApplianceDocument.attachmentDescription)
+        && Objects.equals(this.documentId, displayApplianceDocument.documentId)
+        && Objects.equals(this.documentType, displayApplianceDocument.documentType)
+        && Objects.equals(this.envelopeId, displayApplianceDocument.envelopeId)
+        && Objects.equals(this.externalDocumentId, displayApplianceDocument.externalDocumentId)
+        && Objects.equals(this.latestPDFId, displayApplianceDocument.latestPDFId)
+        && Objects.equals(this.name, displayApplianceDocument.name)
+        && Objects.equals(this.pages, displayApplianceDocument.pages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(attachmentDescription, documentId, documentType, envelopeId, externalDocumentId, latestPDFId, name, pages);
+    return Objects.hash(
+        attachmentDescription,
+        documentId,
+        documentType,
+        envelopeId,
+        externalDocumentId,
+        latestPDFId,
+        name,
+        pages);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DisplayApplianceDocument {\n");
-    
-    sb.append("    attachmentDescription: ").append(toIndentedString(attachmentDescription)).append("\n");
+
+    sb.append("    attachmentDescription: ")
+        .append(toIndentedString(attachmentDescription))
+        .append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentType: ").append(toIndentedString(documentType)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -223,8 +217,7 @@ public class DisplayApplianceDocument {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -232,6 +225,4 @@ public class DisplayApplianceDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-

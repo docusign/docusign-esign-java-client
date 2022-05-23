@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ExternalClaim
- */
-
+/** ExternalClaim */
 public class ExternalClaim {
   @JsonProperty("acquiredTime")
   private String acquiredTime = null;
@@ -30,10 +23,7 @@ public class ExternalClaim {
     return this;
   }
 
-   /**
-   * 
-   * @return acquiredTime
-  **/
+  /** @return acquiredTime */
   @ApiModelProperty(value = "")
   public String getAcquiredTime() {
     return acquiredTime;
@@ -48,10 +38,7 @@ public class ExternalClaim {
     return this;
   }
 
-   /**
-   * 
-   * @return claimName
-  **/
+  /** @return claimName */
   @ApiModelProperty(value = "")
   public String getClaimName() {
     return claimName;
@@ -66,10 +53,7 @@ public class ExternalClaim {
     return this;
   }
 
-   /**
-   * 
-   * @return provider
-  **/
+  /** @return provider */
   @ApiModelProperty(value = "")
   public String getProvider() {
     return provider;
@@ -84,10 +68,11 @@ public class ExternalClaim {
     return this;
   }
 
-   /**
-   * Specifies the value of the tab. 
+  /**
+   * Specifies the value of the tab.
+   *
    * @return value
-  **/
+   */
   @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
@@ -96,7 +81,6 @@ public class ExternalClaim {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -107,10 +91,10 @@ public class ExternalClaim {
       return false;
     }
     ExternalClaim externalClaim = (ExternalClaim) o;
-    return Objects.equals(this.acquiredTime, externalClaim.acquiredTime) &&
-        Objects.equals(this.claimName, externalClaim.claimName) &&
-        Objects.equals(this.provider, externalClaim.provider) &&
-        Objects.equals(this.value, externalClaim.value);
+    return Objects.equals(this.acquiredTime, externalClaim.acquiredTime)
+        && Objects.equals(this.claimName, externalClaim.claimName)
+        && Objects.equals(this.provider, externalClaim.provider)
+        && Objects.equals(this.value, externalClaim.value);
   }
 
   @Override
@@ -118,12 +102,11 @@ public class ExternalClaim {
     return Objects.hash(acquiredTime, claimName, provider, value);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalClaim {\n");
-    
+
     sb.append("    acquiredTime: ").append(toIndentedString(acquiredTime)).append("\n");
     sb.append("    claimName: ").append(toIndentedString(claimName)).append("\n");
     sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
@@ -133,8 +116,7 @@ public class ExternalClaim {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -142,6 +124,4 @@ public class ExternalClaim {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

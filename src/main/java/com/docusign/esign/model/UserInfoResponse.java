@@ -1,20 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.Seal;
-import com.docusign.esign.model.Sender;
-import com.docusign.esign.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * UserInfoResponse
- */
-
+/** UserInfoResponse */
 public class UserInfoResponse {
   @JsonProperty("envelopeId")
   private String envelopeId = null;
@@ -36,10 +26,11 @@ public class UserInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * The envelope ID of the envelope status that failed to post.
+   *
    * @return envelopeId
-  **/
+   */
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
@@ -54,10 +45,7 @@ public class UserInfoResponse {
     return this;
   }
 
-   /**
-   * 
-   * @return language
-  **/
+  /** @return language */
   @ApiModelProperty(value = "")
   public String getLanguage() {
     return language;
@@ -72,10 +60,11 @@ public class UserInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get seal
+   *
    * @return seal
-  **/
+   */
   @ApiModelProperty(value = "")
   public Seal getSeal() {
     return seal;
@@ -90,10 +79,11 @@ public class UserInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get sender
+   *
    * @return sender
-  **/
+   */
   @ApiModelProperty(value = "")
   public Sender getSender() {
     return sender;
@@ -108,10 +98,11 @@ public class UserInfoResponse {
     return this;
   }
 
-   /**
+  /**
    * Get user
+   *
    * @return user
-  **/
+   */
   @ApiModelProperty(value = "")
   public User getUser() {
     return user;
@@ -120,7 +111,6 @@ public class UserInfoResponse {
   public void setUser(User user) {
     this.user = user;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -131,11 +121,11 @@ public class UserInfoResponse {
       return false;
     }
     UserInfoResponse userInfoResponse = (UserInfoResponse) o;
-    return Objects.equals(this.envelopeId, userInfoResponse.envelopeId) &&
-        Objects.equals(this.language, userInfoResponse.language) &&
-        Objects.equals(this.seal, userInfoResponse.seal) &&
-        Objects.equals(this.sender, userInfoResponse.sender) &&
-        Objects.equals(this.user, userInfoResponse.user);
+    return Objects.equals(this.envelopeId, userInfoResponse.envelopeId)
+        && Objects.equals(this.language, userInfoResponse.language)
+        && Objects.equals(this.seal, userInfoResponse.seal)
+        && Objects.equals(this.sender, userInfoResponse.sender)
+        && Objects.equals(this.user, userInfoResponse.user);
   }
 
   @Override
@@ -143,12 +133,11 @@ public class UserInfoResponse {
     return Objects.hash(envelopeId, language, seal, sender, user);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfoResponse {\n");
-    
+
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("    seal: ").append(toIndentedString(seal)).append("\n");
@@ -159,8 +148,7 @@ public class UserInfoResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -168,6 +156,4 @@ public class UserInfoResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

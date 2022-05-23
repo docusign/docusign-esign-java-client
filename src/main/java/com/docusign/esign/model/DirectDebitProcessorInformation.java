@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * DirectDebitProcessorInformation.
- *
- */
-
+/** DirectDebitProcessorInformation. */
 public class DirectDebitProcessorInformation {
   @JsonProperty("bankBranchCode")
   private String bankBranchCode = null;
@@ -50,12 +42,11 @@ public class DirectDebitProcessorInformation {
   @JsonProperty("lastName")
   private String lastName = null;
 
-
   /**
    * bankBranchCode.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankBranchCode(String bankBranchCode) {
     this.bankBranchCode = bankBranchCode;
     return this;
@@ -63,26 +54,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankBranchCode
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankBranchCode() {
     return bankBranchCode;
   }
 
-  /**
-   * setBankBranchCode.
-   **/
+  /** setBankBranchCode. */
   public void setBankBranchCode(String bankBranchCode) {
     this.bankBranchCode = bankBranchCode;
   }
-
 
   /**
    * bankCheckDigit.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankCheckDigit(String bankCheckDigit) {
     this.bankCheckDigit = bankCheckDigit;
     return this;
@@ -90,26 +79,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankCheckDigit
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankCheckDigit() {
     return bankCheckDigit;
   }
 
-  /**
-   * setBankCheckDigit.
-   **/
+  /** setBankCheckDigit. */
   public void setBankCheckDigit(String bankCheckDigit) {
     this.bankCheckDigit = bankCheckDigit;
   }
-
 
   /**
    * bankCode.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankCode(String bankCode) {
     this.bankCode = bankCode;
     return this;
@@ -117,26 +104,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankCode
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankCode() {
     return bankCode;
   }
 
-  /**
-   * setBankCode.
-   **/
+  /** setBankCode. */
   public void setBankCode(String bankCode) {
     this.bankCode = bankCode;
   }
-
 
   /**
    * bankName.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankName(String bankName) {
     this.bankName = bankName;
     return this;
@@ -144,26 +129,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankName() {
     return bankName;
   }
 
-  /**
-   * setBankName.
-   **/
+  /** setBankName. */
   public void setBankName(String bankName) {
     this.bankName = bankName;
   }
-
 
   /**
    * bankTransferAccountName.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankTransferAccountName(String bankTransferAccountName) {
     this.bankTransferAccountName = bankTransferAccountName;
     return this;
@@ -171,53 +154,50 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankTransferAccountName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankTransferAccountName() {
     return bankTransferAccountName;
   }
 
-  /**
-   * setBankTransferAccountName.
-   **/
+  /** setBankTransferAccountName. */
   public void setBankTransferAccountName(String bankTransferAccountName) {
     this.bankTransferAccountName = bankTransferAccountName;
   }
-
 
   /**
    * bankTransferAccountNumber.
    *
    * @return DirectDebitProcessorInformation
-   **/
-  public DirectDebitProcessorInformation bankTransferAccountNumber(String bankTransferAccountNumber) {
+   */
+  public DirectDebitProcessorInformation bankTransferAccountNumber(
+      String bankTransferAccountNumber) {
     this.bankTransferAccountNumber = bankTransferAccountNumber;
     return this;
   }
 
   /**
    * .
+   *
    * @return bankTransferAccountNumber
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankTransferAccountNumber() {
     return bankTransferAccountNumber;
   }
 
-  /**
-   * setBankTransferAccountNumber.
-   **/
+  /** setBankTransferAccountNumber. */
   public void setBankTransferAccountNumber(String bankTransferAccountNumber) {
     this.bankTransferAccountNumber = bankTransferAccountNumber;
   }
-
 
   /**
    * bankTransferType.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation bankTransferType(String bankTransferType) {
     this.bankTransferType = bankTransferType;
     return this;
@@ -225,26 +205,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return bankTransferType
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getBankTransferType() {
     return bankTransferType;
   }
 
-  /**
-   * setBankTransferType.
-   **/
+  /** setBankTransferType. */
   public void setBankTransferType(String bankTransferType) {
     this.bankTransferType = bankTransferType;
   }
-
 
   /**
    * country.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation country(String country) {
     this.country = country;
     return this;
@@ -252,26 +230,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * Specifies the country associated with the address..
+   *
    * @return country
-   **/
+   */
   @ApiModelProperty(value = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
 
-  /**
-   * setCountry.
-   **/
+  /** setCountry. */
   public void setCountry(String country) {
     this.country = country;
   }
-
 
   /**
    * email.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation email(String email) {
     this.email = email;
     return this;
@@ -279,53 +255,49 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return email
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-  /**
-   * setEmail.
-   **/
+  /** setEmail. */
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * firstName.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
 
   /**
-   * The user's first name.  Maximum Length: 50 characters..
+   * The user's first name. Maximum Length: 50 characters..
+   *
    * @return firstName
-   **/
+   */
   @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
 
-  /**
-   * setFirstName.
-   **/
+  /** setFirstName. */
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
-
 
   /**
    * iBAN.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation iBAN(String iBAN) {
     this.iBAN = iBAN;
     return this;
@@ -333,26 +305,24 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return iBAN
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getIBAN() {
     return iBAN;
   }
 
-  /**
-   * setIBAN.
-   **/
+  /** setIBAN. */
   public void setIBAN(String iBAN) {
     this.iBAN = iBAN;
   }
-
 
   /**
    * lastName.
    *
    * @return DirectDebitProcessorInformation
-   **/
+   */
   public DirectDebitProcessorInformation lastName(String lastName) {
     this.lastName = lastName;
     return this;
@@ -360,20 +330,18 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
+   *
    * @return lastName
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getLastName() {
     return lastName;
   }
 
-  /**
-   * setLastName.
-   **/
+  /** setLastName. */
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
-
 
   /**
    * Compares objects.
@@ -388,44 +356,59 @@ public class DirectDebitProcessorInformation {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DirectDebitProcessorInformation directDebitProcessorInformation = (DirectDebitProcessorInformation) o;
-    return Objects.equals(this.bankBranchCode, directDebitProcessorInformation.bankBranchCode) &&
-        Objects.equals(this.bankCheckDigit, directDebitProcessorInformation.bankCheckDigit) &&
-        Objects.equals(this.bankCode, directDebitProcessorInformation.bankCode) &&
-        Objects.equals(this.bankName, directDebitProcessorInformation.bankName) &&
-        Objects.equals(this.bankTransferAccountName, directDebitProcessorInformation.bankTransferAccountName) &&
-        Objects.equals(this.bankTransferAccountNumber, directDebitProcessorInformation.bankTransferAccountNumber) &&
-        Objects.equals(this.bankTransferType, directDebitProcessorInformation.bankTransferType) &&
-        Objects.equals(this.country, directDebitProcessorInformation.country) &&
-        Objects.equals(this.email, directDebitProcessorInformation.email) &&
-        Objects.equals(this.firstName, directDebitProcessorInformation.firstName) &&
-        Objects.equals(this.iBAN, directDebitProcessorInformation.iBAN) &&
-        Objects.equals(this.lastName, directDebitProcessorInformation.lastName);
+    DirectDebitProcessorInformation directDebitProcessorInformation =
+        (DirectDebitProcessorInformation) o;
+    return Objects.equals(this.bankBranchCode, directDebitProcessorInformation.bankBranchCode)
+        && Objects.equals(this.bankCheckDigit, directDebitProcessorInformation.bankCheckDigit)
+        && Objects.equals(this.bankCode, directDebitProcessorInformation.bankCode)
+        && Objects.equals(this.bankName, directDebitProcessorInformation.bankName)
+        && Objects.equals(
+            this.bankTransferAccountName, directDebitProcessorInformation.bankTransferAccountName)
+        && Objects.equals(
+            this.bankTransferAccountNumber,
+            directDebitProcessorInformation.bankTransferAccountNumber)
+        && Objects.equals(this.bankTransferType, directDebitProcessorInformation.bankTransferType)
+        && Objects.equals(this.country, directDebitProcessorInformation.country)
+        && Objects.equals(this.email, directDebitProcessorInformation.email)
+        && Objects.equals(this.firstName, directDebitProcessorInformation.firstName)
+        && Objects.equals(this.iBAN, directDebitProcessorInformation.iBAN)
+        && Objects.equals(this.lastName, directDebitProcessorInformation.lastName);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(bankBranchCode, bankCheckDigit, bankCode, bankName, bankTransferAccountName, bankTransferAccountNumber, bankTransferType, country, email, firstName, iBAN, lastName);
+    return Objects.hash(
+        bankBranchCode,
+        bankCheckDigit,
+        bankCode,
+        bankName,
+        bankTransferAccountName,
+        bankTransferAccountNumber,
+        bankTransferType,
+        country,
+        email,
+        firstName,
+        iBAN,
+        lastName);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DirectDebitProcessorInformation {\n");
-    
+
     sb.append("    bankBranchCode: ").append(toIndentedString(bankBranchCode)).append("\n");
     sb.append("    bankCheckDigit: ").append(toIndentedString(bankCheckDigit)).append("\n");
     sb.append("    bankCode: ").append(toIndentedString(bankCode)).append("\n");
     sb.append("    bankName: ").append(toIndentedString(bankName)).append("\n");
-    sb.append("    bankTransferAccountName: ").append(toIndentedString(bankTransferAccountName)).append("\n");
-    sb.append("    bankTransferAccountNumber: ").append(toIndentedString(bankTransferAccountNumber)).append("\n");
+    sb.append("    bankTransferAccountName: ")
+        .append(toIndentedString(bankTransferAccountName))
+        .append("\n");
+    sb.append("    bankTransferAccountNumber: ")
+        .append(toIndentedString(bankTransferAccountNumber))
+        .append("\n");
     sb.append("    bankTransferType: ").append(toIndentedString(bankTransferType)).append("\n");
     sb.append("    country: ").append(toIndentedString(country)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -437,8 +420,7 @@ public class DirectDebitProcessorInformation {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -446,6 +428,4 @@ public class DirectDebitProcessorInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

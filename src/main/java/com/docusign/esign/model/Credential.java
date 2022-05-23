@@ -1,17 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * Credential
- */
-
+/** Credential */
 public class Credential {
   @JsonProperty("accessCode")
   private String accessCode = null;
@@ -27,11 +20,18 @@ public class Credential {
     return this;
   }
 
-   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.
+  /**
+   * If a value is provided, the recipient must enter the value as the access code to view and sign
+   * the envelope. Maximum Length: 50 characters and it must conform to the account's access code
+   * format setting. If blank, but the signer `accessCode` property is set in the envelope, then
+   * that value is used. If blank and the signer `accessCode` property is not set, then the access
+   * code is not required.
+   *
    * @return accessCode
-  **/
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+   */
+  @ApiModelProperty(
+      value =
+          "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -45,10 +45,7 @@ public class Credential {
     return this;
   }
 
-   /**
-   * 
-   * @return type
-  **/
+  /** @return type */
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
@@ -63,10 +60,11 @@ public class Credential {
     return this;
   }
 
-   /**
-   * Specifies the value of the tab. 
+  /**
+   * Specifies the value of the tab.
+   *
    * @return value
-  **/
+   */
   @ApiModelProperty(value = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
@@ -75,7 +73,6 @@ public class Credential {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -86,9 +83,9 @@ public class Credential {
       return false;
     }
     Credential credential = (Credential) o;
-    return Objects.equals(this.accessCode, credential.accessCode) &&
-        Objects.equals(this.type, credential.type) &&
-        Objects.equals(this.value, credential.value);
+    return Objects.equals(this.accessCode, credential.accessCode)
+        && Objects.equals(this.type, credential.type)
+        && Objects.equals(this.value, credential.value);
   }
 
   @Override
@@ -96,12 +93,11 @@ public class Credential {
     return Objects.hash(accessCode, type, value);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Credential {\n");
-    
+
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
@@ -110,8 +106,7 @@ public class Credential {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -119,6 +114,4 @@ public class Credential {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

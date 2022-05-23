@@ -1,19 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * CreditCardInformation.
- *
- */
-
+/** CreditCardInformation. */
 public class CreditCardInformation {
   @JsonProperty("address")
   private AddressInformation address = null;
@@ -42,12 +33,11 @@ public class CreditCardInformation {
   @JsonProperty("tokenizedCard")
   private String tokenizedCard = null;
 
-
   /**
    * address.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation address(AddressInformation address) {
     this.address = address;
     return this;
@@ -55,26 +45,24 @@ public class CreditCardInformation {
 
   /**
    * Get address.
+   *
    * @return address
-   **/
+   */
   @ApiModelProperty(value = "")
   public AddressInformation getAddress() {
     return address;
   }
 
-  /**
-   * setAddress.
-   **/
+  /** setAddress. */
   public void setAddress(AddressInformation address) {
     this.address = address;
   }
-
 
   /**
    * cardLastDigits.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation cardLastDigits(String cardLastDigits) {
     this.cardLastDigits = cardLastDigits;
     return this;
@@ -82,26 +70,24 @@ public class CreditCardInformation {
 
   /**
    * .
+   *
    * @return cardLastDigits
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCardLastDigits() {
     return cardLastDigits;
   }
 
-  /**
-   * setCardLastDigits.
-   **/
+  /** setCardLastDigits. */
   public void setCardLastDigits(String cardLastDigits) {
     this.cardLastDigits = cardLastDigits;
   }
-
 
   /**
    * cardNumber.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation cardNumber(String cardNumber) {
     this.cardNumber = cardNumber;
     return this;
@@ -109,26 +95,24 @@ public class CreditCardInformation {
 
   /**
    * The number on the credit card..
+   *
    * @return cardNumber
-   **/
+   */
   @ApiModelProperty(value = "The number on the credit card.")
   public String getCardNumber() {
     return cardNumber;
   }
 
-  /**
-   * setCardNumber.
-   **/
+  /** setCardNumber. */
   public void setCardNumber(String cardNumber) {
     this.cardNumber = cardNumber;
   }
-
 
   /**
    * cardType.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation cardType(String cardType) {
     this.cardType = cardType;
     return this;
@@ -136,26 +120,24 @@ public class CreditCardInformation {
 
   /**
    * The credit card type. Valid values are: visa, mastercard, or amex..
+   *
    * @return cardType
-   **/
+   */
   @ApiModelProperty(value = "The credit card type. Valid values are: visa, mastercard, or amex.")
   public String getCardType() {
     return cardType;
   }
 
-  /**
-   * setCardType.
-   **/
+  /** setCardType. */
   public void setCardType(String cardType) {
     this.cardType = cardType;
   }
-
 
   /**
    * cvNumber.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation cvNumber(String cvNumber) {
     this.cvNumber = cvNumber;
     return this;
@@ -163,26 +145,24 @@ public class CreditCardInformation {
 
   /**
    * .
+   *
    * @return cvNumber
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getCvNumber() {
     return cvNumber;
   }
 
-  /**
-   * setCvNumber.
-   **/
+  /** setCvNumber. */
   public void setCvNumber(String cvNumber) {
     this.cvNumber = cvNumber;
   }
-
 
   /**
    * expirationMonth.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation expirationMonth(String expirationMonth) {
     this.expirationMonth = expirationMonth;
     return this;
@@ -190,26 +170,24 @@ public class CreditCardInformation {
 
   /**
    * The month that the credit card expires (1-12)..
+   *
    * @return expirationMonth
-   **/
+   */
   @ApiModelProperty(value = "The month that the credit card expires (1-12).")
   public String getExpirationMonth() {
     return expirationMonth;
   }
 
-  /**
-   * setExpirationMonth.
-   **/
+  /** setExpirationMonth. */
   public void setExpirationMonth(String expirationMonth) {
     this.expirationMonth = expirationMonth;
   }
-
 
   /**
    * expirationYear.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation expirationYear(String expirationYear) {
     this.expirationYear = expirationYear;
     return this;
@@ -217,26 +195,24 @@ public class CreditCardInformation {
 
   /**
    * The year 4 digit year in which the credit card expires..
+   *
    * @return expirationYear
-   **/
+   */
   @ApiModelProperty(value = "The year 4 digit year in which the credit card expires.")
   public String getExpirationYear() {
     return expirationYear;
   }
 
-  /**
-   * setExpirationYear.
-   **/
+  /** setExpirationYear. */
   public void setExpirationYear(String expirationYear) {
     this.expirationYear = expirationYear;
   }
-
 
   /**
    * nameOnCard.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation nameOnCard(String nameOnCard) {
     this.nameOnCard = nameOnCard;
     return this;
@@ -244,26 +220,24 @@ public class CreditCardInformation {
 
   /**
    * The exact name printed on the credit card..
+   *
    * @return nameOnCard
-   **/
+   */
   @ApiModelProperty(value = "The exact name printed on the credit card.")
   public String getNameOnCard() {
     return nameOnCard;
   }
 
-  /**
-   * setNameOnCard.
-   **/
+  /** setNameOnCard. */
   public void setNameOnCard(String nameOnCard) {
     this.nameOnCard = nameOnCard;
   }
-
 
   /**
    * tokenizedCard.
    *
    * @return CreditCardInformation
-   **/
+   */
   public CreditCardInformation tokenizedCard(String tokenizedCard) {
     this.tokenizedCard = tokenizedCard;
     return this;
@@ -271,20 +245,18 @@ public class CreditCardInformation {
 
   /**
    * .
+   *
    * @return tokenizedCard
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getTokenizedCard() {
     return tokenizedCard;
   }
 
-  /**
-   * setTokenizedCard.
-   **/
+  /** setTokenizedCard. */
   public void setTokenizedCard(String tokenizedCard) {
     this.tokenizedCard = tokenizedCard;
   }
-
 
   /**
    * Compares objects.
@@ -300,34 +272,38 @@ public class CreditCardInformation {
       return false;
     }
     CreditCardInformation creditCardInformation = (CreditCardInformation) o;
-    return Objects.equals(this.address, creditCardInformation.address) &&
-        Objects.equals(this.cardLastDigits, creditCardInformation.cardLastDigits) &&
-        Objects.equals(this.cardNumber, creditCardInformation.cardNumber) &&
-        Objects.equals(this.cardType, creditCardInformation.cardType) &&
-        Objects.equals(this.cvNumber, creditCardInformation.cvNumber) &&
-        Objects.equals(this.expirationMonth, creditCardInformation.expirationMonth) &&
-        Objects.equals(this.expirationYear, creditCardInformation.expirationYear) &&
-        Objects.equals(this.nameOnCard, creditCardInformation.nameOnCard) &&
-        Objects.equals(this.tokenizedCard, creditCardInformation.tokenizedCard);
+    return Objects.equals(this.address, creditCardInformation.address)
+        && Objects.equals(this.cardLastDigits, creditCardInformation.cardLastDigits)
+        && Objects.equals(this.cardNumber, creditCardInformation.cardNumber)
+        && Objects.equals(this.cardType, creditCardInformation.cardType)
+        && Objects.equals(this.cvNumber, creditCardInformation.cvNumber)
+        && Objects.equals(this.expirationMonth, creditCardInformation.expirationMonth)
+        && Objects.equals(this.expirationYear, creditCardInformation.expirationYear)
+        && Objects.equals(this.nameOnCard, creditCardInformation.nameOnCard)
+        && Objects.equals(this.tokenizedCard, creditCardInformation.tokenizedCard);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
-    return Objects.hash(address, cardLastDigits, cardNumber, cardType, cvNumber, expirationMonth, expirationYear, nameOnCard, tokenizedCard);
+    return Objects.hash(
+        address,
+        cardLastDigits,
+        cardNumber,
+        cardType,
+        cvNumber,
+        expirationMonth,
+        expirationYear,
+        nameOnCard,
+        tokenizedCard);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardInformation {\n");
-    
+
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    cardLastDigits: ").append(toIndentedString(cardLastDigits)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
@@ -342,8 +318,7 @@ public class CreditCardInformation {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -351,6 +326,4 @@ public class CreditCardInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

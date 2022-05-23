@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * SignatureGroup.
- *
- */
-
+/** SignatureGroup. */
 public class SignatureGroup {
   @JsonProperty("groupId")
   private String groupId = null;
@@ -23,12 +15,11 @@ public class SignatureGroup {
   @JsonProperty("rights")
   private String rights = null;
 
-
   /**
    * groupId.
    *
    * @return SignatureGroup
-   **/
+   */
   public SignatureGroup groupId(String groupId) {
     this.groupId = groupId;
     return this;
@@ -36,26 +27,24 @@ public class SignatureGroup {
 
   /**
    * .
+   *
    * @return groupId
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getGroupId() {
     return groupId;
   }
 
-  /**
-   * setGroupId.
-   **/
+  /** setGroupId. */
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
-
 
   /**
    * groupName.
    *
    * @return SignatureGroup
-   **/
+   */
   public SignatureGroup groupName(String groupName) {
     this.groupName = groupName;
     return this;
@@ -63,26 +52,24 @@ public class SignatureGroup {
 
   /**
    * The name of the group..
+   *
    * @return groupName
-   **/
+   */
   @ApiModelProperty(value = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
 
-  /**
-   * setGroupName.
-   **/
+  /** setGroupName. */
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
-
 
   /**
    * rights.
    *
    * @return SignatureGroup
-   **/
+   */
   public SignatureGroup rights(String rights) {
     this.rights = rights;
     return this;
@@ -90,20 +77,18 @@ public class SignatureGroup {
 
   /**
    * .
+   *
    * @return rights
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getRights() {
     return rights;
   }
 
-  /**
-   * setRights.
-   **/
+  /** setRights. */
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * Compares objects.
@@ -119,28 +104,23 @@ public class SignatureGroup {
       return false;
     }
     SignatureGroup signatureGroup = (SignatureGroup) o;
-    return Objects.equals(this.groupId, signatureGroup.groupId) &&
-        Objects.equals(this.groupName, signatureGroup.groupName) &&
-        Objects.equals(this.rights, signatureGroup.rights);
+    return Objects.equals(this.groupId, signatureGroup.groupId)
+        && Objects.equals(this.groupName, signatureGroup.groupName)
+        && Objects.equals(this.rights, signatureGroup.rights);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(groupId, groupName, rights);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureGroup {\n");
-    
+
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
@@ -149,8 +129,7 @@ public class SignatureGroup {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -158,6 +137,4 @@ public class SignatureGroup {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

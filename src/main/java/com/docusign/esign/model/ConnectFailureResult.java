@@ -1,18 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ConnectFailureResult.
- *
- */
-
+/** ConnectFailureResult. */
 public class ConnectFailureResult {
   @JsonProperty("configId")
   private String configId = null;
@@ -29,12 +21,11 @@ public class ConnectFailureResult {
   @JsonProperty("statusMessage")
   private String statusMessage = null;
 
-
   /**
    * configId.
    *
    * @return ConnectFailureResult
-   **/
+   */
   public ConnectFailureResult configId(String configId) {
     this.configId = configId;
     return this;
@@ -42,26 +33,24 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
+   *
    * @return configId
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getConfigId() {
     return configId;
   }
 
-  /**
-   * setConfigId.
-   **/
+  /** setConfigId. */
   public void setConfigId(String configId) {
     this.configId = configId;
   }
-
 
   /**
    * configUrl.
    *
    * @return ConnectFailureResult
-   **/
+   */
   public ConnectFailureResult configUrl(String configUrl) {
     this.configUrl = configUrl;
     return this;
@@ -69,26 +58,24 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
+   *
    * @return configUrl
-   **/
+   */
   @ApiModelProperty(value = "Reserved: TBD")
   public String getConfigUrl() {
     return configUrl;
   }
 
-  /**
-   * setConfigUrl.
-   **/
+  /** setConfigUrl. */
   public void setConfigUrl(String configUrl) {
     this.configUrl = configUrl;
   }
-
 
   /**
    * envelopeId.
    *
    * @return ConnectFailureResult
-   **/
+   */
   public ConnectFailureResult envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
@@ -96,53 +83,52 @@ public class ConnectFailureResult {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   *
    * @return envelopeId
-   **/
+   */
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
-  /**
-   * setEnvelopeId.
-   **/
+  /** setEnvelopeId. */
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * status.
    *
    * @return ConnectFailureResult
-   **/
+   */
   public ConnectFailureResult status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
+   *
    * @return status
-   **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   */
+  @ApiModelProperty(
+      value =
+          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /**
-   * setStatus.
-   **/
+  /** setStatus. */
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMessage.
    *
    * @return ConnectFailureResult
-   **/
+   */
   public ConnectFailureResult statusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
     return this;
@@ -150,20 +136,18 @@ public class ConnectFailureResult {
 
   /**
    * .
+   *
    * @return statusMessage
-   **/
+   */
   @ApiModelProperty(value = "")
   public String getStatusMessage() {
     return statusMessage;
   }
 
-  /**
-   * setStatusMessage.
-   **/
+  /** setStatusMessage. */
   public void setStatusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
   }
-
 
   /**
    * Compares objects.
@@ -179,30 +163,25 @@ public class ConnectFailureResult {
       return false;
     }
     ConnectFailureResult connectFailureResult = (ConnectFailureResult) o;
-    return Objects.equals(this.configId, connectFailureResult.configId) &&
-        Objects.equals(this.configUrl, connectFailureResult.configUrl) &&
-        Objects.equals(this.envelopeId, connectFailureResult.envelopeId) &&
-        Objects.equals(this.status, connectFailureResult.status) &&
-        Objects.equals(this.statusMessage, connectFailureResult.statusMessage);
+    return Objects.equals(this.configId, connectFailureResult.configId)
+        && Objects.equals(this.configUrl, connectFailureResult.configUrl)
+        && Objects.equals(this.envelopeId, connectFailureResult.envelopeId)
+        && Objects.equals(this.status, connectFailureResult.status)
+        && Objects.equals(this.statusMessage, connectFailureResult.statusMessage);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(configId, configUrl, envelopeId, status, statusMessage);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResult {\n");
-    
+
     sb.append("    configId: ").append(toIndentedString(configId)).append("\n");
     sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -213,8 +192,7 @@ public class ConnectFailureResult {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -222,6 +200,4 @@ public class ConnectFailureResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

@@ -1,39 +1,29 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.docusign.esign.model.ReportInProductListItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ReportInProductList.
- *
- */
-
+/** ReportInProductList. */
 public class ReportInProductList {
   @JsonProperty("reports")
   private java.util.List<ReportInProductListItem> reports = null;
-
 
   /**
    * reports.
    *
    * @return ReportInProductList
-   **/
+   */
   public ReportInProductList reports(java.util.List<ReportInProductListItem> reports) {
     this.reports = reports;
     return this;
   }
-  
+
   /**
    * addReportsItem.
    *
    * @return ReportInProductList
-   **/
+   */
   public ReportInProductList addReportsItem(ReportInProductListItem reportsItem) {
     if (this.reports == null) {
       this.reports = new java.util.ArrayList<ReportInProductListItem>();
@@ -44,20 +34,18 @@ public class ReportInProductList {
 
   /**
    * .
+   *
    * @return reports
-   **/
+   */
   @ApiModelProperty(value = "")
   public java.util.List<ReportInProductListItem> getReports() {
     return reports;
   }
 
-  /**
-   * setReports.
-   **/
+  /** setReports. */
   public void setReports(java.util.List<ReportInProductListItem> reports) {
     this.reports = reports;
   }
-
 
   /**
    * Compares objects.
@@ -76,31 +64,25 @@ public class ReportInProductList {
     return Objects.equals(this.reports, reportInProductList.reports);
   }
 
-  /**
-   * Returns the HashCode.
-   */
+  /** Returns the HashCode. */
   @Override
   public int hashCode() {
     return Objects.hash(reports);
   }
 
-
-  /**
-   * Converts the given object to string.
-   */
+  /** Converts the given object to string. */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReportInProductList {\n");
-    
+
     sb.append("    reports: ").append(toIndentedString(reports)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,6 +90,4 @@ public class ReportInProductList {
     }
     return o.toString().replace("\n", "\n    ");
   }
-
 }
-

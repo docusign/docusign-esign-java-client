@@ -1,15 +1,10 @@
 package com.docusign.esign.model;
 
-import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 
-/**
- * ViewLinkRequest
- */
-
+/** ViewLinkRequest */
 public class ViewLinkRequest {
   @JsonProperty("email")
   private String email = null;
@@ -22,10 +17,7 @@ public class ViewLinkRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return email
-  **/
+  /** @return email */
   @ApiModelProperty(example = "null", value = "")
   public String getEmail() {
     return email;
@@ -40,10 +32,7 @@ public class ViewLinkRequest {
     return this;
   }
 
-   /**
-   * 
-   * @return returnUrl
-  **/
+  /** @return returnUrl */
   @ApiModelProperty(example = "null", value = "")
   public String getReturnUrl() {
     return returnUrl;
@@ -52,7 +41,6 @@ public class ViewLinkRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -63,8 +51,8 @@ public class ViewLinkRequest {
       return false;
     }
     ViewLinkRequest viewLinkRequest = (ViewLinkRequest) o;
-    return Objects.equals(this.email, viewLinkRequest.email) &&
-        Objects.equals(this.returnUrl, viewLinkRequest.returnUrl);
+    return Objects.equals(this.email, viewLinkRequest.email)
+        && Objects.equals(this.returnUrl, viewLinkRequest.returnUrl);
   }
 
   @Override
@@ -72,12 +60,11 @@ public class ViewLinkRequest {
     return Objects.hash(email, returnUrl);
   }
 
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewLinkRequest {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
@@ -85,8 +72,7 @@ public class ViewLinkRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -94,6 +80,4 @@ public class ViewLinkRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
-
