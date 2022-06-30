@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.RecipientIdentityInputOption;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** RecipientIdentityVerification. */
+/**
+ * RecipientIdentityVerification.
+ *
+ */
+
 public class RecipientIdentityVerification {
   @JsonProperty("inputOptions")
   private java.util.List<RecipientIdentityInputOption> inputOptions = null;
@@ -15,24 +25,23 @@ public class RecipientIdentityVerification {
   @JsonProperty("workflowIdMetadata")
   private PropertyMetadata workflowIdMetadata = null;
 
+
   /**
    * inputOptions.
    *
    * @return RecipientIdentityVerification
-   */
-  public RecipientIdentityVerification inputOptions(
-      java.util.List<RecipientIdentityInputOption> inputOptions) {
+   **/
+  public RecipientIdentityVerification inputOptions(java.util.List<RecipientIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
     return this;
   }
-
+  
   /**
    * addInputOptionsItem.
    *
    * @return RecipientIdentityVerification
-   */
-  public RecipientIdentityVerification addInputOptionsItem(
-      RecipientIdentityInputOption inputOptionsItem) {
+   **/
+  public RecipientIdentityVerification addInputOptionsItem(RecipientIdentityInputOption inputOptionsItem) {
     if (this.inputOptions == null) {
       this.inputOptions = new java.util.ArrayList<>();
     }
@@ -42,24 +51,26 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   *
    * @return inputOptions
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<RecipientIdentityInputOption> getInputOptions() {
     return inputOptions;
   }
 
-  /** setInputOptions. */
+  /**
+   * setInputOptions.
+   **/
   public void setInputOptions(java.util.List<RecipientIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
   }
+
 
   /**
    * workflowId.
    *
    * @return RecipientIdentityVerification
-   */
+   **/
   public RecipientIdentityVerification workflowId(String workflowId) {
     this.workflowId = workflowId;
     return this;
@@ -67,24 +78,26 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   *
    * @return workflowId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowId() {
     return workflowId;
   }
 
-  /** setWorkflowId. */
+  /**
+   * setWorkflowId.
+   **/
   public void setWorkflowId(String workflowId) {
     this.workflowId = workflowId;
   }
+
 
   /**
    * workflowIdMetadata.
    *
    * @return RecipientIdentityVerification
-   */
+   **/
   public RecipientIdentityVerification workflowIdMetadata(PropertyMetadata workflowIdMetadata) {
     this.workflowIdMetadata = workflowIdMetadata;
     return this;
@@ -92,18 +105,20 @@ public class RecipientIdentityVerification {
 
   /**
    * Get workflowIdMetadata.
-   *
    * @return workflowIdMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getWorkflowIdMetadata() {
     return workflowIdMetadata;
   }
 
-  /** setWorkflowIdMetadata. */
+  /**
+   * setWorkflowIdMetadata.
+   **/
   public void setWorkflowIdMetadata(PropertyMetadata workflowIdMetadata) {
     this.workflowIdMetadata = workflowIdMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -119,24 +134,28 @@ public class RecipientIdentityVerification {
       return false;
     }
     RecipientIdentityVerification recipientIdentityVerification = (RecipientIdentityVerification) o;
-    return Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions)
-        && Objects.equals(this.workflowId, recipientIdentityVerification.workflowId)
-        && Objects.equals(
-            this.workflowIdMetadata, recipientIdentityVerification.workflowIdMetadata);
+    return Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions) &&
+        Objects.equals(this.workflowId, recipientIdentityVerification.workflowId) &&
+        Objects.equals(this.workflowIdMetadata, recipientIdentityVerification.workflowIdMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(inputOptions, workflowId, workflowIdMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityVerification {\n");
-
+    
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("    workflowIdMetadata: ").append(toIndentedString(workflowIdMetadata)).append("\n");
@@ -145,7 +164,8 @@ public class RecipientIdentityVerification {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -153,4 +173,6 @@ public class RecipientIdentityVerification {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

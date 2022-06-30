@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.DocumentHtmlDisplayAnchor;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** DocumentHtmlDefinition. */
+/**
+ * DocumentHtmlDefinition.
+ *
+ */
+
 public class DocumentHtmlDefinition {
   @JsonProperty("displayAnchorPrefix")
   private String displayAnchorPrefix = null;
@@ -39,11 +48,12 @@ public class DocumentHtmlDefinition {
   @JsonProperty("source")
   private String source = null;
 
+
   /**
    * displayAnchorPrefix.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition displayAnchorPrefix(String displayAnchorPrefix) {
     this.displayAnchorPrefix = displayAnchorPrefix;
     return this;
@@ -51,37 +61,37 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return displayAnchorPrefix
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayAnchorPrefix() {
     return displayAnchorPrefix;
   }
 
-  /** setDisplayAnchorPrefix. */
+  /**
+   * setDisplayAnchorPrefix.
+   **/
   public void setDisplayAnchorPrefix(String displayAnchorPrefix) {
     this.displayAnchorPrefix = displayAnchorPrefix;
   }
+
 
   /**
    * displayAnchors.
    *
    * @return DocumentHtmlDefinition
-   */
-  public DocumentHtmlDefinition displayAnchors(
-      java.util.List<DocumentHtmlDisplayAnchor> displayAnchors) {
+   **/
+  public DocumentHtmlDefinition displayAnchors(java.util.List<DocumentHtmlDisplayAnchor> displayAnchors) {
     this.displayAnchors = displayAnchors;
     return this;
   }
-
+  
   /**
    * addDisplayAnchorsItem.
    *
    * @return DocumentHtmlDefinition
-   */
-  public DocumentHtmlDefinition addDisplayAnchorsItem(
-      DocumentHtmlDisplayAnchor displayAnchorsItem) {
+   **/
+  public DocumentHtmlDefinition addDisplayAnchorsItem(DocumentHtmlDisplayAnchor displayAnchorsItem) {
     if (this.displayAnchors == null) {
       this.displayAnchors = new java.util.ArrayList<>();
     }
@@ -91,24 +101,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return displayAnchors
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<DocumentHtmlDisplayAnchor> getDisplayAnchors() {
     return displayAnchors;
   }
 
-  /** setDisplayAnchors. */
+  /**
+   * setDisplayAnchors.
+   **/
   public void setDisplayAnchors(java.util.List<DocumentHtmlDisplayAnchor> displayAnchors) {
     this.displayAnchors = displayAnchors;
   }
+
 
   /**
    * displayOrder.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition displayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
     return this;
@@ -116,24 +128,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return displayOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
 
-  /** setDisplayOrder. */
+  /**
+   * setDisplayOrder.
+   **/
   public void setDisplayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
   }
+
 
   /**
    * displayPageNumber.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition displayPageNumber(String displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
     return this;
@@ -141,24 +155,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return displayPageNumber
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisplayPageNumber() {
     return displayPageNumber;
   }
 
-  /** setDisplayPageNumber. */
+  /**
+   * setDisplayPageNumber.
+   **/
   public void setDisplayPageNumber(String displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
   }
+
 
   /**
    * documentGuid.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition documentGuid(String documentGuid) {
     this.documentGuid = documentGuid;
     return this;
@@ -166,52 +182,53 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return documentGuid
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentGuid() {
     return documentGuid;
   }
 
-  /** setDocumentGuid. */
+  /**
+   * setDocumentGuid.
+   **/
   public void setDocumentGuid(String documentGuid) {
     this.documentGuid = documentGuid;
   }
+
 
   /**
    * documentId.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
-   * Document's ID attribute..
-   *
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   **/
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
-  /** setDocumentId. */
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
+
 
   /**
    * headerLabel.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition headerLabel(String headerLabel) {
     this.headerLabel = headerLabel;
     return this;
@@ -219,24 +236,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return headerLabel
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getHeaderLabel() {
     return headerLabel;
   }
 
-  /** setHeaderLabel. */
+  /**
+   * setHeaderLabel.
+   **/
   public void setHeaderLabel(String headerLabel) {
     this.headerLabel = headerLabel;
   }
+
 
   /**
    * maxScreenWidth.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition maxScreenWidth(String maxScreenWidth) {
     this.maxScreenWidth = maxScreenWidth;
     return this;
@@ -244,24 +263,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return maxScreenWidth
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMaxScreenWidth() {
     return maxScreenWidth;
   }
 
-  /** setMaxScreenWidth. */
+  /**
+   * setMaxScreenWidth.
+   **/
   public void setMaxScreenWidth(String maxScreenWidth) {
     this.maxScreenWidth = maxScreenWidth;
   }
+
 
   /**
    * removeEmptyTags.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition removeEmptyTags(String removeEmptyTags) {
     this.removeEmptyTags = removeEmptyTags;
     return this;
@@ -269,24 +290,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return removeEmptyTags
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRemoveEmptyTags() {
     return removeEmptyTags;
   }
 
-  /** setRemoveEmptyTags. */
+  /**
+   * setRemoveEmptyTags.
+   **/
   public void setRemoveEmptyTags(String removeEmptyTags) {
     this.removeEmptyTags = removeEmptyTags;
   }
+
 
   /**
    * showMobileOptimizedToggle.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition showMobileOptimizedToggle(String showMobileOptimizedToggle) {
     this.showMobileOptimizedToggle = showMobileOptimizedToggle;
     return this;
@@ -294,24 +317,26 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return showMobileOptimizedToggle
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getShowMobileOptimizedToggle() {
     return showMobileOptimizedToggle;
   }
 
-  /** setShowMobileOptimizedToggle. */
+  /**
+   * setShowMobileOptimizedToggle.
+   **/
   public void setShowMobileOptimizedToggle(String showMobileOptimizedToggle) {
     this.showMobileOptimizedToggle = showMobileOptimizedToggle;
   }
+
 
   /**
    * source.
    *
    * @return DocumentHtmlDefinition
-   */
+   **/
   public DocumentHtmlDefinition source(String source) {
     this.source = source;
     return this;
@@ -319,18 +344,20 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   *
    * @return source
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSource() {
     return source;
   }
 
-  /** setSource. */
+  /**
+   * setSource.
+   **/
   public void setSource(String source) {
     this.source = source;
   }
+
 
   /**
    * Compares objects.
@@ -346,46 +373,37 @@ public class DocumentHtmlDefinition {
       return false;
     }
     DocumentHtmlDefinition documentHtmlDefinition = (DocumentHtmlDefinition) o;
-    return Objects.equals(this.displayAnchorPrefix, documentHtmlDefinition.displayAnchorPrefix)
-        && Objects.equals(this.displayAnchors, documentHtmlDefinition.displayAnchors)
-        && Objects.equals(this.displayOrder, documentHtmlDefinition.displayOrder)
-        && Objects.equals(this.displayPageNumber, documentHtmlDefinition.displayPageNumber)
-        && Objects.equals(this.documentGuid, documentHtmlDefinition.documentGuid)
-        && Objects.equals(this.documentId, documentHtmlDefinition.documentId)
-        && Objects.equals(this.headerLabel, documentHtmlDefinition.headerLabel)
-        && Objects.equals(this.maxScreenWidth, documentHtmlDefinition.maxScreenWidth)
-        && Objects.equals(this.removeEmptyTags, documentHtmlDefinition.removeEmptyTags)
-        && Objects.equals(
-            this.showMobileOptimizedToggle, documentHtmlDefinition.showMobileOptimizedToggle)
-        && Objects.equals(this.source, documentHtmlDefinition.source);
+    return Objects.equals(this.displayAnchorPrefix, documentHtmlDefinition.displayAnchorPrefix) &&
+        Objects.equals(this.displayAnchors, documentHtmlDefinition.displayAnchors) &&
+        Objects.equals(this.displayOrder, documentHtmlDefinition.displayOrder) &&
+        Objects.equals(this.displayPageNumber, documentHtmlDefinition.displayPageNumber) &&
+        Objects.equals(this.documentGuid, documentHtmlDefinition.documentGuid) &&
+        Objects.equals(this.documentId, documentHtmlDefinition.documentId) &&
+        Objects.equals(this.headerLabel, documentHtmlDefinition.headerLabel) &&
+        Objects.equals(this.maxScreenWidth, documentHtmlDefinition.maxScreenWidth) &&
+        Objects.equals(this.removeEmptyTags, documentHtmlDefinition.removeEmptyTags) &&
+        Objects.equals(this.showMobileOptimizedToggle, documentHtmlDefinition.showMobileOptimizedToggle) &&
+        Objects.equals(this.source, documentHtmlDefinition.source);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        displayAnchorPrefix,
-        displayAnchors,
-        displayOrder,
-        displayPageNumber,
-        documentGuid,
-        documentId,
-        headerLabel,
-        maxScreenWidth,
-        removeEmptyTags,
-        showMobileOptimizedToggle,
-        source);
+    return Objects.hash(displayAnchorPrefix, displayAnchors, displayOrder, displayPageNumber, documentGuid, documentId, headerLabel, maxScreenWidth, removeEmptyTags, showMobileOptimizedToggle, source);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinition {\n");
-
-    sb.append("    displayAnchorPrefix: ")
-        .append(toIndentedString(displayAnchorPrefix))
-        .append("\n");
+    
+    sb.append("    displayAnchorPrefix: ").append(toIndentedString(displayAnchorPrefix)).append("\n");
     sb.append("    displayAnchors: ").append(toIndentedString(displayAnchors)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    displayPageNumber: ").append(toIndentedString(displayPageNumber)).append("\n");
@@ -394,16 +412,15 @@ public class DocumentHtmlDefinition {
     sb.append("    headerLabel: ").append(toIndentedString(headerLabel)).append("\n");
     sb.append("    maxScreenWidth: ").append(toIndentedString(maxScreenWidth)).append("\n");
     sb.append("    removeEmptyTags: ").append(toIndentedString(removeEmptyTags)).append("\n");
-    sb.append("    showMobileOptimizedToggle: ")
-        .append(toIndentedString(showMobileOptimizedToggle))
-        .append("\n");
+    sb.append("    showMobileOptimizedToggle: ").append(toIndentedString(showMobileOptimizedToggle)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -411,4 +428,6 @@ public class DocumentHtmlDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

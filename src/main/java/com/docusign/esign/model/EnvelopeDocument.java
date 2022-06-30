@@ -1,10 +1,23 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.NameValue;
+import com.docusign.esign.model.Page;
+import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SignatureType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EnvelopeDocument. */
+/**
+ * EnvelopeDocument.
+ *
+ */
+
 public class EnvelopeDocument {
   @JsonProperty("addedRecipientIds")
   private java.util.List<String> addedRecipientIds = null;
@@ -84,21 +97,22 @@ public class EnvelopeDocument {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * addedRecipientIds.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument addedRecipientIds(java.util.List<String> addedRecipientIds) {
     this.addedRecipientIds = addedRecipientIds;
     return this;
   }
-
+  
   /**
    * addAddedRecipientIdsItem.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument addAddedRecipientIdsItem(String addedRecipientIdsItem) {
     if (this.addedRecipientIds == null) {
       this.addedRecipientIds = new java.util.ArrayList<>();
@@ -109,24 +123,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return addedRecipientIds
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getAddedRecipientIds() {
     return addedRecipientIds;
   }
 
-  /** setAddedRecipientIds. */
+  /**
+   * setAddedRecipientIds.
+   **/
   public void setAddedRecipientIds(java.util.List<String> addedRecipientIds) {
     this.addedRecipientIds = addedRecipientIds;
   }
+
 
   /**
    * attachmentTabId.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument attachmentTabId(String attachmentTabId) {
     this.attachmentTabId = attachmentTabId;
     return this;
@@ -134,52 +150,53 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return attachmentTabId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAttachmentTabId() {
     return attachmentTabId;
   }
 
-  /** setAttachmentTabId. */
+  /**
+   * setAttachmentTabId.
+   **/
   public void setAttachmentTabId(String attachmentTabId) {
     this.attachmentTabId = attachmentTabId;
   }
+
 
   /**
    * authoritativeCopy.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument authoritativeCopy(String authoritativeCopy) {
     this.authoritativeCopy = authoritativeCopy;
     return this;
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is
-   * enabled..
-   *
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
    * @return authoritativeCopy
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+   **/
+  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
   }
 
-  /** setAuthoritativeCopy. */
+  /**
+   * setAuthoritativeCopy.
+   **/
   public void setAuthoritativeCopy(String authoritativeCopy) {
     this.authoritativeCopy = authoritativeCopy;
   }
+
 
   /**
    * authoritativeCopyMetadata.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument authoritativeCopyMetadata(PropertyMetadata authoritativeCopyMetadata) {
     this.authoritativeCopyMetadata = authoritativeCopyMetadata;
     return this;
@@ -187,35 +204,36 @@ public class EnvelopeDocument {
 
   /**
    * Get authoritativeCopyMetadata.
-   *
    * @return authoritativeCopyMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getAuthoritativeCopyMetadata() {
     return authoritativeCopyMetadata;
   }
 
-  /** setAuthoritativeCopyMetadata. */
+  /**
+   * setAuthoritativeCopyMetadata.
+   **/
   public void setAuthoritativeCopyMetadata(PropertyMetadata authoritativeCopyMetadata) {
     this.authoritativeCopyMetadata = authoritativeCopyMetadata;
   }
+
 
   /**
    * availableDocumentTypes.
    *
    * @return EnvelopeDocument
-   */
-  public EnvelopeDocument availableDocumentTypes(
-      java.util.List<SignatureType> availableDocumentTypes) {
+   **/
+  public EnvelopeDocument availableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
     this.availableDocumentTypes = availableDocumentTypes;
     return this;
   }
-
+  
   /**
    * addAvailableDocumentTypesItem.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument addAvailableDocumentTypesItem(SignatureType availableDocumentTypesItem) {
     if (this.availableDocumentTypes == null) {
       this.availableDocumentTypes = new java.util.ArrayList<>();
@@ -226,24 +244,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return availableDocumentTypes
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SignatureType> getAvailableDocumentTypes() {
     return availableDocumentTypes;
   }
 
-  /** setAvailableDocumentTypes. */
+  /**
+   * setAvailableDocumentTypes.
+   **/
   public void setAvailableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
     this.availableDocumentTypes = availableDocumentTypes;
   }
+
 
   /**
    * containsPdfFormFields.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument containsPdfFormFields(String containsPdfFormFields) {
     this.containsPdfFormFields = containsPdfFormFields;
     return this;
@@ -251,24 +271,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return containsPdfFormFields
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getContainsPdfFormFields() {
     return containsPdfFormFields;
   }
 
-  /** setContainsPdfFormFields. */
+  /**
+   * setContainsPdfFormFields.
+   **/
   public void setContainsPdfFormFields(String containsPdfFormFields) {
     this.containsPdfFormFields = containsPdfFormFields;
   }
+
 
   /**
    * display.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument display(String display) {
     this.display = display;
     return this;
@@ -276,24 +298,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return display
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisplay() {
     return display;
   }
 
-  /** setDisplay. */
+  /**
+   * setDisplay.
+   **/
   public void setDisplay(String display) {
     this.display = display;
   }
+
 
   /**
    * displayMetadata.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument displayMetadata(PropertyMetadata displayMetadata) {
     this.displayMetadata = displayMetadata;
     return this;
@@ -301,24 +325,26 @@ public class EnvelopeDocument {
 
   /**
    * Get displayMetadata.
-   *
    * @return displayMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getDisplayMetadata() {
     return displayMetadata;
   }
 
-  /** setDisplayMetadata. */
+  /**
+   * setDisplayMetadata.
+   **/
   public void setDisplayMetadata(PropertyMetadata displayMetadata) {
     this.displayMetadata = displayMetadata;
   }
+
 
   /**
    * documentBase64.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument documentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
     return this;
@@ -326,34 +352,36 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return documentBase64
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentBase64() {
     return documentBase64;
   }
 
-  /** setDocumentBase64. */
+  /**
+   * setDocumentBase64.
+   **/
   public void setDocumentBase64(String documentBase64) {
     this.documentBase64 = documentBase64;
   }
+
 
   /**
    * documentFields.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument documentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
     return this;
   }
-
+  
   /**
    * addDocumentFieldsItem.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument addDocumentFieldsItem(NameValue documentFieldsItem) {
     if (this.documentFields == null) {
       this.documentFields = new java.util.ArrayList<>();
@@ -364,52 +392,53 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return documentFields
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
 
-  /** setDocumentFields. */
+  /**
+   * setDocumentFields.
+   **/
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
   }
+
 
   /**
    * documentId.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
-   * Document's ID attribute..
-   *
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   **/
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
-  /** setDocumentId. */
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
+
 
   /**
    * documentIdGuid.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument documentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
     return this;
@@ -417,24 +446,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return documentIdGuid
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
 
-  /** setDocumentIdGuid. */
+  /**
+   * setDocumentIdGuid.
+   **/
   public void setDocumentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
   }
+
 
   /**
    * errorDetails.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -442,24 +473,26 @@ public class EnvelopeDocument {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * includeInDownload.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument includeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
     return this;
@@ -467,24 +500,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return includeInDownload
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
 
-  /** setIncludeInDownload. */
+  /**
+   * setIncludeInDownload.
+   **/
   public void setIncludeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
   }
+
 
   /**
    * includeInDownloadMetadata.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument includeInDownloadMetadata(PropertyMetadata includeInDownloadMetadata) {
     this.includeInDownloadMetadata = includeInDownloadMetadata;
     return this;
@@ -492,24 +527,26 @@ public class EnvelopeDocument {
 
   /**
    * Get includeInDownloadMetadata.
-   *
    * @return includeInDownloadMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getIncludeInDownloadMetadata() {
     return includeInDownloadMetadata;
   }
 
-  /** setIncludeInDownloadMetadata. */
+  /**
+   * setIncludeInDownloadMetadata.
+   **/
   public void setIncludeInDownloadMetadata(PropertyMetadata includeInDownloadMetadata) {
     this.includeInDownloadMetadata = includeInDownloadMetadata;
   }
+
 
   /**
    * name.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument name(String name) {
     this.name = name;
     return this;
@@ -517,24 +554,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * nameMetadata.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument nameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
     return this;
@@ -542,24 +581,26 @@ public class EnvelopeDocument {
 
   /**
    * Get nameMetadata.
-   *
    * @return nameMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
 
-  /** setNameMetadata. */
+  /**
+   * setNameMetadata.
+   **/
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
+
 
   /**
    * order.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument order(String order) {
     this.order = order;
     return this;
@@ -567,34 +608,36 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return order
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getOrder() {
     return order;
   }
 
-  /** setOrder. */
+  /**
+   * setOrder.
+   **/
   public void setOrder(String order) {
     this.order = order;
   }
+
 
   /**
    * pages.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument pages(java.util.List<Page> pages) {
     this.pages = pages;
     return this;
   }
-
+  
   /**
    * addPagesItem.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument addPagesItem(Page pagesItem) {
     if (this.pages == null) {
       this.pages = new java.util.ArrayList<>();
@@ -605,24 +648,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return pages
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Page> getPages() {
     return pages;
   }
 
-  /** setPages. */
+  /**
+   * setPages.
+   **/
   public void setPages(java.util.List<Page> pages) {
     this.pages = pages;
   }
+
 
   /**
    * signerMustAcknowledge.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument signerMustAcknowledge(String signerMustAcknowledge) {
     this.signerMustAcknowledge = signerMustAcknowledge;
     return this;
@@ -630,50 +675,53 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return signerMustAcknowledge
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
 
-  /** setSignerMustAcknowledge. */
+  /**
+   * setSignerMustAcknowledge.
+   **/
   public void setSignerMustAcknowledge(String signerMustAcknowledge) {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
+
 
   /**
    * signerMustAcknowledgeMetadata.
    *
    * @return EnvelopeDocument
-   */
-  public EnvelopeDocument signerMustAcknowledgeMetadata(
-      PropertyMetadata signerMustAcknowledgeMetadata) {
+   **/
+  public EnvelopeDocument signerMustAcknowledgeMetadata(PropertyMetadata signerMustAcknowledgeMetadata) {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
     return this;
   }
 
   /**
    * Get signerMustAcknowledgeMetadata.
-   *
    * @return signerMustAcknowledgeMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getSignerMustAcknowledgeMetadata() {
     return signerMustAcknowledgeMetadata;
   }
 
-  /** setSignerMustAcknowledgeMetadata. */
+  /**
+   * setSignerMustAcknowledgeMetadata.
+   **/
   public void setSignerMustAcknowledgeMetadata(PropertyMetadata signerMustAcknowledgeMetadata) {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
   }
+
 
   /**
    * sizeBytes.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument sizeBytes(String sizeBytes) {
     this.sizeBytes = sizeBytes;
     return this;
@@ -681,80 +729,80 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return sizeBytes
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSizeBytes() {
     return sizeBytes;
   }
 
-  /** setSizeBytes. */
+  /**
+   * setSizeBytes.
+   **/
   public void setSizeBytes(String sizeBytes) {
     this.sizeBytes = sizeBytes;
   }
+
 
   /**
    * templateLocked.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
-   * working with template recipients. .
-   *
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
 
-  /** setTemplateLocked. */
+  /**
+   * setTemplateLocked.
+   **/
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
+
 
   /**
    * templateRequired.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with
-   * template recipients..
-   *
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
 
-  /** setTemplateRequired. */
+  /**
+   * setTemplateRequired.
+   **/
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
+
 
   /**
    * type.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument type(String type) {
     this.type = type;
     return this;
@@ -762,24 +810,26 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return type
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
-  /** setType. */
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * uri.
    *
    * @return EnvelopeDocument
-   */
+   **/
   public EnvelopeDocument uri(String uri) {
     this.uri = uri;
     return this;
@@ -787,18 +837,20 @@ public class EnvelopeDocument {
 
   /**
    * .
-   *
    * @return uri
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
-  /** setUri. */
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -814,87 +866,57 @@ public class EnvelopeDocument {
       return false;
     }
     EnvelopeDocument envelopeDocument = (EnvelopeDocument) o;
-    return Objects.equals(this.addedRecipientIds, envelopeDocument.addedRecipientIds)
-        && Objects.equals(this.attachmentTabId, envelopeDocument.attachmentTabId)
-        && Objects.equals(this.authoritativeCopy, envelopeDocument.authoritativeCopy)
-        && Objects.equals(
-            this.authoritativeCopyMetadata, envelopeDocument.authoritativeCopyMetadata)
-        && Objects.equals(this.availableDocumentTypes, envelopeDocument.availableDocumentTypes)
-        && Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields)
-        && Objects.equals(this.display, envelopeDocument.display)
-        && Objects.equals(this.displayMetadata, envelopeDocument.displayMetadata)
-        && Objects.equals(this.documentBase64, envelopeDocument.documentBase64)
-        && Objects.equals(this.documentFields, envelopeDocument.documentFields)
-        && Objects.equals(this.documentId, envelopeDocument.documentId)
-        && Objects.equals(this.documentIdGuid, envelopeDocument.documentIdGuid)
-        && Objects.equals(this.errorDetails, envelopeDocument.errorDetails)
-        && Objects.equals(this.includeInDownload, envelopeDocument.includeInDownload)
-        && Objects.equals(
-            this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata)
-        && Objects.equals(this.name, envelopeDocument.name)
-        && Objects.equals(this.nameMetadata, envelopeDocument.nameMetadata)
-        && Objects.equals(this.order, envelopeDocument.order)
-        && Objects.equals(this.pages, envelopeDocument.pages)
-        && Objects.equals(this.signerMustAcknowledge, envelopeDocument.signerMustAcknowledge)
-        && Objects.equals(
-            this.signerMustAcknowledgeMetadata, envelopeDocument.signerMustAcknowledgeMetadata)
-        && Objects.equals(this.sizeBytes, envelopeDocument.sizeBytes)
-        && Objects.equals(this.templateLocked, envelopeDocument.templateLocked)
-        && Objects.equals(this.templateRequired, envelopeDocument.templateRequired)
-        && Objects.equals(this.type, envelopeDocument.type)
-        && Objects.equals(this.uri, envelopeDocument.uri);
+    return Objects.equals(this.addedRecipientIds, envelopeDocument.addedRecipientIds) &&
+        Objects.equals(this.attachmentTabId, envelopeDocument.attachmentTabId) &&
+        Objects.equals(this.authoritativeCopy, envelopeDocument.authoritativeCopy) &&
+        Objects.equals(this.authoritativeCopyMetadata, envelopeDocument.authoritativeCopyMetadata) &&
+        Objects.equals(this.availableDocumentTypes, envelopeDocument.availableDocumentTypes) &&
+        Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
+        Objects.equals(this.display, envelopeDocument.display) &&
+        Objects.equals(this.displayMetadata, envelopeDocument.displayMetadata) &&
+        Objects.equals(this.documentBase64, envelopeDocument.documentBase64) &&
+        Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
+        Objects.equals(this.documentId, envelopeDocument.documentId) &&
+        Objects.equals(this.documentIdGuid, envelopeDocument.documentIdGuid) &&
+        Objects.equals(this.errorDetails, envelopeDocument.errorDetails) &&
+        Objects.equals(this.includeInDownload, envelopeDocument.includeInDownload) &&
+        Objects.equals(this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata) &&
+        Objects.equals(this.name, envelopeDocument.name) &&
+        Objects.equals(this.nameMetadata, envelopeDocument.nameMetadata) &&
+        Objects.equals(this.order, envelopeDocument.order) &&
+        Objects.equals(this.pages, envelopeDocument.pages) &&
+        Objects.equals(this.signerMustAcknowledge, envelopeDocument.signerMustAcknowledge) &&
+        Objects.equals(this.signerMustAcknowledgeMetadata, envelopeDocument.signerMustAcknowledgeMetadata) &&
+        Objects.equals(this.sizeBytes, envelopeDocument.sizeBytes) &&
+        Objects.equals(this.templateLocked, envelopeDocument.templateLocked) &&
+        Objects.equals(this.templateRequired, envelopeDocument.templateRequired) &&
+        Objects.equals(this.type, envelopeDocument.type) &&
+        Objects.equals(this.uri, envelopeDocument.uri);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        addedRecipientIds,
-        attachmentTabId,
-        authoritativeCopy,
-        authoritativeCopyMetadata,
-        availableDocumentTypes,
-        containsPdfFormFields,
-        display,
-        displayMetadata,
-        documentBase64,
-        documentFields,
-        documentId,
-        documentIdGuid,
-        errorDetails,
-        includeInDownload,
-        includeInDownloadMetadata,
-        name,
-        nameMetadata,
-        order,
-        pages,
-        signerMustAcknowledge,
-        signerMustAcknowledgeMetadata,
-        sizeBytes,
-        templateLocked,
-        templateRequired,
-        type,
-        uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocument {\n");
-
+    
     sb.append("    addedRecipientIds: ").append(toIndentedString(addedRecipientIds)).append("\n");
     sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
-    sb.append("    authoritativeCopyMetadata: ")
-        .append(toIndentedString(authoritativeCopyMetadata))
-        .append("\n");
-    sb.append("    availableDocumentTypes: ")
-        .append(toIndentedString(availableDocumentTypes))
-        .append("\n");
-    sb.append("    containsPdfFormFields: ")
-        .append(toIndentedString(containsPdfFormFields))
-        .append("\n");
+    sb.append("    authoritativeCopyMetadata: ").append(toIndentedString(authoritativeCopyMetadata)).append("\n");
+    sb.append("    availableDocumentTypes: ").append(toIndentedString(availableDocumentTypes)).append("\n");
+    sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    displayMetadata: ").append(toIndentedString(displayMetadata)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
@@ -903,19 +925,13 @@ public class EnvelopeDocument {
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
-    sb.append("    includeInDownloadMetadata: ")
-        .append(toIndentedString(includeInDownloadMetadata))
-        .append("\n");
+    sb.append("    includeInDownloadMetadata: ").append(toIndentedString(includeInDownloadMetadata)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
-    sb.append("    signerMustAcknowledge: ")
-        .append(toIndentedString(signerMustAcknowledge))
-        .append("\n");
-    sb.append("    signerMustAcknowledgeMetadata: ")
-        .append(toIndentedString(signerMustAcknowledgeMetadata))
-        .append("\n");
+    sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
+    sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata)).append("\n");
     sb.append("    sizeBytes: ").append(toIndentedString(sizeBytes)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
@@ -926,7 +942,8 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -934,4 +951,6 @@ public class EnvelopeDocument {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

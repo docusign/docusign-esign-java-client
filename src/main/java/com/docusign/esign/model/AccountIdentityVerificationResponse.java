@@ -1,32 +1,40 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.AccountIdentityVerificationWorkflow;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AccountIdentityVerificationResponse. */
+/**
+ * AccountIdentityVerificationResponse.
+ *
+ */
+
 public class AccountIdentityVerificationResponse {
   @JsonProperty("identityVerification")
   private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = null;
+
 
   /**
    * identityVerification.
    *
    * @return AccountIdentityVerificationResponse
-   */
-  public AccountIdentityVerificationResponse identityVerification(
-      java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
+   **/
+  public AccountIdentityVerificationResponse identityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
     return this;
   }
-
+  
   /**
    * addIdentityVerificationItem.
    *
    * @return AccountIdentityVerificationResponse
-   */
-  public AccountIdentityVerificationResponse addIdentityVerificationItem(
-      AccountIdentityVerificationWorkflow identityVerificationItem) {
+   **/
+  public AccountIdentityVerificationResponse addIdentityVerificationItem(AccountIdentityVerificationWorkflow identityVerificationItem) {
     if (this.identityVerification == null) {
       this.identityVerification = new java.util.ArrayList<>();
     }
@@ -36,19 +44,20 @@ public class AccountIdentityVerificationResponse {
 
   /**
    * .
-   *
    * @return identityVerification
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<AccountIdentityVerificationWorkflow> getIdentityVerification() {
     return identityVerification;
   }
 
-  /** setIdentityVerification. */
-  public void setIdentityVerification(
-      java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
+  /**
+   * setIdentityVerification.
+   **/
+  public void setIdentityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
   }
+
 
   /**
    * Compares objects.
@@ -63,33 +72,35 @@ public class AccountIdentityVerificationResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AccountIdentityVerificationResponse accountIdentityVerificationResponse =
-        (AccountIdentityVerificationResponse) o;
-    return Objects.equals(
-        this.identityVerification, accountIdentityVerificationResponse.identityVerification);
+    AccountIdentityVerificationResponse accountIdentityVerificationResponse = (AccountIdentityVerificationResponse) o;
+    return Objects.equals(this.identityVerification, accountIdentityVerificationResponse.identityVerification);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(identityVerification);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationResponse {\n");
-
-    sb.append("    identityVerification: ")
-        .append(toIndentedString(identityVerification))
-        .append("\n");
+    
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -97,4 +108,6 @@ public class AccountIdentityVerificationResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

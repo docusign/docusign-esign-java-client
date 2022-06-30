@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.DateStampProperties;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** Stamp. */
+/**
+ * Stamp.
+ *
+ */
+
 public class Stamp {
   @JsonProperty("adoptedDateTime")
   private String adoptedDateTime = null;
@@ -54,11 +64,12 @@ public class Stamp {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * adoptedDateTime.
    *
    * @return Stamp
-   */
+   **/
   public Stamp adoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
     return this;
@@ -66,24 +77,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return adoptedDateTime
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAdoptedDateTime() {
     return adoptedDateTime;
   }
 
-  /** setAdoptedDateTime. */
+  /**
+   * setAdoptedDateTime.
+   **/
   public void setAdoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
   }
+
 
   /**
    * createdDateTime.
    *
    * @return Stamp
-   */
+   **/
   public Stamp createdDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
     return this;
@@ -91,24 +104,26 @@ public class Stamp {
 
   /**
    * Indicates the date and time the item was created..
-   *
    * @return createdDateTime
-   */
+   **/
   @ApiModelProperty(value = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
 
-  /** setCreatedDateTime. */
+  /**
+   * setCreatedDateTime.
+   **/
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
+
 
   /**
    * customField.
    *
    * @return Stamp
-   */
+   **/
   public Stamp customField(String customField) {
     this.customField = customField;
     return this;
@@ -116,24 +131,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return customField
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCustomField() {
     return customField;
   }
 
-  /** setCustomField. */
+  /**
+   * setCustomField.
+   **/
   public void setCustomField(String customField) {
     this.customField = customField;
   }
+
 
   /**
    * dateStampProperties.
    *
    * @return Stamp
-   */
+   **/
   public Stamp dateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
     return this;
@@ -141,24 +158,26 @@ public class Stamp {
 
   /**
    * Get dateStampProperties.
-   *
    * @return dateStampProperties
-   */
+   **/
   @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
 
-  /** setDateStampProperties. */
+  /**
+   * setDateStampProperties.
+   **/
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
+
 
   /**
    * disallowUserResizeStamp.
    *
    * @return Stamp
-   */
+   **/
   public Stamp disallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
     return this;
@@ -166,24 +185,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return disallowUserResizeStamp
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
 
-  /** setDisallowUserResizeStamp. */
+  /**
+   * setDisallowUserResizeStamp.
+   **/
   public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
+
 
   /**
    * errorDetails.
    *
    * @return Stamp
-   */
+   **/
   public Stamp errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -191,24 +212,26 @@ public class Stamp {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * externalID.
    *
    * @return Stamp
-   */
+   **/
   public Stamp externalID(String externalID) {
     this.externalID = externalID;
     return this;
@@ -216,24 +239,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return externalID
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
 
-  /** setExternalID. */
+  /**
+   * setExternalID.
+   **/
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
+
 
   /**
    * imageBase64.
    *
    * @return Stamp
-   */
+   **/
   public Stamp imageBase64(String imageBase64) {
     this.imageBase64 = imageBase64;
     return this;
@@ -241,24 +266,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return imageBase64
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getImageBase64() {
     return imageBase64;
   }
 
-  /** setImageBase64. */
+  /**
+   * setImageBase64.
+   **/
   public void setImageBase64(String imageBase64) {
     this.imageBase64 = imageBase64;
   }
+
 
   /**
    * imageType.
    *
    * @return Stamp
-   */
+   **/
   public Stamp imageType(String imageType) {
     this.imageType = imageType;
     return this;
@@ -266,24 +293,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return imageType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
 
-  /** setImageType. */
+  /**
+   * setImageType.
+   **/
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
+
 
   /**
    * lastModifiedDateTime.
    *
    * @return Stamp
-   */
+   **/
   public Stamp lastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
     return this;
@@ -291,24 +320,26 @@ public class Stamp {
 
   /**
    * The date and time the item was last modified..
-   *
    * @return lastModifiedDateTime
-   */
+   **/
   @ApiModelProperty(value = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
 
-  /** setLastModifiedDateTime. */
+  /**
+   * setLastModifiedDateTime.
+   **/
   public void setLastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
+
 
   /**
    * phoneticName.
    *
    * @return Stamp
-   */
+   **/
   public Stamp phoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
     return this;
@@ -316,24 +347,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return phoneticName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
 
-  /** setPhoneticName. */
+  /**
+   * setPhoneticName.
+   **/
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
+
 
   /**
    * signatureName.
    *
    * @return Stamp
-   */
+   **/
   public Stamp signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
@@ -341,24 +374,26 @@ public class Stamp {
 
   /**
    * Specifies the user signature name..
-   *
    * @return signatureName
-   */
+   **/
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
-  /** setSignatureName. */
+  /**
+   * setSignatureName.
+   **/
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
+
 
   /**
    * stampFormat.
    *
    * @return Stamp
-   */
+   **/
   public Stamp stampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
     return this;
@@ -366,24 +401,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return stampFormat
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
 
-  /** setStampFormat. */
+  /**
+   * setStampFormat.
+   **/
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
+
 
   /**
    * stampImageUri.
    *
    * @return Stamp
-   */
+   **/
   public Stamp stampImageUri(String stampImageUri) {
     this.stampImageUri = stampImageUri;
     return this;
@@ -391,24 +428,26 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return stampImageUri
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getStampImageUri() {
     return stampImageUri;
   }
 
-  /** setStampImageUri. */
+  /**
+   * setStampImageUri.
+   **/
   public void setStampImageUri(String stampImageUri) {
     this.stampImageUri = stampImageUri;
   }
+
 
   /**
    * stampSizeMM.
    *
    * @return Stamp
-   */
+   **/
   public Stamp stampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
     return this;
@@ -416,46 +455,47 @@ public class Stamp {
 
   /**
    * .
-   *
    * @return stampSizeMM
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
 
-  /** setStampSizeMM. */
+  /**
+   * setStampSizeMM.
+   **/
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
+
 
   /**
    * status.
    *
    * @return Stamp
-   */
+   **/
   public Stamp status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
-   *
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-   */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   **/
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /** setStatus. */
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -471,68 +511,51 @@ public class Stamp {
       return false;
     }
     Stamp stamp = (Stamp) o;
-    return Objects.equals(this.adoptedDateTime, stamp.adoptedDateTime)
-        && Objects.equals(this.createdDateTime, stamp.createdDateTime)
-        && Objects.equals(this.customField, stamp.customField)
-        && Objects.equals(this.dateStampProperties, stamp.dateStampProperties)
-        && Objects.equals(this.disallowUserResizeStamp, stamp.disallowUserResizeStamp)
-        && Objects.equals(this.errorDetails, stamp.errorDetails)
-        && Objects.equals(this.externalID, stamp.externalID)
-        && Objects.equals(this.imageBase64, stamp.imageBase64)
-        && Objects.equals(this.imageType, stamp.imageType)
-        && Objects.equals(this.lastModifiedDateTime, stamp.lastModifiedDateTime)
-        && Objects.equals(this.phoneticName, stamp.phoneticName)
-        && Objects.equals(this.signatureName, stamp.signatureName)
-        && Objects.equals(this.stampFormat, stamp.stampFormat)
-        && Objects.equals(this.stampImageUri, stamp.stampImageUri)
-        && Objects.equals(this.stampSizeMM, stamp.stampSizeMM)
-        && Objects.equals(this.status, stamp.status);
+    return Objects.equals(this.adoptedDateTime, stamp.adoptedDateTime) &&
+        Objects.equals(this.createdDateTime, stamp.createdDateTime) &&
+        Objects.equals(this.customField, stamp.customField) &&
+        Objects.equals(this.dateStampProperties, stamp.dateStampProperties) &&
+        Objects.equals(this.disallowUserResizeStamp, stamp.disallowUserResizeStamp) &&
+        Objects.equals(this.errorDetails, stamp.errorDetails) &&
+        Objects.equals(this.externalID, stamp.externalID) &&
+        Objects.equals(this.imageBase64, stamp.imageBase64) &&
+        Objects.equals(this.imageType, stamp.imageType) &&
+        Objects.equals(this.lastModifiedDateTime, stamp.lastModifiedDateTime) &&
+        Objects.equals(this.phoneticName, stamp.phoneticName) &&
+        Objects.equals(this.signatureName, stamp.signatureName) &&
+        Objects.equals(this.stampFormat, stamp.stampFormat) &&
+        Objects.equals(this.stampImageUri, stamp.stampImageUri) &&
+        Objects.equals(this.stampSizeMM, stamp.stampSizeMM) &&
+        Objects.equals(this.status, stamp.status);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        adoptedDateTime,
-        createdDateTime,
-        customField,
-        dateStampProperties,
-        disallowUserResizeStamp,
-        errorDetails,
-        externalID,
-        imageBase64,
-        imageType,
-        lastModifiedDateTime,
-        phoneticName,
-        signatureName,
-        stampFormat,
-        stampImageUri,
-        stampSizeMM,
-        status);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, lastModifiedDateTime, phoneticName, signatureName, stampFormat, stampImageUri, stampSizeMM, status);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Stamp {\n");
-
+    
     sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
-    sb.append("    dateStampProperties: ")
-        .append(toIndentedString(dateStampProperties))
-        .append("\n");
-    sb.append("    disallowUserResizeStamp: ")
-        .append(toIndentedString(disallowUserResizeStamp))
-        .append("\n");
+    sb.append("    dateStampProperties: ").append(toIndentedString(dateStampProperties)).append("\n");
+    sb.append("    disallowUserResizeStamp: ").append(toIndentedString(disallowUserResizeStamp)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    externalID: ").append(toIndentedString(externalID)).append("\n");
     sb.append("    imageBase64: ").append(toIndentedString(imageBase64)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
-    sb.append("    lastModifiedDateTime: ")
-        .append(toIndentedString(lastModifiedDateTime))
-        .append("\n");
+    sb.append("    lastModifiedDateTime: ").append(toIndentedString(lastModifiedDateTime)).append("\n");
     sb.append("    phoneticName: ").append(toIndentedString(phoneticName)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
     sb.append("    stampFormat: ").append(toIndentedString(stampFormat)).append("\n");
@@ -544,7 +567,8 @@ public class Stamp {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -552,4 +576,6 @@ public class Stamp {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

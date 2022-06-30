@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** BillingDiscount. */
+/**
+ * BillingDiscount.
+ *
+ */
+
 public class BillingDiscount {
   @JsonProperty("beginQuantity")
   private String beginQuantity = null;
@@ -15,11 +23,12 @@ public class BillingDiscount {
   @JsonProperty("endQuantity")
   private String endQuantity = null;
 
+
   /**
    * beginQuantity.
    *
    * @return BillingDiscount
-   */
+   **/
   public BillingDiscount beginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
     return this;
@@ -27,24 +36,26 @@ public class BillingDiscount {
 
   /**
    * Reserved: TBD.
-   *
    * @return beginQuantity
-   */
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
 
-  /** setBeginQuantity. */
+  /**
+   * setBeginQuantity.
+   **/
   public void setBeginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
   }
+
 
   /**
    * discount.
    *
    * @return BillingDiscount
-   */
+   **/
   public BillingDiscount discount(String discount) {
     this.discount = discount;
     return this;
@@ -52,24 +63,26 @@ public class BillingDiscount {
 
   /**
    * .
-   *
    * @return discount
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDiscount() {
     return discount;
   }
 
-  /** setDiscount. */
+  /**
+   * setDiscount.
+   **/
   public void setDiscount(String discount) {
     this.discount = discount;
   }
+
 
   /**
    * endQuantity.
    *
    * @return BillingDiscount
-   */
+   **/
   public BillingDiscount endQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
     return this;
@@ -77,18 +90,20 @@ public class BillingDiscount {
 
   /**
    * .
-   *
    * @return endQuantity
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEndQuantity() {
     return endQuantity;
   }
 
-  /** setEndQuantity. */
+  /**
+   * setEndQuantity.
+   **/
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +119,28 @@ public class BillingDiscount {
       return false;
     }
     BillingDiscount billingDiscount = (BillingDiscount) o;
-    return Objects.equals(this.beginQuantity, billingDiscount.beginQuantity)
-        && Objects.equals(this.discount, billingDiscount.discount)
-        && Objects.equals(this.endQuantity, billingDiscount.endQuantity);
+    return Objects.equals(this.beginQuantity, billingDiscount.beginQuantity) &&
+        Objects.equals(this.discount, billingDiscount.discount) &&
+        Objects.equals(this.endQuantity, billingDiscount.endQuantity);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(beginQuantity, discount, endQuantity);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingDiscount {\n");
-
+    
     sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
     sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
     sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
@@ -129,7 +149,8 @@ public class BillingDiscount {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +158,6 @@ public class BillingDiscount {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

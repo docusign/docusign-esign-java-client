@@ -1,12 +1,20 @@
 package com.docusign.esign.model;
 
+import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Objects;
 
-/** Defines a billing plan response object.. */
+/**
+ * Defines a billing plan response object..
+ *
+ */
 @ApiModel(description = "Defines a billing plan response object.")
+
 public class BillingPlanResponse {
   @JsonProperty("billingPlan")
   private BillingPlan billingPlan = null;
@@ -14,11 +22,12 @@ public class BillingPlanResponse {
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
 
+
   /**
    * billingPlan.
    *
    * @return BillingPlanResponse
-   */
+   **/
   public BillingPlanResponse billingPlan(BillingPlan billingPlan) {
     this.billingPlan = billingPlan;
     return this;
@@ -26,34 +35,36 @@ public class BillingPlanResponse {
 
   /**
    * Get billingPlan.
-   *
    * @return billingPlan
-   */
+   **/
   @ApiModelProperty(value = "")
   public BillingPlan getBillingPlan() {
     return billingPlan;
   }
 
-  /** setBillingPlan. */
+  /**
+   * setBillingPlan.
+   **/
   public void setBillingPlan(BillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
+
 
   /**
    * successorPlans.
    *
    * @return BillingPlanResponse
-   */
+   **/
   public BillingPlanResponse successorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
     return this;
   }
-
+  
   /**
    * addSuccessorPlansItem.
    *
    * @return BillingPlanResponse
-   */
+   **/
   public BillingPlanResponse addSuccessorPlansItem(BillingPlan successorPlansItem) {
     if (this.successorPlans == null) {
       this.successorPlans = new java.util.ArrayList<>();
@@ -64,18 +75,20 @@ public class BillingPlanResponse {
 
   /**
    * .
-   *
    * @return successorPlans
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
 
-  /** setSuccessorPlans. */
+  /**
+   * setSuccessorPlans.
+   **/
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
+
 
   /**
    * Compares objects.
@@ -91,22 +104,27 @@ public class BillingPlanResponse {
       return false;
     }
     BillingPlanResponse billingPlanResponse = (BillingPlanResponse) o;
-    return Objects.equals(this.billingPlan, billingPlanResponse.billingPlan)
-        && Objects.equals(this.successorPlans, billingPlanResponse.successorPlans);
+    return Objects.equals(this.billingPlan, billingPlanResponse.billingPlan) &&
+        Objects.equals(this.successorPlans, billingPlanResponse.successorPlans);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingPlan, successorPlans);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanResponse {\n");
-
+    
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
@@ -114,7 +132,8 @@ public class BillingPlanResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -122,4 +141,6 @@ public class BillingPlanResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

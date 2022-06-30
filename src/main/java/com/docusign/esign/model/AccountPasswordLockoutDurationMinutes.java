@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AccountPasswordLockoutDurationMinutes. */
+/**
+ * AccountPasswordLockoutDurationMinutes.
+ *
+ */
+
 public class AccountPasswordLockoutDurationMinutes {
   @JsonProperty("maximumMinutes")
   private String maximumMinutes = null;
@@ -12,11 +20,12 @@ public class AccountPasswordLockoutDurationMinutes {
   @JsonProperty("minimumMinutes")
   private String minimumMinutes = null;
 
+
   /**
    * maximumMinutes.
    *
    * @return AccountPasswordLockoutDurationMinutes
-   */
+   **/
   public AccountPasswordLockoutDurationMinutes maximumMinutes(String maximumMinutes) {
     this.maximumMinutes = maximumMinutes;
     return this;
@@ -24,24 +33,26 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
-   *
    * @return maximumMinutes
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMaximumMinutes() {
     return maximumMinutes;
   }
 
-  /** setMaximumMinutes. */
+  /**
+   * setMaximumMinutes.
+   **/
   public void setMaximumMinutes(String maximumMinutes) {
     this.maximumMinutes = maximumMinutes;
   }
+
 
   /**
    * minimumMinutes.
    *
    * @return AccountPasswordLockoutDurationMinutes
-   */
+   **/
   public AccountPasswordLockoutDurationMinutes minimumMinutes(String minimumMinutes) {
     this.minimumMinutes = minimumMinutes;
     return this;
@@ -49,18 +60,20 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
-   *
    * @return minimumMinutes
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumMinutes() {
     return minimumMinutes;
   }
 
-  /** setMinimumMinutes. */
+  /**
+   * setMinimumMinutes.
+   **/
   public void setMinimumMinutes(String minimumMinutes) {
     this.minimumMinutes = minimumMinutes;
   }
+
 
   /**
    * Compares objects.
@@ -75,25 +88,28 @@ public class AccountPasswordLockoutDurationMinutes {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AccountPasswordLockoutDurationMinutes accountPasswordLockoutDurationMinutes =
-        (AccountPasswordLockoutDurationMinutes) o;
-    return Objects.equals(this.maximumMinutes, accountPasswordLockoutDurationMinutes.maximumMinutes)
-        && Objects.equals(
-            this.minimumMinutes, accountPasswordLockoutDurationMinutes.minimumMinutes);
+    AccountPasswordLockoutDurationMinutes accountPasswordLockoutDurationMinutes = (AccountPasswordLockoutDurationMinutes) o;
+    return Objects.equals(this.maximumMinutes, accountPasswordLockoutDurationMinutes.maximumMinutes) &&
+        Objects.equals(this.minimumMinutes, accountPasswordLockoutDurationMinutes.minimumMinutes);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(maximumMinutes, minimumMinutes);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordLockoutDurationMinutes {\n");
-
+    
     sb.append("    maximumMinutes: ").append(toIndentedString(maximumMinutes)).append("\n");
     sb.append("    minimumMinutes: ").append(toIndentedString(minimumMinutes)).append("\n");
     sb.append("}");
@@ -101,7 +117,8 @@ public class AccountPasswordLockoutDurationMinutes {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -109,4 +126,6 @@ public class AccountPasswordLockoutDurationMinutes {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

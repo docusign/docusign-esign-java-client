@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AskAnAdmin. */
+/**
+ * AskAnAdmin.
+ *
+ */
+
 public class AskAnAdmin {
   @JsonProperty("email")
   private String email = null;
@@ -18,11 +26,12 @@ public class AskAnAdmin {
   @JsonProperty("phone")
   private String phone = null;
 
+
   /**
    * email.
    *
    * @return AskAnAdmin
-   */
+   **/
   public AskAnAdmin email(String email) {
     this.email = email;
     return this;
@@ -30,24 +39,26 @@ public class AskAnAdmin {
 
   /**
    * .
-   *
    * @return email
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-  /** setEmail. */
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
+
 
   /**
    * message.
    *
    * @return AskAnAdmin
-   */
+   **/
   public AskAnAdmin message(String message) {
     this.message = message;
     return this;
@@ -55,24 +66,26 @@ public class AskAnAdmin {
 
   /**
    * .
-   *
    * @return message
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMessage() {
     return message;
   }
 
-  /** setMessage. */
+  /**
+   * setMessage.
+   **/
   public void setMessage(String message) {
     this.message = message;
   }
+
 
   /**
    * name.
    *
    * @return AskAnAdmin
-   */
+   **/
   public AskAnAdmin name(String name) {
     this.name = name;
     return this;
@@ -80,24 +93,26 @@ public class AskAnAdmin {
 
   /**
    * .
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * phone.
    *
    * @return AskAnAdmin
-   */
+   **/
   public AskAnAdmin phone(String phone) {
     this.phone = phone;
     return this;
@@ -105,18 +120,20 @@ public class AskAnAdmin {
 
   /**
    * .
-   *
    * @return phone
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPhone() {
     return phone;
   }
 
-  /** setPhone. */
+  /**
+   * setPhone.
+   **/
   public void setPhone(String phone) {
     this.phone = phone;
   }
+
 
   /**
    * Compares objects.
@@ -132,24 +149,29 @@ public class AskAnAdmin {
       return false;
     }
     AskAnAdmin askAnAdmin = (AskAnAdmin) o;
-    return Objects.equals(this.email, askAnAdmin.email)
-        && Objects.equals(this.message, askAnAdmin.message)
-        && Objects.equals(this.name, askAnAdmin.name)
-        && Objects.equals(this.phone, askAnAdmin.phone);
+    return Objects.equals(this.email, askAnAdmin.email) &&
+        Objects.equals(this.message, askAnAdmin.message) &&
+        Objects.equals(this.name, askAnAdmin.name) &&
+        Objects.equals(this.phone, askAnAdmin.phone);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, message, name, phone);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AskAnAdmin {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -159,7 +181,8 @@ public class AskAnAdmin {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -167,4 +190,6 @@ public class AskAnAdmin {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

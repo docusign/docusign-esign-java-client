@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.UserInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** SharedItem. */
+/**
+ * SharedItem.
+ *
+ */
+
 public class SharedItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -15,11 +25,12 @@ public class SharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * errorDetails.
    *
    * @return SharedItem
-   */
+   **/
   public SharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -27,24 +38,26 @@ public class SharedItem {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * shared.
    *
    * @return SharedItem
-   */
+   **/
   public SharedItem shared(String shared) {
     this.shared = shared;
     return this;
@@ -52,24 +65,26 @@ public class SharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * user.
    *
    * @return SharedItem
-   */
+   **/
   public SharedItem user(UserInfo user) {
     this.user = user;
     return this;
@@ -77,18 +92,20 @@ public class SharedItem {
 
   /**
    * Get user.
-   *
    * @return user
-   */
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
-  /** setUser. */
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +121,28 @@ public class SharedItem {
       return false;
     }
     SharedItem sharedItem = (SharedItem) o;
-    return Objects.equals(this.errorDetails, sharedItem.errorDetails)
-        && Objects.equals(this.shared, sharedItem.shared)
-        && Objects.equals(this.user, sharedItem.user);
+    return Objects.equals(this.errorDetails, sharedItem.errorDetails) &&
+        Objects.equals(this.shared, sharedItem.shared) &&
+        Objects.equals(this.user, sharedItem.user);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, shared, user);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -129,7 +151,8 @@ public class SharedItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +160,6 @@ public class SharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

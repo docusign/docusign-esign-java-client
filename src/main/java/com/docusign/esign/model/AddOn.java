@@ -1,12 +1,19 @@
 package com.docusign.esign.model;
 
+import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Objects;
 
-/** Contains information about add ons.. */
+/**
+ * Contains information about add ons..
+ *
+ */
 @ApiModel(description = "Contains information about add ons.")
+
 public class AddOn {
   @JsonProperty("active")
   private String active = null;
@@ -20,11 +27,12 @@ public class AddOn {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * active.
    *
    * @return AddOn
-   */
+   **/
   public AddOn active(String active) {
     this.active = active;
     return this;
@@ -32,24 +40,26 @@ public class AddOn {
 
   /**
    * Reserved:.
-   *
    * @return active
-   */
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getActive() {
     return active;
   }
 
-  /** setActive. */
+  /**
+   * setActive.
+   **/
   public void setActive(String active) {
     this.active = active;
   }
+
 
   /**
    * addOnId.
    *
    * @return AddOn
-   */
+   **/
   public AddOn addOnId(String addOnId) {
     this.addOnId = addOnId;
     return this;
@@ -57,24 +67,26 @@ public class AddOn {
 
   /**
    * Reserved:.
-   *
    * @return addOnId
-   */
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getAddOnId() {
     return addOnId;
   }
 
-  /** setAddOnId. */
+  /**
+   * setAddOnId.
+   **/
   public void setAddOnId(String addOnId) {
     this.addOnId = addOnId;
   }
+
 
   /**
    * id.
    *
    * @return AddOn
-   */
+   **/
   public AddOn id(String id) {
     this.id = id;
     return this;
@@ -82,24 +94,26 @@ public class AddOn {
 
   /**
    * .
-   *
    * @return id
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
-  /** setId. */
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
+
 
   /**
    * name.
    *
    * @return AddOn
-   */
+   **/
   public AddOn name(String name) {
     this.name = name;
     return this;
@@ -107,18 +121,20 @@ public class AddOn {
 
   /**
    * Reserved:.
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "Reserved:")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -134,24 +150,29 @@ public class AddOn {
       return false;
     }
     AddOn addOn = (AddOn) o;
-    return Objects.equals(this.active, addOn.active)
-        && Objects.equals(this.addOnId, addOn.addOnId)
-        && Objects.equals(this.id, addOn.id)
-        && Objects.equals(this.name, addOn.name);
+    return Objects.equals(this.active, addOn.active) &&
+        Objects.equals(this.addOnId, addOn.addOnId) &&
+        Objects.equals(this.id, addOn.id) &&
+        Objects.equals(this.name, addOn.name);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(active, addOnId, id, name);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOn {\n");
-
+    
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -161,7 +182,8 @@ public class AddOn {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -169,4 +191,6 @@ public class AddOn {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

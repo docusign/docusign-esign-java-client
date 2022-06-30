@@ -1,10 +1,23 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FolderSharedItem;
+import com.docusign.esign.model.SharedItem;
+import com.docusign.esign.model.TemplateSharedItem;
+import com.docusign.esign.model.UserInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** MemberSharedItems. */
+/**
+ * MemberSharedItems.
+ *
+ */
+
 public class MemberSharedItems {
   @JsonProperty("envelopes")
   private java.util.List<SharedItem> envelopes = null;
@@ -21,21 +34,22 @@ public class MemberSharedItems {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * envelopes.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems envelopes(java.util.List<SharedItem> envelopes) {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems addEnvelopesItem(SharedItem envelopesItem) {
     if (this.envelopes == null) {
       this.envelopes = new java.util.ArrayList<>();
@@ -46,24 +60,26 @@ public class MemberSharedItems {
 
   /**
    * .
-   *
    * @return envelopes
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
   }
 
-  /** setEnvelopes. */
+  /**
+   * setEnvelopes.
+   **/
   public void setEnvelopes(java.util.List<SharedItem> envelopes) {
     this.envelopes = envelopes;
   }
+
 
   /**
    * errorDetails.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -71,34 +87,36 @@ public class MemberSharedItems {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * folders.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems folders(java.util.List<FolderSharedItem> folders) {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems addFoldersItem(FolderSharedItem foldersItem) {
     if (this.folders == null) {
       this.folders = new java.util.ArrayList<>();
@@ -109,34 +127,36 @@ public class MemberSharedItems {
 
   /**
    * .
-   *
    * @return folders
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FolderSharedItem> getFolders() {
     return folders;
   }
 
-  /** setFolders. */
+  /**
+   * setFolders.
+   **/
   public void setFolders(java.util.List<FolderSharedItem> folders) {
     this.folders = folders;
   }
+
 
   /**
    * templates.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems templates(java.util.List<TemplateSharedItem> templates) {
     this.templates = templates;
     return this;
   }
-
+  
   /**
    * addTemplatesItem.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems addTemplatesItem(TemplateSharedItem templatesItem) {
     if (this.templates == null) {
       this.templates = new java.util.ArrayList<>();
@@ -147,24 +167,26 @@ public class MemberSharedItems {
 
   /**
    * .
-   *
    * @return templates
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TemplateSharedItem> getTemplates() {
     return templates;
   }
 
-  /** setTemplates. */
+  /**
+   * setTemplates.
+   **/
   public void setTemplates(java.util.List<TemplateSharedItem> templates) {
     this.templates = templates;
   }
+
 
   /**
    * user.
    *
    * @return MemberSharedItems
-   */
+   **/
   public MemberSharedItems user(UserInfo user) {
     this.user = user;
     return this;
@@ -172,18 +194,20 @@ public class MemberSharedItems {
 
   /**
    * Get user.
-   *
    * @return user
-   */
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
-  /** setUser. */
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -199,25 +223,30 @@ public class MemberSharedItems {
       return false;
     }
     MemberSharedItems memberSharedItems = (MemberSharedItems) o;
-    return Objects.equals(this.envelopes, memberSharedItems.envelopes)
-        && Objects.equals(this.errorDetails, memberSharedItems.errorDetails)
-        && Objects.equals(this.folders, memberSharedItems.folders)
-        && Objects.equals(this.templates, memberSharedItems.templates)
-        && Objects.equals(this.user, memberSharedItems.user);
+    return Objects.equals(this.envelopes, memberSharedItems.envelopes) &&
+        Objects.equals(this.errorDetails, memberSharedItems.errorDetails) &&
+        Objects.equals(this.folders, memberSharedItems.folders) &&
+        Objects.equals(this.templates, memberSharedItems.templates) &&
+        Objects.equals(this.user, memberSharedItems.user);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopes, errorDetails, folders, templates, user);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberSharedItems {\n");
-
+    
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
@@ -228,7 +257,8 @@ public class MemberSharedItems {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -236,4 +266,6 @@ public class MemberSharedItems {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.FavoriteTemplatesContentItem;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** FavoriteTemplatesInfo. */
+/**
+ * FavoriteTemplatesInfo.
+ *
+ */
+
 public class FavoriteTemplatesInfo {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -15,11 +25,12 @@ public class FavoriteTemplatesInfo {
   @JsonProperty("templatesUpdatedCount")
   private Integer templatesUpdatedCount = null;
 
+
   /**
    * errorDetails.
    *
    * @return FavoriteTemplatesInfo
-   */
+   **/
   public FavoriteTemplatesInfo errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -27,37 +38,37 @@ public class FavoriteTemplatesInfo {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * favoriteTemplates.
    *
    * @return FavoriteTemplatesInfo
-   */
-  public FavoriteTemplatesInfo favoriteTemplates(
-      java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
+   **/
+  public FavoriteTemplatesInfo favoriteTemplates(java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
     this.favoriteTemplates = favoriteTemplates;
     return this;
   }
-
+  
   /**
    * addFavoriteTemplatesItem.
    *
    * @return FavoriteTemplatesInfo
-   */
-  public FavoriteTemplatesInfo addFavoriteTemplatesItem(
-      FavoriteTemplatesContentItem favoriteTemplatesItem) {
+   **/
+  public FavoriteTemplatesInfo addFavoriteTemplatesItem(FavoriteTemplatesContentItem favoriteTemplatesItem) {
     if (this.favoriteTemplates == null) {
       this.favoriteTemplates = new java.util.ArrayList<>();
     }
@@ -67,24 +78,26 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
-   *
    * @return favoriteTemplates
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<FavoriteTemplatesContentItem> getFavoriteTemplates() {
     return favoriteTemplates;
   }
 
-  /** setFavoriteTemplates. */
+  /**
+   * setFavoriteTemplates.
+   **/
   public void setFavoriteTemplates(java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
     this.favoriteTemplates = favoriteTemplates;
   }
+
 
   /**
    * templatesUpdatedCount.
    *
    * @return FavoriteTemplatesInfo
-   */
+   **/
   public FavoriteTemplatesInfo templatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
     return this;
@@ -92,18 +105,20 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
-   *
    * @return templatesUpdatedCount
-   */
+   **/
   @ApiModelProperty(value = "")
   public Integer getTemplatesUpdatedCount() {
     return templatesUpdatedCount;
   }
 
-  /** setTemplatesUpdatedCount. */
+  /**
+   * setTemplatesUpdatedCount.
+   **/
   public void setTemplatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
   }
+
 
   /**
    * Compares objects.
@@ -119,34 +134,38 @@ public class FavoriteTemplatesInfo {
       return false;
     }
     FavoriteTemplatesInfo favoriteTemplatesInfo = (FavoriteTemplatesInfo) o;
-    return Objects.equals(this.errorDetails, favoriteTemplatesInfo.errorDetails)
-        && Objects.equals(this.favoriteTemplates, favoriteTemplatesInfo.favoriteTemplates)
-        && Objects.equals(this.templatesUpdatedCount, favoriteTemplatesInfo.templatesUpdatedCount);
+    return Objects.equals(this.errorDetails, favoriteTemplatesInfo.errorDetails) &&
+        Objects.equals(this.favoriteTemplates, favoriteTemplatesInfo.favoriteTemplates) &&
+        Objects.equals(this.templatesUpdatedCount, favoriteTemplatesInfo.templatesUpdatedCount);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, favoriteTemplates, templatesUpdatedCount);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FavoriteTemplatesInfo {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    favoriteTemplates: ").append(toIndentedString(favoriteTemplates)).append("\n");
-    sb.append("    templatesUpdatedCount: ")
-        .append(toIndentedString(templatesUpdatedCount))
-        .append("\n");
+    sb.append("    templatesUpdatedCount: ").append(toIndentedString(templatesUpdatedCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -154,4 +173,6 @@ public class FavoriteTemplatesInfo {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

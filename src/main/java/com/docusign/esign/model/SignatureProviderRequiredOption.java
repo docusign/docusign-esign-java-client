@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** SignatureProviderRequiredOption. */
+/**
+ * SignatureProviderRequiredOption.
+ *
+ */
+
 public class SignatureProviderRequiredOption {
   @JsonProperty("requiredSignatureProviderOptionIds")
   private java.util.List<String> requiredSignatureProviderOptionIds = null;
@@ -12,24 +20,23 @@ public class SignatureProviderRequiredOption {
   @JsonProperty("signerType")
   private String signerType = null;
 
+
   /**
    * requiredSignatureProviderOptionIds.
    *
    * @return SignatureProviderRequiredOption
-   */
-  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(
-      java.util.List<String> requiredSignatureProviderOptionIds) {
+   **/
+  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
     return this;
   }
-
+  
   /**
    * addRequiredSignatureProviderOptionIdsItem.
    *
    * @return SignatureProviderRequiredOption
-   */
-  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(
-      String requiredSignatureProviderOptionIdsItem) {
+   **/
+  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
     if (this.requiredSignatureProviderOptionIds == null) {
       this.requiredSignatureProviderOptionIds = new java.util.ArrayList<>();
     }
@@ -39,25 +46,26 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
-   *
    * @return requiredSignatureProviderOptionIds
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getRequiredSignatureProviderOptionIds() {
     return requiredSignatureProviderOptionIds;
   }
 
-  /** setRequiredSignatureProviderOptionIds. */
-  public void setRequiredSignatureProviderOptionIds(
-      java.util.List<String> requiredSignatureProviderOptionIds) {
+  /**
+   * setRequiredSignatureProviderOptionIds.
+   **/
+  public void setRequiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
   }
+
 
   /**
    * signerType.
    *
    * @return SignatureProviderRequiredOption
-   */
+   **/
   public SignatureProviderRequiredOption signerType(String signerType) {
     this.signerType = signerType;
     return this;
@@ -65,18 +73,20 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
-   *
    * @return signerType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSignerType() {
     return signerType;
   }
 
-  /** setSignerType. */
+  /**
+   * setSignerType.
+   **/
   public void setSignerType(String signerType) {
     this.signerType = signerType;
   }
+
 
   /**
    * Compares objects.
@@ -91,36 +101,37 @@ public class SignatureProviderRequiredOption {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SignatureProviderRequiredOption signatureProviderRequiredOption =
-        (SignatureProviderRequiredOption) o;
-    return Objects.equals(
-            this.requiredSignatureProviderOptionIds,
-            signatureProviderRequiredOption.requiredSignatureProviderOptionIds)
-        && Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
+    SignatureProviderRequiredOption signatureProviderRequiredOption = (SignatureProviderRequiredOption) o;
+    return Objects.equals(this.requiredSignatureProviderOptionIds, signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
+        Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(requiredSignatureProviderOptionIds, signerType);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProviderRequiredOption {\n");
-
-    sb.append("    requiredSignatureProviderOptionIds: ")
-        .append(toIndentedString(requiredSignatureProviderOptionIds))
-        .append("\n");
+    
+    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
     sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -128,4 +139,6 @@ public class SignatureProviderRequiredOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

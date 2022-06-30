@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.Jurisdiction;
+import com.docusign.esign.model.Notary;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** NotaryResult. */
+/**
+ * NotaryResult.
+ *
+ */
+
 public class NotaryResult {
   @JsonProperty("jurisdictions")
   private java.util.List<Jurisdiction> jurisdictions = null;
@@ -12,21 +22,22 @@ public class NotaryResult {
   @JsonProperty("notary")
   private Notary notary = null;
 
+
   /**
    * jurisdictions.
    *
    * @return NotaryResult
-   */
+   **/
   public NotaryResult jurisdictions(java.util.List<Jurisdiction> jurisdictions) {
     this.jurisdictions = jurisdictions;
     return this;
   }
-
+  
   /**
    * addJurisdictionsItem.
    *
    * @return NotaryResult
-   */
+   **/
   public NotaryResult addJurisdictionsItem(Jurisdiction jurisdictionsItem) {
     if (this.jurisdictions == null) {
       this.jurisdictions = new java.util.ArrayList<>();
@@ -37,24 +48,26 @@ public class NotaryResult {
 
   /**
    * .
-   *
    * @return jurisdictions
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Jurisdiction> getJurisdictions() {
     return jurisdictions;
   }
 
-  /** setJurisdictions. */
+  /**
+   * setJurisdictions.
+   **/
   public void setJurisdictions(java.util.List<Jurisdiction> jurisdictions) {
     this.jurisdictions = jurisdictions;
   }
+
 
   /**
    * notary.
    *
    * @return NotaryResult
-   */
+   **/
   public NotaryResult notary(Notary notary) {
     this.notary = notary;
     return this;
@@ -62,18 +75,20 @@ public class NotaryResult {
 
   /**
    * Get notary.
-   *
    * @return notary
-   */
+   **/
   @ApiModelProperty(value = "")
   public Notary getNotary() {
     return notary;
   }
 
-  /** setNotary. */
+  /**
+   * setNotary.
+   **/
   public void setNotary(Notary notary) {
     this.notary = notary;
   }
+
 
   /**
    * Compares objects.
@@ -89,22 +104,27 @@ public class NotaryResult {
       return false;
     }
     NotaryResult notaryResult = (NotaryResult) o;
-    return Objects.equals(this.jurisdictions, notaryResult.jurisdictions)
-        && Objects.equals(this.notary, notaryResult.notary);
+    return Objects.equals(this.jurisdictions, notaryResult.jurisdictions) &&
+        Objects.equals(this.notary, notaryResult.notary);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(jurisdictions, notary);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryResult {\n");
-
+    
     sb.append("    jurisdictions: ").append(toIndentedString(jurisdictions)).append("\n");
     sb.append("    notary: ").append(toIndentedString(notary)).append("\n");
     sb.append("}");
@@ -112,7 +132,8 @@ public class NotaryResult {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -120,4 +141,6 @@ public class NotaryResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

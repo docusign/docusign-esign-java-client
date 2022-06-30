@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AccountPasswordExpirePasswordDays. */
+/**
+ * AccountPasswordExpirePasswordDays.
+ *
+ */
+
 public class AccountPasswordExpirePasswordDays {
   @JsonProperty("maximumDays")
   private String maximumDays = null;
@@ -12,11 +20,12 @@ public class AccountPasswordExpirePasswordDays {
   @JsonProperty("minimumDays")
   private String minimumDays = null;
 
+
   /**
    * maximumDays.
    *
    * @return AccountPasswordExpirePasswordDays
-   */
+   **/
   public AccountPasswordExpirePasswordDays maximumDays(String maximumDays) {
     this.maximumDays = maximumDays;
     return this;
@@ -24,24 +33,26 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
-   *
    * @return maximumDays
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMaximumDays() {
     return maximumDays;
   }
 
-  /** setMaximumDays. */
+  /**
+   * setMaximumDays.
+   **/
   public void setMaximumDays(String maximumDays) {
     this.maximumDays = maximumDays;
   }
+
 
   /**
    * minimumDays.
    *
    * @return AccountPasswordExpirePasswordDays
-   */
+   **/
   public AccountPasswordExpirePasswordDays minimumDays(String minimumDays) {
     this.minimumDays = minimumDays;
     return this;
@@ -49,18 +60,20 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
-   *
    * @return minimumDays
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMinimumDays() {
     return minimumDays;
   }
 
-  /** setMinimumDays. */
+  /**
+   * setMinimumDays.
+   **/
   public void setMinimumDays(String minimumDays) {
     this.minimumDays = minimumDays;
   }
+
 
   /**
    * Compares objects.
@@ -75,24 +88,28 @@ public class AccountPasswordExpirePasswordDays {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AccountPasswordExpirePasswordDays accountPasswordExpirePasswordDays =
-        (AccountPasswordExpirePasswordDays) o;
-    return Objects.equals(this.maximumDays, accountPasswordExpirePasswordDays.maximumDays)
-        && Objects.equals(this.minimumDays, accountPasswordExpirePasswordDays.minimumDays);
+    AccountPasswordExpirePasswordDays accountPasswordExpirePasswordDays = (AccountPasswordExpirePasswordDays) o;
+    return Objects.equals(this.maximumDays, accountPasswordExpirePasswordDays.maximumDays) &&
+        Objects.equals(this.minimumDays, accountPasswordExpirePasswordDays.minimumDays);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(maximumDays, minimumDays);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordExpirePasswordDays {\n");
-
+    
     sb.append("    maximumDays: ").append(toIndentedString(maximumDays)).append("\n");
     sb.append("    minimumDays: ").append(toIndentedString(minimumDays)).append("\n");
     sb.append("}");
@@ -100,7 +117,8 @@ public class AccountPasswordExpirePasswordDays {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -108,4 +126,6 @@ public class AccountPasswordExpirePasswordDays {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

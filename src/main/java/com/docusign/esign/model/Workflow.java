@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ScheduledSending;
+import com.docusign.esign.model.WorkflowStep;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** Workflow. */
+/**
+ * Workflow.
+ *
+ */
+
 public class Workflow {
   @JsonProperty("currentWorkflowStepId")
   private String currentWorkflowStepId = null;
@@ -24,11 +34,12 @@ public class Workflow {
   @JsonProperty("workflowSteps")
   private java.util.List<WorkflowStep> workflowSteps = null;
 
+
   /**
    * currentWorkflowStepId.
    *
    * @return Workflow
-   */
+   **/
   public Workflow currentWorkflowStepId(String currentWorkflowStepId) {
     this.currentWorkflowStepId = currentWorkflowStepId;
     return this;
@@ -36,24 +47,26 @@ public class Workflow {
 
   /**
    * .
-   *
    * @return currentWorkflowStepId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCurrentWorkflowStepId() {
     return currentWorkflowStepId;
   }
 
-  /** setCurrentWorkflowStepId. */
+  /**
+   * setCurrentWorkflowStepId.
+   **/
   public void setCurrentWorkflowStepId(String currentWorkflowStepId) {
     this.currentWorkflowStepId = currentWorkflowStepId;
   }
+
 
   /**
    * overwriteUpdateMode.
    *
    * @return Workflow
-   */
+   **/
   public Workflow overwriteUpdateMode(String overwriteUpdateMode) {
     this.overwriteUpdateMode = overwriteUpdateMode;
     return this;
@@ -61,24 +74,26 @@ public class Workflow {
 
   /**
    * .
-   *
    * @return overwriteUpdateMode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getOverwriteUpdateMode() {
     return overwriteUpdateMode;
   }
 
-  /** setOverwriteUpdateMode. */
+  /**
+   * setOverwriteUpdateMode.
+   **/
   public void setOverwriteUpdateMode(String overwriteUpdateMode) {
     this.overwriteUpdateMode = overwriteUpdateMode;
   }
+
 
   /**
    * resumeDate.
    *
    * @return Workflow
-   */
+   **/
   public Workflow resumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
     return this;
@@ -86,24 +101,26 @@ public class Workflow {
 
   /**
    * .
-   *
    * @return resumeDate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getResumeDate() {
     return resumeDate;
   }
 
-  /** setResumeDate. */
+  /**
+   * setResumeDate.
+   **/
   public void setResumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
   }
+
 
   /**
    * scheduledSending.
    *
    * @return Workflow
-   */
+   **/
   public Workflow scheduledSending(ScheduledSending scheduledSending) {
     this.scheduledSending = scheduledSending;
     return this;
@@ -111,24 +128,26 @@ public class Workflow {
 
   /**
    * Get scheduledSending.
-   *
    * @return scheduledSending
-   */
+   **/
   @ApiModelProperty(value = "")
   public ScheduledSending getScheduledSending() {
     return scheduledSending;
   }
 
-  /** setScheduledSending. */
+  /**
+   * setScheduledSending.
+   **/
   public void setScheduledSending(ScheduledSending scheduledSending) {
     this.scheduledSending = scheduledSending;
   }
+
 
   /**
    * workflowStatus.
    *
    * @return Workflow
-   */
+   **/
   public Workflow workflowStatus(String workflowStatus) {
     this.workflowStatus = workflowStatus;
     return this;
@@ -136,34 +155,36 @@ public class Workflow {
 
   /**
    * .
-   *
    * @return workflowStatus
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowStatus() {
     return workflowStatus;
   }
 
-  /** setWorkflowStatus. */
+  /**
+   * setWorkflowStatus.
+   **/
   public void setWorkflowStatus(String workflowStatus) {
     this.workflowStatus = workflowStatus;
   }
+
 
   /**
    * workflowSteps.
    *
    * @return Workflow
-   */
+   **/
   public Workflow workflowSteps(java.util.List<WorkflowStep> workflowSteps) {
     this.workflowSteps = workflowSteps;
     return this;
   }
-
+  
   /**
    * addWorkflowStepsItem.
    *
    * @return Workflow
-   */
+   **/
   public Workflow addWorkflowStepsItem(WorkflowStep workflowStepsItem) {
     if (this.workflowSteps == null) {
       this.workflowSteps = new java.util.ArrayList<>();
@@ -174,18 +195,20 @@ public class Workflow {
 
   /**
    * .
-   *
    * @return workflowSteps
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<WorkflowStep> getWorkflowSteps() {
     return workflowSteps;
   }
 
-  /** setWorkflowSteps. */
+  /**
+   * setWorkflowSteps.
+   **/
   public void setWorkflowSteps(java.util.List<WorkflowStep> workflowSteps) {
     this.workflowSteps = workflowSteps;
   }
+
 
   /**
    * Compares objects.
@@ -201,38 +224,33 @@ public class Workflow {
       return false;
     }
     Workflow workflow = (Workflow) o;
-    return Objects.equals(this.currentWorkflowStepId, workflow.currentWorkflowStepId)
-        && Objects.equals(this.overwriteUpdateMode, workflow.overwriteUpdateMode)
-        && Objects.equals(this.resumeDate, workflow.resumeDate)
-        && Objects.equals(this.scheduledSending, workflow.scheduledSending)
-        && Objects.equals(this.workflowStatus, workflow.workflowStatus)
-        && Objects.equals(this.workflowSteps, workflow.workflowSteps);
+    return Objects.equals(this.currentWorkflowStepId, workflow.currentWorkflowStepId) &&
+        Objects.equals(this.overwriteUpdateMode, workflow.overwriteUpdateMode) &&
+        Objects.equals(this.resumeDate, workflow.resumeDate) &&
+        Objects.equals(this.scheduledSending, workflow.scheduledSending) &&
+        Objects.equals(this.workflowStatus, workflow.workflowStatus) &&
+        Objects.equals(this.workflowSteps, workflow.workflowSteps);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        currentWorkflowStepId,
-        overwriteUpdateMode,
-        resumeDate,
-        scheduledSending,
-        workflowStatus,
-        workflowSteps);
+    return Objects.hash(currentWorkflowStepId, overwriteUpdateMode, resumeDate, scheduledSending, workflowStatus, workflowSteps);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Workflow {\n");
-
-    sb.append("    currentWorkflowStepId: ")
-        .append(toIndentedString(currentWorkflowStepId))
-        .append("\n");
-    sb.append("    overwriteUpdateMode: ")
-        .append(toIndentedString(overwriteUpdateMode))
-        .append("\n");
+    
+    sb.append("    currentWorkflowStepId: ").append(toIndentedString(currentWorkflowStepId)).append("\n");
+    sb.append("    overwriteUpdateMode: ").append(toIndentedString(overwriteUpdateMode)).append("\n");
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("    scheduledSending: ").append(toIndentedString(scheduledSending)).append("\n");
     sb.append("    workflowStatus: ").append(toIndentedString(workflowStatus)).append("\n");
@@ -242,7 +260,8 @@ public class Workflow {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -250,4 +269,6 @@ public class Workflow {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

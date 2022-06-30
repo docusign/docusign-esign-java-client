@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ChunkedUploadPart;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ChunkedUploadResponse. */
+/**
+ * ChunkedUploadResponse.
+ *
+ */
+
 public class ChunkedUploadResponse {
   @JsonProperty("checksum")
   private String checksum = null;
@@ -33,11 +42,12 @@ public class ChunkedUploadResponse {
   @JsonProperty("totalSize")
   private String totalSize = null;
 
+
   /**
    * checksum.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse checksum(String checksum) {
     this.checksum = checksum;
     return this;
@@ -45,24 +55,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return checksum
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getChecksum() {
     return checksum;
   }
 
-  /** setChecksum. */
+  /**
+   * setChecksum.
+   **/
   public void setChecksum(String checksum) {
     this.checksum = checksum;
   }
+
 
   /**
    * chunkedUploadId.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse chunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
     return this;
@@ -70,35 +82,36 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return chunkedUploadId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
 
-  /** setChunkedUploadId. */
+  /**
+   * setChunkedUploadId.
+   **/
   public void setChunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
   }
+
 
   /**
    * chunkedUploadParts.
    *
    * @return ChunkedUploadResponse
-   */
-  public ChunkedUploadResponse chunkedUploadParts(
-      java.util.List<ChunkedUploadPart> chunkedUploadParts) {
+   **/
+  public ChunkedUploadResponse chunkedUploadParts(java.util.List<ChunkedUploadPart> chunkedUploadParts) {
     this.chunkedUploadParts = chunkedUploadParts;
     return this;
   }
-
+  
   /**
    * addChunkedUploadPartsItem.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse addChunkedUploadPartsItem(ChunkedUploadPart chunkedUploadPartsItem) {
     if (this.chunkedUploadParts == null) {
       this.chunkedUploadParts = new java.util.ArrayList<>();
@@ -109,24 +122,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return chunkedUploadParts
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ChunkedUploadPart> getChunkedUploadParts() {
     return chunkedUploadParts;
   }
 
-  /** setChunkedUploadParts. */
+  /**
+   * setChunkedUploadParts.
+   **/
   public void setChunkedUploadParts(java.util.List<ChunkedUploadPart> chunkedUploadParts) {
     this.chunkedUploadParts = chunkedUploadParts;
   }
+
 
   /**
    * chunkedUploadUri.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse chunkedUploadUri(String chunkedUploadUri) {
     this.chunkedUploadUri = chunkedUploadUri;
     return this;
@@ -134,24 +149,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return chunkedUploadUri
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getChunkedUploadUri() {
     return chunkedUploadUri;
   }
 
-  /** setChunkedUploadUri. */
+  /**
+   * setChunkedUploadUri.
+   **/
   public void setChunkedUploadUri(String chunkedUploadUri) {
     this.chunkedUploadUri = chunkedUploadUri;
   }
+
 
   /**
    * committed.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse committed(String committed) {
     this.committed = committed;
     return this;
@@ -159,24 +176,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return committed
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCommitted() {
     return committed;
   }
 
-  /** setCommitted. */
+  /**
+   * setCommitted.
+   **/
   public void setCommitted(String committed) {
     this.committed = committed;
   }
+
 
   /**
    * expirationDateTime.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse expirationDateTime(String expirationDateTime) {
     this.expirationDateTime = expirationDateTime;
     return this;
@@ -184,24 +203,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return expirationDateTime
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getExpirationDateTime() {
     return expirationDateTime;
   }
 
-  /** setExpirationDateTime. */
+  /**
+   * setExpirationDateTime.
+   **/
   public void setExpirationDateTime(String expirationDateTime) {
     this.expirationDateTime = expirationDateTime;
   }
+
 
   /**
    * maxChunkedUploadParts.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse maxChunkedUploadParts(String maxChunkedUploadParts) {
     this.maxChunkedUploadParts = maxChunkedUploadParts;
     return this;
@@ -209,24 +230,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return maxChunkedUploadParts
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMaxChunkedUploadParts() {
     return maxChunkedUploadParts;
   }
 
-  /** setMaxChunkedUploadParts. */
+  /**
+   * setMaxChunkedUploadParts.
+   **/
   public void setMaxChunkedUploadParts(String maxChunkedUploadParts) {
     this.maxChunkedUploadParts = maxChunkedUploadParts;
   }
+
 
   /**
    * maxTotalSize.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse maxTotalSize(String maxTotalSize) {
     this.maxTotalSize = maxTotalSize;
     return this;
@@ -234,24 +257,26 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return maxTotalSize
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMaxTotalSize() {
     return maxTotalSize;
   }
 
-  /** setMaxTotalSize. */
+  /**
+   * setMaxTotalSize.
+   **/
   public void setMaxTotalSize(String maxTotalSize) {
     this.maxTotalSize = maxTotalSize;
   }
+
 
   /**
    * totalSize.
    *
    * @return ChunkedUploadResponse
-   */
+   **/
   public ChunkedUploadResponse totalSize(String totalSize) {
     this.totalSize = totalSize;
     return this;
@@ -259,18 +284,20 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   *
    * @return totalSize
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTotalSize() {
     return totalSize;
   }
 
-  /** setTotalSize. */
+  /**
+   * setTotalSize.
+   **/
   public void setTotalSize(String totalSize) {
     this.totalSize = totalSize;
   }
+
 
   /**
    * Compares objects.
@@ -286,47 +313,41 @@ public class ChunkedUploadResponse {
       return false;
     }
     ChunkedUploadResponse chunkedUploadResponse = (ChunkedUploadResponse) o;
-    return Objects.equals(this.checksum, chunkedUploadResponse.checksum)
-        && Objects.equals(this.chunkedUploadId, chunkedUploadResponse.chunkedUploadId)
-        && Objects.equals(this.chunkedUploadParts, chunkedUploadResponse.chunkedUploadParts)
-        && Objects.equals(this.chunkedUploadUri, chunkedUploadResponse.chunkedUploadUri)
-        && Objects.equals(this.committed, chunkedUploadResponse.committed)
-        && Objects.equals(this.expirationDateTime, chunkedUploadResponse.expirationDateTime)
-        && Objects.equals(this.maxChunkedUploadParts, chunkedUploadResponse.maxChunkedUploadParts)
-        && Objects.equals(this.maxTotalSize, chunkedUploadResponse.maxTotalSize)
-        && Objects.equals(this.totalSize, chunkedUploadResponse.totalSize);
+    return Objects.equals(this.checksum, chunkedUploadResponse.checksum) &&
+        Objects.equals(this.chunkedUploadId, chunkedUploadResponse.chunkedUploadId) &&
+        Objects.equals(this.chunkedUploadParts, chunkedUploadResponse.chunkedUploadParts) &&
+        Objects.equals(this.chunkedUploadUri, chunkedUploadResponse.chunkedUploadUri) &&
+        Objects.equals(this.committed, chunkedUploadResponse.committed) &&
+        Objects.equals(this.expirationDateTime, chunkedUploadResponse.expirationDateTime) &&
+        Objects.equals(this.maxChunkedUploadParts, chunkedUploadResponse.maxChunkedUploadParts) &&
+        Objects.equals(this.maxTotalSize, chunkedUploadResponse.maxTotalSize) &&
+        Objects.equals(this.totalSize, chunkedUploadResponse.totalSize);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        checksum,
-        chunkedUploadId,
-        chunkedUploadParts,
-        chunkedUploadUri,
-        committed,
-        expirationDateTime,
-        maxChunkedUploadParts,
-        maxTotalSize,
-        totalSize);
+    return Objects.hash(checksum, chunkedUploadId, chunkedUploadParts, chunkedUploadUri, committed, expirationDateTime, maxChunkedUploadParts, maxTotalSize, totalSize);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadResponse {\n");
-
+    
     sb.append("    checksum: ").append(toIndentedString(checksum)).append("\n");
     sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
     sb.append("    chunkedUploadParts: ").append(toIndentedString(chunkedUploadParts)).append("\n");
     sb.append("    chunkedUploadUri: ").append(toIndentedString(chunkedUploadUri)).append("\n");
     sb.append("    committed: ").append(toIndentedString(committed)).append("\n");
     sb.append("    expirationDateTime: ").append(toIndentedString(expirationDateTime)).append("\n");
-    sb.append("    maxChunkedUploadParts: ")
-        .append(toIndentedString(maxChunkedUploadParts))
-        .append("\n");
+    sb.append("    maxChunkedUploadParts: ").append(toIndentedString(maxChunkedUploadParts)).append("\n");
     sb.append("    maxTotalSize: ").append(toIndentedString(maxTotalSize)).append("\n");
     sb.append("    totalSize: ").append(toIndentedString(totalSize)).append("\n");
     sb.append("}");
@@ -334,7 +355,8 @@ public class ChunkedUploadResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -342,4 +364,6 @@ public class ChunkedUploadResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

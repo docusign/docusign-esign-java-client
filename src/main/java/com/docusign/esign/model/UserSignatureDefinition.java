@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.DateStampProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** UserSignatureDefinition. */
+/**
+ * UserSignatureDefinition.
+ *
+ */
+
 public class UserSignatureDefinition {
   @JsonProperty("dateStampProperties")
   private DateStampProperties dateStampProperties = null;
@@ -51,11 +60,12 @@ public class UserSignatureDefinition {
   @JsonProperty("stampSizeMM")
   private String stampSizeMM = null;
 
+
   /**
    * dateStampProperties.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition dateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
     return this;
@@ -63,24 +73,26 @@ public class UserSignatureDefinition {
 
   /**
    * Get dateStampProperties.
-   *
    * @return dateStampProperties
-   */
+   **/
   @ApiModelProperty(value = "")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
 
-  /** setDateStampProperties. */
+  /**
+   * setDateStampProperties.
+   **/
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
+
 
   /**
    * disallowUserResizeStamp.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition disallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
     return this;
@@ -88,24 +100,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return disallowUserResizeStamp
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
 
-  /** setDisallowUserResizeStamp. */
+  /**
+   * setDisallowUserResizeStamp.
+   **/
   public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
+
 
   /**
    * externalID.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition externalID(String externalID) {
     this.externalID = externalID;
     return this;
@@ -113,24 +127,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return externalID
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getExternalID() {
     return externalID;
   }
 
-  /** setExternalID. */
+  /**
+   * setExternalID.
+   **/
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
+
 
   /**
    * imageType.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition imageType(String imageType) {
     this.imageType = imageType;
     return this;
@@ -138,24 +154,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return imageType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getImageType() {
     return imageType;
   }
 
-  /** setImageType. */
+  /**
+   * setImageType.
+   **/
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
+
 
   /**
    * isDefault.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition isDefault(String isDefault) {
     this.isDefault = isDefault;
     return this;
@@ -163,24 +181,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return isDefault
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getIsDefault() {
     return isDefault;
   }
 
-  /** setIsDefault. */
+  /**
+   * setIsDefault.
+   **/
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
+
 
   /**
    * nrdsId.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition nrdsId(String nrdsId) {
     this.nrdsId = nrdsId;
     return this;
@@ -188,24 +208,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return nrdsId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getNrdsId() {
     return nrdsId;
   }
 
-  /** setNrdsId. */
+  /**
+   * setNrdsId.
+   **/
   public void setNrdsId(String nrdsId) {
     this.nrdsId = nrdsId;
   }
+
 
   /**
    * nrdsLastName.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition nrdsLastName(String nrdsLastName) {
     this.nrdsLastName = nrdsLastName;
     return this;
@@ -213,24 +235,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return nrdsLastName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getNrdsLastName() {
     return nrdsLastName;
   }
 
-  /** setNrdsLastName. */
+  /**
+   * setNrdsLastName.
+   **/
   public void setNrdsLastName(String nrdsLastName) {
     this.nrdsLastName = nrdsLastName;
   }
+
 
   /**
    * phoneticName.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition phoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
     return this;
@@ -238,24 +262,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return phoneticName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPhoneticName() {
     return phoneticName;
   }
 
-  /** setPhoneticName. */
+  /**
+   * setPhoneticName.
+   **/
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
+
 
   /**
    * signatureFont.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition signatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
     return this;
@@ -263,55 +289,53 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return signatureFont
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureFont() {
     return signatureFont;
   }
 
-  /** setSignatureFont. */
+  /**
+   * setSignatureFont.
+   **/
   public void setSignatureFont(String signatureFont) {
     this.signatureFont = signatureFont;
   }
+
 
   /**
    * signatureId.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition signatureId(String signatureId) {
     this.signatureId = signatureId;
     return this;
   }
 
   /**
-   * Specifies the signature ID associated with the signature name. You can use the signature ID in
-   * the URI in place of the signature name, and the value stored in the `signatureName` property in
-   * the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a
-   * the signature name. Note that with each update to signatures, the returned signature ID might
-   * change, so the caller will need to trigger off the signature name to get the new signature ID..
-   *
+   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
    * @return signatureId
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
+   **/
+  @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
 
-  /** setSignatureId. */
+  /**
+   * setSignatureId.
+   **/
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
+
 
   /**
    * signatureInitials.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition signatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
     return this;
@@ -319,24 +343,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return signatureInitials
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
 
-  /** setSignatureInitials. */
+  /**
+   * setSignatureInitials.
+   **/
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
+
 
   /**
    * signatureName.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition signatureName(String signatureName) {
     this.signatureName = signatureName;
     return this;
@@ -344,24 +370,26 @@ public class UserSignatureDefinition {
 
   /**
    * Specifies the user signature name..
-   *
    * @return signatureName
-   */
+   **/
   @ApiModelProperty(value = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
 
-  /** setSignatureName. */
+  /**
+   * setSignatureName.
+   **/
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
+
 
   /**
    * signatureType.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition signatureType(String signatureType) {
     this.signatureType = signatureType;
     return this;
@@ -369,24 +397,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return signatureType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSignatureType() {
     return signatureType;
   }
 
-  /** setSignatureType. */
+  /**
+   * setSignatureType.
+   **/
   public void setSignatureType(String signatureType) {
     this.signatureType = signatureType;
   }
+
 
   /**
    * stampFormat.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition stampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
     return this;
@@ -394,24 +424,26 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return stampFormat
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getStampFormat() {
     return stampFormat;
   }
 
-  /** setStampFormat. */
+  /**
+   * setStampFormat.
+   **/
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
+
 
   /**
    * stampSizeMM.
    *
    * @return UserSignatureDefinition
-   */
+   **/
   public UserSignatureDefinition stampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
     return this;
@@ -419,18 +451,20 @@ public class UserSignatureDefinition {
 
   /**
    * .
-   *
    * @return stampSizeMM
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
 
-  /** setStampSizeMM. */
+  /**
+   * setStampSizeMM.
+   **/
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
+
 
   /**
    * Compares objects.
@@ -446,57 +480,42 @@ public class UserSignatureDefinition {
       return false;
     }
     UserSignatureDefinition userSignatureDefinition = (UserSignatureDefinition) o;
-    return Objects.equals(this.dateStampProperties, userSignatureDefinition.dateStampProperties)
-        && Objects.equals(
-            this.disallowUserResizeStamp, userSignatureDefinition.disallowUserResizeStamp)
-        && Objects.equals(this.externalID, userSignatureDefinition.externalID)
-        && Objects.equals(this.imageType, userSignatureDefinition.imageType)
-        && Objects.equals(this.isDefault, userSignatureDefinition.isDefault)
-        && Objects.equals(this.nrdsId, userSignatureDefinition.nrdsId)
-        && Objects.equals(this.nrdsLastName, userSignatureDefinition.nrdsLastName)
-        && Objects.equals(this.phoneticName, userSignatureDefinition.phoneticName)
-        && Objects.equals(this.signatureFont, userSignatureDefinition.signatureFont)
-        && Objects.equals(this.signatureId, userSignatureDefinition.signatureId)
-        && Objects.equals(this.signatureInitials, userSignatureDefinition.signatureInitials)
-        && Objects.equals(this.signatureName, userSignatureDefinition.signatureName)
-        && Objects.equals(this.signatureType, userSignatureDefinition.signatureType)
-        && Objects.equals(this.stampFormat, userSignatureDefinition.stampFormat)
-        && Objects.equals(this.stampSizeMM, userSignatureDefinition.stampSizeMM);
+    return Objects.equals(this.dateStampProperties, userSignatureDefinition.dateStampProperties) &&
+        Objects.equals(this.disallowUserResizeStamp, userSignatureDefinition.disallowUserResizeStamp) &&
+        Objects.equals(this.externalID, userSignatureDefinition.externalID) &&
+        Objects.equals(this.imageType, userSignatureDefinition.imageType) &&
+        Objects.equals(this.isDefault, userSignatureDefinition.isDefault) &&
+        Objects.equals(this.nrdsId, userSignatureDefinition.nrdsId) &&
+        Objects.equals(this.nrdsLastName, userSignatureDefinition.nrdsLastName) &&
+        Objects.equals(this.phoneticName, userSignatureDefinition.phoneticName) &&
+        Objects.equals(this.signatureFont, userSignatureDefinition.signatureFont) &&
+        Objects.equals(this.signatureId, userSignatureDefinition.signatureId) &&
+        Objects.equals(this.signatureInitials, userSignatureDefinition.signatureInitials) &&
+        Objects.equals(this.signatureName, userSignatureDefinition.signatureName) &&
+        Objects.equals(this.signatureType, userSignatureDefinition.signatureType) &&
+        Objects.equals(this.stampFormat, userSignatureDefinition.stampFormat) &&
+        Objects.equals(this.stampSizeMM, userSignatureDefinition.stampSizeMM);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        dateStampProperties,
-        disallowUserResizeStamp,
-        externalID,
-        imageType,
-        isDefault,
-        nrdsId,
-        nrdsLastName,
-        phoneticName,
-        signatureFont,
-        signatureId,
-        signatureInitials,
-        signatureName,
-        signatureType,
-        stampFormat,
-        stampSizeMM);
+    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureId, signatureInitials, signatureName, signatureType, stampFormat, stampSizeMM);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignatureDefinition {\n");
-
-    sb.append("    dateStampProperties: ")
-        .append(toIndentedString(dateStampProperties))
-        .append("\n");
-    sb.append("    disallowUserResizeStamp: ")
-        .append(toIndentedString(disallowUserResizeStamp))
-        .append("\n");
+    
+    sb.append("    dateStampProperties: ").append(toIndentedString(dateStampProperties)).append("\n");
+    sb.append("    disallowUserResizeStamp: ").append(toIndentedString(disallowUserResizeStamp)).append("\n");
     sb.append("    externalID: ").append(toIndentedString(externalID)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
@@ -515,7 +534,8 @@ public class UserSignatureDefinition {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -523,4 +543,6 @@ public class UserSignatureDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

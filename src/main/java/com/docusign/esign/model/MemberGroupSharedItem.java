@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.Group;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** MemberGroupSharedItem. */
+/**
+ * MemberGroupSharedItem.
+ *
+ */
+
 public class MemberGroupSharedItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -15,11 +25,12 @@ public class MemberGroupSharedItem {
   @JsonProperty("shared")
   private String shared = null;
 
+
   /**
    * errorDetails.
    *
    * @return MemberGroupSharedItem
-   */
+   **/
   public MemberGroupSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -27,24 +38,26 @@ public class MemberGroupSharedItem {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * group.
    *
    * @return MemberGroupSharedItem
-   */
+   **/
   public MemberGroupSharedItem group(Group group) {
     this.group = group;
     return this;
@@ -52,24 +65,26 @@ public class MemberGroupSharedItem {
 
   /**
    * Get group.
-   *
    * @return group
-   */
+   **/
   @ApiModelProperty(value = "")
   public Group getGroup() {
     return group;
   }
 
-  /** setGroup. */
+  /**
+   * setGroup.
+   **/
   public void setGroup(Group group) {
     this.group = group;
   }
+
 
   /**
    * shared.
    *
    * @return MemberGroupSharedItem
-   */
+   **/
   public MemberGroupSharedItem shared(String shared) {
     this.shared = shared;
     return this;
@@ -77,18 +92,20 @@ public class MemberGroupSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +121,28 @@ public class MemberGroupSharedItem {
       return false;
     }
     MemberGroupSharedItem memberGroupSharedItem = (MemberGroupSharedItem) o;
-    return Objects.equals(this.errorDetails, memberGroupSharedItem.errorDetails)
-        && Objects.equals(this.group, memberGroupSharedItem.group)
-        && Objects.equals(this.shared, memberGroupSharedItem.shared);
+    return Objects.equals(this.errorDetails, memberGroupSharedItem.errorDetails) &&
+        Objects.equals(this.group, memberGroupSharedItem.group) &&
+        Objects.equals(this.shared, memberGroupSharedItem.shared);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, group, shared);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberGroupSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -129,7 +151,8 @@ public class MemberGroupSharedItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +160,6 @@ public class MemberGroupSharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.DelayedRouting;
+import com.docusign.esign.model.RecipientRouting;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** WorkflowStep. */
+/**
+ * WorkflowStep.
+ *
+ */
+
 public class WorkflowStep {
   @JsonProperty("action")
   private String action = null;
@@ -33,11 +43,12 @@ public class WorkflowStep {
   @JsonProperty("workflowStepId")
   private String workflowStepId = null;
 
+
   /**
    * action.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep action(String action) {
     this.action = action;
     return this;
@@ -45,24 +56,26 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return action
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAction() {
     return action;
   }
 
-  /** setAction. */
+  /**
+   * setAction.
+   **/
   public void setAction(String action) {
     this.action = action;
   }
+
 
   /**
    * completedDate.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep completedDate(String completedDate) {
     this.completedDate = completedDate;
     return this;
@@ -70,24 +83,26 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return completedDate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCompletedDate() {
     return completedDate;
   }
 
-  /** setCompletedDate. */
+  /**
+   * setCompletedDate.
+   **/
   public void setCompletedDate(String completedDate) {
     this.completedDate = completedDate;
   }
+
 
   /**
    * delayedRouting.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep delayedRouting(DelayedRouting delayedRouting) {
     this.delayedRouting = delayedRouting;
     return this;
@@ -95,24 +110,26 @@ public class WorkflowStep {
 
   /**
    * Get delayedRouting.
-   *
    * @return delayedRouting
-   */
+   **/
   @ApiModelProperty(value = "")
   public DelayedRouting getDelayedRouting() {
     return delayedRouting;
   }
 
-  /** setDelayedRouting. */
+  /**
+   * setDelayedRouting.
+   **/
   public void setDelayedRouting(DelayedRouting delayedRouting) {
     this.delayedRouting = delayedRouting;
   }
+
 
   /**
    * itemId.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep itemId(String itemId) {
     this.itemId = itemId;
     return this;
@@ -120,24 +137,26 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return itemId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getItemId() {
     return itemId;
   }
 
-  /** setItemId. */
+  /**
+   * setItemId.
+   **/
   public void setItemId(String itemId) {
     this.itemId = itemId;
   }
+
 
   /**
    * recipientRouting.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep recipientRouting(RecipientRouting recipientRouting) {
     this.recipientRouting = recipientRouting;
     return this;
@@ -145,52 +164,53 @@ public class WorkflowStep {
 
   /**
    * Get recipientRouting.
-   *
    * @return recipientRouting
-   */
+   **/
   @ApiModelProperty(value = "")
   public RecipientRouting getRecipientRouting() {
     return recipientRouting;
   }
 
-  /** setRecipientRouting. */
+  /**
+   * setRecipientRouting.
+   **/
   public void setRecipientRouting(RecipientRouting recipientRouting) {
     this.recipientRouting = recipientRouting;
   }
+
 
   /**
    * status.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
-   *
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-   */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   **/
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /** setStatus. */
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * triggeredDate.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep triggeredDate(String triggeredDate) {
     this.triggeredDate = triggeredDate;
     return this;
@@ -198,24 +218,26 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return triggeredDate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTriggeredDate() {
     return triggeredDate;
   }
 
-  /** setTriggeredDate. */
+  /**
+   * setTriggeredDate.
+   **/
   public void setTriggeredDate(String triggeredDate) {
     this.triggeredDate = triggeredDate;
   }
+
 
   /**
    * triggerOnItem.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep triggerOnItem(String triggerOnItem) {
     this.triggerOnItem = triggerOnItem;
     return this;
@@ -223,24 +245,26 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return triggerOnItem
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTriggerOnItem() {
     return triggerOnItem;
   }
 
-  /** setTriggerOnItem. */
+  /**
+   * setTriggerOnItem.
+   **/
   public void setTriggerOnItem(String triggerOnItem) {
     this.triggerOnItem = triggerOnItem;
   }
+
 
   /**
    * workflowStepId.
    *
    * @return WorkflowStep
-   */
+   **/
   public WorkflowStep workflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
     return this;
@@ -248,18 +272,20 @@ public class WorkflowStep {
 
   /**
    * .
-   *
    * @return workflowStepId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getWorkflowStepId() {
     return workflowStepId;
   }
 
-  /** setWorkflowStepId. */
+  /**
+   * setWorkflowStepId.
+   **/
   public void setWorkflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
   }
+
 
   /**
    * Compares objects.
@@ -275,38 +301,34 @@ public class WorkflowStep {
       return false;
     }
     WorkflowStep workflowStep = (WorkflowStep) o;
-    return Objects.equals(this.action, workflowStep.action)
-        && Objects.equals(this.completedDate, workflowStep.completedDate)
-        && Objects.equals(this.delayedRouting, workflowStep.delayedRouting)
-        && Objects.equals(this.itemId, workflowStep.itemId)
-        && Objects.equals(this.recipientRouting, workflowStep.recipientRouting)
-        && Objects.equals(this.status, workflowStep.status)
-        && Objects.equals(this.triggeredDate, workflowStep.triggeredDate)
-        && Objects.equals(this.triggerOnItem, workflowStep.triggerOnItem)
-        && Objects.equals(this.workflowStepId, workflowStep.workflowStepId);
+    return Objects.equals(this.action, workflowStep.action) &&
+        Objects.equals(this.completedDate, workflowStep.completedDate) &&
+        Objects.equals(this.delayedRouting, workflowStep.delayedRouting) &&
+        Objects.equals(this.itemId, workflowStep.itemId) &&
+        Objects.equals(this.recipientRouting, workflowStep.recipientRouting) &&
+        Objects.equals(this.status, workflowStep.status) &&
+        Objects.equals(this.triggeredDate, workflowStep.triggeredDate) &&
+        Objects.equals(this.triggerOnItem, workflowStep.triggerOnItem) &&
+        Objects.equals(this.workflowStepId, workflowStep.workflowStepId);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        action,
-        completedDate,
-        delayedRouting,
-        itemId,
-        recipientRouting,
-        status,
-        triggeredDate,
-        triggerOnItem,
-        workflowStepId);
+    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkflowStep {\n");
-
+    
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    completedDate: ").append(toIndentedString(completedDate)).append("\n");
     sb.append("    delayedRouting: ").append(toIndentedString(delayedRouting)).append("\n");
@@ -321,7 +343,8 @@ public class WorkflowStep {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -329,4 +352,6 @@ public class WorkflowStep {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** RecipientProofFile. */
+/**
+ * RecipientProofFile.
+ *
+ */
+
 public class RecipientProofFile {
   @JsonProperty("hasIdentityAttempts")
   private String hasIdentityAttempts = null;
@@ -12,11 +20,12 @@ public class RecipientProofFile {
   @JsonProperty("isInProofFile")
   private String isInProofFile = null;
 
+
   /**
    * hasIdentityAttempts.
    *
    * @return RecipientProofFile
-   */
+   **/
   public RecipientProofFile hasIdentityAttempts(String hasIdentityAttempts) {
     this.hasIdentityAttempts = hasIdentityAttempts;
     return this;
@@ -24,24 +33,26 @@ public class RecipientProofFile {
 
   /**
    * .
-   *
    * @return hasIdentityAttempts
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getHasIdentityAttempts() {
     return hasIdentityAttempts;
   }
 
-  /** setHasIdentityAttempts. */
+  /**
+   * setHasIdentityAttempts.
+   **/
   public void setHasIdentityAttempts(String hasIdentityAttempts) {
     this.hasIdentityAttempts = hasIdentityAttempts;
   }
+
 
   /**
    * isInProofFile.
    *
    * @return RecipientProofFile
-   */
+   **/
   public RecipientProofFile isInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
     return this;
@@ -49,18 +60,20 @@ public class RecipientProofFile {
 
   /**
    * .
-   *
    * @return isInProofFile
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getIsInProofFile() {
     return isInProofFile;
   }
 
-  /** setIsInProofFile. */
+  /**
+   * setIsInProofFile.
+   **/
   public void setIsInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
   }
+
 
   /**
    * Compares objects.
@@ -76,32 +89,36 @@ public class RecipientProofFile {
       return false;
     }
     RecipientProofFile recipientProofFile = (RecipientProofFile) o;
-    return Objects.equals(this.hasIdentityAttempts, recipientProofFile.hasIdentityAttempts)
-        && Objects.equals(this.isInProofFile, recipientProofFile.isInProofFile);
+    return Objects.equals(this.hasIdentityAttempts, recipientProofFile.hasIdentityAttempts) &&
+        Objects.equals(this.isInProofFile, recipientProofFile.isInProofFile);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(hasIdentityAttempts, isInProofFile);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientProofFile {\n");
-
-    sb.append("    hasIdentityAttempts: ")
-        .append(toIndentedString(hasIdentityAttempts))
-        .append("\n");
+    
+    sb.append("    hasIdentityAttempts: ").append(toIndentedString(hasIdentityAttempts)).append("\n");
     sb.append("    isInProofFile: ").append(toIndentedString(isInProofFile)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -109,4 +126,6 @@ public class RecipientProofFile {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

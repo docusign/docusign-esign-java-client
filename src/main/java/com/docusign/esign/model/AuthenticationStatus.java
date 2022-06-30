@@ -1,12 +1,20 @@
 package com.docusign.esign.model;
 
+import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.EventResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Objects;
 
-/** Contains information about the authentication status.. */
+/**
+ * Contains information about the authentication status..
+ *
+ */
 @ApiModel(description = "Contains information about the authentication status.")
+
 public class AuthenticationStatus {
   @JsonProperty("accessCodeResult")
   private EventResult accessCodeResult = null;
@@ -65,11 +73,12 @@ public class AuthenticationStatus {
   @JsonProperty("yahooResult")
   private EventResult yahooResult = null;
 
+
   /**
    * accessCodeResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus accessCodeResult(EventResult accessCodeResult) {
     this.accessCodeResult = accessCodeResult;
     return this;
@@ -77,24 +86,26 @@ public class AuthenticationStatus {
 
   /**
    * Get accessCodeResult.
-   *
    * @return accessCodeResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getAccessCodeResult() {
     return accessCodeResult;
   }
 
-  /** setAccessCodeResult. */
+  /**
+   * setAccessCodeResult.
+   **/
   public void setAccessCodeResult(EventResult accessCodeResult) {
     this.accessCodeResult = accessCodeResult;
   }
+
 
   /**
    * ageVerifyResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus ageVerifyResult(EventResult ageVerifyResult) {
     this.ageVerifyResult = ageVerifyResult;
     return this;
@@ -102,24 +113,26 @@ public class AuthenticationStatus {
 
   /**
    * Get ageVerifyResult.
-   *
    * @return ageVerifyResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getAgeVerifyResult() {
     return ageVerifyResult;
   }
 
-  /** setAgeVerifyResult. */
+  /**
+   * setAgeVerifyResult.
+   **/
   public void setAgeVerifyResult(EventResult ageVerifyResult) {
     this.ageVerifyResult = ageVerifyResult;
   }
+
 
   /**
    * anySocialIDResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus anySocialIDResult(EventResult anySocialIDResult) {
     this.anySocialIDResult = anySocialIDResult;
     return this;
@@ -127,24 +140,26 @@ public class AuthenticationStatus {
 
   /**
    * Get anySocialIDResult.
-   *
    * @return anySocialIDResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getAnySocialIDResult() {
     return anySocialIDResult;
   }
 
-  /** setAnySocialIDResult. */
+  /**
+   * setAnySocialIDResult.
+   **/
   public void setAnySocialIDResult(EventResult anySocialIDResult) {
     this.anySocialIDResult = anySocialIDResult;
   }
+
 
   /**
    * facebookResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus facebookResult(EventResult facebookResult) {
     this.facebookResult = facebookResult;
     return this;
@@ -152,24 +167,26 @@ public class AuthenticationStatus {
 
   /**
    * Get facebookResult.
-   *
    * @return facebookResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getFacebookResult() {
     return facebookResult;
   }
 
-  /** setFacebookResult. */
+  /**
+   * setFacebookResult.
+   **/
   public void setFacebookResult(EventResult facebookResult) {
     this.facebookResult = facebookResult;
   }
+
 
   /**
    * googleResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus googleResult(EventResult googleResult) {
     this.googleResult = googleResult;
     return this;
@@ -177,24 +194,26 @@ public class AuthenticationStatus {
 
   /**
    * Get googleResult.
-   *
    * @return googleResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getGoogleResult() {
     return googleResult;
   }
 
-  /** setGoogleResult. */
+  /**
+   * setGoogleResult.
+   **/
   public void setGoogleResult(EventResult googleResult) {
     this.googleResult = googleResult;
   }
+
 
   /**
    * identityVerificationResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus identityVerificationResult(EventResult identityVerificationResult) {
     this.identityVerificationResult = identityVerificationResult;
     return this;
@@ -202,24 +221,26 @@ public class AuthenticationStatus {
 
   /**
    * Get identityVerificationResult.
-   *
    * @return identityVerificationResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getIdentityVerificationResult() {
     return identityVerificationResult;
   }
 
-  /** setIdentityVerificationResult. */
+  /**
+   * setIdentityVerificationResult.
+   **/
   public void setIdentityVerificationResult(EventResult identityVerificationResult) {
     this.identityVerificationResult = identityVerificationResult;
   }
+
 
   /**
    * idLookupResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus idLookupResult(EventResult idLookupResult) {
     this.idLookupResult = idLookupResult;
     return this;
@@ -227,24 +248,26 @@ public class AuthenticationStatus {
 
   /**
    * Get idLookupResult.
-   *
    * @return idLookupResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getIdLookupResult() {
     return idLookupResult;
   }
 
-  /** setIdLookupResult. */
+  /**
+   * setIdLookupResult.
+   **/
   public void setIdLookupResult(EventResult idLookupResult) {
     this.idLookupResult = idLookupResult;
   }
+
 
   /**
    * idQuestionsResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus idQuestionsResult(EventResult idQuestionsResult) {
     this.idQuestionsResult = idQuestionsResult;
     return this;
@@ -252,24 +275,26 @@ public class AuthenticationStatus {
 
   /**
    * Get idQuestionsResult.
-   *
    * @return idQuestionsResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getIdQuestionsResult() {
     return idQuestionsResult;
   }
 
-  /** setIdQuestionsResult. */
+  /**
+   * setIdQuestionsResult.
+   **/
   public void setIdQuestionsResult(EventResult idQuestionsResult) {
     this.idQuestionsResult = idQuestionsResult;
   }
+
 
   /**
    * linkedinResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus linkedinResult(EventResult linkedinResult) {
     this.linkedinResult = linkedinResult;
     return this;
@@ -277,24 +302,26 @@ public class AuthenticationStatus {
 
   /**
    * Get linkedinResult.
-   *
    * @return linkedinResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getLinkedinResult() {
     return linkedinResult;
   }
 
-  /** setLinkedinResult. */
+  /**
+   * setLinkedinResult.
+   **/
   public void setLinkedinResult(EventResult linkedinResult) {
     this.linkedinResult = linkedinResult;
   }
+
 
   /**
    * liveIDResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus liveIDResult(EventResult liveIDResult) {
     this.liveIDResult = liveIDResult;
     return this;
@@ -302,24 +329,26 @@ public class AuthenticationStatus {
 
   /**
    * Get liveIDResult.
-   *
    * @return liveIDResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getLiveIDResult() {
     return liveIDResult;
   }
 
-  /** setLiveIDResult. */
+  /**
+   * setLiveIDResult.
+   **/
   public void setLiveIDResult(EventResult liveIDResult) {
     this.liveIDResult = liveIDResult;
   }
+
 
   /**
    * ofacResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus ofacResult(EventResult ofacResult) {
     this.ofacResult = ofacResult;
     return this;
@@ -327,24 +356,26 @@ public class AuthenticationStatus {
 
   /**
    * Get ofacResult.
-   *
    * @return ofacResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getOfacResult() {
     return ofacResult;
   }
 
-  /** setOfacResult. */
+  /**
+   * setOfacResult.
+   **/
   public void setOfacResult(EventResult ofacResult) {
     this.ofacResult = ofacResult;
   }
+
 
   /**
    * openIDResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus openIDResult(EventResult openIDResult) {
     this.openIDResult = openIDResult;
     return this;
@@ -352,24 +383,26 @@ public class AuthenticationStatus {
 
   /**
    * Get openIDResult.
-   *
    * @return openIDResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getOpenIDResult() {
     return openIDResult;
   }
 
-  /** setOpenIDResult. */
+  /**
+   * setOpenIDResult.
+   **/
   public void setOpenIDResult(EventResult openIDResult) {
     this.openIDResult = openIDResult;
   }
+
 
   /**
    * phoneAuthResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus phoneAuthResult(EventResult phoneAuthResult) {
     this.phoneAuthResult = phoneAuthResult;
     return this;
@@ -377,24 +410,26 @@ public class AuthenticationStatus {
 
   /**
    * Get phoneAuthResult.
-   *
    * @return phoneAuthResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getPhoneAuthResult() {
     return phoneAuthResult;
   }
 
-  /** setPhoneAuthResult. */
+  /**
+   * setPhoneAuthResult.
+   **/
   public void setPhoneAuthResult(EventResult phoneAuthResult) {
     this.phoneAuthResult = phoneAuthResult;
   }
+
 
   /**
    * salesforceResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus salesforceResult(EventResult salesforceResult) {
     this.salesforceResult = salesforceResult;
     return this;
@@ -402,24 +437,26 @@ public class AuthenticationStatus {
 
   /**
    * Get salesforceResult.
-   *
    * @return salesforceResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getSalesforceResult() {
     return salesforceResult;
   }
 
-  /** setSalesforceResult. */
+  /**
+   * setSalesforceResult.
+   **/
   public void setSalesforceResult(EventResult salesforceResult) {
     this.salesforceResult = salesforceResult;
   }
+
 
   /**
    * signatureProviderResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus signatureProviderResult(EventResult signatureProviderResult) {
     this.signatureProviderResult = signatureProviderResult;
     return this;
@@ -427,24 +464,26 @@ public class AuthenticationStatus {
 
   /**
    * Get signatureProviderResult.
-   *
    * @return signatureProviderResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getSignatureProviderResult() {
     return signatureProviderResult;
   }
 
-  /** setSignatureProviderResult. */
+  /**
+   * setSignatureProviderResult.
+   **/
   public void setSignatureProviderResult(EventResult signatureProviderResult) {
     this.signatureProviderResult = signatureProviderResult;
   }
+
 
   /**
    * smsAuthResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus smsAuthResult(EventResult smsAuthResult) {
     this.smsAuthResult = smsAuthResult;
     return this;
@@ -452,24 +491,26 @@ public class AuthenticationStatus {
 
   /**
    * Get smsAuthResult.
-   *
    * @return smsAuthResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getSmsAuthResult() {
     return smsAuthResult;
   }
 
-  /** setSmsAuthResult. */
+  /**
+   * setSmsAuthResult.
+   **/
   public void setSmsAuthResult(EventResult smsAuthResult) {
     this.smsAuthResult = smsAuthResult;
   }
+
 
   /**
    * sTANPinResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus sTANPinResult(EventResult sTANPinResult) {
     this.sTANPinResult = sTANPinResult;
     return this;
@@ -477,24 +518,26 @@ public class AuthenticationStatus {
 
   /**
    * Get sTANPinResult.
-   *
    * @return sTANPinResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getSTANPinResult() {
     return sTANPinResult;
   }
 
-  /** setSTANPinResult. */
+  /**
+   * setSTANPinResult.
+   **/
   public void setSTANPinResult(EventResult sTANPinResult) {
     this.sTANPinResult = sTANPinResult;
   }
+
 
   /**
    * twitterResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus twitterResult(EventResult twitterResult) {
     this.twitterResult = twitterResult;
     return this;
@@ -502,24 +545,26 @@ public class AuthenticationStatus {
 
   /**
    * Get twitterResult.
-   *
    * @return twitterResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getTwitterResult() {
     return twitterResult;
   }
 
-  /** setTwitterResult. */
+  /**
+   * setTwitterResult.
+   **/
   public void setTwitterResult(EventResult twitterResult) {
     this.twitterResult = twitterResult;
   }
+
 
   /**
    * yahooResult.
    *
    * @return AuthenticationStatus
-   */
+   **/
   public AuthenticationStatus yahooResult(EventResult yahooResult) {
     this.yahooResult = yahooResult;
     return this;
@@ -527,18 +572,20 @@ public class AuthenticationStatus {
 
   /**
    * Get yahooResult.
-   *
    * @return yahooResult
-   */
+   **/
   @ApiModelProperty(value = "")
   public EventResult getYahooResult() {
     return yahooResult;
   }
 
-  /** setYahooResult. */
+  /**
+   * setYahooResult.
+   **/
   public void setYahooResult(EventResult yahooResult) {
     this.yahooResult = yahooResult;
   }
+
 
   /**
    * Compares objects.
@@ -554,68 +601,50 @@ public class AuthenticationStatus {
       return false;
     }
     AuthenticationStatus authenticationStatus = (AuthenticationStatus) o;
-    return Objects.equals(this.accessCodeResult, authenticationStatus.accessCodeResult)
-        && Objects.equals(this.ageVerifyResult, authenticationStatus.ageVerifyResult)
-        && Objects.equals(this.anySocialIDResult, authenticationStatus.anySocialIDResult)
-        && Objects.equals(this.facebookResult, authenticationStatus.facebookResult)
-        && Objects.equals(this.googleResult, authenticationStatus.googleResult)
-        && Objects.equals(
-            this.identityVerificationResult, authenticationStatus.identityVerificationResult)
-        && Objects.equals(this.idLookupResult, authenticationStatus.idLookupResult)
-        && Objects.equals(this.idQuestionsResult, authenticationStatus.idQuestionsResult)
-        && Objects.equals(this.linkedinResult, authenticationStatus.linkedinResult)
-        && Objects.equals(this.liveIDResult, authenticationStatus.liveIDResult)
-        && Objects.equals(this.ofacResult, authenticationStatus.ofacResult)
-        && Objects.equals(this.openIDResult, authenticationStatus.openIDResult)
-        && Objects.equals(this.phoneAuthResult, authenticationStatus.phoneAuthResult)
-        && Objects.equals(this.salesforceResult, authenticationStatus.salesforceResult)
-        && Objects.equals(
-            this.signatureProviderResult, authenticationStatus.signatureProviderResult)
-        && Objects.equals(this.smsAuthResult, authenticationStatus.smsAuthResult)
-        && Objects.equals(this.sTANPinResult, authenticationStatus.sTANPinResult)
-        && Objects.equals(this.twitterResult, authenticationStatus.twitterResult)
-        && Objects.equals(this.yahooResult, authenticationStatus.yahooResult);
+    return Objects.equals(this.accessCodeResult, authenticationStatus.accessCodeResult) &&
+        Objects.equals(this.ageVerifyResult, authenticationStatus.ageVerifyResult) &&
+        Objects.equals(this.anySocialIDResult, authenticationStatus.anySocialIDResult) &&
+        Objects.equals(this.facebookResult, authenticationStatus.facebookResult) &&
+        Objects.equals(this.googleResult, authenticationStatus.googleResult) &&
+        Objects.equals(this.identityVerificationResult, authenticationStatus.identityVerificationResult) &&
+        Objects.equals(this.idLookupResult, authenticationStatus.idLookupResult) &&
+        Objects.equals(this.idQuestionsResult, authenticationStatus.idQuestionsResult) &&
+        Objects.equals(this.linkedinResult, authenticationStatus.linkedinResult) &&
+        Objects.equals(this.liveIDResult, authenticationStatus.liveIDResult) &&
+        Objects.equals(this.ofacResult, authenticationStatus.ofacResult) &&
+        Objects.equals(this.openIDResult, authenticationStatus.openIDResult) &&
+        Objects.equals(this.phoneAuthResult, authenticationStatus.phoneAuthResult) &&
+        Objects.equals(this.salesforceResult, authenticationStatus.salesforceResult) &&
+        Objects.equals(this.signatureProviderResult, authenticationStatus.signatureProviderResult) &&
+        Objects.equals(this.smsAuthResult, authenticationStatus.smsAuthResult) &&
+        Objects.equals(this.sTANPinResult, authenticationStatus.sTANPinResult) &&
+        Objects.equals(this.twitterResult, authenticationStatus.twitterResult) &&
+        Objects.equals(this.yahooResult, authenticationStatus.yahooResult);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        accessCodeResult,
-        ageVerifyResult,
-        anySocialIDResult,
-        facebookResult,
-        googleResult,
-        identityVerificationResult,
-        idLookupResult,
-        idQuestionsResult,
-        linkedinResult,
-        liveIDResult,
-        ofacResult,
-        openIDResult,
-        phoneAuthResult,
-        salesforceResult,
-        signatureProviderResult,
-        smsAuthResult,
-        sTANPinResult,
-        twitterResult,
-        yahooResult);
+    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult, identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult, openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult, twitterResult, yahooResult);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationStatus {\n");
-
+    
     sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
     sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
     sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
     sb.append("    facebookResult: ").append(toIndentedString(facebookResult)).append("\n");
     sb.append("    googleResult: ").append(toIndentedString(googleResult)).append("\n");
-    sb.append("    identityVerificationResult: ")
-        .append(toIndentedString(identityVerificationResult))
-        .append("\n");
+    sb.append("    identityVerificationResult: ").append(toIndentedString(identityVerificationResult)).append("\n");
     sb.append("    idLookupResult: ").append(toIndentedString(idLookupResult)).append("\n");
     sb.append("    idQuestionsResult: ").append(toIndentedString(idQuestionsResult)).append("\n");
     sb.append("    linkedinResult: ").append(toIndentedString(linkedinResult)).append("\n");
@@ -624,9 +653,7 @@ public class AuthenticationStatus {
     sb.append("    openIDResult: ").append(toIndentedString(openIDResult)).append("\n");
     sb.append("    phoneAuthResult: ").append(toIndentedString(phoneAuthResult)).append("\n");
     sb.append("    salesforceResult: ").append(toIndentedString(salesforceResult)).append("\n");
-    sb.append("    signatureProviderResult: ")
-        .append(toIndentedString(signatureProviderResult))
-        .append("\n");
+    sb.append("    signatureProviderResult: ").append(toIndentedString(signatureProviderResult)).append("\n");
     sb.append("    smsAuthResult: ").append(toIndentedString(smsAuthResult)).append("\n");
     sb.append("    sTANPinResult: ").append(toIndentedString(sTANPinResult)).append("\n");
     sb.append("    twitterResult: ").append(toIndentedString(twitterResult)).append("\n");
@@ -636,7 +663,8 @@ public class AuthenticationStatus {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -644,4 +672,6 @@ public class AuthenticationStatus {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

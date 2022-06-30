@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.SenderEmailNotifications;
+import com.docusign.esign.model.SignerEmailNotifications;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** NotificationDefaultSettings. */
+/**
+ * NotificationDefaultSettings.
+ *
+ */
+
 public class NotificationDefaultSettings {
   @JsonProperty("senderEmailNotifications")
   private SenderEmailNotifications senderEmailNotifications = null;
@@ -12,57 +22,60 @@ public class NotificationDefaultSettings {
   @JsonProperty("signerEmailNotifications")
   private SignerEmailNotifications signerEmailNotifications = null;
 
+
   /**
    * senderEmailNotifications.
    *
    * @return NotificationDefaultSettings
-   */
-  public NotificationDefaultSettings senderEmailNotifications(
-      SenderEmailNotifications senderEmailNotifications) {
+   **/
+  public NotificationDefaultSettings senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
     return this;
   }
 
   /**
    * Get senderEmailNotifications.
-   *
    * @return senderEmailNotifications
-   */
+   **/
   @ApiModelProperty(value = "")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
 
-  /** setSenderEmailNotifications. */
+  /**
+   * setSenderEmailNotifications.
+   **/
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
+
 
   /**
    * signerEmailNotifications.
    *
    * @return NotificationDefaultSettings
-   */
-  public NotificationDefaultSettings signerEmailNotifications(
-      SignerEmailNotifications signerEmailNotifications) {
+   **/
+  public NotificationDefaultSettings signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
     return this;
   }
 
   /**
    * Get signerEmailNotifications.
-   *
    * @return signerEmailNotifications
-   */
+   **/
   @ApiModelProperty(value = "")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
 
-  /** setSignerEmailNotifications. */
+  /**
+   * setSignerEmailNotifications.
+   **/
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
+
 
   /**
    * Compares objects.
@@ -78,36 +91,36 @@ public class NotificationDefaultSettings {
       return false;
     }
     NotificationDefaultSettings notificationDefaultSettings = (NotificationDefaultSettings) o;
-    return Objects.equals(
-            this.senderEmailNotifications, notificationDefaultSettings.senderEmailNotifications)
-        && Objects.equals(
-            this.signerEmailNotifications, notificationDefaultSettings.signerEmailNotifications);
+    return Objects.equals(this.senderEmailNotifications, notificationDefaultSettings.senderEmailNotifications) &&
+        Objects.equals(this.signerEmailNotifications, notificationDefaultSettings.signerEmailNotifications);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(senderEmailNotifications, signerEmailNotifications);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationDefaultSettings {\n");
-
-    sb.append("    senderEmailNotifications: ")
-        .append(toIndentedString(senderEmailNotifications))
-        .append("\n");
-    sb.append("    signerEmailNotifications: ")
-        .append(toIndentedString(signerEmailNotifications))
-        .append("\n");
+    
+    sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
+    sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -115,4 +128,6 @@ public class NotificationDefaultSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

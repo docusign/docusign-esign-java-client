@@ -1,29 +1,39 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.Contact;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ContactUpdateResponse. */
+/**
+ * ContactUpdateResponse.
+ *
+ */
+
 public class ContactUpdateResponse {
   @JsonProperty("contacts")
   private java.util.List<Contact> contacts = null;
+
 
   /**
    * contacts.
    *
    * @return ContactUpdateResponse
-   */
+   **/
   public ContactUpdateResponse contacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
     return this;
   }
-
+  
   /**
    * addContactsItem.
    *
    * @return ContactUpdateResponse
-   */
+   **/
   public ContactUpdateResponse addContactsItem(Contact contactsItem) {
     if (this.contacts == null) {
       this.contacts = new java.util.ArrayList<>();
@@ -34,18 +44,20 @@ public class ContactUpdateResponse {
 
   /**
    * .
-   *
    * @return contacts
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Contact> getContacts() {
     return contacts;
   }
 
-  /** setContacts. */
+  /**
+   * setContacts.
+   **/
   public void setContacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +76,31 @@ public class ContactUpdateResponse {
     return Objects.equals(this.contacts, contactUpdateResponse.contacts);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(contacts);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactUpdateResponse {\n");
-
+    
     sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +108,6 @@ public class ContactUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

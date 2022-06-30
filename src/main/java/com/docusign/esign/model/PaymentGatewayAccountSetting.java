@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** PaymentGatewayAccountSetting. */
+/**
+ * PaymentGatewayAccountSetting.
+ *
+ */
+
 public class PaymentGatewayAccountSetting {
   @JsonProperty("apiFields")
   private String apiFields = null;
@@ -18,11 +26,12 @@ public class PaymentGatewayAccountSetting {
   @JsonProperty("merchantId")
   private String merchantId = null;
 
+
   /**
    * apiFields.
    *
    * @return PaymentGatewayAccountSetting
-   */
+   **/
   public PaymentGatewayAccountSetting apiFields(String apiFields) {
     this.apiFields = apiFields;
     return this;
@@ -30,24 +39,26 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   *
    * @return apiFields
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getApiFields() {
     return apiFields;
   }
 
-  /** setApiFields. */
+  /**
+   * setApiFields.
+   **/
   public void setApiFields(String apiFields) {
     this.apiFields = apiFields;
   }
+
 
   /**
    * authorizationCode.
    *
    * @return PaymentGatewayAccountSetting
-   */
+   **/
   public PaymentGatewayAccountSetting authorizationCode(String authorizationCode) {
     this.authorizationCode = authorizationCode;
     return this;
@@ -55,24 +66,26 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   *
    * @return authorizationCode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAuthorizationCode() {
     return authorizationCode;
   }
 
-  /** setAuthorizationCode. */
+  /**
+   * setAuthorizationCode.
+   **/
   public void setAuthorizationCode(String authorizationCode) {
     this.authorizationCode = authorizationCode;
   }
+
 
   /**
    * credentialStatus.
    *
    * @return PaymentGatewayAccountSetting
-   */
+   **/
   public PaymentGatewayAccountSetting credentialStatus(String credentialStatus) {
     this.credentialStatus = credentialStatus;
     return this;
@@ -80,24 +93,26 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   *
    * @return credentialStatus
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCredentialStatus() {
     return credentialStatus;
   }
 
-  /** setCredentialStatus. */
+  /**
+   * setCredentialStatus.
+   **/
   public void setCredentialStatus(String credentialStatus) {
     this.credentialStatus = credentialStatus;
   }
+
 
   /**
    * merchantId.
    *
    * @return PaymentGatewayAccountSetting
-   */
+   **/
   public PaymentGatewayAccountSetting merchantId(String merchantId) {
     this.merchantId = merchantId;
     return this;
@@ -105,18 +120,20 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   *
    * @return merchantId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMerchantId() {
     return merchantId;
   }
 
-  /** setMerchantId. */
+  /**
+   * setMerchantId.
+   **/
   public void setMerchantId(String merchantId) {
     this.merchantId = merchantId;
   }
+
 
   /**
    * Compares objects.
@@ -132,24 +149,29 @@ public class PaymentGatewayAccountSetting {
       return false;
     }
     PaymentGatewayAccountSetting paymentGatewayAccountSetting = (PaymentGatewayAccountSetting) o;
-    return Objects.equals(this.apiFields, paymentGatewayAccountSetting.apiFields)
-        && Objects.equals(this.authorizationCode, paymentGatewayAccountSetting.authorizationCode)
-        && Objects.equals(this.credentialStatus, paymentGatewayAccountSetting.credentialStatus)
-        && Objects.equals(this.merchantId, paymentGatewayAccountSetting.merchantId);
+    return Objects.equals(this.apiFields, paymentGatewayAccountSetting.apiFields) &&
+        Objects.equals(this.authorizationCode, paymentGatewayAccountSetting.authorizationCode) &&
+        Objects.equals(this.credentialStatus, paymentGatewayAccountSetting.credentialStatus) &&
+        Objects.equals(this.merchantId, paymentGatewayAccountSetting.merchantId);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(apiFields, authorizationCode, credentialStatus, merchantId);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccountSetting {\n");
-
+    
     sb.append("    apiFields: ").append(toIndentedString(apiFields)).append("\n");
     sb.append("    authorizationCode: ").append(toIndentedString(authorizationCode)).append("\n");
     sb.append("    credentialStatus: ").append(toIndentedString(credentialStatus)).append("\n");
@@ -159,7 +181,8 @@ public class PaymentGatewayAccountSetting {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -167,4 +190,6 @@ public class PaymentGatewayAccountSetting {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

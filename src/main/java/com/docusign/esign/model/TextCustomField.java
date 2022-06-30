@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** TextCustomField. */
+/**
+ * TextCustomField.
+ *
+ */
+
 public class TextCustomField {
   @JsonProperty("configurationType")
   private String configurationType = null;
@@ -27,39 +36,39 @@ public class TextCustomField {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * configurationType.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField configurationType(String configurationType) {
     this.configurationType = configurationType;
     return this;
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The only supported
-   * value is **salesforce**..
-   *
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
-   */
-  @ApiModelProperty(
-      value =
-          "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+   **/
+  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
 
-  /** setConfigurationType. */
+  /**
+   * setConfigurationType.
+   **/
   public void setConfigurationType(String configurationType) {
     this.configurationType = configurationType;
   }
+
 
   /**
    * errorDetails.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -67,24 +76,26 @@ public class TextCustomField {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * fieldId.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField fieldId(String fieldId) {
     this.fieldId = fieldId;
     return this;
@@ -92,24 +103,26 @@ public class TextCustomField {
 
   /**
    * An ID used to specify a custom field..
-   *
    * @return fieldId
-   */
+   **/
   @ApiModelProperty(value = "An ID used to specify a custom field.")
   public String getFieldId() {
     return fieldId;
   }
 
-  /** setFieldId. */
+  /**
+   * setFieldId.
+   **/
   public void setFieldId(String fieldId) {
     this.fieldId = fieldId;
   }
+
 
   /**
    * name.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField name(String name) {
     this.name = name;
     return this;
@@ -117,24 +130,26 @@ public class TextCustomField {
 
   /**
    * The name of the custom field..
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "The name of the custom field.")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * required.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField required(String required) {
     this.required = required;
     return this;
@@ -142,24 +157,26 @@ public class TextCustomField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   *
    * @return required
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
 
-  /** setRequired. */
+  /**
+   * setRequired.
+   **/
   public void setRequired(String required) {
     this.required = required;
   }
+
 
   /**
    * show.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField show(String show) {
     this.show = show;
     return this;
@@ -167,24 +184,26 @@ public class TextCustomField {
 
   /**
    * A boolean indicating if the value should be displayed..
-   *
    * @return show
-   */
+   **/
   @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
   public String getShow() {
     return show;
   }
 
-  /** setShow. */
+  /**
+   * setShow.
+   **/
   public void setShow(String show) {
     this.show = show;
   }
+
 
   /**
    * value.
    *
    * @return TextCustomField
-   */
+   **/
   public TextCustomField value(String value) {
     this.value = value;
     return this;
@@ -192,18 +211,20 @@ public class TextCustomField {
 
   /**
    * The value of the custom field..
-   *
    * @return value
-   */
+   **/
   @ApiModelProperty(value = "The value of the custom field.")
   public String getValue() {
     return value;
   }
 
-  /** setValue. */
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -219,27 +240,32 @@ public class TextCustomField {
       return false;
     }
     TextCustomField textCustomField = (TextCustomField) o;
-    return Objects.equals(this.configurationType, textCustomField.configurationType)
-        && Objects.equals(this.errorDetails, textCustomField.errorDetails)
-        && Objects.equals(this.fieldId, textCustomField.fieldId)
-        && Objects.equals(this.name, textCustomField.name)
-        && Objects.equals(this.required, textCustomField.required)
-        && Objects.equals(this.show, textCustomField.show)
-        && Objects.equals(this.value, textCustomField.value);
+    return Objects.equals(this.configurationType, textCustomField.configurationType) &&
+        Objects.equals(this.errorDetails, textCustomField.errorDetails) &&
+        Objects.equals(this.fieldId, textCustomField.fieldId) &&
+        Objects.equals(this.name, textCustomField.name) &&
+        Objects.equals(this.required, textCustomField.required) &&
+        Objects.equals(this.show, textCustomField.show) &&
+        Objects.equals(this.value, textCustomField.value);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(configurationType, errorDetails, fieldId, name, required, show, value);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TextCustomField {\n");
-
+    
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -252,7 +278,8 @@ public class TextCustomField {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -260,4 +287,6 @@ public class TextCustomField {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

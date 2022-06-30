@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** PayPalLegacySettings. */
+/**
+ * PayPalLegacySettings.
+ *
+ */
+
 public class PayPalLegacySettings {
   @JsonProperty("currency")
   private String currency = null;
@@ -21,11 +29,12 @@ public class PayPalLegacySettings {
   @JsonProperty("vendor")
   private String vendor = null;
 
+
   /**
    * currency.
    *
    * @return PayPalLegacySettings
-   */
+   **/
   public PayPalLegacySettings currency(String currency) {
     this.currency = currency;
     return this;
@@ -33,24 +42,26 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   *
    * @return currency
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCurrency() {
     return currency;
   }
 
-  /** setCurrency. */
+  /**
+   * setCurrency.
+   **/
   public void setCurrency(String currency) {
     this.currency = currency;
   }
+
 
   /**
    * partner.
    *
    * @return PayPalLegacySettings
-   */
+   **/
   public PayPalLegacySettings partner(String partner) {
     this.partner = partner;
     return this;
@@ -58,24 +69,26 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   *
    * @return partner
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPartner() {
     return partner;
   }
 
-  /** setPartner. */
+  /**
+   * setPartner.
+   **/
   public void setPartner(String partner) {
     this.partner = partner;
   }
+
 
   /**
    * password.
    *
    * @return PayPalLegacySettings
-   */
+   **/
   public PayPalLegacySettings password(String password) {
     this.password = password;
     return this;
@@ -83,24 +96,26 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   *
    * @return password
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
-  /** setPassword. */
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
+
 
   /**
    * userName.
    *
    * @return PayPalLegacySettings
-   */
+   **/
   public PayPalLegacySettings userName(String userName) {
     this.userName = userName;
     return this;
@@ -108,24 +123,26 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   *
    * @return userName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getUserName() {
     return userName;
   }
 
-  /** setUserName. */
+  /**
+   * setUserName.
+   **/
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * vendor.
    *
    * @return PayPalLegacySettings
-   */
+   **/
   public PayPalLegacySettings vendor(String vendor) {
     this.vendor = vendor;
     return this;
@@ -133,18 +150,20 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   *
    * @return vendor
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getVendor() {
     return vendor;
   }
 
-  /** setVendor. */
+  /**
+   * setVendor.
+   **/
   public void setVendor(String vendor) {
     this.vendor = vendor;
   }
+
 
   /**
    * Compares objects.
@@ -160,25 +179,30 @@ public class PayPalLegacySettings {
       return false;
     }
     PayPalLegacySettings payPalLegacySettings = (PayPalLegacySettings) o;
-    return Objects.equals(this.currency, payPalLegacySettings.currency)
-        && Objects.equals(this.partner, payPalLegacySettings.partner)
-        && Objects.equals(this.password, payPalLegacySettings.password)
-        && Objects.equals(this.userName, payPalLegacySettings.userName)
-        && Objects.equals(this.vendor, payPalLegacySettings.vendor);
+    return Objects.equals(this.currency, payPalLegacySettings.currency) &&
+        Objects.equals(this.partner, payPalLegacySettings.partner) &&
+        Objects.equals(this.password, payPalLegacySettings.password) &&
+        Objects.equals(this.userName, payPalLegacySettings.userName) &&
+        Objects.equals(this.vendor, payPalLegacySettings.vendor);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(currency, partner, password, userName, vendor);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PayPalLegacySettings {\n");
-
+    
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    partner: ").append(toIndentedString(partner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -189,7 +213,8 @@ public class PayPalLegacySettings {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -197,4 +222,6 @@ public class PayPalLegacySettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.UserInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** UserSharedItem. */
+/**
+ * UserSharedItem.
+ *
+ */
+
 public class UserSharedItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -15,11 +25,12 @@ public class UserSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * errorDetails.
    *
    * @return UserSharedItem
-   */
+   **/
   public UserSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
@@ -27,24 +38,26 @@ public class UserSharedItem {
 
   /**
    * Get errorDetails.
-   *
    * @return errorDetails
-   */
+   **/
   @ApiModelProperty(value = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * shared.
    *
    * @return UserSharedItem
-   */
+   **/
   public UserSharedItem shared(String shared) {
     this.shared = shared;
     return this;
@@ -52,24 +65,26 @@ public class UserSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * user.
    *
    * @return UserSharedItem
-   */
+   **/
   public UserSharedItem user(UserInfo user) {
     this.user = user;
     return this;
@@ -77,18 +92,20 @@ public class UserSharedItem {
 
   /**
    * Get user.
-   *
    * @return user
-   */
+   **/
   @ApiModelProperty(value = "")
   public UserInfo getUser() {
     return user;
   }
 
-  /** setUser. */
+  /**
+   * setUser.
+   **/
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +121,28 @@ public class UserSharedItem {
       return false;
     }
     UserSharedItem userSharedItem = (UserSharedItem) o;
-    return Objects.equals(this.errorDetails, userSharedItem.errorDetails)
-        && Objects.equals(this.shared, userSharedItem.shared)
-        && Objects.equals(this.user, userSharedItem.user);
+    return Objects.equals(this.errorDetails, userSharedItem.errorDetails) &&
+        Objects.equals(this.shared, userSharedItem.shared) &&
+        Objects.equals(this.user, userSharedItem.user);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, shared, user);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -129,7 +151,8 @@ public class UserSharedItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +160,6 @@ public class UserSharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

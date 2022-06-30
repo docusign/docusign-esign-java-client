@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** CorrectViewRequest. */
+/**
+ * CorrectViewRequest.
+ *
+ */
+
 public class CorrectViewRequest {
   @JsonProperty("returnUrl")
   private String returnUrl = null;
@@ -15,43 +23,39 @@ public class CorrectViewRequest {
   @JsonProperty("viewUrl")
   private String viewUrl = null;
 
+
   /**
    * returnUrl.
    *
    * @return CorrectViewRequest
-   */
+   **/
   public CorrectViewRequest returnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
     return this;
   }
 
   /**
-   * The url used after correct/send view session has ended. DocuSign redirects to the url and
-   * includes an event parameter that can be used by your app. The event parameters returned are: *
-   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user
-   * canceled the transaction.) * error (there was an error when performing the correct or send) *
-   * sessionEnd (the session ended before the user completed a different action) ###### Note:
-   * Include https:// in the URL or the redirect might not succeed on some browsers. .
-   *
+   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. .
    * @return returnUrl
-   */
-  @ApiModelProperty(
-      value =
-          "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
+   **/
+  @ApiModelProperty(value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   public String getReturnUrl() {
     return returnUrl;
   }
 
-  /** setReturnUrl. */
+  /**
+   * setReturnUrl.
+   **/
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
+
 
   /**
    * suppressNavigation.
    *
    * @return CorrectViewRequest
-   */
+   **/
   public CorrectViewRequest suppressNavigation(String suppressNavigation) {
     this.suppressNavigation = suppressNavigation;
     return this;
@@ -59,24 +63,26 @@ public class CorrectViewRequest {
 
   /**
    * Specifies whether the window is displayed with or without dressing..
-   *
    * @return suppressNavigation
-   */
+   **/
   @ApiModelProperty(value = "Specifies whether the window is displayed with or without dressing.")
   public String getSuppressNavigation() {
     return suppressNavigation;
   }
 
-  /** setSuppressNavigation. */
+  /**
+   * setSuppressNavigation.
+   **/
   public void setSuppressNavigation(String suppressNavigation) {
     this.suppressNavigation = suppressNavigation;
   }
+
 
   /**
    * viewUrl.
    *
    * @return CorrectViewRequest
-   */
+   **/
   public CorrectViewRequest viewUrl(String viewUrl) {
     this.viewUrl = viewUrl;
     return this;
@@ -84,18 +90,20 @@ public class CorrectViewRequest {
 
   /**
    * .
-   *
    * @return viewUrl
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getViewUrl() {
     return viewUrl;
   }
 
-  /** setViewUrl. */
+  /**
+   * setViewUrl.
+   **/
   public void setViewUrl(String viewUrl) {
     this.viewUrl = viewUrl;
   }
+
 
   /**
    * Compares objects.
@@ -111,23 +119,28 @@ public class CorrectViewRequest {
       return false;
     }
     CorrectViewRequest correctViewRequest = (CorrectViewRequest) o;
-    return Objects.equals(this.returnUrl, correctViewRequest.returnUrl)
-        && Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation)
-        && Objects.equals(this.viewUrl, correctViewRequest.viewUrl);
+    return Objects.equals(this.returnUrl, correctViewRequest.returnUrl) &&
+        Objects.equals(this.suppressNavigation, correctViewRequest.suppressNavigation) &&
+        Objects.equals(this.viewUrl, correctViewRequest.viewUrl);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(returnUrl, suppressNavigation, viewUrl);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorrectViewRequest {\n");
-
+    
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("    suppressNavigation: ").append(toIndentedString(suppressNavigation)).append("\n");
     sb.append("    viewUrl: ").append(toIndentedString(viewUrl)).append("\n");
@@ -136,7 +149,8 @@ public class CorrectViewRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -144,4 +158,6 @@ public class CorrectViewRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

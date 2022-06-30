@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** LockRequest. */
+/**
+ * LockRequest.
+ *
+ */
+
 public class LockRequest {
   @JsonProperty("lockDurationInSeconds")
   private String lockDurationInSeconds = null;
@@ -21,92 +29,93 @@ public class LockRequest {
   @JsonProperty("useScratchPad")
   private String useScratchPad = null;
 
+
   /**
    * lockDurationInSeconds.
    *
    * @return LockRequest
-   */
+   **/
   public LockRequest lockDurationInSeconds(String lockDurationInSeconds) {
     this.lockDurationInSeconds = lockDurationInSeconds;
     return this;
   }
 
   /**
-   * The number of seconds to lock the envelope for editing. Must be greater than 0 seconds..
-   *
+   * The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds..
    * @return lockDurationInSeconds
-   */
-  @ApiModelProperty(
-      value =
-          "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
+   **/
+  @ApiModelProperty(value = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
   }
 
-  /** setLockDurationInSeconds. */
+  /**
+   * setLockDurationInSeconds.
+   **/
   public void setLockDurationInSeconds(String lockDurationInSeconds) {
     this.lockDurationInSeconds = lockDurationInSeconds;
   }
+
 
   /**
    * lockedByApp.
    *
    * @return LockRequest
-   */
+   **/
   public LockRequest lockedByApp(String lockedByApp) {
     this.lockedByApp = lockedByApp;
     return this;
   }
 
   /**
-   * A friendly name of the application used to lock the envelope. Will be used in error messages to
-   * the user when lock conflicts occur..
-   *
+   * A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur..
    * @return lockedByApp
-   */
-  @ApiModelProperty(
-      value =
-          "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
+   **/
+  @ApiModelProperty(value = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
   public String getLockedByApp() {
     return lockedByApp;
   }
 
-  /** setLockedByApp. */
+  /**
+   * setLockedByApp.
+   **/
   public void setLockedByApp(String lockedByApp) {
     this.lockedByApp = lockedByApp;
   }
+
 
   /**
    * lockType.
    *
    * @return LockRequest
-   */
+   **/
   public LockRequest lockType(String lockType) {
     this.lockType = lockType;
     return this;
   }
 
   /**
-   * The type of envelope lock. Currently \"edit\" is the only supported type..
-   *
+   * The type of envelope lock.  Currently \"edit\" is the only supported type..
    * @return lockType
-   */
-  @ApiModelProperty(
-      value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
+   **/
+  @ApiModelProperty(value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   public String getLockType() {
     return lockType;
   }
 
-  /** setLockType. */
+  /**
+   * setLockType.
+   **/
   public void setLockType(String lockType) {
     this.lockType = lockType;
   }
+
 
   /**
    * templatePassword.
    *
    * @return LockRequest
-   */
+   **/
   public LockRequest templatePassword(String templatePassword) {
     this.templatePassword = templatePassword;
     return this;
@@ -114,45 +123,47 @@ public class LockRequest {
 
   /**
    * .
-   *
    * @return templatePassword
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplatePassword() {
     return templatePassword;
   }
 
-  /** setTemplatePassword. */
+  /**
+   * setTemplatePassword.
+   **/
   public void setTemplatePassword(String templatePassword) {
     this.templatePassword = templatePassword;
   }
+
 
   /**
    * useScratchPad.
    *
    * @return LockRequest
-   */
+   **/
   public LockRequest useScratchPad(String useScratchPad) {
     this.useScratchPad = useScratchPad;
     return this;
   }
 
   /**
-   * Reserved for future use. Indicates whether a scratchpad is used for editing information. .
-   *
+   * Reserved for future use.  Indicates whether a scratchpad is used for editing information.  .
    * @return useScratchPad
-   */
-  @ApiModelProperty(
-      value =
-          "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
+   **/
+  @ApiModelProperty(value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
   public String getUseScratchPad() {
     return useScratchPad;
   }
 
-  /** setUseScratchPad. */
+  /**
+   * setUseScratchPad.
+   **/
   public void setUseScratchPad(String useScratchPad) {
     this.useScratchPad = useScratchPad;
   }
+
 
   /**
    * Compares objects.
@@ -168,29 +179,31 @@ public class LockRequest {
       return false;
     }
     LockRequest lockRequest = (LockRequest) o;
-    return Objects.equals(this.lockDurationInSeconds, lockRequest.lockDurationInSeconds)
-        && Objects.equals(this.lockedByApp, lockRequest.lockedByApp)
-        && Objects.equals(this.lockType, lockRequest.lockType)
-        && Objects.equals(this.templatePassword, lockRequest.templatePassword)
-        && Objects.equals(this.useScratchPad, lockRequest.useScratchPad);
+    return Objects.equals(this.lockDurationInSeconds, lockRequest.lockDurationInSeconds) &&
+        Objects.equals(this.lockedByApp, lockRequest.lockedByApp) &&
+        Objects.equals(this.lockType, lockRequest.lockType) &&
+        Objects.equals(this.templatePassword, lockRequest.templatePassword) &&
+        Objects.equals(this.useScratchPad, lockRequest.useScratchPad);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        lockDurationInSeconds, lockedByApp, lockType, templatePassword, useScratchPad);
+    return Objects.hash(lockDurationInSeconds, lockedByApp, lockType, templatePassword, useScratchPad);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockRequest {\n");
-
-    sb.append("    lockDurationInSeconds: ")
-        .append(toIndentedString(lockDurationInSeconds))
-        .append("\n");
+    
+    sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
     sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
     sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
     sb.append("    templatePassword: ").append(toIndentedString(templatePassword)).append("\n");
@@ -200,7 +213,8 @@ public class LockRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -208,4 +222,6 @@ public class LockRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+
