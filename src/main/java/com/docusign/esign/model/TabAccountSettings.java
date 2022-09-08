@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.SettingsMetadata;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** TabAccountSettings. */
+/**
+ * TabAccountSettings.
+ *
+ */
+
 public class TabAccountSettings {
   @JsonProperty("allowTabOrder")
   private String allowTabOrder = null;
@@ -138,11 +147,12 @@ public class TabAccountSettings {
   @JsonProperty("textTabsMetadata")
   private SettingsMetadata textTabsMetadata = null;
 
+
   /**
    * allowTabOrder.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings allowTabOrder(String allowTabOrder) {
     this.allowTabOrder = allowTabOrder;
     return this;
@@ -150,49 +160,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return allowTabOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowTabOrder() {
     return allowTabOrder;
   }
 
-  /** setAllowTabOrder. */
+  /**
+   * setAllowTabOrder.
+   **/
   public void setAllowTabOrder(String allowTabOrder) {
     this.allowTabOrder = allowTabOrder;
   }
+
 
   /**
    * allowTabOrderMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings allowTabOrderMetadata(SettingsMetadata allowTabOrderMetadata) {
     this.allowTabOrderMetadata = allowTabOrderMetadata;
     return this;
   }
 
   /**
-   * Get allowTabOrderMetadata.
-   *
+   * Metadata that indicates whether the `allowTabOrder` property is editable. .
    * @return allowTabOrderMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `allowTabOrder` property is editable. ")
   public SettingsMetadata getAllowTabOrderMetadata() {
     return allowTabOrderMetadata;
   }
 
-  /** setAllowTabOrderMetadata. */
+  /**
+   * setAllowTabOrderMetadata.
+   **/
   public void setAllowTabOrderMetadata(SettingsMetadata allowTabOrderMetadata) {
     this.allowTabOrderMetadata = allowTabOrderMetadata;
   }
+
 
   /**
    * approveDeclineTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings approveDeclineTabsEnabled(String approveDeclineTabsEnabled) {
     this.approveDeclineTabsEnabled = approveDeclineTabsEnabled;
     return this;
@@ -200,50 +214,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return approveDeclineTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getApproveDeclineTabsEnabled() {
     return approveDeclineTabsEnabled;
   }
 
-  /** setApproveDeclineTabsEnabled. */
+  /**
+   * setApproveDeclineTabsEnabled.
+   **/
   public void setApproveDeclineTabsEnabled(String approveDeclineTabsEnabled) {
     this.approveDeclineTabsEnabled = approveDeclineTabsEnabled;
   }
+
 
   /**
    * approveDeclineTabsMetadata.
    *
    * @return TabAccountSettings
-   */
-  public TabAccountSettings approveDeclineTabsMetadata(
-      SettingsMetadata approveDeclineTabsMetadata) {
+   **/
+  public TabAccountSettings approveDeclineTabsMetadata(SettingsMetadata approveDeclineTabsMetadata) {
     this.approveDeclineTabsMetadata = approveDeclineTabsMetadata;
     return this;
   }
 
   /**
-   * Get approveDeclineTabsMetadata.
-   *
+   * Metadata that indicates whether the `approveDeclineTabs` property is editable. .
    * @return approveDeclineTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `approveDeclineTabs` property is editable. ")
   public SettingsMetadata getApproveDeclineTabsMetadata() {
     return approveDeclineTabsMetadata;
   }
 
-  /** setApproveDeclineTabsMetadata. */
+  /**
+   * setApproveDeclineTabsMetadata.
+   **/
   public void setApproveDeclineTabsMetadata(SettingsMetadata approveDeclineTabsMetadata) {
     this.approveDeclineTabsMetadata = approveDeclineTabsMetadata;
   }
+
 
   /**
    * calculatedFieldsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings calculatedFieldsEnabled(String calculatedFieldsEnabled) {
     this.calculatedFieldsEnabled = calculatedFieldsEnabled;
     return this;
@@ -251,49 +268,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return calculatedFieldsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCalculatedFieldsEnabled() {
     return calculatedFieldsEnabled;
   }
 
-  /** setCalculatedFieldsEnabled. */
+  /**
+   * setCalculatedFieldsEnabled.
+   **/
   public void setCalculatedFieldsEnabled(String calculatedFieldsEnabled) {
     this.calculatedFieldsEnabled = calculatedFieldsEnabled;
   }
+
 
   /**
    * calculatedFieldsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings calculatedFieldsMetadata(SettingsMetadata calculatedFieldsMetadata) {
     this.calculatedFieldsMetadata = calculatedFieldsMetadata;
     return this;
   }
 
   /**
-   * Get calculatedFieldsMetadata.
-   *
+   * Metadata that indicates whether the `calculatedFields` property is editable. .
    * @return calculatedFieldsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `calculatedFields` property is editable. ")
   public SettingsMetadata getCalculatedFieldsMetadata() {
     return calculatedFieldsMetadata;
   }
 
-  /** setCalculatedFieldsMetadata. */
+  /**
+   * setCalculatedFieldsMetadata.
+   **/
   public void setCalculatedFieldsMetadata(SettingsMetadata calculatedFieldsMetadata) {
     this.calculatedFieldsMetadata = calculatedFieldsMetadata;
   }
+
 
   /**
    * checkboxTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings checkboxTabsEnabled(String checkboxTabsEnabled) {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
     return this;
@@ -301,49 +322,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return checkboxTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCheckboxTabsEnabled() {
     return checkboxTabsEnabled;
   }
 
-  /** setCheckboxTabsEnabled. */
+  /**
+   * setCheckboxTabsEnabled.
+   **/
   public void setCheckboxTabsEnabled(String checkboxTabsEnabled) {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
   }
+
 
   /**
    * checkBoxTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings checkBoxTabsMetadata(SettingsMetadata checkBoxTabsMetadata) {
     this.checkBoxTabsMetadata = checkBoxTabsMetadata;
     return this;
   }
 
   /**
-   * Get checkBoxTabsMetadata.
-   *
+   * Metadata that indicates whether the `checkBoxTabs` property is editable..
    * @return checkBoxTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `checkBoxTabs` property is editable.")
   public SettingsMetadata getCheckBoxTabsMetadata() {
     return checkBoxTabsMetadata;
   }
 
-  /** setCheckBoxTabsMetadata. */
+  /**
+   * setCheckBoxTabsMetadata.
+   **/
   public void setCheckBoxTabsMetadata(SettingsMetadata checkBoxTabsMetadata) {
     this.checkBoxTabsMetadata = checkBoxTabsMetadata;
   }
+
 
   /**
    * currencyTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings currencyTabsEnabled(String currencyTabsEnabled) {
     this.currencyTabsEnabled = currencyTabsEnabled;
     return this;
@@ -351,49 +376,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return currencyTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCurrencyTabsEnabled() {
     return currencyTabsEnabled;
   }
 
-  /** setCurrencyTabsEnabled. */
+  /**
+   * setCurrencyTabsEnabled.
+   **/
   public void setCurrencyTabsEnabled(String currencyTabsEnabled) {
     this.currencyTabsEnabled = currencyTabsEnabled;
   }
+
 
   /**
    * currencyTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings currencyTabsMetadata(SettingsMetadata currencyTabsMetadata) {
     this.currencyTabsMetadata = currencyTabsMetadata;
     return this;
   }
 
   /**
-   * Get currencyTabsMetadata.
-   *
+   * .
    * @return currencyTabsMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getCurrencyTabsMetadata() {
     return currencyTabsMetadata;
   }
 
-  /** setCurrencyTabsMetadata. */
+  /**
+   * setCurrencyTabsMetadata.
+   **/
   public void setCurrencyTabsMetadata(SettingsMetadata currencyTabsMetadata) {
     this.currencyTabsMetadata = currencyTabsMetadata;
   }
+
 
   /**
    * dataFieldRegexEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings dataFieldRegexEnabled(String dataFieldRegexEnabled) {
     this.dataFieldRegexEnabled = dataFieldRegexEnabled;
     return this;
@@ -401,49 +430,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return dataFieldRegexEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDataFieldRegexEnabled() {
     return dataFieldRegexEnabled;
   }
 
-  /** setDataFieldRegexEnabled. */
+  /**
+   * setDataFieldRegexEnabled.
+   **/
   public void setDataFieldRegexEnabled(String dataFieldRegexEnabled) {
     this.dataFieldRegexEnabled = dataFieldRegexEnabled;
   }
+
 
   /**
    * dataFieldRegexMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings dataFieldRegexMetadata(SettingsMetadata dataFieldRegexMetadata) {
     this.dataFieldRegexMetadata = dataFieldRegexMetadata;
     return this;
   }
 
   /**
-   * Get dataFieldRegexMetadata.
-   *
+   * Metadata that indicates whether the `dataFieldRegex` property is editable. .
    * @return dataFieldRegexMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `dataFieldRegex` property is editable. ")
   public SettingsMetadata getDataFieldRegexMetadata() {
     return dataFieldRegexMetadata;
   }
 
-  /** setDataFieldRegexMetadata. */
+  /**
+   * setDataFieldRegexMetadata.
+   **/
   public void setDataFieldRegexMetadata(SettingsMetadata dataFieldRegexMetadata) {
     this.dataFieldRegexMetadata = dataFieldRegexMetadata;
   }
+
 
   /**
    * dataFieldSizeEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings dataFieldSizeEnabled(String dataFieldSizeEnabled) {
     this.dataFieldSizeEnabled = dataFieldSizeEnabled;
     return this;
@@ -451,49 +484,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return dataFieldSizeEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDataFieldSizeEnabled() {
     return dataFieldSizeEnabled;
   }
 
-  /** setDataFieldSizeEnabled. */
+  /**
+   * setDataFieldSizeEnabled.
+   **/
   public void setDataFieldSizeEnabled(String dataFieldSizeEnabled) {
     this.dataFieldSizeEnabled = dataFieldSizeEnabled;
   }
+
 
   /**
    * dataFieldSizeMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings dataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
     return this;
   }
 
   /**
-   * Get dataFieldSizeMetadata.
-   *
+   * Metadata that indicates whether the `dataFieldSize` property is editable. .
    * @return dataFieldSizeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `dataFieldSize` property is editable. ")
   public SettingsMetadata getDataFieldSizeMetadata() {
     return dataFieldSizeMetadata;
   }
 
-  /** setDataFieldSizeMetadata. */
+  /**
+   * setDataFieldSizeMetadata.
+   **/
   public void setDataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
   }
+
 
   /**
    * drawTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings drawTabsEnabled(String drawTabsEnabled) {
     this.drawTabsEnabled = drawTabsEnabled;
     return this;
@@ -501,49 +538,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return drawTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDrawTabsEnabled() {
     return drawTabsEnabled;
   }
 
-  /** setDrawTabsEnabled. */
+  /**
+   * setDrawTabsEnabled.
+   **/
   public void setDrawTabsEnabled(String drawTabsEnabled) {
     this.drawTabsEnabled = drawTabsEnabled;
   }
+
 
   /**
    * drawTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings drawTabsMetadata(SettingsMetadata drawTabsMetadata) {
     this.drawTabsMetadata = drawTabsMetadata;
     return this;
   }
 
   /**
-   * Get drawTabsMetadata.
-   *
+   * .
    * @return drawTabsMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getDrawTabsMetadata() {
     return drawTabsMetadata;
   }
 
-  /** setDrawTabsMetadata. */
+  /**
+   * setDrawTabsMetadata.
+   **/
   public void setDrawTabsMetadata(SettingsMetadata drawTabsMetadata) {
     this.drawTabsMetadata = drawTabsMetadata;
   }
+
 
   /**
    * firstLastEmailTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings firstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
     this.firstLastEmailTabsEnabled = firstLastEmailTabsEnabled;
     return this;
@@ -551,50 +592,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return firstLastEmailTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFirstLastEmailTabsEnabled() {
     return firstLastEmailTabsEnabled;
   }
 
-  /** setFirstLastEmailTabsEnabled. */
+  /**
+   * setFirstLastEmailTabsEnabled.
+   **/
   public void setFirstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
     this.firstLastEmailTabsEnabled = firstLastEmailTabsEnabled;
   }
+
 
   /**
    * firstLastEmailTabsMetadata.
    *
    * @return TabAccountSettings
-   */
-  public TabAccountSettings firstLastEmailTabsMetadata(
-      SettingsMetadata firstLastEmailTabsMetadata) {
+   **/
+  public TabAccountSettings firstLastEmailTabsMetadata(SettingsMetadata firstLastEmailTabsMetadata) {
     this.firstLastEmailTabsMetadata = firstLastEmailTabsMetadata;
     return this;
   }
 
   /**
-   * Get firstLastEmailTabsMetadata.
-   *
+   * Reserved for DocuSign..
    * @return firstLastEmailTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getFirstLastEmailTabsMetadata() {
     return firstLastEmailTabsMetadata;
   }
 
-  /** setFirstLastEmailTabsMetadata. */
+  /**
+   * setFirstLastEmailTabsMetadata.
+   **/
   public void setFirstLastEmailTabsMetadata(SettingsMetadata firstLastEmailTabsMetadata) {
     this.firstLastEmailTabsMetadata = firstLastEmailTabsMetadata;
   }
+
 
   /**
    * listTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings listTabsEnabled(String listTabsEnabled) {
     this.listTabsEnabled = listTabsEnabled;
     return this;
@@ -602,49 +646,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return listTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getListTabsEnabled() {
     return listTabsEnabled;
   }
 
-  /** setListTabsEnabled. */
+  /**
+   * setListTabsEnabled.
+   **/
   public void setListTabsEnabled(String listTabsEnabled) {
     this.listTabsEnabled = listTabsEnabled;
   }
+
 
   /**
    * listTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings listTabsMetadata(SettingsMetadata listTabsMetadata) {
     this.listTabsMetadata = listTabsMetadata;
     return this;
   }
 
   /**
-   * Get listTabsMetadata.
-   *
+   * Metadata that indicates whether the `listTabs` property is editable. .
    * @return listTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `listTabs` property is editable. ")
   public SettingsMetadata getListTabsMetadata() {
     return listTabsMetadata;
   }
 
-  /** setListTabsMetadata. */
+  /**
+   * setListTabsMetadata.
+   **/
   public void setListTabsMetadata(SettingsMetadata listTabsMetadata) {
     this.listTabsMetadata = listTabsMetadata;
   }
+
 
   /**
    * noteTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings noteTabsEnabled(String noteTabsEnabled) {
     this.noteTabsEnabled = noteTabsEnabled;
     return this;
@@ -652,49 +700,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return noteTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getNoteTabsEnabled() {
     return noteTabsEnabled;
   }
 
-  /** setNoteTabsEnabled. */
+  /**
+   * setNoteTabsEnabled.
+   **/
   public void setNoteTabsEnabled(String noteTabsEnabled) {
     this.noteTabsEnabled = noteTabsEnabled;
   }
+
 
   /**
    * noteTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings noteTabsMetadata(SettingsMetadata noteTabsMetadata) {
     this.noteTabsMetadata = noteTabsMetadata;
     return this;
   }
 
   /**
-   * Get noteTabsMetadata.
-   *
+   * Metadata that indicates whether the `noteTabs` property is editable. .
    * @return noteTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `noteTabs` property is editable. ")
   public SettingsMetadata getNoteTabsMetadata() {
     return noteTabsMetadata;
   }
 
-  /** setNoteTabsMetadata. */
+  /**
+   * setNoteTabsMetadata.
+   **/
   public void setNoteTabsMetadata(SettingsMetadata noteTabsMetadata) {
     this.noteTabsMetadata = noteTabsMetadata;
   }
+
 
   /**
    * prefillTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings prefillTabsEnabled(String prefillTabsEnabled) {
     this.prefillTabsEnabled = prefillTabsEnabled;
     return this;
@@ -702,49 +754,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return prefillTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPrefillTabsEnabled() {
     return prefillTabsEnabled;
   }
 
-  /** setPrefillTabsEnabled. */
+  /**
+   * setPrefillTabsEnabled.
+   **/
   public void setPrefillTabsEnabled(String prefillTabsEnabled) {
     this.prefillTabsEnabled = prefillTabsEnabled;
   }
+
 
   /**
    * prefillTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings prefillTabsMetadata(SettingsMetadata prefillTabsMetadata) {
     this.prefillTabsMetadata = prefillTabsMetadata;
     return this;
   }
 
   /**
-   * Get prefillTabsMetadata.
-   *
+   * .
    * @return prefillTabsMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getPrefillTabsMetadata() {
     return prefillTabsMetadata;
   }
 
-  /** setPrefillTabsMetadata. */
+  /**
+   * setPrefillTabsMetadata.
+   **/
   public void setPrefillTabsMetadata(SettingsMetadata prefillTabsMetadata) {
     this.prefillTabsMetadata = prefillTabsMetadata;
   }
+
 
   /**
    * radioTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings radioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
     return this;
@@ -752,49 +808,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return radioTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRadioTabsEnabled() {
     return radioTabsEnabled;
   }
 
-  /** setRadioTabsEnabled. */
+  /**
+   * setRadioTabsEnabled.
+   **/
   public void setRadioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
   }
+
 
   /**
    * radioTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings radioTabsMetadata(SettingsMetadata radioTabsMetadata) {
     this.radioTabsMetadata = radioTabsMetadata;
     return this;
   }
 
   /**
-   * Get radioTabsMetadata.
-   *
+   * Metadata that indicates whether the `radioTabs` property is editable. .
    * @return radioTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `radioTabs` property is editable. ")
   public SettingsMetadata getRadioTabsMetadata() {
     return radioTabsMetadata;
   }
 
-  /** setRadioTabsMetadata. */
+  /**
+   * setRadioTabsMetadata.
+   **/
   public void setRadioTabsMetadata(SettingsMetadata radioTabsMetadata) {
     this.radioTabsMetadata = radioTabsMetadata;
   }
+
 
   /**
    * savingCustomTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings savingCustomTabsEnabled(String savingCustomTabsEnabled) {
     this.savingCustomTabsEnabled = savingCustomTabsEnabled;
     return this;
@@ -802,102 +862,107 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return savingCustomTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSavingCustomTabsEnabled() {
     return savingCustomTabsEnabled;
   }
 
-  /** setSavingCustomTabsEnabled. */
+  /**
+   * setSavingCustomTabsEnabled.
+   **/
   public void setSavingCustomTabsEnabled(String savingCustomTabsEnabled) {
     this.savingCustomTabsEnabled = savingCustomTabsEnabled;
   }
+
 
   /**
    * savingCustomTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings savingCustomTabsMetadata(SettingsMetadata savingCustomTabsMetadata) {
     this.savingCustomTabsMetadata = savingCustomTabsMetadata;
     return this;
   }
 
   /**
-   * Get savingCustomTabsMetadata.
-   *
+   * Metadata that indicates whether the `savingCustomTabs` property is editable. .
    * @return savingCustomTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `savingCustomTabs` property is editable. ")
   public SettingsMetadata getSavingCustomTabsMetadata() {
     return savingCustomTabsMetadata;
   }
 
-  /** setSavingCustomTabsMetadata. */
+  /**
+   * setSavingCustomTabsMetadata.
+   **/
   public void setSavingCustomTabsMetadata(SettingsMetadata savingCustomTabsMetadata) {
     this.savingCustomTabsMetadata = savingCustomTabsMetadata;
   }
+
 
   /**
    * senderToChangeTabAssignmentsEnabled.
    *
    * @return TabAccountSettings
-   */
-  public TabAccountSettings senderToChangeTabAssignmentsEnabled(
-      String senderToChangeTabAssignmentsEnabled) {
+   **/
+  public TabAccountSettings senderToChangeTabAssignmentsEnabled(String senderToChangeTabAssignmentsEnabled) {
     this.senderToChangeTabAssignmentsEnabled = senderToChangeTabAssignmentsEnabled;
     return this;
   }
 
   /**
    * .
-   *
    * @return senderToChangeTabAssignmentsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSenderToChangeTabAssignmentsEnabled() {
     return senderToChangeTabAssignmentsEnabled;
   }
 
-  /** setSenderToChangeTabAssignmentsEnabled. */
+  /**
+   * setSenderToChangeTabAssignmentsEnabled.
+   **/
   public void setSenderToChangeTabAssignmentsEnabled(String senderToChangeTabAssignmentsEnabled) {
     this.senderToChangeTabAssignmentsEnabled = senderToChangeTabAssignmentsEnabled;
   }
+
 
   /**
    * senderToChangeTabAssignmentsMetadata.
    *
    * @return TabAccountSettings
-   */
-  public TabAccountSettings senderToChangeTabAssignmentsMetadata(
-      SettingsMetadata senderToChangeTabAssignmentsMetadata) {
+   **/
+  public TabAccountSettings senderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
     return this;
   }
 
   /**
-   * Get senderToChangeTabAssignmentsMetadata.
-   *
+   * Reserved for DocuSign..
    * @return senderToChangeTabAssignmentsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getSenderToChangeTabAssignmentsMetadata() {
     return senderToChangeTabAssignmentsMetadata;
   }
 
-  /** setSenderToChangeTabAssignmentsMetadata. */
-  public void setSenderToChangeTabAssignmentsMetadata(
-      SettingsMetadata senderToChangeTabAssignmentsMetadata) {
+  /**
+   * setSenderToChangeTabAssignmentsMetadata.
+   **/
+  public void setSenderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
   }
+
 
   /**
    * sharedCustomTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings sharedCustomTabsEnabled(String sharedCustomTabsEnabled) {
     this.sharedCustomTabsEnabled = sharedCustomTabsEnabled;
     return this;
@@ -905,49 +970,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return sharedCustomTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSharedCustomTabsEnabled() {
     return sharedCustomTabsEnabled;
   }
 
-  /** setSharedCustomTabsEnabled. */
+  /**
+   * setSharedCustomTabsEnabled.
+   **/
   public void setSharedCustomTabsEnabled(String sharedCustomTabsEnabled) {
     this.sharedCustomTabsEnabled = sharedCustomTabsEnabled;
   }
+
 
   /**
    * sharedCustomTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings sharedCustomTabsMetadata(SettingsMetadata sharedCustomTabsMetadata) {
     this.sharedCustomTabsMetadata = sharedCustomTabsMetadata;
     return this;
   }
 
   /**
-   * Get sharedCustomTabsMetadata.
-   *
+   * Metadata that indicates whether the `sharedCustomTabs` property is editable. .
    * @return sharedCustomTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `sharedCustomTabs` property is editable. ")
   public SettingsMetadata getSharedCustomTabsMetadata() {
     return sharedCustomTabsMetadata;
   }
 
-  /** setSharedCustomTabsMetadata. */
+  /**
+   * setSharedCustomTabsMetadata.
+   **/
   public void setSharedCustomTabsMetadata(SettingsMetadata sharedCustomTabsMetadata) {
     this.sharedCustomTabsMetadata = sharedCustomTabsMetadata;
   }
+
 
   /**
    * tabDataLabelEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabDataLabelEnabled(String tabDataLabelEnabled) {
     this.tabDataLabelEnabled = tabDataLabelEnabled;
     return this;
@@ -955,49 +1024,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return tabDataLabelEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabDataLabelEnabled() {
     return tabDataLabelEnabled;
   }
 
-  /** setTabDataLabelEnabled. */
+  /**
+   * setTabDataLabelEnabled.
+   **/
   public void setTabDataLabelEnabled(String tabDataLabelEnabled) {
     this.tabDataLabelEnabled = tabDataLabelEnabled;
   }
+
 
   /**
    * tabDataLabelMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabDataLabelMetadata(SettingsMetadata tabDataLabelMetadata) {
     this.tabDataLabelMetadata = tabDataLabelMetadata;
     return this;
   }
 
   /**
-   * Get tabDataLabelMetadata.
-   *
+   * Metadata that indicates whether the `tabDataLabel` property is editable. .
    * @return tabDataLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabDataLabel` property is editable. ")
   public SettingsMetadata getTabDataLabelMetadata() {
     return tabDataLabelMetadata;
   }
 
-  /** setTabDataLabelMetadata. */
+  /**
+   * setTabDataLabelMetadata.
+   **/
   public void setTabDataLabelMetadata(SettingsMetadata tabDataLabelMetadata) {
     this.tabDataLabelMetadata = tabDataLabelMetadata;
   }
+
 
   /**
    * tabLocationEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabLocationEnabled(String tabLocationEnabled) {
     this.tabLocationEnabled = tabLocationEnabled;
     return this;
@@ -1005,49 +1078,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return tabLocationEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabLocationEnabled() {
     return tabLocationEnabled;
   }
 
-  /** setTabLocationEnabled. */
+  /**
+   * setTabLocationEnabled.
+   **/
   public void setTabLocationEnabled(String tabLocationEnabled) {
     this.tabLocationEnabled = tabLocationEnabled;
   }
+
 
   /**
    * tabLocationMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabLocationMetadata(SettingsMetadata tabLocationMetadata) {
     this.tabLocationMetadata = tabLocationMetadata;
     return this;
   }
 
   /**
-   * Get tabLocationMetadata.
-   *
+   * Reserved for DocuSign..
    * @return tabLocationMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTabLocationMetadata() {
     return tabLocationMetadata;
   }
 
-  /** setTabLocationMetadata. */
+  /**
+   * setTabLocationMetadata.
+   **/
   public void setTabLocationMetadata(SettingsMetadata tabLocationMetadata) {
     this.tabLocationMetadata = tabLocationMetadata;
   }
+
 
   /**
    * tabLockingEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabLockingEnabled(String tabLockingEnabled) {
     this.tabLockingEnabled = tabLockingEnabled;
     return this;
@@ -1055,49 +1132,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return tabLockingEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabLockingEnabled() {
     return tabLockingEnabled;
   }
 
-  /** setTabLockingEnabled. */
+  /**
+   * setTabLockingEnabled.
+   **/
   public void setTabLockingEnabled(String tabLockingEnabled) {
     this.tabLockingEnabled = tabLockingEnabled;
   }
+
 
   /**
    * tabLockingMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabLockingMetadata(SettingsMetadata tabLockingMetadata) {
     this.tabLockingMetadata = tabLockingMetadata;
     return this;
   }
 
   /**
-   * Get tabLockingMetadata.
-   *
+   * Metadata that indicates whether the `tabLocking` property is editable. .
    * @return tabLockingMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabLocking` property is editable. ")
   public SettingsMetadata getTabLockingMetadata() {
     return tabLockingMetadata;
   }
 
-  /** setTabLockingMetadata. */
+  /**
+   * setTabLockingMetadata.
+   **/
   public void setTabLockingMetadata(SettingsMetadata tabLockingMetadata) {
     this.tabLockingMetadata = tabLockingMetadata;
   }
+
 
   /**
    * tabScaleEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabScaleEnabled(String tabScaleEnabled) {
     this.tabScaleEnabled = tabScaleEnabled;
     return this;
@@ -1105,49 +1186,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return tabScaleEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabScaleEnabled() {
     return tabScaleEnabled;
   }
 
-  /** setTabScaleEnabled. */
+  /**
+   * setTabScaleEnabled.
+   **/
   public void setTabScaleEnabled(String tabScaleEnabled) {
     this.tabScaleEnabled = tabScaleEnabled;
   }
+
 
   /**
    * tabScaleMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabScaleMetadata(SettingsMetadata tabScaleMetadata) {
     this.tabScaleMetadata = tabScaleMetadata;
     return this;
   }
 
   /**
-   * Get tabScaleMetadata.
-   *
+   * Reserved for DocuSign..
    * @return tabScaleMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTabScaleMetadata() {
     return tabScaleMetadata;
   }
 
-  /** setTabScaleMetadata. */
+  /**
+   * setTabScaleMetadata.
+   **/
   public void setTabScaleMetadata(SettingsMetadata tabScaleMetadata) {
     this.tabScaleMetadata = tabScaleMetadata;
   }
+
 
   /**
    * tabTextFormattingEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabTextFormattingEnabled(String tabTextFormattingEnabled) {
     this.tabTextFormattingEnabled = tabTextFormattingEnabled;
     return this;
@@ -1155,49 +1240,53 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return tabTextFormattingEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabTextFormattingEnabled() {
     return tabTextFormattingEnabled;
   }
 
-  /** setTabTextFormattingEnabled. */
+  /**
+   * setTabTextFormattingEnabled.
+   **/
   public void setTabTextFormattingEnabled(String tabTextFormattingEnabled) {
     this.tabTextFormattingEnabled = tabTextFormattingEnabled;
   }
+
 
   /**
    * tabTextFormattingMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings tabTextFormattingMetadata(SettingsMetadata tabTextFormattingMetadata) {
     this.tabTextFormattingMetadata = tabTextFormattingMetadata;
     return this;
   }
 
   /**
-   * Get tabTextFormattingMetadata.
-   *
+   * Metadata that indicates whether the `tabTextFormatting` property is editable. .
    * @return tabTextFormattingMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabTextFormatting` property is editable. ")
   public SettingsMetadata getTabTextFormattingMetadata() {
     return tabTextFormattingMetadata;
   }
 
-  /** setTabTextFormattingMetadata. */
+  /**
+   * setTabTextFormattingMetadata.
+   **/
   public void setTabTextFormattingMetadata(SettingsMetadata tabTextFormattingMetadata) {
     this.tabTextFormattingMetadata = tabTextFormattingMetadata;
   }
+
 
   /**
    * textTabsEnabled.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings textTabsEnabled(String textTabsEnabled) {
     this.textTabsEnabled = textTabsEnabled;
     return this;
@@ -1205,43 +1294,47 @@ public class TabAccountSettings {
 
   /**
    * .
-   *
    * @return textTabsEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTextTabsEnabled() {
     return textTabsEnabled;
   }
 
-  /** setTextTabsEnabled. */
+  /**
+   * setTextTabsEnabled.
+   **/
   public void setTextTabsEnabled(String textTabsEnabled) {
     this.textTabsEnabled = textTabsEnabled;
   }
+
 
   /**
    * textTabsMetadata.
    *
    * @return TabAccountSettings
-   */
+   **/
   public TabAccountSettings textTabsMetadata(SettingsMetadata textTabsMetadata) {
     this.textTabsMetadata = textTabsMetadata;
     return this;
   }
 
   /**
-   * Get textTabsMetadata.
-   *
+   * Metadata that indicates whether the `textTabs` property is editable. .
    * @return textTabsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `textTabs` property is editable. ")
   public SettingsMetadata getTextTabsMetadata() {
     return textTabsMetadata;
   }
 
-  /** setTextTabsMetadata. */
+  /**
+   * setTextTabsMetadata.
+   **/
   public void setTextTabsMetadata(SettingsMetadata textTabsMetadata) {
     this.textTabsMetadata = textTabsMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -1257,217 +1350,111 @@ public class TabAccountSettings {
       return false;
     }
     TabAccountSettings tabAccountSettings = (TabAccountSettings) o;
-    return Objects.equals(this.allowTabOrder, tabAccountSettings.allowTabOrder)
-        && Objects.equals(this.allowTabOrderMetadata, tabAccountSettings.allowTabOrderMetadata)
-        && Objects.equals(
-            this.approveDeclineTabsEnabled, tabAccountSettings.approveDeclineTabsEnabled)
-        && Objects.equals(
-            this.approveDeclineTabsMetadata, tabAccountSettings.approveDeclineTabsMetadata)
-        && Objects.equals(this.calculatedFieldsEnabled, tabAccountSettings.calculatedFieldsEnabled)
-        && Objects.equals(
-            this.calculatedFieldsMetadata, tabAccountSettings.calculatedFieldsMetadata)
-        && Objects.equals(this.checkboxTabsEnabled, tabAccountSettings.checkboxTabsEnabled)
-        && Objects.equals(this.checkBoxTabsMetadata, tabAccountSettings.checkBoxTabsMetadata)
-        && Objects.equals(this.currencyTabsEnabled, tabAccountSettings.currencyTabsEnabled)
-        && Objects.equals(this.currencyTabsMetadata, tabAccountSettings.currencyTabsMetadata)
-        && Objects.equals(this.dataFieldRegexEnabled, tabAccountSettings.dataFieldRegexEnabled)
-        && Objects.equals(this.dataFieldRegexMetadata, tabAccountSettings.dataFieldRegexMetadata)
-        && Objects.equals(this.dataFieldSizeEnabled, tabAccountSettings.dataFieldSizeEnabled)
-        && Objects.equals(this.dataFieldSizeMetadata, tabAccountSettings.dataFieldSizeMetadata)
-        && Objects.equals(this.drawTabsEnabled, tabAccountSettings.drawTabsEnabled)
-        && Objects.equals(this.drawTabsMetadata, tabAccountSettings.drawTabsMetadata)
-        && Objects.equals(
-            this.firstLastEmailTabsEnabled, tabAccountSettings.firstLastEmailTabsEnabled)
-        && Objects.equals(
-            this.firstLastEmailTabsMetadata, tabAccountSettings.firstLastEmailTabsMetadata)
-        && Objects.equals(this.listTabsEnabled, tabAccountSettings.listTabsEnabled)
-        && Objects.equals(this.listTabsMetadata, tabAccountSettings.listTabsMetadata)
-        && Objects.equals(this.noteTabsEnabled, tabAccountSettings.noteTabsEnabled)
-        && Objects.equals(this.noteTabsMetadata, tabAccountSettings.noteTabsMetadata)
-        && Objects.equals(this.prefillTabsEnabled, tabAccountSettings.prefillTabsEnabled)
-        && Objects.equals(this.prefillTabsMetadata, tabAccountSettings.prefillTabsMetadata)
-        && Objects.equals(this.radioTabsEnabled, tabAccountSettings.radioTabsEnabled)
-        && Objects.equals(this.radioTabsMetadata, tabAccountSettings.radioTabsMetadata)
-        && Objects.equals(this.savingCustomTabsEnabled, tabAccountSettings.savingCustomTabsEnabled)
-        && Objects.equals(
-            this.savingCustomTabsMetadata, tabAccountSettings.savingCustomTabsMetadata)
-        && Objects.equals(
-            this.senderToChangeTabAssignmentsEnabled,
-            tabAccountSettings.senderToChangeTabAssignmentsEnabled)
-        && Objects.equals(
-            this.senderToChangeTabAssignmentsMetadata,
-            tabAccountSettings.senderToChangeTabAssignmentsMetadata)
-        && Objects.equals(this.sharedCustomTabsEnabled, tabAccountSettings.sharedCustomTabsEnabled)
-        && Objects.equals(
-            this.sharedCustomTabsMetadata, tabAccountSettings.sharedCustomTabsMetadata)
-        && Objects.equals(this.tabDataLabelEnabled, tabAccountSettings.tabDataLabelEnabled)
-        && Objects.equals(this.tabDataLabelMetadata, tabAccountSettings.tabDataLabelMetadata)
-        && Objects.equals(this.tabLocationEnabled, tabAccountSettings.tabLocationEnabled)
-        && Objects.equals(this.tabLocationMetadata, tabAccountSettings.tabLocationMetadata)
-        && Objects.equals(this.tabLockingEnabled, tabAccountSettings.tabLockingEnabled)
-        && Objects.equals(this.tabLockingMetadata, tabAccountSettings.tabLockingMetadata)
-        && Objects.equals(this.tabScaleEnabled, tabAccountSettings.tabScaleEnabled)
-        && Objects.equals(this.tabScaleMetadata, tabAccountSettings.tabScaleMetadata)
-        && Objects.equals(
-            this.tabTextFormattingEnabled, tabAccountSettings.tabTextFormattingEnabled)
-        && Objects.equals(
-            this.tabTextFormattingMetadata, tabAccountSettings.tabTextFormattingMetadata)
-        && Objects.equals(this.textTabsEnabled, tabAccountSettings.textTabsEnabled)
-        && Objects.equals(this.textTabsMetadata, tabAccountSettings.textTabsMetadata);
+    return Objects.equals(this.allowTabOrder, tabAccountSettings.allowTabOrder) &&
+        Objects.equals(this.allowTabOrderMetadata, tabAccountSettings.allowTabOrderMetadata) &&
+        Objects.equals(this.approveDeclineTabsEnabled, tabAccountSettings.approveDeclineTabsEnabled) &&
+        Objects.equals(this.approveDeclineTabsMetadata, tabAccountSettings.approveDeclineTabsMetadata) &&
+        Objects.equals(this.calculatedFieldsEnabled, tabAccountSettings.calculatedFieldsEnabled) &&
+        Objects.equals(this.calculatedFieldsMetadata, tabAccountSettings.calculatedFieldsMetadata) &&
+        Objects.equals(this.checkboxTabsEnabled, tabAccountSettings.checkboxTabsEnabled) &&
+        Objects.equals(this.checkBoxTabsMetadata, tabAccountSettings.checkBoxTabsMetadata) &&
+        Objects.equals(this.currencyTabsEnabled, tabAccountSettings.currencyTabsEnabled) &&
+        Objects.equals(this.currencyTabsMetadata, tabAccountSettings.currencyTabsMetadata) &&
+        Objects.equals(this.dataFieldRegexEnabled, tabAccountSettings.dataFieldRegexEnabled) &&
+        Objects.equals(this.dataFieldRegexMetadata, tabAccountSettings.dataFieldRegexMetadata) &&
+        Objects.equals(this.dataFieldSizeEnabled, tabAccountSettings.dataFieldSizeEnabled) &&
+        Objects.equals(this.dataFieldSizeMetadata, tabAccountSettings.dataFieldSizeMetadata) &&
+        Objects.equals(this.drawTabsEnabled, tabAccountSettings.drawTabsEnabled) &&
+        Objects.equals(this.drawTabsMetadata, tabAccountSettings.drawTabsMetadata) &&
+        Objects.equals(this.firstLastEmailTabsEnabled, tabAccountSettings.firstLastEmailTabsEnabled) &&
+        Objects.equals(this.firstLastEmailTabsMetadata, tabAccountSettings.firstLastEmailTabsMetadata) &&
+        Objects.equals(this.listTabsEnabled, tabAccountSettings.listTabsEnabled) &&
+        Objects.equals(this.listTabsMetadata, tabAccountSettings.listTabsMetadata) &&
+        Objects.equals(this.noteTabsEnabled, tabAccountSettings.noteTabsEnabled) &&
+        Objects.equals(this.noteTabsMetadata, tabAccountSettings.noteTabsMetadata) &&
+        Objects.equals(this.prefillTabsEnabled, tabAccountSettings.prefillTabsEnabled) &&
+        Objects.equals(this.prefillTabsMetadata, tabAccountSettings.prefillTabsMetadata) &&
+        Objects.equals(this.radioTabsEnabled, tabAccountSettings.radioTabsEnabled) &&
+        Objects.equals(this.radioTabsMetadata, tabAccountSettings.radioTabsMetadata) &&
+        Objects.equals(this.savingCustomTabsEnabled, tabAccountSettings.savingCustomTabsEnabled) &&
+        Objects.equals(this.savingCustomTabsMetadata, tabAccountSettings.savingCustomTabsMetadata) &&
+        Objects.equals(this.senderToChangeTabAssignmentsEnabled, tabAccountSettings.senderToChangeTabAssignmentsEnabled) &&
+        Objects.equals(this.senderToChangeTabAssignmentsMetadata, tabAccountSettings.senderToChangeTabAssignmentsMetadata) &&
+        Objects.equals(this.sharedCustomTabsEnabled, tabAccountSettings.sharedCustomTabsEnabled) &&
+        Objects.equals(this.sharedCustomTabsMetadata, tabAccountSettings.sharedCustomTabsMetadata) &&
+        Objects.equals(this.tabDataLabelEnabled, tabAccountSettings.tabDataLabelEnabled) &&
+        Objects.equals(this.tabDataLabelMetadata, tabAccountSettings.tabDataLabelMetadata) &&
+        Objects.equals(this.tabLocationEnabled, tabAccountSettings.tabLocationEnabled) &&
+        Objects.equals(this.tabLocationMetadata, tabAccountSettings.tabLocationMetadata) &&
+        Objects.equals(this.tabLockingEnabled, tabAccountSettings.tabLockingEnabled) &&
+        Objects.equals(this.tabLockingMetadata, tabAccountSettings.tabLockingMetadata) &&
+        Objects.equals(this.tabScaleEnabled, tabAccountSettings.tabScaleEnabled) &&
+        Objects.equals(this.tabScaleMetadata, tabAccountSettings.tabScaleMetadata) &&
+        Objects.equals(this.tabTextFormattingEnabled, tabAccountSettings.tabTextFormattingEnabled) &&
+        Objects.equals(this.tabTextFormattingMetadata, tabAccountSettings.tabTextFormattingMetadata) &&
+        Objects.equals(this.textTabsEnabled, tabAccountSettings.textTabsEnabled) &&
+        Objects.equals(this.textTabsMetadata, tabAccountSettings.textTabsMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        allowTabOrder,
-        allowTabOrderMetadata,
-        approveDeclineTabsEnabled,
-        approveDeclineTabsMetadata,
-        calculatedFieldsEnabled,
-        calculatedFieldsMetadata,
-        checkboxTabsEnabled,
-        checkBoxTabsMetadata,
-        currencyTabsEnabled,
-        currencyTabsMetadata,
-        dataFieldRegexEnabled,
-        dataFieldRegexMetadata,
-        dataFieldSizeEnabled,
-        dataFieldSizeMetadata,
-        drawTabsEnabled,
-        drawTabsMetadata,
-        firstLastEmailTabsEnabled,
-        firstLastEmailTabsMetadata,
-        listTabsEnabled,
-        listTabsMetadata,
-        noteTabsEnabled,
-        noteTabsMetadata,
-        prefillTabsEnabled,
-        prefillTabsMetadata,
-        radioTabsEnabled,
-        radioTabsMetadata,
-        savingCustomTabsEnabled,
-        savingCustomTabsMetadata,
-        senderToChangeTabAssignmentsEnabled,
-        senderToChangeTabAssignmentsMetadata,
-        sharedCustomTabsEnabled,
-        sharedCustomTabsMetadata,
-        tabDataLabelEnabled,
-        tabDataLabelMetadata,
-        tabLocationEnabled,
-        tabLocationMetadata,
-        tabLockingEnabled,
-        tabLockingMetadata,
-        tabScaleEnabled,
-        tabScaleMetadata,
-        tabTextFormattingEnabled,
-        tabTextFormattingMetadata,
-        textTabsEnabled,
-        textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, currencyTabsEnabled, currencyTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabAccountSettings {\n");
-
+    
     sb.append("    allowTabOrder: ").append(toIndentedString(allowTabOrder)).append("\n");
-    sb.append("    allowTabOrderMetadata: ")
-        .append(toIndentedString(allowTabOrderMetadata))
-        .append("\n");
-    sb.append("    approveDeclineTabsEnabled: ")
-        .append(toIndentedString(approveDeclineTabsEnabled))
-        .append("\n");
-    sb.append("    approveDeclineTabsMetadata: ")
-        .append(toIndentedString(approveDeclineTabsMetadata))
-        .append("\n");
-    sb.append("    calculatedFieldsEnabled: ")
-        .append(toIndentedString(calculatedFieldsEnabled))
-        .append("\n");
-    sb.append("    calculatedFieldsMetadata: ")
-        .append(toIndentedString(calculatedFieldsMetadata))
-        .append("\n");
-    sb.append("    checkboxTabsEnabled: ")
-        .append(toIndentedString(checkboxTabsEnabled))
-        .append("\n");
-    sb.append("    checkBoxTabsMetadata: ")
-        .append(toIndentedString(checkBoxTabsMetadata))
-        .append("\n");
-    sb.append("    currencyTabsEnabled: ")
-        .append(toIndentedString(currencyTabsEnabled))
-        .append("\n");
-    sb.append("    currencyTabsMetadata: ")
-        .append(toIndentedString(currencyTabsMetadata))
-        .append("\n");
-    sb.append("    dataFieldRegexEnabled: ")
-        .append(toIndentedString(dataFieldRegexEnabled))
-        .append("\n");
-    sb.append("    dataFieldRegexMetadata: ")
-        .append(toIndentedString(dataFieldRegexMetadata))
-        .append("\n");
-    sb.append("    dataFieldSizeEnabled: ")
-        .append(toIndentedString(dataFieldSizeEnabled))
-        .append("\n");
-    sb.append("    dataFieldSizeMetadata: ")
-        .append(toIndentedString(dataFieldSizeMetadata))
-        .append("\n");
+    sb.append("    allowTabOrderMetadata: ").append(toIndentedString(allowTabOrderMetadata)).append("\n");
+    sb.append("    approveDeclineTabsEnabled: ").append(toIndentedString(approveDeclineTabsEnabled)).append("\n");
+    sb.append("    approveDeclineTabsMetadata: ").append(toIndentedString(approveDeclineTabsMetadata)).append("\n");
+    sb.append("    calculatedFieldsEnabled: ").append(toIndentedString(calculatedFieldsEnabled)).append("\n");
+    sb.append("    calculatedFieldsMetadata: ").append(toIndentedString(calculatedFieldsMetadata)).append("\n");
+    sb.append("    checkboxTabsEnabled: ").append(toIndentedString(checkboxTabsEnabled)).append("\n");
+    sb.append("    checkBoxTabsMetadata: ").append(toIndentedString(checkBoxTabsMetadata)).append("\n");
+    sb.append("    currencyTabsEnabled: ").append(toIndentedString(currencyTabsEnabled)).append("\n");
+    sb.append("    currencyTabsMetadata: ").append(toIndentedString(currencyTabsMetadata)).append("\n");
+    sb.append("    dataFieldRegexEnabled: ").append(toIndentedString(dataFieldRegexEnabled)).append("\n");
+    sb.append("    dataFieldRegexMetadata: ").append(toIndentedString(dataFieldRegexMetadata)).append("\n");
+    sb.append("    dataFieldSizeEnabled: ").append(toIndentedString(dataFieldSizeEnabled)).append("\n");
+    sb.append("    dataFieldSizeMetadata: ").append(toIndentedString(dataFieldSizeMetadata)).append("\n");
     sb.append("    drawTabsEnabled: ").append(toIndentedString(drawTabsEnabled)).append("\n");
     sb.append("    drawTabsMetadata: ").append(toIndentedString(drawTabsMetadata)).append("\n");
-    sb.append("    firstLastEmailTabsEnabled: ")
-        .append(toIndentedString(firstLastEmailTabsEnabled))
-        .append("\n");
-    sb.append("    firstLastEmailTabsMetadata: ")
-        .append(toIndentedString(firstLastEmailTabsMetadata))
-        .append("\n");
+    sb.append("    firstLastEmailTabsEnabled: ").append(toIndentedString(firstLastEmailTabsEnabled)).append("\n");
+    sb.append("    firstLastEmailTabsMetadata: ").append(toIndentedString(firstLastEmailTabsMetadata)).append("\n");
     sb.append("    listTabsEnabled: ").append(toIndentedString(listTabsEnabled)).append("\n");
     sb.append("    listTabsMetadata: ").append(toIndentedString(listTabsMetadata)).append("\n");
     sb.append("    noteTabsEnabled: ").append(toIndentedString(noteTabsEnabled)).append("\n");
     sb.append("    noteTabsMetadata: ").append(toIndentedString(noteTabsMetadata)).append("\n");
     sb.append("    prefillTabsEnabled: ").append(toIndentedString(prefillTabsEnabled)).append("\n");
-    sb.append("    prefillTabsMetadata: ")
-        .append(toIndentedString(prefillTabsMetadata))
-        .append("\n");
+    sb.append("    prefillTabsMetadata: ").append(toIndentedString(prefillTabsMetadata)).append("\n");
     sb.append("    radioTabsEnabled: ").append(toIndentedString(radioTabsEnabled)).append("\n");
     sb.append("    radioTabsMetadata: ").append(toIndentedString(radioTabsMetadata)).append("\n");
-    sb.append("    savingCustomTabsEnabled: ")
-        .append(toIndentedString(savingCustomTabsEnabled))
-        .append("\n");
-    sb.append("    savingCustomTabsMetadata: ")
-        .append(toIndentedString(savingCustomTabsMetadata))
-        .append("\n");
-    sb.append("    senderToChangeTabAssignmentsEnabled: ")
-        .append(toIndentedString(senderToChangeTabAssignmentsEnabled))
-        .append("\n");
-    sb.append("    senderToChangeTabAssignmentsMetadata: ")
-        .append(toIndentedString(senderToChangeTabAssignmentsMetadata))
-        .append("\n");
-    sb.append("    sharedCustomTabsEnabled: ")
-        .append(toIndentedString(sharedCustomTabsEnabled))
-        .append("\n");
-    sb.append("    sharedCustomTabsMetadata: ")
-        .append(toIndentedString(sharedCustomTabsMetadata))
-        .append("\n");
-    sb.append("    tabDataLabelEnabled: ")
-        .append(toIndentedString(tabDataLabelEnabled))
-        .append("\n");
-    sb.append("    tabDataLabelMetadata: ")
-        .append(toIndentedString(tabDataLabelMetadata))
-        .append("\n");
+    sb.append("    savingCustomTabsEnabled: ").append(toIndentedString(savingCustomTabsEnabled)).append("\n");
+    sb.append("    savingCustomTabsMetadata: ").append(toIndentedString(savingCustomTabsMetadata)).append("\n");
+    sb.append("    senderToChangeTabAssignmentsEnabled: ").append(toIndentedString(senderToChangeTabAssignmentsEnabled)).append("\n");
+    sb.append("    senderToChangeTabAssignmentsMetadata: ").append(toIndentedString(senderToChangeTabAssignmentsMetadata)).append("\n");
+    sb.append("    sharedCustomTabsEnabled: ").append(toIndentedString(sharedCustomTabsEnabled)).append("\n");
+    sb.append("    sharedCustomTabsMetadata: ").append(toIndentedString(sharedCustomTabsMetadata)).append("\n");
+    sb.append("    tabDataLabelEnabled: ").append(toIndentedString(tabDataLabelEnabled)).append("\n");
+    sb.append("    tabDataLabelMetadata: ").append(toIndentedString(tabDataLabelMetadata)).append("\n");
     sb.append("    tabLocationEnabled: ").append(toIndentedString(tabLocationEnabled)).append("\n");
-    sb.append("    tabLocationMetadata: ")
-        .append(toIndentedString(tabLocationMetadata))
-        .append("\n");
+    sb.append("    tabLocationMetadata: ").append(toIndentedString(tabLocationMetadata)).append("\n");
     sb.append("    tabLockingEnabled: ").append(toIndentedString(tabLockingEnabled)).append("\n");
     sb.append("    tabLockingMetadata: ").append(toIndentedString(tabLockingMetadata)).append("\n");
     sb.append("    tabScaleEnabled: ").append(toIndentedString(tabScaleEnabled)).append("\n");
     sb.append("    tabScaleMetadata: ").append(toIndentedString(tabScaleMetadata)).append("\n");
-    sb.append("    tabTextFormattingEnabled: ")
-        .append(toIndentedString(tabTextFormattingEnabled))
-        .append("\n");
-    sb.append("    tabTextFormattingMetadata: ")
-        .append(toIndentedString(tabTextFormattingMetadata))
-        .append("\n");
+    sb.append("    tabTextFormattingEnabled: ").append(toIndentedString(tabTextFormattingEnabled)).append("\n");
+    sb.append("    tabTextFormattingMetadata: ").append(toIndentedString(tabTextFormattingMetadata)).append("\n");
     sb.append("    textTabsEnabled: ").append(toIndentedString(textTabsEnabled)).append("\n");
     sb.append("    textTabsMetadata: ").append(toIndentedString(textTabsMetadata)).append("\n");
     sb.append("}");
@@ -1475,7 +1462,8 @@ public class TabAccountSettings {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -1483,4 +1471,6 @@ public class TabAccountSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

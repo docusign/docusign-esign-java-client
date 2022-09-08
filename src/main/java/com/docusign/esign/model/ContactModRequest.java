@@ -1,29 +1,40 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.Contact;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ContactModRequest. */
+/**
+ * The request object containing the new information for the contacts..
+ *
+ */
+@ApiModel(description = "The request object containing the new information for the contacts.")
+
 public class ContactModRequest {
   @JsonProperty("contactList")
   private java.util.List<Contact> contactList = null;
+
 
   /**
    * contactList.
    *
    * @return ContactModRequest
-   */
+   **/
   public ContactModRequest contactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
     return this;
   }
-
+  
   /**
    * addContactListItem.
    *
    * @return ContactModRequest
-   */
+   **/
   public ContactModRequest addContactListItem(Contact contactListItem) {
     if (this.contactList == null) {
       this.contactList = new java.util.ArrayList<>();
@@ -34,18 +45,20 @@ public class ContactModRequest {
 
   /**
    * .
-   *
    * @return contactList
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<Contact> getContactList() {
     return contactList;
   }
 
-  /** setContactList. */
+  /**
+   * setContactList.
+   **/
   public void setContactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +77,31 @@ public class ContactModRequest {
     return Objects.equals(this.contactList, contactModRequest.contactList);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(contactList);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactModRequest {\n");
-
+    
     sb.append("    contactList: ").append(toIndentedString(contactList)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +109,6 @@ public class ContactModRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

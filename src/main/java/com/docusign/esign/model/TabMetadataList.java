@@ -1,29 +1,39 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.TabMetadata;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** TabMetadataList. */
+/**
+ * TabMetadataList.
+ *
+ */
+
 public class TabMetadataList {
   @JsonProperty("tabs")
   private java.util.List<TabMetadata> tabs = null;
+
 
   /**
    * tabs.
    *
    * @return TabMetadataList
-   */
+   **/
   public TabMetadataList tabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
     return this;
   }
-
+  
   /**
    * addTabsItem.
    *
    * @return TabMetadataList
-   */
+   **/
   public TabMetadataList addTabsItem(TabMetadata tabsItem) {
     if (this.tabs == null) {
       this.tabs = new java.util.ArrayList<>();
@@ -34,18 +44,20 @@ public class TabMetadataList {
 
   /**
    * .
-   *
    * @return tabs
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
   }
 
-  /** setTabs. */
+  /**
+   * setTabs.
+   **/
   public void setTabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +76,31 @@ public class TabMetadataList {
     return Objects.equals(this.tabs, tabMetadataList.tabs);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(tabs);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
-
+    
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +108,6 @@ public class TabMetadataList {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

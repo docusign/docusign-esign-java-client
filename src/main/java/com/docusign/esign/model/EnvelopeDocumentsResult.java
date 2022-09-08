@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.EnvelopeDocument;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EnvelopeDocumentsResult. */
+/**
+ * EnvelopeDocumentsResult.
+ *
+ */
+
 public class EnvelopeDocumentsResult {
   @JsonProperty("envelopeDocuments")
   private java.util.List<EnvelopeDocument> envelopeDocuments = null;
@@ -12,22 +21,22 @@ public class EnvelopeDocumentsResult {
   @JsonProperty("envelopeId")
   private String envelopeId = null;
 
+
   /**
    * envelopeDocuments.
    *
    * @return EnvelopeDocumentsResult
-   */
-  public EnvelopeDocumentsResult envelopeDocuments(
-      java.util.List<EnvelopeDocument> envelopeDocuments) {
+   **/
+  public EnvelopeDocumentsResult envelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
     return this;
   }
-
+  
   /**
    * addEnvelopeDocumentsItem.
    *
    * @return EnvelopeDocumentsResult
-   */
+   **/
   public EnvelopeDocumentsResult addEnvelopeDocumentsItem(EnvelopeDocument envelopeDocumentsItem) {
     if (this.envelopeDocuments == null) {
       this.envelopeDocuments = new java.util.ArrayList<>();
@@ -38,24 +47,26 @@ public class EnvelopeDocumentsResult {
 
   /**
    * .
-   *
    * @return envelopeDocuments
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
     return envelopeDocuments;
   }
 
-  /** setEnvelopeDocuments. */
+  /**
+   * setEnvelopeDocuments.
+   **/
   public void setEnvelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
   }
+
 
   /**
    * envelopeId.
    *
    * @return EnvelopeDocumentsResult
-   */
+   **/
   public EnvelopeDocumentsResult envelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
     return this;
@@ -63,18 +74,20 @@ public class EnvelopeDocumentsResult {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   *
    * @return envelopeId
-   */
+   **/
   @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
 
-  /** setEnvelopeId. */
+  /**
+   * setEnvelopeId.
+   **/
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
+
 
   /**
    * Compares objects.
@@ -90,22 +103,27 @@ public class EnvelopeDocumentsResult {
       return false;
     }
     EnvelopeDocumentsResult envelopeDocumentsResult = (EnvelopeDocumentsResult) o;
-    return Objects.equals(this.envelopeDocuments, envelopeDocumentsResult.envelopeDocuments)
-        && Objects.equals(this.envelopeId, envelopeDocumentsResult.envelopeId);
+    return Objects.equals(this.envelopeDocuments, envelopeDocumentsResult.envelopeDocuments) &&
+        Objects.equals(this.envelopeId, envelopeDocumentsResult.envelopeId);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(envelopeDocuments, envelopeId);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocumentsResult {\n");
-
+    
     sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("}");
@@ -113,7 +131,8 @@ public class EnvelopeDocumentsResult {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -121,4 +140,6 @@ public class EnvelopeDocumentsResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

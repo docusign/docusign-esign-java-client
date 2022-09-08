@@ -1,10 +1,21 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.Tabs;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** RecipientUpdateResponse. */
+/**
+ * The recipient details that are returned after you update the recipient..
+ *
+ */
+@ApiModel(description = "The recipient details that are returned after you update the recipient.")
+
 public class RecipientUpdateResponse {
   @JsonProperty("combined")
   private String combined = null;
@@ -21,11 +32,12 @@ public class RecipientUpdateResponse {
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
+
   /**
    * combined.
    *
    * @return RecipientUpdateResponse
-   */
+   **/
   public RecipientUpdateResponse combined(String combined) {
     this.combined = combined;
     return this;
@@ -33,77 +45,80 @@ public class RecipientUpdateResponse {
 
   /**
    * .
-   *
    * @return combined
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCombined() {
     return combined;
   }
 
-  /** setCombined. */
+  /**
+   * setCombined.
+   **/
   public void setCombined(String combined) {
     this.combined = combined;
   }
+
 
   /**
    * errorDetails.
    *
    * @return RecipientUpdateResponse
-   */
+   **/
   public RecipientUpdateResponse errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * recipientId.
    *
    * @return RecipientUpdateResponse
-   */
+   **/
   public RecipientUpdateResponse recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
-   * the Document..
-   *
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-   */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   **/
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
-  /** setRecipientId. */
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
+
 
   /**
    * recipientIdGuid.
    *
    * @return RecipientUpdateResponse
-   */
+   **/
   public RecipientUpdateResponse recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
@@ -111,43 +126,47 @@ public class RecipientUpdateResponse {
 
   /**
    * .
-   *
    * @return recipientIdGuid
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
 
-  /** setRecipientIdGuid. */
+  /**
+   * setRecipientIdGuid.
+   **/
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
+
 
   /**
    * tabs.
    *
    * @return RecipientUpdateResponse
-   */
+   **/
   public RecipientUpdateResponse tabs(Tabs tabs) {
     this.tabs = tabs;
     return this;
   }
 
   /**
-   * Get tabs.
-   *
+   * All of the tabs associated with the recipient..
    * @return tabs
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "All of the tabs associated with the recipient.")
   public Tabs getTabs() {
     return tabs;
   }
 
-  /** setTabs. */
+  /**
+   * setTabs.
+   **/
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
+
 
   /**
    * Compares objects.
@@ -163,25 +182,30 @@ public class RecipientUpdateResponse {
       return false;
     }
     RecipientUpdateResponse recipientUpdateResponse = (RecipientUpdateResponse) o;
-    return Objects.equals(this.combined, recipientUpdateResponse.combined)
-        && Objects.equals(this.errorDetails, recipientUpdateResponse.errorDetails)
-        && Objects.equals(this.recipientId, recipientUpdateResponse.recipientId)
-        && Objects.equals(this.recipientIdGuid, recipientUpdateResponse.recipientIdGuid)
-        && Objects.equals(this.tabs, recipientUpdateResponse.tabs);
+    return Objects.equals(this.combined, recipientUpdateResponse.combined) &&
+        Objects.equals(this.errorDetails, recipientUpdateResponse.errorDetails) &&
+        Objects.equals(this.recipientId, recipientUpdateResponse.recipientId) &&
+        Objects.equals(this.recipientIdGuid, recipientUpdateResponse.recipientIdGuid) &&
+        Objects.equals(this.tabs, recipientUpdateResponse.tabs);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(combined, errorDetails, recipientId, recipientIdGuid, tabs);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientUpdateResponse {\n");
-
+    
     sb.append("    combined: ").append(toIndentedString(combined)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -192,7 +216,8 @@ public class RecipientUpdateResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -200,4 +225,6 @@ public class RecipientUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

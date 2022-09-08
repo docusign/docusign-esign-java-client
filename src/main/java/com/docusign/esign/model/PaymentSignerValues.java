@@ -1,19 +1,28 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** PaymentSignerValues. */
+/**
+ * PaymentSignerValues.
+ *
+ */
+
 public class PaymentSignerValues {
   @JsonProperty("paymentOption")
   private String paymentOption = null;
+
 
   /**
    * paymentOption.
    *
    * @return PaymentSignerValues
-   */
+   **/
   public PaymentSignerValues paymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
     return this;
@@ -21,18 +30,20 @@ public class PaymentSignerValues {
 
   /**
    * .
-   *
    * @return paymentOption
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPaymentOption() {
     return paymentOption;
   }
 
-  /** setPaymentOption. */
+  /**
+   * setPaymentOption.
+   **/
   public void setPaymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
   }
+
 
   /**
    * Compares objects.
@@ -51,25 +62,31 @@ public class PaymentSignerValues {
     return Objects.equals(this.paymentOption, paymentSignerValues.paymentOption);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(paymentOption);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentSignerValues {\n");
-
+    
     sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -77,4 +94,6 @@ public class PaymentSignerValues {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

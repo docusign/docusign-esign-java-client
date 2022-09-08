@@ -1,10 +1,25 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.LocalePolicy;
+import com.docusign.esign.model.SealIdentifier;
+import com.docusign.esign.model.SenderEmailNotifications;
+import com.docusign.esign.model.SettingsMetadata;
+import com.docusign.esign.model.SignerEmailNotifications;
+import com.docusign.esign.model.UserAccountManagementGranularInformation;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** UserSettingsInformation. */
+/**
+ * Properties that configure the settings for a user. Some elements of this object have a &#x60;metadata&#x60; property, which includes the following: - &#x60;rights&#x60;: The calling users permissions to edit this setting (can be &#x60;editable&#x60; or &#x60;read_only&#x60;) - &#x60;uiHint&#x60;: Internally used to build UIs (can be &#x60;available&#x60; or &#x60;hidden&#x60;) - &#x60;options&#x60;: The values supported for this setting (not all settings have this element).
+ *
+ */
+@ApiModel(description = "Properties that configure the settings for a user. Some elements of this object have a `metadata` property, which includes the following: - `rights`: The calling users permissions to edit this setting (can be `editable` or `read_only`) - `uiHint`: Internally used to build UIs (can be `available` or `hidden`) - `options`: The values supported for this setting (not all settings have this element)")
+
 public class UserSettingsInformation {
   @JsonProperty("accountManagementGranular")
   private UserAccountManagementGranularInformation accountManagementGranular = null;
@@ -381,38 +396,39 @@ public class UserSettingsInformation {
   @JsonProperty("webFormsMetadata")
   private SettingsMetadata webFormsMetadata = null;
 
+
   /**
    * accountManagementGranular.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation accountManagementGranular(
-      UserAccountManagementGranularInformation accountManagementGranular) {
+   **/
+  public UserSettingsInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
     return this;
   }
 
   /**
-   * Get accountManagementGranular.
-   *
+   * Describes which account management capabilities a user has..
    * @return accountManagementGranular
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Describes which account management capabilities a user has.")
   public UserAccountManagementGranularInformation getAccountManagementGranular() {
     return accountManagementGranular;
   }
 
-  /** setAccountManagementGranular. */
-  public void setAccountManagementGranular(
-      UserAccountManagementGranularInformation accountManagementGranular) {
+  /**
+   * setAccountManagementGranular.
+   **/
+  public void setAccountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
   }
+
 
   /**
    * adminOnly.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation adminOnly(String adminOnly) {
     this.adminOnly = adminOnly;
     return this;
@@ -420,49 +436,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return adminOnly
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAdminOnly() {
     return adminOnly;
   }
 
-  /** setAdminOnly. */
+  /**
+   * setAdminOnly.
+   **/
   public void setAdminOnly(String adminOnly) {
     this.adminOnly = adminOnly;
   }
+
 
   /**
    * adminOnlyMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation adminOnlyMetadata(SettingsMetadata adminOnlyMetadata) {
     this.adminOnlyMetadata = adminOnlyMetadata;
     return this;
   }
 
   /**
-   * Get adminOnlyMetadata.
-   *
+   * Reserved for DocuSign..
    * @return adminOnlyMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getAdminOnlyMetadata() {
     return adminOnlyMetadata;
   }
 
-  /** setAdminOnlyMetadata. */
+  /**
+   * setAdminOnlyMetadata.
+   **/
   public void setAdminOnlyMetadata(SettingsMetadata adminOnlyMetadata) {
     this.adminOnlyMetadata = adminOnlyMetadata;
   }
+
 
   /**
    * allowAutoTagging.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation allowAutoTagging(String allowAutoTagging) {
     this.allowAutoTagging = allowAutoTagging;
     return this;
@@ -470,24 +490,26 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return allowAutoTagging
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowAutoTagging() {
     return allowAutoTagging;
   }
 
-  /** setAllowAutoTagging. */
+  /**
+   * setAllowAutoTagging.
+   **/
   public void setAllowAutoTagging(String allowAutoTagging) {
     this.allowAutoTagging = allowAutoTagging;
   }
+
 
   /**
    * allowEnvelopeTransferTo.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation allowEnvelopeTransferTo(String allowEnvelopeTransferTo) {
     this.allowEnvelopeTransferTo = allowEnvelopeTransferTo;
     return this;
@@ -495,50 +517,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return allowEnvelopeTransferTo
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowEnvelopeTransferTo() {
     return allowEnvelopeTransferTo;
   }
 
-  /** setAllowEnvelopeTransferTo. */
+  /**
+   * setAllowEnvelopeTransferTo.
+   **/
   public void setAllowEnvelopeTransferTo(String allowEnvelopeTransferTo) {
     this.allowEnvelopeTransferTo = allowEnvelopeTransferTo;
   }
+
 
   /**
    * allowEnvelopeTransferToMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowEnvelopeTransferToMetadata(
-      SettingsMetadata allowEnvelopeTransferToMetadata) {
+   **/
+  public UserSettingsInformation allowEnvelopeTransferToMetadata(SettingsMetadata allowEnvelopeTransferToMetadata) {
     this.allowEnvelopeTransferToMetadata = allowEnvelopeTransferToMetadata;
     return this;
   }
 
   /**
-   * Get allowEnvelopeTransferToMetadata.
-   *
+   * Reserved for DocuSign..
    * @return allowEnvelopeTransferToMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getAllowEnvelopeTransferToMetadata() {
     return allowEnvelopeTransferToMetadata;
   }
 
-  /** setAllowEnvelopeTransferToMetadata. */
+  /**
+   * setAllowEnvelopeTransferToMetadata.
+   **/
   public void setAllowEnvelopeTransferToMetadata(SettingsMetadata allowEnvelopeTransferToMetadata) {
     this.allowEnvelopeTransferToMetadata = allowEnvelopeTransferToMetadata;
   }
+
 
   /**
    * allowEsealRecipients.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation allowEsealRecipients(String allowEsealRecipients) {
     this.allowEsealRecipients = allowEsealRecipients;
     return this;
@@ -546,161 +571,161 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return allowEsealRecipients
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowEsealRecipients() {
     return allowEsealRecipients;
   }
 
-  /** setAllowEsealRecipients. */
+  /**
+   * setAllowEsealRecipients.
+   **/
   public void setAllowEsealRecipients(String allowEsealRecipients) {
     this.allowEsealRecipients = allowEsealRecipients;
   }
+
 
   /**
    * allowEsealRecipientsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowEsealRecipientsMetadata(
-      SettingsMetadata allowEsealRecipientsMetadata) {
+   **/
+  public UserSettingsInformation allowEsealRecipientsMetadata(SettingsMetadata allowEsealRecipientsMetadata) {
     this.allowEsealRecipientsMetadata = allowEsealRecipientsMetadata;
     return this;
   }
 
   /**
-   * Get allowEsealRecipientsMetadata.
-   *
+   * Metadata about the `allowEsealRecipientsMetadata` property..
    * @return allowEsealRecipientsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `allowEsealRecipientsMetadata` property.")
   public SettingsMetadata getAllowEsealRecipientsMetadata() {
     return allowEsealRecipientsMetadata;
   }
 
-  /** setAllowEsealRecipientsMetadata. */
+  /**
+   * setAllowEsealRecipientsMetadata.
+   **/
   public void setAllowEsealRecipientsMetadata(SettingsMetadata allowEsealRecipientsMetadata) {
     this.allowEsealRecipientsMetadata = allowEsealRecipientsMetadata;
   }
+
 
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelope.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelope(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
-    this.allowPowerFormsAdminToAccessAllPowerFormEnvelope =
-        allowPowerFormsAdminToAccessAllPowerFormEnvelope;
+   **/
+  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelope(String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelope = allowPowerFormsAdminToAccessAllPowerFormEnvelope;
     return this;
   }
 
   /**
    * .
-   *
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelope
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowPowerFormsAdminToAccessAllPowerFormEnvelope() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelope;
   }
 
-  /** setAllowPowerFormsAdminToAccessAllPowerFormEnvelope. */
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelope(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
-    this.allowPowerFormsAdminToAccessAllPowerFormEnvelope =
-        allowPowerFormsAdminToAccessAllPowerFormEnvelope;
+  /**
+   * setAllowPowerFormsAdminToAccessAllPowerFormEnvelope.
+   **/
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelope(String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelope = allowPowerFormsAdminToAccessAllPowerFormEnvelope;
   }
+
 
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
-    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata =
-        allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
+   **/
+  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
     return this;
   }
 
   /**
-   * Get allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata.
-   *
+   * Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property..
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property.")
   public SettingsMetadata getAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata() {
     return allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
   }
 
-  /** setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata. */
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
-    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata =
-        allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
+  /**
+   * setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata.
+   **/
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
+    this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
   }
+
 
   /**
    * allowRecipientLanguageSelection.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowRecipientLanguageSelection(
-      String allowRecipientLanguageSelection) {
+   **/
+  public UserSettingsInformation allowRecipientLanguageSelection(String allowRecipientLanguageSelection) {
     this.allowRecipientLanguageSelection = allowRecipientLanguageSelection;
     return this;
   }
 
   /**
    * .
-   *
    * @return allowRecipientLanguageSelection
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowRecipientLanguageSelection() {
     return allowRecipientLanguageSelection;
   }
 
-  /** setAllowRecipientLanguageSelection. */
+  /**
+   * setAllowRecipientLanguageSelection.
+   **/
   public void setAllowRecipientLanguageSelection(String allowRecipientLanguageSelection) {
     this.allowRecipientLanguageSelection = allowRecipientLanguageSelection;
   }
+
 
   /**
    * allowRecipientLanguageSelectionMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowRecipientLanguageSelectionMetadata(
-      SettingsMetadata allowRecipientLanguageSelectionMetadata) {
+   **/
+  public UserSettingsInformation allowRecipientLanguageSelectionMetadata(SettingsMetadata allowRecipientLanguageSelectionMetadata) {
     this.allowRecipientLanguageSelectionMetadata = allowRecipientLanguageSelectionMetadata;
     return this;
   }
 
   /**
-   * Get allowRecipientLanguageSelectionMetadata.
-   *
+   * Metadata for allowRecipientLanguageSelection..
    * @return allowRecipientLanguageSelectionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata for allowRecipientLanguageSelection.")
   public SettingsMetadata getAllowRecipientLanguageSelectionMetadata() {
     return allowRecipientLanguageSelectionMetadata;
   }
 
-  /** setAllowRecipientLanguageSelectionMetadata. */
-  public void setAllowRecipientLanguageSelectionMetadata(
-      SettingsMetadata allowRecipientLanguageSelectionMetadata) {
+  /**
+   * setAllowRecipientLanguageSelectionMetadata.
+   **/
+  public void setAllowRecipientLanguageSelectionMetadata(SettingsMetadata allowRecipientLanguageSelectionMetadata) {
     this.allowRecipientLanguageSelectionMetadata = allowRecipientLanguageSelectionMetadata;
   }
+
 
   /**
    * allowSendOnBehalfOf.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation allowSendOnBehalfOf(String allowSendOnBehalfOf) {
     this.allowSendOnBehalfOf = allowSendOnBehalfOf;
     return this;
@@ -708,50 +733,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return allowSendOnBehalfOf
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowSendOnBehalfOf() {
     return allowSendOnBehalfOf;
   }
 
-  /** setAllowSendOnBehalfOf. */
+  /**
+   * setAllowSendOnBehalfOf.
+   **/
   public void setAllowSendOnBehalfOf(String allowSendOnBehalfOf) {
     this.allowSendOnBehalfOf = allowSendOnBehalfOf;
   }
+
 
   /**
    * allowSendOnBehalfOfMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowSendOnBehalfOfMetadata(
-      SettingsMetadata allowSendOnBehalfOfMetadata) {
+   **/
+  public UserSettingsInformation allowSendOnBehalfOfMetadata(SettingsMetadata allowSendOnBehalfOfMetadata) {
     this.allowSendOnBehalfOfMetadata = allowSendOnBehalfOfMetadata;
     return this;
   }
 
   /**
-   * Get allowSendOnBehalfOfMetadata.
-   *
+   * Metadata for allowSendOnBehalfOf..
    * @return allowSendOnBehalfOfMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata for allowSendOnBehalfOf.")
   public SettingsMetadata getAllowSendOnBehalfOfMetadata() {
     return allowSendOnBehalfOfMetadata;
   }
 
-  /** setAllowSendOnBehalfOfMetadata. */
+  /**
+   * setAllowSendOnBehalfOfMetadata.
+   **/
   public void setAllowSendOnBehalfOfMetadata(SettingsMetadata allowSendOnBehalfOfMetadata) {
     this.allowSendOnBehalfOfMetadata = allowSendOnBehalfOfMetadata;
   }
+
 
   /**
    * allowSupplementalDocuments.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation allowSupplementalDocuments(String allowSupplementalDocuments) {
     this.allowSupplementalDocuments = allowSupplementalDocuments;
     return this;
@@ -759,77 +787,80 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return allowSupplementalDocuments
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowSupplementalDocuments() {
     return allowSupplementalDocuments;
   }
 
-  /** setAllowSupplementalDocuments. */
+  /**
+   * setAllowSupplementalDocuments.
+   **/
   public void setAllowSupplementalDocuments(String allowSupplementalDocuments) {
     this.allowSupplementalDocuments = allowSupplementalDocuments;
   }
+
 
   /**
    * allowSupplementalDocumentsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation allowSupplementalDocumentsMetadata(
-      SettingsMetadata allowSupplementalDocumentsMetadata) {
+   **/
+  public UserSettingsInformation allowSupplementalDocumentsMetadata(SettingsMetadata allowSupplementalDocumentsMetadata) {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
     return this;
   }
 
   /**
-   * Get allowSupplementalDocumentsMetadata.
-   *
+   * Metadata that indicates whether the `allowSupplementalDocuments` property is editable..
    * @return allowSupplementalDocumentsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `allowSupplementalDocuments` property is editable.")
   public SettingsMetadata getAllowSupplementalDocumentsMetadata() {
     return allowSupplementalDocumentsMetadata;
   }
 
-  /** setAllowSupplementalDocumentsMetadata. */
-  public void setAllowSupplementalDocumentsMetadata(
-      SettingsMetadata allowSupplementalDocumentsMetadata) {
+  /**
+   * setAllowSupplementalDocumentsMetadata.
+   **/
+  public void setAllowSupplementalDocumentsMetadata(SettingsMetadata allowSupplementalDocumentsMetadata) {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
   }
+
 
   /**
    * anchorTagVersionedPlacementEnabled.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation anchorTagVersionedPlacementEnabled(
-      String anchorTagVersionedPlacementEnabled) {
+   **/
+  public UserSettingsInformation anchorTagVersionedPlacementEnabled(String anchorTagVersionedPlacementEnabled) {
     this.anchorTagVersionedPlacementEnabled = anchorTagVersionedPlacementEnabled;
     return this;
   }
 
   /**
    * .
-   *
    * @return anchorTagVersionedPlacementEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAnchorTagVersionedPlacementEnabled() {
     return anchorTagVersionedPlacementEnabled;
   }
 
-  /** setAnchorTagVersionedPlacementEnabled. */
+  /**
+   * setAnchorTagVersionedPlacementEnabled.
+   **/
   public void setAnchorTagVersionedPlacementEnabled(String anchorTagVersionedPlacementEnabled) {
     this.anchorTagVersionedPlacementEnabled = anchorTagVersionedPlacementEnabled;
   }
+
 
   /**
    * apiAccountWideAccess.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation apiAccountWideAccess(String apiAccountWideAccess) {
     this.apiAccountWideAccess = apiAccountWideAccess;
     return this;
@@ -837,50 +868,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return apiAccountWideAccess
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getApiAccountWideAccess() {
     return apiAccountWideAccess;
   }
 
-  /** setApiAccountWideAccess. */
+  /**
+   * setApiAccountWideAccess.
+   **/
   public void setApiAccountWideAccess(String apiAccountWideAccess) {
     this.apiAccountWideAccess = apiAccountWideAccess;
   }
+
 
   /**
    * apiAccountWideAccessMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation apiAccountWideAccessMetadata(
-      SettingsMetadata apiAccountWideAccessMetadata) {
+   **/
+  public UserSettingsInformation apiAccountWideAccessMetadata(SettingsMetadata apiAccountWideAccessMetadata) {
     this.apiAccountWideAccessMetadata = apiAccountWideAccessMetadata;
     return this;
   }
 
   /**
-   * Get apiAccountWideAccessMetadata.
-   *
+   * Metadata for apiAccountWideAccess..
    * @return apiAccountWideAccessMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata for apiAccountWideAccess.")
   public SettingsMetadata getApiAccountWideAccessMetadata() {
     return apiAccountWideAccessMetadata;
   }
 
-  /** setApiAccountWideAccessMetadata. */
+  /**
+   * setApiAccountWideAccessMetadata.
+   **/
   public void setApiAccountWideAccessMetadata(SettingsMetadata apiAccountWideAccessMetadata) {
     this.apiAccountWideAccessMetadata = apiAccountWideAccessMetadata;
   }
+
 
   /**
    * apiCanExportAC.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation apiCanExportAC(String apiCanExportAC) {
     this.apiCanExportAC = apiCanExportAC;
     return this;
@@ -888,49 +922,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return apiCanExportAC
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getApiCanExportAC() {
     return apiCanExportAC;
   }
 
-  /** setApiCanExportAC. */
+  /**
+   * setApiCanExportAC.
+   **/
   public void setApiCanExportAC(String apiCanExportAC) {
     this.apiCanExportAC = apiCanExportAC;
   }
+
 
   /**
    * apiCanExportACMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation apiCanExportACMetadata(SettingsMetadata apiCanExportACMetadata) {
     this.apiCanExportACMetadata = apiCanExportACMetadata;
     return this;
   }
 
   /**
-   * Get apiCanExportACMetadata.
-   *
+   * Metadata about the `apiCanExportACMetadata` property..
    * @return apiCanExportACMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `apiCanExportACMetadata` property.")
   public SettingsMetadata getApiCanExportACMetadata() {
     return apiCanExportACMetadata;
   }
 
-  /** setApiCanExportACMetadata. */
+  /**
+   * setApiCanExportACMetadata.
+   **/
   public void setApiCanExportACMetadata(SettingsMetadata apiCanExportACMetadata) {
     this.apiCanExportACMetadata = apiCanExportACMetadata;
   }
+
 
   /**
    * bulkSend.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation bulkSend(String bulkSend) {
     this.bulkSend = bulkSend;
     return this;
@@ -938,49 +976,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return bulkSend
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getBulkSend() {
     return bulkSend;
   }
 
-  /** setBulkSend. */
+  /**
+   * setBulkSend.
+   **/
   public void setBulkSend(String bulkSend) {
     this.bulkSend = bulkSend;
   }
+
 
   /**
    * bulkSendMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation bulkSendMetadata(SettingsMetadata bulkSendMetadata) {
     this.bulkSendMetadata = bulkSendMetadata;
     return this;
   }
 
   /**
-   * Get bulkSendMetadata.
-   *
+   * Metadata that indicates whether the `bulkSend` property is editable. .
    * @return bulkSendMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `bulkSend` property is editable. ")
   public SettingsMetadata getBulkSendMetadata() {
     return bulkSendMetadata;
   }
 
-  /** setBulkSendMetadata. */
+  /**
+   * setBulkSendMetadata.
+   **/
   public void setBulkSendMetadata(SettingsMetadata bulkSendMetadata) {
     this.bulkSendMetadata = bulkSendMetadata;
   }
+
 
   /**
    * canChargeAccount.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canChargeAccount(String canChargeAccount) {
     this.canChargeAccount = canChargeAccount;
     return this;
@@ -988,50 +1030,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canChargeAccount
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanChargeAccount() {
     return canChargeAccount;
   }
 
-  /** setCanChargeAccount. */
+  /**
+   * setCanChargeAccount.
+   **/
   public void setCanChargeAccount(String canChargeAccount) {
     this.canChargeAccount = canChargeAccount;
   }
+
 
   /**
    * canChargeAccountMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canChargeAccountMetadata(
-      SettingsMetadata canChargeAccountMetadata) {
+   **/
+  public UserSettingsInformation canChargeAccountMetadata(SettingsMetadata canChargeAccountMetadata) {
     this.canChargeAccountMetadata = canChargeAccountMetadata;
     return this;
   }
 
   /**
-   * Get canChargeAccountMetadata.
-   *
+   * Reserved for DocuSign..
    * @return canChargeAccountMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getCanChargeAccountMetadata() {
     return canChargeAccountMetadata;
   }
 
-  /** setCanChargeAccountMetadata. */
+  /**
+   * setCanChargeAccountMetadata.
+   **/
   public void setCanChargeAccountMetadata(SettingsMetadata canChargeAccountMetadata) {
     this.canChargeAccountMetadata = canChargeAccountMetadata;
   }
+
 
   /**
    * canEditSharedAddressbook.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canEditSharedAddressbook(String canEditSharedAddressbook) {
     this.canEditSharedAddressbook = canEditSharedAddressbook;
     return this;
@@ -1039,51 +1084,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canEditSharedAddressbook
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanEditSharedAddressbook() {
     return canEditSharedAddressbook;
   }
 
-  /** setCanEditSharedAddressbook. */
+  /**
+   * setCanEditSharedAddressbook.
+   **/
   public void setCanEditSharedAddressbook(String canEditSharedAddressbook) {
     this.canEditSharedAddressbook = canEditSharedAddressbook;
   }
+
 
   /**
    * canEditSharedAddressbookMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canEditSharedAddressbookMetadata(
-      SettingsMetadata canEditSharedAddressbookMetadata) {
+   **/
+  public UserSettingsInformation canEditSharedAddressbookMetadata(SettingsMetadata canEditSharedAddressbookMetadata) {
     this.canEditSharedAddressbookMetadata = canEditSharedAddressbookMetadata;
     return this;
   }
 
   /**
-   * Get canEditSharedAddressbookMetadata.
-   *
+   * Metadata about the `canEditSharedAddressbookMetadata` property..
    * @return canEditSharedAddressbookMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canEditSharedAddressbookMetadata` property.")
   public SettingsMetadata getCanEditSharedAddressbookMetadata() {
     return canEditSharedAddressbookMetadata;
   }
 
-  /** setCanEditSharedAddressbookMetadata. */
-  public void setCanEditSharedAddressbookMetadata(
-      SettingsMetadata canEditSharedAddressbookMetadata) {
+  /**
+   * setCanEditSharedAddressbookMetadata.
+   **/
+  public void setCanEditSharedAddressbookMetadata(SettingsMetadata canEditSharedAddressbookMetadata) {
     this.canEditSharedAddressbookMetadata = canEditSharedAddressbookMetadata;
   }
+
 
   /**
    * canLockEnvelopes.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canLockEnvelopes(String canLockEnvelopes) {
     this.canLockEnvelopes = canLockEnvelopes;
     return this;
@@ -1091,50 +1138,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canLockEnvelopes
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanLockEnvelopes() {
     return canLockEnvelopes;
   }
 
-  /** setCanLockEnvelopes. */
+  /**
+   * setCanLockEnvelopes.
+   **/
   public void setCanLockEnvelopes(String canLockEnvelopes) {
     this.canLockEnvelopes = canLockEnvelopes;
   }
+
 
   /**
    * canLockEnvelopesMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canLockEnvelopesMetadata(
-      SettingsMetadata canLockEnvelopesMetadata) {
+   **/
+  public UserSettingsInformation canLockEnvelopesMetadata(SettingsMetadata canLockEnvelopesMetadata) {
     this.canLockEnvelopesMetadata = canLockEnvelopesMetadata;
     return this;
   }
 
   /**
-   * Get canLockEnvelopesMetadata.
-   *
+   * Metadata about the `canLockEnvelopes` property..
    * @return canLockEnvelopesMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canLockEnvelopes` property.")
   public SettingsMetadata getCanLockEnvelopesMetadata() {
     return canLockEnvelopesMetadata;
   }
 
-  /** setCanLockEnvelopesMetadata. */
+  /**
+   * setCanLockEnvelopesMetadata.
+   **/
   public void setCanLockEnvelopesMetadata(SettingsMetadata canLockEnvelopesMetadata) {
     this.canLockEnvelopesMetadata = canLockEnvelopesMetadata;
   }
+
 
   /**
    * canManageAccount.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canManageAccount(String canManageAccount) {
     this.canManageAccount = canManageAccount;
     return this;
@@ -1142,50 +1192,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canManageAccount
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanManageAccount() {
     return canManageAccount;
   }
 
-  /** setCanManageAccount. */
+  /**
+   * setCanManageAccount.
+   **/
   public void setCanManageAccount(String canManageAccount) {
     this.canManageAccount = canManageAccount;
   }
+
 
   /**
    * canManageAccountMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canManageAccountMetadata(
-      SettingsMetadata canManageAccountMetadata) {
+   **/
+  public UserSettingsInformation canManageAccountMetadata(SettingsMetadata canManageAccountMetadata) {
     this.canManageAccountMetadata = canManageAccountMetadata;
     return this;
   }
 
   /**
-   * Get canManageAccountMetadata.
-   *
+   * Metadata about the `canManageAccountMetadata` property..
    * @return canManageAccountMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canManageAccountMetadata` property.")
   public SettingsMetadata getCanManageAccountMetadata() {
     return canManageAccountMetadata;
   }
 
-  /** setCanManageAccountMetadata. */
+  /**
+   * setCanManageAccountMetadata.
+   **/
   public void setCanManageAccountMetadata(SettingsMetadata canManageAccountMetadata) {
     this.canManageAccountMetadata = canManageAccountMetadata;
   }
+
 
   /**
    * canManageDistributor.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canManageDistributor(String canManageDistributor) {
     this.canManageDistributor = canManageDistributor;
     return this;
@@ -1193,50 +1246,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canManageDistributor
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanManageDistributor() {
     return canManageDistributor;
   }
 
-  /** setCanManageDistributor. */
+  /**
+   * setCanManageDistributor.
+   **/
   public void setCanManageDistributor(String canManageDistributor) {
     this.canManageDistributor = canManageDistributor;
   }
+
 
   /**
    * canManageDistributorMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canManageDistributorMetadata(
-      SettingsMetadata canManageDistributorMetadata) {
+   **/
+  public UserSettingsInformation canManageDistributorMetadata(SettingsMetadata canManageDistributorMetadata) {
     this.canManageDistributorMetadata = canManageDistributorMetadata;
     return this;
   }
 
   /**
-   * Get canManageDistributorMetadata.
-   *
+   * Metadata about the `canManageDistributor` property..
    * @return canManageDistributorMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canManageDistributor` property.")
   public SettingsMetadata getCanManageDistributorMetadata() {
     return canManageDistributorMetadata;
   }
 
-  /** setCanManageDistributorMetadata. */
+  /**
+   * setCanManageDistributorMetadata.
+   **/
   public void setCanManageDistributorMetadata(SettingsMetadata canManageDistributorMetadata) {
     this.canManageDistributorMetadata = canManageDistributorMetadata;
   }
+
 
   /**
    * canManageTemplates.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canManageTemplates(String canManageTemplates) {
     this.canManageTemplates = canManageTemplates;
     return this;
@@ -1244,50 +1300,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canManageTemplates
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanManageTemplates() {
     return canManageTemplates;
   }
 
-  /** setCanManageTemplates. */
+  /**
+   * setCanManageTemplates.
+   **/
   public void setCanManageTemplates(String canManageTemplates) {
     this.canManageTemplates = canManageTemplates;
   }
+
 
   /**
    * canManageTemplatesMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canManageTemplatesMetadata(
-      SettingsMetadata canManageTemplatesMetadata) {
+   **/
+  public UserSettingsInformation canManageTemplatesMetadata(SettingsMetadata canManageTemplatesMetadata) {
     this.canManageTemplatesMetadata = canManageTemplatesMetadata;
     return this;
   }
 
   /**
-   * Get canManageTemplatesMetadata.
-   *
+   * Metadata about the `canManageTemplates` property..
    * @return canManageTemplatesMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canManageTemplates` property.")
   public SettingsMetadata getCanManageTemplatesMetadata() {
     return canManageTemplatesMetadata;
   }
 
-  /** setCanManageTemplatesMetadata. */
+  /**
+   * setCanManageTemplatesMetadata.
+   **/
   public void setCanManageTemplatesMetadata(SettingsMetadata canManageTemplatesMetadata) {
     this.canManageTemplatesMetadata = canManageTemplatesMetadata;
   }
+
 
   /**
    * canSendAPIRequests.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSendAPIRequests(String canSendAPIRequests) {
     this.canSendAPIRequests = canSendAPIRequests;
     return this;
@@ -1295,50 +1354,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canSendAPIRequests
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanSendAPIRequests() {
     return canSendAPIRequests;
   }
 
-  /** setCanSendAPIRequests. */
+  /**
+   * setCanSendAPIRequests.
+   **/
   public void setCanSendAPIRequests(String canSendAPIRequests) {
     this.canSendAPIRequests = canSendAPIRequests;
   }
+
 
   /**
    * canSendAPIRequestsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canSendAPIRequestsMetadata(
-      SettingsMetadata canSendAPIRequestsMetadata) {
+   **/
+  public UserSettingsInformation canSendAPIRequestsMetadata(SettingsMetadata canSendAPIRequestsMetadata) {
     this.canSendAPIRequestsMetadata = canSendAPIRequestsMetadata;
     return this;
   }
 
   /**
-   * Get canSendAPIRequestsMetadata.
-   *
+   * Metadata about the `canSendAPIRequests` property..
    * @return canSendAPIRequestsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canSendAPIRequests` property.")
   public SettingsMetadata getCanSendAPIRequestsMetadata() {
     return canSendAPIRequestsMetadata;
   }
 
-  /** setCanSendAPIRequestsMetadata. */
+  /**
+   * setCanSendAPIRequestsMetadata.
+   **/
   public void setCanSendAPIRequestsMetadata(SettingsMetadata canSendAPIRequestsMetadata) {
     this.canSendAPIRequestsMetadata = canSendAPIRequestsMetadata;
   }
+
 
   /**
    * canSendEnvelope.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSendEnvelope(String canSendEnvelope) {
     this.canSendEnvelope = canSendEnvelope;
     return this;
@@ -1346,49 +1408,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canSendEnvelope
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanSendEnvelope() {
     return canSendEnvelope;
   }
 
-  /** setCanSendEnvelope. */
+  /**
+   * setCanSendEnvelope.
+   **/
   public void setCanSendEnvelope(String canSendEnvelope) {
     this.canSendEnvelope = canSendEnvelope;
   }
+
 
   /**
    * canSendEnvelopeMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSendEnvelopeMetadata(SettingsMetadata canSendEnvelopeMetadata) {
     this.canSendEnvelopeMetadata = canSendEnvelopeMetadata;
     return this;
   }
 
   /**
-   * Get canSendEnvelopeMetadata.
-   *
+   * Metadata about the `canSendEnvelope` property..
    * @return canSendEnvelopeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canSendEnvelope` property.")
   public SettingsMetadata getCanSendEnvelopeMetadata() {
     return canSendEnvelopeMetadata;
   }
 
-  /** setCanSendEnvelopeMetadata. */
+  /**
+   * setCanSendEnvelopeMetadata.
+   **/
   public void setCanSendEnvelopeMetadata(SettingsMetadata canSendEnvelopeMetadata) {
     this.canSendEnvelopeMetadata = canSendEnvelopeMetadata;
   }
+
 
   /**
    * canSendEnvelopesViaSMS.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSendEnvelopesViaSMS(String canSendEnvelopesViaSMS) {
     this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
     return this;
@@ -1396,50 +1462,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canSendEnvelopesViaSMS
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanSendEnvelopesViaSMS() {
     return canSendEnvelopesViaSMS;
   }
 
-  /** setCanSendEnvelopesViaSMS. */
+  /**
+   * setCanSendEnvelopesViaSMS.
+   **/
   public void setCanSendEnvelopesViaSMS(String canSendEnvelopesViaSMS) {
     this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
   }
+
 
   /**
    * canSendEnvelopesViaSMSMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canSendEnvelopesViaSMSMetadata(
-      SettingsMetadata canSendEnvelopesViaSMSMetadata) {
+   **/
+  public UserSettingsInformation canSendEnvelopesViaSMSMetadata(SettingsMetadata canSendEnvelopesViaSMSMetadata) {
     this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
     return this;
   }
 
   /**
-   * Get canSendEnvelopesViaSMSMetadata.
-   *
+   * .
    * @return canSendEnvelopesViaSMSMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getCanSendEnvelopesViaSMSMetadata() {
     return canSendEnvelopesViaSMSMetadata;
   }
 
-  /** setCanSendEnvelopesViaSMSMetadata. */
+  /**
+   * setCanSendEnvelopesViaSMSMetadata.
+   **/
   public void setCanSendEnvelopesViaSMSMetadata(SettingsMetadata canSendEnvelopesViaSMSMetadata) {
     this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
   }
+
 
   /**
    * canSignEnvelope.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSignEnvelope(String canSignEnvelope) {
     this.canSignEnvelope = canSignEnvelope;
     return this;
@@ -1447,49 +1516,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canSignEnvelope
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanSignEnvelope() {
     return canSignEnvelope;
   }
 
-  /** setCanSignEnvelope. */
+  /**
+   * setCanSignEnvelope.
+   **/
   public void setCanSignEnvelope(String canSignEnvelope) {
     this.canSignEnvelope = canSignEnvelope;
   }
+
 
   /**
    * canSignEnvelopeMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canSignEnvelopeMetadata(SettingsMetadata canSignEnvelopeMetadata) {
     this.canSignEnvelopeMetadata = canSignEnvelopeMetadata;
     return this;
   }
 
   /**
-   * Get canSignEnvelopeMetadata.
-   *
+   * Metadata about the `canSignEnvelope` property..
    * @return canSignEnvelopeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canSignEnvelope` property.")
   public SettingsMetadata getCanSignEnvelopeMetadata() {
     return canSignEnvelopeMetadata;
   }
 
-  /** setCanSignEnvelopeMetadata. */
+  /**
+   * setCanSignEnvelopeMetadata.
+   **/
   public void setCanSignEnvelopeMetadata(SettingsMetadata canSignEnvelopeMetadata) {
     this.canSignEnvelopeMetadata = canSignEnvelopeMetadata;
   }
+
 
   /**
    * canUseScratchpad.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canUseScratchpad(String canUseScratchpad) {
     this.canUseScratchpad = canUseScratchpad;
     return this;
@@ -1497,50 +1570,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canUseScratchpad
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanUseScratchpad() {
     return canUseScratchpad;
   }
 
-  /** setCanUseScratchpad. */
+  /**
+   * setCanUseScratchpad.
+   **/
   public void setCanUseScratchpad(String canUseScratchpad) {
     this.canUseScratchpad = canUseScratchpad;
   }
+
 
   /**
    * canUseScratchpadMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canUseScratchpadMetadata(
-      SettingsMetadata canUseScratchpadMetadata) {
+   **/
+  public UserSettingsInformation canUseScratchpadMetadata(SettingsMetadata canUseScratchpadMetadata) {
     this.canUseScratchpadMetadata = canUseScratchpadMetadata;
     return this;
   }
 
   /**
-   * Get canUseScratchpadMetadata.
-   *
+   * Metadata about the `canUseScratchpad` property..
    * @return canUseScratchpadMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `canUseScratchpad` property.")
   public SettingsMetadata getCanUseScratchpadMetadata() {
     return canUseScratchpadMetadata;
   }
 
-  /** setCanUseScratchpadMetadata. */
+  /**
+   * setCanUseScratchpadMetadata.
+   **/
   public void setCanUseScratchpadMetadata(SettingsMetadata canUseScratchpadMetadata) {
     this.canUseScratchpadMetadata = canUseScratchpadMetadata;
   }
+
 
   /**
    * canUseSmartContracts.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation canUseSmartContracts(String canUseSmartContracts) {
     this.canUseSmartContracts = canUseSmartContracts;
     return this;
@@ -1548,50 +1624,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return canUseSmartContracts
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCanUseSmartContracts() {
     return canUseSmartContracts;
   }
 
-  /** setCanUseSmartContracts. */
+  /**
+   * setCanUseSmartContracts.
+   **/
   public void setCanUseSmartContracts(String canUseSmartContracts) {
     this.canUseSmartContracts = canUseSmartContracts;
   }
+
 
   /**
    * canUseSmartContractsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation canUseSmartContractsMetadata(
-      SettingsMetadata canUseSmartContractsMetadata) {
+   **/
+  public UserSettingsInformation canUseSmartContractsMetadata(SettingsMetadata canUseSmartContractsMetadata) {
     this.canUseSmartContractsMetadata = canUseSmartContractsMetadata;
     return this;
   }
 
   /**
-   * Get canUseSmartContractsMetadata.
-   *
+   * Reserved for DocuSign..
    * @return canUseSmartContractsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getCanUseSmartContractsMetadata() {
     return canUseSmartContractsMetadata;
   }
 
-  /** setCanUseSmartContractsMetadata. */
+  /**
+   * setCanUseSmartContractsMetadata.
+   **/
   public void setCanUseSmartContractsMetadata(SettingsMetadata canUseSmartContractsMetadata) {
     this.canUseSmartContractsMetadata = canUseSmartContractsMetadata;
   }
+
 
   /**
    * disableDocumentUpload.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation disableDocumentUpload(String disableDocumentUpload) {
     this.disableDocumentUpload = disableDocumentUpload;
     return this;
@@ -1599,50 +1678,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return disableDocumentUpload
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisableDocumentUpload() {
     return disableDocumentUpload;
   }
 
-  /** setDisableDocumentUpload. */
+  /**
+   * setDisableDocumentUpload.
+   **/
   public void setDisableDocumentUpload(String disableDocumentUpload) {
     this.disableDocumentUpload = disableDocumentUpload;
   }
+
 
   /**
    * disableDocumentUploadMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation disableDocumentUploadMetadata(
-      SettingsMetadata disableDocumentUploadMetadata) {
+   **/
+  public UserSettingsInformation disableDocumentUploadMetadata(SettingsMetadata disableDocumentUploadMetadata) {
     this.disableDocumentUploadMetadata = disableDocumentUploadMetadata;
     return this;
   }
 
   /**
-   * Get disableDocumentUploadMetadata.
-   *
+   * Metadata that indicates whether the `disableDocumentUpload` property is editable. .
    * @return disableDocumentUploadMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `disableDocumentUpload` property is editable. ")
   public SettingsMetadata getDisableDocumentUploadMetadata() {
     return disableDocumentUploadMetadata;
   }
 
-  /** setDisableDocumentUploadMetadata. */
+  /**
+   * setDisableDocumentUploadMetadata.
+   **/
   public void setDisableDocumentUploadMetadata(SettingsMetadata disableDocumentUploadMetadata) {
     this.disableDocumentUploadMetadata = disableDocumentUploadMetadata;
   }
+
 
   /**
    * disableOtherActions.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation disableOtherActions(String disableOtherActions) {
     this.disableOtherActions = disableOtherActions;
     return this;
@@ -1650,50 +1732,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return disableOtherActions
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDisableOtherActions() {
     return disableOtherActions;
   }
 
-  /** setDisableOtherActions. */
+  /**
+   * setDisableOtherActions.
+   **/
   public void setDisableOtherActions(String disableOtherActions) {
     this.disableOtherActions = disableOtherActions;
   }
+
 
   /**
    * disableOtherActionsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation disableOtherActionsMetadata(
-      SettingsMetadata disableOtherActionsMetadata) {
+   **/
+  public UserSettingsInformation disableOtherActionsMetadata(SettingsMetadata disableOtherActionsMetadata) {
     this.disableOtherActionsMetadata = disableOtherActionsMetadata;
     return this;
   }
 
   /**
-   * Get disableOtherActionsMetadata.
-   *
+   * Metadata that indicates whether the `disableOtherActions` property is editable. .
    * @return disableOtherActionsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `disableOtherActions` property is editable. ")
   public SettingsMetadata getDisableOtherActionsMetadata() {
     return disableOtherActionsMetadata;
   }
 
-  /** setDisableOtherActionsMetadata. */
+  /**
+   * setDisableOtherActionsMetadata.
+   **/
   public void setDisableOtherActionsMetadata(SettingsMetadata disableOtherActionsMetadata) {
     this.disableOtherActionsMetadata = disableOtherActionsMetadata;
   }
+
 
   /**
    * enableDSPro.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableDSPro(String enableDSPro) {
     this.enableDSPro = enableDSPro;
     return this;
@@ -1701,105 +1786,107 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableDSPro
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableDSPro() {
     return enableDSPro;
   }
 
-  /** setEnableDSPro. */
+  /**
+   * setEnableDSPro.
+   **/
   public void setEnableDSPro(String enableDSPro) {
     this.enableDSPro = enableDSPro;
   }
+
 
   /**
    * enableDSProMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableDSProMetadata(SettingsMetadata enableDSProMetadata) {
     this.enableDSProMetadata = enableDSProMetadata;
     return this;
   }
 
   /**
-   * Get enableDSProMetadata.
-   *
+   * Metadata that indicates whether the `enableDSPro` property is editable. .
    * @return enableDSProMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableDSPro` property is editable. ")
   public SettingsMetadata getEnableDSProMetadata() {
     return enableDSProMetadata;
   }
 
-  /** setEnableDSProMetadata. */
+  /**
+   * setEnableDSProMetadata.
+   **/
   public void setEnableDSProMetadata(SettingsMetadata enableDSProMetadata) {
     this.enableDSProMetadata = enableDSProMetadata;
   }
+
 
   /**
    * enableKeyTermsSuggestionsByDocumentType.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentType(
-      String enableKeyTermsSuggestionsByDocumentType) {
+   **/
+  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentType(String enableKeyTermsSuggestionsByDocumentType) {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
     return this;
   }
 
   /**
    * .
-   *
    * @return enableKeyTermsSuggestionsByDocumentType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableKeyTermsSuggestionsByDocumentType() {
     return enableKeyTermsSuggestionsByDocumentType;
   }
 
-  /** setEnableKeyTermsSuggestionsByDocumentType. */
-  public void setEnableKeyTermsSuggestionsByDocumentType(
-      String enableKeyTermsSuggestionsByDocumentType) {
+  /**
+   * setEnableKeyTermsSuggestionsByDocumentType.
+   **/
+  public void setEnableKeyTermsSuggestionsByDocumentType(String enableKeyTermsSuggestionsByDocumentType) {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
   }
+
 
   /**
    * enableKeyTermsSuggestionsByDocumentTypeMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
-    this.enableKeyTermsSuggestionsByDocumentTypeMetadata =
-        enableKeyTermsSuggestionsByDocumentTypeMetadata;
+   **/
+  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+    this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
     return this;
   }
 
   /**
    * Get enableKeyTermsSuggestionsByDocumentTypeMetadata.
-   *
    * @return enableKeyTermsSuggestionsByDocumentTypeMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getEnableKeyTermsSuggestionsByDocumentTypeMetadata() {
     return enableKeyTermsSuggestionsByDocumentTypeMetadata;
   }
 
-  /** setEnableKeyTermsSuggestionsByDocumentTypeMetadata. */
-  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
-    this.enableKeyTermsSuggestionsByDocumentTypeMetadata =
-        enableKeyTermsSuggestionsByDocumentTypeMetadata;
+  /**
+   * setEnableKeyTermsSuggestionsByDocumentTypeMetadata.
+   **/
+  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+    this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
   }
+
 
   /**
    * enableSequentialSigningAPI.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableSequentialSigningAPI(String enableSequentialSigningAPI) {
     this.enableSequentialSigningAPI = enableSequentialSigningAPI;
     return this;
@@ -1807,51 +1894,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableSequentialSigningAPI
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSequentialSigningAPI() {
     return enableSequentialSigningAPI;
   }
 
-  /** setEnableSequentialSigningAPI. */
+  /**
+   * setEnableSequentialSigningAPI.
+   **/
   public void setEnableSequentialSigningAPI(String enableSequentialSigningAPI) {
     this.enableSequentialSigningAPI = enableSequentialSigningAPI;
   }
+
 
   /**
    * enableSequentialSigningAPIMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableSequentialSigningAPIMetadata(
-      SettingsMetadata enableSequentialSigningAPIMetadata) {
+   **/
+  public UserSettingsInformation enableSequentialSigningAPIMetadata(SettingsMetadata enableSequentialSigningAPIMetadata) {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
     return this;
   }
 
   /**
-   * Get enableSequentialSigningAPIMetadata.
-   *
+   * Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. .
    * @return enableSequentialSigningAPIMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. ")
   public SettingsMetadata getEnableSequentialSigningAPIMetadata() {
     return enableSequentialSigningAPIMetadata;
   }
 
-  /** setEnableSequentialSigningAPIMetadata. */
-  public void setEnableSequentialSigningAPIMetadata(
-      SettingsMetadata enableSequentialSigningAPIMetadata) {
+  /**
+   * setEnableSequentialSigningAPIMetadata.
+   **/
+  public void setEnableSequentialSigningAPIMetadata(SettingsMetadata enableSequentialSigningAPIMetadata) {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
   }
+
 
   /**
    * enableSequentialSigningUI.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableSequentialSigningUI(String enableSequentialSigningUI) {
     this.enableSequentialSigningUI = enableSequentialSigningUI;
     return this;
@@ -1859,51 +1948,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableSequentialSigningUI
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSequentialSigningUI() {
     return enableSequentialSigningUI;
   }
 
-  /** setEnableSequentialSigningUI. */
+  /**
+   * setEnableSequentialSigningUI.
+   **/
   public void setEnableSequentialSigningUI(String enableSequentialSigningUI) {
     this.enableSequentialSigningUI = enableSequentialSigningUI;
   }
+
 
   /**
    * enableSequentialSigningUIMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableSequentialSigningUIMetadata(
-      SettingsMetadata enableSequentialSigningUIMetadata) {
+   **/
+  public UserSettingsInformation enableSequentialSigningUIMetadata(SettingsMetadata enableSequentialSigningUIMetadata) {
     this.enableSequentialSigningUIMetadata = enableSequentialSigningUIMetadata;
     return this;
   }
 
   /**
-   * Get enableSequentialSigningUIMetadata.
-   *
+   * Metadata that indicates whether the `enableSequentialSigningUI` property is editable. .
    * @return enableSequentialSigningUIMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableSequentialSigningUI` property is editable. ")
   public SettingsMetadata getEnableSequentialSigningUIMetadata() {
     return enableSequentialSigningUIMetadata;
   }
 
-  /** setEnableSequentialSigningUIMetadata. */
-  public void setEnableSequentialSigningUIMetadata(
-      SettingsMetadata enableSequentialSigningUIMetadata) {
+  /**
+   * setEnableSequentialSigningUIMetadata.
+   **/
+  public void setEnableSequentialSigningUIMetadata(SettingsMetadata enableSequentialSigningUIMetadata) {
     this.enableSequentialSigningUIMetadata = enableSequentialSigningUIMetadata;
   }
+
 
   /**
    * enableSignerAttachments.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableSignerAttachments(String enableSignerAttachments) {
     this.enableSignerAttachments = enableSignerAttachments;
     return this;
@@ -1911,50 +2002,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableSignerAttachments
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSignerAttachments() {
     return enableSignerAttachments;
   }
 
-  /** setEnableSignerAttachments. */
+  /**
+   * setEnableSignerAttachments.
+   **/
   public void setEnableSignerAttachments(String enableSignerAttachments) {
     this.enableSignerAttachments = enableSignerAttachments;
   }
+
 
   /**
    * enableSignerAttachmentsMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableSignerAttachmentsMetadata(
-      SettingsMetadata enableSignerAttachmentsMetadata) {
+   **/
+  public UserSettingsInformation enableSignerAttachmentsMetadata(SettingsMetadata enableSignerAttachmentsMetadata) {
     this.enableSignerAttachmentsMetadata = enableSignerAttachmentsMetadata;
     return this;
   }
 
   /**
-   * Get enableSignerAttachmentsMetadata.
-   *
+   * Metadata that indicates whether the `enableSignerAttachments` property is editable. .
    * @return enableSignerAttachmentsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableSignerAttachments` property is editable. ")
   public SettingsMetadata getEnableSignerAttachmentsMetadata() {
     return enableSignerAttachmentsMetadata;
   }
 
-  /** setEnableSignerAttachmentsMetadata. */
+  /**
+   * setEnableSignerAttachmentsMetadata.
+   **/
   public void setEnableSignerAttachmentsMetadata(SettingsMetadata enableSignerAttachmentsMetadata) {
     this.enableSignerAttachmentsMetadata = enableSignerAttachmentsMetadata;
   }
+
 
   /**
    * enableSignOnPaperOverride.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableSignOnPaperOverride(String enableSignOnPaperOverride) {
     this.enableSignOnPaperOverride = enableSignOnPaperOverride;
     return this;
@@ -1962,51 +2056,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableSignOnPaperOverride
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSignOnPaperOverride() {
     return enableSignOnPaperOverride;
   }
 
-  /** setEnableSignOnPaperOverride. */
+  /**
+   * setEnableSignOnPaperOverride.
+   **/
   public void setEnableSignOnPaperOverride(String enableSignOnPaperOverride) {
     this.enableSignOnPaperOverride = enableSignOnPaperOverride;
   }
+
 
   /**
    * enableSignOnPaperOverrideMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableSignOnPaperOverrideMetadata(
-      SettingsMetadata enableSignOnPaperOverrideMetadata) {
+   **/
+  public UserSettingsInformation enableSignOnPaperOverrideMetadata(SettingsMetadata enableSignOnPaperOverrideMetadata) {
     this.enableSignOnPaperOverrideMetadata = enableSignOnPaperOverrideMetadata;
     return this;
   }
 
   /**
-   * Get enableSignOnPaperOverrideMetadata.
-   *
+   * Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. .
    * @return enableSignOnPaperOverrideMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. ")
   public SettingsMetadata getEnableSignOnPaperOverrideMetadata() {
     return enableSignOnPaperOverrideMetadata;
   }
 
-  /** setEnableSignOnPaperOverrideMetadata. */
-  public void setEnableSignOnPaperOverrideMetadata(
-      SettingsMetadata enableSignOnPaperOverrideMetadata) {
+  /**
+   * setEnableSignOnPaperOverrideMetadata.
+   **/
+  public void setEnableSignOnPaperOverrideMetadata(SettingsMetadata enableSignOnPaperOverrideMetadata) {
     this.enableSignOnPaperOverrideMetadata = enableSignOnPaperOverrideMetadata;
   }
+
 
   /**
    * enableTransactionPoint.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableTransactionPoint(String enableTransactionPoint) {
     this.enableTransactionPoint = enableTransactionPoint;
     return this;
@@ -2014,50 +2110,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableTransactionPoint
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableTransactionPoint() {
     return enableTransactionPoint;
   }
 
-  /** setEnableTransactionPoint. */
+  /**
+   * setEnableTransactionPoint.
+   **/
   public void setEnableTransactionPoint(String enableTransactionPoint) {
     this.enableTransactionPoint = enableTransactionPoint;
   }
+
 
   /**
    * enableTransactionPointMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation enableTransactionPointMetadata(
-      SettingsMetadata enableTransactionPointMetadata) {
+   **/
+  public UserSettingsInformation enableTransactionPointMetadata(SettingsMetadata enableTransactionPointMetadata) {
     this.enableTransactionPointMetadata = enableTransactionPointMetadata;
     return this;
   }
 
   /**
-   * Get enableTransactionPointMetadata.
-   *
+   * Reserved for DocuSign..
    * @return enableTransactionPointMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getEnableTransactionPointMetadata() {
     return enableTransactionPointMetadata;
   }
 
-  /** setEnableTransactionPointMetadata. */
+  /**
+   * setEnableTransactionPointMetadata.
+   **/
   public void setEnableTransactionPointMetadata(SettingsMetadata enableTransactionPointMetadata) {
     this.enableTransactionPointMetadata = enableTransactionPointMetadata;
   }
+
 
   /**
    * enableVaulting.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableVaulting(String enableVaulting) {
     this.enableVaulting = enableVaulting;
     return this;
@@ -2065,49 +2164,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return enableVaulting
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableVaulting() {
     return enableVaulting;
   }
 
-  /** setEnableVaulting. */
+  /**
+   * setEnableVaulting.
+   **/
   public void setEnableVaulting(String enableVaulting) {
     this.enableVaulting = enableVaulting;
   }
+
 
   /**
    * enableVaultingMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation enableVaultingMetadata(SettingsMetadata enableVaultingMetadata) {
     this.enableVaultingMetadata = enableVaultingMetadata;
     return this;
   }
 
   /**
-   * Get enableVaultingMetadata.
-   *
+   * Metadata that indicates whether the `enableVaulting` property is editable. .
    * @return enableVaultingMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `enableVaulting` property is editable. ")
   public SettingsMetadata getEnableVaultingMetadata() {
     return enableVaultingMetadata;
   }
 
-  /** setEnableVaultingMetadata. */
+  /**
+   * setEnableVaultingMetadata.
+   **/
   public void setEnableVaultingMetadata(SettingsMetadata enableVaultingMetadata) {
     this.enableVaultingMetadata = enableVaultingMetadata;
   }
+
 
   /**
    * expressSendOnly.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation expressSendOnly(String expressSendOnly) {
     this.expressSendOnly = expressSendOnly;
     return this;
@@ -2115,24 +2218,26 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return expressSendOnly
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getExpressSendOnly() {
     return expressSendOnly;
   }
 
-  /** setExpressSendOnly. */
+  /**
+   * setExpressSendOnly.
+   **/
   public void setExpressSendOnly(String expressSendOnly) {
     this.expressSendOnly = expressSendOnly;
   }
+
 
   /**
    * locale.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation locale(String locale) {
     this.locale = locale;
     return this;
@@ -2140,74 +2245,80 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return locale
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getLocale() {
     return locale;
   }
 
-  /** setLocale. */
+  /**
+   * setLocale.
+   **/
   public void setLocale(String locale) {
     this.locale = locale;
   }
+
 
   /**
    * localeMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation localeMetadata(SettingsMetadata localeMetadata) {
     this.localeMetadata = localeMetadata;
     return this;
   }
 
   /**
-   * Get localeMetadata.
-   *
+   * Metadata about the `locale` property..
    * @return localeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `locale` property.")
   public SettingsMetadata getLocaleMetadata() {
     return localeMetadata;
   }
 
-  /** setLocaleMetadata. */
+  /**
+   * setLocaleMetadata.
+   **/
   public void setLocaleMetadata(SettingsMetadata localeMetadata) {
     this.localeMetadata = localeMetadata;
   }
+
 
   /**
    * localePolicy.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation localePolicy(LocalePolicy localePolicy) {
     this.localePolicy = localePolicy;
     return this;
   }
 
   /**
-   * Get localePolicy.
-   *
+   * Reserved for DocuSign..
    * @return localePolicy
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public LocalePolicy getLocalePolicy() {
     return localePolicy;
   }
 
-  /** setLocalePolicy. */
+  /**
+   * setLocalePolicy.
+   **/
   public void setLocalePolicy(LocalePolicy localePolicy) {
     this.localePolicy = localePolicy;
   }
+
 
   /**
    * manageClickwrapsMode.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation manageClickwrapsMode(String manageClickwrapsMode) {
     this.manageClickwrapsMode = manageClickwrapsMode;
     return this;
@@ -2215,50 +2326,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return manageClickwrapsMode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getManageClickwrapsMode() {
     return manageClickwrapsMode;
   }
 
-  /** setManageClickwrapsMode. */
+  /**
+   * setManageClickwrapsMode.
+   **/
   public void setManageClickwrapsMode(String manageClickwrapsMode) {
     this.manageClickwrapsMode = manageClickwrapsMode;
   }
+
 
   /**
    * manageClickwrapsModeMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation manageClickwrapsModeMetadata(
-      SettingsMetadata manageClickwrapsModeMetadata) {
+   **/
+  public UserSettingsInformation manageClickwrapsModeMetadata(SettingsMetadata manageClickwrapsModeMetadata) {
     this.manageClickwrapsModeMetadata = manageClickwrapsModeMetadata;
     return this;
   }
 
   /**
-   * Get manageClickwrapsModeMetadata.
-   *
+   * Metadata about the `manageClickwrapsMode` property..
    * @return manageClickwrapsModeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `manageClickwrapsMode` property.")
   public SettingsMetadata getManageClickwrapsModeMetadata() {
     return manageClickwrapsModeMetadata;
   }
 
-  /** setManageClickwrapsModeMetadata. */
+  /**
+   * setManageClickwrapsModeMetadata.
+   **/
   public void setManageClickwrapsModeMetadata(SettingsMetadata manageClickwrapsModeMetadata) {
     this.manageClickwrapsModeMetadata = manageClickwrapsModeMetadata;
   }
+
 
   /**
    * modifiedBy.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedBy(String modifiedBy) {
     this.modifiedBy = modifiedBy;
     return this;
@@ -2266,49 +2380,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return modifiedBy
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedBy() {
     return modifiedBy;
   }
 
-  /** setModifiedBy. */
+  /**
+   * setModifiedBy.
+   **/
   public void setModifiedBy(String modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
+
 
   /**
    * modifiedByMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedByMetadata(SettingsMetadata modifiedByMetadata) {
     this.modifiedByMetadata = modifiedByMetadata;
     return this;
   }
 
   /**
-   * Get modifiedByMetadata.
-   *
+   * Metadata about the `modifiedBy` property..
    * @return modifiedByMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `modifiedBy` property.")
   public SettingsMetadata getModifiedByMetadata() {
     return modifiedByMetadata;
   }
 
-  /** setModifiedByMetadata. */
+  /**
+   * setModifiedByMetadata.
+   **/
   public void setModifiedByMetadata(SettingsMetadata modifiedByMetadata) {
     this.modifiedByMetadata = modifiedByMetadata;
   }
+
 
   /**
    * modifiedDate.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
     return this;
@@ -2316,49 +2434,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return modifiedDate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
 
-  /** setModifiedDate. */
+  /**
+   * setModifiedDate.
+   **/
   public void setModifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
+
 
   /**
    * modifiedDateMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedDateMetadata(SettingsMetadata modifiedDateMetadata) {
     this.modifiedDateMetadata = modifiedDateMetadata;
     return this;
   }
 
   /**
-   * Get modifiedDateMetadata.
-   *
+   * Metadata about the `modifiedDate` property..
    * @return modifiedDateMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `modifiedDate` property.")
   public SettingsMetadata getModifiedDateMetadata() {
     return modifiedDateMetadata;
   }
 
-  /** setModifiedDateMetadata. */
+  /**
+   * setModifiedDateMetadata.
+   **/
   public void setModifiedDateMetadata(SettingsMetadata modifiedDateMetadata) {
     this.modifiedDateMetadata = modifiedDateMetadata;
   }
+
 
   /**
    * modifiedPage.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedPage(String modifiedPage) {
     this.modifiedPage = modifiedPage;
     return this;
@@ -2366,49 +2488,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return modifiedPage
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getModifiedPage() {
     return modifiedPage;
   }
 
-  /** setModifiedPage. */
+  /**
+   * setModifiedPage.
+   **/
   public void setModifiedPage(String modifiedPage) {
     this.modifiedPage = modifiedPage;
   }
+
 
   /**
    * modifiedPageMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation modifiedPageMetadata(SettingsMetadata modifiedPageMetadata) {
     this.modifiedPageMetadata = modifiedPageMetadata;
     return this;
   }
 
   /**
-   * Get modifiedPageMetadata.
-   *
+   * Metadata about the `modifiedPage` property..
    * @return modifiedPageMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `modifiedPage` property.")
   public SettingsMetadata getModifiedPageMetadata() {
     return modifiedPageMetadata;
   }
 
-  /** setModifiedPageMetadata. */
+  /**
+   * setModifiedPageMetadata.
+   **/
   public void setModifiedPageMetadata(SettingsMetadata modifiedPageMetadata) {
     this.modifiedPageMetadata = modifiedPageMetadata;
   }
+
 
   /**
    * newSendUI.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation newSendUI(String newSendUI) {
     this.newSendUI = newSendUI;
     return this;
@@ -2416,49 +2542,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return newSendUI
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getNewSendUI() {
     return newSendUI;
   }
 
-  /** setNewSendUI. */
+  /**
+   * setNewSendUI.
+   **/
   public void setNewSendUI(String newSendUI) {
     this.newSendUI = newSendUI;
   }
+
 
   /**
    * newSendUIMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation newSendUIMetadata(SettingsMetadata newSendUIMetadata) {
     this.newSendUIMetadata = newSendUIMetadata;
     return this;
   }
 
   /**
-   * Get newSendUIMetadata.
-   *
+   * Metadata about the `newSendUI` property..
    * @return newSendUIMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `newSendUI` property.")
   public SettingsMetadata getNewSendUIMetadata() {
     return newSendUIMetadata;
   }
 
-  /** setNewSendUIMetadata. */
+  /**
+   * setNewSendUIMetadata.
+   **/
   public void setNewSendUIMetadata(SettingsMetadata newSendUIMetadata) {
     this.newSendUIMetadata = newSendUIMetadata;
   }
+
 
   /**
    * powerFormMode.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation powerFormMode(String powerFormMode) {
     this.powerFormMode = powerFormMode;
     return this;
@@ -2466,49 +2596,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return powerFormMode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPowerFormMode() {
     return powerFormMode;
   }
 
-  /** setPowerFormMode. */
+  /**
+   * setPowerFormMode.
+   **/
   public void setPowerFormMode(String powerFormMode) {
     this.powerFormMode = powerFormMode;
   }
+
 
   /**
    * powerFormModeMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation powerFormModeMetadata(SettingsMetadata powerFormModeMetadata) {
     this.powerFormModeMetadata = powerFormModeMetadata;
     return this;
   }
 
   /**
-   * Get powerFormModeMetadata.
-   *
+   * Metadata about the `powerFormMode` property..
    * @return powerFormModeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `powerFormMode` property.")
   public SettingsMetadata getPowerFormModeMetadata() {
     return powerFormModeMetadata;
   }
 
-  /** setPowerFormModeMetadata. */
+  /**
+   * setPowerFormModeMetadata.
+   **/
   public void setPowerFormModeMetadata(SettingsMetadata powerFormModeMetadata) {
     this.powerFormModeMetadata = powerFormModeMetadata;
   }
+
 
   /**
    * recipientViewedNotification.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation recipientViewedNotification(String recipientViewedNotification) {
     this.recipientViewedNotification = recipientViewedNotification;
     return this;
@@ -2516,61 +2650,63 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return recipientViewedNotification
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientViewedNotification() {
     return recipientViewedNotification;
   }
 
-  /** setRecipientViewedNotification. */
+  /**
+   * setRecipientViewedNotification.
+   **/
   public void setRecipientViewedNotification(String recipientViewedNotification) {
     this.recipientViewedNotification = recipientViewedNotification;
   }
+
 
   /**
    * recipientViewedNotificationMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation recipientViewedNotificationMetadata(
-      SettingsMetadata recipientViewedNotificationMetadata) {
+   **/
+  public UserSettingsInformation recipientViewedNotificationMetadata(SettingsMetadata recipientViewedNotificationMetadata) {
     this.recipientViewedNotificationMetadata = recipientViewedNotificationMetadata;
     return this;
   }
 
   /**
-   * Get recipientViewedNotificationMetadata.
-   *
+   * Metadata about the `recipientViewedNotification` property..
    * @return recipientViewedNotificationMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `recipientViewedNotification` property.")
   public SettingsMetadata getRecipientViewedNotificationMetadata() {
     return recipientViewedNotificationMetadata;
   }
 
-  /** setRecipientViewedNotificationMetadata. */
-  public void setRecipientViewedNotificationMetadata(
-      SettingsMetadata recipientViewedNotificationMetadata) {
+  /**
+   * setRecipientViewedNotificationMetadata.
+   **/
+  public void setRecipientViewedNotificationMetadata(SettingsMetadata recipientViewedNotificationMetadata) {
     this.recipientViewedNotificationMetadata = recipientViewedNotificationMetadata;
   }
+
 
   /**
    * sealIdentifiers.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation sealIdentifiers(java.util.List<SealIdentifier> sealIdentifiers) {
     this.sealIdentifiers = sealIdentifiers;
     return this;
   }
-
+  
   /**
    * addSealIdentifiersItem.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation addSealIdentifiersItem(SealIdentifier sealIdentifiersItem) {
     if (this.sealIdentifiers == null) {
       this.sealIdentifiers = new java.util.ArrayList<>();
@@ -2581,315 +2717,323 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return sealIdentifiers
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<SealIdentifier> getSealIdentifiers() {
     return sealIdentifiers;
   }
 
-  /** setSealIdentifiers. */
+  /**
+   * setSealIdentifiers.
+   **/
   public void setSealIdentifiers(java.util.List<SealIdentifier> sealIdentifiers) {
     this.sealIdentifiers = sealIdentifiers;
   }
+
 
   /**
    * selfSignedRecipientEmailDocument.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation selfSignedRecipientEmailDocument(
-      String selfSignedRecipientEmailDocument) {
+   **/
+  public UserSettingsInformation selfSignedRecipientEmailDocument(String selfSignedRecipientEmailDocument) {
     this.selfSignedRecipientEmailDocument = selfSignedRecipientEmailDocument;
     return this;
   }
 
   /**
    * .
-   *
    * @return selfSignedRecipientEmailDocument
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSelfSignedRecipientEmailDocument() {
     return selfSignedRecipientEmailDocument;
   }
 
-  /** setSelfSignedRecipientEmailDocument. */
+  /**
+   * setSelfSignedRecipientEmailDocument.
+   **/
   public void setSelfSignedRecipientEmailDocument(String selfSignedRecipientEmailDocument) {
     this.selfSignedRecipientEmailDocument = selfSignedRecipientEmailDocument;
   }
+
 
   /**
    * selfSignedRecipientEmailDocumentMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation selfSignedRecipientEmailDocumentMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
+   **/
+  public UserSettingsInformation selfSignedRecipientEmailDocumentMetadata(SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
     return this;
   }
 
   /**
-   * Get selfSignedRecipientEmailDocumentMetadata.
-   *
+   * Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. .
    * @return selfSignedRecipientEmailDocumentMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. ")
   public SettingsMetadata getSelfSignedRecipientEmailDocumentMetadata() {
     return selfSignedRecipientEmailDocumentMetadata;
   }
 
-  /** setSelfSignedRecipientEmailDocumentMetadata. */
-  public void setSelfSignedRecipientEmailDocumentMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
+  /**
+   * setSelfSignedRecipientEmailDocumentMetadata.
+   **/
+  public void setSelfSignedRecipientEmailDocumentMetadata(SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
   }
+
 
   /**
    * senderEmailNotifications.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation senderEmailNotifications(
-      SenderEmailNotifications senderEmailNotifications) {
+   **/
+  public UserSettingsInformation senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
     return this;
   }
 
   /**
-   * Get senderEmailNotifications.
-   *
+   *   An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   .
    * @return senderEmailNotifications
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "  An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   ")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
 
-  /** setSenderEmailNotifications. */
+  /**
+   * setSenderEmailNotifications.
+   **/
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
+
 
   /**
    * signerEmailNotifications.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation signerEmailNotifications(
-      SignerEmailNotifications signerEmailNotifications) {
+   **/
+  public UserSettingsInformation signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
     return this;
   }
 
   /**
-   * Get signerEmailNotifications.
-   *
+   * An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. .
    * @return signerEmailNotifications
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. ")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
 
-  /** setSignerEmailNotifications. */
+  /**
+   * setSignerEmailNotifications.
+   **/
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
+
 
   /**
    * supplementalDocumentIncludeInDownload.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentIncludeInDownload(
-      String supplementalDocumentIncludeInDownload) {
+   **/
+  public UserSettingsInformation supplementalDocumentIncludeInDownload(String supplementalDocumentIncludeInDownload) {
     this.supplementalDocumentIncludeInDownload = supplementalDocumentIncludeInDownload;
     return this;
   }
 
   /**
    * .
-   *
    * @return supplementalDocumentIncludeInDownload
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSupplementalDocumentIncludeInDownload() {
     return supplementalDocumentIncludeInDownload;
   }
 
-  /** setSupplementalDocumentIncludeInDownload. */
-  public void setSupplementalDocumentIncludeInDownload(
-      String supplementalDocumentIncludeInDownload) {
+  /**
+   * setSupplementalDocumentIncludeInDownload.
+   **/
+  public void setSupplementalDocumentIncludeInDownload(String supplementalDocumentIncludeInDownload) {
     this.supplementalDocumentIncludeInDownload = supplementalDocumentIncludeInDownload;
   }
+
 
   /**
    * supplementalDocumentsMustAccept.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustAccept(
-      String supplementalDocumentsMustAccept) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustAccept(String supplementalDocumentsMustAccept) {
     this.supplementalDocumentsMustAccept = supplementalDocumentsMustAccept;
     return this;
   }
 
   /**
    * .
-   *
    * @return supplementalDocumentsMustAccept
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustAccept() {
     return supplementalDocumentsMustAccept;
   }
 
-  /** setSupplementalDocumentsMustAccept. */
+  /**
+   * setSupplementalDocumentsMustAccept.
+   **/
   public void setSupplementalDocumentsMustAccept(String supplementalDocumentsMustAccept) {
     this.supplementalDocumentsMustAccept = supplementalDocumentsMustAccept;
   }
+
 
   /**
    * supplementalDocumentsMustAcceptMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustAcceptMetadata(
-      SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustAcceptMetadata(SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
     return this;
   }
 
   /**
-   * Get supplementalDocumentsMustAcceptMetadata.
-   *
+   * Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. .
    * @return supplementalDocumentsMustAcceptMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. ")
   public SettingsMetadata getSupplementalDocumentsMustAcceptMetadata() {
     return supplementalDocumentsMustAcceptMetadata;
   }
 
-  /** setSupplementalDocumentsMustAcceptMetadata. */
-  public void setSupplementalDocumentsMustAcceptMetadata(
-      SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
+  /**
+   * setSupplementalDocumentsMustAcceptMetadata.
+   **/
+  public void setSupplementalDocumentsMustAcceptMetadata(SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
   }
+
 
   /**
    * supplementalDocumentsMustRead.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustRead(
-      String supplementalDocumentsMustRead) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustRead(String supplementalDocumentsMustRead) {
     this.supplementalDocumentsMustRead = supplementalDocumentsMustRead;
     return this;
   }
 
   /**
    * .
-   *
    * @return supplementalDocumentsMustRead
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustRead() {
     return supplementalDocumentsMustRead;
   }
 
-  /** setSupplementalDocumentsMustRead. */
+  /**
+   * setSupplementalDocumentsMustRead.
+   **/
   public void setSupplementalDocumentsMustRead(String supplementalDocumentsMustRead) {
     this.supplementalDocumentsMustRead = supplementalDocumentsMustRead;
   }
+
 
   /**
    * supplementalDocumentsMustReadMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustReadMetadata(
-      SettingsMetadata supplementalDocumentsMustReadMetadata) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustReadMetadata(SettingsMetadata supplementalDocumentsMustReadMetadata) {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
     return this;
   }
 
   /**
-   * Get supplementalDocumentsMustReadMetadata.
-   *
+   * Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. .
    * @return supplementalDocumentsMustReadMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. ")
   public SettingsMetadata getSupplementalDocumentsMustReadMetadata() {
     return supplementalDocumentsMustReadMetadata;
   }
 
-  /** setSupplementalDocumentsMustReadMetadata. */
-  public void setSupplementalDocumentsMustReadMetadata(
-      SettingsMetadata supplementalDocumentsMustReadMetadata) {
+  /**
+   * setSupplementalDocumentsMustReadMetadata.
+   **/
+  public void setSupplementalDocumentsMustReadMetadata(SettingsMetadata supplementalDocumentsMustReadMetadata) {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
   }
+
 
   /**
    * supplementalDocumentsMustView.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustView(
-      String supplementalDocumentsMustView) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustView(String supplementalDocumentsMustView) {
     this.supplementalDocumentsMustView = supplementalDocumentsMustView;
     return this;
   }
 
   /**
    * .
-   *
    * @return supplementalDocumentsMustView
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSupplementalDocumentsMustView() {
     return supplementalDocumentsMustView;
   }
 
-  /** setSupplementalDocumentsMustView. */
+  /**
+   * setSupplementalDocumentsMustView.
+   **/
   public void setSupplementalDocumentsMustView(String supplementalDocumentsMustView) {
     this.supplementalDocumentsMustView = supplementalDocumentsMustView;
   }
+
 
   /**
    * supplementalDocumentsMustViewMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation supplementalDocumentsMustViewMetadata(
-      SettingsMetadata supplementalDocumentsMustViewMetadata) {
+   **/
+  public UserSettingsInformation supplementalDocumentsMustViewMetadata(SettingsMetadata supplementalDocumentsMustViewMetadata) {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
     return this;
   }
 
   /**
-   * Get supplementalDocumentsMustViewMetadata.
-   *
+   * Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. .
    * @return supplementalDocumentsMustViewMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. ")
   public SettingsMetadata getSupplementalDocumentsMustViewMetadata() {
     return supplementalDocumentsMustViewMetadata;
   }
 
-  /** setSupplementalDocumentsMustViewMetadata. */
-  public void setSupplementalDocumentsMustViewMetadata(
-      SettingsMetadata supplementalDocumentsMustViewMetadata) {
+  /**
+   * setSupplementalDocumentsMustViewMetadata.
+   **/
+  public void setSupplementalDocumentsMustViewMetadata(SettingsMetadata supplementalDocumentsMustViewMetadata) {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
   }
+
 
   /**
    * templateActiveCreation.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation templateActiveCreation(String templateActiveCreation) {
     this.templateActiveCreation = templateActiveCreation;
     return this;
@@ -2897,50 +3041,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return templateActiveCreation
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateActiveCreation() {
     return templateActiveCreation;
   }
 
-  /** setTemplateActiveCreation. */
+  /**
+   * setTemplateActiveCreation.
+   **/
   public void setTemplateActiveCreation(String templateActiveCreation) {
     this.templateActiveCreation = templateActiveCreation;
   }
+
 
   /**
    * templateActiveCreationMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation templateActiveCreationMetadata(
-      SettingsMetadata templateActiveCreationMetadata) {
+   **/
+  public UserSettingsInformation templateActiveCreationMetadata(SettingsMetadata templateActiveCreationMetadata) {
     this.templateActiveCreationMetadata = templateActiveCreationMetadata;
     return this;
   }
 
   /**
-   * Get templateActiveCreationMetadata.
-   *
+   * Metadata about the `templateActiveCreation` property..
    * @return templateActiveCreationMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `templateActiveCreation` property.")
   public SettingsMetadata getTemplateActiveCreationMetadata() {
     return templateActiveCreationMetadata;
   }
 
-  /** setTemplateActiveCreationMetadata. */
+  /**
+   * setTemplateActiveCreationMetadata.
+   **/
   public void setTemplateActiveCreationMetadata(SettingsMetadata templateActiveCreationMetadata) {
     this.templateActiveCreationMetadata = templateActiveCreationMetadata;
   }
+
 
   /**
    * templateApplyNotify.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation templateApplyNotify(String templateApplyNotify) {
     this.templateApplyNotify = templateApplyNotify;
     return this;
@@ -2948,50 +3095,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return templateApplyNotify
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateApplyNotify() {
     return templateApplyNotify;
   }
 
-  /** setTemplateApplyNotify. */
+  /**
+   * setTemplateApplyNotify.
+   **/
   public void setTemplateApplyNotify(String templateApplyNotify) {
     this.templateApplyNotify = templateApplyNotify;
   }
+
 
   /**
    * templateApplyNotifyMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation templateApplyNotifyMetadata(
-      SettingsMetadata templateApplyNotifyMetadata) {
+   **/
+  public UserSettingsInformation templateApplyNotifyMetadata(SettingsMetadata templateApplyNotifyMetadata) {
     this.templateApplyNotifyMetadata = templateApplyNotifyMetadata;
     return this;
   }
 
   /**
-   * Get templateApplyNotifyMetadata.
-   *
+   * Metadata about the `templateApplyNotify` property..
    * @return templateApplyNotifyMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `templateApplyNotify` property.")
   public SettingsMetadata getTemplateApplyNotifyMetadata() {
     return templateApplyNotifyMetadata;
   }
 
-  /** setTemplateApplyNotifyMetadata. */
+  /**
+   * setTemplateApplyNotifyMetadata.
+   **/
   public void setTemplateApplyNotifyMetadata(SettingsMetadata templateApplyNotifyMetadata) {
     this.templateApplyNotifyMetadata = templateApplyNotifyMetadata;
   }
+
 
   /**
    * templateAutoMatching.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation templateAutoMatching(String templateAutoMatching) {
     this.templateAutoMatching = templateAutoMatching;
     return this;
@@ -2999,50 +3149,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return templateAutoMatching
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateAutoMatching() {
     return templateAutoMatching;
   }
 
-  /** setTemplateAutoMatching. */
+  /**
+   * setTemplateAutoMatching.
+   **/
   public void setTemplateAutoMatching(String templateAutoMatching) {
     this.templateAutoMatching = templateAutoMatching;
   }
+
 
   /**
    * templateAutoMatchingMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation templateAutoMatchingMetadata(
-      SettingsMetadata templateAutoMatchingMetadata) {
+   **/
+  public UserSettingsInformation templateAutoMatchingMetadata(SettingsMetadata templateAutoMatchingMetadata) {
     this.templateAutoMatchingMetadata = templateAutoMatchingMetadata;
     return this;
   }
 
   /**
-   * Get templateAutoMatchingMetadata.
-   *
+   * Metadata about the `templateAutoMatching` property..
    * @return templateAutoMatchingMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `templateAutoMatching` property.")
   public SettingsMetadata getTemplateAutoMatchingMetadata() {
     return templateAutoMatchingMetadata;
   }
 
-  /** setTemplateAutoMatchingMetadata. */
+  /**
+   * setTemplateAutoMatchingMetadata.
+   **/
   public void setTemplateAutoMatchingMetadata(SettingsMetadata templateAutoMatchingMetadata) {
     this.templateAutoMatchingMetadata = templateAutoMatchingMetadata;
   }
+
 
   /**
    * templateMatchingSensitivity.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation templateMatchingSensitivity(String templateMatchingSensitivity) {
     this.templateMatchingSensitivity = templateMatchingSensitivity;
     return this;
@@ -3050,51 +3203,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return templateMatchingSensitivity
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateMatchingSensitivity() {
     return templateMatchingSensitivity;
   }
 
-  /** setTemplateMatchingSensitivity. */
+  /**
+   * setTemplateMatchingSensitivity.
+   **/
   public void setTemplateMatchingSensitivity(String templateMatchingSensitivity) {
     this.templateMatchingSensitivity = templateMatchingSensitivity;
   }
+
 
   /**
    * templateMatchingSensitivityMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation templateMatchingSensitivityMetadata(
-      SettingsMetadata templateMatchingSensitivityMetadata) {
+   **/
+  public UserSettingsInformation templateMatchingSensitivityMetadata(SettingsMetadata templateMatchingSensitivityMetadata) {
     this.templateMatchingSensitivityMetadata = templateMatchingSensitivityMetadata;
     return this;
   }
 
   /**
-   * Get templateMatchingSensitivityMetadata.
-   *
+   * Metadata about the `tempalteMatchingSensitivity` property..
    * @return templateMatchingSensitivityMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `tempalteMatchingSensitivity` property.")
   public SettingsMetadata getTemplateMatchingSensitivityMetadata() {
     return templateMatchingSensitivityMetadata;
   }
 
-  /** setTemplateMatchingSensitivityMetadata. */
-  public void setTemplateMatchingSensitivityMetadata(
-      SettingsMetadata templateMatchingSensitivityMetadata) {
+  /**
+   * setTemplateMatchingSensitivityMetadata.
+   **/
+  public void setTemplateMatchingSensitivityMetadata(SettingsMetadata templateMatchingSensitivityMetadata) {
     this.templateMatchingSensitivityMetadata = templateMatchingSensitivityMetadata;
   }
+
 
   /**
    * templatePageLevelMatching.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation templatePageLevelMatching(String templatePageLevelMatching) {
     this.templatePageLevelMatching = templatePageLevelMatching;
     return this;
@@ -3102,51 +3257,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return templatePageLevelMatching
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplatePageLevelMatching() {
     return templatePageLevelMatching;
   }
 
-  /** setTemplatePageLevelMatching. */
+  /**
+   * setTemplatePageLevelMatching.
+   **/
   public void setTemplatePageLevelMatching(String templatePageLevelMatching) {
     this.templatePageLevelMatching = templatePageLevelMatching;
   }
+
 
   /**
    * templatePageLevelMatchingMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation templatePageLevelMatchingMetadata(
-      SettingsMetadata templatePageLevelMatchingMetadata) {
+   **/
+  public UserSettingsInformation templatePageLevelMatchingMetadata(SettingsMetadata templatePageLevelMatchingMetadata) {
     this.templatePageLevelMatchingMetadata = templatePageLevelMatchingMetadata;
     return this;
   }
 
   /**
-   * Get templatePageLevelMatchingMetadata.
-   *
+   * Metadata about the `templatePageLevelMatching` property..
    * @return templatePageLevelMatchingMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `templatePageLevelMatching` property.")
   public SettingsMetadata getTemplatePageLevelMatchingMetadata() {
     return templatePageLevelMatchingMetadata;
   }
 
-  /** setTemplatePageLevelMatchingMetadata. */
-  public void setTemplatePageLevelMatchingMetadata(
-      SettingsMetadata templatePageLevelMatchingMetadata) {
+  /**
+   * setTemplatePageLevelMatchingMetadata.
+   **/
+  public void setTemplatePageLevelMatchingMetadata(SettingsMetadata templatePageLevelMatchingMetadata) {
     this.templatePageLevelMatchingMetadata = templatePageLevelMatchingMetadata;
   }
+
 
   /**
    * timezoneDST.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneDST(String timezoneDST) {
     this.timezoneDST = timezoneDST;
     return this;
@@ -3154,49 +3311,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return timezoneDST
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTimezoneDST() {
     return timezoneDST;
   }
 
-  /** setTimezoneDST. */
+  /**
+   * setTimezoneDST.
+   **/
   public void setTimezoneDST(String timezoneDST) {
     this.timezoneDST = timezoneDST;
   }
+
 
   /**
    * timezoneDSTMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneDSTMetadata(SettingsMetadata timezoneDSTMetadata) {
     this.timezoneDSTMetadata = timezoneDSTMetadata;
     return this;
   }
 
   /**
-   * Get timezoneDSTMetadata.
-   *
+   * Metadata about the `timezoneDST` property..
    * @return timezoneDSTMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `timezoneDST` property.")
   public SettingsMetadata getTimezoneDSTMetadata() {
     return timezoneDSTMetadata;
   }
 
-  /** setTimezoneDSTMetadata. */
+  /**
+   * setTimezoneDSTMetadata.
+   **/
   public void setTimezoneDSTMetadata(SettingsMetadata timezoneDSTMetadata) {
     this.timezoneDSTMetadata = timezoneDSTMetadata;
   }
+
 
   /**
    * timezoneMask.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneMask(String timezoneMask) {
     this.timezoneMask = timezoneMask;
     return this;
@@ -3204,49 +3365,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return timezoneMask
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTimezoneMask() {
     return timezoneMask;
   }
 
-  /** setTimezoneMask. */
+  /**
+   * setTimezoneMask.
+   **/
   public void setTimezoneMask(String timezoneMask) {
     this.timezoneMask = timezoneMask;
   }
+
 
   /**
    * timezoneMaskMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneMaskMetadata(SettingsMetadata timezoneMaskMetadata) {
     this.timezoneMaskMetadata = timezoneMaskMetadata;
     return this;
   }
 
   /**
-   * Get timezoneMaskMetadata.
-   *
+   * Metadata about the `timezoneMask` property..
    * @return timezoneMaskMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `timezoneMask` property.")
   public SettingsMetadata getTimezoneMaskMetadata() {
     return timezoneMaskMetadata;
   }
 
-  /** setTimezoneMaskMetadata. */
+  /**
+   * setTimezoneMaskMetadata.
+   **/
   public void setTimezoneMaskMetadata(SettingsMetadata timezoneMaskMetadata) {
     this.timezoneMaskMetadata = timezoneMaskMetadata;
   }
+
 
   /**
    * timezoneOffset.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneOffset(String timezoneOffset) {
     this.timezoneOffset = timezoneOffset;
     return this;
@@ -3254,49 +3419,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return timezoneOffset
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTimezoneOffset() {
     return timezoneOffset;
   }
 
-  /** setTimezoneOffset. */
+  /**
+   * setTimezoneOffset.
+   **/
   public void setTimezoneOffset(String timezoneOffset) {
     this.timezoneOffset = timezoneOffset;
   }
+
 
   /**
    * timezoneOffsetMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneOffsetMetadata(SettingsMetadata timezoneOffsetMetadata) {
     this.timezoneOffsetMetadata = timezoneOffsetMetadata;
     return this;
   }
 
   /**
-   * Get timezoneOffsetMetadata.
-   *
+   * Metadata about the `timezoneOffset` property..
    * @return timezoneOffsetMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `timezoneOffset` property.")
   public SettingsMetadata getTimezoneOffsetMetadata() {
     return timezoneOffsetMetadata;
   }
 
-  /** setTimezoneOffsetMetadata. */
+  /**
+   * setTimezoneOffsetMetadata.
+   **/
   public void setTimezoneOffsetMetadata(SettingsMetadata timezoneOffsetMetadata) {
     this.timezoneOffsetMetadata = timezoneOffsetMetadata;
   }
+
 
   /**
    * timezoneSendingPref.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneSendingPref(String timezoneSendingPref) {
     this.timezoneSendingPref = timezoneSendingPref;
     return this;
@@ -3304,50 +3473,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return timezoneSendingPref
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTimezoneSendingPref() {
     return timezoneSendingPref;
   }
 
-  /** setTimezoneSendingPref. */
+  /**
+   * setTimezoneSendingPref.
+   **/
   public void setTimezoneSendingPref(String timezoneSendingPref) {
     this.timezoneSendingPref = timezoneSendingPref;
   }
+
 
   /**
    * timezoneSendingPrefMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation timezoneSendingPrefMetadata(
-      SettingsMetadata timezoneSendingPrefMetadata) {
+   **/
+  public UserSettingsInformation timezoneSendingPrefMetadata(SettingsMetadata timezoneSendingPrefMetadata) {
     this.timezoneSendingPrefMetadata = timezoneSendingPrefMetadata;
     return this;
   }
 
   /**
-   * Get timezoneSendingPrefMetadata.
-   *
+   * Reserved for DocuSign..
    * @return timezoneSendingPrefMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTimezoneSendingPrefMetadata() {
     return timezoneSendingPrefMetadata;
   }
 
-  /** setTimezoneSendingPrefMetadata. */
+  /**
+   * setTimezoneSendingPrefMetadata.
+   **/
   public void setTimezoneSendingPrefMetadata(SettingsMetadata timezoneSendingPrefMetadata) {
     this.timezoneSendingPrefMetadata = timezoneSendingPrefMetadata;
   }
+
 
   /**
    * timezoneSigningPref.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation timezoneSigningPref(String timezoneSigningPref) {
     this.timezoneSigningPref = timezoneSigningPref;
     return this;
@@ -3355,50 +3527,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return timezoneSigningPref
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTimezoneSigningPref() {
     return timezoneSigningPref;
   }
 
-  /** setTimezoneSigningPref. */
+  /**
+   * setTimezoneSigningPref.
+   **/
   public void setTimezoneSigningPref(String timezoneSigningPref) {
     this.timezoneSigningPref = timezoneSigningPref;
   }
+
 
   /**
    * timezoneSigningPrefMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation timezoneSigningPrefMetadata(
-      SettingsMetadata timezoneSigningPrefMetadata) {
+   **/
+  public UserSettingsInformation timezoneSigningPrefMetadata(SettingsMetadata timezoneSigningPrefMetadata) {
     this.timezoneSigningPrefMetadata = timezoneSigningPrefMetadata;
     return this;
   }
 
   /**
-   * Get timezoneSigningPrefMetadata.
-   *
+   * Reserved for DocuSign..
    * @return timezoneSigningPrefMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTimezoneSigningPrefMetadata() {
     return timezoneSigningPrefMetadata;
   }
 
-  /** setTimezoneSigningPrefMetadata. */
+  /**
+   * setTimezoneSigningPrefMetadata.
+   **/
   public void setTimezoneSigningPrefMetadata(SettingsMetadata timezoneSigningPrefMetadata) {
     this.timezoneSigningPrefMetadata = timezoneSigningPrefMetadata;
   }
+
 
   /**
    * transactionPointSiteNameURL.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation transactionPointSiteNameURL(String transactionPointSiteNameURL) {
     this.transactionPointSiteNameURL = transactionPointSiteNameURL;
     return this;
@@ -3406,51 +3581,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return transactionPointSiteNameURL
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionPointSiteNameURL() {
     return transactionPointSiteNameURL;
   }
 
-  /** setTransactionPointSiteNameURL. */
+  /**
+   * setTransactionPointSiteNameURL.
+   **/
   public void setTransactionPointSiteNameURL(String transactionPointSiteNameURL) {
     this.transactionPointSiteNameURL = transactionPointSiteNameURL;
   }
+
 
   /**
    * transactionPointSiteNameURLMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation transactionPointSiteNameURLMetadata(
-      SettingsMetadata transactionPointSiteNameURLMetadata) {
+   **/
+  public UserSettingsInformation transactionPointSiteNameURLMetadata(SettingsMetadata transactionPointSiteNameURLMetadata) {
     this.transactionPointSiteNameURLMetadata = transactionPointSiteNameURLMetadata;
     return this;
   }
 
   /**
-   * Get transactionPointSiteNameURLMetadata.
-   *
+   * Reserved for DocuSign..
    * @return transactionPointSiteNameURLMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTransactionPointSiteNameURLMetadata() {
     return transactionPointSiteNameURLMetadata;
   }
 
-  /** setTransactionPointSiteNameURLMetadata. */
-  public void setTransactionPointSiteNameURLMetadata(
-      SettingsMetadata transactionPointSiteNameURLMetadata) {
+  /**
+   * setTransactionPointSiteNameURLMetadata.
+   **/
+  public void setTransactionPointSiteNameURLMetadata(SettingsMetadata transactionPointSiteNameURLMetadata) {
     this.transactionPointSiteNameURLMetadata = transactionPointSiteNameURLMetadata;
   }
+
 
   /**
    * transactionPointUserName.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation transactionPointUserName(String transactionPointUserName) {
     this.transactionPointUserName = transactionPointUserName;
     return this;
@@ -3458,51 +3635,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return transactionPointUserName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTransactionPointUserName() {
     return transactionPointUserName;
   }
 
-  /** setTransactionPointUserName. */
+  /**
+   * setTransactionPointUserName.
+   **/
   public void setTransactionPointUserName(String transactionPointUserName) {
     this.transactionPointUserName = transactionPointUserName;
   }
+
 
   /**
    * transactionPointUserNameMetadata.
    *
    * @return UserSettingsInformation
-   */
-  public UserSettingsInformation transactionPointUserNameMetadata(
-      SettingsMetadata transactionPointUserNameMetadata) {
+   **/
+  public UserSettingsInformation transactionPointUserNameMetadata(SettingsMetadata transactionPointUserNameMetadata) {
     this.transactionPointUserNameMetadata = transactionPointUserNameMetadata;
     return this;
   }
 
   /**
-   * Get transactionPointUserNameMetadata.
-   *
+   * Reserved for DocuSign..
    * @return transactionPointUserNameMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SettingsMetadata getTransactionPointUserNameMetadata() {
     return transactionPointUserNameMetadata;
   }
 
-  /** setTransactionPointUserNameMetadata. */
-  public void setTransactionPointUserNameMetadata(
-      SettingsMetadata transactionPointUserNameMetadata) {
+  /**
+   * setTransactionPointUserNameMetadata.
+   **/
+  public void setTransactionPointUserNameMetadata(SettingsMetadata transactionPointUserNameMetadata) {
     this.transactionPointUserNameMetadata = transactionPointUserNameMetadata;
   }
+
 
   /**
    * vaultingMode.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation vaultingMode(String vaultingMode) {
     this.vaultingMode = vaultingMode;
     return this;
@@ -3510,49 +3689,53 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return vaultingMode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getVaultingMode() {
     return vaultingMode;
   }
 
-  /** setVaultingMode. */
+  /**
+   * setVaultingMode.
+   **/
   public void setVaultingMode(String vaultingMode) {
     this.vaultingMode = vaultingMode;
   }
+
 
   /**
    * vaultingModeMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation vaultingModeMetadata(SettingsMetadata vaultingModeMetadata) {
     this.vaultingModeMetadata = vaultingModeMetadata;
     return this;
   }
 
   /**
-   * Get vaultingModeMetadata.
-   *
+   * Metadata about the `vaultingMode` property..
    * @return vaultingModeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata about the `vaultingMode` property.")
   public SettingsMetadata getVaultingModeMetadata() {
     return vaultingModeMetadata;
   }
 
-  /** setVaultingModeMetadata. */
+  /**
+   * setVaultingModeMetadata.
+   **/
   public void setVaultingModeMetadata(SettingsMetadata vaultingModeMetadata) {
     this.vaultingModeMetadata = vaultingModeMetadata;
   }
+
 
   /**
    * webForms.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation webForms(String webForms) {
     this.webForms = webForms;
     return this;
@@ -3560,24 +3743,26 @@ public class UserSettingsInformation {
 
   /**
    * .
-   *
    * @return webForms
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getWebForms() {
     return webForms;
   }
 
-  /** setWebForms. */
+  /**
+   * setWebForms.
+   **/
   public void setWebForms(String webForms) {
     this.webForms = webForms;
   }
+
 
   /**
    * webFormsMetadata.
    *
    * @return UserSettingsInformation
-   */
+   **/
   public UserSettingsInformation webFormsMetadata(SettingsMetadata webFormsMetadata) {
     this.webFormsMetadata = webFormsMetadata;
     return this;
@@ -3585,18 +3770,20 @@ public class UserSettingsInformation {
 
   /**
    * Get webFormsMetadata.
-   *
    * @return webFormsMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public SettingsMetadata getWebFormsMetadata() {
     return webFormsMetadata;
   }
 
-  /** setWebFormsMetadata. */
+  /**
+   * setWebFormsMetadata.
+   **/
   public void setWebFormsMetadata(SettingsMetadata webFormsMetadata) {
     this.webFormsMetadata = webFormsMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3612,679 +3799,273 @@ public class UserSettingsInformation {
       return false;
     }
     UserSettingsInformation userSettingsInformation = (UserSettingsInformation) o;
-    return Objects.equals(
-            this.accountManagementGranular, userSettingsInformation.accountManagementGranular)
-        && Objects.equals(this.adminOnly, userSettingsInformation.adminOnly)
-        && Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata)
-        && Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging)
-        && Objects.equals(
-            this.allowEnvelopeTransferTo, userSettingsInformation.allowEnvelopeTransferTo)
-        && Objects.equals(
-            this.allowEnvelopeTransferToMetadata,
-            userSettingsInformation.allowEnvelopeTransferToMetadata)
-        && Objects.equals(this.allowEsealRecipients, userSettingsInformation.allowEsealRecipients)
-        && Objects.equals(
-            this.allowEsealRecipientsMetadata, userSettingsInformation.allowEsealRecipientsMetadata)
-        && Objects.equals(
-            this.allowPowerFormsAdminToAccessAllPowerFormEnvelope,
-            userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelope)
-        && Objects.equals(
-            this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata,
-            userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata)
-        && Objects.equals(
-            this.allowRecipientLanguageSelection,
-            userSettingsInformation.allowRecipientLanguageSelection)
-        && Objects.equals(
-            this.allowRecipientLanguageSelectionMetadata,
-            userSettingsInformation.allowRecipientLanguageSelectionMetadata)
-        && Objects.equals(this.allowSendOnBehalfOf, userSettingsInformation.allowSendOnBehalfOf)
-        && Objects.equals(
-            this.allowSendOnBehalfOfMetadata, userSettingsInformation.allowSendOnBehalfOfMetadata)
-        && Objects.equals(
-            this.allowSupplementalDocuments, userSettingsInformation.allowSupplementalDocuments)
-        && Objects.equals(
-            this.allowSupplementalDocumentsMetadata,
-            userSettingsInformation.allowSupplementalDocumentsMetadata)
-        && Objects.equals(
-            this.anchorTagVersionedPlacementEnabled,
-            userSettingsInformation.anchorTagVersionedPlacementEnabled)
-        && Objects.equals(this.apiAccountWideAccess, userSettingsInformation.apiAccountWideAccess)
-        && Objects.equals(
-            this.apiAccountWideAccessMetadata, userSettingsInformation.apiAccountWideAccessMetadata)
-        && Objects.equals(this.apiCanExportAC, userSettingsInformation.apiCanExportAC)
-        && Objects.equals(
-            this.apiCanExportACMetadata, userSettingsInformation.apiCanExportACMetadata)
-        && Objects.equals(this.bulkSend, userSettingsInformation.bulkSend)
-        && Objects.equals(this.bulkSendMetadata, userSettingsInformation.bulkSendMetadata)
-        && Objects.equals(this.canChargeAccount, userSettingsInformation.canChargeAccount)
-        && Objects.equals(
-            this.canChargeAccountMetadata, userSettingsInformation.canChargeAccountMetadata)
-        && Objects.equals(
-            this.canEditSharedAddressbook, userSettingsInformation.canEditSharedAddressbook)
-        && Objects.equals(
-            this.canEditSharedAddressbookMetadata,
-            userSettingsInformation.canEditSharedAddressbookMetadata)
-        && Objects.equals(this.canLockEnvelopes, userSettingsInformation.canLockEnvelopes)
-        && Objects.equals(
-            this.canLockEnvelopesMetadata, userSettingsInformation.canLockEnvelopesMetadata)
-        && Objects.equals(this.canManageAccount, userSettingsInformation.canManageAccount)
-        && Objects.equals(
-            this.canManageAccountMetadata, userSettingsInformation.canManageAccountMetadata)
-        && Objects.equals(this.canManageDistributor, userSettingsInformation.canManageDistributor)
-        && Objects.equals(
-            this.canManageDistributorMetadata, userSettingsInformation.canManageDistributorMetadata)
-        && Objects.equals(this.canManageTemplates, userSettingsInformation.canManageTemplates)
-        && Objects.equals(
-            this.canManageTemplatesMetadata, userSettingsInformation.canManageTemplatesMetadata)
-        && Objects.equals(this.canSendAPIRequests, userSettingsInformation.canSendAPIRequests)
-        && Objects.equals(
-            this.canSendAPIRequestsMetadata, userSettingsInformation.canSendAPIRequestsMetadata)
-        && Objects.equals(this.canSendEnvelope, userSettingsInformation.canSendEnvelope)
-        && Objects.equals(
-            this.canSendEnvelopeMetadata, userSettingsInformation.canSendEnvelopeMetadata)
-        && Objects.equals(
-            this.canSendEnvelopesViaSMS, userSettingsInformation.canSendEnvelopesViaSMS)
-        && Objects.equals(
-            this.canSendEnvelopesViaSMSMetadata,
-            userSettingsInformation.canSendEnvelopesViaSMSMetadata)
-        && Objects.equals(this.canSignEnvelope, userSettingsInformation.canSignEnvelope)
-        && Objects.equals(
-            this.canSignEnvelopeMetadata, userSettingsInformation.canSignEnvelopeMetadata)
-        && Objects.equals(this.canUseScratchpad, userSettingsInformation.canUseScratchpad)
-        && Objects.equals(
-            this.canUseScratchpadMetadata, userSettingsInformation.canUseScratchpadMetadata)
-        && Objects.equals(this.canUseSmartContracts, userSettingsInformation.canUseSmartContracts)
-        && Objects.equals(
-            this.canUseSmartContractsMetadata, userSettingsInformation.canUseSmartContractsMetadata)
-        && Objects.equals(this.disableDocumentUpload, userSettingsInformation.disableDocumentUpload)
-        && Objects.equals(
-            this.disableDocumentUploadMetadata,
-            userSettingsInformation.disableDocumentUploadMetadata)
-        && Objects.equals(this.disableOtherActions, userSettingsInformation.disableOtherActions)
-        && Objects.equals(
-            this.disableOtherActionsMetadata, userSettingsInformation.disableOtherActionsMetadata)
-        && Objects.equals(this.enableDSPro, userSettingsInformation.enableDSPro)
-        && Objects.equals(this.enableDSProMetadata, userSettingsInformation.enableDSProMetadata)
-        && Objects.equals(
-            this.enableKeyTermsSuggestionsByDocumentType,
-            userSettingsInformation.enableKeyTermsSuggestionsByDocumentType)
-        && Objects.equals(
-            this.enableKeyTermsSuggestionsByDocumentTypeMetadata,
-            userSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata)
-        && Objects.equals(
-            this.enableSequentialSigningAPI, userSettingsInformation.enableSequentialSigningAPI)
-        && Objects.equals(
-            this.enableSequentialSigningAPIMetadata,
-            userSettingsInformation.enableSequentialSigningAPIMetadata)
-        && Objects.equals(
-            this.enableSequentialSigningUI, userSettingsInformation.enableSequentialSigningUI)
-        && Objects.equals(
-            this.enableSequentialSigningUIMetadata,
-            userSettingsInformation.enableSequentialSigningUIMetadata)
-        && Objects.equals(
-            this.enableSignerAttachments, userSettingsInformation.enableSignerAttachments)
-        && Objects.equals(
-            this.enableSignerAttachmentsMetadata,
-            userSettingsInformation.enableSignerAttachmentsMetadata)
-        && Objects.equals(
-            this.enableSignOnPaperOverride, userSettingsInformation.enableSignOnPaperOverride)
-        && Objects.equals(
-            this.enableSignOnPaperOverrideMetadata,
-            userSettingsInformation.enableSignOnPaperOverrideMetadata)
-        && Objects.equals(
-            this.enableTransactionPoint, userSettingsInformation.enableTransactionPoint)
-        && Objects.equals(
-            this.enableTransactionPointMetadata,
-            userSettingsInformation.enableTransactionPointMetadata)
-        && Objects.equals(this.enableVaulting, userSettingsInformation.enableVaulting)
-        && Objects.equals(
-            this.enableVaultingMetadata, userSettingsInformation.enableVaultingMetadata)
-        && Objects.equals(this.expressSendOnly, userSettingsInformation.expressSendOnly)
-        && Objects.equals(this.locale, userSettingsInformation.locale)
-        && Objects.equals(this.localeMetadata, userSettingsInformation.localeMetadata)
-        && Objects.equals(this.localePolicy, userSettingsInformation.localePolicy)
-        && Objects.equals(this.manageClickwrapsMode, userSettingsInformation.manageClickwrapsMode)
-        && Objects.equals(
-            this.manageClickwrapsModeMetadata, userSettingsInformation.manageClickwrapsModeMetadata)
-        && Objects.equals(this.modifiedBy, userSettingsInformation.modifiedBy)
-        && Objects.equals(this.modifiedByMetadata, userSettingsInformation.modifiedByMetadata)
-        && Objects.equals(this.modifiedDate, userSettingsInformation.modifiedDate)
-        && Objects.equals(this.modifiedDateMetadata, userSettingsInformation.modifiedDateMetadata)
-        && Objects.equals(this.modifiedPage, userSettingsInformation.modifiedPage)
-        && Objects.equals(this.modifiedPageMetadata, userSettingsInformation.modifiedPageMetadata)
-        && Objects.equals(this.newSendUI, userSettingsInformation.newSendUI)
-        && Objects.equals(this.newSendUIMetadata, userSettingsInformation.newSendUIMetadata)
-        && Objects.equals(this.powerFormMode, userSettingsInformation.powerFormMode)
-        && Objects.equals(this.powerFormModeMetadata, userSettingsInformation.powerFormModeMetadata)
-        && Objects.equals(
-            this.recipientViewedNotification, userSettingsInformation.recipientViewedNotification)
-        && Objects.equals(
-            this.recipientViewedNotificationMetadata,
-            userSettingsInformation.recipientViewedNotificationMetadata)
-        && Objects.equals(this.sealIdentifiers, userSettingsInformation.sealIdentifiers)
-        && Objects.equals(
-            this.selfSignedRecipientEmailDocument,
-            userSettingsInformation.selfSignedRecipientEmailDocument)
-        && Objects.equals(
-            this.selfSignedRecipientEmailDocumentMetadata,
-            userSettingsInformation.selfSignedRecipientEmailDocumentMetadata)
-        && Objects.equals(
-            this.senderEmailNotifications, userSettingsInformation.senderEmailNotifications)
-        && Objects.equals(
-            this.signerEmailNotifications, userSettingsInformation.signerEmailNotifications)
-        && Objects.equals(
-            this.supplementalDocumentIncludeInDownload,
-            userSettingsInformation.supplementalDocumentIncludeInDownload)
-        && Objects.equals(
-            this.supplementalDocumentsMustAccept,
-            userSettingsInformation.supplementalDocumentsMustAccept)
-        && Objects.equals(
-            this.supplementalDocumentsMustAcceptMetadata,
-            userSettingsInformation.supplementalDocumentsMustAcceptMetadata)
-        && Objects.equals(
-            this.supplementalDocumentsMustRead,
-            userSettingsInformation.supplementalDocumentsMustRead)
-        && Objects.equals(
-            this.supplementalDocumentsMustReadMetadata,
-            userSettingsInformation.supplementalDocumentsMustReadMetadata)
-        && Objects.equals(
-            this.supplementalDocumentsMustView,
-            userSettingsInformation.supplementalDocumentsMustView)
-        && Objects.equals(
-            this.supplementalDocumentsMustViewMetadata,
-            userSettingsInformation.supplementalDocumentsMustViewMetadata)
-        && Objects.equals(
-            this.templateActiveCreation, userSettingsInformation.templateActiveCreation)
-        && Objects.equals(
-            this.templateActiveCreationMetadata,
-            userSettingsInformation.templateActiveCreationMetadata)
-        && Objects.equals(this.templateApplyNotify, userSettingsInformation.templateApplyNotify)
-        && Objects.equals(
-            this.templateApplyNotifyMetadata, userSettingsInformation.templateApplyNotifyMetadata)
-        && Objects.equals(this.templateAutoMatching, userSettingsInformation.templateAutoMatching)
-        && Objects.equals(
-            this.templateAutoMatchingMetadata, userSettingsInformation.templateAutoMatchingMetadata)
-        && Objects.equals(
-            this.templateMatchingSensitivity, userSettingsInformation.templateMatchingSensitivity)
-        && Objects.equals(
-            this.templateMatchingSensitivityMetadata,
-            userSettingsInformation.templateMatchingSensitivityMetadata)
-        && Objects.equals(
-            this.templatePageLevelMatching, userSettingsInformation.templatePageLevelMatching)
-        && Objects.equals(
-            this.templatePageLevelMatchingMetadata,
-            userSettingsInformation.templatePageLevelMatchingMetadata)
-        && Objects.equals(this.timezoneDST, userSettingsInformation.timezoneDST)
-        && Objects.equals(this.timezoneDSTMetadata, userSettingsInformation.timezoneDSTMetadata)
-        && Objects.equals(this.timezoneMask, userSettingsInformation.timezoneMask)
-        && Objects.equals(this.timezoneMaskMetadata, userSettingsInformation.timezoneMaskMetadata)
-        && Objects.equals(this.timezoneOffset, userSettingsInformation.timezoneOffset)
-        && Objects.equals(
-            this.timezoneOffsetMetadata, userSettingsInformation.timezoneOffsetMetadata)
-        && Objects.equals(this.timezoneSendingPref, userSettingsInformation.timezoneSendingPref)
-        && Objects.equals(
-            this.timezoneSendingPrefMetadata, userSettingsInformation.timezoneSendingPrefMetadata)
-        && Objects.equals(this.timezoneSigningPref, userSettingsInformation.timezoneSigningPref)
-        && Objects.equals(
-            this.timezoneSigningPrefMetadata, userSettingsInformation.timezoneSigningPrefMetadata)
-        && Objects.equals(
-            this.transactionPointSiteNameURL, userSettingsInformation.transactionPointSiteNameURL)
-        && Objects.equals(
-            this.transactionPointSiteNameURLMetadata,
-            userSettingsInformation.transactionPointSiteNameURLMetadata)
-        && Objects.equals(
-            this.transactionPointUserName, userSettingsInformation.transactionPointUserName)
-        && Objects.equals(
-            this.transactionPointUserNameMetadata,
-            userSettingsInformation.transactionPointUserNameMetadata)
-        && Objects.equals(this.vaultingMode, userSettingsInformation.vaultingMode)
-        && Objects.equals(this.vaultingModeMetadata, userSettingsInformation.vaultingModeMetadata)
-        && Objects.equals(this.webForms, userSettingsInformation.webForms)
-        && Objects.equals(this.webFormsMetadata, userSettingsInformation.webFormsMetadata);
+    return Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
+        Objects.equals(this.adminOnly, userSettingsInformation.adminOnly) &&
+        Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata) &&
+        Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging) &&
+        Objects.equals(this.allowEnvelopeTransferTo, userSettingsInformation.allowEnvelopeTransferTo) &&
+        Objects.equals(this.allowEnvelopeTransferToMetadata, userSettingsInformation.allowEnvelopeTransferToMetadata) &&
+        Objects.equals(this.allowEsealRecipients, userSettingsInformation.allowEsealRecipients) &&
+        Objects.equals(this.allowEsealRecipientsMetadata, userSettingsInformation.allowEsealRecipientsMetadata) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelope, userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelope) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) &&
+        Objects.equals(this.allowRecipientLanguageSelection, userSettingsInformation.allowRecipientLanguageSelection) &&
+        Objects.equals(this.allowRecipientLanguageSelectionMetadata, userSettingsInformation.allowRecipientLanguageSelectionMetadata) &&
+        Objects.equals(this.allowSendOnBehalfOf, userSettingsInformation.allowSendOnBehalfOf) &&
+        Objects.equals(this.allowSendOnBehalfOfMetadata, userSettingsInformation.allowSendOnBehalfOfMetadata) &&
+        Objects.equals(this.allowSupplementalDocuments, userSettingsInformation.allowSupplementalDocuments) &&
+        Objects.equals(this.allowSupplementalDocumentsMetadata, userSettingsInformation.allowSupplementalDocumentsMetadata) &&
+        Objects.equals(this.anchorTagVersionedPlacementEnabled, userSettingsInformation.anchorTagVersionedPlacementEnabled) &&
+        Objects.equals(this.apiAccountWideAccess, userSettingsInformation.apiAccountWideAccess) &&
+        Objects.equals(this.apiAccountWideAccessMetadata, userSettingsInformation.apiAccountWideAccessMetadata) &&
+        Objects.equals(this.apiCanExportAC, userSettingsInformation.apiCanExportAC) &&
+        Objects.equals(this.apiCanExportACMetadata, userSettingsInformation.apiCanExportACMetadata) &&
+        Objects.equals(this.bulkSend, userSettingsInformation.bulkSend) &&
+        Objects.equals(this.bulkSendMetadata, userSettingsInformation.bulkSendMetadata) &&
+        Objects.equals(this.canChargeAccount, userSettingsInformation.canChargeAccount) &&
+        Objects.equals(this.canChargeAccountMetadata, userSettingsInformation.canChargeAccountMetadata) &&
+        Objects.equals(this.canEditSharedAddressbook, userSettingsInformation.canEditSharedAddressbook) &&
+        Objects.equals(this.canEditSharedAddressbookMetadata, userSettingsInformation.canEditSharedAddressbookMetadata) &&
+        Objects.equals(this.canLockEnvelopes, userSettingsInformation.canLockEnvelopes) &&
+        Objects.equals(this.canLockEnvelopesMetadata, userSettingsInformation.canLockEnvelopesMetadata) &&
+        Objects.equals(this.canManageAccount, userSettingsInformation.canManageAccount) &&
+        Objects.equals(this.canManageAccountMetadata, userSettingsInformation.canManageAccountMetadata) &&
+        Objects.equals(this.canManageDistributor, userSettingsInformation.canManageDistributor) &&
+        Objects.equals(this.canManageDistributorMetadata, userSettingsInformation.canManageDistributorMetadata) &&
+        Objects.equals(this.canManageTemplates, userSettingsInformation.canManageTemplates) &&
+        Objects.equals(this.canManageTemplatesMetadata, userSettingsInformation.canManageTemplatesMetadata) &&
+        Objects.equals(this.canSendAPIRequests, userSettingsInformation.canSendAPIRequests) &&
+        Objects.equals(this.canSendAPIRequestsMetadata, userSettingsInformation.canSendAPIRequestsMetadata) &&
+        Objects.equals(this.canSendEnvelope, userSettingsInformation.canSendEnvelope) &&
+        Objects.equals(this.canSendEnvelopeMetadata, userSettingsInformation.canSendEnvelopeMetadata) &&
+        Objects.equals(this.canSendEnvelopesViaSMS, userSettingsInformation.canSendEnvelopesViaSMS) &&
+        Objects.equals(this.canSendEnvelopesViaSMSMetadata, userSettingsInformation.canSendEnvelopesViaSMSMetadata) &&
+        Objects.equals(this.canSignEnvelope, userSettingsInformation.canSignEnvelope) &&
+        Objects.equals(this.canSignEnvelopeMetadata, userSettingsInformation.canSignEnvelopeMetadata) &&
+        Objects.equals(this.canUseScratchpad, userSettingsInformation.canUseScratchpad) &&
+        Objects.equals(this.canUseScratchpadMetadata, userSettingsInformation.canUseScratchpadMetadata) &&
+        Objects.equals(this.canUseSmartContracts, userSettingsInformation.canUseSmartContracts) &&
+        Objects.equals(this.canUseSmartContractsMetadata, userSettingsInformation.canUseSmartContractsMetadata) &&
+        Objects.equals(this.disableDocumentUpload, userSettingsInformation.disableDocumentUpload) &&
+        Objects.equals(this.disableDocumentUploadMetadata, userSettingsInformation.disableDocumentUploadMetadata) &&
+        Objects.equals(this.disableOtherActions, userSettingsInformation.disableOtherActions) &&
+        Objects.equals(this.disableOtherActionsMetadata, userSettingsInformation.disableOtherActionsMetadata) &&
+        Objects.equals(this.enableDSPro, userSettingsInformation.enableDSPro) &&
+        Objects.equals(this.enableDSProMetadata, userSettingsInformation.enableDSProMetadata) &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType, userSettingsInformation.enableKeyTermsSuggestionsByDocumentType) &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata, userSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata) &&
+        Objects.equals(this.enableSequentialSigningAPI, userSettingsInformation.enableSequentialSigningAPI) &&
+        Objects.equals(this.enableSequentialSigningAPIMetadata, userSettingsInformation.enableSequentialSigningAPIMetadata) &&
+        Objects.equals(this.enableSequentialSigningUI, userSettingsInformation.enableSequentialSigningUI) &&
+        Objects.equals(this.enableSequentialSigningUIMetadata, userSettingsInformation.enableSequentialSigningUIMetadata) &&
+        Objects.equals(this.enableSignerAttachments, userSettingsInformation.enableSignerAttachments) &&
+        Objects.equals(this.enableSignerAttachmentsMetadata, userSettingsInformation.enableSignerAttachmentsMetadata) &&
+        Objects.equals(this.enableSignOnPaperOverride, userSettingsInformation.enableSignOnPaperOverride) &&
+        Objects.equals(this.enableSignOnPaperOverrideMetadata, userSettingsInformation.enableSignOnPaperOverrideMetadata) &&
+        Objects.equals(this.enableTransactionPoint, userSettingsInformation.enableTransactionPoint) &&
+        Objects.equals(this.enableTransactionPointMetadata, userSettingsInformation.enableTransactionPointMetadata) &&
+        Objects.equals(this.enableVaulting, userSettingsInformation.enableVaulting) &&
+        Objects.equals(this.enableVaultingMetadata, userSettingsInformation.enableVaultingMetadata) &&
+        Objects.equals(this.expressSendOnly, userSettingsInformation.expressSendOnly) &&
+        Objects.equals(this.locale, userSettingsInformation.locale) &&
+        Objects.equals(this.localeMetadata, userSettingsInformation.localeMetadata) &&
+        Objects.equals(this.localePolicy, userSettingsInformation.localePolicy) &&
+        Objects.equals(this.manageClickwrapsMode, userSettingsInformation.manageClickwrapsMode) &&
+        Objects.equals(this.manageClickwrapsModeMetadata, userSettingsInformation.manageClickwrapsModeMetadata) &&
+        Objects.equals(this.modifiedBy, userSettingsInformation.modifiedBy) &&
+        Objects.equals(this.modifiedByMetadata, userSettingsInformation.modifiedByMetadata) &&
+        Objects.equals(this.modifiedDate, userSettingsInformation.modifiedDate) &&
+        Objects.equals(this.modifiedDateMetadata, userSettingsInformation.modifiedDateMetadata) &&
+        Objects.equals(this.modifiedPage, userSettingsInformation.modifiedPage) &&
+        Objects.equals(this.modifiedPageMetadata, userSettingsInformation.modifiedPageMetadata) &&
+        Objects.equals(this.newSendUI, userSettingsInformation.newSendUI) &&
+        Objects.equals(this.newSendUIMetadata, userSettingsInformation.newSendUIMetadata) &&
+        Objects.equals(this.powerFormMode, userSettingsInformation.powerFormMode) &&
+        Objects.equals(this.powerFormModeMetadata, userSettingsInformation.powerFormModeMetadata) &&
+        Objects.equals(this.recipientViewedNotification, userSettingsInformation.recipientViewedNotification) &&
+        Objects.equals(this.recipientViewedNotificationMetadata, userSettingsInformation.recipientViewedNotificationMetadata) &&
+        Objects.equals(this.sealIdentifiers, userSettingsInformation.sealIdentifiers) &&
+        Objects.equals(this.selfSignedRecipientEmailDocument, userSettingsInformation.selfSignedRecipientEmailDocument) &&
+        Objects.equals(this.selfSignedRecipientEmailDocumentMetadata, userSettingsInformation.selfSignedRecipientEmailDocumentMetadata) &&
+        Objects.equals(this.senderEmailNotifications, userSettingsInformation.senderEmailNotifications) &&
+        Objects.equals(this.signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
+        Objects.equals(this.supplementalDocumentIncludeInDownload, userSettingsInformation.supplementalDocumentIncludeInDownload) &&
+        Objects.equals(this.supplementalDocumentsMustAccept, userSettingsInformation.supplementalDocumentsMustAccept) &&
+        Objects.equals(this.supplementalDocumentsMustAcceptMetadata, userSettingsInformation.supplementalDocumentsMustAcceptMetadata) &&
+        Objects.equals(this.supplementalDocumentsMustRead, userSettingsInformation.supplementalDocumentsMustRead) &&
+        Objects.equals(this.supplementalDocumentsMustReadMetadata, userSettingsInformation.supplementalDocumentsMustReadMetadata) &&
+        Objects.equals(this.supplementalDocumentsMustView, userSettingsInformation.supplementalDocumentsMustView) &&
+        Objects.equals(this.supplementalDocumentsMustViewMetadata, userSettingsInformation.supplementalDocumentsMustViewMetadata) &&
+        Objects.equals(this.templateActiveCreation, userSettingsInformation.templateActiveCreation) &&
+        Objects.equals(this.templateActiveCreationMetadata, userSettingsInformation.templateActiveCreationMetadata) &&
+        Objects.equals(this.templateApplyNotify, userSettingsInformation.templateApplyNotify) &&
+        Objects.equals(this.templateApplyNotifyMetadata, userSettingsInformation.templateApplyNotifyMetadata) &&
+        Objects.equals(this.templateAutoMatching, userSettingsInformation.templateAutoMatching) &&
+        Objects.equals(this.templateAutoMatchingMetadata, userSettingsInformation.templateAutoMatchingMetadata) &&
+        Objects.equals(this.templateMatchingSensitivity, userSettingsInformation.templateMatchingSensitivity) &&
+        Objects.equals(this.templateMatchingSensitivityMetadata, userSettingsInformation.templateMatchingSensitivityMetadata) &&
+        Objects.equals(this.templatePageLevelMatching, userSettingsInformation.templatePageLevelMatching) &&
+        Objects.equals(this.templatePageLevelMatchingMetadata, userSettingsInformation.templatePageLevelMatchingMetadata) &&
+        Objects.equals(this.timezoneDST, userSettingsInformation.timezoneDST) &&
+        Objects.equals(this.timezoneDSTMetadata, userSettingsInformation.timezoneDSTMetadata) &&
+        Objects.equals(this.timezoneMask, userSettingsInformation.timezoneMask) &&
+        Objects.equals(this.timezoneMaskMetadata, userSettingsInformation.timezoneMaskMetadata) &&
+        Objects.equals(this.timezoneOffset, userSettingsInformation.timezoneOffset) &&
+        Objects.equals(this.timezoneOffsetMetadata, userSettingsInformation.timezoneOffsetMetadata) &&
+        Objects.equals(this.timezoneSendingPref, userSettingsInformation.timezoneSendingPref) &&
+        Objects.equals(this.timezoneSendingPrefMetadata, userSettingsInformation.timezoneSendingPrefMetadata) &&
+        Objects.equals(this.timezoneSigningPref, userSettingsInformation.timezoneSigningPref) &&
+        Objects.equals(this.timezoneSigningPrefMetadata, userSettingsInformation.timezoneSigningPrefMetadata) &&
+        Objects.equals(this.transactionPointSiteNameURL, userSettingsInformation.transactionPointSiteNameURL) &&
+        Objects.equals(this.transactionPointSiteNameURLMetadata, userSettingsInformation.transactionPointSiteNameURLMetadata) &&
+        Objects.equals(this.transactionPointUserName, userSettingsInformation.transactionPointUserName) &&
+        Objects.equals(this.transactionPointUserNameMetadata, userSettingsInformation.transactionPointUserNameMetadata) &&
+        Objects.equals(this.vaultingMode, userSettingsInformation.vaultingMode) &&
+        Objects.equals(this.vaultingModeMetadata, userSettingsInformation.vaultingModeMetadata) &&
+        Objects.equals(this.webForms, userSettingsInformation.webForms) &&
+        Objects.equals(this.webFormsMetadata, userSettingsInformation.webFormsMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        accountManagementGranular,
-        adminOnly,
-        adminOnlyMetadata,
-        allowAutoTagging,
-        allowEnvelopeTransferTo,
-        allowEnvelopeTransferToMetadata,
-        allowEsealRecipients,
-        allowEsealRecipientsMetadata,
-        allowPowerFormsAdminToAccessAllPowerFormEnvelope,
-        allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata,
-        allowRecipientLanguageSelection,
-        allowRecipientLanguageSelectionMetadata,
-        allowSendOnBehalfOf,
-        allowSendOnBehalfOfMetadata,
-        allowSupplementalDocuments,
-        allowSupplementalDocumentsMetadata,
-        anchorTagVersionedPlacementEnabled,
-        apiAccountWideAccess,
-        apiAccountWideAccessMetadata,
-        apiCanExportAC,
-        apiCanExportACMetadata,
-        bulkSend,
-        bulkSendMetadata,
-        canChargeAccount,
-        canChargeAccountMetadata,
-        canEditSharedAddressbook,
-        canEditSharedAddressbookMetadata,
-        canLockEnvelopes,
-        canLockEnvelopesMetadata,
-        canManageAccount,
-        canManageAccountMetadata,
-        canManageDistributor,
-        canManageDistributorMetadata,
-        canManageTemplates,
-        canManageTemplatesMetadata,
-        canSendAPIRequests,
-        canSendAPIRequestsMetadata,
-        canSendEnvelope,
-        canSendEnvelopeMetadata,
-        canSendEnvelopesViaSMS,
-        canSendEnvelopesViaSMSMetadata,
-        canSignEnvelope,
-        canSignEnvelopeMetadata,
-        canUseScratchpad,
-        canUseScratchpadMetadata,
-        canUseSmartContracts,
-        canUseSmartContractsMetadata,
-        disableDocumentUpload,
-        disableDocumentUploadMetadata,
-        disableOtherActions,
-        disableOtherActionsMetadata,
-        enableDSPro,
-        enableDSProMetadata,
-        enableKeyTermsSuggestionsByDocumentType,
-        enableKeyTermsSuggestionsByDocumentTypeMetadata,
-        enableSequentialSigningAPI,
-        enableSequentialSigningAPIMetadata,
-        enableSequentialSigningUI,
-        enableSequentialSigningUIMetadata,
-        enableSignerAttachments,
-        enableSignerAttachmentsMetadata,
-        enableSignOnPaperOverride,
-        enableSignOnPaperOverrideMetadata,
-        enableTransactionPoint,
-        enableTransactionPointMetadata,
-        enableVaulting,
-        enableVaultingMetadata,
-        expressSendOnly,
-        locale,
-        localeMetadata,
-        localePolicy,
-        manageClickwrapsMode,
-        manageClickwrapsModeMetadata,
-        modifiedBy,
-        modifiedByMetadata,
-        modifiedDate,
-        modifiedDateMetadata,
-        modifiedPage,
-        modifiedPageMetadata,
-        newSendUI,
-        newSendUIMetadata,
-        powerFormMode,
-        powerFormModeMetadata,
-        recipientViewedNotification,
-        recipientViewedNotificationMetadata,
-        sealIdentifiers,
-        selfSignedRecipientEmailDocument,
-        selfSignedRecipientEmailDocumentMetadata,
-        senderEmailNotifications,
-        signerEmailNotifications,
-        supplementalDocumentIncludeInDownload,
-        supplementalDocumentsMustAccept,
-        supplementalDocumentsMustAcceptMetadata,
-        supplementalDocumentsMustRead,
-        supplementalDocumentsMustReadMetadata,
-        supplementalDocumentsMustView,
-        supplementalDocumentsMustViewMetadata,
-        templateActiveCreation,
-        templateActiveCreationMetadata,
-        templateApplyNotify,
-        templateApplyNotifyMetadata,
-        templateAutoMatching,
-        templateAutoMatchingMetadata,
-        templateMatchingSensitivity,
-        templateMatchingSensitivityMetadata,
-        templatePageLevelMatching,
-        templatePageLevelMatchingMetadata,
-        timezoneDST,
-        timezoneDSTMetadata,
-        timezoneMask,
-        timezoneMaskMetadata,
-        timezoneOffset,
-        timezoneOffsetMetadata,
-        timezoneSendingPref,
-        timezoneSendingPrefMetadata,
-        timezoneSigningPref,
-        timezoneSigningPrefMetadata,
-        transactionPointSiteNameURL,
-        transactionPointSiteNameURLMetadata,
-        transactionPointUserName,
-        transactionPointUserNameMetadata,
-        vaultingMode,
-        vaultingModeMetadata,
-        webForms,
-        webFormsMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSettingsInformation {\n");
-
-    sb.append("    accountManagementGranular: ")
-        .append(toIndentedString(accountManagementGranular))
-        .append("\n");
+    
+    sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
-    sb.append("    allowEnvelopeTransferTo: ")
-        .append(toIndentedString(allowEnvelopeTransferTo))
-        .append("\n");
-    sb.append("    allowEnvelopeTransferToMetadata: ")
-        .append(toIndentedString(allowEnvelopeTransferToMetadata))
-        .append("\n");
-    sb.append("    allowEsealRecipients: ")
-        .append(toIndentedString(allowEsealRecipients))
-        .append("\n");
-    sb.append("    allowEsealRecipientsMetadata: ")
-        .append(toIndentedString(allowEsealRecipientsMetadata))
-        .append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelope: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelope))
-        .append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata))
-        .append("\n");
-    sb.append("    allowRecipientLanguageSelection: ")
-        .append(toIndentedString(allowRecipientLanguageSelection))
-        .append("\n");
-    sb.append("    allowRecipientLanguageSelectionMetadata: ")
-        .append(toIndentedString(allowRecipientLanguageSelectionMetadata))
-        .append("\n");
-    sb.append("    allowSendOnBehalfOf: ")
-        .append(toIndentedString(allowSendOnBehalfOf))
-        .append("\n");
-    sb.append("    allowSendOnBehalfOfMetadata: ")
-        .append(toIndentedString(allowSendOnBehalfOfMetadata))
-        .append("\n");
-    sb.append("    allowSupplementalDocuments: ")
-        .append(toIndentedString(allowSupplementalDocuments))
-        .append("\n");
-    sb.append("    allowSupplementalDocumentsMetadata: ")
-        .append(toIndentedString(allowSupplementalDocumentsMetadata))
-        .append("\n");
-    sb.append("    anchorTagVersionedPlacementEnabled: ")
-        .append(toIndentedString(anchorTagVersionedPlacementEnabled))
-        .append("\n");
-    sb.append("    apiAccountWideAccess: ")
-        .append(toIndentedString(apiAccountWideAccess))
-        .append("\n");
-    sb.append("    apiAccountWideAccessMetadata: ")
-        .append(toIndentedString(apiAccountWideAccessMetadata))
-        .append("\n");
+    sb.append("    allowEnvelopeTransferTo: ").append(toIndentedString(allowEnvelopeTransferTo)).append("\n");
+    sb.append("    allowEnvelopeTransferToMetadata: ").append(toIndentedString(allowEnvelopeTransferToMetadata)).append("\n");
+    sb.append("    allowEsealRecipients: ").append(toIndentedString(allowEsealRecipients)).append("\n");
+    sb.append("    allowEsealRecipientsMetadata: ").append(toIndentedString(allowEsealRecipientsMetadata)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelope: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelope)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata)).append("\n");
+    sb.append("    allowRecipientLanguageSelection: ").append(toIndentedString(allowRecipientLanguageSelection)).append("\n");
+    sb.append("    allowRecipientLanguageSelectionMetadata: ").append(toIndentedString(allowRecipientLanguageSelectionMetadata)).append("\n");
+    sb.append("    allowSendOnBehalfOf: ").append(toIndentedString(allowSendOnBehalfOf)).append("\n");
+    sb.append("    allowSendOnBehalfOfMetadata: ").append(toIndentedString(allowSendOnBehalfOfMetadata)).append("\n");
+    sb.append("    allowSupplementalDocuments: ").append(toIndentedString(allowSupplementalDocuments)).append("\n");
+    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
+    sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled)).append("\n");
+    sb.append("    apiAccountWideAccess: ").append(toIndentedString(apiAccountWideAccess)).append("\n");
+    sb.append("    apiAccountWideAccessMetadata: ").append(toIndentedString(apiAccountWideAccessMetadata)).append("\n");
     sb.append("    apiCanExportAC: ").append(toIndentedString(apiCanExportAC)).append("\n");
-    sb.append("    apiCanExportACMetadata: ")
-        .append(toIndentedString(apiCanExportACMetadata))
-        .append("\n");
+    sb.append("    apiCanExportACMetadata: ").append(toIndentedString(apiCanExportACMetadata)).append("\n");
     sb.append("    bulkSend: ").append(toIndentedString(bulkSend)).append("\n");
     sb.append("    bulkSendMetadata: ").append(toIndentedString(bulkSendMetadata)).append("\n");
     sb.append("    canChargeAccount: ").append(toIndentedString(canChargeAccount)).append("\n");
-    sb.append("    canChargeAccountMetadata: ")
-        .append(toIndentedString(canChargeAccountMetadata))
-        .append("\n");
-    sb.append("    canEditSharedAddressbook: ")
-        .append(toIndentedString(canEditSharedAddressbook))
-        .append("\n");
-    sb.append("    canEditSharedAddressbookMetadata: ")
-        .append(toIndentedString(canEditSharedAddressbookMetadata))
-        .append("\n");
+    sb.append("    canChargeAccountMetadata: ").append(toIndentedString(canChargeAccountMetadata)).append("\n");
+    sb.append("    canEditSharedAddressbook: ").append(toIndentedString(canEditSharedAddressbook)).append("\n");
+    sb.append("    canEditSharedAddressbookMetadata: ").append(toIndentedString(canEditSharedAddressbookMetadata)).append("\n");
     sb.append("    canLockEnvelopes: ").append(toIndentedString(canLockEnvelopes)).append("\n");
-    sb.append("    canLockEnvelopesMetadata: ")
-        .append(toIndentedString(canLockEnvelopesMetadata))
-        .append("\n");
+    sb.append("    canLockEnvelopesMetadata: ").append(toIndentedString(canLockEnvelopesMetadata)).append("\n");
     sb.append("    canManageAccount: ").append(toIndentedString(canManageAccount)).append("\n");
-    sb.append("    canManageAccountMetadata: ")
-        .append(toIndentedString(canManageAccountMetadata))
-        .append("\n");
-    sb.append("    canManageDistributor: ")
-        .append(toIndentedString(canManageDistributor))
-        .append("\n");
-    sb.append("    canManageDistributorMetadata: ")
-        .append(toIndentedString(canManageDistributorMetadata))
-        .append("\n");
+    sb.append("    canManageAccountMetadata: ").append(toIndentedString(canManageAccountMetadata)).append("\n");
+    sb.append("    canManageDistributor: ").append(toIndentedString(canManageDistributor)).append("\n");
+    sb.append("    canManageDistributorMetadata: ").append(toIndentedString(canManageDistributorMetadata)).append("\n");
     sb.append("    canManageTemplates: ").append(toIndentedString(canManageTemplates)).append("\n");
-    sb.append("    canManageTemplatesMetadata: ")
-        .append(toIndentedString(canManageTemplatesMetadata))
-        .append("\n");
+    sb.append("    canManageTemplatesMetadata: ").append(toIndentedString(canManageTemplatesMetadata)).append("\n");
     sb.append("    canSendAPIRequests: ").append(toIndentedString(canSendAPIRequests)).append("\n");
-    sb.append("    canSendAPIRequestsMetadata: ")
-        .append(toIndentedString(canSendAPIRequestsMetadata))
-        .append("\n");
+    sb.append("    canSendAPIRequestsMetadata: ").append(toIndentedString(canSendAPIRequestsMetadata)).append("\n");
     sb.append("    canSendEnvelope: ").append(toIndentedString(canSendEnvelope)).append("\n");
-    sb.append("    canSendEnvelopeMetadata: ")
-        .append(toIndentedString(canSendEnvelopeMetadata))
-        .append("\n");
-    sb.append("    canSendEnvelopesViaSMS: ")
-        .append(toIndentedString(canSendEnvelopesViaSMS))
-        .append("\n");
-    sb.append("    canSendEnvelopesViaSMSMetadata: ")
-        .append(toIndentedString(canSendEnvelopesViaSMSMetadata))
-        .append("\n");
+    sb.append("    canSendEnvelopeMetadata: ").append(toIndentedString(canSendEnvelopeMetadata)).append("\n");
+    sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
+    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    canSignEnvelope: ").append(toIndentedString(canSignEnvelope)).append("\n");
-    sb.append("    canSignEnvelopeMetadata: ")
-        .append(toIndentedString(canSignEnvelopeMetadata))
-        .append("\n");
+    sb.append("    canSignEnvelopeMetadata: ").append(toIndentedString(canSignEnvelopeMetadata)).append("\n");
     sb.append("    canUseScratchpad: ").append(toIndentedString(canUseScratchpad)).append("\n");
-    sb.append("    canUseScratchpadMetadata: ")
-        .append(toIndentedString(canUseScratchpadMetadata))
-        .append("\n");
-    sb.append("    canUseSmartContracts: ")
-        .append(toIndentedString(canUseSmartContracts))
-        .append("\n");
-    sb.append("    canUseSmartContractsMetadata: ")
-        .append(toIndentedString(canUseSmartContractsMetadata))
-        .append("\n");
-    sb.append("    disableDocumentUpload: ")
-        .append(toIndentedString(disableDocumentUpload))
-        .append("\n");
-    sb.append("    disableDocumentUploadMetadata: ")
-        .append(toIndentedString(disableDocumentUploadMetadata))
-        .append("\n");
-    sb.append("    disableOtherActions: ")
-        .append(toIndentedString(disableOtherActions))
-        .append("\n");
-    sb.append("    disableOtherActionsMetadata: ")
-        .append(toIndentedString(disableOtherActionsMetadata))
-        .append("\n");
+    sb.append("    canUseScratchpadMetadata: ").append(toIndentedString(canUseScratchpadMetadata)).append("\n");
+    sb.append("    canUseSmartContracts: ").append(toIndentedString(canUseSmartContracts)).append("\n");
+    sb.append("    canUseSmartContractsMetadata: ").append(toIndentedString(canUseSmartContractsMetadata)).append("\n");
+    sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
+    sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata)).append("\n");
+    sb.append("    disableOtherActions: ").append(toIndentedString(disableOtherActions)).append("\n");
+    sb.append("    disableOtherActionsMetadata: ").append(toIndentedString(disableOtherActionsMetadata)).append("\n");
     sb.append("    enableDSPro: ").append(toIndentedString(enableDSPro)).append("\n");
-    sb.append("    enableDSProMetadata: ")
-        .append(toIndentedString(enableDSProMetadata))
-        .append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentType: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentType))
-        .append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata))
-        .append("\n");
-    sb.append("    enableSequentialSigningAPI: ")
-        .append(toIndentedString(enableSequentialSigningAPI))
-        .append("\n");
-    sb.append("    enableSequentialSigningAPIMetadata: ")
-        .append(toIndentedString(enableSequentialSigningAPIMetadata))
-        .append("\n");
-    sb.append("    enableSequentialSigningUI: ")
-        .append(toIndentedString(enableSequentialSigningUI))
-        .append("\n");
-    sb.append("    enableSequentialSigningUIMetadata: ")
-        .append(toIndentedString(enableSequentialSigningUIMetadata))
-        .append("\n");
-    sb.append("    enableSignerAttachments: ")
-        .append(toIndentedString(enableSignerAttachments))
-        .append("\n");
-    sb.append("    enableSignerAttachmentsMetadata: ")
-        .append(toIndentedString(enableSignerAttachmentsMetadata))
-        .append("\n");
-    sb.append("    enableSignOnPaperOverride: ")
-        .append(toIndentedString(enableSignOnPaperOverride))
-        .append("\n");
-    sb.append("    enableSignOnPaperOverrideMetadata: ")
-        .append(toIndentedString(enableSignOnPaperOverrideMetadata))
-        .append("\n");
-    sb.append("    enableTransactionPoint: ")
-        .append(toIndentedString(enableTransactionPoint))
-        .append("\n");
-    sb.append("    enableTransactionPointMetadata: ")
-        .append(toIndentedString(enableTransactionPointMetadata))
-        .append("\n");
+    sb.append("    enableDSProMetadata: ").append(toIndentedString(enableDSProMetadata)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentType: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
+    sb.append("    enableSequentialSigningAPI: ").append(toIndentedString(enableSequentialSigningAPI)).append("\n");
+    sb.append("    enableSequentialSigningAPIMetadata: ").append(toIndentedString(enableSequentialSigningAPIMetadata)).append("\n");
+    sb.append("    enableSequentialSigningUI: ").append(toIndentedString(enableSequentialSigningUI)).append("\n");
+    sb.append("    enableSequentialSigningUIMetadata: ").append(toIndentedString(enableSequentialSigningUIMetadata)).append("\n");
+    sb.append("    enableSignerAttachments: ").append(toIndentedString(enableSignerAttachments)).append("\n");
+    sb.append("    enableSignerAttachmentsMetadata: ").append(toIndentedString(enableSignerAttachmentsMetadata)).append("\n");
+    sb.append("    enableSignOnPaperOverride: ").append(toIndentedString(enableSignOnPaperOverride)).append("\n");
+    sb.append("    enableSignOnPaperOverrideMetadata: ").append(toIndentedString(enableSignOnPaperOverrideMetadata)).append("\n");
+    sb.append("    enableTransactionPoint: ").append(toIndentedString(enableTransactionPoint)).append("\n");
+    sb.append("    enableTransactionPointMetadata: ").append(toIndentedString(enableTransactionPointMetadata)).append("\n");
     sb.append("    enableVaulting: ").append(toIndentedString(enableVaulting)).append("\n");
-    sb.append("    enableVaultingMetadata: ")
-        .append(toIndentedString(enableVaultingMetadata))
-        .append("\n");
+    sb.append("    enableVaultingMetadata: ").append(toIndentedString(enableVaultingMetadata)).append("\n");
     sb.append("    expressSendOnly: ").append(toIndentedString(expressSendOnly)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    localeMetadata: ").append(toIndentedString(localeMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
-    sb.append("    manageClickwrapsMode: ")
-        .append(toIndentedString(manageClickwrapsMode))
-        .append("\n");
-    sb.append("    manageClickwrapsModeMetadata: ")
-        .append(toIndentedString(manageClickwrapsModeMetadata))
-        .append("\n");
+    sb.append("    manageClickwrapsMode: ").append(toIndentedString(manageClickwrapsMode)).append("\n");
+    sb.append("    manageClickwrapsModeMetadata: ").append(toIndentedString(manageClickwrapsModeMetadata)).append("\n");
     sb.append("    modifiedBy: ").append(toIndentedString(modifiedBy)).append("\n");
     sb.append("    modifiedByMetadata: ").append(toIndentedString(modifiedByMetadata)).append("\n");
     sb.append("    modifiedDate: ").append(toIndentedString(modifiedDate)).append("\n");
-    sb.append("    modifiedDateMetadata: ")
-        .append(toIndentedString(modifiedDateMetadata))
-        .append("\n");
+    sb.append("    modifiedDateMetadata: ").append(toIndentedString(modifiedDateMetadata)).append("\n");
     sb.append("    modifiedPage: ").append(toIndentedString(modifiedPage)).append("\n");
-    sb.append("    modifiedPageMetadata: ")
-        .append(toIndentedString(modifiedPageMetadata))
-        .append("\n");
+    sb.append("    modifiedPageMetadata: ").append(toIndentedString(modifiedPageMetadata)).append("\n");
     sb.append("    newSendUI: ").append(toIndentedString(newSendUI)).append("\n");
     sb.append("    newSendUIMetadata: ").append(toIndentedString(newSendUIMetadata)).append("\n");
     sb.append("    powerFormMode: ").append(toIndentedString(powerFormMode)).append("\n");
-    sb.append("    powerFormModeMetadata: ")
-        .append(toIndentedString(powerFormModeMetadata))
-        .append("\n");
-    sb.append("    recipientViewedNotification: ")
-        .append(toIndentedString(recipientViewedNotification))
-        .append("\n");
-    sb.append("    recipientViewedNotificationMetadata: ")
-        .append(toIndentedString(recipientViewedNotificationMetadata))
-        .append("\n");
+    sb.append("    powerFormModeMetadata: ").append(toIndentedString(powerFormModeMetadata)).append("\n");
+    sb.append("    recipientViewedNotification: ").append(toIndentedString(recipientViewedNotification)).append("\n");
+    sb.append("    recipientViewedNotificationMetadata: ").append(toIndentedString(recipientViewedNotificationMetadata)).append("\n");
     sb.append("    sealIdentifiers: ").append(toIndentedString(sealIdentifiers)).append("\n");
-    sb.append("    selfSignedRecipientEmailDocument: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocument))
-        .append("\n");
-    sb.append("    selfSignedRecipientEmailDocumentMetadata: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocumentMetadata))
-        .append("\n");
-    sb.append("    senderEmailNotifications: ")
-        .append(toIndentedString(senderEmailNotifications))
-        .append("\n");
-    sb.append("    signerEmailNotifications: ")
-        .append(toIndentedString(signerEmailNotifications))
-        .append("\n");
-    sb.append("    supplementalDocumentIncludeInDownload: ")
-        .append(toIndentedString(supplementalDocumentIncludeInDownload))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAccept: ")
-        .append(toIndentedString(supplementalDocumentsMustAccept))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAcceptMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustAcceptMetadata))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustRead: ")
-        .append(toIndentedString(supplementalDocumentsMustRead))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustReadMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustReadMetadata))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustView: ")
-        .append(toIndentedString(supplementalDocumentsMustView))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustViewMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustViewMetadata))
-        .append("\n");
-    sb.append("    templateActiveCreation: ")
-        .append(toIndentedString(templateActiveCreation))
-        .append("\n");
-    sb.append("    templateActiveCreationMetadata: ")
-        .append(toIndentedString(templateActiveCreationMetadata))
-        .append("\n");
-    sb.append("    templateApplyNotify: ")
-        .append(toIndentedString(templateApplyNotify))
-        .append("\n");
-    sb.append("    templateApplyNotifyMetadata: ")
-        .append(toIndentedString(templateApplyNotifyMetadata))
-        .append("\n");
-    sb.append("    templateAutoMatching: ")
-        .append(toIndentedString(templateAutoMatching))
-        .append("\n");
-    sb.append("    templateAutoMatchingMetadata: ")
-        .append(toIndentedString(templateAutoMatchingMetadata))
-        .append("\n");
-    sb.append("    templateMatchingSensitivity: ")
-        .append(toIndentedString(templateMatchingSensitivity))
-        .append("\n");
-    sb.append("    templateMatchingSensitivityMetadata: ")
-        .append(toIndentedString(templateMatchingSensitivityMetadata))
-        .append("\n");
-    sb.append("    templatePageLevelMatching: ")
-        .append(toIndentedString(templatePageLevelMatching))
-        .append("\n");
-    sb.append("    templatePageLevelMatchingMetadata: ")
-        .append(toIndentedString(templatePageLevelMatchingMetadata))
-        .append("\n");
+    sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocumentMetadata: ").append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");
+    sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
+    sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
+    sb.append("    supplementalDocumentIncludeInDownload: ").append(toIndentedString(supplementalDocumentIncludeInDownload)).append("\n");
+    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept)).append("\n");
+    sb.append("    supplementalDocumentsMustAcceptMetadata: ").append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead)).append("\n");
+    sb.append("    supplementalDocumentsMustReadMetadata: ").append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView)).append("\n");
+    sb.append("    supplementalDocumentsMustViewMetadata: ").append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
+    sb.append("    templateActiveCreation: ").append(toIndentedString(templateActiveCreation)).append("\n");
+    sb.append("    templateActiveCreationMetadata: ").append(toIndentedString(templateActiveCreationMetadata)).append("\n");
+    sb.append("    templateApplyNotify: ").append(toIndentedString(templateApplyNotify)).append("\n");
+    sb.append("    templateApplyNotifyMetadata: ").append(toIndentedString(templateApplyNotifyMetadata)).append("\n");
+    sb.append("    templateAutoMatching: ").append(toIndentedString(templateAutoMatching)).append("\n");
+    sb.append("    templateAutoMatchingMetadata: ").append(toIndentedString(templateAutoMatchingMetadata)).append("\n");
+    sb.append("    templateMatchingSensitivity: ").append(toIndentedString(templateMatchingSensitivity)).append("\n");
+    sb.append("    templateMatchingSensitivityMetadata: ").append(toIndentedString(templateMatchingSensitivityMetadata)).append("\n");
+    sb.append("    templatePageLevelMatching: ").append(toIndentedString(templatePageLevelMatching)).append("\n");
+    sb.append("    templatePageLevelMatchingMetadata: ").append(toIndentedString(templatePageLevelMatchingMetadata)).append("\n");
     sb.append("    timezoneDST: ").append(toIndentedString(timezoneDST)).append("\n");
-    sb.append("    timezoneDSTMetadata: ")
-        .append(toIndentedString(timezoneDSTMetadata))
-        .append("\n");
+    sb.append("    timezoneDSTMetadata: ").append(toIndentedString(timezoneDSTMetadata)).append("\n");
     sb.append("    timezoneMask: ").append(toIndentedString(timezoneMask)).append("\n");
-    sb.append("    timezoneMaskMetadata: ")
-        .append(toIndentedString(timezoneMaskMetadata))
-        .append("\n");
+    sb.append("    timezoneMaskMetadata: ").append(toIndentedString(timezoneMaskMetadata)).append("\n");
     sb.append("    timezoneOffset: ").append(toIndentedString(timezoneOffset)).append("\n");
-    sb.append("    timezoneOffsetMetadata: ")
-        .append(toIndentedString(timezoneOffsetMetadata))
-        .append("\n");
-    sb.append("    timezoneSendingPref: ")
-        .append(toIndentedString(timezoneSendingPref))
-        .append("\n");
-    sb.append("    timezoneSendingPrefMetadata: ")
-        .append(toIndentedString(timezoneSendingPrefMetadata))
-        .append("\n");
-    sb.append("    timezoneSigningPref: ")
-        .append(toIndentedString(timezoneSigningPref))
-        .append("\n");
-    sb.append("    timezoneSigningPrefMetadata: ")
-        .append(toIndentedString(timezoneSigningPrefMetadata))
-        .append("\n");
-    sb.append("    transactionPointSiteNameURL: ")
-        .append(toIndentedString(transactionPointSiteNameURL))
-        .append("\n");
-    sb.append("    transactionPointSiteNameURLMetadata: ")
-        .append(toIndentedString(transactionPointSiteNameURLMetadata))
-        .append("\n");
-    sb.append("    transactionPointUserName: ")
-        .append(toIndentedString(transactionPointUserName))
-        .append("\n");
-    sb.append("    transactionPointUserNameMetadata: ")
-        .append(toIndentedString(transactionPointUserNameMetadata))
-        .append("\n");
+    sb.append("    timezoneOffsetMetadata: ").append(toIndentedString(timezoneOffsetMetadata)).append("\n");
+    sb.append("    timezoneSendingPref: ").append(toIndentedString(timezoneSendingPref)).append("\n");
+    sb.append("    timezoneSendingPrefMetadata: ").append(toIndentedString(timezoneSendingPrefMetadata)).append("\n");
+    sb.append("    timezoneSigningPref: ").append(toIndentedString(timezoneSigningPref)).append("\n");
+    sb.append("    timezoneSigningPrefMetadata: ").append(toIndentedString(timezoneSigningPrefMetadata)).append("\n");
+    sb.append("    transactionPointSiteNameURL: ").append(toIndentedString(transactionPointSiteNameURL)).append("\n");
+    sb.append("    transactionPointSiteNameURLMetadata: ").append(toIndentedString(transactionPointSiteNameURLMetadata)).append("\n");
+    sb.append("    transactionPointUserName: ").append(toIndentedString(transactionPointUserName)).append("\n");
+    sb.append("    transactionPointUserNameMetadata: ").append(toIndentedString(transactionPointUserNameMetadata)).append("\n");
     sb.append("    vaultingMode: ").append(toIndentedString(vaultingMode)).append("\n");
-    sb.append("    vaultingModeMetadata: ")
-        .append(toIndentedString(vaultingModeMetadata))
-        .append("\n");
+    sb.append("    vaultingModeMetadata: ").append(toIndentedString(vaultingModeMetadata)).append("\n");
     sb.append("    webForms: ").append(toIndentedString(webForms)).append("\n");
     sb.append("    webFormsMetadata: ").append(toIndentedString(webFormsMetadata)).append("\n");
     sb.append("}");
@@ -4292,7 +4073,8 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -4300,4 +4082,6 @@ public class UserSettingsInformation {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

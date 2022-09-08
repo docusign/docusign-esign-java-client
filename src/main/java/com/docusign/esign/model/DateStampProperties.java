@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** DateStampProperties. */
+/**
+ * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - &#x60;DateAreaX&#x60;: The X axis position of the top-left corner. - &#x60;DateAreaY&#x60;: The Y axis position of the top-left corner. - &#x60;DateAreaWidth&#x60;: The width of the rectangle. - &#x60;DateAreaHeight&#x60;: The height of the rectangle..
+ *
+ */
+@ApiModel(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
+
 public class DateStampProperties {
   @JsonProperty("dateAreaHeight")
   private String dateAreaHeight = null;
@@ -18,11 +27,12 @@ public class DateStampProperties {
   @JsonProperty("dateAreaY")
   private String dateAreaY = null;
 
+
   /**
    * dateAreaHeight.
    *
    * @return DateStampProperties
-   */
+   **/
   public DateStampProperties dateAreaHeight(String dateAreaHeight) {
     this.dateAreaHeight = dateAreaHeight;
     return this;
@@ -30,24 +40,26 @@ public class DateStampProperties {
 
   /**
    * .
-   *
    * @return dateAreaHeight
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaHeight() {
     return dateAreaHeight;
   }
 
-  /** setDateAreaHeight. */
+  /**
+   * setDateAreaHeight.
+   **/
   public void setDateAreaHeight(String dateAreaHeight) {
     this.dateAreaHeight = dateAreaHeight;
   }
+
 
   /**
    * dateAreaWidth.
    *
    * @return DateStampProperties
-   */
+   **/
   public DateStampProperties dateAreaWidth(String dateAreaWidth) {
     this.dateAreaWidth = dateAreaWidth;
     return this;
@@ -55,24 +67,26 @@ public class DateStampProperties {
 
   /**
    * .
-   *
    * @return dateAreaWidth
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaWidth() {
     return dateAreaWidth;
   }
 
-  /** setDateAreaWidth. */
+  /**
+   * setDateAreaWidth.
+   **/
   public void setDateAreaWidth(String dateAreaWidth) {
     this.dateAreaWidth = dateAreaWidth;
   }
+
 
   /**
    * dateAreaX.
    *
    * @return DateStampProperties
-   */
+   **/
   public DateStampProperties dateAreaX(String dateAreaX) {
     this.dateAreaX = dateAreaX;
     return this;
@@ -80,24 +94,26 @@ public class DateStampProperties {
 
   /**
    * .
-   *
    * @return dateAreaX
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaX() {
     return dateAreaX;
   }
 
-  /** setDateAreaX. */
+  /**
+   * setDateAreaX.
+   **/
   public void setDateAreaX(String dateAreaX) {
     this.dateAreaX = dateAreaX;
   }
+
 
   /**
    * dateAreaY.
    *
    * @return DateStampProperties
-   */
+   **/
   public DateStampProperties dateAreaY(String dateAreaY) {
     this.dateAreaY = dateAreaY;
     return this;
@@ -105,18 +121,20 @@ public class DateStampProperties {
 
   /**
    * .
-   *
    * @return dateAreaY
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDateAreaY() {
     return dateAreaY;
   }
 
-  /** setDateAreaY. */
+  /**
+   * setDateAreaY.
+   **/
   public void setDateAreaY(String dateAreaY) {
     this.dateAreaY = dateAreaY;
   }
+
 
   /**
    * Compares objects.
@@ -132,24 +150,29 @@ public class DateStampProperties {
       return false;
     }
     DateStampProperties dateStampProperties = (DateStampProperties) o;
-    return Objects.equals(this.dateAreaHeight, dateStampProperties.dateAreaHeight)
-        && Objects.equals(this.dateAreaWidth, dateStampProperties.dateAreaWidth)
-        && Objects.equals(this.dateAreaX, dateStampProperties.dateAreaX)
-        && Objects.equals(this.dateAreaY, dateStampProperties.dateAreaY);
+    return Objects.equals(this.dateAreaHeight, dateStampProperties.dateAreaHeight) &&
+        Objects.equals(this.dateAreaWidth, dateStampProperties.dateAreaWidth) &&
+        Objects.equals(this.dateAreaX, dateStampProperties.dateAreaX) &&
+        Objects.equals(this.dateAreaY, dateStampProperties.dateAreaY);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(dateAreaHeight, dateAreaWidth, dateAreaX, dateAreaY);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DateStampProperties {\n");
-
+    
     sb.append("    dateAreaHeight: ").append(toIndentedString(dateAreaHeight)).append("\n");
     sb.append("    dateAreaWidth: ").append(toIndentedString(dateAreaWidth)).append("\n");
     sb.append("    dateAreaX: ").append(toIndentedString(dateAreaX)).append("\n");
@@ -159,7 +182,8 @@ public class DateStampProperties {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -167,4 +191,6 @@ public class DateStampProperties {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

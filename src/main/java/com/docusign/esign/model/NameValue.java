@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** NameValue. */
+/**
+ * A name-value pair that describes an item and provides a value for the item..
+ *
+ */
+@ApiModel(description = "A name-value pair that describes an item and provides a value for the item.")
+
 public class NameValue {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -18,36 +28,39 @@ public class NameValue {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * errorDetails.
    *
    * @return NameValue
-   */
+   **/
   public NameValue errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * name.
    *
    * @return NameValue
-   */
+   **/
   public NameValue name(String name) {
     this.name = name;
     return this;
@@ -55,24 +68,26 @@ public class NameValue {
 
   /**
    * The name or key of a name/value pair..
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "The name or key of a name/value pair.")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * originalValue.
    *
    * @return NameValue
-   */
+   **/
   public NameValue originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
@@ -80,24 +95,26 @@ public class NameValue {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   *
    * @return originalValue
-   */
+   **/
   @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
 
-  /** setOriginalValue. */
+  /**
+   * setOriginalValue.
+   **/
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
+
 
   /**
    * value.
    *
    * @return NameValue
-   */
+   **/
   public NameValue value(String value) {
     this.value = value;
     return this;
@@ -105,18 +122,20 @@ public class NameValue {
 
   /**
    * The value field of a name/value pair..
-   *
    * @return value
-   */
+   **/
   @ApiModelProperty(value = "The value field of a name/value pair.")
   public String getValue() {
     return value;
   }
 
-  /** setValue. */
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -132,24 +151,29 @@ public class NameValue {
       return false;
     }
     NameValue nameValue = (NameValue) o;
-    return Objects.equals(this.errorDetails, nameValue.errorDetails)
-        && Objects.equals(this.name, nameValue.name)
-        && Objects.equals(this.originalValue, nameValue.originalValue)
-        && Objects.equals(this.value, nameValue.value);
+    return Objects.equals(this.errorDetails, nameValue.errorDetails) &&
+        Objects.equals(this.name, nameValue.name) &&
+        Objects.equals(this.originalValue, nameValue.originalValue) &&
+        Objects.equals(this.value, nameValue.value);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
@@ -159,7 +183,8 @@ public class NameValue {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -167,4 +192,6 @@ public class NameValue {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

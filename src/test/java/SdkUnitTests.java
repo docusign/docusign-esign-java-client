@@ -1,4 +1,5 @@
 import com.docusign.esign.api.*;
+import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.*;
 import com.docusign.esign.client.auth.OAuth;
 import com.docusign.esign.client.auth.OAuth.UserInfo;
@@ -1396,6 +1397,74 @@ public class SdkUnitTests {
       Assert.assertEquals(envelopeIds[0], docsList.getEnvelopeId());
 
       System.out.println("EnvelopeDocumentsResult: " + docsList);
+    } catch (ApiException ex) {
+      Assert.fail("Exception: " + ex);
+    } catch (Exception e) {
+      Assert.fail("Exception: " + e.getLocalizedMessage());
+    }
+  }
+
+  @Test
+  public void CreateEnvWithHttpInfoTest() {
+    System.out.println(
+            "\nCreateEnvWithHttpInfoTest:\n" + "===========================================");
+    byte[] fileBytes = null;
+    try {
+      String currentDir = System.getProperty("user.dir");
+
+      Path path = Paths.get(currentDir + SignTest1File);
+      fileBytes = Files.readAllBytes(path);
+    } catch (IOException ioExcp) {
+      Assert.assertNull(ioExcp);
+    }
+
+    // create an envelope to be signed
+    EnvelopeDefinition envDef = new EnvelopeDefinition();
+    envDef.setEmailSubject("Please Sign my Java SDK Envelope");
+    envDef.setEmailBlurb("Hello, Please sign my Java SDK Envelope.");
+
+    // add a document to the envelope
+    Document doc = new Document();
+    String base64Doc = Base64.getEncoder().encodeToString(fileBytes);
+    doc.setDocumentBase64(base64Doc);
+    doc.setName("TestFile.pdf");
+    doc.setDocumentId("1");
+
+    List<Document> docs = new ArrayList<>();
+    docs.add(doc);
+    envDef.setDocuments(docs);
+
+    // Add a recipient to sign the document
+    Signer signer = new Signer();
+    signer.setEmail(UserName);
+    signer.setName("Pat Developer");
+    signer.setRecipientId("1");
+
+    // Create a SignHere tab somewhere on the document for the signer to
+    // sign
+    SignHere signHere = new SignHere();
+
+    List<SignHere> signHereTabs = new ArrayList<>();
+    signHereTabs.add(signHere);
+
+    // Above causes issue
+    envDef.setRecipients(new Recipients());
+    envDef.getRecipients().setSigners(new ArrayList<>());
+    envDef.getRecipients().getSigners().add(signer);
+
+    // send the envelope (otherwise it will be "created" in the Draft folder
+    envDef.setStatus("sent");
+    try {
+      EnvelopesApi envelopesApi = new EnvelopesApi();
+
+      ApiResponse<EnvelopeSummary> apiResponse = envelopesApi.createEnvelopeWithHttpInfo(AccountId, envDef, null);
+
+      Assert.assertNotNull(apiResponse);
+      Assert.assertNotNull(apiResponse.getHeaders());
+      Assert.assertNotNull(apiResponse.getStatusCode());
+      Assert.assertEquals(apiResponse.getStatusCode(), 201);
+      Assert.assertNotNull(apiResponse.getData());
+      Assert.assertEquals(apiResponse.getData().getClass(), EnvelopeSummary.class);
     } catch (ApiException ex) {
       Assert.fail("Exception: " + ex);
     } catch (Exception e) {

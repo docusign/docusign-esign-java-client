@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ExternalFile. */
+/**
+ * This object contains information about a file or folder in cloud storage..
+ *
+ */
+@ApiModel(description = "This object contains information about a file or folder in cloud storage.")
+
 public class ExternalFile {
   @JsonProperty("date")
   private String date = null;
@@ -36,11 +45,12 @@ public class ExternalFile {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * date.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile date(String date) {
     this.date = date;
     return this;
@@ -48,24 +58,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return date
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDate() {
     return date;
   }
 
-  /** setDate. */
+  /**
+   * setDate.
+   **/
   public void setDate(String date) {
     this.date = date;
   }
+
 
   /**
    * hasCompositeTemplate.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile hasCompositeTemplate(String hasCompositeTemplate) {
     this.hasCompositeTemplate = hasCompositeTemplate;
     return this;
@@ -73,24 +85,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return hasCompositeTemplate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getHasCompositeTemplate() {
     return hasCompositeTemplate;
   }
 
-  /** setHasCompositeTemplate. */
+  /**
+   * setHasCompositeTemplate.
+   **/
   public void setHasCompositeTemplate(String hasCompositeTemplate) {
     this.hasCompositeTemplate = hasCompositeTemplate;
   }
+
 
   /**
    * id.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile id(String id) {
     this.id = id;
     return this;
@@ -98,24 +112,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return id
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
 
-  /** setId. */
+  /**
+   * setId.
+   **/
   public void setId(String id) {
     this.id = id;
   }
+
 
   /**
    * img.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile img(String img) {
     this.img = img;
     return this;
@@ -123,24 +139,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return img
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getImg() {
     return img;
   }
 
-  /** setImg. */
+  /**
+   * setImg.
+   **/
   public void setImg(String img) {
     this.img = img;
   }
+
 
   /**
    * name.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile name(String name) {
     this.name = name;
     return this;
@@ -148,24 +166,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * ownerName.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile ownerName(String ownerName) {
     this.ownerName = ownerName;
     return this;
@@ -173,24 +193,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return ownerName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getOwnerName() {
     return ownerName;
   }
 
-  /** setOwnerName. */
+  /**
+   * setOwnerName.
+   **/
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
+
 
   /**
    * size.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile size(String size) {
     this.size = size;
     return this;
@@ -198,24 +220,26 @@ public class ExternalFile {
 
   /**
    * Reserved: TBD.
-   *
    * @return size
-   */
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public String getSize() {
     return size;
   }
 
-  /** setSize. */
+  /**
+   * setSize.
+   **/
   public void setSize(String size) {
     this.size = size;
   }
+
 
   /**
    * supported.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile supported(String supported) {
     this.supported = supported;
     return this;
@@ -223,24 +247,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return supported
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSupported() {
     return supported;
   }
 
-  /** setSupported. */
+  /**
+   * setSupported.
+   **/
   public void setSupported(String supported) {
     this.supported = supported;
   }
+
 
   /**
    * type.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile type(String type) {
     this.type = type;
     return this;
@@ -248,24 +274,26 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return type
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }
 
-  /** setType. */
+  /**
+   * setType.
+   **/
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * uri.
    *
    * @return ExternalFile
-   */
+   **/
   public ExternalFile uri(String uri) {
     this.uri = uri;
     return this;
@@ -273,18 +301,20 @@ public class ExternalFile {
 
   /**
    * .
-   *
    * @return uri
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getUri() {
     return uri;
   }
 
-  /** setUri. */
+  /**
+   * setUri.
+   **/
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -300,35 +330,37 @@ public class ExternalFile {
       return false;
     }
     ExternalFile externalFile = (ExternalFile) o;
-    return Objects.equals(this.date, externalFile.date)
-        && Objects.equals(this.hasCompositeTemplate, externalFile.hasCompositeTemplate)
-        && Objects.equals(this.id, externalFile.id)
-        && Objects.equals(this.img, externalFile.img)
-        && Objects.equals(this.name, externalFile.name)
-        && Objects.equals(this.ownerName, externalFile.ownerName)
-        && Objects.equals(this.size, externalFile.size)
-        && Objects.equals(this.supported, externalFile.supported)
-        && Objects.equals(this.type, externalFile.type)
-        && Objects.equals(this.uri, externalFile.uri);
+    return Objects.equals(this.date, externalFile.date) &&
+        Objects.equals(this.hasCompositeTemplate, externalFile.hasCompositeTemplate) &&
+        Objects.equals(this.id, externalFile.id) &&
+        Objects.equals(this.img, externalFile.img) &&
+        Objects.equals(this.name, externalFile.name) &&
+        Objects.equals(this.ownerName, externalFile.ownerName) &&
+        Objects.equals(this.size, externalFile.size) &&
+        Objects.equals(this.supported, externalFile.supported) &&
+        Objects.equals(this.type, externalFile.type) &&
+        Objects.equals(this.uri, externalFile.uri);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
+    return Objects.hash(date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFile {\n");
-
+    
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
-    sb.append("    hasCompositeTemplate: ")
-        .append(toIndentedString(hasCompositeTemplate))
-        .append("\n");
+    sb.append("    hasCompositeTemplate: ").append(toIndentedString(hasCompositeTemplate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    img: ").append(toIndentedString(img)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -342,7 +374,8 @@ public class ExternalFile {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -350,4 +383,6 @@ public class ExternalFile {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

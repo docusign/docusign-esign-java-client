@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** BillingEntityInformationResponse. */
+/**
+ * BillingEntityInformationResponse.
+ *
+ */
+
 public class BillingEntityInformationResponse {
   @JsonProperty("billingProfile")
   private String billingProfile = null;
@@ -18,11 +26,12 @@ public class BillingEntityInformationResponse {
   @JsonProperty("isExternallyBilled")
   private String isExternallyBilled = null;
 
+
   /**
    * billingProfile.
    *
    * @return BillingEntityInformationResponse
-   */
+   **/
   public BillingEntityInformationResponse billingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
     return this;
@@ -30,24 +39,26 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   *
    * @return billingProfile
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getBillingProfile() {
     return billingProfile;
   }
 
-  /** setBillingProfile. */
+  /**
+   * setBillingProfile.
+   **/
   public void setBillingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
   }
+
 
   /**
    * entityName.
    *
    * @return BillingEntityInformationResponse
-   */
+   **/
   public BillingEntityInformationResponse entityName(String entityName) {
     this.entityName = entityName;
     return this;
@@ -55,24 +66,26 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   *
    * @return entityName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEntityName() {
     return entityName;
   }
 
-  /** setEntityName. */
+  /**
+   * setEntityName.
+   **/
   public void setEntityName(String entityName) {
     this.entityName = entityName;
   }
+
 
   /**
    * externalEntityId.
    *
    * @return BillingEntityInformationResponse
-   */
+   **/
   public BillingEntityInformationResponse externalEntityId(String externalEntityId) {
     this.externalEntityId = externalEntityId;
     return this;
@@ -80,24 +93,26 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   *
    * @return externalEntityId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getExternalEntityId() {
     return externalEntityId;
   }
 
-  /** setExternalEntityId. */
+  /**
+   * setExternalEntityId.
+   **/
   public void setExternalEntityId(String externalEntityId) {
     this.externalEntityId = externalEntityId;
   }
+
 
   /**
    * isExternallyBilled.
    *
    * @return BillingEntityInformationResponse
-   */
+   **/
   public BillingEntityInformationResponse isExternallyBilled(String isExternallyBilled) {
     this.isExternallyBilled = isExternallyBilled;
     return this;
@@ -105,18 +120,20 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   *
    * @return isExternallyBilled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getIsExternallyBilled() {
     return isExternallyBilled;
   }
 
-  /** setIsExternallyBilled. */
+  /**
+   * setIsExternallyBilled.
+   **/
   public void setIsExternallyBilled(String isExternallyBilled) {
     this.isExternallyBilled = isExternallyBilled;
   }
+
 
   /**
    * Compares objects.
@@ -131,27 +148,30 @@ public class BillingEntityInformationResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BillingEntityInformationResponse billingEntityInformationResponse =
-        (BillingEntityInformationResponse) o;
-    return Objects.equals(this.billingProfile, billingEntityInformationResponse.billingProfile)
-        && Objects.equals(this.entityName, billingEntityInformationResponse.entityName)
-        && Objects.equals(this.externalEntityId, billingEntityInformationResponse.externalEntityId)
-        && Objects.equals(
-            this.isExternallyBilled, billingEntityInformationResponse.isExternallyBilled);
+    BillingEntityInformationResponse billingEntityInformationResponse = (BillingEntityInformationResponse) o;
+    return Objects.equals(this.billingProfile, billingEntityInformationResponse.billingProfile) &&
+        Objects.equals(this.entityName, billingEntityInformationResponse.entityName) &&
+        Objects.equals(this.externalEntityId, billingEntityInformationResponse.externalEntityId) &&
+        Objects.equals(this.isExternallyBilled, billingEntityInformationResponse.isExternallyBilled);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(billingProfile, entityName, externalEntityId, isExternallyBilled);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingEntityInformationResponse {\n");
-
+    
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
     sb.append("    entityName: ").append(toIndentedString(entityName)).append("\n");
     sb.append("    externalEntityId: ").append(toIndentedString(externalEntityId)).append("\n");
@@ -161,7 +181,8 @@ public class BillingEntityInformationResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -169,4 +190,6 @@ public class BillingEntityInformationResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

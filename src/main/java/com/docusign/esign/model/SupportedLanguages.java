@@ -1,29 +1,40 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.NameValue;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** SupportedLanguages. */
+/**
+ * A list of supported languages..
+ *
+ */
+@ApiModel(description = "A list of supported languages.")
+
 public class SupportedLanguages {
   @JsonProperty("languages")
   private java.util.List<NameValue> languages = null;
+
 
   /**
    * languages.
    *
    * @return SupportedLanguages
-   */
+   **/
   public SupportedLanguages languages(java.util.List<NameValue> languages) {
     this.languages = languages;
     return this;
   }
-
+  
   /**
    * addLanguagesItem.
    *
    * @return SupportedLanguages
-   */
+   **/
   public SupportedLanguages addLanguagesItem(NameValue languagesItem) {
     if (this.languages == null) {
       this.languages = new java.util.ArrayList<>();
@@ -34,18 +45,20 @@ public class SupportedLanguages {
 
   /**
    * .
-   *
    * @return languages
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<NameValue> getLanguages() {
     return languages;
   }
 
-  /** setLanguages. */
+  /**
+   * setLanguages.
+   **/
   public void setLanguages(java.util.List<NameValue> languages) {
     this.languages = languages;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +77,31 @@ public class SupportedLanguages {
     return Objects.equals(this.languages, supportedLanguages.languages);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(languages);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SupportedLanguages {\n");
-
+    
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +109,6 @@ public class SupportedLanguages {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** MatchBox. */
+/**
+ * MatchBox.
+ *
+ */
+
 public class MatchBox {
   @JsonProperty("height")
   private String height = null;
@@ -21,11 +29,12 @@ public class MatchBox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
+
   /**
    * height.
    *
    * @return MatchBox
-   */
+   **/
   public MatchBox height(String height) {
     this.height = height;
     return this;
@@ -33,24 +42,26 @@ public class MatchBox {
 
   /**
    * Height of the tab in pixels..
-   *
    * @return height
-   */
+   **/
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
 
-  /** setHeight. */
+  /**
+   * setHeight.
+   **/
   public void setHeight(String height) {
     this.height = height;
   }
+
 
   /**
    * pageNumber.
    *
    * @return MatchBox
-   */
+   **/
   public MatchBox pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
@@ -58,24 +69,26 @@ public class MatchBox {
 
   /**
    * Specifies the page number on which the tab is located..
-   *
    * @return pageNumber
-   */
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
-  /** setPageNumber. */
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
+
 
   /**
    * width.
    *
    * @return MatchBox
-   */
+   **/
   public MatchBox width(String width) {
     this.width = width;
     return this;
@@ -83,74 +96,74 @@ public class MatchBox {
 
   /**
    * Width of the tab in pixels..
-   *
    * @return width
-   */
+   **/
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
 
-  /** setWidth. */
+  /**
+   * setWidth.
+   **/
   public void setWidth(String width) {
     this.width = width;
   }
+
 
   /**
    * xPosition.
    *
    * @return MatchBox
-   */
+   **/
   public MatchBox xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
-  /** setXPosition. */
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
+
 
   /**
    * yPosition.
    *
    * @return MatchBox
-   */
+   **/
   public MatchBox yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
-  /** setYPosition. */
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
+
 
   /**
    * Compares objects.
@@ -166,25 +179,30 @@ public class MatchBox {
       return false;
     }
     MatchBox matchBox = (MatchBox) o;
-    return Objects.equals(this.height, matchBox.height)
-        && Objects.equals(this.pageNumber, matchBox.pageNumber)
-        && Objects.equals(this.width, matchBox.width)
-        && Objects.equals(this.xPosition, matchBox.xPosition)
-        && Objects.equals(this.yPosition, matchBox.yPosition);
+    return Objects.equals(this.height, matchBox.height) &&
+        Objects.equals(this.pageNumber, matchBox.pageNumber) &&
+        Objects.equals(this.width, matchBox.width) &&
+        Objects.equals(this.xPosition, matchBox.xPosition) &&
+        Objects.equals(this.yPosition, matchBox.yPosition);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(height, pageNumber, width, xPosition, yPosition);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
-
+    
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
@@ -195,7 +213,8 @@ public class MatchBox {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -203,4 +222,6 @@ public class MatchBox {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

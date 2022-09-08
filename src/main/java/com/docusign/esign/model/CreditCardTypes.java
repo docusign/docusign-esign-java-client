@@ -1,29 +1,38 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** CreditCardTypes. */
+/**
+ * CreditCardTypes.
+ *
+ */
+
 public class CreditCardTypes {
   @JsonProperty("cardTypes")
   private java.util.List<String> cardTypes = null;
+
 
   /**
    * cardTypes.
    *
    * @return CreditCardTypes
-   */
+   **/
   public CreditCardTypes cardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
     return this;
   }
-
+  
   /**
    * addCardTypesItem.
    *
    * @return CreditCardTypes
-   */
+   **/
   public CreditCardTypes addCardTypesItem(String cardTypesItem) {
     if (this.cardTypes == null) {
       this.cardTypes = new java.util.ArrayList<>();
@@ -34,18 +43,20 @@ public class CreditCardTypes {
 
   /**
    * An array containing supported credit card types..
-   *
    * @return cardTypes
-   */
+   **/
   @ApiModelProperty(value = "An array containing supported credit card types.")
   public java.util.List<String> getCardTypes() {
     return cardTypes;
   }
 
-  /** setCardTypes. */
+  /**
+   * setCardTypes.
+   **/
   public void setCardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +75,31 @@ public class CreditCardTypes {
     return Objects.equals(this.cardTypes, creditCardTypes.cardTypes);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(cardTypes);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardTypes {\n");
-
+    
     sb.append("    cardTypes: ").append(toIndentedString(cardTypes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +107,6 @@ public class CreditCardTypes {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

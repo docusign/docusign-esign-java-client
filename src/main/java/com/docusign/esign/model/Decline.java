@@ -1,10 +1,24 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.LocalePolicyTab;
+import com.docusign.esign.model.MergeField;
+import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** Decline. */
+/**
+ * A tab that allows the recipient the option of declining an envelope. If the recipient clicks the tab during the signing process, the envelope is voided. .
+ *
+ */
+@ApiModel(description = "A tab that allows the recipient the option of declining an envelope. If the recipient clicks the tab during the signing process, the envelope is voided. ")
+
 public class Decline {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -276,11 +290,12 @@ public class Decline {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
     return this;
@@ -288,159 +303,161 @@ public class Decline {
 
   /**
    * .
-   *
    * @return anchorAllowWhiteSpaceInCharacters
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
 
-  /** setAnchorAllowWhiteSpaceInCharacters. */
+  /**
+   * setAnchorAllowWhiteSpaceInCharacters.
+   **/
   public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
+
 
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return Decline
-   */
-  public Decline anchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+   **/
+  public Decline anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Get anchorAllowWhiteSpaceInCharactersMetadata.
-   *
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
-  /** setAnchorAllowWhiteSpaceInCharactersMetadata. */
-  public void setAnchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  /**
+   * setAnchorAllowWhiteSpaceInCharactersMetadata.
+   **/
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
+
 
   /**
    * anchorCaseSensitive.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the
-   * document. The default value is **true**..
-   *
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
 
-  /** setAnchorCaseSensitive. */
+  /**
+   * setAnchorCaseSensitive.
+   **/
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
+
 
   /**
    * anchorCaseSensitiveMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
     return this;
   }
 
   /**
-   * Get anchorCaseSensitiveMetadata.
-   *
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
 
-  /** setAnchorCaseSensitiveMetadata. */
+  /**
+   * setAnchorCaseSensitiveMetadata.
+   **/
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
+
 
   /**
    * anchorHorizontalAlignment.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or
-   * **right**. The default value is **left**..
-   *
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+   **/
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
 
-  /** setAnchorHorizontalAlignment. */
+  /**
+   * setAnchorHorizontalAlignment.
+   **/
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
+
 
   /**
    * anchorHorizontalAlignmentMetadata.
    *
    * @return Decline
-   */
-  public Decline anchorHorizontalAlignmentMetadata(
-      PropertyMetadata anchorHorizontalAlignmentMetadata) {
+   **/
+  public Decline anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
 
   /**
-   * Get anchorHorizontalAlignmentMetadata.
-   *
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
 
-  /** setAnchorHorizontalAlignmentMetadata. */
-  public void setAnchorHorizontalAlignmentMetadata(
-      PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  /**
+   * setAnchorHorizontalAlignmentMetadata.
+   **/
+  public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
+
 
   /**
    * anchorIgnoreIfNotPresent.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
@@ -448,106 +465,107 @@ public class Decline {
 
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document..
-   *
    * @return anchorIgnoreIfNotPresent
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
 
-  /** setAnchorIgnoreIfNotPresent. */
+  /**
+   * setAnchorIgnoreIfNotPresent.
+   **/
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
+
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
    * @return Decline
-   */
-  public Decline anchorIgnoreIfNotPresentMetadata(
-      PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+   **/
+  public Decline anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
     return this;
   }
 
   /**
-   * Get anchorIgnoreIfNotPresentMetadata.
-   *
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
 
-  /** setAnchorIgnoreIfNotPresentMetadata. */
-  public void setAnchorIgnoreIfNotPresentMetadata(
-      PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  /**
+   * setAnchorIgnoreIfNotPresentMetadata.
+   **/
+  public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
+
 
   /**
    * anchorMatchWholeWord.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded
-   * in other strings are ignored.) The default value is **true**..
-   *
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
 
-  /** setAnchorMatchWholeWord. */
+  /**
+   * setAnchorMatchWholeWord.
+   **/
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
+
 
   /**
    * anchorMatchWholeWordMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
     return this;
   }
 
   /**
-   * Get anchorMatchWholeWordMetadata.
-   *
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
 
-  /** setAnchorMatchWholeWordMetadata. */
+  /**
+   * setAnchorMatchWholeWordMetadata.
+   **/
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
+
 
   /**
    * anchorString.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
@@ -555,49 +573,53 @@ public class Decline {
 
   /**
    * Anchor text information for a radio button..
-   *
    * @return anchorString
-   */
+   **/
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
 
-  /** setAnchorString. */
+  /**
+   * setAnchorString.
+   **/
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
+
 
   /**
    * anchorStringMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
     return this;
   }
 
   /**
-   * Get anchorStringMetadata.
-   *
+   * Metadata that indicates whether the `anchorString` property is editable..
    * @return anchorStringMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
 
-  /** setAnchorStringMetadata. */
+  /**
+   * setAnchorStringMetadata.
+   **/
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
+
 
   /**
    * anchorTabProcessorVersion.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
     return this;
@@ -605,104 +627,107 @@ public class Decline {
 
   /**
    * .
-   *
    * @return anchorTabProcessorVersion
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
 
-  /** setAnchorTabProcessorVersion. */
+  /**
+   * setAnchorTabProcessorVersion.
+   **/
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
+
 
   /**
    * anchorTabProcessorVersionMetadata.
    *
    * @return Decline
-   */
-  public Decline anchorTabProcessorVersionMetadata(
-      PropertyMetadata anchorTabProcessorVersionMetadata) {
+   **/
+  public Decline anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
 
   /**
-   * Get anchorTabProcessorVersionMetadata.
-   *
+   * Reserved for DocuSign..
    * @return anchorTabProcessorVersionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
 
-  /** setAnchorTabProcessorVersionMetadata. */
-  public void setAnchorTabProcessorVersionMetadata(
-      PropertyMetadata anchorTabProcessorVersionMetadata) {
+  /**
+   * setAnchorTabProcessorVersionMetadata.
+   **/
+  public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
+
 
   /**
    * anchorUnits.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or
-   * inches..
-   *
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+   **/
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
 
-  /** setAnchorUnits. */
+  /**
+   * setAnchorUnits.
+   **/
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
+
 
   /**
    * anchorUnitsMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
     return this;
   }
 
   /**
-   * Get anchorUnitsMetadata.
-   *
+   * Metadata that indicates whether the `anchorUnits` property is editable..
    * @return anchorUnitsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
 
-  /** setAnchorUnitsMetadata. */
+  /**
+   * setAnchorUnitsMetadata.
+   **/
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
+
 
   /**
    * anchorXOffset.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
@@ -710,51 +735,53 @@ public class Decline {
 
   /**
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
-   *
    * @return anchorXOffset
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+   **/
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
 
-  /** setAnchorXOffset. */
+  /**
+   * setAnchorXOffset.
+   **/
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
+
 
   /**
    * anchorXOffsetMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
     return this;
   }
 
   /**
-   * Get anchorXOffsetMetadata.
-   *
+   * Metadata that indicates whether the `anchorXOffset` property is editable..
    * @return anchorXOffsetMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
 
-  /** setAnchorXOffsetMetadata. */
+  /**
+   * setAnchorXOffsetMetadata.
+   **/
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
+
 
   /**
    * anchorYOffset.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
@@ -762,51 +789,53 @@ public class Decline {
 
   /**
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
-   *
    * @return anchorYOffset
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+   **/
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
 
-  /** setAnchorYOffset. */
+  /**
+   * setAnchorYOffset.
+   **/
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
+
 
   /**
    * anchorYOffsetMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
     return this;
   }
 
   /**
-   * Get anchorYOffsetMetadata.
-   *
+   * Metadata that indicates whether the `anchorYOffset` property is editable..
    * @return anchorYOffsetMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
 
-  /** setAnchorYOffsetMetadata. */
+  /**
+   * setAnchorYOffsetMetadata.
+   **/
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
+
 
   /**
    * bold.
    *
    * @return Decline
-   */
+   **/
   public Decline bold(String bold) {
     this.bold = bold;
     return this;
@@ -814,99 +843,107 @@ public class Decline {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   *
    * @return bold
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
 
-  /** setBold. */
+  /**
+   * setBold.
+   **/
   public void setBold(String bold) {
     this.bold = bold;
   }
+
 
   /**
    * boldMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline boldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
     return this;
   }
 
   /**
-   * Get boldMetadata.
-   *
+   * Metadata that indicates whether the `bold` property is editable..
    * @return boldMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `bold` property is editable.")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
 
-  /** setBoldMetadata. */
+  /**
+   * setBoldMetadata.
+   **/
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
+
 
   /**
    * buttonText.
    *
    * @return Decline
-   */
+   **/
   public Decline buttonText(String buttonText) {
     this.buttonText = buttonText;
     return this;
   }
 
   /**
-   * Specifies the decline text displayed in the tab..
-   *
+   *  Specifies the decline text displayed in the tab..
    * @return buttonText
-   */
+   **/
   @ApiModelProperty(value = " Specifies the decline text displayed in the tab.")
   public String getButtonText() {
     return buttonText;
   }
 
-  /** setButtonText. */
+  /**
+   * setButtonText.
+   **/
   public void setButtonText(String buttonText) {
     this.buttonText = buttonText;
   }
+
 
   /**
    * buttonTextMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline buttonTextMetadata(PropertyMetadata buttonTextMetadata) {
     this.buttonTextMetadata = buttonTextMetadata;
     return this;
   }
 
   /**
-   * Get buttonTextMetadata.
-   *
+   * Metadata that indicates whether the `buttonText` property is editable..
    * @return buttonTextMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `buttonText` property is editable.")
   public PropertyMetadata getButtonTextMetadata() {
     return buttonTextMetadata;
   }
 
-  /** setButtonTextMetadata. */
+  /**
+   * setButtonTextMetadata.
+   **/
   public void setButtonTextMetadata(PropertyMetadata buttonTextMetadata) {
     this.buttonTextMetadata = buttonTextMetadata;
   }
+
 
   /**
    * caption.
    *
    * @return Decline
-   */
+   **/
   public Decline caption(String caption) {
     this.caption = caption;
     return this;
@@ -914,24 +951,26 @@ public class Decline {
 
   /**
    * .
-   *
    * @return caption
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCaption() {
     return caption;
   }
 
-  /** setCaption. */
+  /**
+   * setCaption.
+   **/
   public void setCaption(String caption) {
     this.caption = caption;
   }
+
 
   /**
    * captionMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline captionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
     return this;
@@ -939,185 +978,188 @@ public class Decline {
 
   /**
    * Get captionMetadata.
-   *
    * @return captionMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
 
-  /** setCaptionMetadata. */
+  /**
+   * setCaptionMetadata.
+   **/
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
+
 
   /**
    * conditionalParentLabel.
    *
    * @return Decline
-   */
+   **/
   public Decline conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's
-   * visibility..
-   *
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
-   */
-  @ApiModelProperty(
-      value =
-          "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+   **/
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
 
-  /** setConditionalParentLabel. */
+  /**
+   * setConditionalParentLabel.
+   **/
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
+
 
   /**
    * conditionalParentLabelMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
     return this;
   }
 
   /**
-   * Get conditionalParentLabelMetadata.
-   *
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
 
-  /** setConditionalParentLabelMetadata. */
+  /**
+   * setConditionalParentLabelMetadata.
+   **/
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
+
 
   /**
    * conditionalParentValue.
    *
    * @return Decline
-   */
+   **/
   public Decline conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.
-   * If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use
-   * \"on\" as the value to show that the parent tab is active. .
-   *
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
-   */
-  @ApiModelProperty(
-      value =
-          "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+   **/
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
 
-  /** setConditionalParentValue. */
+  /**
+   * setConditionalParentValue.
+   **/
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
+
 
   /**
    * conditionalParentValueMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
     return this;
   }
 
   /**
-   * Get conditionalParentValueMetadata.
-   *
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
 
-  /** setConditionalParentValueMetadata. */
+  /**
+   * setConditionalParentValueMetadata.
+   **/
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
+
 
   /**
    * customTabId.
    *
    * @return Decline
-   */
+   **/
   public Decline customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used
-   * when adding new tabs for a recipient. When used, the new tab inherits all the custom tab
-   * properties..
-   *
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
-   */
-  @ApiModelProperty(
-      value =
-          "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+   **/
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
 
-  /** setCustomTabId. */
+  /**
+   * setCustomTabId.
+   **/
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
+
 
   /**
    * customTabIdMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
     return this;
   }
 
   /**
-   * Get customTabIdMetadata.
-   *
+   * Metadata that indicates whether the `customTabId` property is editable..
    * @return customTabIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
 
-  /** setCustomTabIdMetadata. */
+  /**
+   * setCustomTabIdMetadata.
+   **/
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
+
 
   /**
    * declineReason.
    *
    * @return Decline
-   */
+   **/
   public Decline declineReason(String declineReason) {
     this.declineReason = declineReason;
     return this;
@@ -1125,288 +1167,296 @@ public class Decline {
 
   /**
    * The reason the recipient declined the document..
-   *
    * @return declineReason
-   */
+   **/
   @ApiModelProperty(value = "The reason the recipient declined the document.")
   public String getDeclineReason() {
     return declineReason;
   }
 
-  /** setDeclineReason. */
+  /**
+   * setDeclineReason.
+   **/
   public void setDeclineReason(String declineReason) {
     this.declineReason = declineReason;
   }
+
 
   /**
    * declineReasonMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline declineReasonMetadata(PropertyMetadata declineReasonMetadata) {
     this.declineReasonMetadata = declineReasonMetadata;
     return this;
   }
 
   /**
-   * Get declineReasonMetadata.
-   *
+   * Metadata that indicates whether the `declineReason` property is editable..
    * @return declineReasonMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `declineReason` property is editable.")
   public PropertyMetadata getDeclineReasonMetadata() {
     return declineReasonMetadata;
   }
 
-  /** setDeclineReasonMetadata. */
+  /**
+   * setDeclineReasonMetadata.
+   **/
   public void setDeclineReasonMetadata(PropertyMetadata declineReasonMetadata) {
     this.declineReasonMetadata = declineReasonMetadata;
   }
+
 
   /**
    * documentId.
    *
    * @return Decline
-   */
+   **/
   public Decline documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
-   * Document's ID attribute..
-   *
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   **/
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
-  /** setDocumentId. */
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
+
 
   /**
    * documentIdMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline documentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
     return this;
   }
 
   /**
-   * Get documentIdMetadata.
-   *
+   * Metadata that indicates whether the `documentId` property is editable..
    * @return documentIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
 
-  /** setDocumentIdMetadata. */
+  /**
+   * setDocumentIdMetadata.
+   **/
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
+
 
   /**
    * errorDetails.
    *
    * @return Decline
-   */
+   **/
   public Decline errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
    *
    * @return Decline
-   */
+   **/
   public Decline font(String font) {
     this.font = font;
     return this;
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri,
-   * CourierNew, Garamond, Georgia, Helvetica, LucidaConsole, Tahoma, TimesNewRoman, Trebuchet,
-   * Verdana, MSGothic, MSMincho, Default..
-   *
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
-   */
-  @ApiModelProperty(
-      value =
-          "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+   **/
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
 
-  /** setFont. */
+  /**
+   * setFont.
+   **/
   public void setFont(String font) {
     this.font = font;
   }
+
 
   /**
    * fontColor.
    *
    * @return Decline
-   */
+   **/
   public Decline fontColor(String fontColor) {
     this.fontColor = fontColor;
     return this;
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are: Black, BrightBlue,
-   * BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
-   *
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
-   */
-  @ApiModelProperty(
-      value =
-          "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+   **/
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
 
-  /** setFontColor. */
+  /**
+   * setFontColor.
+   **/
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
+
 
   /**
    * fontColorMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline fontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
     return this;
   }
 
   /**
-   * Get fontColorMetadata.
-   *
+   * Metadata that indicates whether the `fontColor` property is editable..
    * @return fontColorMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fontColor` property is editable.")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
 
-  /** setFontColorMetadata. */
+  /**
+   * setFontColorMetadata.
+   **/
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
+
 
   /**
    * fontMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline fontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
     return this;
   }
 
   /**
-   * Get fontMetadata.
-   *
+   * Metadata that indicates whether the `font` property is editable..
    * @return fontMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `font` property is editable.")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
 
-  /** setFontMetadata. */
+  /**
+   * setFontMetadata.
+   **/
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
+
 
   /**
    * fontSize.
    *
    * @return Decline
-   */
+   **/
   public Decline fontSize(String fontSize) {
     this.fontSize = fontSize;
     return this;
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are: Size7, Size8, Size9,
-   * Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36,
-   * Size48, or Size72..
-   *
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
-   */
-  @ApiModelProperty(
-      value =
-          "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+   **/
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
 
-  /** setFontSize. */
+  /**
+   * setFontSize.
+   **/
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
+
 
   /**
    * fontSizeMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
     return this;
   }
 
   /**
-   * Get fontSizeMetadata.
-   *
+   * Metadata that indicates whether the `fontSize` property is editable..
    * @return fontSizeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fontSize` property is editable.")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
 
-  /** setFontSizeMetadata. */
+  /**
+   * setFontSizeMetadata.
+   **/
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
+
 
   /**
    * formOrder.
    *
    * @return Decline
-   */
+   **/
   public Decline formOrder(String formOrder) {
     this.formOrder = formOrder;
     return this;
@@ -1414,49 +1464,53 @@ public class Decline {
 
   /**
    * .
-   *
    * @return formOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
   }
 
-  /** setFormOrder. */
+  /**
+   * setFormOrder.
+   **/
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
+
 
   /**
    * formOrderMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline formOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
     return this;
   }
 
   /**
-   * Get formOrderMetadata.
-   *
+   * Metadata that indicates whether the `formOrder` property is editable..
    * @return formOrderMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
 
-  /** setFormOrderMetadata. */
+  /**
+   * setFormOrderMetadata.
+   **/
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
+
 
   /**
    * formPageLabel.
    *
    * @return Decline
-   */
+   **/
   public Decline formPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
     return this;
@@ -1464,49 +1518,53 @@ public class Decline {
 
   /**
    * .
-   *
    * @return formPageLabel
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
 
-  /** setFormPageLabel. */
+  /**
+   * setFormPageLabel.
+   **/
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
+
 
   /**
    * formPageLabelMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
     return this;
   }
 
   /**
-   * Get formPageLabelMetadata.
-   *
+   * Metadata that indicates whether the `formPageLabel` property is editable..
    * @return formPageLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
 
-  /** setFormPageLabelMetadata. */
+  /**
+   * setFormPageLabelMetadata.
+   **/
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
+
 
   /**
    * formPageNumber.
    *
    * @return Decline
-   */
+   **/
   public Decline formPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
     return this;
@@ -1514,49 +1572,53 @@ public class Decline {
 
   /**
    * .
-   *
    * @return formPageNumber
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
 
-  /** setFormPageNumber. */
+  /**
+   * setFormPageNumber.
+   **/
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
+
 
   /**
    * formPageNumberMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
     return this;
   }
 
   /**
-   * Get formPageNumberMetadata.
-   *
+   * Metadata that indicates whether the `fromPageNumber` property is editable..
    * @return formPageNumberMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
 
-  /** setFormPageNumberMetadata. */
+  /**
+   * setFormPageNumberMetadata.
+   **/
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
+
 
   /**
    * height.
    *
    * @return Decline
-   */
+   **/
   public Decline height(String height) {
     this.height = height;
     return this;
@@ -1564,49 +1626,53 @@ public class Decline {
 
   /**
    * Height of the tab in pixels..
-   *
    * @return height
-   */
+   **/
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
 
-  /** setHeight. */
+  /**
+   * setHeight.
+   **/
   public void setHeight(String height) {
     this.height = height;
   }
+
 
   /**
    * heightMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline heightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
     return this;
   }
 
   /**
-   * Get heightMetadata.
-   *
+   * Metadata that indicates whether the `height` property is editable..
    * @return heightMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
 
-  /** setHeightMetadata. */
+  /**
+   * setHeightMetadata.
+   **/
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
+
 
   /**
    * italic.
    *
    * @return Decline
-   */
+   **/
   public Decline italic(String italic) {
     this.italic = italic;
     return this;
@@ -1614,99 +1680,107 @@ public class Decline {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   *
    * @return italic
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
 
-  /** setItalic. */
+  /**
+   * setItalic.
+   **/
   public void setItalic(String italic) {
     this.italic = italic;
   }
+
 
   /**
    * italicMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline italicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
     return this;
   }
 
   /**
-   * Get italicMetadata.
-   *
+   * Metadata that indicates whether the `italic` property is editable..
    * @return italicMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `italic` property is editable.")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
 
-  /** setItalicMetadata. */
+  /**
+   * setItalicMetadata.
+   **/
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
+
 
   /**
    * localePolicy.
    *
    * @return Decline
-   */
+   **/
   public Decline localePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
     return this;
   }
 
   /**
-   * Get localePolicy.
-   *
+   * Reserved for DocuSign..
    * @return localePolicy
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
 
-  /** setLocalePolicy. */
+  /**
+   * setLocalePolicy.
+   **/
   public void setLocalePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
   }
+
 
   /**
    * mergeField.
    *
    * @return Decline
-   */
+   **/
   public Decline mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
 
   /**
-   * Get mergeField.
-   *
+   * Contains the information necessary to map the tab to a field in SalesForce..
    * @return mergeField
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
 
-  /** setMergeField. */
+  /**
+   * setMergeField.
+   **/
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
+
 
   /**
    * mergeFieldXml.
    *
    * @return Decline
-   */
+   **/
   public Decline mergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
     return this;
@@ -1714,24 +1788,26 @@ public class Decline {
 
   /**
    * .
-   *
    * @return mergeFieldXml
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
 
-  /** setMergeFieldXml. */
+  /**
+   * setMergeFieldXml.
+   **/
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
+
 
   /**
    * pageNumber.
    *
    * @return Decline
-   */
+   **/
   public Decline pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
@@ -1739,77 +1815,80 @@ public class Decline {
 
   /**
    * Specifies the page number on which the tab is located..
-   *
    * @return pageNumber
-   */
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
-  /** setPageNumber. */
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
+
 
   /**
    * pageNumberMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
     return this;
   }
 
   /**
-   * Get pageNumberMetadata.
-   *
+   * Metadata that indicates whether the `pageNumber` property is editable..
    * @return pageNumberMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
 
-  /** setPageNumberMetadata. */
+  /**
+   * setPageNumberMetadata.
+   **/
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
+
 
   /**
    * recipientId.
    *
    * @return Decline
-   */
+   **/
   public Decline recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
-   * the Document..
-   *
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-   */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   **/
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
-  /** setRecipientId. */
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
+
 
   /**
    * recipientIdGuid.
    *
    * @return Decline
-   */
+   **/
   public Decline recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
@@ -1817,99 +1896,107 @@ public class Decline {
 
   /**
    * .
-   *
    * @return recipientIdGuid
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
 
-  /** setRecipientIdGuid. */
+  /**
+   * setRecipientIdGuid.
+   **/
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
+
 
   /**
    * recipientIdGuidMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
     return this;
   }
 
   /**
-   * Get recipientIdGuidMetadata.
-   *
+   * Metadata that indicates whether the `recipientIdGuid` property is editable..
    * @return recipientIdGuidMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
 
-  /** setRecipientIdGuidMetadata. */
+  /**
+   * setRecipientIdGuidMetadata.
+   **/
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
+
 
   /**
    * recipientIdMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
     return this;
   }
 
   /**
-   * Get recipientIdMetadata.
-   *
+   * Metadata that indicates whether the `recipientId` property is editable..
    * @return recipientIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
 
-  /** setRecipientIdMetadata. */
+  /**
+   * setRecipientIdMetadata.
+   **/
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
+
 
   /**
    * smartContractInformation.
    *
    * @return Decline
-   */
+   **/
   public Decline smartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
     return this;
   }
 
   /**
-   * Get smartContractInformation.
-   *
+   * Reserved for DocuSign..
    * @return smartContractInformation
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
 
-  /** setSmartContractInformation. */
+  /**
+   * setSmartContractInformation.
+   **/
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
+
 
   /**
    * source.
    *
    * @return Decline
-   */
+   **/
   public Decline source(String source) {
     this.source = source;
     return this;
@@ -1917,87 +2004,90 @@ public class Decline {
 
   /**
    * .
-   *
    * @return source
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSource() {
     return source;
   }
 
-  /** setSource. */
+  /**
+   * setSource.
+   **/
   public void setSource(String source) {
     this.source = source;
   }
+
 
   /**
    * status.
    *
    * @return Decline
-   */
+   **/
   public Decline status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
-   *
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-   */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   **/
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /** setStatus. */
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * statusMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline statusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
     return this;
   }
 
   /**
-   * Get statusMetadata.
-   *
+   * Metadata that indicates whether the `status` property is editable..
    * @return statusMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
 
-  /** setStatusMetadata. */
+  /**
+   * setStatusMetadata.
+   **/
   public void setStatusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
   }
+
 
   /**
    * tabGroupLabels.
    *
    * @return Decline
-   */
+   **/
   public Decline tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
    * @return Decline
-   */
+   **/
   public Decline addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<>();
@@ -2008,101 +2098,107 @@ public class Decline {
 
   /**
    * .
-   *
    * @return tabGroupLabels
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
 
-  /** setTabGroupLabels. */
+  /**
+   * setTabGroupLabels.
+   **/
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
+
 
   /**
    * tabGroupLabelsMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
     return this;
   }
 
   /**
-   * Get tabGroupLabelsMetadata.
-   *
+   * Metadata that indicates whether the `tabGroupLabels` property is editable..
    * @return tabGroupLabelsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
 
-  /** setTabGroupLabelsMetadata. */
+  /**
+   * setTabGroupLabelsMetadata.
+   **/
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
+
 
   /**
    * tabId.
    *
    * @return Decline
-   */
+   **/
   public Decline tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. .
-   *
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
-   */
-  @ApiModelProperty(
-      value =
-          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+   **/
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
-  /** setTabId. */
+  /**
+   * setTabId.
+   **/
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
+
 
   /**
    * tabIdMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline tabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
     return this;
   }
 
   /**
-   * Get tabIdMetadata.
-   *
+   * Metadata that indicates whether the `tabId` property is editable..
    * @return tabIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
 
-  /** setTabIdMetadata. */
+  /**
+   * setTabIdMetadata.
+   **/
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
+
 
   /**
    * tabLabel.
    *
    * @return Decline
-   */
+   **/
   public Decline tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
@@ -2110,49 +2206,53 @@ public class Decline {
 
   /**
    * The label string associated with the tab..
-   *
    * @return tabLabel
-   */
+   **/
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
 
-  /** setTabLabel. */
+  /**
+   * setTabLabel.
+   **/
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
+
 
   /**
    * tabLabelMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
     return this;
   }
 
   /**
-   * Get tabLabelMetadata.
-   *
+   * Metadata that indicates whether the `tabLabel` property is editable..
    * @return tabLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
 
-  /** setTabLabelMetadata. */
+  /**
+   * setTabLabelMetadata.
+   **/
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
+
 
   /**
    * tabOrder.
    *
    * @return Decline
-   */
+   **/
   public Decline tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
@@ -2160,49 +2260,53 @@ public class Decline {
 
   /**
    * .
-   *
    * @return tabOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
 
-  /** setTabOrder. */
+  /**
+   * setTabOrder.
+   **/
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
+
 
   /**
    * tabOrderMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
     return this;
   }
 
   /**
-   * Get tabOrderMetadata.
-   *
+   * Metadata that indicates whether the `tabOrder` property is editable..
    * @return tabOrderMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
 
-  /** setTabOrderMetadata. */
+  /**
+   * setTabOrderMetadata.
+   **/
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
+
 
   /**
    * tabType.
    *
    * @return Decline
-   */
+   **/
   public Decline tabType(String tabType) {
     this.tabType = tabType;
     return this;
@@ -2210,155 +2314,161 @@ public class Decline {
 
   /**
    * .
-   *
    * @return tabType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
 
-  /** setTabType. */
+  /**
+   * setTabType.
+   **/
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
+
 
   /**
    * tabTypeMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
     return this;
   }
 
   /**
-   * Get tabTypeMetadata.
-   *
+   * Metadata that indicates whether the `tabType` property is editable..
    * @return tabTypeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
 
-  /** setTabTypeMetadata. */
+  /**
+   * setTabTypeMetadata.
+   **/
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
+
 
   /**
    * templateLocked.
    *
    * @return Decline
-   */
+   **/
   public Decline templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
-   * working with template recipients. .
-   *
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
 
-  /** setTemplateLocked. */
+  /**
+   * setTemplateLocked.
+   **/
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
+
 
   /**
    * templateLockedMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
     return this;
   }
 
   /**
-   * Get templateLockedMetadata.
-   *
+   * Metadata that indicates whether the `templateLocked` property is editable..
    * @return templateLockedMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
 
-  /** setTemplateLockedMetadata. */
+  /**
+   * setTemplateLockedMetadata.
+   **/
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
+
 
   /**
    * templateRequired.
    *
    * @return Decline
-   */
+   **/
   public Decline templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with
-   * template recipients..
-   *
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
 
-  /** setTemplateRequired. */
+  /**
+   * setTemplateRequired.
+   **/
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
+
 
   /**
    * templateRequiredMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
     return this;
   }
 
   /**
-   * Get templateRequiredMetadata.
-   *
+   * Metadata that indicates whether the `templateRequired` property is editable..
    * @return templateRequiredMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
 
-  /** setTemplateRequiredMetadata. */
+  /**
+   * setTemplateRequiredMetadata.
+   **/
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
+
 
   /**
    * tooltip.
    *
    * @return Decline
-   */
+   **/
   public Decline tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
@@ -2366,49 +2476,53 @@ public class Decline {
 
   /**
    * .
-   *
    * @return tooltip
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
 
-  /** setTooltip. */
+  /**
+   * setTooltip.
+   **/
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
+
 
   /**
    * toolTipMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline toolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
     return this;
   }
 
   /**
-   * Get toolTipMetadata.
-   *
+   * Metadata that indicates whether the `toolTip` property is editable..
    * @return toolTipMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
 
-  /** setToolTipMetadata. */
+  /**
+   * setToolTipMetadata.
+   **/
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
+
 
   /**
    * underline.
    *
    * @return Decline
-   */
+   **/
   public Decline underline(String underline) {
     this.underline = underline;
     return this;
@@ -2416,49 +2530,53 @@ public class Decline {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   *
    * @return underline
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
 
-  /** setUnderline. */
+  /**
+   * setUnderline.
+   **/
   public void setUnderline(String underline) {
     this.underline = underline;
   }
+
 
   /**
    * underlineMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline underlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
     return this;
   }
 
   /**
-   * Get underlineMetadata.
-   *
+   * Metadata that indicates whether the `underline` property is editable..
    * @return underlineMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `underline` property is editable.")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
 
-  /** setUnderlineMetadata. */
+  /**
+   * setUnderlineMetadata.
+   **/
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
+
 
   /**
    * width.
    *
    * @return Decline
-   */
+   **/
   public Decline width(String width) {
     this.width = width;
     return this;
@@ -2466,149 +2584,155 @@ public class Decline {
 
   /**
    * Width of the tab in pixels..
-   *
    * @return width
-   */
+   **/
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
 
-  /** setWidth. */
+  /**
+   * setWidth.
+   **/
   public void setWidth(String width) {
     this.width = width;
   }
+
 
   /**
    * widthMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline widthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
     return this;
   }
 
   /**
-   * Get widthMetadata.
-   *
+   * Metadata that indicates whether the `width` property is editable..
    * @return widthMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
 
-  /** setWidthMetadata. */
+  /**
+   * setWidthMetadata.
+   **/
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
+
 
   /**
    * xPosition.
    *
    * @return Decline
-   */
+   **/
   public Decline xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
-  /** setXPosition. */
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
+
 
   /**
    * xPositionMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline xPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
     return this;
   }
 
   /**
-   * Get xPositionMetadata.
-   *
+   * Metadata that indicates whether the `xPosition` property is editable..
    * @return xPositionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
 
-  /** setXPositionMetadata. */
+  /**
+   * setXPositionMetadata.
+   **/
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
+
 
   /**
    * yPosition.
    *
    * @return Decline
-   */
+   **/
   public Decline yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
-  /** setYPosition. */
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
+
 
   /**
    * yPositionMetadata.
    *
    * @return Decline
-   */
+   **/
   public Decline yPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
     return this;
   }
 
   /**
-   * Get yPositionMetadata.
-   *
+   * Metadata that indicates whether the `yPosition` property is editable..
    * @return yPositionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
 
-  /** setYPositionMetadata. */
+  /**
+   * setYPositionMetadata.
+   **/
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -2624,286 +2748,149 @@ public class Decline {
       return false;
     }
     Decline decline = (Decline) o;
-    return Objects.equals(
-            this.anchorAllowWhiteSpaceInCharacters, decline.anchorAllowWhiteSpaceInCharacters)
-        && Objects.equals(
-            this.anchorAllowWhiteSpaceInCharactersMetadata,
-            decline.anchorAllowWhiteSpaceInCharactersMetadata)
-        && Objects.equals(this.anchorCaseSensitive, decline.anchorCaseSensitive)
-        && Objects.equals(this.anchorCaseSensitiveMetadata, decline.anchorCaseSensitiveMetadata)
-        && Objects.equals(this.anchorHorizontalAlignment, decline.anchorHorizontalAlignment)
-        && Objects.equals(
-            this.anchorHorizontalAlignmentMetadata, decline.anchorHorizontalAlignmentMetadata)
-        && Objects.equals(this.anchorIgnoreIfNotPresent, decline.anchorIgnoreIfNotPresent)
-        && Objects.equals(
-            this.anchorIgnoreIfNotPresentMetadata, decline.anchorIgnoreIfNotPresentMetadata)
-        && Objects.equals(this.anchorMatchWholeWord, decline.anchorMatchWholeWord)
-        && Objects.equals(this.anchorMatchWholeWordMetadata, decline.anchorMatchWholeWordMetadata)
-        && Objects.equals(this.anchorString, decline.anchorString)
-        && Objects.equals(this.anchorStringMetadata, decline.anchorStringMetadata)
-        && Objects.equals(this.anchorTabProcessorVersion, decline.anchorTabProcessorVersion)
-        && Objects.equals(
-            this.anchorTabProcessorVersionMetadata, decline.anchorTabProcessorVersionMetadata)
-        && Objects.equals(this.anchorUnits, decline.anchorUnits)
-        && Objects.equals(this.anchorUnitsMetadata, decline.anchorUnitsMetadata)
-        && Objects.equals(this.anchorXOffset, decline.anchorXOffset)
-        && Objects.equals(this.anchorXOffsetMetadata, decline.anchorXOffsetMetadata)
-        && Objects.equals(this.anchorYOffset, decline.anchorYOffset)
-        && Objects.equals(this.anchorYOffsetMetadata, decline.anchorYOffsetMetadata)
-        && Objects.equals(this.bold, decline.bold)
-        && Objects.equals(this.boldMetadata, decline.boldMetadata)
-        && Objects.equals(this.buttonText, decline.buttonText)
-        && Objects.equals(this.buttonTextMetadata, decline.buttonTextMetadata)
-        && Objects.equals(this.caption, decline.caption)
-        && Objects.equals(this.captionMetadata, decline.captionMetadata)
-        && Objects.equals(this.conditionalParentLabel, decline.conditionalParentLabel)
-        && Objects.equals(
-            this.conditionalParentLabelMetadata, decline.conditionalParentLabelMetadata)
-        && Objects.equals(this.conditionalParentValue, decline.conditionalParentValue)
-        && Objects.equals(
-            this.conditionalParentValueMetadata, decline.conditionalParentValueMetadata)
-        && Objects.equals(this.customTabId, decline.customTabId)
-        && Objects.equals(this.customTabIdMetadata, decline.customTabIdMetadata)
-        && Objects.equals(this.declineReason, decline.declineReason)
-        && Objects.equals(this.declineReasonMetadata, decline.declineReasonMetadata)
-        && Objects.equals(this.documentId, decline.documentId)
-        && Objects.equals(this.documentIdMetadata, decline.documentIdMetadata)
-        && Objects.equals(this.errorDetails, decline.errorDetails)
-        && Objects.equals(this.font, decline.font)
-        && Objects.equals(this.fontColor, decline.fontColor)
-        && Objects.equals(this.fontColorMetadata, decline.fontColorMetadata)
-        && Objects.equals(this.fontMetadata, decline.fontMetadata)
-        && Objects.equals(this.fontSize, decline.fontSize)
-        && Objects.equals(this.fontSizeMetadata, decline.fontSizeMetadata)
-        && Objects.equals(this.formOrder, decline.formOrder)
-        && Objects.equals(this.formOrderMetadata, decline.formOrderMetadata)
-        && Objects.equals(this.formPageLabel, decline.formPageLabel)
-        && Objects.equals(this.formPageLabelMetadata, decline.formPageLabelMetadata)
-        && Objects.equals(this.formPageNumber, decline.formPageNumber)
-        && Objects.equals(this.formPageNumberMetadata, decline.formPageNumberMetadata)
-        && Objects.equals(this.height, decline.height)
-        && Objects.equals(this.heightMetadata, decline.heightMetadata)
-        && Objects.equals(this.italic, decline.italic)
-        && Objects.equals(this.italicMetadata, decline.italicMetadata)
-        && Objects.equals(this.localePolicy, decline.localePolicy)
-        && Objects.equals(this.mergeField, decline.mergeField)
-        && Objects.equals(this.mergeFieldXml, decline.mergeFieldXml)
-        && Objects.equals(this.pageNumber, decline.pageNumber)
-        && Objects.equals(this.pageNumberMetadata, decline.pageNumberMetadata)
-        && Objects.equals(this.recipientId, decline.recipientId)
-        && Objects.equals(this.recipientIdGuid, decline.recipientIdGuid)
-        && Objects.equals(this.recipientIdGuidMetadata, decline.recipientIdGuidMetadata)
-        && Objects.equals(this.recipientIdMetadata, decline.recipientIdMetadata)
-        && Objects.equals(this.smartContractInformation, decline.smartContractInformation)
-        && Objects.equals(this.source, decline.source)
-        && Objects.equals(this.status, decline.status)
-        && Objects.equals(this.statusMetadata, decline.statusMetadata)
-        && Objects.equals(this.tabGroupLabels, decline.tabGroupLabels)
-        && Objects.equals(this.tabGroupLabelsMetadata, decline.tabGroupLabelsMetadata)
-        && Objects.equals(this.tabId, decline.tabId)
-        && Objects.equals(this.tabIdMetadata, decline.tabIdMetadata)
-        && Objects.equals(this.tabLabel, decline.tabLabel)
-        && Objects.equals(this.tabLabelMetadata, decline.tabLabelMetadata)
-        && Objects.equals(this.tabOrder, decline.tabOrder)
-        && Objects.equals(this.tabOrderMetadata, decline.tabOrderMetadata)
-        && Objects.equals(this.tabType, decline.tabType)
-        && Objects.equals(this.tabTypeMetadata, decline.tabTypeMetadata)
-        && Objects.equals(this.templateLocked, decline.templateLocked)
-        && Objects.equals(this.templateLockedMetadata, decline.templateLockedMetadata)
-        && Objects.equals(this.templateRequired, decline.templateRequired)
-        && Objects.equals(this.templateRequiredMetadata, decline.templateRequiredMetadata)
-        && Objects.equals(this.tooltip, decline.tooltip)
-        && Objects.equals(this.toolTipMetadata, decline.toolTipMetadata)
-        && Objects.equals(this.underline, decline.underline)
-        && Objects.equals(this.underlineMetadata, decline.underlineMetadata)
-        && Objects.equals(this.width, decline.width)
-        && Objects.equals(this.widthMetadata, decline.widthMetadata)
-        && Objects.equals(this.xPosition, decline.xPosition)
-        && Objects.equals(this.xPositionMetadata, decline.xPositionMetadata)
-        && Objects.equals(this.yPosition, decline.yPosition)
-        && Objects.equals(this.yPositionMetadata, decline.yPositionMetadata);
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, decline.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, decline.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, decline.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, decline.anchorCaseSensitiveMetadata) &&
+        Objects.equals(this.anchorHorizontalAlignment, decline.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, decline.anchorHorizontalAlignmentMetadata) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, decline.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, decline.anchorIgnoreIfNotPresentMetadata) &&
+        Objects.equals(this.anchorMatchWholeWord, decline.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, decline.anchorMatchWholeWordMetadata) &&
+        Objects.equals(this.anchorString, decline.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, decline.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, decline.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, decline.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorUnits, decline.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, decline.anchorUnitsMetadata) &&
+        Objects.equals(this.anchorXOffset, decline.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, decline.anchorXOffsetMetadata) &&
+        Objects.equals(this.anchorYOffset, decline.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, decline.anchorYOffsetMetadata) &&
+        Objects.equals(this.bold, decline.bold) &&
+        Objects.equals(this.boldMetadata, decline.boldMetadata) &&
+        Objects.equals(this.buttonText, decline.buttonText) &&
+        Objects.equals(this.buttonTextMetadata, decline.buttonTextMetadata) &&
+        Objects.equals(this.caption, decline.caption) &&
+        Objects.equals(this.captionMetadata, decline.captionMetadata) &&
+        Objects.equals(this.conditionalParentLabel, decline.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, decline.conditionalParentLabelMetadata) &&
+        Objects.equals(this.conditionalParentValue, decline.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, decline.conditionalParentValueMetadata) &&
+        Objects.equals(this.customTabId, decline.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, decline.customTabIdMetadata) &&
+        Objects.equals(this.declineReason, decline.declineReason) &&
+        Objects.equals(this.declineReasonMetadata, decline.declineReasonMetadata) &&
+        Objects.equals(this.documentId, decline.documentId) &&
+        Objects.equals(this.documentIdMetadata, decline.documentIdMetadata) &&
+        Objects.equals(this.errorDetails, decline.errorDetails) &&
+        Objects.equals(this.font, decline.font) &&
+        Objects.equals(this.fontColor, decline.fontColor) &&
+        Objects.equals(this.fontColorMetadata, decline.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, decline.fontMetadata) &&
+        Objects.equals(this.fontSize, decline.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, decline.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, decline.formOrder) &&
+        Objects.equals(this.formOrderMetadata, decline.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, decline.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, decline.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, decline.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, decline.formPageNumberMetadata) &&
+        Objects.equals(this.height, decline.height) &&
+        Objects.equals(this.heightMetadata, decline.heightMetadata) &&
+        Objects.equals(this.italic, decline.italic) &&
+        Objects.equals(this.italicMetadata, decline.italicMetadata) &&
+        Objects.equals(this.localePolicy, decline.localePolicy) &&
+        Objects.equals(this.mergeField, decline.mergeField) &&
+        Objects.equals(this.mergeFieldXml, decline.mergeFieldXml) &&
+        Objects.equals(this.pageNumber, decline.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, decline.pageNumberMetadata) &&
+        Objects.equals(this.recipientId, decline.recipientId) &&
+        Objects.equals(this.recipientIdGuid, decline.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, decline.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, decline.recipientIdMetadata) &&
+        Objects.equals(this.smartContractInformation, decline.smartContractInformation) &&
+        Objects.equals(this.source, decline.source) &&
+        Objects.equals(this.status, decline.status) &&
+        Objects.equals(this.statusMetadata, decline.statusMetadata) &&
+        Objects.equals(this.tabGroupLabels, decline.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, decline.tabGroupLabelsMetadata) &&
+        Objects.equals(this.tabId, decline.tabId) &&
+        Objects.equals(this.tabIdMetadata, decline.tabIdMetadata) &&
+        Objects.equals(this.tabLabel, decline.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, decline.tabLabelMetadata) &&
+        Objects.equals(this.tabOrder, decline.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, decline.tabOrderMetadata) &&
+        Objects.equals(this.tabType, decline.tabType) &&
+        Objects.equals(this.tabTypeMetadata, decline.tabTypeMetadata) &&
+        Objects.equals(this.templateLocked, decline.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, decline.templateLockedMetadata) &&
+        Objects.equals(this.templateRequired, decline.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, decline.templateRequiredMetadata) &&
+        Objects.equals(this.tooltip, decline.tooltip) &&
+        Objects.equals(this.toolTipMetadata, decline.toolTipMetadata) &&
+        Objects.equals(this.underline, decline.underline) &&
+        Objects.equals(this.underlineMetadata, decline.underlineMetadata) &&
+        Objects.equals(this.width, decline.width) &&
+        Objects.equals(this.widthMetadata, decline.widthMetadata) &&
+        Objects.equals(this.xPosition, decline.xPosition) &&
+        Objects.equals(this.xPositionMetadata, decline.xPositionMetadata) &&
+        Objects.equals(this.yPosition, decline.yPosition) &&
+        Objects.equals(this.yPositionMetadata, decline.yPositionMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        anchorAllowWhiteSpaceInCharacters,
-        anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive,
-        anchorCaseSensitiveMetadata,
-        anchorHorizontalAlignment,
-        anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent,
-        anchorIgnoreIfNotPresentMetadata,
-        anchorMatchWholeWord,
-        anchorMatchWholeWordMetadata,
-        anchorString,
-        anchorStringMetadata,
-        anchorTabProcessorVersion,
-        anchorTabProcessorVersionMetadata,
-        anchorUnits,
-        anchorUnitsMetadata,
-        anchorXOffset,
-        anchorXOffsetMetadata,
-        anchorYOffset,
-        anchorYOffsetMetadata,
-        bold,
-        boldMetadata,
-        buttonText,
-        buttonTextMetadata,
-        caption,
-        captionMetadata,
-        conditionalParentLabel,
-        conditionalParentLabelMetadata,
-        conditionalParentValue,
-        conditionalParentValueMetadata,
-        customTabId,
-        customTabIdMetadata,
-        declineReason,
-        declineReasonMetadata,
-        documentId,
-        documentIdMetadata,
-        errorDetails,
-        font,
-        fontColor,
-        fontColorMetadata,
-        fontMetadata,
-        fontSize,
-        fontSizeMetadata,
-        formOrder,
-        formOrderMetadata,
-        formPageLabel,
-        formPageLabelMetadata,
-        formPageNumber,
-        formPageNumberMetadata,
-        height,
-        heightMetadata,
-        italic,
-        italicMetadata,
-        localePolicy,
-        mergeField,
-        mergeFieldXml,
-        pageNumber,
-        pageNumberMetadata,
-        recipientId,
-        recipientIdGuid,
-        recipientIdGuidMetadata,
-        recipientIdMetadata,
-        smartContractInformation,
-        source,
-        status,
-        statusMetadata,
-        tabGroupLabels,
-        tabGroupLabelsMetadata,
-        tabId,
-        tabIdMetadata,
-        tabLabel,
-        tabLabelMetadata,
-        tabOrder,
-        tabOrderMetadata,
-        tabType,
-        tabTypeMetadata,
-        templateLocked,
-        templateLockedMetadata,
-        templateRequired,
-        templateRequiredMetadata,
-        tooltip,
-        toolTipMetadata,
-        underline,
-        underlineMetadata,
-        width,
-        widthMetadata,
-        xPosition,
-        xPositionMetadata,
-        yPosition,
-        yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, declineReason, declineReasonMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Decline {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata))
-        .append("\n");
-    sb.append("    anchorCaseSensitive: ")
-        .append(toIndentedString(anchorCaseSensitive))
-        .append("\n");
-    sb.append("    anchorCaseSensitiveMetadata: ")
-        .append(toIndentedString(anchorCaseSensitiveMetadata))
-        .append("\n");
-    sb.append("    anchorHorizontalAlignment: ")
-        .append(toIndentedString(anchorHorizontalAlignment))
-        .append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ")
-        .append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ")
-        .append(toIndentedString(anchorIgnoreIfNotPresent))
-        .append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ")
-        .append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
-    sb.append("    anchorMatchWholeWord: ")
-        .append(toIndentedString(anchorMatchWholeWord))
-        .append("\n");
-    sb.append("    anchorMatchWholeWordMetadata: ")
-        .append(toIndentedString(anchorMatchWholeWordMetadata))
-        .append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
-    sb.append("    anchorStringMetadata: ")
-        .append(toIndentedString(anchorStringMetadata))
-        .append("\n");
-    sb.append("    anchorTabProcessorVersion: ")
-        .append(toIndentedString(anchorTabProcessorVersion))
-        .append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ")
-        .append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorUnitsMetadata: ")
-        .append(toIndentedString(anchorUnitsMetadata))
-        .append("\n");
+    sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorXOffsetMetadata: ")
-        .append(toIndentedString(anchorXOffsetMetadata))
-        .append("\n");
+    sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorYOffsetMetadata: ")
-        .append(toIndentedString(anchorYOffsetMetadata))
-        .append("\n");
+    sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
     sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
     sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
     sb.append("    buttonText: ").append(toIndentedString(buttonText)).append("\n");
     sb.append("    buttonTextMetadata: ").append(toIndentedString(buttonTextMetadata)).append("\n");
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
-    sb.append("    conditionalParentLabel: ")
-        .append(toIndentedString(conditionalParentLabel))
-        .append("\n");
-    sb.append("    conditionalParentLabelMetadata: ")
-        .append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
-    sb.append("    conditionalParentValue: ")
-        .append(toIndentedString(conditionalParentValue))
-        .append("\n");
-    sb.append("    conditionalParentValueMetadata: ")
-        .append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    customTabIdMetadata: ")
-        .append(toIndentedString(customTabIdMetadata))
-        .append("\n");
+    sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    declineReason: ").append(toIndentedString(declineReason)).append("\n");
-    sb.append("    declineReasonMetadata: ")
-        .append(toIndentedString(declineReasonMetadata))
-        .append("\n");
+    sb.append("    declineReasonMetadata: ").append(toIndentedString(declineReasonMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -2916,13 +2903,9 @@ public class Decline {
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
-    sb.append("    formPageLabelMetadata: ")
-        .append(toIndentedString(formPageLabelMetadata))
-        .append("\n");
+    sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
     sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
-    sb.append("    formPageNumberMetadata: ")
-        .append(toIndentedString(formPageNumberMetadata))
-        .append("\n");
+    sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
@@ -2934,22 +2917,14 @@ public class Decline {
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
-    sb.append("    recipientIdGuidMetadata: ")
-        .append(toIndentedString(recipientIdGuidMetadata))
-        .append("\n");
-    sb.append("    recipientIdMetadata: ")
-        .append(toIndentedString(recipientIdMetadata))
-        .append("\n");
-    sb.append("    smartContractInformation: ")
-        .append(toIndentedString(smartContractInformation))
-        .append("\n");
+    sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
+    sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
-    sb.append("    tabGroupLabelsMetadata: ")
-        .append(toIndentedString(tabGroupLabelsMetadata))
-        .append("\n");
+    sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabIdMetadata: ").append(toIndentedString(tabIdMetadata)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
@@ -2959,13 +2934,9 @@ public class Decline {
     sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
     sb.append("    tabTypeMetadata: ").append(toIndentedString(tabTypeMetadata)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateLockedMetadata: ")
-        .append(toIndentedString(templateLockedMetadata))
-        .append("\n");
+    sb.append("    templateLockedMetadata: ").append(toIndentedString(templateLockedMetadata)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    templateRequiredMetadata: ")
-        .append(toIndentedString(templateRequiredMetadata))
-        .append("\n");
+    sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
@@ -2981,7 +2952,8 @@ public class Decline {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -2989,4 +2961,6 @@ public class Decline {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

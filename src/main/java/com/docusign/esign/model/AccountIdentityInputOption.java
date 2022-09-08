@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AccountIdentityInputOption. */
+/**
+ * AccountIdentityInputOption.
+ *
+ */
+
 public class AccountIdentityInputOption {
   @JsonProperty("isRequired")
   private Boolean isRequired = null;
@@ -15,11 +23,12 @@ public class AccountIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
+
   /**
    * isRequired.
    *
    * @return AccountIdentityInputOption
-   */
+   **/
   public AccountIdentityInputOption isRequired(Boolean isRequired) {
     this.isRequired = isRequired;
     return this;
@@ -27,24 +36,26 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   *
    * @return isRequired
-   */
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
 
-  /** setIsRequired. */
+  /**
+   * setIsRequired.
+   **/
   public void setIsRequired(Boolean isRequired) {
     this.isRequired = isRequired;
   }
+
 
   /**
    * optionName.
    *
    * @return AccountIdentityInputOption
-   */
+   **/
   public AccountIdentityInputOption optionName(String optionName) {
     this.optionName = optionName;
     return this;
@@ -52,24 +63,26 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   *
    * @return optionName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getOptionName() {
     return optionName;
   }
 
-  /** setOptionName. */
+  /**
+   * setOptionName.
+   **/
   public void setOptionName(String optionName) {
     this.optionName = optionName;
   }
+
 
   /**
    * valueType.
    *
    * @return AccountIdentityInputOption
-   */
+   **/
   public AccountIdentityInputOption valueType(String valueType) {
     this.valueType = valueType;
     return this;
@@ -77,18 +90,20 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   *
    * @return valueType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getValueType() {
     return valueType;
   }
 
-  /** setValueType. */
+  /**
+   * setValueType.
+   **/
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +119,28 @@ public class AccountIdentityInputOption {
       return false;
     }
     AccountIdentityInputOption accountIdentityInputOption = (AccountIdentityInputOption) o;
-    return Objects.equals(this.isRequired, accountIdentityInputOption.isRequired)
-        && Objects.equals(this.optionName, accountIdentityInputOption.optionName)
-        && Objects.equals(this.valueType, accountIdentityInputOption.valueType);
+    return Objects.equals(this.isRequired, accountIdentityInputOption.isRequired) &&
+        Objects.equals(this.optionName, accountIdentityInputOption.optionName) &&
+        Objects.equals(this.valueType, accountIdentityInputOption.valueType);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(isRequired, optionName, valueType);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityInputOption {\n");
-
+    
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
     sb.append("    optionName: ").append(toIndentedString(optionName)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
@@ -129,7 +149,8 @@ public class AccountIdentityInputOption {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +158,6 @@ public class AccountIdentityInputOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

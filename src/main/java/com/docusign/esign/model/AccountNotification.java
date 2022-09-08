@@ -1,10 +1,21 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.Expirations;
+import com.docusign.esign.model.Reminders;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** AccountNotification. */
+/**
+ * A complex element that specifies notifications (expirations and reminders) for the envelope..
+ *
+ */
+@ApiModel(description = "A complex element that specifies notifications (expirations and reminders) for the envelope.")
+
 public class AccountNotification {
   @JsonProperty("expirations")
   private Expirations expirations = null;
@@ -15,61 +26,66 @@ public class AccountNotification {
   @JsonProperty("userOverrideEnabled")
   private String userOverrideEnabled = null;
 
+
   /**
    * expirations.
    *
    * @return AccountNotification
-   */
+   **/
   public AccountNotification expirations(Expirations expirations) {
     this.expirations = expirations;
     return this;
   }
 
   /**
-   * Get expirations.
-   *
+   * A complex element that specifies the expiration settings for the envelope..
    * @return expirations
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "A complex element that specifies the expiration settings for the envelope.")
   public Expirations getExpirations() {
     return expirations;
   }
 
-  /** setExpirations. */
+  /**
+   * setExpirations.
+   **/
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
+
 
   /**
    * reminders.
    *
    * @return AccountNotification
-   */
+   **/
   public AccountNotification reminders(Reminders reminders) {
     this.reminders = reminders;
     return this;
   }
 
   /**
-   * Get reminders.
-   *
+   * A complex element that specifies reminder settings for the envelope..
    * @return reminders
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "A complex element that specifies reminder settings for the envelope.")
   public Reminders getReminders() {
     return reminders;
   }
 
-  /** setReminders. */
+  /**
+   * setReminders.
+   **/
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
+
 
   /**
    * userOverrideEnabled.
    *
    * @return AccountNotification
-   */
+   **/
   public AccountNotification userOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
     return this;
@@ -77,18 +93,20 @@ public class AccountNotification {
 
   /**
    * .
-   *
    * @return userOverrideEnabled
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getUserOverrideEnabled() {
     return userOverrideEnabled;
   }
 
-  /** setUserOverrideEnabled. */
+  /**
+   * setUserOverrideEnabled.
+   **/
   public void setUserOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
   }
+
 
   /**
    * Compares objects.
@@ -104,34 +122,38 @@ public class AccountNotification {
       return false;
     }
     AccountNotification accountNotification = (AccountNotification) o;
-    return Objects.equals(this.expirations, accountNotification.expirations)
-        && Objects.equals(this.reminders, accountNotification.reminders)
-        && Objects.equals(this.userOverrideEnabled, accountNotification.userOverrideEnabled);
+    return Objects.equals(this.expirations, accountNotification.expirations) &&
+        Objects.equals(this.reminders, accountNotification.reminders) &&
+        Objects.equals(this.userOverrideEnabled, accountNotification.userOverrideEnabled);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(expirations, reminders, userOverrideEnabled);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountNotification {\n");
-
+    
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
-    sb.append("    userOverrideEnabled: ")
-        .append(toIndentedString(userOverrideEnabled))
-        .append("\n");
+    sb.append("    userOverrideEnabled: ").append(toIndentedString(userOverrideEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -139,4 +161,6 @@ public class AccountNotification {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

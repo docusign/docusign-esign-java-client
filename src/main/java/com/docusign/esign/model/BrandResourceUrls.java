@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** BrandResourceUrls. */
+/**
+ * Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences..
+ *
+ */
+@ApiModel(description = "Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences.")
+
 public class BrandResourceUrls {
   @JsonProperty("email")
   private String email = null;
@@ -18,11 +27,12 @@ public class BrandResourceUrls {
   @JsonProperty("signingCaptive")
   private String signingCaptive = null;
 
+
   /**
    * email.
    *
    * @return BrandResourceUrls
-   */
+   **/
   public BrandResourceUrls email(String email) {
     this.email = email;
     return this;
@@ -30,24 +40,26 @@ public class BrandResourceUrls {
 
   /**
    * .
-   *
    * @return email
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEmail() {
     return email;
   }
 
-  /** setEmail. */
+  /**
+   * setEmail.
+   **/
   public void setEmail(String email) {
     this.email = email;
   }
+
 
   /**
    * sending.
    *
    * @return BrandResourceUrls
-   */
+   **/
   public BrandResourceUrls sending(String sending) {
     this.sending = sending;
     return this;
@@ -55,24 +67,26 @@ public class BrandResourceUrls {
 
   /**
    * .
-   *
    * @return sending
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSending() {
     return sending;
   }
 
-  /** setSending. */
+  /**
+   * setSending.
+   **/
   public void setSending(String sending) {
     this.sending = sending;
   }
+
 
   /**
    * signing.
    *
    * @return BrandResourceUrls
-   */
+   **/
   public BrandResourceUrls signing(String signing) {
     this.signing = signing;
     return this;
@@ -80,24 +94,26 @@ public class BrandResourceUrls {
 
   /**
    * .
-   *
    * @return signing
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSigning() {
     return signing;
   }
 
-  /** setSigning. */
+  /**
+   * setSigning.
+   **/
   public void setSigning(String signing) {
     this.signing = signing;
   }
+
 
   /**
    * signingCaptive.
    *
    * @return BrandResourceUrls
-   */
+   **/
   public BrandResourceUrls signingCaptive(String signingCaptive) {
     this.signingCaptive = signingCaptive;
     return this;
@@ -105,18 +121,20 @@ public class BrandResourceUrls {
 
   /**
    * .
-   *
    * @return signingCaptive
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSigningCaptive() {
     return signingCaptive;
   }
 
-  /** setSigningCaptive. */
+  /**
+   * setSigningCaptive.
+   **/
   public void setSigningCaptive(String signingCaptive) {
     this.signingCaptive = signingCaptive;
   }
+
 
   /**
    * Compares objects.
@@ -132,24 +150,29 @@ public class BrandResourceUrls {
       return false;
     }
     BrandResourceUrls brandResourceUrls = (BrandResourceUrls) o;
-    return Objects.equals(this.email, brandResourceUrls.email)
-        && Objects.equals(this.sending, brandResourceUrls.sending)
-        && Objects.equals(this.signing, brandResourceUrls.signing)
-        && Objects.equals(this.signingCaptive, brandResourceUrls.signingCaptive);
+    return Objects.equals(this.email, brandResourceUrls.email) &&
+        Objects.equals(this.sending, brandResourceUrls.sending) &&
+        Objects.equals(this.signing, brandResourceUrls.signing) &&
+        Objects.equals(this.signingCaptive, brandResourceUrls.signingCaptive);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(email, sending, signing, signingCaptive);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourceUrls {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
     sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
@@ -159,7 +182,8 @@ public class BrandResourceUrls {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -167,4 +191,6 @@ public class BrandResourceUrls {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

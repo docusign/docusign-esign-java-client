@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ConnectUserInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** IntegratedConnectUserInfoList. */
+/**
+ * IntegratedConnectUserInfoList.
+ *
+ */
+
 public class IntegratedConnectUserInfoList {
   @JsonProperty("endPosition")
   private String endPosition = null;
@@ -27,11 +36,12 @@ public class IntegratedConnectUserInfoList {
   @JsonProperty("users")
   private java.util.List<ConnectUserInfo> users = null;
 
+
   /**
    * endPosition.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList endPosition(String endPosition) {
     this.endPosition = endPosition;
     return this;
@@ -39,52 +49,53 @@ public class IntegratedConnectUserInfoList {
 
   /**
    * The last position in the result set. .
-   *
    * @return endPosition
-   */
+   **/
   @ApiModelProperty(value = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
 
-  /** setEndPosition. */
+  /**
+   * setEndPosition.
+   **/
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
+
 
   /**
    * nextUri.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList nextUri(String nextUri) {
     this.nextUri = nextUri;
     return this;
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the
-   * entire results of the search, this is null. .
-   *
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
-   */
-  @ApiModelProperty(
-      value =
-          "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+   **/
+  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
 
-  /** setNextUri. */
+  /**
+   * setNextUri.
+   **/
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
+
 
   /**
    * previousUri.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList previousUri(String previousUri) {
     this.previousUri = previousUri;
     return this;
@@ -92,24 +103,26 @@ public class IntegratedConnectUserInfoList {
 
   /**
    * The postal code for the billing address..
-   *
    * @return previousUri
-   */
+   **/
   @ApiModelProperty(value = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
 
-  /** setPreviousUri. */
+  /**
+   * setPreviousUri.
+   **/
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
+
 
   /**
    * resultSetSize.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList resultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
     return this;
@@ -117,24 +130,26 @@ public class IntegratedConnectUserInfoList {
 
   /**
    * The number of results returned in this response. .
-   *
    * @return resultSetSize
-   */
+   **/
   @ApiModelProperty(value = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
 
-  /** setResultSetSize. */
+  /**
+   * setResultSetSize.
+   **/
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
+
 
   /**
    * startPosition.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList startPosition(String startPosition) {
     this.startPosition = startPosition;
     return this;
@@ -142,62 +157,63 @@ public class IntegratedConnectUserInfoList {
 
   /**
    * Starting position of the current result set..
-   *
    * @return startPosition
-   */
+   **/
   @ApiModelProperty(value = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
 
-  /** setStartPosition. */
+  /**
+   * setStartPosition.
+   **/
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
+
 
   /**
    * totalSetSize.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList totalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
     return this;
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or
-   * equal to the value of the property returning the results in the in the response..
-   *
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
-   */
-  @ApiModelProperty(
-      value =
-          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+   **/
+  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
 
-  /** setTotalSetSize. */
+  /**
+   * setTotalSetSize.
+   **/
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * users.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList users(java.util.List<ConnectUserInfo> users) {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
    * @return IntegratedConnectUserInfoList
-   */
+   **/
   public IntegratedConnectUserInfoList addUsersItem(ConnectUserInfo usersItem) {
     if (this.users == null) {
       this.users = new java.util.ArrayList<>();
@@ -208,18 +224,20 @@ public class IntegratedConnectUserInfoList {
 
   /**
    * .
-   *
    * @return users
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ConnectUserInfo> getUsers() {
     return users;
   }
 
-  /** setUsers. */
+  /**
+   * setUsers.
+   **/
   public void setUsers(java.util.List<ConnectUserInfo> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -235,28 +253,32 @@ public class IntegratedConnectUserInfoList {
       return false;
     }
     IntegratedConnectUserInfoList integratedConnectUserInfoList = (IntegratedConnectUserInfoList) o;
-    return Objects.equals(this.endPosition, integratedConnectUserInfoList.endPosition)
-        && Objects.equals(this.nextUri, integratedConnectUserInfoList.nextUri)
-        && Objects.equals(this.previousUri, integratedConnectUserInfoList.previousUri)
-        && Objects.equals(this.resultSetSize, integratedConnectUserInfoList.resultSetSize)
-        && Objects.equals(this.startPosition, integratedConnectUserInfoList.startPosition)
-        && Objects.equals(this.totalSetSize, integratedConnectUserInfoList.totalSetSize)
-        && Objects.equals(this.users, integratedConnectUserInfoList.users);
+    return Objects.equals(this.endPosition, integratedConnectUserInfoList.endPosition) &&
+        Objects.equals(this.nextUri, integratedConnectUserInfoList.nextUri) &&
+        Objects.equals(this.previousUri, integratedConnectUserInfoList.previousUri) &&
+        Objects.equals(this.resultSetSize, integratedConnectUserInfoList.resultSetSize) &&
+        Objects.equals(this.startPosition, integratedConnectUserInfoList.startPosition) &&
+        Objects.equals(this.totalSetSize, integratedConnectUserInfoList.totalSetSize) &&
+        Objects.equals(this.users, integratedConnectUserInfoList.users);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
+    return Objects.hash(endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IntegratedConnectUserInfoList {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -269,7 +291,8 @@ public class IntegratedConnectUserInfoList {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -277,4 +300,6 @@ public class IntegratedConnectUserInfoList {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

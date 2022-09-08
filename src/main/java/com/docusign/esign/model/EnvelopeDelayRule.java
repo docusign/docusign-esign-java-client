@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EnvelopeDelayRule. */
+/**
+ * EnvelopeDelayRule.
+ *
+ */
+
 public class EnvelopeDelayRule {
   @JsonProperty("delay")
   private String delay = null;
@@ -12,11 +20,12 @@ public class EnvelopeDelayRule {
   @JsonProperty("resumeDate")
   private String resumeDate = null;
 
+
   /**
    * delay.
    *
    * @return EnvelopeDelayRule
-   */
+   **/
   public EnvelopeDelayRule delay(String delay) {
     this.delay = delay;
     return this;
@@ -24,24 +33,26 @@ public class EnvelopeDelayRule {
 
   /**
    * .
-   *
    * @return delay
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getDelay() {
     return delay;
   }
 
-  /** setDelay. */
+  /**
+   * setDelay.
+   **/
   public void setDelay(String delay) {
     this.delay = delay;
   }
+
 
   /**
    * resumeDate.
    *
    * @return EnvelopeDelayRule
-   */
+   **/
   public EnvelopeDelayRule resumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
     return this;
@@ -49,18 +60,20 @@ public class EnvelopeDelayRule {
 
   /**
    * .
-   *
    * @return resumeDate
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getResumeDate() {
     return resumeDate;
   }
 
-  /** setResumeDate. */
+  /**
+   * setResumeDate.
+   **/
   public void setResumeDate(String resumeDate) {
     this.resumeDate = resumeDate;
   }
+
 
   /**
    * Compares objects.
@@ -76,22 +89,27 @@ public class EnvelopeDelayRule {
       return false;
     }
     EnvelopeDelayRule envelopeDelayRule = (EnvelopeDelayRule) o;
-    return Objects.equals(this.delay, envelopeDelayRule.delay)
-        && Objects.equals(this.resumeDate, envelopeDelayRule.resumeDate);
+    return Objects.equals(this.delay, envelopeDelayRule.delay) &&
+        Objects.equals(this.resumeDate, envelopeDelayRule.resumeDate);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(delay, resumeDate);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDelayRule {\n");
-
+    
     sb.append("    delay: ").append(toIndentedString(delay)).append("\n");
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("}");
@@ -99,7 +117,8 @@ public class EnvelopeDelayRule {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -107,4 +126,6 @@ public class EnvelopeDelayRule {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+
