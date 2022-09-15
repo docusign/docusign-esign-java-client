@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ContactPhoneNumber;
+import com.docusign.esign.model.ErrorDetails;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** Contact. */
+/**
+ * Contact.
+ *
+ */
+
 public class Contact {
   @JsonProperty("cloudProvider")
   private String cloudProvider = null;
@@ -48,11 +58,12 @@ public class Contact {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+
   /**
    * cloudProvider.
    *
    * @return Contact
-   */
+   **/
   public Contact cloudProvider(String cloudProvider) {
     this.cloudProvider = cloudProvider;
     return this;
@@ -60,24 +71,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return cloudProvider
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCloudProvider() {
     return cloudProvider;
   }
 
-  /** setCloudProvider. */
+  /**
+   * setCloudProvider.
+   **/
   public void setCloudProvider(String cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
+
 
   /**
    * cloudProviderContainerId.
    *
    * @return Contact
-   */
+   **/
   public Contact cloudProviderContainerId(String cloudProviderContainerId) {
     this.cloudProviderContainerId = cloudProviderContainerId;
     return this;
@@ -85,24 +98,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return cloudProviderContainerId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCloudProviderContainerId() {
     return cloudProviderContainerId;
   }
 
-  /** setCloudProviderContainerId. */
+  /**
+   * setCloudProviderContainerId.
+   **/
   public void setCloudProviderContainerId(String cloudProviderContainerId) {
     this.cloudProviderContainerId = cloudProviderContainerId;
   }
+
 
   /**
    * contactId.
    *
    * @return Contact
-   */
+   **/
   public Contact contactId(String contactId) {
     this.contactId = contactId;
     return this;
@@ -110,34 +125,36 @@ public class Contact {
 
   /**
    * .
-   *
    * @return contactId
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getContactId() {
     return contactId;
   }
 
-  /** setContactId. */
+  /**
+   * setContactId.
+   **/
   public void setContactId(String contactId) {
     this.contactId = contactId;
   }
+
 
   /**
    * contactPhoneNumbers.
    *
    * @return Contact
-   */
+   **/
   public Contact contactPhoneNumbers(java.util.List<ContactPhoneNumber> contactPhoneNumbers) {
     this.contactPhoneNumbers = contactPhoneNumbers;
     return this;
   }
-
+  
   /**
    * addContactPhoneNumbersItem.
    *
    * @return Contact
-   */
+   **/
   public Contact addContactPhoneNumbersItem(ContactPhoneNumber contactPhoneNumbersItem) {
     if (this.contactPhoneNumbers == null) {
       this.contactPhoneNumbers = new java.util.ArrayList<>();
@@ -148,24 +165,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return contactPhoneNumbers
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<ContactPhoneNumber> getContactPhoneNumbers() {
     return contactPhoneNumbers;
   }
 
-  /** setContactPhoneNumbers. */
+  /**
+   * setContactPhoneNumbers.
+   **/
   public void setContactPhoneNumbers(java.util.List<ContactPhoneNumber> contactPhoneNumbers) {
     this.contactPhoneNumbers = contactPhoneNumbers;
   }
+
 
   /**
    * contactUri.
    *
    * @return Contact
-   */
+   **/
   public Contact contactUri(String contactUri) {
     this.contactUri = contactUri;
     return this;
@@ -173,34 +192,36 @@ public class Contact {
 
   /**
    * .
-   *
    * @return contactUri
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getContactUri() {
     return contactUri;
   }
 
-  /** setContactUri. */
+  /**
+   * setContactUri.
+   **/
   public void setContactUri(String contactUri) {
     this.contactUri = contactUri;
   }
+
 
   /**
    * emails.
    *
    * @return Contact
-   */
+   **/
   public Contact emails(java.util.List<String> emails) {
     this.emails = emails;
     return this;
   }
-
+  
   /**
    * addEmailsItem.
    *
    * @return Contact
-   */
+   **/
   public Contact addEmailsItem(String emailsItem) {
     if (this.emails == null) {
       this.emails = new java.util.ArrayList<>();
@@ -211,49 +232,53 @@ public class Contact {
 
   /**
    * .
-   *
    * @return emails
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getEmails() {
     return emails;
   }
 
-  /** setEmails. */
+  /**
+   * setEmails.
+   **/
   public void setEmails(java.util.List<String> emails) {
     this.emails = emails;
   }
+
 
   /**
    * errorDetails.
    *
    * @return Contact
-   */
+   **/
   public Contact errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * isOwner.
    *
    * @return Contact
-   */
+   **/
   public Contact isOwner(Boolean isOwner) {
     this.isOwner = isOwner;
     return this;
@@ -261,24 +286,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return isOwner
-   */
+   **/
   @ApiModelProperty(value = "")
   public Boolean isIsOwner() {
     return isOwner;
   }
 
-  /** setIsOwner. */
+  /**
+   * setIsOwner.
+   **/
   public void setIsOwner(Boolean isOwner) {
     this.isOwner = isOwner;
   }
+
 
   /**
    * name.
    *
    * @return Contact
-   */
+   **/
   public Contact name(String name) {
     this.name = name;
     return this;
@@ -286,24 +313,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return name
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
 
-  /** setName. */
+  /**
+   * setName.
+   **/
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * organization.
    *
    * @return Contact
-   */
+   **/
   public Contact organization(String organization) {
     this.organization = organization;
     return this;
@@ -311,24 +340,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return organization
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getOrganization() {
     return organization;
   }
 
-  /** setOrganization. */
+  /**
+   * setOrganization.
+   **/
   public void setOrganization(String organization) {
     this.organization = organization;
   }
+
 
   /**
    * roomContactType.
    *
    * @return Contact
-   */
+   **/
   public Contact roomContactType(String roomContactType) {
     this.roomContactType = roomContactType;
     return this;
@@ -336,24 +367,26 @@ public class Contact {
 
   /**
    * .
-   *
    * @return roomContactType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRoomContactType() {
     return roomContactType;
   }
 
-  /** setRoomContactType. */
+  /**
+   * setRoomContactType.
+   **/
   public void setRoomContactType(String roomContactType) {
     this.roomContactType = roomContactType;
   }
+
 
   /**
    * shared.
    *
    * @return Contact
-   */
+   **/
   public Contact shared(String shared) {
     this.shared = shared;
     return this;
@@ -361,24 +394,26 @@ public class Contact {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * signingGroup.
    *
    * @return Contact
-   */
+   **/
   public Contact signingGroup(String signingGroup) {
     this.signingGroup = signingGroup;
     return this;
@@ -386,44 +421,47 @@ public class Contact {
 
   /**
    * .
-   *
    * @return signingGroup
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSigningGroup() {
     return signingGroup;
   }
 
-  /** setSigningGroup. */
+  /**
+   * setSigningGroup.
+   **/
   public void setSigningGroup(String signingGroup) {
     this.signingGroup = signingGroup;
   }
+
 
   /**
    * signingGroupName.
    *
    * @return Contact
-   */
+   **/
   public Contact signingGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
     return this;
   }
 
   /**
-   * The display name for the signing group. Maximum Length: 100 characters. .
-   *
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
-   */
-  @ApiModelProperty(
-      value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+   **/
+  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
 
-  /** setSigningGroupName. */
+  /**
+   * setSigningGroupName.
+   **/
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
+
 
   /**
    * Compares objects.
@@ -439,56 +477,43 @@ public class Contact {
       return false;
     }
     Contact contact = (Contact) o;
-    return Objects.equals(this.cloudProvider, contact.cloudProvider)
-        && Objects.equals(this.cloudProviderContainerId, contact.cloudProviderContainerId)
-        && Objects.equals(this.contactId, contact.contactId)
-        && Objects.equals(this.contactPhoneNumbers, contact.contactPhoneNumbers)
-        && Objects.equals(this.contactUri, contact.contactUri)
-        && Objects.equals(this.emails, contact.emails)
-        && Objects.equals(this.errorDetails, contact.errorDetails)
-        && Objects.equals(this.isOwner, contact.isOwner)
-        && Objects.equals(this.name, contact.name)
-        && Objects.equals(this.organization, contact.organization)
-        && Objects.equals(this.roomContactType, contact.roomContactType)
-        && Objects.equals(this.shared, contact.shared)
-        && Objects.equals(this.signingGroup, contact.signingGroup)
-        && Objects.equals(this.signingGroupName, contact.signingGroupName);
+    return Objects.equals(this.cloudProvider, contact.cloudProvider) &&
+        Objects.equals(this.cloudProviderContainerId, contact.cloudProviderContainerId) &&
+        Objects.equals(this.contactId, contact.contactId) &&
+        Objects.equals(this.contactPhoneNumbers, contact.contactPhoneNumbers) &&
+        Objects.equals(this.contactUri, contact.contactUri) &&
+        Objects.equals(this.emails, contact.emails) &&
+        Objects.equals(this.errorDetails, contact.errorDetails) &&
+        Objects.equals(this.isOwner, contact.isOwner) &&
+        Objects.equals(this.name, contact.name) &&
+        Objects.equals(this.organization, contact.organization) &&
+        Objects.equals(this.roomContactType, contact.roomContactType) &&
+        Objects.equals(this.shared, contact.shared) &&
+        Objects.equals(this.signingGroup, contact.signingGroup) &&
+        Objects.equals(this.signingGroupName, contact.signingGroupName);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        cloudProvider,
-        cloudProviderContainerId,
-        contactId,
-        contactPhoneNumbers,
-        contactUri,
-        emails,
-        errorDetails,
-        isOwner,
-        name,
-        organization,
-        roomContactType,
-        shared,
-        signingGroup,
-        signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, organization, roomContactType, shared, signingGroup, signingGroupName);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
-
+    
     sb.append("    cloudProvider: ").append(toIndentedString(cloudProvider)).append("\n");
-    sb.append("    cloudProviderContainerId: ")
-        .append(toIndentedString(cloudProviderContainerId))
-        .append("\n");
+    sb.append("    cloudProviderContainerId: ").append(toIndentedString(cloudProviderContainerId)).append("\n");
     sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
-    sb.append("    contactPhoneNumbers: ")
-        .append(toIndentedString(contactPhoneNumbers))
-        .append("\n");
+    sb.append("    contactPhoneNumbers: ").append(toIndentedString(contactPhoneNumbers)).append("\n");
     sb.append("    contactUri: ").append(toIndentedString(contactUri)).append("\n");
     sb.append("    emails: ").append(toIndentedString(emails)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -504,7 +529,8 @@ public class Contact {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -512,4 +538,6 @@ public class Contact {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

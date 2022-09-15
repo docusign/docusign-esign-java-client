@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EnvelopeMetadata. */
+/**
+ * EnvelopeMetadata.
+ *
+ */
+
 public class EnvelopeMetadata {
   @JsonProperty("allowAdvancedCorrect")
   private String allowAdvancedCorrect = null;
@@ -15,11 +23,12 @@ public class EnvelopeMetadata {
   @JsonProperty("enableSignWithNotary")
   private String enableSignWithNotary = null;
 
+
   /**
    * allowAdvancedCorrect.
    *
    * @return EnvelopeMetadata
-   */
+   **/
   public EnvelopeMetadata allowAdvancedCorrect(String allowAdvancedCorrect) {
     this.allowAdvancedCorrect = allowAdvancedCorrect;
     return this;
@@ -27,24 +36,26 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   *
    * @return allowAdvancedCorrect
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowAdvancedCorrect() {
     return allowAdvancedCorrect;
   }
 
-  /** setAllowAdvancedCorrect. */
+  /**
+   * setAllowAdvancedCorrect.
+   **/
   public void setAllowAdvancedCorrect(String allowAdvancedCorrect) {
     this.allowAdvancedCorrect = allowAdvancedCorrect;
   }
+
 
   /**
    * allowCorrect.
    *
    * @return EnvelopeMetadata
-   */
+   **/
   public EnvelopeMetadata allowCorrect(String allowCorrect) {
     this.allowCorrect = allowCorrect;
     return this;
@@ -52,24 +63,26 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   *
    * @return allowCorrect
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAllowCorrect() {
     return allowCorrect;
   }
 
-  /** setAllowCorrect. */
+  /**
+   * setAllowCorrect.
+   **/
   public void setAllowCorrect(String allowCorrect) {
     this.allowCorrect = allowCorrect;
   }
+
 
   /**
    * enableSignWithNotary.
    *
    * @return EnvelopeMetadata
-   */
+   **/
   public EnvelopeMetadata enableSignWithNotary(String enableSignWithNotary) {
     this.enableSignWithNotary = enableSignWithNotary;
     return this;
@@ -77,18 +90,20 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   *
    * @return enableSignWithNotary
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEnableSignWithNotary() {
     return enableSignWithNotary;
   }
 
-  /** setEnableSignWithNotary. */
+  /**
+   * setEnableSignWithNotary.
+   **/
   public void setEnableSignWithNotary(String enableSignWithNotary) {
     this.enableSignWithNotary = enableSignWithNotary;
   }
+
 
   /**
    * Compares objects.
@@ -104,36 +119,38 @@ public class EnvelopeMetadata {
       return false;
     }
     EnvelopeMetadata envelopeMetadata = (EnvelopeMetadata) o;
-    return Objects.equals(this.allowAdvancedCorrect, envelopeMetadata.allowAdvancedCorrect)
-        && Objects.equals(this.allowCorrect, envelopeMetadata.allowCorrect)
-        && Objects.equals(this.enableSignWithNotary, envelopeMetadata.enableSignWithNotary);
+    return Objects.equals(this.allowAdvancedCorrect, envelopeMetadata.allowAdvancedCorrect) &&
+        Objects.equals(this.allowCorrect, envelopeMetadata.allowCorrect) &&
+        Objects.equals(this.enableSignWithNotary, envelopeMetadata.enableSignWithNotary);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(allowAdvancedCorrect, allowCorrect, enableSignWithNotary);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeMetadata {\n");
-
-    sb.append("    allowAdvancedCorrect: ")
-        .append(toIndentedString(allowAdvancedCorrect))
-        .append("\n");
+    
+    sb.append("    allowAdvancedCorrect: ").append(toIndentedString(allowAdvancedCorrect)).append("\n");
     sb.append("    allowCorrect: ").append(toIndentedString(allowCorrect)).append("\n");
-    sb.append("    enableSignWithNotary: ")
-        .append(toIndentedString(enableSignWithNotary))
-        .append("\n");
+    sb.append("    enableSignWithNotary: ").append(toIndentedString(enableSignWithNotary)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -141,4 +158,6 @@ public class EnvelopeMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

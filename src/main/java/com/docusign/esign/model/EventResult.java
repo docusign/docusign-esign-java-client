@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EventResult. */
+/**
+ * Information about the result of an event..
+ *
+ */
+@ApiModel(description = "Information about the result of an event.")
+
 public class EventResult {
   @JsonProperty("eventTimestamp")
   private String eventTimestamp = null;
@@ -18,11 +27,12 @@ public class EventResult {
   @JsonProperty("vendorFailureStatusCode")
   private String vendorFailureStatusCode = null;
 
+
   /**
    * eventTimestamp.
    *
    * @return EventResult
-   */
+   **/
   public EventResult eventTimestamp(String eventTimestamp) {
     this.eventTimestamp = eventTimestamp;
     return this;
@@ -30,24 +40,26 @@ public class EventResult {
 
   /**
    * .
-   *
    * @return eventTimestamp
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getEventTimestamp() {
     return eventTimestamp;
   }
 
-  /** setEventTimestamp. */
+  /**
+   * setEventTimestamp.
+   **/
   public void setEventTimestamp(String eventTimestamp) {
     this.eventTimestamp = eventTimestamp;
   }
+
 
   /**
    * failureDescription.
    *
    * @return EventResult
-   */
+   **/
   public EventResult failureDescription(String failureDescription) {
     this.failureDescription = failureDescription;
     return this;
@@ -55,52 +67,53 @@ public class EventResult {
 
   /**
    * .
-   *
    * @return failureDescription
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFailureDescription() {
     return failureDescription;
   }
 
-  /** setFailureDescription. */
+  /**
+   * setFailureDescription.
+   **/
   public void setFailureDescription(String failureDescription) {
     this.failureDescription = failureDescription;
   }
+
 
   /**
    * status.
    *
    * @return EventResult
-   */
+   **/
   public EventResult status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
-   *
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-   */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   **/
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /** setStatus. */
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * vendorFailureStatusCode.
    *
    * @return EventResult
-   */
+   **/
   public EventResult vendorFailureStatusCode(String vendorFailureStatusCode) {
     this.vendorFailureStatusCode = vendorFailureStatusCode;
     return this;
@@ -108,18 +121,20 @@ public class EventResult {
 
   /**
    * .
-   *
    * @return vendorFailureStatusCode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getVendorFailureStatusCode() {
     return vendorFailureStatusCode;
   }
 
-  /** setVendorFailureStatusCode. */
+  /**
+   * setVendorFailureStatusCode.
+   **/
   public void setVendorFailureStatusCode(String vendorFailureStatusCode) {
     this.vendorFailureStatusCode = vendorFailureStatusCode;
   }
+
 
   /**
    * Compares objects.
@@ -135,36 +150,40 @@ public class EventResult {
       return false;
     }
     EventResult eventResult = (EventResult) o;
-    return Objects.equals(this.eventTimestamp, eventResult.eventTimestamp)
-        && Objects.equals(this.failureDescription, eventResult.failureDescription)
-        && Objects.equals(this.status, eventResult.status)
-        && Objects.equals(this.vendorFailureStatusCode, eventResult.vendorFailureStatusCode);
+    return Objects.equals(this.eventTimestamp, eventResult.eventTimestamp) &&
+        Objects.equals(this.failureDescription, eventResult.failureDescription) &&
+        Objects.equals(this.status, eventResult.status) &&
+        Objects.equals(this.vendorFailureStatusCode, eventResult.vendorFailureStatusCode);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(eventTimestamp, failureDescription, status, vendorFailureStatusCode);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventResult {\n");
-
+    
     sb.append("    eventTimestamp: ").append(toIndentedString(eventTimestamp)).append("\n");
     sb.append("    failureDescription: ").append(toIndentedString(failureDescription)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    vendorFailureStatusCode: ")
-        .append(toIndentedString(vendorFailureStatusCode))
-        .append("\n");
+    sb.append("    vendorFailureStatusCode: ").append(toIndentedString(vendorFailureStatusCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -172,4 +191,6 @@ public class EventResult {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

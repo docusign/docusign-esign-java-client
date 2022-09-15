@@ -1,12 +1,19 @@
 package com.docusign.esign.model;
 
+import java.util.Objects;
+import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Objects;
 
-/** Contains information about an APP store product.. */
+/**
+ * Contains information about an APP store product..
+ *
+ */
 @ApiModel(description = "Contains information about an APP store product.")
+
 public class AppStoreProduct {
   @JsonProperty("marketPlace")
   private String marketPlace = null;
@@ -14,11 +21,12 @@ public class AppStoreProduct {
   @JsonProperty("productId")
   private String productId = null;
 
+
   /**
    * marketPlace.
    *
    * @return AppStoreProduct
-   */
+   **/
   public AppStoreProduct marketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
     return this;
@@ -26,24 +34,26 @@ public class AppStoreProduct {
 
   /**
    * .
-   *
    * @return marketPlace
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMarketPlace() {
     return marketPlace;
   }
 
-  /** setMarketPlace. */
+  /**
+   * setMarketPlace.
+   **/
   public void setMarketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
   }
+
 
   /**
    * productId.
    *
    * @return AppStoreProduct
-   */
+   **/
   public AppStoreProduct productId(String productId) {
     this.productId = productId;
     return this;
@@ -51,18 +61,20 @@ public class AppStoreProduct {
 
   /**
    * The Product ID from the AppStore..
-   *
    * @return productId
-   */
+   **/
   @ApiModelProperty(value = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
 
-  /** setProductId. */
+  /**
+   * setProductId.
+   **/
   public void setProductId(String productId) {
     this.productId = productId;
   }
+
 
   /**
    * Compares objects.
@@ -78,22 +90,27 @@ public class AppStoreProduct {
       return false;
     }
     AppStoreProduct appStoreProduct = (AppStoreProduct) o;
-    return Objects.equals(this.marketPlace, appStoreProduct.marketPlace)
-        && Objects.equals(this.productId, appStoreProduct.productId);
+    return Objects.equals(this.marketPlace, appStoreProduct.marketPlace) &&
+        Objects.equals(this.productId, appStoreProduct.productId);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(marketPlace, productId);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreProduct {\n");
-
+    
     sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("}");
@@ -101,7 +118,8 @@ public class AppStoreProduct {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -109,4 +127,6 @@ public class AppStoreProduct {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,23 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.MemberGroupSharedItem;
+import com.docusign.esign.model.UserInfo;
+import com.docusign.esign.model.UserSharedItem;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** TemplateSharedItem. */
+/**
+ * Information about shared templates..
+ *
+ */
+@ApiModel(description = "Information about shared templates.")
+
 public class TemplateSharedItem {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
@@ -30,61 +43,66 @@ public class TemplateSharedItem {
   @JsonProperty("templateName")
   private String templateName = null;
 
+
   /**
    * errorDetails.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * owner.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem owner(UserInfo owner) {
     this.owner = owner;
     return this;
   }
 
   /**
-   * Get owner.
-   *
+   * Information about the user who owns the template..
    * @return owner
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Information about the user who owns the template.")
   public UserInfo getOwner() {
     return owner;
   }
 
-  /** setOwner. */
+  /**
+   * setOwner.
+   **/
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
+
 
   /**
    * password.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem password(String password) {
     this.password = password;
     return this;
@@ -92,24 +110,26 @@ public class TemplateSharedItem {
 
   /**
    * .
-   *
    * @return password
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
 
-  /** setPassword. */
+  /**
+   * setPassword.
+   **/
   public void setPassword(String password) {
     this.password = password;
   }
+
 
   /**
    * shared.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem shared(String shared) {
     this.shared = shared;
     return this;
@@ -117,34 +137,36 @@ public class TemplateSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * sharedGroups.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem sharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
     return this;
   }
-
+  
   /**
    * addSharedGroupsItem.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem addSharedGroupsItem(MemberGroupSharedItem sharedGroupsItem) {
     if (this.sharedGroups == null) {
       this.sharedGroups = new java.util.ArrayList<>();
@@ -155,34 +177,36 @@ public class TemplateSharedItem {
 
   /**
    * .
-   *
    * @return sharedGroups
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
 
-  /** setSharedGroups. */
+  /**
+   * setSharedGroups.
+   **/
   public void setSharedGroups(java.util.List<MemberGroupSharedItem> sharedGroups) {
     this.sharedGroups = sharedGroups;
   }
+
 
   /**
    * sharedUsers.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem sharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
     return this;
   }
-
+  
   /**
    * addSharedUsersItem.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem addSharedUsersItem(UserSharedItem sharedUsersItem) {
     if (this.sharedUsers == null) {
       this.sharedUsers = new java.util.ArrayList<>();
@@ -193,52 +217,53 @@ public class TemplateSharedItem {
 
   /**
    * .
-   *
    * @return sharedUsers
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
 
-  /** setSharedUsers. */
+  /**
+   * setSharedUsers.
+   **/
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
+
 
   /**
    * templateId.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
-   * .
-   *
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
-   */
-  @ApiModelProperty(
-      value =
-          "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+   **/
+  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
 
-  /** setTemplateId. */
+  /**
+   * setTemplateId.
+   **/
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
+
 
   /**
    * templateName.
    *
    * @return TemplateSharedItem
-   */
+   **/
   public TemplateSharedItem templateName(String templateName) {
     this.templateName = templateName;
     return this;
@@ -246,18 +271,20 @@ public class TemplateSharedItem {
 
   /**
    * .
-   *
    * @return templateName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTemplateName() {
     return templateName;
   }
 
-  /** setTemplateName. */
+  /**
+   * setTemplateName.
+   **/
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
+
 
   /**
    * Compares objects.
@@ -273,29 +300,33 @@ public class TemplateSharedItem {
       return false;
     }
     TemplateSharedItem templateSharedItem = (TemplateSharedItem) o;
-    return Objects.equals(this.errorDetails, templateSharedItem.errorDetails)
-        && Objects.equals(this.owner, templateSharedItem.owner)
-        && Objects.equals(this.password, templateSharedItem.password)
-        && Objects.equals(this.shared, templateSharedItem.shared)
-        && Objects.equals(this.sharedGroups, templateSharedItem.sharedGroups)
-        && Objects.equals(this.sharedUsers, templateSharedItem.sharedUsers)
-        && Objects.equals(this.templateId, templateSharedItem.templateId)
-        && Objects.equals(this.templateName, templateSharedItem.templateName);
+    return Objects.equals(this.errorDetails, templateSharedItem.errorDetails) &&
+        Objects.equals(this.owner, templateSharedItem.owner) &&
+        Objects.equals(this.password, templateSharedItem.password) &&
+        Objects.equals(this.shared, templateSharedItem.shared) &&
+        Objects.equals(this.sharedGroups, templateSharedItem.sharedGroups) &&
+        Objects.equals(this.sharedUsers, templateSharedItem.sharedUsers) &&
+        Objects.equals(this.templateId, templateSharedItem.templateId) &&
+        Objects.equals(this.templateName, templateSharedItem.templateName);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        errorDetails, owner, password, shared, sharedGroups, sharedUsers, templateId, templateName);
+    return Objects.hash(errorDetails, owner, password, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -309,7 +340,8 @@ public class TemplateSharedItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -317,4 +349,6 @@ public class TemplateSharedItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

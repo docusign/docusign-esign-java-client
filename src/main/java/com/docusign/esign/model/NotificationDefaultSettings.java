@@ -1,10 +1,21 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.SenderEmailNotifications;
+import com.docusign.esign.model.SignerEmailNotifications;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** NotificationDefaultSettings. */
+/**
+ * Contains details about the default notification settings for the envelope notifications that senders and signers receive..
+ *
+ */
+@ApiModel(description = "Contains details about the default notification settings for the envelope notifications that senders and signers receive.")
+
 public class NotificationDefaultSettings {
   @JsonProperty("senderEmailNotifications")
   private SenderEmailNotifications senderEmailNotifications = null;
@@ -12,57 +23,60 @@ public class NotificationDefaultSettings {
   @JsonProperty("signerEmailNotifications")
   private SignerEmailNotifications signerEmailNotifications = null;
 
+
   /**
    * senderEmailNotifications.
    *
    * @return NotificationDefaultSettings
-   */
-  public NotificationDefaultSettings senderEmailNotifications(
-      SenderEmailNotifications senderEmailNotifications) {
+   **/
+  public NotificationDefaultSettings senderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
     return this;
   }
 
   /**
-   * Get senderEmailNotifications.
-   *
+   *   An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   .
    * @return senderEmailNotifications
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "  An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   ")
   public SenderEmailNotifications getSenderEmailNotifications() {
     return senderEmailNotifications;
   }
 
-  /** setSenderEmailNotifications. */
+  /**
+   * setSenderEmailNotifications.
+   **/
   public void setSenderEmailNotifications(SenderEmailNotifications senderEmailNotifications) {
     this.senderEmailNotifications = senderEmailNotifications;
   }
+
 
   /**
    * signerEmailNotifications.
    *
    * @return NotificationDefaultSettings
-   */
-  public NotificationDefaultSettings signerEmailNotifications(
-      SignerEmailNotifications signerEmailNotifications) {
+   **/
+  public NotificationDefaultSettings signerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
     return this;
   }
 
   /**
-   * Get signerEmailNotifications.
-   *
+   * An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. .
    * @return signerEmailNotifications
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. ")
   public SignerEmailNotifications getSignerEmailNotifications() {
     return signerEmailNotifications;
   }
 
-  /** setSignerEmailNotifications. */
+  /**
+   * setSignerEmailNotifications.
+   **/
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
+
 
   /**
    * Compares objects.
@@ -78,36 +92,36 @@ public class NotificationDefaultSettings {
       return false;
     }
     NotificationDefaultSettings notificationDefaultSettings = (NotificationDefaultSettings) o;
-    return Objects.equals(
-            this.senderEmailNotifications, notificationDefaultSettings.senderEmailNotifications)
-        && Objects.equals(
-            this.signerEmailNotifications, notificationDefaultSettings.signerEmailNotifications);
+    return Objects.equals(this.senderEmailNotifications, notificationDefaultSettings.senderEmailNotifications) &&
+        Objects.equals(this.signerEmailNotifications, notificationDefaultSettings.signerEmailNotifications);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(senderEmailNotifications, signerEmailNotifications);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationDefaultSettings {\n");
-
-    sb.append("    senderEmailNotifications: ")
-        .append(toIndentedString(senderEmailNotifications))
-        .append("\n");
-    sb.append("    signerEmailNotifications: ")
-        .append(toIndentedString(signerEmailNotifications))
-        .append("\n");
+    
+    sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
+    sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -115,4 +129,6 @@ public class NotificationDefaultSettings {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

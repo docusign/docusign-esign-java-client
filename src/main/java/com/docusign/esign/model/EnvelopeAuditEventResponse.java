@@ -1,29 +1,39 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.EnvelopeAuditEvent;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** EnvelopeAuditEventResponse. */
+/**
+ * EnvelopeAuditEventResponse.
+ *
+ */
+
 public class EnvelopeAuditEventResponse {
   @JsonProperty("auditEvents")
   private java.util.List<EnvelopeAuditEvent> auditEvents = null;
+
 
   /**
    * auditEvents.
    *
    * @return EnvelopeAuditEventResponse
-   */
+   **/
   public EnvelopeAuditEventResponse auditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
     return this;
   }
-
+  
   /**
    * addAuditEventsItem.
    *
    * @return EnvelopeAuditEventResponse
-   */
+   **/
   public EnvelopeAuditEventResponse addAuditEventsItem(EnvelopeAuditEvent auditEventsItem) {
     if (this.auditEvents == null) {
       this.auditEvents = new java.util.ArrayList<>();
@@ -34,18 +44,20 @@ public class EnvelopeAuditEventResponse {
 
   /**
    * Reserved: TBD.
-   *
    * @return auditEvents
-   */
+   **/
   @ApiModelProperty(value = "Reserved: TBD")
   public java.util.List<EnvelopeAuditEvent> getAuditEvents() {
     return auditEvents;
   }
 
-  /** setAuditEvents. */
+  /**
+   * setAuditEvents.
+   **/
   public void setAuditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
   }
+
 
   /**
    * Compares objects.
@@ -64,25 +76,31 @@ public class EnvelopeAuditEventResponse {
     return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(auditEvents);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEventResponse {\n");
-
+    
     sb.append("    auditEvents: ").append(toIndentedString(auditEvents)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -90,4 +108,6 @@ public class EnvelopeAuditEventResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

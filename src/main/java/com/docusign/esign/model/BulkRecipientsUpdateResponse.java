@@ -1,38 +1,50 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.Signer;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** BulkRecipientsUpdateResponse. */
+/**
+ * BulkRecipientsUpdateResponse.
+ *
+ */
+
 public class BulkRecipientsUpdateResponse {
   @JsonProperty("signer")
   private Signer signer = null;
+
 
   /**
    * signer.
    *
    * @return BulkRecipientsUpdateResponse
-   */
+   **/
   public BulkRecipientsUpdateResponse signer(Signer signer) {
     this.signer = signer;
     return this;
   }
 
   /**
-   * Get signer.
-   *
+   * .
    * @return signer
-   */
+   **/
   @ApiModelProperty(value = "")
   public Signer getSigner() {
     return signer;
   }
 
-  /** setSigner. */
+  /**
+   * setSigner.
+   **/
   public void setSigner(Signer signer) {
     this.signer = signer;
   }
+
 
   /**
    * Compares objects.
@@ -51,25 +63,31 @@ public class BulkRecipientsUpdateResponse {
     return Objects.equals(this.signer, bulkRecipientsUpdateResponse.signer);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(signer);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientsUpdateResponse {\n");
-
+    
     sb.append("    signer: ").append(toIndentedString(signer)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -77,4 +95,6 @@ public class BulkRecipientsUpdateResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,10 +1,19 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ChunkedUploadPart. */
+/**
+ * An object that contains information about the chunked upload part..
+ *
+ */
+@ApiModel(description = "An object that contains information about the chunked upload part.")
+
 public class ChunkedUploadPart {
   @JsonProperty("sequence")
   private String sequence = null;
@@ -12,11 +21,12 @@ public class ChunkedUploadPart {
   @JsonProperty("size")
   private String size = null;
 
+
   /**
    * sequence.
    *
    * @return ChunkedUploadPart
-   */
+   **/
   public ChunkedUploadPart sequence(String sequence) {
     this.sequence = sequence;
     return this;
@@ -24,24 +34,26 @@ public class ChunkedUploadPart {
 
   /**
    * .
-   *
    * @return sequence
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSequence() {
     return sequence;
   }
 
-  /** setSequence. */
+  /**
+   * setSequence.
+   **/
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
+
 
   /**
    * size.
    *
    * @return ChunkedUploadPart
-   */
+   **/
   public ChunkedUploadPart size(String size) {
     this.size = size;
     return this;
@@ -49,18 +61,20 @@ public class ChunkedUploadPart {
 
   /**
    * .
-   *
    * @return size
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSize() {
     return size;
   }
 
-  /** setSize. */
+  /**
+   * setSize.
+   **/
   public void setSize(String size) {
     this.size = size;
   }
+
 
   /**
    * Compares objects.
@@ -76,22 +90,27 @@ public class ChunkedUploadPart {
       return false;
     }
     ChunkedUploadPart chunkedUploadPart = (ChunkedUploadPart) o;
-    return Objects.equals(this.sequence, chunkedUploadPart.sequence)
-        && Objects.equals(this.size, chunkedUploadPart.size);
+    return Objects.equals(this.sequence, chunkedUploadPart.sequence) &&
+        Objects.equals(this.size, chunkedUploadPart.size);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(sequence, size);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadPart {\n");
-
+    
     sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
@@ -99,7 +118,8 @@ public class ChunkedUploadPart {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -107,4 +127,6 @@ public class ChunkedUploadPart {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

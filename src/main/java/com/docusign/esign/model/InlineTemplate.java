@@ -1,10 +1,22 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.CustomFields;
+import com.docusign.esign.model.Document;
+import com.docusign.esign.model.Envelope;
+import com.docusign.esign.model.Recipients;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** InlineTemplate. */
+/**
+ * InlineTemplate.
+ *
+ */
+
 public class InlineTemplate {
   @JsonProperty("customFields")
   private CustomFields customFields = null;
@@ -21,46 +33,49 @@ public class InlineTemplate {
   @JsonProperty("sequence")
   private String sequence = null;
 
+
   /**
    * customFields.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate customFields(CustomFields customFields) {
     this.customFields = customFields;
     return this;
   }
 
   /**
-   * Get customFields.
-   *
+   * An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters..
    * @return customFields
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.")
   public CustomFields getCustomFields() {
     return customFields;
   }
 
-  /** setCustomFields. */
+  /**
+   * setCustomFields.
+   **/
   public void setCustomFields(CustomFields customFields) {
     this.customFields = customFields;
   }
+
 
   /**
    * documents.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate documents(java.util.List<Document> documents) {
     this.documents = documents;
     return this;
   }
-
+  
   /**
    * addDocumentsItem.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate addDocumentsItem(Document documentsItem) {
     if (this.documents == null) {
       this.documents = new java.util.ArrayList<>();
@@ -71,75 +86,80 @@ public class InlineTemplate {
 
   /**
    * Complex element contains the details on the documents in the envelope..
-   *
    * @return documents
-   */
-  @ApiModelProperty(
-      value = "Complex element contains the details on the documents in the envelope.")
+   **/
+  @ApiModelProperty(value = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<Document> getDocuments() {
     return documents;
   }
 
-  /** setDocuments. */
+  /**
+   * setDocuments.
+   **/
   public void setDocuments(java.util.List<Document> documents) {
     this.documents = documents;
   }
+
 
   /**
    * envelope.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate envelope(Envelope envelope) {
     this.envelope = envelope;
     return this;
   }
 
   /**
-   * Get envelope.
-   *
+   * A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients..
    * @return envelope
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients.")
   public Envelope getEnvelope() {
     return envelope;
   }
 
-  /** setEnvelope. */
+  /**
+   * setEnvelope.
+   **/
   public void setEnvelope(Envelope envelope) {
     this.envelope = envelope;
   }
+
 
   /**
    * recipients.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate recipients(Recipients recipients) {
     this.recipients = recipients;
     return this;
   }
 
   /**
-   * Get recipients.
-   *
+   * An array of recipient objects that provides details about the recipients of the envelope..
    * @return recipients
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "An array of recipient objects that provides details about the recipients of the envelope.")
   public Recipients getRecipients() {
     return recipients;
   }
 
-  /** setRecipients. */
+  /**
+   * setRecipients.
+   **/
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * sequence.
    *
    * @return InlineTemplate
-   */
+   **/
   public InlineTemplate sequence(String sequence) {
     this.sequence = sequence;
     return this;
@@ -147,18 +167,20 @@ public class InlineTemplate {
 
   /**
    * Specifies the order in which templates are overlaid..
-   *
    * @return sequence
-   */
+   **/
   @ApiModelProperty(value = "Specifies the order in which templates are overlaid.")
   public String getSequence() {
     return sequence;
   }
 
-  /** setSequence. */
+  /**
+   * setSequence.
+   **/
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
+
 
   /**
    * Compares objects.
@@ -174,25 +196,30 @@ public class InlineTemplate {
       return false;
     }
     InlineTemplate inlineTemplate = (InlineTemplate) o;
-    return Objects.equals(this.customFields, inlineTemplate.customFields)
-        && Objects.equals(this.documents, inlineTemplate.documents)
-        && Objects.equals(this.envelope, inlineTemplate.envelope)
-        && Objects.equals(this.recipients, inlineTemplate.recipients)
-        && Objects.equals(this.sequence, inlineTemplate.sequence);
+    return Objects.equals(this.customFields, inlineTemplate.customFields) &&
+        Objects.equals(this.documents, inlineTemplate.documents) &&
+        Objects.equals(this.envelope, inlineTemplate.envelope) &&
+        Objects.equals(this.recipients, inlineTemplate.recipients) &&
+        Objects.equals(this.sequence, inlineTemplate.sequence);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(customFields, documents, envelope, recipients, sequence);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineTemplate {\n");
-
+    
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    envelope: ").append(toIndentedString(envelope)).append("\n");
@@ -203,7 +230,8 @@ public class InlineTemplate {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -211,4 +239,6 @@ public class InlineTemplate {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

@@ -1,32 +1,40 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.BulkProcessingListSummary;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** BulkProcessingListSummaries. */
+/**
+ * BulkProcessingListSummaries.
+ *
+ */
+
 public class BulkProcessingListSummaries {
   @JsonProperty("bulkListSummaries")
   private java.util.List<BulkProcessingListSummary> bulkListSummaries = null;
+
 
   /**
    * bulkListSummaries.
    *
    * @return BulkProcessingListSummaries
-   */
-  public BulkProcessingListSummaries bulkListSummaries(
-      java.util.List<BulkProcessingListSummary> bulkListSummaries) {
+   **/
+  public BulkProcessingListSummaries bulkListSummaries(java.util.List<BulkProcessingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
     return this;
   }
-
+  
   /**
    * addBulkListSummariesItem.
    *
    * @return BulkProcessingListSummaries
-   */
-  public BulkProcessingListSummaries addBulkListSummariesItem(
-      BulkProcessingListSummary bulkListSummariesItem) {
+   **/
+  public BulkProcessingListSummaries addBulkListSummariesItem(BulkProcessingListSummary bulkListSummariesItem) {
     if (this.bulkListSummaries == null) {
       this.bulkListSummaries = new java.util.ArrayList<>();
     }
@@ -36,18 +44,20 @@ public class BulkProcessingListSummaries {
 
   /**
    * .
-   *
    * @return bulkListSummaries
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<BulkProcessingListSummary> getBulkListSummaries() {
     return bulkListSummaries;
   }
 
-  /** setBulkListSummaries. */
+  /**
+   * setBulkListSummaries.
+   **/
   public void setBulkListSummaries(java.util.List<BulkProcessingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
   }
+
 
   /**
    * Compares objects.
@@ -66,25 +76,31 @@ public class BulkProcessingListSummaries {
     return Objects.equals(this.bulkListSummaries, bulkProcessingListSummaries.bulkListSummaries);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(bulkListSummaries);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingListSummaries {\n");
-
+    
     sb.append("    bulkListSummaries: ").append(toIndentedString(bulkListSummaries)).append("\n");
     sb.append("}");
     return sb.toString();
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -92,4 +108,6 @@ public class BulkProcessingListSummaries {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

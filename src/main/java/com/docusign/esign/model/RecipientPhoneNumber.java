@@ -1,10 +1,20 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.PropertyMetadata;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** RecipientPhoneNumber. */
+/**
+ * Describes the recipient phone number..
+ *
+ */
+@ApiModel(description = "Describes the recipient phone number.")
+
 public class RecipientPhoneNumber {
   @JsonProperty("countryCode")
   private String countryCode = null;
@@ -18,11 +28,12 @@ public class RecipientPhoneNumber {
   @JsonProperty("numberMetadata")
   private PropertyMetadata numberMetadata = null;
 
+
   /**
    * countryCode.
    *
    * @return RecipientPhoneNumber
-   */
+   **/
   public RecipientPhoneNumber countryCode(String countryCode) {
     this.countryCode = countryCode;
     return this;
@@ -30,49 +41,53 @@ public class RecipientPhoneNumber {
 
   /**
    * .
-   *
    * @return countryCode
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCountryCode() {
     return countryCode;
   }
 
-  /** setCountryCode. */
+  /**
+   * setCountryCode.
+   **/
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
+
 
   /**
    * countryCodeMetadata.
    *
    * @return RecipientPhoneNumber
-   */
+   **/
   public RecipientPhoneNumber countryCodeMetadata(PropertyMetadata countryCodeMetadata) {
     this.countryCodeMetadata = countryCodeMetadata;
     return this;
   }
 
   /**
-   * Get countryCodeMetadata.
-   *
+   * Metadata that indicates if the `countryCode` property is editable..
    * @return countryCodeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates if the `countryCode` property is editable.")
   public PropertyMetadata getCountryCodeMetadata() {
     return countryCodeMetadata;
   }
 
-  /** setCountryCodeMetadata. */
+  /**
+   * setCountryCodeMetadata.
+   **/
   public void setCountryCodeMetadata(PropertyMetadata countryCodeMetadata) {
     this.countryCodeMetadata = countryCodeMetadata;
   }
+
 
   /**
    * number.
    *
    * @return RecipientPhoneNumber
-   */
+   **/
   public RecipientPhoneNumber number(String number) {
     this.number = number;
     return this;
@@ -80,43 +95,47 @@ public class RecipientPhoneNumber {
 
   /**
    * .
-   *
    * @return number
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getNumber() {
     return number;
   }
 
-  /** setNumber. */
+  /**
+   * setNumber.
+   **/
   public void setNumber(String number) {
     this.number = number;
   }
+
 
   /**
    * numberMetadata.
    *
    * @return RecipientPhoneNumber
-   */
+   **/
   public RecipientPhoneNumber numberMetadata(PropertyMetadata numberMetadata) {
     this.numberMetadata = numberMetadata;
     return this;
   }
 
   /**
-   * Get numberMetadata.
-   *
+   * Metadata that indicates if the `number` property is editable..
    * @return numberMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates if the `number` property is editable.")
   public PropertyMetadata getNumberMetadata() {
     return numberMetadata;
   }
 
-  /** setNumberMetadata. */
+  /**
+   * setNumberMetadata.
+   **/
   public void setNumberMetadata(PropertyMetadata numberMetadata) {
     this.numberMetadata = numberMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -132,28 +151,31 @@ public class RecipientPhoneNumber {
       return false;
     }
     RecipientPhoneNumber recipientPhoneNumber = (RecipientPhoneNumber) o;
-    return Objects.equals(this.countryCode, recipientPhoneNumber.countryCode)
-        && Objects.equals(this.countryCodeMetadata, recipientPhoneNumber.countryCodeMetadata)
-        && Objects.equals(this.number, recipientPhoneNumber.number)
-        && Objects.equals(this.numberMetadata, recipientPhoneNumber.numberMetadata);
+    return Objects.equals(this.countryCode, recipientPhoneNumber.countryCode) &&
+        Objects.equals(this.countryCodeMetadata, recipientPhoneNumber.countryCodeMetadata) &&
+        Objects.equals(this.number, recipientPhoneNumber.number) &&
+        Objects.equals(this.numberMetadata, recipientPhoneNumber.numberMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(countryCode, countryCodeMetadata, number, numberMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneNumber {\n");
-
+    
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
-    sb.append("    countryCodeMetadata: ")
-        .append(toIndentedString(countryCodeMetadata))
-        .append("\n");
+    sb.append("    countryCodeMetadata: ").append(toIndentedString(countryCodeMetadata)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    numberMetadata: ").append(toIndentedString(numberMetadata)).append("\n");
     sb.append("}");
@@ -161,7 +183,8 @@ public class RecipientPhoneNumber {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -169,4 +192,6 @@ public class RecipientPhoneNumber {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

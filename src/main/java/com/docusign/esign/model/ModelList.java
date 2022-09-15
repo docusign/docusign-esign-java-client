@@ -1,10 +1,25 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ListItem;
+import com.docusign.esign.model.LocalePolicyTab;
+import com.docusign.esign.model.MergeField;
+import com.docusign.esign.model.PropertyMetadata;
+import com.docusign.esign.model.SmartContractInformation;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** ModelList. */
+/**
+ * This tab offers a list of options to choose from. The &#x60;listItems&#x60; property contains a list of [&#x60;listItem&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) objects to specify the selectable options. .
+ *
+ */
+@ApiModel(description = "This tab offers a list of options to choose from. The `listItems` property contains a list of [`listItem`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) objects to specify the selectable options. ")
+
 public class ModelList {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -327,11 +342,12 @@ public class ModelList {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
     return this;
@@ -339,159 +355,161 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return anchorAllowWhiteSpaceInCharacters
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
 
-  /** setAnchorAllowWhiteSpaceInCharacters. */
+  /**
+   * setAnchorAllowWhiteSpaceInCharacters.
+   **/
   public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
+
 
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return ModelList
-   */
-  public ModelList anchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+   **/
+  public ModelList anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Get anchorAllowWhiteSpaceInCharactersMetadata.
-   *
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
-  /** setAnchorAllowWhiteSpaceInCharactersMetadata. */
-  public void setAnchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  /**
+   * setAnchorAllowWhiteSpaceInCharactersMetadata.
+   **/
+  public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
+
 
   /**
    * anchorCaseSensitive.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
     return this;
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the
-   * document. The default value is **true**..
-   *
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
 
-  /** setAnchorCaseSensitive. */
+  /**
+   * setAnchorCaseSensitive.
+   **/
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
+
 
   /**
    * anchorCaseSensitiveMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
     return this;
   }
 
   /**
-   * Get anchorCaseSensitiveMetadata.
-   *
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
 
-  /** setAnchorCaseSensitiveMetadata. */
+  /**
+   * setAnchorCaseSensitiveMetadata.
+   **/
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
+
 
   /**
    * anchorHorizontalAlignment.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
     return this;
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or
-   * **right**. The default value is **left**..
-   *
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+   **/
+  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
 
-  /** setAnchorHorizontalAlignment. */
+  /**
+   * setAnchorHorizontalAlignment.
+   **/
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
+
 
   /**
    * anchorHorizontalAlignmentMetadata.
    *
    * @return ModelList
-   */
-  public ModelList anchorHorizontalAlignmentMetadata(
-      PropertyMetadata anchorHorizontalAlignmentMetadata) {
+   **/
+  public ModelList anchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
     return this;
   }
 
   /**
-   * Get anchorHorizontalAlignmentMetadata.
-   *
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
 
-  /** setAnchorHorizontalAlignmentMetadata. */
-  public void setAnchorHorizontalAlignmentMetadata(
-      PropertyMetadata anchorHorizontalAlignmentMetadata) {
+  /**
+   * setAnchorHorizontalAlignmentMetadata.
+   **/
+  public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
+
 
   /**
    * anchorIgnoreIfNotPresent.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
     return this;
@@ -499,106 +517,107 @@ public class ModelList {
 
   /**
    * When set to **true**, this tab is ignored if anchorString is not found in the document..
-   *
    * @return anchorIgnoreIfNotPresent
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
 
-  /** setAnchorIgnoreIfNotPresent. */
+  /**
+   * setAnchorIgnoreIfNotPresent.
+   **/
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
+
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
    * @return ModelList
-   */
-  public ModelList anchorIgnoreIfNotPresentMetadata(
-      PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+   **/
+  public ModelList anchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
     return this;
   }
 
   /**
-   * Get anchorIgnoreIfNotPresentMetadata.
-   *
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
 
-  /** setAnchorIgnoreIfNotPresentMetadata. */
-  public void setAnchorIgnoreIfNotPresentMetadata(
-      PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
+  /**
+   * setAnchorIgnoreIfNotPresentMetadata.
+   **/
+  public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
+
 
   /**
    * anchorMatchWholeWord.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
     return this;
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded
-   * in other strings are ignored.) The default value is **true**..
-   *
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
 
-  /** setAnchorMatchWholeWord. */
+  /**
+   * setAnchorMatchWholeWord.
+   **/
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
+
 
   /**
    * anchorMatchWholeWordMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
     return this;
   }
 
   /**
-   * Get anchorMatchWholeWordMetadata.
-   *
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
 
-  /** setAnchorMatchWholeWordMetadata. */
+  /**
+   * setAnchorMatchWholeWordMetadata.
+   **/
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
+
 
   /**
    * anchorString.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorString(String anchorString) {
     this.anchorString = anchorString;
     return this;
@@ -606,49 +625,53 @@ public class ModelList {
 
   /**
    * Anchor text information for a radio button..
-   *
    * @return anchorString
-   */
+   **/
   @ApiModelProperty(value = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
 
-  /** setAnchorString. */
+  /**
+   * setAnchorString.
+   **/
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
+
 
   /**
    * anchorStringMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
     return this;
   }
 
   /**
-   * Get anchorStringMetadata.
-   *
+   * Metadata that indicates whether the `anchorString` property is editable..
    * @return anchorStringMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
 
-  /** setAnchorStringMetadata. */
+  /**
+   * setAnchorStringMetadata.
+   **/
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
+
 
   /**
    * anchorTabProcessorVersion.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
     return this;
@@ -656,104 +679,107 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return anchorTabProcessorVersion
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
 
-  /** setAnchorTabProcessorVersion. */
+  /**
+   * setAnchorTabProcessorVersion.
+   **/
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
+
 
   /**
    * anchorTabProcessorVersionMetadata.
    *
    * @return ModelList
-   */
-  public ModelList anchorTabProcessorVersionMetadata(
-      PropertyMetadata anchorTabProcessorVersionMetadata) {
+   **/
+  public ModelList anchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
     return this;
   }
 
   /**
-   * Get anchorTabProcessorVersionMetadata.
-   *
+   * Reserved for DocuSign..
    * @return anchorTabProcessorVersionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
 
-  /** setAnchorTabProcessorVersionMetadata. */
-  public void setAnchorTabProcessorVersionMetadata(
-      PropertyMetadata anchorTabProcessorVersionMetadata) {
+  /**
+   * setAnchorTabProcessorVersionMetadata.
+   **/
+  public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
+
 
   /**
    * anchorUnits.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
     return this;
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or
-   * inches..
-   *
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+   **/
+  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
 
-  /** setAnchorUnits. */
+  /**
+   * setAnchorUnits.
+   **/
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
+
 
   /**
    * anchorUnitsMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
     return this;
   }
 
   /**
-   * Get anchorUnitsMetadata.
-   *
+   * Metadata that indicates whether the `anchorUnits` property is editable..
    * @return anchorUnitsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
 
-  /** setAnchorUnitsMetadata. */
+  /**
+   * setAnchorUnitsMetadata.
+   **/
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
+
 
   /**
    * anchorXOffset.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
     return this;
@@ -761,51 +787,53 @@ public class ModelList {
 
   /**
    * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
-   *
    * @return anchorXOffset
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+   **/
+  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
 
-  /** setAnchorXOffset. */
+  /**
+   * setAnchorXOffset.
+   **/
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
+
 
   /**
    * anchorXOffsetMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
     return this;
   }
 
   /**
-   * Get anchorXOffsetMetadata.
-   *
+   * Metadata that indicates whether the `anchorXOffset` property is editable..
    * @return anchorXOffsetMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
 
-  /** setAnchorXOffsetMetadata. */
+  /**
+   * setAnchorXOffsetMetadata.
+   **/
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
+
 
   /**
    * anchorYOffset.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
     return this;
@@ -813,51 +841,53 @@ public class ModelList {
 
   /**
    * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
-   *
    * @return anchorYOffset
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+   **/
+  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
 
-  /** setAnchorYOffset. */
+  /**
+   * setAnchorYOffset.
+   **/
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
+
 
   /**
    * anchorYOffsetMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList anchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
     return this;
   }
 
   /**
-   * Get anchorYOffsetMetadata.
-   *
+   * Metadata that indicates whether the `anchorYOffset` property is editable..
    * @return anchorYOffsetMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
 
-  /** setAnchorYOffsetMetadata. */
+  /**
+   * setAnchorYOffsetMetadata.
+   **/
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
+
 
   /**
    * bold.
    *
    * @return ModelList
-   */
+   **/
   public ModelList bold(String bold) {
     this.bold = bold;
     return this;
@@ -865,49 +895,53 @@ public class ModelList {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   *
    * @return bold
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
 
-  /** setBold. */
+  /**
+   * setBold.
+   **/
   public void setBold(String bold) {
     this.bold = bold;
   }
+
 
   /**
    * boldMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList boldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
     return this;
   }
 
   /**
-   * Get boldMetadata.
-   *
+   * Metadata that indicates whether the `bold` property is editable..
    * @return boldMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `bold` property is editable.")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
 
-  /** setBoldMetadata. */
+  /**
+   * setBoldMetadata.
+   **/
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
+
 
   /**
    * caption.
    *
    * @return ModelList
-   */
+   **/
   public ModelList caption(String caption) {
     this.caption = caption;
     return this;
@@ -915,24 +949,26 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return caption
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getCaption() {
     return caption;
   }
 
-  /** setCaption. */
+  /**
+   * setCaption.
+   **/
   public void setCaption(String caption) {
     this.caption = caption;
   }
+
 
   /**
    * captionMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList captionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
     return this;
@@ -940,424 +976,431 @@ public class ModelList {
 
   /**
    * Get captionMetadata.
-   *
    * @return captionMetadata
-   */
+   **/
   @ApiModelProperty(value = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
 
-  /** setCaptionMetadata. */
+  /**
+   * setCaptionMetadata.
+   **/
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
+
 
   /**
    * conditionalParentLabel.
    *
    * @return ModelList
-   */
+   **/
   public ModelList conditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
     return this;
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's
-   * visibility..
-   *
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
-   */
-  @ApiModelProperty(
-      value =
-          "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+   **/
+  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
 
-  /** setConditionalParentLabel. */
+  /**
+   * setConditionalParentLabel.
+   **/
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
+
 
   /**
    * conditionalParentLabelMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList conditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
     return this;
   }
 
   /**
-   * Get conditionalParentLabelMetadata.
-   *
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
 
-  /** setConditionalParentLabelMetadata. */
+  /**
+   * setConditionalParentLabelMetadata.
+   **/
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
+
 
   /**
    * conditionalParentValue.
    *
    * @return ModelList
-   */
+   **/
   public ModelList conditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
     return this;
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.
-   * If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use
-   * \"on\" as the value to show that the parent tab is active. .
-   *
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
-   */
-  @ApiModelProperty(
-      value =
-          "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+   **/
+  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
 
-  /** setConditionalParentValue. */
+  /**
+   * setConditionalParentValue.
+   **/
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
+
 
   /**
    * conditionalParentValueMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList conditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
     return this;
   }
 
   /**
-   * Get conditionalParentValueMetadata.
-   *
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
 
-  /** setConditionalParentValueMetadata. */
+  /**
+   * setConditionalParentValueMetadata.
+   **/
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
+
 
   /**
    * customTabId.
    *
    * @return ModelList
-   */
+   **/
   public ModelList customTabId(String customTabId) {
     this.customTabId = customTabId;
     return this;
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used
-   * when adding new tabs for a recipient. When used, the new tab inherits all the custom tab
-   * properties..
-   *
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
-   */
-  @ApiModelProperty(
-      value =
-          "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+   **/
+  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
 
-  /** setCustomTabId. */
+  /**
+   * setCustomTabId.
+   **/
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
+
 
   /**
    * customTabIdMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList customTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
     return this;
   }
 
   /**
-   * Get customTabIdMetadata.
-   *
+   * Metadata that indicates whether the `customTabId` property is editable..
    * @return customTabIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
 
-  /** setCustomTabIdMetadata. */
+  /**
+   * setCustomTabIdMetadata.
+   **/
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
+
 
   /**
    * documentId.
    *
    * @return ModelList
-   */
+   **/
   public ModelList documentId(String documentId) {
     this.documentId = documentId;
     return this;
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
-   * Document's ID attribute..
-   *
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
-   */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+   **/
+  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
 
-  /** setDocumentId. */
+  /**
+   * setDocumentId.
+   **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
+
 
   /**
    * documentIdMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList documentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
     return this;
   }
 
   /**
-   * Get documentIdMetadata.
-   *
+   * Metadata that indicates whether the `documentId` property is editable..
    * @return documentIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
 
-  /** setDocumentIdMetadata. */
+  /**
+   * setDocumentIdMetadata.
+   **/
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
+
 
   /**
    * errorDetails.
    *
    * @return ModelList
-   */
+   **/
   public ModelList errorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
     return this;
   }
 
   /**
-   * Get errorDetails.
-   *
+   * This object describes errors that occur. It is only valid for responses and ignored in requests..
    * @return errorDetails
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
 
-  /** setErrorDetails. */
+  /**
+   * setErrorDetails.
+   **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
    *
    * @return ModelList
-   */
+   **/
   public ModelList font(String font) {
     this.font = font;
     return this;
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri,
-   * CourierNew, Garamond, Georgia, Helvetica, LucidaConsole, Tahoma, TimesNewRoman, Trebuchet,
-   * Verdana, MSGothic, MSMincho, Default..
-   *
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
-   */
-  @ApiModelProperty(
-      value =
-          "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+   **/
+  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
 
-  /** setFont. */
+  /**
+   * setFont.
+   **/
   public void setFont(String font) {
     this.font = font;
   }
+
 
   /**
    * fontColor.
    *
    * @return ModelList
-   */
+   **/
   public ModelList fontColor(String fontColor) {
     this.fontColor = fontColor;
     return this;
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are: Black, BrightBlue,
-   * BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
-   *
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
-   */
-  @ApiModelProperty(
-      value =
-          "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+   **/
+  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
 
-  /** setFontColor. */
+  /**
+   * setFontColor.
+   **/
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
+
 
   /**
    * fontColorMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList fontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
     return this;
   }
 
   /**
-   * Get fontColorMetadata.
-   *
+   * Metadata that indicates whether the `fontColor` property is editable..
    * @return fontColorMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fontColor` property is editable.")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
 
-  /** setFontColorMetadata. */
+  /**
+   * setFontColorMetadata.
+   **/
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
+
 
   /**
    * fontMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList fontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
     return this;
   }
 
   /**
-   * Get fontMetadata.
-   *
+   * Metadata that indicates whether the `font` property is editable..
    * @return fontMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `font` property is editable.")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
 
-  /** setFontMetadata. */
+  /**
+   * setFontMetadata.
+   **/
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
+
 
   /**
    * fontSize.
    *
    * @return ModelList
-   */
+   **/
   public ModelList fontSize(String fontSize) {
     this.fontSize = fontSize;
     return this;
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are: Size7, Size8, Size9,
-   * Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36,
-   * Size48, or Size72..
-   *
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
-   */
-  @ApiModelProperty(
-      value =
-          "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+   **/
+  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
 
-  /** setFontSize. */
+  /**
+   * setFontSize.
+   **/
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
+
 
   /**
    * fontSizeMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList fontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
     return this;
   }
 
   /**
-   * Get fontSizeMetadata.
-   *
+   * Metadata that indicates whether the `fontSize` property is editable..
    * @return fontSizeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fontSize` property is editable.")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
 
-  /** setFontSizeMetadata. */
+  /**
+   * setFontSizeMetadata.
+   **/
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
+
 
   /**
    * formOrder.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formOrder(String formOrder) {
     this.formOrder = formOrder;
     return this;
@@ -1365,49 +1408,53 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return formOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormOrder() {
     return formOrder;
   }
 
-  /** setFormOrder. */
+  /**
+   * setFormOrder.
+   **/
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
+
 
   /**
    * formOrderMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
     return this;
   }
 
   /**
-   * Get formOrderMetadata.
-   *
+   * Metadata that indicates whether the `formOrder` property is editable..
    * @return formOrderMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
 
-  /** setFormOrderMetadata. */
+  /**
+   * setFormOrderMetadata.
+   **/
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
+
 
   /**
    * formPageLabel.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
     return this;
@@ -1415,49 +1462,53 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return formPageLabel
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
 
-  /** setFormPageLabel. */
+  /**
+   * setFormPageLabel.
+   **/
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
+
 
   /**
    * formPageLabelMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
     return this;
   }
 
   /**
-   * Get formPageLabelMetadata.
-   *
+   * Metadata that indicates whether the `formPageLabel` property is editable..
    * @return formPageLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
 
-  /** setFormPageLabelMetadata. */
+  /**
+   * setFormPageLabelMetadata.
+   **/
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
+
 
   /**
    * formPageNumber.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
     return this;
@@ -1465,49 +1516,53 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return formPageNumber
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
 
-  /** setFormPageNumber. */
+  /**
+   * setFormPageNumber.
+   **/
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
+
 
   /**
    * formPageNumberMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList formPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
     return this;
   }
 
   /**
-   * Get formPageNumberMetadata.
-   *
+   * Metadata that indicates whether the `fromPageNumber` property is editable..
    * @return formPageNumberMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
 
-  /** setFormPageNumberMetadata. */
+  /**
+   * setFormPageNumberMetadata.
+   **/
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
+
 
   /**
    * height.
    *
    * @return ModelList
-   */
+   **/
   public ModelList height(String height) {
     this.height = height;
     return this;
@@ -1515,49 +1570,53 @@ public class ModelList {
 
   /**
    * Height of the tab in pixels..
-   *
    * @return height
-   */
+   **/
   @ApiModelProperty(value = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
 
-  /** setHeight. */
+  /**
+   * setHeight.
+   **/
   public void setHeight(String height) {
     this.height = height;
   }
+
 
   /**
    * heightMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList heightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
     return this;
   }
 
   /**
-   * Get heightMetadata.
-   *
+   * Metadata that indicates whether the `height` property is editable..
    * @return heightMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
 
-  /** setHeightMetadata. */
+  /**
+   * setHeightMetadata.
+   **/
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
+
 
   /**
    * italic.
    *
    * @return ModelList
-   */
+   **/
   public ModelList italic(String italic) {
     this.italic = italic;
     return this;
@@ -1565,59 +1624,63 @@ public class ModelList {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   *
    * @return italic
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
 
-  /** setItalic. */
+  /**
+   * setItalic.
+   **/
   public void setItalic(String italic) {
     this.italic = italic;
   }
+
 
   /**
    * italicMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList italicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
     return this;
   }
 
   /**
-   * Get italicMetadata.
-   *
+   * Metadata that indicates whether the `italic` property is editable..
    * @return italicMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `italic` property is editable.")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
 
-  /** setItalicMetadata. */
+  /**
+   * setItalicMetadata.
+   **/
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
+
 
   /**
    * listItems.
    *
    * @return ModelList
-   */
+   **/
   public ModelList listItems(java.util.List<ListItem> listItems) {
     this.listItems = listItems;
     return this;
   }
-
+  
   /**
    * addListItemsItem.
    *
    * @return ModelList
-   */
+   **/
   public ModelList addListItemsItem(ListItem listItemsItem) {
     if (this.listItems == null) {
       this.listItems = new java.util.ArrayList<>();
@@ -1627,29 +1690,27 @@ public class ModelList {
   }
 
   /**
-   * The list of values that can be selected by senders. The list values are separated by
-   * semi-colons. Example: [one;two;three;four] Maximum Length of listItems: 2048 characters.
-   * Maximum Length of items in the list: 100 characters. .
-   *
+   * The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  .
    * @return listItems
-   */
-  @ApiModelProperty(
-      value =
-          "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
+   **/
+  @ApiModelProperty(value = "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
   public java.util.List<ListItem> getListItems() {
     return listItems;
   }
 
-  /** setListItems. */
+  /**
+   * setListItems.
+   **/
   public void setListItems(java.util.List<ListItem> listItems) {
     this.listItems = listItems;
   }
+
 
   /**
    * listSelectedValue.
    *
    * @return ModelList
-   */
+   **/
   public ModelList listSelectedValue(String listSelectedValue) {
     this.listSelectedValue = listSelectedValue;
     return this;
@@ -1657,74 +1718,80 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return listSelectedValue
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getListSelectedValue() {
     return listSelectedValue;
   }
 
-  /** setListSelectedValue. */
+  /**
+   * setListSelectedValue.
+   **/
   public void setListSelectedValue(String listSelectedValue) {
     this.listSelectedValue = listSelectedValue;
   }
+
 
   /**
    * listSelectedValueMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList listSelectedValueMetadata(PropertyMetadata listSelectedValueMetadata) {
     this.listSelectedValueMetadata = listSelectedValueMetadata;
     return this;
   }
 
   /**
-   * Get listSelectedValueMetadata.
-   *
+   * Metadata that indicates whether the `listSelectedValue` property is editable..
    * @return listSelectedValueMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `listSelectedValue` property is editable.")
   public PropertyMetadata getListSelectedValueMetadata() {
     return listSelectedValueMetadata;
   }
 
-  /** setListSelectedValueMetadata. */
+  /**
+   * setListSelectedValueMetadata.
+   **/
   public void setListSelectedValueMetadata(PropertyMetadata listSelectedValueMetadata) {
     this.listSelectedValueMetadata = listSelectedValueMetadata;
   }
+
 
   /**
    * localePolicy.
    *
    * @return ModelList
-   */
+   **/
   public ModelList localePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
     return this;
   }
 
   /**
-   * Get localePolicy.
-   *
+   * Reserved for DocuSign..
    * @return localePolicy
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
 
-  /** setLocalePolicy. */
+  /**
+   * setLocalePolicy.
+   **/
   public void setLocalePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
   }
+
 
   /**
    * locked.
    *
    * @return ModelList
-   */
+   **/
   public ModelList locked(String locked) {
     this.locked = locked;
     return this;
@@ -1732,75 +1799,80 @@ public class ModelList {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   *
    * @return locked
-   */
-  @ApiModelProperty(
-      value = "When set to **true**, the signer cannot change the data of the custom tab.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
 
-  /** setLocked. */
+  /**
+   * setLocked.
+   **/
   public void setLocked(String locked) {
     this.locked = locked;
   }
+
 
   /**
    * lockedMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList lockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
     return this;
   }
 
   /**
-   * Get lockedMetadata.
-   *
+   * Metadata that indicates whether the `locked` property is editable..
    * @return lockedMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `locked` property is editable.")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
 
-  /** setLockedMetadata. */
+  /**
+   * setLockedMetadata.
+   **/
   public void setLockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
   }
+
 
   /**
    * mergeField.
    *
    * @return ModelList
-   */
+   **/
   public ModelList mergeField(MergeField mergeField) {
     this.mergeField = mergeField;
     return this;
   }
 
   /**
-   * Get mergeField.
-   *
+   * Contains the information necessary to map the tab to a field in SalesForce..
    * @return mergeField
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
 
-  /** setMergeField. */
+  /**
+   * setMergeField.
+   **/
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
+
 
   /**
    * mergeFieldXml.
    *
    * @return ModelList
-   */
+   **/
   public ModelList mergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
     return this;
@@ -1808,24 +1880,26 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return mergeFieldXml
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
 
-  /** setMergeFieldXml. */
+  /**
+   * setMergeFieldXml.
+   **/
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
+
 
   /**
    * originalValue.
    *
    * @return ModelList
-   */
+   **/
   public ModelList originalValue(String originalValue) {
     this.originalValue = originalValue;
     return this;
@@ -1833,49 +1907,53 @@ public class ModelList {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   *
    * @return originalValue
-   */
+   **/
   @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
 
-  /** setOriginalValue. */
+  /**
+   * setOriginalValue.
+   **/
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
+
 
   /**
    * originalValueMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList originalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
     return this;
   }
 
   /**
-   * Get originalValueMetadata.
-   *
+   * Metadata that indicates whether the `originalValue` property is editable..
    * @return originalValueMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `originalValue` property is editable.")
   public PropertyMetadata getOriginalValueMetadata() {
     return originalValueMetadata;
   }
 
-  /** setOriginalValueMetadata. */
+  /**
+   * setOriginalValueMetadata.
+   **/
   public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
   }
+
 
   /**
    * pageNumber.
    *
    * @return ModelList
-   */
+   **/
   public ModelList pageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
     return this;
@@ -1883,77 +1961,80 @@ public class ModelList {
 
   /**
    * Specifies the page number on which the tab is located..
-   *
    * @return pageNumber
-   */
+   **/
   @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
 
-  /** setPageNumber. */
+  /**
+   * setPageNumber.
+   **/
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
+
 
   /**
    * pageNumberMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList pageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
     return this;
   }
 
   /**
-   * Get pageNumberMetadata.
-   *
+   * Metadata that indicates whether the `pageNumber` property is editable..
    * @return pageNumberMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
 
-  /** setPageNumberMetadata. */
+  /**
+   * setPageNumberMetadata.
+   **/
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
+
 
   /**
    * recipientId.
    *
    * @return ModelList
-   */
+   **/
   public ModelList recipientId(String recipientId) {
     this.recipientId = recipientId;
     return this;
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
-   * the Document..
-   *
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
-   */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+   **/
+  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
 
-  /** setRecipientId. */
+  /**
+   * setRecipientId.
+   **/
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
+
 
   /**
    * recipientIdGuid.
    *
    * @return ModelList
-   */
+   **/
   public ModelList recipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
     return this;
@@ -1961,127 +2042,134 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return recipientIdGuid
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
 
-  /** setRecipientIdGuid. */
+  /**
+   * setRecipientIdGuid.
+   **/
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
+
 
   /**
    * recipientIdGuidMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList recipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
     return this;
   }
 
   /**
-   * Get recipientIdGuidMetadata.
-   *
+   * Metadata that indicates whether the `recipientIdGuid` property is editable..
    * @return recipientIdGuidMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
 
-  /** setRecipientIdGuidMetadata. */
+  /**
+   * setRecipientIdGuidMetadata.
+   **/
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
+
 
   /**
    * recipientIdMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList recipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
     return this;
   }
 
   /**
-   * Get recipientIdMetadata.
-   *
+   * Metadata that indicates whether the `recipientId` property is editable..
    * @return recipientIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
 
-  /** setRecipientIdMetadata. */
+  /**
+   * setRecipientIdMetadata.
+   **/
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
+
 
   /**
    * requireAll.
    *
    * @return ModelList
-   */
+   **/
   public ModelList requireAll(String requireAll) {
     this.requireAll = requireAll;
     return this;
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete
-   * the envelope. .
-   *
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+   **/
+  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
 
-  /** setRequireAll. */
+  /**
+   * setRequireAll.
+   **/
   public void setRequireAll(String requireAll) {
     this.requireAll = requireAll;
   }
+
 
   /**
    * requireAllMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList requireAllMetadata(PropertyMetadata requireAllMetadata) {
     this.requireAllMetadata = requireAllMetadata;
     return this;
   }
 
   /**
-   * Get requireAllMetadata.
-   *
+   * Metadata that indicates whether the `requireAll` property is editable..
    * @return requireAllMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `requireAll` property is editable.")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
 
-  /** setRequireAllMetadata. */
+  /**
+   * setRequireAllMetadata.
+   **/
   public void setRequireAllMetadata(PropertyMetadata requireAllMetadata) {
     this.requireAllMetadata = requireAllMetadata;
   }
+
 
   /**
    * required.
    *
    * @return ModelList
-   */
+   **/
   public ModelList required(String required) {
     this.required = required;
     return this;
@@ -2089,158 +2177,161 @@ public class ModelList {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   *
    * @return required
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
 
-  /** setRequired. */
+  /**
+   * setRequired.
+   **/
   public void setRequired(String required) {
     this.required = required;
   }
+
 
   /**
    * requiredMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList requiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
     return this;
   }
 
   /**
-   * Get requiredMetadata.
-   *
+   * Metadata that indicates whether the `required` property is editable..
    * @return requiredMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `required` property is editable.")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
 
-  /** setRequiredMetadata. */
+  /**
+   * setRequiredMetadata.
+   **/
   public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
   }
+
 
   /**
    * requireInitialOnSharedChange.
    *
    * @return ModelList
-   */
+   **/
   public ModelList requireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
     return this;
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when
-   * they modify a shared field..
-   *
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
-   */
-  @ApiModelProperty(
-      value =
-          "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+   **/
+  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
 
-  /** setRequireInitialOnSharedChange. */
+  /**
+   * setRequireInitialOnSharedChange.
+   **/
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
+
 
   /**
    * requireInitialOnSharedChangeMetadata.
    *
    * @return ModelList
-   */
-  public ModelList requireInitialOnSharedChangeMetadata(
-      PropertyMetadata requireInitialOnSharedChangeMetadata) {
+   **/
+  public ModelList requireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
     return this;
   }
 
   /**
-   * Get requireInitialOnSharedChangeMetadata.
-   *
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
    * @return requireInitialOnSharedChangeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
 
-  /** setRequireInitialOnSharedChangeMetadata. */
-  public void setRequireInitialOnSharedChangeMetadata(
-      PropertyMetadata requireInitialOnSharedChangeMetadata) {
+  /**
+   * setRequireInitialOnSharedChangeMetadata.
+   **/
+  public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
+
 
   /**
    * senderRequired.
    *
    * @return ModelList
-   */
+   **/
   public ModelList senderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
     return this;
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can be sent using the
-   * template. This value tab can only be changed by modifying (PUT) the template. Tabs with a
-   * `senderRequired` value of true cannot be deleted from an envelope..
-   *
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
    * @return senderRequired
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
 
-  /** setSenderRequired. */
+  /**
+   * setSenderRequired.
+   **/
   public void setSenderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
   }
+
 
   /**
    * senderRequiredMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList senderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
     this.senderRequiredMetadata = senderRequiredMetadata;
     return this;
   }
 
   /**
-   * Get senderRequiredMetadata.
-   *
+   * Metadata that indicates whether the `senderRequired` property is editable..
    * @return senderRequiredMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `senderRequired` property is editable.")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
   }
 
-  /** setSenderRequiredMetadata. */
+  /**
+   * setSenderRequiredMetadata.
+   **/
   public void setSenderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
+
 
   /**
    * shared.
    *
    * @return ModelList
-   */
+   **/
   public ModelList shared(String shared) {
     this.shared = shared;
     return this;
@@ -2248,49 +2339,53 @@ public class ModelList {
 
   /**
    * When set to **true**, this custom tab is shared..
-   *
    * @return shared
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
 
-  /** setShared. */
+  /**
+   * setShared.
+   **/
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * sharedMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList sharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
     return this;
   }
 
   /**
-   * Get sharedMetadata.
-   *
+   * Metadata that indicates whether the `shared` property is editable..
    * @return sharedMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `shared` property is editable.")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
 
-  /** setSharedMetadata. */
+  /**
+   * setSharedMetadata.
+   **/
   public void setSharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
   }
+
 
   /**
    * shareToRecipients.
    *
    * @return ModelList
-   */
+   **/
   public ModelList shareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
     return this;
@@ -2298,74 +2393,80 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return shareToRecipients
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getShareToRecipients() {
     return shareToRecipients;
   }
 
-  /** setShareToRecipients. */
+  /**
+   * setShareToRecipients.
+   **/
   public void setShareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
   }
+
 
   /**
    * shareToRecipientsMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList shareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
     return this;
   }
 
   /**
-   * Get shareToRecipientsMetadata.
-   *
+   * Reserved for DocuSign..
    * @return shareToRecipientsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public PropertyMetadata getShareToRecipientsMetadata() {
     return shareToRecipientsMetadata;
   }
 
-  /** setShareToRecipientsMetadata. */
+  /**
+   * setShareToRecipientsMetadata.
+   **/
   public void setShareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
+
 
   /**
    * smartContractInformation.
    *
    * @return ModelList
-   */
+   **/
   public ModelList smartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
     return this;
   }
 
   /**
-   * Get smartContractInformation.
-   *
+   * Reserved for DocuSign..
    * @return smartContractInformation
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
 
-  /** setSmartContractInformation. */
+  /**
+   * setSmartContractInformation.
+   **/
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
+
 
   /**
    * source.
    *
    * @return ModelList
-   */
+   **/
   public ModelList source(String source) {
     this.source = source;
     return this;
@@ -2373,87 +2474,90 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return source
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getSource() {
     return source;
   }
 
-  /** setSource. */
+  /**
+   * setSource.
+   **/
   public void setSource(String source) {
     this.source = source;
   }
+
 
   /**
    * status.
    *
    * @return ModelList
-   */
+   **/
   public ModelList status(String status) {
     this.status = status;
     return this;
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
-   *
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
-   */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+   **/
+  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
 
-  /** setStatus. */
+  /**
+   * setStatus.
+   **/
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * statusMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList statusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
     return this;
   }
 
   /**
-   * Get statusMetadata.
-   *
+   * Metadata that indicates whether the `status` property is editable..
    * @return statusMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
 
-  /** setStatusMetadata. */
+  /**
+   * setStatusMetadata.
+   **/
   public void setStatusMetadata(PropertyMetadata statusMetadata) {
     this.statusMetadata = statusMetadata;
   }
+
 
   /**
    * tabGroupLabels.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
    * @return ModelList
-   */
+   **/
   public ModelList addTabGroupLabelsItem(String tabGroupLabelsItem) {
     if (this.tabGroupLabels == null) {
       this.tabGroupLabels = new java.util.ArrayList<>();
@@ -2464,101 +2568,107 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return tabGroupLabels
-   */
+   **/
   @ApiModelProperty(value = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
 
-  /** setTabGroupLabels. */
+  /**
+   * setTabGroupLabels.
+   **/
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
+
 
   /**
    * tabGroupLabelsMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
     return this;
   }
 
   /**
-   * Get tabGroupLabelsMetadata.
-   *
+   * Metadata that indicates whether the `tabGroupLabels` property is editable..
    * @return tabGroupLabelsMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
 
-  /** setTabGroupLabelsMetadata. */
+  /**
+   * setTabGroupLabelsMetadata.
+   **/
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
+
 
   /**
    * tabId.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabId(String tabId) {
     this.tabId = tabId;
     return this;
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call]. .
-   *
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
-   */
-  @ApiModelProperty(
-      value =
-          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+   **/
+  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
 
-  /** setTabId. */
+  /**
+   * setTabId.
+   **/
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
+
 
   /**
    * tabIdMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
     return this;
   }
 
   /**
-   * Get tabIdMetadata.
-   *
+   * Metadata that indicates whether the `tabId` property is editable..
    * @return tabIdMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
 
-  /** setTabIdMetadata. */
+  /**
+   * setTabIdMetadata.
+   **/
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
+
 
   /**
    * tabLabel.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
     return this;
@@ -2566,49 +2676,53 @@ public class ModelList {
 
   /**
    * The label string associated with the tab..
-   *
    * @return tabLabel
-   */
+   **/
   @ApiModelProperty(value = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
 
-  /** setTabLabel. */
+  /**
+   * setTabLabel.
+   **/
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
+
 
   /**
    * tabLabelMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
     return this;
   }
 
   /**
-   * Get tabLabelMetadata.
-   *
+   * Metadata that indicates whether the `tabLabel` property is editable..
    * @return tabLabelMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
 
-  /** setTabLabelMetadata. */
+  /**
+   * setTabLabelMetadata.
+   **/
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
+
 
   /**
    * tabOrder.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
     return this;
@@ -2616,49 +2730,53 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return tabOrder
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabOrder() {
     return tabOrder;
   }
 
-  /** setTabOrder. */
+  /**
+   * setTabOrder.
+   **/
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
+
 
   /**
    * tabOrderMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
     return this;
   }
 
   /**
-   * Get tabOrderMetadata.
-   *
+   * Metadata that indicates whether the `tabOrder` property is editable..
    * @return tabOrderMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
 
-  /** setTabOrderMetadata. */
+  /**
+   * setTabOrderMetadata.
+   **/
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
+
 
   /**
    * tabType.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabType(String tabType) {
     this.tabType = tabType;
     return this;
@@ -2666,155 +2784,161 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return tabType
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTabType() {
     return tabType;
   }
 
-  /** setTabType. */
+  /**
+   * setTabType.
+   **/
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
+
 
   /**
    * tabTypeMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
     return this;
   }
 
   /**
-   * Get tabTypeMetadata.
-   *
+   * Metadata that indicates whether the `tabType` property is editable..
    * @return tabTypeMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
 
-  /** setTabTypeMetadata. */
+  /**
+   * setTabTypeMetadata.
+   **/
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
+
 
   /**
    * templateLocked.
    *
    * @return ModelList
-   */
+   **/
   public ModelList templateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
     return this;
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
-   * working with template recipients. .
-   *
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
 
-  /** setTemplateLocked. */
+  /**
+   * setTemplateLocked.
+   **/
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
+
 
   /**
    * templateLockedMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList templateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
     return this;
   }
 
   /**
-   * Get templateLockedMetadata.
-   *
+   * Metadata that indicates whether the `templateLocked` property is editable..
    * @return templateLockedMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
 
-  /** setTemplateLockedMetadata. */
+  /**
+   * setTemplateLockedMetadata.
+   **/
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
+
 
   /**
    * templateRequired.
    *
    * @return ModelList
-   */
+   **/
   public ModelList templateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
     return this;
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with
-   * template recipients..
-   *
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
-   */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+   **/
+  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
 
-  /** setTemplateRequired. */
+  /**
+   * setTemplateRequired.
+   **/
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
+
 
   /**
    * templateRequiredMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList templateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
     return this;
   }
 
   /**
-   * Get templateRequiredMetadata.
-   *
+   * Metadata that indicates whether the `templateRequired` property is editable..
    * @return templateRequiredMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
 
-  /** setTemplateRequiredMetadata. */
+  /**
+   * setTemplateRequiredMetadata.
+   **/
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
+
 
   /**
    * tooltip.
    *
    * @return ModelList
-   */
+   **/
   public ModelList tooltip(String tooltip) {
     this.tooltip = tooltip;
     return this;
@@ -2822,49 +2946,53 @@ public class ModelList {
 
   /**
    * .
-   *
    * @return tooltip
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getTooltip() {
     return tooltip;
   }
 
-  /** setTooltip. */
+  /**
+   * setTooltip.
+   **/
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
+
 
   /**
    * toolTipMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList toolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
     return this;
   }
 
   /**
-   * Get toolTipMetadata.
-   *
+   * Metadata that indicates whether the `toolTip` property is editable..
    * @return toolTipMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
 
-  /** setToolTipMetadata. */
+  /**
+   * setToolTipMetadata.
+   **/
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
+
 
   /**
    * underline.
    *
    * @return ModelList
-   */
+   **/
   public ModelList underline(String underline) {
     this.underline = underline;
     return this;
@@ -2872,49 +3000,53 @@ public class ModelList {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   *
    * @return underline
-   */
+   **/
   @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
 
-  /** setUnderline. */
+  /**
+   * setUnderline.
+   **/
   public void setUnderline(String underline) {
     this.underline = underline;
   }
+
 
   /**
    * underlineMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList underlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
     return this;
   }
 
   /**
-   * Get underlineMetadata.
-   *
+   * Metadata that indicates whether the `underline` property is editable..
    * @return underlineMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `underline` property is editable.")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
 
-  /** setUnderlineMetadata. */
+  /**
+   * setUnderlineMetadata.
+   **/
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
+
 
   /**
    * value.
    *
    * @return ModelList
-   */
+   **/
   public ModelList value(String value) {
     this.value = value;
     return this;
@@ -2922,49 +3054,53 @@ public class ModelList {
 
   /**
    * The value to use when the item is selected..
-   *
    * @return value
-   */
+   **/
   @ApiModelProperty(value = "The value to use when the item is selected.")
   public String getValue() {
     return value;
   }
 
-  /** setValue. */
+  /**
+   * setValue.
+   **/
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * valueMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList valueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
     return this;
   }
 
   /**
-   * Get valueMetadata.
-   *
+   * Metadata that indicates whether the `value` property is editable..
    * @return valueMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `value` property is editable.")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
 
-  /** setValueMetadata. */
+  /**
+   * setValueMetadata.
+   **/
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
+
 
   /**
    * width.
    *
    * @return ModelList
-   */
+   **/
   public ModelList width(String width) {
     this.width = width;
     return this;
@@ -2972,149 +3108,155 @@ public class ModelList {
 
   /**
    * Width of the tab in pixels..
-   *
    * @return width
-   */
+   **/
   @ApiModelProperty(value = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
 
-  /** setWidth. */
+  /**
+   * setWidth.
+   **/
   public void setWidth(String width) {
     this.width = width;
   }
+
 
   /**
    * widthMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList widthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
     return this;
   }
 
   /**
-   * Get widthMetadata.
-   *
+   * Metadata that indicates whether the `width` property is editable..
    * @return widthMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
 
-  /** setWidthMetadata. */
+  /**
+   * setWidthMetadata.
+   **/
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
+
 
   /**
    * xPosition.
    *
    * @return ModelList
-   */
+   **/
   public ModelList xPosition(String xPosition) {
     this.xPosition = xPosition;
     return this;
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
 
-  /** setXPosition. */
+  /**
+   * setXPosition.
+   **/
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
+
 
   /**
    * xPositionMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList xPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
     return this;
   }
 
   /**
-   * Get xPositionMetadata.
-   *
+   * Metadata that indicates whether the `xPosition` property is editable..
    * @return xPositionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
 
-  /** setXPositionMetadata. */
+  /**
+   * setXPositionMetadata.
+   **/
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
+
 
   /**
    * yPosition.
    *
    * @return ModelList
-   */
+   **/
   public ModelList yPosition(String yPosition) {
     this.yPosition = yPosition;
     return this;
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
-   * determining position..
-   *
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
-   */
-  @ApiModelProperty(
-      value =
-          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+   **/
+  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
 
-  /** setYPosition. */
+  /**
+   * setYPosition.
+   **/
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
+
 
   /**
    * yPositionMetadata.
    *
    * @return ModelList
-   */
+   **/
   public ModelList yPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
     return this;
   }
 
   /**
-   * Get yPositionMetadata.
-   *
+   * Metadata that indicates whether the `yPosition` property is editable..
    * @return yPositionMetadata
-   */
-  @ApiModelProperty(value = "")
+   **/
+  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
 
-  /** setYPositionMetadata. */
+  /**
+   * setYPositionMetadata.
+   **/
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3130,313 +3272,162 @@ public class ModelList {
       return false;
     }
     ModelList _list = (ModelList) o;
-    return Objects.equals(
-            this.anchorAllowWhiteSpaceInCharacters, _list.anchorAllowWhiteSpaceInCharacters)
-        && Objects.equals(
-            this.anchorAllowWhiteSpaceInCharactersMetadata,
-            _list.anchorAllowWhiteSpaceInCharactersMetadata)
-        && Objects.equals(this.anchorCaseSensitive, _list.anchorCaseSensitive)
-        && Objects.equals(this.anchorCaseSensitiveMetadata, _list.anchorCaseSensitiveMetadata)
-        && Objects.equals(this.anchorHorizontalAlignment, _list.anchorHorizontalAlignment)
-        && Objects.equals(
-            this.anchorHorizontalAlignmentMetadata, _list.anchorHorizontalAlignmentMetadata)
-        && Objects.equals(this.anchorIgnoreIfNotPresent, _list.anchorIgnoreIfNotPresent)
-        && Objects.equals(
-            this.anchorIgnoreIfNotPresentMetadata, _list.anchorIgnoreIfNotPresentMetadata)
-        && Objects.equals(this.anchorMatchWholeWord, _list.anchorMatchWholeWord)
-        && Objects.equals(this.anchorMatchWholeWordMetadata, _list.anchorMatchWholeWordMetadata)
-        && Objects.equals(this.anchorString, _list.anchorString)
-        && Objects.equals(this.anchorStringMetadata, _list.anchorStringMetadata)
-        && Objects.equals(this.anchorTabProcessorVersion, _list.anchorTabProcessorVersion)
-        && Objects.equals(
-            this.anchorTabProcessorVersionMetadata, _list.anchorTabProcessorVersionMetadata)
-        && Objects.equals(this.anchorUnits, _list.anchorUnits)
-        && Objects.equals(this.anchorUnitsMetadata, _list.anchorUnitsMetadata)
-        && Objects.equals(this.anchorXOffset, _list.anchorXOffset)
-        && Objects.equals(this.anchorXOffsetMetadata, _list.anchorXOffsetMetadata)
-        && Objects.equals(this.anchorYOffset, _list.anchorYOffset)
-        && Objects.equals(this.anchorYOffsetMetadata, _list.anchorYOffsetMetadata)
-        && Objects.equals(this.bold, _list.bold)
-        && Objects.equals(this.boldMetadata, _list.boldMetadata)
-        && Objects.equals(this.caption, _list.caption)
-        && Objects.equals(this.captionMetadata, _list.captionMetadata)
-        && Objects.equals(this.conditionalParentLabel, _list.conditionalParentLabel)
-        && Objects.equals(this.conditionalParentLabelMetadata, _list.conditionalParentLabelMetadata)
-        && Objects.equals(this.conditionalParentValue, _list.conditionalParentValue)
-        && Objects.equals(this.conditionalParentValueMetadata, _list.conditionalParentValueMetadata)
-        && Objects.equals(this.customTabId, _list.customTabId)
-        && Objects.equals(this.customTabIdMetadata, _list.customTabIdMetadata)
-        && Objects.equals(this.documentId, _list.documentId)
-        && Objects.equals(this.documentIdMetadata, _list.documentIdMetadata)
-        && Objects.equals(this.errorDetails, _list.errorDetails)
-        && Objects.equals(this.font, _list.font)
-        && Objects.equals(this.fontColor, _list.fontColor)
-        && Objects.equals(this.fontColorMetadata, _list.fontColorMetadata)
-        && Objects.equals(this.fontMetadata, _list.fontMetadata)
-        && Objects.equals(this.fontSize, _list.fontSize)
-        && Objects.equals(this.fontSizeMetadata, _list.fontSizeMetadata)
-        && Objects.equals(this.formOrder, _list.formOrder)
-        && Objects.equals(this.formOrderMetadata, _list.formOrderMetadata)
-        && Objects.equals(this.formPageLabel, _list.formPageLabel)
-        && Objects.equals(this.formPageLabelMetadata, _list.formPageLabelMetadata)
-        && Objects.equals(this.formPageNumber, _list.formPageNumber)
-        && Objects.equals(this.formPageNumberMetadata, _list.formPageNumberMetadata)
-        && Objects.equals(this.height, _list.height)
-        && Objects.equals(this.heightMetadata, _list.heightMetadata)
-        && Objects.equals(this.italic, _list.italic)
-        && Objects.equals(this.italicMetadata, _list.italicMetadata)
-        && Objects.equals(this.listItems, _list.listItems)
-        && Objects.equals(this.listSelectedValue, _list.listSelectedValue)
-        && Objects.equals(this.listSelectedValueMetadata, _list.listSelectedValueMetadata)
-        && Objects.equals(this.localePolicy, _list.localePolicy)
-        && Objects.equals(this.locked, _list.locked)
-        && Objects.equals(this.lockedMetadata, _list.lockedMetadata)
-        && Objects.equals(this.mergeField, _list.mergeField)
-        && Objects.equals(this.mergeFieldXml, _list.mergeFieldXml)
-        && Objects.equals(this.originalValue, _list.originalValue)
-        && Objects.equals(this.originalValueMetadata, _list.originalValueMetadata)
-        && Objects.equals(this.pageNumber, _list.pageNumber)
-        && Objects.equals(this.pageNumberMetadata, _list.pageNumberMetadata)
-        && Objects.equals(this.recipientId, _list.recipientId)
-        && Objects.equals(this.recipientIdGuid, _list.recipientIdGuid)
-        && Objects.equals(this.recipientIdGuidMetadata, _list.recipientIdGuidMetadata)
-        && Objects.equals(this.recipientIdMetadata, _list.recipientIdMetadata)
-        && Objects.equals(this.requireAll, _list.requireAll)
-        && Objects.equals(this.requireAllMetadata, _list.requireAllMetadata)
-        && Objects.equals(this.required, _list.required)
-        && Objects.equals(this.requiredMetadata, _list.requiredMetadata)
-        && Objects.equals(this.requireInitialOnSharedChange, _list.requireInitialOnSharedChange)
-        && Objects.equals(
-            this.requireInitialOnSharedChangeMetadata, _list.requireInitialOnSharedChangeMetadata)
-        && Objects.equals(this.senderRequired, _list.senderRequired)
-        && Objects.equals(this.senderRequiredMetadata, _list.senderRequiredMetadata)
-        && Objects.equals(this.shared, _list.shared)
-        && Objects.equals(this.sharedMetadata, _list.sharedMetadata)
-        && Objects.equals(this.shareToRecipients, _list.shareToRecipients)
-        && Objects.equals(this.shareToRecipientsMetadata, _list.shareToRecipientsMetadata)
-        && Objects.equals(this.smartContractInformation, _list.smartContractInformation)
-        && Objects.equals(this.source, _list.source)
-        && Objects.equals(this.status, _list.status)
-        && Objects.equals(this.statusMetadata, _list.statusMetadata)
-        && Objects.equals(this.tabGroupLabels, _list.tabGroupLabels)
-        && Objects.equals(this.tabGroupLabelsMetadata, _list.tabGroupLabelsMetadata)
-        && Objects.equals(this.tabId, _list.tabId)
-        && Objects.equals(this.tabIdMetadata, _list.tabIdMetadata)
-        && Objects.equals(this.tabLabel, _list.tabLabel)
-        && Objects.equals(this.tabLabelMetadata, _list.tabLabelMetadata)
-        && Objects.equals(this.tabOrder, _list.tabOrder)
-        && Objects.equals(this.tabOrderMetadata, _list.tabOrderMetadata)
-        && Objects.equals(this.tabType, _list.tabType)
-        && Objects.equals(this.tabTypeMetadata, _list.tabTypeMetadata)
-        && Objects.equals(this.templateLocked, _list.templateLocked)
-        && Objects.equals(this.templateLockedMetadata, _list.templateLockedMetadata)
-        && Objects.equals(this.templateRequired, _list.templateRequired)
-        && Objects.equals(this.templateRequiredMetadata, _list.templateRequiredMetadata)
-        && Objects.equals(this.tooltip, _list.tooltip)
-        && Objects.equals(this.toolTipMetadata, _list.toolTipMetadata)
-        && Objects.equals(this.underline, _list.underline)
-        && Objects.equals(this.underlineMetadata, _list.underlineMetadata)
-        && Objects.equals(this.value, _list.value)
-        && Objects.equals(this.valueMetadata, _list.valueMetadata)
-        && Objects.equals(this.width, _list.width)
-        && Objects.equals(this.widthMetadata, _list.widthMetadata)
-        && Objects.equals(this.xPosition, _list.xPosition)
-        && Objects.equals(this.xPositionMetadata, _list.xPositionMetadata)
-        && Objects.equals(this.yPosition, _list.yPosition)
-        && Objects.equals(this.yPositionMetadata, _list.yPositionMetadata);
+    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, _list.anchorAllowWhiteSpaceInCharacters) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, _list.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorCaseSensitive, _list.anchorCaseSensitive) &&
+        Objects.equals(this.anchorCaseSensitiveMetadata, _list.anchorCaseSensitiveMetadata) &&
+        Objects.equals(this.anchorHorizontalAlignment, _list.anchorHorizontalAlignment) &&
+        Objects.equals(this.anchorHorizontalAlignmentMetadata, _list.anchorHorizontalAlignmentMetadata) &&
+        Objects.equals(this.anchorIgnoreIfNotPresent, _list.anchorIgnoreIfNotPresent) &&
+        Objects.equals(this.anchorIgnoreIfNotPresentMetadata, _list.anchorIgnoreIfNotPresentMetadata) &&
+        Objects.equals(this.anchorMatchWholeWord, _list.anchorMatchWholeWord) &&
+        Objects.equals(this.anchorMatchWholeWordMetadata, _list.anchorMatchWholeWordMetadata) &&
+        Objects.equals(this.anchorString, _list.anchorString) &&
+        Objects.equals(this.anchorStringMetadata, _list.anchorStringMetadata) &&
+        Objects.equals(this.anchorTabProcessorVersion, _list.anchorTabProcessorVersion) &&
+        Objects.equals(this.anchorTabProcessorVersionMetadata, _list.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorUnits, _list.anchorUnits) &&
+        Objects.equals(this.anchorUnitsMetadata, _list.anchorUnitsMetadata) &&
+        Objects.equals(this.anchorXOffset, _list.anchorXOffset) &&
+        Objects.equals(this.anchorXOffsetMetadata, _list.anchorXOffsetMetadata) &&
+        Objects.equals(this.anchorYOffset, _list.anchorYOffset) &&
+        Objects.equals(this.anchorYOffsetMetadata, _list.anchorYOffsetMetadata) &&
+        Objects.equals(this.bold, _list.bold) &&
+        Objects.equals(this.boldMetadata, _list.boldMetadata) &&
+        Objects.equals(this.caption, _list.caption) &&
+        Objects.equals(this.captionMetadata, _list.captionMetadata) &&
+        Objects.equals(this.conditionalParentLabel, _list.conditionalParentLabel) &&
+        Objects.equals(this.conditionalParentLabelMetadata, _list.conditionalParentLabelMetadata) &&
+        Objects.equals(this.conditionalParentValue, _list.conditionalParentValue) &&
+        Objects.equals(this.conditionalParentValueMetadata, _list.conditionalParentValueMetadata) &&
+        Objects.equals(this.customTabId, _list.customTabId) &&
+        Objects.equals(this.customTabIdMetadata, _list.customTabIdMetadata) &&
+        Objects.equals(this.documentId, _list.documentId) &&
+        Objects.equals(this.documentIdMetadata, _list.documentIdMetadata) &&
+        Objects.equals(this.errorDetails, _list.errorDetails) &&
+        Objects.equals(this.font, _list.font) &&
+        Objects.equals(this.fontColor, _list.fontColor) &&
+        Objects.equals(this.fontColorMetadata, _list.fontColorMetadata) &&
+        Objects.equals(this.fontMetadata, _list.fontMetadata) &&
+        Objects.equals(this.fontSize, _list.fontSize) &&
+        Objects.equals(this.fontSizeMetadata, _list.fontSizeMetadata) &&
+        Objects.equals(this.formOrder, _list.formOrder) &&
+        Objects.equals(this.formOrderMetadata, _list.formOrderMetadata) &&
+        Objects.equals(this.formPageLabel, _list.formPageLabel) &&
+        Objects.equals(this.formPageLabelMetadata, _list.formPageLabelMetadata) &&
+        Objects.equals(this.formPageNumber, _list.formPageNumber) &&
+        Objects.equals(this.formPageNumberMetadata, _list.formPageNumberMetadata) &&
+        Objects.equals(this.height, _list.height) &&
+        Objects.equals(this.heightMetadata, _list.heightMetadata) &&
+        Objects.equals(this.italic, _list.italic) &&
+        Objects.equals(this.italicMetadata, _list.italicMetadata) &&
+        Objects.equals(this.listItems, _list.listItems) &&
+        Objects.equals(this.listSelectedValue, _list.listSelectedValue) &&
+        Objects.equals(this.listSelectedValueMetadata, _list.listSelectedValueMetadata) &&
+        Objects.equals(this.localePolicy, _list.localePolicy) &&
+        Objects.equals(this.locked, _list.locked) &&
+        Objects.equals(this.lockedMetadata, _list.lockedMetadata) &&
+        Objects.equals(this.mergeField, _list.mergeField) &&
+        Objects.equals(this.mergeFieldXml, _list.mergeFieldXml) &&
+        Objects.equals(this.originalValue, _list.originalValue) &&
+        Objects.equals(this.originalValueMetadata, _list.originalValueMetadata) &&
+        Objects.equals(this.pageNumber, _list.pageNumber) &&
+        Objects.equals(this.pageNumberMetadata, _list.pageNumberMetadata) &&
+        Objects.equals(this.recipientId, _list.recipientId) &&
+        Objects.equals(this.recipientIdGuid, _list.recipientIdGuid) &&
+        Objects.equals(this.recipientIdGuidMetadata, _list.recipientIdGuidMetadata) &&
+        Objects.equals(this.recipientIdMetadata, _list.recipientIdMetadata) &&
+        Objects.equals(this.requireAll, _list.requireAll) &&
+        Objects.equals(this.requireAllMetadata, _list.requireAllMetadata) &&
+        Objects.equals(this.required, _list.required) &&
+        Objects.equals(this.requiredMetadata, _list.requiredMetadata) &&
+        Objects.equals(this.requireInitialOnSharedChange, _list.requireInitialOnSharedChange) &&
+        Objects.equals(this.requireInitialOnSharedChangeMetadata, _list.requireInitialOnSharedChangeMetadata) &&
+        Objects.equals(this.senderRequired, _list.senderRequired) &&
+        Objects.equals(this.senderRequiredMetadata, _list.senderRequiredMetadata) &&
+        Objects.equals(this.shared, _list.shared) &&
+        Objects.equals(this.sharedMetadata, _list.sharedMetadata) &&
+        Objects.equals(this.shareToRecipients, _list.shareToRecipients) &&
+        Objects.equals(this.shareToRecipientsMetadata, _list.shareToRecipientsMetadata) &&
+        Objects.equals(this.smartContractInformation, _list.smartContractInformation) &&
+        Objects.equals(this.source, _list.source) &&
+        Objects.equals(this.status, _list.status) &&
+        Objects.equals(this.statusMetadata, _list.statusMetadata) &&
+        Objects.equals(this.tabGroupLabels, _list.tabGroupLabels) &&
+        Objects.equals(this.tabGroupLabelsMetadata, _list.tabGroupLabelsMetadata) &&
+        Objects.equals(this.tabId, _list.tabId) &&
+        Objects.equals(this.tabIdMetadata, _list.tabIdMetadata) &&
+        Objects.equals(this.tabLabel, _list.tabLabel) &&
+        Objects.equals(this.tabLabelMetadata, _list.tabLabelMetadata) &&
+        Objects.equals(this.tabOrder, _list.tabOrder) &&
+        Objects.equals(this.tabOrderMetadata, _list.tabOrderMetadata) &&
+        Objects.equals(this.tabType, _list.tabType) &&
+        Objects.equals(this.tabTypeMetadata, _list.tabTypeMetadata) &&
+        Objects.equals(this.templateLocked, _list.templateLocked) &&
+        Objects.equals(this.templateLockedMetadata, _list.templateLockedMetadata) &&
+        Objects.equals(this.templateRequired, _list.templateRequired) &&
+        Objects.equals(this.templateRequiredMetadata, _list.templateRequiredMetadata) &&
+        Objects.equals(this.tooltip, _list.tooltip) &&
+        Objects.equals(this.toolTipMetadata, _list.toolTipMetadata) &&
+        Objects.equals(this.underline, _list.underline) &&
+        Objects.equals(this.underlineMetadata, _list.underlineMetadata) &&
+        Objects.equals(this.value, _list.value) &&
+        Objects.equals(this.valueMetadata, _list.valueMetadata) &&
+        Objects.equals(this.width, _list.width) &&
+        Objects.equals(this.widthMetadata, _list.widthMetadata) &&
+        Objects.equals(this.xPosition, _list.xPosition) &&
+        Objects.equals(this.xPositionMetadata, _list.xPositionMetadata) &&
+        Objects.equals(this.yPosition, _list.yPosition) &&
+        Objects.equals(this.yPositionMetadata, _list.yPositionMetadata);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
-    return Objects.hash(
-        anchorAllowWhiteSpaceInCharacters,
-        anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive,
-        anchorCaseSensitiveMetadata,
-        anchorHorizontalAlignment,
-        anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent,
-        anchorIgnoreIfNotPresentMetadata,
-        anchorMatchWholeWord,
-        anchorMatchWholeWordMetadata,
-        anchorString,
-        anchorStringMetadata,
-        anchorTabProcessorVersion,
-        anchorTabProcessorVersionMetadata,
-        anchorUnits,
-        anchorUnitsMetadata,
-        anchorXOffset,
-        anchorXOffsetMetadata,
-        anchorYOffset,
-        anchorYOffsetMetadata,
-        bold,
-        boldMetadata,
-        caption,
-        captionMetadata,
-        conditionalParentLabel,
-        conditionalParentLabelMetadata,
-        conditionalParentValue,
-        conditionalParentValueMetadata,
-        customTabId,
-        customTabIdMetadata,
-        documentId,
-        documentIdMetadata,
-        errorDetails,
-        font,
-        fontColor,
-        fontColorMetadata,
-        fontMetadata,
-        fontSize,
-        fontSizeMetadata,
-        formOrder,
-        formOrderMetadata,
-        formPageLabel,
-        formPageLabelMetadata,
-        formPageNumber,
-        formPageNumberMetadata,
-        height,
-        heightMetadata,
-        italic,
-        italicMetadata,
-        listItems,
-        listSelectedValue,
-        listSelectedValueMetadata,
-        localePolicy,
-        locked,
-        lockedMetadata,
-        mergeField,
-        mergeFieldXml,
-        originalValue,
-        originalValueMetadata,
-        pageNumber,
-        pageNumberMetadata,
-        recipientId,
-        recipientIdGuid,
-        recipientIdGuidMetadata,
-        recipientIdMetadata,
-        requireAll,
-        requireAllMetadata,
-        required,
-        requiredMetadata,
-        requireInitialOnSharedChange,
-        requireInitialOnSharedChangeMetadata,
-        senderRequired,
-        senderRequiredMetadata,
-        shared,
-        sharedMetadata,
-        shareToRecipients,
-        shareToRecipientsMetadata,
-        smartContractInformation,
-        source,
-        status,
-        statusMetadata,
-        tabGroupLabels,
-        tabGroupLabelsMetadata,
-        tabId,
-        tabIdMetadata,
-        tabLabel,
-        tabLabelMetadata,
-        tabOrder,
-        tabOrderMetadata,
-        tabType,
-        tabTypeMetadata,
-        templateLocked,
-        templateLockedMetadata,
-        templateRequired,
-        templateRequiredMetadata,
-        tooltip,
-        toolTipMetadata,
-        underline,
-        underlineMetadata,
-        value,
-        valueMetadata,
-        width,
-        widthMetadata,
-        xPosition,
-        xPositionMetadata,
-        yPosition,
-        yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, listItems, listSelectedValue, listSelectedValueMetadata, localePolicy, locked, lockedMetadata, mergeField, mergeFieldXml, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ModelList {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata))
-        .append("\n");
-    sb.append("    anchorCaseSensitive: ")
-        .append(toIndentedString(anchorCaseSensitive))
-        .append("\n");
-    sb.append("    anchorCaseSensitiveMetadata: ")
-        .append(toIndentedString(anchorCaseSensitiveMetadata))
-        .append("\n");
-    sb.append("    anchorHorizontalAlignment: ")
-        .append(toIndentedString(anchorHorizontalAlignment))
-        .append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ")
-        .append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
-    sb.append("    anchorIgnoreIfNotPresent: ")
-        .append(toIndentedString(anchorIgnoreIfNotPresent))
-        .append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ")
-        .append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
-    sb.append("    anchorMatchWholeWord: ")
-        .append(toIndentedString(anchorMatchWholeWord))
-        .append("\n");
-    sb.append("    anchorMatchWholeWordMetadata: ")
-        .append(toIndentedString(anchorMatchWholeWordMetadata))
-        .append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
+    sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
+    sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
-    sb.append("    anchorStringMetadata: ")
-        .append(toIndentedString(anchorStringMetadata))
-        .append("\n");
-    sb.append("    anchorTabProcessorVersion: ")
-        .append(toIndentedString(anchorTabProcessorVersion))
-        .append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ")
-        .append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
-    sb.append("    anchorUnitsMetadata: ")
-        .append(toIndentedString(anchorUnitsMetadata))
-        .append("\n");
+    sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
-    sb.append("    anchorXOffsetMetadata: ")
-        .append(toIndentedString(anchorXOffsetMetadata))
-        .append("\n");
+    sb.append("    anchorXOffsetMetadata: ").append(toIndentedString(anchorXOffsetMetadata)).append("\n");
     sb.append("    anchorYOffset: ").append(toIndentedString(anchorYOffset)).append("\n");
-    sb.append("    anchorYOffsetMetadata: ")
-        .append(toIndentedString(anchorYOffsetMetadata))
-        .append("\n");
+    sb.append("    anchorYOffsetMetadata: ").append(toIndentedString(anchorYOffsetMetadata)).append("\n");
     sb.append("    bold: ").append(toIndentedString(bold)).append("\n");
     sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
-    sb.append("    conditionalParentLabel: ")
-        .append(toIndentedString(conditionalParentLabel))
-        .append("\n");
-    sb.append("    conditionalParentLabelMetadata: ")
-        .append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
-    sb.append("    conditionalParentValue: ")
-        .append(toIndentedString(conditionalParentValue))
-        .append("\n");
-    sb.append("    conditionalParentValueMetadata: ")
-        .append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
-    sb.append("    customTabIdMetadata: ")
-        .append(toIndentedString(customTabIdMetadata))
-        .append("\n");
+    sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -3449,71 +3440,47 @@ public class ModelList {
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
-    sb.append("    formPageLabelMetadata: ")
-        .append(toIndentedString(formPageLabelMetadata))
-        .append("\n");
+    sb.append("    formPageLabelMetadata: ").append(toIndentedString(formPageLabelMetadata)).append("\n");
     sb.append("    formPageNumber: ").append(toIndentedString(formPageNumber)).append("\n");
-    sb.append("    formPageNumberMetadata: ")
-        .append(toIndentedString(formPageNumberMetadata))
-        .append("\n");
+    sb.append("    formPageNumberMetadata: ").append(toIndentedString(formPageNumberMetadata)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    heightMetadata: ").append(toIndentedString(heightMetadata)).append("\n");
     sb.append("    italic: ").append(toIndentedString(italic)).append("\n");
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
     sb.append("    listItems: ").append(toIndentedString(listItems)).append("\n");
     sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
-    sb.append("    listSelectedValueMetadata: ")
-        .append(toIndentedString(listSelectedValueMetadata))
-        .append("\n");
+    sb.append("    listSelectedValueMetadata: ").append(toIndentedString(listSelectedValueMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
     sb.append("    mergeField: ").append(toIndentedString(mergeField)).append("\n");
     sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
-    sb.append("    originalValueMetadata: ")
-        .append(toIndentedString(originalValueMetadata))
-        .append("\n");
+    sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
-    sb.append("    recipientIdGuidMetadata: ")
-        .append(toIndentedString(recipientIdGuidMetadata))
-        .append("\n");
-    sb.append("    recipientIdMetadata: ")
-        .append(toIndentedString(recipientIdMetadata))
-        .append("\n");
+    sb.append("    recipientIdGuidMetadata: ").append(toIndentedString(recipientIdGuidMetadata)).append("\n");
+    sb.append("    recipientIdMetadata: ").append(toIndentedString(recipientIdMetadata)).append("\n");
     sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
     sb.append("    requireAllMetadata: ").append(toIndentedString(requireAllMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
-    sb.append("    requireInitialOnSharedChange: ")
-        .append(toIndentedString(requireInitialOnSharedChange))
-        .append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ")
-        .append(toIndentedString(requireInitialOnSharedChangeMetadata))
-        .append("\n");
+    sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
-    sb.append("    senderRequiredMetadata: ")
-        .append(toIndentedString(senderRequiredMetadata))
-        .append("\n");
+    sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    shareToRecipients: ").append(toIndentedString(shareToRecipients)).append("\n");
-    sb.append("    shareToRecipientsMetadata: ")
-        .append(toIndentedString(shareToRecipientsMetadata))
-        .append("\n");
-    sb.append("    smartContractInformation: ")
-        .append(toIndentedString(smartContractInformation))
-        .append("\n");
+    sb.append("    shareToRecipientsMetadata: ").append(toIndentedString(shareToRecipientsMetadata)).append("\n");
+    sb.append("    smartContractInformation: ").append(toIndentedString(smartContractInformation)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
-    sb.append("    tabGroupLabelsMetadata: ")
-        .append(toIndentedString(tabGroupLabelsMetadata))
-        .append("\n");
+    sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabIdMetadata: ").append(toIndentedString(tabIdMetadata)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
@@ -3523,13 +3490,9 @@ public class ModelList {
     sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
     sb.append("    tabTypeMetadata: ").append(toIndentedString(tabTypeMetadata)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
-    sb.append("    templateLockedMetadata: ")
-        .append(toIndentedString(templateLockedMetadata))
-        .append("\n");
+    sb.append("    templateLockedMetadata: ").append(toIndentedString(templateLockedMetadata)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
-    sb.append("    templateRequiredMetadata: ")
-        .append(toIndentedString(templateRequiredMetadata))
-        .append("\n");
+    sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
@@ -3547,7 +3510,8 @@ public class ModelList {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -3555,4 +3519,6 @@ public class ModelList {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

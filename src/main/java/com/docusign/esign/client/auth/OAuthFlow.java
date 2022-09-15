@@ -1,9 +1,12 @@
+
+
 package com.docusign.esign.client.auth;
 
-/** enum. */
+ /**
+  * enum.
+  *
+  */
+
 public enum OAuthFlow {
-  accessCode,
-  implicit,
-  password,
-  application
+    accessCode, implicit, password, application
 }

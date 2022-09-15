@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** FeatureAvailableMetadata. */
+/**
+ * FeatureAvailableMetadata.
+ *
+ */
+
 public class FeatureAvailableMetadata {
   @JsonProperty("availabilty")
   private String availabilty = null;
@@ -12,11 +20,12 @@ public class FeatureAvailableMetadata {
   @JsonProperty("featureName")
   private String featureName = null;
 
+
   /**
    * availabilty.
    *
    * @return FeatureAvailableMetadata
-   */
+   **/
   public FeatureAvailableMetadata availabilty(String availabilty) {
     this.availabilty = availabilty;
     return this;
@@ -24,24 +33,26 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
-   *
    * @return availabilty
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getAvailabilty() {
     return availabilty;
   }
 
-  /** setAvailabilty. */
+  /**
+   * setAvailabilty.
+   **/
   public void setAvailabilty(String availabilty) {
     this.availabilty = availabilty;
   }
+
 
   /**
    * featureName.
    *
    * @return FeatureAvailableMetadata
-   */
+   **/
   public FeatureAvailableMetadata featureName(String featureName) {
     this.featureName = featureName;
     return this;
@@ -49,18 +60,20 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
-   *
    * @return featureName
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFeatureName() {
     return featureName;
   }
 
-  /** setFeatureName. */
+  /**
+   * setFeatureName.
+   **/
   public void setFeatureName(String featureName) {
     this.featureName = featureName;
   }
+
 
   /**
    * Compares objects.
@@ -76,22 +89,27 @@ public class FeatureAvailableMetadata {
       return false;
     }
     FeatureAvailableMetadata featureAvailableMetadata = (FeatureAvailableMetadata) o;
-    return Objects.equals(this.availabilty, featureAvailableMetadata.availabilty)
-        && Objects.equals(this.featureName, featureAvailableMetadata.featureName);
+    return Objects.equals(this.availabilty, featureAvailableMetadata.availabilty) &&
+        Objects.equals(this.featureName, featureAvailableMetadata.featureName);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(availabilty, featureName);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureAvailableMetadata {\n");
-
+    
     sb.append("    availabilty: ").append(toIndentedString(availabilty)).append("\n");
     sb.append("    featureName: ").append(toIndentedString(featureName)).append("\n");
     sb.append("}");
@@ -99,7 +117,8 @@ public class FeatureAvailableMetadata {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -107,4 +126,6 @@ public class FeatureAvailableMetadata {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+

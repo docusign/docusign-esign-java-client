@@ -1,10 +1,18 @@
 package com.docusign.esign.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
+import java.util.Arrays;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-/** GraphicsContext. */
+/**
+ * GraphicsContext.
+ *
+ */
+
 public class GraphicsContext {
   @JsonProperty("fillColor")
   private String fillColor = null;
@@ -15,11 +23,12 @@ public class GraphicsContext {
   @JsonProperty("lineWeight")
   private String lineWeight = null;
 
+
   /**
    * fillColor.
    *
    * @return GraphicsContext
-   */
+   **/
   public GraphicsContext fillColor(String fillColor) {
     this.fillColor = fillColor;
     return this;
@@ -27,24 +36,26 @@ public class GraphicsContext {
 
   /**
    * .
-   *
    * @return fillColor
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getFillColor() {
     return fillColor;
   }
 
-  /** setFillColor. */
+  /**
+   * setFillColor.
+   **/
   public void setFillColor(String fillColor) {
     this.fillColor = fillColor;
   }
+
 
   /**
    * lineColor.
    *
    * @return GraphicsContext
-   */
+   **/
   public GraphicsContext lineColor(String lineColor) {
     this.lineColor = lineColor;
     return this;
@@ -52,24 +63,26 @@ public class GraphicsContext {
 
   /**
    * .
-   *
    * @return lineColor
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getLineColor() {
     return lineColor;
   }
 
-  /** setLineColor. */
+  /**
+   * setLineColor.
+   **/
   public void setLineColor(String lineColor) {
     this.lineColor = lineColor;
   }
+
 
   /**
    * lineWeight.
    *
    * @return GraphicsContext
-   */
+   **/
   public GraphicsContext lineWeight(String lineWeight) {
     this.lineWeight = lineWeight;
     return this;
@@ -77,18 +90,20 @@ public class GraphicsContext {
 
   /**
    * .
-   *
    * @return lineWeight
-   */
+   **/
   @ApiModelProperty(value = "")
   public String getLineWeight() {
     return lineWeight;
   }
 
-  /** setLineWeight. */
+  /**
+   * setLineWeight.
+   **/
   public void setLineWeight(String lineWeight) {
     this.lineWeight = lineWeight;
   }
+
 
   /**
    * Compares objects.
@@ -104,23 +119,28 @@ public class GraphicsContext {
       return false;
     }
     GraphicsContext graphicsContext = (GraphicsContext) o;
-    return Objects.equals(this.fillColor, graphicsContext.fillColor)
-        && Objects.equals(this.lineColor, graphicsContext.lineColor)
-        && Objects.equals(this.lineWeight, graphicsContext.lineWeight);
+    return Objects.equals(this.fillColor, graphicsContext.fillColor) &&
+        Objects.equals(this.lineColor, graphicsContext.lineColor) &&
+        Objects.equals(this.lineWeight, graphicsContext.lineWeight);
   }
 
-  /** Returns the HashCode. */
+  /**
+   * Returns the HashCode.
+   */
   @Override
   public int hashCode() {
     return Objects.hash(fillColor, lineColor, lineWeight);
   }
 
-  /** Converts the given object to string. */
+
+  /**
+   * Converts the given object to string.
+   */
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphicsContext {\n");
-
+    
     sb.append("    fillColor: ").append(toIndentedString(fillColor)).append("\n");
     sb.append("    lineColor: ").append(toIndentedString(lineColor)).append("\n");
     sb.append("    lineWeight: ").append(toIndentedString(lineWeight)).append("\n");
@@ -129,7 +149,8 @@ public class GraphicsContext {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
@@ -137,4 +158,6 @@ public class GraphicsContext {
     }
     return o.toString().replace("\n", "\n    ");
   }
+
 }
+
