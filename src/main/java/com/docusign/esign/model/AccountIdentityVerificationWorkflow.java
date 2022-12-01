@@ -36,6 +36,9 @@ public class AccountIdentityVerificationWorkflow {
   @JsonProperty("workflowId")
   private String workflowId = null;
 
+  @JsonProperty("workflowLabel")
+  private String workflowLabel = null;
+
   @JsonProperty("workflowResourceKey")
   private String workflowResourceKey = null;
 
@@ -229,6 +232,33 @@ public class AccountIdentityVerificationWorkflow {
 
 
   /**
+   * workflowLabel.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
+  public AccountIdentityVerificationWorkflow workflowLabel(String workflowLabel) {
+    this.workflowLabel = workflowLabel;
+    return this;
+  }
+
+  /**
+   * .
+   * @return workflowLabel
+   **/
+  @ApiModelProperty(value = "")
+  public String getWorkflowLabel() {
+    return workflowLabel;
+  }
+
+  /**
+   * setWorkflowLabel.
+   **/
+  public void setWorkflowLabel(String workflowLabel) {
+    this.workflowLabel = workflowLabel;
+  }
+
+
+  /**
    * workflowResourceKey.
    *
    * @return AccountIdentityVerificationWorkflow
@@ -275,6 +305,7 @@ public class AccountIdentityVerificationWorkflow {
         Objects.equals(this.signatureProvider, accountIdentityVerificationWorkflow.signatureProvider) &&
         Objects.equals(this.steps, accountIdentityVerificationWorkflow.steps) &&
         Objects.equals(this.workflowId, accountIdentityVerificationWorkflow.workflowId) &&
+        Objects.equals(this.workflowLabel, accountIdentityVerificationWorkflow.workflowLabel) &&
         Objects.equals(this.workflowResourceKey, accountIdentityVerificationWorkflow.workflowResourceKey);
   }
 
@@ -283,7 +314,7 @@ public class AccountIdentityVerificationWorkflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowResourceKey);
+    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
   }
 
 
@@ -301,6 +332,7 @@ public class AccountIdentityVerificationWorkflow {
     sb.append("    signatureProvider: ").append(toIndentedString(signatureProvider)).append("\n");
     sb.append("    steps: ").append(toIndentedString(steps)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
+    sb.append("    workflowLabel: ").append(toIndentedString(workflowLabel)).append("\n");
     sb.append("    workflowResourceKey: ").append(toIndentedString(workflowResourceKey)).append("\n");
     sb.append("}");
     return sb.toString();

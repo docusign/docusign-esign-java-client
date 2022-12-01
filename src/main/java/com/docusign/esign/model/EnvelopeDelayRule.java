@@ -9,9 +9,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * EnvelopeDelayRule.
+ * An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future..
  *
  */
+@ApiModel(description = "An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future.")
 
 public class EnvelopeDelayRule {
   @JsonProperty("delay")
@@ -32,10 +33,10 @@ public class EnvelopeDelayRule {
   }
 
   /**
-   * .
+   * A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days..
    * @return delay
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days.")
   public String getDelay() {
     return delay;
   }
@@ -59,10 +60,10 @@ public class EnvelopeDelayRule {
   }
 
   /**
-   * .
+   * A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future..
    * @return resumeDate
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future.")
   public String getResumeDate() {
     return resumeDate;
   }

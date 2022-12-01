@@ -95,7 +95,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("/SDK/3.21.0/Java/");
+    setUserAgent("/SDK/3.22.0/Java/");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1635,11 +1635,16 @@ public class ApiClient {
     }
     performAdditionalClientConfiguration(clientConfig);
 
-    // Force TLS v1.2
+    // Check for required TLS v1.2
     try {
-    	System.setProperty("https.protocols", "TLSv1.2");
+        String[] supportedProtocols = SSLContext.getDefault().createSSLEngine().getEnabledProtocols();
+        if (!Arrays.asList(supportedProtocols).contains("TLSv1.2")) {
+            throw new SecurityException("Docusign Java SDK requires TLSv1.2 Protocol");
+        }
     } catch (SecurityException se) {
-        System.err.println("failed to set https.protocols property");
+        System.err.println(se.getMessage());
+    } catch (NoSuchAlgorithmException nsae) {
+        System.err.println(nsae.getMessage());
     }
 
     // Setup the SSLContext object to use for HTTPS connections to the API
