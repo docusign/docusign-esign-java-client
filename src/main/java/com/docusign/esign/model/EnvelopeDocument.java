@@ -2,6 +2,8 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.DocGenFormField;
+import com.docusign.esign.model.DocGenSyntaxError;
 import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.NameValue;
 import com.docusign.esign.model.Page;
@@ -44,6 +46,15 @@ public class EnvelopeDocument {
   @JsonProperty("displayMetadata")
   private PropertyMetadata displayMetadata = null;
 
+  @JsonProperty("docGenDocumentStatus")
+  private String docGenDocumentStatus = null;
+
+  @JsonProperty("docGenErrors")
+  private java.util.List<DocGenSyntaxError> docGenErrors = null;
+
+  @JsonProperty("docGenFormFields")
+  private java.util.List<DocGenFormField> docGenFormFields = null;
+
   @JsonProperty("documentBase64")
   private String documentBase64 = null;
 
@@ -64,6 +75,9 @@ public class EnvelopeDocument {
 
   @JsonProperty("includeInDownloadMetadata")
   private PropertyMetadata includeInDownloadMetadata = null;
+
+  @JsonProperty("isDocGenDocument")
+  private String isDocGenDocument = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -342,6 +356,113 @@ public class EnvelopeDocument {
 
 
   /**
+   * docGenDocumentStatus.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument docGenDocumentStatus(String docGenDocumentStatus) {
+    this.docGenDocumentStatus = docGenDocumentStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenDocumentStatus
+   **/
+  @ApiModelProperty(value = "")
+  public String getDocGenDocumentStatus() {
+    return docGenDocumentStatus;
+  }
+
+  /**
+   * setDocGenDocumentStatus.
+   **/
+  public void setDocGenDocumentStatus(String docGenDocumentStatus) {
+    this.docGenDocumentStatus = docGenDocumentStatus;
+  }
+
+
+  /**
+   * docGenErrors.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument docGenErrors(java.util.List<DocGenSyntaxError> docGenErrors) {
+    this.docGenErrors = docGenErrors;
+    return this;
+  }
+  
+  /**
+   * addDocGenErrorsItem.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument addDocGenErrorsItem(DocGenSyntaxError docGenErrorsItem) {
+    if (this.docGenErrors == null) {
+      this.docGenErrors = new java.util.ArrayList<>();
+    }
+    this.docGenErrors.add(docGenErrorsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenErrors
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DocGenSyntaxError> getDocGenErrors() {
+    return docGenErrors;
+  }
+
+  /**
+   * setDocGenErrors.
+   **/
+  public void setDocGenErrors(java.util.List<DocGenSyntaxError> docGenErrors) {
+    this.docGenErrors = docGenErrors;
+  }
+
+
+  /**
+   * docGenFormFields.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument docGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
+    return this;
+  }
+  
+  /**
+   * addDocGenFormFieldsItem.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument addDocGenFormFieldsItem(DocGenFormField docGenFormFieldsItem) {
+    if (this.docGenFormFields == null) {
+      this.docGenFormFields = new java.util.ArrayList<>();
+    }
+    this.docGenFormFields.add(docGenFormFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenFormFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DocGenFormField> getDocGenFormFields() {
+    return docGenFormFields;
+  }
+
+  /**
+   * setDocGenFormFields.
+   **/
+  public void setDocGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
+  }
+
+
+  /**
    * documentBase64.
    *
    * @return EnvelopeDocument
@@ -540,6 +661,33 @@ public class EnvelopeDocument {
    **/
   public void setIncludeInDownloadMetadata(PropertyMetadata includeInDownloadMetadata) {
     this.includeInDownloadMetadata = includeInDownloadMetadata;
+  }
+
+
+  /**
+   * isDocGenDocument.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument isDocGenDocument(String isDocGenDocument) {
+    this.isDocGenDocument = isDocGenDocument;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isDocGenDocument
+   **/
+  @ApiModelProperty(value = "")
+  public String getIsDocGenDocument() {
+    return isDocGenDocument;
+  }
+
+  /**
+   * setIsDocGenDocument.
+   **/
+  public void setIsDocGenDocument(String isDocGenDocument) {
+    this.isDocGenDocument = isDocGenDocument;
   }
 
 
@@ -875,6 +1023,9 @@ public class EnvelopeDocument {
         Objects.equals(this.containsPdfFormFields, envelopeDocument.containsPdfFormFields) &&
         Objects.equals(this.display, envelopeDocument.display) &&
         Objects.equals(this.displayMetadata, envelopeDocument.displayMetadata) &&
+        Objects.equals(this.docGenDocumentStatus, envelopeDocument.docGenDocumentStatus) &&
+        Objects.equals(this.docGenErrors, envelopeDocument.docGenErrors) &&
+        Objects.equals(this.docGenFormFields, envelopeDocument.docGenFormFields) &&
         Objects.equals(this.documentBase64, envelopeDocument.documentBase64) &&
         Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
         Objects.equals(this.documentId, envelopeDocument.documentId) &&
@@ -882,6 +1033,7 @@ public class EnvelopeDocument {
         Objects.equals(this.errorDetails, envelopeDocument.errorDetails) &&
         Objects.equals(this.includeInDownload, envelopeDocument.includeInDownload) &&
         Objects.equals(this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata) &&
+        Objects.equals(this.isDocGenDocument, envelopeDocument.isDocGenDocument) &&
         Objects.equals(this.name, envelopeDocument.name) &&
         Objects.equals(this.nameMetadata, envelopeDocument.nameMetadata) &&
         Objects.equals(this.order, envelopeDocument.order) &&
@@ -900,7 +1052,7 @@ public class EnvelopeDocument {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -920,6 +1072,9 @@ public class EnvelopeDocument {
     sb.append("    containsPdfFormFields: ").append(toIndentedString(containsPdfFormFields)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    displayMetadata: ").append(toIndentedString(displayMetadata)).append("\n");
+    sb.append("    docGenDocumentStatus: ").append(toIndentedString(docGenDocumentStatus)).append("\n");
+    sb.append("    docGenErrors: ").append(toIndentedString(docGenErrors)).append("\n");
+    sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -927,6 +1082,7 @@ public class EnvelopeDocument {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
     sb.append("    includeInDownloadMetadata: ").append(toIndentedString(includeInDownloadMetadata)).append("\n");
+    sb.append("    isDocGenDocument: ").append(toIndentedString(isDocGenDocument)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");

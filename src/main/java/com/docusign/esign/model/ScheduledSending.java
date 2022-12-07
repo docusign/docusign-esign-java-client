@@ -66,10 +66,10 @@ public class ScheduledSending {
   }
 
   /**
-   * .
+   * An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent..
    * @return resumeDate
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.")
   public String getResumeDate() {
     return resumeDate;
   }
@@ -106,10 +106,10 @@ public class ScheduledSending {
   }
 
   /**
-   * .
+   * A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified..
    * @return rules
    **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.")
   public java.util.List<EnvelopeDelayRule> getRules() {
     return rules;
   }
@@ -133,10 +133,10 @@ public class ScheduledSending {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * \\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent..
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @ApiModelProperty(value = "\\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.")
   public String getStatus() {
     return status;
   }
