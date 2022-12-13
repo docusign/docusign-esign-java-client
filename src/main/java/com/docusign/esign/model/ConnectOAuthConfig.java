@@ -23,6 +23,9 @@ public class ConnectOAuthConfig {
   @JsonProperty("clientSecret")
   private String clientSecret = null;
 
+  @JsonProperty("customParameters")
+  private String customParameters = null;
+
   @JsonProperty("scope")
   private String scope = null;
 
@@ -109,6 +112,33 @@ public class ConnectOAuthConfig {
 
 
   /**
+   * customParameters.
+   *
+   * @return ConnectOAuthConfig
+   **/
+  public ConnectOAuthConfig customParameters(String customParameters) {
+    this.customParameters = customParameters;
+    return this;
+  }
+
+  /**
+   * .
+   * @return customParameters
+   **/
+  @ApiModelProperty(value = "")
+  public String getCustomParameters() {
+    return customParameters;
+  }
+
+  /**
+   * setCustomParameters.
+   **/
+  public void setCustomParameters(String customParameters) {
+    this.customParameters = customParameters;
+  }
+
+
+  /**
    * scope.
    *
    * @return ConnectOAuthConfig
@@ -152,6 +182,7 @@ public class ConnectOAuthConfig {
     return Objects.equals(this.authorizationServerUrl, connectOAuthConfig.authorizationServerUrl) &&
         Objects.equals(this.clientId, connectOAuthConfig.clientId) &&
         Objects.equals(this.clientSecret, connectOAuthConfig.clientSecret) &&
+        Objects.equals(this.customParameters, connectOAuthConfig.customParameters) &&
         Objects.equals(this.scope, connectOAuthConfig.scope);
   }
 
@@ -160,7 +191,7 @@ public class ConnectOAuthConfig {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(authorizationServerUrl, clientId, clientSecret, scope);
+    return Objects.hash(authorizationServerUrl, clientId, clientSecret, customParameters, scope);
   }
 
 
@@ -175,6 +206,7 @@ public class ConnectOAuthConfig {
     sb.append("    authorizationServerUrl: ").append(toIndentedString(authorizationServerUrl)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    clientSecret: ").append(toIndentedString(clientSecret)).append("\n");
+    sb.append("    customParameters: ").append(toIndentedString(customParameters)).append("\n");
     sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
     sb.append("}");
     return sb.toString();

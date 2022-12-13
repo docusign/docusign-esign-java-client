@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.DocGenFormField;
 import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.docusign.esign.model.MatchBox;
 import com.docusign.esign.model.NameValue;
@@ -28,6 +29,9 @@ public class Document {
   @JsonProperty("display")
   private String display = null;
 
+  @JsonProperty("docGenFormFields")
+  private java.util.List<DocGenFormField> docGenFormFields = null;
+
   @JsonProperty("documentBase64")
   private String documentBase64 = null;
 
@@ -51,6 +55,9 @@ public class Document {
 
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
+
+  @JsonProperty("isDocGenDocument")
+  private String isDocGenDocument = null;
 
   @JsonProperty("matchBoxes")
   private java.util.List<MatchBox> matchBoxes = null;
@@ -173,6 +180,46 @@ public class Document {
    **/
   public void setDisplay(String display) {
     this.display = display;
+  }
+
+
+  /**
+   * docGenFormFields.
+   *
+   * @return Document
+   **/
+  public Document docGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
+    return this;
+  }
+  
+  /**
+   * addDocGenFormFieldsItem.
+   *
+   * @return Document
+   **/
+  public Document addDocGenFormFieldsItem(DocGenFormField docGenFormFieldsItem) {
+    if (this.docGenFormFields == null) {
+      this.docGenFormFields = new java.util.ArrayList<>();
+    }
+    this.docGenFormFields.add(docGenFormFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenFormFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<DocGenFormField> getDocGenFormFields() {
+    return docGenFormFields;
+  }
+
+  /**
+   * setDocGenFormFields.
+   **/
+  public void setDocGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
   }
 
 
@@ -402,6 +449,33 @@ public class Document {
    **/
   public void setIncludeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
+  }
+
+
+  /**
+   * isDocGenDocument.
+   *
+   * @return Document
+   **/
+  public Document isDocGenDocument(String isDocGenDocument) {
+    this.isDocGenDocument = isDocGenDocument;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isDocGenDocument
+   **/
+  @ApiModelProperty(value = "")
+  public String getIsDocGenDocument() {
+    return isDocGenDocument;
+  }
+
+  /**
+   * setIsDocGenDocument.
+   **/
+  public void setIsDocGenDocument(String isDocGenDocument) {
+    this.isDocGenDocument = isDocGenDocument;
   }
 
 
@@ -813,6 +887,7 @@ public class Document {
     return Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs) &&
         Objects.equals(this.assignTabsToRecipientId, document.assignTabsToRecipientId) &&
         Objects.equals(this.display, document.display) &&
+        Objects.equals(this.docGenFormFields, document.docGenFormFields) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
         Objects.equals(this.documentId, document.documentId) &&
@@ -821,6 +896,7 @@ public class Document {
         Objects.equals(this.fileFormatHint, document.fileFormatHint) &&
         Objects.equals(this.htmlDefinition, document.htmlDefinition) &&
         Objects.equals(this.includeInDownload, document.includeInDownload) &&
+        Objects.equals(this.isDocGenDocument, document.isDocGenDocument) &&
         Objects.equals(this.matchBoxes, document.matchBoxes) &&
         Objects.equals(this.name, document.name) &&
         Objects.equals(this.order, document.order) &&
@@ -842,7 +918,7 @@ public class Document {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -857,6 +933,7 @@ public class Document {
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
     sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -865,6 +942,7 @@ public class Document {
     sb.append("    fileFormatHint: ").append(toIndentedString(fileFormatHint)).append("\n");
     sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
+    sb.append("    isDocGenDocument: ").append(toIndentedString(isDocGenDocument)).append("\n");
     sb.append("    matchBoxes: ").append(toIndentedString(matchBoxes)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");

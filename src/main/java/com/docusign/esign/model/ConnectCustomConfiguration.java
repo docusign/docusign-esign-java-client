@@ -80,6 +80,9 @@ public class ConnectCustomConfiguration {
   @JsonProperty("includeHMAC")
   private String includeHMAC = null;
 
+  @JsonProperty("includeOAuth")
+  private String includeOAuth = null;
+
   @JsonProperty("includeSenderAccountasCustomField")
   private String includeSenderAccountasCustomField = null;
 
@@ -748,6 +751,33 @@ public class ConnectCustomConfiguration {
 
 
   /**
+   * includeOAuth.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration includeOAuth(String includeOAuth) {
+    this.includeOAuth = includeOAuth;
+    return this;
+  }
+
+  /**
+   * .
+   * @return includeOAuth
+   **/
+  @ApiModelProperty(value = "")
+  public String getIncludeOAuth() {
+    return includeOAuth;
+  }
+
+  /**
+   * setIncludeOAuth.
+   **/
+  public void setIncludeOAuth(String includeOAuth) {
+    this.includeOAuth = includeOAuth;
+  }
+
+
+  /**
    * includeSenderAccountasCustomField.
    *
    * @return ConnectCustomConfiguration
@@ -1374,6 +1404,7 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.includeDocuments, connectCustomConfiguration.includeDocuments) &&
         Objects.equals(this.includeEnvelopeVoidReason, connectCustomConfiguration.includeEnvelopeVoidReason) &&
         Objects.equals(this.includeHMAC, connectCustomConfiguration.includeHMAC) &&
+        Objects.equals(this.includeOAuth, connectCustomConfiguration.includeOAuth) &&
         Objects.equals(this.includeSenderAccountasCustomField, connectCustomConfiguration.includeSenderAccountasCustomField) &&
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
@@ -1401,7 +1432,7 @@ public class ConnectCustomConfiguration {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1434,6 +1465,7 @@ public class ConnectCustomConfiguration {
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
     sb.append("    includeHMAC: ").append(toIndentedString(includeHMAC)).append("\n");
+    sb.append("    includeOAuth: ").append(toIndentedString(includeOAuth)).append("\n");
     sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
