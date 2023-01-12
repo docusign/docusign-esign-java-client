@@ -63,11 +63,29 @@ public class FoldersApi {
   **/
   public class CallListOptions
   {
+  private String count = null;
   private String include = null;
   private String includeItems = null;
   private String startPosition = null;
+  private String subFolderDepth = null;
   private String template = null;
   private String userFilter = null;
+  
+ /**
+  * setCount method.
+  */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
+  public String getCount() {
+    return this.count;
+  }
   
  /**
   * setInclude method.
@@ -115,6 +133,22 @@ public class FoldersApi {
   */
   public String getStartPosition() {
     return this.startPosition;
+  }
+  
+ /**
+  * setSubFolderDepth method.
+  */
+  public void setSubFolderDepth(String subFolderDepth) {
+    this.subFolderDepth = subFolderDepth;
+  }
+
+ /**
+  * getSubFolderDepth method.
+  *
+  * @return String
+  */
+  public String getSubFolderDepth() {
+    return this.subFolderDepth;
   }
   
  /**
@@ -200,11 +234,15 @@ public class FoldersApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_items", options.includeItems));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("sub_folder_depth", options.subFolderDepth));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("template", options.template));
     }if (options != null) {

@@ -26,6 +26,9 @@ public class RecipientIdentityVerification {
   @JsonProperty("workflowIdMetadata")
   private PropertyMetadata workflowIdMetadata = null;
 
+  @JsonProperty("workflowLabel")
+  private String workflowLabel = null;
+
 
   /**
    * inputOptions.
@@ -122,6 +125,33 @@ public class RecipientIdentityVerification {
 
 
   /**
+   * workflowLabel.
+   *
+   * @return RecipientIdentityVerification
+   **/
+  public RecipientIdentityVerification workflowLabel(String workflowLabel) {
+    this.workflowLabel = workflowLabel;
+    return this;
+  }
+
+  /**
+   * .
+   * @return workflowLabel
+   **/
+  @ApiModelProperty(value = "")
+  public String getWorkflowLabel() {
+    return workflowLabel;
+  }
+
+  /**
+   * setWorkflowLabel.
+   **/
+  public void setWorkflowLabel(String workflowLabel) {
+    this.workflowLabel = workflowLabel;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -137,7 +167,8 @@ public class RecipientIdentityVerification {
     RecipientIdentityVerification recipientIdentityVerification = (RecipientIdentityVerification) o;
     return Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions) &&
         Objects.equals(this.workflowId, recipientIdentityVerification.workflowId) &&
-        Objects.equals(this.workflowIdMetadata, recipientIdentityVerification.workflowIdMetadata);
+        Objects.equals(this.workflowIdMetadata, recipientIdentityVerification.workflowIdMetadata) &&
+        Objects.equals(this.workflowLabel, recipientIdentityVerification.workflowLabel);
   }
 
   /**
@@ -145,7 +176,7 @@ public class RecipientIdentityVerification {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(inputOptions, workflowId, workflowIdMetadata);
+    return Objects.hash(inputOptions, workflowId, workflowIdMetadata, workflowLabel);
   }
 
 
@@ -160,6 +191,7 @@ public class RecipientIdentityVerification {
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("    workflowIdMetadata: ").append(toIndentedString(workflowIdMetadata)).append("\n");
+    sb.append("    workflowLabel: ").append(toIndentedString(workflowLabel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

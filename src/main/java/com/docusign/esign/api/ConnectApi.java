@@ -1754,6 +1754,68 @@ public class ConnectApi {
   }
 
   /**
+   * Updates the existing Connect OAuth Config for the account..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param connectOAuthConfig  (optional)
+   * @return ConnectOAuthConfig
+   * @throws ApiException if fails to make API call
+   */
+  public ConnectOAuthConfig updateConnectOAuthConfig(String accountId, ConnectOAuthConfig connectOAuthConfig) throws ApiException {
+    ApiResponse<ConnectOAuthConfig> localVarResponse = updateConnectOAuthConfigWithHttpInfo(accountId, connectOAuthConfig);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates the existing Connect OAuth Config for the account.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param connectOAuthConfig  (optional)
+   * @return ConnectOAuthConfig
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<ConnectOAuthConfig > updateConnectOAuthConfigWithHttpInfo(String accountId, ConnectOAuthConfig connectOAuthConfig) throws ApiException {
+    Object localVarPostBody = connectOAuthConfig;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateConnectOAuthConfig");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/oauth"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<ConnectOAuthConfig> localVarReturnType = new GenericType<ConnectOAuthConfig>() {};
+    ConnectOAuthConfig localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<ConnectOAuthConfig>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Reserved.
    * Reserved:
    * @param accountId The external account number (int) or account ID Guid. (required)
