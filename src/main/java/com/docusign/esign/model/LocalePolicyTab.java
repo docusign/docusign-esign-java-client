@@ -53,6 +53,9 @@ public class LocalePolicyTab {
   @JsonProperty("timeZone")
   private String timeZone = null;
 
+  @JsonProperty("useLongCurrencyFormat")
+  private String useLongCurrencyFormat = null;
+
 
   /**
    * addressFormat.
@@ -406,6 +409,33 @@ public class LocalePolicyTab {
 
 
   /**
+   * useLongCurrencyFormat.
+   *
+   * @return LocalePolicyTab
+   **/
+  public LocalePolicyTab useLongCurrencyFormat(String useLongCurrencyFormat) {
+    this.useLongCurrencyFormat = useLongCurrencyFormat;
+    return this;
+  }
+
+  /**
+   * .
+   * @return useLongCurrencyFormat
+   **/
+  @ApiModelProperty(value = "")
+  public String getUseLongCurrencyFormat() {
+    return useLongCurrencyFormat;
+  }
+
+  /**
+   * setUseLongCurrencyFormat.
+   **/
+  public void setUseLongCurrencyFormat(String useLongCurrencyFormat) {
+    this.useLongCurrencyFormat = useLongCurrencyFormat;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -431,7 +461,8 @@ public class LocalePolicyTab {
         Objects.equals(this.initialFormat, localePolicyTab.initialFormat) &&
         Objects.equals(this.nameFormat, localePolicyTab.nameFormat) &&
         Objects.equals(this.timeFormat, localePolicyTab.timeFormat) &&
-        Objects.equals(this.timeZone, localePolicyTab.timeZone);
+        Objects.equals(this.timeZone, localePolicyTab.timeZone) &&
+        Objects.equals(this.useLongCurrencyFormat, localePolicyTab.useLongCurrencyFormat);
   }
 
   /**
@@ -439,7 +470,7 @@ public class LocalePolicyTab {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone);
+    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone, useLongCurrencyFormat);
   }
 
 
@@ -464,6 +495,7 @@ public class LocalePolicyTab {
     sb.append("    nameFormat: ").append(toIndentedString(nameFormat)).append("\n");
     sb.append("    timeFormat: ").append(toIndentedString(timeFormat)).append("\n");
     sb.append("    timeZone: ").append(toIndentedString(timeZone)).append("\n");
+    sb.append("    useLongCurrencyFormat: ").append(toIndentedString(useLongCurrencyFormat)).append("\n");
     sb.append("}");
     return sb.toString();
   }

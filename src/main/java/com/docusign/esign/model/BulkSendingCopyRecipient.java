@@ -5,6 +5,7 @@ import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopyTab;
 import com.docusign.esign.model.IdCheckInformationInput;
 import com.docusign.esign.model.RecipientEmailNotification;
+import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureProvider;
@@ -60,6 +61,9 @@ public class BulkSendingCopyRecipient {
 
   @JsonProperty("identificationMethod")
   private String identificationMethod = null;
+
+  @JsonProperty("identityVerification")
+  private RecipientIdentityVerification identityVerification = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -460,6 +464,33 @@ public class BulkSendingCopyRecipient {
 
 
   /**
+   * identityVerification.
+   *
+   * @return BulkSendingCopyRecipient
+   **/
+  public BulkSendingCopyRecipient identityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+    return this;
+  }
+
+  /**
+   * Get identityVerification.
+   * @return identityVerification
+   **/
+  @ApiModelProperty(value = "")
+  public RecipientIdentityVerification getIdentityVerification() {
+    return identityVerification;
+  }
+
+  /**
+   * setIdentityVerification.
+   **/
+  public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
+    this.identityVerification = identityVerification;
+  }
+
+
+  /**
    * name.
    *
    * @return BulkSendingCopyRecipient
@@ -822,6 +853,7 @@ public class BulkSendingCopyRecipient {
         Objects.equals(this.idCheckConfigurationName, bulkSendingCopyRecipient.idCheckConfigurationName) &&
         Objects.equals(this.idCheckInformationInput, bulkSendingCopyRecipient.idCheckInformationInput) &&
         Objects.equals(this.identificationMethod, bulkSendingCopyRecipient.identificationMethod) &&
+        Objects.equals(this.identityVerification, bulkSendingCopyRecipient.identityVerification) &&
         Objects.equals(this.name, bulkSendingCopyRecipient.name) &&
         Objects.equals(this.note, bulkSendingCopyRecipient.note) &&
         Objects.equals(this.phoneAuthentication, bulkSendingCopyRecipient.phoneAuthentication) &&
@@ -840,7 +872,7 @@ public class BulkSendingCopyRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, faxNumber, hostEmail, hostName, idCheckConfigurationName, idCheckInformationInput, identificationMethod, name, note, phoneAuthentication, recipientId, recipientSignatureProviders, roleName, signerName, signingGroupId, smsAuthentication, socialAuthentications, tabs);
+    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, faxNumber, hostEmail, hostName, idCheckConfigurationName, idCheckInformationInput, identificationMethod, identityVerification, name, note, phoneAuthentication, recipientId, recipientSignatureProviders, roleName, signerName, signingGroupId, smsAuthentication, socialAuthentications, tabs);
   }
 
 
@@ -865,6 +897,7 @@ public class BulkSendingCopyRecipient {
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    identificationMethod: ").append(toIndentedString(identificationMethod)).append("\n");
+    sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
