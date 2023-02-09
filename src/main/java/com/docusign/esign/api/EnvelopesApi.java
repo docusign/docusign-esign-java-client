@@ -9791,11 +9791,12 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param documentId The ID of the document being accessed. (required)
+   * @param documentFileBytes Updated document content. (required)
    * @return EnvelopeDocument
    * @throws ApiException if fails to make API call
    */
-  public EnvelopeDocument updateDocument(String accountId, String envelopeId, String documentId) throws ApiException {
-    ApiResponse<EnvelopeDocument> localVarResponse = updateDocumentWithHttpInfo(accountId, envelopeId, documentId);
+  public EnvelopeDocument updateDocument(String accountId, String envelopeId, String documentId, byte[] documentFileBytes) throws ApiException {
+    ApiResponse<EnvelopeDocument> localVarResponse = updateDocumentWithHttpInfo(accountId, envelopeId, documentId, documentFileBytes);
     return localVarResponse.getData();
   }
 
@@ -9805,11 +9806,12 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param documentId The ID of the document being accessed. (required)
+   * @param documentFileBytes Updated document content. (required)
    * @return EnvelopeDocument
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<EnvelopeDocument > updateDocumentWithHttpInfo(String accountId, String envelopeId, String documentId) throws ApiException {
-    Object localVarPostBody = "{}";
+  public ApiResponse<EnvelopeDocument > updateDocumentWithHttpInfo(String accountId, String envelopeId, String documentId, byte[] documentFileBytes) throws ApiException {
+    Object localVarPostBody = documentFileBytes;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -9824,6 +9826,11 @@ public class EnvelopesApi {
     // verify the required parameter 'documentId' is set
     if (documentId == null) {
       throw new ApiException(400, "Missing the required parameter 'documentId' when calling updateDocument");
+    }
+    
+    // verify the required parameter 'documentFileBytes' is set
+    if (documentFileBytes == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentFileBytes' when calling updateDocument");
     }
     
     // create path and map variables
@@ -9850,7 +9857,7 @@ public class EnvelopesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      
+      "application/pdf"
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -11167,84 +11174,6 @@ public class EnvelopesApi {
     GenericType<DocumentVisibilityList> localVarReturnType = new GenericType<DocumentVisibilityList>() {};
     DocumentVisibilityList localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<DocumentVisibilityList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
-  }
-
-  /**
-   * Retrieves a PDF document from the envelope with no CoC..
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param regenDocumentId  (required)
-   * @param document  (optional)
-   * @return byte[]
-   * @throws ApiException if fails to make API call
-   */
-  public byte[] updateRegenDocument(String accountId, String envelopeId, String regenDocumentId, Document document) throws ApiException {
-    ApiResponse<byte[]> localVarResponse = updateRegenDocumentWithHttpInfo(accountId, envelopeId, regenDocumentId, document);
-    return localVarResponse.getData();
-  }
-
-  /**
-   * Retrieves a PDF document from the envelope with no CoC.
-   * 
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param regenDocumentId  (required)
-   * @param document  (optional)
-   * @return byte[]
-   * @throws ApiException if fails to make API call
-   */
-  public ApiResponse<byte[] > updateRegenDocumentWithHttpInfo(String accountId, String envelopeId, String regenDocumentId, Document document) throws ApiException {
-    Object localVarPostBody = document;
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateRegenDocument");
-    }
-    
-    // verify the required parameter 'envelopeId' is set
-    if (envelopeId == null) {
-      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateRegenDocument");
-    }
-    
-    // verify the required parameter 'regenDocumentId' is set
-    if (regenDocumentId == null) {
-      throw new ApiException(400, "Missing the required parameter 'regenDocumentId' when calling updateRegenDocument");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/{regenDocumentId}/regen"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
-      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
-      .replaceAll("\\{" + "regenDocumentId" + "\\}", apiClient.escapeString(regenDocumentId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/pdf"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-    
-    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
-    byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-    return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**

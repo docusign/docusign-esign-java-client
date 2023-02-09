@@ -173,6 +173,9 @@ public class TabMetadata {
   @JsonProperty("validationPattern")
   private String validationPattern = null;
 
+  @JsonProperty("validationType")
+  private String validationType = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -1595,6 +1598,33 @@ public class TabMetadata {
 
 
   /**
+   * validationType.
+   *
+   * @return TabMetadata
+   **/
+  public TabMetadata validationType(String validationType) {
+    this.validationType = validationType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return validationType
+   **/
+  @ApiModelProperty(value = "")
+  public String getValidationType() {
+    return validationType;
+  }
+
+  /**
+   * setValidationType.
+   **/
+  public void setValidationType(String validationType) {
+    this.validationType = validationType;
+  }
+
+
+  /**
    * width.
    *
    * @return TabMetadata
@@ -1687,6 +1717,7 @@ public class TabMetadata {
         Objects.equals(this.underline, tabMetadata.underline) &&
         Objects.equals(this.validationMessage, tabMetadata.validationMessage) &&
         Objects.equals(this.validationPattern, tabMetadata.validationPattern) &&
+        Objects.equals(this.validationType, tabMetadata.validationType) &&
         Objects.equals(this.width, tabMetadata.width);
   }
 
@@ -1695,7 +1726,7 @@ public class TabMetadata {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, maxNumericalValue, mergeField, minNumericalValue, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, signatureProviderId, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, maxNumericalValue, mergeField, minNumericalValue, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, signatureProviderId, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, validationType, width);
   }
 
 
@@ -1759,6 +1790,7 @@ public class TabMetadata {
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    validationPattern: ").append(toIndentedString(validationPattern)).append("\n");
+    sb.append("    validationType: ").append(toIndentedString(validationType)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("}");
     return sb.toString();

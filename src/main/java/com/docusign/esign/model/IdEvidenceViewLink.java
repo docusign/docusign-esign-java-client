@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class IdEvidenceViewLink {
-  @JsonProperty("ViewLink")
+  @JsonProperty("viewLink")
   private String viewLink = null;
 
 

@@ -15,10 +15,10 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class RecipientFormData {
-  @JsonProperty("DeclinedTime")
+  @JsonProperty("declinedTime")
   private String declinedTime = null;
 
-  @JsonProperty("DeliveredTime")
+  @JsonProperty("deliveredTime")
   private String deliveredTime = null;
 
   @JsonProperty("email")
@@ -33,10 +33,10 @@ public class RecipientFormData {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
-  @JsonProperty("SentTime")
+  @JsonProperty("sentTime")
   private String sentTime = null;
 
-  @JsonProperty("SignedTime")
+  @JsonProperty("signedTime")
   private String signedTime = null;
 
 

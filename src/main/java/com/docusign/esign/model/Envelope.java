@@ -66,6 +66,9 @@ public class Envelope {
   @JsonProperty("brandLock")
   private String brandLock = null;
 
+  @JsonProperty("burnDefaultTabData")
+  private String burnDefaultTabData = null;
+
   @JsonProperty("certificateUri")
   private String certificateUri = null;
 
@@ -610,6 +613,33 @@ public class Envelope {
    **/
   public void setBrandLock(String brandLock) {
     this.brandLock = brandLock;
+  }
+
+
+  /**
+   * burnDefaultTabData.
+   *
+   * @return Envelope
+   **/
+  public Envelope burnDefaultTabData(String burnDefaultTabData) {
+    this.burnDefaultTabData = burnDefaultTabData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return burnDefaultTabData
+   **/
+  @ApiModelProperty(value = "")
+  public String getBurnDefaultTabData() {
+    return burnDefaultTabData;
+  }
+
+  /**
+   * setBurnDefaultTabData.
+   **/
+  public void setBurnDefaultTabData(String burnDefaultTabData) {
+    this.burnDefaultTabData = burnDefaultTabData;
   }
 
 
@@ -2434,6 +2464,7 @@ public class Envelope {
         Objects.equals(this.autoNavigation, envelope.autoNavigation) &&
         Objects.equals(this.brandId, envelope.brandId) &&
         Objects.equals(this.brandLock, envelope.brandLock) &&
+        Objects.equals(this.burnDefaultTabData, envelope.burnDefaultTabData) &&
         Objects.equals(this.certificateUri, envelope.certificateUri) &&
         Objects.equals(this.completedDateTime, envelope.completedDateTime) &&
         Objects.equals(this.copyRecipientData, envelope.copyRecipientData) &&
@@ -2506,7 +2537,7 @@ public class Envelope {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -2531,6 +2562,7 @@ public class Envelope {
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    brandLock: ").append(toIndentedString(brandLock)).append("\n");
+    sb.append("    burnDefaultTabData: ").append(toIndentedString(burnDefaultTabData)).append("\n");
     sb.append("    certificateUri: ").append(toIndentedString(certificateUri)).append("\n");
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
     sb.append("    copyRecipientData: ").append(toIndentedString(copyRecipientData)).append("\n");

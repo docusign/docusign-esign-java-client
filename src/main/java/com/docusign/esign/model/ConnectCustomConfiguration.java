@@ -89,6 +89,9 @@ public class ConnectCustomConfiguration {
   @JsonProperty("includeTimeZoneInformation")
   private String includeTimeZoneInformation = null;
 
+  @JsonProperty("integratorManaged")
+  private String integratorManaged = null;
+
   @JsonProperty("name")
   private String name = null;
 
@@ -832,6 +835,33 @@ public class ConnectCustomConfiguration {
 
 
   /**
+   * integratorManaged.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration integratorManaged(String integratorManaged) {
+    this.integratorManaged = integratorManaged;
+    return this;
+  }
+
+  /**
+   * .
+   * @return integratorManaged
+   **/
+  @ApiModelProperty(value = "")
+  public String getIntegratorManaged() {
+    return integratorManaged;
+  }
+
+  /**
+   * setIntegratorManaged.
+   **/
+  public void setIntegratorManaged(String integratorManaged) {
+    this.integratorManaged = integratorManaged;
+  }
+
+
+  /**
    * name.
    *
    * @return ConnectCustomConfiguration
@@ -1407,6 +1437,7 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.includeOAuth, connectCustomConfiguration.includeOAuth) &&
         Objects.equals(this.includeSenderAccountasCustomField, connectCustomConfiguration.includeSenderAccountasCustomField) &&
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
+        Objects.equals(this.integratorManaged, connectCustomConfiguration.integratorManaged) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
         Objects.equals(this.password, connectCustomConfiguration.password) &&
         Objects.equals(this.recipientEvents, connectCustomConfiguration.recipientEvents) &&
@@ -1432,7 +1463,7 @@ public class ConnectCustomConfiguration {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1468,6 +1499,7 @@ public class ConnectCustomConfiguration {
     sb.append("    includeOAuth: ").append(toIndentedString(includeOAuth)).append("\n");
     sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
+    sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
