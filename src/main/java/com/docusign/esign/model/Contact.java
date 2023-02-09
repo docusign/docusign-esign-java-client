@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ContactPhoneNumber;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.NotaryContactDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -42,6 +43,9 @@ public class Contact {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("notaryContactDetails")
+  private NotaryContactDetails notaryContactDetails = null;
 
   @JsonProperty("organization")
   private String organization = null;
@@ -329,6 +333,33 @@ public class Contact {
 
 
   /**
+   * notaryContactDetails.
+   *
+   * @return Contact
+   **/
+  public Contact notaryContactDetails(NotaryContactDetails notaryContactDetails) {
+    this.notaryContactDetails = notaryContactDetails;
+    return this;
+  }
+
+  /**
+   * Get notaryContactDetails.
+   * @return notaryContactDetails
+   **/
+  @ApiModelProperty(value = "")
+  public NotaryContactDetails getNotaryContactDetails() {
+    return notaryContactDetails;
+  }
+
+  /**
+   * setNotaryContactDetails.
+   **/
+  public void setNotaryContactDetails(NotaryContactDetails notaryContactDetails) {
+    this.notaryContactDetails = notaryContactDetails;
+  }
+
+
+  /**
    * organization.
    *
    * @return Contact
@@ -486,6 +517,7 @@ public class Contact {
         Objects.equals(this.errorDetails, contact.errorDetails) &&
         Objects.equals(this.isOwner, contact.isOwner) &&
         Objects.equals(this.name, contact.name) &&
+        Objects.equals(this.notaryContactDetails, contact.notaryContactDetails) &&
         Objects.equals(this.organization, contact.organization) &&
         Objects.equals(this.roomContactType, contact.roomContactType) &&
         Objects.equals(this.shared, contact.shared) &&
@@ -498,7 +530,7 @@ public class Contact {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, organization, roomContactType, shared, signingGroup, signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup, signingGroupName);
   }
 
 
@@ -519,6 +551,7 @@ public class Contact {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    isOwner: ").append(toIndentedString(isOwner)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    notaryContactDetails: ").append(toIndentedString(notaryContactDetails)).append("\n");
     sb.append("    organization: ").append(toIndentedString(organization)).append("\n");
     sb.append("    roomContactType: ").append(toIndentedString(roomContactType)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");

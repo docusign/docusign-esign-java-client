@@ -14,16 +14,16 @@ import io.swagger.annotations.ApiModelProperty;
  */
 
 public class DelegationInfo {
-  @JsonProperty("Email")
+  @JsonProperty("email")
   private String email = null;
 
-  @JsonProperty("Name")
+  @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("UserAuthorizationId")
+  @JsonProperty("userAuthorizationId")
   private String userAuthorizationId = null;
 
-  @JsonProperty("UserId")
+  @JsonProperty("userId")
   private String userId = null;
 
 

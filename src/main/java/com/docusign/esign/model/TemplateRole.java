@@ -32,6 +32,9 @@ public class TemplateRole {
   @JsonProperty("defaultRecipient")
   private String defaultRecipient = null;
 
+  @JsonProperty("deliveryMethod")
+  private String deliveryMethod = null;
+
   @JsonProperty("email")
   private String email = null;
 
@@ -184,6 +187,33 @@ public class TemplateRole {
    **/
   public void setDefaultRecipient(String defaultRecipient) {
     this.defaultRecipient = defaultRecipient;
+  }
+
+
+  /**
+   * deliveryMethod.
+   *
+   * @return TemplateRole
+   **/
+  public TemplateRole deliveryMethod(String deliveryMethod) {
+    this.deliveryMethod = deliveryMethod;
+    return this;
+  }
+
+  /**
+   * Reserved: For DocuSign use only..
+   * @return deliveryMethod
+   **/
+  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  public String getDeliveryMethod() {
+    return deliveryMethod;
+  }
+
+  /**
+   * setDeliveryMethod.
+   **/
+  public void setDeliveryMethod(String deliveryMethod) {
+    this.deliveryMethod = deliveryMethod;
   }
 
 
@@ -515,6 +545,7 @@ public class TemplateRole {
         Objects.equals(this.additionalNotifications, templateRole.additionalNotifications) &&
         Objects.equals(this.clientUserId, templateRole.clientUserId) &&
         Objects.equals(this.defaultRecipient, templateRole.defaultRecipient) &&
+        Objects.equals(this.deliveryMethod, templateRole.deliveryMethod) &&
         Objects.equals(this.email, templateRole.email) &&
         Objects.equals(this.emailNotification, templateRole.emailNotification) &&
         Objects.equals(this.embeddedRecipientStartURL, templateRole.embeddedRecipientStartURL) &&
@@ -533,7 +564,7 @@ public class TemplateRole {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
+    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
   }
 
 
@@ -549,6 +580,7 @@ public class TemplateRole {
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    defaultRecipient: ").append(toIndentedString(defaultRecipient)).append("\n");
+    sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");

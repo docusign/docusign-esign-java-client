@@ -58,6 +58,12 @@ public class UserAccountManagementGranularInformation {
   @JsonProperty("canManageGroupsButNotUsersMetadata")
   private SettingsMetadata canManageGroupsButNotUsersMetadata = null;
 
+  @JsonProperty("canManageJointAgreements")
+  private String canManageJointAgreements = null;
+
+  @JsonProperty("canManageJointAgreementsMetadata")
+  private SettingsMetadata canManageJointAgreementsMetadata = null;
+
   @JsonProperty("canManageReporting")
   private String canManageReporting = null;
 
@@ -471,6 +477,60 @@ public class UserAccountManagementGranularInformation {
 
 
   /**
+   * canManageJointAgreements.
+   *
+   * @return UserAccountManagementGranularInformation
+   **/
+  public UserAccountManagementGranularInformation canManageJointAgreements(String canManageJointAgreements) {
+    this.canManageJointAgreements = canManageJointAgreements;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageJointAgreements
+   **/
+  @ApiModelProperty(value = "")
+  public String getCanManageJointAgreements() {
+    return canManageJointAgreements;
+  }
+
+  /**
+   * setCanManageJointAgreements.
+   **/
+  public void setCanManageJointAgreements(String canManageJointAgreements) {
+    this.canManageJointAgreements = canManageJointAgreements;
+  }
+
+
+  /**
+   * canManageJointAgreementsMetadata.
+   *
+   * @return UserAccountManagementGranularInformation
+   **/
+  public UserAccountManagementGranularInformation canManageJointAgreementsMetadata(SettingsMetadata canManageJointAgreementsMetadata) {
+    this.canManageJointAgreementsMetadata = canManageJointAgreementsMetadata;
+    return this;
+  }
+
+  /**
+   * Get canManageJointAgreementsMetadata.
+   * @return canManageJointAgreementsMetadata
+   **/
+  @ApiModelProperty(value = "")
+  public SettingsMetadata getCanManageJointAgreementsMetadata() {
+    return canManageJointAgreementsMetadata;
+  }
+
+  /**
+   * setCanManageJointAgreementsMetadata.
+   **/
+  public void setCanManageJointAgreementsMetadata(SettingsMetadata canManageJointAgreementsMetadata) {
+    this.canManageJointAgreementsMetadata = canManageJointAgreementsMetadata;
+  }
+
+
+  /**
    * canManageReporting.
    *
    * @return UserAccountManagementGranularInformation
@@ -795,6 +855,8 @@ public class UserAccountManagementGranularInformation {
         Objects.equals(this.canManageEnvelopeTransferMetadata, userAccountManagementGranularInformation.canManageEnvelopeTransferMetadata) &&
         Objects.equals(this.canManageGroupsButNotUsers, userAccountManagementGranularInformation.canManageGroupsButNotUsers) &&
         Objects.equals(this.canManageGroupsButNotUsersMetadata, userAccountManagementGranularInformation.canManageGroupsButNotUsersMetadata) &&
+        Objects.equals(this.canManageJointAgreements, userAccountManagementGranularInformation.canManageJointAgreements) &&
+        Objects.equals(this.canManageJointAgreementsMetadata, userAccountManagementGranularInformation.canManageJointAgreementsMetadata) &&
         Objects.equals(this.canManageReporting, userAccountManagementGranularInformation.canManageReporting) &&
         Objects.equals(this.canManageReportingMetadata, userAccountManagementGranularInformation.canManageReportingMetadata) &&
         Objects.equals(this.canManageSharing, userAccountManagementGranularInformation.canManageSharing) &&
@@ -813,7 +875,7 @@ public class UserAccountManagementGranularInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageConnect, canManageConnectMetadata, canManageDocumentRetention, canManageDocumentRetentionMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageGroupsButNotUsers, canManageGroupsButNotUsersMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageStamps, canManageStampsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers);
+    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageConnect, canManageConnectMetadata, canManageDocumentRetention, canManageDocumentRetentionMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageGroupsButNotUsers, canManageGroupsButNotUsersMetadata, canManageJointAgreements, canManageJointAgreementsMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageStamps, canManageStampsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers);
   }
 
 
@@ -839,6 +901,8 @@ public class UserAccountManagementGranularInformation {
     sb.append("    canManageEnvelopeTransferMetadata: ").append(toIndentedString(canManageEnvelopeTransferMetadata)).append("\n");
     sb.append("    canManageGroupsButNotUsers: ").append(toIndentedString(canManageGroupsButNotUsers)).append("\n");
     sb.append("    canManageGroupsButNotUsersMetadata: ").append(toIndentedString(canManageGroupsButNotUsersMetadata)).append("\n");
+    sb.append("    canManageJointAgreements: ").append(toIndentedString(canManageJointAgreements)).append("\n");
+    sb.append("    canManageJointAgreementsMetadata: ").append(toIndentedString(canManageJointAgreementsMetadata)).append("\n");
     sb.append("    canManageReporting: ").append(toIndentedString(canManageReporting)).append("\n");
     sb.append("    canManageReportingMetadata: ").append(toIndentedString(canManageReportingMetadata)).append("\n");
     sb.append("    canManageSharing: ").append(toIndentedString(canManageSharing)).append("\n");

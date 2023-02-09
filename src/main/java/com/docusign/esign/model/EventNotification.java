@@ -57,6 +57,9 @@ public class EventNotification {
   @JsonProperty("includeTimeZone")
   private String includeTimeZone = null;
 
+  @JsonProperty("integratorManaged")
+  private String integratorManaged = null;
+
   @JsonProperty("loggingEnabled")
   private String loggingEnabled = null;
 
@@ -457,6 +460,33 @@ public class EventNotification {
 
 
   /**
+   * integratorManaged.
+   *
+   * @return EventNotification
+   **/
+  public EventNotification integratorManaged(String integratorManaged) {
+    this.integratorManaged = integratorManaged;
+    return this;
+  }
+
+  /**
+   * .
+   * @return integratorManaged
+   **/
+  @ApiModelProperty(value = "")
+  public String getIntegratorManaged() {
+    return integratorManaged;
+  }
+
+  /**
+   * setIntegratorManaged.
+   **/
+  public void setIntegratorManaged(String integratorManaged) {
+    this.integratorManaged = integratorManaged;
+  }
+
+
+  /**
    * loggingEnabled.
    *
    * @return EventNotification
@@ -685,6 +715,7 @@ public class EventNotification {
         Objects.equals(this.includeOAuth, eventNotification.includeOAuth) &&
         Objects.equals(this.includeSenderAccountAsCustomField, eventNotification.includeSenderAccountAsCustomField) &&
         Objects.equals(this.includeTimeZone, eventNotification.includeTimeZone) &&
+        Objects.equals(this.integratorManaged, eventNotification.integratorManaged) &&
         Objects.equals(this.loggingEnabled, eventNotification.loggingEnabled) &&
         Objects.equals(this.recipientEvents, eventNotification.recipientEvents) &&
         Objects.equals(this.requireAcknowledgment, eventNotification.requireAcknowledgment) &&
@@ -699,7 +730,7 @@ public class EventNotification {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryMode, envelopeEvents, eventData, events, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountAsCustomField, includeTimeZone, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
+    return Objects.hash(deliveryMode, envelopeEvents, eventData, events, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountAsCustomField, includeTimeZone, integratorManaged, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
   }
 
 
@@ -724,6 +755,7 @@ public class EventNotification {
     sb.append("    includeOAuth: ").append(toIndentedString(includeOAuth)).append("\n");
     sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
     sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
+    sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
     sb.append("    requireAcknowledgment: ").append(toIndentedString(requireAcknowledgment)).append("\n");

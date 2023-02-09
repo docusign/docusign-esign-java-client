@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopyCustomField;
 import com.docusign.esign.model.BulkSendingCopyRecipient;
+import com.docusign.esign.model.BulksendingCopyDocGenFormField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -19,6 +20,9 @@ import io.swagger.annotations.ApiModelProperty;
 public class BulkSendingCopy {
   @JsonProperty("customFields")
   private java.util.List<BulkSendingCopyCustomField> customFields = null;
+
+  @JsonProperty("docGenFormFields")
+  private java.util.List<BulksendingCopyDocGenFormField> docGenFormFields = null;
 
   @JsonProperty("emailBlurb")
   private String emailBlurb = null;
@@ -67,6 +71,46 @@ public class BulkSendingCopy {
    **/
   public void setCustomFields(java.util.List<BulkSendingCopyCustomField> customFields) {
     this.customFields = customFields;
+  }
+
+
+  /**
+   * docGenFormFields.
+   *
+   * @return BulkSendingCopy
+   **/
+  public BulkSendingCopy docGenFormFields(java.util.List<BulksendingCopyDocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
+    return this;
+  }
+  
+  /**
+   * addDocGenFormFieldsItem.
+   *
+   * @return BulkSendingCopy
+   **/
+  public BulkSendingCopy addDocGenFormFieldsItem(BulksendingCopyDocGenFormField docGenFormFieldsItem) {
+    if (this.docGenFormFields == null) {
+      this.docGenFormFields = new java.util.ArrayList<>();
+    }
+    this.docGenFormFields.add(docGenFormFieldsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenFormFields
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<BulksendingCopyDocGenFormField> getDocGenFormFields() {
+    return docGenFormFields;
+  }
+
+  /**
+   * setDocGenFormFields.
+   **/
+  public void setDocGenFormFields(java.util.List<BulksendingCopyDocGenFormField> docGenFormFields) {
+    this.docGenFormFields = docGenFormFields;
   }
 
 
@@ -179,6 +223,7 @@ public class BulkSendingCopy {
     }
     BulkSendingCopy bulkSendingCopy = (BulkSendingCopy) o;
     return Objects.equals(this.customFields, bulkSendingCopy.customFields) &&
+        Objects.equals(this.docGenFormFields, bulkSendingCopy.docGenFormFields) &&
         Objects.equals(this.emailBlurb, bulkSendingCopy.emailBlurb) &&
         Objects.equals(this.emailSubject, bulkSendingCopy.emailSubject) &&
         Objects.equals(this.recipients, bulkSendingCopy.recipients);
@@ -189,7 +234,7 @@ public class BulkSendingCopy {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(customFields, emailBlurb, emailSubject, recipients);
+    return Objects.hash(customFields, docGenFormFields, emailBlurb, emailSubject, recipients);
   }
 
 
@@ -202,6 +247,7 @@ public class BulkSendingCopy {
     sb.append("class BulkSendingCopy {\n");
     
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
+    sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");

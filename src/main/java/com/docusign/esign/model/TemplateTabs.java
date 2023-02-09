@@ -27,6 +27,7 @@ import com.docusign.esign.model.Notarize;
 import com.docusign.esign.model.NotarySeal;
 import com.docusign.esign.model.Note;
 import com.docusign.esign.model.Number;
+import com.docusign.esign.model.Numerical;
 import com.docusign.esign.model.PhoneNumber;
 import com.docusign.esign.model.PolyLineOverlay;
 import com.docusign.esign.model.PrefillTabs;
@@ -130,6 +131,9 @@ public class TemplateTabs {
 
   @JsonProperty("numberTabs")
   private java.util.List<Number> numberTabs = null;
+
+  @JsonProperty("numericalTabs")
+  private java.util.List<Numerical> numericalTabs = null;
 
   @JsonProperty("phoneNumberTabs")
   private java.util.List<PhoneNumber> phoneNumberTabs = null;
@@ -1212,6 +1216,46 @@ public class TemplateTabs {
 
 
   /**
+   * numericalTabs.
+   *
+   * @return TemplateTabs
+   **/
+  public TemplateTabs numericalTabs(java.util.List<Numerical> numericalTabs) {
+    this.numericalTabs = numericalTabs;
+    return this;
+  }
+  
+  /**
+   * addNumericalTabsItem.
+   *
+   * @return TemplateTabs
+   **/
+  public TemplateTabs addNumericalTabsItem(Numerical numericalTabsItem) {
+    if (this.numericalTabs == null) {
+      this.numericalTabs = new java.util.ArrayList<>();
+    }
+    this.numericalTabs.add(numericalTabsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return numericalTabs
+   **/
+  @ApiModelProperty(value = "")
+  public java.util.List<Numerical> getNumericalTabs() {
+    return numericalTabs;
+  }
+
+  /**
+   * setNumericalTabs.
+   **/
+  public void setNumericalTabs(java.util.List<Numerical> numericalTabs) {
+    this.numericalTabs = numericalTabs;
+  }
+
+
+  /**
    * phoneNumberTabs.
    *
    * @return TemplateTabs
@@ -1758,6 +1802,7 @@ public class TemplateTabs {
         Objects.equals(this.notarySealTabs, templateTabs.notarySealTabs) &&
         Objects.equals(this.noteTabs, templateTabs.noteTabs) &&
         Objects.equals(this.numberTabs, templateTabs.numberTabs) &&
+        Objects.equals(this.numericalTabs, templateTabs.numericalTabs) &&
         Objects.equals(this.phoneNumberTabs, templateTabs.phoneNumberTabs) &&
         Objects.equals(this.polyLineOverlayTabs, templateTabs.polyLineOverlayTabs) &&
         Objects.equals(this.prefillTabs, templateTabs.prefillTabs) &&
@@ -1778,7 +1823,7 @@ public class TemplateTabs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, numericalTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
 
 
@@ -1816,6 +1861,7 @@ public class TemplateTabs {
     sb.append("    notarySealTabs: ").append(toIndentedString(notarySealTabs)).append("\n");
     sb.append("    noteTabs: ").append(toIndentedString(noteTabs)).append("\n");
     sb.append("    numberTabs: ").append(toIndentedString(numberTabs)).append("\n");
+    sb.append("    numericalTabs: ").append(toIndentedString(numericalTabs)).append("\n");
     sb.append("    phoneNumberTabs: ").append(toIndentedString(phoneNumberTabs)).append("\n");
     sb.append("    polyLineOverlayTabs: ").append(toIndentedString(polyLineOverlayTabs)).append("\n");
     sb.append("    prefillTabs: ").append(toIndentedString(prefillTabs)).append("\n");
