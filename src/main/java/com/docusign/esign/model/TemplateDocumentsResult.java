@@ -6,8 +6,8 @@ import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TemplateDocumentsResult.
@@ -21,7 +21,6 @@ public class TemplateDocumentsResult {
   @JsonProperty("templateId")
   private String templateId = null;
 
-
   /**
    * templateDocuments.
    *
@@ -31,7 +30,7 @@ public class TemplateDocumentsResult {
     this.templateDocuments = templateDocuments;
     return this;
   }
-  
+
   /**
    * addTemplateDocumentsItem.
    *
@@ -47,9 +46,10 @@ public class TemplateDocumentsResult {
 
   /**
    * .
+   * 
    * @return templateDocuments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<EnvelopeDocument> getTemplateDocuments() {
     return templateDocuments;
   }
@@ -60,7 +60,6 @@ public class TemplateDocumentsResult {
   public void setTemplateDocuments(java.util.List<EnvelopeDocument> templateDocuments) {
     this.templateDocuments = templateDocuments;
   }
-
 
   /**
    * templateId.
@@ -73,10 +72,12 @@ public class TemplateDocumentsResult {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -87,7 +88,6 @@ public class TemplateDocumentsResult {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +115,6 @@ public class TemplateDocumentsResult {
     return Objects.hash(templateDocuments, templateId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +122,7 @@ public class TemplateDocumentsResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateDocumentsResult {\n");
-    
+
     sb.append("    templateDocuments: ").append(toIndentedString(templateDocuments)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("}");
@@ -142,4 +141,3 @@ public class TemplateDocumentsResult {
   }
 
 }
-

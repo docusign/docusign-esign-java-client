@@ -9,14 +9,15 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A tab that allows the recipient to attach supporting documents to an envelope. .
+ * A tab that allows the recipient to attach supporting documents to an
+ * envelope. .
  *
  */
-@ApiModel(description = "A tab that allows the recipient to attach supporting documents to an envelope. ")
+@Schema(description = "A tab that allows the recipient to attach supporting documents to an envelope. ")
 
 public class SignerAttachment {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
@@ -259,7 +260,6 @@ public class SignerAttachment {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -272,9 +272,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -286,22 +287,24 @@ public class SignerAttachment {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return SignerAttachment
    **/
-  public SignerAttachment anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public SignerAttachment anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
+   * property is editable..
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -312,7 +315,6 @@ public class SignerAttachment {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -325,10 +327,12 @@ public class SignerAttachment {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -339,7 +343,6 @@ public class SignerAttachment {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -352,10 +355,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
+   * Metadata that indicates whether the `anchorCaseSensitive` property is
+   * editable..
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -366,7 +371,6 @@ public class SignerAttachment {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -379,10 +383,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -393,7 +399,6 @@ public class SignerAttachment {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -406,10 +411,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
+   * editable..
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -420,7 +427,6 @@ public class SignerAttachment {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -433,10 +439,12 @@ public class SignerAttachment {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -447,7 +455,6 @@ public class SignerAttachment {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -460,10 +467,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
+   * editable..
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -474,7 +483,6 @@ public class SignerAttachment {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -487,10 +495,13 @@ public class SignerAttachment {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -501,7 +512,6 @@ public class SignerAttachment {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -514,10 +524,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is
+   * editable..
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -528,7 +540,6 @@ public class SignerAttachment {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -542,9 +553,10 @@ public class SignerAttachment {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -555,7 +567,6 @@ public class SignerAttachment {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -569,9 +580,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -582,7 +594,6 @@ public class SignerAttachment {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -596,9 +607,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -609,7 +621,6 @@ public class SignerAttachment {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -623,9 +634,10 @@ public class SignerAttachment {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -636,7 +648,6 @@ public class SignerAttachment {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -649,10 +660,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -663,7 +676,6 @@ public class SignerAttachment {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -677,9 +689,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -690,7 +703,6 @@ public class SignerAttachment {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -703,10 +715,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -717,7 +731,6 @@ public class SignerAttachment {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -731,9 +744,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -744,7 +758,6 @@ public class SignerAttachment {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -757,10 +770,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -771,7 +786,6 @@ public class SignerAttachment {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -785,9 +799,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -798,7 +813,6 @@ public class SignerAttachment {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * caption.
@@ -812,9 +826,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -825,7 +840,6 @@ public class SignerAttachment {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -839,9 +853,10 @@ public class SignerAttachment {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -852,7 +867,6 @@ public class SignerAttachment {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -865,10 +879,12 @@ public class SignerAttachment {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -879,7 +895,6 @@ public class SignerAttachment {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -892,10 +907,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
+   * Metadata that indicates whether the `conditionalParentLabel` property is
+   * editable..
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -906,7 +923,6 @@ public class SignerAttachment {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -919,10 +935,14 @@ public class SignerAttachment {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -933,7 +953,6 @@ public class SignerAttachment {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -946,10 +965,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is editable..
+   * Metadata that indicates whether the `conditionalParentValue` property is
+   * editable..
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -960,7 +981,6 @@ public class SignerAttachment {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -973,10 +993,13 @@ public class SignerAttachment {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -987,7 +1010,6 @@ public class SignerAttachment {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1001,9 +1023,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1014,7 +1037,6 @@ public class SignerAttachment {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * documentId.
@@ -1027,10 +1049,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1041,7 +1065,6 @@ public class SignerAttachment {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1055,9 +1078,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1068,7 +1092,6 @@ public class SignerAttachment {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1081,10 +1104,12 @@ public class SignerAttachment {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1095,7 +1120,6 @@ public class SignerAttachment {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * formOrder.
@@ -1109,9 +1133,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1122,7 +1147,6 @@ public class SignerAttachment {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1136,9 +1160,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1149,7 +1174,6 @@ public class SignerAttachment {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1163,9 +1187,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1176,7 +1201,6 @@ public class SignerAttachment {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1190,9 +1214,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1203,7 +1228,6 @@ public class SignerAttachment {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1217,9 +1241,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1230,7 +1255,6 @@ public class SignerAttachment {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1244,9 +1268,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1257,7 +1282,6 @@ public class SignerAttachment {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * handDrawRequired.
@@ -1271,9 +1295,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return handDrawRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHandDrawRequired() {
     return handDrawRequired;
   }
@@ -1284,7 +1309,6 @@ public class SignerAttachment {
   public void setHandDrawRequired(String handDrawRequired) {
     this.handDrawRequired = handDrawRequired;
   }
-
 
   /**
    * height.
@@ -1298,9 +1322,10 @@ public class SignerAttachment {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1311,7 +1336,6 @@ public class SignerAttachment {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1325,9 +1349,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1338,7 +1363,6 @@ public class SignerAttachment {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * mergeField.
@@ -1352,9 +1376,10 @@ public class SignerAttachment {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
+  @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1365,7 +1390,6 @@ public class SignerAttachment {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -1379,9 +1403,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1392,7 +1417,6 @@ public class SignerAttachment {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * name.
@@ -1406,9 +1430,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -1419,7 +1444,6 @@ public class SignerAttachment {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -1432,10 +1456,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This property is read-only..
+   * Metadata that indicates whether the `name` property is editable. This
+   * property is read-only..
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -1446,7 +1472,6 @@ public class SignerAttachment {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * optional.
@@ -1460,9 +1485,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return optional
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOptional() {
     return optional;
   }
@@ -1473,7 +1499,6 @@ public class SignerAttachment {
   public void setOptional(String optional) {
     this.optional = optional;
   }
-
 
   /**
    * optionalMetadata.
@@ -1487,9 +1512,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `optional` property is editable..
+   * 
    * @return optionalMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `optional` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `optional` property is editable.")
   public PropertyMetadata getOptionalMetadata() {
     return optionalMetadata;
   }
@@ -1500,7 +1526,6 @@ public class SignerAttachment {
   public void setOptionalMetadata(PropertyMetadata optionalMetadata) {
     this.optionalMetadata = optionalMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -1514,9 +1539,10 @@ public class SignerAttachment {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1527,7 +1553,6 @@ public class SignerAttachment {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -1541,9 +1566,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1554,7 +1580,6 @@ public class SignerAttachment {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -1567,10 +1592,12 @@ public class SignerAttachment {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1581,7 +1608,6 @@ public class SignerAttachment {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -1595,9 +1621,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1608,7 +1635,6 @@ public class SignerAttachment {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -1622,9 +1648,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1635,7 +1662,6 @@ public class SignerAttachment {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -1649,9 +1675,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1662,7 +1689,6 @@ public class SignerAttachment {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * scaleValue.
@@ -1676,9 +1702,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return scaleValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScaleValue() {
     return scaleValue;
   }
@@ -1689,7 +1716,6 @@ public class SignerAttachment {
   public void setScaleValue(String scaleValue) {
     this.scaleValue = scaleValue;
   }
-
 
   /**
    * scaleValueMetadata.
@@ -1703,9 +1729,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `scaleValue` property is editable..
+   * 
    * @return scaleValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `scaleValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `scaleValue` property is editable.")
   public PropertyMetadata getScaleValueMetadata() {
     return scaleValueMetadata;
   }
@@ -1716,7 +1743,6 @@ public class SignerAttachment {
   public void setScaleValueMetadata(PropertyMetadata scaleValueMetadata) {
     this.scaleValueMetadata = scaleValueMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -1730,9 +1756,10 @@ public class SignerAttachment {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1743,7 +1770,6 @@ public class SignerAttachment {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -1757,9 +1783,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -1770,7 +1797,6 @@ public class SignerAttachment {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -1783,10 +1809,13 @@ public class SignerAttachment {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1797,7 +1826,6 @@ public class SignerAttachment {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -1811,9 +1839,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1825,7 +1854,6 @@ public class SignerAttachment {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -1835,7 +1863,7 @@ public class SignerAttachment {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -1851,9 +1879,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1864,7 +1893,6 @@ public class SignerAttachment {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -1878,9 +1906,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1891,7 +1920,6 @@ public class SignerAttachment {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -1904,10 +1932,12 @@ public class SignerAttachment {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1918,7 +1948,6 @@ public class SignerAttachment {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -1932,9 +1961,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1945,7 +1975,6 @@ public class SignerAttachment {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabLabel.
@@ -1959,9 +1988,10 @@ public class SignerAttachment {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -1972,7 +2002,6 @@ public class SignerAttachment {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabLabelMetadata.
@@ -1986,9 +2015,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
+   * 
    * @return tabLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -1999,7 +2029,6 @@ public class SignerAttachment {
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -2013,9 +2042,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2026,7 +2056,6 @@ public class SignerAttachment {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2040,9 +2069,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2053,7 +2083,6 @@ public class SignerAttachment {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabType.
@@ -2067,9 +2096,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -2080,7 +2110,6 @@ public class SignerAttachment {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -2094,9 +2123,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2107,7 +2137,6 @@ public class SignerAttachment {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -2120,10 +2149,12 @@ public class SignerAttachment {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2134,7 +2165,6 @@ public class SignerAttachment {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -2148,9 +2178,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2161,7 +2192,6 @@ public class SignerAttachment {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -2174,10 +2204,12 @@ public class SignerAttachment {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2188,7 +2220,6 @@ public class SignerAttachment {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -2202,9 +2233,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2215,7 +2247,6 @@ public class SignerAttachment {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -2229,9 +2260,10 @@ public class SignerAttachment {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2242,7 +2274,6 @@ public class SignerAttachment {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -2256,9 +2287,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2269,7 +2301,6 @@ public class SignerAttachment {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * width.
@@ -2283,9 +2314,10 @@ public class SignerAttachment {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2296,7 +2328,6 @@ public class SignerAttachment {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -2310,9 +2341,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2323,7 +2355,6 @@ public class SignerAttachment {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -2336,10 +2367,12 @@ public class SignerAttachment {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2350,7 +2383,6 @@ public class SignerAttachment {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -2364,9 +2396,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -2377,7 +2410,6 @@ public class SignerAttachment {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -2390,10 +2422,12 @@ public class SignerAttachment {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -2404,7 +2438,6 @@ public class SignerAttachment {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -2418,9 +2451,10 @@ public class SignerAttachment {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -2431,7 +2465,6 @@ public class SignerAttachment {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -2448,7 +2481,9 @@ public class SignerAttachment {
     }
     SignerAttachment signerAttachment = (SignerAttachment) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, signerAttachment.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, signerAttachment.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
+            signerAttachment.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, signerAttachment.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, signerAttachment.anchorHorizontalAlignment) &&
@@ -2534,9 +2569,22 @@ public class SignerAttachment {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption,
+        captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue,
+        conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails,
+        formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata,
+        handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional,
+        optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata,
+        recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata,
+        tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder,
+        tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
+        templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata,
+        yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -2545,21 +2593,26 @@ public class SignerAttachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerAttachment {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -2569,9 +2622,11 @@ public class SignerAttachment {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -2642,4 +2697,3 @@ public class SignerAttachment {
   }
 
 }
-

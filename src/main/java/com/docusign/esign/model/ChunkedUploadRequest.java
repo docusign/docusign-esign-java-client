@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This is the request object for uploading a chunked upload..
  *
  */
-@ApiModel(description = "This is the request object for uploading a chunked upload.")
+@Schema(description = "This is the request object for uploading a chunked upload.")
 
 public class ChunkedUploadRequest {
   @JsonProperty("chunkedUploadId")
@@ -20,7 +20,6 @@ public class ChunkedUploadRequest {
 
   @JsonProperty("data")
   private String data = null;
-
 
   /**
    * chunkedUploadId.
@@ -34,9 +33,10 @@ public class ChunkedUploadRequest {
 
   /**
    * .
+   * 
    * @return chunkedUploadId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
@@ -47,7 +47,6 @@ public class ChunkedUploadRequest {
   public void setChunkedUploadId(String chunkedUploadId) {
     this.chunkedUploadId = chunkedUploadId;
   }
-
 
   /**
    * data.
@@ -61,9 +60,10 @@ public class ChunkedUploadRequest {
 
   /**
    * .
+   * 
    * @return data
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getData() {
     return data;
   }
@@ -74,7 +74,6 @@ public class ChunkedUploadRequest {
   public void setData(String data) {
     this.data = data;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class ChunkedUploadRequest {
     return Objects.hash(chunkedUploadId, data);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class ChunkedUploadRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadRequest {\n");
-    
+
     sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class ChunkedUploadRequest {
   }
 
 }
-

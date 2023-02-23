@@ -5,14 +5,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request body for the [EnvelopeViews: createCorrect](/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/) method..
+ * The request body for the [EnvelopeViews:
+ * createCorrect](/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/)
+ * method..
  *
  */
-@ApiModel(description = "The request body for the [EnvelopeViews: createCorrect](/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/) method.")
+@Schema(description = "The request body for the [EnvelopeViews: createCorrect](/docs/esign-rest-api/reference/envelopes/envelopeviews/createcorrect/) method.")
 
 public class CorrectViewRequest {
   @JsonProperty("beginOnTagger")
@@ -27,7 +29,6 @@ public class CorrectViewRequest {
   @JsonProperty("viewUrl")
   private String viewUrl = null;
 
-
   /**
    * beginOnTagger.
    *
@@ -40,9 +41,10 @@ public class CorrectViewRequest {
 
   /**
    * .
+   * 
    * @return beginOnTagger
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBeginOnTagger() {
     return beginOnTagger;
   }
@@ -53,7 +55,6 @@ public class CorrectViewRequest {
   public void setBeginOnTagger(String beginOnTagger) {
     this.beginOnTagger = beginOnTagger;
   }
-
 
   /**
    * returnUrl.
@@ -66,10 +67,18 @@ public class CorrectViewRequest {
   }
 
   /**
-   * The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. .
+   * The url used after correct/send view session has ended. DocuSign redirects to
+   * the url and includes an event parameter that can be used by your app. The
+   * event parameters returned are: * send (user corrected and sent the envelope)
+   * * save (user saved the envelope) * cancel (user canceled the transaction.) *
+   * error (there was an error when performing the correct or send) * sessionEnd
+   * (the session ended before the user completed a different action) ###### Note:
+   * Include https:// in the URL or the redirect might not succeed on some
+   * browsers. .
+   * 
    * @return returnUrl
    **/
-  @ApiModelProperty(value = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
+  @Schema(description = "The url used after correct/send view session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your app. The event parameters returned are:   * send (user corrected and sent the envelope) * save (user saved the envelope) * cancel (user canceled the transaction.) * error (there was an error when performing the correct or send) * sessionEnd (the session ended before the user completed a different action)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -80,7 +89,6 @@ public class CorrectViewRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
-
 
   /**
    * suppressNavigation.
@@ -94,9 +102,10 @@ public class CorrectViewRequest {
 
   /**
    * Specifies whether the window is displayed with or without dressing..
+   * 
    * @return suppressNavigation
    **/
-  @ApiModelProperty(value = "Specifies whether the window is displayed with or without dressing.")
+  @Schema(description = "Specifies whether the window is displayed with or without dressing.")
   public String getSuppressNavigation() {
     return suppressNavigation;
   }
@@ -107,7 +116,6 @@ public class CorrectViewRequest {
   public void setSuppressNavigation(String suppressNavigation) {
     this.suppressNavigation = suppressNavigation;
   }
-
 
   /**
    * viewUrl.
@@ -121,9 +129,10 @@ public class CorrectViewRequest {
 
   /**
    * .
+   * 
    * @return viewUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getViewUrl() {
     return viewUrl;
   }
@@ -134,7 +143,6 @@ public class CorrectViewRequest {
   public void setViewUrl(String viewUrl) {
     this.viewUrl = viewUrl;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +172,6 @@ public class CorrectViewRequest {
     return Objects.hash(beginOnTagger, returnUrl, suppressNavigation, viewUrl);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +179,7 @@ public class CorrectViewRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CorrectViewRequest {\n");
-    
+
     sb.append("    beginOnTagger: ").append(toIndentedString(beginOnTagger)).append("\n");
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("    suppressNavigation: ").append(toIndentedString(suppressNavigation)).append("\n");
@@ -193,4 +200,3 @@ public class CorrectViewRequest {
   }
 
 }
-

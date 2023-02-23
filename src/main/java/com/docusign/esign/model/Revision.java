@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** Revision */
@@ -30,7 +30,7 @@ public class Revision {
   }
 
   /** @return endData */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEndData() {
     return endData;
   }
@@ -45,7 +45,7 @@ public class Revision {
   }
 
   /** @return fieldName */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFieldName() {
     return fieldName;
   }
@@ -60,7 +60,7 @@ public class Revision {
   }
 
   /** @return maxSignatureLength */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
   }
@@ -79,7 +79,7 @@ public class Revision {
    *
    * @return signatureProperties
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SignatureProperties getSignatureProperties() {
     return signatureProperties;
   }
@@ -94,7 +94,7 @@ public class Revision {
   }
 
   /** @return signatureType */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -109,7 +109,7 @@ public class Revision {
   }
 
   /** @return startData */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStartData() {
     return startData;
   }
@@ -159,7 +159,8 @@ public class Revision {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

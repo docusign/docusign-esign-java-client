@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about add ons..
  *
  */
-@ApiModel(description = "Contains information about add ons.")
+@Schema(description = "Contains information about add ons.")
 
 public class AddOn {
   @JsonProperty("active")
@@ -27,7 +27,6 @@ public class AddOn {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * active.
    *
@@ -40,9 +39,10 @@ public class AddOn {
 
   /**
    * Reserved:.
+   * 
    * @return active
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public String getActive() {
     return active;
   }
@@ -53,7 +53,6 @@ public class AddOn {
   public void setActive(String active) {
     this.active = active;
   }
-
 
   /**
    * addOnId.
@@ -67,9 +66,10 @@ public class AddOn {
 
   /**
    * Reserved:.
+   * 
    * @return addOnId
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public String getAddOnId() {
     return addOnId;
   }
@@ -80,7 +80,6 @@ public class AddOn {
   public void setAddOnId(String addOnId) {
     this.addOnId = addOnId;
   }
-
 
   /**
    * id.
@@ -94,9 +93,10 @@ public class AddOn {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -107,7 +107,6 @@ public class AddOn {
   public void setId(String id) {
     this.id = id;
   }
-
 
   /**
    * name.
@@ -121,9 +120,10 @@ public class AddOn {
 
   /**
    * Reserved:.
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public String getName() {
     return name;
   }
@@ -134,7 +134,6 @@ public class AddOn {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +163,6 @@ public class AddOn {
     return Objects.hash(active, addOnId, id, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +170,7 @@ public class AddOn {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOn {\n");
-    
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -193,4 +191,3 @@ public class AddOn {
   }
 
 }
-

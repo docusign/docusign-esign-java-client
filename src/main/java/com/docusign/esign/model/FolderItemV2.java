@@ -6,14 +6,14 @@ import com.docusign.esign.model.Recipients;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about folder item results..
  *
  */
-@ApiModel(description = "Information about folder item results.")
+@Schema(description = "Information about folder item results.")
 
 public class FolderItemV2 {
   @JsonProperty("completedDateTime")
@@ -79,7 +79,6 @@ public class FolderItemV2 {
   @JsonProperty("templateUri")
   private String templateUri = null;
 
-
   /**
    * completedDateTime.
    *
@@ -92,9 +91,10 @@ public class FolderItemV2 {
 
   /**
    * Specifies the date and time this item was completed..
+   * 
    * @return completedDateTime
    **/
-  @ApiModelProperty(value = "Specifies the date and time this item was completed.")
+  @Schema(description = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
@@ -105,7 +105,6 @@ public class FolderItemV2 {
   public void setCompletedDateTime(String completedDateTime) {
     this.completedDateTime = completedDateTime;
   }
-
 
   /**
    * createdDateTime.
@@ -119,9 +118,10 @@ public class FolderItemV2 {
 
   /**
    * Indicates the date and time the item was created..
+   * 
    * @return createdDateTime
    **/
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @Schema(description = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -132,7 +132,6 @@ public class FolderItemV2 {
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
-
 
   /**
    * envelopeId.
@@ -146,9 +145,10 @@ public class FolderItemV2 {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -159,7 +159,6 @@ public class FolderItemV2 {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * envelopeUri.
@@ -172,10 +171,12 @@ public class FolderItemV2 {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or
+   * envelopes..
+   * 
    * @return envelopeUri
    **/
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -186,7 +187,6 @@ public class FolderItemV2 {
   public void setEnvelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
   }
-
 
   /**
    * expireDateTime.
@@ -200,9 +200,10 @@ public class FolderItemV2 {
 
   /**
    * The date and time the envelope is set to expire..
+   * 
    * @return expireDateTime
    **/
-  @ApiModelProperty(value = "The date and time the envelope is set to expire.")
+  @Schema(description = "The date and time the envelope is set to expire.")
   public String getExpireDateTime() {
     return expireDateTime;
   }
@@ -213,7 +214,6 @@ public class FolderItemV2 {
   public void setExpireDateTime(String expireDateTime) {
     this.expireDateTime = expireDateTime;
   }
-
 
   /**
    * folderId.
@@ -227,9 +227,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return folderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFolderId() {
     return folderId;
   }
@@ -240,7 +241,6 @@ public class FolderItemV2 {
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
-
 
   /**
    * folderUri.
@@ -254,9 +254,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return folderUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFolderUri() {
     return folderUri;
   }
@@ -267,7 +268,6 @@ public class FolderItemV2 {
   public void setFolderUri(String folderUri) {
     this.folderUri = folderUri;
   }
-
 
   /**
    * is21CFRPart11.
@@ -281,9 +281,10 @@ public class FolderItemV2 {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
+   * 
    * @return is21CFRPart11
    **/
-  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
+  @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -294,7 +295,6 @@ public class FolderItemV2 {
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
   }
-
 
   /**
    * lastModifiedDateTime.
@@ -308,9 +308,10 @@ public class FolderItemV2 {
 
   /**
    * The date and time the item was last modified..
+   * 
    * @return lastModifiedDateTime
    **/
-  @ApiModelProperty(value = "The date and time the item was last modified.")
+  @Schema(description = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
@@ -321,7 +322,6 @@ public class FolderItemV2 {
   public void setLastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
-
 
   /**
    * ownerName.
@@ -335,9 +335,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return ownerName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerName() {
     return ownerName;
   }
@@ -348,7 +349,6 @@ public class FolderItemV2 {
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
-
 
   /**
    * recipients.
@@ -361,10 +361,12 @@ public class FolderItemV2 {
   }
 
   /**
-   * An array of recipient objects that provides details about the recipients of the envelope..
+   * An array of recipient objects that provides details about the recipients of
+   * the envelope..
+   * 
    * @return recipients
    **/
-  @ApiModelProperty(value = "An array of recipient objects that provides details about the recipients of the envelope.")
+  @Schema(description = "An array of recipient objects that provides details about the recipients of the envelope.")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -375,7 +377,6 @@ public class FolderItemV2 {
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
-
 
   /**
    * recipientsUri.
@@ -389,9 +390,10 @@ public class FolderItemV2 {
 
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients..
+   * 
    * @return recipientsUri
    **/
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
+  @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
   public String getRecipientsUri() {
     return recipientsUri;
   }
@@ -402,7 +404,6 @@ public class FolderItemV2 {
   public void setRecipientsUri(String recipientsUri) {
     this.recipientsUri = recipientsUri;
   }
-
 
   /**
    * senderCompany.
@@ -416,9 +417,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return senderCompany
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderCompany() {
     return senderCompany;
   }
@@ -429,7 +431,6 @@ public class FolderItemV2 {
   public void setSenderCompany(String senderCompany) {
     this.senderCompany = senderCompany;
   }
-
 
   /**
    * senderEmail.
@@ -443,9 +444,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return senderEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -456,7 +458,6 @@ public class FolderItemV2 {
   public void setSenderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
   }
-
 
   /**
    * senderName.
@@ -470,9 +471,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return senderName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderName() {
     return senderName;
   }
@@ -483,7 +485,6 @@ public class FolderItemV2 {
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
-
 
   /**
    * senderUserId.
@@ -497,9 +498,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return senderUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -510,7 +512,6 @@ public class FolderItemV2 {
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
-
 
   /**
    * sentDateTime.
@@ -524,9 +525,10 @@ public class FolderItemV2 {
 
   /**
    * The date and time the envelope was sent..
+   * 
    * @return sentDateTime
    **/
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @Schema(description = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -537,7 +539,6 @@ public class FolderItemV2 {
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
-
 
   /**
    * status.
@@ -550,10 +551,13 @@ public class FolderItemV2 {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -564,7 +568,6 @@ public class FolderItemV2 {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * subject.
@@ -578,9 +581,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return subject
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubject() {
     return subject;
   }
@@ -591,7 +595,6 @@ public class FolderItemV2 {
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   /**
    * templateId.
@@ -604,10 +607,12 @@ public class FolderItemV2 {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -618,7 +623,6 @@ public class FolderItemV2 {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * templateUri.
@@ -632,9 +636,10 @@ public class FolderItemV2 {
 
   /**
    * .
+   * 
    * @return templateUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplateUri() {
     return templateUri;
   }
@@ -645,7 +650,6 @@ public class FolderItemV2 {
   public void setTemplateUri(String templateUri) {
     this.templateUri = templateUri;
   }
-
 
   /**
    * Compares objects.
@@ -689,9 +693,10 @@ public class FolderItemV2 {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
+    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId,
+        folderUri, is21CFRPart11, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany,
+        senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -700,7 +705,7 @@ public class FolderItemV2 {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemV2 {\n");
-    
+
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -738,4 +743,3 @@ public class FolderItemV2 {
   }
 
 }
-

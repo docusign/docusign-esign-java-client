@@ -5,19 +5,18 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object provides information about the settings for the workspace..
  *
  */
-@ApiModel(description = "This object provides information about the settings for the workspace.")
+@Schema(description = "This object provides information about the settings for the workspace.")
 
 public class WorkspaceSettings {
   @JsonProperty("commentsAllowed")
   private String commentsAllowed = null;
-
 
   /**
    * commentsAllowed.
@@ -31,9 +30,10 @@ public class WorkspaceSettings {
 
   /**
    * .
+   * 
    * @return commentsAllowed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommentsAllowed() {
     return commentsAllowed;
   }
@@ -44,7 +44,6 @@ public class WorkspaceSettings {
   public void setCommentsAllowed(String commentsAllowed) {
     this.commentsAllowed = commentsAllowed;
   }
-
 
   /**
    * Compares objects.
@@ -71,7 +70,6 @@ public class WorkspaceSettings {
     return Objects.hash(commentsAllowed);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -79,7 +77,7 @@ public class WorkspaceSettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceSettings {\n");
-    
+
     sb.append("    commentsAllowed: ").append(toIndentedString(commentsAllowed)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -97,4 +95,3 @@ public class WorkspaceSettings {
   }
 
 }
-

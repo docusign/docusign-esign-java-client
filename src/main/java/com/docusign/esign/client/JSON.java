@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.*;
 
 import java.text.DateFormat;
 
-import javax.ws.rs.ext.ContextResolver;
+import jakarta.ws.rs.ext.ContextResolver;
 
 
 

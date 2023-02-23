@@ -6,8 +6,8 @@ import com.docusign.esign.model.ConnectLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectLogs.
@@ -27,7 +27,6 @@ public class ConnectLogs {
   @JsonProperty("type")
   private String type = null;
 
-
   /**
    * failures.
    *
@@ -37,7 +36,7 @@ public class ConnectLogs {
     this.failures = failures;
     return this;
   }
-  
+
   /**
    * addFailuresItem.
    *
@@ -53,9 +52,10 @@ public class ConnectLogs {
 
   /**
    * An array of containing failure information from the Connect failure log..
+   * 
    * @return failures
    **/
-  @ApiModelProperty(value = "An array of containing failure information from the Connect failure log.")
+  @Schema(description = "An array of containing failure information from the Connect failure log.")
   public java.util.List<ConnectLog> getFailures() {
     return failures;
   }
@@ -67,7 +67,6 @@ public class ConnectLogs {
     this.failures = failures;
   }
 
-
   /**
    * logs.
    *
@@ -77,7 +76,7 @@ public class ConnectLogs {
     this.logs = logs;
     return this;
   }
-  
+
   /**
    * addLogsItem.
    *
@@ -92,10 +91,12 @@ public class ConnectLogs {
   }
 
   /**
-   * A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. .
+   * A complex type containing Connect log information. It is divided into two
+   * sections, one for regular logs and one for Connect failures. .
+   * 
    * @return logs
    **/
-  @ApiModelProperty(value = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
+  @Schema(description = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
   public java.util.List<ConnectLog> getLogs() {
     return logs;
   }
@@ -106,7 +107,6 @@ public class ConnectLogs {
   public void setLogs(java.util.List<ConnectLog> logs) {
     this.logs = logs;
   }
-
 
   /**
    * totalRecords.
@@ -120,9 +120,10 @@ public class ConnectLogs {
 
   /**
    * .
+   * 
    * @return totalRecords
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalRecords() {
     return totalRecords;
   }
@@ -133,7 +134,6 @@ public class ConnectLogs {
   public void setTotalRecords(String totalRecords) {
     this.totalRecords = totalRecords;
   }
-
 
   /**
    * type.
@@ -147,9 +147,10 @@ public class ConnectLogs {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -160,7 +161,6 @@ public class ConnectLogs {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -190,7 +190,6 @@ public class ConnectLogs {
     return Objects.hash(failures, logs, totalRecords, type);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -198,7 +197,7 @@ public class ConnectLogs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLogs {\n");
-    
+
     sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
     sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
     sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
@@ -219,4 +218,3 @@ public class ConnectLogs {
   }
 
 }
-

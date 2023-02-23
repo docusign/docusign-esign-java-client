@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayApplianceAccount */
@@ -31,7 +31,7 @@ public class DisplayApplianceAccount {
    *
    * @return accountId
    */
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -47,7 +47,7 @@ public class DisplayApplianceAccount {
   }
 
   /** @return optOutAutoNavTextAndTabColorUpdates */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isOptOutAutoNavTextAndTabColorUpdates() {
     return optOutAutoNavTextAndTabColorUpdates;
   }
@@ -63,7 +63,7 @@ public class DisplayApplianceAccount {
   }
 
   /** @return showInitialConditionalFields */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isShowInitialConditionalFields() {
     return showInitialConditionalFields;
   }
@@ -78,7 +78,7 @@ public class DisplayApplianceAccount {
   }
 
   /** @return signingVersion */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigningVersion() {
     return signingVersion;
   }
@@ -93,7 +93,7 @@ public class DisplayApplianceAccount {
   }
 
   /** @return tagHasSigBlock */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isTagHasSigBlock() {
     return tagHasSigBlock;
   }
@@ -150,7 +150,8 @@ public class DisplayApplianceAccount {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

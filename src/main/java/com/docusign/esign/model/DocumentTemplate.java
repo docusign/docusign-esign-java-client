@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentTemplate.
@@ -30,7 +30,6 @@ public class DocumentTemplate {
   @JsonProperty("templateId")
   private String templateId = null;
 
-
   /**
    * documentEndPage.
    *
@@ -43,9 +42,10 @@ public class DocumentTemplate {
 
   /**
    * .
+   * 
    * @return documentEndPage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentEndPage() {
     return documentEndPage;
   }
@@ -56,7 +56,6 @@ public class DocumentTemplate {
   public void setDocumentEndPage(String documentEndPage) {
     this.documentEndPage = documentEndPage;
   }
-
 
   /**
    * documentId.
@@ -69,10 +68,12 @@ public class DocumentTemplate {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -83,7 +84,6 @@ public class DocumentTemplate {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentStartPage.
@@ -97,9 +97,10 @@ public class DocumentTemplate {
 
   /**
    * .
+   * 
    * @return documentStartPage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentStartPage() {
     return documentStartPage;
   }
@@ -110,7 +111,6 @@ public class DocumentTemplate {
   public void setDocumentStartPage(String documentStartPage) {
     this.documentStartPage = documentStartPage;
   }
-
 
   /**
    * errorDetails.
@@ -123,10 +123,12 @@ public class DocumentTemplate {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -137,7 +139,6 @@ public class DocumentTemplate {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * templateId.
@@ -150,10 +151,12 @@ public class DocumentTemplate {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -164,7 +167,6 @@ public class DocumentTemplate {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +197,6 @@ public class DocumentTemplate {
     return Objects.hash(documentEndPage, documentId, documentStartPage, errorDetails, templateId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +204,7 @@ public class DocumentTemplate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplate {\n");
-    
+
     sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
@@ -225,4 +226,3 @@ public class DocumentTemplate {
   }
 
 }
-

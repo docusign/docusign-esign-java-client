@@ -6,8 +6,8 @@ import com.docusign.esign.model.ConnectFailureResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectFailureResults.
@@ -18,7 +18,6 @@ public class ConnectFailureResults {
   @JsonProperty("retryQueue")
   private java.util.List<ConnectFailureResult> retryQueue = null;
 
-
   /**
    * retryQueue.
    *
@@ -28,7 +27,7 @@ public class ConnectFailureResults {
     this.retryQueue = retryQueue;
     return this;
   }
-  
+
   /**
    * addRetryQueueItem.
    *
@@ -44,9 +43,10 @@ public class ConnectFailureResults {
 
   /**
    * .
+   * 
    * @return retryQueue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConnectFailureResult> getRetryQueue() {
     return retryQueue;
   }
@@ -57,7 +57,6 @@ public class ConnectFailureResults {
   public void setRetryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class ConnectFailureResults {
     return Objects.hash(retryQueue);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class ConnectFailureResults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResults {\n");
-    
+
     sb.append("    retryQueue: ").append(toIndentedString(retryQueue)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class ConnectFailureResults {
   }
 
 }
-

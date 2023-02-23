@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** BulkRecipientsSummaryResponse. */
@@ -43,12 +43,12 @@ public class BulkRecipientsSummaryResponse {
   }
 
   /**
-   * A complex type containing information about the bulk recipients in the response..
+   * A complex type containing information about the bulk recipients in the
+   * response..
    *
    * @return bulkRecipients
    */
-  @ApiModelProperty(
-      value = "A complex type containing information about the bulk recipients in the response.")
+  @Schema(description = "A complex type containing information about the bulk recipients in the response.")
   public java.util.List<BulkRecipient> getBulkRecipients() {
     return bulkRecipients;
   }
@@ -73,7 +73,7 @@ public class BulkRecipientsSummaryResponse {
    *
    * @return bulkRecipientsCount
    */
-  @ApiModelProperty(value = "The number of items returned in this response.")
+  @Schema(description = "The number of items returned in this response.")
   public String getBulkRecipientsCount() {
     return bulkRecipientsCount;
   }
@@ -94,13 +94,12 @@ public class BulkRecipientsSummaryResponse {
   }
 
   /**
-   * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information..
+   * Contains a URI for an endpoint that allows you to easily retrieve bulk
+   * recipient information..
    *
    * @return bulkRecipientsUri
    */
-  @ApiModelProperty(
-      value =
-          "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
+  @Schema(description = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
   public String getBulkRecipientsUri() {
     return bulkRecipientsUri;
   }
@@ -138,7 +137,7 @@ public class BulkRecipientsSummaryResponse {
    *
    * @return errorDetails
    */
-  @ApiModelProperty(value = "Array or errors.")
+  @Schema(description = "Array or errors.")
   public java.util.List<ErrorDetails> getErrorDetails() {
     return errorDetails;
   }
@@ -192,7 +191,8 @@ public class BulkRecipientsSummaryResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

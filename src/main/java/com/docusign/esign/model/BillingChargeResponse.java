@@ -6,19 +6,18 @@ import com.docusign.esign.model.BillingCharge;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing charge response object..
  *
  */
-@ApiModel(description = "Defines a billing charge response object.")
+@Schema(description = "Defines a billing charge response object.")
 
 public class BillingChargeResponse {
   @JsonProperty("billingChargeItems")
   private java.util.List<BillingCharge> billingChargeItems = null;
-
 
   /**
    * billingChargeItems.
@@ -29,7 +28,7 @@ public class BillingChargeResponse {
     this.billingChargeItems = billingChargeItems;
     return this;
   }
-  
+
   /**
    * addBillingChargeItemsItem.
    *
@@ -45,9 +44,10 @@ public class BillingChargeResponse {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingChargeItems
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingCharge> getBillingChargeItems() {
     return billingChargeItems;
   }
@@ -58,7 +58,6 @@ public class BillingChargeResponse {
   public void setBillingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class BillingChargeResponse {
     return Objects.hash(billingChargeItems);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class BillingChargeResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingChargeResponse {\n");
-    
+
     sb.append("    billingChargeItems: ").append(toIndentedString(billingChargeItems)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class BillingChargeResponse {
   }
 
 }
-

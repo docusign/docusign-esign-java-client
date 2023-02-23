@@ -7,14 +7,21 @@ import com.docusign.esign.model.RecipientIdentityInputOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods..
+ * Specifies ID Verification applied on an envelope by workflow ID. See the
+ * [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/)
+ * method in the
+ * [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/)
+ * resource for more information on how to retrieve workflow IDs available for
+ * an account. This can be used in addition to other [recipient
+ * authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication)
+ * methods..
  *
  */
-@ApiModel(description = "Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods.")
+@Schema(description = "Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods.")
 
 public class RecipientIdentityVerification {
   @JsonProperty("inputOptions")
@@ -29,7 +36,6 @@ public class RecipientIdentityVerification {
   @JsonProperty("workflowLabel")
   private String workflowLabel = null;
 
-
   /**
    * inputOptions.
    *
@@ -39,7 +45,7 @@ public class RecipientIdentityVerification {
     this.inputOptions = inputOptions;
     return this;
   }
-  
+
   /**
    * addInputOptionsItem.
    *
@@ -55,9 +61,10 @@ public class RecipientIdentityVerification {
 
   /**
    * .
+   * 
    * @return inputOptions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientIdentityInputOption> getInputOptions() {
     return inputOptions;
   }
@@ -68,7 +75,6 @@ public class RecipientIdentityVerification {
   public void setInputOptions(java.util.List<RecipientIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
   }
-
 
   /**
    * workflowId.
@@ -82,9 +88,10 @@ public class RecipientIdentityVerification {
 
   /**
    * .
+   * 
    * @return workflowId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkflowId() {
     return workflowId;
   }
@@ -95,7 +102,6 @@ public class RecipientIdentityVerification {
   public void setWorkflowId(String workflowId) {
     this.workflowId = workflowId;
   }
-
 
   /**
    * workflowIdMetadata.
@@ -109,9 +115,10 @@ public class RecipientIdentityVerification {
 
   /**
    * .
+   * 
    * @return workflowIdMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getWorkflowIdMetadata() {
     return workflowIdMetadata;
   }
@@ -122,7 +129,6 @@ public class RecipientIdentityVerification {
   public void setWorkflowIdMetadata(PropertyMetadata workflowIdMetadata) {
     this.workflowIdMetadata = workflowIdMetadata;
   }
-
 
   /**
    * workflowLabel.
@@ -136,9 +142,10 @@ public class RecipientIdentityVerification {
 
   /**
    * .
+   * 
    * @return workflowLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkflowLabel() {
     return workflowLabel;
   }
@@ -149,7 +156,6 @@ public class RecipientIdentityVerification {
   public void setWorkflowLabel(String workflowLabel) {
     this.workflowLabel = workflowLabel;
   }
-
 
   /**
    * Compares objects.
@@ -179,7 +185,6 @@ public class RecipientIdentityVerification {
     return Objects.hash(inputOptions, workflowId, workflowIdMetadata, workflowLabel);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -187,7 +192,7 @@ public class RecipientIdentityVerification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityVerification {\n");
-    
+
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("    workflowIdMetadata: ").append(toIndentedString(workflowIdMetadata)).append("\n");
@@ -208,4 +213,3 @@ public class RecipientIdentityVerification {
   }
 
 }
-

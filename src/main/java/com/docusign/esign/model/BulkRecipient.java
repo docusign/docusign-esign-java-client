@@ -8,8 +8,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkRecipient.
@@ -47,7 +47,6 @@ public class BulkRecipient {
   @JsonProperty("tabLabels")
   private java.util.List<BulkRecipientTabLabel> tabLabels = null;
 
-
   /**
    * accessCode.
    *
@@ -59,10 +58,16 @@ public class BulkRecipient {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
+   * If a value is provided, the recipient must enter the value as the access code
+   * to view and sign the envelope. Maximum Length: 50 characters and it must
+   * conform to the account's access code format setting. If blank, but the signer
+   * `accessCode` property is set in the envelope, then that value is used. If
+   * blank and the signer `accessCode` property is not set, then the access code
+   * is not required..
+   * 
    * @return accessCode
    **/
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -73,7 +78,6 @@ public class BulkRecipient {
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
   }
-
 
   /**
    * email.
@@ -86,10 +90,11 @@ public class BulkRecipient {
   }
 
   /**
-   * Specifies the recipient's email address.   Maximum length: 100 characters..
+   * Specifies the recipient's email address. Maximum length: 100 characters..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "Specifies the recipient's email address.   Maximum length: 100 characters.")
+  @Schema(description = "Specifies the recipient's email address.   Maximum length: 100 characters.")
   public String getEmail() {
     return email;
   }
@@ -101,7 +106,6 @@ public class BulkRecipient {
     this.email = email;
   }
 
-
   /**
    * errorDetails.
    *
@@ -111,7 +115,7 @@ public class BulkRecipient {
     this.errorDetails = errorDetails;
     return this;
   }
-  
+
   /**
    * addErrorDetailsItem.
    *
@@ -127,9 +131,10 @@ public class BulkRecipient {
 
   /**
    * Array or errors..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "Array or errors.")
+  @Schema(description = "Array or errors.")
   public java.util.List<ErrorDetails> getErrorDetails() {
     return errorDetails;
   }
@@ -140,7 +145,6 @@ public class BulkRecipient {
   public void setErrorDetails(java.util.List<ErrorDetails> errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * identification.
@@ -153,10 +157,15 @@ public class BulkRecipient {
   }
 
   /**
-   * Specifies the authentication check used for the signer. If blank then no authentication check is required for the signer. Only one value can be used in this field.  The acceptable values are:  * KBA: Enables the normal ID check authentication set up for your account. * Phone: Enables phone authentication. * SMS: Enables SMS authentication..
+   * Specifies the authentication check used for the signer. If blank then no
+   * authentication check is required for the signer. Only one value can be used
+   * in this field. The acceptable values are: * KBA: Enables the normal ID check
+   * authentication set up for your account. * Phone: Enables phone
+   * authentication. * SMS: Enables SMS authentication..
+   * 
    * @return identification
    **/
-  @ApiModelProperty(value = "Specifies the authentication check used for the signer. If blank then no authentication check is required for the signer. Only one value can be used in this field.  The acceptable values are:  * KBA: Enables the normal ID check authentication set up for your account. * Phone: Enables phone authentication. * SMS: Enables SMS authentication.")
+  @Schema(description = "Specifies the authentication check used for the signer. If blank then no authentication check is required for the signer. Only one value can be used in this field.  The acceptable values are:  * KBA: Enables the normal ID check authentication set up for your account. * Phone: Enables phone authentication. * SMS: Enables SMS authentication.")
   public String getIdentification() {
     return identification;
   }
@@ -167,7 +176,6 @@ public class BulkRecipient {
   public void setIdentification(String identification) {
     this.identification = identification;
   }
-
 
   /**
    * name.
@@ -180,10 +188,11 @@ public class BulkRecipient {
   }
 
   /**
-   * Specifies the recipient's name.   Maximum length: 50 characters..
+   * Specifies the recipient's name. Maximum length: 50 characters..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "Specifies the recipient's name.   Maximum length: 50 characters.")
+  @Schema(description = "Specifies the recipient's name.   Maximum length: 50 characters.")
   public String getName() {
     return name;
   }
@@ -194,7 +203,6 @@ public class BulkRecipient {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * note.
@@ -207,10 +215,14 @@ public class BulkRecipient {
   }
 
   /**
-   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters..
+   * Specifies a note that is unique to this recipient. This note is sent to the
+   * recipient via the signing email. The note displays in the signing UI near the
+   * upper left corner of the document on the signing screen. Maximum Length: 1000
+   * characters..
+   * 
    * @return note
    **/
-  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
+  @Schema(description = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
   public String getNote() {
     return note;
   }
@@ -221,7 +233,6 @@ public class BulkRecipient {
   public void setNote(String note) {
     this.note = note;
   }
-
 
   /**
    * phoneNumber.
@@ -234,10 +245,15 @@ public class BulkRecipient {
   }
 
   /**
-   * This is only used if the Identification field value is Phone or SMS. The value for this field can be a valid telephone number or, if Phone, usersupplied (SMS authentication cannot use a user supplied number). Parenthesis and dashes can be used in the telephone number.  If `usersupplied` is used, the signer supplies his or her own telephone number..
+   * This is only used if the Identification field value is Phone or SMS. The
+   * value for this field can be a valid telephone number or, if Phone,
+   * usersupplied (SMS authentication cannot use a user supplied number).
+   * Parenthesis and dashes can be used in the telephone number. If `usersupplied`
+   * is used, the signer supplies his or her own telephone number..
+   * 
    * @return phoneNumber
    **/
-  @ApiModelProperty(value = "This is only used if the Identification field value is Phone or SMS. The value for this field can be a valid telephone number or, if Phone, usersupplied (SMS authentication cannot use a user supplied number). Parenthesis and dashes can be used in the telephone number.  If `usersupplied` is used, the signer supplies his or her own telephone number.")
+  @Schema(description = "This is only used if the Identification field value is Phone or SMS. The value for this field can be a valid telephone number or, if Phone, usersupplied (SMS authentication cannot use a user supplied number). Parenthesis and dashes can be used in the telephone number.  If `usersupplied` is used, the signer supplies his or her own telephone number.")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -249,23 +265,24 @@ public class BulkRecipient {
     this.phoneNumber = phoneNumber;
   }
 
-
   /**
    * recipientSignatureProviderInfo.
    *
    * @return BulkRecipient
    **/
-  public BulkRecipient recipientSignatureProviderInfo(java.util.List<BulkRecipientSignatureProvider> recipientSignatureProviderInfo) {
+  public BulkRecipient recipientSignatureProviderInfo(
+      java.util.List<BulkRecipientSignatureProvider> recipientSignatureProviderInfo) {
     this.recipientSignatureProviderInfo = recipientSignatureProviderInfo;
     return this;
   }
-  
+
   /**
    * addRecipientSignatureProviderInfoItem.
    *
    * @return BulkRecipient
    **/
-  public BulkRecipient addRecipientSignatureProviderInfoItem(BulkRecipientSignatureProvider recipientSignatureProviderInfoItem) {
+  public BulkRecipient addRecipientSignatureProviderInfoItem(
+      BulkRecipientSignatureProvider recipientSignatureProviderInfoItem) {
     if (this.recipientSignatureProviderInfo == null) {
       this.recipientSignatureProviderInfo = new java.util.ArrayList<>();
     }
@@ -275,9 +292,10 @@ public class BulkRecipient {
 
   /**
    * .
+   * 
    * @return recipientSignatureProviderInfo
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkRecipientSignatureProvider> getRecipientSignatureProviderInfo() {
     return recipientSignatureProviderInfo;
   }
@@ -285,10 +303,10 @@ public class BulkRecipient {
   /**
    * setRecipientSignatureProviderInfo.
    **/
-  public void setRecipientSignatureProviderInfo(java.util.List<BulkRecipientSignatureProvider> recipientSignatureProviderInfo) {
+  public void setRecipientSignatureProviderInfo(
+      java.util.List<BulkRecipientSignatureProvider> recipientSignatureProviderInfo) {
     this.recipientSignatureProviderInfo = recipientSignatureProviderInfo;
   }
-
 
   /**
    * rowNumber.
@@ -302,9 +320,10 @@ public class BulkRecipient {
 
   /**
    * .
+   * 
    * @return rowNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRowNumber() {
     return rowNumber;
   }
@@ -316,7 +335,6 @@ public class BulkRecipient {
     this.rowNumber = rowNumber;
   }
 
-
   /**
    * tabLabels.
    *
@@ -326,7 +344,7 @@ public class BulkRecipient {
     this.tabLabels = tabLabels;
     return this;
   }
-  
+
   /**
    * addTabLabelsItem.
    *
@@ -341,10 +359,19 @@ public class BulkRecipient {
   }
 
   /**
-   * Specifies values used to populate recipient tabs with information. This allows each bulk recipient signer to have different values for their associated tabs. Any number of `tabLabel` columns can be added to the bulk recipient file.  The information used in the bulk recipient file header must be the same as the `tabLabel` for the tab.  The values entered in this column are automatically inserted into the corresponding tab for the recipient in the same row.  Note that this option cannot be used for tabs that do not have data or that are automatically populated data such as Signature, Full Name, Email Address, Company, Title, and Date Signed tabs..
+   * Specifies values used to populate recipient tabs with information. This
+   * allows each bulk recipient signer to have different values for their
+   * associated tabs. Any number of `tabLabel` columns can be added to the bulk
+   * recipient file. The information used in the bulk recipient file header must
+   * be the same as the `tabLabel` for the tab. The values entered in this column
+   * are automatically inserted into the corresponding tab for the recipient in
+   * the same row. Note that this option cannot be used for tabs that do not have
+   * data or that are automatically populated data such as Signature, Full Name,
+   * Email Address, Company, Title, and Date Signed tabs..
+   * 
    * @return tabLabels
    **/
-  @ApiModelProperty(value = "Specifies values used to populate recipient tabs with information. This allows each bulk recipient signer to have different values for their associated tabs. Any number of `tabLabel` columns can be added to the bulk recipient file.  The information used in the bulk recipient file header must be the same as the `tabLabel` for the tab.  The values entered in this column are automatically inserted into the corresponding tab for the recipient in the same row.  Note that this option cannot be used for tabs that do not have data or that are automatically populated data such as Signature, Full Name, Email Address, Company, Title, and Date Signed tabs.")
+  @Schema(description = "Specifies values used to populate recipient tabs with information. This allows each bulk recipient signer to have different values for their associated tabs. Any number of `tabLabel` columns can be added to the bulk recipient file.  The information used in the bulk recipient file header must be the same as the `tabLabel` for the tab.  The values entered in this column are automatically inserted into the corresponding tab for the recipient in the same row.  Note that this option cannot be used for tabs that do not have data or that are automatically populated data such as Signature, Full Name, Email Address, Company, Title, and Date Signed tabs.")
   public java.util.List<BulkRecipientTabLabel> getTabLabels() {
     return tabLabels;
   }
@@ -355,7 +382,6 @@ public class BulkRecipient {
   public void setTabLabels(java.util.List<BulkRecipientTabLabel> tabLabels) {
     this.tabLabels = tabLabels;
   }
-
 
   /**
    * Compares objects.
@@ -388,9 +414,9 @@ public class BulkRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, email, errorDetails, identification, name, note, phoneNumber, recipientSignatureProviderInfo, rowNumber, tabLabels);
+    return Objects.hash(accessCode, email, errorDetails, identification, name, note, phoneNumber,
+        recipientSignatureProviderInfo, rowNumber, tabLabels);
   }
-
 
   /**
    * Converts the given object to string.
@@ -399,7 +425,7 @@ public class BulkRecipient {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipient {\n");
-    
+
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -407,7 +433,8 @@ public class BulkRecipient {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
-    sb.append("    recipientSignatureProviderInfo: ").append(toIndentedString(recipientSignatureProviderInfo)).append("\n");
+    sb.append("    recipientSignatureProviderInfo: ").append(toIndentedString(recipientSignatureProviderInfo))
+        .append("\n");
     sb.append("    rowNumber: ").append(toIndentedString(rowNumber)).append("\n");
     sb.append("    tabLabels: ").append(toIndentedString(tabLabels)).append("\n");
     sb.append("}");
@@ -426,4 +453,3 @@ public class BulkRecipient {
   }
 
 }
-

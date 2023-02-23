@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** PostTransactionsResponse */
@@ -18,7 +18,7 @@ public class PostTransactionsResponse {
   }
 
   /** @return documentData */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDocumentData() {
     return documentData;
   }
@@ -33,7 +33,7 @@ public class PostTransactionsResponse {
   }
 
   /** @return transactionSid */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getTransactionSid() {
     return transactionSid;
   }
@@ -72,7 +72,8 @@ public class PostTransactionsResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

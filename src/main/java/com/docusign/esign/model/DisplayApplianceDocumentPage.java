@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayApplianceDocumentPage */
@@ -42,7 +42,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return docPageCountTotal */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getDocPageCountTotal() {
     return docPageCountTotal;
   }
@@ -57,15 +57,13 @@ public class DisplayApplianceDocumentPage {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(example = "null", description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -80,7 +78,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return documentName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDocumentName() {
     return documentName;
   }
@@ -95,7 +93,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return extension */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getExtension() {
     return extension;
   }
@@ -110,7 +108,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return height72DPI */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getHeight72DPI() {
     return height72DPI;
   }
@@ -125,7 +123,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return isAttachmentType */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIsAttachmentType() {
     return isAttachmentType;
   }
@@ -140,7 +138,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return page */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getPage() {
     return page;
   }
@@ -155,7 +153,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return pageId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageId() {
     return pageId;
   }
@@ -170,7 +168,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return type */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getType() {
     return type;
   }
@@ -185,7 +183,7 @@ public class DisplayApplianceDocumentPage {
   }
 
   /** @return width72DPI */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getWidth72DPI() {
     return width72DPI;
   }
@@ -250,7 +248,8 @@ public class DisplayApplianceDocumentPage {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

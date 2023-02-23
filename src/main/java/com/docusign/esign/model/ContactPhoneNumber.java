@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Details about the phone numbers associated with a specific contact..
  *
  */
-@ApiModel(description = "Details about the phone numbers associated with a specific contact.")
+@Schema(description = "Details about the phone numbers associated with a specific contact.")
 
 public class ContactPhoneNumber {
   @JsonProperty("phoneNumber")
@@ -20,7 +20,6 @@ public class ContactPhoneNumber {
 
   @JsonProperty("phoneType")
   private String phoneType = null;
-
 
   /**
    * phoneNumber.
@@ -34,9 +33,10 @@ public class ContactPhoneNumber {
 
   /**
    * .
+   * 
    * @return phoneNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -47,7 +47,6 @@ public class ContactPhoneNumber {
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
-
 
   /**
    * phoneType.
@@ -61,9 +60,10 @@ public class ContactPhoneNumber {
 
   /**
    * .
+   * 
    * @return phoneType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneType() {
     return phoneType;
   }
@@ -74,7 +74,6 @@ public class ContactPhoneNumber {
   public void setPhoneType(String phoneType) {
     this.phoneType = phoneType;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class ContactPhoneNumber {
     return Objects.hash(phoneNumber, phoneType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class ContactPhoneNumber {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactPhoneNumber {\n");
-    
+
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    phoneType: ").append(toIndentedString(phoneType)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class ContactPhoneNumber {
   }
 
 }
-

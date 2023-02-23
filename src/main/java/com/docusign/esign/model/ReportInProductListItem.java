@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductListItem. */
@@ -63,7 +63,7 @@ public class ReportInProductListItem {
    *
    * @return getUri
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGetUri() {
     return getUri;
   }
@@ -88,7 +88,7 @@ public class ReportInProductListItem {
    *
    * @return lastScheduledExecutionDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastScheduledExecutionDate() {
     return lastScheduledExecutionDate;
   }
@@ -114,7 +114,7 @@ public class ReportInProductListItem {
    *
    * @return lastScheduledExecutionSuccessDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastScheduledExecutionSuccessDate() {
     return lastScheduledExecutionSuccessDate;
   }
@@ -139,7 +139,7 @@ public class ReportInProductListItem {
    *
    * @return reportCustomizedId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
@@ -164,7 +164,7 @@ public class ReportInProductListItem {
    *
    * @return reportDescription
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportDescription() {
     return reportDescription;
   }
@@ -189,7 +189,7 @@ public class ReportInProductListItem {
    *
    * @return reportId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportId() {
     return reportId;
   }
@@ -214,7 +214,7 @@ public class ReportInProductListItem {
    *
    * @return reportName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportName() {
     return reportName;
   }
@@ -239,7 +239,7 @@ public class ReportInProductListItem {
    *
    * @return reportType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportType() {
     return reportType;
   }
@@ -264,7 +264,7 @@ public class ReportInProductListItem {
    *
    * @return runUri
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRunUri() {
     return runUri;
   }
@@ -289,7 +289,7 @@ public class ReportInProductListItem {
    *
    * @return saveUri
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSaveUri() {
     return saveUri;
   }
@@ -314,7 +314,7 @@ public class ReportInProductListItem {
    *
    * @return scheduleCreateDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScheduleCreateDate() {
     return scheduleCreateDate;
   }
@@ -339,7 +339,7 @@ public class ReportInProductListItem {
    *
    * @return scheduleEndDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScheduleEndDate() {
     return scheduleEndDate;
   }
@@ -364,7 +364,7 @@ public class ReportInProductListItem {
    *
    * @return scheduleId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScheduleId() {
     return scheduleId;
   }
@@ -389,7 +389,7 @@ public class ReportInProductListItem {
    *
    * @return scheduleRenewDurationDays
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScheduleRenewDurationDays() {
     return scheduleRenewDurationDays;
   }
@@ -484,7 +484,8 @@ public class ReportInProductListItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

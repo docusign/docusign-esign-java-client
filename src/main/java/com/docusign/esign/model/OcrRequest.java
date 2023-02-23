@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** OcrRequest */
@@ -30,7 +30,7 @@ public class OcrRequest {
   }
 
   /** @return ocrLanguage */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getOcrLanguage() {
     return ocrLanguage;
   }
@@ -45,7 +45,7 @@ public class OcrRequest {
   }
 
   /** @return pageSelection */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageSelection() {
     return pageSelection;
   }
@@ -60,7 +60,7 @@ public class OcrRequest {
   }
 
   /** @return setPageOrientation */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSetPageOrientation() {
     return setPageOrientation;
   }
@@ -75,7 +75,7 @@ public class OcrRequest {
   }
 
   /** @return showFrames */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getShowFrames() {
     return showFrames;
   }
@@ -90,7 +90,7 @@ public class OcrRequest {
   }
 
   /** @return showText */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getShowText() {
     return showText;
   }
@@ -106,7 +106,7 @@ public class OcrRequest {
   }
 
   /** @return skipPagesHavingExistingExtractableText */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSkipPagesHavingExistingExtractableText() {
     return skipPagesHavingExistingExtractableText;
   }
@@ -164,7 +164,8 @@ public class OcrRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

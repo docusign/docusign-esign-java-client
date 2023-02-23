@@ -6,14 +6,15 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication..
+ * Contains the element senderProvidedNumbers which is an Array of phone numbers
+ * the recipient can use for SMS text authentication..
  *
  */
-@ApiModel(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
+@Schema(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
 
 public class RecipientSMSAuthentication {
   @JsonProperty("senderProvidedNumbers")
@@ -21,7 +22,6 @@ public class RecipientSMSAuthentication {
 
   @JsonProperty("senderProvidedNumbersMetadata")
   private PropertyMetadata senderProvidedNumbersMetadata = null;
-
 
   /**
    * senderProvidedNumbers.
@@ -32,7 +32,7 @@ public class RecipientSMSAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-  
+
   /**
    * addSenderProvidedNumbersItem.
    *
@@ -47,10 +47,12 @@ public class RecipientSMSAuthentication {
   }
 
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
+   * An Array containing a list of phone numbers the recipient may use for SMS
+   * text authentication. .
+   * 
    * @return senderProvidedNumbers
    **/
-  @ApiModelProperty(value = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
+  @Schema(description = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
   public java.util.List<String> getSenderProvidedNumbers() {
     return senderProvidedNumbers;
   }
@@ -61,7 +63,6 @@ public class RecipientSMSAuthentication {
   public void setSenderProvidedNumbers(java.util.List<String> senderProvidedNumbers) {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
-
 
   /**
    * senderProvidedNumbersMetadata.
@@ -74,10 +75,12 @@ public class RecipientSMSAuthentication {
   }
 
   /**
-   * Metadata that indicates whether the `senderProvidedNumbers` property can be edited..
+   * Metadata that indicates whether the `senderProvidedNumbers` property can be
+   * edited..
+   * 
    * @return senderProvidedNumbersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `senderProvidedNumbers` property can be edited.")
+  @Schema(description = "Metadata that indicates whether the `senderProvidedNumbers` property can be edited.")
   public PropertyMetadata getSenderProvidedNumbersMetadata() {
     return senderProvidedNumbersMetadata;
   }
@@ -88,7 +91,6 @@ public class RecipientSMSAuthentication {
   public void setSenderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -116,7 +118,6 @@ public class RecipientSMSAuthentication {
     return Objects.hash(senderProvidedNumbers, senderProvidedNumbersMetadata);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -124,9 +125,10 @@ public class RecipientSMSAuthentication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSMSAuthentication {\n");
-    
+
     sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
-    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata)).append("\n");
+    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -143,4 +145,3 @@ public class RecipientSMSAuthentication {
   }
 
 }
-

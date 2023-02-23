@@ -6,14 +6,14 @@ import com.docusign.esign.model.EventResult;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about the authentication status..
  *
  */
-@ApiModel(description = "Contains information about the authentication status.")
+@Schema(description = "Contains information about the authentication status.")
 
 public class AuthenticationStatus {
   @JsonProperty("accessCodeResult")
@@ -73,7 +73,6 @@ public class AuthenticationStatus {
   @JsonProperty("yahooResult")
   private EventResult yahooResult = null;
 
-
   /**
    * accessCodeResult.
    *
@@ -85,10 +84,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of a user's attempt to authenticate by using an access code. It
+   * returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that
+   * the event occurred. - `FailureDescription`: A string containing the details
+   * about a failed authentication. - `VendorFailureStatusCode`: A string
+   * containing the vendor's status code for a failed authentication. .
+   * 
    * @return accessCodeResult
    **/
-  @ApiModelProperty(value = "The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getAccessCodeResult() {
     return accessCodeResult;
   }
@@ -99,7 +103,6 @@ public class AuthenticationStatus {
   public void setAccessCodeResult(EventResult accessCodeResult) {
     this.accessCodeResult = accessCodeResult;
   }
-
 
   /**
    * ageVerifyResult.
@@ -112,10 +115,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of an age verification check. It returns: - `Status`: `Pass` or
+   * `Fail`. - `dateTime`: The date and time that the event occurred. -
+   * `FailureDescription`: A string containing the details about a failed
+   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
+   * status code for a failed authentication. .
+   * 
    * @return ageVerifyResult
    **/
-  @ApiModelProperty(value = "The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getAgeVerifyResult() {
     return ageVerifyResult;
   }
@@ -126,7 +134,6 @@ public class AuthenticationStatus {
   public void setAgeVerifyResult(EventResult ageVerifyResult) {
     this.ageVerifyResult = ageVerifyResult;
   }
-
 
   /**
    * anySocialIDResult.
@@ -140,9 +147,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return anySocialIDResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getAnySocialIDResult() {
     return anySocialIDResult;
   }
@@ -153,7 +161,6 @@ public class AuthenticationStatus {
   public void setAnySocialIDResult(EventResult anySocialIDResult) {
     this.anySocialIDResult = anySocialIDResult;
   }
-
 
   /**
    * facebookResult.
@@ -167,9 +174,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return facebookResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getFacebookResult() {
     return facebookResult;
   }
@@ -180,7 +188,6 @@ public class AuthenticationStatus {
   public void setFacebookResult(EventResult facebookResult) {
     this.facebookResult = facebookResult;
   }
-
 
   /**
    * googleResult.
@@ -194,9 +201,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return googleResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getGoogleResult() {
     return googleResult;
   }
@@ -207,7 +215,6 @@ public class AuthenticationStatus {
   public void setGoogleResult(EventResult googleResult) {
     this.googleResult = googleResult;
   }
-
 
   /**
    * identityVerificationResult.
@@ -220,10 +227,12 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/.
+   * The result of an [Identity Verification][IDV] workflow. [IDV]:
+   * /docs/esign-rest-api/reference/accounts/identityverifications/.
+   * 
    * @return identityVerificationResult
    **/
-  @ApiModelProperty(value = "The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/")
+  @Schema(description = "The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/")
   public EventResult getIdentityVerificationResult() {
     return identityVerificationResult;
   }
@@ -234,7 +243,6 @@ public class AuthenticationStatus {
   public void setIdentityVerificationResult(EventResult identityVerificationResult) {
     this.identityVerificationResult = identityVerificationResult;
   }
-
 
   /**
    * idLookupResult.
@@ -247,10 +255,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of an ID lookup authentication check. It returns: - `Status`:
+   * `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. -
+   * `FailureDescription`: A string containing the details about a failed
+   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
+   * status code for a failed authentication. .
+   * 
    * @return idLookupResult
    **/
-  @ApiModelProperty(value = "The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getIdLookupResult() {
     return idLookupResult;
   }
@@ -261,7 +274,6 @@ public class AuthenticationStatus {
   public void setIdLookupResult(EventResult idLookupResult) {
     this.idLookupResult = idLookupResult;
   }
-
 
   /**
    * idQuestionsResult.
@@ -274,10 +286,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of the user's answers to ID challenge questions. It returns: -
+   * `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event
+   * occurred. - `FailureDescription`: A string containing the details about a
+   * failed authentication. - `VendorFailureStatusCode`: A string containing the
+   * vendor's status code for a failed authentication. .
+   * 
    * @return idQuestionsResult
    **/
-  @ApiModelProperty(value = "The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getIdQuestionsResult() {
     return idQuestionsResult;
   }
@@ -288,7 +305,6 @@ public class AuthenticationStatus {
   public void setIdQuestionsResult(EventResult idQuestionsResult) {
     this.idQuestionsResult = idQuestionsResult;
   }
-
 
   /**
    * linkedinResult.
@@ -302,9 +318,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return linkedinResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getLinkedinResult() {
     return linkedinResult;
   }
@@ -315,7 +332,6 @@ public class AuthenticationStatus {
   public void setLinkedinResult(EventResult linkedinResult) {
     this.linkedinResult = linkedinResult;
   }
-
 
   /**
    * liveIDResult.
@@ -329,9 +345,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return liveIDResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getLiveIDResult() {
     return liveIDResult;
   }
@@ -342,7 +359,6 @@ public class AuthenticationStatus {
   public void setLiveIDResult(EventResult liveIDResult) {
     this.liveIDResult = liveIDResult;
   }
-
 
   /**
    * ofacResult.
@@ -355,10 +371,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of an Office of Foreign Asset Control (OFAC) check. It returns: -
+   * `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event
+   * occurred. - `FailureDescription`: A string containing the details about a
+   * failed authentication. - `VendorFailureStatusCode`: A string containing the
+   * vendor's status code for a failed authentication. .
+   * 
    * @return ofacResult
    **/
-  @ApiModelProperty(value = "The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getOfacResult() {
     return ofacResult;
   }
@@ -369,7 +390,6 @@ public class AuthenticationStatus {
   public void setOfacResult(EventResult ofacResult) {
     this.ofacResult = ofacResult;
   }
-
 
   /**
    * openIDResult.
@@ -383,9 +403,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return openIDResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getOpenIDResult() {
     return openIDResult;
   }
@@ -396,7 +417,6 @@ public class AuthenticationStatus {
   public void setOpenIDResult(EventResult openIDResult) {
     this.openIDResult = openIDResult;
   }
-
 
   /**
    * phoneAuthResult.
@@ -409,10 +429,16 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of the user's attempt to authenticate by using two-factor
+   * authentication (2FA) through phone messaging. It returns: - `Status`: `Pass`
+   * or `Fail`. - `dateTime`: The date and time that the event occurred. -
+   * `FailureDescription`: A string containing the details about a failed
+   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
+   * status code for a failed authentication. .
+   * 
    * @return phoneAuthResult
    **/
-  @ApiModelProperty(value = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getPhoneAuthResult() {
     return phoneAuthResult;
   }
@@ -423,7 +449,6 @@ public class AuthenticationStatus {
   public void setPhoneAuthResult(EventResult phoneAuthResult) {
     this.phoneAuthResult = phoneAuthResult;
   }
-
 
   /**
    * salesforceResult.
@@ -436,10 +461,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * Success/failure result of authentication using sign-in with a Salesforce
+   * account. It returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and
+   * time that the event occurred. - `FailureDescription`: A string containing the
+   * details about a failed authentication. - `VendorFailureStatusCode`: A string
+   * containing the vendor's status code for a failed authentication. .
+   * 
    * @return salesforceResult
    **/
-  @ApiModelProperty(value = "Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getSalesforceResult() {
     return salesforceResult;
   }
@@ -450,7 +480,6 @@ public class AuthenticationStatus {
   public void setSalesforceResult(EventResult salesforceResult) {
     this.salesforceResult = salesforceResult;
   }
-
 
   /**
    * signatureProviderResult.
@@ -463,10 +492,12 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using a signature provider..
+   * The result of the user's attempt to authenticate by using a signature
+   * provider..
+   * 
    * @return signatureProviderResult
    **/
-  @ApiModelProperty(value = "The result of the user's attempt to authenticate by using a signature provider.")
+  @Schema(description = "The result of the user's attempt to authenticate by using a signature provider.")
   public EventResult getSignatureProviderResult() {
     return signatureProviderResult;
   }
@@ -477,7 +508,6 @@ public class AuthenticationStatus {
   public void setSignatureProviderResult(EventResult signatureProviderResult) {
     this.signatureProviderResult = signatureProviderResult;
   }
-
 
   /**
    * smsAuthResult.
@@ -490,10 +520,12 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone..
+   * The result of the user's attempt to authenticate by using two-factor
+   * authentication (2FA) through SMS messaging on a mobile phone..
+   * 
    * @return smsAuthResult
    **/
-  @ApiModelProperty(value = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.")
+  @Schema(description = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.")
   public EventResult getSmsAuthResult() {
     return smsAuthResult;
   }
@@ -504,7 +536,6 @@ public class AuthenticationStatus {
   public void setSmsAuthResult(EventResult smsAuthResult) {
     this.smsAuthResult = smsAuthResult;
   }
-
 
   /**
    * sTANPinResult.
@@ -517,10 +548,15 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
+   * The result of a Student Authentication Network (STAN) authentication check.
+   * It returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time
+   * that the event occurred. - `FailureDescription`: A string containing the
+   * details about a failed authentication. - `VendorFailureStatusCode`: A string
+   * containing the vendor's status code for a failed authentication. .
+   * 
    * @return sTANPinResult
    **/
-  @ApiModelProperty(value = "The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
+  @Schema(description = "The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
   public EventResult getSTANPinResult() {
     return sTANPinResult;
   }
@@ -531,7 +567,6 @@ public class AuthenticationStatus {
   public void setSTANPinResult(EventResult sTANPinResult) {
     this.sTANPinResult = sTANPinResult;
   }
-
 
   /**
    * twitterResult.
@@ -545,9 +580,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return twitterResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getTwitterResult() {
     return twitterResult;
   }
@@ -558,7 +594,6 @@ public class AuthenticationStatus {
   public void setTwitterResult(EventResult twitterResult) {
     this.twitterResult = twitterResult;
   }
-
 
   /**
    * yahooResult.
@@ -572,9 +607,10 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
+   * 
    * @return yahooResult
    **/
-  @ApiModelProperty(value = "Deprecated.")
+  @Schema(description = "Deprecated.")
   public EventResult getYahooResult() {
     return yahooResult;
   }
@@ -585,7 +621,6 @@ public class AuthenticationStatus {
   public void setYahooResult(EventResult yahooResult) {
     this.yahooResult = yahooResult;
   }
-
 
   /**
    * Compares objects.
@@ -627,9 +662,11 @@ public class AuthenticationStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult, identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult, openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult, twitterResult, yahooResult);
+    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult,
+        identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult,
+        openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult,
+        twitterResult, yahooResult);
   }
-
 
   /**
    * Converts the given object to string.
@@ -638,7 +675,7 @@ public class AuthenticationStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationStatus {\n");
-    
+
     sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
     sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
     sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
@@ -674,4 +711,3 @@ public class AuthenticationStatus {
   }
 
 }
-

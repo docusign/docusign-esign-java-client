@@ -7,8 +7,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Stamp.
@@ -64,7 +64,6 @@ public class Stamp {
   @JsonProperty("status")
   private String status = null;
 
-
   /**
    * adoptedDateTime.
    *
@@ -77,9 +76,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return adoptedDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAdoptedDateTime() {
     return adoptedDateTime;
   }
@@ -90,7 +90,6 @@ public class Stamp {
   public void setAdoptedDateTime(String adoptedDateTime) {
     this.adoptedDateTime = adoptedDateTime;
   }
-
 
   /**
    * createdDateTime.
@@ -104,9 +103,10 @@ public class Stamp {
 
   /**
    * Indicates the date and time the item was created..
+   * 
    * @return createdDateTime
    **/
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @Schema(description = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -117,7 +117,6 @@ public class Stamp {
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
-
 
   /**
    * customField.
@@ -131,9 +130,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return customField
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomField() {
     return customField;
   }
@@ -144,7 +144,6 @@ public class Stamp {
   public void setCustomField(String customField) {
     this.customField = customField;
   }
-
 
   /**
    * dateStampProperties.
@@ -157,10 +156,17 @@ public class Stamp {
   }
 
   /**
-   * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle..
+   * Specifies the area in which a date stamp is placed. This parameter uses pixel
+   * positioning to draw a rectangle at the center of the stamp area. The stamp is
+   * superimposed on top of this central area. This property contains the
+   * following information about the central rectangle: - `DateAreaX`: The X axis
+   * position of the top-left corner. - `DateAreaY`: The Y axis position of the
+   * top-left corner. - `DateAreaWidth`: The width of the rectangle. -
+   * `DateAreaHeight`: The height of the rectangle..
+   * 
    * @return dateStampProperties
    **/
-  @ApiModelProperty(value = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
+  @Schema(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
@@ -171,7 +177,6 @@ public class Stamp {
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
-
 
   /**
    * disallowUserResizeStamp.
@@ -185,9 +190,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return disallowUserResizeStamp
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
@@ -198,7 +204,6 @@ public class Stamp {
   public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
-
 
   /**
    * errorDetails.
@@ -211,10 +216,12 @@ public class Stamp {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -225,7 +232,6 @@ public class Stamp {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * externalID.
@@ -239,9 +245,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return externalID
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExternalID() {
     return externalID;
   }
@@ -252,7 +259,6 @@ public class Stamp {
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
-
 
   /**
    * imageBase64.
@@ -266,9 +272,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return imageBase64
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageBase64() {
     return imageBase64;
   }
@@ -279,7 +286,6 @@ public class Stamp {
   public void setImageBase64(String imageBase64) {
     this.imageBase64 = imageBase64;
   }
-
 
   /**
    * imageType.
@@ -293,9 +299,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return imageType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageType() {
     return imageType;
   }
@@ -306,7 +313,6 @@ public class Stamp {
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
-
 
   /**
    * lastModifiedDateTime.
@@ -320,9 +326,10 @@ public class Stamp {
 
   /**
    * The date and time the item was last modified..
+   * 
    * @return lastModifiedDateTime
    **/
-  @ApiModelProperty(value = "The date and time the item was last modified.")
+  @Schema(description = "The date and time the item was last modified.")
   public String getLastModifiedDateTime() {
     return lastModifiedDateTime;
   }
@@ -333,7 +340,6 @@ public class Stamp {
   public void setLastModifiedDateTime(String lastModifiedDateTime) {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
-
 
   /**
    * phoneticName.
@@ -347,9 +353,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return phoneticName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneticName() {
     return phoneticName;
   }
@@ -360,7 +367,6 @@ public class Stamp {
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
-
 
   /**
    * signatureName.
@@ -374,9 +380,10 @@ public class Stamp {
 
   /**
    * Specifies the user signature name..
+   * 
    * @return signatureName
    **/
-  @ApiModelProperty(value = "Specifies the user signature name.")
+  @Schema(description = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -387,7 +394,6 @@ public class Stamp {
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
-
 
   /**
    * stampFormat.
@@ -401,9 +407,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return stampFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStampFormat() {
     return stampFormat;
   }
@@ -414,7 +421,6 @@ public class Stamp {
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
-
 
   /**
    * stampImageUri.
@@ -428,9 +434,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return stampImageUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStampImageUri() {
     return stampImageUri;
   }
@@ -441,7 +448,6 @@ public class Stamp {
   public void setStampImageUri(String stampImageUri) {
     this.stampImageUri = stampImageUri;
   }
-
 
   /**
    * stampSizeMM.
@@ -455,9 +461,10 @@ public class Stamp {
 
   /**
    * .
+   * 
    * @return stampSizeMM
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
@@ -468,7 +475,6 @@ public class Stamp {
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
-
 
   /**
    * status.
@@ -481,10 +487,13 @@ public class Stamp {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -495,7 +504,6 @@ public class Stamp {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * Compares objects.
@@ -534,9 +542,10 @@ public class Stamp {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, lastModifiedDateTime, phoneticName, signatureName, stampFormat, stampImageUri, stampSizeMM, status);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp,
+        errorDetails, externalID, imageBase64, imageType, lastModifiedDateTime, phoneticName, signatureName,
+        stampFormat, stampImageUri, stampSizeMM, status);
   }
-
 
   /**
    * Converts the given object to string.
@@ -545,7 +554,7 @@ public class Stamp {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Stamp {\n");
-    
+
     sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
@@ -578,4 +587,3 @@ public class Stamp {
   }
 
 }
-

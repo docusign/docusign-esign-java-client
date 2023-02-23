@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains address information..
  *
  */
-@ApiModel(description = "Contains address information.")
+@Schema(description = "Contains address information.")
 
 public class AddressInformation {
   @JsonProperty("address1")
@@ -42,7 +42,6 @@ public class AddressInformation {
   @JsonProperty("zipPlus4")
   private String zipPlus4 = null;
 
-
   /**
    * address1.
    *
@@ -55,9 +54,10 @@ public class AddressInformation {
 
   /**
    * First Line of the address. Maximum length: 100 characters..
+   * 
    * @return address1
    **/
-  @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
+  @Schema(description = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -68,7 +68,6 @@ public class AddressInformation {
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
-
 
   /**
    * address2.
@@ -82,9 +81,10 @@ public class AddressInformation {
 
   /**
    * Second Line of the address. Maximum length: 100 characters..
+   * 
    * @return address2
    **/
-  @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
+  @Schema(description = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -95,7 +95,6 @@ public class AddressInformation {
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
-
 
   /**
    * city.
@@ -109,9 +108,10 @@ public class AddressInformation {
 
   /**
    * The city associated with the address..
+   * 
    * @return city
    **/
-  @ApiModelProperty(value = "The city associated with the address.")
+  @Schema(description = "The city associated with the address.")
   public String getCity() {
     return city;
   }
@@ -122,7 +122,6 @@ public class AddressInformation {
   public void setCity(String city) {
     this.city = city;
   }
-
 
   /**
    * country.
@@ -136,9 +135,10 @@ public class AddressInformation {
 
   /**
    * Specifies the country associated with the address..
+   * 
    * @return country
    **/
-  @ApiModelProperty(value = "Specifies the country associated with the address.")
+  @Schema(description = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -149,7 +149,6 @@ public class AddressInformation {
   public void setCountry(String country) {
     this.country = country;
   }
-
 
   /**
    * fax.
@@ -163,9 +162,10 @@ public class AddressInformation {
 
   /**
    * A Fax number associated with the address if one is available..
+   * 
    * @return fax
    **/
-  @ApiModelProperty(value = "A Fax number associated with the address if one is available.")
+  @Schema(description = "A Fax number associated with the address if one is available.")
   public String getFax() {
     return fax;
   }
@@ -176,7 +176,6 @@ public class AddressInformation {
   public void setFax(String fax) {
     this.fax = fax;
   }
-
 
   /**
    * phone.
@@ -190,9 +189,10 @@ public class AddressInformation {
 
   /**
    * A phone number associated with the address..
+   * 
    * @return phone
    **/
-  @ApiModelProperty(value = "A phone number associated with the address.")
+  @Schema(description = "A phone number associated with the address.")
   public String getPhone() {
     return phone;
   }
@@ -203,7 +203,6 @@ public class AddressInformation {
   public void setPhone(String phone) {
     this.phone = phone;
   }
-
 
   /**
    * postalCode.
@@ -217,9 +216,10 @@ public class AddressInformation {
 
   /**
    * .
+   * 
    * @return postalCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -230,7 +230,6 @@ public class AddressInformation {
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
-
 
   /**
    * stateOrProvince.
@@ -244,9 +243,10 @@ public class AddressInformation {
 
   /**
    * .
+   * 
    * @return stateOrProvince
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStateOrProvince() {
     return stateOrProvince;
   }
@@ -257,7 +257,6 @@ public class AddressInformation {
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   /**
    * zipPlus4.
@@ -271,9 +270,10 @@ public class AddressInformation {
 
   /**
    * .
+   * 
    * @return zipPlus4
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getZipPlus4() {
     return zipPlus4;
   }
@@ -284,7 +284,6 @@ public class AddressInformation {
   public void setZipPlus4(String zipPlus4) {
     this.zipPlus4 = zipPlus4;
   }
-
 
   /**
    * Compares objects.
@@ -319,7 +318,6 @@ public class AddressInformation {
     return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince, zipPlus4);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -327,7 +325,7 @@ public class AddressInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformation {\n");
-    
+
     sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
     sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
@@ -353,4 +351,3 @@ public class AddressInformation {
   }
 
 }
-

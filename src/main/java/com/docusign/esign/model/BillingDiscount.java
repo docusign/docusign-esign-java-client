@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BillingDiscount.
@@ -23,7 +23,6 @@ public class BillingDiscount {
   @JsonProperty("endQuantity")
   private String endQuantity = null;
 
-
   /**
    * beginQuantity.
    *
@@ -36,9 +35,10 @@ public class BillingDiscount {
 
   /**
    * Reserved: TBD.
+   * 
    * @return beginQuantity
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
@@ -49,7 +49,6 @@ public class BillingDiscount {
   public void setBeginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
   }
-
 
   /**
    * discount.
@@ -63,9 +62,10 @@ public class BillingDiscount {
 
   /**
    * .
+   * 
    * @return discount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDiscount() {
     return discount;
   }
@@ -76,7 +76,6 @@ public class BillingDiscount {
   public void setDiscount(String discount) {
     this.discount = discount;
   }
-
 
   /**
    * endQuantity.
@@ -90,9 +89,10 @@ public class BillingDiscount {
 
   /**
    * .
+   * 
    * @return endQuantity
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEndQuantity() {
     return endQuantity;
   }
@@ -103,7 +103,6 @@ public class BillingDiscount {
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class BillingDiscount {
     return Objects.hash(beginQuantity, discount, endQuantity);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class BillingDiscount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingDiscount {\n");
-    
+
     sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
     sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
     sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
@@ -160,4 +158,3 @@ public class BillingDiscount {
   }
 
 }
-

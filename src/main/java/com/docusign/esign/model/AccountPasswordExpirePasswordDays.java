@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordExpirePasswordDays.
@@ -20,7 +20,6 @@ public class AccountPasswordExpirePasswordDays {
   @JsonProperty("minimumDays")
   private String minimumDays = null;
 
-
   /**
    * maximumDays.
    *
@@ -33,9 +32,10 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
+   * 
    * @return maximumDays
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumDays() {
     return maximumDays;
   }
@@ -46,7 +46,6 @@ public class AccountPasswordExpirePasswordDays {
   public void setMaximumDays(String maximumDays) {
     this.maximumDays = maximumDays;
   }
-
 
   /**
    * minimumDays.
@@ -60,9 +59,10 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
+   * 
    * @return minimumDays
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumDays() {
     return minimumDays;
   }
@@ -73,7 +73,6 @@ public class AccountPasswordExpirePasswordDays {
   public void setMinimumDays(String minimumDays) {
     this.minimumDays = minimumDays;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class AccountPasswordExpirePasswordDays {
     return Objects.hash(maximumDays, minimumDays);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class AccountPasswordExpirePasswordDays {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordExpirePasswordDays {\n");
-    
+
     sb.append("    maximumDays: ").append(toIndentedString(maximumDays)).append("\n");
     sb.append("    minimumDays: ").append(toIndentedString(minimumDays)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class AccountPasswordExpirePasswordDays {
   }
 
 }
-

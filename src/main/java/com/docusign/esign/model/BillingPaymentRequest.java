@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BillingPaymentRequest.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class BillingPaymentRequest {
   @JsonProperty("paymentAmount")
   private String paymentAmount = null;
-
 
   /**
    * paymentAmount.
@@ -29,10 +28,12 @@ public class BillingPaymentRequest {
   }
 
   /**
-   * The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices..
+   * The payment amount for the past due invoices. This value must match the
+   * pastDueBalance value retrieved using Get Past Due Invoices..
+   * 
    * @return paymentAmount
    **/
-  @ApiModelProperty(value = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
+  @Schema(description = "The payment amount for the past due invoices. This value must match the pastDueBalance value retrieved using Get Past Due Invoices.")
   public String getPaymentAmount() {
     return paymentAmount;
   }
@@ -43,7 +44,6 @@ public class BillingPaymentRequest {
   public void setPaymentAmount(String paymentAmount) {
     this.paymentAmount = paymentAmount;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +70,6 @@ public class BillingPaymentRequest {
     return Objects.hash(paymentAmount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +77,7 @@ public class BillingPaymentRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentRequest {\n");
-    
+
     sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +95,3 @@ public class BillingPaymentRequest {
   }
 
 }
-

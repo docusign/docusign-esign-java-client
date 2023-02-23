@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeCustomMetadata.
@@ -18,7 +18,6 @@ public class EnvelopeCustomMetadata {
   @JsonProperty("envelopeCustomMetadataDetails")
   private java.util.List<NameValue> envelopeCustomMetadataDetails = null;
 
-
   /**
    * envelopeCustomMetadataDetails.
    *
@@ -28,7 +27,7 @@ public class EnvelopeCustomMetadata {
     this.envelopeCustomMetadataDetails = envelopeCustomMetadataDetails;
     return this;
   }
-  
+
   /**
    * addEnvelopeCustomMetadataDetailsItem.
    *
@@ -44,9 +43,10 @@ public class EnvelopeCustomMetadata {
 
   /**
    * .
+   * 
    * @return envelopeCustomMetadataDetails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getEnvelopeCustomMetadataDetails() {
     return envelopeCustomMetadataDetails;
   }
@@ -57,7 +57,6 @@ public class EnvelopeCustomMetadata {
   public void setEnvelopeCustomMetadataDetails(java.util.List<NameValue> envelopeCustomMetadataDetails) {
     this.envelopeCustomMetadataDetails = envelopeCustomMetadataDetails;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class EnvelopeCustomMetadata {
     return Objects.hash(envelopeCustomMetadataDetails);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,8 +90,9 @@ public class EnvelopeCustomMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeCustomMetadata {\n");
-    
-    sb.append("    envelopeCustomMetadataDetails: ").append(toIndentedString(envelopeCustomMetadataDetails)).append("\n");
+
+    sb.append("    envelopeCustomMetadataDetails: ").append(toIndentedString(envelopeCustomMetadataDetails))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -110,4 +109,3 @@ public class EnvelopeCustomMetadata {
   }
 
 }
-

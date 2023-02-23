@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object describes errors that occur. It is only valid for responses, and ignored in requests..
+ * This object describes errors that occur. It is only valid for responses, and
+ * ignored in requests..
  *
  */
-@ApiModel(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
+@Schema(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
 
 public class ErrorDetails {
   @JsonProperty("errorCode")
@@ -20,7 +21,6 @@ public class ErrorDetails {
 
   @JsonProperty("message")
   private String message = null;
-
 
   /**
    * errorCode.
@@ -34,9 +34,10 @@ public class ErrorDetails {
 
   /**
    * An error code associated with the error..
+   * 
    * @return errorCode
    **/
-  @ApiModelProperty(value = "An error code associated with the error.")
+  @Schema(description = "An error code associated with the error.")
   public String getErrorCode() {
     return errorCode;
   }
@@ -47,7 +48,6 @@ public class ErrorDetails {
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
-
 
   /**
    * message.
@@ -61,9 +61,10 @@ public class ErrorDetails {
 
   /**
    * A short error message..
+   * 
    * @return message
    **/
-  @ApiModelProperty(value = "A short error message.")
+  @Schema(description = "A short error message.")
   public String getMessage() {
     return message;
   }
@@ -74,7 +75,6 @@ public class ErrorDetails {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +102,6 @@ public class ErrorDetails {
     return Objects.hash(errorCode, message);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +109,7 @@ public class ErrorDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorDetails {\n");
-    
+
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
@@ -129,4 +128,3 @@ public class ErrorDetails {
   }
 
 }
-

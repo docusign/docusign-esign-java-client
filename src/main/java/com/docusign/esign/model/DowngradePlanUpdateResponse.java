@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DowngradePlanUpdateResponse.
@@ -53,7 +53,6 @@ public class DowngradePlanUpdateResponse {
   @JsonProperty("saleDiscountType")
   private String saleDiscountType = null;
 
-
   /**
    * accountPaymentMethod.
    *
@@ -66,9 +65,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return accountPaymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
@@ -79,7 +79,6 @@ public class DowngradePlanUpdateResponse {
   public void setAccountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
   }
-
 
   /**
    * discountApplied.
@@ -93,9 +92,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return discountApplied
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDiscountApplied() {
     return discountApplied;
   }
@@ -106,7 +106,6 @@ public class DowngradePlanUpdateResponse {
   public void setDiscountApplied(String discountApplied) {
     this.discountApplied = discountApplied;
   }
-
 
   /**
    * downgradeEffectiveDate.
@@ -120,9 +119,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return downgradeEffectiveDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeEffectiveDate() {
     return downgradeEffectiveDate;
   }
@@ -133,7 +133,6 @@ public class DowngradePlanUpdateResponse {
   public void setDowngradeEffectiveDate(String downgradeEffectiveDate) {
     this.downgradeEffectiveDate = downgradeEffectiveDate;
   }
-
 
   /**
    * downgradePaymentCycle.
@@ -147,9 +146,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return downgradePaymentCycle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradePaymentCycle() {
     return downgradePaymentCycle;
   }
@@ -160,7 +160,6 @@ public class DowngradePlanUpdateResponse {
   public void setDowngradePaymentCycle(String downgradePaymentCycle) {
     this.downgradePaymentCycle = downgradePaymentCycle;
   }
-
 
   /**
    * downgradePlanId.
@@ -174,9 +173,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return downgradePlanId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradePlanId() {
     return downgradePlanId;
   }
@@ -187,7 +187,6 @@ public class DowngradePlanUpdateResponse {
   public void setDowngradePlanId(String downgradePlanId) {
     this.downgradePlanId = downgradePlanId;
   }
-
 
   /**
    * downgradePlanName.
@@ -201,9 +200,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return downgradePlanName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradePlanName() {
     return downgradePlanName;
   }
@@ -214,7 +214,6 @@ public class DowngradePlanUpdateResponse {
   public void setDowngradePlanName(String downgradePlanName) {
     this.downgradePlanName = downgradePlanName;
   }
-
 
   /**
    * downgradeRequestStatus.
@@ -228,9 +227,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return downgradeRequestStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeRequestStatus() {
     return downgradeRequestStatus;
   }
@@ -241,7 +241,6 @@ public class DowngradePlanUpdateResponse {
   public void setDowngradeRequestStatus(String downgradeRequestStatus) {
     this.downgradeRequestStatus = downgradeRequestStatus;
   }
-
 
   /**
    * message.
@@ -255,9 +254,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMessage() {
     return message;
   }
@@ -268,7 +268,6 @@ public class DowngradePlanUpdateResponse {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   /**
    * productId.
@@ -282,9 +281,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return productId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProductId() {
     return productId;
   }
@@ -295,7 +295,6 @@ public class DowngradePlanUpdateResponse {
   public void setProductId(String productId) {
     this.productId = productId;
   }
-
 
   /**
    * promoCode.
@@ -309,9 +308,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return promoCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPromoCode() {
     return promoCode;
   }
@@ -322,7 +322,6 @@ public class DowngradePlanUpdateResponse {
   public void setPromoCode(String promoCode) {
     this.promoCode = promoCode;
   }
-
 
   /**
    * saleDiscount.
@@ -336,9 +335,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return saleDiscount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSaleDiscount() {
     return saleDiscount;
   }
@@ -349,7 +349,6 @@ public class DowngradePlanUpdateResponse {
   public void setSaleDiscount(String saleDiscount) {
     this.saleDiscount = saleDiscount;
   }
-
 
   /**
    * saleDiscountPeriods.
@@ -363,9 +362,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return saleDiscountPeriods
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSaleDiscountPeriods() {
     return saleDiscountPeriods;
   }
@@ -376,7 +376,6 @@ public class DowngradePlanUpdateResponse {
   public void setSaleDiscountPeriods(String saleDiscountPeriods) {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
-
 
   /**
    * saleDiscountType.
@@ -390,9 +389,10 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return saleDiscountType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSaleDiscountType() {
     return saleDiscountType;
   }
@@ -403,7 +403,6 @@ public class DowngradePlanUpdateResponse {
   public void setSaleDiscountType(String saleDiscountType) {
     this.saleDiscountType = saleDiscountType;
   }
-
 
   /**
    * Compares objects.
@@ -439,9 +438,10 @@ public class DowngradePlanUpdateResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountPaymentMethod, discountApplied, downgradeEffectiveDate, downgradePaymentCycle, downgradePlanId, downgradePlanName, downgradeRequestStatus, message, productId, promoCode, saleDiscount, saleDiscountPeriods, saleDiscountType);
+    return Objects.hash(accountPaymentMethod, discountApplied, downgradeEffectiveDate, downgradePaymentCycle,
+        downgradePlanId, downgradePlanName, downgradeRequestStatus, message, productId, promoCode, saleDiscount,
+        saleDiscountPeriods, saleDiscountType);
   }
-
 
   /**
    * Converts the given object to string.
@@ -450,7 +450,7 @@ public class DowngradePlanUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradePlanUpdateResponse {\n");
-    
+
     sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
     sb.append("    discountApplied: ").append(toIndentedString(discountApplied)).append("\n");
     sb.append("    downgradeEffectiveDate: ").append(toIndentedString(downgradeEffectiveDate)).append("\n");
@@ -480,4 +480,3 @@ public class DowngradePlanUpdateResponse {
   }
 
 }
-

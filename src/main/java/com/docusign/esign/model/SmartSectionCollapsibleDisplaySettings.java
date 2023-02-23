@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SmartSectionCollapsibleDisplaySettings.
@@ -44,7 +44,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   @JsonProperty("outerLabelAndArrowStyle")
   private String outerLabelAndArrowStyle = null;
 
-
   /**
    * arrowClosed.
    *
@@ -57,9 +56,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowClosed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowClosed() {
     return arrowClosed;
   }
@@ -70,7 +70,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
   }
-
 
   /**
    * arrowColor.
@@ -84,9 +83,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowColor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowColor() {
     return arrowColor;
   }
@@ -97,7 +97,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
   }
-
 
   /**
    * arrowLocation.
@@ -111,9 +110,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowLocation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowLocation() {
     return arrowLocation;
   }
@@ -124,7 +124,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
   }
-
 
   /**
    * arrowOpen.
@@ -138,9 +137,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowOpen
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowOpen() {
     return arrowOpen;
   }
@@ -151,7 +151,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
   }
-
 
   /**
    * arrowSize.
@@ -165,9 +164,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowSize() {
     return arrowSize;
   }
@@ -178,7 +178,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
   }
-
 
   /**
    * arrowStyle.
@@ -192,9 +191,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowStyle() {
     return arrowStyle;
   }
@@ -205,7 +205,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setArrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
   }
-
 
   /**
    * containerStyle.
@@ -219,9 +218,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return containerStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContainerStyle() {
     return containerStyle;
   }
@@ -232,7 +232,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setContainerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
   }
-
 
   /**
    * labelStyle.
@@ -246,9 +245,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return labelStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabelStyle() {
     return labelStyle;
   }
@@ -259,7 +259,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setLabelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
   }
-
 
   /**
    * onlyArrowIsClickable.
@@ -273,9 +272,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return onlyArrowIsClickable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isOnlyArrowIsClickable() {
     return onlyArrowIsClickable;
   }
@@ -286,7 +286,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setOnlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
   }
-
 
   /**
    * outerLabelAndArrowStyle.
@@ -300,9 +299,10 @@ public class SmartSectionCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return outerLabelAndArrowStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOuterLabelAndArrowStyle() {
     return outerLabelAndArrowStyle;
   }
@@ -313,7 +313,6 @@ public class SmartSectionCollapsibleDisplaySettings {
   public void setOuterLabelAndArrowStyle(String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
   }
-
 
   /**
    * Compares objects.
@@ -346,9 +345,9 @@ public class SmartSectionCollapsibleDisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle, labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
+    return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle,
+        labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
   }
-
 
   /**
    * Converts the given object to string.
@@ -357,7 +356,7 @@ public class SmartSectionCollapsibleDisplaySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartSectionCollapsibleDisplaySettings {\n");
-    
+
     sb.append("    arrowClosed: ").append(toIndentedString(arrowClosed)).append("\n");
     sb.append("    arrowColor: ").append(toIndentedString(arrowColor)).append("\n");
     sb.append("    arrowLocation: ").append(toIndentedString(arrowLocation)).append("\n");
@@ -384,4 +383,3 @@ public class SmartSectionCollapsibleDisplaySettings {
   }
 
 }
-

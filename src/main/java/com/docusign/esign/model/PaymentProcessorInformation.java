@@ -6,8 +6,8 @@ import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PaymentProcessorInformation.
@@ -24,7 +24,6 @@ public class PaymentProcessorInformation {
   @JsonProperty("email")
   private String email = null;
 
-
   /**
    * address.
    *
@@ -37,9 +36,10 @@ public class PaymentProcessorInformation {
 
   /**
    * The mailing address associated with the payment processor..
+   * 
    * @return address
    **/
-  @ApiModelProperty(value = "The mailing address associated with the payment processor.")
+  @Schema(description = "The mailing address associated with the payment processor.")
   public AddressInformation getAddress() {
     return address;
   }
@@ -50,7 +50,6 @@ public class PaymentProcessorInformation {
   public void setAddress(AddressInformation address) {
     this.address = address;
   }
-
 
   /**
    * billingAgreementId.
@@ -64,9 +63,10 @@ public class PaymentProcessorInformation {
 
   /**
    * .
+   * 
    * @return billingAgreementId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBillingAgreementId() {
     return billingAgreementId;
   }
@@ -77,7 +77,6 @@ public class PaymentProcessorInformation {
   public void setBillingAgreementId(String billingAgreementId) {
     this.billingAgreementId = billingAgreementId;
   }
-
 
   /**
    * email.
@@ -91,9 +90,10 @@ public class PaymentProcessorInformation {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -104,7 +104,6 @@ public class PaymentProcessorInformation {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +132,6 @@ public class PaymentProcessorInformation {
     return Objects.hash(address, billingAgreementId, email);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +139,7 @@ public class PaymentProcessorInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentProcessorInformation {\n");
-    
+
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    billingAgreementId: ").append(toIndentedString(billingAgreementId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -161,4 +159,3 @@ public class PaymentProcessorInformation {
   }
 
 }
-

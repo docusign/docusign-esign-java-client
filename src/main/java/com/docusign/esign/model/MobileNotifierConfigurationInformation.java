@@ -6,8 +6,8 @@ import com.docusign.esign.model.MobileNotifierConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * MobileNotifierConfigurationInformation.
@@ -18,23 +18,24 @@ public class MobileNotifierConfigurationInformation {
   @JsonProperty("mobileNotifierConfigurations")
   private java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations = null;
 
-
   /**
    * mobileNotifierConfigurations.
    *
    * @return MobileNotifierConfigurationInformation
    **/
-  public MobileNotifierConfigurationInformation mobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
+  public MobileNotifierConfigurationInformation mobileNotifierConfigurations(
+      java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
     return this;
   }
-  
+
   /**
    * addMobileNotifierConfigurationsItem.
    *
    * @return MobileNotifierConfigurationInformation
    **/
-  public MobileNotifierConfigurationInformation addMobileNotifierConfigurationsItem(MobileNotifierConfiguration mobileNotifierConfigurationsItem) {
+  public MobileNotifierConfigurationInformation addMobileNotifierConfigurationsItem(
+      MobileNotifierConfiguration mobileNotifierConfigurationsItem) {
     if (this.mobileNotifierConfigurations == null) {
       this.mobileNotifierConfigurations = new java.util.ArrayList<>();
     }
@@ -44,9 +45,10 @@ public class MobileNotifierConfigurationInformation {
 
   /**
    * .
+   * 
    * @return mobileNotifierConfigurations
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<MobileNotifierConfiguration> getMobileNotifierConfigurations() {
     return mobileNotifierConfigurations;
   }
@@ -54,10 +56,10 @@ public class MobileNotifierConfigurationInformation {
   /**
    * setMobileNotifierConfigurations.
    **/
-  public void setMobileNotifierConfigurations(java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
+  public void setMobileNotifierConfigurations(
+      java.util.List<MobileNotifierConfiguration> mobileNotifierConfigurations) {
     this.mobileNotifierConfigurations = mobileNotifierConfigurations;
   }
-
 
   /**
    * Compares objects.
@@ -73,7 +75,8 @@ public class MobileNotifierConfigurationInformation {
       return false;
     }
     MobileNotifierConfigurationInformation mobileNotifierConfigurationInformation = (MobileNotifierConfigurationInformation) o;
-    return Objects.equals(this.mobileNotifierConfigurations, mobileNotifierConfigurationInformation.mobileNotifierConfigurations);
+    return Objects.equals(this.mobileNotifierConfigurations,
+        mobileNotifierConfigurationInformation.mobileNotifierConfigurations);
   }
 
   /**
@@ -84,7 +87,6 @@ public class MobileNotifierConfigurationInformation {
     return Objects.hash(mobileNotifierConfigurations);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +94,7 @@ public class MobileNotifierConfigurationInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileNotifierConfigurationInformation {\n");
-    
+
     sb.append("    mobileNotifierConfigurations: ").append(toIndentedString(mobileNotifierConfigurations)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +112,3 @@ public class MobileNotifierConfigurationInformation {
   }
 
 }
-

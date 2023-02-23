@@ -7,8 +7,8 @@ import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TemplateNotificationRequest.
@@ -28,7 +28,6 @@ public class TemplateNotificationRequest {
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
 
-
   /**
    * expirations.
    *
@@ -41,9 +40,10 @@ public class TemplateNotificationRequest {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
+   * 
    * @return expirations
    **/
-  @ApiModelProperty(value = "A complex element that specifies the expiration settings for the envelope.")
+  @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
   public Expirations getExpirations() {
     return expirations;
   }
@@ -54,7 +54,6 @@ public class TemplateNotificationRequest {
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
-
 
   /**
    * password.
@@ -68,9 +67,10 @@ public class TemplateNotificationRequest {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -81,7 +81,6 @@ public class TemplateNotificationRequest {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * reminders.
@@ -95,9 +94,10 @@ public class TemplateNotificationRequest {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
+   * 
    * @return reminders
    **/
-  @ApiModelProperty(value = "A complex element that specifies reminder settings for the envelope.")
+  @Schema(description = "A complex element that specifies reminder settings for the envelope.")
   public Reminders getReminders() {
     return reminders;
   }
@@ -108,7 +108,6 @@ public class TemplateNotificationRequest {
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
-
 
   /**
    * useAccountDefaults.
@@ -121,10 +120,12 @@ public class TemplateNotificationRequest {
   }
 
   /**
-   * When set to **true**, the account default notification settings are used for the envelope..
+   * When set to **true**, the account default notification settings are used for
+   * the envelope..
+   * 
    * @return useAccountDefaults
    **/
-  @ApiModelProperty(value = "When set to **true**, the account default notification settings are used for the envelope.")
+  @Schema(description = "When set to **true**, the account default notification settings are used for the envelope.")
   public String getUseAccountDefaults() {
     return useAccountDefaults;
   }
@@ -135,7 +136,6 @@ public class TemplateNotificationRequest {
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
-
 
   /**
    * Compares objects.
@@ -165,7 +165,6 @@ public class TemplateNotificationRequest {
     return Objects.hash(expirations, password, reminders, useAccountDefaults);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -173,7 +172,7 @@ public class TemplateNotificationRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateNotificationRequest {\n");
-    
+
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
@@ -194,4 +193,3 @@ public class TemplateNotificationRequest {
   }
 
 }
-

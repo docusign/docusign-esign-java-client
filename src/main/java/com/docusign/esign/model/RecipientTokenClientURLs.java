@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientTokenClientURLs.
@@ -44,7 +44,6 @@ public class RecipientTokenClientURLs {
   @JsonProperty("onViewingComplete")
   private String onViewingComplete = null;
 
-
   /**
    * onAccessCodeFailed.
    *
@@ -57,9 +56,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onAccessCodeFailed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnAccessCodeFailed() {
     return onAccessCodeFailed;
   }
@@ -70,7 +70,6 @@ public class RecipientTokenClientURLs {
   public void setOnAccessCodeFailed(String onAccessCodeFailed) {
     this.onAccessCodeFailed = onAccessCodeFailed;
   }
-
 
   /**
    * onCancel.
@@ -84,9 +83,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onCancel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnCancel() {
     return onCancel;
   }
@@ -97,7 +97,6 @@ public class RecipientTokenClientURLs {
   public void setOnCancel(String onCancel) {
     this.onCancel = onCancel;
   }
-
 
   /**
    * onDecline.
@@ -111,9 +110,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onDecline
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnDecline() {
     return onDecline;
   }
@@ -124,7 +124,6 @@ public class RecipientTokenClientURLs {
   public void setOnDecline(String onDecline) {
     this.onDecline = onDecline;
   }
-
 
   /**
    * onException.
@@ -138,9 +137,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onException
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnException() {
     return onException;
   }
@@ -151,7 +151,6 @@ public class RecipientTokenClientURLs {
   public void setOnException(String onException) {
     this.onException = onException;
   }
-
 
   /**
    * onFaxPending.
@@ -165,9 +164,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onFaxPending
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnFaxPending() {
     return onFaxPending;
   }
@@ -178,7 +178,6 @@ public class RecipientTokenClientURLs {
   public void setOnFaxPending(String onFaxPending) {
     this.onFaxPending = onFaxPending;
   }
-
 
   /**
    * onIdCheckFailed.
@@ -192,9 +191,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onIdCheckFailed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnIdCheckFailed() {
     return onIdCheckFailed;
   }
@@ -205,7 +205,6 @@ public class RecipientTokenClientURLs {
   public void setOnIdCheckFailed(String onIdCheckFailed) {
     this.onIdCheckFailed = onIdCheckFailed;
   }
-
 
   /**
    * onSessionTimeout.
@@ -219,9 +218,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onSessionTimeout
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnSessionTimeout() {
     return onSessionTimeout;
   }
@@ -232,7 +232,6 @@ public class RecipientTokenClientURLs {
   public void setOnSessionTimeout(String onSessionTimeout) {
     this.onSessionTimeout = onSessionTimeout;
   }
-
 
   /**
    * onSigningComplete.
@@ -246,9 +245,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onSigningComplete
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnSigningComplete() {
     return onSigningComplete;
   }
@@ -259,7 +259,6 @@ public class RecipientTokenClientURLs {
   public void setOnSigningComplete(String onSigningComplete) {
     this.onSigningComplete = onSigningComplete;
   }
-
 
   /**
    * onTTLExpired.
@@ -273,9 +272,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onTTLExpired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnTTLExpired() {
     return onTTLExpired;
   }
@@ -286,7 +286,6 @@ public class RecipientTokenClientURLs {
   public void setOnTTLExpired(String onTTLExpired) {
     this.onTTLExpired = onTTLExpired;
   }
-
 
   /**
    * onViewingComplete.
@@ -300,9 +299,10 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
+   * 
    * @return onViewingComplete
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnViewingComplete() {
     return onViewingComplete;
   }
@@ -313,7 +313,6 @@ public class RecipientTokenClientURLs {
   public void setOnViewingComplete(String onViewingComplete) {
     this.onViewingComplete = onViewingComplete;
   }
-
 
   /**
    * Compares objects.
@@ -346,9 +345,9 @@ public class RecipientTokenClientURLs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(onAccessCodeFailed, onCancel, onDecline, onException, onFaxPending, onIdCheckFailed, onSessionTimeout, onSigningComplete, onTTLExpired, onViewingComplete);
+    return Objects.hash(onAccessCodeFailed, onCancel, onDecline, onException, onFaxPending, onIdCheckFailed,
+        onSessionTimeout, onSigningComplete, onTTLExpired, onViewingComplete);
   }
-
 
   /**
    * Converts the given object to string.
@@ -357,7 +356,7 @@ public class RecipientTokenClientURLs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientTokenClientURLs {\n");
-    
+
     sb.append("    onAccessCodeFailed: ").append(toIndentedString(onAccessCodeFailed)).append("\n");
     sb.append("    onCancel: ").append(toIndentedString(onCancel)).append("\n");
     sb.append("    onDecline: ").append(toIndentedString(onDecline)).append("\n");
@@ -384,4 +383,3 @@ public class RecipientTokenClientURLs {
   }
 
 }
-

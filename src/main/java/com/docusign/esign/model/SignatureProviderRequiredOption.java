@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains additional information that a specific signature provider requires..
  *
  */
-@ApiModel(description = "Contains additional information that a specific signature provider requires.")
+@Schema(description = "Contains additional information that a specific signature provider requires.")
 
 public class SignatureProviderRequiredOption {
   @JsonProperty("requiredSignatureProviderOptionIds")
@@ -21,23 +21,24 @@ public class SignatureProviderRequiredOption {
   @JsonProperty("signerType")
   private String signerType = null;
 
-
   /**
    * requiredSignatureProviderOptionIds.
    *
    * @return SignatureProviderRequiredOption
    **/
-  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
+  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(
+      java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
     return this;
   }
-  
+
   /**
    * addRequiredSignatureProviderOptionIdsItem.
    *
    * @return SignatureProviderRequiredOption
    **/
-  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
+  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(
+      String requiredSignatureProviderOptionIdsItem) {
     if (this.requiredSignatureProviderOptionIds == null) {
       this.requiredSignatureProviderOptionIds = new java.util.ArrayList<>();
     }
@@ -47,9 +48,10 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
+   * 
    * @return requiredSignatureProviderOptionIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getRequiredSignatureProviderOptionIds() {
     return requiredSignatureProviderOptionIds;
   }
@@ -60,7 +62,6 @@ public class SignatureProviderRequiredOption {
   public void setRequiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
   }
-
 
   /**
    * signerType.
@@ -74,9 +75,10 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
+   * 
    * @return signerType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerType() {
     return signerType;
   }
@@ -87,7 +89,6 @@ public class SignatureProviderRequiredOption {
   public void setSignerType(String signerType) {
     this.signerType = signerType;
   }
-
 
   /**
    * Compares objects.
@@ -103,7 +104,8 @@ public class SignatureProviderRequiredOption {
       return false;
     }
     SignatureProviderRequiredOption signatureProviderRequiredOption = (SignatureProviderRequiredOption) o;
-    return Objects.equals(this.requiredSignatureProviderOptionIds, signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
+    return Objects.equals(this.requiredSignatureProviderOptionIds,
+        signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
         Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
   }
 
@@ -115,7 +117,6 @@ public class SignatureProviderRequiredOption {
     return Objects.hash(requiredSignatureProviderOptionIds, signerType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,8 +124,9 @@ public class SignatureProviderRequiredOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProviderRequiredOption {\n");
-    
-    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
+
+    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds))
+        .append("\n");
     sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -142,4 +144,3 @@ public class SignatureProviderRequiredOption {
   }
 
 }
-

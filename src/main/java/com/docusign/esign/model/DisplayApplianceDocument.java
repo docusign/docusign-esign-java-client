@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayApplianceDocument */
@@ -36,7 +36,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return attachmentDescription */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getAttachmentDescription() {
     return attachmentDescription;
   }
@@ -51,15 +51,13 @@ public class DisplayApplianceDocument {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(example = "null", description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -74,7 +72,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return documentType */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDocumentType() {
     return documentType;
   }
@@ -93,9 +91,7 @@ public class DisplayApplianceDocument {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(example = "null", description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -110,7 +106,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return externalDocumentId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getExternalDocumentId() {
     return externalDocumentId;
   }
@@ -125,7 +121,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return latestPDFId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getLatestPDFId() {
     return latestPDFId;
   }
@@ -140,7 +136,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return name */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getName() {
     return name;
   }
@@ -155,7 +151,7 @@ public class DisplayApplianceDocument {
   }
 
   /** @return pages */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getPages() {
     return pages;
   }
@@ -174,7 +170,7 @@ public class DisplayApplianceDocument {
     }
     DisplayApplianceDocument displayApplianceDocument = (DisplayApplianceDocument) o;
     return Objects.equals(
-            this.attachmentDescription, displayApplianceDocument.attachmentDescription)
+        this.attachmentDescription, displayApplianceDocument.attachmentDescription)
         && Objects.equals(this.documentId, displayApplianceDocument.documentId)
         && Objects.equals(this.documentType, displayApplianceDocument.documentType)
         && Objects.equals(this.envelopeId, displayApplianceDocument.envelopeId)
@@ -217,7 +213,8 @@ public class DisplayApplianceDocument {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

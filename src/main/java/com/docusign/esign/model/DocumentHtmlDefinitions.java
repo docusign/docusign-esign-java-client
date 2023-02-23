@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentHtmlDefinitions.
@@ -17,7 +17,6 @@ public class DocumentHtmlDefinitions {
   @JsonProperty("htmlDefinitions")
   private java.util.List<String> htmlDefinitions = null;
 
-
   /**
    * htmlDefinitions.
    *
@@ -27,7 +26,7 @@ public class DocumentHtmlDefinitions {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-  
+
   /**
    * addHtmlDefinitionsItem.
    *
@@ -43,9 +42,10 @@ public class DocumentHtmlDefinitions {
 
   /**
    * .
+   * 
    * @return htmlDefinitions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getHtmlDefinitions() {
     return htmlDefinitions;
   }
@@ -56,7 +56,6 @@ public class DocumentHtmlDefinitions {
   public void setHtmlDefinitions(java.util.List<String> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
-
 
   /**
    * Compares objects.
@@ -83,7 +82,6 @@ public class DocumentHtmlDefinitions {
     return Objects.hash(htmlDefinitions);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -91,7 +89,7 @@ public class DocumentHtmlDefinitions {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitions {\n");
-    
+
     sb.append("    htmlDefinitions: ").append(toIndentedString(htmlDefinitions)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,4 +107,3 @@ public class DocumentHtmlDefinitions {
   }
 
 }
-

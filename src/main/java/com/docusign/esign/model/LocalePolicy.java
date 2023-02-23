@@ -6,8 +6,8 @@ import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * LocalePolicy.
@@ -144,7 +144,6 @@ public class LocalePolicy {
   @JsonProperty("timeZoneMetadata")
   private SettingsMetadata timeZoneMetadata = null;
 
-
   /**
    * addressFormat.
    *
@@ -157,9 +156,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return addressFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddressFormat() {
     return addressFormat;
   }
@@ -170,7 +170,6 @@ public class LocalePolicy {
   public void setAddressFormat(String addressFormat) {
     this.addressFormat = addressFormat;
   }
-
 
   /**
    * addressFormatMetadata.
@@ -184,9 +183,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return addressFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getAddressFormatMetadata() {
     return addressFormatMetadata;
   }
@@ -197,7 +197,6 @@ public class LocalePolicy {
   public void setAddressFormatMetadata(SettingsMetadata addressFormatMetadata) {
     this.addressFormatMetadata = addressFormatMetadata;
   }
-
 
   /**
    * allowRegion.
@@ -211,9 +210,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return allowRegion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAllowRegion() {
     return allowRegion;
   }
@@ -224,7 +224,6 @@ public class LocalePolicy {
   public void setAllowRegion(String allowRegion) {
     this.allowRegion = allowRegion;
   }
-
 
   /**
    * calendarType.
@@ -238,9 +237,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return calendarType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCalendarType() {
     return calendarType;
   }
@@ -251,7 +251,6 @@ public class LocalePolicy {
   public void setCalendarType(String calendarType) {
     this.calendarType = calendarType;
   }
-
 
   /**
    * calendarTypeMetadata.
@@ -265,9 +264,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return calendarTypeMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getCalendarTypeMetadata() {
     return calendarTypeMetadata;
   }
@@ -278,7 +278,6 @@ public class LocalePolicy {
   public void setCalendarTypeMetadata(SettingsMetadata calendarTypeMetadata) {
     this.calendarTypeMetadata = calendarTypeMetadata;
   }
-
 
   /**
    * cultureName.
@@ -292,9 +291,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return cultureName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCultureName() {
     return cultureName;
   }
@@ -305,7 +305,6 @@ public class LocalePolicy {
   public void setCultureName(String cultureName) {
     this.cultureName = cultureName;
   }
-
 
   /**
    * cultureNameMetadata.
@@ -319,9 +318,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return cultureNameMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getCultureNameMetadata() {
     return cultureNameMetadata;
   }
@@ -332,7 +332,6 @@ public class LocalePolicy {
   public void setCultureNameMetadata(SettingsMetadata cultureNameMetadata) {
     this.cultureNameMetadata = cultureNameMetadata;
   }
-
 
   /**
    * currencyCode.
@@ -346,9 +345,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -359,7 +359,6 @@ public class LocalePolicy {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currencyCodeMetadata.
@@ -373,9 +372,10 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `currencyCode` property is editable..
+   * 
    * @return currencyCodeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `currencyCode` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `currencyCode` property is editable.")
   public SettingsMetadata getCurrencyCodeMetadata() {
     return currencyCodeMetadata;
   }
@@ -386,7 +386,6 @@ public class LocalePolicy {
   public void setCurrencyCodeMetadata(SettingsMetadata currencyCodeMetadata) {
     this.currencyCodeMetadata = currencyCodeMetadata;
   }
-
 
   /**
    * currencyNegativeFormat.
@@ -400,9 +399,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return currencyNegativeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyNegativeFormat() {
     return currencyNegativeFormat;
   }
@@ -413,7 +413,6 @@ public class LocalePolicy {
   public void setCurrencyNegativeFormat(String currencyNegativeFormat) {
     this.currencyNegativeFormat = currencyNegativeFormat;
   }
-
 
   /**
    * currencyNegativeFormatMetadata.
@@ -427,9 +426,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return currencyNegativeFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getCurrencyNegativeFormatMetadata() {
     return currencyNegativeFormatMetadata;
   }
@@ -440,7 +440,6 @@ public class LocalePolicy {
   public void setCurrencyNegativeFormatMetadata(SettingsMetadata currencyNegativeFormatMetadata) {
     this.currencyNegativeFormatMetadata = currencyNegativeFormatMetadata;
   }
-
 
   /**
    * currencyPositiveFormat.
@@ -454,9 +453,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return currencyPositiveFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyPositiveFormat() {
     return currencyPositiveFormat;
   }
@@ -467,7 +467,6 @@ public class LocalePolicy {
   public void setCurrencyPositiveFormat(String currencyPositiveFormat) {
     this.currencyPositiveFormat = currencyPositiveFormat;
   }
-
 
   /**
    * currencyPositiveFormatMetadata.
@@ -481,9 +480,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return currencyPositiveFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getCurrencyPositiveFormatMetadata() {
     return currencyPositiveFormatMetadata;
   }
@@ -494,7 +494,6 @@ public class LocalePolicy {
   public void setCurrencyPositiveFormatMetadata(SettingsMetadata currencyPositiveFormatMetadata) {
     this.currencyPositiveFormatMetadata = currencyPositiveFormatMetadata;
   }
-
 
   /**
    * customDateFormat.
@@ -508,9 +507,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return customDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomDateFormat() {
     return customDateFormat;
   }
@@ -521,7 +521,6 @@ public class LocalePolicy {
   public void setCustomDateFormat(String customDateFormat) {
     this.customDateFormat = customDateFormat;
   }
-
 
   /**
    * customSignDateFormat.
@@ -535,9 +534,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return customSignDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomSignDateFormat() {
     return customSignDateFormat;
   }
@@ -548,7 +548,6 @@ public class LocalePolicy {
   public void setCustomSignDateFormat(String customSignDateFormat) {
     this.customSignDateFormat = customSignDateFormat;
   }
-
 
   /**
    * customSignTimeFormat.
@@ -562,9 +561,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return customSignTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomSignTimeFormat() {
     return customSignTimeFormat;
   }
@@ -575,7 +575,6 @@ public class LocalePolicy {
   public void setCustomSignTimeFormat(String customSignTimeFormat) {
     this.customSignTimeFormat = customSignTimeFormat;
   }
-
 
   /**
    * customTimeFormat.
@@ -589,9 +588,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return customTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomTimeFormat() {
     return customTimeFormat;
   }
@@ -602,7 +602,6 @@ public class LocalePolicy {
   public void setCustomTimeFormat(String customTimeFormat) {
     this.customTimeFormat = customTimeFormat;
   }
-
 
   /**
    * dateFormat.
@@ -616,9 +615,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return dateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateFormat() {
     return dateFormat;
   }
@@ -629,7 +629,6 @@ public class LocalePolicy {
   public void setDateFormat(String dateFormat) {
     this.dateFormat = dateFormat;
   }
-
 
   /**
    * dateFormatMetadata.
@@ -643,9 +642,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return dateFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getDateFormatMetadata() {
     return dateFormatMetadata;
   }
@@ -656,7 +656,6 @@ public class LocalePolicy {
   public void setDateFormatMetadata(SettingsMetadata dateFormatMetadata) {
     this.dateFormatMetadata = dateFormatMetadata;
   }
-
 
   /**
    * effectiveAddressFormat.
@@ -670,9 +669,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveAddressFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveAddressFormat() {
     return effectiveAddressFormat;
   }
@@ -683,7 +683,6 @@ public class LocalePolicy {
   public void setEffectiveAddressFormat(String effectiveAddressFormat) {
     this.effectiveAddressFormat = effectiveAddressFormat;
   }
-
 
   /**
    * effectiveCalendarType.
@@ -697,9 +696,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCalendarType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCalendarType() {
     return effectiveCalendarType;
   }
@@ -710,7 +710,6 @@ public class LocalePolicy {
   public void setEffectiveCalendarType(String effectiveCalendarType) {
     this.effectiveCalendarType = effectiveCalendarType;
   }
-
 
   /**
    * effectiveCurrencyCode.
@@ -724,9 +723,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCurrencyCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCurrencyCode() {
     return effectiveCurrencyCode;
   }
@@ -737,7 +737,6 @@ public class LocalePolicy {
   public void setEffectiveCurrencyCode(String effectiveCurrencyCode) {
     this.effectiveCurrencyCode = effectiveCurrencyCode;
   }
-
 
   /**
    * effectiveCurrencyNegativeFormat.
@@ -751,9 +750,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCurrencyNegativeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCurrencyNegativeFormat() {
     return effectiveCurrencyNegativeFormat;
   }
@@ -764,7 +764,6 @@ public class LocalePolicy {
   public void setEffectiveCurrencyNegativeFormat(String effectiveCurrencyNegativeFormat) {
     this.effectiveCurrencyNegativeFormat = effectiveCurrencyNegativeFormat;
   }
-
 
   /**
    * effectiveCurrencyPositiveFormat.
@@ -778,9 +777,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCurrencyPositiveFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCurrencyPositiveFormat() {
     return effectiveCurrencyPositiveFormat;
   }
@@ -791,7 +791,6 @@ public class LocalePolicy {
   public void setEffectiveCurrencyPositiveFormat(String effectiveCurrencyPositiveFormat) {
     this.effectiveCurrencyPositiveFormat = effectiveCurrencyPositiveFormat;
   }
-
 
   /**
    * effectiveCustomDateFormat.
@@ -805,9 +804,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCustomDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCustomDateFormat() {
     return effectiveCustomDateFormat;
   }
@@ -818,7 +818,6 @@ public class LocalePolicy {
   public void setEffectiveCustomDateFormat(String effectiveCustomDateFormat) {
     this.effectiveCustomDateFormat = effectiveCustomDateFormat;
   }
-
 
   /**
    * effectiveCustomTimeFormat.
@@ -832,9 +831,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveCustomTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveCustomTimeFormat() {
     return effectiveCustomTimeFormat;
   }
@@ -845,7 +845,6 @@ public class LocalePolicy {
   public void setEffectiveCustomTimeFormat(String effectiveCustomTimeFormat) {
     this.effectiveCustomTimeFormat = effectiveCustomTimeFormat;
   }
-
 
   /**
    * effectiveDateFormat.
@@ -859,9 +858,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveDateFormat() {
     return effectiveDateFormat;
   }
@@ -872,7 +872,6 @@ public class LocalePolicy {
   public void setEffectiveDateFormat(String effectiveDateFormat) {
     this.effectiveDateFormat = effectiveDateFormat;
   }
-
 
   /**
    * effectiveInitialFormat.
@@ -886,9 +885,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveInitialFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveInitialFormat() {
     return effectiveInitialFormat;
   }
@@ -899,7 +899,6 @@ public class LocalePolicy {
   public void setEffectiveInitialFormat(String effectiveInitialFormat) {
     this.effectiveInitialFormat = effectiveInitialFormat;
   }
-
 
   /**
    * effectiveNameFormat.
@@ -913,9 +912,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveNameFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveNameFormat() {
     return effectiveNameFormat;
   }
@@ -926,7 +926,6 @@ public class LocalePolicy {
   public void setEffectiveNameFormat(String effectiveNameFormat) {
     this.effectiveNameFormat = effectiveNameFormat;
   }
-
 
   /**
    * effectiveTimeFormat.
@@ -940,9 +939,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveTimeFormat() {
     return effectiveTimeFormat;
   }
@@ -953,7 +953,6 @@ public class LocalePolicy {
   public void setEffectiveTimeFormat(String effectiveTimeFormat) {
     this.effectiveTimeFormat = effectiveTimeFormat;
   }
-
 
   /**
    * effectiveTimeZone.
@@ -967,9 +966,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return effectiveTimeZone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEffectiveTimeZone() {
     return effectiveTimeZone;
   }
@@ -980,7 +980,6 @@ public class LocalePolicy {
   public void setEffectiveTimeZone(String effectiveTimeZone) {
     this.effectiveTimeZone = effectiveTimeZone;
   }
-
 
   /**
    * initialFormat.
@@ -994,9 +993,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return initialFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInitialFormat() {
     return initialFormat;
   }
@@ -1007,7 +1007,6 @@ public class LocalePolicy {
   public void setInitialFormat(String initialFormat) {
     this.initialFormat = initialFormat;
   }
-
 
   /**
    * initialFormatMetadata.
@@ -1021,9 +1020,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return initialFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getInitialFormatMetadata() {
     return initialFormatMetadata;
   }
@@ -1034,7 +1034,6 @@ public class LocalePolicy {
   public void setInitialFormatMetadata(SettingsMetadata initialFormatMetadata) {
     this.initialFormatMetadata = initialFormatMetadata;
   }
-
 
   /**
    * nameFormat.
@@ -1048,9 +1047,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return nameFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNameFormat() {
     return nameFormat;
   }
@@ -1061,7 +1061,6 @@ public class LocalePolicy {
   public void setNameFormat(String nameFormat) {
     this.nameFormat = nameFormat;
   }
-
 
   /**
    * nameFormatMetadata.
@@ -1075,9 +1074,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return nameFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getNameFormatMetadata() {
     return nameFormatMetadata;
   }
@@ -1088,7 +1088,6 @@ public class LocalePolicy {
   public void setNameFormatMetadata(SettingsMetadata nameFormatMetadata) {
     this.nameFormatMetadata = nameFormatMetadata;
   }
-
 
   /**
    * signDateFormat.
@@ -1102,9 +1101,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return signDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignDateFormat() {
     return signDateFormat;
   }
@@ -1115,7 +1115,6 @@ public class LocalePolicy {
   public void setSignDateFormat(String signDateFormat) {
     this.signDateFormat = signDateFormat;
   }
-
 
   /**
    * signDateFormatMetadata.
@@ -1129,9 +1128,10 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `signDateFormat` property is editable. .
+   * 
    * @return signDateFormatMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `signDateFormat` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `signDateFormat` property is editable. ")
   public SettingsMetadata getSignDateFormatMetadata() {
     return signDateFormatMetadata;
   }
@@ -1142,7 +1142,6 @@ public class LocalePolicy {
   public void setSignDateFormatMetadata(SettingsMetadata signDateFormatMetadata) {
     this.signDateFormatMetadata = signDateFormatMetadata;
   }
-
 
   /**
    * signTimeFormat.
@@ -1156,9 +1155,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return signTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignTimeFormat() {
     return signTimeFormat;
   }
@@ -1169,7 +1169,6 @@ public class LocalePolicy {
   public void setSignTimeFormat(String signTimeFormat) {
     this.signTimeFormat = signTimeFormat;
   }
-
 
   /**
    * signTimeFormatMetadata.
@@ -1183,9 +1182,10 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `signTimeFormat` property is editable. .
+   * 
    * @return signTimeFormatMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `signTimeFormat` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `signTimeFormat` property is editable. ")
   public SettingsMetadata getSignTimeFormatMetadata() {
     return signTimeFormatMetadata;
   }
@@ -1196,7 +1196,6 @@ public class LocalePolicy {
   public void setSignTimeFormatMetadata(SettingsMetadata signTimeFormatMetadata) {
     this.signTimeFormatMetadata = signTimeFormatMetadata;
   }
-
 
   /**
    * timeFormat.
@@ -1210,9 +1209,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return timeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeFormat() {
     return timeFormat;
   }
@@ -1223,7 +1223,6 @@ public class LocalePolicy {
   public void setTimeFormat(String timeFormat) {
     this.timeFormat = timeFormat;
   }
-
 
   /**
    * timeFormatMetadata.
@@ -1237,9 +1236,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return timeFormatMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getTimeFormatMetadata() {
     return timeFormatMetadata;
   }
@@ -1250,7 +1250,6 @@ public class LocalePolicy {
   public void setTimeFormatMetadata(SettingsMetadata timeFormatMetadata) {
     this.timeFormatMetadata = timeFormatMetadata;
   }
-
 
   /**
    * timeZone.
@@ -1264,9 +1263,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return timeZone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeZone() {
     return timeZone;
   }
@@ -1277,7 +1277,6 @@ public class LocalePolicy {
   public void setTimeZone(String timeZone) {
     this.timeZone = timeZone;
   }
-
 
   /**
    * timeZoneMetadata.
@@ -1291,9 +1290,10 @@ public class LocalePolicy {
 
   /**
    * .
+   * 
    * @return timeZoneMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getTimeZoneMetadata() {
     return timeZoneMetadata;
   }
@@ -1304,7 +1304,6 @@ public class LocalePolicy {
   public void setTimeZoneMetadata(SettingsMetadata timeZoneMetadata) {
     this.timeZoneMetadata = timeZoneMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -1370,9 +1369,16 @@ public class LocalePolicy {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, addressFormatMetadata, allowRegion, calendarType, calendarTypeMetadata, cultureName, cultureNameMetadata, currencyCode, currencyCodeMetadata, currencyNegativeFormat, currencyNegativeFormatMetadata, currencyPositiveFormat, currencyPositiveFormatMetadata, customDateFormat, customSignDateFormat, customSignTimeFormat, customTimeFormat, dateFormat, dateFormatMetadata, effectiveAddressFormat, effectiveCalendarType, effectiveCurrencyCode, effectiveCurrencyNegativeFormat, effectiveCurrencyPositiveFormat, effectiveCustomDateFormat, effectiveCustomTimeFormat, effectiveDateFormat, effectiveInitialFormat, effectiveNameFormat, effectiveTimeFormat, effectiveTimeZone, initialFormat, initialFormatMetadata, nameFormat, nameFormatMetadata, signDateFormat, signDateFormatMetadata, signTimeFormat, signTimeFormatMetadata, timeFormat, timeFormatMetadata, timeZone, timeZoneMetadata);
+    return Objects.hash(addressFormat, addressFormatMetadata, allowRegion, calendarType, calendarTypeMetadata,
+        cultureName, cultureNameMetadata, currencyCode, currencyCodeMetadata, currencyNegativeFormat,
+        currencyNegativeFormatMetadata, currencyPositiveFormat, currencyPositiveFormatMetadata, customDateFormat,
+        customSignDateFormat, customSignTimeFormat, customTimeFormat, dateFormat, dateFormatMetadata,
+        effectiveAddressFormat, effectiveCalendarType, effectiveCurrencyCode, effectiveCurrencyNegativeFormat,
+        effectiveCurrencyPositiveFormat, effectiveCustomDateFormat, effectiveCustomTimeFormat, effectiveDateFormat,
+        effectiveInitialFormat, effectiveNameFormat, effectiveTimeFormat, effectiveTimeZone, initialFormat,
+        initialFormatMetadata, nameFormat, nameFormatMetadata, signDateFormat, signDateFormatMetadata, signTimeFormat,
+        signTimeFormatMetadata, timeFormat, timeFormatMetadata, timeZone, timeZoneMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1381,7 +1387,7 @@ public class LocalePolicy {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocalePolicy {\n");
-    
+
     sb.append("    addressFormat: ").append(toIndentedString(addressFormat)).append("\n");
     sb.append("    addressFormatMetadata: ").append(toIndentedString(addressFormatMetadata)).append("\n");
     sb.append("    allowRegion: ").append(toIndentedString(allowRegion)).append("\n");
@@ -1392,9 +1398,11 @@ public class LocalePolicy {
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencyCodeMetadata: ").append(toIndentedString(currencyCodeMetadata)).append("\n");
     sb.append("    currencyNegativeFormat: ").append(toIndentedString(currencyNegativeFormat)).append("\n");
-    sb.append("    currencyNegativeFormatMetadata: ").append(toIndentedString(currencyNegativeFormatMetadata)).append("\n");
+    sb.append("    currencyNegativeFormatMetadata: ").append(toIndentedString(currencyNegativeFormatMetadata))
+        .append("\n");
     sb.append("    currencyPositiveFormat: ").append(toIndentedString(currencyPositiveFormat)).append("\n");
-    sb.append("    currencyPositiveFormatMetadata: ").append(toIndentedString(currencyPositiveFormatMetadata)).append("\n");
+    sb.append("    currencyPositiveFormatMetadata: ").append(toIndentedString(currencyPositiveFormatMetadata))
+        .append("\n");
     sb.append("    customDateFormat: ").append(toIndentedString(customDateFormat)).append("\n");
     sb.append("    customSignDateFormat: ").append(toIndentedString(customSignDateFormat)).append("\n");
     sb.append("    customSignTimeFormat: ").append(toIndentedString(customSignTimeFormat)).append("\n");
@@ -1404,8 +1412,10 @@ public class LocalePolicy {
     sb.append("    effectiveAddressFormat: ").append(toIndentedString(effectiveAddressFormat)).append("\n");
     sb.append("    effectiveCalendarType: ").append(toIndentedString(effectiveCalendarType)).append("\n");
     sb.append("    effectiveCurrencyCode: ").append(toIndentedString(effectiveCurrencyCode)).append("\n");
-    sb.append("    effectiveCurrencyNegativeFormat: ").append(toIndentedString(effectiveCurrencyNegativeFormat)).append("\n");
-    sb.append("    effectiveCurrencyPositiveFormat: ").append(toIndentedString(effectiveCurrencyPositiveFormat)).append("\n");
+    sb.append("    effectiveCurrencyNegativeFormat: ").append(toIndentedString(effectiveCurrencyNegativeFormat))
+        .append("\n");
+    sb.append("    effectiveCurrencyPositiveFormat: ").append(toIndentedString(effectiveCurrencyPositiveFormat))
+        .append("\n");
     sb.append("    effectiveCustomDateFormat: ").append(toIndentedString(effectiveCustomDateFormat)).append("\n");
     sb.append("    effectiveCustomTimeFormat: ").append(toIndentedString(effectiveCustomTimeFormat)).append("\n");
     sb.append("    effectiveDateFormat: ").append(toIndentedString(effectiveDateFormat)).append("\n");
@@ -1441,4 +1451,3 @@ public class LocalePolicy {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.ConditionalRecipientRuleFilter;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConditionalRecipientRuleCondition.
@@ -24,7 +24,6 @@ public class ConditionalRecipientRuleCondition {
   @JsonProperty("recipientLabel")
   private String recipientLabel = null;
 
-
   /**
    * filters.
    *
@@ -34,7 +33,7 @@ public class ConditionalRecipientRuleCondition {
     this.filters = filters;
     return this;
   }
-  
+
   /**
    * addFiltersItem.
    *
@@ -50,9 +49,10 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
+   * 
    * @return filters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConditionalRecipientRuleFilter> getFilters() {
     return filters;
   }
@@ -63,7 +63,6 @@ public class ConditionalRecipientRuleCondition {
   public void setFilters(java.util.List<ConditionalRecipientRuleFilter> filters) {
     this.filters = filters;
   }
-
 
   /**
    * order.
@@ -77,9 +76,10 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
+   * 
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrder() {
     return order;
   }
@@ -90,7 +90,6 @@ public class ConditionalRecipientRuleCondition {
   public void setOrder(String order) {
     this.order = order;
   }
-
 
   /**
    * recipientLabel.
@@ -104,9 +103,10 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
+   * 
    * @return recipientLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientLabel() {
     return recipientLabel;
   }
@@ -117,7 +117,6 @@ public class ConditionalRecipientRuleCondition {
   public void setRecipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +145,6 @@ public class ConditionalRecipientRuleCondition {
     return Objects.hash(filters, order, recipientLabel);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +152,7 @@ public class ConditionalRecipientRuleCondition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRuleCondition {\n");
-    
+
     sb.append("    filters: ").append(toIndentedString(filters)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    recipientLabel: ").append(toIndentedString(recipientLabel)).append("\n");
@@ -174,4 +172,3 @@ public class ConditionalRecipientRuleCondition {
   }
 
 }
-

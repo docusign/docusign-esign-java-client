@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes information about the &#x60;total&#x60; of a payment. .
  *
  */
-@ApiModel(description = "Describes information about the `total` of a payment. ")
+@Schema(description = "Describes information about the `total` of a payment. ")
 
 public class Money {
   @JsonProperty("amountInBaseUnit")
@@ -23,7 +23,6 @@ public class Money {
 
   @JsonProperty("displayAmount")
   private String displayAmount = null;
-
 
   /**
    * amountInBaseUnit.
@@ -37,9 +36,10 @@ public class Money {
 
   /**
    * .
+   * 
    * @return amountInBaseUnit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAmountInBaseUnit() {
     return amountInBaseUnit;
   }
@@ -50,7 +50,6 @@ public class Money {
   public void setAmountInBaseUnit(String amountInBaseUnit) {
     this.amountInBaseUnit = amountInBaseUnit;
   }
-
 
   /**
    * currency.
@@ -64,9 +63,10 @@ public class Money {
 
   /**
    * .
+   * 
    * @return currency
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrency() {
     return currency;
   }
@@ -77,7 +77,6 @@ public class Money {
   public void setCurrency(String currency) {
     this.currency = currency;
   }
-
 
   /**
    * displayAmount.
@@ -91,9 +90,10 @@ public class Money {
 
   /**
    * .
+   * 
    * @return displayAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayAmount() {
     return displayAmount;
   }
@@ -104,7 +104,6 @@ public class Money {
   public void setDisplayAmount(String displayAmount) {
     this.displayAmount = displayAmount;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +132,6 @@ public class Money {
     return Objects.hash(amountInBaseUnit, currency, displayAmount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +139,7 @@ public class Money {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Money {\n");
-    
+
     sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
@@ -161,4 +159,3 @@ public class Money {
   }
 
 }
-

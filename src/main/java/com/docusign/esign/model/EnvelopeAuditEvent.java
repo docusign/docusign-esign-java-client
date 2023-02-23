@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeAuditEvent.
@@ -18,7 +18,6 @@ public class EnvelopeAuditEvent {
   @JsonProperty("eventFields")
   private java.util.List<NameValue> eventFields = null;
 
-
   /**
    * eventFields.
    *
@@ -28,7 +27,7 @@ public class EnvelopeAuditEvent {
     this.eventFields = eventFields;
     return this;
   }
-  
+
   /**
    * addEventFieldsItem.
    *
@@ -44,9 +43,10 @@ public class EnvelopeAuditEvent {
 
   /**
    * .
+   * 
    * @return eventFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getEventFields() {
     return eventFields;
   }
@@ -57,7 +57,6 @@ public class EnvelopeAuditEvent {
   public void setEventFields(java.util.List<NameValue> eventFields) {
     this.eventFields = eventFields;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class EnvelopeAuditEvent {
     return Objects.hash(eventFields);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class EnvelopeAuditEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEvent {\n");
-    
+
     sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class EnvelopeAuditEvent {
   }
 
 }
-

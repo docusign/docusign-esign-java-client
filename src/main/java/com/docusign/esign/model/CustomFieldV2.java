@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** CustomFieldV2 */
@@ -33,15 +33,13 @@ public class CustomFieldV2 {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The only supported
+   * If merge field's are being used, specifies the type of the merge field. The
+   * only supported
    * value is **salesforce**.
    *
    * @return configurationType
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @Schema(example = "null", description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -60,7 +58,7 @@ public class CustomFieldV2 {
    *
    * @return errorDetails
    */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -75,7 +73,7 @@ public class CustomFieldV2 {
   }
 
   /** @return fieldId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getFieldId() {
     return fieldId;
   }
@@ -90,7 +88,7 @@ public class CustomFieldV2 {
   }
 
   /** @return name */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getName() {
     return name;
   }
@@ -109,9 +107,7 @@ public class CustomFieldV2 {
    *
    * @return required
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(example = "null", description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -126,7 +122,7 @@ public class CustomFieldV2 {
   }
 
   /** @return show */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getShow() {
     return show;
   }
@@ -145,7 +141,7 @@ public class CustomFieldV2 {
    *
    * @return value
    */
-  @ApiModelProperty(example = "null", value = "The value of the custom field.")
+  @Schema(example = "null", description = "The value of the custom field.")
   public String getValue() {
     return value;
   }
@@ -194,7 +190,8 @@ public class CustomFieldV2 {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

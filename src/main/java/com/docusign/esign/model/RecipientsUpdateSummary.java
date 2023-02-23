@@ -6,30 +6,30 @@ import com.docusign.esign.model.RecipientUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This is the response that the API returns after you update recipients..
  *
  */
-@ApiModel(description = "This is the response that the API returns after you update recipients.")
+@Schema(description = "This is the response that the API returns after you update recipients.")
 
 public class RecipientsUpdateSummary {
   @JsonProperty("recipientUpdateResults")
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = null;
-
 
   /**
    * recipientUpdateResults.
    *
    * @return RecipientsUpdateSummary
    **/
-  public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
+  public RecipientsUpdateSummary recipientUpdateResults(
+      java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
   }
-  
+
   /**
    * addRecipientUpdateResultsItem.
    *
@@ -45,9 +45,10 @@ public class RecipientsUpdateSummary {
 
   /**
    * .
+   * 
    * @return recipientUpdateResults
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
@@ -58,7 +59,6 @@ public class RecipientsUpdateSummary {
   public void setRecipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +85,6 @@ public class RecipientsUpdateSummary {
     return Objects.hash(recipientUpdateResults);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +92,7 @@ public class RecipientsUpdateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientsUpdateSummary {\n");
-    
+
     sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +110,3 @@ public class RecipientsUpdateSummary {
   }
 
 }
-

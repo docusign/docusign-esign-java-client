@@ -7,14 +7,14 @@ import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Provides properties that describe user authorization to a workspace..
  *
  */
-@ApiModel(description = "Provides properties that describe user authorization to a workspace.")
+@Schema(description = "Provides properties that describe user authorization to a workspace.")
 
 public class WorkspaceUserAuthorization {
   @JsonProperty("canDelete")
@@ -50,7 +50,6 @@ public class WorkspaceUserAuthorization {
   @JsonProperty("workspaceUserInformation")
   private WorkspaceUser workspaceUserInformation = null;
 
-
   /**
    * canDelete.
    *
@@ -63,9 +62,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return canDelete
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCanDelete() {
     return canDelete;
   }
@@ -76,7 +76,6 @@ public class WorkspaceUserAuthorization {
   public void setCanDelete(String canDelete) {
     this.canDelete = canDelete;
   }
-
 
   /**
    * canMove.
@@ -90,9 +89,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return canMove
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCanMove() {
     return canMove;
   }
@@ -103,7 +103,6 @@ public class WorkspaceUserAuthorization {
   public void setCanMove(String canMove) {
     this.canMove = canMove;
   }
-
 
   /**
    * canTransact.
@@ -117,9 +116,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return canTransact
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCanTransact() {
     return canTransact;
   }
@@ -130,7 +130,6 @@ public class WorkspaceUserAuthorization {
   public void setCanTransact(String canTransact) {
     this.canTransact = canTransact;
   }
-
 
   /**
    * canView.
@@ -144,9 +143,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return canView
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCanView() {
     return canView;
   }
@@ -157,7 +157,6 @@ public class WorkspaceUserAuthorization {
   public void setCanView(String canView) {
     this.canView = canView;
   }
-
 
   /**
    * created.
@@ -171,9 +170,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * The UTC DateTime when the workspace user authorization was created..
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "The UTC DateTime when the workspace user authorization was created.")
+  @Schema(description = "The UTC DateTime when the workspace user authorization was created.")
   public String getCreated() {
     return created;
   }
@@ -184,7 +184,6 @@ public class WorkspaceUserAuthorization {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdById.
@@ -198,9 +197,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return createdById
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -211,7 +211,6 @@ public class WorkspaceUserAuthorization {
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
-
 
   /**
    * errorDetails.
@@ -224,10 +223,12 @@ public class WorkspaceUserAuthorization {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -238,7 +239,6 @@ public class WorkspaceUserAuthorization {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * modified.
@@ -252,9 +252,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return modified
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModified() {
     return modified;
   }
@@ -265,7 +266,6 @@ public class WorkspaceUserAuthorization {
   public void setModified(String modified) {
     this.modified = modified;
   }
-
 
   /**
    * modifiedById.
@@ -279,9 +279,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return modifiedById
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedById() {
     return modifiedById;
   }
@@ -292,7 +293,6 @@ public class WorkspaceUserAuthorization {
   public void setModifiedById(String modifiedById) {
     this.modifiedById = modifiedById;
   }
-
 
   /**
    * workspaceUserId.
@@ -306,9 +306,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
+   * 
    * @return workspaceUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
@@ -319,7 +320,6 @@ public class WorkspaceUserAuthorization {
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
-
 
   /**
    * workspaceUserInformation.
@@ -333,9 +333,10 @@ public class WorkspaceUserAuthorization {
 
   /**
    * An object that provides details about the workspace user..
+   * 
    * @return workspaceUserInformation
    **/
-  @ApiModelProperty(value = "An object that provides details about the workspace user.")
+  @Schema(description = "An object that provides details about the workspace user.")
   public WorkspaceUser getWorkspaceUserInformation() {
     return workspaceUserInformation;
   }
@@ -346,7 +347,6 @@ public class WorkspaceUserAuthorization {
   public void setWorkspaceUserInformation(WorkspaceUser workspaceUserInformation) {
     this.workspaceUserInformation = workspaceUserInformation;
   }
-
 
   /**
    * Compares objects.
@@ -380,9 +380,9 @@ public class WorkspaceUserAuthorization {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified, modifiedById, workspaceUserId, workspaceUserInformation);
+    return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified,
+        modifiedById, workspaceUserId, workspaceUserInformation);
   }
-
 
   /**
    * Converts the given object to string.
@@ -391,7 +391,7 @@ public class WorkspaceUserAuthorization {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUserAuthorization {\n");
-    
+
     sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
     sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
     sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
@@ -419,4 +419,3 @@ public class WorkspaceUserAuthorization {
   }
 
 }
-

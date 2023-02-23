@@ -6,8 +6,8 @@ import com.docusign.esign.model.JurisdictionSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NotaryContactDetails.
@@ -21,7 +21,6 @@ public class NotaryContactDetails {
   @JsonProperty("jurisdictions")
   private java.util.List<JurisdictionSummary> jurisdictions = null;
 
-
   /**
    * hasDocusignCertificate.
    *
@@ -34,9 +33,10 @@ public class NotaryContactDetails {
 
   /**
    * .
+   * 
    * @return hasDocusignCertificate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHasDocusignCertificate() {
     return hasDocusignCertificate;
   }
@@ -48,7 +48,6 @@ public class NotaryContactDetails {
     this.hasDocusignCertificate = hasDocusignCertificate;
   }
 
-
   /**
    * jurisdictions.
    *
@@ -58,7 +57,7 @@ public class NotaryContactDetails {
     this.jurisdictions = jurisdictions;
     return this;
   }
-  
+
   /**
    * addJurisdictionsItem.
    *
@@ -74,9 +73,10 @@ public class NotaryContactDetails {
 
   /**
    * .
+   * 
    * @return jurisdictions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<JurisdictionSummary> getJurisdictions() {
     return jurisdictions;
   }
@@ -87,7 +87,6 @@ public class NotaryContactDetails {
   public void setJurisdictions(java.util.List<JurisdictionSummary> jurisdictions) {
     this.jurisdictions = jurisdictions;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class NotaryContactDetails {
     return Objects.hash(hasDocusignCertificate, jurisdictions);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class NotaryContactDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryContactDetails {\n");
-    
+
     sb.append("    hasDocusignCertificate: ").append(toIndentedString(hasDocusignCertificate)).append("\n");
     sb.append("    jurisdictions: ").append(toIndentedString(jurisdictions)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class NotaryContactDetails {
   }
 
 }
-

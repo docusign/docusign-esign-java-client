@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocGenSyntaxError.
@@ -23,7 +23,6 @@ public class DocGenSyntaxError {
   @JsonProperty("tagIdentifier")
   private String tagIdentifier = null;
 
-
   /**
    * errorCode.
    *
@@ -36,9 +35,10 @@ public class DocGenSyntaxError {
 
   /**
    * .
+   * 
    * @return errorCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorCode() {
     return errorCode;
   }
@@ -49,7 +49,6 @@ public class DocGenSyntaxError {
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
-
 
   /**
    * message.
@@ -63,9 +62,10 @@ public class DocGenSyntaxError {
 
   /**
    * .
+   * 
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMessage() {
     return message;
   }
@@ -76,7 +76,6 @@ public class DocGenSyntaxError {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   /**
    * tagIdentifier.
@@ -90,9 +89,10 @@ public class DocGenSyntaxError {
 
   /**
    * .
+   * 
    * @return tagIdentifier
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTagIdentifier() {
     return tagIdentifier;
   }
@@ -103,7 +103,6 @@ public class DocGenSyntaxError {
   public void setTagIdentifier(String tagIdentifier) {
     this.tagIdentifier = tagIdentifier;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class DocGenSyntaxError {
     return Objects.hash(errorCode, message, tagIdentifier);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class DocGenSyntaxError {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenSyntaxError {\n");
-    
+
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    tagIdentifier: ").append(toIndentedString(tagIdentifier)).append("\n");
@@ -160,4 +158,3 @@ public class DocGenSyntaxError {
   }
 
 }
-

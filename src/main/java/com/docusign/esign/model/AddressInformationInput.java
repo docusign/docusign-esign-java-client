@@ -6,14 +6,14 @@ import com.docusign.esign.model.AddressInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains address input information..
  *
  */
-@ApiModel(description = "Contains address input information.")
+@Schema(description = "Contains address input information.")
 
 public class AddressInformationInput {
   @JsonProperty("addressInformation")
@@ -24,7 +24,6 @@ public class AddressInformationInput {
 
   @JsonProperty("receiveInResponse")
   private String receiveInResponse = null;
-
 
   /**
    * addressInformation.
@@ -37,10 +36,18 @@ public class AddressInformationInput {
   }
 
   /**
-   * A complex type that contains the following information for the new account: `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and `stateOrProvince`.  The maximum characters for the strings are: * `address1`, `address2`, `city`, `country` and `stateOrProvince`: 100 characters * `postalCode`, `phone`, and `fax`: 20 characters  **Note:** If country is US (United States), `stateOrProvince` codes are validated. Otherwise, `stateOrProvince` is treated as a non-validated string used to specify a state, province, or region..
+   * A complex type that contains the following information for the new account:
+   * `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and
+   * `stateOrProvince`. The maximum characters for the strings are: * `address1`,
+   * `address2`, `city`, `country` and `stateOrProvince`: 100 characters *
+   * `postalCode`, `phone`, and `fax`: 20 characters **Note:** If country is US
+   * (United States), `stateOrProvince` codes are validated. Otherwise,
+   * `stateOrProvince` is treated as a non-validated string used to specify a
+   * state, province, or region..
+   * 
    * @return addressInformation
    **/
-  @ApiModelProperty(value = "A complex type that contains the following information for the new account: `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and `stateOrProvince`.  The maximum characters for the strings are: * `address1`, `address2`, `city`, `country` and `stateOrProvince`: 100 characters * `postalCode`, `phone`, and `fax`: 20 characters  **Note:** If country is US (United States), `stateOrProvince` codes are validated. Otherwise, `stateOrProvince` is treated as a non-validated string used to specify a state, province, or region.")
+  @Schema(description = "A complex type that contains the following information for the new account: `address1`, `address2`, `city`, `country`, `fax`, `phone`, `postalCode` and `stateOrProvince`.  The maximum characters for the strings are: * `address1`, `address2`, `city`, `country` and `stateOrProvince`: 100 characters * `postalCode`, `phone`, and `fax`: 20 characters  **Note:** If country is US (United States), `stateOrProvince` codes are validated. Otherwise, `stateOrProvince` is treated as a non-validated string used to specify a state, province, or region.")
   public AddressInformation getAddressInformation() {
     return addressInformation;
   }
@@ -51,7 +58,6 @@ public class AddressInformationInput {
   public void setAddressInformation(AddressInformation addressInformation) {
     this.addressInformation = addressInformation;
   }
-
 
   /**
    * displayLevelCode.
@@ -64,10 +70,12 @@ public class AddressInformationInput {
   }
 
   /**
-   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
+   * Specifies the display level for the recipient. Valid values are: * ReadOnly *
+   * Editable * DoNotDisplay.
+   * 
    * @return displayLevelCode
    **/
-  @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
+  @Schema(description = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
@@ -78,7 +86,6 @@ public class AddressInformationInput {
   public void setDisplayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
   }
-
 
   /**
    * receiveInResponse.
@@ -92,9 +99,10 @@ public class AddressInformationInput {
 
   /**
    * When set to **true**, the information needs to be returned in the response..
+   * 
    * @return receiveInResponse
    **/
-  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
+  @Schema(description = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
@@ -105,7 +113,6 @@ public class AddressInformationInput {
   public void setReceiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
   }
-
 
   /**
    * Compares objects.
@@ -134,7 +141,6 @@ public class AddressInformationInput {
     return Objects.hash(addressInformation, displayLevelCode, receiveInResponse);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -142,7 +148,7 @@ public class AddressInformationInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformationInput {\n");
-    
+
     sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
     sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
@@ -162,4 +168,3 @@ public class AddressInformationInput {
   }
 
 }
-

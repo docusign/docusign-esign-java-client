@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SealIdentifier.
@@ -20,7 +20,6 @@ public class SealIdentifier {
   @JsonProperty("sealName")
   private String sealName = null;
 
-
   /**
    * sealDisplayName.
    *
@@ -33,9 +32,10 @@ public class SealIdentifier {
 
   /**
    * .
+   * 
    * @return sealDisplayName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSealDisplayName() {
     return sealDisplayName;
   }
@@ -46,7 +46,6 @@ public class SealIdentifier {
   public void setSealDisplayName(String sealDisplayName) {
     this.sealDisplayName = sealDisplayName;
   }
-
 
   /**
    * sealName.
@@ -60,9 +59,10 @@ public class SealIdentifier {
 
   /**
    * .
+   * 
    * @return sealName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSealName() {
     return sealName;
   }
@@ -73,7 +73,6 @@ public class SealIdentifier {
   public void setSealName(String sealName) {
     this.sealName = sealName;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class SealIdentifier {
     return Objects.hash(sealDisplayName, sealName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class SealIdentifier {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SealIdentifier {\n");
-    
+
     sb.append("    sealDisplayName: ").append(toIndentedString(sealDisplayName)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class SealIdentifier {
   }
 
 }
-

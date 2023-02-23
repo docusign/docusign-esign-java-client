@@ -6,14 +6,14 @@ import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Details about consumer disclosures..
  *
  */
-@ApiModel(description = "Details about consumer disclosures.")
+@Schema(description = "Details about consumer disclosures.")
 
 public class ConsumerDisclosure {
   @JsonProperty("accountEsignId")
@@ -112,7 +112,6 @@ public class ConsumerDisclosure {
   @JsonProperty("withdrawState")
   private String withdrawState = null;
 
-
   /**
    * accountEsignId.
    *
@@ -125,9 +124,10 @@ public class ConsumerDisclosure {
 
   /**
    * A GUID identifying the account associated with the consumer disclosure.
+   * 
    * @return accountEsignId
    **/
-  @ApiModelProperty(value = "A GUID identifying the account associated with the consumer disclosure")
+  @Schema(description = "A GUID identifying the account associated with the consumer disclosure")
   public String getAccountEsignId() {
     return accountEsignId;
   }
@@ -138,7 +138,6 @@ public class ConsumerDisclosure {
   public void setAccountEsignId(String accountEsignId) {
     this.accountEsignId = accountEsignId;
   }
-
 
   /**
    * allowCDWithdraw.
@@ -151,10 +150,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Indicates whether the customer can withdraw their acceptance of the consumer disclosure..
+   * Indicates whether the customer can withdraw their acceptance of the consumer
+   * disclosure..
+   * 
    * @return allowCDWithdraw
    **/
-  @ApiModelProperty(value = "Indicates whether the customer can withdraw their acceptance of the consumer disclosure.")
+  @Schema(description = "Indicates whether the customer can withdraw their acceptance of the consumer disclosure.")
   public String getAllowCDWithdraw() {
     return allowCDWithdraw;
   }
@@ -165,7 +166,6 @@ public class ConsumerDisclosure {
   public void setAllowCDWithdraw(String allowCDWithdraw) {
     this.allowCDWithdraw = allowCDWithdraw;
   }
-
 
   /**
    * allowCDWithdrawMetadata.
@@ -179,9 +179,10 @@ public class ConsumerDisclosure {
 
   /**
    * Metadata that indicates whether the `allowCDWithdraw` property is editable. .
+   * 
    * @return allowCDWithdrawMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `allowCDWithdraw` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `allowCDWithdraw` property is editable. ")
   public SettingsMetadata getAllowCDWithdrawMetadata() {
     return allowCDWithdrawMetadata;
   }
@@ -192,7 +193,6 @@ public class ConsumerDisclosure {
   public void setAllowCDWithdrawMetadata(SettingsMetadata allowCDWithdrawMetadata) {
     this.allowCDWithdrawMetadata = allowCDWithdrawMetadata;
   }
-
 
   /**
    * changeEmail.
@@ -206,9 +206,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return changeEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChangeEmail() {
     return changeEmail;
   }
@@ -219,7 +220,6 @@ public class ConsumerDisclosure {
   public void setChangeEmail(String changeEmail) {
     this.changeEmail = changeEmail;
   }
-
 
   /**
    * changeEmailOther.
@@ -233,9 +233,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return changeEmailOther
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChangeEmailOther() {
     return changeEmailOther;
   }
@@ -246,7 +247,6 @@ public class ConsumerDisclosure {
   public void setChangeEmailOther(String changeEmailOther) {
     this.changeEmailOther = changeEmailOther;
   }
-
 
   /**
    * companyName.
@@ -260,9 +260,10 @@ public class ConsumerDisclosure {
 
   /**
    * The name of the company associated with the consumer disclosure..
+   * 
    * @return companyName
    **/
-  @ApiModelProperty(value = "The name of the company associated with the consumer disclosure.")
+  @Schema(description = "The name of the company associated with the consumer disclosure.")
   public String getCompanyName() {
     return companyName;
   }
@@ -273,7 +274,6 @@ public class ConsumerDisclosure {
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
-
 
   /**
    * companyPhone.
@@ -287,9 +287,10 @@ public class ConsumerDisclosure {
 
   /**
    * The phone number of the company associated with the consumer disclosure..
+   * 
    * @return companyPhone
    **/
-  @ApiModelProperty(value = "The phone number of the company associated with the consumer disclosure.")
+  @Schema(description = "The phone number of the company associated with the consumer disclosure.")
   public String getCompanyPhone() {
     return companyPhone;
   }
@@ -300,7 +301,6 @@ public class ConsumerDisclosure {
   public void setCompanyPhone(String companyPhone) {
     this.companyPhone = companyPhone;
   }
-
 
   /**
    * copyCostPerPage.
@@ -314,9 +314,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return copyCostPerPage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCopyCostPerPage() {
     return copyCostPerPage;
   }
@@ -327,7 +328,6 @@ public class ConsumerDisclosure {
   public void setCopyCostPerPage(String copyCostPerPage) {
     this.copyCostPerPage = copyCostPerPage;
   }
-
 
   /**
    * copyFeeCollectionMethod.
@@ -340,10 +340,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters.
+   * Specifies the fee collection method for cases in which the customer requires
+   * paper copies of the document. Maximum Length: 255 characters.
+   * 
    * @return copyFeeCollectionMethod
    **/
-  @ApiModelProperty(value = "Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters")
+  @Schema(description = "Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters")
   public String getCopyFeeCollectionMethod() {
     return copyFeeCollectionMethod;
   }
@@ -354,7 +356,6 @@ public class ConsumerDisclosure {
   public void setCopyFeeCollectionMethod(String copyFeeCollectionMethod) {
     this.copyFeeCollectionMethod = copyFeeCollectionMethod;
   }
-
 
   /**
    * copyRequestEmail.
@@ -368,9 +369,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return copyRequestEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCopyRequestEmail() {
     return copyRequestEmail;
   }
@@ -381,7 +383,6 @@ public class ConsumerDisclosure {
   public void setCopyRequestEmail(String copyRequestEmail) {
     this.copyRequestEmail = copyRequestEmail;
   }
-
 
   /**
    * custom.
@@ -395,9 +396,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return custom
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustom() {
     return custom;
   }
@@ -408,7 +410,6 @@ public class ConsumerDisclosure {
   public void setCustom(String custom) {
     this.custom = custom;
   }
-
 
   /**
    * enableEsign.
@@ -422,9 +423,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return enableEsign
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnableEsign() {
     return enableEsign;
   }
@@ -435,7 +437,6 @@ public class ConsumerDisclosure {
   public void setEnableEsign(String enableEsign) {
     this.enableEsign = enableEsign;
   }
-
 
   /**
    * esignAgreement.
@@ -448,10 +449,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting..
+   * The Electronic Record and Signature Disclosure text. The disclosure text
+   * includes the html formatting..
+   * 
    * @return esignAgreement
    **/
-  @ApiModelProperty(value = "The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.")
+  @Schema(description = "The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.")
   public String getEsignAgreement() {
     return esignAgreement;
   }
@@ -462,7 +465,6 @@ public class ConsumerDisclosure {
   public void setEsignAgreement(String esignAgreement) {
     this.esignAgreement = esignAgreement;
   }
-
 
   /**
    * esignText.
@@ -476,9 +478,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return esignText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEsignText() {
     return esignText;
   }
@@ -489,7 +492,6 @@ public class ConsumerDisclosure {
   public void setEsignText(String esignText) {
     this.esignText = esignText;
   }
-
 
   /**
    * languageCode.
@@ -503,9 +505,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return languageCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLanguageCode() {
     return languageCode;
   }
@@ -516,7 +519,6 @@ public class ConsumerDisclosure {
   public void setLanguageCode(String languageCode) {
     this.languageCode = languageCode;
   }
-
 
   /**
    * mustAgreeToEsign.
@@ -530,9 +532,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return mustAgreeToEsign
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMustAgreeToEsign() {
     return mustAgreeToEsign;
   }
@@ -543,7 +546,6 @@ public class ConsumerDisclosure {
   public void setMustAgreeToEsign(String mustAgreeToEsign) {
     this.mustAgreeToEsign = mustAgreeToEsign;
   }
-
 
   /**
    * pdfId.
@@ -557,9 +559,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return pdfId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPdfId() {
     return pdfId;
   }
@@ -570,7 +573,6 @@ public class ConsumerDisclosure {
   public void setPdfId(String pdfId) {
     this.pdfId = pdfId;
   }
-
 
   /**
    * useBrand.
@@ -584,9 +586,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return useBrand
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUseBrand() {
     return useBrand;
   }
@@ -597,7 +600,6 @@ public class ConsumerDisclosure {
   public void setUseBrand(String useBrand) {
     this.useBrand = useBrand;
   }
-
 
   /**
    * useConsumerDisclosureWithinAccount.
@@ -611,9 +613,10 @@ public class ConsumerDisclosure {
 
   /**
    * .
+   * 
    * @return useConsumerDisclosureWithinAccount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUseConsumerDisclosureWithinAccount() {
     return useConsumerDisclosureWithinAccount;
   }
@@ -625,22 +628,24 @@ public class ConsumerDisclosure {
     this.useConsumerDisclosureWithinAccount = useConsumerDisclosureWithinAccount;
   }
 
-
   /**
    * useConsumerDisclosureWithinAccountMetadata.
    *
    * @return ConsumerDisclosure
    **/
-  public ConsumerDisclosure useConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public ConsumerDisclosure useConsumerDisclosureWithinAccountMetadata(
+      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. .
+   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount`
+   * property is editable. .
+   * 
    * @return useConsumerDisclosureWithinAccountMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. ")
   public SettingsMetadata getUseConsumerDisclosureWithinAccountMetadata() {
     return useConsumerDisclosureWithinAccountMetadata;
   }
@@ -648,10 +653,10 @@ public class ConsumerDisclosure {
   /**
    * setUseConsumerDisclosureWithinAccountMetadata.
    **/
-  public void setUseConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public void setUseConsumerDisclosureWithinAccountMetadata(
+      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
   }
-
 
   /**
    * withdrawAddressLine1.
@@ -664,10 +669,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
+   * Contains the first address line of the postal address to which a customer can
+   * send a consent withdrawal notification. Maximum length: 100 characters. .
+   * 
    * @return withdrawAddressLine1
    **/
-  @ApiModelProperty(value = "Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @Schema(description = "Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawAddressLine1() {
     return withdrawAddressLine1;
   }
@@ -678,7 +685,6 @@ public class ConsumerDisclosure {
   public void setWithdrawAddressLine1(String withdrawAddressLine1) {
     this.withdrawAddressLine1 = withdrawAddressLine1;
   }
-
 
   /**
    * withdrawAddressLine2.
@@ -691,10 +697,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
+   * Contains the second address line of the postal address to which a customer
+   * can send a consent withdrawal notification. Maximum length: 100 characters. .
+   * 
    * @return withdrawAddressLine2
    **/
-  @ApiModelProperty(value = "Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @Schema(description = "Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawAddressLine2() {
     return withdrawAddressLine2;
   }
@@ -705,7 +713,6 @@ public class ConsumerDisclosure {
   public void setWithdrawAddressLine2(String withdrawAddressLine2) {
     this.withdrawAddressLine2 = withdrawAddressLine2;
   }
-
 
   /**
    * withdrawByEmail.
@@ -719,9 +726,10 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by email..
+   * 
    * @return withdrawByEmail
    **/
-  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by email.")
+  @Schema(description = "Indicates whether the customer can withdraw consent by email.")
   public String getWithdrawByEmail() {
     return withdrawByEmail;
   }
@@ -732,7 +740,6 @@ public class ConsumerDisclosure {
   public void setWithdrawByEmail(String withdrawByEmail) {
     this.withdrawByEmail = withdrawByEmail;
   }
-
 
   /**
    * withdrawByMail.
@@ -746,9 +753,10 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by postal mail..
+   * 
    * @return withdrawByMail
    **/
-  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by postal mail.")
+  @Schema(description = "Indicates whether the customer can withdraw consent by postal mail.")
   public String getWithdrawByMail() {
     return withdrawByMail;
   }
@@ -759,7 +767,6 @@ public class ConsumerDisclosure {
   public void setWithdrawByMail(String withdrawByMail) {
     this.withdrawByMail = withdrawByMail;
   }
-
 
   /**
    * withdrawByPhone.
@@ -773,9 +780,10 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by phone..
+   * 
    * @return withdrawByPhone
    **/
-  @ApiModelProperty(value = "Indicates whether the customer can withdraw consent by phone.")
+  @Schema(description = "Indicates whether the customer can withdraw consent by phone.")
   public String getWithdrawByPhone() {
     return withdrawByPhone;
   }
@@ -786,7 +794,6 @@ public class ConsumerDisclosure {
   public void setWithdrawByPhone(String withdrawByPhone) {
     this.withdrawByPhone = withdrawByPhone;
   }
-
 
   /**
    * withdrawCity.
@@ -799,10 +806,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. .
+   * Contains the city of the postal address to which a customer can send a
+   * consent withdrawal notification. Maximum length: 50 characters. .
+   * 
    * @return withdrawCity
    **/
-  @ApiModelProperty(value = "Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. ")
+  @Schema(description = "Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. ")
   public String getWithdrawCity() {
     return withdrawCity;
   }
@@ -813,7 +822,6 @@ public class ConsumerDisclosure {
   public void setWithdrawCity(String withdrawCity) {
     this.withdrawCity = withdrawCity;
   }
-
 
   /**
    * withdrawConsequences.
@@ -827,9 +835,10 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates the consequences of withdrawing consent..
+   * 
    * @return withdrawConsequences
    **/
-  @ApiModelProperty(value = "Indicates the consequences of withdrawing consent.")
+  @Schema(description = "Indicates the consequences of withdrawing consent.")
   public String getWithdrawConsequences() {
     return withdrawConsequences;
   }
@@ -840,7 +849,6 @@ public class ConsumerDisclosure {
   public void setWithdrawConsequences(String withdrawConsequences) {
     this.withdrawConsequences = withdrawConsequences;
   }
-
 
   /**
    * withdrawEmail.
@@ -853,10 +861,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
+   * Contains the email address to which a customer can send a consent withdrawal
+   * notification. Maximum length: 100 characters. .
+   * 
    * @return withdrawEmail
    **/
-  @ApiModelProperty(value = "Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
+  @Schema(description = "Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
   public String getWithdrawEmail() {
     return withdrawEmail;
   }
@@ -867,7 +877,6 @@ public class ConsumerDisclosure {
   public void setWithdrawEmail(String withdrawEmail) {
     this.withdrawEmail = withdrawEmail;
   }
-
 
   /**
    * withdrawOther.
@@ -880,10 +889,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Indicates other information need to withdraw consent.  Maximum length: 255 characters..
+   * Indicates other information need to withdraw consent. Maximum length: 255
+   * characters..
+   * 
    * @return withdrawOther
    **/
-  @ApiModelProperty(value = "Indicates other information need to withdraw consent.  Maximum length: 255 characters.")
+  @Schema(description = "Indicates other information need to withdraw consent.  Maximum length: 255 characters.")
   public String getWithdrawOther() {
     return withdrawOther;
   }
@@ -894,7 +905,6 @@ public class ConsumerDisclosure {
   public void setWithdrawOther(String withdrawOther) {
     this.withdrawOther = withdrawOther;
   }
-
 
   /**
    * withdrawPhone.
@@ -907,10 +917,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. .
+   * Contains the phone number which a customer can call to register consent
+   * withdrawal notification. Maximum length: 20 characters. .
+   * 
    * @return withdrawPhone
    **/
-  @ApiModelProperty(value = "Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. ")
+  @Schema(description = "Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. ")
   public String getWithdrawPhone() {
     return withdrawPhone;
   }
@@ -921,7 +933,6 @@ public class ConsumerDisclosure {
   public void setWithdrawPhone(String withdrawPhone) {
     this.withdrawPhone = withdrawPhone;
   }
-
 
   /**
    * withdrawPostalCode.
@@ -934,10 +945,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. .
+   * Contains the postal code of the postal address to which a customer can send a
+   * consent withdrawal notification. Maximum length: 20 characters. .
+   * 
    * @return withdrawPostalCode
    **/
-  @ApiModelProperty(value = "Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. ")
+  @Schema(description = "Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. ")
   public String getWithdrawPostalCode() {
     return withdrawPostalCode;
   }
@@ -948,7 +961,6 @@ public class ConsumerDisclosure {
   public void setWithdrawPostalCode(String withdrawPostalCode) {
     this.withdrawPostalCode = withdrawPostalCode;
   }
-
 
   /**
    * withdrawState.
@@ -961,10 +973,12 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the state of the postal address to which a customer can send a consent withdrawal notification..
+   * Contains the state of the postal address to which a customer can send a
+   * consent withdrawal notification..
+   * 
    * @return withdrawState
    **/
-  @ApiModelProperty(value = "Contains the state of the postal address to which a customer can send a consent withdrawal notification.")
+  @Schema(description = "Contains the state of the postal address to which a customer can send a consent withdrawal notification.")
   public String getWithdrawState() {
     return withdrawState;
   }
@@ -975,7 +989,6 @@ public class ConsumerDisclosure {
   public void setWithdrawState(String withdrawState) {
     this.withdrawState = withdrawState;
   }
-
 
   /**
    * Compares objects.
@@ -1009,8 +1022,11 @@ public class ConsumerDisclosure {
         Objects.equals(this.mustAgreeToEsign, consumerDisclosure.mustAgreeToEsign) &&
         Objects.equals(this.pdfId, consumerDisclosure.pdfId) &&
         Objects.equals(this.useBrand, consumerDisclosure.useBrand) &&
-        Objects.equals(this.useConsumerDisclosureWithinAccount, consumerDisclosure.useConsumerDisclosureWithinAccount) &&
-        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata, consumerDisclosure.useConsumerDisclosureWithinAccountMetadata) &&
+        Objects.equals(this.useConsumerDisclosureWithinAccount, consumerDisclosure.useConsumerDisclosureWithinAccount)
+        &&
+        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata,
+            consumerDisclosure.useConsumerDisclosureWithinAccountMetadata)
+        &&
         Objects.equals(this.withdrawAddressLine1, consumerDisclosure.withdrawAddressLine1) &&
         Objects.equals(this.withdrawAddressLine2, consumerDisclosure.withdrawAddressLine2) &&
         Objects.equals(this.withdrawByEmail, consumerDisclosure.withdrawByEmail) &&
@@ -1030,9 +1046,13 @@ public class ConsumerDisclosure {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountEsignId, allowCDWithdraw, allowCDWithdrawMetadata, changeEmail, changeEmailOther, companyName, companyPhone, copyCostPerPage, copyFeeCollectionMethod, copyRequestEmail, custom, enableEsign, esignAgreement, esignText, languageCode, mustAgreeToEsign, pdfId, useBrand, useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, withdrawAddressLine1, withdrawAddressLine2, withdrawByEmail, withdrawByMail, withdrawByPhone, withdrawCity, withdrawConsequences, withdrawEmail, withdrawOther, withdrawPhone, withdrawPostalCode, withdrawState);
+    return Objects.hash(accountEsignId, allowCDWithdraw, allowCDWithdrawMetadata, changeEmail, changeEmailOther,
+        companyName, companyPhone, copyCostPerPage, copyFeeCollectionMethod, copyRequestEmail, custom, enableEsign,
+        esignAgreement, esignText, languageCode, mustAgreeToEsign, pdfId, useBrand, useConsumerDisclosureWithinAccount,
+        useConsumerDisclosureWithinAccountMetadata, withdrawAddressLine1, withdrawAddressLine2, withdrawByEmail,
+        withdrawByMail, withdrawByPhone, withdrawCity, withdrawConsequences, withdrawEmail, withdrawOther,
+        withdrawPhone, withdrawPostalCode, withdrawState);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1041,7 +1061,7 @@ public class ConsumerDisclosure {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsumerDisclosure {\n");
-    
+
     sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
     sb.append("    allowCDWithdraw: ").append(toIndentedString(allowCDWithdraw)).append("\n");
     sb.append("    allowCDWithdrawMetadata: ").append(toIndentedString(allowCDWithdrawMetadata)).append("\n");
@@ -1060,8 +1080,10 @@ public class ConsumerDisclosure {
     sb.append("    mustAgreeToEsign: ").append(toIndentedString(mustAgreeToEsign)).append("\n");
     sb.append("    pdfId: ").append(toIndentedString(pdfId)).append("\n");
     sb.append("    useBrand: ").append(toIndentedString(useBrand)).append("\n");
-    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount)).append("\n");
-    sb.append("    useConsumerDisclosureWithinAccountMetadata: ").append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
+    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount))
+        .append("\n");
+    sb.append("    useConsumerDisclosureWithinAccountMetadata: ")
+        .append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
     sb.append("    withdrawAddressLine1: ").append(toIndentedString(withdrawAddressLine1)).append("\n");
     sb.append("    withdrawAddressLine2: ").append(toIndentedString(withdrawAddressLine2)).append("\n");
     sb.append("    withdrawByEmail: ").append(toIndentedString(withdrawByEmail)).append("\n");
@@ -1090,4 +1112,3 @@ public class ConsumerDisclosure {
   }
 
 }
-

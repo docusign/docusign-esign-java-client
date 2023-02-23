@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountIdentityInputOption.
@@ -23,7 +23,6 @@ public class AccountIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
-
   /**
    * isRequired.
    *
@@ -36,9 +35,10 @@ public class AccountIdentityInputOption {
 
   /**
    * .
+   * 
    * @return isRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsRequired() {
     return isRequired;
   }
@@ -49,7 +49,6 @@ public class AccountIdentityInputOption {
   public void setIsRequired(Boolean isRequired) {
     this.isRequired = isRequired;
   }
-
 
   /**
    * optionName.
@@ -63,9 +62,10 @@ public class AccountIdentityInputOption {
 
   /**
    * .
+   * 
    * @return optionName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOptionName() {
     return optionName;
   }
@@ -76,7 +76,6 @@ public class AccountIdentityInputOption {
   public void setOptionName(String optionName) {
     this.optionName = optionName;
   }
-
 
   /**
    * valueType.
@@ -90,9 +89,10 @@ public class AccountIdentityInputOption {
 
   /**
    * .
+   * 
    * @return valueType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getValueType() {
     return valueType;
   }
@@ -103,7 +103,6 @@ public class AccountIdentityInputOption {
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class AccountIdentityInputOption {
     return Objects.hash(isRequired, optionName, valueType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class AccountIdentityInputOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityInputOption {\n");
-    
+
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
     sb.append("    optionName: ").append(toIndentedString(optionName)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
@@ -160,4 +158,3 @@ public class AccountIdentityInputOption {
   }
 
 }
-

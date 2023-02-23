@@ -6,8 +6,8 @@ import com.docusign.esign.model.BulkEnvelope;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkEnvelopeStatus.
@@ -57,7 +57,6 @@ public class BulkEnvelopeStatus {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * batchId.
    *
@@ -69,10 +68,12 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches..
+   * Specifies an identifier which can be used to retrieve a more detailed status
+   * of individual bulk recipient batches..
+   * 
    * @return batchId
    **/
-  @ApiModelProperty(value = "Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches.")
+  @Schema(description = "Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches.")
   public String getBatchId() {
     return batchId;
   }
@@ -83,7 +84,6 @@ public class BulkEnvelopeStatus {
   public void setBatchId(String batchId) {
     this.batchId = batchId;
   }
-
 
   /**
    * batchSize.
@@ -97,9 +97,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of items returned in this response..
+   * 
    * @return batchSize
    **/
-  @ApiModelProperty(value = "The number of items returned in this response.")
+  @Schema(description = "The number of items returned in this response.")
   public String getBatchSize() {
     return batchSize;
   }
@@ -111,7 +112,6 @@ public class BulkEnvelopeStatus {
     this.batchSize = batchSize;
   }
 
-
   /**
    * bulkEnvelopes.
    *
@@ -121,7 +121,7 @@ public class BulkEnvelopeStatus {
     this.bulkEnvelopes = bulkEnvelopes;
     return this;
   }
-  
+
   /**
    * addBulkEnvelopesItem.
    *
@@ -137,9 +137,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * Reserved: TBD.
+   * 
    * @return bulkEnvelopes
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BulkEnvelope> getBulkEnvelopes() {
     return bulkEnvelopes;
   }
@@ -150,7 +151,6 @@ public class BulkEnvelopeStatus {
   public void setBulkEnvelopes(java.util.List<BulkEnvelope> bulkEnvelopes) {
     this.bulkEnvelopes = bulkEnvelopes;
   }
-
 
   /**
    * bulkEnvelopesBatchUri.
@@ -164,9 +164,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * Reserved: TBD.
+   * 
    * @return bulkEnvelopesBatchUri
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBulkEnvelopesBatchUri() {
     return bulkEnvelopesBatchUri;
   }
@@ -177,7 +178,6 @@ public class BulkEnvelopeStatus {
   public void setBulkEnvelopesBatchUri(String bulkEnvelopesBatchUri) {
     this.bulkEnvelopesBatchUri = bulkEnvelopesBatchUri;
   }
-
 
   /**
    * endPosition.
@@ -191,9 +191,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -204,7 +205,6 @@ public class BulkEnvelopeStatus {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * failed.
@@ -218,9 +218,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of failed. .
+   * 
    * @return failed
    **/
-  @ApiModelProperty(value = "The number of entries with a status of failed. ")
+  @Schema(description = "The number of entries with a status of failed. ")
   public String getFailed() {
     return failed;
   }
@@ -231,7 +232,6 @@ public class BulkEnvelopeStatus {
   public void setFailed(String failed) {
     this.failed = failed;
   }
-
 
   /**
    * nextUri.
@@ -244,10 +244,12 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -258,7 +260,6 @@ public class BulkEnvelopeStatus {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -272,9 +273,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -285,7 +287,6 @@ public class BulkEnvelopeStatus {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * queued.
@@ -299,9 +300,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of queued. .
+   * 
    * @return queued
    **/
-  @ApiModelProperty(value = "The number of entries with a status of queued. ")
+  @Schema(description = "The number of entries with a status of queued. ")
   public String getQueued() {
     return queued;
   }
@@ -312,7 +314,6 @@ public class BulkEnvelopeStatus {
   public void setQueued(String queued) {
     this.queued = queued;
   }
-
 
   /**
    * resultSetSize.
@@ -326,9 +327,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -339,7 +341,6 @@ public class BulkEnvelopeStatus {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * sent.
@@ -353,9 +354,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of sent..
+   * 
    * @return sent
    **/
-  @ApiModelProperty(value = "The number of entries with a status of sent.")
+  @Schema(description = "The number of entries with a status of sent.")
   public String getSent() {
     return sent;
   }
@@ -366,7 +368,6 @@ public class BulkEnvelopeStatus {
   public void setSent(String sent) {
     this.sent = sent;
   }
-
 
   /**
    * startPosition.
@@ -380,9 +381,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -393,7 +395,6 @@ public class BulkEnvelopeStatus {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * submittedDate.
@@ -407,9 +408,10 @@ public class BulkEnvelopeStatus {
 
   /**
    * .
+   * 
    * @return submittedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubmittedDate() {
     return submittedDate;
   }
@@ -420,7 +422,6 @@ public class BulkEnvelopeStatus {
   public void setSubmittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
   }
-
 
   /**
    * totalSetSize.
@@ -433,10 +434,13 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -447,7 +451,6 @@ public class BulkEnvelopeStatus {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -484,9 +487,9 @@ public class BulkEnvelopeStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchSize, bulkEnvelopes, bulkEnvelopesBatchUri, endPosition, failed, nextUri, previousUri, queued, resultSetSize, sent, startPosition, submittedDate, totalSetSize);
+    return Objects.hash(batchId, batchSize, bulkEnvelopes, bulkEnvelopesBatchUri, endPosition, failed, nextUri,
+        previousUri, queued, resultSetSize, sent, startPosition, submittedDate, totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -495,7 +498,7 @@ public class BulkEnvelopeStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelopeStatus {\n");
-    
+
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    bulkEnvelopes: ").append(toIndentedString(bulkEnvelopes)).append("\n");
@@ -526,4 +529,3 @@ public class BulkEnvelopeStatus {
   }
 
 }
-

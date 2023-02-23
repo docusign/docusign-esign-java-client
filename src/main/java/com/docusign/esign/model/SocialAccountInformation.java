@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SocialAccountInformation.
@@ -30,7 +30,6 @@ public class SocialAccountInformation {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * email.
    *
@@ -43,9 +42,10 @@ public class SocialAccountInformation {
 
   /**
    * The users email address..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "The users email address.")
+  @Schema(description = "The users email address.")
   public String getEmail() {
     return email;
   }
@@ -56,7 +56,6 @@ public class SocialAccountInformation {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * errorDetails.
@@ -69,10 +68,12 @@ public class SocialAccountInformation {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -83,7 +84,6 @@ public class SocialAccountInformation {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * provider.
@@ -97,9 +97,10 @@ public class SocialAccountInformation {
 
   /**
    * The social account provider (Facebook, Yahoo, etc.).
+   * 
    * @return provider
    **/
-  @ApiModelProperty(value = "The social account provider (Facebook, Yahoo, etc.)")
+  @Schema(description = "The social account provider (Facebook, Yahoo, etc.)")
   public String getProvider() {
     return provider;
   }
@@ -110,7 +111,6 @@ public class SocialAccountInformation {
   public void setProvider(String provider) {
     this.provider = provider;
   }
-
 
   /**
    * socialId.
@@ -124,9 +124,10 @@ public class SocialAccountInformation {
 
   /**
    * The ID provided by the Socal Account..
+   * 
    * @return socialId
    **/
-  @ApiModelProperty(value = "The ID provided by the Socal Account.")
+  @Schema(description = "The ID provided by the Socal Account.")
   public String getSocialId() {
     return socialId;
   }
@@ -137,7 +138,6 @@ public class SocialAccountInformation {
   public void setSocialId(String socialId) {
     this.socialId = socialId;
   }
-
 
   /**
    * userName.
@@ -151,9 +151,10 @@ public class SocialAccountInformation {
 
   /**
    * The full user name for the account..
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "The full user name for the account.")
+  @Schema(description = "The full user name for the account.")
   public String getUserName() {
     return userName;
   }
@@ -164,7 +165,6 @@ public class SocialAccountInformation {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +195,6 @@ public class SocialAccountInformation {
     return Objects.hash(email, errorDetails, provider, socialId, userName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +202,7 @@ public class SocialAccountInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAccountInformation {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
@@ -225,4 +224,3 @@ public class SocialAccountInformation {
   }
 
 }
-

@@ -7,14 +7,14 @@ import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * The recipient details that are returned after you update the recipient..
  *
  */
-@ApiModel(description = "The recipient details that are returned after you update the recipient.")
+@Schema(description = "The recipient details that are returned after you update the recipient.")
 
 public class RecipientUpdateResponse {
   @JsonProperty("combined")
@@ -32,7 +32,6 @@ public class RecipientUpdateResponse {
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
-
   /**
    * combined.
    *
@@ -45,9 +44,10 @@ public class RecipientUpdateResponse {
 
   /**
    * .
+   * 
    * @return combined
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCombined() {
     return combined;
   }
@@ -58,7 +58,6 @@ public class RecipientUpdateResponse {
   public void setCombined(String combined) {
     this.combined = combined;
   }
-
 
   /**
    * errorDetails.
@@ -71,10 +70,12 @@ public class RecipientUpdateResponse {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -85,7 +86,6 @@ public class RecipientUpdateResponse {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * recipientId.
@@ -98,10 +98,12 @@ public class RecipientUpdateResponse {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -112,7 +114,6 @@ public class RecipientUpdateResponse {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -126,9 +127,10 @@ public class RecipientUpdateResponse {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -139,7 +141,6 @@ public class RecipientUpdateResponse {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * tabs.
@@ -153,9 +154,10 @@ public class RecipientUpdateResponse {
 
   /**
    * All of the tabs associated with the recipient..
+   * 
    * @return tabs
    **/
-  @ApiModelProperty(value = "All of the tabs associated with the recipient.")
+  @Schema(description = "All of the tabs associated with the recipient.")
   public Tabs getTabs() {
     return tabs;
   }
@@ -166,7 +168,6 @@ public class RecipientUpdateResponse {
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
-
 
   /**
    * Compares objects.
@@ -197,7 +198,6 @@ public class RecipientUpdateResponse {
     return Objects.hash(combined, errorDetails, recipientId, recipientIdGuid, tabs);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -205,7 +205,7 @@ public class RecipientUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientUpdateResponse {\n");
-    
+
     sb.append("    combined: ").append(toIndentedString(combined)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -227,4 +227,3 @@ public class RecipientUpdateResponse {
   }
 
 }
-

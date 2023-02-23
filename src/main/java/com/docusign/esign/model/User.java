@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** User */
@@ -30,7 +30,7 @@ public class User {
   }
 
   /** @return cellPhoneNumber */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCellPhoneNumber() {
     return cellPhoneNumber;
   }
@@ -45,7 +45,7 @@ public class User {
   }
 
   /** @return countryCode */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -68,7 +68,7 @@ public class User {
   }
 
   /** @return credentials */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Credential> getCredentials() {
     return credentials;
   }
@@ -83,7 +83,7 @@ public class User {
   }
 
   /** @return displayName */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayName() {
     return displayName;
   }
@@ -98,7 +98,7 @@ public class User {
   }
 
   /** @return email */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -121,7 +121,7 @@ public class User {
   }
 
   /** @return externalClaims */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ExternalClaim> getExternalClaims() {
     return externalClaims;
   }
@@ -169,7 +169,8 @@ public class User {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

@@ -9,8 +9,8 @@ import com.docusign.esign.model.UserSharedItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FolderSharedItem.
@@ -51,7 +51,6 @@ public class FolderSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
-
   /**
    * errorDetails.
    *
@@ -63,10 +62,12 @@ public class FolderSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -77,7 +78,6 @@ public class FolderSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * folderId.
@@ -91,9 +91,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return folderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFolderId() {
     return folderId;
   }
@@ -104,7 +105,6 @@ public class FolderSharedItem {
   public void setFolderId(String folderId) {
     this.folderId = folderId;
   }
-
 
   /**
    * name.
@@ -118,9 +118,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -131,7 +132,6 @@ public class FolderSharedItem {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * owner.
@@ -145,9 +145,10 @@ public class FolderSharedItem {
 
   /**
    * Information about the user who owns the folder..
+   * 
    * @return owner
    **/
-  @ApiModelProperty(value = "Information about the user who owns the folder.")
+  @Schema(description = "Information about the user who owns the folder.")
   public UserInfo getOwner() {
     return owner;
   }
@@ -158,7 +159,6 @@ public class FolderSharedItem {
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
-
 
   /**
    * parentFolderId.
@@ -172,9 +172,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return parentFolderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getParentFolderId() {
     return parentFolderId;
   }
@@ -185,7 +186,6 @@ public class FolderSharedItem {
   public void setParentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
   }
-
 
   /**
    * parentFolderUri.
@@ -199,9 +199,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return parentFolderUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -212,7 +213,6 @@ public class FolderSharedItem {
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
-
 
   /**
    * shared.
@@ -226,9 +226,10 @@ public class FolderSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -240,7 +241,6 @@ public class FolderSharedItem {
     this.shared = shared;
   }
 
-
   /**
    * sharedGroups.
    *
@@ -250,7 +250,7 @@ public class FolderSharedItem {
     this.sharedGroups = sharedGroups;
     return this;
   }
-  
+
   /**
    * addSharedGroupsItem.
    *
@@ -266,9 +266,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return sharedGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
@@ -280,7 +281,6 @@ public class FolderSharedItem {
     this.sharedGroups = sharedGroups;
   }
 
-
   /**
    * sharedUsers.
    *
@@ -290,7 +290,7 @@ public class FolderSharedItem {
     this.sharedUsers = sharedUsers;
     return this;
   }
-  
+
   /**
    * addSharedUsersItem.
    *
@@ -306,9 +306,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return sharedUsers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
@@ -319,7 +320,6 @@ public class FolderSharedItem {
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
-
 
   /**
    * uri.
@@ -333,9 +333,10 @@ public class FolderSharedItem {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -346,7 +347,6 @@ public class FolderSharedItem {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * user.
@@ -360,9 +360,10 @@ public class FolderSharedItem {
 
   /**
    * Information about the user associated with the folder..
+   * 
    * @return user
    **/
-  @ApiModelProperty(value = "Information about the user associated with the folder.")
+  @Schema(description = "Information about the user associated with the folder.")
   public UserInfo getUser() {
     return user;
   }
@@ -373,7 +374,6 @@ public class FolderSharedItem {
   public void setUser(UserInfo user) {
     this.user = user;
   }
-
 
   /**
    * Compares objects.
@@ -407,9 +407,9 @@ public class FolderSharedItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups, sharedUsers, uri, user);
+    return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups,
+        sharedUsers, uri, user);
   }
-
 
   /**
    * Converts the given object to string.
@@ -418,7 +418,7 @@ public class FolderSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderSharedItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -446,4 +446,3 @@ public class FolderSharedItem {
   }
 
 }
-

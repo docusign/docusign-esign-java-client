@@ -6,8 +6,8 @@ import com.docusign.esign.model.Signer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkRecipientsUpdateResponse.
@@ -17,7 +17,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class BulkRecipientsUpdateResponse {
   @JsonProperty("signer")
   private Signer signer = null;
-
 
   /**
    * signer.
@@ -31,9 +30,10 @@ public class BulkRecipientsUpdateResponse {
 
   /**
    * .
+   * 
    * @return signer
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Signer getSigner() {
     return signer;
   }
@@ -44,7 +44,6 @@ public class BulkRecipientsUpdateResponse {
   public void setSigner(Signer signer) {
     this.signer = signer;
   }
-
 
   /**
    * Compares objects.
@@ -71,7 +70,6 @@ public class BulkRecipientsUpdateResponse {
     return Objects.hash(signer);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -79,7 +77,7 @@ public class BulkRecipientsUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientsUpdateResponse {\n");
-    
+
     sb.append("    signer: ").append(toIndentedString(signer)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -97,4 +95,3 @@ public class BulkRecipientsUpdateResponse {
   }
 
 }
-

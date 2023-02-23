@@ -6,14 +6,15 @@ import com.docusign.esign.model.SmartSectionCollapsibleDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * These properties define how a Smart Section displays. A Smart Section is a type of display section..
+ * These properties define how a Smart Section displays. A Smart Section is a
+ * type of display section..
  *
  */
-@ApiModel(description = "These properties define how a Smart Section displays. A Smart Section is a type of display section.")
+@Schema(description = "These properties define how a Smart Section displays. A Smart Section is a type of display section.")
 
 public class SmartSectionDisplaySettings {
   @JsonProperty("cellStyle")
@@ -52,7 +53,6 @@ public class SmartSectionDisplaySettings {
   @JsonProperty("tableStyle")
   private String tableStyle = null;
 
-
   /**
    * cellStyle.
    *
@@ -65,9 +65,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return cellStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCellStyle() {
     return cellStyle;
   }
@@ -78,7 +79,6 @@ public class SmartSectionDisplaySettings {
   public void setCellStyle(String cellStyle) {
     this.cellStyle = cellStyle;
   }
-
 
   /**
    * collapsibleSettings.
@@ -91,10 +91,12 @@ public class SmartSectionDisplaySettings {
   }
 
   /**
-   * This object defines the appearance and function of a collapsible section or item..
+   * This object defines the appearance and function of a collapsible section or
+   * item..
+   * 
    * @return collapsibleSettings
    **/
-  @ApiModelProperty(value = "This object defines the appearance and function of a collapsible section or item.")
+  @Schema(description = "This object defines the appearance and function of a collapsible section or item.")
   public SmartSectionCollapsibleDisplaySettings getCollapsibleSettings() {
     return collapsibleSettings;
   }
@@ -105,7 +107,6 @@ public class SmartSectionDisplaySettings {
   public void setCollapsibleSettings(SmartSectionCollapsibleDisplaySettings collapsibleSettings) {
     this.collapsibleSettings = collapsibleSettings;
   }
-
 
   /**
    * display.
@@ -119,9 +120,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return display
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplay() {
     return display;
   }
@@ -132,7 +134,6 @@ public class SmartSectionDisplaySettings {
   public void setDisplay(String display) {
     this.display = display;
   }
-
 
   /**
    * displayLabel.
@@ -146,9 +147,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayLabel() {
     return displayLabel;
   }
@@ -159,7 +161,6 @@ public class SmartSectionDisplaySettings {
   public void setDisplayLabel(String displayLabel) {
     this.displayLabel = displayLabel;
   }
-
 
   /**
    * displayOrder.
@@ -173,9 +174,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDisplayOrder() {
     return displayOrder;
   }
@@ -186,7 +188,6 @@ public class SmartSectionDisplaySettings {
   public void setDisplayOrder(Integer displayOrder) {
     this.displayOrder = displayOrder;
   }
-
 
   /**
    * displayPageNumber.
@@ -200,9 +201,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDisplayPageNumber() {
     return displayPageNumber;
   }
@@ -213,7 +215,6 @@ public class SmartSectionDisplaySettings {
   public void setDisplayPageNumber(Integer displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
   }
-
 
   /**
    * hideLabelWhenOpened.
@@ -227,9 +228,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return hideLabelWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isHideLabelWhenOpened() {
     return hideLabelWhenOpened;
   }
@@ -240,7 +242,6 @@ public class SmartSectionDisplaySettings {
   public void setHideLabelWhenOpened(Boolean hideLabelWhenOpened) {
     this.hideLabelWhenOpened = hideLabelWhenOpened;
   }
-
 
   /**
    * inlineOuterStyle.
@@ -254,9 +255,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return inlineOuterStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInlineOuterStyle() {
     return inlineOuterStyle;
   }
@@ -267,7 +269,6 @@ public class SmartSectionDisplaySettings {
   public void setInlineOuterStyle(String inlineOuterStyle) {
     this.inlineOuterStyle = inlineOuterStyle;
   }
-
 
   /**
    * labelWhenOpened.
@@ -281,9 +282,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return labelWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabelWhenOpened() {
     return labelWhenOpened;
   }
@@ -294,7 +296,6 @@ public class SmartSectionDisplaySettings {
   public void setLabelWhenOpened(String labelWhenOpened) {
     this.labelWhenOpened = labelWhenOpened;
   }
-
 
   /**
    * preLabel.
@@ -308,9 +309,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return preLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPreLabel() {
     return preLabel;
   }
@@ -321,7 +323,6 @@ public class SmartSectionDisplaySettings {
   public void setPreLabel(String preLabel) {
     this.preLabel = preLabel;
   }
-
 
   /**
    * scrollToTopWhenOpened.
@@ -335,9 +336,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return scrollToTopWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isScrollToTopWhenOpened() {
     return scrollToTopWhenOpened;
   }
@@ -348,7 +350,6 @@ public class SmartSectionDisplaySettings {
   public void setScrollToTopWhenOpened(Boolean scrollToTopWhenOpened) {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
   }
-
 
   /**
    * tableStyle.
@@ -362,9 +363,10 @@ public class SmartSectionDisplaySettings {
 
   /**
    * .
+   * 
    * @return tableStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTableStyle() {
     return tableStyle;
   }
@@ -375,7 +377,6 @@ public class SmartSectionDisplaySettings {
   public void setTableStyle(String tableStyle) {
     this.tableStyle = tableStyle;
   }
-
 
   /**
    * Compares objects.
@@ -410,9 +411,9 @@ public class SmartSectionDisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
+    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber,
+        hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
   }
-
 
   /**
    * Converts the given object to string.
@@ -421,7 +422,7 @@ public class SmartSectionDisplaySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartSectionDisplaySettings {\n");
-    
+
     sb.append("    cellStyle: ").append(toIndentedString(cellStyle)).append("\n");
     sb.append("    collapsibleSettings: ").append(toIndentedString(collapsibleSettings)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
@@ -450,4 +451,3 @@ public class SmartSectionDisplaySettings {
   }
 
 }
-

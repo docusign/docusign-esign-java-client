@@ -6,8 +6,8 @@ import com.docusign.esign.model.ServiceVersion;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ServiceInformation.
@@ -33,7 +33,6 @@ public class ServiceInformation {
   @JsonProperty("serviceVersions")
   private java.util.List<ServiceVersion> serviceVersions = null;
 
-
   /**
    * buildBranch.
    *
@@ -46,9 +45,10 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return buildBranch
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBuildBranch() {
     return buildBranch;
   }
@@ -59,7 +59,6 @@ public class ServiceInformation {
   public void setBuildBranch(String buildBranch) {
     this.buildBranch = buildBranch;
   }
-
 
   /**
    * buildBranchDeployedDateTime.
@@ -73,9 +72,10 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return buildBranchDeployedDateTime
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBuildBranchDeployedDateTime() {
     return buildBranchDeployedDateTime;
   }
@@ -86,7 +86,6 @@ public class ServiceInformation {
   public void setBuildBranchDeployedDateTime(String buildBranchDeployedDateTime) {
     this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
   }
-
 
   /**
    * buildSHA.
@@ -100,9 +99,10 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return buildSHA
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBuildSHA() {
     return buildSHA;
   }
@@ -113,7 +113,6 @@ public class ServiceInformation {
   public void setBuildSHA(String buildSHA) {
     this.buildSHA = buildSHA;
   }
-
 
   /**
    * buildVersion.
@@ -127,9 +126,10 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return buildVersion
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBuildVersion() {
     return buildVersion;
   }
@@ -141,7 +141,6 @@ public class ServiceInformation {
     this.buildVersion = buildVersion;
   }
 
-
   /**
    * linkedSites.
    *
@@ -151,7 +150,7 @@ public class ServiceInformation {
     this.linkedSites = linkedSites;
     return this;
   }
-  
+
   /**
    * addLinkedSitesItem.
    *
@@ -167,9 +166,10 @@ public class ServiceInformation {
 
   /**
    * .
+   * 
    * @return linkedSites
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getLinkedSites() {
     return linkedSites;
   }
@@ -181,7 +181,6 @@ public class ServiceInformation {
     this.linkedSites = linkedSites;
   }
 
-
   /**
    * serviceVersions.
    *
@@ -191,7 +190,7 @@ public class ServiceInformation {
     this.serviceVersions = serviceVersions;
     return this;
   }
-  
+
   /**
    * addServiceVersionsItem.
    *
@@ -207,9 +206,10 @@ public class ServiceInformation {
 
   /**
    * .
+   * 
    * @return serviceVersions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ServiceVersion> getServiceVersions() {
     return serviceVersions;
   }
@@ -220,7 +220,6 @@ public class ServiceInformation {
   public void setServiceVersions(java.util.List<ServiceVersion> serviceVersions) {
     this.serviceVersions = serviceVersions;
   }
-
 
   /**
    * Compares objects.
@@ -252,7 +251,6 @@ public class ServiceInformation {
     return Objects.hash(buildBranch, buildBranchDeployedDateTime, buildSHA, buildVersion, linkedSites, serviceVersions);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -260,7 +258,7 @@ public class ServiceInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceInformation {\n");
-    
+
     sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
     sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
     sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
@@ -283,4 +281,3 @@ public class ServiceInformation {
   }
 
 }
-

@@ -7,14 +7,15 @@ import com.docusign.esign.model.RecipientGroup;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A rule that defines a set of recipients and the conditions under which they will be used for the envelope..
+ * A rule that defines a set of recipients and the conditions under which they
+ * will be used for the envelope..
  *
  */
-@ApiModel(description = "A rule that defines a set of recipients and the conditions under which they will be used for the envelope.")
+@Schema(description = "A rule that defines a set of recipients and the conditions under which they will be used for the envelope.")
 
 public class ConditionalRecipientRule {
   @JsonProperty("conditions")
@@ -29,7 +30,6 @@ public class ConditionalRecipientRule {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
-
   /**
    * conditions.
    *
@@ -39,7 +39,7 @@ public class ConditionalRecipientRule {
     this.conditions = conditions;
     return this;
   }
-  
+
   /**
    * addConditionsItem.
    *
@@ -55,9 +55,10 @@ public class ConditionalRecipientRule {
 
   /**
    * .
+   * 
    * @return conditions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConditionalRecipientRuleCondition> getConditions() {
     return conditions;
   }
@@ -68,7 +69,6 @@ public class ConditionalRecipientRule {
   public void setConditions(java.util.List<ConditionalRecipientRuleCondition> conditions) {
     this.conditions = conditions;
   }
-
 
   /**
    * order.
@@ -82,9 +82,10 @@ public class ConditionalRecipientRule {
 
   /**
    * .
+   * 
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrder() {
     return order;
   }
@@ -95,7 +96,6 @@ public class ConditionalRecipientRule {
   public void setOrder(String order) {
     this.order = order;
   }
-
 
   /**
    * recipientGroup.
@@ -108,10 +108,12 @@ public class ConditionalRecipientRule {
   }
 
   /**
-   * A set of recipients that may be used for the envelope, depending on the `conditions` defined..
+   * A set of recipients that may be used for the envelope, depending on the
+   * `conditions` defined..
+   * 
    * @return recipientGroup
    **/
-  @ApiModelProperty(value = "A set of recipients that may be used for the envelope, depending on the `conditions` defined.")
+  @Schema(description = "A set of recipients that may be used for the envelope, depending on the `conditions` defined.")
   public RecipientGroup getRecipientGroup() {
     return recipientGroup;
   }
@@ -122,7 +124,6 @@ public class ConditionalRecipientRule {
   public void setRecipientGroup(RecipientGroup recipientGroup) {
     this.recipientGroup = recipientGroup;
   }
-
 
   /**
    * recipientId.
@@ -135,10 +136,12 @@ public class ConditionalRecipientRule {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -149,7 +152,6 @@ public class ConditionalRecipientRule {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * Compares objects.
@@ -179,7 +181,6 @@ public class ConditionalRecipientRule {
     return Objects.hash(conditions, order, recipientGroup, recipientId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -187,7 +188,7 @@ public class ConditionalRecipientRule {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRule {\n");
-    
+
     sb.append("    conditions: ").append(toIndentedString(conditions)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    recipientGroup: ").append(toIndentedString(recipientGroup)).append("\n");
@@ -208,4 +209,3 @@ public class ConditionalRecipientRule {
   }
 
 }
-

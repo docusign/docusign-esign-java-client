@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopePublishTransactionErrorRollup.
@@ -20,7 +20,6 @@ public class EnvelopePublishTransactionErrorRollup {
   @JsonProperty("errorType")
   private String errorType = null;
 
-
   /**
    * count.
    *
@@ -33,9 +32,10 @@ public class EnvelopePublishTransactionErrorRollup {
 
   /**
    * .
+   * 
    * @return count
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCount() {
     return count;
   }
@@ -46,7 +46,6 @@ public class EnvelopePublishTransactionErrorRollup {
   public void setCount(String count) {
     this.count = count;
   }
-
 
   /**
    * errorType.
@@ -60,9 +59,10 @@ public class EnvelopePublishTransactionErrorRollup {
 
   /**
    * .
+   * 
    * @return errorType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorType() {
     return errorType;
   }
@@ -73,7 +73,6 @@ public class EnvelopePublishTransactionErrorRollup {
   public void setErrorType(String errorType) {
     this.errorType = errorType;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class EnvelopePublishTransactionErrorRollup {
     return Objects.hash(count, errorType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class EnvelopePublishTransactionErrorRollup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePublishTransactionErrorRollup {\n");
-    
+
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    errorType: ").append(toIndentedString(errorType)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class EnvelopePublishTransactionErrorRollup {
   }
 
 }
-

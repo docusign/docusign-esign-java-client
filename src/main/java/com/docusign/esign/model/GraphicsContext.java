@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * GraphicsContext.
@@ -23,7 +23,6 @@ public class GraphicsContext {
   @JsonProperty("lineWeight")
   private String lineWeight = null;
 
-
   /**
    * fillColor.
    *
@@ -36,9 +35,10 @@ public class GraphicsContext {
 
   /**
    * .
+   * 
    * @return fillColor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFillColor() {
     return fillColor;
   }
@@ -49,7 +49,6 @@ public class GraphicsContext {
   public void setFillColor(String fillColor) {
     this.fillColor = fillColor;
   }
-
 
   /**
    * lineColor.
@@ -63,9 +62,10 @@ public class GraphicsContext {
 
   /**
    * .
+   * 
    * @return lineColor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLineColor() {
     return lineColor;
   }
@@ -76,7 +76,6 @@ public class GraphicsContext {
   public void setLineColor(String lineColor) {
     this.lineColor = lineColor;
   }
-
 
   /**
    * lineWeight.
@@ -90,9 +89,10 @@ public class GraphicsContext {
 
   /**
    * .
+   * 
    * @return lineWeight
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLineWeight() {
     return lineWeight;
   }
@@ -103,7 +103,6 @@ public class GraphicsContext {
   public void setLineWeight(String lineWeight) {
     this.lineWeight = lineWeight;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class GraphicsContext {
     return Objects.hash(fillColor, lineColor, lineWeight);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class GraphicsContext {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphicsContext {\n");
-    
+
     sb.append("    fillColor: ").append(toIndentedString(fillColor)).append("\n");
     sb.append("    lineColor: ").append(toIndentedString(lineColor)).append("\n");
     sb.append("    lineWeight: ").append(toIndentedString(lineWeight)).append("\n");
@@ -160,4 +158,3 @@ public class GraphicsContext {
   }
 
 }
-

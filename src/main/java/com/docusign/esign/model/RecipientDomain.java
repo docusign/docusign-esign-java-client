@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientDomain.
@@ -26,7 +26,6 @@ public class RecipientDomain {
   @JsonProperty("recipientDomainId")
   private String recipientDomainId = null;
 
-
   /**
    * active.
    *
@@ -39,9 +38,10 @@ public class RecipientDomain {
 
   /**
    * .
+   * 
    * @return active
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActive() {
     return active;
   }
@@ -52,7 +52,6 @@ public class RecipientDomain {
   public void setActive(String active) {
     this.active = active;
   }
-
 
   /**
    * domainCode.
@@ -66,9 +65,10 @@ public class RecipientDomain {
 
   /**
    * .
+   * 
    * @return domainCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDomainCode() {
     return domainCode;
   }
@@ -79,7 +79,6 @@ public class RecipientDomain {
   public void setDomainCode(String domainCode) {
     this.domainCode = domainCode;
   }
-
 
   /**
    * domainName.
@@ -93,9 +92,10 @@ public class RecipientDomain {
 
   /**
    * .
+   * 
    * @return domainName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDomainName() {
     return domainName;
   }
@@ -106,7 +106,6 @@ public class RecipientDomain {
   public void setDomainName(String domainName) {
     this.domainName = domainName;
   }
-
 
   /**
    * recipientDomainId.
@@ -120,9 +119,10 @@ public class RecipientDomain {
 
   /**
    * .
+   * 
    * @return recipientDomainId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientDomainId() {
     return recipientDomainId;
   }
@@ -133,7 +133,6 @@ public class RecipientDomain {
   public void setRecipientDomainId(String recipientDomainId) {
     this.recipientDomainId = recipientDomainId;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class RecipientDomain {
     return Objects.hash(active, domainCode, domainName, recipientDomainId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class RecipientDomain {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientDomain {\n");
-    
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
     sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
@@ -192,4 +190,3 @@ public class RecipientDomain {
   }
 
 }
-

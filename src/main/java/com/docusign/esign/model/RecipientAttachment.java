@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientAttachment.
@@ -32,7 +32,6 @@ public class RecipientAttachment {
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
-
   /**
    * attachmentId.
    *
@@ -45,9 +44,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return attachmentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -58,7 +58,6 @@ public class RecipientAttachment {
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
-
 
   /**
    * attachmentType.
@@ -72,9 +71,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return attachmentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -85,7 +85,6 @@ public class RecipientAttachment {
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
-
 
   /**
    * data.
@@ -99,9 +98,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return data
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getData() {
     return data;
   }
@@ -112,7 +112,6 @@ public class RecipientAttachment {
   public void setData(String data) {
     this.data = data;
   }
-
 
   /**
    * label.
@@ -126,9 +125,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return label
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabel() {
     return label;
   }
@@ -139,7 +139,6 @@ public class RecipientAttachment {
   public void setLabel(String label) {
     this.label = label;
   }
-
 
   /**
    * name.
@@ -153,9 +152,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -166,7 +166,6 @@ public class RecipientAttachment {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * remoteUrl.
@@ -180,9 +179,10 @@ public class RecipientAttachment {
 
   /**
    * .
+   * 
    * @return remoteUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -193,7 +193,6 @@ public class RecipientAttachment {
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
-
 
   /**
    * Compares objects.
@@ -225,7 +224,6 @@ public class RecipientAttachment {
     return Objects.hash(attachmentId, attachmentType, data, label, name, remoteUrl);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -233,7 +231,7 @@ public class RecipientAttachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientAttachment {\n");
-    
+
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
@@ -256,4 +254,3 @@ public class RecipientAttachment {
   }
 
 }
-

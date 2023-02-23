@@ -6,8 +6,8 @@ import com.docusign.esign.model.DowngradePlanUpdateResponse;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DowngradRequestBillingInfoResponse.
@@ -21,22 +21,23 @@ public class DowngradRequestBillingInfoResponse {
   @JsonProperty("paymentMethod")
   private String paymentMethod = null;
 
-
   /**
    * downgradePlanInformation.
    *
    * @return DowngradRequestBillingInfoResponse
    **/
-  public DowngradRequestBillingInfoResponse downgradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
+  public DowngradRequestBillingInfoResponse downgradePlanInformation(
+      DowngradePlanUpdateResponse downgradePlanInformation) {
     this.downgradePlanInformation = downgradePlanInformation;
     return this;
   }
 
   /**
    * .
+   * 
    * @return downgradePlanInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DowngradePlanUpdateResponse getDowngradePlanInformation() {
     return downgradePlanInformation;
   }
@@ -47,7 +48,6 @@ public class DowngradRequestBillingInfoResponse {
   public void setDowngradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
     this.downgradePlanInformation = downgradePlanInformation;
   }
-
 
   /**
    * paymentMethod.
@@ -61,9 +61,10 @@ public class DowngradRequestBillingInfoResponse {
 
   /**
    * .
+   * 
    * @return paymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -74,7 +75,6 @@ public class DowngradRequestBillingInfoResponse {
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +102,6 @@ public class DowngradRequestBillingInfoResponse {
     return Objects.hash(downgradePlanInformation, paymentMethod);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +109,7 @@ public class DowngradRequestBillingInfoResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradRequestBillingInfoResponse {\n");
-    
+
     sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("}");
@@ -129,4 +128,3 @@ public class DowngradRequestBillingInfoResponse {
   }
 
 }
-

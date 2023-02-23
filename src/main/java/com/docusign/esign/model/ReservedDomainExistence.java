@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReservedDomainExistence. */
@@ -27,7 +27,7 @@ public class ReservedDomainExistence {
    *
    * @return emailDomain
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmailDomain() {
     return emailDomain;
   }
@@ -52,7 +52,7 @@ public class ReservedDomainExistence {
    *
    * @return isReserved
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsReserved() {
     return isReserved;
   }
@@ -99,7 +99,8 @@ public class ReservedDomainExistence {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

@@ -7,14 +7,14 @@ import com.docusign.esign.model.WorkspaceUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Provides properties that describe a workspace..
  *
  */
-@ApiModel(description = "Provides properties that describe a workspace.")
+@Schema(description = "Provides properties that describe a workspace.")
 
 public class Workspace {
   @JsonProperty("billableAccountId")
@@ -56,7 +56,6 @@ public class Workspace {
   @JsonProperty("workspaceUri")
   private String workspaceUri = null;
 
-
   /**
    * billableAccountId.
    *
@@ -69,9 +68,10 @@ public class Workspace {
 
   /**
    * .
+   * 
    * @return billableAccountId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBillableAccountId() {
     return billableAccountId;
   }
@@ -82,7 +82,6 @@ public class Workspace {
   public void setBillableAccountId(String billableAccountId) {
     this.billableAccountId = billableAccountId;
   }
-
 
   /**
    * callerInformation.
@@ -96,9 +95,10 @@ public class Workspace {
 
   /**
    * .
+   * 
    * @return callerInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public WorkspaceUser getCallerInformation() {
     return callerInformation;
   }
@@ -109,7 +109,6 @@ public class Workspace {
   public void setCallerInformation(WorkspaceUser callerInformation) {
     this.callerInformation = callerInformation;
   }
-
 
   /**
    * created.
@@ -123,9 +122,10 @@ public class Workspace {
 
   /**
    * .
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreated() {
     return created;
   }
@@ -136,7 +136,6 @@ public class Workspace {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdByInformation.
@@ -150,9 +149,10 @@ public class Workspace {
 
   /**
    * Details about the user who created the workspace..
+   * 
    * @return createdByInformation
    **/
-  @ApiModelProperty(value = "Details about the user who created the workspace.")
+  @Schema(description = "Details about the user who created the workspace.")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
@@ -163,7 +163,6 @@ public class Workspace {
   public void setCreatedByInformation(WorkspaceUser createdByInformation) {
     this.createdByInformation = createdByInformation;
   }
-
 
   /**
    * lastModified.
@@ -176,10 +175,12 @@ public class Workspace {
   }
 
   /**
-   * Utc date and time the comment was last updated (can only be done by creator.).
+   * Utc date and time the comment was last updated (can only be done by
+   * creator.).
+   * 
    * @return lastModified
    **/
-  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator.)")
+  @Schema(description = "Utc date and time the comment was last updated (can only be done by creator.)")
   public String getLastModified() {
     return lastModified;
   }
@@ -190,7 +191,6 @@ public class Workspace {
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
-
 
   /**
    * lastModifiedByInformation.
@@ -204,9 +204,10 @@ public class Workspace {
 
   /**
    * Details about the user who last modified the workspace..
+   * 
    * @return lastModifiedByInformation
    **/
-  @ApiModelProperty(value = "Details about the user who last modified the workspace.")
+  @Schema(description = "Details about the user who last modified the workspace.")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
@@ -217,7 +218,6 @@ public class Workspace {
   public void setLastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
-
 
   /**
    * settings.
@@ -231,9 +231,10 @@ public class Workspace {
 
   /**
    * Information about the settings for the workspace..
+   * 
    * @return settings
    **/
-  @ApiModelProperty(value = "Information about the settings for the workspace.")
+  @Schema(description = "Information about the settings for the workspace.")
   public WorkspaceSettings getSettings() {
     return settings;
   }
@@ -244,7 +245,6 @@ public class Workspace {
   public void setSettings(WorkspaceSettings settings) {
     this.settings = settings;
   }
-
 
   /**
    * status.
@@ -257,10 +257,13 @@ public class Workspace {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -271,7 +274,6 @@ public class Workspace {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * workspaceBaseUrl.
@@ -285,9 +287,10 @@ public class Workspace {
 
   /**
    * The relative URL that may be used to access the workspace..
+   * 
    * @return workspaceBaseUrl
    **/
-  @ApiModelProperty(value = "The relative URL that may be used to access the workspace.")
+  @Schema(description = "The relative URL that may be used to access the workspace.")
   public String getWorkspaceBaseUrl() {
     return workspaceBaseUrl;
   }
@@ -298,7 +301,6 @@ public class Workspace {
   public void setWorkspaceBaseUrl(String workspaceBaseUrl) {
     this.workspaceBaseUrl = workspaceBaseUrl;
   }
-
 
   /**
    * workspaceDescription.
@@ -312,9 +314,10 @@ public class Workspace {
 
   /**
    * Text describing the purpose of the workspace..
+   * 
    * @return workspaceDescription
    **/
-  @ApiModelProperty(value = "Text describing the purpose of the workspace.")
+  @Schema(description = "Text describing the purpose of the workspace.")
   public String getWorkspaceDescription() {
     return workspaceDescription;
   }
@@ -325,7 +328,6 @@ public class Workspace {
   public void setWorkspaceDescription(String workspaceDescription) {
     this.workspaceDescription = workspaceDescription;
   }
-
 
   /**
    * workspaceId.
@@ -339,9 +341,10 @@ public class Workspace {
 
   /**
    * The id of the workspace, always populated..
+   * 
    * @return workspaceId
    **/
-  @ApiModelProperty(value = "The id of the workspace, always populated.")
+  @Schema(description = "The id of the workspace, always populated.")
   public String getWorkspaceId() {
     return workspaceId;
   }
@@ -352,7 +355,6 @@ public class Workspace {
   public void setWorkspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
   }
-
 
   /**
    * workspaceName.
@@ -366,9 +368,10 @@ public class Workspace {
 
   /**
    * The name of the workspace..
+   * 
    * @return workspaceName
    **/
-  @ApiModelProperty(value = "The name of the workspace.")
+  @Schema(description = "The name of the workspace.")
   public String getWorkspaceName() {
     return workspaceName;
   }
@@ -379,7 +382,6 @@ public class Workspace {
   public void setWorkspaceName(String workspaceName) {
     this.workspaceName = workspaceName;
   }
-
 
   /**
    * workspaceUri.
@@ -393,9 +395,10 @@ public class Workspace {
 
   /**
    * The relative URI that may be used to access the workspace..
+   * 
    * @return workspaceUri
    **/
-  @ApiModelProperty(value = "The relative URI that may be used to access the workspace.")
+  @Schema(description = "The relative URI that may be used to access the workspace.")
   public String getWorkspaceUri() {
     return workspaceUri;
   }
@@ -406,7 +409,6 @@ public class Workspace {
   public void setWorkspaceUri(String workspaceUri) {
     this.workspaceUri = workspaceUri;
   }
-
 
   /**
    * Compares objects.
@@ -442,9 +444,10 @@ public class Workspace {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(billableAccountId, callerInformation, created, createdByInformation, lastModified, lastModifiedByInformation, settings, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName, workspaceUri);
+    return Objects.hash(billableAccountId, callerInformation, created, createdByInformation, lastModified,
+        lastModifiedByInformation, settings, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName,
+        workspaceUri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -453,7 +456,7 @@ public class Workspace {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Workspace {\n");
-    
+
     sb.append("    billableAccountId: ").append(toIndentedString(billableAccountId)).append("\n");
     sb.append("    callerInformation: ").append(toIndentedString(callerInformation)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -483,4 +486,3 @@ public class Workspace {
   }
 
 }
-

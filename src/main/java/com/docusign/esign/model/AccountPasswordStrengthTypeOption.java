@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordStrengthTypeOption.
@@ -35,7 +35,6 @@ public class AccountPasswordStrengthTypeOption {
   @JsonProperty("passwordIncludeUpperCase")
   private String passwordIncludeUpperCase = null;
 
-
   /**
    * minimumLength.
    *
@@ -48,9 +47,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return minimumLength
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumLength() {
     return minimumLength;
   }
@@ -61,7 +61,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
-
 
   /**
    * name.
@@ -75,9 +74,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -88,7 +88,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * passwordIncludeDigit.
@@ -102,9 +101,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return passwordIncludeDigit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordIncludeDigit() {
     return passwordIncludeDigit;
   }
@@ -116,22 +116,23 @@ public class AccountPasswordStrengthTypeOption {
     this.passwordIncludeDigit = passwordIncludeDigit;
   }
 
-
   /**
    * passwordIncludeDigitOrSpecialCharacter.
    *
    * @return AccountPasswordStrengthTypeOption
    **/
-  public AccountPasswordStrengthTypeOption passwordIncludeDigitOrSpecialCharacter(String passwordIncludeDigitOrSpecialCharacter) {
+  public AccountPasswordStrengthTypeOption passwordIncludeDigitOrSpecialCharacter(
+      String passwordIncludeDigitOrSpecialCharacter) {
     this.passwordIncludeDigitOrSpecialCharacter = passwordIncludeDigitOrSpecialCharacter;
     return this;
   }
 
   /**
    * .
+   * 
    * @return passwordIncludeDigitOrSpecialCharacter
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordIncludeDigitOrSpecialCharacter() {
     return passwordIncludeDigitOrSpecialCharacter;
   }
@@ -142,7 +143,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setPasswordIncludeDigitOrSpecialCharacter(String passwordIncludeDigitOrSpecialCharacter) {
     this.passwordIncludeDigitOrSpecialCharacter = passwordIncludeDigitOrSpecialCharacter;
   }
-
 
   /**
    * passwordIncludeLowerCase.
@@ -156,9 +156,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return passwordIncludeLowerCase
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordIncludeLowerCase() {
     return passwordIncludeLowerCase;
   }
@@ -169,7 +170,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setPasswordIncludeLowerCase(String passwordIncludeLowerCase) {
     this.passwordIncludeLowerCase = passwordIncludeLowerCase;
   }
-
 
   /**
    * passwordIncludeSpecialCharacter.
@@ -183,9 +183,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return passwordIncludeSpecialCharacter
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordIncludeSpecialCharacter() {
     return passwordIncludeSpecialCharacter;
   }
@@ -196,7 +197,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setPasswordIncludeSpecialCharacter(String passwordIncludeSpecialCharacter) {
     this.passwordIncludeSpecialCharacter = passwordIncludeSpecialCharacter;
   }
-
 
   /**
    * passwordIncludeUpperCase.
@@ -210,9 +210,10 @@ public class AccountPasswordStrengthTypeOption {
 
   /**
    * .
+   * 
    * @return passwordIncludeUpperCase
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordIncludeUpperCase() {
     return passwordIncludeUpperCase;
   }
@@ -223,7 +224,6 @@ public class AccountPasswordStrengthTypeOption {
   public void setPasswordIncludeUpperCase(String passwordIncludeUpperCase) {
     this.passwordIncludeUpperCase = passwordIncludeUpperCase;
   }
-
 
   /**
    * Compares objects.
@@ -242,9 +242,13 @@ public class AccountPasswordStrengthTypeOption {
     return Objects.equals(this.minimumLength, accountPasswordStrengthTypeOption.minimumLength) &&
         Objects.equals(this.name, accountPasswordStrengthTypeOption.name) &&
         Objects.equals(this.passwordIncludeDigit, accountPasswordStrengthTypeOption.passwordIncludeDigit) &&
-        Objects.equals(this.passwordIncludeDigitOrSpecialCharacter, accountPasswordStrengthTypeOption.passwordIncludeDigitOrSpecialCharacter) &&
+        Objects.equals(this.passwordIncludeDigitOrSpecialCharacter,
+            accountPasswordStrengthTypeOption.passwordIncludeDigitOrSpecialCharacter)
+        &&
         Objects.equals(this.passwordIncludeLowerCase, accountPasswordStrengthTypeOption.passwordIncludeLowerCase) &&
-        Objects.equals(this.passwordIncludeSpecialCharacter, accountPasswordStrengthTypeOption.passwordIncludeSpecialCharacter) &&
+        Objects.equals(this.passwordIncludeSpecialCharacter,
+            accountPasswordStrengthTypeOption.passwordIncludeSpecialCharacter)
+        &&
         Objects.equals(this.passwordIncludeUpperCase, accountPasswordStrengthTypeOption.passwordIncludeUpperCase);
   }
 
@@ -253,9 +257,9 @@ public class AccountPasswordStrengthTypeOption {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(minimumLength, name, passwordIncludeDigit, passwordIncludeDigitOrSpecialCharacter, passwordIncludeLowerCase, passwordIncludeSpecialCharacter, passwordIncludeUpperCase);
+    return Objects.hash(minimumLength, name, passwordIncludeDigit, passwordIncludeDigitOrSpecialCharacter,
+        passwordIncludeLowerCase, passwordIncludeSpecialCharacter, passwordIncludeUpperCase);
   }
-
 
   /**
    * Converts the given object to string.
@@ -264,13 +268,15 @@ public class AccountPasswordStrengthTypeOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordStrengthTypeOption {\n");
-    
+
     sb.append("    minimumLength: ").append(toIndentedString(minimumLength)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    passwordIncludeDigit: ").append(toIndentedString(passwordIncludeDigit)).append("\n");
-    sb.append("    passwordIncludeDigitOrSpecialCharacter: ").append(toIndentedString(passwordIncludeDigitOrSpecialCharacter)).append("\n");
+    sb.append("    passwordIncludeDigitOrSpecialCharacter: ")
+        .append(toIndentedString(passwordIncludeDigitOrSpecialCharacter)).append("\n");
     sb.append("    passwordIncludeLowerCase: ").append(toIndentedString(passwordIncludeLowerCase)).append("\n");
-    sb.append("    passwordIncludeSpecialCharacter: ").append(toIndentedString(passwordIncludeSpecialCharacter)).append("\n");
+    sb.append("    passwordIncludeSpecialCharacter: ").append(toIndentedString(passwordIncludeSpecialCharacter))
+        .append("\n");
     sb.append("    passwordIncludeUpperCase: ").append(toIndentedString(passwordIncludeUpperCase)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -288,4 +294,3 @@ public class AccountPasswordStrengthTypeOption {
   }
 
 }
-

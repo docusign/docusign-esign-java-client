@@ -6,14 +6,14 @@ import com.docusign.esign.model.BillingInvoiceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about a billing invoice..
  *
  */
-@ApiModel(description = "Contains information about a billing invoice.")
+@Schema(description = "Contains information about a billing invoice.")
 
 public class BillingInvoice {
   @JsonProperty("amount")
@@ -46,7 +46,6 @@ public class BillingInvoice {
   @JsonProperty("taxableAmount")
   private String taxableAmount = null;
 
-
   /**
    * amount.
    *
@@ -59,9 +58,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return amount
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
@@ -72,7 +72,6 @@ public class BillingInvoice {
   public void setAmount(String amount) {
     this.amount = amount;
   }
-
 
   /**
    * balance.
@@ -86,9 +85,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return balance
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBalance() {
     return balance;
   }
@@ -99,7 +99,6 @@ public class BillingInvoice {
   public void setBalance(String balance) {
     this.balance = balance;
   }
-
 
   /**
    * dueDate.
@@ -113,9 +112,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return dueDate
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getDueDate() {
     return dueDate;
   }
@@ -126,7 +126,6 @@ public class BillingInvoice {
   public void setDueDate(String dueDate) {
     this.dueDate = dueDate;
   }
-
 
   /**
    * invoiceId.
@@ -140,9 +139,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return invoiceId
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
@@ -154,7 +154,6 @@ public class BillingInvoice {
     this.invoiceId = invoiceId;
   }
 
-
   /**
    * invoiceItems.
    *
@@ -164,7 +163,7 @@ public class BillingInvoice {
     this.invoiceItems = invoiceItems;
     return this;
   }
-  
+
   /**
    * addInvoiceItemsItem.
    *
@@ -180,9 +179,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return invoiceItems
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingInvoiceItem> getInvoiceItems() {
     return invoiceItems;
   }
@@ -193,7 +193,6 @@ public class BillingInvoice {
   public void setInvoiceItems(java.util.List<BillingInvoiceItem> invoiceItems) {
     this.invoiceItems = invoiceItems;
   }
-
 
   /**
    * invoiceNumber.
@@ -207,9 +206,10 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return invoiceNumber
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getInvoiceNumber() {
     return invoiceNumber;
   }
@@ -220,7 +220,6 @@ public class BillingInvoice {
   public void setInvoiceNumber(String invoiceNumber) {
     this.invoiceNumber = invoiceNumber;
   }
-
 
   /**
    * invoiceUri.
@@ -233,10 +232,12 @@ public class BillingInvoice {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve invoice information..
+   * Contains a URI for an endpoint that you can use to retrieve invoice
+   * information..
+   * 
    * @return invoiceUri
    **/
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
+  @Schema(description = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
   public String getInvoiceUri() {
     return invoiceUri;
   }
@@ -247,7 +248,6 @@ public class BillingInvoice {
   public void setInvoiceUri(String invoiceUri) {
     this.invoiceUri = invoiceUri;
   }
-
 
   /**
    * nonTaxableAmount.
@@ -261,9 +261,10 @@ public class BillingInvoice {
 
   /**
    * .
+   * 
    * @return nonTaxableAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNonTaxableAmount() {
     return nonTaxableAmount;
   }
@@ -274,7 +275,6 @@ public class BillingInvoice {
   public void setNonTaxableAmount(String nonTaxableAmount) {
     this.nonTaxableAmount = nonTaxableAmount;
   }
-
 
   /**
    * pdfAvailable.
@@ -288,9 +288,10 @@ public class BillingInvoice {
 
   /**
    * .
+   * 
    * @return pdfAvailable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPdfAvailable() {
     return pdfAvailable;
   }
@@ -301,7 +302,6 @@ public class BillingInvoice {
   public void setPdfAvailable(String pdfAvailable) {
     this.pdfAvailable = pdfAvailable;
   }
-
 
   /**
    * taxableAmount.
@@ -315,9 +315,10 @@ public class BillingInvoice {
 
   /**
    * .
+   * 
    * @return taxableAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTaxableAmount() {
     return taxableAmount;
   }
@@ -328,7 +329,6 @@ public class BillingInvoice {
   public void setTaxableAmount(String taxableAmount) {
     this.taxableAmount = taxableAmount;
   }
-
 
   /**
    * Compares objects.
@@ -361,9 +361,9 @@ public class BillingInvoice {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount, pdfAvailable, taxableAmount);
+    return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount,
+        pdfAvailable, taxableAmount);
   }
-
 
   /**
    * Converts the given object to string.
@@ -372,7 +372,7 @@ public class BillingInvoice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoice {\n");
-    
+
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
@@ -399,4 +399,3 @@ public class BillingInvoice {
   }
 
 }
-

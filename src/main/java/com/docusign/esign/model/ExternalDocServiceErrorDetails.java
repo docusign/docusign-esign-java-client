@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ExternalDocServiceErrorDetails.
@@ -23,7 +23,6 @@ public class ExternalDocServiceErrorDetails {
   @JsonProperty("message")
   private String message = null;
 
-
   /**
    * authenticationUrl.
    *
@@ -36,9 +35,10 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * Reserved: TBD.
+   * 
    * @return authenticationUrl
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
@@ -49,7 +49,6 @@ public class ExternalDocServiceErrorDetails {
   public void setAuthenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
   }
-
 
   /**
    * errorCode.
@@ -63,9 +62,10 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * .
+   * 
    * @return errorCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorCode() {
     return errorCode;
   }
@@ -76,7 +76,6 @@ public class ExternalDocServiceErrorDetails {
   public void setErrorCode(String errorCode) {
     this.errorCode = errorCode;
   }
-
 
   /**
    * message.
@@ -90,9 +89,10 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * .
+   * 
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMessage() {
     return message;
   }
@@ -103,7 +103,6 @@ public class ExternalDocServiceErrorDetails {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class ExternalDocServiceErrorDetails {
     return Objects.hash(authenticationUrl, errorCode, message);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class ExternalDocServiceErrorDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocServiceErrorDetails {\n");
-    
+
     sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
@@ -160,4 +158,3 @@ public class ExternalDocServiceErrorDetails {
   }
 
 }
-

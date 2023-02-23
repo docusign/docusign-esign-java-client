@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConditionalRecipientRuleFilter.
@@ -35,7 +35,6 @@ public class ConditionalRecipientRuleFilter {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * operator.
    *
@@ -48,9 +47,10 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   * 
    * @return operator
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOperator() {
     return operator;
   }
@@ -61,7 +61,6 @@ public class ConditionalRecipientRuleFilter {
   public void setOperator(String operator) {
     this.operator = operator;
   }
-
 
   /**
    * recipientId.
@@ -74,10 +73,12 @@ public class ConditionalRecipientRuleFilter {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -88,7 +89,6 @@ public class ConditionalRecipientRuleFilter {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * scope.
@@ -102,9 +102,10 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   * 
    * @return scope
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScope() {
     return scope;
   }
@@ -115,7 +116,6 @@ public class ConditionalRecipientRuleFilter {
   public void setScope(String scope) {
     this.scope = scope;
   }
-
 
   /**
    * tabId.
@@ -128,10 +128,12 @@ public class ConditionalRecipientRuleFilter {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -142,7 +144,6 @@ public class ConditionalRecipientRuleFilter {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabLabel.
@@ -156,9 +157,10 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -169,7 +171,6 @@ public class ConditionalRecipientRuleFilter {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabType.
@@ -183,9 +184,10 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -196,7 +198,6 @@ public class ConditionalRecipientRuleFilter {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * value.
@@ -210,9 +211,10 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -223,7 +225,6 @@ public class ConditionalRecipientRuleFilter {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -256,7 +257,6 @@ public class ConditionalRecipientRuleFilter {
     return Objects.hash(operator, recipientId, scope, tabId, tabLabel, tabType, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -264,7 +264,7 @@ public class ConditionalRecipientRuleFilter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRuleFilter {\n");
-    
+
     sb.append("    operator: ").append(toIndentedString(operator)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
@@ -288,4 +288,3 @@ public class ConditionalRecipientRuleFilter {
   }
 
 }
-

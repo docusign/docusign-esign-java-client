@@ -6,19 +6,18 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A list of supported languages..
  *
  */
-@ApiModel(description = "A list of supported languages.")
+@Schema(description = "A list of supported languages.")
 
 public class SupportedLanguages {
   @JsonProperty("languages")
   private java.util.List<NameValue> languages = null;
-
 
   /**
    * languages.
@@ -29,7 +28,7 @@ public class SupportedLanguages {
     this.languages = languages;
     return this;
   }
-  
+
   /**
    * addLanguagesItem.
    *
@@ -45,9 +44,10 @@ public class SupportedLanguages {
 
   /**
    * .
+   * 
    * @return languages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getLanguages() {
     return languages;
   }
@@ -58,7 +58,6 @@ public class SupportedLanguages {
   public void setLanguages(java.util.List<NameValue> languages) {
     this.languages = languages;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class SupportedLanguages {
     return Objects.hash(languages);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class SupportedLanguages {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SupportedLanguages {\n");
-    
+
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class SupportedLanguages {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.EnvelopeAttachment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeAttachmentsResult.
@@ -18,7 +18,6 @@ public class EnvelopeAttachmentsResult {
   @JsonProperty("attachments")
   private java.util.List<EnvelopeAttachment> attachments = null;
 
-
   /**
    * attachments.
    *
@@ -28,7 +27,7 @@ public class EnvelopeAttachmentsResult {
     this.attachments = attachments;
     return this;
   }
-  
+
   /**
    * addAttachmentsItem.
    *
@@ -44,9 +43,10 @@ public class EnvelopeAttachmentsResult {
 
   /**
    * .
+   * 
    * @return attachments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<EnvelopeAttachment> getAttachments() {
     return attachments;
   }
@@ -57,7 +57,6 @@ public class EnvelopeAttachmentsResult {
   public void setAttachments(java.util.List<EnvelopeAttachment> attachments) {
     this.attachments = attachments;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class EnvelopeAttachmentsResult {
     return Objects.hash(attachments);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class EnvelopeAttachmentsResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachmentsResult {\n");
-    
+
     sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class EnvelopeAttachmentsResult {
   }
 
 }
-

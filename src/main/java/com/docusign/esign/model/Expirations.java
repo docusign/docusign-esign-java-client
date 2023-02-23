@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A complex element that specifies the expiration settings for the envelope..
  *
  */
-@ApiModel(description = "A complex element that specifies the expiration settings for the envelope.")
+@Schema(description = "A complex element that specifies the expiration settings for the envelope.")
 
 public class Expirations {
   @JsonProperty("expireAfter")
@@ -23,7 +23,6 @@ public class Expirations {
 
   @JsonProperty("expireWarn")
   private String expireWarn = null;
-
 
   /**
    * expireAfter.
@@ -37,9 +36,10 @@ public class Expirations {
 
   /**
    * An integer that sets the number of days the envelope is active..
+   * 
    * @return expireAfter
    **/
-  @ApiModelProperty(value = "An integer that sets the number of days the envelope is active.")
+  @Schema(description = "An integer that sets the number of days the envelope is active.")
   public String getExpireAfter() {
     return expireAfter;
   }
@@ -50,7 +50,6 @@ public class Expirations {
   public void setExpireAfter(String expireAfter) {
     this.expireAfter = expireAfter;
   }
-
 
   /**
    * expireEnabled.
@@ -63,10 +62,14 @@ public class Expirations {
   }
 
   /**
-   * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used..
+   * When set to **true**, the envelope expires (is no longer available for
+   * signing) in the set number of days. If false, the account default setting is
+   * used. If the account does not have an expiration setting, the DocuSign
+   * default value of 120 days is used..
+   * 
    * @return expireEnabled
    **/
-  @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
+  @Schema(description = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   public String getExpireEnabled() {
     return expireEnabled;
   }
@@ -77,7 +80,6 @@ public class Expirations {
   public void setExpireEnabled(String expireEnabled) {
     this.expireEnabled = expireEnabled;
   }
-
 
   /**
    * expireWarn.
@@ -90,10 +92,13 @@ public class Expirations {
   }
 
   /**
-   * An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent..
+   * An integer that sets the number of days before envelope expiration that an
+   * expiration warning email is sent to the recipient. If set to 0 (zero), no
+   * warning email is sent..
+   * 
    * @return expireWarn
    **/
-  @ApiModelProperty(value = "An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
+  @Schema(description = "An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
   public String getExpireWarn() {
     return expireWarn;
   }
@@ -104,7 +109,6 @@ public class Expirations {
   public void setExpireWarn(String expireWarn) {
     this.expireWarn = expireWarn;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +137,6 @@ public class Expirations {
     return Objects.hash(expireAfter, expireEnabled, expireWarn);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +144,7 @@ public class Expirations {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Expirations {\n");
-    
+
     sb.append("    expireAfter: ").append(toIndentedString(expireAfter)).append("\n");
     sb.append("    expireEnabled: ").append(toIndentedString(expireEnabled)).append("\n");
     sb.append("    expireWarn: ").append(toIndentedString(expireWarn)).append("\n");
@@ -161,4 +164,3 @@ public class Expirations {
   }
 
 }
-

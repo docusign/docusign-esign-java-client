@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkSendBatchError.
@@ -20,7 +20,6 @@ public class BulkSendBatchError {
   @JsonProperty("errorDetail")
   private String errorDetail = null;
 
-
   /**
    * error.
    *
@@ -33,9 +32,10 @@ public class BulkSendBatchError {
 
   /**
    * .
+   * 
    * @return error
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getError() {
     return error;
   }
@@ -46,7 +46,6 @@ public class BulkSendBatchError {
   public void setError(String error) {
     this.error = error;
   }
-
 
   /**
    * errorDetail.
@@ -60,9 +59,10 @@ public class BulkSendBatchError {
 
   /**
    * .
+   * 
    * @return errorDetail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorDetail() {
     return errorDetail;
   }
@@ -73,7 +73,6 @@ public class BulkSendBatchError {
   public void setErrorDetail(String errorDetail) {
     this.errorDetail = errorDetail;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class BulkSendBatchError {
     return Objects.hash(error, errorDetail);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class BulkSendBatchError {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchError {\n");
-    
+
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    errorDetail: ").append(toIndentedString(errorDetail)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class BulkSendBatchError {
   }
 
 }
-

@@ -6,14 +6,16 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Option settings for the signature provider. Different providers require or use different options. [The current provider list and the options they require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
+ * Option settings for the signature provider. Different providers require or
+ * use different options. [The current provider list and the options they
+ * require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
  *
  */
-@ApiModel(description = "Option settings for the signature provider. Different providers require or use different options. [The current provider list and the options they require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/)")
+@Schema(description = "Option settings for the signature provider. Different providers require or use different options. [The current provider list and the options they require.](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/)")
 
 public class RecipientSignatureProviderOptions {
   @JsonProperty("cpfNumber")
@@ -40,7 +42,6 @@ public class RecipientSignatureProviderOptions {
   @JsonProperty("smsMetadata")
   private PropertyMetadata smsMetadata = null;
 
-
   /**
    * cpfNumber.
    *
@@ -53,9 +54,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * .
+   * 
    * @return cpfNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCpfNumber() {
     return cpfNumber;
   }
@@ -66,7 +68,6 @@ public class RecipientSignatureProviderOptions {
   public void setCpfNumber(String cpfNumber) {
     this.cpfNumber = cpfNumber;
   }
-
 
   /**
    * cpfNumberMetadata.
@@ -80,9 +81,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return cpfNumberMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getCpfNumberMetadata() {
     return cpfNumberMetadata;
   }
@@ -93,7 +95,6 @@ public class RecipientSignatureProviderOptions {
   public void setCpfNumberMetadata(PropertyMetadata cpfNumberMetadata) {
     this.cpfNumberMetadata = cpfNumberMetadata;
   }
-
 
   /**
    * oneTimePassword.
@@ -107,9 +108,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * .
+   * 
    * @return oneTimePassword
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOneTimePassword() {
     return oneTimePassword;
   }
@@ -120,7 +122,6 @@ public class RecipientSignatureProviderOptions {
   public void setOneTimePassword(String oneTimePassword) {
     this.oneTimePassword = oneTimePassword;
   }
-
 
   /**
    * oneTimePasswordMetadata.
@@ -134,9 +135,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * Metadata that indicates whether the `oneTimePassword` property is editable..
+   * 
    * @return oneTimePasswordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `oneTimePassword` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `oneTimePassword` property is editable.")
   public PropertyMetadata getOneTimePasswordMetadata() {
     return oneTimePasswordMetadata;
   }
@@ -147,7 +149,6 @@ public class RecipientSignatureProviderOptions {
   public void setOneTimePasswordMetadata(PropertyMetadata oneTimePasswordMetadata) {
     this.oneTimePasswordMetadata = oneTimePasswordMetadata;
   }
-
 
   /**
    * signerRole.
@@ -161,9 +162,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * .
+   * 
    * @return signerRole
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerRole() {
     return signerRole;
   }
@@ -174,7 +176,6 @@ public class RecipientSignatureProviderOptions {
   public void setSignerRole(String signerRole) {
     this.signerRole = signerRole;
   }
-
 
   /**
    * signerRoleMetadata.
@@ -188,9 +189,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * Metadata that indicates whether the `signerRole` property is editable..
+   * 
    * @return signerRoleMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `signerRole` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `signerRole` property is editable.")
   public PropertyMetadata getSignerRoleMetadata() {
     return signerRoleMetadata;
   }
@@ -201,7 +203,6 @@ public class RecipientSignatureProviderOptions {
   public void setSignerRoleMetadata(PropertyMetadata signerRoleMetadata) {
     this.signerRoleMetadata = signerRoleMetadata;
   }
-
 
   /**
    * sms.
@@ -215,9 +216,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * .
+   * 
    * @return sms
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSms() {
     return sms;
   }
@@ -228,7 +230,6 @@ public class RecipientSignatureProviderOptions {
   public void setSms(String sms) {
     this.sms = sms;
   }
-
 
   /**
    * smsMetadata.
@@ -242,9 +243,10 @@ public class RecipientSignatureProviderOptions {
 
   /**
    * Metadata that indicates whether the `sms` property is editable..
+   * 
    * @return smsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `sms` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `sms` property is editable.")
   public PropertyMetadata getSmsMetadata() {
     return smsMetadata;
   }
@@ -255,7 +257,6 @@ public class RecipientSignatureProviderOptions {
   public void setSmsMetadata(PropertyMetadata smsMetadata) {
     this.smsMetadata = smsMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -286,9 +287,9 @@ public class RecipientSignatureProviderOptions {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cpfNumber, cpfNumberMetadata, oneTimePassword, oneTimePasswordMetadata, signerRole, signerRoleMetadata, sms, smsMetadata);
+    return Objects.hash(cpfNumber, cpfNumberMetadata, oneTimePassword, oneTimePasswordMetadata, signerRole,
+        signerRoleMetadata, sms, smsMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -297,7 +298,7 @@ public class RecipientSignatureProviderOptions {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProviderOptions {\n");
-    
+
     sb.append("    cpfNumber: ").append(toIndentedString(cpfNumber)).append("\n");
     sb.append("    cpfNumberMetadata: ").append(toIndentedString(cpfNumberMetadata)).append("\n");
     sb.append("    oneTimePassword: ").append(toIndentedString(oneTimePassword)).append("\n");
@@ -322,4 +323,3 @@ public class RecipientSignatureProviderOptions {
   }
 
 }
-

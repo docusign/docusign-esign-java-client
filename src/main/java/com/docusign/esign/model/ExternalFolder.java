@@ -7,8 +7,8 @@ import com.docusign.esign.model.ExternalFile;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ExternalFolder.
@@ -46,7 +46,6 @@ public class ExternalFolder {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * endPosition.
    *
@@ -59,9 +58,10 @@ public class ExternalFolder {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -72,7 +72,6 @@ public class ExternalFolder {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * errorDetails.
@@ -85,10 +84,12 @@ public class ExternalFolder {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ExternalDocServiceErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -99,7 +100,6 @@ public class ExternalFolder {
   public void setErrorDetails(ExternalDocServiceErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * id.
@@ -113,9 +113,10 @@ public class ExternalFolder {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -127,7 +128,6 @@ public class ExternalFolder {
     this.id = id;
   }
 
-
   /**
    * items.
    *
@@ -137,7 +137,7 @@ public class ExternalFolder {
     this.items = items;
     return this;
   }
-  
+
   /**
    * addItemsItem.
    *
@@ -153,9 +153,10 @@ public class ExternalFolder {
 
   /**
    * .
+   * 
    * @return items
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ExternalFile> getItems() {
     return items;
   }
@@ -166,7 +167,6 @@ public class ExternalFolder {
   public void setItems(java.util.List<ExternalFile> items) {
     this.items = items;
   }
-
 
   /**
    * name.
@@ -180,9 +180,10 @@ public class ExternalFolder {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -193,7 +194,6 @@ public class ExternalFolder {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nextUri.
@@ -206,10 +206,12 @@ public class ExternalFolder {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -220,7 +222,6 @@ public class ExternalFolder {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -234,9 +235,10 @@ public class ExternalFolder {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -247,7 +249,6 @@ public class ExternalFolder {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -261,9 +262,10 @@ public class ExternalFolder {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -274,7 +276,6 @@ public class ExternalFolder {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -288,9 +289,10 @@ public class ExternalFolder {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -301,7 +303,6 @@ public class ExternalFolder {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -314,10 +315,13 @@ public class ExternalFolder {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -328,7 +332,6 @@ public class ExternalFolder {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -361,9 +364,9 @@ public class ExternalFolder {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, startPosition,
+        totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -372,7 +375,7 @@ public class ExternalFolder {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFolder {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -399,4 +402,3 @@ public class ExternalFolder {
   }
 
 }
-

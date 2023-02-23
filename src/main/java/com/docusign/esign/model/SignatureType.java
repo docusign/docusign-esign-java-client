@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains information about the type of signature..
  *
  */
-@ApiModel(description = "This object contains information about the type of signature.")
+@Schema(description = "This object contains information about the type of signature.")
 
 public class SignatureType {
   @JsonProperty("isDefault")
@@ -20,7 +20,6 @@ public class SignatureType {
 
   @JsonProperty("type")
   private String type = null;
-
 
   /**
    * isDefault.
@@ -34,9 +33,10 @@ public class SignatureType {
 
   /**
    * .
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -47,7 +47,6 @@ public class SignatureType {
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * type.
@@ -61,9 +60,10 @@ public class SignatureType {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -74,7 +74,6 @@ public class SignatureType {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class SignatureType {
     return Objects.hash(isDefault, type);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class SignatureType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureType {\n");
-    
+
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class SignatureType {
   }
 
 }
-

@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** AddressInformationV2 */
@@ -40,9 +40,7 @@ public class AddressInformationV2 {
    *
    * @return address1
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "First Line of the address. Maximum length: 100 characters.")
+  @Schema(example = "null", description = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -61,9 +59,7 @@ public class AddressInformationV2 {
    *
    * @return address2
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "Second Line of the address. Maximum length: 100 characters.")
+  @Schema(example = "null", description = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -78,7 +74,7 @@ public class AddressInformationV2 {
   }
 
   /** @return city */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getCity() {
     return city;
   }
@@ -97,7 +93,7 @@ public class AddressInformationV2 {
    *
    * @return country
    */
-  @ApiModelProperty(example = "null", value = "Specifies the country associated with the address.")
+  @Schema(example = "null", description = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -112,7 +108,7 @@ public class AddressInformationV2 {
   }
 
   /** @return fax */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getFax() {
     return fax;
   }
@@ -127,7 +123,7 @@ public class AddressInformationV2 {
   }
 
   /** @return phone */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPhone() {
     return phone;
   }
@@ -142,7 +138,7 @@ public class AddressInformationV2 {
   }
 
   /** @return postalCode */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -161,7 +157,7 @@ public class AddressInformationV2 {
    *
    * @return stateOrProvince
    */
-  @ApiModelProperty(example = "null", value = "The state or province associated with the address.")
+  @Schema(example = "null", description = "The state or province associated with the address.")
   public String getStateOrProvince() {
     return stateOrProvince;
   }
@@ -212,7 +208,8 @@ public class AddressInformationV2 {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

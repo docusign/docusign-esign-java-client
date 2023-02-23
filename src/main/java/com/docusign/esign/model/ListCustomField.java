@@ -6,14 +6,15 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object represents a list custom field from which envelope creators and senders can select custom data..
+ * This object represents a list custom field from which envelope creators and
+ * senders can select custom data..
  *
  */
-@ApiModel(description = "This object represents a list custom field from which envelope creators and senders can select custom data.")
+@Schema(description = "This object represents a list custom field from which envelope creators and senders can select custom data.")
 
 public class ListCustomField {
   @JsonProperty("configurationType")
@@ -40,7 +41,6 @@ public class ListCustomField {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * configurationType.
    *
@@ -52,10 +52,12 @@ public class ListCustomField {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
+   * If merge field's are being used, specifies the type of the merge field. The
+   * only supported value is **salesforce**..
+   * 
    * @return configurationType
    **/
-  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationType() {
     return configurationType;
   }
@@ -66,7 +68,6 @@ public class ListCustomField {
   public void setConfigurationType(String configurationType) {
     this.configurationType = configurationType;
   }
-
 
   /**
    * errorDetails.
@@ -79,10 +80,12 @@ public class ListCustomField {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -93,7 +96,6 @@ public class ListCustomField {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * fieldId.
@@ -107,9 +109,10 @@ public class ListCustomField {
 
   /**
    * An ID used to specify a custom field..
+   * 
    * @return fieldId
    **/
-  @ApiModelProperty(value = "An ID used to specify a custom field.")
+  @Schema(description = "An ID used to specify a custom field.")
   public String getFieldId() {
     return fieldId;
   }
@@ -121,7 +124,6 @@ public class ListCustomField {
     this.fieldId = fieldId;
   }
 
-
   /**
    * listItems.
    *
@@ -131,7 +133,7 @@ public class ListCustomField {
     this.listItems = listItems;
     return this;
   }
-  
+
   /**
    * addListItemsItem.
    *
@@ -147,9 +149,10 @@ public class ListCustomField {
 
   /**
    * .
+   * 
    * @return listItems
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getListItems() {
     return listItems;
   }
@@ -160,7 +163,6 @@ public class ListCustomField {
   public void setListItems(java.util.List<String> listItems) {
     this.listItems = listItems;
   }
-
 
   /**
    * name.
@@ -174,9 +176,10 @@ public class ListCustomField {
 
   /**
    * The name of the custom field..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "The name of the custom field.")
+  @Schema(description = "The name of the custom field.")
   public String getName() {
     return name;
   }
@@ -187,7 +190,6 @@ public class ListCustomField {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * required.
@@ -201,9 +203,10 @@ public class ListCustomField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -214,7 +217,6 @@ public class ListCustomField {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * show.
@@ -228,9 +230,10 @@ public class ListCustomField {
 
   /**
    * A boolean indicating if the value should be displayed..
+   * 
    * @return show
    **/
-  @ApiModelProperty(value = "A boolean indicating if the value should be displayed.")
+  @Schema(description = "A boolean indicating if the value should be displayed.")
   public String getShow() {
     return show;
   }
@@ -241,7 +244,6 @@ public class ListCustomField {
   public void setShow(String show) {
     this.show = show;
   }
-
 
   /**
    * value.
@@ -254,10 +256,11 @@ public class ListCustomField {
   }
 
   /**
-   * The value of the custom field.  Maximum Length: 100 characters..
+   * The value of the custom field. Maximum Length: 100 characters..
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "The value of the custom field.  Maximum Length: 100 characters.")
+  @Schema(description = "The value of the custom field.  Maximum Length: 100 characters.")
   public String getValue() {
     return value;
   }
@@ -268,7 +271,6 @@ public class ListCustomField {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -302,7 +304,6 @@ public class ListCustomField {
     return Objects.hash(configurationType, errorDetails, fieldId, listItems, name, required, show, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -310,7 +311,7 @@ public class ListCustomField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListCustomField {\n");
-    
+
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -335,4 +336,3 @@ public class ListCustomField {
   }
 
 }
-

@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A single bulk send error report..
  *
  */
-@ApiModel(description = "A single bulk send error report.")
+@Schema(description = "A single bulk send error report.")
 
 public class BulkSendErrorStatus {
   @JsonProperty("created")
@@ -27,7 +27,6 @@ public class BulkSendErrorStatus {
   @JsonProperty("recipientEmails")
   private java.util.List<String> recipientEmails = null;
 
-
   /**
    * created.
    *
@@ -40,9 +39,10 @@ public class BulkSendErrorStatus {
 
   /**
    * .
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreated() {
     return created;
   }
@@ -53,7 +53,6 @@ public class BulkSendErrorStatus {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * envelopeId.
@@ -67,9 +66,10 @@ public class BulkSendErrorStatus {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -80,7 +80,6 @@ public class BulkSendErrorStatus {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * errorMessage.
@@ -94,9 +93,10 @@ public class BulkSendErrorStatus {
 
   /**
    * .
+   * 
    * @return errorMessage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getErrorMessage() {
     return errorMessage;
   }
@@ -108,7 +108,6 @@ public class BulkSendErrorStatus {
     this.errorMessage = errorMessage;
   }
 
-
   /**
    * recipientEmails.
    *
@@ -118,7 +117,7 @@ public class BulkSendErrorStatus {
     this.recipientEmails = recipientEmails;
     return this;
   }
-  
+
   /**
    * addRecipientEmailsItem.
    *
@@ -134,9 +133,10 @@ public class BulkSendErrorStatus {
 
   /**
    * .
+   * 
    * @return recipientEmails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getRecipientEmails() {
     return recipientEmails;
   }
@@ -147,7 +147,6 @@ public class BulkSendErrorStatus {
   public void setRecipientEmails(java.util.List<String> recipientEmails) {
     this.recipientEmails = recipientEmails;
   }
-
 
   /**
    * Compares objects.
@@ -177,7 +176,6 @@ public class BulkSendErrorStatus {
     return Objects.hash(created, envelopeId, errorMessage, recipientEmails);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -185,7 +183,7 @@ public class BulkSendErrorStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendErrorStatus {\n");
-    
+
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
@@ -206,4 +204,3 @@ public class BulkSendErrorStatus {
   }
 
 }
-

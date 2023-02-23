@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SocialAuthentication.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class SocialAuthentication {
   @JsonProperty("authentication")
   private String authentication = null;
-
 
   /**
    * authentication.
@@ -30,9 +29,10 @@ public class SocialAuthentication {
 
   /**
    * Reserved: TBD.
+   * 
    * @return authentication
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getAuthentication() {
     return authentication;
   }
@@ -43,7 +43,6 @@ public class SocialAuthentication {
   public void setAuthentication(String authentication) {
     this.authentication = authentication;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class SocialAuthentication {
     return Objects.hash(authentication);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class SocialAuthentication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAuthentication {\n");
-    
+
     sb.append("    authentication: ").append(toIndentedString(authentication)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class SocialAuthentication {
   }
 
 }
-

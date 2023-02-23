@@ -6,8 +6,8 @@ import com.docusign.esign.model.CommentPublish;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CommentsPublish.
@@ -18,7 +18,6 @@ public class CommentsPublish {
   @JsonProperty("commentsToPublish")
   private java.util.List<CommentPublish> commentsToPublish = null;
 
-
   /**
    * commentsToPublish.
    *
@@ -28,7 +27,7 @@ public class CommentsPublish {
     this.commentsToPublish = commentsToPublish;
     return this;
   }
-  
+
   /**
    * addCommentsToPublishItem.
    *
@@ -44,9 +43,10 @@ public class CommentsPublish {
 
   /**
    * .
+   * 
    * @return commentsToPublish
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommentPublish> getCommentsToPublish() {
     return commentsToPublish;
   }
@@ -57,7 +57,6 @@ public class CommentsPublish {
   public void setCommentsToPublish(java.util.List<CommentPublish> commentsToPublish) {
     this.commentsToPublish = commentsToPublish;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class CommentsPublish {
     return Objects.hash(commentsToPublish);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class CommentsPublish {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentsPublish {\n");
-    
+
     sb.append("    commentsToPublish: ").append(toIndentedString(commentsToPublish)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class CommentsPublish {
   }
 
 }
-

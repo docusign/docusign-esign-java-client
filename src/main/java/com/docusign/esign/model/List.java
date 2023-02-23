@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** List */
@@ -315,7 +315,7 @@ public class List {
   }
 
   /** @return anchorAllowWhiteSpaceInCharacters */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -335,7 +335,7 @@ public class List {
    *
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -351,14 +351,13 @@ public class List {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the
    * document. The default value is **true**.
    *
    * @return anchorCaseSensitive
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -377,7 +376,7 @@ public class List {
    *
    * @return anchorCaseSensitiveMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -392,14 +391,13 @@ public class List {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or
    * **right**. The default value is **left**.
    *
    * @return anchorHorizontalAlignment
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -419,7 +417,7 @@ public class List {
    *
    * @return anchorHorizontalAlignmentMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -435,13 +433,12 @@ public class List {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document.
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document.
    *
    * @return anchorIgnoreIfNotPresent
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -460,7 +457,7 @@ public class List {
    *
    * @return anchorIgnoreIfNotPresentMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -476,14 +473,13 @@ public class List {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded
    * in other strings are ignored.) The default value is **true**.
    *
    * @return anchorMatchWholeWord
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -502,7 +498,7 @@ public class List {
    *
    * @return anchorMatchWholeWordMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -521,7 +517,7 @@ public class List {
    *
    * @return anchorString
    */
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -540,7 +536,7 @@ public class List {
    *
    * @return anchorStringMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -555,7 +551,7 @@ public class List {
   }
 
   /** @return anchorTabProcessorVersion */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -575,7 +571,7 @@ public class List {
    *
    * @return anchorTabProcessorVersionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -591,14 +587,13 @@ public class List {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or
    * inches.
    *
    * @return anchorUnits
    */
-  @ApiModelProperty(
-      value =
-          "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -617,7 +612,7 @@ public class List {
    *
    * @return anchorUnitsMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -632,13 +627,12 @@ public class List {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString.
    *
    * @return anchorXOffset
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -657,7 +651,7 @@ public class List {
    *
    * @return anchorXOffsetMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -672,13 +666,12 @@ public class List {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString.
    *
    * @return anchorYOffset
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -697,7 +690,7 @@ public class List {
    *
    * @return anchorYOffsetMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -716,7 +709,7 @@ public class List {
    *
    * @return bold
    */
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @Schema(description = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -735,7 +728,7 @@ public class List {
    *
    * @return boldMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -750,14 +743,13 @@ public class List {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's
    * visibility.
    *
    * @return conditionalParentLabel
    */
-  @ApiModelProperty(
-      value =
-          "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -776,7 +768,7 @@ public class List {
    *
    * @return conditionalParentLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -791,15 +783,15 @@ public class List {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.
-   * If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility.
+   * If the parent tab is a Checkbox, Radio button, Optional Signature, or
+   * Optional Initial use
    * \"on\" as the value to show that the parent tab is active.
    *
    * @return conditionalParentValue
    */
-  @ApiModelProperty(
-      value =
-          "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -818,7 +810,7 @@ public class List {
    *
    * @return conditionalParentValueMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -833,15 +825,15 @@ public class List {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used
-   * when adding new tabs for a recipient. When used, the new tab inherits all the custom tab
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used
+   * when adding new tabs for a recipient. When used, the new tab inherits all the
+   * custom tab
    * properties.
    *
    * @return customTabId
    */
-  @ApiModelProperty(
-      value =
-          "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -860,7 +852,7 @@ public class List {
    *
    * @return customTabIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -875,14 +867,13 @@ public class List {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -901,7 +892,7 @@ public class List {
    *
    * @return documentIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -920,7 +911,7 @@ public class List {
    *
    * @return errorDetails
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -935,15 +926,15 @@ public class List {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri,
-   * CourierNew, Garamond, Georgia, Helvetica, LucidaConsole, Tahoma, TimesNewRoman, Trebuchet,
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri,
+   * CourierNew, Garamond, Georgia, Helvetica, LucidaConsole, Tahoma,
+   * TimesNewRoman, Trebuchet,
    * Verdana, MSGothic, MSMincho, Default.
    *
    * @return font
    */
-  @ApiModelProperty(
-      value =
-          "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -958,14 +949,13 @@ public class List {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are: Black, BrightBlue,
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue,
    * BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.
    *
    * @return fontColor
    */
-  @ApiModelProperty(
-      value =
-          "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -984,7 +974,7 @@ public class List {
    *
    * @return fontColorMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1003,7 +993,7 @@ public class List {
    *
    * @return fontMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1018,15 +1008,15 @@ public class List {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are: Size7, Size8, Size9,
-   * Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36,
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9,
+   * Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24,
+   * Size26, Size28, Size36,
    * Size48, or Size72.
    *
    * @return fontSize
    */
-  @ApiModelProperty(
-      value =
-          "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1045,7 +1035,7 @@ public class List {
    *
    * @return fontSizeMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1060,7 +1050,7 @@ public class List {
   }
 
   /** @return formOrder */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1079,7 +1069,7 @@ public class List {
    *
    * @return formOrderMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1094,7 +1084,7 @@ public class List {
   }
 
   /** @return formPageLabel */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1113,7 +1103,7 @@ public class List {
    *
    * @return formPageLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1128,7 +1118,7 @@ public class List {
   }
 
   /** @return formPageNumber */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1147,7 +1137,7 @@ public class List {
    *
    * @return formPageNumberMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1166,7 +1156,7 @@ public class List {
    *
    * @return height
    */
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1185,7 +1175,7 @@ public class List {
    *
    * @return heightMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1204,7 +1194,7 @@ public class List {
    *
    * @return italic
    */
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @Schema(description = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1223,7 +1213,7 @@ public class List {
    *
    * @return italicMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1246,15 +1236,15 @@ public class List {
   }
 
   /**
-   * The list of values that can be selected by senders. The list values are separated by
-   * semi-colons. Example: [one;two;three;four] Maximum Length of listItems: 2048 characters.
+   * The list of values that can be selected by senders. The list values are
+   * separated by
+   * semi-colons. Example: [one;two;three;four] Maximum Length of listItems: 2048
+   * characters.
    * Maximum Length of items in the list: 100 characters.
    *
    * @return listItems
    */
-  @ApiModelProperty(
-      value =
-          "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
+  @Schema(description = "The list of values that can be selected by senders. The list values are separated by semi-colons. Example: [one;two;three;four]  Maximum Length of listItems:  2048 characters. Maximum Length of items in the list: 100 characters.  ")
   public java.util.List<ListItem> getListItems() {
     return listItems;
   }
@@ -1269,7 +1259,7 @@ public class List {
   }
 
   /** @return listSelectedValue */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getListSelectedValue() {
     return listSelectedValue;
   }
@@ -1288,7 +1278,7 @@ public class List {
    *
    * @return listSelectedValueMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getListSelectedValueMetadata() {
     return listSelectedValueMetadata;
   }
@@ -1307,7 +1297,7 @@ public class List {
    *
    * @return localePolicy
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
@@ -1326,8 +1316,7 @@ public class List {
    *
    * @return locked
    */
-  @ApiModelProperty(
-      value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1346,7 +1335,7 @@ public class List {
    *
    * @return lockedMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1365,7 +1354,7 @@ public class List {
    *
    * @return mergeField
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1380,7 +1369,7 @@ public class List {
   }
 
   /** @return mergeFieldXml */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1399,7 +1388,7 @@ public class List {
    *
    * @return pageNumber
    */
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1418,7 +1407,7 @@ public class List {
    *
    * @return pageNumberMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1433,14 +1422,13 @@ public class List {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign
    * the Document.
    *
    * @return recipientId
    */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1455,7 +1443,7 @@ public class List {
   }
 
   /** @return recipientIdGuid */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1474,7 +1462,7 @@ public class List {
    *
    * @return recipientIdGuidMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1493,7 +1481,7 @@ public class List {
    *
    * @return recipientIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1508,14 +1496,13 @@ public class List {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete
+   * When set to **true** and shared is true, information must be entered in this
+   * field to complete
    * the envelope.
    *
    * @return requireAll
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -1534,7 +1521,7 @@ public class List {
    *
    * @return requireAllMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
@@ -1553,7 +1540,7 @@ public class List {
    *
    * @return required
    */
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -1572,7 +1559,7 @@ public class List {
    *
    * @return requiredMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -1587,14 +1574,13 @@ public class List {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when
+   * Optional element for field markup. When set to **true**, the signer is
+   * required to initial when
    * they modify a shared field.
    *
    * @return requireInitialOnSharedChange
    */
-  @ApiModelProperty(
-      value =
-          "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -1614,7 +1600,7 @@ public class List {
    *
    * @return requireInitialOnSharedChangeMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -1630,15 +1616,15 @@ public class List {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can be sent using the
-   * template. This value tab can only be changed by modifying (PUT) the template. Tabs with a
+   * When set to **true**, the sender must populate the tab before an envelope can
+   * be sent using the
+   * template. This value tab can only be changed by modifying (PUT) the template.
+   * Tabs with a
    * `senderRequired` value of true cannot be deleted from an envelope.
    *
    * @return senderRequired
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
@@ -1657,7 +1643,7 @@ public class List {
    *
    * @return senderRequiredMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
   }
@@ -1676,7 +1662,7 @@ public class List {
    *
    * @return shared
    */
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -1695,7 +1681,7 @@ public class List {
    *
    * @return sharedMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -1714,7 +1700,7 @@ public class List {
    *
    * @return smartContractInformation
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1729,7 +1715,7 @@ public class List {
   }
 
   /** @return source */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -1744,14 +1730,14 @@ public class List {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified
+   * and sent later.
    *
    * @return status
    */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1770,7 +1756,7 @@ public class List {
    *
    * @return statusMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1793,7 +1779,7 @@ public class List {
   }
 
   /** @return tabGroupLabels */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1812,7 +1798,7 @@ public class List {
    *
    * @return tabGroupLabelsMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1827,13 +1813,12 @@ public class List {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call].
    *
    * @return tabId
    */
-  @ApiModelProperty(
-      value =
-          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1852,7 +1837,7 @@ public class List {
    *
    * @return tabIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1871,7 +1856,7 @@ public class List {
    *
    * @return tabLabel
    */
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -1890,7 +1875,7 @@ public class List {
    *
    * @return tabLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -1905,7 +1890,7 @@ public class List {
   }
 
   /** @return tabOrder */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -1924,7 +1909,7 @@ public class List {
    *
    * @return tabOrderMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -1939,7 +1924,7 @@ public class List {
   }
 
   /** @return tabType */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -1958,7 +1943,7 @@ public class List {
    *
    * @return tabTypeMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -1973,14 +1958,13 @@ public class List {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when
    * working with template recipients.
    *
    * @return templateLocked
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1999,7 +1983,7 @@ public class List {
    *
    * @return templateLockedMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2014,14 +1998,13 @@ public class List {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with
    * template recipients.
    *
    * @return templateRequired
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2040,7 +2023,7 @@ public class List {
    *
    * @return templateRequiredMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2055,7 +2038,7 @@ public class List {
   }
 
   /** @return tooltip */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2074,7 +2057,7 @@ public class List {
    *
    * @return toolTipMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2093,7 +2076,7 @@ public class List {
    *
    * @return underline
    */
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @Schema(description = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -2112,7 +2095,7 @@ public class List {
    *
    * @return underlineMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -2131,7 +2114,7 @@ public class List {
    *
    * @return value
    */
-  @ApiModelProperty(value = "The value to use when the item is selected.")
+  @Schema(description = "The value to use when the item is selected.")
   public String getValue() {
     return value;
   }
@@ -2150,7 +2133,7 @@ public class List {
    *
    * @return valueMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -2169,7 +2152,7 @@ public class List {
    *
    * @return width
    */
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2188,7 +2171,7 @@ public class List {
    *
    * @return widthMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2203,14 +2186,13 @@ public class List {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when
    * determining position.
    *
    * @return xPosition
    */
-  @ApiModelProperty(
-      value =
-          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2229,7 +2211,7 @@ public class List {
    *
    * @return xPositionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -2244,14 +2226,13 @@ public class List {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when
    * determining position.
    *
    * @return yPosition
    */
-  @ApiModelProperty(
-      value =
-          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -2270,7 +2251,7 @@ public class List {
    *
    * @return yPositionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -2289,7 +2270,7 @@ public class List {
     }
     List list = (List) o;
     return Objects.equals(
-            this.anchorAllowWhiteSpaceInCharacters, list.anchorAllowWhiteSpaceInCharacters)
+        this.anchorAllowWhiteSpaceInCharacters, list.anchorAllowWhiteSpaceInCharacters)
         && Objects.equals(
             this.anchorAllowWhiteSpaceInCharactersMetadata,
             list.anchorAllowWhiteSpaceInCharactersMetadata)
@@ -2681,7 +2662,8 @@ public class List {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

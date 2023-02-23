@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessingLists.
@@ -17,7 +17,6 @@ public class BulkProcessingLists {
   @JsonProperty("bulkProcessListIds")
   private java.util.List<String> bulkProcessListIds = null;
 
-
   /**
    * bulkProcessListIds.
    *
@@ -27,7 +26,7 @@ public class BulkProcessingLists {
     this.bulkProcessListIds = bulkProcessListIds;
     return this;
   }
-  
+
   /**
    * addBulkProcessListIdsItem.
    *
@@ -43,9 +42,10 @@ public class BulkProcessingLists {
 
   /**
    * .
+   * 
    * @return bulkProcessListIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getBulkProcessListIds() {
     return bulkProcessListIds;
   }
@@ -56,7 +56,6 @@ public class BulkProcessingLists {
   public void setBulkProcessListIds(java.util.List<String> bulkProcessListIds) {
     this.bulkProcessListIds = bulkProcessListIds;
   }
-
 
   /**
    * Compares objects.
@@ -83,7 +82,6 @@ public class BulkProcessingLists {
     return Objects.hash(bulkProcessListIds);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -91,7 +89,7 @@ public class BulkProcessingLists {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingLists {\n");
-    
+
     sb.append("    bulkProcessListIds: ").append(toIndentedString(bulkProcessListIds)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,4 +107,3 @@ public class BulkProcessingLists {
   }
 
 }
-

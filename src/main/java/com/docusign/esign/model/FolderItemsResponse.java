@@ -7,8 +7,8 @@ import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FolderItemsResponse.
@@ -40,7 +40,6 @@ public class FolderItemsResponse {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * endPosition.
    *
@@ -53,9 +52,10 @@ public class FolderItemsResponse {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -67,7 +67,6 @@ public class FolderItemsResponse {
     this.endPosition = endPosition;
   }
 
-
   /**
    * envelopes.
    *
@@ -77,7 +76,7 @@ public class FolderItemsResponse {
     this.envelopes = envelopes;
     return this;
   }
-  
+
   /**
    * addEnvelopesItem.
    *
@@ -93,9 +92,10 @@ public class FolderItemsResponse {
 
   /**
    * .
+   * 
    * @return envelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<EnvelopeSummary> getEnvelopes() {
     return envelopes;
   }
@@ -107,7 +107,6 @@ public class FolderItemsResponse {
     this.envelopes = envelopes;
   }
 
-
   /**
    * folders.
    *
@@ -117,7 +116,7 @@ public class FolderItemsResponse {
     this.folders = folders;
     return this;
   }
-  
+
   /**
    * addFoldersItem.
    *
@@ -133,9 +132,10 @@ public class FolderItemsResponse {
 
   /**
    * .
+   * 
    * @return folders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -146,7 +146,6 @@ public class FolderItemsResponse {
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
-
 
   /**
    * nextUri.
@@ -159,10 +158,12 @@ public class FolderItemsResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -173,7 +174,6 @@ public class FolderItemsResponse {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -187,9 +187,10 @@ public class FolderItemsResponse {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -200,7 +201,6 @@ public class FolderItemsResponse {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -214,9 +214,10 @@ public class FolderItemsResponse {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -227,7 +228,6 @@ public class FolderItemsResponse {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -241,9 +241,10 @@ public class FolderItemsResponse {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -254,7 +255,6 @@ public class FolderItemsResponse {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -267,10 +267,13 @@ public class FolderItemsResponse {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -281,7 +284,6 @@ public class FolderItemsResponse {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -312,9 +314,9 @@ public class FolderItemsResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, envelopes, folders, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(endPosition, envelopes, folders, nextUri, previousUri, resultSetSize, startPosition,
+        totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -323,7 +325,7 @@ public class FolderItemsResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemsResponse {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
@@ -348,4 +350,3 @@ public class FolderItemsResponse {
   }
 
 }
-

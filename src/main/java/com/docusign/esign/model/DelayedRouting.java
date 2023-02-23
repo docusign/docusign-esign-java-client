@@ -6,8 +6,8 @@ import com.docusign.esign.model.EnvelopeDelayRule;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DelayedRouting.
@@ -24,7 +24,6 @@ public class DelayedRouting {
   @JsonProperty("status")
   private String status = null;
 
-
   /**
    * resumeDate.
    *
@@ -36,10 +35,14 @@ public class DelayedRouting {
   }
 
   /**
-   * An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step..
+   * An ISO 8601 formatted datetime string indicating the date and time that the
+   * envelope is (or was) scheduled to be sent to the recipients associated with
+   * the current workflow step or null if the envelope has not yet begun
+   * processing the current workflow step..
+   * 
    * @return resumeDate
    **/
-  @ApiModelProperty(value = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.")
+  @Schema(description = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.")
   public String getResumeDate() {
     return resumeDate;
   }
@@ -51,7 +54,6 @@ public class DelayedRouting {
     this.resumeDate = resumeDate;
   }
 
-
   /**
    * rules.
    *
@@ -61,7 +63,7 @@ public class DelayedRouting {
     this.rules = rules;
     return this;
   }
-  
+
   /**
    * addRulesItem.
    *
@@ -76,10 +78,13 @@ public class DelayedRouting {
   }
 
   /**
-   * A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified..
+   * A list of envelope delay rules specified by the user indicating how and when
+   * the envelope should be sent in the future for the current workflow step and
+   * its associated recipients. Currently only 1 rule may be specified..
+   * 
    * @return rules
    **/
-  @ApiModelProperty(value = "A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.")
+  @Schema(description = "A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.")
   public java.util.List<EnvelopeDelayRule> getRules() {
     return rules;
   }
@@ -90,7 +95,6 @@ public class DelayedRouting {
   public void setRules(java.util.List<EnvelopeDelayRule> rules) {
     this.rules = rules;
   }
-
 
   /**
    * status.
@@ -103,10 +107,14 @@ public class DelayedRouting {
   }
 
   /**
-   * \\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients..
+   * \\\"pending\\\" if the current workflow step has not been reached and the
+   * delay has not yet started. \\\"started\\\" if the delay is in progress.
+   * \\\"completed\\\" if the delay has elapsed and the envelope has been sent to
+   * the current workflow step's recipients..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "\\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
+  @Schema(description = "\\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
   public String getStatus() {
     return status;
   }
@@ -117,7 +125,6 @@ public class DelayedRouting {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +153,6 @@ public class DelayedRouting {
     return Objects.hash(resumeDate, rules, status);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +160,7 @@ public class DelayedRouting {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DelayedRouting {\n");
-    
+
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -174,4 +180,3 @@ public class DelayedRouting {
   }
 
 }
-

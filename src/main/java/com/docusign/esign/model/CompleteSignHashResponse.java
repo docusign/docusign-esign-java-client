@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** CompleteSignHashResponse */
@@ -33,8 +33,7 @@ public class CompleteSignHashResponse {
    *
    * @return documents
    */
-  @ApiModelProperty(
-      value = "Complex element contains the details on the documents in the envelope.")
+  @Schema(description = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -49,7 +48,7 @@ public class CompleteSignHashResponse {
   }
 
   /** @return redirectionUrl */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
   }
@@ -64,7 +63,7 @@ public class CompleteSignHashResponse {
   }
 
   /** @return remainingSignatureRequests */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemainingSignatureRequests() {
     return remainingSignatureRequests;
   }
@@ -108,7 +107,8 @@ public class CompleteSignHashResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

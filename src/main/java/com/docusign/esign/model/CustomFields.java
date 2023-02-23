@@ -7,14 +7,14 @@ import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about custom fields..
  *
  */
-@ApiModel(description = "Contains information about custom fields.")
+@Schema(description = "Contains information about custom fields.")
 
 public class CustomFields {
   @JsonProperty("listCustomFields")
@@ -22,7 +22,6 @@ public class CustomFields {
 
   @JsonProperty("textCustomFields")
   private java.util.List<TextCustomField> textCustomFields = null;
-
 
   /**
    * listCustomFields.
@@ -33,7 +32,7 @@ public class CustomFields {
     this.listCustomFields = listCustomFields;
     return this;
   }
-  
+
   /**
    * addListCustomFieldsItem.
    *
@@ -49,9 +48,10 @@ public class CustomFields {
 
   /**
    * An array of list custom fields..
+   * 
    * @return listCustomFields
    **/
-  @ApiModelProperty(value = "An array of list custom fields.")
+  @Schema(description = "An array of list custom fields.")
   public java.util.List<ListCustomField> getListCustomFields() {
     return listCustomFields;
   }
@@ -63,7 +63,6 @@ public class CustomFields {
     this.listCustomFields = listCustomFields;
   }
 
-
   /**
    * textCustomFields.
    *
@@ -73,7 +72,7 @@ public class CustomFields {
     this.textCustomFields = textCustomFields;
     return this;
   }
-  
+
   /**
    * addTextCustomFieldsItem.
    *
@@ -89,9 +88,10 @@ public class CustomFields {
 
   /**
    * An array of text custom fields..
+   * 
    * @return textCustomFields
    **/
-  @ApiModelProperty(value = "An array of text custom fields.")
+  @Schema(description = "An array of text custom fields.")
   public java.util.List<TextCustomField> getTextCustomFields() {
     return textCustomFields;
   }
@@ -102,7 +102,6 @@ public class CustomFields {
   public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
   }
-
 
   /**
    * Compares objects.
@@ -130,7 +129,6 @@ public class CustomFields {
     return Objects.hash(listCustomFields, textCustomFields);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -138,7 +136,7 @@ public class CustomFields {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFields {\n");
-    
+
     sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
     sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
@@ -157,4 +155,3 @@ public class CustomFields {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * IdCheckSecurityStep.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class IdCheckSecurityStep {
   @JsonProperty("authType")
   private String authType = null;
-
 
   /**
    * authType.
@@ -30,9 +29,10 @@ public class IdCheckSecurityStep {
 
   /**
    * .
+   * 
    * @return authType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthType() {
     return authType;
   }
@@ -43,7 +43,6 @@ public class IdCheckSecurityStep {
   public void setAuthType(String authType) {
     this.authType = authType;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class IdCheckSecurityStep {
     return Objects.hash(authType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class IdCheckSecurityStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdCheckSecurityStep {\n");
-    
+
     sb.append("    authType: ").append(toIndentedString(authType)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class IdCheckSecurityStep {
   }
 
 }
-

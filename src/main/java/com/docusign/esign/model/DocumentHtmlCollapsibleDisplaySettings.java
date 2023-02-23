@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Display settings for collapsible section..
  *
  */
-@ApiModel(description = "Display settings for collapsible section.")
+@Schema(description = "Display settings for collapsible section.")
 
 public class DocumentHtmlCollapsibleDisplaySettings {
   @JsonProperty("arrowClosed")
@@ -45,7 +45,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   @JsonProperty("outerLabelAndArrowStyle")
   private String outerLabelAndArrowStyle = null;
 
-
   /**
    * arrowClosed.
    *
@@ -58,9 +57,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowClosed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowClosed() {
     return arrowClosed;
   }
@@ -71,7 +71,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowClosed(String arrowClosed) {
     this.arrowClosed = arrowClosed;
   }
-
 
   /**
    * arrowColor.
@@ -85,9 +84,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowColor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowColor() {
     return arrowColor;
   }
@@ -98,7 +98,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowColor(String arrowColor) {
     this.arrowColor = arrowColor;
   }
-
 
   /**
    * arrowLocation.
@@ -112,9 +111,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowLocation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowLocation() {
     return arrowLocation;
   }
@@ -125,7 +125,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowLocation(String arrowLocation) {
     this.arrowLocation = arrowLocation;
   }
-
 
   /**
    * arrowOpen.
@@ -139,9 +138,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowOpen
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowOpen() {
     return arrowOpen;
   }
@@ -152,7 +152,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowOpen(String arrowOpen) {
     this.arrowOpen = arrowOpen;
   }
-
 
   /**
    * arrowSize.
@@ -166,9 +165,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowSize() {
     return arrowSize;
   }
@@ -179,7 +179,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowSize(String arrowSize) {
     this.arrowSize = arrowSize;
   }
-
 
   /**
    * arrowStyle.
@@ -193,9 +192,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return arrowStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getArrowStyle() {
     return arrowStyle;
   }
@@ -206,7 +206,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setArrowStyle(String arrowStyle) {
     this.arrowStyle = arrowStyle;
   }
-
 
   /**
    * containerStyle.
@@ -220,9 +219,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return containerStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContainerStyle() {
     return containerStyle;
   }
@@ -233,7 +233,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setContainerStyle(String containerStyle) {
     this.containerStyle = containerStyle;
   }
-
 
   /**
    * labelStyle.
@@ -247,9 +246,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return labelStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabelStyle() {
     return labelStyle;
   }
@@ -260,7 +260,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setLabelStyle(String labelStyle) {
     this.labelStyle = labelStyle;
   }
-
 
   /**
    * onlyArrowIsClickable.
@@ -274,9 +273,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return onlyArrowIsClickable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isOnlyArrowIsClickable() {
     return onlyArrowIsClickable;
   }
@@ -287,7 +287,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setOnlyArrowIsClickable(Boolean onlyArrowIsClickable) {
     this.onlyArrowIsClickable = onlyArrowIsClickable;
   }
-
 
   /**
    * outerLabelAndArrowStyle.
@@ -301,9 +300,10 @@ public class DocumentHtmlCollapsibleDisplaySettings {
 
   /**
    * .
+   * 
    * @return outerLabelAndArrowStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOuterLabelAndArrowStyle() {
     return outerLabelAndArrowStyle;
   }
@@ -314,7 +314,6 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public void setOuterLabelAndArrowStyle(String outerLabelAndArrowStyle) {
     this.outerLabelAndArrowStyle = outerLabelAndArrowStyle;
   }
-
 
   /**
    * Compares objects.
@@ -347,9 +346,9 @@ public class DocumentHtmlCollapsibleDisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle, labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
+    return Objects.hash(arrowClosed, arrowColor, arrowLocation, arrowOpen, arrowSize, arrowStyle, containerStyle,
+        labelStyle, onlyArrowIsClickable, outerLabelAndArrowStyle);
   }
-
 
   /**
    * Converts the given object to string.
@@ -358,7 +357,7 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlCollapsibleDisplaySettings {\n");
-    
+
     sb.append("    arrowClosed: ").append(toIndentedString(arrowClosed)).append("\n");
     sb.append("    arrowColor: ").append(toIndentedString(arrowColor)).append("\n");
     sb.append("    arrowLocation: ").append(toIndentedString(arrowLocation)).append("\n");
@@ -385,4 +384,3 @@ public class DocumentHtmlCollapsibleDisplaySettings {
   }
 
 }
-

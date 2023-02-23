@@ -6,14 +6,14 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes the recipient phone number..
  *
  */
-@ApiModel(description = "Describes the recipient phone number.")
+@Schema(description = "Describes the recipient phone number.")
 
 public class RecipientPhoneNumber {
   @JsonProperty("countryCode")
@@ -28,7 +28,6 @@ public class RecipientPhoneNumber {
   @JsonProperty("numberMetadata")
   private PropertyMetadata numberMetadata = null;
 
-
   /**
    * countryCode.
    *
@@ -41,9 +40,10 @@ public class RecipientPhoneNumber {
 
   /**
    * .
+   * 
    * @return countryCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -54,7 +54,6 @@ public class RecipientPhoneNumber {
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   /**
    * countryCodeMetadata.
@@ -68,9 +67,10 @@ public class RecipientPhoneNumber {
 
   /**
    * Metadata that indicates if the `countryCode` property is editable..
+   * 
    * @return countryCodeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the `countryCode` property is editable.")
+  @Schema(description = "Metadata that indicates if the `countryCode` property is editable.")
   public PropertyMetadata getCountryCodeMetadata() {
     return countryCodeMetadata;
   }
@@ -81,7 +81,6 @@ public class RecipientPhoneNumber {
   public void setCountryCodeMetadata(PropertyMetadata countryCodeMetadata) {
     this.countryCodeMetadata = countryCodeMetadata;
   }
-
 
   /**
    * number.
@@ -95,9 +94,10 @@ public class RecipientPhoneNumber {
 
   /**
    * .
+   * 
    * @return number
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumber() {
     return number;
   }
@@ -108,7 +108,6 @@ public class RecipientPhoneNumber {
   public void setNumber(String number) {
     this.number = number;
   }
-
 
   /**
    * numberMetadata.
@@ -122,9 +121,10 @@ public class RecipientPhoneNumber {
 
   /**
    * Metadata that indicates if the `number` property is editable..
+   * 
    * @return numberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the `number` property is editable.")
+  @Schema(description = "Metadata that indicates if the `number` property is editable.")
   public PropertyMetadata getNumberMetadata() {
     return numberMetadata;
   }
@@ -135,7 +135,6 @@ public class RecipientPhoneNumber {
   public void setNumberMetadata(PropertyMetadata numberMetadata) {
     this.numberMetadata = numberMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -165,7 +164,6 @@ public class RecipientPhoneNumber {
     return Objects.hash(countryCode, countryCodeMetadata, number, numberMetadata);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -173,7 +171,7 @@ public class RecipientPhoneNumber {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneNumber {\n");
-    
+
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    countryCodeMetadata: ").append(toIndentedString(countryCodeMetadata)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
@@ -194,4 +192,3 @@ public class RecipientPhoneNumber {
   }
 
 }
-

@@ -7,8 +7,8 @@ import com.docusign.esign.model.NotaryJournalMetaData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NotaryJournal.
@@ -34,7 +34,6 @@ public class NotaryJournal {
   @JsonProperty("signerName")
   private String signerName = null;
 
-
   /**
    * createdDate.
    *
@@ -47,9 +46,10 @@ public class NotaryJournal {
 
   /**
    * .
+   * 
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -60,7 +60,6 @@ public class NotaryJournal {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * documentName.
@@ -74,9 +73,10 @@ public class NotaryJournal {
 
   /**
    * .
+   * 
    * @return documentName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentName() {
     return documentName;
   }
@@ -87,7 +87,6 @@ public class NotaryJournal {
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
   }
-
 
   /**
    * jurisdiction.
@@ -101,9 +100,10 @@ public class NotaryJournal {
 
   /**
    * The notary's jurisdiction. .
+   * 
    * @return jurisdiction
    **/
-  @ApiModelProperty(value = "The notary's jurisdiction. ")
+  @Schema(description = "The notary's jurisdiction. ")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
@@ -114,7 +114,6 @@ public class NotaryJournal {
   public void setJurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
   }
-
 
   /**
    * notaryJournalId.
@@ -128,9 +127,10 @@ public class NotaryJournal {
 
   /**
    * .
+   * 
    * @return notaryJournalId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNotaryJournalId() {
     return notaryJournalId;
   }
@@ -141,7 +141,6 @@ public class NotaryJournal {
   public void setNotaryJournalId(String notaryJournalId) {
     this.notaryJournalId = notaryJournalId;
   }
-
 
   /**
    * notaryJournalMetaData.
@@ -155,9 +154,10 @@ public class NotaryJournal {
 
   /**
    * Additional journal data such as the witness list and signature image..
+   * 
    * @return notaryJournalMetaData
    **/
-  @ApiModelProperty(value = "Additional journal data such as the witness list and signature image.")
+  @Schema(description = "Additional journal data such as the witness list and signature image.")
   public NotaryJournalMetaData getNotaryJournalMetaData() {
     return notaryJournalMetaData;
   }
@@ -168,7 +168,6 @@ public class NotaryJournal {
   public void setNotaryJournalMetaData(NotaryJournalMetaData notaryJournalMetaData) {
     this.notaryJournalMetaData = notaryJournalMetaData;
   }
-
 
   /**
    * signerName.
@@ -182,9 +181,10 @@ public class NotaryJournal {
 
   /**
    * .
+   * 
    * @return signerName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerName() {
     return signerName;
   }
@@ -195,7 +195,6 @@ public class NotaryJournal {
   public void setSignerName(String signerName) {
     this.signerName = signerName;
   }
-
 
   /**
    * Compares objects.
@@ -227,7 +226,6 @@ public class NotaryJournal {
     return Objects.hash(createdDate, documentName, jurisdiction, notaryJournalId, notaryJournalMetaData, signerName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -235,7 +233,7 @@ public class NotaryJournal {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournal {\n");
-    
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    jurisdiction: ").append(toIndentedString(jurisdiction)).append("\n");
@@ -258,4 +256,3 @@ public class NotaryJournal {
   }
 
 }
-

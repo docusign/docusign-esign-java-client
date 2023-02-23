@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * IdEvidenceViewLink.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class IdEvidenceViewLink {
   @JsonProperty("viewLink")
   private String viewLink = null;
-
 
   /**
    * viewLink.
@@ -30,9 +29,10 @@ public class IdEvidenceViewLink {
 
   /**
    * .
+   * 
    * @return viewLink
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getViewLink() {
     return viewLink;
   }
@@ -43,7 +43,6 @@ public class IdEvidenceViewLink {
   public void setViewLink(String viewLink) {
     this.viewLink = viewLink;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class IdEvidenceViewLink {
     return Objects.hash(viewLink);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class IdEvidenceViewLink {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdEvidenceViewLink {\n");
-    
+
     sb.append("    viewLink: ").append(toIndentedString(viewLink)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class IdEvidenceViewLink {
   }
 
 }
-

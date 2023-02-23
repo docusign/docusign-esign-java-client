@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PathExtendedElement.
@@ -23,7 +23,6 @@ public class PathExtendedElement {
   @JsonProperty("typeName")
   private String typeName = null;
 
-
   /**
    * name.
    *
@@ -36,9 +35,10 @@ public class PathExtendedElement {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -49,7 +49,6 @@ public class PathExtendedElement {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * type.
@@ -63,9 +62,10 @@ public class PathExtendedElement {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -76,7 +76,6 @@ public class PathExtendedElement {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * typeName.
@@ -90,9 +89,10 @@ public class PathExtendedElement {
 
   /**
    * .
+   * 
    * @return typeName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTypeName() {
     return typeName;
   }
@@ -103,7 +103,6 @@ public class PathExtendedElement {
   public void setTypeName(String typeName) {
     this.typeName = typeName;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class PathExtendedElement {
     return Objects.hash(name, type, typeName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class PathExtendedElement {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PathExtendedElement {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    typeName: ").append(toIndentedString(typeName)).append("\n");
@@ -160,4 +158,3 @@ public class PathExtendedElement {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Watermark.
@@ -41,7 +41,6 @@ public class Watermark {
   @JsonProperty("watermarkText")
   private String watermarkText = null;
 
-
   /**
    * displayAngle.
    *
@@ -54,9 +53,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return displayAngle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayAngle() {
     return displayAngle;
   }
@@ -67,7 +67,6 @@ public class Watermark {
   public void setDisplayAngle(String displayAngle) {
     this.displayAngle = displayAngle;
   }
-
 
   /**
    * enabled.
@@ -81,9 +80,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return enabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnabled() {
     return enabled;
   }
@@ -94,7 +94,6 @@ public class Watermark {
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
-
 
   /**
    * font.
@@ -107,10 +106,14 @@ public class Watermark {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
+   * Default..
+   * 
    * @return font
    **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -121,7 +124,6 @@ public class Watermark {
   public void setFont(String font) {
     this.font = font;
   }
-
 
   /**
    * fontColor.
@@ -134,10 +136,13 @@ public class Watermark {
   }
 
   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
+   * Purple, or White..
+   * 
    * @return fontColor
    **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -148,7 +153,6 @@ public class Watermark {
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
-
 
   /**
    * fontSize.
@@ -161,10 +165,13 @@ public class Watermark {
   }
 
   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
+   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * 
    * @return fontSize
    **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -175,7 +182,6 @@ public class Watermark {
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   /**
    * id.
@@ -189,9 +195,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -202,7 +209,6 @@ public class Watermark {
   public void setId(String id) {
     this.id = id;
   }
-
 
   /**
    * imageBase64.
@@ -216,9 +222,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return imageBase64
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageBase64() {
     return imageBase64;
   }
@@ -229,7 +236,6 @@ public class Watermark {
   public void setImageBase64(String imageBase64) {
     this.imageBase64 = imageBase64;
   }
-
 
   /**
    * transparency.
@@ -243,9 +249,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return transparency
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransparency() {
     return transparency;
   }
@@ -256,7 +263,6 @@ public class Watermark {
   public void setTransparency(String transparency) {
     this.transparency = transparency;
   }
-
 
   /**
    * watermarkText.
@@ -270,9 +276,10 @@ public class Watermark {
 
   /**
    * .
+   * 
    * @return watermarkText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWatermarkText() {
     return watermarkText;
   }
@@ -283,7 +290,6 @@ public class Watermark {
   public void setWatermarkText(String watermarkText) {
     this.watermarkText = watermarkText;
   }
-
 
   /**
    * Compares objects.
@@ -318,7 +324,6 @@ public class Watermark {
     return Objects.hash(displayAngle, enabled, font, fontColor, fontSize, id, imageBase64, transparency, watermarkText);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -326,7 +331,7 @@ public class Watermark {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Watermark {\n");
-    
+
     sb.append("    displayAngle: ").append(toIndentedString(displayAngle)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
@@ -352,4 +357,3 @@ public class Watermark {
   }
 
 }
-

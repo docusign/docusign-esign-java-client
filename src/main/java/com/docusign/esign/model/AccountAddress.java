@@ -6,14 +6,14 @@ import com.docusign.esign.model.Country;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about an account address..
  *
  */
-@ApiModel(description = "Contains information about an account address.")
+@Schema(description = "Contains information about an account address.")
 
 public class AccountAddress {
   @JsonProperty("address1")
@@ -52,7 +52,6 @@ public class AccountAddress {
   @JsonProperty("supportedCountries")
   private java.util.List<Country> supportedCountries = null;
 
-
   /**
    * address1.
    *
@@ -65,9 +64,10 @@ public class AccountAddress {
 
   /**
    * First Line of the address. Maximum length: 100 characters..
+   * 
    * @return address1
    **/
-  @ApiModelProperty(value = "First Line of the address. Maximum length: 100 characters.")
+  @Schema(description = "First Line of the address. Maximum length: 100 characters.")
   public String getAddress1() {
     return address1;
   }
@@ -78,7 +78,6 @@ public class AccountAddress {
   public void setAddress1(String address1) {
     this.address1 = address1;
   }
-
 
   /**
    * address2.
@@ -92,9 +91,10 @@ public class AccountAddress {
 
   /**
    * Second Line of the address. Maximum length: 100 characters..
+   * 
    * @return address2
    **/
-  @ApiModelProperty(value = "Second Line of the address. Maximum length: 100 characters.")
+  @Schema(description = "Second Line of the address. Maximum length: 100 characters.")
   public String getAddress2() {
     return address2;
   }
@@ -105,7 +105,6 @@ public class AccountAddress {
   public void setAddress2(String address2) {
     this.address2 = address2;
   }
-
 
   /**
    * city.
@@ -119,9 +118,10 @@ public class AccountAddress {
 
   /**
    * The city value of the address..
+   * 
    * @return city
    **/
-  @ApiModelProperty(value = "The city value of the address.")
+  @Schema(description = "The city value of the address.")
   public String getCity() {
     return city;
   }
@@ -132,7 +132,6 @@ public class AccountAddress {
   public void setCity(String city) {
     this.city = city;
   }
-
 
   /**
    * country.
@@ -146,9 +145,10 @@ public class AccountAddress {
 
   /**
    * Specifies the country associated with the address..
+   * 
    * @return country
    **/
-  @ApiModelProperty(value = "Specifies the country associated with the address.")
+  @Schema(description = "Specifies the country associated with the address.")
   public String getCountry() {
     return country;
   }
@@ -159,7 +159,6 @@ public class AccountAddress {
   public void setCountry(String country) {
     this.country = country;
   }
-
 
   /**
    * email.
@@ -173,9 +172,10 @@ public class AccountAddress {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -186,7 +186,6 @@ public class AccountAddress {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * fax.
@@ -200,9 +199,10 @@ public class AccountAddress {
 
   /**
    * .
+   * 
    * @return fax
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFax() {
     return fax;
   }
@@ -213,7 +213,6 @@ public class AccountAddress {
   public void setFax(String fax) {
     this.fax = fax;
   }
-
 
   /**
    * firstName.
@@ -226,10 +225,11 @@ public class AccountAddress {
   }
 
   /**
-   * The user's first name.  Maximum Length: 50 characters..
+   * The user's first name. Maximum Length: 50 characters..
+   * 
    * @return firstName
    **/
-  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
+  @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -240,7 +240,6 @@ public class AccountAddress {
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
-
 
   /**
    * lastName.
@@ -254,9 +253,10 @@ public class AccountAddress {
 
   /**
    * .
+   * 
    * @return lastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastName() {
     return lastName;
   }
@@ -267,7 +267,6 @@ public class AccountAddress {
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
-
 
   /**
    * phone.
@@ -281,9 +280,10 @@ public class AccountAddress {
 
   /**
    * .
+   * 
    * @return phone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhone() {
     return phone;
   }
@@ -294,7 +294,6 @@ public class AccountAddress {
   public void setPhone(String phone) {
     this.phone = phone;
   }
-
 
   /**
    * postalCode.
@@ -308,9 +307,10 @@ public class AccountAddress {
 
   /**
    * .
+   * 
    * @return postalCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPostalCode() {
     return postalCode;
   }
@@ -321,7 +321,6 @@ public class AccountAddress {
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
-
 
   /**
    * state.
@@ -335,9 +334,10 @@ public class AccountAddress {
 
   /**
    * The state or province associated with the address..
+   * 
    * @return state
    **/
-  @ApiModelProperty(value = "The state or province associated with the address.")
+  @Schema(description = "The state or province associated with the address.")
   public String getState() {
     return state;
   }
@@ -349,7 +349,6 @@ public class AccountAddress {
     this.state = state;
   }
 
-
   /**
    * supportedCountries.
    *
@@ -359,7 +358,7 @@ public class AccountAddress {
     this.supportedCountries = supportedCountries;
     return this;
   }
-  
+
   /**
    * addSupportedCountriesItem.
    *
@@ -375,9 +374,10 @@ public class AccountAddress {
 
   /**
    * Contains an array of countries supported by the billing plan..
+   * 
    * @return supportedCountries
    **/
-  @ApiModelProperty(value = "Contains an array of countries supported by the billing plan.")
+  @Schema(description = "Contains an array of countries supported by the billing plan.")
   public java.util.List<Country> getSupportedCountries() {
     return supportedCountries;
   }
@@ -388,7 +388,6 @@ public class AccountAddress {
   public void setSupportedCountries(java.util.List<Country> supportedCountries) {
     this.supportedCountries = supportedCountries;
   }
-
 
   /**
    * Compares objects.
@@ -423,9 +422,9 @@ public class AccountAddress {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(address1, address2, city, country, email, fax, firstName, lastName, phone, postalCode, state, supportedCountries);
+    return Objects.hash(address1, address2, city, country, email, fax, firstName, lastName, phone, postalCode, state,
+        supportedCountries);
   }
-
 
   /**
    * Converts the given object to string.
@@ -434,7 +433,7 @@ public class AccountAddress {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountAddress {\n");
-    
+
     sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
     sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
@@ -463,4 +462,3 @@ public class AccountAddress {
   }
 
 }
-

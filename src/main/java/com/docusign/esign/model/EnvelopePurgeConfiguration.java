@@ -5,14 +5,17 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information about the current envelope purge configuration for an account, which enables account administrators to purge documents from completed and voided envelopes after a set number of days (&#x60;retentionDays&#x60;). .
+ * Contains information about the current envelope purge configuration for an
+ * account, which enables account administrators to purge documents from
+ * completed and voided envelopes after a set number of days
+ * (&#x60;retentionDays&#x60;). .
  *
  */
-@ApiModel(description = "Contains information about the current envelope purge configuration for an account, which enables account administrators to purge documents from completed and voided envelopes after a set number of days (`retentionDays`). ")
+@Schema(description = "Contains information about the current envelope purge configuration for an account, which enables account administrators to purge documents from completed and voided envelopes after a set number of days (`retentionDays`). ")
 
 public class EnvelopePurgeConfiguration {
   @JsonProperty("purgeEnvelopes")
@@ -27,7 +30,6 @@ public class EnvelopePurgeConfiguration {
   @JsonProperty("retentionDays")
   private String retentionDays = null;
 
-
   /**
    * purgeEnvelopes.
    *
@@ -40,9 +42,10 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
+   * 
    * @return purgeEnvelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPurgeEnvelopes() {
     return purgeEnvelopes;
   }
@@ -53,7 +56,6 @@ public class EnvelopePurgeConfiguration {
   public void setPurgeEnvelopes(String purgeEnvelopes) {
     this.purgeEnvelopes = purgeEnvelopes;
   }
-
 
   /**
    * redactPII.
@@ -67,9 +69,10 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
+   * 
    * @return redactPII
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRedactPII() {
     return redactPII;
   }
@@ -80,7 +83,6 @@ public class EnvelopePurgeConfiguration {
   public void setRedactPII(String redactPII) {
     this.redactPII = redactPII;
   }
-
 
   /**
    * removeTabsAndEnvelopeAttachments.
@@ -94,9 +96,10 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
+   * 
    * @return removeTabsAndEnvelopeAttachments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemoveTabsAndEnvelopeAttachments() {
     return removeTabsAndEnvelopeAttachments;
   }
@@ -107,7 +110,6 @@ public class EnvelopePurgeConfiguration {
   public void setRemoveTabsAndEnvelopeAttachments(String removeTabsAndEnvelopeAttachments) {
     this.removeTabsAndEnvelopeAttachments = removeTabsAndEnvelopeAttachments;
   }
-
 
   /**
    * retentionDays.
@@ -121,9 +123,10 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
+   * 
    * @return retentionDays
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRetentionDays() {
     return retentionDays;
   }
@@ -134,7 +137,6 @@ public class EnvelopePurgeConfiguration {
   public void setRetentionDays(String retentionDays) {
     this.retentionDays = retentionDays;
   }
-
 
   /**
    * Compares objects.
@@ -152,7 +154,9 @@ public class EnvelopePurgeConfiguration {
     EnvelopePurgeConfiguration envelopePurgeConfiguration = (EnvelopePurgeConfiguration) o;
     return Objects.equals(this.purgeEnvelopes, envelopePurgeConfiguration.purgeEnvelopes) &&
         Objects.equals(this.redactPII, envelopePurgeConfiguration.redactPII) &&
-        Objects.equals(this.removeTabsAndEnvelopeAttachments, envelopePurgeConfiguration.removeTabsAndEnvelopeAttachments) &&
+        Objects.equals(this.removeTabsAndEnvelopeAttachments,
+            envelopePurgeConfiguration.removeTabsAndEnvelopeAttachments)
+        &&
         Objects.equals(this.retentionDays, envelopePurgeConfiguration.retentionDays);
   }
 
@@ -164,7 +168,6 @@ public class EnvelopePurgeConfiguration {
     return Objects.hash(purgeEnvelopes, redactPII, removeTabsAndEnvelopeAttachments, retentionDays);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,10 +175,11 @@ public class EnvelopePurgeConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePurgeConfiguration {\n");
-    
+
     sb.append("    purgeEnvelopes: ").append(toIndentedString(purgeEnvelopes)).append("\n");
     sb.append("    redactPII: ").append(toIndentedString(redactPII)).append("\n");
-    sb.append("    removeTabsAndEnvelopeAttachments: ").append(toIndentedString(removeTabsAndEnvelopeAttachments)).append("\n");
+    sb.append("    removeTabsAndEnvelopeAttachments: ").append(toIndentedString(removeTabsAndEnvelopeAttachments))
+        .append("\n");
     sb.append("    retentionDays: ").append(toIndentedString(retentionDays)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -193,4 +197,3 @@ public class EnvelopePurgeConfiguration {
   }
 
 }
-

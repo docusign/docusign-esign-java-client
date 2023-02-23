@@ -10,14 +10,14 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about shared items..
  *
  */
-@ApiModel(description = "Information about shared items.")
+@Schema(description = "Information about shared items.")
 
 public class MemberSharedItems {
   @JsonProperty("envelopes")
@@ -35,7 +35,6 @@ public class MemberSharedItems {
   @JsonProperty("user")
   private UserInfo user = null;
 
-
   /**
    * envelopes.
    *
@@ -45,7 +44,7 @@ public class MemberSharedItems {
     this.envelopes = envelopes;
     return this;
   }
-  
+
   /**
    * addEnvelopesItem.
    *
@@ -61,9 +60,10 @@ public class MemberSharedItems {
 
   /**
    * .
+   * 
    * @return envelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SharedItem> getEnvelopes() {
     return envelopes;
   }
@@ -74,7 +74,6 @@ public class MemberSharedItems {
   public void setEnvelopes(java.util.List<SharedItem> envelopes) {
     this.envelopes = envelopes;
   }
-
 
   /**
    * errorDetails.
@@ -87,10 +86,12 @@ public class MemberSharedItems {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -102,7 +103,6 @@ public class MemberSharedItems {
     this.errorDetails = errorDetails;
   }
 
-
   /**
    * folders.
    *
@@ -112,7 +112,7 @@ public class MemberSharedItems {
     this.folders = folders;
     return this;
   }
-  
+
   /**
    * addFoldersItem.
    *
@@ -128,9 +128,10 @@ public class MemberSharedItems {
 
   /**
    * .
+   * 
    * @return folders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FolderSharedItem> getFolders() {
     return folders;
   }
@@ -142,7 +143,6 @@ public class MemberSharedItems {
     this.folders = folders;
   }
 
-
   /**
    * templates.
    *
@@ -152,7 +152,7 @@ public class MemberSharedItems {
     this.templates = templates;
     return this;
   }
-  
+
   /**
    * addTemplatesItem.
    *
@@ -168,9 +168,10 @@ public class MemberSharedItems {
 
   /**
    * .
+   * 
    * @return templates
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TemplateSharedItem> getTemplates() {
     return templates;
   }
@@ -181,7 +182,6 @@ public class MemberSharedItems {
   public void setTemplates(java.util.List<TemplateSharedItem> templates) {
     this.templates = templates;
   }
-
 
   /**
    * user.
@@ -195,9 +195,10 @@ public class MemberSharedItems {
 
   /**
    * Information about the user requesting sharing information..
+   * 
    * @return user
    **/
-  @ApiModelProperty(value = "Information about the user requesting sharing information.")
+  @Schema(description = "Information about the user requesting sharing information.")
   public UserInfo getUser() {
     return user;
   }
@@ -208,7 +209,6 @@ public class MemberSharedItems {
   public void setUser(UserInfo user) {
     this.user = user;
   }
-
 
   /**
    * Compares objects.
@@ -239,7 +239,6 @@ public class MemberSharedItems {
     return Objects.hash(envelopes, errorDetails, folders, templates, user);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -247,7 +246,7 @@ public class MemberSharedItems {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberSharedItems {\n");
-    
+
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
@@ -269,4 +268,3 @@ public class MemberSharedItems {
   }
 
 }
-

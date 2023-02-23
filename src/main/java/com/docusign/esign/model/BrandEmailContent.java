@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Deprecated..
  *
  */
-@ApiModel(description = "Deprecated.")
+@Schema(description = "Deprecated.")
 
 public class BrandEmailContent {
   @JsonProperty("content")
@@ -27,7 +27,6 @@ public class BrandEmailContent {
   @JsonProperty("linkText")
   private String linkText = null;
 
-
   /**
    * content.
    *
@@ -40,9 +39,10 @@ public class BrandEmailContent {
 
   /**
    * .
+   * 
    * @return content
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContent() {
     return content;
   }
@@ -53,7 +53,6 @@ public class BrandEmailContent {
   public void setContent(String content) {
     this.content = content;
   }
-
 
   /**
    * emailContentType.
@@ -67,9 +66,10 @@ public class BrandEmailContent {
 
   /**
    * .
+   * 
    * @return emailContentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmailContentType() {
     return emailContentType;
   }
@@ -80,7 +80,6 @@ public class BrandEmailContent {
   public void setEmailContentType(String emailContentType) {
     this.emailContentType = emailContentType;
   }
-
 
   /**
    * emailToLink.
@@ -94,9 +93,10 @@ public class BrandEmailContent {
 
   /**
    * .
+   * 
    * @return emailToLink
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmailToLink() {
     return emailToLink;
   }
@@ -107,7 +107,6 @@ public class BrandEmailContent {
   public void setEmailToLink(String emailToLink) {
     this.emailToLink = emailToLink;
   }
-
 
   /**
    * linkText.
@@ -121,9 +120,10 @@ public class BrandEmailContent {
 
   /**
    * .
+   * 
    * @return linkText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLinkText() {
     return linkText;
   }
@@ -134,7 +134,6 @@ public class BrandEmailContent {
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +163,6 @@ public class BrandEmailContent {
     return Objects.hash(content, emailContentType, emailToLink, linkText);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +170,7 @@ public class BrandEmailContent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandEmailContent {\n");
-    
+
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
     sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
@@ -193,4 +191,3 @@ public class BrandEmailContent {
   }
 
 }
-

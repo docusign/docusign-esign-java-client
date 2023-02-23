@@ -15,15 +15,23 @@ import com.docusign.esign.model.Zip;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
 
 /**
- * Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.  Only the following tab types can be prefill tabs:  - text - check boxes - radio buttons    [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
+ * Prefill tabs are tabs that the sender can fill in before the envelope is
+ * sent. They are sometimes called sender tags or pre-fill fields. Only the
+ * following tab types can be prefill tabs: - text - check boxes - radio buttons
+ * [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in
+ * the web application. [Customize your envelopes with pre-fill fields][catblog]
+ * shows how to use prefill tabs in your application using the eSignature SDKs.
+ * [app]: https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields
+ * [catblog]:
+ * https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
  *
  */
-@ApiModel(description = "Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.  Only the following tab types can be prefill tabs:  - text - check boxes - radio buttons    [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields")
+@Schema(description = "Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.  Only the following tab types can be prefill tabs:  - text - check boxes - radio buttons    [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields")
 
 public class PrefillTabs {
   @JsonProperty("checkboxTabs")
@@ -59,7 +67,6 @@ public class PrefillTabs {
   @JsonProperty("zipTabs")
   private java.util.List<Zip> zipTabs = null;
 
-
   /**
    * checkboxTabs.
    *
@@ -69,7 +76,7 @@ public class PrefillTabs {
     this.checkboxTabs = checkboxTabs;
     return this;
   }
-  
+
   /**
    * addCheckboxTabsItem.
    *
@@ -84,10 +91,12 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select an option..
+   * Specifies a tag on the document in a location where the recipient can select
+   * an option..
+   * 
    * @return checkboxTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document in a location where the recipient can select an option.")
+  @Schema(description = "Specifies a tag on the document in a location where the recipient can select an option.")
   public java.util.List<Checkbox> getCheckboxTabs() {
     return checkboxTabs;
   }
@@ -99,7 +108,6 @@ public class PrefillTabs {
     this.checkboxTabs = checkboxTabs;
   }
 
-
   /**
    * dateTabs.
    *
@@ -109,7 +117,7 @@ public class PrefillTabs {
     this.dateTabs = dateTabs;
     return this;
   }
-  
+
   /**
    * addDateTabsItem.
    *
@@ -124,10 +132,17 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format..
+   * Specifies a tab on the document where you want the recipient to enter a date.
+   * Date tabs are single-line fields that allow date information to be entered in
+   * any format. The tooltip for this tab recommends entering the date as
+   * MM/DD/YYYY, but this is not enforced. The format entered by the signer is
+   * retained. If you need a particular date format enforced, DocuSign recommends
+   * using a Text tab with a Validation Pattern and Validation Message to enforce
+   * the format..
+   * 
    * @return dateTabs
    **/
-  @ApiModelProperty(value = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
+  @Schema(description = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
   public java.util.List<com.docusign.esign.model.Date> getDateTabs() {
     return dateTabs;
   }
@@ -139,7 +154,6 @@ public class PrefillTabs {
     this.dateTabs = dateTabs;
   }
 
-
   /**
    * emailTabs.
    *
@@ -149,7 +163,7 @@ public class PrefillTabs {
     this.emailTabs = emailTabs;
     return this;
   }
-  
+
   /**
    * addEmailTabsItem.
    *
@@ -164,10 +178,17 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter an
+   * email. Email tags are single-line fields that accept any characters. The
+   * system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the
+   * tag. It uses the same parameters as a Text tab, with the validation message
+   * and pattern set for email information. When getting information that includes
+   * this tab type, the original value of the tab when the associated envelope was
+   * sent is included in the response..
+   * 
    * @return emailTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Email> getEmailTabs() {
     return emailTabs;
   }
@@ -179,7 +200,6 @@ public class PrefillTabs {
     this.emailTabs = emailTabs;
   }
 
-
   /**
    * numberTabs.
    *
@@ -189,7 +209,7 @@ public class PrefillTabs {
     this.numberTabs = numberTabs;
     return this;
   }
-  
+
   /**
    * addNumberTabsItem.
    *
@@ -204,10 +224,15 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. .
+   * Specifies a tag on the document where you want the recipient to enter a
+   * number. It uses the same parameters as a Text tab, with the validation
+   * message and pattern set for number information. When getting information that
+   * includes this tab type, the original value of the tab when the associated
+   * envelope was sent is included in the response. .
+   * 
    * @return numberTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
   public java.util.List<Number> getNumberTabs() {
     return numberTabs;
   }
@@ -219,7 +244,6 @@ public class PrefillTabs {
     this.numberTabs = numberTabs;
   }
 
-
   /**
    * radioGroupTabs.
    *
@@ -229,7 +253,7 @@ public class PrefillTabs {
     this.radioGroupTabs = radioGroupTabs;
     return this;
   }
-  
+
   /**
    * addRadioGroupTabsItem.
    *
@@ -244,10 +268,13 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document..
+   * Specifies a tag on the document in a location where the recipient can select
+   * one option from a group of options using a radio button. The radio buttons do
+   * not have to be on the same page in a document..
+   * 
    * @return radioGroupTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.")
+  @Schema(description = "Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.")
   public java.util.List<RadioGroup> getRadioGroupTabs() {
     return radioGroupTabs;
   }
@@ -259,7 +286,6 @@ public class PrefillTabs {
     this.radioGroupTabs = radioGroupTabs;
   }
 
-
   /**
    * senderCompanyTabs.
    *
@@ -269,7 +295,7 @@ public class PrefillTabs {
     this.senderCompanyTabs = senderCompanyTabs;
     return this;
   }
-  
+
   /**
    * addSenderCompanyTabsItem.
    *
@@ -285,9 +311,10 @@ public class PrefillTabs {
 
   /**
    * .
+   * 
    * @return senderCompanyTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SenderCompany> getSenderCompanyTabs() {
     return senderCompanyTabs;
   }
@@ -299,7 +326,6 @@ public class PrefillTabs {
     this.senderCompanyTabs = senderCompanyTabs;
   }
 
-
   /**
    * senderNameTabs.
    *
@@ -309,7 +335,7 @@ public class PrefillTabs {
     this.senderNameTabs = senderNameTabs;
     return this;
   }
-  
+
   /**
    * addSenderNameTabsItem.
    *
@@ -325,9 +351,10 @@ public class PrefillTabs {
 
   /**
    * .
+   * 
    * @return senderNameTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SenderName> getSenderNameTabs() {
     return senderNameTabs;
   }
@@ -339,7 +366,6 @@ public class PrefillTabs {
     this.senderNameTabs = senderNameTabs;
   }
 
-
   /**
    * ssnTabs.
    *
@@ -349,7 +375,7 @@ public class PrefillTabs {
     this.ssnTabs = ssnTabs;
     return this;
   }
-  
+
   /**
    * addSsnTabsItem.
    *
@@ -364,10 +390,16 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter a
+   * Social Security Number (SSN). A SSN can be typed with or without dashes. It
+   * uses the same parameters as a Text tab, with the validation message and
+   * pattern set for SSN information. When getting information that includes this
+   * tab type, the original value of the tab when the associated envelope was sent
+   * is included in the response..
+   * 
    * @return ssnTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Ssn> getSsnTabs() {
     return ssnTabs;
   }
@@ -379,7 +411,6 @@ public class PrefillTabs {
     this.ssnTabs = ssnTabs;
   }
 
-
   /**
    * tabGroups.
    *
@@ -389,7 +420,7 @@ public class PrefillTabs {
     this.tabGroups = tabGroups;
     return this;
   }
-  
+
   /**
    * addTabGroupsItem.
    *
@@ -405,9 +436,10 @@ public class PrefillTabs {
 
   /**
    * .
+   * 
    * @return tabGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TabGroup> getTabGroups() {
     return tabGroups;
   }
@@ -419,7 +451,6 @@ public class PrefillTabs {
     this.tabGroups = tabGroups;
   }
 
-
   /**
    * textTabs.
    *
@@ -429,7 +460,7 @@ public class PrefillTabs {
     this.textTabs = textTabs;
     return this;
   }
-  
+
   /**
    * addTextTabsItem.
    *
@@ -444,10 +475,14 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a that that is an adaptable field that allows the recipient to
+   * enter different text information. When getting information that includes this
+   * tab type, the original value of the tab when the associated envelope was sent
+   * is included in the response..
+   * 
    * @return textTabs
    **/
-  @ApiModelProperty(value = "Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Text> getTextTabs() {
     return textTabs;
   }
@@ -459,7 +494,6 @@ public class PrefillTabs {
     this.textTabs = textTabs;
   }
 
-
   /**
    * zipTabs.
    *
@@ -469,7 +503,7 @@ public class PrefillTabs {
     this.zipTabs = zipTabs;
     return this;
   }
-  
+
   /**
    * addZipTabsItem.
    *
@@ -484,10 +518,17 @@ public class PrefillTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter a ZIP
+   * code. The ZIP code can be a five numbers or the ZIP+4 format with nine
+   * numbers. The zip code can be typed with or without dashes. It uses the same
+   * parameters as a Text tab, with the validation message and pattern set for ZIP
+   * code information. When getting information that includes this tab type, the
+   * original value of the tab when the associated envelope was sent is included
+   * in the response..
+   * 
    * @return zipTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Zip> getZipTabs() {
     return zipTabs;
   }
@@ -498,7 +539,6 @@ public class PrefillTabs {
   public void setZipTabs(java.util.List<Zip> zipTabs) {
     this.zipTabs = zipTabs;
   }
-
 
   /**
    * Compares objects.
@@ -532,9 +572,9 @@ public class PrefillTabs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(checkboxTabs, dateTabs, emailTabs, numberTabs, radioGroupTabs, senderCompanyTabs, senderNameTabs, ssnTabs, tabGroups, textTabs, zipTabs);
+    return Objects.hash(checkboxTabs, dateTabs, emailTabs, numberTabs, radioGroupTabs, senderCompanyTabs,
+        senderNameTabs, ssnTabs, tabGroups, textTabs, zipTabs);
   }
-
 
   /**
    * Converts the given object to string.
@@ -543,7 +583,7 @@ public class PrefillTabs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrefillTabs {\n");
-    
+
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
     sb.append("    emailTabs: ").append(toIndentedString(emailTabs)).append("\n");
@@ -571,4 +611,3 @@ public class PrefillTabs {
   }
 
 }
-

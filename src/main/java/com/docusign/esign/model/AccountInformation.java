@@ -8,14 +8,14 @@ import com.docusign.esign.model.RecipientDomain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains account Information..
  *
  */
-@ApiModel(description = "Contains account Information.")
+@Schema(description = "Contains account Information.")
 
 public class AccountInformation {
   @JsonProperty("accountIdGuid")
@@ -132,7 +132,6 @@ public class AccountInformation {
   @JsonProperty("useDisplayAppliance")
   private Boolean useDisplayAppliance = null;
 
-
   /**
    * accountIdGuid.
    *
@@ -145,9 +144,10 @@ public class AccountInformation {
 
   /**
    * The GUID associated with the account ID..
+   * 
    * @return accountIdGuid
    **/
-  @ApiModelProperty(value = "The GUID associated with the account ID.")
+  @Schema(description = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -158,7 +158,6 @@ public class AccountInformation {
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
-
 
   /**
    * accountName.
@@ -172,9 +171,10 @@ public class AccountInformation {
 
   /**
    * The name of the current account..
+   * 
    * @return accountName
    **/
-  @ApiModelProperty(value = "The name of the current account.")
+  @Schema(description = "The name of the current account.")
   public String getAccountName() {
     return accountName;
   }
@@ -185,7 +185,6 @@ public class AccountInformation {
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
-
 
   /**
    * accountSettings.
@@ -198,10 +197,13 @@ public class AccountInformation {
   }
 
   /**
-   * The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.  .
+   * The list of account settings accountsettings that determine the features
+   * available for the account. Note that some features are determined by the plan
+   * used to create the account and cannot be overridden. .
+   * 
    * @return accountSettings
    **/
-  @ApiModelProperty(value = "The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.  ")
+  @Schema(description = "The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.  ")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
@@ -212,7 +214,6 @@ public class AccountInformation {
   public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
-
 
   /**
    * allowTransactionRooms.
@@ -225,10 +226,12 @@ public class AccountInformation {
   }
 
   /**
-   * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled..
+   * When set to **true**, the transaction rooms feature exposed through the
+   * Workspaces API is enabled..
+   * 
    * @return allowTransactionRooms
    **/
-  @ApiModelProperty(value = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
+  @Schema(description = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
   public String getAllowTransactionRooms() {
     return allowTransactionRooms;
   }
@@ -239,7 +242,6 @@ public class AccountInformation {
   public void setAllowTransactionRooms(String allowTransactionRooms) {
     this.allowTransactionRooms = allowTransactionRooms;
   }
-
 
   /**
    * billingPeriodDaysRemaining.
@@ -253,9 +255,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPeriodDaysRemaining
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingPeriodDaysRemaining() {
     return billingPeriodDaysRemaining;
   }
@@ -266,7 +269,6 @@ public class AccountInformation {
   public void setBillingPeriodDaysRemaining(String billingPeriodDaysRemaining) {
     this.billingPeriodDaysRemaining = billingPeriodDaysRemaining;
   }
-
 
   /**
    * billingPeriodEndDate.
@@ -280,9 +282,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPeriodEndDate
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingPeriodEndDate() {
     return billingPeriodEndDate;
   }
@@ -293,7 +296,6 @@ public class AccountInformation {
   public void setBillingPeriodEndDate(String billingPeriodEndDate) {
     this.billingPeriodEndDate = billingPeriodEndDate;
   }
-
 
   /**
    * billingPeriodEnvelopesAllowed.
@@ -307,9 +309,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPeriodEnvelopesAllowed
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingPeriodEnvelopesAllowed() {
     return billingPeriodEnvelopesAllowed;
   }
@@ -320,7 +323,6 @@ public class AccountInformation {
   public void setBillingPeriodEnvelopesAllowed(String billingPeriodEnvelopesAllowed) {
     this.billingPeriodEnvelopesAllowed = billingPeriodEnvelopesAllowed;
   }
-
 
   /**
    * billingPeriodEnvelopesSent.
@@ -334,9 +336,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPeriodEnvelopesSent
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingPeriodEnvelopesSent() {
     return billingPeriodEnvelopesSent;
   }
@@ -347,7 +350,6 @@ public class AccountInformation {
   public void setBillingPeriodEnvelopesSent(String billingPeriodEnvelopesSent) {
     this.billingPeriodEnvelopesSent = billingPeriodEnvelopesSent;
   }
-
 
   /**
    * billingPeriodStartDate.
@@ -361,9 +363,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPeriodStartDate
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingPeriodStartDate() {
     return billingPeriodStartDate;
   }
@@ -374,7 +377,6 @@ public class AccountInformation {
   public void setBillingPeriodStartDate(String billingPeriodStartDate) {
     this.billingPeriodStartDate = billingPeriodStartDate;
   }
-
 
   /**
    * billingProfile.
@@ -388,9 +390,10 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingProfile
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBillingProfile() {
     return billingProfile;
   }
@@ -401,7 +404,6 @@ public class AccountInformation {
   public void setBillingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
   }
-
 
   /**
    * brands.
@@ -415,9 +417,10 @@ public class AccountInformation {
 
   /**
    * Get brands.
+   * 
    * @return brands
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BrandsResponse getBrands() {
     return brands;
   }
@@ -428,7 +431,6 @@ public class AccountInformation {
   public void setBrands(BrandsResponse brands) {
     this.brands = brands;
   }
-
 
   /**
    * canUpgrade.
@@ -441,10 +443,12 @@ public class AccountInformation {
   }
 
   /**
-   * When set to **true**, specifies that you can upgrade the account through the API..
+   * When set to **true**, specifies that you can upgrade the account through the
+   * API..
+   * 
    * @return canUpgrade
    **/
-  @ApiModelProperty(value = "When set to **true**, specifies that you can upgrade the account through the API.")
+  @Schema(description = "When set to **true**, specifies that you can upgrade the account through the API.")
   public String getCanUpgrade() {
     return canUpgrade;
   }
@@ -455,7 +459,6 @@ public class AccountInformation {
   public void setCanUpgrade(String canUpgrade) {
     this.canUpgrade = canUpgrade;
   }
-
 
   /**
    * connectPermission.
@@ -469,9 +472,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return connectPermission
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getConnectPermission() {
     return connectPermission;
   }
@@ -482,7 +486,6 @@ public class AccountInformation {
   public void setConnectPermission(String connectPermission) {
     this.connectPermission = connectPermission;
   }
-
 
   /**
    * createdDate.
@@ -496,9 +499,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -509,7 +513,6 @@ public class AccountInformation {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * currencyCode.
@@ -523,9 +526,10 @@ public class AccountInformation {
 
   /**
    * Specifies the ISO currency code for the account..
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @Schema(description = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -536,7 +540,6 @@ public class AccountInformation {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currentPlanId.
@@ -550,9 +553,10 @@ public class AccountInformation {
 
   /**
    * Identifies the plan that was used create this account..
+   * 
    * @return currentPlanId
    **/
-  @ApiModelProperty(value = "Identifies the plan that was used create this account.")
+  @Schema(description = "Identifies the plan that was used create this account.")
   public String getCurrentPlanId() {
     return currentPlanId;
   }
@@ -563,7 +567,6 @@ public class AccountInformation {
   public void setCurrentPlanId(String currentPlanId) {
     this.currentPlanId = currentPlanId;
   }
-
 
   /**
    * displayApplianceStartUrl.
@@ -577,9 +580,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return displayApplianceStartUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayApplianceStartUrl() {
     return displayApplianceStartUrl;
   }
@@ -590,7 +594,6 @@ public class AccountInformation {
   public void setDisplayApplianceStartUrl(String displayApplianceStartUrl) {
     this.displayApplianceStartUrl = displayApplianceStartUrl;
   }
-
 
   /**
    * displayApplianceUrl.
@@ -604,9 +607,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return displayApplianceUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayApplianceUrl() {
     return displayApplianceUrl;
   }
@@ -617,7 +621,6 @@ public class AccountInformation {
   public void setDisplayApplianceUrl(String displayApplianceUrl) {
     this.displayApplianceUrl = displayApplianceUrl;
   }
-
 
   /**
    * distributorCode.
@@ -630,10 +633,12 @@ public class AccountInformation {
   }
 
   /**
-   * The code that identifies the billing plan groups and plans for the new account..
+   * The code that identifies the billing plan groups and plans for the new
+   * account..
+   * 
    * @return distributorCode
    **/
-  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
+  @Schema(description = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
@@ -644,7 +649,6 @@ public class AccountInformation {
   public void setDistributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
   }
-
 
   /**
    * docuSignLandingUrl.
@@ -658,9 +662,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return docuSignLandingUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocuSignLandingUrl() {
     return docuSignLandingUrl;
   }
@@ -671,7 +676,6 @@ public class AccountInformation {
   public void setDocuSignLandingUrl(String docuSignLandingUrl) {
     this.docuSignLandingUrl = docuSignLandingUrl;
   }
-
 
   /**
    * dssValues.
@@ -698,9 +702,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return dssValues
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.Map<String, String> getDssValues() {
     return dssValues;
   }
@@ -711,7 +716,6 @@ public class AccountInformation {
   public void setDssValues(java.util.Map<String, String> dssValues) {
     this.dssValues = dssValues;
   }
-
 
   /**
    * envelopeSendingBlocked.
@@ -725,9 +729,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return envelopeSendingBlocked
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeSendingBlocked() {
     return envelopeSendingBlocked;
   }
@@ -738,7 +743,6 @@ public class AccountInformation {
   public void setEnvelopeSendingBlocked(String envelopeSendingBlocked) {
     this.envelopeSendingBlocked = envelopeSendingBlocked;
   }
-
 
   /**
    * envelopeUnitPrice.
@@ -752,9 +756,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return envelopeUnitPrice
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeUnitPrice() {
     return envelopeUnitPrice;
   }
@@ -765,7 +770,6 @@ public class AccountInformation {
   public void setEnvelopeUnitPrice(String envelopeUnitPrice) {
     this.envelopeUnitPrice = envelopeUnitPrice;
   }
-
 
   /**
    * externalAccountId.
@@ -779,9 +783,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return externalAccountId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExternalAccountId() {
     return externalAccountId;
   }
@@ -792,7 +797,6 @@ public class AccountInformation {
   public void setExternalAccountId(String externalAccountId) {
     this.externalAccountId = externalAccountId;
   }
-
 
   /**
    * forgottenPasswordQuestionsCount.
@@ -805,10 +809,12 @@ public class AccountInformation {
   }
 
   /**
-   *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user..
+   * A complex element that contains up to four Question/Answer pairs for
+   * forgotten password information for a user..
+   * 
    * @return forgottenPasswordQuestionsCount
    **/
-  @ApiModelProperty(value = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
+  @Schema(description = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
   public String getForgottenPasswordQuestionsCount() {
     return forgottenPasswordQuestionsCount;
   }
@@ -819,7 +825,6 @@ public class AccountInformation {
   public void setForgottenPasswordQuestionsCount(String forgottenPasswordQuestionsCount) {
     this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
   }
-
 
   /**
    * isDowngrade.
@@ -833,9 +838,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return isDowngrade
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDowngrade() {
     return isDowngrade;
   }
@@ -846,7 +852,6 @@ public class AccountInformation {
   public void setIsDowngrade(String isDowngrade) {
     this.isDowngrade = isDowngrade;
   }
-
 
   /**
    * paymentMethod.
@@ -860,9 +865,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return paymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -873,7 +879,6 @@ public class AccountInformation {
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
-
 
   /**
    * planClassification.
@@ -886,10 +891,12 @@ public class AccountInformation {
   }
 
   /**
-   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
+   * Identifies the type of plan. Examples include Business, Corporate,
+   * Enterprise, Free..
+   * 
    * @return planClassification
    **/
-  @ApiModelProperty(value = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
+  @Schema(description = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
   public String getPlanClassification() {
     return planClassification;
   }
@@ -900,7 +907,6 @@ public class AccountInformation {
   public void setPlanClassification(String planClassification) {
     this.planClassification = planClassification;
   }
-
 
   /**
    * planEndDate.
@@ -914,9 +920,10 @@ public class AccountInformation {
 
   /**
    * The date that the current plan will end..
+   * 
    * @return planEndDate
    **/
-  @ApiModelProperty(value = "The date that the current plan will end.")
+  @Schema(description = "The date that the current plan will end.")
   public String getPlanEndDate() {
     return planEndDate;
   }
@@ -927,7 +934,6 @@ public class AccountInformation {
   public void setPlanEndDate(String planEndDate) {
     this.planEndDate = planEndDate;
   }
-
 
   /**
    * planName.
@@ -941,9 +947,10 @@ public class AccountInformation {
 
   /**
    * The name of the Billing Plan..
+   * 
    * @return planName
    **/
-  @ApiModelProperty(value = "The name of the Billing Plan.")
+  @Schema(description = "The name of the Billing Plan.")
   public String getPlanName() {
     return planName;
   }
@@ -954,7 +961,6 @@ public class AccountInformation {
   public void setPlanName(String planName) {
     this.planName = planName;
   }
-
 
   /**
    * planStartDate.
@@ -968,9 +974,10 @@ public class AccountInformation {
 
   /**
    * The date that the Account started using the current plan..
+   * 
    * @return planStartDate
    **/
-  @ApiModelProperty(value = "The date that the Account started using the current plan.")
+  @Schema(description = "The date that the Account started using the current plan.")
   public String getPlanStartDate() {
     return planStartDate;
   }
@@ -982,7 +989,6 @@ public class AccountInformation {
     this.planStartDate = planStartDate;
   }
 
-
   /**
    * recipientDomains.
    *
@@ -992,7 +998,7 @@ public class AccountInformation {
     this.recipientDomains = recipientDomains;
     return this;
   }
-  
+
   /**
    * addRecipientDomainsItem.
    *
@@ -1008,9 +1014,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return recipientDomains
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientDomain> getRecipientDomains() {
     return recipientDomains;
   }
@@ -1021,7 +1028,6 @@ public class AccountInformation {
   public void setRecipientDomains(java.util.List<RecipientDomain> recipientDomains) {
     this.recipientDomains = recipientDomains;
   }
-
 
   /**
    * seatsAllowed.
@@ -1035,9 +1041,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return seatsAllowed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSeatsAllowed() {
     return seatsAllowed;
   }
@@ -1048,7 +1055,6 @@ public class AccountInformation {
   public void setSeatsAllowed(String seatsAllowed) {
     this.seatsAllowed = seatsAllowed;
   }
-
 
   /**
    * seatsInUse.
@@ -1062,9 +1068,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return seatsInUse
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSeatsInUse() {
     return seatsInUse;
   }
@@ -1075,7 +1082,6 @@ public class AccountInformation {
   public void setSeatsInUse(String seatsInUse) {
     this.seatsInUse = seatsInUse;
   }
-
 
   /**
    * status21CFRPart11.
@@ -1089,9 +1095,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return status21CFRPart11
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatus21CFRPart11() {
     return status21CFRPart11;
   }
@@ -1102,7 +1109,6 @@ public class AccountInformation {
   public void setStatus21CFRPart11(String status21CFRPart11) {
     this.status21CFRPart11 = status21CFRPart11;
   }
-
 
   /**
    * suspensionDate.
@@ -1116,9 +1122,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return suspensionDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuspensionDate() {
     return suspensionDate;
   }
@@ -1129,7 +1136,6 @@ public class AccountInformation {
   public void setSuspensionDate(String suspensionDate) {
     this.suspensionDate = suspensionDate;
   }
-
 
   /**
    * suspensionStatus.
@@ -1143,9 +1149,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return suspensionStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuspensionStatus() {
     return suspensionStatus;
   }
@@ -1156,7 +1163,6 @@ public class AccountInformation {
   public void setSuspensionStatus(String suspensionStatus) {
     this.suspensionStatus = suspensionStatus;
   }
-
 
   /**
    * useDisplayAppliance.
@@ -1170,9 +1176,10 @@ public class AccountInformation {
 
   /**
    * .
+   * 
    * @return useDisplayAppliance
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isUseDisplayAppliance() {
     return useDisplayAppliance;
   }
@@ -1183,7 +1190,6 @@ public class AccountInformation {
   public void setUseDisplayAppliance(Boolean useDisplayAppliance) {
     this.useDisplayAppliance = useDisplayAppliance;
   }
-
 
   /**
    * Compares objects.
@@ -1244,9 +1250,14 @@ public class AccountInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining,
+        billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate,
+        billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId,
+        displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues,
+        envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade,
+        paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed,
+        seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1255,14 +1266,15 @@ public class AccountInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountInformation {\n");
-    
+
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
     sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
     sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
-    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
+    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed))
+        .append("\n");
     sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
     sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
@@ -1280,7 +1292,8 @@ public class AccountInformation {
     sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
     sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
     sb.append("    externalAccountId: ").append(toIndentedString(externalAccountId)).append("\n");
-    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
+    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount))
+        .append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
@@ -1310,4 +1323,3 @@ public class AccountInformation {
   }
 
 }
-

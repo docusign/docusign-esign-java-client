@@ -6,8 +6,8 @@ import com.docusign.esign.model.PowerFormFormDataEnvelope;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PowerFormsFormDataResponse.
@@ -18,7 +18,6 @@ public class PowerFormsFormDataResponse {
   @JsonProperty("envelopes")
   private java.util.List<PowerFormFormDataEnvelope> envelopes = null;
 
-
   /**
    * envelopes.
    *
@@ -28,7 +27,7 @@ public class PowerFormsFormDataResponse {
     this.envelopes = envelopes;
     return this;
   }
-  
+
   /**
    * addEnvelopesItem.
    *
@@ -44,9 +43,10 @@ public class PowerFormsFormDataResponse {
 
   /**
    * .
+   * 
    * @return envelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<PowerFormFormDataEnvelope> getEnvelopes() {
     return envelopes;
   }
@@ -57,7 +57,6 @@ public class PowerFormsFormDataResponse {
   public void setEnvelopes(java.util.List<PowerFormFormDataEnvelope> envelopes) {
     this.envelopes = envelopes;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class PowerFormsFormDataResponse {
     return Objects.hash(envelopes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class PowerFormsFormDataResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsFormDataResponse {\n");
-    
+
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class PowerFormsFormDataResponse {
   }
 
 }
-

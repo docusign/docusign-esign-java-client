@@ -6,14 +6,14 @@ import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing invoice response object..
  *
  */
-@ApiModel(description = "Defines a billing invoice response object.")
+@Schema(description = "Defines a billing invoice response object.")
 
 public class BillingInvoicesResponse {
   @JsonProperty("billingInvoices")
@@ -25,7 +25,6 @@ public class BillingInvoicesResponse {
   @JsonProperty("previousUri")
   private String previousUri = null;
 
-
   /**
    * billingInvoices.
    *
@@ -35,7 +34,7 @@ public class BillingInvoicesResponse {
     this.billingInvoices = billingInvoices;
     return this;
   }
-  
+
   /**
    * addBillingInvoicesItem.
    *
@@ -51,9 +50,10 @@ public class BillingInvoicesResponse {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingInvoices
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
@@ -64,7 +64,6 @@ public class BillingInvoicesResponse {
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
-
 
   /**
    * nextUri.
@@ -77,10 +76,12 @@ public class BillingInvoicesResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -91,7 +92,6 @@ public class BillingInvoicesResponse {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -105,9 +105,10 @@ public class BillingInvoicesResponse {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -118,7 +119,6 @@ public class BillingInvoicesResponse {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * Compares objects.
@@ -147,7 +147,6 @@ public class BillingInvoicesResponse {
     return Objects.hash(billingInvoices, nextUri, previousUri);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -155,7 +154,7 @@ public class BillingInvoicesResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesResponse {\n");
-    
+
     sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -175,4 +174,3 @@ public class BillingInvoicesResponse {
   }
 
 }
-

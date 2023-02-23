@@ -5,14 +5,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences..
+ * Brands use resource files to style the following experiences: - Email -
+ * Sending - Signing - Captive (embedded) signing You can modify these resource
+ * files to customize these experiences..
  *
  */
-@ApiModel(description = "Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences.")
+@Schema(description = "Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences.")
 
 public class BrandResourceUrls {
   @JsonProperty("email")
@@ -27,7 +29,6 @@ public class BrandResourceUrls {
   @JsonProperty("signingCaptive")
   private String signingCaptive = null;
 
-
   /**
    * email.
    *
@@ -40,9 +41,10 @@ public class BrandResourceUrls {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -53,7 +55,6 @@ public class BrandResourceUrls {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * sending.
@@ -67,9 +68,10 @@ public class BrandResourceUrls {
 
   /**
    * .
+   * 
    * @return sending
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSending() {
     return sending;
   }
@@ -80,7 +82,6 @@ public class BrandResourceUrls {
   public void setSending(String sending) {
     this.sending = sending;
   }
-
 
   /**
    * signing.
@@ -94,9 +95,10 @@ public class BrandResourceUrls {
 
   /**
    * .
+   * 
    * @return signing
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigning() {
     return signing;
   }
@@ -107,7 +109,6 @@ public class BrandResourceUrls {
   public void setSigning(String signing) {
     this.signing = signing;
   }
-
 
   /**
    * signingCaptive.
@@ -121,9 +122,10 @@ public class BrandResourceUrls {
 
   /**
    * .
+   * 
    * @return signingCaptive
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigningCaptive() {
     return signingCaptive;
   }
@@ -134,7 +136,6 @@ public class BrandResourceUrls {
   public void setSigningCaptive(String signingCaptive) {
     this.signingCaptive = signingCaptive;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +165,6 @@ public class BrandResourceUrls {
     return Objects.hash(email, sending, signing, signingCaptive);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +172,7 @@ public class BrandResourceUrls {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourceUrls {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
     sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
@@ -193,4 +193,3 @@ public class BrandResourceUrls {
   }
 
 }
-

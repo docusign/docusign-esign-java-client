@@ -7,8 +7,8 @@ import com.docusign.esign.model.FavoriteTemplatesContentItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FavoriteTemplatesInfo.
@@ -25,7 +25,6 @@ public class FavoriteTemplatesInfo {
   @JsonProperty("templatesUpdatedCount")
   private Integer templatesUpdatedCount = null;
 
-
   /**
    * errorDetails.
    *
@@ -37,10 +36,12 @@ public class FavoriteTemplatesInfo {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -52,7 +53,6 @@ public class FavoriteTemplatesInfo {
     this.errorDetails = errorDetails;
   }
 
-
   /**
    * favoriteTemplates.
    *
@@ -62,7 +62,7 @@ public class FavoriteTemplatesInfo {
     this.favoriteTemplates = favoriteTemplates;
     return this;
   }
-  
+
   /**
    * addFavoriteTemplatesItem.
    *
@@ -78,9 +78,10 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
+   * 
    * @return favoriteTemplates
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FavoriteTemplatesContentItem> getFavoriteTemplates() {
     return favoriteTemplates;
   }
@@ -91,7 +92,6 @@ public class FavoriteTemplatesInfo {
   public void setFavoriteTemplates(java.util.List<FavoriteTemplatesContentItem> favoriteTemplates) {
     this.favoriteTemplates = favoriteTemplates;
   }
-
 
   /**
    * templatesUpdatedCount.
@@ -105,9 +105,10 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
+   * 
    * @return templatesUpdatedCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getTemplatesUpdatedCount() {
     return templatesUpdatedCount;
   }
@@ -118,7 +119,6 @@ public class FavoriteTemplatesInfo {
   public void setTemplatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
   }
-
 
   /**
    * Compares objects.
@@ -147,7 +147,6 @@ public class FavoriteTemplatesInfo {
     return Objects.hash(errorDetails, favoriteTemplates, templatesUpdatedCount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -155,7 +154,7 @@ public class FavoriteTemplatesInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FavoriteTemplatesInfo {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    favoriteTemplates: ").append(toIndentedString(favoriteTemplates)).append("\n");
     sb.append("    templatesUpdatedCount: ").append(toIndentedString(templatesUpdatedCount)).append("\n");
@@ -175,4 +174,3 @@ public class FavoriteTemplatesInfo {
   }
 
 }
-

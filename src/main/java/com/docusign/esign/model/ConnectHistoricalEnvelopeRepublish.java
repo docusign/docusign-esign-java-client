@@ -6,8 +6,8 @@ import com.docusign.esign.model.ConnectCustomConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectHistoricalEnvelopeRepublish.
@@ -21,7 +21,6 @@ public class ConnectHistoricalEnvelopeRepublish {
   @JsonProperty("envelopes")
   private java.util.List<String> envelopes = null;
 
-
   /**
    * config.
    *
@@ -34,9 +33,10 @@ public class ConnectHistoricalEnvelopeRepublish {
 
   /**
    * Get config.
+   * 
    * @return config
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ConnectCustomConfiguration getConfig() {
     return config;
   }
@@ -48,7 +48,6 @@ public class ConnectHistoricalEnvelopeRepublish {
     this.config = config;
   }
 
-
   /**
    * envelopes.
    *
@@ -58,7 +57,7 @@ public class ConnectHistoricalEnvelopeRepublish {
     this.envelopes = envelopes;
     return this;
   }
-  
+
   /**
    * addEnvelopesItem.
    *
@@ -74,9 +73,10 @@ public class ConnectHistoricalEnvelopeRepublish {
 
   /**
    * .
+   * 
    * @return envelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getEnvelopes() {
     return envelopes;
   }
@@ -87,7 +87,6 @@ public class ConnectHistoricalEnvelopeRepublish {
   public void setEnvelopes(java.util.List<String> envelopes) {
     this.envelopes = envelopes;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class ConnectHistoricalEnvelopeRepublish {
     return Objects.hash(config, envelopes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class ConnectHistoricalEnvelopeRepublish {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectHistoricalEnvelopeRepublish {\n");
-    
+
     sb.append("    config: ").append(toIndentedString(config)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class ConnectHistoricalEnvelopeRepublish {
   }
 
 }
-

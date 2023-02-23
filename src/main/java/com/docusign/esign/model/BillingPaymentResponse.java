@@ -6,19 +6,18 @@ import com.docusign.esign.model.BillingPayment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines an billing payment response object..
  *
  */
-@ApiModel(description = "Defines an billing payment response object.")
+@Schema(description = "Defines an billing payment response object.")
 
 public class BillingPaymentResponse {
   @JsonProperty("billingPayments")
   private java.util.List<BillingPayment> billingPayments = null;
-
 
   /**
    * billingPayments.
@@ -29,7 +28,7 @@ public class BillingPaymentResponse {
     this.billingPayments = billingPayments;
     return this;
   }
-  
+
   /**
    * addBillingPaymentsItem.
    *
@@ -45,9 +44,10 @@ public class BillingPaymentResponse {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPayments
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingPayment> getBillingPayments() {
     return billingPayments;
   }
@@ -58,7 +58,6 @@ public class BillingPaymentResponse {
   public void setBillingPayments(java.util.List<BillingPayment> billingPayments) {
     this.billingPayments = billingPayments;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class BillingPaymentResponse {
     return Objects.hash(billingPayments);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class BillingPaymentResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentResponse {\n");
-    
+
     sb.append("    billingPayments: ").append(toIndentedString(billingPayments)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class BillingPaymentResponse {
   }
 
 }
-

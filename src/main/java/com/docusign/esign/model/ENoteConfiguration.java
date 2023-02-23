@@ -5,14 +5,17 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly..
+ * This object contains information used to configure
+ * [eNote](https://www.docusign.com/products/enote) functionality. To use eNote,
+ * the Allow eNote for eOriginal account plan item must be on, and the Connect
+ * configuration for eOriginal must be set correctly..
  *
  */
-@ApiModel(description = "This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly.")
+@Schema(description = "This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly.")
 
 public class ENoteConfiguration {
   @JsonProperty("apiKey")
@@ -33,7 +36,6 @@ public class ENoteConfiguration {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * apiKey.
    *
@@ -46,9 +48,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return apiKey
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getApiKey() {
     return apiKey;
   }
@@ -59,7 +62,6 @@ public class ENoteConfiguration {
   public void setApiKey(String apiKey) {
     this.apiKey = apiKey;
   }
-
 
   /**
    * connectConfigured.
@@ -73,9 +75,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return connectConfigured
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getConnectConfigured() {
     return connectConfigured;
   }
@@ -86,7 +89,6 @@ public class ENoteConfiguration {
   public void setConnectConfigured(String connectConfigured) {
     this.connectConfigured = connectConfigured;
   }
-
 
   /**
    * eNoteConfigured.
@@ -100,9 +102,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return eNoteConfigured
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getENoteConfigured() {
     return eNoteConfigured;
   }
@@ -113,7 +116,6 @@ public class ENoteConfiguration {
   public void setENoteConfigured(String eNoteConfigured) {
     this.eNoteConfigured = eNoteConfigured;
   }
-
 
   /**
    * organization.
@@ -127,9 +129,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return organization
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrganization() {
     return organization;
   }
@@ -140,7 +143,6 @@ public class ENoteConfiguration {
   public void setOrganization(String organization) {
     this.organization = organization;
   }
-
 
   /**
    * password.
@@ -154,9 +156,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -167,7 +170,6 @@ public class ENoteConfiguration {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * userName.
@@ -181,9 +183,10 @@ public class ENoteConfiguration {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -194,7 +197,6 @@ public class ENoteConfiguration {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -226,7 +228,6 @@ public class ENoteConfiguration {
     return Objects.hash(apiKey, connectConfigured, eNoteConfigured, organization, password, userName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -234,7 +235,7 @@ public class ENoteConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ENoteConfiguration {\n");
-    
+
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
     sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
@@ -257,4 +258,3 @@ public class ENoteConfiguration {
   }
 
 }
-

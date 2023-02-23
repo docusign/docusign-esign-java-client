@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the number of password questions required (0 to 4) to confirm a user&#39;s identity when a user needs to reset their password..
+ * Information about the number of password questions required (0 to 4) to
+ * confirm a user&#39;s identity when a user needs to reset their password..
  *
  */
-@ApiModel(description = "Information about the number of password questions required (0 to 4) to confirm a user's identity when a user needs to reset their password.")
+@Schema(description = "Information about the number of password questions required (0 to 4) to confirm a user's identity when a user needs to reset their password.")
 
 public class AccountPasswordQuestionsRequired {
   @JsonProperty("maximumQuestions")
@@ -20,7 +21,6 @@ public class AccountPasswordQuestionsRequired {
 
   @JsonProperty("minimumQuestions")
   private String minimumQuestions = null;
-
 
   /**
    * maximumQuestions.
@@ -34,9 +34,10 @@ public class AccountPasswordQuestionsRequired {
 
   /**
    * .
+   * 
    * @return maximumQuestions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumQuestions() {
     return maximumQuestions;
   }
@@ -47,7 +48,6 @@ public class AccountPasswordQuestionsRequired {
   public void setMaximumQuestions(String maximumQuestions) {
     this.maximumQuestions = maximumQuestions;
   }
-
 
   /**
    * minimumQuestions.
@@ -61,9 +61,10 @@ public class AccountPasswordQuestionsRequired {
 
   /**
    * .
+   * 
    * @return minimumQuestions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumQuestions() {
     return minimumQuestions;
   }
@@ -74,7 +75,6 @@ public class AccountPasswordQuestionsRequired {
   public void setMinimumQuestions(String minimumQuestions) {
     this.minimumQuestions = minimumQuestions;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +102,6 @@ public class AccountPasswordQuestionsRequired {
     return Objects.hash(maximumQuestions, minimumQuestions);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +109,7 @@ public class AccountPasswordQuestionsRequired {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordQuestionsRequired {\n");
-    
+
     sb.append("    maximumQuestions: ").append(toIndentedString(maximumQuestions)).append("\n");
     sb.append("    minimumQuestions: ").append(toIndentedString(minimumQuestions)).append("\n");
     sb.append("}");
@@ -129,4 +128,3 @@ public class AccountPasswordQuestionsRequired {
   }
 
 }
-

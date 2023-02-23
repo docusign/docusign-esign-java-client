@@ -10,14 +10,18 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A Commission Number tab displays a notary&#39;s commission number. The tab is populated with the notary&#39;s commission information, but the recipient can also edit the value when notarizing. This tab can only be assigned to a remote notary recipient using [DocuSign Notary][notary].  [notary]: /docs/notary-api/ .
+ * A Commission Number tab displays a notary&#39;s commission number. The tab is
+ * populated with the notary&#39;s commission information, but the recipient can
+ * also edit the value when notarizing. This tab can only be assigned to a
+ * remote notary recipient using [DocuSign Notary][notary]. [notary]:
+ * /docs/notary-api/ .
  *
  */
-@ApiModel(description = "A Commission Number tab displays a notary's commission number. The tab is populated with the notary's commission information, but the recipient can also edit the value when notarizing. This tab can only be assigned to a remote notary recipient using [DocuSign Notary][notary].  [notary]: /docs/notary-api/ ")
+@Schema(description = "A Commission Number tab displays a notary's commission number. The tab is populated with the notary's commission information, but the recipient can also edit the value when notarizing. This tab can only be assigned to a remote notary recipient using [DocuSign Notary][notary].  [notary]: /docs/notary-api/ ")
 
 public class CommissionNumber {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
@@ -326,7 +330,6 @@ public class CommissionNumber {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -339,9 +342,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -353,22 +357,24 @@ public class CommissionNumber {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return CommissionNumber
    **/
-  public CommissionNumber anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public CommissionNumber anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
+   * property is editable..
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -379,7 +385,6 @@ public class CommissionNumber {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -392,10 +397,12 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -406,7 +413,6 @@ public class CommissionNumber {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -419,10 +425,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
+   * Metadata that indicates whether the `anchorCaseSensitive` property is
+   * editable..
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -433,7 +441,6 @@ public class CommissionNumber {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -446,10 +453,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -460,7 +469,6 @@ public class CommissionNumber {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -473,10 +481,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
+   * editable..
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -487,7 +497,6 @@ public class CommissionNumber {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -500,10 +509,12 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -514,7 +525,6 @@ public class CommissionNumber {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -527,10 +537,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
+   * editable..
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -541,7 +553,6 @@ public class CommissionNumber {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -554,10 +565,13 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -568,7 +582,6 @@ public class CommissionNumber {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -581,10 +594,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is
+   * editable..
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -595,7 +610,6 @@ public class CommissionNumber {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -609,9 +623,10 @@ public class CommissionNumber {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -622,7 +637,6 @@ public class CommissionNumber {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -636,9 +650,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -649,7 +664,6 @@ public class CommissionNumber {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -663,9 +677,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -676,7 +691,6 @@ public class CommissionNumber {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -690,9 +704,10 @@ public class CommissionNumber {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -703,7 +718,6 @@ public class CommissionNumber {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -716,10 +730,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -730,7 +746,6 @@ public class CommissionNumber {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -744,9 +759,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -757,7 +773,6 @@ public class CommissionNumber {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -770,10 +785,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -784,7 +801,6 @@ public class CommissionNumber {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -798,9 +814,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -811,7 +828,6 @@ public class CommissionNumber {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -824,10 +840,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -838,7 +856,6 @@ public class CommissionNumber {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -852,9 +869,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -865,7 +883,6 @@ public class CommissionNumber {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * bold.
@@ -879,9 +896,10 @@ public class CommissionNumber {
 
   /**
    * When set to **true**, the information in the tab is bold..
+   * 
    * @return bold
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @Schema(description = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -892,7 +910,6 @@ public class CommissionNumber {
   public void setBold(String bold) {
     this.bold = bold;
   }
-
 
   /**
    * boldMetadata.
@@ -906,9 +923,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
+   * 
    * @return boldMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `bold` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -919,7 +937,6 @@ public class CommissionNumber {
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
-
 
   /**
    * caption.
@@ -933,9 +950,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -946,7 +964,6 @@ public class CommissionNumber {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -960,9 +977,10 @@ public class CommissionNumber {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -973,7 +991,6 @@ public class CommissionNumber {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * concealValueOnDocument.
@@ -986,10 +1003,16 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * When set to **true**, the field appears normally while the recipient is
+   * adding or modifying the information in the field, but the data is not visible
+   * (the characters are hidden by asterisks) to any other signer or the sender.
+   * When an envelope is completed the information is available to the sender
+   * through the Form Data link in the DocuSign Console. This setting applies only
+   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * 
    * @return concealValueOnDocument
    **/
-  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
   }
@@ -1000,7 +1023,6 @@ public class CommissionNumber {
   public void setConcealValueOnDocument(String concealValueOnDocument) {
     this.concealValueOnDocument = concealValueOnDocument;
   }
-
 
   /**
    * concealValueOnDocumentMetadata.
@@ -1013,10 +1035,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `concealValueOnDocument` property is editable..
+   * Metadata that indicates whether the `concealValueOnDocument` property is
+   * editable..
+   * 
    * @return concealValueOnDocumentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
   public PropertyMetadata getConcealValueOnDocumentMetadata() {
     return concealValueOnDocumentMetadata;
   }
@@ -1027,7 +1051,6 @@ public class CommissionNumber {
   public void setConcealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -1040,10 +1063,12 @@ public class CommissionNumber {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -1054,7 +1079,6 @@ public class CommissionNumber {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -1067,10 +1091,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
+   * Metadata that indicates whether the `conditionalParentLabel` property is
+   * editable..
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -1081,7 +1107,6 @@ public class CommissionNumber {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -1094,10 +1119,14 @@ public class CommissionNumber {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -1108,7 +1137,6 @@ public class CommissionNumber {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -1121,10 +1149,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is editable..
+   * Metadata that indicates whether the `conditionalParentValue` property is
+   * editable..
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -1135,7 +1165,6 @@ public class CommissionNumber {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -1148,10 +1177,13 @@ public class CommissionNumber {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -1162,7 +1194,6 @@ public class CommissionNumber {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1176,9 +1207,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1189,7 +1221,6 @@ public class CommissionNumber {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * disableAutoSize.
@@ -1202,10 +1233,14 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
+   * When set to **true**, disables the auto sizing of single line text boxes in
+   * the signing screen when the signer enters data. If disabled users will only
+   * be able enter as much data as the text box can hold. By default this is
+   * false. This property only affects single line text boxes..
+   * 
    * @return disableAutoSize
    **/
-  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   public String getDisableAutoSize() {
     return disableAutoSize;
   }
@@ -1216,7 +1251,6 @@ public class CommissionNumber {
   public void setDisableAutoSize(String disableAutoSize) {
     this.disableAutoSize = disableAutoSize;
   }
-
 
   /**
    * disableAutoSizeMetadata.
@@ -1230,9 +1264,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `disableAutoSize` property is editable..
+   * 
    * @return disableAutoSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `disableAutoSize` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `disableAutoSize` property is editable.")
   public PropertyMetadata getDisableAutoSizeMetadata() {
     return disableAutoSizeMetadata;
   }
@@ -1243,7 +1278,6 @@ public class CommissionNumber {
   public void setDisableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
-
 
   /**
    * documentId.
@@ -1256,10 +1290,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1270,7 +1306,6 @@ public class CommissionNumber {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1284,9 +1319,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1297,7 +1333,6 @@ public class CommissionNumber {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1310,10 +1345,12 @@ public class CommissionNumber {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1324,7 +1361,6 @@ public class CommissionNumber {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * font.
@@ -1337,10 +1373,14 @@ public class CommissionNumber {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
+   * Default..
+   * 
    * @return font
    **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -1351,7 +1391,6 @@ public class CommissionNumber {
   public void setFont(String font) {
     this.font = font;
   }
-
 
   /**
    * fontColor.
@@ -1364,10 +1403,13 @@ public class CommissionNumber {
   }
 
   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
+   * Purple, or White..
+   * 
    * @return fontColor
    **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -1378,7 +1420,6 @@ public class CommissionNumber {
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
-
 
   /**
    * fontColorMetadata.
@@ -1392,9 +1433,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
+   * 
    * @return fontColorMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontColor` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1405,7 +1447,6 @@ public class CommissionNumber {
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
-
 
   /**
    * fontMetadata.
@@ -1419,9 +1460,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
+   * 
    * @return fontMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `font` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `font` property is editable.")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1432,7 +1474,6 @@ public class CommissionNumber {
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
-
 
   /**
    * fontSize.
@@ -1445,10 +1486,13 @@ public class CommissionNumber {
   }
 
   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
+   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * 
    * @return fontSize
    **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1459,7 +1503,6 @@ public class CommissionNumber {
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   /**
    * fontSizeMetadata.
@@ -1473,9 +1516,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
+   * 
    * @return fontSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontSize` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1486,7 +1530,6 @@ public class CommissionNumber {
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
-
 
   /**
    * formOrder.
@@ -1500,9 +1543,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1513,7 +1557,6 @@ public class CommissionNumber {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1527,9 +1570,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1540,7 +1584,6 @@ public class CommissionNumber {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1554,9 +1597,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1567,7 +1611,6 @@ public class CommissionNumber {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1581,9 +1624,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1594,7 +1638,6 @@ public class CommissionNumber {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1608,9 +1651,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1621,7 +1665,6 @@ public class CommissionNumber {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1635,9 +1678,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1648,7 +1692,6 @@ public class CommissionNumber {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * height.
@@ -1662,9 +1705,10 @@ public class CommissionNumber {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1675,7 +1719,6 @@ public class CommissionNumber {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1689,9 +1732,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1702,7 +1746,6 @@ public class CommissionNumber {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * italic.
@@ -1716,9 +1759,10 @@ public class CommissionNumber {
 
   /**
    * When set to **true**, the information in the tab is italic..
+   * 
    * @return italic
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @Schema(description = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1729,7 +1773,6 @@ public class CommissionNumber {
   public void setItalic(String italic) {
     this.italic = italic;
   }
-
 
   /**
    * italicMetadata.
@@ -1743,9 +1786,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
+   * 
    * @return italicMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `italic` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1756,7 +1800,6 @@ public class CommissionNumber {
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
-
 
   /**
    * localePolicy.
@@ -1770,9 +1813,10 @@ public class CommissionNumber {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return localePolicy
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
@@ -1783,7 +1827,6 @@ public class CommissionNumber {
   public void setLocalePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
   }
-
 
   /**
    * locked.
@@ -1797,9 +1840,10 @@ public class CommissionNumber {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
+   * 
    * @return locked
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1810,7 +1854,6 @@ public class CommissionNumber {
   public void setLocked(String locked) {
     this.locked = locked;
   }
-
 
   /**
    * lockedMetadata.
@@ -1824,9 +1867,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
+   * 
    * @return lockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `locked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1837,7 +1881,6 @@ public class CommissionNumber {
   public void setLockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
   }
-
 
   /**
    * maxLength.
@@ -1850,10 +1893,12 @@ public class CommissionNumber {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the property is a string..
+   * An optional value that describes the maximum length of the property when the
+   * property is a string..
+   * 
    * @return maxLength
    **/
-  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
+  @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
   public String getMaxLength() {
     return maxLength;
   }
@@ -1864,7 +1909,6 @@ public class CommissionNumber {
   public void setMaxLength(String maxLength) {
     this.maxLength = maxLength;
   }
-
 
   /**
    * maxLengthMetadata.
@@ -1878,9 +1922,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `maxLength` property is editable..
+   * 
    * @return maxLengthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `maxLength` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `maxLength` property is editable.")
   public PropertyMetadata getMaxLengthMetadata() {
     return maxLengthMetadata;
   }
@@ -1891,7 +1936,6 @@ public class CommissionNumber {
   public void setMaxLengthMetadata(PropertyMetadata maxLengthMetadata) {
     this.maxLengthMetadata = maxLengthMetadata;
   }
-
 
   /**
    * mergeField.
@@ -1905,9 +1949,10 @@ public class CommissionNumber {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
+  @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1918,7 +1963,6 @@ public class CommissionNumber {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -1932,9 +1976,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1945,7 +1990,6 @@ public class CommissionNumber {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * name.
@@ -1959,9 +2003,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -1972,7 +2017,6 @@ public class CommissionNumber {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -1985,10 +2029,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This property is read-only..
+   * Metadata that indicates whether the `name` property is editable. This
+   * property is read-only..
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -1999,7 +2045,6 @@ public class CommissionNumber {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * originalValue.
@@ -2013,9 +2058,10 @@ public class CommissionNumber {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
+   * 
    * @return originalValue
    **/
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -2026,7 +2072,6 @@ public class CommissionNumber {
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
-
 
   /**
    * originalValueMetadata.
@@ -2040,9 +2085,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `originalValue` property is editable..
+   * 
    * @return originalValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `originalValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `originalValue` property is editable.")
   public PropertyMetadata getOriginalValueMetadata() {
     return originalValueMetadata;
   }
@@ -2053,7 +2099,6 @@ public class CommissionNumber {
   public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -2067,9 +2112,10 @@ public class CommissionNumber {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -2080,7 +2126,6 @@ public class CommissionNumber {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -2094,9 +2139,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -2107,7 +2153,6 @@ public class CommissionNumber {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -2120,10 +2165,12 @@ public class CommissionNumber {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -2134,7 +2181,6 @@ public class CommissionNumber {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -2148,9 +2194,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -2161,7 +2208,6 @@ public class CommissionNumber {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -2175,9 +2221,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -2188,7 +2235,6 @@ public class CommissionNumber {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -2202,9 +2248,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -2215,7 +2262,6 @@ public class CommissionNumber {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * required.
@@ -2229,9 +2275,10 @@ public class CommissionNumber {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -2242,7 +2289,6 @@ public class CommissionNumber {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * requiredMetadata.
@@ -2256,9 +2302,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
+   * 
    * @return requiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `required` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `required` property is editable.")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -2269,7 +2316,6 @@ public class CommissionNumber {
   public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -2283,9 +2329,10 @@ public class CommissionNumber {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -2296,7 +2343,6 @@ public class CommissionNumber {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -2310,9 +2356,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -2323,7 +2370,6 @@ public class CommissionNumber {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -2336,10 +2382,13 @@ public class CommissionNumber {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -2350,7 +2399,6 @@ public class CommissionNumber {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -2364,9 +2412,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -2378,7 +2427,6 @@ public class CommissionNumber {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -2388,7 +2436,7 @@ public class CommissionNumber {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -2404,9 +2452,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -2417,7 +2466,6 @@ public class CommissionNumber {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -2431,9 +2479,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -2444,7 +2493,6 @@ public class CommissionNumber {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -2457,10 +2505,12 @@ public class CommissionNumber {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -2471,7 +2521,6 @@ public class CommissionNumber {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -2485,9 +2534,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -2498,7 +2548,6 @@ public class CommissionNumber {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabLabel.
@@ -2512,9 +2561,10 @@ public class CommissionNumber {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -2525,7 +2575,6 @@ public class CommissionNumber {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabLabelMetadata.
@@ -2539,9 +2588,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
+   * 
    * @return tabLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -2552,7 +2602,6 @@ public class CommissionNumber {
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -2566,9 +2615,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2579,7 +2629,6 @@ public class CommissionNumber {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2593,9 +2642,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2606,7 +2656,6 @@ public class CommissionNumber {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabType.
@@ -2620,9 +2669,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -2633,7 +2683,6 @@ public class CommissionNumber {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -2647,9 +2696,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2660,7 +2710,6 @@ public class CommissionNumber {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -2673,10 +2722,12 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2687,7 +2738,6 @@ public class CommissionNumber {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -2701,9 +2751,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2714,7 +2765,6 @@ public class CommissionNumber {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -2727,10 +2777,12 @@ public class CommissionNumber {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2741,7 +2793,6 @@ public class CommissionNumber {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -2755,9 +2806,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2768,7 +2820,6 @@ public class CommissionNumber {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -2782,9 +2833,10 @@ public class CommissionNumber {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2795,7 +2847,6 @@ public class CommissionNumber {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -2809,9 +2860,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2822,7 +2874,6 @@ public class CommissionNumber {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * underline.
@@ -2836,9 +2887,10 @@ public class CommissionNumber {
 
   /**
    * When set to **true**, the information in the tab is underlined..
+   * 
    * @return underline
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @Schema(description = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -2849,7 +2901,6 @@ public class CommissionNumber {
   public void setUnderline(String underline) {
     this.underline = underline;
   }
-
 
   /**
    * underlineMetadata.
@@ -2863,9 +2914,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
+   * 
    * @return underlineMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `underline` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -2876,7 +2928,6 @@ public class CommissionNumber {
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
-
 
   /**
    * value.
@@ -2890,9 +2941,10 @@ public class CommissionNumber {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -2903,7 +2955,6 @@ public class CommissionNumber {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * valueMetadata.
@@ -2917,9 +2968,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
+   * 
    * @return valueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `value` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `value` property is editable.")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -2930,7 +2982,6 @@ public class CommissionNumber {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
-
 
   /**
    * width.
@@ -2944,9 +2995,10 @@ public class CommissionNumber {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2957,7 +3009,6 @@ public class CommissionNumber {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -2971,9 +3022,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2984,7 +3036,6 @@ public class CommissionNumber {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -2997,10 +3048,12 @@ public class CommissionNumber {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -3011,7 +3064,6 @@ public class CommissionNumber {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -3025,9 +3077,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -3038,7 +3091,6 @@ public class CommissionNumber {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -3051,10 +3103,12 @@ public class CommissionNumber {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -3065,7 +3119,6 @@ public class CommissionNumber {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -3079,9 +3132,10 @@ public class CommissionNumber {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -3092,7 +3146,6 @@ public class CommissionNumber {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -3109,7 +3162,9 @@ public class CommissionNumber {
     }
     CommissionNumber commissionNumber = (CommissionNumber) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, commissionNumber.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, commissionNumber.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
+            commissionNumber.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, commissionNumber.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, commissionNumber.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, commissionNumber.anchorHorizontalAlignment) &&
@@ -3217,9 +3272,25 @@ public class CommissionNumber {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
+        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
+        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
+        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
+        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
+        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height,
+        heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata,
+        mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber,
+        pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required,
+        requiredMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels,
+        tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType,
+        tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip,
+        toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition,
+        xPositionMetadata, yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -3228,21 +3299,26 @@ public class CommissionNumber {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommissionNumber {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3254,11 +3330,14 @@ public class CommissionNumber {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
+        .append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3347,4 +3426,3 @@ public class CommissionNumber {
   }
 
 }
-

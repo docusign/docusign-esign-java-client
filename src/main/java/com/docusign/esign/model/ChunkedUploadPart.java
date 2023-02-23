@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * An object that contains information about the chunked upload part..
  *
  */
-@ApiModel(description = "An object that contains information about the chunked upload part.")
+@Schema(description = "An object that contains information about the chunked upload part.")
 
 public class ChunkedUploadPart {
   @JsonProperty("sequence")
@@ -20,7 +20,6 @@ public class ChunkedUploadPart {
 
   @JsonProperty("size")
   private String size = null;
-
 
   /**
    * sequence.
@@ -34,9 +33,10 @@ public class ChunkedUploadPart {
 
   /**
    * .
+   * 
    * @return sequence
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSequence() {
     return sequence;
   }
@@ -47,7 +47,6 @@ public class ChunkedUploadPart {
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
-
 
   /**
    * size.
@@ -61,9 +60,10 @@ public class ChunkedUploadPart {
 
   /**
    * .
+   * 
    * @return size
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSize() {
     return size;
   }
@@ -74,7 +74,6 @@ public class ChunkedUploadPart {
   public void setSize(String size) {
     this.size = size;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class ChunkedUploadPart {
     return Objects.hash(sequence, size);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class ChunkedUploadPart {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadPart {\n");
-    
+
     sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class ChunkedUploadPart {
   }
 
 }
-

@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** TimeStampField */
@@ -25,7 +25,7 @@ public class TimeStampField {
    *
    * @return documentSecurityStore
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -40,7 +40,7 @@ public class TimeStampField {
   }
 
   /** @return maxTimeStampSignatureLength */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxTimeStampSignatureLength() {
     return maxTimeStampSignatureLength;
   }
@@ -55,7 +55,7 @@ public class TimeStampField {
   }
 
   /** @return timeStampFieldName */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeStampFieldName() {
     return timeStampFieldName;
   }
@@ -101,7 +101,8 @@ public class TimeStampField {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

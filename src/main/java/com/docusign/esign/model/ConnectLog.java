@@ -6,14 +6,14 @@ import com.docusign.esign.model.ConnectDebugLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about a Connect log entry..
  *
  */
-@ApiModel(description = "Contains information about a Connect log entry.")
+@Schema(description = "Contains information about a Connect log entry.")
 
 public class ConnectLog {
   @JsonProperty("accountId")
@@ -70,7 +70,6 @@ public class ConnectLog {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * accountId.
    *
@@ -83,9 +82,10 @@ public class ConnectLog {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -96,7 +96,6 @@ public class ConnectLog {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * configUrl.
@@ -110,9 +109,10 @@ public class ConnectLog {
 
   /**
    * The web address of the listener or Retrieving Service end point for Connect..
+   * 
    * @return configUrl
    **/
-  @ApiModelProperty(value = "The web address of the listener or Retrieving Service end point for Connect.")
+  @Schema(description = "The web address of the listener or Retrieving Service end point for Connect.")
   public String getConfigUrl() {
     return configUrl;
   }
@@ -124,7 +124,6 @@ public class ConnectLog {
     this.configUrl = configUrl;
   }
 
-
   /**
    * connectDebugLog.
    *
@@ -134,7 +133,7 @@ public class ConnectLog {
     this.connectDebugLog = connectDebugLog;
     return this;
   }
-  
+
   /**
    * addConnectDebugLogItem.
    *
@@ -149,10 +148,13 @@ public class ConnectLog {
   }
 
   /**
-   * A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used..
+   * A complex element containing information about the Connect configuration,
+   * error details, date/time, description and payload. This is only included in
+   * the response if the query additional_info=true is used..
+   * 
    * @return connectDebugLog
    **/
-  @ApiModelProperty(value = "A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used.")
+  @Schema(description = "A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used.")
   public java.util.List<ConnectDebugLog> getConnectDebugLog() {
     return connectDebugLog;
   }
@@ -163,7 +165,6 @@ public class ConnectLog {
   public void setConnectDebugLog(java.util.List<ConnectDebugLog> connectDebugLog) {
     this.connectDebugLog = connectDebugLog;
   }
-
 
   /**
    * connectId.
@@ -176,10 +177,13 @@ public class ConnectLog {
   }
 
   /**
-   * The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post..
+   * The identifier for the Connect configuration that failed. If an account has
+   * multiple Connect configurations, this value is used to look up the Connect
+   * configuration for the failed post..
+   * 
    * @return connectId
    **/
-  @ApiModelProperty(value = "The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.")
+  @Schema(description = "The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.")
   public String getConnectId() {
     return connectId;
   }
@@ -190,7 +194,6 @@ public class ConnectLog {
   public void setConnectId(String connectId) {
     this.connectId = connectId;
   }
-
 
   /**
    * created.
@@ -204,9 +207,10 @@ public class ConnectLog {
 
   /**
    * The date and time the entry was created..
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "The date and time the entry was created.")
+  @Schema(description = "The date and time the entry was created.")
   public String getCreated() {
     return created;
   }
@@ -217,7 +221,6 @@ public class ConnectLog {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * email.
@@ -231,9 +234,10 @@ public class ConnectLog {
 
   /**
    * The email that sent the envelope..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "The email that sent the envelope.")
+  @Schema(description = "The email that sent the envelope.")
   public String getEmail() {
     return email;
   }
@@ -244,7 +248,6 @@ public class ConnectLog {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * envelopeId.
@@ -258,9 +261,10 @@ public class ConnectLog {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -271,7 +275,6 @@ public class ConnectLog {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * error.
@@ -285,9 +288,10 @@ public class ConnectLog {
 
   /**
    * The error that caused the Connect post to fail..
+   * 
    * @return error
    **/
-  @ApiModelProperty(value = "The error that caused the Connect post to fail.")
+  @Schema(description = "The error that caused the Connect post to fail.")
   public String getError() {
     return error;
   }
@@ -298,7 +302,6 @@ public class ConnectLog {
   public void setError(String error) {
     this.error = error;
   }
-
 
   /**
    * failureId.
@@ -312,9 +315,10 @@ public class ConnectLog {
 
   /**
    * The failure log ID for the failure..
+   * 
    * @return failureId
    **/
-  @ApiModelProperty(value = "The failure log ID for the failure.")
+  @Schema(description = "The failure log ID for the failure.")
   public String getFailureId() {
     return failureId;
   }
@@ -325,7 +329,6 @@ public class ConnectLog {
   public void setFailureId(String failureId) {
     this.failureId = failureId;
   }
-
 
   /**
    * failureUri.
@@ -339,9 +342,10 @@ public class ConnectLog {
 
   /**
    * The URI for the failure..
+   * 
    * @return failureUri
    **/
-  @ApiModelProperty(value = "The URI for the failure.")
+  @Schema(description = "The URI for the failure.")
   public String getFailureUri() {
     return failureUri;
   }
@@ -352,7 +356,6 @@ public class ConnectLog {
   public void setFailureUri(String failureUri) {
     this.failureUri = failureUri;
   }
-
 
   /**
    * lastTry.
@@ -366,9 +369,10 @@ public class ConnectLog {
 
   /**
    * The date and time the last attempt to post..
+   * 
    * @return lastTry
    **/
-  @ApiModelProperty(value = "The date and time the last attempt to post.")
+  @Schema(description = "The date and time the last attempt to post.")
   public String getLastTry() {
     return lastTry;
   }
@@ -379,7 +383,6 @@ public class ConnectLog {
   public void setLastTry(String lastTry) {
     this.lastTry = lastTry;
   }
-
 
   /**
    * logId.
@@ -393,9 +396,10 @@ public class ConnectLog {
 
   /**
    * The Connect log ID for the entry..
+   * 
    * @return logId
    **/
-  @ApiModelProperty(value = "The Connect log ID for the entry.")
+  @Schema(description = "The Connect log ID for the entry.")
   public String getLogId() {
     return logId;
   }
@@ -406,7 +410,6 @@ public class ConnectLog {
   public void setLogId(String logId) {
     this.logId = logId;
   }
-
 
   /**
    * logUri.
@@ -420,9 +423,10 @@ public class ConnectLog {
 
   /**
    * The URI for the log item..
+   * 
    * @return logUri
    **/
-  @ApiModelProperty(value = "The URI for the log item.")
+  @Schema(description = "The URI for the log item.")
   public String getLogUri() {
     return logUri;
   }
@@ -433,7 +437,6 @@ public class ConnectLog {
   public void setLogUri(String logUri) {
     this.logUri = logUri;
   }
-
 
   /**
    * retryCount.
@@ -447,9 +450,10 @@ public class ConnectLog {
 
   /**
    * The number of times the Connect post has been retried..
+   * 
    * @return retryCount
    **/
-  @ApiModelProperty(value = "The number of times the Connect post has been retried.")
+  @Schema(description = "The number of times the Connect post has been retried.")
   public String getRetryCount() {
     return retryCount;
   }
@@ -460,7 +464,6 @@ public class ConnectLog {
   public void setRetryCount(String retryCount) {
     this.retryCount = retryCount;
   }
-
 
   /**
    * retryUri.
@@ -474,9 +477,10 @@ public class ConnectLog {
 
   /**
    * The UEI to retry to publish the Connect failure..
+   * 
    * @return retryUri
    **/
-  @ApiModelProperty(value = "The UEI to retry to publish the Connect failure.")
+  @Schema(description = "The UEI to retry to publish the Connect failure.")
   public String getRetryUri() {
     return retryUri;
   }
@@ -487,7 +491,6 @@ public class ConnectLog {
   public void setRetryUri(String retryUri) {
     this.retryUri = retryUri;
   }
-
 
   /**
    * status.
@@ -500,10 +503,13 @@ public class ConnectLog {
   }
 
   /**
-   * The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing..
+   * The new envelope status for the failed Connect post. The possible values are:
+   * Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined,
+   * TimedOut, Template, or Processing..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.")
+  @Schema(description = "The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.")
   public String getStatus() {
     return status;
   }
@@ -514,7 +520,6 @@ public class ConnectLog {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * subject.
@@ -528,9 +533,10 @@ public class ConnectLog {
 
   /**
    * The envelope subject..
+   * 
    * @return subject
    **/
-  @ApiModelProperty(value = "The envelope subject.")
+  @Schema(description = "The envelope subject.")
   public String getSubject() {
     return subject;
   }
@@ -541,7 +547,6 @@ public class ConnectLog {
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   /**
    * userName.
@@ -555,9 +560,10 @@ public class ConnectLog {
 
   /**
    * The name of the envelope sender..
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "The name of the envelope sender.")
+  @Schema(description = "The name of the envelope sender.")
   public String getUserName() {
     return userName;
   }
@@ -568,7 +574,6 @@ public class ConnectLog {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -609,9 +614,9 @@ public class ConnectLog {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, configUrl, connectDebugLog, connectId, created, email, envelopeId, error, failureId, failureUri, lastTry, logId, logUri, retryCount, retryUri, status, subject, userName);
+    return Objects.hash(accountId, configUrl, connectDebugLog, connectId, created, email, envelopeId, error, failureId,
+        failureUri, lastTry, logId, logUri, retryCount, retryUri, status, subject, userName);
   }
-
 
   /**
    * Converts the given object to string.
@@ -620,7 +625,7 @@ public class ConnectLog {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLog {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
     sb.append("    connectDebugLog: ").append(toIndentedString(connectDebugLog)).append("\n");
@@ -655,4 +660,3 @@ public class ConnectLog {
   }
 
 }
-

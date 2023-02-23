@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Metadata that indicates whether a property is editable and describes setting-specific options..
+ * Metadata that indicates whether a property is editable and describes
+ * setting-specific options..
  *
  */
-@ApiModel(description = "Metadata that indicates whether a property is editable and describes setting-specific options.")
+@Schema(description = "Metadata that indicates whether a property is editable and describes setting-specific options.")
 
 public class SettingsMetadata {
   @JsonProperty("is21CFRPart11")
@@ -33,7 +34,6 @@ public class SettingsMetadata {
   @JsonProperty("uiType")
   private String uiType = null;
 
-
   /**
    * is21CFRPart11.
    *
@@ -46,9 +46,10 @@ public class SettingsMetadata {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
+   * 
    * @return is21CFRPart11
    **/
-  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
+  @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -60,7 +61,6 @@ public class SettingsMetadata {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
-
   /**
    * options.
    *
@@ -70,7 +70,7 @@ public class SettingsMetadata {
     this.options = options;
     return this;
   }
-  
+
   /**
    * addOptionsItem.
    *
@@ -86,9 +86,10 @@ public class SettingsMetadata {
 
   /**
    * .
+   * 
    * @return options
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getOptions() {
     return options;
   }
@@ -99,7 +100,6 @@ public class SettingsMetadata {
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
-
 
   /**
    * rights.
@@ -113,9 +113,10 @@ public class SettingsMetadata {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -126,7 +127,6 @@ public class SettingsMetadata {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * uiHint.
@@ -140,9 +140,10 @@ public class SettingsMetadata {
 
   /**
    * .
+   * 
    * @return uiHint
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUiHint() {
     return uiHint;
   }
@@ -153,7 +154,6 @@ public class SettingsMetadata {
   public void setUiHint(String uiHint) {
     this.uiHint = uiHint;
   }
-
 
   /**
    * uiOrder.
@@ -167,9 +167,10 @@ public class SettingsMetadata {
 
   /**
    * .
+   * 
    * @return uiOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUiOrder() {
     return uiOrder;
   }
@@ -180,7 +181,6 @@ public class SettingsMetadata {
   public void setUiOrder(String uiOrder) {
     this.uiOrder = uiOrder;
   }
-
 
   /**
    * uiType.
@@ -194,9 +194,10 @@ public class SettingsMetadata {
 
   /**
    * .
+   * 
    * @return uiType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUiType() {
     return uiType;
   }
@@ -207,7 +208,6 @@ public class SettingsMetadata {
   public void setUiType(String uiType) {
     this.uiType = uiType;
   }
-
 
   /**
    * Compares objects.
@@ -239,7 +239,6 @@ public class SettingsMetadata {
     return Objects.hash(is21CFRPart11, options, rights, uiHint, uiOrder, uiType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -247,7 +246,7 @@ public class SettingsMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SettingsMetadata {\n");
-    
+
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
@@ -270,4 +269,3 @@ public class SettingsMetadata {
   }
 
 }
-

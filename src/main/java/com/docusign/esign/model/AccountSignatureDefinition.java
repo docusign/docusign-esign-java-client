@@ -8,8 +8,8 @@ import com.docusign.esign.model.SignatureUserDef;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountSignatureDefinition.
@@ -68,7 +68,6 @@ public class AccountSignatureDefinition {
   @JsonProperty("stampSizeMM")
   private String stampSizeMM = null;
 
-
   /**
    * dateStampProperties.
    *
@@ -80,10 +79,17 @@ public class AccountSignatureDefinition {
   }
 
   /**
-   * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle..
+   * Specifies the area in which a date stamp is placed. This parameter uses pixel
+   * positioning to draw a rectangle at the center of the stamp area. The stamp is
+   * superimposed on top of this central area. This property contains the
+   * following information about the central rectangle: - `DateAreaX`: The X axis
+   * position of the top-left corner. - `DateAreaY`: The Y axis position of the
+   * top-left corner. - `DateAreaWidth`: The width of the rectangle. -
+   * `DateAreaHeight`: The height of the rectangle..
+   * 
    * @return dateStampProperties
    **/
-  @ApiModelProperty(value = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
+  @Schema(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
   public DateStampProperties getDateStampProperties() {
     return dateStampProperties;
   }
@@ -94,7 +100,6 @@ public class AccountSignatureDefinition {
   public void setDateStampProperties(DateStampProperties dateStampProperties) {
     this.dateStampProperties = dateStampProperties;
   }
-
 
   /**
    * disallowUserResizeStamp.
@@ -108,9 +113,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return disallowUserResizeStamp
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisallowUserResizeStamp() {
     return disallowUserResizeStamp;
   }
@@ -121,7 +127,6 @@ public class AccountSignatureDefinition {
   public void setDisallowUserResizeStamp(String disallowUserResizeStamp) {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
-
 
   /**
    * externalID.
@@ -135,9 +140,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return externalID
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExternalID() {
     return externalID;
   }
@@ -148,7 +154,6 @@ public class AccountSignatureDefinition {
   public void setExternalID(String externalID) {
     this.externalID = externalID;
   }
-
 
   /**
    * imageType.
@@ -162,9 +167,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return imageType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageType() {
     return imageType;
   }
@@ -175,7 +181,6 @@ public class AccountSignatureDefinition {
   public void setImageType(String imageType) {
     this.imageType = imageType;
   }
-
 
   /**
    * isDefault.
@@ -189,9 +194,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -202,7 +208,6 @@ public class AccountSignatureDefinition {
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * nrdsId.
@@ -216,9 +221,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return nrdsId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNrdsId() {
     return nrdsId;
   }
@@ -229,7 +235,6 @@ public class AccountSignatureDefinition {
   public void setNrdsId(String nrdsId) {
     this.nrdsId = nrdsId;
   }
-
 
   /**
    * nrdsLastName.
@@ -243,9 +248,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return nrdsLastName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNrdsLastName() {
     return nrdsLastName;
   }
@@ -256,7 +262,6 @@ public class AccountSignatureDefinition {
   public void setNrdsLastName(String nrdsLastName) {
     this.nrdsLastName = nrdsLastName;
   }
-
 
   /**
    * phoneticName.
@@ -270,9 +275,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return phoneticName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneticName() {
     return phoneticName;
   }
@@ -283,7 +289,6 @@ public class AccountSignatureDefinition {
   public void setPhoneticName(String phoneticName) {
     this.phoneticName = phoneticName;
   }
-
 
   /**
    * signatureFont.
@@ -297,9 +302,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return signatureFont
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureFont() {
     return signatureFont;
   }
@@ -311,7 +317,6 @@ public class AccountSignatureDefinition {
     this.signatureFont = signatureFont;
   }
 
-
   /**
    * signatureGroups.
    *
@@ -321,7 +326,7 @@ public class AccountSignatureDefinition {
     this.signatureGroups = signatureGroups;
     return this;
   }
-  
+
   /**
    * addSignatureGroupsItem.
    *
@@ -337,9 +342,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return signatureGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SignatureGroupDef> getSignatureGroups() {
     return signatureGroups;
   }
@@ -350,7 +356,6 @@ public class AccountSignatureDefinition {
   public void setSignatureGroups(java.util.List<SignatureGroupDef> signatureGroups) {
     this.signatureGroups = signatureGroups;
   }
-
 
   /**
    * signatureId.
@@ -363,10 +368,17 @@ public class AccountSignatureDefinition {
   }
 
   /**
-   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
+   * Specifies the signature ID associated with the signature name. You can use
+   * the signature ID in the URI in place of the signature name, and the value
+   * stored in the `signatureName` property in the body is used. This allows the
+   * use of special characters (such as \"&\", \"<\", \">\") in a the signature
+   * name. Note that with each update to signatures, the returned signature ID
+   * might change, so the caller will need to trigger off the signature name to
+   * get the new signature ID..
+   * 
    * @return signatureId
    **/
-  @ApiModelProperty(value = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
+  @Schema(description = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
   public String getSignatureId() {
     return signatureId;
   }
@@ -377,7 +389,6 @@ public class AccountSignatureDefinition {
   public void setSignatureId(String signatureId) {
     this.signatureId = signatureId;
   }
-
 
   /**
    * signatureInitials.
@@ -391,9 +402,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return signatureInitials
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
@@ -404,7 +416,6 @@ public class AccountSignatureDefinition {
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
-
 
   /**
    * signatureName.
@@ -418,9 +429,10 @@ public class AccountSignatureDefinition {
 
   /**
    * Specifies the user signature name..
+   * 
    * @return signatureName
    **/
-  @ApiModelProperty(value = "Specifies the user signature name.")
+  @Schema(description = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -431,7 +443,6 @@ public class AccountSignatureDefinition {
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
-
 
   /**
    * signatureType.
@@ -445,9 +456,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return signatureType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -459,7 +471,6 @@ public class AccountSignatureDefinition {
     this.signatureType = signatureType;
   }
 
-
   /**
    * signatureUsers.
    *
@@ -469,7 +480,7 @@ public class AccountSignatureDefinition {
     this.signatureUsers = signatureUsers;
     return this;
   }
-  
+
   /**
    * addSignatureUsersItem.
    *
@@ -485,9 +496,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return signatureUsers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SignatureUserDef> getSignatureUsers() {
     return signatureUsers;
   }
@@ -498,7 +510,6 @@ public class AccountSignatureDefinition {
   public void setSignatureUsers(java.util.List<SignatureUserDef> signatureUsers) {
     this.signatureUsers = signatureUsers;
   }
-
 
   /**
    * stampFormat.
@@ -512,9 +523,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return stampFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStampFormat() {
     return stampFormat;
   }
@@ -525,7 +537,6 @@ public class AccountSignatureDefinition {
   public void setStampFormat(String stampFormat) {
     this.stampFormat = stampFormat;
   }
-
 
   /**
    * stampSizeMM.
@@ -539,9 +550,10 @@ public class AccountSignatureDefinition {
 
   /**
    * .
+   * 
    * @return stampSizeMM
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStampSizeMM() {
     return stampSizeMM;
   }
@@ -552,7 +564,6 @@ public class AccountSignatureDefinition {
   public void setStampSizeMM(String stampSizeMM) {
     this.stampSizeMM = stampSizeMM;
   }
-
 
   /**
    * Compares objects.
@@ -592,9 +603,10 @@ public class AccountSignatureDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId, nrdsLastName, phoneticName, signatureFont, signatureGroups, signatureId, signatureInitials, signatureName, signatureType, signatureUsers, stampFormat, stampSizeMM);
+    return Objects.hash(dateStampProperties, disallowUserResizeStamp, externalID, imageType, isDefault, nrdsId,
+        nrdsLastName, phoneticName, signatureFont, signatureGroups, signatureId, signatureInitials, signatureName,
+        signatureType, signatureUsers, stampFormat, stampSizeMM);
   }
-
 
   /**
    * Converts the given object to string.
@@ -603,7 +615,7 @@ public class AccountSignatureDefinition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureDefinition {\n");
-    
+
     sb.append("    dateStampProperties: ").append(toIndentedString(dateStampProperties)).append("\n");
     sb.append("    disallowUserResizeStamp: ").append(toIndentedString(disallowUserResizeStamp)).append("\n");
     sb.append("    externalID: ").append(toIndentedString(externalID)).append("\n");
@@ -637,4 +649,3 @@ public class AccountSignatureDefinition {
   }
 
 }
-

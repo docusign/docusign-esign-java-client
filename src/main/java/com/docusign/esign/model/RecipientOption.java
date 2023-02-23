@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes a recipient who is a member of a conditional group..
  *
  */
-@ApiModel(description = "Describes a recipient who is a member of a conditional group.")
+@Schema(description = "Describes a recipient who is a member of a conditional group.")
 
 public class RecipientOption {
   @JsonProperty("email")
@@ -30,7 +30,6 @@ public class RecipientOption {
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
 
-
   /**
    * email.
    *
@@ -43,9 +42,10 @@ public class RecipientOption {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -56,7 +56,6 @@ public class RecipientOption {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * name.
@@ -70,9 +69,10 @@ public class RecipientOption {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -83,7 +83,6 @@ public class RecipientOption {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * recipientLabel.
@@ -97,9 +96,10 @@ public class RecipientOption {
 
   /**
    * .
+   * 
    * @return recipientLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientLabel() {
     return recipientLabel;
   }
@@ -110,7 +110,6 @@ public class RecipientOption {
   public void setRecipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
   }
-
 
   /**
    * roleName.
@@ -123,10 +122,13 @@ public class RecipientOption {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
+   * Optional element. Specifies the role name associated with the recipient.<br/>
+   * <br/>
+   * This is required when working with template recipients..
+   * 
    * @return roleName
    **/
-  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -137,7 +139,6 @@ public class RecipientOption {
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
-
 
   /**
    * signingGroupId.
@@ -150,10 +151,14 @@ public class RecipientOption {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
+   * When set to **true** and the feature is enabled in the sender's account, the
+   * signing recipient is required to draw signatures and initials at each
+   * signature/initial tab ( instead of adopting a signature/initial style or only
+   * drawing a signature/initial once)..
+   * 
    * @return signingGroupId
    **/
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -164,7 +169,6 @@ public class RecipientOption {
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +199,6 @@ public class RecipientOption {
     return Objects.hash(email, name, recipientLabel, roleName, signingGroupId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +206,7 @@ public class RecipientOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientOption {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    recipientLabel: ").append(toIndentedString(recipientLabel)).append("\n");
@@ -225,4 +228,3 @@ public class RecipientOption {
   }
 
 }
-

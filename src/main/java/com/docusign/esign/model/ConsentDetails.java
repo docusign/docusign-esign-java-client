@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConsentDetails.
@@ -23,7 +23,6 @@ public class ConsentDetails {
   @JsonProperty("signerConsentStatus")
   private String signerConsentStatus = null;
 
-
   /**
    * consentKey.
    *
@@ -36,9 +35,10 @@ public class ConsentDetails {
 
   /**
    * .
+   * 
    * @return consentKey
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getConsentKey() {
     return consentKey;
   }
@@ -49,7 +49,6 @@ public class ConsentDetails {
   public void setConsentKey(String consentKey) {
     this.consentKey = consentKey;
   }
-
 
   /**
    * deliveryMethod.
@@ -63,9 +62,10 @@ public class ConsentDetails {
 
   /**
    * Reserved: For DocuSign use only..
+   * 
    * @return deliveryMethod
    **/
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @Schema(description = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
@@ -76,7 +76,6 @@ public class ConsentDetails {
   public void setDeliveryMethod(String deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
-
 
   /**
    * signerConsentStatus.
@@ -90,9 +89,10 @@ public class ConsentDetails {
 
   /**
    * .
+   * 
    * @return signerConsentStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerConsentStatus() {
     return signerConsentStatus;
   }
@@ -103,7 +103,6 @@ public class ConsentDetails {
   public void setSignerConsentStatus(String signerConsentStatus) {
     this.signerConsentStatus = signerConsentStatus;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class ConsentDetails {
     return Objects.hash(consentKey, deliveryMethod, signerConsentStatus);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class ConsentDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsentDetails {\n");
-    
+
     sb.append("    consentKey: ").append(toIndentedString(consentKey)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    signerConsentStatus: ").append(toIndentedString(signerConsentStatus)).append("\n");
@@ -160,4 +158,3 @@ public class ConsentDetails {
   }
 
 }
-

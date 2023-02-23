@@ -6,14 +6,15 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A workspaceUser representing the user. This property is only returned in response to user specific GET call. .
+ * A workspaceUser representing the user. This property is only returned in
+ * response to user specific GET call. .
  *
  */
-@ApiModel(description = "A workspaceUser representing the user. This property is only returned in response to user specific GET call. ")
+@Schema(description = "A workspaceUser representing the user. This property is only returned in response to user specific GET call. ")
 
 public class WorkspaceUser {
   @JsonProperty("accountId")
@@ -73,7 +74,6 @@ public class WorkspaceUser {
   @JsonProperty("workspaceUserUri")
   private String workspaceUserUri = null;
 
-
   /**
    * accountId.
    *
@@ -86,9 +86,10 @@ public class WorkspaceUser {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -99,7 +100,6 @@ public class WorkspaceUser {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * accountName.
@@ -113,9 +113,10 @@ public class WorkspaceUser {
 
   /**
    * The name of the account that the workspace user belongs to..
+   * 
    * @return accountName
    **/
-  @ApiModelProperty(value = "The name of the account that the workspace user belongs to.")
+  @Schema(description = "The name of the account that the workspace user belongs to.")
   public String getAccountName() {
     return accountName;
   }
@@ -126,7 +127,6 @@ public class WorkspaceUser {
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
-
 
   /**
    * activeSince.
@@ -140,9 +140,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return activeSince
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActiveSince() {
     return activeSince;
   }
@@ -153,7 +154,6 @@ public class WorkspaceUser {
   public void setActiveSince(String activeSince) {
     this.activeSince = activeSince;
   }
-
 
   /**
    * created.
@@ -167,9 +167,10 @@ public class WorkspaceUser {
 
   /**
    * The UTC DateTime when the workspace user was created..
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "The UTC DateTime when the workspace user was created.")
+  @Schema(description = "The UTC DateTime when the workspace user was created.")
   public String getCreated() {
     return created;
   }
@@ -180,7 +181,6 @@ public class WorkspaceUser {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdById.
@@ -194,9 +194,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return createdById
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -207,7 +208,6 @@ public class WorkspaceUser {
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
-
 
   /**
    * email.
@@ -221,9 +221,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -234,7 +235,6 @@ public class WorkspaceUser {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * errorDetails.
@@ -247,10 +247,12 @@ public class WorkspaceUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -261,7 +263,6 @@ public class WorkspaceUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * invitationEmailBlurb.
@@ -275,9 +276,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return invitationEmailBlurb
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInvitationEmailBlurb() {
     return invitationEmailBlurb;
   }
@@ -288,7 +290,6 @@ public class WorkspaceUser {
   public void setInvitationEmailBlurb(String invitationEmailBlurb) {
     this.invitationEmailBlurb = invitationEmailBlurb;
   }
-
 
   /**
    * invitationEmailSubject.
@@ -302,9 +303,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return invitationEmailSubject
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInvitationEmailSubject() {
     return invitationEmailSubject;
   }
@@ -315,7 +317,6 @@ public class WorkspaceUser {
   public void setInvitationEmailSubject(String invitationEmailSubject) {
     this.invitationEmailSubject = invitationEmailSubject;
   }
-
 
   /**
    * lastModified.
@@ -328,10 +329,12 @@ public class WorkspaceUser {
   }
 
   /**
-   * Utc date and time the comment was last updated (can only be done by creator.).
+   * Utc date and time the comment was last updated (can only be done by
+   * creator.).
+   * 
    * @return lastModified
    **/
-  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator.)")
+  @Schema(description = "Utc date and time the comment was last updated (can only be done by creator.)")
   public String getLastModified() {
     return lastModified;
   }
@@ -342,7 +345,6 @@ public class WorkspaceUser {
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
-
 
   /**
    * lastModifiedById.
@@ -356,9 +358,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return lastModifiedById
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastModifiedById() {
     return lastModifiedById;
   }
@@ -369,7 +372,6 @@ public class WorkspaceUser {
   public void setLastModifiedById(String lastModifiedById) {
     this.lastModifiedById = lastModifiedById;
   }
-
 
   /**
    * status.
@@ -382,10 +384,13 @@ public class WorkspaceUser {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -396,7 +401,6 @@ public class WorkspaceUser {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * type.
@@ -410,9 +414,10 @@ public class WorkspaceUser {
 
   /**
    * Type of the user. Valid values: type_owner, type_participant..
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "Type of the user. Valid values: type_owner, type_participant.")
+  @Schema(description = "Type of the user. Valid values: type_owner, type_participant.")
   public String getType() {
     return type;
   }
@@ -423,7 +428,6 @@ public class WorkspaceUser {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * userId.
@@ -437,9 +441,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -450,7 +455,6 @@ public class WorkspaceUser {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -464,9 +468,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -477,7 +482,6 @@ public class WorkspaceUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * workspaceId.
@@ -491,9 +495,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return workspaceId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkspaceId() {
     return workspaceId;
   }
@@ -504,7 +509,6 @@ public class WorkspaceUser {
   public void setWorkspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
   }
-
 
   /**
    * workspaceUserBaseUrl.
@@ -518,9 +522,10 @@ public class WorkspaceUser {
 
   /**
    * The relative URI that may be used to access a workspace user..
+   * 
    * @return workspaceUserBaseUrl
    **/
-  @ApiModelProperty(value = "The relative URI that may be used to access a workspace user.")
+  @Schema(description = "The relative URI that may be used to access a workspace user.")
   public String getWorkspaceUserBaseUrl() {
     return workspaceUserBaseUrl;
   }
@@ -531,7 +536,6 @@ public class WorkspaceUser {
   public void setWorkspaceUserBaseUrl(String workspaceUserBaseUrl) {
     this.workspaceUserBaseUrl = workspaceUserBaseUrl;
   }
-
 
   /**
    * workspaceUserId.
@@ -545,9 +549,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return workspaceUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkspaceUserId() {
     return workspaceUserId;
   }
@@ -558,7 +563,6 @@ public class WorkspaceUser {
   public void setWorkspaceUserId(String workspaceUserId) {
     this.workspaceUserId = workspaceUserId;
   }
-
 
   /**
    * workspaceUserUri.
@@ -572,9 +576,10 @@ public class WorkspaceUser {
 
   /**
    * .
+   * 
    * @return workspaceUserUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkspaceUserUri() {
     return workspaceUserUri;
   }
@@ -585,7 +590,6 @@ public class WorkspaceUser {
   public void setWorkspaceUserUri(String workspaceUserUri) {
     this.workspaceUserUri = workspaceUserUri;
   }
-
 
   /**
    * Compares objects.
@@ -627,9 +631,10 @@ public class WorkspaceUser {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails, invitationEmailBlurb, invitationEmailSubject, lastModified, lastModifiedById, status, type, userId, userName, workspaceId, workspaceUserBaseUrl, workspaceUserId, workspaceUserUri);
+    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails,
+        invitationEmailBlurb, invitationEmailSubject, lastModified, lastModifiedById, status, type, userId, userName,
+        workspaceId, workspaceUserBaseUrl, workspaceUserId, workspaceUserUri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -638,7 +643,7 @@ public class WorkspaceUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUser {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    activeSince: ").append(toIndentedString(activeSince)).append("\n");
@@ -674,4 +679,3 @@ public class WorkspaceUser {
   }
 
 }
-

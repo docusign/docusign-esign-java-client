@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DelegationInfo.
@@ -26,7 +26,6 @@ public class DelegationInfo {
   @JsonProperty("userId")
   private String userId = null;
 
-
   /**
    * email.
    *
@@ -39,9 +38,10 @@ public class DelegationInfo {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -52,7 +52,6 @@ public class DelegationInfo {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * name.
@@ -66,9 +65,10 @@ public class DelegationInfo {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -79,7 +79,6 @@ public class DelegationInfo {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * userAuthorizationId.
@@ -93,9 +92,10 @@ public class DelegationInfo {
 
   /**
    * .
+   * 
    * @return userAuthorizationId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserAuthorizationId() {
     return userAuthorizationId;
   }
@@ -106,7 +106,6 @@ public class DelegationInfo {
   public void setUserAuthorizationId(String userAuthorizationId) {
     this.userAuthorizationId = userAuthorizationId;
   }
-
 
   /**
    * userId.
@@ -120,9 +119,10 @@ public class DelegationInfo {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -133,7 +133,6 @@ public class DelegationInfo {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class DelegationInfo {
     return Objects.hash(email, name, userAuthorizationId, userId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class DelegationInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DelegationInfo {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    userAuthorizationId: ").append(toIndentedString(userAuthorizationId)).append("\n");
@@ -192,4 +190,3 @@ public class DelegationInfo {
   }
 
 }
-

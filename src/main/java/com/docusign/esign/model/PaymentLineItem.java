@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A line item describes details about an individual line item in a payment request.  .
+ * A line item describes details about an individual line item in a payment
+ * request. .
  *
  */
-@ApiModel(description = "A line item describes details about an individual line item in a payment request.  ")
+@Schema(description = "A line item describes details about an individual line item in a payment request.  ")
 
 public class PaymentLineItem {
   @JsonProperty("amountReference")
@@ -27,7 +28,6 @@ public class PaymentLineItem {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * amountReference.
    *
@@ -40,9 +40,10 @@ public class PaymentLineItem {
 
   /**
    * .
+   * 
    * @return amountReference
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAmountReference() {
     return amountReference;
   }
@@ -53,7 +54,6 @@ public class PaymentLineItem {
   public void setAmountReference(String amountReference) {
     this.amountReference = amountReference;
   }
-
 
   /**
    * description.
@@ -67,9 +67,10 @@ public class PaymentLineItem {
 
   /**
    * .
+   * 
    * @return description
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDescription() {
     return description;
   }
@@ -80,7 +81,6 @@ public class PaymentLineItem {
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   /**
    * itemCode.
@@ -94,9 +94,10 @@ public class PaymentLineItem {
 
   /**
    * .
+   * 
    * @return itemCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getItemCode() {
     return itemCode;
   }
@@ -107,7 +108,6 @@ public class PaymentLineItem {
   public void setItemCode(String itemCode) {
     this.itemCode = itemCode;
   }
-
 
   /**
    * name.
@@ -121,9 +121,10 @@ public class PaymentLineItem {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -134,7 +135,6 @@ public class PaymentLineItem {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +164,6 @@ public class PaymentLineItem {
     return Objects.hash(amountReference, description, itemCode, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +171,7 @@ public class PaymentLineItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentLineItem {\n");
-    
+
     sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
@@ -193,4 +192,3 @@ public class PaymentLineItem {
   }
 
 }
-
