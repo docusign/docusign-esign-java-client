@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkRecipientSignatureProvider.
@@ -20,7 +20,6 @@ public class BulkRecipientSignatureProvider {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * name.
    *
@@ -33,9 +32,10 @@ public class BulkRecipientSignatureProvider {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -46,7 +46,6 @@ public class BulkRecipientSignatureProvider {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * value.
@@ -60,9 +59,10 @@ public class BulkRecipientSignatureProvider {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -73,7 +73,6 @@ public class BulkRecipientSignatureProvider {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class BulkRecipientSignatureProvider {
     return Objects.hash(name, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class BulkRecipientSignatureProvider {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkRecipientSignatureProvider {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class BulkRecipientSignatureProvider {
   }
 
 }
-

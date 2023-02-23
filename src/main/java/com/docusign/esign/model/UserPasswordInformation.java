@@ -6,8 +6,8 @@ import com.docusign.esign.model.ForgottenPasswordInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserPasswordInformation.
@@ -27,7 +27,6 @@ public class UserPasswordInformation {
   @JsonProperty("newPassword")
   private String newPassword = null;
 
-
   /**
    * currentPassword.
    *
@@ -40,9 +39,10 @@ public class UserPasswordInformation {
 
   /**
    * The user's current password to be changed..
+   * 
    * @return currentPassword
    **/
-  @ApiModelProperty(value = "The user's current password to be changed.")
+  @Schema(description = "The user's current password to be changed.")
   public String getCurrentPassword() {
     return currentPassword;
   }
@@ -53,7 +53,6 @@ public class UserPasswordInformation {
   public void setCurrentPassword(String currentPassword) {
     this.currentPassword = currentPassword;
   }
-
 
   /**
    * email.
@@ -67,9 +66,10 @@ public class UserPasswordInformation {
 
   /**
    * The user's email address for the associated account..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "The user's email address for the associated account.")
+  @Schema(description = "The user's email address for the associated account.")
   public String getEmail() {
     return email;
   }
@@ -80,7 +80,6 @@ public class UserPasswordInformation {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * forgottenPasswordInfo.
@@ -93,10 +92,12 @@ public class UserPasswordInformation {
   }
 
   /**
-   * A complex element containing up to four Question/Answer pairs for forgotten password information..
+   * A complex element containing up to four Question/Answer pairs for forgotten
+   * password information..
+   * 
    * @return forgottenPasswordInfo
    **/
-  @ApiModelProperty(value = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
+  @Schema(description = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
@@ -107,7 +108,6 @@ public class UserPasswordInformation {
   public void setForgottenPasswordInfo(ForgottenPasswordInformation forgottenPasswordInfo) {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
-
 
   /**
    * newPassword.
@@ -121,9 +121,10 @@ public class UserPasswordInformation {
 
   /**
    * The user's new password..
+   * 
    * @return newPassword
    **/
-  @ApiModelProperty(value = "The user's new password.")
+  @Schema(description = "The user's new password.")
   public String getNewPassword() {
     return newPassword;
   }
@@ -134,7 +135,6 @@ public class UserPasswordInformation {
   public void setNewPassword(String newPassword) {
     this.newPassword = newPassword;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +164,6 @@ public class UserPasswordInformation {
     return Objects.hash(currentPassword, email, forgottenPasswordInfo, newPassword);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +171,7 @@ public class UserPasswordInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordInformation {\n");
-    
+
     sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
@@ -193,4 +192,3 @@ public class UserPasswordInformation {
   }
 
 }
-

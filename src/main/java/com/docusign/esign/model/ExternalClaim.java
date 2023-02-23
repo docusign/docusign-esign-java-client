@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ExternalClaim */
@@ -24,7 +24,7 @@ public class ExternalClaim {
   }
 
   /** @return acquiredTime */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAcquiredTime() {
     return acquiredTime;
   }
@@ -39,7 +39,7 @@ public class ExternalClaim {
   }
 
   /** @return claimName */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClaimName() {
     return claimName;
   }
@@ -54,7 +54,7 @@ public class ExternalClaim {
   }
 
   /** @return provider */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProvider() {
     return provider;
   }
@@ -73,7 +73,7 @@ public class ExternalClaim {
    *
    * @return value
    */
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -116,7 +116,8 @@ public class ExternalClaim {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

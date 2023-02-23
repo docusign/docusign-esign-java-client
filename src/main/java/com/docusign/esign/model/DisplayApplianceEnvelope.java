@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayApplianceEnvelope */
@@ -57,7 +57,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return addDemoStamp */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getAddDemoStamp() {
     return addDemoStamp;
   }
@@ -72,7 +72,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return allowMultipleAttachments */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getAllowMultipleAttachments() {
     return allowMultipleAttachments;
   }
@@ -87,7 +87,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return burnDefaultTabData */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getBurnDefaultTabData() {
     return burnDefaultTabData;
   }
@@ -102,7 +102,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return convertPdfFields */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getConvertPdfFields() {
     return convertPdfFields;
   }
@@ -121,9 +121,7 @@ public class DisplayApplianceEnvelope {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(example = "null", description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -138,7 +136,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return envelopeType */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getEnvelopeType() {
     return envelopeType;
   }
@@ -153,7 +151,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return includeSigsBeforeComplete */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIncludeSigsBeforeComplete() {
     return includeSigsBeforeComplete;
   }
@@ -168,7 +166,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return isConcatMode */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIsConcatMode() {
     return isConcatMode;
   }
@@ -183,7 +181,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return isEnvelopeIDStampingEnabled */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIsEnvelopeIDStampingEnabled() {
     return isEnvelopeIDStampingEnabled;
   }
@@ -199,7 +197,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return pdfFormConversionFontScale100 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getPdfFormConversionFontScale100() {
     return pdfFormConversionFontScale100;
   }
@@ -214,7 +212,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return shouldFlatten */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getShouldFlatten() {
     return shouldFlatten;
   }
@@ -229,7 +227,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return showEnvelopeChanges */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getShowEnvelopeChanges() {
     return showEnvelopeChanges;
   }
@@ -244,7 +242,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return signOnline */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getSignOnline() {
     return signOnline;
   }
@@ -259,15 +257,14 @@ public class DisplayApplianceEnvelope {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified
+   * and sent later.
    *
    * @return status
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(example = "null", description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -282,7 +279,7 @@ public class DisplayApplianceEnvelope {
   }
 
   /** @return userId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getUserId() {
     return userId;
   }
@@ -377,7 +374,8 @@ public class DisplayApplianceEnvelope {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

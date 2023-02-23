@@ -6,14 +6,15 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences..
+ * Information about the resource files that the brand uses for the email,
+ * signing, sending, and captive (embedded) signing experiences..
  *
  */
-@ApiModel(description = "Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences.")
+@Schema(description = "Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences.")
 
 public class BrandResources {
   @JsonProperty("createdByUserInfo")
@@ -40,7 +41,6 @@ public class BrandResources {
   @JsonProperty("resourcesContentUri")
   private String resourcesContentUri = null;
 
-
   /**
    * createdByUserInfo.
    *
@@ -53,9 +53,10 @@ public class BrandResources {
 
   /**
    * The user ID of the user who created the brand resource..
+   * 
    * @return createdByUserInfo
    **/
-  @ApiModelProperty(value = "The user ID of the user who created the brand resource.")
+  @Schema(description = "The user ID of the user who created the brand resource.")
   public UserInfo getCreatedByUserInfo() {
     return createdByUserInfo;
   }
@@ -66,7 +67,6 @@ public class BrandResources {
   public void setCreatedByUserInfo(UserInfo createdByUserInfo) {
     this.createdByUserInfo = createdByUserInfo;
   }
-
 
   /**
    * createdDate.
@@ -80,9 +80,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -94,7 +95,6 @@ public class BrandResources {
     this.createdDate = createdDate;
   }
 
-
   /**
    * dataNotSavedNotInMaster.
    *
@@ -104,7 +104,7 @@ public class BrandResources {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
     return this;
   }
-  
+
   /**
    * addDataNotSavedNotInMasterItem.
    *
@@ -120,9 +120,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return dataNotSavedNotInMaster
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getDataNotSavedNotInMaster() {
     return dataNotSavedNotInMaster;
   }
@@ -133,7 +134,6 @@ public class BrandResources {
   public void setDataNotSavedNotInMaster(java.util.List<String> dataNotSavedNotInMaster) {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
   }
-
 
   /**
    * modifiedByUserInfo.
@@ -147,9 +147,10 @@ public class BrandResources {
 
   /**
    * Information about the user who last modified the brand resource..
+   * 
    * @return modifiedByUserInfo
    **/
-  @ApiModelProperty(value = "Information about the user who last modified the brand resource.")
+  @Schema(description = "Information about the user who last modified the brand resource.")
   public UserInfo getModifiedByUserInfo() {
     return modifiedByUserInfo;
   }
@@ -160,7 +161,6 @@ public class BrandResources {
   public void setModifiedByUserInfo(UserInfo modifiedByUserInfo) {
     this.modifiedByUserInfo = modifiedByUserInfo;
   }
-
 
   /**
    * modifiedDate.
@@ -174,9 +174,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return modifiedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
@@ -188,7 +189,6 @@ public class BrandResources {
     this.modifiedDate = modifiedDate;
   }
 
-
   /**
    * modifiedTemplates.
    *
@@ -198,7 +198,7 @@ public class BrandResources {
     this.modifiedTemplates = modifiedTemplates;
     return this;
   }
-  
+
   /**
    * addModifiedTemplatesItem.
    *
@@ -214,9 +214,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return modifiedTemplates
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getModifiedTemplates() {
     return modifiedTemplates;
   }
@@ -227,7 +228,6 @@ public class BrandResources {
   public void setModifiedTemplates(java.util.List<String> modifiedTemplates) {
     this.modifiedTemplates = modifiedTemplates;
   }
-
 
   /**
    * resourcesContentType.
@@ -241,9 +241,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return resourcesContentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResourcesContentType() {
     return resourcesContentType;
   }
@@ -254,7 +255,6 @@ public class BrandResources {
   public void setResourcesContentType(String resourcesContentType) {
     this.resourcesContentType = resourcesContentType;
   }
-
 
   /**
    * resourcesContentUri.
@@ -268,9 +268,10 @@ public class BrandResources {
 
   /**
    * .
+   * 
    * @return resourcesContentUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResourcesContentUri() {
     return resourcesContentUri;
   }
@@ -281,7 +282,6 @@ public class BrandResources {
   public void setResourcesContentUri(String resourcesContentUri) {
     this.resourcesContentUri = resourcesContentUri;
   }
-
 
   /**
    * Compares objects.
@@ -312,9 +312,9 @@ public class BrandResources {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate, modifiedTemplates, resourcesContentType, resourcesContentUri);
+    return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate,
+        modifiedTemplates, resourcesContentType, resourcesContentUri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -323,7 +323,7 @@ public class BrandResources {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResources {\n");
-    
+
     sb.append("    createdByUserInfo: ").append(toIndentedString(createdByUserInfo)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    dataNotSavedNotInMaster: ").append(toIndentedString(dataNotSavedNotInMaster)).append("\n");
@@ -348,4 +348,3 @@ public class BrandResources {
   }
 
 }
-

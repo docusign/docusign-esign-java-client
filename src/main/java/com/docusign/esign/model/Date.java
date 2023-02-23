@@ -10,14 +10,19 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A tab that allows the recipient to enter a date. Date tabs are one-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained. If you need a particular date format enforced, DocuSign recommends using a Text tab with a validation pattern and a validation message to enforce the format. .
+ * A tab that allows the recipient to enter a date. Date tabs are one-line
+ * fields that allow date information to be entered in any format. The tooltip
+ * for this tab recommends entering the date as MM/DD/YYYY, but this is not
+ * enforced. The format entered by the signer is retained. If you need a
+ * particular date format enforced, DocuSign recommends using a Text tab with a
+ * validation pattern and a validation message to enforce the format. .
  *
  */
-@ApiModel(description = "A tab that allows the recipient to enter a date. Date tabs are one-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained. If you need a particular date format enforced, DocuSign recommends using a Text tab with a validation pattern and a validation message to enforce the format. ")
+@Schema(description = "A tab that allows the recipient to enter a date. Date tabs are one-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained. If you need a particular date format enforced, DocuSign recommends using a Text tab with a validation pattern and a validation message to enforce the format. ")
 
 public class Date {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
@@ -368,7 +373,6 @@ public class Date {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -381,9 +385,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -394,7 +399,6 @@ public class Date {
   public void setAnchorAllowWhiteSpaceInCharacters(String anchorAllowWhiteSpaceInCharacters) {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
-
 
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
@@ -407,10 +411,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
+   * property is editable..
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -421,7 +427,6 @@ public class Date {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -434,10 +439,12 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -448,7 +455,6 @@ public class Date {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -461,10 +467,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
+   * Metadata that indicates whether the `anchorCaseSensitive` property is
+   * editable..
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -475,7 +483,6 @@ public class Date {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -488,10 +495,12 @@ public class Date {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -502,7 +511,6 @@ public class Date {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -515,10 +523,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
+   * editable..
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -529,7 +539,6 @@ public class Date {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -542,10 +551,12 @@ public class Date {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -556,7 +567,6 @@ public class Date {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -569,10 +579,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
+   * editable..
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -583,7 +595,6 @@ public class Date {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -596,10 +607,13 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -610,7 +624,6 @@ public class Date {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -623,10 +636,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is
+   * editable..
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -637,7 +652,6 @@ public class Date {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -651,9 +665,10 @@ public class Date {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -664,7 +679,6 @@ public class Date {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -678,9 +692,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -691,7 +706,6 @@ public class Date {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -705,9 +719,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -718,7 +733,6 @@ public class Date {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -732,9 +746,10 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -745,7 +760,6 @@ public class Date {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -758,10 +772,12 @@ public class Date {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -772,7 +788,6 @@ public class Date {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -786,9 +801,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -799,7 +815,6 @@ public class Date {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -812,10 +827,12 @@ public class Date {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -826,7 +843,6 @@ public class Date {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -840,9 +856,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -853,7 +870,6 @@ public class Date {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -866,10 +882,12 @@ public class Date {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -880,7 +898,6 @@ public class Date {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -894,9 +911,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -907,7 +925,6 @@ public class Date {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * bold.
@@ -921,9 +938,10 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is bold..
+   * 
    * @return bold
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @Schema(description = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -934,7 +952,6 @@ public class Date {
   public void setBold(String bold) {
     this.bold = bold;
   }
-
 
   /**
    * boldMetadata.
@@ -948,9 +965,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
+   * 
    * @return boldMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `bold` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -961,7 +979,6 @@ public class Date {
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
-
 
   /**
    * caption.
@@ -975,9 +992,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -988,7 +1006,6 @@ public class Date {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -1002,9 +1019,10 @@ public class Date {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -1015,7 +1033,6 @@ public class Date {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * concealValueOnDocument.
@@ -1028,10 +1045,16 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * When set to **true**, the field appears normally while the recipient is
+   * adding or modifying the information in the field, but the data is not visible
+   * (the characters are hidden by asterisks) to any other signer or the sender.
+   * When an envelope is completed the information is available to the sender
+   * through the Form Data link in the DocuSign Console. This setting applies only
+   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * 
    * @return concealValueOnDocument
    **/
-  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
   }
@@ -1042,7 +1065,6 @@ public class Date {
   public void setConcealValueOnDocument(String concealValueOnDocument) {
     this.concealValueOnDocument = concealValueOnDocument;
   }
-
 
   /**
    * concealValueOnDocumentMetadata.
@@ -1055,10 +1077,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `concealValueOnDocument` property is editable..
+   * Metadata that indicates whether the `concealValueOnDocument` property is
+   * editable..
+   * 
    * @return concealValueOnDocumentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
   public PropertyMetadata getConcealValueOnDocumentMetadata() {
     return concealValueOnDocumentMetadata;
   }
@@ -1069,7 +1093,6 @@ public class Date {
   public void setConcealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -1082,10 +1105,12 @@ public class Date {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -1096,7 +1121,6 @@ public class Date {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -1109,10 +1133,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
+   * Metadata that indicates whether the `conditionalParentLabel` property is
+   * editable..
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -1123,7 +1149,6 @@ public class Date {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -1136,10 +1161,14 @@ public class Date {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -1150,7 +1179,6 @@ public class Date {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -1163,10 +1191,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is editable..
+   * Metadata that indicates whether the `conditionalParentValue` property is
+   * editable..
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -1177,7 +1207,6 @@ public class Date {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -1190,10 +1219,13 @@ public class Date {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -1204,7 +1236,6 @@ public class Date {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1218,9 +1249,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1231,7 +1263,6 @@ public class Date {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * disableAutoSize.
@@ -1244,10 +1275,14 @@ public class Date {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
+   * When set to **true**, disables the auto sizing of single line text boxes in
+   * the signing screen when the signer enters data. If disabled users will only
+   * be able enter as much data as the text box can hold. By default this is
+   * false. This property only affects single line text boxes..
+   * 
    * @return disableAutoSize
    **/
-  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   public String getDisableAutoSize() {
     return disableAutoSize;
   }
@@ -1258,7 +1293,6 @@ public class Date {
   public void setDisableAutoSize(String disableAutoSize) {
     this.disableAutoSize = disableAutoSize;
   }
-
 
   /**
    * disableAutoSizeMetadata.
@@ -1272,9 +1306,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `disableAutoSize` property is editable..
+   * 
    * @return disableAutoSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `disableAutoSize` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `disableAutoSize` property is editable.")
   public PropertyMetadata getDisableAutoSizeMetadata() {
     return disableAutoSizeMetadata;
   }
@@ -1285,7 +1320,6 @@ public class Date {
   public void setDisableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
-
 
   /**
    * documentId.
@@ -1298,10 +1332,12 @@ public class Date {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1312,7 +1348,6 @@ public class Date {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1326,9 +1361,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1339,7 +1375,6 @@ public class Date {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1352,10 +1387,12 @@ public class Date {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1366,7 +1403,6 @@ public class Date {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * font.
@@ -1379,10 +1415,14 @@ public class Date {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
+   * Default..
+   * 
    * @return font
    **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -1393,7 +1433,6 @@ public class Date {
   public void setFont(String font) {
     this.font = font;
   }
-
 
   /**
    * fontColor.
@@ -1406,10 +1445,13 @@ public class Date {
   }
 
   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
+   * Purple, or White..
+   * 
    * @return fontColor
    **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -1420,7 +1462,6 @@ public class Date {
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
-
 
   /**
    * fontColorMetadata.
@@ -1434,9 +1475,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
+   * 
    * @return fontColorMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontColor` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1447,7 +1489,6 @@ public class Date {
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
-
 
   /**
    * fontMetadata.
@@ -1461,9 +1502,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
+   * 
    * @return fontMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `font` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `font` property is editable.")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1474,7 +1516,6 @@ public class Date {
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
-
 
   /**
    * fontSize.
@@ -1487,10 +1528,13 @@ public class Date {
   }
 
   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
+   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * 
    * @return fontSize
    **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1501,7 +1545,6 @@ public class Date {
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   /**
    * fontSizeMetadata.
@@ -1515,9 +1558,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
+   * 
    * @return fontSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontSize` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1528,7 +1572,6 @@ public class Date {
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
-
 
   /**
    * formOrder.
@@ -1542,9 +1585,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1555,7 +1599,6 @@ public class Date {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1569,9 +1612,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1582,7 +1626,6 @@ public class Date {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1596,9 +1639,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1609,7 +1653,6 @@ public class Date {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1623,9 +1666,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1636,7 +1680,6 @@ public class Date {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1650,9 +1693,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1663,7 +1707,6 @@ public class Date {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1677,9 +1720,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1690,7 +1734,6 @@ public class Date {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * height.
@@ -1704,9 +1747,10 @@ public class Date {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1717,7 +1761,6 @@ public class Date {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1731,9 +1774,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1744,7 +1788,6 @@ public class Date {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * italic.
@@ -1758,9 +1801,10 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is italic..
+   * 
    * @return italic
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @Schema(description = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1771,7 +1815,6 @@ public class Date {
   public void setItalic(String italic) {
     this.italic = italic;
   }
-
 
   /**
    * italicMetadata.
@@ -1785,9 +1828,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
+   * 
    * @return italicMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `italic` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1798,7 +1842,6 @@ public class Date {
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
-
 
   /**
    * localePolicy.
@@ -1812,9 +1855,10 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return localePolicy
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
@@ -1825,7 +1869,6 @@ public class Date {
   public void setLocalePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
   }
-
 
   /**
    * locked.
@@ -1839,9 +1882,10 @@ public class Date {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
+   * 
    * @return locked
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1852,7 +1896,6 @@ public class Date {
   public void setLocked(String locked) {
     this.locked = locked;
   }
-
 
   /**
    * lockedMetadata.
@@ -1866,9 +1909,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
+   * 
    * @return lockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `locked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1879,7 +1923,6 @@ public class Date {
   public void setLockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
   }
-
 
   /**
    * maxLength.
@@ -1892,10 +1935,12 @@ public class Date {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the property is a string..
+   * An optional value that describes the maximum length of the property when the
+   * property is a string..
+   * 
    * @return maxLength
    **/
-  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
+  @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
   public String getMaxLength() {
     return maxLength;
   }
@@ -1906,7 +1951,6 @@ public class Date {
   public void setMaxLength(String maxLength) {
     this.maxLength = maxLength;
   }
-
 
   /**
    * maxLengthMetadata.
@@ -1920,9 +1964,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `maxLength` property is editable..
+   * 
    * @return maxLengthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `maxLength` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `maxLength` property is editable.")
   public PropertyMetadata getMaxLengthMetadata() {
     return maxLengthMetadata;
   }
@@ -1933,7 +1978,6 @@ public class Date {
   public void setMaxLengthMetadata(PropertyMetadata maxLengthMetadata) {
     this.maxLengthMetadata = maxLengthMetadata;
   }
-
 
   /**
    * mergeField.
@@ -1947,9 +1991,10 @@ public class Date {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
+  @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1960,7 +2005,6 @@ public class Date {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -1974,9 +2018,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1987,7 +2032,6 @@ public class Date {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * name.
@@ -2001,9 +2045,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -2014,7 +2059,6 @@ public class Date {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -2027,10 +2071,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This property is read-only..
+   * Metadata that indicates whether the `name` property is editable. This
+   * property is read-only..
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -2041,7 +2087,6 @@ public class Date {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * originalValue.
@@ -2055,9 +2100,10 @@ public class Date {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
+   * 
    * @return originalValue
    **/
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -2068,7 +2114,6 @@ public class Date {
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
-
 
   /**
    * originalValueMetadata.
@@ -2082,9 +2127,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `originalValue` property is editable..
+   * 
    * @return originalValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `originalValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `originalValue` property is editable.")
   public PropertyMetadata getOriginalValueMetadata() {
     return originalValueMetadata;
   }
@@ -2095,7 +2141,6 @@ public class Date {
   public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -2109,9 +2154,10 @@ public class Date {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -2122,7 +2168,6 @@ public class Date {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -2136,9 +2181,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -2149,7 +2195,6 @@ public class Date {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -2162,10 +2207,12 @@ public class Date {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -2176,7 +2223,6 @@ public class Date {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -2190,9 +2236,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -2203,7 +2250,6 @@ public class Date {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -2217,9 +2263,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -2230,7 +2277,6 @@ public class Date {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -2244,9 +2290,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -2257,7 +2304,6 @@ public class Date {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * requireAll.
@@ -2270,10 +2316,12 @@ public class Date {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
+   * When set to **true** and shared is true, information must be entered in this
+   * field to complete the envelope. .
+   * 
    * @return requireAll
    **/
-  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -2284,7 +2332,6 @@ public class Date {
   public void setRequireAll(String requireAll) {
     this.requireAll = requireAll;
   }
-
 
   /**
    * requireAllMetadata.
@@ -2298,9 +2345,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `requireAll` property is editable..
+   * 
    * @return requireAllMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `requireAll` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `requireAll` property is editable.")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
@@ -2311,7 +2359,6 @@ public class Date {
   public void setRequireAllMetadata(PropertyMetadata requireAllMetadata) {
     this.requireAllMetadata = requireAllMetadata;
   }
-
 
   /**
    * required.
@@ -2325,9 +2372,10 @@ public class Date {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -2338,7 +2386,6 @@ public class Date {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * requiredMetadata.
@@ -2352,9 +2399,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
+   * 
    * @return requiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `required` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `required` property is editable.")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -2365,7 +2413,6 @@ public class Date {
   public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
   }
-
 
   /**
    * requireInitialOnSharedChange.
@@ -2378,10 +2425,12 @@ public class Date {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
+   * Optional element for field markup. When set to **true**, the signer is
+   * required to initial when they modify a shared field..
+   * 
    * @return requireInitialOnSharedChange
    **/
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -2392,7 +2441,6 @@ public class Date {
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
-
 
   /**
    * requireInitialOnSharedChangeMetadata.
@@ -2405,10 +2453,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property
+   * is editable..
+   * 
    * @return requireInitialOnSharedChangeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -2419,7 +2469,6 @@ public class Date {
   public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
-
 
   /**
    * senderRequired.
@@ -2432,10 +2481,14 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
+   * When set to **true**, the sender must populate the tab before an envelope can
+   * be sent using the template. This value tab can only be changed by modifying
+   * (PUT) the template. Tabs with a `senderRequired` value of true cannot be
+   * deleted from an envelope..
+   * 
    * @return senderRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
@@ -2446,7 +2499,6 @@ public class Date {
   public void setSenderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
   }
-
 
   /**
    * senderRequiredMetadata.
@@ -2460,9 +2512,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `senderRequired` property is editable..
+   * 
    * @return senderRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `senderRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `senderRequired` property is editable.")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
   }
@@ -2473,7 +2526,6 @@ public class Date {
   public void setSenderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
-
 
   /**
    * shared.
@@ -2487,9 +2539,10 @@ public class Date {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -2500,7 +2553,6 @@ public class Date {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * sharedMetadata.
@@ -2514,9 +2566,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `shared` property is editable..
+   * 
    * @return sharedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `shared` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `shared` property is editable.")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -2527,7 +2580,6 @@ public class Date {
   public void setSharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
   }
-
 
   /**
    * shareToRecipients.
@@ -2541,9 +2593,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return shareToRecipients
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShareToRecipients() {
     return shareToRecipients;
   }
@@ -2554,7 +2607,6 @@ public class Date {
   public void setShareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
   }
-
 
   /**
    * shareToRecipientsMetadata.
@@ -2568,9 +2620,10 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return shareToRecipientsMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getShareToRecipientsMetadata() {
     return shareToRecipientsMetadata;
   }
@@ -2581,7 +2634,6 @@ public class Date {
   public void setShareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -2595,9 +2647,10 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -2608,7 +2661,6 @@ public class Date {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -2622,9 +2674,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -2635,7 +2688,6 @@ public class Date {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -2648,10 +2700,13 @@ public class Date {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -2662,7 +2717,6 @@ public class Date {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -2676,9 +2730,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -2690,7 +2745,6 @@ public class Date {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -2700,7 +2754,7 @@ public class Date {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -2716,9 +2770,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -2729,7 +2784,6 @@ public class Date {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -2743,9 +2797,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -2756,7 +2811,6 @@ public class Date {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -2769,10 +2823,12 @@ public class Date {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -2783,7 +2839,6 @@ public class Date {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -2797,9 +2852,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -2810,7 +2866,6 @@ public class Date {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabLabel.
@@ -2824,9 +2879,10 @@ public class Date {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -2837,7 +2893,6 @@ public class Date {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabLabelMetadata.
@@ -2851,9 +2906,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
+   * 
    * @return tabLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -2864,7 +2920,6 @@ public class Date {
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -2878,9 +2933,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2891,7 +2947,6 @@ public class Date {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2905,9 +2960,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2918,7 +2974,6 @@ public class Date {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabType.
@@ -2932,9 +2987,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -2945,7 +3001,6 @@ public class Date {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -2959,9 +3014,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2972,7 +3028,6 @@ public class Date {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -2985,10 +3040,12 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2999,7 +3056,6 @@ public class Date {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -3013,9 +3069,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -3026,7 +3083,6 @@ public class Date {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -3039,10 +3095,12 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -3053,7 +3111,6 @@ public class Date {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -3067,9 +3124,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -3080,7 +3138,6 @@ public class Date {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -3094,9 +3151,10 @@ public class Date {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -3107,7 +3165,6 @@ public class Date {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -3121,9 +3178,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -3134,7 +3192,6 @@ public class Date {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * underline.
@@ -3148,9 +3205,10 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is underlined..
+   * 
    * @return underline
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @Schema(description = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -3161,7 +3219,6 @@ public class Date {
   public void setUnderline(String underline) {
     this.underline = underline;
   }
-
 
   /**
    * underlineMetadata.
@@ -3175,9 +3232,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
+   * 
    * @return underlineMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `underline` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -3188,7 +3246,6 @@ public class Date {
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
-
 
   /**
    * validationMessage.
@@ -3201,10 +3258,12 @@ public class Date {
   }
 
   /**
-   * The message displayed if the custom tab fails input validation (either custom of embedded)..
+   * The message displayed if the custom tab fails input validation (either custom
+   * of embedded)..
+   * 
    * @return validationMessage
    **/
-  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @Schema(description = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   public String getValidationMessage() {
     return validationMessage;
   }
@@ -3215,7 +3274,6 @@ public class Date {
   public void setValidationMessage(String validationMessage) {
     this.validationMessage = validationMessage;
   }
-
 
   /**
    * validationMessageMetadata.
@@ -3228,10 +3286,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `validationMessage` property is editable..
+   * Metadata that indicates whether the `validationMessage` property is
+   * editable..
+   * 
    * @return validationMessageMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `validationMessage` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `validationMessage` property is editable.")
   public PropertyMetadata getValidationMessageMetadata() {
     return validationMessageMetadata;
   }
@@ -3242,7 +3302,6 @@ public class Date {
   public void setValidationMessageMetadata(PropertyMetadata validationMessageMetadata) {
     this.validationMessageMetadata = validationMessageMetadata;
   }
-
 
   /**
    * validationPattern.
@@ -3256,9 +3315,10 @@ public class Date {
 
   /**
    * A regular expression used to validate input for the tab..
+   * 
    * @return validationPattern
    **/
-  @ApiModelProperty(value = "A regular expression used to validate input for the tab.")
+  @Schema(description = "A regular expression used to validate input for the tab.")
   public String getValidationPattern() {
     return validationPattern;
   }
@@ -3269,7 +3329,6 @@ public class Date {
   public void setValidationPattern(String validationPattern) {
     this.validationPattern = validationPattern;
   }
-
 
   /**
    * validationPatternMetadata.
@@ -3282,10 +3341,12 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `validationPattern` property is editable..
+   * Metadata that indicates whether the `validationPattern` property is
+   * editable..
+   * 
    * @return validationPatternMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `validationPattern` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `validationPattern` property is editable.")
   public PropertyMetadata getValidationPatternMetadata() {
     return validationPatternMetadata;
   }
@@ -3296,7 +3357,6 @@ public class Date {
   public void setValidationPatternMetadata(PropertyMetadata validationPatternMetadata) {
     this.validationPatternMetadata = validationPatternMetadata;
   }
-
 
   /**
    * value.
@@ -3310,9 +3370,10 @@ public class Date {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -3323,7 +3384,6 @@ public class Date {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * valueMetadata.
@@ -3337,9 +3397,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
+   * 
    * @return valueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `value` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `value` property is editable.")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -3350,7 +3411,6 @@ public class Date {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
-
 
   /**
    * width.
@@ -3364,9 +3424,10 @@ public class Date {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -3377,7 +3438,6 @@ public class Date {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -3391,9 +3451,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -3404,7 +3465,6 @@ public class Date {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -3417,10 +3477,12 @@ public class Date {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -3431,7 +3493,6 @@ public class Date {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -3445,9 +3506,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -3458,7 +3520,6 @@ public class Date {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -3471,10 +3532,12 @@ public class Date {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -3485,7 +3548,6 @@ public class Date {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -3499,9 +3561,10 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -3512,7 +3575,6 @@ public class Date {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -3529,7 +3591,8 @@ public class Date {
     }
     Date date = (Date) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, date.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, date.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, date.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, date.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, date.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, date.anchorHorizontalAlignment) &&
@@ -3651,9 +3714,28 @@ public class Date {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
+        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
+        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
+        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
+        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
+        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height,
+        heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata,
+        mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber,
+        pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll,
+        requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange,
+        requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata,
+        shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata,
+        tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder,
+        tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
+        templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage,
+        validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width,
+        widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -3662,21 +3744,26 @@ public class Date {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Date {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3688,11 +3775,14 @@ public class Date {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
+        .append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3738,7 +3828,8 @@ public class Date {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ")
+        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -3795,4 +3886,3 @@ public class Date {
   }
 
 }
-

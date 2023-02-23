@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ViewLinkRequest */
@@ -18,7 +18,7 @@ public class ViewLinkRequest {
   }
 
   /** @return email */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getEmail() {
     return email;
   }
@@ -33,7 +33,7 @@ public class ViewLinkRequest {
   }
 
   /** @return returnUrl */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -72,7 +72,8 @@ public class ViewLinkRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

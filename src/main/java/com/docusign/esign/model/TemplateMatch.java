@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TemplateMatch.
@@ -23,7 +23,6 @@ public class TemplateMatch {
   @JsonProperty("matchPercentage")
   private String matchPercentage = null;
 
-
   /**
    * documentEndPage.
    *
@@ -36,9 +35,10 @@ public class TemplateMatch {
 
   /**
    * .
+   * 
    * @return documentEndPage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentEndPage() {
     return documentEndPage;
   }
@@ -49,7 +49,6 @@ public class TemplateMatch {
   public void setDocumentEndPage(String documentEndPage) {
     this.documentEndPage = documentEndPage;
   }
-
 
   /**
    * documentStartPage.
@@ -63,9 +62,10 @@ public class TemplateMatch {
 
   /**
    * .
+   * 
    * @return documentStartPage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentStartPage() {
     return documentStartPage;
   }
@@ -76,7 +76,6 @@ public class TemplateMatch {
   public void setDocumentStartPage(String documentStartPage) {
     this.documentStartPage = documentStartPage;
   }
-
 
   /**
    * matchPercentage.
@@ -90,9 +89,10 @@ public class TemplateMatch {
 
   /**
    * .
+   * 
    * @return matchPercentage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMatchPercentage() {
     return matchPercentage;
   }
@@ -103,7 +103,6 @@ public class TemplateMatch {
   public void setMatchPercentage(String matchPercentage) {
     this.matchPercentage = matchPercentage;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class TemplateMatch {
     return Objects.hash(documentEndPage, documentStartPage, matchPercentage);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class TemplateMatch {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateMatch {\n");
-    
+
     sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
     sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
     sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
@@ -160,4 +158,3 @@ public class TemplateMatch {
   }
 
 }
-

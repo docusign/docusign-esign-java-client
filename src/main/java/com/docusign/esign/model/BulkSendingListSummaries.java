@@ -6,19 +6,19 @@ import com.docusign.esign.model.BulkSendingListSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This complex type contains summaries that provide basic information about the bulk send lists that belong to the current user..
+ * This complex type contains summaries that provide basic information about the
+ * bulk send lists that belong to the current user..
  *
  */
-@ApiModel(description = "This complex type contains summaries that provide basic information about the bulk send lists that belong to the current user.")
+@Schema(description = "This complex type contains summaries that provide basic information about the bulk send lists that belong to the current user.")
 
 public class BulkSendingListSummaries {
   @JsonProperty("bulkListSummaries")
   private java.util.List<BulkSendingListSummary> bulkListSummaries = null;
-
 
   /**
    * bulkListSummaries.
@@ -29,7 +29,7 @@ public class BulkSendingListSummaries {
     this.bulkListSummaries = bulkListSummaries;
     return this;
   }
-  
+
   /**
    * addBulkListSummariesItem.
    *
@@ -45,9 +45,10 @@ public class BulkSendingListSummaries {
 
   /**
    * .
+   * 
    * @return bulkListSummaries
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkSendingListSummary> getBulkListSummaries() {
     return bulkListSummaries;
   }
@@ -58,7 +59,6 @@ public class BulkSendingListSummaries {
   public void setBulkListSummaries(java.util.List<BulkSendingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +85,6 @@ public class BulkSendingListSummaries {
     return Objects.hash(bulkListSummaries);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +92,7 @@ public class BulkSendingListSummaries {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingListSummaries {\n");
-    
+
     sb.append("    bulkListSummaries: ").append(toIndentedString(bulkListSummaries)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +110,3 @@ public class BulkSendingListSummaries {
   }
 
 }
-

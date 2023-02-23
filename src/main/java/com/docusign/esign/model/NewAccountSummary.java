@@ -6,8 +6,8 @@ import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NewAccountSummary.
@@ -36,7 +36,6 @@ public class NewAccountSummary {
   @JsonProperty("userId")
   private String userId = null;
 
-
   /**
    * accountId.
    *
@@ -49,9 +48,10 @@ public class NewAccountSummary {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -62,7 +62,6 @@ public class NewAccountSummary {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * accountIdGuid.
@@ -76,9 +75,10 @@ public class NewAccountSummary {
 
   /**
    * The GUID associated with the account ID..
+   * 
    * @return accountIdGuid
    **/
-  @ApiModelProperty(value = "The GUID associated with the account ID.")
+  @Schema(description = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -89,7 +89,6 @@ public class NewAccountSummary {
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
-
 
   /**
    * accountName.
@@ -103,9 +102,10 @@ public class NewAccountSummary {
 
   /**
    * The account name for the new account..
+   * 
    * @return accountName
    **/
-  @ApiModelProperty(value = "The account name for the new account.")
+  @Schema(description = "The account name for the new account.")
   public String getAccountName() {
     return accountName;
   }
@@ -116,7 +116,6 @@ public class NewAccountSummary {
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
-
 
   /**
    * apiPassword.
@@ -129,10 +128,12 @@ public class NewAccountSummary {
   }
 
   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
+   * Contains a token that can be used for authentication in API calls instead of
+   * using the user name and password..
+   * 
    * @return apiPassword
    **/
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
+  @Schema(description = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -143,7 +144,6 @@ public class NewAccountSummary {
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
-
 
   /**
    * baseUrl.
@@ -156,10 +156,14 @@ public class NewAccountSummary {
   }
 
   /**
-   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
+   * The URL that should be used for successive calls to this account. It includes
+   * the protocal (https), the DocuSign server where the account is located, and
+   * the account number. Use this Url to make API calls against this account. Many
+   * of the API calls provide Uri's that are relative to this baseUrl..
+   * 
    * @return baseUrl
    **/
-  @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
+  @Schema(description = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
@@ -170,7 +174,6 @@ public class NewAccountSummary {
   public void setBaseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
   }
-
 
   /**
    * billingPlanPreview.
@@ -184,9 +187,10 @@ public class NewAccountSummary {
 
   /**
    * .
+   * 
    * @return billingPlanPreview
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
@@ -197,7 +201,6 @@ public class NewAccountSummary {
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
-
 
   /**
    * userId.
@@ -211,9 +214,10 @@ public class NewAccountSummary {
 
   /**
    * Specifies the user ID of the new user..
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "Specifies the user ID of the new user.")
+  @Schema(description = "Specifies the user ID of the new user.")
   public String getUserId() {
     return userId;
   }
@@ -224,7 +228,6 @@ public class NewAccountSummary {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * Compares objects.
@@ -257,7 +260,6 @@ public class NewAccountSummary {
     return Objects.hash(accountId, accountIdGuid, accountName, apiPassword, baseUrl, billingPlanPreview, userId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -265,7 +267,7 @@ public class NewAccountSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountSummary {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
@@ -289,4 +291,3 @@ public class NewAccountSummary {
   }
 
 }
-

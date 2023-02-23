@@ -9,14 +9,14 @@ import com.docusign.esign.model.UserSharedItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about shared templates..
  *
  */
-@ApiModel(description = "Information about shared templates.")
+@Schema(description = "Information about shared templates.")
 
 public class TemplateSharedItem {
   @JsonProperty("errorDetails")
@@ -43,7 +43,6 @@ public class TemplateSharedItem {
   @JsonProperty("templateName")
   private String templateName = null;
 
-
   /**
    * errorDetails.
    *
@@ -55,10 +54,12 @@ public class TemplateSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -69,7 +70,6 @@ public class TemplateSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * owner.
@@ -83,9 +83,10 @@ public class TemplateSharedItem {
 
   /**
    * Information about the user who owns the template..
+   * 
    * @return owner
    **/
-  @ApiModelProperty(value = "Information about the user who owns the template.")
+  @Schema(description = "Information about the user who owns the template.")
   public UserInfo getOwner() {
     return owner;
   }
@@ -96,7 +97,6 @@ public class TemplateSharedItem {
   public void setOwner(UserInfo owner) {
     this.owner = owner;
   }
-
 
   /**
    * password.
@@ -110,9 +110,10 @@ public class TemplateSharedItem {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -123,7 +124,6 @@ public class TemplateSharedItem {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * shared.
@@ -137,9 +137,10 @@ public class TemplateSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -151,7 +152,6 @@ public class TemplateSharedItem {
     this.shared = shared;
   }
 
-
   /**
    * sharedGroups.
    *
@@ -161,7 +161,7 @@ public class TemplateSharedItem {
     this.sharedGroups = sharedGroups;
     return this;
   }
-  
+
   /**
    * addSharedGroupsItem.
    *
@@ -177,9 +177,10 @@ public class TemplateSharedItem {
 
   /**
    * .
+   * 
    * @return sharedGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<MemberGroupSharedItem> getSharedGroups() {
     return sharedGroups;
   }
@@ -191,7 +192,6 @@ public class TemplateSharedItem {
     this.sharedGroups = sharedGroups;
   }
 
-
   /**
    * sharedUsers.
    *
@@ -201,7 +201,7 @@ public class TemplateSharedItem {
     this.sharedUsers = sharedUsers;
     return this;
   }
-  
+
   /**
    * addSharedUsersItem.
    *
@@ -217,9 +217,10 @@ public class TemplateSharedItem {
 
   /**
    * .
+   * 
    * @return sharedUsers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserSharedItem> getSharedUsers() {
     return sharedUsers;
   }
@@ -230,7 +231,6 @@ public class TemplateSharedItem {
   public void setSharedUsers(java.util.List<UserSharedItem> sharedUsers) {
     this.sharedUsers = sharedUsers;
   }
-
 
   /**
    * templateId.
@@ -243,10 +243,12 @@ public class TemplateSharedItem {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -257,7 +259,6 @@ public class TemplateSharedItem {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * templateName.
@@ -271,9 +272,10 @@ public class TemplateSharedItem {
 
   /**
    * .
+   * 
    * @return templateName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplateName() {
     return templateName;
   }
@@ -284,7 +286,6 @@ public class TemplateSharedItem {
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
-
 
   /**
    * Compares objects.
@@ -318,7 +319,6 @@ public class TemplateSharedItem {
     return Objects.hash(errorDetails, owner, password, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -326,7 +326,7 @@ public class TemplateSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSharedItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -351,4 +351,3 @@ public class TemplateSharedItem {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * IntegratedUserInfoList.
@@ -39,7 +39,6 @@ public class IntegratedUserInfoList {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
 
-
   /**
    * allUsersSelected.
    *
@@ -52,9 +51,10 @@ public class IntegratedUserInfoList {
 
   /**
    * .
+   * 
    * @return allUsersSelected
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAllUsersSelected() {
     return allUsersSelected;
   }
@@ -65,7 +65,6 @@ public class IntegratedUserInfoList {
   public void setAllUsersSelected(String allUsersSelected) {
     this.allUsersSelected = allUsersSelected;
   }
-
 
   /**
    * endPosition.
@@ -79,9 +78,10 @@ public class IntegratedUserInfoList {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -92,7 +92,6 @@ public class IntegratedUserInfoList {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * nextUri.
@@ -105,10 +104,12 @@ public class IntegratedUserInfoList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -119,7 +120,6 @@ public class IntegratedUserInfoList {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -133,9 +133,10 @@ public class IntegratedUserInfoList {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -146,7 +147,6 @@ public class IntegratedUserInfoList {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -160,9 +160,10 @@ public class IntegratedUserInfoList {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -173,7 +174,6 @@ public class IntegratedUserInfoList {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -187,9 +187,10 @@ public class IntegratedUserInfoList {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -200,7 +201,6 @@ public class IntegratedUserInfoList {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -213,10 +213,13 @@ public class IntegratedUserInfoList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -228,7 +231,6 @@ public class IntegratedUserInfoList {
     this.totalSetSize = totalSetSize;
   }
 
-
   /**
    * users.
    *
@@ -238,7 +240,7 @@ public class IntegratedUserInfoList {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
@@ -254,9 +256,10 @@ public class IntegratedUserInfoList {
 
   /**
    * .
+   * 
    * @return users
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
@@ -267,7 +270,6 @@ public class IntegratedUserInfoList {
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
-
 
   /**
    * Compares objects.
@@ -298,9 +300,9 @@ public class IntegratedUserInfoList {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allUsersSelected, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
+    return Objects.hash(allUsersSelected, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize,
+        users);
   }
-
 
   /**
    * Converts the given object to string.
@@ -309,7 +311,7 @@ public class IntegratedUserInfoList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IntegratedUserInfoList {\n");
-    
+
     sb.append("    allUsersSelected: ").append(toIndentedString(allUsersSelected)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -334,4 +336,3 @@ public class IntegratedUserInfoList {
   }
 
 }
-

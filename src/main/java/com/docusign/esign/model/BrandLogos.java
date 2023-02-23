@@ -5,14 +5,18 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The URIs for retrieving the logos that are associated with the brand.  These are read-only properties that provide a URI to logos in use. To update a logo use [AccountBrands: updateLogo](/docs/esign-rest-api/reference/accounts/accountbrands/updatelogo/). .
+ * The URIs for retrieving the logos that are associated with the brand. These
+ * are read-only properties that provide a URI to logos in use. To update a logo
+ * use [AccountBrands:
+ * updateLogo](/docs/esign-rest-api/reference/accounts/accountbrands/updatelogo/).
+ * .
  *
  */
-@ApiModel(description = "The URIs for retrieving the logos that are associated with the brand.  These are read-only properties that provide a URI to logos in use. To update a logo use [AccountBrands: updateLogo](/docs/esign-rest-api/reference/accounts/accountbrands/updatelogo/). ")
+@Schema(description = "The URIs for retrieving the logos that are associated with the brand.  These are read-only properties that provide a URI to logos in use. To update a logo use [AccountBrands: updateLogo](/docs/esign-rest-api/reference/accounts/accountbrands/updatelogo/). ")
 
 public class BrandLogos {
   @JsonProperty("email")
@@ -23,7 +27,6 @@ public class BrandLogos {
 
   @JsonProperty("secondary")
   private String secondary = null;
-
 
   /**
    * email.
@@ -37,9 +40,10 @@ public class BrandLogos {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -50,7 +54,6 @@ public class BrandLogos {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * primary.
@@ -64,9 +67,10 @@ public class BrandLogos {
 
   /**
    * .
+   * 
    * @return primary
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPrimary() {
     return primary;
   }
@@ -77,7 +81,6 @@ public class BrandLogos {
   public void setPrimary(String primary) {
     this.primary = primary;
   }
-
 
   /**
    * secondary.
@@ -91,9 +94,10 @@ public class BrandLogos {
 
   /**
    * .
+   * 
    * @return secondary
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSecondary() {
     return secondary;
   }
@@ -104,7 +108,6 @@ public class BrandLogos {
   public void setSecondary(String secondary) {
     this.secondary = secondary;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +136,6 @@ public class BrandLogos {
     return Objects.hash(email, primary, secondary);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +143,7 @@ public class BrandLogos {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandLogos {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    primary: ").append(toIndentedString(primary)).append("\n");
     sb.append("    secondary: ").append(toIndentedString(secondary)).append("\n");
@@ -161,4 +163,3 @@ public class BrandLogos {
   }
 
 }
-

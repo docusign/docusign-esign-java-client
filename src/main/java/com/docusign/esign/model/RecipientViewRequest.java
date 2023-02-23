@@ -6,14 +6,18 @@ import com.docusign.esign.model.RecipientTokenClientURLs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods..
+ * The request body for the [EnvelopeViews:
+ * createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/)
+ * and [EnvelopeViews:
+ * createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/)
+ * methods..
  *
  */
-@ApiModel(description = "The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods.")
+@Schema(description = "The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods.")
 
 public class RecipientViewRequest {
   @JsonProperty("assertionId")
@@ -67,7 +71,6 @@ public class RecipientViewRequest {
   @JsonProperty("xFrameOptionsAllowFromUrl")
   private String xFrameOptionsAllowFromUrl = null;
 
-
   /**
    * assertionId.
    *
@@ -79,10 +82,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A unique identifier of the authentication event executed by the client application..
+   * A unique identifier of the authentication event executed by the client
+   * application..
+   * 
    * @return assertionId
    **/
-  @ApiModelProperty(value = "A unique identifier of the authentication event executed by the client application.")
+  @Schema(description = "A unique identifier of the authentication event executed by the client application.")
   public String getAssertionId() {
     return assertionId;
   }
@@ -93,7 +98,6 @@ public class RecipientViewRequest {
   public void setAssertionId(String assertionId) {
     this.assertionId = assertionId;
   }
-
 
   /**
    * authenticationInstant.
@@ -106,10 +110,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender generated value that indicates the date/time that the signer was authenticated..
+   * A sender generated value that indicates the date/time that the signer was
+   * authenticated..
+   * 
    * @return authenticationInstant
    **/
-  @ApiModelProperty(value = "A sender generated value that indicates the date/time that the signer was authenticated.")
+  @Schema(description = "A sender generated value that indicates the date/time that the signer was authenticated.")
   public String getAuthenticationInstant() {
     return authenticationInstant;
   }
@@ -120,7 +126,6 @@ public class RecipientViewRequest {
   public void setAuthenticationInstant(String authenticationInstant) {
     this.authenticationInstant = authenticationInstant;
   }
-
 
   /**
    * authenticationMethod.
@@ -133,10 +138,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion..
+   * A sender created value that indicates the convention used to authenticate the
+   * signer. This information is included in the Certificate of Completion..
+   * 
    * @return authenticationMethod
    **/
-  @ApiModelProperty(value = "A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.")
+  @Schema(description = "A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.")
   public String getAuthenticationMethod() {
     return authenticationMethod;
   }
@@ -147,7 +154,6 @@ public class RecipientViewRequest {
   public void setAuthenticationMethod(String authenticationMethod) {
     this.authenticationMethod = authenticationMethod;
   }
-
 
   /**
    * clientURLs.
@@ -161,9 +167,10 @@ public class RecipientViewRequest {
 
   /**
    * .
+   * 
    * @return clientURLs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public RecipientTokenClientURLs getClientURLs() {
     return clientURLs;
   }
@@ -174,7 +181,6 @@ public class RecipientViewRequest {
   public void setClientURLs(RecipientTokenClientURLs clientURLs) {
     this.clientURLs = clientURLs;
   }
-
 
   /**
    * clientUserId.
@@ -187,10 +193,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters..
+   * A sender created value that shows the recipient is embedded (captive).
+   * Maximum length: 100 characters..
+   * 
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters.")
+  @Schema(description = "A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters.")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -201,7 +209,6 @@ public class RecipientViewRequest {
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
   }
-
 
   /**
    * email.
@@ -214,10 +221,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient..
+   * Specifies the email of the recipient. You can use either email and userName
+   * or userId to identify the recipient..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.")
+  @Schema(description = "Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.")
   public String getEmail() {
     return email;
   }
@@ -229,7 +238,6 @@ public class RecipientViewRequest {
     this.email = email;
   }
 
-
   /**
    * frameAncestors.
    *
@@ -239,7 +247,7 @@ public class RecipientViewRequest {
     this.frameAncestors = frameAncestors;
     return this;
   }
-  
+
   /**
    * addFrameAncestorsItem.
    *
@@ -255,9 +263,10 @@ public class RecipientViewRequest {
 
   /**
    * .
+   * 
    * @return frameAncestors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getFrameAncestors() {
     return frameAncestors;
   }
@@ -269,7 +278,6 @@ public class RecipientViewRequest {
     this.frameAncestors = frameAncestors;
   }
 
-
   /**
    * messageOrigins.
    *
@@ -279,7 +287,7 @@ public class RecipientViewRequest {
     this.messageOrigins = messageOrigins;
     return this;
   }
-  
+
   /**
    * addMessageOriginsItem.
    *
@@ -295,9 +303,10 @@ public class RecipientViewRequest {
 
   /**
    * .
+   * 
    * @return messageOrigins
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getMessageOrigins() {
     return messageOrigins;
   }
@@ -308,7 +317,6 @@ public class RecipientViewRequest {
   public void setMessageOrigins(java.util.List<String> messageOrigins) {
     this.messageOrigins = messageOrigins;
   }
-
 
   /**
    * pingFrequency.
@@ -321,10 +329,13 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds..
+   * Only used if pingUrl is specified. This is the interval, in seconds, between
+   * pings on the pingUrl. The default is 300 seconds. Valid values are 60-1200
+   * seconds..
+   * 
    * @return pingFrequency
    **/
-  @ApiModelProperty(value = "Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.")
+  @Schema(description = "Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.")
   public String getPingFrequency() {
     return pingFrequency;
   }
@@ -335,7 +346,6 @@ public class RecipientViewRequest {
   public void setPingFrequency(String pingFrequency) {
     this.pingFrequency = pingFrequency;
   }
-
 
   /**
    * pingUrl.
@@ -348,10 +358,14 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received..
+   * A client Url to be pinged by the DocuSign Signing experience to indicate to
+   * the client that Signing is active. An HTTP Get is executed against the
+   * client. The response from the client is ignored. The intent is for the client
+   * to reset it's session timer when the request is received..
+   * 
    * @return pingUrl
    **/
-  @ApiModelProperty(value = "A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.")
+  @Schema(description = "A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.")
   public String getPingUrl() {
     return pingUrl;
   }
@@ -362,7 +376,6 @@ public class RecipientViewRequest {
   public void setPingUrl(String pingUrl) {
     this.pingUrl = pingUrl;
   }
-
 
   /**
    * recipientId.
@@ -375,10 +388,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -389,7 +404,6 @@ public class RecipientViewRequest {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * returnUrl.
@@ -402,10 +416,20 @@ public class RecipientViewRequest {
   }
 
   /**
-   * The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. .
+   * The url the recipient is redirected to after the signing session has ended.
+   * DocuSign redirects to the url and includes an event parameter that can be
+   * used by your application. Possible event parameter values: * cancel
+   * (recipient canceled the signing operation) * decline (recipient declined to
+   * sign) * exception (an exception occurred) * fax_pending (recipient has a fax
+   * pending) * session_timeout (session timed out) * signing_complete (signer
+   * completed the signing ceremony) * ttl_expired (the TTL, time to live, timer
+   * expired) * viewing_complete (recipient completed viewing the envelope) ######
+   * Note: Include https:// in the URL or the redirect might not succeed on some
+   * browsers. .
+   * 
    * @return returnUrl
    **/
-  @ApiModelProperty(value = "The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
+  @Schema(description = "The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -416,7 +440,6 @@ public class RecipientViewRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
-
 
   /**
    * securityDomain.
@@ -430,9 +453,10 @@ public class RecipientViewRequest {
 
   /**
    * The domain in which the user authenticated..
+   * 
    * @return securityDomain
    **/
-  @ApiModelProperty(value = "The domain in which the user authenticated.")
+  @Schema(description = "The domain in which the user authenticated.")
   public String getSecurityDomain() {
     return securityDomain;
   }
@@ -443,7 +467,6 @@ public class RecipientViewRequest {
   public void setSecurityDomain(String securityDomain) {
     this.securityDomain = securityDomain;
   }
-
 
   /**
    * userId.
@@ -456,10 +479,16 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user..
+   * Specifies the user ID of the recipient. You can use with user ID or email and
+   * user name to identify the recipient. If user ID is used and a client user ID
+   * is provided, the value in the `userId` property must match a recipient ID
+   * (which can be retrieved with a GET recipients call) for the envelope. If a
+   * user ID is used and a clientUser ID is not provided, the user ID match the
+   * user ID of the authenticating user..
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.")
+  @Schema(description = "Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.")
   public String getUserId() {
     return userId;
   }
@@ -470,7 +499,6 @@ public class RecipientViewRequest {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -483,10 +511,12 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient..
+   * Specifies the username of the recipient. You can use either email and
+   * userName or userId to identify the recipient..
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.")
+  @Schema(description = "Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.")
   public String getUserName() {
     return userName;
   }
@@ -497,7 +527,6 @@ public class RecipientViewRequest {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * xFrameOptions.
@@ -511,9 +540,10 @@ public class RecipientViewRequest {
 
   /**
    * .
+   * 
    * @return xFrameOptions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getXFrameOptions() {
     return xFrameOptions;
   }
@@ -524,7 +554,6 @@ public class RecipientViewRequest {
   public void setXFrameOptions(String xFrameOptions) {
     this.xFrameOptions = xFrameOptions;
   }
-
 
   /**
    * xFrameOptionsAllowFromUrl.
@@ -538,9 +567,10 @@ public class RecipientViewRequest {
 
   /**
    * .
+   * 
    * @return xFrameOptionsAllowFromUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getXFrameOptionsAllowFromUrl() {
     return xFrameOptionsAllowFromUrl;
   }
@@ -551,7 +581,6 @@ public class RecipientViewRequest {
   public void setXFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
     this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
   }
-
 
   /**
    * Compares objects.
@@ -591,9 +620,10 @@ public class RecipientViewRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email,
+        frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId,
+        userName, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
-
 
   /**
    * Converts the given object to string.
@@ -602,7 +632,7 @@ public class RecipientViewRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientViewRequest {\n");
-    
+
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
@@ -636,4 +666,3 @@ public class RecipientViewRequest {
   }
 
 }
-

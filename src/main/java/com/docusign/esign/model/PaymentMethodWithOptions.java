@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it..
+ * This object contains information about a payment method that the gateway
+ * accepts and the payment options that are compatible with it..
  *
  */
-@ApiModel(description = "This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it.")
+@Schema(description = "This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it.")
 
 public class PaymentMethodWithOptions {
   @JsonProperty("supportedCurrencies")
@@ -24,7 +25,6 @@ public class PaymentMethodWithOptions {
   @JsonProperty("type")
   private String type = null;
 
-
   /**
    * supportedCurrencies.
    *
@@ -34,7 +34,7 @@ public class PaymentMethodWithOptions {
     this.supportedCurrencies = supportedCurrencies;
     return this;
   }
-  
+
   /**
    * addSupportedCurrenciesItem.
    *
@@ -50,9 +50,10 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   * 
    * @return supportedCurrencies
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getSupportedCurrencies() {
     return supportedCurrencies;
   }
@@ -64,7 +65,6 @@ public class PaymentMethodWithOptions {
     this.supportedCurrencies = supportedCurrencies;
   }
 
-
   /**
    * supportedOptions.
    *
@@ -74,7 +74,7 @@ public class PaymentMethodWithOptions {
     this.supportedOptions = supportedOptions;
     return this;
   }
-  
+
   /**
    * addSupportedOptionsItem.
    *
@@ -90,9 +90,10 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   * 
    * @return supportedOptions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getSupportedOptions() {
     return supportedOptions;
   }
@@ -103,7 +104,6 @@ public class PaymentMethodWithOptions {
   public void setSupportedOptions(java.util.List<String> supportedOptions) {
     this.supportedOptions = supportedOptions;
   }
-
 
   /**
    * type.
@@ -117,9 +117,10 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -130,7 +131,6 @@ public class PaymentMethodWithOptions {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -159,7 +159,6 @@ public class PaymentMethodWithOptions {
     return Objects.hash(supportedCurrencies, supportedOptions, type);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -167,7 +166,7 @@ public class PaymentMethodWithOptions {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentMethodWithOptions {\n");
-    
+
     sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
     sb.append("    supportedOptions: ").append(toIndentedString(supportedOptions)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
@@ -187,4 +186,3 @@ public class PaymentMethodWithOptions {
   }
 
 }
-

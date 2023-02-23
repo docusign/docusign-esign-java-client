@@ -5,14 +5,18 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Lists of envelope and transaction IDs to use in the results.  If you use this request body with Envelopes: listStatus, you must set one or both of the following query parameters to the special value &#x60;request_body&#x60;:  - &#x60;envelope_ids&#x3D;request_body&#x60; - &#x60;transaction_ids&#x3D;request_body&#x60; .
+ * Lists of envelope and transaction IDs to use in the results. If you use this
+ * request body with Envelopes: listStatus, you must set one or both of the
+ * following query parameters to the special value &#x60;request_body&#x60;: -
+ * &#x60;envelope_ids&#x3D;request_body&#x60; -
+ * &#x60;transaction_ids&#x3D;request_body&#x60; .
  *
  */
-@ApiModel(description = "Lists of envelope and transaction IDs to use in the results.  If you use this request body with Envelopes: listStatus, you must set one or both of the following query parameters to the special value `request_body`:  - `envelope_ids=request_body` - `transaction_ids=request_body` ")
+@Schema(description = "Lists of envelope and transaction IDs to use in the results.  If you use this request body with Envelopes: listStatus, you must set one or both of the following query parameters to the special value `request_body`:  - `envelope_ids=request_body` - `transaction_ids=request_body` ")
 
 public class EnvelopeIdsRequest {
   @JsonProperty("envelopeIds")
@@ -20,7 +24,6 @@ public class EnvelopeIdsRequest {
 
   @JsonProperty("transactionIds")
   private java.util.List<String> transactionIds = null;
-
 
   /**
    * envelopeIds.
@@ -31,7 +34,7 @@ public class EnvelopeIdsRequest {
     this.envelopeIds = envelopeIds;
     return this;
   }
-  
+
   /**
    * addEnvelopeIdsItem.
    *
@@ -47,9 +50,10 @@ public class EnvelopeIdsRequest {
 
   /**
    * .
+   * 
    * @return envelopeIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -61,7 +65,6 @@ public class EnvelopeIdsRequest {
     this.envelopeIds = envelopeIds;
   }
 
-
   /**
    * transactionIds.
    *
@@ -71,7 +74,7 @@ public class EnvelopeIdsRequest {
     this.transactionIds = transactionIds;
     return this;
   }
-  
+
   /**
    * addTransactionIdsItem.
    *
@@ -86,10 +89,12 @@ public class EnvelopeIdsRequest {
   }
 
   /**
-   *  A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes..
+   * A list of transaction Id's used to determining the status of envelopes sent
+   * asynchronously. See **transactionId** property on envelopes..
+   * 
    * @return transactionIds
    **/
-  @ApiModelProperty(value = " A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.")
+  @Schema(description = " A list of transaction Id's used to determining the status of envelopes sent asynchronously. See **transactionId** property on envelopes.")
   public java.util.List<String> getTransactionIds() {
     return transactionIds;
   }
@@ -100,7 +105,6 @@ public class EnvelopeIdsRequest {
   public void setTransactionIds(java.util.List<String> transactionIds) {
     this.transactionIds = transactionIds;
   }
-
 
   /**
    * Compares objects.
@@ -128,7 +132,6 @@ public class EnvelopeIdsRequest {
     return Objects.hash(envelopeIds, transactionIds);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -136,7 +139,7 @@ public class EnvelopeIdsRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeIdsRequest {\n");
-    
+
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
     sb.append("    transactionIds: ").append(toIndentedString(transactionIds)).append("\n");
     sb.append("}");
@@ -155,4 +158,3 @@ public class EnvelopeIdsRequest {
   }
 
 }
-

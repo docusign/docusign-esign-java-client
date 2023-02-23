@@ -6,14 +6,14 @@ import com.docusign.esign.model.BillingPlanPreview;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing plan update response object..
  *
  */
-@ApiModel(description = "Defines a billing plan update response object.")
+@Schema(description = "Defines a billing plan update response object.")
 
 public class BillingPlanUpdateResponse {
   @JsonProperty("accountPaymentMethod")
@@ -40,7 +40,6 @@ public class BillingPlanUpdateResponse {
   @JsonProperty("planName")
   private String planName = null;
 
-
   /**
    * accountPaymentMethod.
    *
@@ -53,9 +52,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return accountPaymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccountPaymentMethod() {
     return accountPaymentMethod;
   }
@@ -66,7 +66,6 @@ public class BillingPlanUpdateResponse {
   public void setAccountPaymentMethod(String accountPaymentMethod) {
     this.accountPaymentMethod = accountPaymentMethod;
   }
-
 
   /**
    * billingPlanPreview.
@@ -80,9 +79,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return billingPlanPreview
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BillingPlanPreview getBillingPlanPreview() {
     return billingPlanPreview;
   }
@@ -93,7 +93,6 @@ public class BillingPlanUpdateResponse {
   public void setBillingPlanPreview(BillingPlanPreview billingPlanPreview) {
     this.billingPlanPreview = billingPlanPreview;
   }
-
 
   /**
    * currencyCode.
@@ -107,9 +106,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * Specifies the ISO currency code for the account..
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @Schema(description = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -120,7 +120,6 @@ public class BillingPlanUpdateResponse {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * includedSeats.
@@ -134,9 +133,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * The number of seats (users) included..
+   * 
    * @return includedSeats
    **/
-  @ApiModelProperty(value = "The number of seats (users) included.")
+  @Schema(description = "The number of seats (users) included.")
   public String getIncludedSeats() {
     return includedSeats;
   }
@@ -147,7 +147,6 @@ public class BillingPlanUpdateResponse {
   public void setIncludedSeats(String includedSeats) {
     this.includedSeats = includedSeats;
   }
-
 
   /**
    * paymentCycle.
@@ -161,9 +160,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return paymentCycle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentCycle() {
     return paymentCycle;
   }
@@ -174,7 +174,6 @@ public class BillingPlanUpdateResponse {
   public void setPaymentCycle(String paymentCycle) {
     this.paymentCycle = paymentCycle;
   }
-
 
   /**
    * paymentMethod.
@@ -188,9 +187,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return paymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -201,7 +201,6 @@ public class BillingPlanUpdateResponse {
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
-
 
   /**
    * planId.
@@ -215,9 +214,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return planId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlanId() {
     return planId;
   }
@@ -228,7 +228,6 @@ public class BillingPlanUpdateResponse {
   public void setPlanId(String planId) {
     this.planId = planId;
   }
-
 
   /**
    * planName.
@@ -242,9 +241,10 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
+   * 
    * @return planName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlanName() {
     return planName;
   }
@@ -255,7 +255,6 @@ public class BillingPlanUpdateResponse {
   public void setPlanName(String planName) {
     this.planName = planName;
   }
-
 
   /**
    * Compares objects.
@@ -286,9 +285,9 @@ public class BillingPlanUpdateResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
+    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle,
+        paymentMethod, planId, planName);
   }
-
 
   /**
    * Converts the given object to string.
@@ -297,7 +296,7 @@ public class BillingPlanUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanUpdateResponse {\n");
-    
+
     sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
     sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -322,4 +321,3 @@ public class BillingPlanUpdateResponse {
   }
 
 }
-

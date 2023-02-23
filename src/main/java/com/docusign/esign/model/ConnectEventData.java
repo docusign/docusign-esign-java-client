@@ -5,14 +5,17 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object lets you choose the data format of your Connect response. For  more information about using this object, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications). .
+ * This object lets you choose the data format of your Connect response. For
+ * more information about using this object, see [Connect webhooks with JSON
+ * notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
+ * .
  *
  */
-@ApiModel(description = "This object lets you choose the data format of your Connect response. For  more information about using this object, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications). ")
+@Schema(description = "This object lets you choose the data format of your Connect response. For  more information about using this object, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications). ")
 
 public class ConnectEventData {
   @JsonProperty("format")
@@ -23,7 +26,6 @@ public class ConnectEventData {
 
   @JsonProperty("version")
   private String version = null;
-
 
   /**
    * format.
@@ -37,9 +39,10 @@ public class ConnectEventData {
 
   /**
    * .
+   * 
    * @return format
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormat() {
     return format;
   }
@@ -51,7 +54,6 @@ public class ConnectEventData {
     this.format = format;
   }
 
-
   /**
    * includeData.
    *
@@ -61,7 +63,7 @@ public class ConnectEventData {
     this.includeData = includeData;
     return this;
   }
-  
+
   /**
    * addIncludeDataItem.
    *
@@ -77,9 +79,10 @@ public class ConnectEventData {
 
   /**
    * .
+   * 
    * @return includeData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getIncludeData() {
     return includeData;
   }
@@ -90,7 +93,6 @@ public class ConnectEventData {
   public void setIncludeData(java.util.List<String> includeData) {
     this.includeData = includeData;
   }
-
 
   /**
    * version.
@@ -104,9 +106,10 @@ public class ConnectEventData {
 
   /**
    * .
+   * 
    * @return version
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVersion() {
     return version;
   }
@@ -117,7 +120,6 @@ public class ConnectEventData {
   public void setVersion(String version) {
     this.version = version;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +148,6 @@ public class ConnectEventData {
     return Objects.hash(format, includeData, version);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +155,7 @@ public class ConnectEventData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectEventData {\n");
-    
+
     sb.append("    format: ").append(toIndentedString(format)).append("\n");
     sb.append("    includeData: ").append(toIndentedString(includeData)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
@@ -174,4 +175,3 @@ public class ConnectEventData {
   }
 
 }
-

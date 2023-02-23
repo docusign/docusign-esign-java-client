@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductCsvRunRequest. */
@@ -106,7 +106,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return authenticationSuccessFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationSuccessFilter() {
     return authenticationSuccessFilter;
   }
@@ -131,7 +131,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return customFieldFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomFieldFilter() {
     return customFieldFilter;
   }
@@ -156,7 +156,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return dateRangeCustomFromDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeCustomFromDate() {
     return dateRangeCustomFromDate;
   }
@@ -181,7 +181,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return dateRangeCustomToDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeCustomToDate() {
     return dateRangeCustomToDate;
   }
@@ -206,7 +206,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return dateRangeFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeFilter() {
     return dateRangeFilter;
   }
@@ -231,7 +231,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return envelopeDateTypeFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeDateTypeFilter() {
     return envelopeDateTypeFilter;
   }
@@ -257,7 +257,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return envelopeRecipientNameContainsFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeRecipientNameContainsFilter() {
     return envelopeRecipientNameContainsFilter;
   }
@@ -282,7 +282,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return envelopeStatusFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeStatusFilter() {
     return envelopeStatusFilter;
   }
@@ -308,7 +308,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return envelopeSubjectContainsFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeSubjectContainsFilter() {
     return envelopeSubjectContainsFilter;
   }
@@ -346,7 +346,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return fields
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ReportInProductField> getFields() {
     return fields;
   }
@@ -371,7 +371,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return forDownload
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getForDownload() {
     return forDownload;
   }
@@ -396,7 +396,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return isDashboard
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDashboard() {
     return isDashboard;
   }
@@ -421,7 +421,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return newLine
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNewLine() {
     return newLine;
   }
@@ -446,7 +446,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return overrideTimezoneKey
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOverrideTimezoneKey() {
     return overrideTimezoneKey;
   }
@@ -471,7 +471,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return periodLengthFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPeriodLengthFilter() {
     return periodLengthFilter;
   }
@@ -496,7 +496,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return quote
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getQuote() {
     return quote;
   }
@@ -521,7 +521,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return reportCustomizedId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
@@ -546,7 +546,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return reportDescription
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportDescription() {
     return reportDescription;
   }
@@ -571,7 +571,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return reportId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportId() {
     return reportId;
   }
@@ -596,7 +596,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return reportInvocationType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportInvocationType() {
     return reportInvocationType;
   }
@@ -621,7 +621,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return reportName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportName() {
     return reportName;
   }
@@ -646,7 +646,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return sentByFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByFilter() {
     return sentByFilter;
   }
@@ -671,7 +671,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return sentByIds
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByIds() {
     return sentByIds;
   }
@@ -696,7 +696,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return separator
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSeparator() {
     return separator;
   }
@@ -721,7 +721,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return sortDirection
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSortDirection() {
     return sortDirection;
   }
@@ -746,7 +746,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return sortField
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSortField() {
     return sortField;
   }
@@ -771,7 +771,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return startPosition
    */
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -796,7 +796,7 @@ public class ReportInProductCsvRunRequest {
    *
    * @return verificationStatusFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVerificationStatusFilter() {
     return verificationStatusFilter;
   }
@@ -821,8 +821,8 @@ public class ReportInProductCsvRunRequest {
     }
     ReportInProductCsvRunRequest reportInProductCsvRunRequest = (ReportInProductCsvRunRequest) o;
     return Objects.equals(
-            this.authenticationSuccessFilter,
-            reportInProductCsvRunRequest.authenticationSuccessFilter)
+        this.authenticationSuccessFilter,
+        reportInProductCsvRunRequest.authenticationSuccessFilter)
         && Objects.equals(this.customFieldFilter, reportInProductCsvRunRequest.customFieldFilter)
         && Objects.equals(
             this.dateRangeCustomFromDate, reportInProductCsvRunRequest.dateRangeCustomFromDate)
@@ -956,7 +956,8 @@ public class ReportInProductCsvRunRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

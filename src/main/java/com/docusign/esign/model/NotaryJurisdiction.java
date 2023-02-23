@@ -7,14 +7,14 @@ import com.docusign.esign.model.Jurisdiction;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A notary jurisdiction..
  *
  */
-@ApiModel(description = "A notary jurisdiction.")
+@Schema(description = "A notary jurisdiction.")
 
 public class NotaryJurisdiction {
   @JsonProperty("commissionExpiration")
@@ -38,7 +38,6 @@ public class NotaryJurisdiction {
   @JsonProperty("sealType")
   private String sealType = null;
 
-
   /**
    * commissionExpiration.
    *
@@ -51,9 +50,10 @@ public class NotaryJurisdiction {
 
   /**
    * .
+   * 
    * @return commissionExpiration
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommissionExpiration() {
     return commissionExpiration;
   }
@@ -64,7 +64,6 @@ public class NotaryJurisdiction {
   public void setCommissionExpiration(String commissionExpiration) {
     this.commissionExpiration = commissionExpiration;
   }
-
 
   /**
    * commissionId.
@@ -78,9 +77,10 @@ public class NotaryJurisdiction {
 
   /**
    * .
+   * 
    * @return commissionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommissionId() {
     return commissionId;
   }
@@ -91,7 +91,6 @@ public class NotaryJurisdiction {
   public void setCommissionId(String commissionId) {
     this.commissionId = commissionId;
   }
-
 
   /**
    * county.
@@ -105,9 +104,10 @@ public class NotaryJurisdiction {
 
   /**
    * .
+   * 
    * @return county
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCounty() {
     return county;
   }
@@ -118,7 +118,6 @@ public class NotaryJurisdiction {
   public void setCounty(String county) {
     this.county = county;
   }
-
 
   /**
    * errorDetails.
@@ -131,10 +130,12 @@ public class NotaryJurisdiction {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -145,7 +146,6 @@ public class NotaryJurisdiction {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * jurisdiction.
@@ -158,10 +158,12 @@ public class NotaryJurisdiction {
   }
 
   /**
-   * Description of the jurisdiction for this notary. This is a read-only property..
+   * Description of the jurisdiction for this notary. This is a read-only
+   * property..
+   * 
    * @return jurisdiction
    **/
-  @ApiModelProperty(value = "Description of the jurisdiction for this notary. This is a read-only property.")
+  @Schema(description = "Description of the jurisdiction for this notary. This is a read-only property.")
   public Jurisdiction getJurisdiction() {
     return jurisdiction;
   }
@@ -172,7 +174,6 @@ public class NotaryJurisdiction {
   public void setJurisdiction(Jurisdiction jurisdiction) {
     this.jurisdiction = jurisdiction;
   }
-
 
   /**
    * registeredName.
@@ -186,9 +187,10 @@ public class NotaryJurisdiction {
 
   /**
    * .
+   * 
    * @return registeredName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRegisteredName() {
     return registeredName;
   }
@@ -199,7 +201,6 @@ public class NotaryJurisdiction {
   public void setRegisteredName(String registeredName) {
     this.registeredName = registeredName;
   }
-
 
   /**
    * sealType.
@@ -213,9 +214,10 @@ public class NotaryJurisdiction {
 
   /**
    * .
+   * 
    * @return sealType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSealType() {
     return sealType;
   }
@@ -226,7 +228,6 @@ public class NotaryJurisdiction {
   public void setSealType(String sealType) {
     this.sealType = sealType;
   }
-
 
   /**
    * Compares objects.
@@ -256,9 +257,9 @@ public class NotaryJurisdiction {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(commissionExpiration, commissionId, county, errorDetails, jurisdiction, registeredName, sealType);
+    return Objects.hash(commissionExpiration, commissionId, county, errorDetails, jurisdiction, registeredName,
+        sealType);
   }
-
 
   /**
    * Converts the given object to string.
@@ -267,7 +268,7 @@ public class NotaryJurisdiction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJurisdiction {\n");
-    
+
     sb.append("    commissionExpiration: ").append(toIndentedString(commissionExpiration)).append("\n");
     sb.append("    commissionId: ").append(toIndentedString(commissionId)).append("\n");
     sb.append("    county: ").append(toIndentedString(county)).append("\n");
@@ -291,4 +292,3 @@ public class NotaryJurisdiction {
   }
 
 }
-

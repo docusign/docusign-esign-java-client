@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordLockoutDurationMinutes.
@@ -20,7 +20,6 @@ public class AccountPasswordLockoutDurationMinutes {
   @JsonProperty("minimumMinutes")
   private String minimumMinutes = null;
 
-
   /**
    * maximumMinutes.
    *
@@ -33,9 +32,10 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
+   * 
    * @return maximumMinutes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumMinutes() {
     return maximumMinutes;
   }
@@ -46,7 +46,6 @@ public class AccountPasswordLockoutDurationMinutes {
   public void setMaximumMinutes(String maximumMinutes) {
     this.maximumMinutes = maximumMinutes;
   }
-
 
   /**
    * minimumMinutes.
@@ -60,9 +59,10 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
+   * 
    * @return minimumMinutes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumMinutes() {
     return minimumMinutes;
   }
@@ -73,7 +73,6 @@ public class AccountPasswordLockoutDurationMinutes {
   public void setMinimumMinutes(String minimumMinutes) {
     this.minimumMinutes = minimumMinutes;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class AccountPasswordLockoutDurationMinutes {
     return Objects.hash(maximumMinutes, minimumMinutes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class AccountPasswordLockoutDurationMinutes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordLockoutDurationMinutes {\n");
-    
+
     sb.append("    maximumMinutes: ").append(toIndentedString(maximumMinutes)).append("\n");
     sb.append("    minimumMinutes: ").append(toIndentedString(minimumMinutes)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class AccountPasswordLockoutDurationMinutes {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PaymentGatewayAccountSetting.
@@ -26,7 +26,6 @@ public class PaymentGatewayAccountSetting {
   @JsonProperty("merchantId")
   private String merchantId = null;
 
-
   /**
    * apiFields.
    *
@@ -39,9 +38,10 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
+   * 
    * @return apiFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getApiFields() {
     return apiFields;
   }
@@ -52,7 +52,6 @@ public class PaymentGatewayAccountSetting {
   public void setApiFields(String apiFields) {
     this.apiFields = apiFields;
   }
-
 
   /**
    * authorizationCode.
@@ -66,9 +65,10 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
+   * 
    * @return authorizationCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthorizationCode() {
     return authorizationCode;
   }
@@ -79,7 +79,6 @@ public class PaymentGatewayAccountSetting {
   public void setAuthorizationCode(String authorizationCode) {
     this.authorizationCode = authorizationCode;
   }
-
 
   /**
    * credentialStatus.
@@ -93,9 +92,10 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
+   * 
    * @return credentialStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCredentialStatus() {
     return credentialStatus;
   }
@@ -106,7 +106,6 @@ public class PaymentGatewayAccountSetting {
   public void setCredentialStatus(String credentialStatus) {
     this.credentialStatus = credentialStatus;
   }
-
 
   /**
    * merchantId.
@@ -120,9 +119,10 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
+   * 
    * @return merchantId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMerchantId() {
     return merchantId;
   }
@@ -133,7 +133,6 @@ public class PaymentGatewayAccountSetting {
   public void setMerchantId(String merchantId) {
     this.merchantId = merchantId;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class PaymentGatewayAccountSetting {
     return Objects.hash(apiFields, authorizationCode, credentialStatus, merchantId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class PaymentGatewayAccountSetting {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccountSetting {\n");
-    
+
     sb.append("    apiFields: ").append(toIndentedString(apiFields)).append("\n");
     sb.append("    authorizationCode: ").append(toIndentedString(authorizationCode)).append("\n");
     sb.append("    credentialStatus: ").append(toIndentedString(credentialStatus)).append("\n");
@@ -192,4 +190,3 @@ public class PaymentGatewayAccountSetting {
   }
 
 }
-

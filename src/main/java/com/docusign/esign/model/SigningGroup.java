@@ -7,14 +7,17 @@ import com.docusign.esign.model.SigningGroupUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature..
+ * Contains details about a signing group. Signing groups enable you to send an
+ * envelope to a predefined group of recipients and have any one member of the
+ * group sign your documents. When you send an envelope to a signing group,
+ * anyone in the group can open it and sign it with their own signature..
  *
  */
-@ApiModel(description = "Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature.")
+@Schema(description = "Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature.")
 
 public class SigningGroup {
   @JsonProperty("created")
@@ -47,7 +50,6 @@ public class SigningGroup {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
-
   /**
    * created.
    *
@@ -60,9 +62,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreated() {
     return created;
   }
@@ -73,7 +76,6 @@ public class SigningGroup {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdBy.
@@ -87,9 +89,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return createdBy
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedBy() {
     return createdBy;
   }
@@ -100,7 +103,6 @@ public class SigningGroup {
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
-
 
   /**
    * errorDetails.
@@ -113,10 +115,12 @@ public class SigningGroup {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -127,7 +131,6 @@ public class SigningGroup {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * groupEmail.
@@ -141,9 +144,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return groupEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupEmail() {
     return groupEmail;
   }
@@ -154,7 +158,6 @@ public class SigningGroup {
   public void setGroupEmail(String groupEmail) {
     this.groupEmail = groupEmail;
   }
-
 
   /**
    * groupName.
@@ -168,9 +171,10 @@ public class SigningGroup {
 
   /**
    * The name of the group..
+   * 
    * @return groupName
    **/
-  @ApiModelProperty(value = "The name of the group.")
+  @Schema(description = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -181,7 +185,6 @@ public class SigningGroup {
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
-
 
   /**
    * groupType.
@@ -195,9 +198,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return groupType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupType() {
     return groupType;
   }
@@ -208,7 +212,6 @@ public class SigningGroup {
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
-
 
   /**
    * modified.
@@ -222,9 +225,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return modified
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModified() {
     return modified;
   }
@@ -235,7 +239,6 @@ public class SigningGroup {
   public void setModified(String modified) {
     this.modified = modified;
   }
-
 
   /**
    * modifiedBy.
@@ -249,9 +252,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return modifiedBy
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedBy() {
     return modifiedBy;
   }
@@ -262,7 +266,6 @@ public class SigningGroup {
   public void setModifiedBy(String modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
-
 
   /**
    * signingGroupId.
@@ -275,10 +278,14 @@ public class SigningGroup {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
+   * When set to **true** and the feature is enabled in the sender's account, the
+   * signing recipient is required to draw signatures and initials at each
+   * signature/initial tab ( instead of adopting a signature/initial style or only
+   * drawing a signature/initial once)..
+   * 
    * @return signingGroupId
    **/
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -290,7 +297,6 @@ public class SigningGroup {
     this.signingGroupId = signingGroupId;
   }
 
-
   /**
    * users.
    *
@@ -300,7 +306,7 @@ public class SigningGroup {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
@@ -316,9 +322,10 @@ public class SigningGroup {
 
   /**
    * .
+   * 
    * @return users
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
@@ -329,7 +336,6 @@ public class SigningGroup {
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
-
 
   /**
    * Compares objects.
@@ -362,9 +368,9 @@ public class SigningGroup {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(created, createdBy, errorDetails, groupEmail, groupName, groupType, modified, modifiedBy, signingGroupId, users);
+    return Objects.hash(created, createdBy, errorDetails, groupEmail, groupName, groupType, modified, modifiedBy,
+        signingGroupId, users);
   }
-
 
   /**
    * Converts the given object to string.
@@ -373,7 +379,7 @@ public class SigningGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroup {\n");
-    
+
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -400,4 +406,3 @@ public class SigningGroup {
   }
 
 }
-

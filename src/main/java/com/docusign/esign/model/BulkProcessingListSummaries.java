@@ -6,8 +6,8 @@ import com.docusign.esign.model.BulkProcessingListSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessingListSummaries.
@@ -18,7 +18,6 @@ public class BulkProcessingListSummaries {
   @JsonProperty("bulkListSummaries")
   private java.util.List<BulkProcessingListSummary> bulkListSummaries = null;
 
-
   /**
    * bulkListSummaries.
    *
@@ -28,7 +27,7 @@ public class BulkProcessingListSummaries {
     this.bulkListSummaries = bulkListSummaries;
     return this;
   }
-  
+
   /**
    * addBulkListSummariesItem.
    *
@@ -44,9 +43,10 @@ public class BulkProcessingListSummaries {
 
   /**
    * .
+   * 
    * @return bulkListSummaries
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkProcessingListSummary> getBulkListSummaries() {
     return bulkListSummaries;
   }
@@ -57,7 +57,6 @@ public class BulkProcessingListSummaries {
   public void setBulkListSummaries(java.util.List<BulkProcessingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class BulkProcessingListSummaries {
     return Objects.hash(bulkListSummaries);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class BulkProcessingListSummaries {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingListSummaries {\n");
-    
+
     sb.append("    bulkListSummaries: ").append(toIndentedString(bulkListSummaries)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class BulkProcessingListSummaries {
   }
 
 }
-

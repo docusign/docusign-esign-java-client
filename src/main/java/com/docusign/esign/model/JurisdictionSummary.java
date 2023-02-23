@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * JurisdictionSummary.
@@ -26,7 +26,6 @@ public class JurisdictionSummary {
   @JsonProperty("jurisdictionName")
   private String jurisdictionName = null;
 
-
   /**
    * authorizedForIPen.
    *
@@ -39,9 +38,10 @@ public class JurisdictionSummary {
 
   /**
    * .
+   * 
    * @return authorizedForIPen
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthorizedForIPen() {
     return authorizedForIPen;
   }
@@ -52,7 +52,6 @@ public class JurisdictionSummary {
   public void setAuthorizedForIPen(String authorizedForIPen) {
     this.authorizedForIPen = authorizedForIPen;
   }
-
 
   /**
    * authorizedForRon.
@@ -66,9 +65,10 @@ public class JurisdictionSummary {
 
   /**
    * .
+   * 
    * @return authorizedForRon
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthorizedForRon() {
     return authorizedForRon;
   }
@@ -79,7 +79,6 @@ public class JurisdictionSummary {
   public void setAuthorizedForRon(String authorizedForRon) {
     this.authorizedForRon = authorizedForRon;
   }
-
 
   /**
    * jurisdictionId.
@@ -93,9 +92,10 @@ public class JurisdictionSummary {
 
   /**
    * .
+   * 
    * @return jurisdictionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getJurisdictionId() {
     return jurisdictionId;
   }
@@ -106,7 +106,6 @@ public class JurisdictionSummary {
   public void setJurisdictionId(String jurisdictionId) {
     this.jurisdictionId = jurisdictionId;
   }
-
 
   /**
    * jurisdictionName.
@@ -120,9 +119,10 @@ public class JurisdictionSummary {
 
   /**
    * .
+   * 
    * @return jurisdictionName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getJurisdictionName() {
     return jurisdictionName;
   }
@@ -133,7 +133,6 @@ public class JurisdictionSummary {
   public void setJurisdictionName(String jurisdictionName) {
     this.jurisdictionName = jurisdictionName;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class JurisdictionSummary {
     return Objects.hash(authorizedForIPen, authorizedForRon, jurisdictionId, jurisdictionName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class JurisdictionSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class JurisdictionSummary {\n");
-    
+
     sb.append("    authorizedForIPen: ").append(toIndentedString(authorizedForIPen)).append("\n");
     sb.append("    authorizedForRon: ").append(toIndentedString(authorizedForRon)).append("\n");
     sb.append("    jurisdictionId: ").append(toIndentedString(jurisdictionId)).append("\n");
@@ -192,4 +190,3 @@ public class JurisdictionSummary {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserInfo.
@@ -54,7 +54,6 @@ public class UserInfo {
   @JsonProperty("userType")
   private String userType = null;
 
-
   /**
    * accountId.
    *
@@ -67,9 +66,10 @@ public class UserInfo {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -80,7 +80,6 @@ public class UserInfo {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * accountName.
@@ -94,9 +93,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return accountName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccountName() {
     return accountName;
   }
@@ -107,7 +107,6 @@ public class UserInfo {
   public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
-
 
   /**
    * activationAccessCode.
@@ -121,9 +120,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return activationAccessCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
@@ -134,7 +134,6 @@ public class UserInfo {
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
   }
-
 
   /**
    * email.
@@ -148,9 +147,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -161,7 +161,6 @@ public class UserInfo {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * errorDetails.
@@ -174,10 +173,12 @@ public class UserInfo {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -188,7 +189,6 @@ public class UserInfo {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * loginStatus.
@@ -202,9 +202,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return loginStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLoginStatus() {
     return loginStatus;
   }
@@ -215,7 +216,6 @@ public class UserInfo {
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
-
 
   /**
    * membershipId.
@@ -229,9 +229,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return membershipId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMembershipId() {
     return membershipId;
   }
@@ -242,7 +243,6 @@ public class UserInfo {
   public void setMembershipId(String membershipId) {
     this.membershipId = membershipId;
   }
-
 
   /**
    * sendActivationEmail.
@@ -256,9 +256,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return sendActivationEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
@@ -269,7 +270,6 @@ public class UserInfo {
   public void setSendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
   }
-
 
   /**
    * uri.
@@ -283,9 +283,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -296,7 +297,6 @@ public class UserInfo {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * userId.
@@ -310,9 +310,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -323,7 +324,6 @@ public class UserInfo {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -337,9 +337,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -350,7 +351,6 @@ public class UserInfo {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * userStatus.
@@ -364,9 +364,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return userStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -377,7 +378,6 @@ public class UserInfo {
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
-
 
   /**
    * userType.
@@ -391,9 +391,10 @@ public class UserInfo {
 
   /**
    * .
+   * 
    * @return userType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserType() {
     return userType;
   }
@@ -404,7 +405,6 @@ public class UserInfo {
   public void setUserType(String userType) {
     this.userType = userType;
   }
-
 
   /**
    * Compares objects.
@@ -440,9 +440,9 @@ public class UserInfo {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, loginStatus, membershipId, sendActivationEmail, uri, userId, userName, userStatus, userType);
+    return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, loginStatus, membershipId,
+        sendActivationEmail, uri, userId, userName, userStatus, userType);
   }
-
 
   /**
    * Converts the given object to string.
@@ -451,7 +451,7 @@ public class UserInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfo {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
@@ -481,4 +481,3 @@ public class UserInfo {
   }
 
 }
-

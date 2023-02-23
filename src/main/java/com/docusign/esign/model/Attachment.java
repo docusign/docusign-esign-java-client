@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about an attachment..
  *
  */
-@ApiModel(description = "Contains information about an attachment.")
+@Schema(description = "Contains information about an attachment.")
 
 public class Attachment {
   @JsonProperty("accessControl")
@@ -36,7 +36,6 @@ public class Attachment {
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
-
   /**
    * accessControl.
    *
@@ -49,9 +48,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return accessControl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccessControl() {
     return accessControl;
   }
@@ -62,7 +62,6 @@ public class Attachment {
   public void setAccessControl(String accessControl) {
     this.accessControl = accessControl;
   }
-
 
   /**
    * attachmentId.
@@ -76,9 +75,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return attachmentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -89,7 +89,6 @@ public class Attachment {
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
-
 
   /**
    * attachmentType.
@@ -103,9 +102,10 @@ public class Attachment {
 
   /**
    * Specifies the type of the attachment for the recipient..
+   * 
    * @return attachmentType
    **/
-  @ApiModelProperty(value = "Specifies the type of the attachment for the recipient.")
+  @Schema(description = "Specifies the type of the attachment for the recipient.")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -116,7 +116,6 @@ public class Attachment {
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
-
 
   /**
    * data.
@@ -130,9 +129,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return data
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getData() {
     return data;
   }
@@ -143,7 +143,6 @@ public class Attachment {
   public void setData(String data) {
     this.data = data;
   }
-
 
   /**
    * label.
@@ -157,9 +156,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return label
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabel() {
     return label;
   }
@@ -170,7 +170,6 @@ public class Attachment {
   public void setLabel(String label) {
     this.label = label;
   }
-
 
   /**
    * name.
@@ -184,9 +183,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -197,7 +197,6 @@ public class Attachment {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * remoteUrl.
@@ -211,9 +210,10 @@ public class Attachment {
 
   /**
    * .
+   * 
    * @return remoteUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -224,7 +224,6 @@ public class Attachment {
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
-
 
   /**
    * Compares objects.
@@ -257,7 +256,6 @@ public class Attachment {
     return Objects.hash(accessControl, attachmentId, attachmentType, data, label, name, remoteUrl);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -265,7 +263,7 @@ public class Attachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Attachment {\n");
-    
+
     sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
@@ -289,4 +287,3 @@ public class Attachment {
   }
 
 }
-

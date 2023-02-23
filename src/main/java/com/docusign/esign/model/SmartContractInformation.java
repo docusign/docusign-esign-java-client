@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SmartContractInformation.
@@ -20,7 +20,6 @@ public class SmartContractInformation {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * code.
    *
@@ -33,9 +32,10 @@ public class SmartContractInformation {
 
   /**
    * .
+   * 
    * @return code
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCode() {
     return code;
   }
@@ -46,7 +46,6 @@ public class SmartContractInformation {
   public void setCode(String code) {
     this.code = code;
   }
-
 
   /**
    * uri.
@@ -60,9 +59,10 @@ public class SmartContractInformation {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -73,7 +73,6 @@ public class SmartContractInformation {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class SmartContractInformation {
     return Objects.hash(code, uri);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class SmartContractInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartContractInformation {\n");
-    
+
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class SmartContractInformation {
   }
 
 }
-

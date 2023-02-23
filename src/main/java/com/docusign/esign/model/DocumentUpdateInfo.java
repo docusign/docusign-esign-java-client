@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DocumentUpdateInfo */
@@ -33,7 +33,7 @@ public class DocumentUpdateInfo {
   }
 
   /** @return data */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getData() {
     return data;
   }
@@ -48,14 +48,13 @@ public class DocumentUpdateInfo {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -74,7 +73,7 @@ public class DocumentUpdateInfo {
    *
    * @return documentSecurityStore
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -89,7 +88,7 @@ public class DocumentUpdateInfo {
   }
 
   /** @return name */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -104,7 +103,7 @@ public class DocumentUpdateInfo {
   }
 
   /** @return returnFormat */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReturnFormat() {
     return returnFormat;
   }
@@ -128,7 +127,7 @@ public class DocumentUpdateInfo {
   }
 
   /** @return signatureDataInfos */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SignatureDataInfo> getSignatureDataInfos() {
     return signatureDataInfos;
   }
@@ -147,7 +146,7 @@ public class DocumentUpdateInfo {
    *
    * @return timeStampField
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TimeStampField getTimeStampField() {
     return timeStampField;
   }
@@ -205,7 +204,8 @@ public class DocumentUpdateInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

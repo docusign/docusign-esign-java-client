@@ -23,10 +23,10 @@ import org.glassfish.jersey.logging.LoggingFeature;
 import org.glassfish.jersey.media.multipart.*;
 
 import javax.net.ssl.*;
-import javax.ws.rs.client.*;
-import javax.ws.rs.core.*;
-import javax.ws.rs.core.Response.Status;
-import javax.ws.rs.core.Response.Status.Family;
+import jakarta.ws.rs.client.*;
+import jakarta.ws.rs.core.*;
+import jakarta.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status.Family;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -96,7 +96,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("/SDK/3.23.0/Java/");
+    setUserAgent("/SDK/4.0.0-RC1/Java/");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1695,7 +1695,7 @@ public class ApiClient {
       }
 
       @Override
-      public Connector getConnector(Client client, javax.ws.rs.core.Configuration configuration) {
+      public Connector getConnector(Client client, jakarta.ws.rs.core.Configuration configuration) {
         HttpUrlConnectorProvider customConnProv =  new HttpUrlConnectorProvider();
         customConnProv.connectionFactory(new HttpUrlConnectorProvider.ConnectionFactory() {
             @Override

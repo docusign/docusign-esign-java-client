@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BillingEntityInformationResponse.
@@ -26,7 +26,6 @@ public class BillingEntityInformationResponse {
   @JsonProperty("isExternallyBilled")
   private String isExternallyBilled = null;
 
-
   /**
    * billingProfile.
    *
@@ -39,9 +38,10 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
+   * 
    * @return billingProfile
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBillingProfile() {
     return billingProfile;
   }
@@ -52,7 +52,6 @@ public class BillingEntityInformationResponse {
   public void setBillingProfile(String billingProfile) {
     this.billingProfile = billingProfile;
   }
-
 
   /**
    * entityName.
@@ -66,9 +65,10 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
+   * 
    * @return entityName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEntityName() {
     return entityName;
   }
@@ -79,7 +79,6 @@ public class BillingEntityInformationResponse {
   public void setEntityName(String entityName) {
     this.entityName = entityName;
   }
-
 
   /**
    * externalEntityId.
@@ -93,9 +92,10 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
+   * 
    * @return externalEntityId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExternalEntityId() {
     return externalEntityId;
   }
@@ -106,7 +106,6 @@ public class BillingEntityInformationResponse {
   public void setExternalEntityId(String externalEntityId) {
     this.externalEntityId = externalEntityId;
   }
-
 
   /**
    * isExternallyBilled.
@@ -120,9 +119,10 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
+   * 
    * @return isExternallyBilled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsExternallyBilled() {
     return isExternallyBilled;
   }
@@ -133,7 +133,6 @@ public class BillingEntityInformationResponse {
   public void setIsExternallyBilled(String isExternallyBilled) {
     this.isExternallyBilled = isExternallyBilled;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class BillingEntityInformationResponse {
     return Objects.hash(billingProfile, entityName, externalEntityId, isExternallyBilled);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class BillingEntityInformationResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingEntityInformationResponse {\n");
-    
+
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
     sb.append("    entityName: ").append(toIndentedString(entityName)).append("\n");
     sb.append("    externalEntityId: ").append(toIndentedString(externalEntityId)).append("\n");
@@ -192,4 +190,3 @@ public class BillingEntityInformationResponse {
   }
 
 }
-

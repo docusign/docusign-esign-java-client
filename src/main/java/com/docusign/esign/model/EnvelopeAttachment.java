@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeAttachment.
@@ -33,7 +33,6 @@ public class EnvelopeAttachment {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * accessControl.
    *
@@ -46,9 +45,10 @@ public class EnvelopeAttachment {
 
   /**
    * .
+   * 
    * @return accessControl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccessControl() {
     return accessControl;
   }
@@ -59,7 +59,6 @@ public class EnvelopeAttachment {
   public void setAccessControl(String accessControl) {
     this.accessControl = accessControl;
   }
-
 
   /**
    * attachmentId.
@@ -73,9 +72,10 @@ public class EnvelopeAttachment {
 
   /**
    * .
+   * 
    * @return attachmentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentId() {
     return attachmentId;
   }
@@ -86,7 +86,6 @@ public class EnvelopeAttachment {
   public void setAttachmentId(String attachmentId) {
     this.attachmentId = attachmentId;
   }
-
 
   /**
    * attachmentType.
@@ -100,9 +99,10 @@ public class EnvelopeAttachment {
 
   /**
    * .
+   * 
    * @return attachmentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentType() {
     return attachmentType;
   }
@@ -113,7 +113,6 @@ public class EnvelopeAttachment {
   public void setAttachmentType(String attachmentType) {
     this.attachmentType = attachmentType;
   }
-
 
   /**
    * errorDetails.
@@ -126,10 +125,12 @@ public class EnvelopeAttachment {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -140,7 +141,6 @@ public class EnvelopeAttachment {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * label.
@@ -154,9 +154,10 @@ public class EnvelopeAttachment {
 
   /**
    * .
+   * 
    * @return label
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabel() {
     return label;
   }
@@ -167,7 +168,6 @@ public class EnvelopeAttachment {
   public void setLabel(String label) {
     this.label = label;
   }
-
 
   /**
    * name.
@@ -181,9 +181,10 @@ public class EnvelopeAttachment {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -194,7 +195,6 @@ public class EnvelopeAttachment {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -226,7 +226,6 @@ public class EnvelopeAttachment {
     return Objects.hash(accessControl, attachmentId, attachmentType, errorDetails, label, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -234,7 +233,7 @@ public class EnvelopeAttachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachment {\n");
-    
+
     sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
@@ -257,4 +256,3 @@ public class EnvelopeAttachment {
   }
 
 }
-

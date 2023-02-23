@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CommentPublish.
@@ -32,7 +32,6 @@ public class CommentPublish {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
-
   /**
    * id.
    *
@@ -45,9 +44,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -59,7 +59,6 @@ public class CommentPublish {
     this.id = id;
   }
 
-
   /**
    * mentions.
    *
@@ -69,7 +68,7 @@ public class CommentPublish {
     this.mentions = mentions;
     return this;
   }
-  
+
   /**
    * addMentionsItem.
    *
@@ -85,9 +84,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return mentions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
@@ -98,7 +98,6 @@ public class CommentPublish {
   public void setMentions(java.util.List<String> mentions) {
     this.mentions = mentions;
   }
-
 
   /**
    * text.
@@ -112,9 +111,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return text
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getText() {
     return text;
   }
@@ -125,7 +125,6 @@ public class CommentPublish {
   public void setText(String text) {
     this.text = text;
   }
-
 
   /**
    * threadAnchorKeys.
@@ -152,9 +151,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return threadAnchorKeys
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.Map<String, String> getThreadAnchorKeys() {
     return threadAnchorKeys;
   }
@@ -165,7 +165,6 @@ public class CommentPublish {
   public void setThreadAnchorKeys(java.util.Map<String, String> threadAnchorKeys) {
     this.threadAnchorKeys = threadAnchorKeys;
   }
-
 
   /**
    * threadId.
@@ -179,9 +178,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return threadId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreadId() {
     return threadId;
   }
@@ -193,7 +193,6 @@ public class CommentPublish {
     this.threadId = threadId;
   }
 
-
   /**
    * visibleTo.
    *
@@ -203,7 +202,7 @@ public class CommentPublish {
     this.visibleTo = visibleTo;
     return this;
   }
-  
+
   /**
    * addVisibleToItem.
    *
@@ -219,9 +218,10 @@ public class CommentPublish {
 
   /**
    * .
+   * 
    * @return visibleTo
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
@@ -232,7 +232,6 @@ public class CommentPublish {
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
-
 
   /**
    * Compares objects.
@@ -264,7 +263,6 @@ public class CommentPublish {
     return Objects.hash(id, mentions, text, threadAnchorKeys, threadId, visibleTo);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -272,7 +270,7 @@ public class CommentPublish {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentPublish {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    mentions: ").append(toIndentedString(mentions)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
@@ -295,4 +293,3 @@ public class CommentPublish {
   }
 
 }
-

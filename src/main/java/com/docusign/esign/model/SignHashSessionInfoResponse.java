@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** SignHashSessionInfoResponse */
@@ -48,8 +48,7 @@ public class SignHashSessionInfoResponse {
    *
    * @return documents
    */
-  @ApiModelProperty(
-      value = "Complex element contains the details on the documents in the envelope.")
+  @Schema(description = "Complex element contains the details on the documents in the envelope.")
   public java.util.List<SignHashDocument> getDocuments() {
     return documents;
   }
@@ -68,7 +67,7 @@ public class SignHashSessionInfoResponse {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -83,7 +82,7 @@ public class SignHashSessionInfoResponse {
   }
 
   /** @return language */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLanguage() {
     return language;
   }
@@ -98,7 +97,7 @@ public class SignHashSessionInfoResponse {
   }
 
   /** @return redirectionUrl */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRedirectionUrl() {
     return redirectionUrl;
   }
@@ -113,7 +112,7 @@ public class SignHashSessionInfoResponse {
   }
 
   /** @return remainingSignatureRequests */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Long getRemainingSignatureRequests() {
     return remainingSignatureRequests;
   }
@@ -132,7 +131,7 @@ public class SignHashSessionInfoResponse {
    *
    * @return seal
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Seal getSeal() {
     return seal;
   }
@@ -151,7 +150,7 @@ public class SignHashSessionInfoResponse {
    *
    * @return sender
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Sender getSender() {
     return sender;
   }
@@ -170,7 +169,7 @@ public class SignHashSessionInfoResponse {
    *
    * @return user
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public User getUser() {
     return user;
   }
@@ -232,7 +231,8 @@ public class SignHashSessionInfoResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

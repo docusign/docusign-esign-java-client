@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkSendEnvelopesInfo.
@@ -53,7 +53,6 @@ public class BulkSendEnvelopesInfo {
   @JsonProperty("voided")
   private String voided = null;
 
-
   /**
    * authoritativeCopy.
    *
@@ -65,10 +64,12 @@ public class BulkSendEnvelopesInfo {
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
+   * Specifies the Authoritative copy feature. If set to true the Authoritative
+   * copy feature is enabled..
+   * 
    * @return authoritativeCopy
    **/
-  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
   }
@@ -79,7 +80,6 @@ public class BulkSendEnvelopesInfo {
   public void setAuthoritativeCopy(String authoritativeCopy) {
     this.authoritativeCopy = authoritativeCopy;
   }
-
 
   /**
    * completed.
@@ -93,9 +93,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return completed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompleted() {
     return completed;
   }
@@ -106,7 +107,6 @@ public class BulkSendEnvelopesInfo {
   public void setCompleted(String completed) {
     this.completed = completed;
   }
-
 
   /**
    * correct.
@@ -120,9 +120,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return correct
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCorrect() {
     return correct;
   }
@@ -133,7 +134,6 @@ public class BulkSendEnvelopesInfo {
   public void setCorrect(String correct) {
     this.correct = correct;
   }
-
 
   /**
    * created.
@@ -147,9 +147,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreated() {
     return created;
   }
@@ -160,7 +161,6 @@ public class BulkSendEnvelopesInfo {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * declined.
@@ -174,9 +174,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return declined
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeclined() {
     return declined;
   }
@@ -187,7 +188,6 @@ public class BulkSendEnvelopesInfo {
   public void setDeclined(String declined) {
     this.declined = declined;
   }
-
 
   /**
    * deleted.
@@ -201,9 +201,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return deleted
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeleted() {
     return deleted;
   }
@@ -214,7 +215,6 @@ public class BulkSendEnvelopesInfo {
   public void setDeleted(String deleted) {
     this.deleted = deleted;
   }
-
 
   /**
    * delivered.
@@ -228,9 +228,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return delivered
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDelivered() {
     return delivered;
   }
@@ -241,7 +242,6 @@ public class BulkSendEnvelopesInfo {
   public void setDelivered(String delivered) {
     this.delivered = delivered;
   }
-
 
   /**
    * digitalSignaturesPending.
@@ -255,9 +255,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return digitalSignaturesPending
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDigitalSignaturesPending() {
     return digitalSignaturesPending;
   }
@@ -268,7 +269,6 @@ public class BulkSendEnvelopesInfo {
   public void setDigitalSignaturesPending(String digitalSignaturesPending) {
     this.digitalSignaturesPending = digitalSignaturesPending;
   }
-
 
   /**
    * sent.
@@ -282,9 +282,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return sent
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSent() {
     return sent;
   }
@@ -295,7 +296,6 @@ public class BulkSendEnvelopesInfo {
   public void setSent(String sent) {
     this.sent = sent;
   }
-
 
   /**
    * signed.
@@ -309,9 +309,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return signed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigned() {
     return signed;
   }
@@ -322,7 +323,6 @@ public class BulkSendEnvelopesInfo {
   public void setSigned(String signed) {
     this.signed = signed;
   }
-
 
   /**
    * timedOut.
@@ -336,9 +336,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return timedOut
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimedOut() {
     return timedOut;
   }
@@ -349,7 +350,6 @@ public class BulkSendEnvelopesInfo {
   public void setTimedOut(String timedOut) {
     this.timedOut = timedOut;
   }
-
 
   /**
    * transferCompleted.
@@ -363,9 +363,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return transferCompleted
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTransferCompleted() {
     return transferCompleted;
   }
@@ -376,7 +377,6 @@ public class BulkSendEnvelopesInfo {
   public void setTransferCompleted(String transferCompleted) {
     this.transferCompleted = transferCompleted;
   }
-
 
   /**
    * voided.
@@ -390,9 +390,10 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
+   * 
    * @return voided
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVoided() {
     return voided;
   }
@@ -403,7 +404,6 @@ public class BulkSendEnvelopesInfo {
   public void setVoided(String voided) {
     this.voided = voided;
   }
-
 
   /**
    * Compares objects.
@@ -439,9 +439,9 @@ public class BulkSendEnvelopesInfo {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(authoritativeCopy, completed, correct, created, declined, deleted, delivered, digitalSignaturesPending, sent, signed, timedOut, transferCompleted, voided);
+    return Objects.hash(authoritativeCopy, completed, correct, created, declined, deleted, delivered,
+        digitalSignaturesPending, sent, signed, timedOut, transferCompleted, voided);
   }
-
 
   /**
    * Converts the given object to string.
@@ -450,7 +450,7 @@ public class BulkSendEnvelopesInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendEnvelopesInfo {\n");
-    
+
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    completed: ").append(toIndentedString(completed)).append("\n");
     sb.append("    correct: ").append(toIndentedString(correct)).append("\n");
@@ -480,4 +480,3 @@ public class BulkSendEnvelopesInfo {
   }
 
 }
-

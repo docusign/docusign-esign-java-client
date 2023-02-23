@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * MobileNotifierConfiguration.
@@ -24,7 +24,6 @@ public class MobileNotifierConfiguration {
   @JsonProperty("platform")
   private String platform = null;
 
-
   /**
    * deviceId.
    *
@@ -37,9 +36,10 @@ public class MobileNotifierConfiguration {
 
   /**
    * .
+   * 
    * @return deviceId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeviceId() {
     return deviceId;
   }
@@ -50,7 +50,6 @@ public class MobileNotifierConfiguration {
   public void setDeviceId(String deviceId) {
     this.deviceId = deviceId;
   }
-
 
   /**
    * errorDetails.
@@ -63,10 +62,12 @@ public class MobileNotifierConfiguration {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -77,7 +78,6 @@ public class MobileNotifierConfiguration {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * platform.
@@ -91,9 +91,10 @@ public class MobileNotifierConfiguration {
 
   /**
    * .
+   * 
    * @return platform
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlatform() {
     return platform;
   }
@@ -104,7 +105,6 @@ public class MobileNotifierConfiguration {
   public void setPlatform(String platform) {
     this.platform = platform;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +133,6 @@ public class MobileNotifierConfiguration {
     return Objects.hash(deviceId, errorDetails, platform);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +140,7 @@ public class MobileNotifierConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileNotifierConfiguration {\n");
-    
+
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
@@ -161,4 +160,3 @@ public class MobileNotifierConfiguration {
   }
 
 }
-

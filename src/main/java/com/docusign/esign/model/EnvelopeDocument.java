@@ -12,14 +12,14 @@ import com.docusign.esign.model.SignatureType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains details about the envelope document..
  *
  */
-@ApiModel(description = "This object contains details about the envelope document.")
+@Schema(description = "This object contains details about the envelope document.")
 
 public class EnvelopeDocument {
   @JsonProperty("addedRecipientIds")
@@ -112,7 +112,6 @@ public class EnvelopeDocument {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * addedRecipientIds.
    *
@@ -122,7 +121,7 @@ public class EnvelopeDocument {
     this.addedRecipientIds = addedRecipientIds;
     return this;
   }
-  
+
   /**
    * addAddedRecipientIdsItem.
    *
@@ -138,9 +137,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return addedRecipientIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getAddedRecipientIds() {
     return addedRecipientIds;
   }
@@ -151,7 +151,6 @@ public class EnvelopeDocument {
   public void setAddedRecipientIds(java.util.List<String> addedRecipientIds) {
     this.addedRecipientIds = addedRecipientIds;
   }
-
 
   /**
    * attachmentTabId.
@@ -165,9 +164,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return attachmentTabId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAttachmentTabId() {
     return attachmentTabId;
   }
@@ -178,7 +178,6 @@ public class EnvelopeDocument {
   public void setAttachmentTabId(String attachmentTabId) {
     this.attachmentTabId = attachmentTabId;
   }
-
 
   /**
    * authoritativeCopy.
@@ -191,10 +190,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
+   * Specifies the Authoritative copy feature. If set to true the Authoritative
+   * copy feature is enabled..
+   * 
    * @return authoritativeCopy
    **/
-  @ApiModelProperty(value = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
   public String getAuthoritativeCopy() {
     return authoritativeCopy;
   }
@@ -205,7 +206,6 @@ public class EnvelopeDocument {
   public void setAuthoritativeCopy(String authoritativeCopy) {
     this.authoritativeCopy = authoritativeCopy;
   }
-
 
   /**
    * authoritativeCopyMetadata.
@@ -218,10 +218,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents..
+   * Metadata that indicates if the sender can edit the `authoritativeCopy`
+   * property. Not applicable for template documents..
+   * 
    * @return authoritativeCopyMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.")
+  @Schema(description = "Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.")
   public PropertyMetadata getAuthoritativeCopyMetadata() {
     return authoritativeCopyMetadata;
   }
@@ -233,7 +235,6 @@ public class EnvelopeDocument {
     this.authoritativeCopyMetadata = authoritativeCopyMetadata;
   }
 
-
   /**
    * availableDocumentTypes.
    *
@@ -243,7 +244,7 @@ public class EnvelopeDocument {
     this.availableDocumentTypes = availableDocumentTypes;
     return this;
   }
-  
+
   /**
    * addAvailableDocumentTypesItem.
    *
@@ -259,9 +260,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return availableDocumentTypes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SignatureType> getAvailableDocumentTypes() {
     return availableDocumentTypes;
   }
@@ -272,7 +274,6 @@ public class EnvelopeDocument {
   public void setAvailableDocumentTypes(java.util.List<SignatureType> availableDocumentTypes) {
     this.availableDocumentTypes = availableDocumentTypes;
   }
-
 
   /**
    * containsPdfFormFields.
@@ -286,9 +287,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return containsPdfFormFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContainsPdfFormFields() {
     return containsPdfFormFields;
   }
@@ -299,7 +301,6 @@ public class EnvelopeDocument {
   public void setContainsPdfFormFields(String containsPdfFormFields) {
     this.containsPdfFormFields = containsPdfFormFields;
   }
-
 
   /**
    * display.
@@ -313,9 +314,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return display
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplay() {
     return display;
   }
@@ -326,7 +328,6 @@ public class EnvelopeDocument {
   public void setDisplay(String display) {
     this.display = display;
   }
-
 
   /**
    * displayMetadata.
@@ -339,10 +340,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents..
+   * Metadata that indicates if the sender can edit the `display` property. Not
+   * applicable for template documents..
+   * 
    * @return displayMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.")
+  @Schema(description = "Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.")
   public PropertyMetadata getDisplayMetadata() {
     return displayMetadata;
   }
@@ -353,7 +356,6 @@ public class EnvelopeDocument {
   public void setDisplayMetadata(PropertyMetadata displayMetadata) {
     this.displayMetadata = displayMetadata;
   }
-
 
   /**
    * docGenDocumentStatus.
@@ -367,9 +369,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return docGenDocumentStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocGenDocumentStatus() {
     return docGenDocumentStatus;
   }
@@ -381,7 +384,6 @@ public class EnvelopeDocument {
     this.docGenDocumentStatus = docGenDocumentStatus;
   }
 
-
   /**
    * docGenErrors.
    *
@@ -391,7 +393,7 @@ public class EnvelopeDocument {
     this.docGenErrors = docGenErrors;
     return this;
   }
-  
+
   /**
    * addDocGenErrorsItem.
    *
@@ -407,9 +409,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return docGenErrors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocGenSyntaxError> getDocGenErrors() {
     return docGenErrors;
   }
@@ -421,7 +424,6 @@ public class EnvelopeDocument {
     this.docGenErrors = docGenErrors;
   }
 
-
   /**
    * docGenFormFields.
    *
@@ -431,7 +433,7 @@ public class EnvelopeDocument {
     this.docGenFormFields = docGenFormFields;
     return this;
   }
-  
+
   /**
    * addDocGenFormFieldsItem.
    *
@@ -447,9 +449,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return docGenFormFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocGenFormField> getDocGenFormFields() {
     return docGenFormFields;
   }
@@ -460,7 +463,6 @@ public class EnvelopeDocument {
   public void setDocGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
     this.docGenFormFields = docGenFormFields;
   }
-
 
   /**
    * documentBase64.
@@ -474,9 +476,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return documentBase64
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -488,7 +491,6 @@ public class EnvelopeDocument {
     this.documentBase64 = documentBase64;
   }
 
-
   /**
    * documentFields.
    *
@@ -498,7 +500,7 @@ public class EnvelopeDocument {
     this.documentFields = documentFields;
     return this;
   }
-  
+
   /**
    * addDocumentFieldsItem.
    *
@@ -514,9 +516,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return documentFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -527,7 +530,6 @@ public class EnvelopeDocument {
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
   }
-
 
   /**
    * documentId.
@@ -540,10 +542,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -554,7 +558,6 @@ public class EnvelopeDocument {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdGuid.
@@ -568,9 +571,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return documentIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
@@ -581,7 +585,6 @@ public class EnvelopeDocument {
   public void setDocumentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
   }
-
 
   /**
    * errorDetails.
@@ -594,10 +597,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -608,7 +613,6 @@ public class EnvelopeDocument {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * includeInDownload.
@@ -622,9 +626,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return includeInDownload
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -635,7 +640,6 @@ public class EnvelopeDocument {
   public void setIncludeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
   }
-
 
   /**
    * includeInDownloadMetadata.
@@ -648,10 +652,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents..
+   * Metadata that indicates if the sender can edit the `includeInDownload`
+   * property. Not applicable for template documents..
+   * 
    * @return includeInDownloadMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.")
+  @Schema(description = "Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.")
   public PropertyMetadata getIncludeInDownloadMetadata() {
     return includeInDownloadMetadata;
   }
@@ -662,7 +668,6 @@ public class EnvelopeDocument {
   public void setIncludeInDownloadMetadata(PropertyMetadata includeInDownloadMetadata) {
     this.includeInDownloadMetadata = includeInDownloadMetadata;
   }
-
 
   /**
    * isDocGenDocument.
@@ -676,9 +681,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return isDocGenDocument
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDocGenDocument() {
     return isDocGenDocument;
   }
@@ -689,7 +695,6 @@ public class EnvelopeDocument {
   public void setIsDocGenDocument(String isDocGenDocument) {
     this.isDocGenDocument = isDocGenDocument;
   }
-
 
   /**
    * name.
@@ -703,9 +708,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -716,7 +722,6 @@ public class EnvelopeDocument {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -729,10 +734,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents..
+   * Metadata that indicates if the sender can edit the `name` property. Not
+   * applicable for template documents..
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.")
+  @Schema(description = "Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -743,7 +750,6 @@ public class EnvelopeDocument {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * order.
@@ -757,9 +763,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrder() {
     return order;
   }
@@ -771,7 +778,6 @@ public class EnvelopeDocument {
     this.order = order;
   }
 
-
   /**
    * pages.
    *
@@ -781,7 +787,7 @@ public class EnvelopeDocument {
     this.pages = pages;
     return this;
   }
-  
+
   /**
    * addPagesItem.
    *
@@ -797,9 +803,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return pages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Page> getPages() {
     return pages;
   }
@@ -810,7 +817,6 @@ public class EnvelopeDocument {
   public void setPages(java.util.List<Page> pages) {
     this.pages = pages;
   }
-
 
   /**
    * signerMustAcknowledge.
@@ -824,9 +830,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return signerMustAcknowledge
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -837,7 +844,6 @@ public class EnvelopeDocument {
   public void setSignerMustAcknowledge(String signerMustAcknowledge) {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
-
 
   /**
    * signerMustAcknowledgeMetadata.
@@ -850,10 +856,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents..
+   * Metadata that indicates if the sender can edit the `signerMustAcknowledge`
+   * property. Not applicable for template documents..
+   * 
    * @return signerMustAcknowledgeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.")
+  @Schema(description = "Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.")
   public PropertyMetadata getSignerMustAcknowledgeMetadata() {
     return signerMustAcknowledgeMetadata;
   }
@@ -864,7 +872,6 @@ public class EnvelopeDocument {
   public void setSignerMustAcknowledgeMetadata(PropertyMetadata signerMustAcknowledgeMetadata) {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
   }
-
 
   /**
    * sizeBytes.
@@ -878,9 +885,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return sizeBytes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSizeBytes() {
     return sizeBytes;
   }
@@ -891,7 +899,6 @@ public class EnvelopeDocument {
   public void setSizeBytes(String sizeBytes) {
     this.sizeBytes = sizeBytes;
   }
-
 
   /**
    * templateLocked.
@@ -904,10 +911,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -918,7 +927,6 @@ public class EnvelopeDocument {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateRequired.
@@ -931,10 +939,12 @@ public class EnvelopeDocument {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -945,7 +955,6 @@ public class EnvelopeDocument {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * type.
@@ -959,9 +968,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -972,7 +982,6 @@ public class EnvelopeDocument {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * uri.
@@ -986,9 +995,10 @@ public class EnvelopeDocument {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -999,7 +1009,6 @@ public class EnvelopeDocument {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -1052,9 +1061,12 @@ public class EnvelopeDocument {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata,
+        availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors,
+        docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload,
+        includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge,
+        signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1063,7 +1075,7 @@ public class EnvelopeDocument {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocument {\n");
-    
+
     sb.append("    addedRecipientIds: ").append(toIndentedString(addedRecipientIds)).append("\n");
     sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
@@ -1088,7 +1100,8 @@ public class EnvelopeDocument {
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata)).append("\n");
+    sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata))
+        .append("\n");
     sb.append("    sizeBytes: ").append(toIndentedString(sizeBytes)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
@@ -1110,4 +1123,3 @@ public class EnvelopeDocument {
   }
 
 }
-

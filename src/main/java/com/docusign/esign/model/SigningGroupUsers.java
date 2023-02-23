@@ -6,8 +6,8 @@ import com.docusign.esign.model.SigningGroupUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SigningGroupUsers.
@@ -18,7 +18,6 @@ public class SigningGroupUsers {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
-
   /**
    * users.
    *
@@ -28,7 +27,7 @@ public class SigningGroupUsers {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
@@ -44,9 +43,10 @@ public class SigningGroupUsers {
 
   /**
    * .
+   * 
    * @return users
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SigningGroupUser> getUsers() {
     return users;
   }
@@ -57,7 +57,6 @@ public class SigningGroupUsers {
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class SigningGroupUsers {
     return Objects.hash(users);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class SigningGroupUsers {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupUsers {\n");
-    
+
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class SigningGroupUsers {
   }
 
 }
-

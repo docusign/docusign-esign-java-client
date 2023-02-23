@@ -5,19 +5,20 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method..
+ * The request body for the [EnvelopeViews:
+ * createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/)
+ * method..
  *
  */
-@ApiModel(description = "The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method.")
+@Schema(description = "The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method.")
 
 public class ReturnUrlRequest {
   @JsonProperty("returnUrl")
   private String returnUrl = null;
-
 
   /**
    * returnUrl.
@@ -30,10 +31,17 @@ public class ReturnUrlRequest {
   }
 
   /**
-   * Identifies the return point after sending the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are:   * send (user sends the envelope) * save (user saves the envelope) * cancel (user cancels the sending transaction. No envelopeId is returned in this case.) * error (there is an error when performing the send) * sessionEnd (the sending session ends before the user completes another action)..
+   * Identifies the return point after sending the envelope. DocuSign returns to
+   * the URL and includes an event parameter that can be used to redirect the
+   * recipient to another location. The possible event parameters returned are: *
+   * send (user sends the envelope) * save (user saves the envelope) * cancel
+   * (user cancels the sending transaction. No envelopeId is returned in this
+   * case.) * error (there is an error when performing the send) * sessionEnd (the
+   * sending session ends before the user completes another action)..
+   * 
    * @return returnUrl
    **/
-  @ApiModelProperty(value = "Identifies the return point after sending the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are:   * send (user sends the envelope) * save (user saves the envelope) * cancel (user cancels the sending transaction. No envelopeId is returned in this case.) * error (there is an error when performing the send) * sessionEnd (the sending session ends before the user completes another action).")
+  @Schema(description = "Identifies the return point after sending the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are:   * send (user sends the envelope) * save (user saves the envelope) * cancel (user cancels the sending transaction. No envelopeId is returned in this case.) * error (there is an error when performing the send) * sessionEnd (the sending session ends before the user completes another action).")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -44,7 +52,6 @@ public class ReturnUrlRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
-
 
   /**
    * Compares objects.
@@ -71,7 +78,6 @@ public class ReturnUrlRequest {
     return Objects.hash(returnUrl);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -79,7 +85,7 @@ public class ReturnUrlRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReturnUrlRequest {\n");
-    
+
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -97,4 +103,3 @@ public class ReturnUrlRequest {
   }
 
 }
-

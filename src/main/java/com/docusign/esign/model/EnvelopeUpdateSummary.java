@@ -12,8 +12,8 @@ import com.docusign.esign.model.TextCustomField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeUpdateSummary.
@@ -48,7 +48,6 @@ public class EnvelopeUpdateSummary {
   @JsonProperty("textCustomFieldUpdateResults")
   private java.util.List<TextCustomField> textCustomFieldUpdateResults = null;
 
-
   /**
    * bulkEnvelopeStatus.
    *
@@ -61,9 +60,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * An object that describes the status of the bulk send envelopes..
+   * 
    * @return bulkEnvelopeStatus
    **/
-  @ApiModelProperty(value = "An object that describes the status of the bulk send envelopes.")
+  @Schema(description = "An object that describes the status of the bulk send envelopes.")
   public BulkEnvelopeStatus getBulkEnvelopeStatus() {
     return bulkEnvelopeStatus;
   }
@@ -74,7 +74,6 @@ public class EnvelopeUpdateSummary {
   public void setBulkEnvelopeStatus(BulkEnvelopeStatus bulkEnvelopeStatus) {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
   }
-
 
   /**
    * envelopeId.
@@ -88,9 +87,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -101,7 +101,6 @@ public class EnvelopeUpdateSummary {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * errorDetails.
@@ -114,10 +113,12 @@ public class EnvelopeUpdateSummary {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -129,17 +130,17 @@ public class EnvelopeUpdateSummary {
     this.errorDetails = errorDetails;
   }
 
-
   /**
    * listCustomFieldUpdateResults.
    *
    * @return EnvelopeUpdateSummary
    **/
-  public EnvelopeUpdateSummary listCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
+  public EnvelopeUpdateSummary listCustomFieldUpdateResults(
+      java.util.List<ListCustomField> listCustomFieldUpdateResults) {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
     return this;
   }
-  
+
   /**
    * addListCustomFieldUpdateResultsItem.
    *
@@ -155,9 +156,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * .
+   * 
    * @return listCustomFieldUpdateResults
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ListCustomField> getListCustomFieldUpdateResults() {
     return listCustomFieldUpdateResults;
   }
@@ -168,7 +170,6 @@ public class EnvelopeUpdateSummary {
   public void setListCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
   }
-
 
   /**
    * lockInformation.
@@ -182,9 +183,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * Provides lock information about an envelope that a user has locked..
+   * 
    * @return lockInformation
    **/
-  @ApiModelProperty(value = "Provides lock information about an envelope that a user has locked.")
+  @Schema(description = "Provides lock information about an envelope that a user has locked.")
   public LockInformation getLockInformation() {
     return lockInformation;
   }
@@ -195,7 +197,6 @@ public class EnvelopeUpdateSummary {
   public void setLockInformation(LockInformation lockInformation) {
     this.lockInformation = lockInformation;
   }
-
 
   /**
    * purgeState.
@@ -209,9 +210,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * .
+   * 
    * @return purgeState
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPurgeState() {
     return purgeState;
   }
@@ -223,7 +225,6 @@ public class EnvelopeUpdateSummary {
     this.purgeState = purgeState;
   }
 
-
   /**
    * recipientUpdateResults.
    *
@@ -233,7 +234,7 @@ public class EnvelopeUpdateSummary {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
   }
-  
+
   /**
    * addRecipientUpdateResultsItem.
    *
@@ -249,9 +250,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * .
+   * 
    * @return recipientUpdateResults
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientUpdateResponse> getRecipientUpdateResults() {
     return recipientUpdateResults;
   }
@@ -262,7 +264,6 @@ public class EnvelopeUpdateSummary {
   public void setRecipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
   }
-
 
   /**
    * tabUpdateResults.
@@ -276,9 +277,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * .
+   * 
    * @return tabUpdateResults
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Tabs getTabUpdateResults() {
     return tabUpdateResults;
   }
@@ -290,17 +292,17 @@ public class EnvelopeUpdateSummary {
     this.tabUpdateResults = tabUpdateResults;
   }
 
-
   /**
    * textCustomFieldUpdateResults.
    *
    * @return EnvelopeUpdateSummary
    **/
-  public EnvelopeUpdateSummary textCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
+  public EnvelopeUpdateSummary textCustomFieldUpdateResults(
+      java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
     return this;
   }
-  
+
   /**
    * addTextCustomFieldUpdateResultsItem.
    *
@@ -316,9 +318,10 @@ public class EnvelopeUpdateSummary {
 
   /**
    * .
+   * 
    * @return textCustomFieldUpdateResults
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TextCustomField> getTextCustomFieldUpdateResults() {
     return textCustomFieldUpdateResults;
   }
@@ -329,7 +332,6 @@ public class EnvelopeUpdateSummary {
   public void setTextCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
   }
-
 
   /**
    * Compares objects.
@@ -361,9 +363,9 @@ public class EnvelopeUpdateSummary {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation,
+        purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
   }
-
 
   /**
    * Converts the given object to string.
@@ -372,7 +374,7 @@ public class EnvelopeUpdateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeUpdateSummary {\n");
-    
+
     sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -398,4 +400,3 @@ public class EnvelopeUpdateSummary {
   }
 
 }
-

@@ -10,14 +10,14 @@ import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A document object..
  *
  */
-@ApiModel(description = "A document object.")
+@Schema(description = "A document object.")
 
 public class Document {
   @JsonProperty("applyAnchorTabs")
@@ -101,7 +101,6 @@ public class Document {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * applyAnchorTabs.
    *
@@ -114,9 +113,10 @@ public class Document {
 
   /**
    * Reserved: TBD.
+   * 
    * @return applyAnchorTabs
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getApplyAnchorTabs() {
     return applyAnchorTabs;
   }
@@ -127,7 +127,6 @@ public class Document {
   public void setApplyAnchorTabs(String applyAnchorTabs) {
     this.applyAnchorTabs = applyAnchorTabs;
   }
-
 
   /**
    * assignTabsToRecipientId.
@@ -141,9 +140,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return assignTabsToRecipientId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAssignTabsToRecipientId() {
     return assignTabsToRecipientId;
   }
@@ -154,7 +154,6 @@ public class Document {
   public void setAssignTabsToRecipientId(String assignTabsToRecipientId) {
     this.assignTabsToRecipientId = assignTabsToRecipientId;
   }
-
 
   /**
    * display.
@@ -168,9 +167,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return display
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplay() {
     return display;
   }
@@ -182,7 +182,6 @@ public class Document {
     this.display = display;
   }
 
-
   /**
    * docGenFormFields.
    *
@@ -192,7 +191,7 @@ public class Document {
     this.docGenFormFields = docGenFormFields;
     return this;
   }
-  
+
   /**
    * addDocGenFormFieldsItem.
    *
@@ -208,9 +207,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return docGenFormFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocGenFormField> getDocGenFormFields() {
     return docGenFormFields;
   }
@@ -221,7 +221,6 @@ public class Document {
   public void setDocGenFormFields(java.util.List<DocGenFormField> docGenFormFields) {
     this.docGenFormFields = docGenFormFields;
   }
-
 
   /**
    * documentBase64.
@@ -234,10 +233,14 @@ public class Document {
   }
 
   /**
-   * The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding..
+   * The document's bytes. This field can be used to include a base64 version of
+   * the document bytes within an envelope definition instead of sending the
+   * document using a multi-part HTTP request. The maximum document size is
+   * smaller if this field is used due to the overhead of the base64 encoding..
+   * 
    * @return documentBase64
    **/
-  @ApiModelProperty(value = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
+  @Schema(description = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
   public String getDocumentBase64() {
     return documentBase64;
   }
@@ -249,7 +252,6 @@ public class Document {
     this.documentBase64 = documentBase64;
   }
 
-
   /**
    * documentFields.
    *
@@ -259,7 +261,7 @@ public class Document {
     this.documentFields = documentFields;
     return this;
   }
-  
+
   /**
    * addDocumentFieldsItem.
    *
@@ -275,9 +277,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return documentFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -288,7 +291,6 @@ public class Document {
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
   }
-
 
   /**
    * documentId.
@@ -301,10 +303,12 @@ public class Document {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -315,7 +319,6 @@ public class Document {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * encryptedWithKeyManager.
@@ -328,10 +331,12 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  .
+   * When set to **true**, the document is been already encrypted by the sender
+   * for use with the DocuSign Key Manager Security Appliance. .
+   * 
    * @return encryptedWithKeyManager
    **/
-  @ApiModelProperty(value = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
+  @Schema(description = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
   public String getEncryptedWithKeyManager() {
     return encryptedWithKeyManager;
   }
@@ -342,7 +347,6 @@ public class Document {
   public void setEncryptedWithKeyManager(String encryptedWithKeyManager) {
     this.encryptedWithKeyManager = encryptedWithKeyManager;
   }
-
 
   /**
    * fileExtension.
@@ -355,10 +359,12 @@ public class Document {
   }
 
   /**
-   * The file extension type of the document. If the document is not a PDF it is converted to a PDF.  .
+   * The file extension type of the document. If the document is not a PDF it is
+   * converted to a PDF. .
+   * 
    * @return fileExtension
    **/
-  @ApiModelProperty(value = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
+  @Schema(description = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
   public String getFileExtension() {
     return fileExtension;
   }
@@ -369,7 +375,6 @@ public class Document {
   public void setFileExtension(String fileExtension) {
     this.fileExtension = fileExtension;
   }
-
 
   /**
    * fileFormatHint.
@@ -383,9 +388,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return fileFormatHint
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileFormatHint() {
     return fileFormatHint;
   }
@@ -396,7 +402,6 @@ public class Document {
   public void setFileFormatHint(String fileFormatHint) {
     this.fileFormatHint = fileFormatHint;
   }
-
 
   /**
    * htmlDefinition.
@@ -409,10 +414,13 @@ public class Document {
   }
 
   /**
-   * Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
+   * Defines how to generate the responsive-formatted HTML for the document. See
+   * [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in
+   * the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
+   * 
    * @return htmlDefinition
    **/
-  @ApiModelProperty(value = "Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
+  @Schema(description = "Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
@@ -423,7 +431,6 @@ public class Document {
   public void setHtmlDefinition(DocumentHtmlDefinition htmlDefinition) {
     this.htmlDefinition = htmlDefinition;
   }
-
 
   /**
    * includeInDownload.
@@ -437,9 +444,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return includeInDownload
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIncludeInDownload() {
     return includeInDownload;
   }
@@ -450,7 +458,6 @@ public class Document {
   public void setIncludeInDownload(String includeInDownload) {
     this.includeInDownload = includeInDownload;
   }
-
 
   /**
    * isDocGenDocument.
@@ -464,9 +471,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return isDocGenDocument
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDocGenDocument() {
     return isDocGenDocument;
   }
@@ -478,7 +486,6 @@ public class Document {
     this.isDocGenDocument = isDocGenDocument;
   }
 
-
   /**
    * matchBoxes.
    *
@@ -488,7 +495,7 @@ public class Document {
     this.matchBoxes = matchBoxes;
     return this;
   }
-  
+
   /**
    * addMatchBoxesItem.
    *
@@ -503,10 +510,16 @@ public class Document {
   }
 
   /**
-   * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  .
+   * Matchboxes define areas in a document for document matching when you are
+   * creating envelopes. They are only used when you upload and edit a template. A
+   * matchbox consists of 5 elements: * pageNumber - The document page number on
+   * which the matchbox will appear. * xPosition - The x position of the matchbox
+   * on a page. * yPosition - The y position of the matchbox on a page. * width -
+   * The width of the matchbox. * height - The height of the matchbox. .
+   * 
    * @return matchBoxes
    **/
-  @ApiModelProperty(value = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
+  @Schema(description = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
   public java.util.List<MatchBox> getMatchBoxes() {
     return matchBoxes;
   }
@@ -517,7 +530,6 @@ public class Document {
   public void setMatchBoxes(java.util.List<MatchBox> matchBoxes) {
     this.matchBoxes = matchBoxes;
   }
-
 
   /**
    * name.
@@ -531,9 +543,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -544,7 +557,6 @@ public class Document {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * order.
@@ -558,9 +570,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrder() {
     return order;
   }
@@ -571,7 +584,6 @@ public class Document {
   public void setOrder(String order) {
     this.order = order;
   }
-
 
   /**
    * pages.
@@ -585,9 +597,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return pages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPages() {
     return pages;
   }
@@ -598,7 +611,6 @@ public class Document {
   public void setPages(String pages) {
     this.pages = pages;
   }
-
 
   /**
    * password.
@@ -612,9 +624,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -625,7 +638,6 @@ public class Document {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * pdfFormFieldOption.
@@ -639,9 +651,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return pdfFormFieldOption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPdfFormFieldOption() {
     return pdfFormFieldOption;
   }
@@ -652,7 +665,6 @@ public class Document {
   public void setPdfFormFieldOption(String pdfFormFieldOption) {
     this.pdfFormFieldOption = pdfFormFieldOption;
   }
-
 
   /**
    * remoteUrl.
@@ -665,10 +677,13 @@ public class Document {
   }
 
   /**
-   * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. .
+   * The file id from the cloud storage service where the document is located.
+   * This information is returned using [ML:GET /folders] or
+   * [ML:/folders/{folderid}]. .
+   * 
    * @return remoteUrl
    **/
-  @ApiModelProperty(value = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
+  @Schema(description = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
   public String getRemoteUrl() {
     return remoteUrl;
   }
@@ -679,7 +694,6 @@ public class Document {
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
-
 
   /**
    * signerMustAcknowledge.
@@ -693,9 +707,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return signerMustAcknowledge
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerMustAcknowledge() {
     return signerMustAcknowledge;
   }
@@ -706,7 +721,6 @@ public class Document {
   public void setSignerMustAcknowledge(String signerMustAcknowledge) {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
-
 
   /**
    * signerMustAcknowledgeUseAccountDefault.
@@ -720,9 +734,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return signerMustAcknowledgeUseAccountDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isSignerMustAcknowledgeUseAccountDefault() {
     return signerMustAcknowledgeUseAccountDefault;
   }
@@ -733,7 +748,6 @@ public class Document {
   public void setSignerMustAcknowledgeUseAccountDefault(Boolean signerMustAcknowledgeUseAccountDefault) {
     this.signerMustAcknowledgeUseAccountDefault = signerMustAcknowledgeUseAccountDefault;
   }
-
 
   /**
    * tabs.
@@ -746,10 +760,13 @@ public class Document {
   }
 
   /**
-   * A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients..
+   * A list of tabs, which are represented graphically as symbols on documents at
+   * the time of signing. Tabs show recipients where to sign, initial, or enter
+   * data. They may also display data to the recipients..
+   * 
    * @return tabs
    **/
-  @ApiModelProperty(value = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
+  @Schema(description = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
   public Tabs getTabs() {
     return tabs;
   }
@@ -760,7 +777,6 @@ public class Document {
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
-
 
   /**
    * templateLocked.
@@ -773,10 +789,12 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -787,7 +805,6 @@ public class Document {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateRequired.
@@ -800,10 +817,12 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -814,7 +833,6 @@ public class Document {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * transformPdfFields.
@@ -827,10 +845,15 @@ public class Document {
   }
 
   /**
-   * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. .
+   * When set to **true**, PDF form field data is transformed into document tab
+   * values when the PDF form field name matches the DocuSign custom tab tabLabel.
+   * The resulting PDF form data is also returned in the PDF meta data when
+   * requesting the document PDF. See the [ML:Transform PDF Fields] section for
+   * more information about how fields are transformed into DocuSign tabs. .
+   * 
    * @return transformPdfFields
    **/
-  @ApiModelProperty(value = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
+  @Schema(description = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
   public String getTransformPdfFields() {
     return transformPdfFields;
   }
@@ -841,7 +864,6 @@ public class Document {
   public void setTransformPdfFields(String transformPdfFields) {
     this.transformPdfFields = transformPdfFields;
   }
-
 
   /**
    * uri.
@@ -855,9 +877,10 @@ public class Document {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -868,7 +891,6 @@ public class Document {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -918,9 +940,12 @@ public class Document {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64,
+        documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition,
+        includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl,
+        signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired,
+        transformPdfFields, uri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -929,7 +954,7 @@ public class Document {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Document {\n");
-    
+
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
     sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
@@ -951,7 +976,8 @@ public class Document {
     sb.append("    pdfFormFieldOption: ").append(toIndentedString(pdfFormFieldOption)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    signerMustAcknowledgeUseAccountDefault: ").append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
+    sb.append("    signerMustAcknowledgeUseAccountDefault: ")
+        .append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
@@ -973,4 +999,3 @@ public class Document {
   }
 
 }
-

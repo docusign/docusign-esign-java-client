@@ -6,8 +6,8 @@ import com.docusign.esign.model.Comment;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CommentHistoryResult.
@@ -27,7 +27,6 @@ public class CommentHistoryResult {
   @JsonProperty("startTimetoken")
   private String startTimetoken = null;
 
-
   /**
    * comments.
    *
@@ -37,7 +36,7 @@ public class CommentHistoryResult {
     this.comments = comments;
     return this;
   }
-  
+
   /**
    * addCommentsItem.
    *
@@ -53,9 +52,10 @@ public class CommentHistoryResult {
 
   /**
    * .
+   * 
    * @return comments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Comment> getComments() {
     return comments;
   }
@@ -66,7 +66,6 @@ public class CommentHistoryResult {
   public void setComments(java.util.List<Comment> comments) {
     this.comments = comments;
   }
-
 
   /**
    * count.
@@ -80,9 +79,10 @@ public class CommentHistoryResult {
 
   /**
    * .
+   * 
    * @return count
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getCount() {
     return count;
   }
@@ -93,7 +93,6 @@ public class CommentHistoryResult {
   public void setCount(Integer count) {
     this.count = count;
   }
-
 
   /**
    * endTimetoken.
@@ -107,9 +106,10 @@ public class CommentHistoryResult {
 
   /**
    * .
+   * 
    * @return endTimetoken
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEndTimetoken() {
     return endTimetoken;
   }
@@ -120,7 +120,6 @@ public class CommentHistoryResult {
   public void setEndTimetoken(String endTimetoken) {
     this.endTimetoken = endTimetoken;
   }
-
 
   /**
    * startTimetoken.
@@ -134,9 +133,10 @@ public class CommentHistoryResult {
 
   /**
    * .
+   * 
    * @return startTimetoken
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStartTimetoken() {
     return startTimetoken;
   }
@@ -147,7 +147,6 @@ public class CommentHistoryResult {
   public void setStartTimetoken(String startTimetoken) {
     this.startTimetoken = startTimetoken;
   }
-
 
   /**
    * Compares objects.
@@ -177,7 +176,6 @@ public class CommentHistoryResult {
     return Objects.hash(comments, count, endTimetoken, startTimetoken);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -185,7 +183,7 @@ public class CommentHistoryResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentHistoryResult {\n");
-    
+
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    endTimetoken: ").append(toIndentedString(endTimetoken)).append("\n");
@@ -206,4 +204,3 @@ public class CommentHistoryResult {
   }
 
 }
-

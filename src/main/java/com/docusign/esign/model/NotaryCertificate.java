@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** NotaryCertificate */
@@ -232,7 +232,7 @@ public class NotaryCertificate {
   }
 
   /** @return anchorAllowWhiteSpaceInCharacters */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -252,7 +252,7 @@ public class NotaryCertificate {
    *
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -268,14 +268,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the
    * document. The default value is **true**.
    *
    * @return anchorCaseSensitive
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -295,7 +294,7 @@ public class NotaryCertificate {
    *
    * @return anchorCaseSensitiveMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -310,14 +309,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or
    * **right**. The default value is **left**.
    *
    * @return anchorHorizontalAlignment
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -337,7 +335,7 @@ public class NotaryCertificate {
    *
    * @return anchorHorizontalAlignmentMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -353,13 +351,12 @@ public class NotaryCertificate {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document.
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document.
    *
    * @return anchorIgnoreIfNotPresent
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -379,7 +376,7 @@ public class NotaryCertificate {
    *
    * @return anchorIgnoreIfNotPresentMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -395,14 +392,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded
    * in other strings are ignored.) The default value is **true**.
    *
    * @return anchorMatchWholeWord
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -422,7 +418,7 @@ public class NotaryCertificate {
    *
    * @return anchorMatchWholeWordMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -441,7 +437,7 @@ public class NotaryCertificate {
    *
    * @return anchorString
    */
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -460,7 +456,7 @@ public class NotaryCertificate {
    *
    * @return anchorStringMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -475,7 +471,7 @@ public class NotaryCertificate {
   }
 
   /** @return anchorTabProcessorVersion */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -495,7 +491,7 @@ public class NotaryCertificate {
    *
    * @return anchorTabProcessorVersionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -511,14 +507,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or
    * inches.
    *
    * @return anchorUnits
    */
-  @ApiModelProperty(
-      value =
-          "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -537,7 +532,7 @@ public class NotaryCertificate {
    *
    * @return anchorUnitsMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -552,13 +547,12 @@ public class NotaryCertificate {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString.
    *
    * @return anchorXOffset
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -577,7 +571,7 @@ public class NotaryCertificate {
    *
    * @return anchorXOffsetMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -592,13 +586,12 @@ public class NotaryCertificate {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString.
    *
    * @return anchorYOffset
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -617,7 +610,7 @@ public class NotaryCertificate {
    *
    * @return anchorYOffsetMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -632,14 +625,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's
    * visibility.
    *
    * @return conditionalParentLabel
    */
-  @ApiModelProperty(
-      value =
-          "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -659,7 +651,7 @@ public class NotaryCertificate {
    *
    * @return conditionalParentLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -674,15 +666,15 @@ public class NotaryCertificate {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.
-   * If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility.
+   * If the parent tab is a Checkbox, Radio button, Optional Signature, or
+   * Optional Initial use
    * \"on\" as the value to show that the parent tab is active.
    *
    * @return conditionalParentValue
    */
-  @ApiModelProperty(
-      value =
-          "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -702,7 +694,7 @@ public class NotaryCertificate {
    *
    * @return conditionalParentValueMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -717,15 +709,15 @@ public class NotaryCertificate {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used
-   * when adding new tabs for a recipient. When used, the new tab inherits all the custom tab
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used
+   * when adding new tabs for a recipient. When used, the new tab inherits all the
+   * custom tab
    * properties.
    *
    * @return customTabId
    */
-  @ApiModelProperty(
-      value =
-          "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -744,7 +736,7 @@ public class NotaryCertificate {
    *
    * @return customTabIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -759,14 +751,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -785,7 +776,7 @@ public class NotaryCertificate {
    *
    * @return documentIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -804,7 +795,7 @@ public class NotaryCertificate {
    *
    * @return errorDetails
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -819,7 +810,7 @@ public class NotaryCertificate {
   }
 
   /** @return formOrder */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -838,7 +829,7 @@ public class NotaryCertificate {
    *
    * @return formOrderMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -853,7 +844,7 @@ public class NotaryCertificate {
   }
 
   /** @return formPageLabel */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -872,7 +863,7 @@ public class NotaryCertificate {
    *
    * @return formPageLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -887,7 +878,7 @@ public class NotaryCertificate {
   }
 
   /** @return formPageNumber */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -906,7 +897,7 @@ public class NotaryCertificate {
    *
    * @return formPageNumberMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -925,7 +916,7 @@ public class NotaryCertificate {
    *
    * @return height
    */
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -944,7 +935,7 @@ public class NotaryCertificate {
    *
    * @return heightMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -963,8 +954,7 @@ public class NotaryCertificate {
    *
    * @return locked
    */
-  @ApiModelProperty(
-      value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -983,7 +973,7 @@ public class NotaryCertificate {
    *
    * @return lockedMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1002,7 +992,7 @@ public class NotaryCertificate {
    *
    * @return mergeField
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1017,7 +1007,7 @@ public class NotaryCertificate {
   }
 
   /** @return mergeFieldXml */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1036,7 +1026,7 @@ public class NotaryCertificate {
    *
    * @return pageNumber
    */
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1055,7 +1045,7 @@ public class NotaryCertificate {
    *
    * @return pageNumberMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1070,14 +1060,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign
    * the Document.
    *
    * @return recipientId
    */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1092,7 +1081,7 @@ public class NotaryCertificate {
   }
 
   /** @return recipientIdGuid */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1111,7 +1100,7 @@ public class NotaryCertificate {
    *
    * @return recipientIdGuidMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1130,7 +1119,7 @@ public class NotaryCertificate {
    *
    * @return recipientIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1149,7 +1138,7 @@ public class NotaryCertificate {
    *
    * @return required
    */
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -1168,7 +1157,7 @@ public class NotaryCertificate {
    *
    * @return requiredMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -1188,7 +1177,7 @@ public class NotaryCertificate {
    *
    * @return smartContractInformation
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1203,14 +1192,14 @@ public class NotaryCertificate {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified
+   * and sent later.
    *
    * @return status
    */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1229,7 +1218,7 @@ public class NotaryCertificate {
    *
    * @return statusMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1252,7 +1241,7 @@ public class NotaryCertificate {
   }
 
   /** @return tabGroupLabels */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1271,7 +1260,7 @@ public class NotaryCertificate {
    *
    * @return tabGroupLabelsMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1286,13 +1275,12 @@ public class NotaryCertificate {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call].
    *
    * @return tabId
    */
-  @ApiModelProperty(
-      value =
-          "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1311,7 +1299,7 @@ public class NotaryCertificate {
    *
    * @return tabIdMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1330,7 +1318,7 @@ public class NotaryCertificate {
    *
    * @return tabLabelMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -1345,7 +1333,7 @@ public class NotaryCertificate {
   }
 
   /** @return tabOrder */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -1364,7 +1352,7 @@ public class NotaryCertificate {
    *
    * @return tabOrderMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -1379,7 +1367,7 @@ public class NotaryCertificate {
   }
 
   /** @return tabType */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -1398,7 +1386,7 @@ public class NotaryCertificate {
    *
    * @return tabTypeMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -1413,14 +1401,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when
    * working with template recipients.
    *
    * @return templateLocked
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1439,7 +1426,7 @@ public class NotaryCertificate {
    *
    * @return templateLockedMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -1454,14 +1441,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with
    * template recipients.
    *
    * @return templateRequired
    */
-  @ApiModelProperty(
-      value =
-          "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1480,7 +1466,7 @@ public class NotaryCertificate {
    *
    * @return templateRequiredMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -1495,7 +1481,7 @@ public class NotaryCertificate {
   }
 
   /** @return tooltip */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -1514,7 +1500,7 @@ public class NotaryCertificate {
    *
    * @return toolTipMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -1533,7 +1519,7 @@ public class NotaryCertificate {
    *
    * @return width
    */
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -1552,7 +1538,7 @@ public class NotaryCertificate {
    *
    * @return widthMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -1567,14 +1553,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when
    * determining position.
    *
    * @return xPosition
    */
-  @ApiModelProperty(
-      value =
-          "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -1593,7 +1578,7 @@ public class NotaryCertificate {
    *
    * @return xPositionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -1608,14 +1593,13 @@ public class NotaryCertificate {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when
    * determining position.
    *
    * @return yPosition
    */
-  @ApiModelProperty(
-      value =
-          "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -1634,7 +1618,7 @@ public class NotaryCertificate {
    *
    * @return yPositionMetadata
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -1653,8 +1637,8 @@ public class NotaryCertificate {
     }
     NotaryCertificate notaryCertificate = (NotaryCertificate) o;
     return Objects.equals(
-            this.anchorAllowWhiteSpaceInCharacters,
-            notaryCertificate.anchorAllowWhiteSpaceInCharacters)
+        this.anchorAllowWhiteSpaceInCharacters,
+        notaryCertificate.anchorAllowWhiteSpaceInCharacters)
         && Objects.equals(
             this.anchorAllowWhiteSpaceInCharactersMetadata,
             notaryCertificate.anchorAllowWhiteSpaceInCharactersMetadata)
@@ -1962,7 +1946,8 @@ public class NotaryCertificate {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

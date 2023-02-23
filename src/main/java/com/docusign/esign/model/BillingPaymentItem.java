@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing payment request object..
  *
  */
-@ApiModel(description = "Defines a billing payment request object.")
+@Schema(description = "Defines a billing payment request object.")
 
 public class BillingPaymentItem {
   @JsonProperty("amount")
@@ -30,7 +30,6 @@ public class BillingPaymentItem {
   @JsonProperty("paymentNumber")
   private String paymentNumber = null;
 
-
   /**
    * amount.
    *
@@ -43,9 +42,10 @@ public class BillingPaymentItem {
 
   /**
    * Reserved: TBD.
+   * 
    * @return amount
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
@@ -56,7 +56,6 @@ public class BillingPaymentItem {
   public void setAmount(String amount) {
     this.amount = amount;
   }
-
 
   /**
    * description.
@@ -70,9 +69,10 @@ public class BillingPaymentItem {
 
   /**
    * .
+   * 
    * @return description
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDescription() {
     return description;
   }
@@ -83,7 +83,6 @@ public class BillingPaymentItem {
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   /**
    * paymentDate.
@@ -97,9 +96,10 @@ public class BillingPaymentItem {
 
   /**
    * .
+   * 
    * @return paymentDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentDate() {
     return paymentDate;
   }
@@ -110,7 +110,6 @@ public class BillingPaymentItem {
   public void setPaymentDate(String paymentDate) {
     this.paymentDate = paymentDate;
   }
-
 
   /**
    * paymentId.
@@ -124,9 +123,10 @@ public class BillingPaymentItem {
 
   /**
    * .
+   * 
    * @return paymentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentId() {
     return paymentId;
   }
@@ -137,7 +137,6 @@ public class BillingPaymentItem {
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
-
 
   /**
    * paymentNumber.
@@ -150,10 +149,13 @@ public class BillingPaymentItem {
   }
 
   /**
-   * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\"..
+   * When set to **true**, a PDF version of the invoice is available. To get the
+   * PDF, make the call again and change \"Accept:\" in the header to \"Accept:
+   * application/pdf\"..
+   * 
    * @return paymentNumber
    **/
-  @ApiModelProperty(value = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
+  @Schema(description = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
   public String getPaymentNumber() {
     return paymentNumber;
   }
@@ -164,7 +166,6 @@ public class BillingPaymentItem {
   public void setPaymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +196,6 @@ public class BillingPaymentItem {
     return Objects.hash(amount, description, paymentDate, paymentId, paymentNumber);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +203,7 @@ public class BillingPaymentItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentItem {\n");
-    
+
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    paymentDate: ").append(toIndentedString(paymentDate)).append("\n");
@@ -225,4 +225,3 @@ public class BillingPaymentItem {
   }
 
 }
-

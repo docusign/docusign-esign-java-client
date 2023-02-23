@@ -7,14 +7,14 @@ import com.docusign.esign.model.Group;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about items shared among groups..
  *
  */
-@ApiModel(description = "Information about items shared among groups.")
+@Schema(description = "Information about items shared among groups.")
 
 public class MemberGroupSharedItem {
   @JsonProperty("errorDetails")
@@ -25,7 +25,6 @@ public class MemberGroupSharedItem {
 
   @JsonProperty("shared")
   private String shared = null;
-
 
   /**
    * errorDetails.
@@ -38,10 +37,12 @@ public class MemberGroupSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -52,7 +53,6 @@ public class MemberGroupSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * group.
@@ -66,9 +66,10 @@ public class MemberGroupSharedItem {
 
   /**
    * The group sharing the item..
+   * 
    * @return group
    **/
-  @ApiModelProperty(value = "The group sharing the item.")
+  @Schema(description = "The group sharing the item.")
   public Group getGroup() {
     return group;
   }
@@ -79,7 +80,6 @@ public class MemberGroupSharedItem {
   public void setGroup(Group group) {
     this.group = group;
   }
-
 
   /**
    * shared.
@@ -93,9 +93,10 @@ public class MemberGroupSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -106,7 +107,6 @@ public class MemberGroupSharedItem {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * Compares objects.
@@ -135,7 +135,6 @@ public class MemberGroupSharedItem {
     return Objects.hash(errorDetails, group, shared);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -143,7 +142,7 @@ public class MemberGroupSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberGroupSharedItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -163,4 +162,3 @@ public class MemberGroupSharedItem {
   }
 
 }
-

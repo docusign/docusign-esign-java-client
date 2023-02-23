@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AdminMessage.
@@ -20,7 +20,6 @@ public class AdminMessage {
   @JsonProperty("moreInformation")
   private String moreInformation = null;
 
-
   /**
    * baseMessage.
    *
@@ -33,9 +32,10 @@ public class AdminMessage {
 
   /**
    * .
+   * 
    * @return baseMessage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBaseMessage() {
     return baseMessage;
   }
@@ -46,7 +46,6 @@ public class AdminMessage {
   public void setBaseMessage(String baseMessage) {
     this.baseMessage = baseMessage;
   }
-
 
   /**
    * moreInformation.
@@ -60,9 +59,10 @@ public class AdminMessage {
 
   /**
    * .
+   * 
    * @return moreInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMoreInformation() {
     return moreInformation;
   }
@@ -73,7 +73,6 @@ public class AdminMessage {
   public void setMoreInformation(String moreInformation) {
     this.moreInformation = moreInformation;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class AdminMessage {
     return Objects.hash(baseMessage, moreInformation);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class AdminMessage {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdminMessage {\n");
-    
+
     sb.append("    baseMessage: ").append(toIndentedString(baseMessage)).append("\n");
     sb.append("    moreInformation: ").append(toIndentedString(moreInformation)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class AdminMessage {
   }
 
 }
-

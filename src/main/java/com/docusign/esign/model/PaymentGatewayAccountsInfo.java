@@ -6,30 +6,30 @@ import com.docusign.esign.model.PaymentGatewayAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Holds information about connected payment accounts..
  *
  */
-@ApiModel(description = "Holds information about connected payment accounts.")
+@Schema(description = "Holds information about connected payment accounts.")
 
 public class PaymentGatewayAccountsInfo {
   @JsonProperty("paymentGatewayAccounts")
   private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = null;
-
 
   /**
    * paymentGatewayAccounts.
    *
    * @return PaymentGatewayAccountsInfo
    **/
-  public PaymentGatewayAccountsInfo paymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
+  public PaymentGatewayAccountsInfo paymentGatewayAccounts(
+      java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
     return this;
   }
-  
+
   /**
    * addPaymentGatewayAccountsItem.
    *
@@ -45,9 +45,10 @@ public class PaymentGatewayAccountsInfo {
 
   /**
    * .
+   * 
    * @return paymentGatewayAccounts
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<PaymentGatewayAccount> getPaymentGatewayAccounts() {
     return paymentGatewayAccounts;
   }
@@ -58,7 +59,6 @@ public class PaymentGatewayAccountsInfo {
   public void setPaymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +85,6 @@ public class PaymentGatewayAccountsInfo {
     return Objects.hash(paymentGatewayAccounts);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +92,7 @@ public class PaymentGatewayAccountsInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccountsInfo {\n");
-    
+
     sb.append("    paymentGatewayAccounts: ").append(toIndentedString(paymentGatewayAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +110,3 @@ public class PaymentGatewayAccountsInfo {
   }
 
 }
-

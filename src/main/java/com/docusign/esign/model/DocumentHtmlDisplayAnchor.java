@@ -6,8 +6,8 @@ import com.docusign.esign.model.DocumentHtmlDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentHtmlDisplayAnchor.
@@ -33,7 +33,6 @@ public class DocumentHtmlDisplayAnchor {
   @JsonProperty("startAnchor")
   private String startAnchor = null;
 
-
   /**
    * caseSensitive.
    *
@@ -46,9 +45,10 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
+   * 
    * @return caseSensitive
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCaseSensitive() {
     return caseSensitive;
   }
@@ -59,7 +59,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setCaseSensitive(Boolean caseSensitive) {
     this.caseSensitive = caseSensitive;
   }
-
 
   /**
    * displaySettings.
@@ -72,10 +71,12 @@ public class DocumentHtmlDisplayAnchor {
   }
 
   /**
-   * This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays..
+   * This object defines how the HTML section inside the `startAnchor` and
+   * `endAnchor` displays..
+   * 
    * @return displaySettings
    **/
-  @ApiModelProperty(value = "This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.")
+  @Schema(description = "This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.")
   public DocumentHtmlDisplaySettings getDisplaySettings() {
     return displaySettings;
   }
@@ -86,7 +87,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setDisplaySettings(DocumentHtmlDisplaySettings displaySettings) {
     this.displaySettings = displaySettings;
   }
-
 
   /**
    * endAnchor.
@@ -100,9 +100,10 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
+   * 
    * @return endAnchor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEndAnchor() {
     return endAnchor;
   }
@@ -113,7 +114,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setEndAnchor(String endAnchor) {
     this.endAnchor = endAnchor;
   }
-
 
   /**
    * removeEndAnchor.
@@ -127,9 +127,10 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
+   * 
    * @return removeEndAnchor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRemoveEndAnchor() {
     return removeEndAnchor;
   }
@@ -140,7 +141,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setRemoveEndAnchor(Boolean removeEndAnchor) {
     this.removeEndAnchor = removeEndAnchor;
   }
-
 
   /**
    * removeStartAnchor.
@@ -154,9 +154,10 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
+   * 
    * @return removeStartAnchor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRemoveStartAnchor() {
     return removeStartAnchor;
   }
@@ -167,7 +168,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setRemoveStartAnchor(Boolean removeStartAnchor) {
     this.removeStartAnchor = removeStartAnchor;
   }
-
 
   /**
    * startAnchor.
@@ -181,9 +181,10 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
+   * 
    * @return startAnchor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStartAnchor() {
     return startAnchor;
   }
@@ -194,7 +195,6 @@ public class DocumentHtmlDisplayAnchor {
   public void setStartAnchor(String startAnchor) {
     this.startAnchor = startAnchor;
   }
-
 
   /**
    * Compares objects.
@@ -226,7 +226,6 @@ public class DocumentHtmlDisplayAnchor {
     return Objects.hash(caseSensitive, displaySettings, endAnchor, removeEndAnchor, removeStartAnchor, startAnchor);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -234,7 +233,7 @@ public class DocumentHtmlDisplayAnchor {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDisplayAnchor {\n");
-    
+
     sb.append("    caseSensitive: ").append(toIndentedString(caseSensitive)).append("\n");
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    endAnchor: ").append(toIndentedString(endAnchor)).append("\n");
@@ -257,4 +256,3 @@ public class DocumentHtmlDisplayAnchor {
   }
 
 }
-

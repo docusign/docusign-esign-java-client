@@ -9,14 +9,19 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
+ * When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab
+ * is a payment item. See [Requesting Payments Along with
+ * Signatures][paymentguide] in the DocuSign Support Center to learn more about
+ * payments. [paymentguide]:
+ * https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
+ * .
  *
  */
-@ApiModel(description = "When a formula tab has a `paymentDetails` property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
+@Schema(description = "When a formula tab has a `paymentDetails` property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
 
 public class PaymentDetails {
   @JsonProperty("allowedPaymentMethods")
@@ -73,7 +78,6 @@ public class PaymentDetails {
   @JsonProperty("total")
   private Money total = null;
 
-
   /**
    * allowedPaymentMethods.
    *
@@ -83,7 +87,7 @@ public class PaymentDetails {
     this.allowedPaymentMethods = allowedPaymentMethods;
     return this;
   }
-  
+
   /**
    * addAllowedPaymentMethodsItem.
    *
@@ -99,9 +103,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return allowedPaymentMethods
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getAllowedPaymentMethods() {
     return allowedPaymentMethods;
   }
@@ -112,7 +117,6 @@ public class PaymentDetails {
   public void setAllowedPaymentMethods(java.util.List<String> allowedPaymentMethods) {
     this.allowedPaymentMethods = allowedPaymentMethods;
   }
-
 
   /**
    * chargeId.
@@ -126,9 +130,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return chargeId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChargeId() {
     return chargeId;
   }
@@ -139,7 +144,6 @@ public class PaymentDetails {
   public void setChargeId(String chargeId) {
     this.chargeId = chargeId;
   }
-
 
   /**
    * currencyCode.
@@ -153,9 +157,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -166,7 +171,6 @@ public class PaymentDetails {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currencyCodeMetadata.
@@ -180,9 +184,10 @@ public class PaymentDetails {
 
   /**
    * Metadata that indicates whether the `currencyCode` property is editable..
+   * 
    * @return currencyCodeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `currencyCode` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `currencyCode` property is editable.")
   public PropertyMetadata getCurrencyCodeMetadata() {
     return currencyCodeMetadata;
   }
@@ -193,7 +198,6 @@ public class PaymentDetails {
   public void setCurrencyCodeMetadata(PropertyMetadata currencyCodeMetadata) {
     this.currencyCodeMetadata = currencyCodeMetadata;
   }
-
 
   /**
    * customerId.
@@ -207,9 +211,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return customerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomerId() {
     return customerId;
   }
@@ -220,7 +225,6 @@ public class PaymentDetails {
   public void setCustomerId(String customerId) {
     this.customerId = customerId;
   }
-
 
   /**
    * customMetadata.
@@ -234,9 +238,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return customMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomMetadata() {
     return customMetadata;
   }
@@ -247,7 +252,6 @@ public class PaymentDetails {
   public void setCustomMetadata(String customMetadata) {
     this.customMetadata = customMetadata;
   }
-
 
   /**
    * customMetadataRequired.
@@ -261,9 +265,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return customMetadataRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCustomMetadataRequired() {
     return customMetadataRequired;
   }
@@ -274,7 +279,6 @@ public class PaymentDetails {
   public void setCustomMetadataRequired(Boolean customMetadataRequired) {
     this.customMetadataRequired = customMetadataRequired;
   }
-
 
   /**
    * gatewayAccountId.
@@ -288,9 +292,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return gatewayAccountId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGatewayAccountId() {
     return gatewayAccountId;
   }
@@ -301,7 +306,6 @@ public class PaymentDetails {
   public void setGatewayAccountId(String gatewayAccountId) {
     this.gatewayAccountId = gatewayAccountId;
   }
-
 
   /**
    * gatewayAccountIdMetadata.
@@ -315,9 +319,10 @@ public class PaymentDetails {
 
   /**
    * Metadata that indicates whether the `gatewayAccountId` property is editable..
+   * 
    * @return gatewayAccountIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `gatewayAccountId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `gatewayAccountId` property is editable.")
   public PropertyMetadata getGatewayAccountIdMetadata() {
     return gatewayAccountIdMetadata;
   }
@@ -328,7 +333,6 @@ public class PaymentDetails {
   public void setGatewayAccountIdMetadata(PropertyMetadata gatewayAccountIdMetadata) {
     this.gatewayAccountIdMetadata = gatewayAccountIdMetadata;
   }
-
 
   /**
    * gatewayDisplayName.
@@ -342,9 +346,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return gatewayDisplayName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGatewayDisplayName() {
     return gatewayDisplayName;
   }
@@ -355,7 +360,6 @@ public class PaymentDetails {
   public void setGatewayDisplayName(String gatewayDisplayName) {
     this.gatewayDisplayName = gatewayDisplayName;
   }
-
 
   /**
    * gatewayName.
@@ -369,9 +373,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return gatewayName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGatewayName() {
     return gatewayName;
   }
@@ -383,7 +388,6 @@ public class PaymentDetails {
     this.gatewayName = gatewayName;
   }
 
-
   /**
    * lineItems.
    *
@@ -393,7 +397,7 @@ public class PaymentDetails {
     this.lineItems = lineItems;
     return this;
   }
-  
+
   /**
    * addLineItemsItem.
    *
@@ -409,9 +413,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return lineItems
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<PaymentLineItem> getLineItems() {
     return lineItems;
   }
@@ -422,7 +427,6 @@ public class PaymentDetails {
   public void setLineItems(java.util.List<PaymentLineItem> lineItems) {
     this.lineItems = lineItems;
   }
-
 
   /**
    * paymentOption.
@@ -436,9 +440,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return paymentOption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentOption() {
     return paymentOption;
   }
@@ -449,7 +454,6 @@ public class PaymentDetails {
   public void setPaymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
   }
-
 
   /**
    * paymentSourceId.
@@ -463,9 +467,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return paymentSourceId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentSourceId() {
     return paymentSourceId;
   }
@@ -476,7 +481,6 @@ public class PaymentDetails {
   public void setPaymentSourceId(String paymentSourceId) {
     this.paymentSourceId = paymentSourceId;
   }
-
 
   /**
    * signerValues.
@@ -490,9 +494,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return signerValues
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PaymentSignerValues getSignerValues() {
     return signerValues;
   }
@@ -503,7 +508,6 @@ public class PaymentDetails {
   public void setSignerValues(PaymentSignerValues signerValues) {
     this.signerValues = signerValues;
   }
-
 
   /**
    * status.
@@ -516,10 +520,13 @@ public class PaymentDetails {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -530,7 +537,6 @@ public class PaymentDetails {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * subGatewayName.
@@ -544,9 +550,10 @@ public class PaymentDetails {
 
   /**
    * .
+   * 
    * @return subGatewayName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubGatewayName() {
     return subGatewayName;
   }
@@ -557,7 +564,6 @@ public class PaymentDetails {
   public void setSubGatewayName(String subGatewayName) {
     this.subGatewayName = subGatewayName;
   }
-
 
   /**
    * total.
@@ -570,10 +576,14 @@ public class PaymentDetails {
   }
 
   /**
-   * This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields. .
+   * This read-only property is a currency-formatted string that represents the
+   * total of all the line items. The total is available only after the document
+   * is completed, which is when all recipients have paid and have completed all
+   * required fields. .
+   * 
    * @return total
    **/
-  @ApiModelProperty(value = "This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields. ")
+  @Schema(description = "This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields. ")
   public Money getTotal() {
     return total;
   }
@@ -584,7 +594,6 @@ public class PaymentDetails {
   public void setTotal(Money total) {
     this.total = total;
   }
-
 
   /**
    * Compares objects.
@@ -625,9 +634,10 @@ public class PaymentDetails {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, signerValues, status, subGatewayName, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata,
+        customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems,
+        paymentOption, paymentSourceId, signerValues, status, subGatewayName, total);
   }
-
 
   /**
    * Converts the given object to string.
@@ -636,7 +646,7 @@ public class PaymentDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentDetails {\n");
-    
+
     sb.append("    allowedPaymentMethods: ").append(toIndentedString(allowedPaymentMethods)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -671,4 +681,3 @@ public class PaymentDetails {
   }
 
 }
-

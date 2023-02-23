@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** BulkEnvelopesResponse */
@@ -47,7 +47,7 @@ public class BulkEnvelopesResponse {
    *
    * @return bulkEnvelopeStatuses
    */
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BulkEnvelopeStatus> getBulkEnvelopeStatuses() {
     return bulkEnvelopeStatuses;
   }
@@ -66,7 +66,7 @@ public class BulkEnvelopesResponse {
    *
    * @return endPosition
    */
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -81,14 +81,13 @@ public class BulkEnvelopesResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the
    * entire results of the search, this is null.
    *
    * @return nextUri
    */
-  @ApiModelProperty(
-      value =
-          "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -107,7 +106,7 @@ public class BulkEnvelopesResponse {
    *
    * @return previousUri
    */
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -126,7 +125,7 @@ public class BulkEnvelopesResponse {
    *
    * @return resultSetSize
    */
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -145,7 +144,7 @@ public class BulkEnvelopesResponse {
    *
    * @return startPosition
    */
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -160,14 +159,14 @@ public class BulkEnvelopesResponse {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or
-   * equal to the value of the property returning the results in the in the response.
+   * The total number of items available in the result set. This will always be
+   * greater than or
+   * equal to the value of the property returning the results in the in the
+   * response.
    *
    * @return totalSetSize
    */
-  @ApiModelProperty(
-      value =
-          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -225,7 +224,8 @@ public class BulkEnvelopesResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

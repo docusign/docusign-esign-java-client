@@ -6,8 +6,8 @@ import com.docusign.esign.model.NotificationDefaultSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NotificationDefaults.
@@ -21,7 +21,6 @@ public class NotificationDefaults {
   @JsonProperty("emailNotifications")
   private NotificationDefaultSettings emailNotifications = null;
 
-
   /**
    * apiEmailNotifications.
    *
@@ -34,9 +33,10 @@ public class NotificationDefaults {
 
   /**
    * The default notification settings for envelopes sent by using the console..
+   * 
    * @return apiEmailNotifications
    **/
-  @ApiModelProperty(value = "The default notification settings for envelopes sent by using the console.")
+  @Schema(description = "The default notification settings for envelopes sent by using the console.")
   public NotificationDefaultSettings getApiEmailNotifications() {
     return apiEmailNotifications;
   }
@@ -47,7 +47,6 @@ public class NotificationDefaults {
   public void setApiEmailNotifications(NotificationDefaultSettings apiEmailNotifications) {
     this.apiEmailNotifications = apiEmailNotifications;
   }
-
 
   /**
    * emailNotifications.
@@ -61,9 +60,10 @@ public class NotificationDefaults {
 
   /**
    * The default notification settings for envelopes sent by using the API..
+   * 
    * @return emailNotifications
    **/
-  @ApiModelProperty(value = "The default notification settings for envelopes sent by using the API.")
+  @Schema(description = "The default notification settings for envelopes sent by using the API.")
   public NotificationDefaultSettings getEmailNotifications() {
     return emailNotifications;
   }
@@ -74,7 +74,6 @@ public class NotificationDefaults {
   public void setEmailNotifications(NotificationDefaultSettings emailNotifications) {
     this.emailNotifications = emailNotifications;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class NotificationDefaults {
     return Objects.hash(apiEmailNotifications, emailNotifications);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class NotificationDefaults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationDefaults {\n");
-    
+
     sb.append("    apiEmailNotifications: ").append(toIndentedString(apiEmailNotifications)).append("\n");
     sb.append("    emailNotifications: ").append(toIndentedString(emailNotifications)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class NotificationDefaults {
   }
 
 }
-

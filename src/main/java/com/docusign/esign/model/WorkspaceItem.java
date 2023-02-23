@@ -8,14 +8,15 @@ import com.docusign.esign.model.WorkspaceUserAuthorization;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call..
+ * A workspaceItem (file type only) representing the file. This property is only
+ * returned in response to file specific GET call..
  *
  */
-@ApiModel(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
+@Schema(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
 
 public class WorkspaceItem {
   @JsonProperty("callerAuthorization")
@@ -90,7 +91,6 @@ public class WorkspaceItem {
   @JsonProperty("userAuthorization")
   private WorkspaceUserAuthorization userAuthorization = null;
 
-
   /**
    * callerAuthorization.
    *
@@ -103,9 +103,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return callerAuthorization
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public WorkspaceUserAuthorization getCallerAuthorization() {
     return callerAuthorization;
   }
@@ -116,7 +117,6 @@ public class WorkspaceItem {
   public void setCallerAuthorization(WorkspaceUserAuthorization callerAuthorization) {
     this.callerAuthorization = callerAuthorization;
   }
-
 
   /**
    * contentType.
@@ -130,9 +130,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return contentType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContentType() {
     return contentType;
   }
@@ -143,7 +144,6 @@ public class WorkspaceItem {
   public void setContentType(String contentType) {
     this.contentType = contentType;
   }
-
 
   /**
    * created.
@@ -157,9 +157,10 @@ public class WorkspaceItem {
 
   /**
    * The UTC DateTime when the workspace item was created..
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "The UTC DateTime when the workspace item was created.")
+  @Schema(description = "The UTC DateTime when the workspace item was created.")
   public String getCreated() {
     return created;
   }
@@ -170,7 +171,6 @@ public class WorkspaceItem {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdById.
@@ -184,9 +184,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return createdById
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedById() {
     return createdById;
   }
@@ -197,7 +198,6 @@ public class WorkspaceItem {
   public void setCreatedById(String createdById) {
     this.createdById = createdById;
   }
-
 
   /**
    * createdByInformation.
@@ -211,9 +211,10 @@ public class WorkspaceItem {
 
   /**
    * Details about the user who created the workspace item..
+   * 
    * @return createdByInformation
    **/
-  @ApiModelProperty(value = "Details about the user who created the workspace item.")
+  @Schema(description = "Details about the user who created the workspace item.")
   public WorkspaceUser getCreatedByInformation() {
     return createdByInformation;
   }
@@ -224,7 +225,6 @@ public class WorkspaceItem {
   public void setCreatedByInformation(WorkspaceUser createdByInformation) {
     this.createdByInformation = createdByInformation;
   }
-
 
   /**
    * extension.
@@ -238,9 +238,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return extension
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExtension() {
     return extension;
   }
@@ -251,7 +252,6 @@ public class WorkspaceItem {
   public void setExtension(String extension) {
     this.extension = extension;
   }
-
 
   /**
    * fileSize.
@@ -265,9 +265,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return fileSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileSize() {
     return fileSize;
   }
@@ -278,7 +279,6 @@ public class WorkspaceItem {
   public void setFileSize(String fileSize) {
     this.fileSize = fileSize;
   }
-
 
   /**
    * fileUri.
@@ -292,9 +292,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return fileUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFileUri() {
     return fileUri;
   }
@@ -305,7 +306,6 @@ public class WorkspaceItem {
   public void setFileUri(String fileUri) {
     this.fileUri = fileUri;
   }
-
 
   /**
    * id.
@@ -319,9 +319,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -332,7 +333,6 @@ public class WorkspaceItem {
   public void setId(String id) {
     this.id = id;
   }
-
 
   /**
    * isPublic.
@@ -345,10 +345,12 @@ public class WorkspaceItem {
   }
 
   /**
-   *  If true, this supersedes need for bit mask permission with workspaceUserAuthorization.
+   * If true, this supersedes need for bit mask permission with
+   * workspaceUserAuthorization.
+   * 
    * @return isPublic
    **/
-  @ApiModelProperty(value = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
+  @Schema(description = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
   public String getIsPublic() {
     return isPublic;
   }
@@ -359,7 +361,6 @@ public class WorkspaceItem {
   public void setIsPublic(String isPublic) {
     this.isPublic = isPublic;
   }
-
 
   /**
    * lastModified.
@@ -373,9 +374,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return lastModified
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -386,7 +388,6 @@ public class WorkspaceItem {
   public void setLastModified(String lastModified) {
     this.lastModified = lastModified;
   }
-
 
   /**
    * lastModifiedById.
@@ -400,9 +401,10 @@ public class WorkspaceItem {
 
   /**
    * Utc date and time the comment was last updated (can only be done by creator).
+   * 
    * @return lastModifiedById
    **/
-  @ApiModelProperty(value = "Utc date and time the comment was last updated (can only be done by creator)")
+  @Schema(description = "Utc date and time the comment was last updated (can only be done by creator)")
   public String getLastModifiedById() {
     return lastModifiedById;
   }
@@ -413,7 +415,6 @@ public class WorkspaceItem {
   public void setLastModifiedById(String lastModifiedById) {
     this.lastModifiedById = lastModifiedById;
   }
-
 
   /**
    * lastModifiedByInformation.
@@ -427,9 +428,10 @@ public class WorkspaceItem {
 
   /**
    * Details about the user who last modified the workspace item..
+   * 
    * @return lastModifiedByInformation
    **/
-  @ApiModelProperty(value = "Details about the user who last modified the workspace item.")
+  @Schema(description = "Details about the user who last modified the workspace item.")
   public WorkspaceUser getLastModifiedByInformation() {
     return lastModifiedByInformation;
   }
@@ -440,7 +442,6 @@ public class WorkspaceItem {
   public void setLastModifiedByInformation(WorkspaceUser lastModifiedByInformation) {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
-
 
   /**
    * name.
@@ -453,10 +454,12 @@ public class WorkspaceItem {
   }
 
   /**
-   * A simple string description of the item, such as a file name or a folder name..
+   * A simple string description of the item, such as a file name or a folder
+   * name..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "A simple string description of the item, such as a file name or a folder name.")
+  @Schema(description = "A simple string description of the item, such as a file name or a folder name.")
   public String getName() {
     return name;
   }
@@ -467,7 +470,6 @@ public class WorkspaceItem {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * pageCount.
@@ -481,9 +483,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return pageCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPageCount() {
     return pageCount;
   }
@@ -494,7 +497,6 @@ public class WorkspaceItem {
   public void setPageCount(String pageCount) {
     this.pageCount = pageCount;
   }
-
 
   /**
    * parentFolderId.
@@ -507,10 +509,12 @@ public class WorkspaceItem {
   }
 
   /**
-   * The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder..
+   * The ID of the parent folder. This is the GUID of the parent folder, or the
+   * special value 'root' for the root folder..
+   * 
    * @return parentFolderId
    **/
-  @ApiModelProperty(value = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
+  @Schema(description = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
   public String getParentFolderId() {
     return parentFolderId;
   }
@@ -521,7 +525,6 @@ public class WorkspaceItem {
   public void setParentFolderId(String parentFolderId) {
     this.parentFolderId = parentFolderId;
   }
-
 
   /**
    * parentFolderUri.
@@ -535,9 +538,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return parentFolderUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getParentFolderUri() {
     return parentFolderUri;
   }
@@ -548,7 +552,6 @@ public class WorkspaceItem {
   public void setParentFolderUri(String parentFolderUri) {
     this.parentFolderUri = parentFolderUri;
   }
-
 
   /**
    * sha256.
@@ -562,9 +565,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return sha256
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSha256() {
     return sha256;
   }
@@ -575,7 +579,6 @@ public class WorkspaceItem {
   public void setSha256(String sha256) {
     this.sha256 = sha256;
   }
-
 
   /**
    * thumbHeight.
@@ -589,9 +592,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return thumbHeight
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThumbHeight() {
     return thumbHeight;
   }
@@ -602,7 +606,6 @@ public class WorkspaceItem {
   public void setThumbHeight(String thumbHeight) {
     this.thumbHeight = thumbHeight;
   }
-
 
   /**
    * thumbnail.
@@ -616,9 +619,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return thumbnail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Page getThumbnail() {
     return thumbnail;
   }
@@ -629,7 +633,6 @@ public class WorkspaceItem {
   public void setThumbnail(Page thumbnail) {
     this.thumbnail = thumbnail;
   }
-
 
   /**
    * thumbWidth.
@@ -643,9 +646,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return thumbWidth
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThumbWidth() {
     return thumbWidth;
   }
@@ -656,7 +660,6 @@ public class WorkspaceItem {
   public void setThumbWidth(String thumbWidth) {
     this.thumbWidth = thumbWidth;
   }
-
 
   /**
    * type.
@@ -670,9 +673,10 @@ public class WorkspaceItem {
 
   /**
    * The type of the workspace item. Valid values are file, folder..
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "The type of the workspace item. Valid values are file, folder.")
+  @Schema(description = "The type of the workspace item. Valid values are file, folder.")
   public String getType() {
     return type;
   }
@@ -683,7 +687,6 @@ public class WorkspaceItem {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * uri.
@@ -697,9 +700,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -710,7 +714,6 @@ public class WorkspaceItem {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * userAuthorization.
@@ -724,9 +727,10 @@ public class WorkspaceItem {
 
   /**
    * .
+   * 
    * @return userAuthorization
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public WorkspaceUserAuthorization getUserAuthorization() {
     return userAuthorization;
   }
@@ -737,7 +741,6 @@ public class WorkspaceItem {
   public void setUserAuthorization(WorkspaceUserAuthorization userAuthorization) {
     this.userAuthorization = userAuthorization;
   }
-
 
   /**
    * Compares objects.
@@ -784,9 +787,10 @@ public class WorkspaceItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, sha256, thumbHeight, thumbnail, thumbWidth, type, uri, userAuthorization);
+    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension,
+        fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount,
+        parentFolderId, parentFolderUri, sha256, thumbHeight, thumbnail, thumbWidth, type, uri, userAuthorization);
   }
-
 
   /**
    * Converts the given object to string.
@@ -795,7 +799,7 @@ public class WorkspaceItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItem {\n");
-    
+
     sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -836,4 +840,3 @@ public class WorkspaceItem {
   }
 
 }
-

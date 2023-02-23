@@ -6,8 +6,8 @@ import com.docusign.esign.model.EnvelopeDocument;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * EnvelopeDocumentsResult.
@@ -21,7 +21,6 @@ public class EnvelopeDocumentsResult {
   @JsonProperty("envelopeId")
   private String envelopeId = null;
 
-
   /**
    * envelopeDocuments.
    *
@@ -31,7 +30,7 @@ public class EnvelopeDocumentsResult {
     this.envelopeDocuments = envelopeDocuments;
     return this;
   }
-  
+
   /**
    * addEnvelopeDocumentsItem.
    *
@@ -47,9 +46,10 @@ public class EnvelopeDocumentsResult {
 
   /**
    * .
+   * 
    * @return envelopeDocuments
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<EnvelopeDocument> getEnvelopeDocuments() {
     return envelopeDocuments;
   }
@@ -60,7 +60,6 @@ public class EnvelopeDocumentsResult {
   public void setEnvelopeDocuments(java.util.List<EnvelopeDocument> envelopeDocuments) {
     this.envelopeDocuments = envelopeDocuments;
   }
-
 
   /**
    * envelopeId.
@@ -74,9 +73,10 @@ public class EnvelopeDocumentsResult {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -87,7 +87,6 @@ public class EnvelopeDocumentsResult {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class EnvelopeDocumentsResult {
     return Objects.hash(envelopeDocuments, envelopeId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class EnvelopeDocumentsResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocumentsResult {\n");
-    
+
     sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class EnvelopeDocumentsResult {
   }
 
 }
-

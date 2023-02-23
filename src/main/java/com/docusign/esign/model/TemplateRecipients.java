@@ -17,8 +17,8 @@ import com.docusign.esign.model.Witness;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TemplateRecipients.
@@ -68,7 +68,6 @@ public class TemplateRecipients {
   @JsonProperty("witnesses")
   private java.util.List<Witness> witnesses = null;
 
-
   /**
    * agents.
    *
@@ -78,7 +77,7 @@ public class TemplateRecipients {
     this.agents = agents;
     return this;
   }
-  
+
   /**
    * addAgentsItem.
    *
@@ -93,10 +92,12 @@ public class TemplateRecipients {
   }
 
   /**
-   * A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document..
+   * A complex type defining the management and access rights of a recipient
+   * assigned assigned as an agent on the document..
+   * 
    * @return agents
    **/
-  @ApiModelProperty(value = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
+  @Schema(description = "A complex type defining the management and access rights of a recipient assigned assigned as an agent on the document.")
   public java.util.List<Agent> getAgents() {
     return agents;
   }
@@ -108,7 +109,6 @@ public class TemplateRecipients {
     this.agents = agents;
   }
 
-
   /**
    * carbonCopies.
    *
@@ -118,7 +118,7 @@ public class TemplateRecipients {
     this.carbonCopies = carbonCopies;
     return this;
   }
-  
+
   /**
    * addCarbonCopiesItem.
    *
@@ -133,10 +133,12 @@ public class TemplateRecipients {
   }
 
   /**
-   * A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it..
+   * A complex type containing information about recipients who should receive a
+   * copy of the envelope, but does not need to sign it..
+   * 
    * @return carbonCopies
    **/
-  @ApiModelProperty(value = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
+  @Schema(description = "A complex type containing information about recipients who should receive a copy of the envelope, but does not need to sign it.")
   public java.util.List<CarbonCopy> getCarbonCopies() {
     return carbonCopies;
   }
@@ -148,7 +150,6 @@ public class TemplateRecipients {
     this.carbonCopies = carbonCopies;
   }
 
-
   /**
    * certifiedDeliveries.
    *
@@ -158,7 +159,7 @@ public class TemplateRecipients {
     this.certifiedDeliveries = certifiedDeliveries;
     return this;
   }
-  
+
   /**
    * addCertifiedDeliveriesItem.
    *
@@ -173,10 +174,13 @@ public class TemplateRecipients {
   }
 
   /**
-   * A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents..
+   * A complex type containing information on a recipient the must receive the
+   * completed documents for the envelope to be completed, but the recipient does
+   * not need to sign, initial, date, or add information to any of the documents..
+   * 
    * @return certifiedDeliveries
    **/
-  @ApiModelProperty(value = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
+  @Schema(description = "A complex type containing information on a recipient the must receive the completed documents for the envelope to be completed, but the recipient does not need to sign, initial, date, or add information to any of the documents.")
   public java.util.List<CertifiedDelivery> getCertifiedDeliveries() {
     return certifiedDeliveries;
   }
@@ -187,7 +191,6 @@ public class TemplateRecipients {
   public void setCertifiedDeliveries(java.util.List<CertifiedDelivery> certifiedDeliveries) {
     this.certifiedDeliveries = certifiedDeliveries;
   }
-
 
   /**
    * currentRoutingOrder.
@@ -201,9 +204,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return currentRoutingOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrentRoutingOrder() {
     return currentRoutingOrder;
   }
@@ -215,7 +219,6 @@ public class TemplateRecipients {
     this.currentRoutingOrder = currentRoutingOrder;
   }
 
-
   /**
    * editors.
    *
@@ -225,7 +228,7 @@ public class TemplateRecipients {
     this.editors = editors;
     return this;
   }
-  
+
   /**
    * addEditorsItem.
    *
@@ -241,9 +244,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return editors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Editor> getEditors() {
     return editors;
   }
@@ -254,7 +258,6 @@ public class TemplateRecipients {
   public void setEditors(java.util.List<Editor> editors) {
     this.editors = editors;
   }
-
 
   /**
    * errorDetails.
@@ -267,10 +270,12 @@ public class TemplateRecipients {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -282,7 +287,6 @@ public class TemplateRecipients {
     this.errorDetails = errorDetails;
   }
 
-
   /**
    * inPersonSigners.
    *
@@ -292,7 +296,7 @@ public class TemplateRecipients {
     this.inPersonSigners = inPersonSigners;
     return this;
   }
-  
+
   /**
    * addInPersonSignersItem.
    *
@@ -307,10 +311,14 @@ public class TemplateRecipients {
   }
 
   /**
-   * Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected..
+   * Specifies a signer that is in the same physical location as a DocuSign user
+   * who will act as a Signing Host for the transaction. The recipient added is
+   * the Signing Host and new separate Signer Name field appears after Sign in
+   * person is selected..
+   * 
    * @return inPersonSigners
    **/
-  @ApiModelProperty(value = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
+  @Schema(description = "Specifies a signer that is in the same physical location as a DocuSign user who will act as a Signing Host for the transaction. The recipient added is the Signing Host and new separate Signer Name field appears after Sign in person is selected.")
   public java.util.List<InPersonSigner> getInPersonSigners() {
     return inPersonSigners;
   }
@@ -322,7 +330,6 @@ public class TemplateRecipients {
     this.inPersonSigners = inPersonSigners;
   }
 
-
   /**
    * intermediaries.
    *
@@ -332,7 +339,7 @@ public class TemplateRecipients {
     this.intermediaries = intermediaries;
     return this;
   }
-  
+
   /**
    * addIntermediariesItem.
    *
@@ -347,10 +354,14 @@ public class TemplateRecipients {
   }
 
   /**
-   * Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added)..
+   * Identifies a recipient that can, but is not required to, add name and email
+   * information for recipients at the same or subsequent level in the routing
+   * order (until subsequent Agents, Editors or Intermediaries recipient types are
+   * added)..
+   * 
    * @return intermediaries
    **/
-  @ApiModelProperty(value = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
+  @Schema(description = "Identifies a recipient that can, but is not required to, add name and email information for recipients at the same or subsequent level in the routing order (until subsequent Agents, Editors or Intermediaries recipient types are added).")
   public java.util.List<Intermediary> getIntermediaries() {
     return intermediaries;
   }
@@ -362,7 +373,6 @@ public class TemplateRecipients {
     this.intermediaries = intermediaries;
   }
 
-
   /**
    * notaries.
    *
@@ -372,7 +382,7 @@ public class TemplateRecipients {
     this.notaries = notaries;
     return this;
   }
-  
+
   /**
    * addNotariesItem.
    *
@@ -388,9 +398,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return notaries
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NotaryRecipient> getNotaries() {
     return notaries;
   }
@@ -402,7 +413,6 @@ public class TemplateRecipients {
     this.notaries = notaries;
   }
 
-
   /**
    * participants.
    *
@@ -412,7 +422,7 @@ public class TemplateRecipients {
     this.participants = participants;
     return this;
   }
-  
+
   /**
    * addParticipantsItem.
    *
@@ -428,9 +438,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return participants
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Participant> getParticipants() {
     return participants;
   }
@@ -441,7 +452,6 @@ public class TemplateRecipients {
   public void setParticipants(java.util.List<Participant> participants) {
     this.participants = participants;
   }
-
 
   /**
    * recipientCount.
@@ -454,10 +464,16 @@ public class TemplateRecipients {
   }
 
   /**
-   * The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message..
+   * The list of recipient event statuses that will trigger Connect to send
+   * updates to the url. It can be a two-part list with: *
+   * recipientEventStatusCode - The recipient status, this can be Sent, Delivered,
+   * Completed, Declined, AuthenticationFailed, and AutoResponded. *
+   * includeDocuments - When set to **true**, the envelope time zone information
+   * is included in the message..
+   * 
    * @return recipientCount
    **/
-  @ApiModelProperty(value = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
+  @Schema(description = "The list of recipient event statuses that will trigger Connect to send updates to the url. It can be a two-part list with:  * recipientEventStatusCode - The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded. * includeDocuments - When set to **true**, the envelope time zone information is included in the message.")
   public String getRecipientCount() {
     return recipientCount;
   }
@@ -469,7 +485,6 @@ public class TemplateRecipients {
     this.recipientCount = recipientCount;
   }
 
-
   /**
    * seals.
    *
@@ -479,7 +494,7 @@ public class TemplateRecipients {
     this.seals = seals;
     return this;
   }
-  
+
   /**
    * addSealsItem.
    *
@@ -495,9 +510,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return seals
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SealSign> getSeals() {
     return seals;
   }
@@ -509,7 +525,6 @@ public class TemplateRecipients {
     this.seals = seals;
   }
 
-
   /**
    * signers.
    *
@@ -519,7 +534,7 @@ public class TemplateRecipients {
     this.signers = signers;
     return this;
   }
-  
+
   /**
    * addSignersItem.
    *
@@ -535,9 +550,10 @@ public class TemplateRecipients {
 
   /**
    * A complex type containing information about the Signer recipient..
+   * 
    * @return signers
    **/
-  @ApiModelProperty(value = "A complex type containing information about the Signer recipient.")
+  @Schema(description = "A complex type containing information about the Signer recipient.")
   public java.util.List<Signer> getSigners() {
     return signers;
   }
@@ -549,7 +565,6 @@ public class TemplateRecipients {
     this.signers = signers;
   }
 
-
   /**
    * witnesses.
    *
@@ -559,7 +574,7 @@ public class TemplateRecipients {
     this.witnesses = witnesses;
     return this;
   }
-  
+
   /**
    * addWitnessesItem.
    *
@@ -575,9 +590,10 @@ public class TemplateRecipients {
 
   /**
    * .
+   * 
    * @return witnesses
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Witness> getWitnesses() {
     return witnesses;
   }
@@ -588,7 +604,6 @@ public class TemplateRecipients {
   public void setWitnesses(java.util.List<Witness> witnesses) {
     this.witnesses = witnesses;
   }
-
 
   /**
    * Compares objects.
@@ -625,9 +640,9 @@ public class TemplateRecipients {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, participants, recipientCount, seals, signers, witnesses);
+    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails,
+        inPersonSigners, intermediaries, notaries, participants, recipientCount, seals, signers, witnesses);
   }
-
 
   /**
    * Converts the given object to string.
@@ -636,7 +651,7 @@ public class TemplateRecipients {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateRecipients {\n");
-    
+
     sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
     sb.append("    carbonCopies: ").append(toIndentedString(carbonCopies)).append("\n");
     sb.append("    certifiedDeliveries: ").append(toIndentedString(certifiedDeliveries)).append("\n");
@@ -667,4 +682,3 @@ public class TemplateRecipients {
   }
 
 }
-

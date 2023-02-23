@@ -6,8 +6,8 @@ import com.docusign.esign.model.FormDataItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientFormData.
@@ -39,7 +39,6 @@ public class RecipientFormData {
   @JsonProperty("signedTime")
   private String signedTime = null;
 
-
   /**
    * declinedTime.
    *
@@ -52,9 +51,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return declinedTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeclinedTime() {
     return declinedTime;
   }
@@ -65,7 +65,6 @@ public class RecipientFormData {
   public void setDeclinedTime(String declinedTime) {
     this.declinedTime = declinedTime;
   }
-
 
   /**
    * deliveredTime.
@@ -79,9 +78,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return deliveredTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeliveredTime() {
     return deliveredTime;
   }
@@ -92,7 +92,6 @@ public class RecipientFormData {
   public void setDeliveredTime(String deliveredTime) {
     this.deliveredTime = deliveredTime;
   }
-
 
   /**
    * email.
@@ -106,9 +105,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -120,7 +120,6 @@ public class RecipientFormData {
     this.email = email;
   }
 
-
   /**
    * formData.
    *
@@ -130,7 +129,7 @@ public class RecipientFormData {
     this.formData = formData;
     return this;
   }
-  
+
   /**
    * addFormDataItem.
    *
@@ -146,9 +145,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return formData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
@@ -159,7 +159,6 @@ public class RecipientFormData {
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
-
 
   /**
    * name.
@@ -173,9 +172,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -186,7 +186,6 @@ public class RecipientFormData {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * recipientId.
@@ -199,10 +198,12 @@ public class RecipientFormData {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -213,7 +214,6 @@ public class RecipientFormData {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * sentTime.
@@ -227,9 +227,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return sentTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentTime() {
     return sentTime;
   }
@@ -240,7 +241,6 @@ public class RecipientFormData {
   public void setSentTime(String sentTime) {
     this.sentTime = sentTime;
   }
-
 
   /**
    * signedTime.
@@ -254,9 +254,10 @@ public class RecipientFormData {
 
   /**
    * .
+   * 
    * @return signedTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignedTime() {
     return signedTime;
   }
@@ -267,7 +268,6 @@ public class RecipientFormData {
   public void setSignedTime(String signedTime) {
     this.signedTime = signedTime;
   }
-
 
   /**
    * Compares objects.
@@ -301,7 +301,6 @@ public class RecipientFormData {
     return Objects.hash(declinedTime, deliveredTime, email, formData, name, recipientId, sentTime, signedTime);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -309,7 +308,7 @@ public class RecipientFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientFormData {\n");
-    
+
     sb.append("    declinedTime: ").append(toIndentedString(declinedTime)).append("\n");
     sb.append("    deliveredTime: ").append(toIndentedString(deliveredTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -334,4 +333,3 @@ public class RecipientFormData {
   }
 
 }
-

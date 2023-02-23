@@ -6,8 +6,8 @@ import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BillingInvoicesSummary.
@@ -30,7 +30,6 @@ public class BillingInvoicesSummary {
   @JsonProperty("paymentAllowed")
   private String paymentAllowed = null;
 
-
   /**
    * accountBalance.
    *
@@ -43,9 +42,10 @@ public class BillingInvoicesSummary {
 
   /**
    * .
+   * 
    * @return accountBalance
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccountBalance() {
     return accountBalance;
   }
@@ -57,7 +57,6 @@ public class BillingInvoicesSummary {
     this.accountBalance = accountBalance;
   }
 
-
   /**
    * billingInvoices.
    *
@@ -67,7 +66,7 @@ public class BillingInvoicesSummary {
     this.billingInvoices = billingInvoices;
     return this;
   }
-  
+
   /**
    * addBillingInvoicesItem.
    *
@@ -83,9 +82,10 @@ public class BillingInvoicesSummary {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingInvoices
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingInvoice> getBillingInvoices() {
     return billingInvoices;
   }
@@ -96,7 +96,6 @@ public class BillingInvoicesSummary {
   public void setBillingInvoices(java.util.List<BillingInvoice> billingInvoices) {
     this.billingInvoices = billingInvoices;
   }
-
 
   /**
    * currencyCode.
@@ -110,9 +109,10 @@ public class BillingInvoicesSummary {
 
   /**
    * .
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -123,7 +123,6 @@ public class BillingInvoicesSummary {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * pastDueBalance.
@@ -137,9 +136,10 @@ public class BillingInvoicesSummary {
 
   /**
    * .
+   * 
    * @return pastDueBalance
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPastDueBalance() {
     return pastDueBalance;
   }
@@ -150,7 +150,6 @@ public class BillingInvoicesSummary {
   public void setPastDueBalance(String pastDueBalance) {
     this.pastDueBalance = pastDueBalance;
   }
-
 
   /**
    * paymentAllowed.
@@ -164,9 +163,10 @@ public class BillingInvoicesSummary {
 
   /**
    * .
+   * 
    * @return paymentAllowed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentAllowed() {
     return paymentAllowed;
   }
@@ -177,7 +177,6 @@ public class BillingInvoicesSummary {
   public void setPaymentAllowed(String paymentAllowed) {
     this.paymentAllowed = paymentAllowed;
   }
-
 
   /**
    * Compares objects.
@@ -208,7 +207,6 @@ public class BillingInvoicesSummary {
     return Objects.hash(accountBalance, billingInvoices, currencyCode, pastDueBalance, paymentAllowed);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -216,7 +214,7 @@ public class BillingInvoicesSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesSummary {\n");
-    
+
     sb.append("    accountBalance: ").append(toIndentedString(accountBalance)).append("\n");
     sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -238,4 +236,3 @@ public class BillingInvoicesSummary {
   }
 
 }
-

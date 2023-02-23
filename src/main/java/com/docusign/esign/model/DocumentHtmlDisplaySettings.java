@@ -6,8 +6,8 @@ import com.docusign.esign.model.DocumentHtmlCollapsibleDisplaySettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentHtmlDisplaySettings.
@@ -51,7 +51,6 @@ public class DocumentHtmlDisplaySettings {
   @JsonProperty("tableStyle")
   private String tableStyle = null;
 
-
   /**
    * cellStyle.
    *
@@ -64,9 +63,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return cellStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCellStyle() {
     return cellStyle;
   }
@@ -77,7 +77,6 @@ public class DocumentHtmlDisplaySettings {
   public void setCellStyle(String cellStyle) {
     this.cellStyle = cellStyle;
   }
-
 
   /**
    * collapsibleSettings.
@@ -90,10 +89,12 @@ public class DocumentHtmlDisplaySettings {
   }
 
   /**
-   * This object defines the appearance and function of a collapsible section or item..
+   * This object defines the appearance and function of a collapsible section or
+   * item..
+   * 
    * @return collapsibleSettings
    **/
-  @ApiModelProperty(value = "This object defines the appearance and function of a collapsible section or item.")
+  @Schema(description = "This object defines the appearance and function of a collapsible section or item.")
   public DocumentHtmlCollapsibleDisplaySettings getCollapsibleSettings() {
     return collapsibleSettings;
   }
@@ -104,7 +105,6 @@ public class DocumentHtmlDisplaySettings {
   public void setCollapsibleSettings(DocumentHtmlCollapsibleDisplaySettings collapsibleSettings) {
     this.collapsibleSettings = collapsibleSettings;
   }
-
 
   /**
    * display.
@@ -118,9 +118,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return display
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplay() {
     return display;
   }
@@ -131,7 +132,6 @@ public class DocumentHtmlDisplaySettings {
   public void setDisplay(String display) {
     this.display = display;
   }
-
 
   /**
    * displayLabel.
@@ -145,9 +145,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayLabel() {
     return displayLabel;
   }
@@ -158,7 +159,6 @@ public class DocumentHtmlDisplaySettings {
   public void setDisplayLabel(String displayLabel) {
     this.displayLabel = displayLabel;
   }
-
 
   /**
    * displayOrder.
@@ -172,9 +172,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDisplayOrder() {
     return displayOrder;
   }
@@ -185,7 +186,6 @@ public class DocumentHtmlDisplaySettings {
   public void setDisplayOrder(Integer displayOrder) {
     this.displayOrder = displayOrder;
   }
-
 
   /**
    * displayPageNumber.
@@ -199,9 +199,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return displayPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Integer getDisplayPageNumber() {
     return displayPageNumber;
   }
@@ -212,7 +213,6 @@ public class DocumentHtmlDisplaySettings {
   public void setDisplayPageNumber(Integer displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
   }
-
 
   /**
    * hideLabelWhenOpened.
@@ -226,9 +226,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return hideLabelWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isHideLabelWhenOpened() {
     return hideLabelWhenOpened;
   }
@@ -239,7 +240,6 @@ public class DocumentHtmlDisplaySettings {
   public void setHideLabelWhenOpened(Boolean hideLabelWhenOpened) {
     this.hideLabelWhenOpened = hideLabelWhenOpened;
   }
-
 
   /**
    * inlineOuterStyle.
@@ -253,9 +253,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return inlineOuterStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInlineOuterStyle() {
     return inlineOuterStyle;
   }
@@ -266,7 +267,6 @@ public class DocumentHtmlDisplaySettings {
   public void setInlineOuterStyle(String inlineOuterStyle) {
     this.inlineOuterStyle = inlineOuterStyle;
   }
-
 
   /**
    * labelWhenOpened.
@@ -280,9 +280,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return labelWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabelWhenOpened() {
     return labelWhenOpened;
   }
@@ -293,7 +294,6 @@ public class DocumentHtmlDisplaySettings {
   public void setLabelWhenOpened(String labelWhenOpened) {
     this.labelWhenOpened = labelWhenOpened;
   }
-
 
   /**
    * preLabel.
@@ -307,9 +307,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return preLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPreLabel() {
     return preLabel;
   }
@@ -320,7 +321,6 @@ public class DocumentHtmlDisplaySettings {
   public void setPreLabel(String preLabel) {
     this.preLabel = preLabel;
   }
-
 
   /**
    * scrollToTopWhenOpened.
@@ -334,9 +334,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return scrollToTopWhenOpened
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isScrollToTopWhenOpened() {
     return scrollToTopWhenOpened;
   }
@@ -347,7 +348,6 @@ public class DocumentHtmlDisplaySettings {
   public void setScrollToTopWhenOpened(Boolean scrollToTopWhenOpened) {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
   }
-
 
   /**
    * tableStyle.
@@ -361,9 +361,10 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
+   * 
    * @return tableStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTableStyle() {
     return tableStyle;
   }
@@ -374,7 +375,6 @@ public class DocumentHtmlDisplaySettings {
   public void setTableStyle(String tableStyle) {
     this.tableStyle = tableStyle;
   }
-
 
   /**
    * Compares objects.
@@ -409,9 +409,9 @@ public class DocumentHtmlDisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
+    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber,
+        hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
   }
-
 
   /**
    * Converts the given object to string.
@@ -420,7 +420,7 @@ public class DocumentHtmlDisplaySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDisplaySettings {\n");
-    
+
     sb.append("    cellStyle: ").append(toIndentedString(cellStyle)).append("\n");
     sb.append("    collapsibleSettings: ").append(toIndentedString(collapsibleSettings)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
@@ -449,4 +449,3 @@ public class DocumentHtmlDisplaySettings {
   }
 
 }
-

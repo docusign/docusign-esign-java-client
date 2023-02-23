@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NotaryJournalCredibleWitness.
@@ -23,7 +23,6 @@ public class NotaryJournalCredibleWitness {
   @JsonProperty("signatureImage")
   private String signatureImage = null;
 
-
   /**
    * address.
    *
@@ -36,9 +35,10 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
+   * 
    * @return address
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddress() {
     return address;
   }
@@ -49,7 +49,6 @@ public class NotaryJournalCredibleWitness {
   public void setAddress(String address) {
     this.address = address;
   }
-
 
   /**
    * name.
@@ -63,9 +62,10 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -76,7 +76,6 @@ public class NotaryJournalCredibleWitness {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * signatureImage.
@@ -90,9 +89,10 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
+   * 
    * @return signatureImage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureImage() {
     return signatureImage;
   }
@@ -103,7 +103,6 @@ public class NotaryJournalCredibleWitness {
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class NotaryJournalCredibleWitness {
     return Objects.hash(address, name, signatureImage);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class NotaryJournalCredibleWitness {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalCredibleWitness {\n");
-    
+
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    signatureImage: ").append(toIndentedString(signatureImage)).append("\n");
@@ -160,4 +158,3 @@ public class NotaryJournalCredibleWitness {
   }
 
 }
-

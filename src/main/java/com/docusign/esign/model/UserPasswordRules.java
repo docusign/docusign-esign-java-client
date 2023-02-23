@@ -6,14 +6,14 @@ import com.docusign.esign.model.AccountPasswordRules;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains details about the password rules for a user..
  *
  */
-@ApiModel(description = "Contains details about the password rules for a user.")
+@Schema(description = "Contains details about the password rules for a user.")
 
 public class UserPasswordRules {
   @JsonProperty("passwordRules")
@@ -21,7 +21,6 @@ public class UserPasswordRules {
 
   @JsonProperty("userId")
   private String userId = null;
-
 
   /**
    * passwordRules.
@@ -35,9 +34,10 @@ public class UserPasswordRules {
 
   /**
    * Contains details about the password rules for the user..
+   * 
    * @return passwordRules
    **/
-  @ApiModelProperty(value = "Contains details about the password rules for the user.")
+  @Schema(description = "Contains details about the password rules for the user.")
   public AccountPasswordRules getPasswordRules() {
     return passwordRules;
   }
@@ -48,7 +48,6 @@ public class UserPasswordRules {
   public void setPasswordRules(AccountPasswordRules passwordRules) {
     this.passwordRules = passwordRules;
   }
-
 
   /**
    * userId.
@@ -62,9 +61,10 @@ public class UserPasswordRules {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -75,7 +75,6 @@ public class UserPasswordRules {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * Compares objects.
@@ -103,7 +102,6 @@ public class UserPasswordRules {
     return Objects.hash(passwordRules, userId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -111,7 +109,7 @@ public class UserPasswordRules {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordRules {\n");
-    
+
     sb.append("    passwordRules: ").append(toIndentedString(passwordRules)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
@@ -130,4 +128,3 @@ public class UserPasswordRules {
   }
 
 }
-

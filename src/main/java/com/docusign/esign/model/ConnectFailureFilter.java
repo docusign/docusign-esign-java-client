@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A list of failed envelope IDs to retry..
  *
  */
-@ApiModel(description = "A list of failed envelope IDs to retry.")
+@Schema(description = "A list of failed envelope IDs to retry.")
 
 public class ConnectFailureFilter {
   @JsonProperty("envelopeIds")
@@ -20,7 +20,6 @@ public class ConnectFailureFilter {
 
   @JsonProperty("synchronous")
   private String synchronous = null;
-
 
   /**
    * envelopeIds.
@@ -31,7 +30,7 @@ public class ConnectFailureFilter {
     this.envelopeIds = envelopeIds;
     return this;
   }
-  
+
   /**
    * addEnvelopeIdsItem.
    *
@@ -47,9 +46,10 @@ public class ConnectFailureFilter {
 
   /**
    * .
+   * 
    * @return envelopeIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -60,7 +60,6 @@ public class ConnectFailureFilter {
   public void setEnvelopeIds(java.util.List<String> envelopeIds) {
     this.envelopeIds = envelopeIds;
   }
-
 
   /**
    * synchronous.
@@ -74,9 +73,10 @@ public class ConnectFailureFilter {
 
   /**
    * .
+   * 
    * @return synchronous
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSynchronous() {
     return synchronous;
   }
@@ -87,7 +87,6 @@ public class ConnectFailureFilter {
   public void setSynchronous(String synchronous) {
     this.synchronous = synchronous;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class ConnectFailureFilter {
     return Objects.hash(envelopeIds, synchronous);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class ConnectFailureFilter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureFilter {\n");
-    
+
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
     sb.append("    synchronous: ").append(toIndentedString(synchronous)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class ConnectFailureFilter {
   }
 
 }
-

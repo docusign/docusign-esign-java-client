@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentFieldsInformation.
@@ -18,7 +18,6 @@ public class DocumentFieldsInformation {
   @JsonProperty("documentFields")
   private java.util.List<NameValue> documentFields = null;
 
-
   /**
    * documentFields.
    *
@@ -28,7 +27,7 @@ public class DocumentFieldsInformation {
     this.documentFields = documentFields;
     return this;
   }
-  
+
   /**
    * addDocumentFieldsItem.
    *
@@ -43,10 +42,16 @@ public class DocumentFieldsInformation {
   }
 
   /**
-   * The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  .
+   * The array of name/value custom data strings to be added to a document. Custom
+   * document field information is returned in the status, but otherwise is not
+   * used by DocuSign. The array contains the elements: * name - A string that can
+   * be a maximum of 50 characters. * value - A string that can be a maximum of
+   * 200 characters. *IMPORTANT*: If you are using xml, the name/value pair is
+   * contained in a nameValue element. .
+   * 
    * @return documentFields
    **/
-  @ApiModelProperty(value = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  ")
+  @Schema(description = "The array of name/value custom data strings to be added to a document. Custom document field information is returned in the status, but otherwise is not used by DocuSign. The array contains the elements:   * name - A string that can be a maximum of 50 characters.  * value - A string that can be a maximum of 200 characters.  *IMPORTANT*: If you are using xml, the name/value pair is contained in a nameValue element.  ")
   public java.util.List<NameValue> getDocumentFields() {
     return documentFields;
   }
@@ -57,7 +62,6 @@ public class DocumentFieldsInformation {
   public void setDocumentFields(java.util.List<NameValue> documentFields) {
     this.documentFields = documentFields;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +88,6 @@ public class DocumentFieldsInformation {
     return Objects.hash(documentFields);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +95,7 @@ public class DocumentFieldsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentFieldsInformation {\n");
-    
+
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +113,3 @@ public class DocumentFieldsInformation {
   }
 
 }
-

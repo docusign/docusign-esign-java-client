@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SignatureGroupDef.
@@ -20,7 +20,6 @@ public class SignatureGroupDef {
   @JsonProperty("rights")
   private String rights = null;
 
-
   /**
    * groupId.
    *
@@ -33,9 +32,10 @@ public class SignatureGroupDef {
 
   /**
    * .
+   * 
    * @return groupId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupId() {
     return groupId;
   }
@@ -46,7 +46,6 @@ public class SignatureGroupDef {
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
-
 
   /**
    * rights.
@@ -60,9 +59,10 @@ public class SignatureGroupDef {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -73,7 +73,6 @@ public class SignatureGroupDef {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class SignatureGroupDef {
     return Objects.hash(groupId, rights);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class SignatureGroupDef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureGroupDef {\n");
-    
+
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class SignatureGroupDef {
   }
 
 }
-

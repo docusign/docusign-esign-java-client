@@ -10,14 +10,14 @@ import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about a specific role..
  *
  */
-@ApiModel(description = "Information about a specific role.")
+@Schema(description = "Information about a specific role.")
 
 public class TemplateRole {
   @JsonProperty("accessCode")
@@ -68,7 +68,6 @@ public class TemplateRole {
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
-
   /**
    * accessCode.
    *
@@ -80,10 +79,16 @@ public class TemplateRole {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
+   * If a value is provided, the recipient must enter the value as the access code
+   * to view and sign the envelope. Maximum Length: 50 characters and it must
+   * conform to the account's access code format setting. If blank, but the signer
+   * `accessCode` property is set in the envelope, then that value is used. If
+   * blank and the signer `accessCode` property is not set, then the access code
+   * is not required..
+   * 
    * @return accessCode
    **/
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -95,7 +100,6 @@ public class TemplateRole {
     this.accessCode = accessCode;
   }
 
-
   /**
    * additionalNotifications.
    *
@@ -105,7 +109,7 @@ public class TemplateRole {
     this.additionalNotifications = additionalNotifications;
     return this;
   }
-  
+
   /**
    * addAdditionalNotificationsItem.
    *
@@ -121,9 +125,10 @@ public class TemplateRole {
 
   /**
    * .
+   * 
    * @return additionalNotifications
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientAdditionalNotification> getAdditionalNotifications() {
     return additionalNotifications;
   }
@@ -134,7 +139,6 @@ public class TemplateRole {
   public void setAdditionalNotifications(java.util.List<RecipientAdditionalNotification> additionalNotifications) {
     this.additionalNotifications = additionalNotifications;
   }
-
 
   /**
    * clientUserId.
@@ -147,10 +151,15 @@ public class TemplateRole {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
+   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
+   * property is not null then the recipient is embedded. Note that if the
+   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
+   * `SignerMustLoginToSign` property of the account settings is set to **true**,
+   * an error is generated on sending.ng. Maximum length: 100 characters. .
+   * 
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
+  @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -161,7 +170,6 @@ public class TemplateRole {
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
   }
-
 
   /**
    * defaultRecipient.
@@ -174,10 +182,12 @@ public class TemplateRole {
   }
 
   /**
-   * When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient..
+   * When set to **true**, this recipient is the default recipient and any tabs
+   * generated by the transformPdfFields option are mapped to this recipient..
+   * 
    * @return defaultRecipient
    **/
-  @ApiModelProperty(value = "When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.")
+  @Schema(description = "When set to **true**, this recipient is the default recipient and any tabs generated by the transformPdfFields option are mapped to this recipient.")
   public String getDefaultRecipient() {
     return defaultRecipient;
   }
@@ -188,7 +198,6 @@ public class TemplateRole {
   public void setDefaultRecipient(String defaultRecipient) {
     this.defaultRecipient = defaultRecipient;
   }
-
 
   /**
    * deliveryMethod.
@@ -202,9 +211,10 @@ public class TemplateRole {
 
   /**
    * Reserved: For DocuSign use only..
+   * 
    * @return deliveryMethod
    **/
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @Schema(description = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
@@ -215,7 +225,6 @@ public class TemplateRole {
   public void setDeliveryMethod(String deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
-
 
   /**
    * email.
@@ -229,9 +238,10 @@ public class TemplateRole {
 
   /**
    * Specifies the email associated with a role name..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "Specifies the email associated with a role name.")
+  @Schema(description = "Specifies the email associated with a role name.")
   public String getEmail() {
     return email;
   }
@@ -242,7 +252,6 @@ public class TemplateRole {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * emailNotification.
@@ -255,10 +264,15 @@ public class TemplateRole {
   }
 
   /**
-   * An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. .
+   * An optional complex type that sets a specific email subject and body for this
+   * recipient's notification email. **Note:** You can set the `emailNotification`
+   * property separately for each recipient. If you set the value only for certain
+   * recipients, the other recipients will inherit the this value from the
+   * top-level `emailSubject` and `emailBlurb`. .
+   * 
    * @return emailNotification
    **/
-  @ApiModelProperty(value = "An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. ")
+  @Schema(description = "An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. ")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -269,7 +283,6 @@ public class TemplateRole {
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
-
 
   /**
    * embeddedRecipientStartURL.
@@ -282,10 +295,42 @@ public class TemplateRole {
   }
 
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` .
+   * Specifies a sender provided valid URL string for redirecting an embedded
+   * recipient. When using this option, the embedded recipient still receives an
+   * email from DocuSign, just as a remote recipient would. When the document link
+   * in the email is clicked the recipient is redirected, through DocuSign, to the
+   * supplied URL to complete their actions. When routing to the URL, the sender's
+   * system (the server responding to the URL) must request a recipient token to
+   * launch a signing session. If set to `SIGN_AT_DOCUSIGN`, the recipient is
+   * directed to an embedded signing or viewing process directly at DocuSign. The
+   * signing or viewing action is initiated by the DocuSign system and the
+   * transaction activity and Certificate of Completion records will reflect this.
+   * In all other ways the process is identical to an embedded signing or viewing
+   * operation that is launched by any partner. It is important to remember that
+   * in a typical embedded workflow the authentication of an embedded recipient is
+   * the responsibility of the sending application, DocuSign expects that senders
+   * will follow their own process for establishing the recipient's identity. In
+   * this workflow the recipient goes through the sending application before the
+   * embedded signing or viewing process in initiated. However, when the sending
+   * application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient
+   * goes directly to the embedded signing or viewing process bypassing the
+   * sending application and any authentication steps the sending application
+   * would use. In this case, DocuSign recommends that you use one of the normal
+   * DocuSign authentication features (Access Code, Phone Authentication, SMS
+   * Authentication, etc.) to verify the identity of the recipient. If the
+   * `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is
+   * set, DocuSign will ignore the redirect URL and launch the standard signing
+   * process for the email recipient. Information can be appended to the embedded
+   * recipient start URL using merge fields. The available merge fields items are:
+   * envelopeId, recipientId, recipientName, recipientEmail, and customFields. The
+   * `customFields` property must be set fort the recipient or envelope. The merge
+   * fields are enclosed in double brackets. *Example*:
+   * `http://senderHost/[[mergeField1]]/ beginSigningSession?
+   * [[mergeField2]]&[[mergeField3]]` .
+   * 
    * @return embeddedRecipientStartURL
    **/
-  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
+  @Schema(description = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
@@ -296,7 +341,6 @@ public class TemplateRole {
   public void setEmbeddedRecipientStartURL(String embeddedRecipientStartURL) {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
-
 
   /**
    * inPersonSignerName.
@@ -309,10 +353,12 @@ public class TemplateRole {
   }
 
   /**
-   * Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters..
+   * Specifies the full legal name of the signer in person signer template roles.
+   * Maximum Length: 100 characters..
+   * 
    * @return inPersonSignerName
    **/
-  @ApiModelProperty(value = "Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.")
+  @Schema(description = "Specifies the full legal name of the signer in person signer template roles.  Maximum Length: 100 characters.")
   public String getInPersonSignerName() {
     return inPersonSignerName;
   }
@@ -323,7 +369,6 @@ public class TemplateRole {
   public void setInPersonSignerName(String inPersonSignerName) {
     this.inPersonSignerName = inPersonSignerName;
   }
-
 
   /**
    * name.
@@ -337,9 +382,10 @@ public class TemplateRole {
 
   /**
    * Specifies the recipient's name..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "Specifies the recipient's name.")
+  @Schema(description = "Specifies the recipient's name.")
   public String getName() {
     return name;
   }
@@ -350,7 +396,6 @@ public class TemplateRole {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * phoneNumber.
@@ -364,9 +409,10 @@ public class TemplateRole {
 
   /**
    * Describes the recipient phone number..
+   * 
    * @return phoneNumber
    **/
-  @ApiModelProperty(value = "Describes the recipient phone number.")
+  @Schema(description = "Describes the recipient phone number.")
   public RecipientPhoneNumber getPhoneNumber() {
     return phoneNumber;
   }
@@ -378,17 +424,17 @@ public class TemplateRole {
     this.phoneNumber = phoneNumber;
   }
 
-
   /**
    * recipientSignatureProviders.
    *
    * @return TemplateRole
    **/
-  public TemplateRole recipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
+  public TemplateRole recipientSignatureProviders(
+      java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
   }
-  
+
   /**
    * addRecipientSignatureProvidersItem.
    *
@@ -404,9 +450,10 @@ public class TemplateRole {
 
   /**
    * .
+   * 
    * @return recipientSignatureProviders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientSignatureProvider> getRecipientSignatureProviders() {
     return recipientSignatureProviders;
   }
@@ -417,7 +464,6 @@ public class TemplateRole {
   public void setRecipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
-
 
   /**
    * roleName.
@@ -430,10 +476,13 @@ public class TemplateRole {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
+   * Optional element. Specifies the role name associated with the recipient.<br/>
+   * <br/>
+   * This is required when working with template recipients..
+   * 
    * @return roleName
    **/
-  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -444,7 +493,6 @@ public class TemplateRole {
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
-
 
   /**
    * routingOrder.
@@ -458,9 +506,10 @@ public class TemplateRole {
 
   /**
    * Specifies the routing order of the recipient in the envelope. .
+   * 
    * @return routingOrder
    **/
-  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
+  @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
@@ -471,7 +520,6 @@ public class TemplateRole {
   public void setRoutingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
   }
-
 
   /**
    * signingGroupId.
@@ -484,10 +532,14 @@ public class TemplateRole {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
+   * When set to **true** and the feature is enabled in the sender's account, the
+   * signing recipient is required to draw signatures and initials at each
+   * signature/initial tab ( instead of adopting a signature/initial style or only
+   * drawing a signature/initial once)..
+   * 
    * @return signingGroupId
    **/
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -498,7 +550,6 @@ public class TemplateRole {
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
-
 
   /**
    * tabs.
@@ -511,10 +562,13 @@ public class TemplateRole {
   }
 
   /**
-   * A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients..
+   * A list of tabs, which are represented graphically as symbols on documents at
+   * the time of signing. Tabs show recipients where to sign, initial, or enter
+   * data. They may also display data to the recipients..
+   * 
    * @return tabs
    **/
-  @ApiModelProperty(value = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
+  @Schema(description = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
   public Tabs getTabs() {
     return tabs;
   }
@@ -525,7 +579,6 @@ public class TemplateRole {
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
-
 
   /**
    * Compares objects.
@@ -564,9 +617,10 @@ public class TemplateRole {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
+    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, deliveryMethod, email,
+        emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber,
+        recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
   }
-
 
   /**
    * Converts the given object to string.
@@ -575,7 +629,7 @@ public class TemplateRole {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateRole {\n");
-    
+
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
@@ -608,4 +662,3 @@ public class TemplateRole {
   }
 
 }
-

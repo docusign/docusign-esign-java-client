@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** RecipientEmail */
@@ -40,7 +40,7 @@ public class RecipientEmail {
    *
    * @return accountId
    */
-  @ApiModelProperty(example = "null", value = "The account ID associated with the envelope.")
+  @Schema(example = "null", description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -55,7 +55,7 @@ public class RecipientEmail {
   }
 
   /** @return accountName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getAccountName() {
     return accountName;
   }
@@ -70,7 +70,7 @@ public class RecipientEmail {
   }
 
   /** @return email */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getEmail() {
     return email;
   }
@@ -89,9 +89,7 @@ public class RecipientEmail {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(example = "null", description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -106,7 +104,7 @@ public class RecipientEmail {
   }
 
   /** @return name */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getName() {
     return name;
   }
@@ -121,15 +119,13 @@ public class RecipientEmail {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign
    * the Document.
    *
    * @return recipientId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(example = "null", description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -144,7 +140,7 @@ public class RecipientEmail {
   }
 
   /** @return supported */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getSupported() {
     return supported;
   }
@@ -159,7 +155,7 @@ public class RecipientEmail {
   }
 
   /** @return userId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getUserId() {
     return userId;
   }
@@ -211,7 +207,8 @@ public class RecipientEmail {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

@@ -6,8 +6,8 @@ import com.docusign.esign.model.FileType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FileTypeList.
@@ -18,7 +18,6 @@ public class FileTypeList {
   @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = null;
 
-
   /**
    * fileTypes.
    *
@@ -28,7 +27,7 @@ public class FileTypeList {
     this.fileTypes = fileTypes;
     return this;
   }
-  
+
   /**
    * addFileTypesItem.
    *
@@ -44,9 +43,10 @@ public class FileTypeList {
 
   /**
    * A collection of file types..
+   * 
    * @return fileTypes
    **/
-  @ApiModelProperty(value = "A collection of file types.")
+  @Schema(description = "A collection of file types.")
   public java.util.List<FileType> getFileTypes() {
     return fileTypes;
   }
@@ -57,7 +57,6 @@ public class FileTypeList {
   public void setFileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class FileTypeList {
     return Objects.hash(fileTypes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class FileTypeList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileTypeList {\n");
-    
+
     sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class FileTypeList {
   }
 
 }
-

@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** SignatureDataInfo */
@@ -25,7 +25,7 @@ public class SignatureDataInfo {
    *
    * @return documentSecurityStore
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DocumentSecurityStore getDocumentSecurityStore() {
     return documentSecurityStore;
   }
@@ -40,7 +40,7 @@ public class SignatureDataInfo {
   }
 
   /** @return signatureData */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureData() {
     return signatureData;
   }
@@ -55,7 +55,7 @@ public class SignatureDataInfo {
   }
 
   /** @return signatureFieldName */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureFieldName() {
     return signatureFieldName;
   }
@@ -98,7 +98,8 @@ public class SignatureDataInfo {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

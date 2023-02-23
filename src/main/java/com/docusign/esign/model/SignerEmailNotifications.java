@@ -5,14 +5,18 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created..
+ * An array of email notifications that specifies the email the user receives
+ * when they are a sender. When the specific email notification is set to true,
+ * the user receives those types of email notifications from DocuSign. The user
+ * inherits the default account sender email notification settings when the user
+ * is created..
  *
  */
-@ApiModel(description = "An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.")
+@Schema(description = "An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.")
 
 public class SignerEmailNotifications {
   @JsonProperty("agentNotification")
@@ -63,7 +67,6 @@ public class SignerEmailNotifications {
   @JsonProperty("whenSigningGroupMember")
   private String whenSigningGroupMember = null;
 
-
   /**
    * agentNotification.
    *
@@ -76,9 +79,10 @@ public class SignerEmailNotifications {
 
   /**
    * When set to **true**, the user receives agent notification emails..
+   * 
    * @return agentNotification
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives agent notification emails.")
+  @Schema(description = "When set to **true**, the user receives agent notification emails.")
   public String getAgentNotification() {
     return agentNotification;
   }
@@ -89,7 +93,6 @@ public class SignerEmailNotifications {
   public void setAgentNotification(String agentNotification) {
     this.agentNotification = agentNotification;
   }
-
 
   /**
    * carbonCopyNotification.
@@ -102,10 +105,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notifications of carbon copy deliveries..
+   * When set to **true**, the user receives notifications of carbon copy
+   * deliveries..
+   * 
    * @return carbonCopyNotification
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notifications of carbon copy deliveries.")
+  @Schema(description = "When set to **true**, the user receives notifications of carbon copy deliveries.")
   public String getCarbonCopyNotification() {
     return carbonCopyNotification;
   }
@@ -116,7 +121,6 @@ public class SignerEmailNotifications {
   public void setCarbonCopyNotification(String carbonCopyNotification) {
     this.carbonCopyNotification = carbonCopyNotification;
   }
-
 
   /**
    * certifiedDeliveryNotification.
@@ -129,10 +133,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notifications of certified deliveries..
+   * When set to **true**, the user receives notifications of certified
+   * deliveries..
+   * 
    * @return certifiedDeliveryNotification
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notifications of certified deliveries.")
+  @Schema(description = "When set to **true**, the user receives notifications of certified deliveries.")
   public String getCertifiedDeliveryNotification() {
     return certifiedDeliveryNotification;
   }
@@ -143,7 +149,6 @@ public class SignerEmailNotifications {
   public void setCertifiedDeliveryNotification(String certifiedDeliveryNotification) {
     this.certifiedDeliveryNotification = certifiedDeliveryNotification;
   }
-
 
   /**
    * commentsOnlyPrivateAndMention.
@@ -157,9 +162,10 @@ public class SignerEmailNotifications {
 
   /**
    * .
+   * 
    * @return commentsOnlyPrivateAndMention
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommentsOnlyPrivateAndMention() {
     return commentsOnlyPrivateAndMention;
   }
@@ -170,7 +176,6 @@ public class SignerEmailNotifications {
   public void setCommentsOnlyPrivateAndMention(String commentsOnlyPrivateAndMention) {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
   }
-
 
   /**
    * commentsReceiveAll.
@@ -184,9 +189,10 @@ public class SignerEmailNotifications {
 
   /**
    * .
+   * 
    * @return commentsReceiveAll
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommentsReceiveAll() {
     return commentsReceiveAll;
   }
@@ -197,7 +203,6 @@ public class SignerEmailNotifications {
   public void setCommentsReceiveAll(String commentsReceiveAll) {
     this.commentsReceiveAll = commentsReceiveAll;
   }
-
 
   /**
    * documentMarkupActivation.
@@ -210,10 +215,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that document markup has been activated..
+   * When set to **true**, the user receives notification that document markup has
+   * been activated..
+   * 
    * @return documentMarkupActivation
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that document markup has been activated.")
+  @Schema(description = "When set to **true**, the user receives notification that document markup has been activated.")
   public String getDocumentMarkupActivation() {
     return documentMarkupActivation;
   }
@@ -224,7 +231,6 @@ public class SignerEmailNotifications {
   public void setDocumentMarkupActivation(String documentMarkupActivation) {
     this.documentMarkupActivation = documentMarkupActivation;
   }
-
 
   /**
    * envelopeActivation.
@@ -237,10 +243,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been activated..
+   * When set to **true**, the user receives notification that the envelope has
+   * been activated..
+   * 
    * @return envelopeActivation
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been activated.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been activated.")
   public String getEnvelopeActivation() {
     return envelopeActivation;
   }
@@ -251,7 +259,6 @@ public class SignerEmailNotifications {
   public void setEnvelopeActivation(String envelopeActivation) {
     this.envelopeActivation = envelopeActivation;
   }
-
 
   /**
    * envelopeComplete.
@@ -264,10 +271,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been completed..
+   * When set to **true**, the user receives notification that the envelope has
+   * been completed..
+   * 
    * @return envelopeComplete
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been completed.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been completed.")
   public String getEnvelopeComplete() {
     return envelopeComplete;
   }
@@ -278,7 +287,6 @@ public class SignerEmailNotifications {
   public void setEnvelopeComplete(String envelopeComplete) {
     this.envelopeComplete = envelopeComplete;
   }
-
 
   /**
    * envelopeCorrected.
@@ -291,10 +299,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been corrected..
+   * When set to **true**, the user receives notification that the envelope has
+   * been corrected..
+   * 
    * @return envelopeCorrected
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been corrected.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been corrected.")
   public String getEnvelopeCorrected() {
     return envelopeCorrected;
   }
@@ -305,7 +315,6 @@ public class SignerEmailNotifications {
   public void setEnvelopeCorrected(String envelopeCorrected) {
     this.envelopeCorrected = envelopeCorrected;
   }
-
 
   /**
    * envelopeDeclined.
@@ -318,10 +327,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been declined..
+   * When set to **true**, the user receives notification that the envelope has
+   * been declined..
+   * 
    * @return envelopeDeclined
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been declined.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been declined.")
   public String getEnvelopeDeclined() {
     return envelopeDeclined;
   }
@@ -332,7 +343,6 @@ public class SignerEmailNotifications {
   public void setEnvelopeDeclined(String envelopeDeclined) {
     this.envelopeDeclined = envelopeDeclined;
   }
-
 
   /**
    * envelopeVoided.
@@ -345,10 +355,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been voided..
+   * When set to **true**, the user receives notification that the envelope has
+   * been voided..
+   * 
    * @return envelopeVoided
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been voided.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been voided.")
   public String getEnvelopeVoided() {
     return envelopeVoided;
   }
@@ -359,7 +371,6 @@ public class SignerEmailNotifications {
   public void setEnvelopeVoided(String envelopeVoided) {
     this.envelopeVoided = envelopeVoided;
   }
-
 
   /**
    * faxReceived.
@@ -373,9 +384,10 @@ public class SignerEmailNotifications {
 
   /**
    * Reserved:.
+   * 
    * @return faxReceived
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public String getFaxReceived() {
     return faxReceived;
   }
@@ -386,7 +398,6 @@ public class SignerEmailNotifications {
   public void setFaxReceived(String faxReceived) {
     this.faxReceived = faxReceived;
   }
-
 
   /**
    * offlineSigningFailed.
@@ -399,10 +410,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification if the offline signing failed..
+   * When set to **true**, the user receives notification if the offline signing
+   * failed..
+   * 
    * @return offlineSigningFailed
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification if the offline signing failed.")
+  @Schema(description = "When set to **true**, the user receives notification if the offline signing failed.")
   public String getOfflineSigningFailed() {
     return offlineSigningFailed;
   }
@@ -413,7 +426,6 @@ public class SignerEmailNotifications {
   public void setOfflineSigningFailed(String offlineSigningFailed) {
     this.offlineSigningFailed = offlineSigningFailed;
   }
-
 
   /**
    * purgeDocuments.
@@ -427,9 +439,10 @@ public class SignerEmailNotifications {
 
   /**
    * When set to **true**, the user receives notification of document purges..
+   * 
    * @return purgeDocuments
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification of document purges.")
+  @Schema(description = "When set to **true**, the user receives notification of document purges.")
   public String getPurgeDocuments() {
     return purgeDocuments;
   }
@@ -440,7 +453,6 @@ public class SignerEmailNotifications {
   public void setPurgeDocuments(String purgeDocuments) {
     this.purgeDocuments = purgeDocuments;
   }
-
 
   /**
    * reassignedSigner.
@@ -453,10 +465,12 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has been reassigned..
+   * When set to **true**, the user receives notification that the envelope has
+   * been reassigned..
+   * 
    * @return reassignedSigner
    **/
-  @ApiModelProperty(value = "When set to **true**, the user receives notification that the envelope has been reassigned.")
+  @Schema(description = "When set to **true**, the user receives notification that the envelope has been reassigned.")
   public String getReassignedSigner() {
     return reassignedSigner;
   }
@@ -467,7 +481,6 @@ public class SignerEmailNotifications {
   public void setReassignedSigner(String reassignedSigner) {
     this.reassignedSigner = reassignedSigner;
   }
-
 
   /**
    * whenSigningGroupMember.
@@ -481,9 +494,10 @@ public class SignerEmailNotifications {
 
   /**
    * .
+   * 
    * @return whenSigningGroupMember
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWhenSigningGroupMember() {
     return whenSigningGroupMember;
   }
@@ -494,7 +508,6 @@ public class SignerEmailNotifications {
   public void setWhenSigningGroupMember(String whenSigningGroupMember) {
     this.whenSigningGroupMember = whenSigningGroupMember;
   }
-
 
   /**
    * Compares objects.
@@ -533,9 +546,11 @@ public class SignerEmailNotifications {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agentNotification, carbonCopyNotification, certifiedDeliveryNotification, commentsOnlyPrivateAndMention, commentsReceiveAll, documentMarkupActivation, envelopeActivation, envelopeComplete, envelopeCorrected, envelopeDeclined, envelopeVoided, faxReceived, offlineSigningFailed, purgeDocuments, reassignedSigner, whenSigningGroupMember);
+    return Objects.hash(agentNotification, carbonCopyNotification, certifiedDeliveryNotification,
+        commentsOnlyPrivateAndMention, commentsReceiveAll, documentMarkupActivation, envelopeActivation,
+        envelopeComplete, envelopeCorrected, envelopeDeclined, envelopeVoided, faxReceived, offlineSigningFailed,
+        purgeDocuments, reassignedSigner, whenSigningGroupMember);
   }
-
 
   /**
    * Converts the given object to string.
@@ -544,11 +559,13 @@ public class SignerEmailNotifications {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerEmailNotifications {\n");
-    
+
     sb.append("    agentNotification: ").append(toIndentedString(agentNotification)).append("\n");
     sb.append("    carbonCopyNotification: ").append(toIndentedString(carbonCopyNotification)).append("\n");
-    sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification)).append("\n");
-    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention)).append("\n");
+    sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification))
+        .append("\n");
+    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention))
+        .append("\n");
     sb.append("    commentsReceiveAll: ").append(toIndentedString(commentsReceiveAll)).append("\n");
     sb.append("    documentMarkupActivation: ").append(toIndentedString(documentMarkupActivation)).append("\n");
     sb.append("    envelopeActivation: ").append(toIndentedString(envelopeActivation)).append("\n");
@@ -577,4 +594,3 @@ public class SignerEmailNotifications {
   }
 
 }
-

@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains details about a Connect failure result..
  *
  */
-@ApiModel(description = "This object contains details about a Connect failure result.")
+@Schema(description = "This object contains details about a Connect failure result.")
 
 public class ConnectFailureResult {
   @JsonProperty("configId")
@@ -30,7 +30,6 @@ public class ConnectFailureResult {
   @JsonProperty("statusMessage")
   private String statusMessage = null;
 
-
   /**
    * configId.
    *
@@ -43,9 +42,10 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
+   * 
    * @return configId
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getConfigId() {
     return configId;
   }
@@ -56,7 +56,6 @@ public class ConnectFailureResult {
   public void setConfigId(String configId) {
     this.configId = configId;
   }
-
 
   /**
    * configUrl.
@@ -70,9 +69,10 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
+   * 
    * @return configUrl
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getConfigUrl() {
     return configUrl;
   }
@@ -83,7 +83,6 @@ public class ConnectFailureResult {
   public void setConfigUrl(String configUrl) {
     this.configUrl = configUrl;
   }
-
 
   /**
    * envelopeId.
@@ -97,9 +96,10 @@ public class ConnectFailureResult {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -110,7 +110,6 @@ public class ConnectFailureResult {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * status.
@@ -123,10 +122,13 @@ public class ConnectFailureResult {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -137,7 +139,6 @@ public class ConnectFailureResult {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMessage.
@@ -151,9 +152,10 @@ public class ConnectFailureResult {
 
   /**
    * .
+   * 
    * @return statusMessage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatusMessage() {
     return statusMessage;
   }
@@ -164,7 +166,6 @@ public class ConnectFailureResult {
   public void setStatusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +196,6 @@ public class ConnectFailureResult {
     return Objects.hash(configId, configUrl, envelopeId, status, statusMessage);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +203,7 @@ public class ConnectFailureResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResult {\n");
-    
+
     sb.append("    configId: ").append(toIndentedString(configId)).append("\n");
     sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -225,4 +225,3 @@ public class ConnectFailureResult {
   }
 
 }
-

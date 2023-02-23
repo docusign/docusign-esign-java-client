@@ -6,14 +6,14 @@ import com.docusign.esign.model.RecipientOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes a group of recipients..
  *
  */
-@ApiModel(description = "Describes a group of recipients.")
+@Schema(description = "Describes a group of recipients.")
 
 public class RecipientGroup {
   @JsonProperty("groupMessage")
@@ -24,7 +24,6 @@ public class RecipientGroup {
 
   @JsonProperty("recipients")
   private java.util.List<RecipientOption> recipients = null;
-
 
   /**
    * groupMessage.
@@ -38,9 +37,10 @@ public class RecipientGroup {
 
   /**
    * .
+   * 
    * @return groupMessage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupMessage() {
     return groupMessage;
   }
@@ -51,7 +51,6 @@ public class RecipientGroup {
   public void setGroupMessage(String groupMessage) {
     this.groupMessage = groupMessage;
   }
-
 
   /**
    * groupName.
@@ -65,9 +64,10 @@ public class RecipientGroup {
 
   /**
    * The name of the group..
+   * 
    * @return groupName
    **/
-  @ApiModelProperty(value = "The name of the group.")
+  @Schema(description = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -79,7 +79,6 @@ public class RecipientGroup {
     this.groupName = groupName;
   }
 
-
   /**
    * recipients.
    *
@@ -89,7 +88,7 @@ public class RecipientGroup {
     this.recipients = recipients;
     return this;
   }
-  
+
   /**
    * addRecipientsItem.
    *
@@ -105,9 +104,10 @@ public class RecipientGroup {
 
   /**
    * An array of powerform recipients..
+   * 
    * @return recipients
    **/
-  @ApiModelProperty(value = "An array of powerform recipients.")
+  @Schema(description = "An array of powerform recipients.")
   public java.util.List<RecipientOption> getRecipients() {
     return recipients;
   }
@@ -118,7 +118,6 @@ public class RecipientGroup {
   public void setRecipients(java.util.List<RecipientOption> recipients) {
     this.recipients = recipients;
   }
-
 
   /**
    * Compares objects.
@@ -147,7 +146,6 @@ public class RecipientGroup {
     return Objects.hash(groupMessage, groupName, recipients);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -155,7 +153,7 @@ public class RecipientGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientGroup {\n");
-    
+
     sb.append("    groupMessage: ").append(toIndentedString(groupMessage)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
@@ -175,4 +173,3 @@ public class RecipientGroup {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SignatureGroup.
@@ -23,7 +23,6 @@ public class SignatureGroup {
   @JsonProperty("rights")
   private String rights = null;
 
-
   /**
    * groupId.
    *
@@ -36,9 +35,10 @@ public class SignatureGroup {
 
   /**
    * .
+   * 
    * @return groupId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupId() {
     return groupId;
   }
@@ -49,7 +49,6 @@ public class SignatureGroup {
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
-
 
   /**
    * groupName.
@@ -63,9 +62,10 @@ public class SignatureGroup {
 
   /**
    * The name of the group..
+   * 
    * @return groupName
    **/
-  @ApiModelProperty(value = "The name of the group.")
+  @Schema(description = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -76,7 +76,6 @@ public class SignatureGroup {
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
-
 
   /**
    * rights.
@@ -90,9 +89,10 @@ public class SignatureGroup {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -103,7 +103,6 @@ public class SignatureGroup {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class SignatureGroup {
     return Objects.hash(groupId, groupName, rights);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class SignatureGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureGroup {\n");
-    
+
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
@@ -160,4 +158,3 @@ public class SignatureGroup {
   }
 
 }
-

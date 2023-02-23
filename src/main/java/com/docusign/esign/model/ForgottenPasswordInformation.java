@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element that has up to four Question/Answer pairs for forgotten password information..
+ * A complex element that has up to four Question/Answer pairs for forgotten
+ * password information..
  *
  */
-@ApiModel(description = "A complex element that has up to four Question/Answer pairs for forgotten password information.")
+@Schema(description = "A complex element that has up to four Question/Answer pairs for forgotten password information.")
 
 public class ForgottenPasswordInformation {
   @JsonProperty("forgottenPasswordAnswer1")
@@ -39,7 +40,6 @@ public class ForgottenPasswordInformation {
   @JsonProperty("forgottenPasswordQuestion4")
   private String forgottenPasswordQuestion4 = null;
 
-
   /**
    * forgottenPasswordAnswer1.
    *
@@ -52,9 +52,10 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the first forgotten password challenge question..
+   * 
    * @return forgottenPasswordAnswer1
    **/
-  @ApiModelProperty(value = "The answer to the first forgotten password challenge question.")
+  @Schema(description = "The answer to the first forgotten password challenge question.")
   public String getForgottenPasswordAnswer1() {
     return forgottenPasswordAnswer1;
   }
@@ -65,7 +66,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordAnswer1(String forgottenPasswordAnswer1) {
     this.forgottenPasswordAnswer1 = forgottenPasswordAnswer1;
   }
-
 
   /**
    * forgottenPasswordAnswer2.
@@ -79,9 +79,10 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the second forgotten password challenge question..
+   * 
    * @return forgottenPasswordAnswer2
    **/
-  @ApiModelProperty(value = "The answer to the second forgotten password challenge question.")
+  @Schema(description = "The answer to the second forgotten password challenge question.")
   public String getForgottenPasswordAnswer2() {
     return forgottenPasswordAnswer2;
   }
@@ -92,7 +93,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordAnswer2(String forgottenPasswordAnswer2) {
     this.forgottenPasswordAnswer2 = forgottenPasswordAnswer2;
   }
-
 
   /**
    * forgottenPasswordAnswer3.
@@ -106,9 +106,10 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the third forgotten password challenge question..
+   * 
    * @return forgottenPasswordAnswer3
    **/
-  @ApiModelProperty(value = "The answer to the third forgotten password challenge question.")
+  @Schema(description = "The answer to the third forgotten password challenge question.")
   public String getForgottenPasswordAnswer3() {
     return forgottenPasswordAnswer3;
   }
@@ -119,7 +120,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordAnswer3(String forgottenPasswordAnswer3) {
     this.forgottenPasswordAnswer3 = forgottenPasswordAnswer3;
   }
-
 
   /**
    * forgottenPasswordAnswer4.
@@ -133,9 +133,10 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the fourth forgotten password challenge question..
+   * 
    * @return forgottenPasswordAnswer4
    **/
-  @ApiModelProperty(value = "The answer to the fourth forgotten password challenge question.")
+  @Schema(description = "The answer to the fourth forgotten password challenge question.")
   public String getForgottenPasswordAnswer4() {
     return forgottenPasswordAnswer4;
   }
@@ -146,7 +147,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordAnswer4(String forgottenPasswordAnswer4) {
     this.forgottenPasswordAnswer4 = forgottenPasswordAnswer4;
   }
-
 
   /**
    * forgottenPasswordQuestion1.
@@ -159,10 +159,12 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The first challenge question presented to a user who has forgotten their password..
+   * The first challenge question presented to a user who has forgotten their
+   * password..
+   * 
    * @return forgottenPasswordQuestion1
    **/
-  @ApiModelProperty(value = "The first challenge question presented to a user who has forgotten their password.")
+  @Schema(description = "The first challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion1() {
     return forgottenPasswordQuestion1;
   }
@@ -173,7 +175,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordQuestion1(String forgottenPasswordQuestion1) {
     this.forgottenPasswordQuestion1 = forgottenPasswordQuestion1;
   }
-
 
   /**
    * forgottenPasswordQuestion2.
@@ -186,10 +187,12 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The second challenge question presented to a user who has forgotten their password..
+   * The second challenge question presented to a user who has forgotten their
+   * password..
+   * 
    * @return forgottenPasswordQuestion2
    **/
-  @ApiModelProperty(value = "The second challenge question presented to a user who has forgotten their password.")
+  @Schema(description = "The second challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion2() {
     return forgottenPasswordQuestion2;
   }
@@ -200,7 +203,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordQuestion2(String forgottenPasswordQuestion2) {
     this.forgottenPasswordQuestion2 = forgottenPasswordQuestion2;
   }
-
 
   /**
    * forgottenPasswordQuestion3.
@@ -213,10 +215,12 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The third challenge question presented to a user who has forgotten their password..
+   * The third challenge question presented to a user who has forgotten their
+   * password..
+   * 
    * @return forgottenPasswordQuestion3
    **/
-  @ApiModelProperty(value = "The third challenge question presented to a user who has forgotten their password.")
+  @Schema(description = "The third challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion3() {
     return forgottenPasswordQuestion3;
   }
@@ -227,7 +231,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordQuestion3(String forgottenPasswordQuestion3) {
     this.forgottenPasswordQuestion3 = forgottenPasswordQuestion3;
   }
-
 
   /**
    * forgottenPasswordQuestion4.
@@ -240,10 +243,12 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The fourth challenge question presented to a user who has forgotten their password..
+   * The fourth challenge question presented to a user who has forgotten their
+   * password..
+   * 
    * @return forgottenPasswordQuestion4
    **/
-  @ApiModelProperty(value = "The fourth challenge question presented to a user who has forgotten their password.")
+  @Schema(description = "The fourth challenge question presented to a user who has forgotten their password.")
   public String getForgottenPasswordQuestion4() {
     return forgottenPasswordQuestion4;
   }
@@ -254,7 +259,6 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordQuestion4(String forgottenPasswordQuestion4) {
     this.forgottenPasswordQuestion4 = forgottenPasswordQuestion4;
   }
-
 
   /**
    * Compares objects.
@@ -285,9 +289,10 @@ public class ForgottenPasswordInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(forgottenPasswordAnswer1, forgottenPasswordAnswer2, forgottenPasswordAnswer3, forgottenPasswordAnswer4, forgottenPasswordQuestion1, forgottenPasswordQuestion2, forgottenPasswordQuestion3, forgottenPasswordQuestion4);
+    return Objects.hash(forgottenPasswordAnswer1, forgottenPasswordAnswer2, forgottenPasswordAnswer3,
+        forgottenPasswordAnswer4, forgottenPasswordQuestion1, forgottenPasswordQuestion2, forgottenPasswordQuestion3,
+        forgottenPasswordQuestion4);
   }
-
 
   /**
    * Converts the given object to string.
@@ -296,7 +301,7 @@ public class ForgottenPasswordInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ForgottenPasswordInformation {\n");
-    
+
     sb.append("    forgottenPasswordAnswer1: ").append(toIndentedString(forgottenPasswordAnswer1)).append("\n");
     sb.append("    forgottenPasswordAnswer2: ").append(toIndentedString(forgottenPasswordAnswer2)).append("\n");
     sb.append("    forgottenPasswordAnswer3: ").append(toIndentedString(forgottenPasswordAnswer3)).append("\n");
@@ -321,4 +326,3 @@ public class ForgottenPasswordInformation {
   }
 
 }
-

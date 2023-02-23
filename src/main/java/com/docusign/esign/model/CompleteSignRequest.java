@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** CompleteSignRequest */
@@ -30,7 +30,7 @@ public class CompleteSignRequest {
   }
 
   /** @return certificate */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCertificate() {
     return certificate;
   }
@@ -45,7 +45,7 @@ public class CompleteSignRequest {
   }
 
   /** @return correlationId */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCorrelationId() {
     return correlationId;
   }
@@ -70,7 +70,7 @@ public class CompleteSignRequest {
   }
 
   /** @return documentUpdateInfos */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocumentUpdateInfo> getDocumentUpdateInfos() {
     return documentUpdateInfos;
   }
@@ -85,7 +85,7 @@ public class CompleteSignRequest {
   }
 
   /** @return maxSignatureLength */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxSignatureLength() {
     return maxSignatureLength;
   }
@@ -100,14 +100,13 @@ public class CompleteSignRequest {
   }
 
   /**
-   * Specifies the physical location where the signing takes place. It can have two enumeration
+   * Specifies the physical location where the signing takes place. It can have
+   * two enumeration
    * values; InPerson and Online. The default value is Online.
    *
    * @return signingLocation
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
+  @Schema(description = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
   public String getSigningLocation() {
     return signingLocation;
   }
@@ -122,17 +121,19 @@ public class CompleteSignRequest {
   }
 
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign
-   * system for 7 days. It is recommended that a transaction ID is used for offline signing to
-   * ensure that an envelope is not sent multiple times. The `transactionId` property can be used
-   * determine an envelope's status (i.e. was it created or not) in cases where the internet
+   * Used to identify an envelope. The id is a sender-generated value and is valid
+   * in the DocuSign
+   * system for 7 days. It is recommended that a transaction ID is used for
+   * offline signing to
+   * ensure that an envelope is not sent multiple times. The `transactionId`
+   * property can be used
+   * determine an envelope's status (i.e. was it created or not) in cases where
+   * the internet
    * connection was lost before the envelope status was returned.
    *
    * @return transactionId
    */
-  @ApiModelProperty(
-      value =
-          " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
+  @Schema(description = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   public String getTransactionId() {
     return transactionId;
   }
@@ -187,7 +188,8 @@ public class CompleteSignRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

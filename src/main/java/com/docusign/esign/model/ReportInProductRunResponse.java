@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductRunResponse. */
@@ -42,7 +42,7 @@ public class ReportInProductRunResponse {
    *
    * @return endPosition
    */
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -67,7 +67,7 @@ public class ReportInProductRunResponse {
    *
    * @return exceededMaxResults
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExceededMaxResults() {
     return exceededMaxResults;
   }
@@ -93,7 +93,7 @@ public class ReportInProductRunResponse {
    *
    * @return lastWarehouseRefreshDateTime
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastWarehouseRefreshDateTime() {
     return lastWarehouseRefreshDateTime;
   }
@@ -118,7 +118,7 @@ public class ReportInProductRunResponse {
    *
    * @return resultSetSize
    */
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -156,7 +156,7 @@ public class ReportInProductRunResponse {
    *
    * @return rows
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ReportInProductRunResponseRow> getRows() {
     return rows;
   }
@@ -181,7 +181,7 @@ public class ReportInProductRunResponse {
    *
    * @return startPosition
    */
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -202,14 +202,14 @@ public class ReportInProductRunResponse {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or
-   * equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or
+   * equal to the value of the property returning the results in the in the
+   * response..
    *
    * @return totalSetSize
    */
-  @ApiModelProperty(
-      value =
-          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -277,7 +277,8 @@ public class ReportInProductRunResponse {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

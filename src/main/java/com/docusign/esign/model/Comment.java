@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Comment.
@@ -77,7 +77,6 @@ public class Comment {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
-
   /**
    * envelopeId.
    *
@@ -90,9 +89,10 @@ public class Comment {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -103,7 +103,6 @@ public class Comment {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * hmac.
@@ -117,9 +116,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return hmac
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHmac() {
     return hmac;
   }
@@ -130,7 +130,6 @@ public class Comment {
   public void setHmac(String hmac) {
     this.hmac = hmac;
   }
-
 
   /**
    * id.
@@ -144,9 +143,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -158,7 +158,6 @@ public class Comment {
     this.id = id;
   }
 
-
   /**
    * mentions.
    *
@@ -168,7 +167,7 @@ public class Comment {
     this.mentions = mentions;
     return this;
   }
-  
+
   /**
    * addMentionsItem.
    *
@@ -184,9 +183,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return mentions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getMentions() {
     return mentions;
   }
@@ -197,7 +197,6 @@ public class Comment {
   public void setMentions(java.util.List<String> mentions) {
     this.mentions = mentions;
   }
-
 
   /**
    * read.
@@ -211,9 +210,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return read
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isRead() {
     return read;
   }
@@ -224,7 +224,6 @@ public class Comment {
   public void setRead(Boolean read) {
     this.read = read;
   }
-
 
   /**
    * sentByEmail.
@@ -238,9 +237,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByEmail() {
     return sentByEmail;
   }
@@ -251,7 +251,6 @@ public class Comment {
   public void setSentByEmail(String sentByEmail) {
     this.sentByEmail = sentByEmail;
   }
-
 
   /**
    * sentByFullName.
@@ -265,9 +264,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByFullName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByFullName() {
     return sentByFullName;
   }
@@ -278,7 +278,6 @@ public class Comment {
   public void setSentByFullName(String sentByFullName) {
     this.sentByFullName = sentByFullName;
   }
-
 
   /**
    * sentByImageId.
@@ -292,9 +291,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByImageId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByImageId() {
     return sentByImageId;
   }
@@ -305,7 +305,6 @@ public class Comment {
   public void setSentByImageId(String sentByImageId) {
     this.sentByImageId = sentByImageId;
   }
-
 
   /**
    * sentByInitials.
@@ -319,9 +318,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByInitials
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByInitials() {
     return sentByInitials;
   }
@@ -332,7 +332,6 @@ public class Comment {
   public void setSentByInitials(String sentByInitials) {
     this.sentByInitials = sentByInitials;
   }
-
 
   /**
    * sentByRecipientId.
@@ -346,9 +345,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByRecipientId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByRecipientId() {
     return sentByRecipientId;
   }
@@ -359,7 +359,6 @@ public class Comment {
   public void setSentByRecipientId(String sentByRecipientId) {
     this.sentByRecipientId = sentByRecipientId;
   }
-
 
   /**
    * sentByUserId.
@@ -373,9 +372,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return sentByUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByUserId() {
     return sentByUserId;
   }
@@ -386,7 +386,6 @@ public class Comment {
   public void setSentByUserId(String sentByUserId) {
     this.sentByUserId = sentByUserId;
   }
-
 
   /**
    * signingGroupId.
@@ -399,10 +398,14 @@ public class Comment {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
+   * When set to **true** and the feature is enabled in the sender's account, the
+   * signing recipient is required to draw signatures and initials at each
+   * signature/initial tab ( instead of adopting a signature/initial style or only
+   * drawing a signature/initial once)..
+   * 
    * @return signingGroupId
    **/
-  @ApiModelProperty(value = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
+  @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
   public String getSigningGroupId() {
     return signingGroupId;
   }
@@ -413,7 +416,6 @@ public class Comment {
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
-
 
   /**
    * signingGroupName.
@@ -426,10 +428,11 @@ public class Comment {
   }
 
   /**
-   * The display name for the signing group.   Maximum Length: 100 characters. .
+   * The display name for the signing group. Maximum Length: 100 characters. .
+   * 
    * @return signingGroupName
    **/
-  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
@@ -440,7 +443,6 @@ public class Comment {
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
-
 
   /**
    * subject.
@@ -454,9 +456,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return subject
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubject() {
     return subject;
   }
@@ -467,7 +470,6 @@ public class Comment {
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   /**
    * tabId.
@@ -480,10 +482,12 @@ public class Comment {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -494,7 +498,6 @@ public class Comment {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * text.
@@ -508,9 +511,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return text
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getText() {
     return text;
   }
@@ -521,7 +525,6 @@ public class Comment {
   public void setText(String text) {
     this.text = text;
   }
-
 
   /**
    * threadId.
@@ -535,9 +538,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return threadId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreadId() {
     return threadId;
   }
@@ -548,7 +552,6 @@ public class Comment {
   public void setThreadId(String threadId) {
     this.threadId = threadId;
   }
-
 
   /**
    * threadOriginatorId.
@@ -562,9 +565,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return threadOriginatorId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getThreadOriginatorId() {
     return threadOriginatorId;
   }
@@ -575,7 +579,6 @@ public class Comment {
   public void setThreadOriginatorId(String threadOriginatorId) {
     this.threadOriginatorId = threadOriginatorId;
   }
-
 
   /**
    * timestamp.
@@ -589,9 +592,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return timestamp
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimestamp() {
     return timestamp;
   }
@@ -602,7 +606,6 @@ public class Comment {
   public void setTimestamp(String timestamp) {
     this.timestamp = timestamp;
   }
-
 
   /**
    * timeStampFormatted.
@@ -616,9 +619,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return timeStampFormatted
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeStampFormatted() {
     return timeStampFormatted;
   }
@@ -630,7 +634,6 @@ public class Comment {
     this.timeStampFormatted = timeStampFormatted;
   }
 
-
   /**
    * visibleTo.
    *
@@ -640,7 +643,7 @@ public class Comment {
     this.visibleTo = visibleTo;
     return this;
   }
-  
+
   /**
    * addVisibleToItem.
    *
@@ -656,9 +659,10 @@ public class Comment {
 
   /**
    * .
+   * 
    * @return visibleTo
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getVisibleTo() {
     return visibleTo;
   }
@@ -669,7 +673,6 @@ public class Comment {
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
-
 
   /**
    * Compares objects.
@@ -713,9 +716,10 @@ public class Comment {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeId, hmac, id, mentions, read, sentByEmail, sentByFullName, sentByImageId, sentByInitials, sentByRecipientId, sentByUserId, signingGroupId, signingGroupName, subject, tabId, text, threadId, threadOriginatorId, timestamp, timeStampFormatted, visibleTo);
+    return Objects.hash(envelopeId, hmac, id, mentions, read, sentByEmail, sentByFullName, sentByImageId,
+        sentByInitials, sentByRecipientId, sentByUserId, signingGroupId, signingGroupName, subject, tabId, text,
+        threadId, threadOriginatorId, timestamp, timeStampFormatted, visibleTo);
   }
-
 
   /**
    * Converts the given object to string.
@@ -724,7 +728,7 @@ public class Comment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Comment {\n");
-    
+
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    hmac: ").append(toIndentedString(hmac)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -762,4 +766,3 @@ public class Comment {
   }
 
 }
-

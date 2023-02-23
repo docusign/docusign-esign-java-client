@@ -7,14 +7,14 @@ import com.docusign.esign.model.RecipientRouting;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes a single step in a workflow..
  *
  */
-@ApiModel(description = "Describes a single step in a workflow.")
+@Schema(description = "Describes a single step in a workflow.")
 
 public class WorkflowStep {
   @JsonProperty("action")
@@ -44,7 +44,6 @@ public class WorkflowStep {
   @JsonProperty("workflowStepId")
   private String workflowStepId = null;
 
-
   /**
    * action.
    *
@@ -57,9 +56,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return action
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAction() {
     return action;
   }
@@ -70,7 +70,6 @@ public class WorkflowStep {
   public void setAction(String action) {
     this.action = action;
   }
-
 
   /**
    * completedDate.
@@ -84,9 +83,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return completedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompletedDate() {
     return completedDate;
   }
@@ -97,7 +97,6 @@ public class WorkflowStep {
   public void setCompletedDate(String completedDate) {
     this.completedDate = completedDate;
   }
-
 
   /**
    * delayedRouting.
@@ -110,10 +109,12 @@ public class WorkflowStep {
   }
 
   /**
-   * A complex element that specifies the delayed routing settings for the workflow step..
+   * A complex element that specifies the delayed routing settings for the
+   * workflow step..
+   * 
    * @return delayedRouting
    **/
-  @ApiModelProperty(value = "A complex element that specifies the delayed routing settings for the workflow step.")
+  @Schema(description = "A complex element that specifies the delayed routing settings for the workflow step.")
   public DelayedRouting getDelayedRouting() {
     return delayedRouting;
   }
@@ -124,7 +125,6 @@ public class WorkflowStep {
   public void setDelayedRouting(DelayedRouting delayedRouting) {
     this.delayedRouting = delayedRouting;
   }
-
 
   /**
    * itemId.
@@ -138,9 +138,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return itemId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getItemId() {
     return itemId;
   }
@@ -151,7 +152,6 @@ public class WorkflowStep {
   public void setItemId(String itemId) {
     this.itemId = itemId;
   }
-
 
   /**
    * recipientRouting.
@@ -165,9 +165,10 @@ public class WorkflowStep {
 
   /**
    * The rules for recipient routing..
+   * 
    * @return recipientRouting
    **/
-  @ApiModelProperty(value = "The rules for recipient routing.")
+  @Schema(description = "The rules for recipient routing.")
   public RecipientRouting getRecipientRouting() {
     return recipientRouting;
   }
@@ -178,7 +179,6 @@ public class WorkflowStep {
   public void setRecipientRouting(RecipientRouting recipientRouting) {
     this.recipientRouting = recipientRouting;
   }
-
 
   /**
    * status.
@@ -191,10 +191,13 @@ public class WorkflowStep {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -205,7 +208,6 @@ public class WorkflowStep {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * triggeredDate.
@@ -219,9 +221,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return triggeredDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTriggeredDate() {
     return triggeredDate;
   }
@@ -232,7 +235,6 @@ public class WorkflowStep {
   public void setTriggeredDate(String triggeredDate) {
     this.triggeredDate = triggeredDate;
   }
-
 
   /**
    * triggerOnItem.
@@ -246,9 +248,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return triggerOnItem
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTriggerOnItem() {
     return triggerOnItem;
   }
@@ -259,7 +262,6 @@ public class WorkflowStep {
   public void setTriggerOnItem(String triggerOnItem) {
     this.triggerOnItem = triggerOnItem;
   }
-
 
   /**
    * workflowStepId.
@@ -273,9 +275,10 @@ public class WorkflowStep {
 
   /**
    * .
+   * 
    * @return workflowStepId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getWorkflowStepId() {
     return workflowStepId;
   }
@@ -286,7 +289,6 @@ public class WorkflowStep {
   public void setWorkflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
   }
-
 
   /**
    * Compares objects.
@@ -318,9 +320,9 @@ public class WorkflowStep {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
+    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate,
+        triggerOnItem, workflowStepId);
   }
-
 
   /**
    * Converts the given object to string.
@@ -329,7 +331,7 @@ public class WorkflowStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkflowStep {\n");
-    
+
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    completedDate: ").append(toIndentedString(completedDate)).append("\n");
     sb.append("    delayedRouting: ").append(toIndentedString(delayedRouting)).append("\n");
@@ -355,4 +357,3 @@ public class WorkflowStep {
   }
 
 }
-

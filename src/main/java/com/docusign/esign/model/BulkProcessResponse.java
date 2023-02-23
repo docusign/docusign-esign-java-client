@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessResponse.
@@ -35,7 +35,6 @@ public class BulkProcessResponse {
   @JsonProperty("totalQueued")
   private String totalQueued = null;
 
-
   /**
    * batchId.
    *
@@ -48,9 +47,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return batchId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchId() {
     return batchId;
   }
@@ -61,7 +61,6 @@ public class BulkProcessResponse {
   public void setBatchId(String batchId) {
     this.batchId = batchId;
   }
-
 
   /**
    * batchName.
@@ -75,9 +74,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return batchName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchName() {
     return batchName;
   }
@@ -88,7 +88,6 @@ public class BulkProcessResponse {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * batchSize.
@@ -102,9 +101,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return batchSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchSize() {
     return batchSize;
   }
@@ -116,7 +116,6 @@ public class BulkProcessResponse {
     this.batchSize = batchSize;
   }
 
-
   /**
    * errorDetails.
    *
@@ -126,7 +125,7 @@ public class BulkProcessResponse {
     this.errorDetails = errorDetails;
     return this;
   }
-  
+
   /**
    * addErrorDetailsItem.
    *
@@ -142,9 +141,10 @@ public class BulkProcessResponse {
 
   /**
    * Array or errors..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "Array or errors.")
+  @Schema(description = "Array or errors.")
   public java.util.List<String> getErrorDetails() {
     return errorDetails;
   }
@@ -156,7 +156,6 @@ public class BulkProcessResponse {
     this.errorDetails = errorDetails;
   }
 
-
   /**
    * errors.
    *
@@ -166,7 +165,7 @@ public class BulkProcessResponse {
     this.errors = errors;
     return this;
   }
-  
+
   /**
    * addErrorsItem.
    *
@@ -182,9 +181,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return errors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getErrors() {
     return errors;
   }
@@ -195,7 +195,6 @@ public class BulkProcessResponse {
   public void setErrors(java.util.List<String> errors) {
     this.errors = errors;
   }
-
 
   /**
    * queueLimit.
@@ -209,9 +208,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return queueLimit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getQueueLimit() {
     return queueLimit;
   }
@@ -222,7 +222,6 @@ public class BulkProcessResponse {
   public void setQueueLimit(String queueLimit) {
     this.queueLimit = queueLimit;
   }
-
 
   /**
    * totalQueued.
@@ -236,9 +235,10 @@ public class BulkProcessResponse {
 
   /**
    * .
+   * 
    * @return totalQueued
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalQueued() {
     return totalQueued;
   }
@@ -249,7 +249,6 @@ public class BulkProcessResponse {
   public void setTotalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
   }
-
 
   /**
    * Compares objects.
@@ -282,7 +281,6 @@ public class BulkProcessResponse {
     return Objects.hash(batchId, batchName, batchSize, errorDetails, errors, queueLimit, totalQueued);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -290,7 +288,7 @@ public class BulkProcessResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessResponse {\n");
-    
+
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
@@ -314,4 +312,3 @@ public class BulkProcessResponse {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SignatureUser.
@@ -26,7 +26,6 @@ public class SignatureUser {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * isDefault.
    *
@@ -39,9 +38,10 @@ public class SignatureUser {
 
   /**
    * .
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -52,7 +52,6 @@ public class SignatureUser {
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * rights.
@@ -66,9 +65,10 @@ public class SignatureUser {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -79,7 +79,6 @@ public class SignatureUser {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * userId.
@@ -93,9 +92,10 @@ public class SignatureUser {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -106,7 +106,6 @@ public class SignatureUser {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -120,9 +119,10 @@ public class SignatureUser {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -133,7 +133,6 @@ public class SignatureUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class SignatureUser {
     return Objects.hash(isDefault, rights, userId, userName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class SignatureUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureUser {\n");
-    
+
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -192,4 +190,3 @@ public class SignatureUser {
   }
 
 }
-

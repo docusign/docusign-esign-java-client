@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectOAuthConfig.
@@ -29,7 +29,6 @@ public class ConnectOAuthConfig {
   @JsonProperty("scope")
   private String scope = null;
 
-
   /**
    * authorizationServerUrl.
    *
@@ -42,9 +41,10 @@ public class ConnectOAuthConfig {
 
   /**
    * .
+   * 
    * @return authorizationServerUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthorizationServerUrl() {
     return authorizationServerUrl;
   }
@@ -55,7 +55,6 @@ public class ConnectOAuthConfig {
   public void setAuthorizationServerUrl(String authorizationServerUrl) {
     this.authorizationServerUrl = authorizationServerUrl;
   }
-
 
   /**
    * clientId.
@@ -69,9 +68,10 @@ public class ConnectOAuthConfig {
 
   /**
    * .
+   * 
    * @return clientId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClientId() {
     return clientId;
   }
@@ -82,7 +82,6 @@ public class ConnectOAuthConfig {
   public void setClientId(String clientId) {
     this.clientId = clientId;
   }
-
 
   /**
    * clientSecret.
@@ -96,9 +95,10 @@ public class ConnectOAuthConfig {
 
   /**
    * .
+   * 
    * @return clientSecret
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getClientSecret() {
     return clientSecret;
   }
@@ -109,7 +109,6 @@ public class ConnectOAuthConfig {
   public void setClientSecret(String clientSecret) {
     this.clientSecret = clientSecret;
   }
-
 
   /**
    * customParameters.
@@ -123,9 +122,10 @@ public class ConnectOAuthConfig {
 
   /**
    * .
+   * 
    * @return customParameters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomParameters() {
     return customParameters;
   }
@@ -136,7 +136,6 @@ public class ConnectOAuthConfig {
   public void setCustomParameters(String customParameters) {
     this.customParameters = customParameters;
   }
-
 
   /**
    * scope.
@@ -150,9 +149,10 @@ public class ConnectOAuthConfig {
 
   /**
    * .
+   * 
    * @return scope
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScope() {
     return scope;
   }
@@ -163,7 +163,6 @@ public class ConnectOAuthConfig {
   public void setScope(String scope) {
     this.scope = scope;
   }
-
 
   /**
    * Compares objects.
@@ -194,7 +193,6 @@ public class ConnectOAuthConfig {
     return Objects.hash(authorizationServerUrl, clientId, clientSecret, customParameters, scope);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -202,7 +200,7 @@ public class ConnectOAuthConfig {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectOAuthConfig {\n");
-    
+
     sb.append("    authorizationServerUrl: ").append(toIndentedString(authorizationServerUrl)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    clientSecret: ").append(toIndentedString(clientSecret)).append("\n");
@@ -224,4 +222,3 @@ public class ConnectOAuthConfig {
   }
 
 }
-

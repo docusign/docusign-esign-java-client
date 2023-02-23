@@ -6,8 +6,8 @@ import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Notary.
@@ -27,7 +27,6 @@ public class Notary {
   @JsonProperty("userInfo")
   private UserInformation userInfo = null;
 
-
   /**
    * createdDate.
    *
@@ -40,9 +39,10 @@ public class Notary {
 
   /**
    * .
+   * 
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -53,7 +53,6 @@ public class Notary {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * enabled.
@@ -67,9 +66,10 @@ public class Notary {
 
   /**
    * .
+   * 
    * @return enabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnabled() {
     return enabled;
   }
@@ -80,7 +80,6 @@ public class Notary {
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
-
 
   /**
    * searchable.
@@ -94,9 +93,10 @@ public class Notary {
 
   /**
    * .
+   * 
    * @return searchable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSearchable() {
     return searchable;
   }
@@ -107,7 +107,6 @@ public class Notary {
   public void setSearchable(String searchable) {
     this.searchable = searchable;
   }
-
 
   /**
    * userInfo.
@@ -121,9 +120,10 @@ public class Notary {
 
   /**
    * Information about the user registering to be a notary..
+   * 
    * @return userInfo
    **/
-  @ApiModelProperty(value = "Information about the user registering to be a notary.")
+  @Schema(description = "Information about the user registering to be a notary.")
   public UserInformation getUserInfo() {
     return userInfo;
   }
@@ -134,7 +134,6 @@ public class Notary {
   public void setUserInfo(UserInformation userInfo) {
     this.userInfo = userInfo;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +163,6 @@ public class Notary {
     return Objects.hash(createdDate, enabled, searchable, userInfo);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +170,7 @@ public class Notary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notary {\n");
-    
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    searchable: ").append(toIndentedString(searchable)).append("\n");
@@ -193,4 +191,3 @@ public class Notary {
   }
 
 }
-

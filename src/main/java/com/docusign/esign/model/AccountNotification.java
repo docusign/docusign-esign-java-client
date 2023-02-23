@@ -7,14 +7,15 @@ import com.docusign.esign.model.Reminders;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element that specifies notifications (expirations and reminders) for the envelope..
+ * A complex element that specifies notifications (expirations and reminders)
+ * for the envelope..
  *
  */
-@ApiModel(description = "A complex element that specifies notifications (expirations and reminders) for the envelope.")
+@Schema(description = "A complex element that specifies notifications (expirations and reminders) for the envelope.")
 
 public class AccountNotification {
   @JsonProperty("expirations")
@@ -25,7 +26,6 @@ public class AccountNotification {
 
   @JsonProperty("userOverrideEnabled")
   private String userOverrideEnabled = null;
-
 
   /**
    * expirations.
@@ -39,9 +39,10 @@ public class AccountNotification {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
+   * 
    * @return expirations
    **/
-  @ApiModelProperty(value = "A complex element that specifies the expiration settings for the envelope.")
+  @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
   public Expirations getExpirations() {
     return expirations;
   }
@@ -52,7 +53,6 @@ public class AccountNotification {
   public void setExpirations(Expirations expirations) {
     this.expirations = expirations;
   }
-
 
   /**
    * reminders.
@@ -66,9 +66,10 @@ public class AccountNotification {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
+   * 
    * @return reminders
    **/
-  @ApiModelProperty(value = "A complex element that specifies reminder settings for the envelope.")
+  @Schema(description = "A complex element that specifies reminder settings for the envelope.")
   public Reminders getReminders() {
     return reminders;
   }
@@ -79,7 +80,6 @@ public class AccountNotification {
   public void setReminders(Reminders reminders) {
     this.reminders = reminders;
   }
-
 
   /**
    * userOverrideEnabled.
@@ -93,9 +93,10 @@ public class AccountNotification {
 
   /**
    * .
+   * 
    * @return userOverrideEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserOverrideEnabled() {
     return userOverrideEnabled;
   }
@@ -106,7 +107,6 @@ public class AccountNotification {
   public void setUserOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
   }
-
 
   /**
    * Compares objects.
@@ -135,7 +135,6 @@ public class AccountNotification {
     return Objects.hash(expirations, reminders, userOverrideEnabled);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -143,7 +142,7 @@ public class AccountNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountNotification {\n");
-    
+
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
     sb.append("    userOverrideEnabled: ").append(toIndentedString(userOverrideEnabled)).append("\n");
@@ -163,4 +162,3 @@ public class AccountNotification {
   }
 
 }
-

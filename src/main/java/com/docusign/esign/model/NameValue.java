@@ -6,14 +6,14 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A name-value pair that describes an item and provides a value for the item..
  *
  */
-@ApiModel(description = "A name-value pair that describes an item and provides a value for the item.")
+@Schema(description = "A name-description pair that describes an item and provides a value for the item.")
 
 public class NameValue {
   @JsonProperty("errorDetails")
@@ -28,7 +28,6 @@ public class NameValue {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * errorDetails.
    *
@@ -40,10 +39,12 @@ public class NameValue {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -54,7 +55,6 @@ public class NameValue {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * name.
@@ -68,9 +68,10 @@ public class NameValue {
 
   /**
    * The name or key of a name/value pair..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "The name or key of a name/value pair.")
+  @Schema(description = "The name or key of a name/value pair.")
   public String getName() {
     return name;
   }
@@ -81,7 +82,6 @@ public class NameValue {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * originalValue.
@@ -95,9 +95,10 @@ public class NameValue {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
+   * 
    * @return originalValue
    **/
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -108,7 +109,6 @@ public class NameValue {
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
-
 
   /**
    * value.
@@ -122,9 +122,10 @@ public class NameValue {
 
   /**
    * The value field of a name/value pair..
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "The value field of a name/value pair.")
+  @Schema(description = "The value field of a name/value pair.")
   public String getValue() {
     return value;
   }
@@ -135,7 +136,6 @@ public class NameValue {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -165,7 +165,6 @@ public class NameValue {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -173,7 +172,7 @@ public class NameValue {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
@@ -194,4 +193,3 @@ public class NameValue {
   }
 
 }
-

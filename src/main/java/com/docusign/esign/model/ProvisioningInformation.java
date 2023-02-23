@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ProvisioningInformation.
@@ -35,7 +35,6 @@ public class ProvisioningInformation {
   @JsonProperty("purchaseOrderOrPromAllowed")
   private String purchaseOrderOrPromAllowed = null;
 
-
   /**
    * defaultConnectionId.
    *
@@ -48,9 +47,10 @@ public class ProvisioningInformation {
 
   /**
    * .
+   * 
    * @return defaultConnectionId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDefaultConnectionId() {
     return defaultConnectionId;
   }
@@ -61,7 +61,6 @@ public class ProvisioningInformation {
   public void setDefaultConnectionId(String defaultConnectionId) {
     this.defaultConnectionId = defaultConnectionId;
   }
-
 
   /**
    * defaultPlanId.
@@ -75,9 +74,10 @@ public class ProvisioningInformation {
 
   /**
    * .
+   * 
    * @return defaultPlanId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDefaultPlanId() {
     return defaultPlanId;
   }
@@ -88,7 +88,6 @@ public class ProvisioningInformation {
   public void setDefaultPlanId(String defaultPlanId) {
     this.defaultPlanId = defaultPlanId;
   }
-
 
   /**
    * distributorCode.
@@ -101,10 +100,12 @@ public class ProvisioningInformation {
   }
 
   /**
-   * The code that identifies the billing plan groups and plans for the new account..
+   * The code that identifies the billing plan groups and plans for the new
+   * account..
+   * 
    * @return distributorCode
    **/
-  @ApiModelProperty(value = "The code that identifies the billing plan groups and plans for the new account.")
+  @Schema(description = "The code that identifies the billing plan groups and plans for the new account.")
   public String getDistributorCode() {
     return distributorCode;
   }
@@ -115,7 +116,6 @@ public class ProvisioningInformation {
   public void setDistributorCode(String distributorCode) {
     this.distributorCode = distributorCode;
   }
-
 
   /**
    * distributorPassword.
@@ -129,9 +129,10 @@ public class ProvisioningInformation {
 
   /**
    * The password for the distributorCode..
+   * 
    * @return distributorPassword
    **/
-  @ApiModelProperty(value = "The password for the distributorCode.")
+  @Schema(description = "The password for the distributorCode.")
   public String getDistributorPassword() {
     return distributorPassword;
   }
@@ -142,7 +143,6 @@ public class ProvisioningInformation {
   public void setDistributorPassword(String distributorPassword) {
     this.distributorPassword = distributorPassword;
   }
-
 
   /**
    * passwordRuleText.
@@ -156,9 +156,10 @@ public class ProvisioningInformation {
 
   /**
    * .
+   * 
    * @return passwordRuleText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordRuleText() {
     return passwordRuleText;
   }
@@ -169,7 +170,6 @@ public class ProvisioningInformation {
   public void setPasswordRuleText(String passwordRuleText) {
     this.passwordRuleText = passwordRuleText;
   }
-
 
   /**
    * planPromotionText.
@@ -183,9 +183,10 @@ public class ProvisioningInformation {
 
   /**
    * .
+   * 
    * @return planPromotionText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPlanPromotionText() {
     return planPromotionText;
   }
@@ -196,7 +197,6 @@ public class ProvisioningInformation {
   public void setPlanPromotionText(String planPromotionText) {
     this.planPromotionText = planPromotionText;
   }
-
 
   /**
    * purchaseOrderOrPromAllowed.
@@ -210,9 +210,10 @@ public class ProvisioningInformation {
 
   /**
    * .
+   * 
    * @return purchaseOrderOrPromAllowed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPurchaseOrderOrPromAllowed() {
     return purchaseOrderOrPromAllowed;
   }
@@ -223,7 +224,6 @@ public class ProvisioningInformation {
   public void setPurchaseOrderOrPromAllowed(String purchaseOrderOrPromAllowed) {
     this.purchaseOrderOrPromAllowed = purchaseOrderOrPromAllowed;
   }
-
 
   /**
    * Compares objects.
@@ -253,9 +253,9 @@ public class ProvisioningInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultConnectionId, defaultPlanId, distributorCode, distributorPassword, passwordRuleText, planPromotionText, purchaseOrderOrPromAllowed);
+    return Objects.hash(defaultConnectionId, defaultPlanId, distributorCode, distributorPassword, passwordRuleText,
+        planPromotionText, purchaseOrderOrPromAllowed);
   }
-
 
   /**
    * Converts the given object to string.
@@ -264,7 +264,7 @@ public class ProvisioningInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProvisioningInformation {\n");
-    
+
     sb.append("    defaultConnectionId: ").append(toIndentedString(defaultConnectionId)).append("\n");
     sb.append("    defaultPlanId: ").append(toIndentedString(defaultPlanId)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
@@ -288,4 +288,3 @@ public class ProvisioningInformation {
   }
 
 }
-

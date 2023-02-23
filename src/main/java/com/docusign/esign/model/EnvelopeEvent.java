@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * For which envelope events should your webhook be called?.
  *
  */
-@ApiModel(description = "For which envelope events should your webhook be called?")
+@Schema(description = "For which envelope events should your webhook be called?")
 
 public class EnvelopeEvent {
   @JsonProperty("envelopeEventStatusCode")
@@ -20,7 +20,6 @@ public class EnvelopeEvent {
 
   @JsonProperty("includeDocuments")
   private String includeDocuments = null;
-
 
   /**
    * envelopeEventStatusCode.
@@ -33,10 +32,12 @@ public class EnvelopeEvent {
   }
 
   /**
-   * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided..
+   * he envelope status, this can be Sent, Delivered, Completed, Declined, or
+   * Voided..
+   * 
    * @return envelopeEventStatusCode
    **/
-  @ApiModelProperty(value = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
+  @Schema(description = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
   public String getEnvelopeEventStatusCode() {
     return envelopeEventStatusCode;
   }
@@ -47,7 +48,6 @@ public class EnvelopeEvent {
   public void setEnvelopeEventStatusCode(String envelopeEventStatusCode) {
     this.envelopeEventStatusCode = envelopeEventStatusCode;
   }
-
 
   /**
    * includeDocuments.
@@ -60,10 +60,12 @@ public class EnvelopeEvent {
   }
 
   /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
+   * When set to **true**, the PDF documents are included in the message along
+   * with the updated XML. .
+   * 
    * @return includeDocuments
    **/
-  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
+  @Schema(description = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
@@ -74,7 +76,6 @@ public class EnvelopeEvent {
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +103,6 @@ public class EnvelopeEvent {
     return Objects.hash(envelopeEventStatusCode, includeDocuments);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +110,7 @@ public class EnvelopeEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeEvent {\n");
-    
+
     sb.append("    envelopeEventStatusCode: ").append(toIndentedString(envelopeEventStatusCode)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("}");
@@ -129,4 +129,3 @@ public class EnvelopeEvent {
   }
 
 }
-

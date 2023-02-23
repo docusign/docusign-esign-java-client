@@ -6,14 +6,14 @@ import com.docusign.esign.model.ChunkedUploadPart;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This response object is returned after you upload a chunked upload..
  *
  */
-@ApiModel(description = "This response object is returned after you upload a chunked upload.")
+@Schema(description = "This response object is returned after you upload a chunked upload.")
 
 public class ChunkedUploadResponse {
   @JsonProperty("checksum")
@@ -43,7 +43,6 @@ public class ChunkedUploadResponse {
   @JsonProperty("totalSize")
   private String totalSize = null;
 
-
   /**
    * checksum.
    *
@@ -56,9 +55,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return checksum
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChecksum() {
     return checksum;
   }
@@ -69,7 +69,6 @@ public class ChunkedUploadResponse {
   public void setChecksum(String checksum) {
     this.checksum = checksum;
   }
-
 
   /**
    * chunkedUploadId.
@@ -83,9 +82,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return chunkedUploadId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChunkedUploadId() {
     return chunkedUploadId;
   }
@@ -97,7 +97,6 @@ public class ChunkedUploadResponse {
     this.chunkedUploadId = chunkedUploadId;
   }
 
-
   /**
    * chunkedUploadParts.
    *
@@ -107,7 +106,7 @@ public class ChunkedUploadResponse {
     this.chunkedUploadParts = chunkedUploadParts;
     return this;
   }
-  
+
   /**
    * addChunkedUploadPartsItem.
    *
@@ -123,9 +122,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return chunkedUploadParts
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ChunkedUploadPart> getChunkedUploadParts() {
     return chunkedUploadParts;
   }
@@ -136,7 +136,6 @@ public class ChunkedUploadResponse {
   public void setChunkedUploadParts(java.util.List<ChunkedUploadPart> chunkedUploadParts) {
     this.chunkedUploadParts = chunkedUploadParts;
   }
-
 
   /**
    * chunkedUploadUri.
@@ -150,9 +149,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return chunkedUploadUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getChunkedUploadUri() {
     return chunkedUploadUri;
   }
@@ -163,7 +163,6 @@ public class ChunkedUploadResponse {
   public void setChunkedUploadUri(String chunkedUploadUri) {
     this.chunkedUploadUri = chunkedUploadUri;
   }
-
 
   /**
    * committed.
@@ -177,9 +176,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return committed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCommitted() {
     return committed;
   }
@@ -190,7 +190,6 @@ public class ChunkedUploadResponse {
   public void setCommitted(String committed) {
     this.committed = committed;
   }
-
 
   /**
    * expirationDateTime.
@@ -204,9 +203,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return expirationDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExpirationDateTime() {
     return expirationDateTime;
   }
@@ -217,7 +217,6 @@ public class ChunkedUploadResponse {
   public void setExpirationDateTime(String expirationDateTime) {
     this.expirationDateTime = expirationDateTime;
   }
-
 
   /**
    * maxChunkedUploadParts.
@@ -231,9 +230,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return maxChunkedUploadParts
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxChunkedUploadParts() {
     return maxChunkedUploadParts;
   }
@@ -244,7 +244,6 @@ public class ChunkedUploadResponse {
   public void setMaxChunkedUploadParts(String maxChunkedUploadParts) {
     this.maxChunkedUploadParts = maxChunkedUploadParts;
   }
-
 
   /**
    * maxTotalSize.
@@ -258,9 +257,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return maxTotalSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxTotalSize() {
     return maxTotalSize;
   }
@@ -271,7 +271,6 @@ public class ChunkedUploadResponse {
   public void setMaxTotalSize(String maxTotalSize) {
     this.maxTotalSize = maxTotalSize;
   }
-
 
   /**
    * totalSize.
@@ -285,9 +284,10 @@ public class ChunkedUploadResponse {
 
   /**
    * .
+   * 
    * @return totalSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalSize() {
     return totalSize;
   }
@@ -298,7 +298,6 @@ public class ChunkedUploadResponse {
   public void setTotalSize(String totalSize) {
     this.totalSize = totalSize;
   }
-
 
   /**
    * Compares objects.
@@ -330,9 +329,9 @@ public class ChunkedUploadResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(checksum, chunkedUploadId, chunkedUploadParts, chunkedUploadUri, committed, expirationDateTime, maxChunkedUploadParts, maxTotalSize, totalSize);
+    return Objects.hash(checksum, chunkedUploadId, chunkedUploadParts, chunkedUploadUri, committed, expirationDateTime,
+        maxChunkedUploadParts, maxTotalSize, totalSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -341,7 +340,7 @@ public class ChunkedUploadResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadResponse {\n");
-    
+
     sb.append("    checksum: ").append(toIndentedString(checksum)).append("\n");
     sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
     sb.append("    chunkedUploadParts: ").append(toIndentedString(chunkedUploadParts)).append("\n");
@@ -367,4 +366,3 @@ public class ChunkedUploadResponse {
   }
 
 }
-

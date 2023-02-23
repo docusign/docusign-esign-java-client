@@ -19,14 +19,28 @@ import com.docusign.esign.model.Tabs;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Specifies one or more electronic seals to apply on documents. An electronic seal recipient is a legal entity rather than an actual person. Electronic Seals can be used by organizations and governments to show evidence of origin and integrity of documents. Even though electronic seals can be represented by a tab in a document, they do not require user interaction and apply automatically in the order specified by the sender. The sender is therefore the person authorizing usage of the electronic seal in the flow.  Example:   &#x60;&#x60;&#x60;json \&quot;recipients\&quot;: {       \&quot;seals\&quot;: [         {           \&quot;recipientId\&quot;: \&quot;1\&quot;,           \&quot;routingOrder\&quot; : 1,           \&quot;recipientSignatureProviders\&quot;: [             {               \&quot;sealName\&quot;: \&quot;52e9d968-xxxx-xxxx-xxxx-4682bc45c106\&quot;             }        ]      }    ]  },     .     .     . &#x60;&#x60;&#x60; For more information about Electronic Seals, see [Apply Electronic Seals to Your Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals). .
+ * Specifies one or more electronic seals to apply on documents. An electronic
+ * seal recipient is a legal entity rather than an actual person. Electronic
+ * Seals can be used by organizations and governments to show evidence of origin
+ * and integrity of documents. Even though electronic seals can be represented
+ * by a tab in a document, they do not require user interaction and apply
+ * automatically in the order specified by the sender. The sender is therefore
+ * the person authorizing usage of the electronic seal in the flow. Example:
+ * &#x60;&#x60;&#x60;json \&quot;recipients\&quot;: { \&quot;seals\&quot;: [ {
+ * \&quot;recipientId\&quot;: \&quot;1\&quot;, \&quot;routingOrder\&quot; : 1,
+ * \&quot;recipientSignatureProviders\&quot;: [ { \&quot;sealName\&quot;:
+ * \&quot;52e9d968-xxxx-xxxx-xxxx-4682bc45c106\&quot; } ] } ] }, . . .
+ * &#x60;&#x60;&#x60; For more information about Electronic Seals, see [Apply
+ * Electronic Seals to Your
+ * Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals).
+ * .
  *
  */
-@ApiModel(description = "Specifies one or more electronic seals to apply on documents. An electronic seal recipient is a legal entity rather than an actual person. Electronic Seals can be used by organizations and governments to show evidence of origin and integrity of documents. Even though electronic seals can be represented by a tab in a document, they do not require user interaction and apply automatically in the order specified by the sender. The sender is therefore the person authorizing usage of the electronic seal in the flow.  Example:   ```json \"recipients\": {       \"seals\": [         {           \"recipientId\": \"1\",           \"routingOrder\" : 1,           \"recipientSignatureProviders\": [             {               \"sealName\": \"52e9d968-xxxx-xxxx-xxxx-4682bc45c106\"             }        ]      }    ]  },     .     .     . ``` For more information about Electronic Seals, see [Apply Electronic Seals to Your Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals). ")
+@Schema(description = "Specifies one or more electronic seals to apply on documents. An electronic seal recipient is a legal entity rather than an actual person. Electronic Seals can be used by organizations and governments to show evidence of origin and integrity of documents. Even though electronic seals can be represented by a tab in a document, they do not require user interaction and apply automatically in the order specified by the sender. The sender is therefore the person authorizing usage of the electronic seal in the flow.  Example:   ```json \"recipients\": {       \"seals\": [         {           \"recipientId\": \"1\",           \"routingOrder\" : 1,           \"recipientSignatureProviders\": [             {               \"sealName\": \"52e9d968-xxxx-xxxx-xxxx-4682bc45c106\"             }        ]      }    ]  },     .     .     . ``` For more information about Electronic Seals, see [Apply Electronic Seals to Your Documents](https://support.docusign.com/en/guides/ndse-user-guide-apply-electronic-seals). ")
 
 public class SealSign {
   @JsonProperty("accessCode")
@@ -200,7 +214,6 @@ public class SealSign {
   @JsonProperty("userId")
   private String userId = null;
 
-
   /**
    * accessCode.
    *
@@ -212,10 +225,16 @@ public class SealSign {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
+   * If a value is provided, the recipient must enter the value as the access code
+   * to view and sign the envelope. Maximum Length: 50 characters and it must
+   * conform to the account's access code format setting. If blank, but the signer
+   * `accessCode` property is set in the envelope, then that value is used. If
+   * blank and the signer `accessCode` property is not set, then the access code
+   * is not required..
+   * 
    * @return accessCode
    **/
-  @ApiModelProperty(value = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -226,7 +245,6 @@ public class SealSign {
   public void setAccessCode(String accessCode) {
     this.accessCode = accessCode;
   }
-
 
   /**
    * accessCodeMetadata.
@@ -240,9 +258,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return accessCodeMetadata
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public PropertyMetadata getAccessCodeMetadata() {
     return accessCodeMetadata;
   }
@@ -253,7 +272,6 @@ public class SealSign {
   public void setAccessCodeMetadata(PropertyMetadata accessCodeMetadata) {
     this.accessCodeMetadata = accessCodeMetadata;
   }
-
 
   /**
    * addAccessCodeToEmail.
@@ -266,10 +284,13 @@ public class SealSign {
   }
 
   /**
-   * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient..
+   * This Optional attribute indicates that the access code will be added to the
+   * email sent to the recipient; this nullifies the Security measure of Access
+   * Code on the recipient..
+   * 
    * @return addAccessCodeToEmail
    **/
-  @ApiModelProperty(value = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
+  @Schema(description = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
   public String getAddAccessCodeToEmail() {
     return addAccessCodeToEmail;
   }
@@ -280,7 +301,6 @@ public class SealSign {
   public void setAddAccessCodeToEmail(String addAccessCodeToEmail) {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
   }
-
 
   /**
    * allowSystemOverrideForLockedRecipient.
@@ -294,9 +314,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return allowSystemOverrideForLockedRecipient
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAllowSystemOverrideForLockedRecipient() {
     return allowSystemOverrideForLockedRecipient;
   }
@@ -307,7 +328,6 @@ public class SealSign {
   public void setAllowSystemOverrideForLockedRecipient(String allowSystemOverrideForLockedRecipient) {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
-
 
   /**
    * autoRespondedReason.
@@ -321,9 +341,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return autoRespondedReason
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAutoRespondedReason() {
     return autoRespondedReason;
   }
@@ -334,7 +355,6 @@ public class SealSign {
   public void setAutoRespondedReason(String autoRespondedReason) {
     this.autoRespondedReason = autoRespondedReason;
   }
-
 
   /**
    * clientUserId.
@@ -347,10 +367,15 @@ public class SealSign {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
+   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
+   * property is not null then the recipient is embedded. Note that if the
+   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
+   * `SignerMustLoginToSign` property of the account settings is set to **true**,
+   * an error is generated on sending.ng. Maximum length: 100 characters. .
+   * 
    * @return clientUserId
    **/
-  @ApiModelProperty(value = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
+  @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
   public String getClientUserId() {
     return clientUserId;
   }
@@ -361,7 +386,6 @@ public class SealSign {
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
   }
-
 
   /**
    * completedCount.
@@ -375,9 +399,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return completedCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompletedCount() {
     return completedCount;
   }
@@ -389,7 +414,6 @@ public class SealSign {
     this.completedCount = completedCount;
   }
 
-
   /**
    * customFields.
    *
@@ -399,7 +423,7 @@ public class SealSign {
     this.customFields = customFields;
     return this;
   }
-  
+
   /**
    * addCustomFieldsItem.
    *
@@ -414,10 +438,14 @@ public class SealSign {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
+   * An optional array of strings that allows the sender to provide custom data
+   * about the recipient. This information is returned in the envelope status but
+   * otherwise not used by DocuSign. Each customField string can be a maximum of
+   * 100 characters..
+   * 
    * @return customFields
    **/
-  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<String> getCustomFields() {
     return customFields;
   }
@@ -428,7 +456,6 @@ public class SealSign {
   public void setCustomFields(java.util.List<String> customFields) {
     this.customFields = customFields;
   }
-
 
   /**
    * declinedDateTime.
@@ -442,9 +469,10 @@ public class SealSign {
 
   /**
    * The date and time the recipient declined the document..
+   * 
    * @return declinedDateTime
    **/
-  @ApiModelProperty(value = "The date and time the recipient declined the document.")
+  @Schema(description = "The date and time the recipient declined the document.")
   public String getDeclinedDateTime() {
     return declinedDateTime;
   }
@@ -455,7 +483,6 @@ public class SealSign {
   public void setDeclinedDateTime(String declinedDateTime) {
     this.declinedDateTime = declinedDateTime;
   }
-
 
   /**
    * declinedReason.
@@ -469,9 +496,10 @@ public class SealSign {
 
   /**
    * The reason the recipient declined the document..
+   * 
    * @return declinedReason
    **/
-  @ApiModelProperty(value = "The reason the recipient declined the document.")
+  @Schema(description = "The reason the recipient declined the document.")
   public String getDeclinedReason() {
     return declinedReason;
   }
@@ -482,7 +510,6 @@ public class SealSign {
   public void setDeclinedReason(String declinedReason) {
     this.declinedReason = declinedReason;
   }
-
 
   /**
    * deliveredDateTime.
@@ -496,9 +523,10 @@ public class SealSign {
 
   /**
    * Reserved: For DocuSign use only..
+   * 
    * @return deliveredDateTime
    **/
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @Schema(description = "Reserved: For DocuSign use only.")
   public String getDeliveredDateTime() {
     return deliveredDateTime;
   }
@@ -509,7 +537,6 @@ public class SealSign {
   public void setDeliveredDateTime(String deliveredDateTime) {
     this.deliveredDateTime = deliveredDateTime;
   }
-
 
   /**
    * deliveryMethod.
@@ -523,9 +550,10 @@ public class SealSign {
 
   /**
    * Reserved: For DocuSign use only..
+   * 
    * @return deliveryMethod
    **/
-  @ApiModelProperty(value = "Reserved: For DocuSign use only.")
+  @Schema(description = "Reserved: For DocuSign use only.")
   public String getDeliveryMethod() {
     return deliveryMethod;
   }
@@ -536,7 +564,6 @@ public class SealSign {
   public void setDeliveryMethod(String deliveryMethod) {
     this.deliveryMethod = deliveryMethod;
   }
-
 
   /**
    * deliveryMethodMetadata.
@@ -550,9 +577,10 @@ public class SealSign {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return deliveryMethodMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getDeliveryMethodMetadata() {
     return deliveryMethodMetadata;
   }
@@ -563,7 +591,6 @@ public class SealSign {
   public void setDeliveryMethodMetadata(PropertyMetadata deliveryMethodMetadata) {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
   }
-
 
   /**
    * designatorId.
@@ -577,9 +604,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return designatorId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDesignatorId() {
     return designatorId;
   }
@@ -590,7 +618,6 @@ public class SealSign {
   public void setDesignatorId(String designatorId) {
     this.designatorId = designatorId;
   }
-
 
   /**
    * designatorIdGuid.
@@ -604,9 +631,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return designatorIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDesignatorIdGuid() {
     return designatorIdGuid;
   }
@@ -618,7 +646,6 @@ public class SealSign {
     this.designatorIdGuid = designatorIdGuid;
   }
 
-
   /**
    * documentVisibility.
    *
@@ -628,7 +655,7 @@ public class SealSign {
     this.documentVisibility = documentVisibility;
     return this;
   }
-  
+
   /**
    * addDocumentVisibilityItem.
    *
@@ -644,9 +671,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return documentVisibility
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
@@ -657,7 +685,6 @@ public class SealSign {
   public void setDocumentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
   }
-
 
   /**
    * emailNotification.
@@ -671,9 +698,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return emailNotification
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -684,7 +712,6 @@ public class SealSign {
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
-
 
   /**
    * embeddedRecipientStartURL.
@@ -697,10 +724,42 @@ public class SealSign {
   }
 
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` .
+   * Specifies a sender provided valid URL string for redirecting an embedded
+   * recipient. When using this option, the embedded recipient still receives an
+   * email from DocuSign, just as a remote recipient would. When the document link
+   * in the email is clicked the recipient is redirected, through DocuSign, to the
+   * supplied URL to complete their actions. When routing to the URL, the sender's
+   * system (the server responding to the URL) must request a recipient token to
+   * launch a signing session. If set to `SIGN_AT_DOCUSIGN`, the recipient is
+   * directed to an embedded signing or viewing process directly at DocuSign. The
+   * signing or viewing action is initiated by the DocuSign system and the
+   * transaction activity and Certificate of Completion records will reflect this.
+   * In all other ways the process is identical to an embedded signing or viewing
+   * operation that is launched by any partner. It is important to remember that
+   * in a typical embedded workflow the authentication of an embedded recipient is
+   * the responsibility of the sending application, DocuSign expects that senders
+   * will follow their own process for establishing the recipient's identity. In
+   * this workflow the recipient goes through the sending application before the
+   * embedded signing or viewing process in initiated. However, when the sending
+   * application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient
+   * goes directly to the embedded signing or viewing process bypassing the
+   * sending application and any authentication steps the sending application
+   * would use. In this case, DocuSign recommends that you use one of the normal
+   * DocuSign authentication features (Access Code, Phone Authentication, SMS
+   * Authentication, etc.) to verify the identity of the recipient. If the
+   * `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is
+   * set, DocuSign will ignore the redirect URL and launch the standard signing
+   * process for the email recipient. Information can be appended to the embedded
+   * recipient start URL using merge fields. The available merge fields items are:
+   * envelopeId, recipientId, recipientName, recipientEmail, and customFields. The
+   * `customFields` property must be set fort the recipient or envelope. The merge
+   * fields are enclosed in double brackets. *Example*:
+   * `http://senderHost/[[mergeField1]]/ beginSigningSession?
+   * [[mergeField2]]&[[mergeField3]]` .
+   * 
    * @return embeddedRecipientStartURL
    **/
-  @ApiModelProperty(value = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
+  @Schema(description = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
   public String getEmbeddedRecipientStartURL() {
     return embeddedRecipientStartURL;
   }
@@ -711,7 +770,6 @@ public class SealSign {
   public void setEmbeddedRecipientStartURL(String embeddedRecipientStartURL) {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
-
 
   /**
    * errorDetails.
@@ -724,10 +782,12 @@ public class SealSign {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -738,7 +798,6 @@ public class SealSign {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * faxNumber.
@@ -752,9 +811,10 @@ public class SealSign {
 
   /**
    * Reserved:.
+   * 
    * @return faxNumber
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public String getFaxNumber() {
     return faxNumber;
   }
@@ -765,7 +825,6 @@ public class SealSign {
   public void setFaxNumber(String faxNumber) {
     this.faxNumber = faxNumber;
   }
-
 
   /**
    * faxNumberMetadata.
@@ -779,9 +838,10 @@ public class SealSign {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return faxNumberMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getFaxNumberMetadata() {
     return faxNumberMetadata;
   }
@@ -792,7 +852,6 @@ public class SealSign {
   public void setFaxNumberMetadata(PropertyMetadata faxNumberMetadata) {
     this.faxNumberMetadata = faxNumberMetadata;
   }
-
 
   /**
    * idCheckConfigurationName.
@@ -805,10 +864,20 @@ public class SealSign {
   }
 
   /**
-   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
+   * Specifies authentication check by name. The names used here must be the same
+   * as the authentication type names used by the account (these name can also be
+   * found in the web console sending interface in the Identify list for a
+   * recipient,) This overrides any default authentication setting. *Example*:
+   * Your account has ID Check and SMS Authentication available and in the web
+   * console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use
+   * ID check in an envelope, the idCheckConfigurationName should be 'ID Check '.
+   * If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add
+   * you would need to add phone number information to the `smsAuthentication`
+   * node..
+   * 
    * @return idCheckConfigurationName
    **/
-  @ApiModelProperty(value = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
+  @Schema(description = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
   public String getIdCheckConfigurationName() {
     return idCheckConfigurationName;
   }
@@ -819,7 +888,6 @@ public class SealSign {
   public void setIdCheckConfigurationName(String idCheckConfigurationName) {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
-
 
   /**
    * idCheckConfigurationNameMetadata.
@@ -833,9 +901,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return idCheckConfigurationNameMetadata
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public PropertyMetadata getIdCheckConfigurationNameMetadata() {
     return idCheckConfigurationNameMetadata;
   }
@@ -846,7 +915,6 @@ public class SealSign {
   public void setIdCheckConfigurationNameMetadata(PropertyMetadata idCheckConfigurationNameMetadata) {
     this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
-
 
   /**
    * idCheckInformationInput.
@@ -860,9 +928,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return idCheckInformationInput
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public IdCheckInformationInput getIdCheckInformationInput() {
     return idCheckInformationInput;
   }
@@ -873,7 +942,6 @@ public class SealSign {
   public void setIdCheckInformationInput(IdCheckInformationInput idCheckInformationInput) {
     this.idCheckInformationInput = idCheckInformationInput;
   }
-
 
   /**
    * identityVerification.
@@ -886,10 +954,25 @@ public class SealSign {
   }
 
   /**
-   * Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address)..
+   * Specifies the ID Verification workflow applied on an envelope by workflow ID.
+   * <br/>
+   * See the
+   * [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/)
+   * method in the
+   * [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/)
+   * resource for more information on how to retrieve workflow IDs available for
+   * an account. <br/>
+   * This can be used in addition to other [recipient
+   * authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication)
+   * methods. <br/>
+   * Note that ID Verification and ID Check are two distinct methods. ID
+   * Verification checks recipients' identity by verifying their ID while ID Check
+   * relies on data available on public records (such as current and former
+   * address)..
+   * 
    * @return identityVerification
    **/
-  @ApiModelProperty(value = "Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).")
+  @Schema(description = "Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).")
   public RecipientIdentityVerification getIdentityVerification() {
     return identityVerification;
   }
@@ -900,7 +983,6 @@ public class SealSign {
   public void setIdentityVerification(RecipientIdentityVerification identityVerification) {
     this.identityVerification = identityVerification;
   }
-
 
   /**
    * inheritEmailNotificationConfiguration.
@@ -913,10 +995,13 @@ public class SealSign {
   }
 
   /**
-   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. .
+   * When set to **true** and the envelope recipient creates a DocuSign account
+   * after signing, the Manage Account Email Notification settings are used as the
+   * default settings for the recipient's account. .
+   * 
    * @return inheritEmailNotificationConfiguration
    **/
-  @ApiModelProperty(value = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
+  @Schema(description = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
   public String getInheritEmailNotificationConfiguration() {
     return inheritEmailNotificationConfiguration;
   }
@@ -927,7 +1012,6 @@ public class SealSign {
   public void setInheritEmailNotificationConfiguration(String inheritEmailNotificationConfiguration) {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
-
 
   /**
    * lockedRecipientPhoneAuthEditable.
@@ -941,9 +1025,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return lockedRecipientPhoneAuthEditable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLockedRecipientPhoneAuthEditable() {
     return lockedRecipientPhoneAuthEditable;
   }
@@ -954,7 +1039,6 @@ public class SealSign {
   public void setLockedRecipientPhoneAuthEditable(String lockedRecipientPhoneAuthEditable) {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
   }
-
 
   /**
    * lockedRecipientSmsEditable.
@@ -968,9 +1052,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return lockedRecipientSmsEditable
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLockedRecipientSmsEditable() {
     return lockedRecipientSmsEditable;
   }
@@ -981,7 +1066,6 @@ public class SealSign {
   public void setLockedRecipientSmsEditable(String lockedRecipientSmsEditable) {
     this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
   }
-
 
   /**
    * name.
@@ -995,9 +1079,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -1008,7 +1093,6 @@ public class SealSign {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * note.
@@ -1021,10 +1105,14 @@ public class SealSign {
   }
 
   /**
-   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters..
+   * Specifies a note that is unique to this recipient. This note is sent to the
+   * recipient via the signing email. The note displays in the signing UI near the
+   * upper left corner of the document on the signing screen. Maximum Length: 1000
+   * characters..
+   * 
    * @return note
    **/
-  @ApiModelProperty(value = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
+  @Schema(description = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
   public String getNote() {
     return note;
   }
@@ -1035,7 +1123,6 @@ public class SealSign {
   public void setNote(String note) {
     this.note = note;
   }
-
 
   /**
    * noteMetadata.
@@ -1049,9 +1136,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return noteMetadata
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public PropertyMetadata getNoteMetadata() {
     return noteMetadata;
   }
@@ -1062,7 +1150,6 @@ public class SealSign {
   public void setNoteMetadata(PropertyMetadata noteMetadata) {
     this.noteMetadata = noteMetadata;
   }
-
 
   /**
    * phoneAuthentication.
@@ -1076,9 +1163,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return phoneAuthentication
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public RecipientPhoneAuthentication getPhoneAuthentication() {
     return phoneAuthentication;
   }
@@ -1090,7 +1178,6 @@ public class SealSign {
     this.phoneAuthentication = phoneAuthentication;
   }
 
-
   /**
    * recipientAttachments.
    *
@@ -1100,7 +1187,7 @@ public class SealSign {
     this.recipientAttachments = recipientAttachments;
     return this;
   }
-  
+
   /**
    * addRecipientAttachmentsItem.
    *
@@ -1116,9 +1203,10 @@ public class SealSign {
 
   /**
    * Reserved:.
+   * 
    * @return recipientAttachments
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public java.util.List<RecipientAttachment> getRecipientAttachments() {
     return recipientAttachments;
   }
@@ -1129,7 +1217,6 @@ public class SealSign {
   public void setRecipientAttachments(java.util.List<RecipientAttachment> recipientAttachments) {
     this.recipientAttachments = recipientAttachments;
   }
-
 
   /**
    * recipientAuthenticationStatus.
@@ -1143,9 +1230,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return recipientAuthenticationStatus
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public AuthenticationStatus getRecipientAuthenticationStatus() {
     return recipientAuthenticationStatus;
   }
@@ -1157,7 +1245,6 @@ public class SealSign {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
-
   /**
    * recipientFeatureMetadata.
    *
@@ -1167,7 +1254,7 @@ public class SealSign {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
     return this;
   }
-  
+
   /**
    * addRecipientFeatureMetadataItem.
    *
@@ -1183,9 +1270,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return recipientFeatureMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FeatureAvailableMetadata> getRecipientFeatureMetadata() {
     return recipientFeatureMetadata;
   }
@@ -1196,7 +1284,6 @@ public class SealSign {
   public void setRecipientFeatureMetadata(java.util.List<FeatureAvailableMetadata> recipientFeatureMetadata) {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
   }
-
 
   /**
    * recipientId.
@@ -1209,10 +1296,12 @@ public class SealSign {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1223,7 +1312,6 @@ public class SealSign {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -1237,9 +1325,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1251,7 +1340,6 @@ public class SealSign {
     this.recipientIdGuid = recipientIdGuid;
   }
 
-
   /**
    * recipientSignatureProviders.
    *
@@ -1261,7 +1349,7 @@ public class SealSign {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
   }
-  
+
   /**
    * addRecipientSignatureProvidersItem.
    *
@@ -1277,9 +1365,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return recipientSignatureProviders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientSignatureProvider> getRecipientSignatureProviders() {
     return recipientSignatureProviders;
   }
@@ -1290,7 +1379,6 @@ public class SealSign {
   public void setRecipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
-
 
   /**
    * recipientType.
@@ -1304,9 +1392,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return recipientType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientType() {
     return recipientType;
   }
@@ -1317,7 +1406,6 @@ public class SealSign {
   public void setRecipientType(String recipientType) {
     this.recipientType = recipientType;
   }
-
 
   /**
    * recipientTypeMetadata.
@@ -1330,10 +1418,12 @@ public class SealSign {
   }
 
   /**
-   * Metadata that indicates whether the `recipientType` property is editable. This property is read-only..
+   * Metadata that indicates whether the `recipientType` property is editable.
+   * This property is read-only..
+   * 
    * @return recipientTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientType` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `recipientType` property is editable. This property is read-only.")
   public PropertyMetadata getRecipientTypeMetadata() {
     return recipientTypeMetadata;
   }
@@ -1344,7 +1434,6 @@ public class SealSign {
   public void setRecipientTypeMetadata(PropertyMetadata recipientTypeMetadata) {
     this.recipientTypeMetadata = recipientTypeMetadata;
   }
-
 
   /**
    * requireIdLookup.
@@ -1357,10 +1446,12 @@ public class SealSign {
   }
 
   /**
-   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. .
+   * When set to **true**, the recipient is required to use the specified ID check
+   * method (including Phone and SMS authentication) to validate their identity. .
+   * 
    * @return requireIdLookup
    **/
-  @ApiModelProperty(value = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
+  @Schema(description = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
   public String getRequireIdLookup() {
     return requireIdLookup;
   }
@@ -1371,7 +1462,6 @@ public class SealSign {
   public void setRequireIdLookup(String requireIdLookup) {
     this.requireIdLookup = requireIdLookup;
   }
-
 
   /**
    * requireIdLookupMetadata.
@@ -1385,9 +1475,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return requireIdLookupMetadata
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public PropertyMetadata getRequireIdLookupMetadata() {
     return requireIdLookupMetadata;
   }
@@ -1398,7 +1489,6 @@ public class SealSign {
   public void setRequireIdLookupMetadata(PropertyMetadata requireIdLookupMetadata) {
     this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
-
 
   /**
    * roleName.
@@ -1411,10 +1501,13 @@ public class SealSign {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
+   * Optional element. Specifies the role name associated with the recipient.<br/>
+   * <br/>
+   * This is required when working with template recipients..
+   * 
    * @return roleName
    **/
-  @ApiModelProperty(value = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
+  @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
   public String getRoleName() {
     return roleName;
   }
@@ -1425,7 +1518,6 @@ public class SealSign {
   public void setRoleName(String roleName) {
     this.roleName = roleName;
   }
-
 
   /**
    * routingOrder.
@@ -1439,9 +1531,10 @@ public class SealSign {
 
   /**
    * Specifies the routing order of the recipient in the envelope. .
+   * 
    * @return routingOrder
    **/
-  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
+  @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
@@ -1452,7 +1545,6 @@ public class SealSign {
   public void setRoutingOrder(String routingOrder) {
     this.routingOrder = routingOrder;
   }
-
 
   /**
    * routingOrderMetadata.
@@ -1465,10 +1557,12 @@ public class SealSign {
   }
 
   /**
-   * Metadata that indicates whether the `routingOrder` property is editable. This property is read-only..
+   * Metadata that indicates whether the `routingOrder` property is editable. This
+   * property is read-only..
+   * 
    * @return routingOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.")
   public PropertyMetadata getRoutingOrderMetadata() {
     return routingOrderMetadata;
   }
@@ -1479,7 +1573,6 @@ public class SealSign {
   public void setRoutingOrderMetadata(PropertyMetadata routingOrderMetadata) {
     this.routingOrderMetadata = routingOrderMetadata;
   }
-
 
   /**
    * sentDateTime.
@@ -1493,9 +1586,10 @@ public class SealSign {
 
   /**
    * The date and time the envelope was sent..
+   * 
    * @return sentDateTime
    **/
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @Schema(description = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -1506,7 +1600,6 @@ public class SealSign {
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
-
 
   /**
    * signedDateTime.
@@ -1520,9 +1613,10 @@ public class SealSign {
 
   /**
    * Reserved: For DocuSign use only. .
+   * 
    * @return signedDateTime
    **/
-  @ApiModelProperty(value = "Reserved: For DocuSign use only. ")
+  @Schema(description = "Reserved: For DocuSign use only. ")
   public String getSignedDateTime() {
     return signedDateTime;
   }
@@ -1533,7 +1627,6 @@ public class SealSign {
   public void setSignedDateTime(String signedDateTime) {
     this.signedDateTime = signedDateTime;
   }
-
 
   /**
    * smsAuthentication.
@@ -1547,9 +1640,10 @@ public class SealSign {
 
   /**
    * Not applicable..
+   * 
    * @return smsAuthentication
    **/
-  @ApiModelProperty(value = "Not applicable.")
+  @Schema(description = "Not applicable.")
   public RecipientSMSAuthentication getSmsAuthentication() {
     return smsAuthentication;
   }
@@ -1561,7 +1655,6 @@ public class SealSign {
     this.smsAuthentication = smsAuthentication;
   }
 
-
   /**
    * socialAuthentications.
    *
@@ -1571,7 +1664,7 @@ public class SealSign {
     this.socialAuthentications = socialAuthentications;
     return this;
   }
-  
+
   /**
    * addSocialAuthenticationsItem.
    *
@@ -1586,10 +1679,11 @@ public class SealSign {
   }
 
   /**
-   *  Lists the social ID type that can be used for recipient authentication..
+   * Lists the social ID type that can be used for recipient authentication..
+   * 
    * @return socialAuthentications
    **/
-  @ApiModelProperty(value = " Lists the social ID type that can be used for recipient authentication.")
+  @Schema(description = " Lists the social ID type that can be used for recipient authentication.")
   public java.util.List<SocialAuthentication> getSocialAuthentications() {
     return socialAuthentications;
   }
@@ -1600,7 +1694,6 @@ public class SealSign {
   public void setSocialAuthentications(java.util.List<SocialAuthentication> socialAuthentications) {
     this.socialAuthentications = socialAuthentications;
   }
-
 
   /**
    * status.
@@ -1613,10 +1706,13 @@ public class SealSign {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1627,7 +1723,6 @@ public class SealSign {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusCode.
@@ -1641,9 +1736,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return statusCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatusCode() {
     return statusCode;
   }
@@ -1654,7 +1750,6 @@ public class SealSign {
   public void setStatusCode(String statusCode) {
     this.statusCode = statusCode;
   }
-
 
   /**
    * suppressEmails.
@@ -1668,9 +1763,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return suppressEmails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuppressEmails() {
     return suppressEmails;
   }
@@ -1681,7 +1777,6 @@ public class SealSign {
   public void setSuppressEmails(String suppressEmails) {
     this.suppressEmails = suppressEmails;
   }
-
 
   /**
    * tabs.
@@ -1694,10 +1789,13 @@ public class SealSign {
   }
 
   /**
-   * A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients..
+   * A list of tabs, which are represented graphically as symbols on documents at
+   * the time of signing. Tabs show recipients where to sign, initial, or enter
+   * data. They may also display data to the recipients..
+   * 
    * @return tabs
    **/
-  @ApiModelProperty(value = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
+  @Schema(description = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
   public Tabs getTabs() {
     return tabs;
   }
@@ -1708,7 +1806,6 @@ public class SealSign {
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
-
 
   /**
    * templateLocked.
@@ -1721,10 +1818,12 @@ public class SealSign {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -1735,7 +1834,6 @@ public class SealSign {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateRequired.
@@ -1748,10 +1846,12 @@ public class SealSign {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -1762,7 +1862,6 @@ public class SealSign {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * totalTabCount.
@@ -1776,9 +1875,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return totalTabCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalTabCount() {
     return totalTabCount;
   }
@@ -1789,7 +1889,6 @@ public class SealSign {
   public void setTotalTabCount(String totalTabCount) {
     this.totalTabCount = totalTabCount;
   }
-
 
   /**
    * userId.
@@ -1803,9 +1902,10 @@ public class SealSign {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -1816,7 +1916,6 @@ public class SealSign {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * Compares objects.
@@ -1896,9 +1995,18 @@ public class SealSign {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient,
+        autoRespondedReason, clientUserId, completedCount, customFields, declinedDateTime, declinedReason,
+        deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility,
+        emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata,
+        idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification,
+        inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note,
+        noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus,
+        recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType,
+        recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata,
+        sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails,
+        tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1907,11 +2015,12 @@ public class SealSign {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SealSign {\n");
-    
+
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
-    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ")
+        .append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
@@ -1930,18 +2039,22 @@ public class SealSign {
     sb.append("    faxNumber: ").append(toIndentedString(faxNumber)).append("\n");
     sb.append("    faxNumberMetadata: ").append(toIndentedString(faxNumberMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata))
+        .append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
-    sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
-    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
+    sb.append("    inheritEmailNotificationConfiguration: ")
+        .append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable))
+        .append("\n");
     sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
-    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
+    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus))
+        .append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
@@ -1981,4 +2094,3 @@ public class SealSign {
   }
 
 }
-

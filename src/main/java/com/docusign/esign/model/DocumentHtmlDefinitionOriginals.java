@@ -6,8 +6,8 @@ import com.docusign.esign.model.DocumentHtmlDefinitionOriginal;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentHtmlDefinitionOriginals.
@@ -18,17 +18,17 @@ public class DocumentHtmlDefinitionOriginals {
   @JsonProperty("htmlDefinitions")
   private java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions = null;
 
-
   /**
    * htmlDefinitions.
    *
    * @return DocumentHtmlDefinitionOriginals
    **/
-  public DocumentHtmlDefinitionOriginals htmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
+  public DocumentHtmlDefinitionOriginals htmlDefinitions(
+      java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-  
+
   /**
    * addHtmlDefinitionsItem.
    *
@@ -44,9 +44,10 @@ public class DocumentHtmlDefinitionOriginals {
 
   /**
    * .
+   * 
    * @return htmlDefinitions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocumentHtmlDefinitionOriginal> getHtmlDefinitions() {
     return htmlDefinitions;
   }
@@ -57,7 +58,6 @@ public class DocumentHtmlDefinitionOriginals {
   public void setHtmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +84,6 @@ public class DocumentHtmlDefinitionOriginals {
     return Objects.hash(htmlDefinitions);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +91,7 @@ public class DocumentHtmlDefinitionOriginals {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitionOriginals {\n");
-    
+
     sb.append("    htmlDefinitions: ").append(toIndentedString(htmlDefinitions)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +109,3 @@ public class DocumentHtmlDefinitionOriginals {
   }
 
 }
-

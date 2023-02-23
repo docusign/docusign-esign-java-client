@@ -6,19 +6,18 @@ import com.docusign.esign.model.NewUser;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Object representing a summary of data for new users..
  *
  */
-@ApiModel(description = "Object representing a summary of data for new users.")
+@Schema(description = "Object representing a summary of data for new users.")
 
 public class NewUsersSummary {
   @JsonProperty("newUsers")
   private java.util.List<NewUser> newUsers = null;
-
 
   /**
    * newUsers.
@@ -29,7 +28,7 @@ public class NewUsersSummary {
     this.newUsers = newUsers;
     return this;
   }
-  
+
   /**
    * addNewUsersItem.
    *
@@ -45,9 +44,10 @@ public class NewUsersSummary {
 
   /**
    * .
+   * 
    * @return newUsers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NewUser> getNewUsers() {
     return newUsers;
   }
@@ -58,7 +58,6 @@ public class NewUsersSummary {
   public void setNewUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class NewUsersSummary {
     return Objects.hash(newUsers);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class NewUsersSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUsersSummary {\n");
-    
+
     sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class NewUsersSummary {
   }
 
 }
-

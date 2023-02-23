@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BillingPrice.
@@ -23,7 +23,6 @@ public class BillingPrice {
   @JsonProperty("unitPrice")
   private String unitPrice = null;
 
-
   /**
    * beginQuantity.
    *
@@ -36,9 +35,10 @@ public class BillingPrice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return beginQuantity
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBeginQuantity() {
     return beginQuantity;
   }
@@ -49,7 +49,6 @@ public class BillingPrice {
   public void setBeginQuantity(String beginQuantity) {
     this.beginQuantity = beginQuantity;
   }
-
 
   /**
    * endQuantity.
@@ -63,9 +62,10 @@ public class BillingPrice {
 
   /**
    * .
+   * 
    * @return endQuantity
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEndQuantity() {
     return endQuantity;
   }
@@ -76,7 +76,6 @@ public class BillingPrice {
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
-
 
   /**
    * unitPrice.
@@ -90,9 +89,10 @@ public class BillingPrice {
 
   /**
    * Reserved: TBD.
+   * 
    * @return unitPrice
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getUnitPrice() {
     return unitPrice;
   }
@@ -103,7 +103,6 @@ public class BillingPrice {
   public void setUnitPrice(String unitPrice) {
     this.unitPrice = unitPrice;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class BillingPrice {
     return Objects.hash(beginQuantity, endQuantity, unitPrice);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class BillingPrice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPrice {\n");
-    
+
     sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
     sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
     sb.append("    unitPrice: ").append(toIndentedString(unitPrice)).append("\n");
@@ -160,4 +158,3 @@ public class BillingPrice {
   }
 
 }
-

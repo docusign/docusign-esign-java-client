@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PayPalLegacySettings.
@@ -29,7 +29,6 @@ public class PayPalLegacySettings {
   @JsonProperty("vendor")
   private String vendor = null;
 
-
   /**
    * currency.
    *
@@ -42,9 +41,10 @@ public class PayPalLegacySettings {
 
   /**
    * .
+   * 
    * @return currency
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrency() {
     return currency;
   }
@@ -55,7 +55,6 @@ public class PayPalLegacySettings {
   public void setCurrency(String currency) {
     this.currency = currency;
   }
-
 
   /**
    * partner.
@@ -69,9 +68,10 @@ public class PayPalLegacySettings {
 
   /**
    * .
+   * 
    * @return partner
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPartner() {
     return partner;
   }
@@ -82,7 +82,6 @@ public class PayPalLegacySettings {
   public void setPartner(String partner) {
     this.partner = partner;
   }
-
 
   /**
    * password.
@@ -96,9 +95,10 @@ public class PayPalLegacySettings {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -109,7 +109,6 @@ public class PayPalLegacySettings {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * userName.
@@ -123,9 +122,10 @@ public class PayPalLegacySettings {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -136,7 +136,6 @@ public class PayPalLegacySettings {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * vendor.
@@ -150,9 +149,10 @@ public class PayPalLegacySettings {
 
   /**
    * .
+   * 
    * @return vendor
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVendor() {
     return vendor;
   }
@@ -163,7 +163,6 @@ public class PayPalLegacySettings {
   public void setVendor(String vendor) {
     this.vendor = vendor;
   }
-
 
   /**
    * Compares objects.
@@ -194,7 +193,6 @@ public class PayPalLegacySettings {
     return Objects.hash(currency, partner, password, userName, vendor);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -202,7 +200,7 @@ public class PayPalLegacySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PayPalLegacySettings {\n");
-    
+
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    partner: ").append(toIndentedString(partner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -224,4 +222,3 @@ public class PayPalLegacySettings {
   }
 
 }
-

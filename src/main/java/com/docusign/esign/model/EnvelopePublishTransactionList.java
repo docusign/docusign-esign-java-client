@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** EnvelopePublishTransactionList */
@@ -10,8 +10,7 @@ public class EnvelopePublishTransactionList {
   private String endPosition = null;
 
   @JsonProperty("envelopePublishTransactions")
-  private java.util.List<EnvelopePublishTransaction> envelopePublishTransactions =
-      new java.util.ArrayList<EnvelopePublishTransaction>();
+  private java.util.List<EnvelopePublishTransaction> envelopePublishTransactions = new java.util.ArrayList<EnvelopePublishTransaction>();
 
   @JsonProperty("nextUri")
   private String nextUri = null;
@@ -38,7 +37,7 @@ public class EnvelopePublishTransactionList {
    *
    * @return endPosition
    */
-  @ApiModelProperty(example = "null", value = "The last position in the result set. ")
+  @Schema(example = "null", description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -60,7 +59,7 @@ public class EnvelopePublishTransactionList {
   }
 
   /** @return envelopePublishTransactions */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public java.util.List<EnvelopePublishTransaction> getEnvelopePublishTransactions() {
     return envelopePublishTransactions;
   }
@@ -76,15 +75,13 @@ public class EnvelopePublishTransactionList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the
    * entire results of the search, this is null.
    *
    * @return nextUri
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(example = "null", description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -103,7 +100,7 @@ public class EnvelopePublishTransactionList {
    *
    * @return previousUri
    */
-  @ApiModelProperty(example = "null", value = "The postal code for the billing address.")
+  @Schema(example = "null", description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -122,7 +119,7 @@ public class EnvelopePublishTransactionList {
    *
    * @return resultSetSize
    */
-  @ApiModelProperty(example = "null", value = "The number of results returned in this response. ")
+  @Schema(example = "null", description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -141,7 +138,7 @@ public class EnvelopePublishTransactionList {
    *
    * @return startPosition
    */
-  @ApiModelProperty(example = "null", value = "Starting position of the current result set.")
+  @Schema(example = "null", description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -156,15 +153,14 @@ public class EnvelopePublishTransactionList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or
-   * equal to the value of the property returning the results in the in the response.
+   * The total number of items available in the result set. This will always be
+   * greater than or
+   * equal to the value of the property returning the results in the in the
+   * response.
    *
    * @return totalSetSize
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(example = "null", description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -181,8 +177,7 @@ public class EnvelopePublishTransactionList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EnvelopePublishTransactionList envelopePublishTransactionList =
-        (EnvelopePublishTransactionList) o;
+    EnvelopePublishTransactionList envelopePublishTransactionList = (EnvelopePublishTransactionList) o;
     return Objects.equals(this.endPosition, envelopePublishTransactionList.endPosition)
         && Objects.equals(
             this.envelopePublishTransactions,
@@ -225,7 +220,8 @@ public class EnvelopePublishTransactionList {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

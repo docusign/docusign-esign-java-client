@@ -6,14 +6,14 @@ import com.docusign.esign.model.NotaryJurisdiction;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A paged list of jurisdictions..
  *
  */
-@ApiModel(description = "A paged list of jurisdictions.")
+@Schema(description = "A paged list of jurisdictions.")
 
 public class NotaryJurisdictionList {
   @JsonProperty("endPosition")
@@ -37,7 +37,6 @@ public class NotaryJurisdictionList {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * endPosition.
    *
@@ -50,9 +49,10 @@ public class NotaryJurisdictionList {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -63,7 +63,6 @@ public class NotaryJurisdictionList {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * nextUri.
@@ -76,10 +75,12 @@ public class NotaryJurisdictionList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -91,7 +92,6 @@ public class NotaryJurisdictionList {
     this.nextUri = nextUri;
   }
 
-
   /**
    * notaryJurisdictions.
    *
@@ -101,7 +101,7 @@ public class NotaryJurisdictionList {
     this.notaryJurisdictions = notaryJurisdictions;
     return this;
   }
-  
+
   /**
    * addNotaryJurisdictionsItem.
    *
@@ -117,9 +117,10 @@ public class NotaryJurisdictionList {
 
   /**
    * .
+   * 
    * @return notaryJurisdictions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NotaryJurisdiction> getNotaryJurisdictions() {
     return notaryJurisdictions;
   }
@@ -130,7 +131,6 @@ public class NotaryJurisdictionList {
   public void setNotaryJurisdictions(java.util.List<NotaryJurisdiction> notaryJurisdictions) {
     this.notaryJurisdictions = notaryJurisdictions;
   }
-
 
   /**
    * previousUri.
@@ -144,9 +144,10 @@ public class NotaryJurisdictionList {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -157,7 +158,6 @@ public class NotaryJurisdictionList {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -171,9 +171,10 @@ public class NotaryJurisdictionList {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -184,7 +185,6 @@ public class NotaryJurisdictionList {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -198,9 +198,10 @@ public class NotaryJurisdictionList {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -211,7 +212,6 @@ public class NotaryJurisdictionList {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -224,10 +224,13 @@ public class NotaryJurisdictionList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -238,7 +241,6 @@ public class NotaryJurisdictionList {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -268,9 +270,9 @@ public class NotaryJurisdictionList {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, nextUri, notaryJurisdictions, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(endPosition, nextUri, notaryJurisdictions, previousUri, resultSetSize, startPosition,
+        totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -279,7 +281,7 @@ public class NotaryJurisdictionList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJurisdictionList {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    notaryJurisdictions: ").append(toIndentedString(notaryJurisdictions)).append("\n");
@@ -303,4 +305,3 @@ public class NotaryJurisdictionList {
   }
 
 }
-

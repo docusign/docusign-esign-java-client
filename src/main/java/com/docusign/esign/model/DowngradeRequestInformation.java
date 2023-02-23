@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DowngradeRequestInformation.
@@ -23,7 +23,6 @@ public class DowngradeRequestInformation {
   @JsonProperty("downgradeRequestStatus")
   private String downgradeRequestStatus = null;
 
-
   /**
    * downgradeRequestCreation.
    *
@@ -36,9 +35,10 @@ public class DowngradeRequestInformation {
 
   /**
    * .
+   * 
    * @return downgradeRequestCreation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeRequestCreation() {
     return downgradeRequestCreation;
   }
@@ -49,7 +49,6 @@ public class DowngradeRequestInformation {
   public void setDowngradeRequestCreation(String downgradeRequestCreation) {
     this.downgradeRequestCreation = downgradeRequestCreation;
   }
-
 
   /**
    * downgradeRequestProductId.
@@ -63,9 +62,10 @@ public class DowngradeRequestInformation {
 
   /**
    * .
+   * 
    * @return downgradeRequestProductId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeRequestProductId() {
     return downgradeRequestProductId;
   }
@@ -76,7 +76,6 @@ public class DowngradeRequestInformation {
   public void setDowngradeRequestProductId(String downgradeRequestProductId) {
     this.downgradeRequestProductId = downgradeRequestProductId;
   }
-
 
   /**
    * downgradeRequestStatus.
@@ -90,9 +89,10 @@ public class DowngradeRequestInformation {
 
   /**
    * .
+   * 
    * @return downgradeRequestStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeRequestStatus() {
     return downgradeRequestStatus;
   }
@@ -103,7 +103,6 @@ public class DowngradeRequestInformation {
   public void setDowngradeRequestStatus(String downgradeRequestStatus) {
     this.downgradeRequestStatus = downgradeRequestStatus;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class DowngradeRequestInformation {
     return Objects.hash(downgradeRequestCreation, downgradeRequestProductId, downgradeRequestStatus);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class DowngradeRequestInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradeRequestInformation {\n");
-    
+
     sb.append("    downgradeRequestCreation: ").append(toIndentedString(downgradeRequestCreation)).append("\n");
     sb.append("    downgradeRequestProductId: ").append(toIndentedString(downgradeRequestProductId)).append("\n");
     sb.append("    downgradeRequestStatus: ").append(toIndentedString(downgradeRequestStatus)).append("\n");
@@ -160,4 +158,3 @@ public class DowngradeRequestInformation {
   }
 
 }
-

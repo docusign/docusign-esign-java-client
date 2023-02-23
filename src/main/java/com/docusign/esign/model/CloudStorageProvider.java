@@ -6,14 +6,14 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains details about a specific cloud storage provider..
  *
  */
-@ApiModel(description = "Contains details about a specific cloud storage provider.")
+@Schema(description = "Contains details about a specific cloud storage provider.")
 
 public class CloudStorageProvider {
   @JsonProperty("authenticationUrl")
@@ -31,7 +31,6 @@ public class CloudStorageProvider {
   @JsonProperty("serviceId")
   private String serviceId = null;
 
-
   /**
    * authenticationUrl.
    *
@@ -43,10 +42,14 @@ public class CloudStorageProvider {
   }
 
   /**
-   * The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. .
+   * The authentication URL used for the cloud storage provider. This information
+   * is only included in the response if the user has not passed authentication
+   * for the cloud storage provider. If the redirectUrl query string is provided,
+   * the returnUrl is appended to the authenticationUrl. .
+   * 
    * @return authenticationUrl
    **/
-  @ApiModelProperty(value = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
+  @Schema(description = "The authentication URL used for the cloud storage provider. This information is only included in the response if the user has not passed authentication for the cloud storage provider. If the redirectUrl query string is provided, the returnUrl is appended to the authenticationUrl. ")
   public String getAuthenticationUrl() {
     return authenticationUrl;
   }
@@ -57,7 +60,6 @@ public class CloudStorageProvider {
   public void setAuthenticationUrl(String authenticationUrl) {
     this.authenticationUrl = authenticationUrl;
   }
-
 
   /**
    * errorDetails.
@@ -70,10 +72,12 @@ public class CloudStorageProvider {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -84,7 +88,6 @@ public class CloudStorageProvider {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * redirectUrl.
@@ -97,10 +100,14 @@ public class CloudStorageProvider {
   }
 
   /**
-   * The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains..
+   * The URL the user is redirected to after the cloud storage provider
+   * authenticates the user. Using this will append the redirectUrl to the
+   * authenticationUrl. The redirectUrl is restricted to URLs in the docusign.com
+   * or docusign.net domains..
+   * 
    * @return redirectUrl
    **/
-  @ApiModelProperty(value = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
+  @Schema(description = "The URL the user is redirected to after the cloud storage provider authenticates the user. Using this will append the redirectUrl to the authenticationUrl.  The redirectUrl is restricted to URLs in the docusign.com or docusign.net domains.")
   public String getRedirectUrl() {
     return redirectUrl;
   }
@@ -111,7 +118,6 @@ public class CloudStorageProvider {
   public void setRedirectUrl(String redirectUrl) {
     this.redirectUrl = redirectUrl;
   }
-
 
   /**
    * service.
@@ -125,9 +131,10 @@ public class CloudStorageProvider {
 
   /**
    * The service name for the cloud storage provider..
+   * 
    * @return service
    **/
-  @ApiModelProperty(value = "The service name for the cloud storage provider.")
+  @Schema(description = "The service name for the cloud storage provider.")
   public String getService() {
     return service;
   }
@@ -138,7 +145,6 @@ public class CloudStorageProvider {
   public void setService(String service) {
     this.service = service;
   }
-
 
   /**
    * serviceId.
@@ -152,9 +158,10 @@ public class CloudStorageProvider {
 
   /**
    * The DocuSign generated ID for the cloud storage provider.
+   * 
    * @return serviceId
    **/
-  @ApiModelProperty(value = "The DocuSign generated ID for the cloud storage provider")
+  @Schema(description = "The DocuSign generated ID for the cloud storage provider")
   public String getServiceId() {
     return serviceId;
   }
@@ -165,7 +172,6 @@ public class CloudStorageProvider {
   public void setServiceId(String serviceId) {
     this.serviceId = serviceId;
   }
-
 
   /**
    * Compares objects.
@@ -196,7 +202,6 @@ public class CloudStorageProvider {
     return Objects.hash(authenticationUrl, errorDetails, redirectUrl, service, serviceId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -204,7 +209,7 @@ public class CloudStorageProvider {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProvider {\n");
-    
+
     sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    redirectUrl: ").append(toIndentedString(redirectUrl)).append("\n");
@@ -226,4 +231,3 @@ public class CloudStorageProvider {
   }
 
 }
-

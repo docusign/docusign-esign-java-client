@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DelayedRoutingApiModel. */
@@ -26,15 +26,15 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or
-   * was) scheduled to be sent to the recipients associated with the current workflow step or null
+   * An ISO 8601 formatted datetime string indicating the date and time that the
+   * envelope is (or
+   * was) scheduled to be sent to the recipients associated with the current
+   * workflow step or null
    * if the envelope has not yet begun processing the current workflow step..
    *
    * @return resumeDate
    */
-  @ApiModelProperty(
-      value =
-          "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.")
+  @Schema(description = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent to the recipients associated with the current workflow step or null if the envelope has not yet begun processing the current workflow step.")
   public String getResumeDate() {
     return resumeDate;
   }
@@ -68,15 +68,15 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * A list of envelope delay rules specified by the user indicating how and when the envelope
-   * should be sent in the future for the current workflow step and its associated recipients.
+   * A list of envelope delay rules specified by the user indicating how and when
+   * the envelope
+   * should be sent in the future for the current workflow step and its associated
+   * recipients.
    * Currently only 1 rule may be specified..
    *
    * @return rules
    */
-  @ApiModelProperty(
-      value =
-          "A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.")
+  @Schema(description = "A list of envelope delay rules specified by the user indicating how and when the envelope should be sent in the future for the current workflow step and its associated recipients. Currently only 1 rule may be specified.")
   public java.util.List<EnvelopeDelayRuleApiModel> getRules() {
     return rules;
   }
@@ -97,15 +97,15 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * \"pending\" if the current workflow step has not been reached and the delay has not yet
-   * started. \"started\" if the delay is in progress. \"completed\" if the delay has elapsed and
+   * \"pending\" if the current workflow step has not been reached and the delay
+   * has not yet
+   * started. \"started\" if the delay is in progress. \"completed\" if the delay
+   * has elapsed and
    * the envelope has been sent to the current workflow step's recipients..
    *
    * @return status
    */
-  @ApiModelProperty(
-      value =
-          "\"pending\" if the current workflow step has not been reached and the delay has not yet started. \"started\" if the delay is in progress. \"completed\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
+  @Schema(description = "\"pending\" if the current workflow step has not been reached and the delay has not yet started. \"started\" if the delay is in progress. \"completed\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
   public String getStatus() {
     return status;
   }
@@ -154,7 +154,8 @@ public class DelayedRoutingApiModel {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

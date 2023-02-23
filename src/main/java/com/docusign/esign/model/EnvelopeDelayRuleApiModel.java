@@ -1,18 +1,18 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /**
- * An envelope delay rule is a rule which determines how the envelope should be delayed either for
- * sending or routing. It can expressed as either a delay in some number of days, hours, minutes and
+ * An envelope delay rule is a rule which determines how the envelope should be
+ * delayed either for
+ * sending or routing. It can expressed as either a delay in some number of
+ * days, hours, minutes and
  * seconds or an exact resumeDate in the future..
  */
-@ApiModel(
-    description =
-        "An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future.")
+@Schema(description = "An envelope delay rule is a rule which determines how the envelope should be delayed either for sending or routing. It can expressed as either a delay in some number of days, hours, minutes and seconds or an exact resumeDate in the future.")
 public class EnvelopeDelayRuleApiModel {
   @JsonProperty("delay")
   private String delay = null;
@@ -31,15 +31,15 @@ public class EnvelopeDelayRuleApiModel {
   }
 
   /**
-   * A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours
-   * measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for
+   * A string timespan duration represented as d.hh:mm:ss where the d component is
+   * days, hh is hours
+   * measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the
+   * expected delay for
    * this envelope rule. The maximum delay is 30 days..
    *
    * @return delay
    */
-  @ApiModelProperty(
-      value =
-          "A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days.")
+  @Schema(description = "A string timespan duration represented as d.hh:mm:ss where the d component is days, hh is hours measured on a 24-hour clock, mm is minutes and ss is seconds, indicating the expected delay for this envelope rule. The maximum delay is 30 days.")
   public String getDelay() {
     return delay;
   }
@@ -60,16 +60,17 @@ public class EnvelopeDelayRuleApiModel {
   }
 
   /**
-   * A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected
-   * resumeDate for this envelope rule. The specified datetime must occur in the future relative to
-   * the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in
+   * A string formatted as an ISO 8601 DATETIME with TimeZone specified,
+   * indicating the expected
+   * resumeDate for this envelope rule. The specified datetime must occur in the
+   * future relative to
+   * the current UTC time hen the request is made. The maximum resumeDate must not
+   * exceed 30 days in
    * the future..
    *
    * @return resumeDate
    */
-  @ApiModelProperty(
-      value =
-          "A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future.")
+  @Schema(description = "A string formatted as an ISO 8601 DATETIME with TimeZone specified, indicating the expected resumeDate for this envelope rule. The specified datetime must occur in the future relative to the current UTC time hen the request is made. The maximum resumeDate must not exceed 30 days in the future.")
   public String getResumeDate() {
     return resumeDate;
   }
@@ -116,7 +117,8 @@ public class EnvelopeDelayRuleApiModel {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** PostTransactionsRequest */
@@ -24,7 +24,7 @@ public class PostTransactionsRequest {
   }
 
   /** @return documentData */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDocumentData() {
     return documentData;
   }
@@ -39,7 +39,7 @@ public class PostTransactionsRequest {
   }
 
   /** @return dptName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDptName() {
     return dptName;
   }
@@ -54,7 +54,7 @@ public class PostTransactionsRequest {
   }
 
   /** @return transactionName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getTransactionName() {
     return transactionName;
   }
@@ -69,7 +69,7 @@ public class PostTransactionsRequest {
   }
 
   /** @return transactionTypeName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getTransactionTypeName() {
     return transactionTypeName;
   }
@@ -114,7 +114,8 @@ public class PostTransactionsRequest {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

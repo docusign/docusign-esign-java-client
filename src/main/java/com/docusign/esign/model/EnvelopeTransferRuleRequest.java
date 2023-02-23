@@ -8,14 +8,15 @@ import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains details about the envelope transfer rule that you want to create..
+ * This object contains details about the envelope transfer rule that you want
+ * to create..
  *
  */
-@ApiModel(description = "This object contains details about the envelope transfer rule that you want to create.")
+@Schema(description = "This object contains details about the envelope transfer rule that you want to create.")
 
 public class EnvelopeTransferRuleRequest {
   @JsonProperty("carbonCopyOriginalOwner")
@@ -48,7 +49,6 @@ public class EnvelopeTransferRuleRequest {
   @JsonProperty("toUser")
   private UserInformation toUser = null;
 
-
   /**
    * carbonCopyOriginalOwner.
    *
@@ -61,9 +61,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return carbonCopyOriginalOwner
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCarbonCopyOriginalOwner() {
     return carbonCopyOriginalOwner;
   }
@@ -74,7 +75,6 @@ public class EnvelopeTransferRuleRequest {
   public void setCarbonCopyOriginalOwner(String carbonCopyOriginalOwner) {
     this.carbonCopyOriginalOwner = carbonCopyOriginalOwner;
   }
-
 
   /**
    * enabled.
@@ -88,9 +88,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return enabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnabled() {
     return enabled;
   }
@@ -101,7 +102,6 @@ public class EnvelopeTransferRuleRequest {
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
-
 
   /**
    * envelopeTransferRuleId.
@@ -115,9 +115,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return envelopeTransferRuleId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeTransferRuleId() {
     return envelopeTransferRuleId;
   }
@@ -128,7 +129,6 @@ public class EnvelopeTransferRuleRequest {
   public void setEnvelopeTransferRuleId(String envelopeTransferRuleId) {
     this.envelopeTransferRuleId = envelopeTransferRuleId;
   }
-
 
   /**
    * eventType.
@@ -142,9 +142,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return eventType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEventType() {
     return eventType;
   }
@@ -156,7 +157,6 @@ public class EnvelopeTransferRuleRequest {
     this.eventType = eventType;
   }
 
-
   /**
    * fromGroups.
    *
@@ -166,7 +166,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromGroups = fromGroups;
     return this;
   }
-  
+
   /**
    * addFromGroupsItem.
    *
@@ -182,9 +182,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return fromGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Group> getFromGroups() {
     return fromGroups;
   }
@@ -196,7 +197,6 @@ public class EnvelopeTransferRuleRequest {
     this.fromGroups = fromGroups;
   }
 
-
   /**
    * fromUsers.
    *
@@ -206,7 +206,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromUsers = fromUsers;
     return this;
   }
-  
+
   /**
    * addFromUsersItem.
    *
@@ -222,9 +222,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return fromUsers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserInformation> getFromUsers() {
     return fromUsers;
   }
@@ -235,7 +236,6 @@ public class EnvelopeTransferRuleRequest {
   public void setFromUsers(java.util.List<UserInformation> fromUsers) {
     this.fromUsers = fromUsers;
   }
-
 
   /**
    * modifiedDate.
@@ -249,9 +249,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
+   * 
    * @return modifiedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedDate() {
     return modifiedDate;
   }
@@ -262,7 +263,6 @@ public class EnvelopeTransferRuleRequest {
   public void setModifiedDate(String modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
-
 
   /**
    * modifiedUser.
@@ -276,9 +276,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * Information about the user who last modified the envelope transfer rule..
+   * 
    * @return modifiedUser
    **/
-  @ApiModelProperty(value = "Information about the user who last modified the envelope transfer rule.")
+  @Schema(description = "Information about the user who last modified the envelope transfer rule.")
   public UserInformation getModifiedUser() {
     return modifiedUser;
   }
@@ -289,7 +290,6 @@ public class EnvelopeTransferRuleRequest {
   public void setModifiedUser(UserInformation modifiedUser) {
     this.modifiedUser = modifiedUser;
   }
-
 
   /**
    * toFolder.
@@ -302,10 +302,12 @@ public class EnvelopeTransferRuleRequest {
   }
 
   /**
-   * Information about the destination folder to which the envelope is transferred..
+   * Information about the destination folder to which the envelope is
+   * transferred..
+   * 
    * @return toFolder
    **/
-  @ApiModelProperty(value = "Information about the destination folder to which the envelope is transferred.")
+  @Schema(description = "Information about the destination folder to which the envelope is transferred.")
   public Folder getToFolder() {
     return toFolder;
   }
@@ -316,7 +318,6 @@ public class EnvelopeTransferRuleRequest {
   public void setToFolder(Folder toFolder) {
     this.toFolder = toFolder;
   }
-
 
   /**
    * toUser.
@@ -330,9 +331,10 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * Information about the user to which the envelope is transferred..
+   * 
    * @return toUser
    **/
-  @ApiModelProperty(value = "Information about the user to which the envelope is transferred.")
+  @Schema(description = "Information about the user to which the envelope is transferred.")
   public UserInformation getToUser() {
     return toUser;
   }
@@ -343,7 +345,6 @@ public class EnvelopeTransferRuleRequest {
   public void setToUser(UserInformation toUser) {
     this.toUser = toUser;
   }
-
 
   /**
    * Compares objects.
@@ -376,9 +377,9 @@ public class EnvelopeTransferRuleRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroups, fromUsers, modifiedDate, modifiedUser, toFolder, toUser);
+    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroups, fromUsers,
+        modifiedDate, modifiedUser, toFolder, toUser);
   }
-
 
   /**
    * Converts the given object to string.
@@ -387,7 +388,7 @@ public class EnvelopeTransferRuleRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransferRuleRequest {\n");
-    
+
     sb.append("    carbonCopyOriginalOwner: ").append(toIndentedString(carbonCopyOriginalOwner)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    envelopeTransferRuleId: ").append(toIndentedString(envelopeTransferRuleId)).append("\n");
@@ -414,4 +415,3 @@ public class EnvelopeTransferRuleRequest {
   }
 
 }
-

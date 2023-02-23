@@ -6,8 +6,8 @@ import com.docusign.esign.model.Province;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Country.
@@ -27,7 +27,6 @@ public class Country {
   @JsonProperty("provinceValidated")
   private String provinceValidated = null;
 
-
   /**
    * isoCode.
    *
@@ -40,9 +39,10 @@ public class Country {
 
   /**
    * .
+   * 
    * @return isoCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsoCode() {
     return isoCode;
   }
@@ -53,7 +53,6 @@ public class Country {
   public void setIsoCode(String isoCode) {
     this.isoCode = isoCode;
   }
-
 
   /**
    * name.
@@ -67,9 +66,10 @@ public class Country {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -81,7 +81,6 @@ public class Country {
     this.name = name;
   }
 
-
   /**
    * provinces.
    *
@@ -91,7 +90,7 @@ public class Country {
     this.provinces = provinces;
     return this;
   }
-  
+
   /**
    * addProvincesItem.
    *
@@ -107,9 +106,10 @@ public class Country {
 
   /**
    * .
+   * 
    * @return provinces
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Province> getProvinces() {
     return provinces;
   }
@@ -120,7 +120,6 @@ public class Country {
   public void setProvinces(java.util.List<Province> provinces) {
     this.provinces = provinces;
   }
-
 
   /**
    * provinceValidated.
@@ -134,9 +133,10 @@ public class Country {
 
   /**
    * .
+   * 
    * @return provinceValidated
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProvinceValidated() {
     return provinceValidated;
   }
@@ -147,7 +147,6 @@ public class Country {
   public void setProvinceValidated(String provinceValidated) {
     this.provinceValidated = provinceValidated;
   }
-
 
   /**
    * Compares objects.
@@ -177,7 +176,6 @@ public class Country {
     return Objects.hash(isoCode, name, provinces, provinceValidated);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -185,7 +183,7 @@ public class Country {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Country {\n");
-    
+
     sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    provinces: ").append(toIndentedString(provinces)).append("\n");
@@ -206,4 +204,3 @@ public class Country {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.FormDataItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PrefillFormData.
@@ -27,7 +27,6 @@ public class PrefillFormData {
   @JsonProperty("senderUserId")
   private String senderUserId = null;
 
-
   /**
    * formData.
    *
@@ -37,7 +36,7 @@ public class PrefillFormData {
     this.formData = formData;
     return this;
   }
-  
+
   /**
    * addFormDataItem.
    *
@@ -53,9 +52,10 @@ public class PrefillFormData {
 
   /**
    * .
+   * 
    * @return formData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
@@ -66,7 +66,6 @@ public class PrefillFormData {
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
-
 
   /**
    * senderEmail.
@@ -80,9 +79,10 @@ public class PrefillFormData {
 
   /**
    * .
+   * 
    * @return senderEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -93,7 +93,6 @@ public class PrefillFormData {
   public void setSenderEmail(String senderEmail) {
     this.senderEmail = senderEmail;
   }
-
 
   /**
    * senderName.
@@ -107,9 +106,10 @@ public class PrefillFormData {
 
   /**
    * .
+   * 
    * @return senderName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderName() {
     return senderName;
   }
@@ -120,7 +120,6 @@ public class PrefillFormData {
   public void setSenderName(String senderName) {
     this.senderName = senderName;
   }
-
 
   /**
    * senderUserId.
@@ -134,9 +133,10 @@ public class PrefillFormData {
 
   /**
    * .
+   * 
    * @return senderUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -147,7 +147,6 @@ public class PrefillFormData {
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
-
 
   /**
    * Compares objects.
@@ -177,7 +176,6 @@ public class PrefillFormData {
     return Objects.hash(formData, senderEmail, senderName, senderUserId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -185,7 +183,7 @@ public class PrefillFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrefillFormData {\n");
-    
+
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
     sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
     sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
@@ -206,4 +204,3 @@ public class PrefillFormData {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ServiceVersion.
@@ -20,7 +20,6 @@ public class ServiceVersion {
   @JsonProperty("versionUrl")
   private String versionUrl = null;
 
-
   /**
    * version.
    *
@@ -33,9 +32,10 @@ public class ServiceVersion {
 
   /**
    * The version of the rest API..
+   * 
    * @return version
    **/
-  @ApiModelProperty(value = "The version of the rest API.")
+  @Schema(description = "The version of the rest API.")
   public String getVersion() {
     return version;
   }
@@ -46,7 +46,6 @@ public class ServiceVersion {
   public void setVersion(String version) {
     this.version = version;
   }
-
 
   /**
    * versionUrl.
@@ -60,9 +59,10 @@ public class ServiceVersion {
 
   /**
    * .
+   * 
    * @return versionUrl
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVersionUrl() {
     return versionUrl;
   }
@@ -73,7 +73,6 @@ public class ServiceVersion {
   public void setVersionUrl(String versionUrl) {
     this.versionUrl = versionUrl;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class ServiceVersion {
     return Objects.hash(version, versionUrl);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class ServiceVersion {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceVersion {\n");
-    
+
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    versionUrl: ").append(toIndentedString(versionUrl)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class ServiceVersion {
   }
 
 }
-

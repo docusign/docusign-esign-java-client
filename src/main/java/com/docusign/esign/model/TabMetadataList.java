@@ -6,8 +6,8 @@ import com.docusign.esign.model.TabMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TabMetadataList.
@@ -18,7 +18,6 @@ public class TabMetadataList {
   @JsonProperty("tabs")
   private java.util.List<TabMetadata> tabs = null;
 
-
   /**
    * tabs.
    *
@@ -28,7 +27,7 @@ public class TabMetadataList {
     this.tabs = tabs;
     return this;
   }
-  
+
   /**
    * addTabsItem.
    *
@@ -44,9 +43,10 @@ public class TabMetadataList {
 
   /**
    * .
+   * 
    * @return tabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TabMetadata> getTabs() {
     return tabs;
   }
@@ -57,7 +57,6 @@ public class TabMetadataList {
   public void setTabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class TabMetadataList {
     return Objects.hash(tabs);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class TabMetadataList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
-    
+
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class TabMetadataList {
   }
 
 }
-

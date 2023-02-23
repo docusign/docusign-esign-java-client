@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DiagnosticsSettingsInformation.
@@ -23,7 +23,6 @@ public class DiagnosticsSettingsInformation {
   @JsonProperty("apiRequestLogRemainingEntries")
   private String apiRequestLogRemainingEntries = null;
 
-
   /**
    * apiRequestLogging.
    *
@@ -35,10 +34,11 @@ public class DiagnosticsSettingsInformation {
   }
 
   /**
-   *  When set to **true**, enables API request logging for the user. .
+   * When set to **true**, enables API request logging for the user. .
+   * 
    * @return apiRequestLogging
    **/
-  @ApiModelProperty(value = " When set to **true**, enables API request logging for the user. ")
+  @Schema(description = " When set to **true**, enables API request logging for the user. ")
   public String getApiRequestLogging() {
     return apiRequestLogging;
   }
@@ -49,7 +49,6 @@ public class DiagnosticsSettingsInformation {
   public void setApiRequestLogging(String apiRequestLogging) {
     this.apiRequestLogging = apiRequestLogging;
   }
-
 
   /**
    * apiRequestLogMaxEntries.
@@ -63,9 +62,10 @@ public class DiagnosticsSettingsInformation {
 
   /**
    * Specifies the maximum number of API requests to log..
+   * 
    * @return apiRequestLogMaxEntries
    **/
-  @ApiModelProperty(value = "Specifies the maximum number of API requests to log.")
+  @Schema(description = "Specifies the maximum number of API requests to log.")
   public String getApiRequestLogMaxEntries() {
     return apiRequestLogMaxEntries;
   }
@@ -76,7 +76,6 @@ public class DiagnosticsSettingsInformation {
   public void setApiRequestLogMaxEntries(String apiRequestLogMaxEntries) {
     this.apiRequestLogMaxEntries = apiRequestLogMaxEntries;
   }
-
 
   /**
    * apiRequestLogRemainingEntries.
@@ -90,9 +89,10 @@ public class DiagnosticsSettingsInformation {
 
   /**
    * Indicates the remaining number of API requests that can be logged..
+   * 
    * @return apiRequestLogRemainingEntries
    **/
-  @ApiModelProperty(value = "Indicates the remaining number of API requests that can be logged.")
+  @Schema(description = "Indicates the remaining number of API requests that can be logged.")
   public String getApiRequestLogRemainingEntries() {
     return apiRequestLogRemainingEntries;
   }
@@ -103,7 +103,6 @@ public class DiagnosticsSettingsInformation {
   public void setApiRequestLogRemainingEntries(String apiRequestLogRemainingEntries) {
     this.apiRequestLogRemainingEntries = apiRequestLogRemainingEntries;
   }
-
 
   /**
    * Compares objects.
@@ -121,7 +120,8 @@ public class DiagnosticsSettingsInformation {
     DiagnosticsSettingsInformation diagnosticsSettingsInformation = (DiagnosticsSettingsInformation) o;
     return Objects.equals(this.apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
         Objects.equals(this.apiRequestLogMaxEntries, diagnosticsSettingsInformation.apiRequestLogMaxEntries) &&
-        Objects.equals(this.apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
+        Objects.equals(this.apiRequestLogRemainingEntries,
+            diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
   }
 
   /**
@@ -132,7 +132,6 @@ public class DiagnosticsSettingsInformation {
     return Objects.hash(apiRequestLogging, apiRequestLogMaxEntries, apiRequestLogRemainingEntries);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,10 +139,11 @@ public class DiagnosticsSettingsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiagnosticsSettingsInformation {\n");
-    
+
     sb.append("    apiRequestLogging: ").append(toIndentedString(apiRequestLogging)).append("\n");
     sb.append("    apiRequestLogMaxEntries: ").append(toIndentedString(apiRequestLogMaxEntries)).append("\n");
-    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries)).append("\n");
+    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -160,4 +160,3 @@ public class DiagnosticsSettingsInformation {
   }
 
 }
-

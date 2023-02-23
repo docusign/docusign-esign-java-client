@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SignatureUserDef.
@@ -23,7 +23,6 @@ public class SignatureUserDef {
   @JsonProperty("userId")
   private String userId = null;
 
-
   /**
    * isDefault.
    *
@@ -36,9 +35,10 @@ public class SignatureUserDef {
 
   /**
    * .
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -49,7 +49,6 @@ public class SignatureUserDef {
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * rights.
@@ -63,9 +62,10 @@ public class SignatureUserDef {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -76,7 +76,6 @@ public class SignatureUserDef {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * userId.
@@ -90,9 +89,10 @@ public class SignatureUserDef {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -103,7 +103,6 @@ public class SignatureUserDef {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * Compares objects.
@@ -132,7 +131,6 @@ public class SignatureUserDef {
     return Objects.hash(isDefault, rights, userId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -140,7 +138,7 @@ public class SignatureUserDef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureUserDef {\n");
-    
+
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -160,4 +158,3 @@ public class SignatureUserDef {
   }
 
 }
-

@@ -6,14 +6,14 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Object representing a new user..
  *
  */
-@ApiModel(description = "Object representing a new user.")
+@Schema(description = "Object representing a new user.")
 
 public class NewUser {
   @JsonProperty("apiPassword")
@@ -49,7 +49,6 @@ public class NewUser {
   @JsonProperty("userStatus")
   private String userStatus = null;
 
-
   /**
    * apiPassword.
    *
@@ -61,10 +60,12 @@ public class NewUser {
   }
 
   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
+   * Contains a token that can be used for authentication in API calls instead of
+   * using the user name and password..
+   * 
    * @return apiPassword
    **/
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
+  @Schema(description = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -75,7 +76,6 @@ public class NewUser {
   public void setApiPassword(String apiPassword) {
     this.apiPassword = apiPassword;
   }
-
 
   /**
    * createdDateTime.
@@ -89,9 +89,10 @@ public class NewUser {
 
   /**
    * Indicates the date and time the item was created..
+   * 
    * @return createdDateTime
    **/
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @Schema(description = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -102,7 +103,6 @@ public class NewUser {
   public void setCreatedDateTime(String createdDateTime) {
     this.createdDateTime = createdDateTime;
   }
-
 
   /**
    * email.
@@ -116,9 +116,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -129,7 +130,6 @@ public class NewUser {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * errorDetails.
@@ -142,10 +142,12 @@ public class NewUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -156,7 +158,6 @@ public class NewUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * membershipId.
@@ -170,9 +171,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return membershipId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMembershipId() {
     return membershipId;
   }
@@ -183,7 +185,6 @@ public class NewUser {
   public void setMembershipId(String membershipId) {
     this.membershipId = membershipId;
   }
-
 
   /**
    * permissionProfileId.
@@ -197,9 +198,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return permissionProfileId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -210,7 +212,6 @@ public class NewUser {
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
-
 
   /**
    * permissionProfileName.
@@ -224,9 +225,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return permissionProfileName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -237,7 +239,6 @@ public class NewUser {
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
-
 
   /**
    * uri.
@@ -251,9 +252,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -264,7 +266,6 @@ public class NewUser {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * userId.
@@ -278,9 +279,10 @@ public class NewUser {
 
   /**
    * Specifies the user ID for the new user..
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "Specifies the user ID for the new user.")
+  @Schema(description = "Specifies the user ID for the new user.")
   public String getUserId() {
     return userId;
   }
@@ -291,7 +293,6 @@ public class NewUser {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -305,9 +306,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -318,7 +320,6 @@ public class NewUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * userStatus.
@@ -332,9 +333,10 @@ public class NewUser {
 
   /**
    * .
+   * 
    * @return userStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -345,7 +347,6 @@ public class NewUser {
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
-
 
   /**
    * Compares objects.
@@ -379,9 +380,9 @@ public class NewUser {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
+    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId,
+        permissionProfileName, uri, userId, userName, userStatus);
   }
-
 
   /**
    * Converts the given object to string.
@@ -390,7 +391,7 @@ public class NewUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUser {\n");
-    
+
     sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -418,4 +419,3 @@ public class NewUser {
   }
 
 }
-

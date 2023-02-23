@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about the result of an event..
  *
  */
-@ApiModel(description = "Information about the result of an event.")
+@Schema(description = "Information about the result of an event.")
 
 public class EventResult {
   @JsonProperty("eventTimestamp")
@@ -27,7 +27,6 @@ public class EventResult {
   @JsonProperty("vendorFailureStatusCode")
   private String vendorFailureStatusCode = null;
 
-
   /**
    * eventTimestamp.
    *
@@ -40,9 +39,10 @@ public class EventResult {
 
   /**
    * .
+   * 
    * @return eventTimestamp
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEventTimestamp() {
     return eventTimestamp;
   }
@@ -53,7 +53,6 @@ public class EventResult {
   public void setEventTimestamp(String eventTimestamp) {
     this.eventTimestamp = eventTimestamp;
   }
-
 
   /**
    * failureDescription.
@@ -67,9 +66,10 @@ public class EventResult {
 
   /**
    * .
+   * 
    * @return failureDescription
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailureDescription() {
     return failureDescription;
   }
@@ -80,7 +80,6 @@ public class EventResult {
   public void setFailureDescription(String failureDescription) {
     this.failureDescription = failureDescription;
   }
-
 
   /**
    * status.
@@ -93,10 +92,13 @@ public class EventResult {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -107,7 +109,6 @@ public class EventResult {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * vendorFailureStatusCode.
@@ -121,9 +122,10 @@ public class EventResult {
 
   /**
    * .
+   * 
    * @return vendorFailureStatusCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVendorFailureStatusCode() {
     return vendorFailureStatusCode;
   }
@@ -134,7 +136,6 @@ public class EventResult {
   public void setVendorFailureStatusCode(String vendorFailureStatusCode) {
     this.vendorFailureStatusCode = vendorFailureStatusCode;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +165,6 @@ public class EventResult {
     return Objects.hash(eventTimestamp, failureDescription, status, vendorFailureStatusCode);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +172,7 @@ public class EventResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventResult {\n");
-    
+
     sb.append("    eventTimestamp: ").append(toIndentedString(eventTimestamp)).append("\n");
     sb.append("    failureDescription: ").append(toIndentedString(failureDescription)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -193,4 +193,3 @@ public class EventResult {
   }
 
 }
-

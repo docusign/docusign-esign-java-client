@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductGet. */
@@ -114,7 +114,7 @@ public class ReportInProductGet {
    *
    * @return authenticationSuccessFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationSuccessFilter() {
     return authenticationSuccessFilter;
   }
@@ -139,7 +139,7 @@ public class ReportInProductGet {
    *
    * @return customFieldFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomFieldFilter() {
     return customFieldFilter;
   }
@@ -164,7 +164,7 @@ public class ReportInProductGet {
    *
    * @return dateRangeCustomFromDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeCustomFromDate() {
     return dateRangeCustomFromDate;
   }
@@ -189,7 +189,7 @@ public class ReportInProductGet {
    *
    * @return dateRangeCustomToDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeCustomToDate() {
     return dateRangeCustomToDate;
   }
@@ -214,7 +214,7 @@ public class ReportInProductGet {
    *
    * @return dateRangeFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateRangeFilter() {
     return dateRangeFilter;
   }
@@ -239,7 +239,7 @@ public class ReportInProductGet {
    *
    * @return displayOrder
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
@@ -264,7 +264,7 @@ public class ReportInProductGet {
    *
    * @return envelopeDateTypeFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeDateTypeFilter() {
     return envelopeDateTypeFilter;
   }
@@ -290,7 +290,7 @@ public class ReportInProductGet {
    *
    * @return envelopeRecipientNameContainsFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeRecipientNameContainsFilter() {
     return envelopeRecipientNameContainsFilter;
   }
@@ -315,7 +315,7 @@ public class ReportInProductGet {
    *
    * @return envelopeStatusFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeStatusFilter() {
     return envelopeStatusFilter;
   }
@@ -340,7 +340,7 @@ public class ReportInProductGet {
    *
    * @return envelopeSubjectContainsFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeSubjectContainsFilter() {
     return envelopeSubjectContainsFilter;
   }
@@ -378,7 +378,7 @@ public class ReportInProductGet {
    *
    * @return fields
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ReportInProductField> getFields() {
     return fields;
   }
@@ -403,7 +403,7 @@ public class ReportInProductGet {
    *
    * @return lastScheduledExecutionDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastScheduledExecutionDate() {
     return lastScheduledExecutionDate;
   }
@@ -429,7 +429,7 @@ public class ReportInProductGet {
    *
    * @return lastScheduledExecutionSuccessDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastScheduledExecutionSuccessDate() {
     return lastScheduledExecutionSuccessDate;
   }
@@ -454,7 +454,7 @@ public class ReportInProductGet {
    *
    * @return maxDownloadRows
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxDownloadRows() {
     return maxDownloadRows;
   }
@@ -479,7 +479,7 @@ public class ReportInProductGet {
    *
    * @return maxGridRows
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxGridRows() {
     return maxGridRows;
   }
@@ -504,7 +504,7 @@ public class ReportInProductGet {
    *
    * @return maxScheduledRows
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxScheduledRows() {
     return maxScheduledRows;
   }
@@ -529,7 +529,7 @@ public class ReportInProductGet {
    *
    * @return periodLengthFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPeriodLengthFilter() {
     return periodLengthFilter;
   }
@@ -554,7 +554,7 @@ public class ReportInProductGet {
    *
    * @return reportCustomizedId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportCustomizedId() {
     return reportCustomizedId;
   }
@@ -579,7 +579,7 @@ public class ReportInProductGet {
    *
    * @return reportDescription
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportDescription() {
     return reportDescription;
   }
@@ -604,7 +604,7 @@ public class ReportInProductGet {
    *
    * @return reportId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportId() {
     return reportId;
   }
@@ -629,7 +629,7 @@ public class ReportInProductGet {
    *
    * @return reportName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportName() {
     return reportName;
   }
@@ -654,7 +654,7 @@ public class ReportInProductGet {
    *
    * @return reportType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReportType() {
     return reportType;
   }
@@ -679,7 +679,7 @@ public class ReportInProductGet {
    *
    * @return runUri
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRunUri() {
     return runUri;
   }
@@ -704,7 +704,7 @@ public class ReportInProductGet {
    *
    * @return saveUri
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSaveUri() {
     return saveUri;
   }
@@ -729,7 +729,7 @@ public class ReportInProductGet {
    *
    * @return scheduleId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getScheduleId() {
     return scheduleId;
   }
@@ -754,7 +754,7 @@ public class ReportInProductGet {
    *
    * @return sentByDetails
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ReportInProductSentByDetails getSentByDetails() {
     return sentByDetails;
   }
@@ -779,7 +779,7 @@ public class ReportInProductGet {
    *
    * @return sentByFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByFilter() {
     return sentByFilter;
   }
@@ -804,7 +804,7 @@ public class ReportInProductGet {
    *
    * @return sentByIds
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSentByIds() {
     return sentByIds;
   }
@@ -829,7 +829,7 @@ public class ReportInProductGet {
    *
    * @return sortFieldDirection
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSortFieldDirection() {
     return sortFieldDirection;
   }
@@ -854,7 +854,7 @@ public class ReportInProductGet {
    *
    * @return sortFieldName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSortFieldName() {
     return sortFieldName;
   }
@@ -879,7 +879,7 @@ public class ReportInProductGet {
    *
    * @return verificationStatusFilter
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVerificationStatusFilter() {
     return verificationStatusFilter;
   }
@@ -904,7 +904,7 @@ public class ReportInProductGet {
     }
     ReportInProductGet reportInProductGet = (ReportInProductGet) o;
     return Objects.equals(
-            this.authenticationSuccessFilter, reportInProductGet.authenticationSuccessFilter)
+        this.authenticationSuccessFilter, reportInProductGet.authenticationSuccessFilter)
         && Objects.equals(this.customFieldFilter, reportInProductGet.customFieldFilter)
         && Objects.equals(this.dateRangeCustomFromDate, reportInProductGet.dateRangeCustomFromDate)
         && Objects.equals(this.dateRangeCustomToDate, reportInProductGet.dateRangeCustomToDate)
@@ -1043,7 +1043,8 @@ public class ReportInProductGet {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

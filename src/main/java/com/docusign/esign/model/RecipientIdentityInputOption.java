@@ -6,8 +6,8 @@ import com.docusign.esign.model.RecipientIdentityPhoneNumber;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientIdentityInputOption.
@@ -24,7 +24,6 @@ public class RecipientIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
-
   /**
    * name.
    *
@@ -37,9 +36,10 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -51,7 +51,6 @@ public class RecipientIdentityInputOption {
     this.name = name;
   }
 
-
   /**
    * phoneNumberList.
    *
@@ -61,7 +60,7 @@ public class RecipientIdentityInputOption {
     this.phoneNumberList = phoneNumberList;
     return this;
   }
-  
+
   /**
    * addPhoneNumberListItem.
    *
@@ -77,9 +76,10 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
+   * 
    * @return phoneNumberList
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientIdentityPhoneNumber> getPhoneNumberList() {
     return phoneNumberList;
   }
@@ -90,7 +90,6 @@ public class RecipientIdentityInputOption {
   public void setPhoneNumberList(java.util.List<RecipientIdentityPhoneNumber> phoneNumberList) {
     this.phoneNumberList = phoneNumberList;
   }
-
 
   /**
    * valueType.
@@ -104,9 +103,10 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
+   * 
    * @return valueType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getValueType() {
     return valueType;
   }
@@ -117,7 +117,6 @@ public class RecipientIdentityInputOption {
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +145,6 @@ public class RecipientIdentityInputOption {
     return Objects.hash(name, phoneNumberList, valueType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +152,7 @@ public class RecipientIdentityInputOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityInputOption {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    phoneNumberList: ").append(toIndentedString(phoneNumberList)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
@@ -174,4 +172,3 @@ public class RecipientIdentityInputOption {
   }
 
 }
-

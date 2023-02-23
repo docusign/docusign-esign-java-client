@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectDebugLog.
@@ -30,7 +30,6 @@ public class ConnectDebugLog {
   @JsonProperty("payload")
   private String payload = null;
 
-
   /**
    * connectConfig.
    *
@@ -43,9 +42,10 @@ public class ConnectDebugLog {
 
   /**
    * .
+   * 
    * @return connectConfig
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getConnectConfig() {
     return connectConfig;
   }
@@ -56,7 +56,6 @@ public class ConnectDebugLog {
   public void setConnectConfig(String connectConfig) {
     this.connectConfig = connectConfig;
   }
-
 
   /**
    * errorDetails.
@@ -69,10 +68,12 @@ public class ConnectDebugLog {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -83,7 +84,6 @@ public class ConnectDebugLog {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * eventDateTime.
@@ -97,9 +97,10 @@ public class ConnectDebugLog {
 
   /**
    * .
+   * 
    * @return eventDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEventDateTime() {
     return eventDateTime;
   }
@@ -110,7 +111,6 @@ public class ConnectDebugLog {
   public void setEventDateTime(String eventDateTime) {
     this.eventDateTime = eventDateTime;
   }
-
 
   /**
    * eventDescription.
@@ -124,9 +124,10 @@ public class ConnectDebugLog {
 
   /**
    * .
+   * 
    * @return eventDescription
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEventDescription() {
     return eventDescription;
   }
@@ -137,7 +138,6 @@ public class ConnectDebugLog {
   public void setEventDescription(String eventDescription) {
     this.eventDescription = eventDescription;
   }
-
 
   /**
    * payload.
@@ -151,9 +151,10 @@ public class ConnectDebugLog {
 
   /**
    * .
+   * 
    * @return payload
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPayload() {
     return payload;
   }
@@ -164,7 +165,6 @@ public class ConnectDebugLog {
   public void setPayload(String payload) {
     this.payload = payload;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +195,6 @@ public class ConnectDebugLog {
     return Objects.hash(connectConfig, errorDetails, eventDateTime, eventDescription, payload);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +202,7 @@ public class ConnectDebugLog {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectDebugLog {\n");
-    
+
     sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
@@ -225,4 +224,3 @@ public class ConnectDebugLog {
   }
 
 }
-

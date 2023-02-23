@@ -6,8 +6,8 @@ import com.docusign.esign.model.CreditCardTypes;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CurrencyPlanPrice.
@@ -33,7 +33,6 @@ public class CurrencyPlanPrice {
   @JsonProperty("supportPlanFee")
   private String supportPlanFee = null;
 
-
   /**
    * currencyCode.
    *
@@ -46,9 +45,10 @@ public class CurrencyPlanPrice {
 
   /**
    * Specifies the ISO currency code for the account..
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @Schema(description = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -59,7 +59,6 @@ public class CurrencyPlanPrice {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currencySymbol.
@@ -73,9 +72,10 @@ public class CurrencyPlanPrice {
 
   /**
    * Specifies the currency symbol for the account..
+   * 
    * @return currencySymbol
    **/
-  @ApiModelProperty(value = "Specifies the currency symbol for the account.")
+  @Schema(description = "Specifies the currency symbol for the account.")
   public String getCurrencySymbol() {
     return currencySymbol;
   }
@@ -86,7 +86,6 @@ public class CurrencyPlanPrice {
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
   }
-
 
   /**
    * perSeatPrice.
@@ -100,9 +99,10 @@ public class CurrencyPlanPrice {
 
   /**
    * .
+   * 
    * @return perSeatPrice
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPerSeatPrice() {
     return perSeatPrice;
   }
@@ -113,7 +113,6 @@ public class CurrencyPlanPrice {
   public void setPerSeatPrice(String perSeatPrice) {
     this.perSeatPrice = perSeatPrice;
   }
-
 
   /**
    * supportedCardTypes.
@@ -126,10 +125,21 @@ public class CurrencyPlanPrice {
   }
 
   /**
-   * A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi)..
+   * A simple type enumeration of the language used. The supported languages, with
+   * the language value shown in parenthesis, are: Arabic (ar), Bahasa Indonesia
+   * (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified
+   * (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl),
+   * English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi),
+   * French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he),
+   * Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian
+   * (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt),
+   * Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak
+   * (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish
+   * (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi)..
+   * 
    * @return supportedCardTypes
    **/
-  @ApiModelProperty(value = "A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi).")
+  @Schema(description = "A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi).")
   public CreditCardTypes getSupportedCardTypes() {
     return supportedCardTypes;
   }
@@ -140,7 +150,6 @@ public class CurrencyPlanPrice {
   public void setSupportedCardTypes(CreditCardTypes supportedCardTypes) {
     this.supportedCardTypes = supportedCardTypes;
   }
-
 
   /**
    * supportIncidentFee.
@@ -154,9 +163,10 @@ public class CurrencyPlanPrice {
 
   /**
    * The support incident fee charged for each support incident..
+   * 
    * @return supportIncidentFee
    **/
-  @ApiModelProperty(value = "The support incident fee charged for each support incident.")
+  @Schema(description = "The support incident fee charged for each support incident.")
   public String getSupportIncidentFee() {
     return supportIncidentFee;
   }
@@ -167,7 +177,6 @@ public class CurrencyPlanPrice {
   public void setSupportIncidentFee(String supportIncidentFee) {
     this.supportIncidentFee = supportIncidentFee;
   }
-
 
   /**
    * supportPlanFee.
@@ -181,9 +190,10 @@ public class CurrencyPlanPrice {
 
   /**
    * The support plan fee charged for this plan..
+   * 
    * @return supportPlanFee
    **/
-  @ApiModelProperty(value = "The support plan fee charged for this plan.")
+  @Schema(description = "The support plan fee charged for this plan.")
   public String getSupportPlanFee() {
     return supportPlanFee;
   }
@@ -194,7 +204,6 @@ public class CurrencyPlanPrice {
   public void setSupportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
   }
-
 
   /**
    * Compares objects.
@@ -223,9 +232,9 @@ public class CurrencyPlanPrice {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currencyCode, currencySymbol, perSeatPrice, supportedCardTypes, supportIncidentFee, supportPlanFee);
+    return Objects.hash(currencyCode, currencySymbol, perSeatPrice, supportedCardTypes, supportIncidentFee,
+        supportPlanFee);
   }
-
 
   /**
    * Converts the given object to string.
@@ -234,7 +243,7 @@ public class CurrencyPlanPrice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CurrencyPlanPrice {\n");
-    
+
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
     sb.append("    perSeatPrice: ").append(toIndentedString(perSeatPrice)).append("\n");
@@ -257,4 +266,3 @@ public class CurrencyPlanPrice {
   }
 
 }
-

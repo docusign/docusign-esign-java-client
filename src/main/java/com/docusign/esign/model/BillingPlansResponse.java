@@ -6,19 +6,18 @@ import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing plans response object..
  *
  */
-@ApiModel(description = "Defines a billing plans response object.")
+@Schema(description = "Defines a billing plans response object.")
 
 public class BillingPlansResponse {
   @JsonProperty("billingPlans")
   private java.util.List<BillingPlan> billingPlans = null;
-
 
   /**
    * billingPlans.
@@ -29,7 +28,7 @@ public class BillingPlansResponse {
     this.billingPlans = billingPlans;
     return this;
   }
-  
+
   /**
    * addBillingPlansItem.
    *
@@ -45,9 +44,10 @@ public class BillingPlansResponse {
 
   /**
    * Reserved: TBD.
+   * 
    * @return billingPlans
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<BillingPlan> getBillingPlans() {
     return billingPlans;
   }
@@ -58,7 +58,6 @@ public class BillingPlansResponse {
   public void setBillingPlans(java.util.List<BillingPlan> billingPlans) {
     this.billingPlans = billingPlans;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class BillingPlansResponse {
     return Objects.hash(billingPlans);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class BillingPlansResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlansResponse {\n");
-    
+
     sb.append("    billingPlans: ").append(toIndentedString(billingPlans)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class BillingPlansResponse {
   }
 
 }
-

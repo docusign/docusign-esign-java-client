@@ -6,19 +6,18 @@ import com.docusign.esign.model.RecipientRules;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes the recipient routing rules..
  *
  */
-@ApiModel(description = "Describes the recipient routing rules.")
+@Schema(description = "Describes the recipient routing rules.")
 
 public class RecipientRouting {
   @JsonProperty("rules")
   private RecipientRules rules = null;
-
 
   /**
    * rules.
@@ -32,9 +31,10 @@ public class RecipientRouting {
 
   /**
    * The recipient routing rules..
+   * 
    * @return rules
    **/
-  @ApiModelProperty(value = "The recipient routing rules.")
+  @Schema(description = "The recipient routing rules.")
   public RecipientRules getRules() {
     return rules;
   }
@@ -45,7 +45,6 @@ public class RecipientRouting {
   public void setRules(RecipientRules rules) {
     this.rules = rules;
   }
-
 
   /**
    * Compares objects.
@@ -72,7 +71,6 @@ public class RecipientRouting {
     return Objects.hash(rules);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -80,7 +78,7 @@ public class RecipientRouting {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientRouting {\n");
-    
+
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -98,4 +96,3 @@ public class RecipientRouting {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessingListSummary.
@@ -26,7 +26,6 @@ public class BulkProcessingListSummary {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * bulkProcessListId.
    *
@@ -39,9 +38,10 @@ public class BulkProcessingListSummary {
 
   /**
    * .
+   * 
    * @return bulkProcessListId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBulkProcessListId() {
     return bulkProcessListId;
   }
@@ -52,7 +52,6 @@ public class BulkProcessingListSummary {
   public void setBulkProcessListId(String bulkProcessListId) {
     this.bulkProcessListId = bulkProcessListId;
   }
-
 
   /**
    * createdByUser.
@@ -66,9 +65,10 @@ public class BulkProcessingListSummary {
 
   /**
    * .
+   * 
    * @return createdByUser
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedByUser() {
     return createdByUser;
   }
@@ -79,7 +79,6 @@ public class BulkProcessingListSummary {
   public void setCreatedByUser(String createdByUser) {
     this.createdByUser = createdByUser;
   }
-
 
   /**
    * createdDate.
@@ -93,9 +92,10 @@ public class BulkProcessingListSummary {
 
   /**
    * .
+   * 
    * @return createdDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -106,7 +106,6 @@ public class BulkProcessingListSummary {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   /**
    * name.
@@ -120,9 +119,10 @@ public class BulkProcessingListSummary {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -133,7 +133,6 @@ public class BulkProcessingListSummary {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class BulkProcessingListSummary {
     return Objects.hash(bulkProcessListId, createdByUser, createdDate, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class BulkProcessingListSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingListSummary {\n");
-    
+
     sb.append("    bulkProcessListId: ").append(toIndentedString(bulkProcessListId)).append("\n");
     sb.append("    createdByUser: ").append(toIndentedString(createdByUser)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -192,4 +190,3 @@ public class BulkProcessingListSummary {
   }
 
 }
-

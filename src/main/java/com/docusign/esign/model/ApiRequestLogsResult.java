@@ -6,19 +6,18 @@ import com.docusign.esign.model.ApiRequestLog;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about mutiple API request logs..
  *
  */
-@ApiModel(description = "Contains information about mutiple API request logs.")
+@Schema(description = "Contains information about mutiple API request logs.")
 
 public class ApiRequestLogsResult {
   @JsonProperty("apiRequestLogs")
   private java.util.List<ApiRequestLog> apiRequestLogs = null;
-
 
   /**
    * apiRequestLogs.
@@ -29,7 +28,7 @@ public class ApiRequestLogsResult {
     this.apiRequestLogs = apiRequestLogs;
     return this;
   }
-  
+
   /**
    * addApiRequestLogsItem.
    *
@@ -45,9 +44,10 @@ public class ApiRequestLogsResult {
 
   /**
    * Reserved: TBD.
+   * 
    * @return apiRequestLogs
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<ApiRequestLog> getApiRequestLogs() {
     return apiRequestLogs;
   }
@@ -58,7 +58,6 @@ public class ApiRequestLogsResult {
   public void setApiRequestLogs(java.util.List<ApiRequestLog> apiRequestLogs) {
     this.apiRequestLogs = apiRequestLogs;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class ApiRequestLogsResult {
     return Objects.hash(apiRequestLogs);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class ApiRequestLogsResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLogsResult {\n");
-    
+
     sb.append("    apiRequestLogs: ").append(toIndentedString(apiRequestLogs)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class ApiRequestLogsResult {
   }
 
 }
-

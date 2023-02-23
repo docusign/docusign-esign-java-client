@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordLockoutDurationType.
@@ -17,7 +17,6 @@ public class AccountPasswordLockoutDurationType {
   @JsonProperty("options")
   private java.util.List<String> options = null;
 
-
   /**
    * options.
    *
@@ -27,7 +26,7 @@ public class AccountPasswordLockoutDurationType {
     this.options = options;
     return this;
   }
-  
+
   /**
    * addOptionsItem.
    *
@@ -43,9 +42,10 @@ public class AccountPasswordLockoutDurationType {
 
   /**
    * .
+   * 
    * @return options
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getOptions() {
     return options;
   }
@@ -56,7 +56,6 @@ public class AccountPasswordLockoutDurationType {
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
-
 
   /**
    * Compares objects.
@@ -83,7 +82,6 @@ public class AccountPasswordLockoutDurationType {
     return Objects.hash(options);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -91,7 +89,7 @@ public class AccountPasswordLockoutDurationType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordLockoutDurationType {\n");
-    
+
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,4 +107,3 @@ public class AccountPasswordLockoutDurationType {
   }
 
 }
-

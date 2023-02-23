@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only..
+ * Information about the price and currency associated with the feature set.
+ * Reserved for internal DocuSign use only..
  *
  */
-@ApiModel(description = "Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only.")
+@Schema(description = "Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only.")
 
 public class CurrencyFeatureSetPrice {
   @JsonProperty("currencyCode")
@@ -30,7 +31,6 @@ public class CurrencyFeatureSetPrice {
   @JsonProperty("seatFee")
   private String seatFee = null;
 
-
   /**
    * currencyCode.
    *
@@ -43,9 +43,10 @@ public class CurrencyFeatureSetPrice {
 
   /**
    * Specifies the alternate ISO currency code for the account. .
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the alternate ISO currency code for the account. ")
+  @Schema(description = "Specifies the alternate ISO currency code for the account. ")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -56,7 +57,6 @@ public class CurrencyFeatureSetPrice {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currencySymbol.
@@ -70,9 +70,10 @@ public class CurrencyFeatureSetPrice {
 
   /**
    * Specifies the alternate currency symbol for the account..
+   * 
    * @return currencySymbol
    **/
-  @ApiModelProperty(value = "Specifies the alternate currency symbol for the account.")
+  @Schema(description = "Specifies the alternate currency symbol for the account.")
   public String getCurrencySymbol() {
     return currencySymbol;
   }
@@ -83,7 +84,6 @@ public class CurrencyFeatureSetPrice {
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
   }
-
 
   /**
    * envelopeFee.
@@ -96,10 +96,12 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.).
+   * An incremental envelope cost for plans with envelope overages (when
+   * `isEnabled` is set to **true**.).
+   * 
    * @return envelopeFee
    **/
-  @ApiModelProperty(value = "An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)")
+  @Schema(description = "An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)")
   public String getEnvelopeFee() {
     return envelopeFee;
   }
@@ -110,7 +112,6 @@ public class CurrencyFeatureSetPrice {
   public void setEnvelopeFee(String envelopeFee) {
     this.envelopeFee = envelopeFee;
   }
-
 
   /**
    * fixedFee.
@@ -123,10 +124,12 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.).
+   * Specifies a one-time fee associated with the plan (when `isEnabled` is set to
+   * **true**.).
+   * 
    * @return fixedFee
    **/
-  @ApiModelProperty(value = "Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)")
+  @Schema(description = "Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)")
   public String getFixedFee() {
     return fixedFee;
   }
@@ -137,7 +140,6 @@ public class CurrencyFeatureSetPrice {
   public void setFixedFee(String fixedFee) {
     this.fixedFee = fixedFee;
   }
-
 
   /**
    * seatFee.
@@ -150,10 +152,12 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.).
+   * Specifies an incremental seat cost for seat-based plans (when `isEnabled` is
+   * set to **true**.).
+   * 
    * @return seatFee
    **/
-  @ApiModelProperty(value = "Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)")
+  @Schema(description = "Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)")
   public String getSeatFee() {
     return seatFee;
   }
@@ -164,7 +168,6 @@ public class CurrencyFeatureSetPrice {
   public void setSeatFee(String seatFee) {
     this.seatFee = seatFee;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +198,6 @@ public class CurrencyFeatureSetPrice {
     return Objects.hash(currencyCode, currencySymbol, envelopeFee, fixedFee, seatFee);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +205,7 @@ public class CurrencyFeatureSetPrice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CurrencyFeatureSetPrice {\n");
-    
+
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
     sb.append("    envelopeFee: ").append(toIndentedString(envelopeFee)).append("\n");
@@ -225,4 +227,3 @@ public class CurrencyFeatureSetPrice {
   }
 
 }
-

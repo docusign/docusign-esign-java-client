@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessRequest.
@@ -20,7 +20,6 @@ public class BulkProcessRequest {
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
 
-
   /**
    * batchName.
    *
@@ -33,9 +32,10 @@ public class BulkProcessRequest {
 
   /**
    * .
+   * 
    * @return batchName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchName() {
     return batchName;
   }
@@ -46,7 +46,6 @@ public class BulkProcessRequest {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * envelopeOrTemplateId.
@@ -60,9 +59,10 @@ public class BulkProcessRequest {
 
   /**
    * .
+   * 
    * @return envelopeOrTemplateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeOrTemplateId() {
     return envelopeOrTemplateId;
   }
@@ -73,7 +73,6 @@ public class BulkProcessRequest {
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class BulkProcessRequest {
     return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class BulkProcessRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessRequest {\n");
-    
+
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class BulkProcessRequest {
   }
 
 }
-

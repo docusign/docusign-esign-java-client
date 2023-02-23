@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Metadata about a property..
  *
  */
-@ApiModel(description = "Metadata about a property.")
+@Schema(description = "Metadata about a property.")
 
 public class PropertyMetadata {
   @JsonProperty("options")
@@ -20,7 +20,6 @@ public class PropertyMetadata {
 
   @JsonProperty("rights")
   private String rights = null;
-
 
   /**
    * options.
@@ -31,7 +30,7 @@ public class PropertyMetadata {
     this.options = options;
     return this;
   }
-  
+
   /**
    * addOptionsItem.
    *
@@ -47,9 +46,10 @@ public class PropertyMetadata {
 
   /**
    * .
+   * 
    * @return options
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getOptions() {
     return options;
   }
@@ -60,7 +60,6 @@ public class PropertyMetadata {
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
-
 
   /**
    * rights.
@@ -74,9 +73,10 @@ public class PropertyMetadata {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -87,7 +87,6 @@ public class PropertyMetadata {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class PropertyMetadata {
     return Objects.hash(options, rights);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class PropertyMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertyMetadata {\n");
-    
+
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class PropertyMetadata {
   }
 
 }
-

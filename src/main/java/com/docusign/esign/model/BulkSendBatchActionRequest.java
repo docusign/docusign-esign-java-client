@@ -6,8 +6,8 @@ import com.docusign.esign.model.Notification;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkSendBatchActionRequest.
@@ -24,7 +24,6 @@ public class BulkSendBatchActionRequest {
   @JsonProperty("voidReason")
   private String voidReason = null;
 
-
   /**
    * action.
    *
@@ -37,9 +36,10 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
+   * 
    * @return action
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAction() {
     return action;
   }
@@ -50,7 +50,6 @@ public class BulkSendBatchActionRequest {
   public void setAction(String action) {
     this.action = action;
   }
-
 
   /**
    * notification.
@@ -64,9 +63,10 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
+   * 
    * @return notification
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Notification getNotification() {
     return notification;
   }
@@ -77,7 +77,6 @@ public class BulkSendBatchActionRequest {
   public void setNotification(Notification notification) {
     this.notification = notification;
   }
-
 
   /**
    * voidReason.
@@ -91,9 +90,10 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
+   * 
    * @return voidReason
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVoidReason() {
     return voidReason;
   }
@@ -104,7 +104,6 @@ public class BulkSendBatchActionRequest {
   public void setVoidReason(String voidReason) {
     this.voidReason = voidReason;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +132,6 @@ public class BulkSendBatchActionRequest {
     return Objects.hash(action, notification, voidReason);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +139,7 @@ public class BulkSendBatchActionRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchActionRequest {\n");
-    
+
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
     sb.append("    voidReason: ").append(toIndentedString(voidReason)).append("\n");
@@ -161,4 +159,3 @@ public class BulkSendBatchActionRequest {
   }
 
 }
-
