@@ -8,14 +8,16 @@ import com.docusign.esign.model.BulksendingCopyDocGenFormField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains the details to use for a specific copy, or instance, of the envelope. When you send an envelope by using a bulk send list, you can customize these properties for each instance..
+ * This object contains the details to use for a specific copy, or instance, of
+ * the envelope. When you send an envelope by using a bulk send list, you can
+ * customize these properties for each instance..
  *
  */
-@ApiModel(description = "This object contains the details to use for a specific copy, or instance, of the envelope. When you send an envelope by using a bulk send list, you can customize these properties for each instance.")
+@Schema(description = "This object contains the details to use for a specific copy, or instance, of the envelope. When you send an envelope by using a bulk send list, you can customize these properties for each instance.")
 
 public class BulkSendingCopy {
   @JsonProperty("customFields")
@@ -33,7 +35,6 @@ public class BulkSendingCopy {
   @JsonProperty("recipients")
   private java.util.List<BulkSendingCopyRecipient> recipients = null;
 
-
   /**
    * customFields.
    *
@@ -43,7 +44,7 @@ public class BulkSendingCopy {
     this.customFields = customFields;
     return this;
   }
-  
+
   /**
    * addCustomFieldsItem.
    *
@@ -58,10 +59,14 @@ public class BulkSendingCopy {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
+   * An optional array of strings that allows the sender to provide custom data
+   * about the recipient. This information is returned in the envelope status but
+   * otherwise not used by DocuSign. Each customField string can be a maximum of
+   * 100 characters..
+   * 
    * @return customFields
    **/
-  @ApiModelProperty(value = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<BulkSendingCopyCustomField> getCustomFields() {
     return customFields;
   }
@@ -73,7 +78,6 @@ public class BulkSendingCopy {
     this.customFields = customFields;
   }
 
-
   /**
    * docGenFormFields.
    *
@@ -83,7 +87,7 @@ public class BulkSendingCopy {
     this.docGenFormFields = docGenFormFields;
     return this;
   }
-  
+
   /**
    * addDocGenFormFieldsItem.
    *
@@ -99,9 +103,10 @@ public class BulkSendingCopy {
 
   /**
    * .
+   * 
    * @return docGenFormFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulksendingCopyDocGenFormField> getDocGenFormFields() {
     return docGenFormFields;
   }
@@ -112,7 +117,6 @@ public class BulkSendingCopy {
   public void setDocGenFormFields(java.util.List<BulksendingCopyDocGenFormField> docGenFormFields) {
     this.docGenFormFields = docGenFormFields;
   }
-
 
   /**
    * emailBlurb.
@@ -126,9 +130,10 @@ public class BulkSendingCopy {
 
   /**
    * .
+   * 
    * @return emailBlurb
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmailBlurb() {
     return emailBlurb;
   }
@@ -139,7 +144,6 @@ public class BulkSendingCopy {
   public void setEmailBlurb(String emailBlurb) {
     this.emailBlurb = emailBlurb;
   }
-
 
   /**
    * emailSubject.
@@ -152,10 +156,13 @@ public class BulkSendingCopy {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
+   * Specifies the subject of the email that is sent to all recipients. See
+   * [ML:Template Email Subject Merge Fields] for information about adding merge
+   * field information to the email subject..
+   * 
    * @return emailSubject
    **/
-  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
@@ -167,7 +174,6 @@ public class BulkSendingCopy {
     this.emailSubject = emailSubject;
   }
 
-
   /**
    * recipients.
    *
@@ -177,7 +183,7 @@ public class BulkSendingCopy {
     this.recipients = recipients;
     return this;
   }
-  
+
   /**
    * addRecipientsItem.
    *
@@ -193,9 +199,10 @@ public class BulkSendingCopy {
 
   /**
    * An array of powerform recipients..
+   * 
    * @return recipients
    **/
-  @ApiModelProperty(value = "An array of powerform recipients.")
+  @Schema(description = "An array of powerform recipients.")
   public java.util.List<BulkSendingCopyRecipient> getRecipients() {
     return recipients;
   }
@@ -206,7 +213,6 @@ public class BulkSendingCopy {
   public void setRecipients(java.util.List<BulkSendingCopyRecipient> recipients) {
     this.recipients = recipients;
   }
-
 
   /**
    * Compares objects.
@@ -237,7 +243,6 @@ public class BulkSendingCopy {
     return Objects.hash(customFields, docGenFormFields, emailBlurb, emailSubject, recipients);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -245,7 +250,7 @@ public class BulkSendingCopy {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingCopy {\n");
-    
+
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
@@ -267,4 +272,3 @@ public class BulkSendingCopy {
   }
 
 }
-

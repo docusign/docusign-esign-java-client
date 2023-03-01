@@ -8,8 +8,8 @@ import com.docusign.esign.model.NotaryContactDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contact.
@@ -62,7 +62,6 @@ public class Contact {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
-
   /**
    * cloudProvider.
    *
@@ -75,9 +74,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return cloudProvider
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCloudProvider() {
     return cloudProvider;
   }
@@ -88,7 +88,6 @@ public class Contact {
   public void setCloudProvider(String cloudProvider) {
     this.cloudProvider = cloudProvider;
   }
-
 
   /**
    * cloudProviderContainerId.
@@ -102,9 +101,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return cloudProviderContainerId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCloudProviderContainerId() {
     return cloudProviderContainerId;
   }
@@ -115,7 +115,6 @@ public class Contact {
   public void setCloudProviderContainerId(String cloudProviderContainerId) {
     this.cloudProviderContainerId = cloudProviderContainerId;
   }
-
 
   /**
    * contactId.
@@ -129,9 +128,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return contactId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContactId() {
     return contactId;
   }
@@ -143,7 +143,6 @@ public class Contact {
     this.contactId = contactId;
   }
 
-
   /**
    * contactPhoneNumbers.
    *
@@ -153,7 +152,7 @@ public class Contact {
     this.contactPhoneNumbers = contactPhoneNumbers;
     return this;
   }
-  
+
   /**
    * addContactPhoneNumbersItem.
    *
@@ -169,9 +168,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return contactPhoneNumbers
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ContactPhoneNumber> getContactPhoneNumbers() {
     return contactPhoneNumbers;
   }
@@ -182,7 +182,6 @@ public class Contact {
   public void setContactPhoneNumbers(java.util.List<ContactPhoneNumber> contactPhoneNumbers) {
     this.contactPhoneNumbers = contactPhoneNumbers;
   }
-
 
   /**
    * contactUri.
@@ -196,9 +195,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return contactUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContactUri() {
     return contactUri;
   }
@@ -210,7 +210,6 @@ public class Contact {
     this.contactUri = contactUri;
   }
 
-
   /**
    * emails.
    *
@@ -220,7 +219,7 @@ public class Contact {
     this.emails = emails;
     return this;
   }
-  
+
   /**
    * addEmailsItem.
    *
@@ -236,9 +235,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return emails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getEmails() {
     return emails;
   }
@@ -249,7 +249,6 @@ public class Contact {
   public void setEmails(java.util.List<String> emails) {
     this.emails = emails;
   }
-
 
   /**
    * errorDetails.
@@ -262,10 +261,12 @@ public class Contact {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -276,7 +277,6 @@ public class Contact {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * isOwner.
@@ -290,9 +290,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return isOwner
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsOwner() {
     return isOwner;
   }
@@ -303,7 +304,6 @@ public class Contact {
   public void setIsOwner(Boolean isOwner) {
     this.isOwner = isOwner;
   }
-
 
   /**
    * name.
@@ -317,9 +317,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -330,7 +331,6 @@ public class Contact {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * notaryContactDetails.
@@ -344,9 +344,10 @@ public class Contact {
 
   /**
    * Get notaryContactDetails.
+   * 
    * @return notaryContactDetails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public NotaryContactDetails getNotaryContactDetails() {
     return notaryContactDetails;
   }
@@ -357,7 +358,6 @@ public class Contact {
   public void setNotaryContactDetails(NotaryContactDetails notaryContactDetails) {
     this.notaryContactDetails = notaryContactDetails;
   }
-
 
   /**
    * organization.
@@ -371,9 +371,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return organization
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrganization() {
     return organization;
   }
@@ -384,7 +385,6 @@ public class Contact {
   public void setOrganization(String organization) {
     this.organization = organization;
   }
-
 
   /**
    * roomContactType.
@@ -398,9 +398,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return roomContactType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRoomContactType() {
     return roomContactType;
   }
@@ -411,7 +412,6 @@ public class Contact {
   public void setRoomContactType(String roomContactType) {
     this.roomContactType = roomContactType;
   }
-
 
   /**
    * shared.
@@ -425,9 +425,10 @@ public class Contact {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -438,7 +439,6 @@ public class Contact {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * signingGroup.
@@ -452,9 +452,10 @@ public class Contact {
 
   /**
    * .
+   * 
    * @return signingGroup
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigningGroup() {
     return signingGroup;
   }
@@ -465,7 +466,6 @@ public class Contact {
   public void setSigningGroup(String signingGroup) {
     this.signingGroup = signingGroup;
   }
-
 
   /**
    * signingGroupName.
@@ -478,10 +478,11 @@ public class Contact {
   }
 
   /**
-   * The display name for the signing group.   Maximum Length: 100 characters. .
+   * The display name for the signing group. Maximum Length: 100 characters. .
+   * 
    * @return signingGroupName
    **/
-  @ApiModelProperty(value = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
   public String getSigningGroupName() {
     return signingGroupName;
   }
@@ -492,7 +493,6 @@ public class Contact {
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
-
 
   /**
    * Compares objects.
@@ -530,9 +530,10 @@ public class Contact {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup, signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails,
+        errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup,
+        signingGroupName);
   }
-
 
   /**
    * Converts the given object to string.
@@ -541,7 +542,7 @@ public class Contact {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
-    
+
     sb.append("    cloudProvider: ").append(toIndentedString(cloudProvider)).append("\n");
     sb.append("    cloudProviderContainerId: ").append(toIndentedString(cloudProviderContainerId)).append("\n");
     sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
@@ -573,4 +574,3 @@ public class Contact {
   }
 
 }
-

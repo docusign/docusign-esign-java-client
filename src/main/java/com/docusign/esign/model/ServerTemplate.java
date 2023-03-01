@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ServerTemplate.
@@ -20,7 +20,6 @@ public class ServerTemplate {
   @JsonProperty("templateId")
   private String templateId = null;
 
-
   /**
    * sequence.
    *
@@ -33,9 +32,10 @@ public class ServerTemplate {
 
   /**
    * .
+   * 
    * @return sequence
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSequence() {
     return sequence;
   }
@@ -46,7 +46,6 @@ public class ServerTemplate {
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
-
 
   /**
    * templateId.
@@ -59,10 +58,12 @@ public class ServerTemplate {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -73,7 +74,6 @@ public class ServerTemplate {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +101,6 @@ public class ServerTemplate {
     return Objects.hash(sequence, templateId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +108,7 @@ public class ServerTemplate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerTemplate {\n");
-    
+
     sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("}");
@@ -128,4 +127,3 @@ public class ServerTemplate {
   }
 
 }
-

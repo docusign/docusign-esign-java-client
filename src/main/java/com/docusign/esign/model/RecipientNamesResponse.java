@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This response object contains a list of recipients..
  *
  */
-@ApiModel(description = "This response object contains a list of recipients.")
+@Schema(description = "This response object contains a list of recipients.")
 
 public class RecipientNamesResponse {
   @JsonProperty("multipleUsers")
@@ -23,7 +23,6 @@ public class RecipientNamesResponse {
 
   @JsonProperty("reservedRecipientEmail")
   private String reservedRecipientEmail = null;
-
 
   /**
    * multipleUsers.
@@ -37,9 +36,10 @@ public class RecipientNamesResponse {
 
   /**
    * Indicates whether email address is used by more than one user..
+   * 
    * @return multipleUsers
    **/
-  @ApiModelProperty(value = "Indicates whether email address is used by more than one user.")
+  @Schema(description = "Indicates whether email address is used by more than one user.")
   public String getMultipleUsers() {
     return multipleUsers;
   }
@@ -51,7 +51,6 @@ public class RecipientNamesResponse {
     this.multipleUsers = multipleUsers;
   }
 
-
   /**
    * recipientNames.
    *
@@ -61,7 +60,7 @@ public class RecipientNamesResponse {
     this.recipientNames = recipientNames;
     return this;
   }
-  
+
   /**
    * addRecipientNamesItem.
    *
@@ -77,9 +76,10 @@ public class RecipientNamesResponse {
 
   /**
    * .
+   * 
    * @return recipientNames
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getRecipientNames() {
     return recipientNames;
   }
@@ -90,7 +90,6 @@ public class RecipientNamesResponse {
   public void setRecipientNames(java.util.List<String> recipientNames) {
     this.recipientNames = recipientNames;
   }
-
 
   /**
    * reservedRecipientEmail.
@@ -104,9 +103,10 @@ public class RecipientNamesResponse {
 
   /**
    * .
+   * 
    * @return reservedRecipientEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReservedRecipientEmail() {
     return reservedRecipientEmail;
   }
@@ -117,7 +117,6 @@ public class RecipientNamesResponse {
   public void setReservedRecipientEmail(String reservedRecipientEmail) {
     this.reservedRecipientEmail = reservedRecipientEmail;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +145,6 @@ public class RecipientNamesResponse {
     return Objects.hash(multipleUsers, recipientNames, reservedRecipientEmail);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +152,7 @@ public class RecipientNamesResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientNamesResponse {\n");
-    
+
     sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
     sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
     sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
@@ -174,4 +172,3 @@ public class RecipientNamesResponse {
   }
 
 }
-

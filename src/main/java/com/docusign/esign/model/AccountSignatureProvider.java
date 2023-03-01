@@ -7,14 +7,16 @@ import com.docusign.esign.model.SignatureProviderRequiredOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information abotu the signature provider associated with the Identity Verification workflow.  If empty, then this specific workflow is not intended for signers. .
+ * Contains information abotu the signature provider associated with the
+ * Identity Verification workflow. If empty, then this specific workflow is not
+ * intended for signers. .
  *
  */
-@ApiModel(description = "Contains information abotu the signature provider associated with the Identity Verification workflow.  If empty, then this specific workflow is not intended for signers. ")
+@Schema(description = "Contains information abotu the signature provider associated with the Identity Verification workflow.  If empty, then this specific workflow is not intended for signers. ")
 
 public class AccountSignatureProvider {
   @JsonProperty("isRequired")
@@ -38,7 +40,6 @@ public class AccountSignatureProvider {
   @JsonProperty("signatureProviderRequiredOptions")
   private java.util.List<SignatureProviderRequiredOption> signatureProviderRequiredOptions = null;
 
-
   /**
    * isRequired.
    *
@@ -51,9 +52,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return isRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsRequired() {
     return isRequired;
   }
@@ -64,7 +66,6 @@ public class AccountSignatureProvider {
   public void setIsRequired(String isRequired) {
     this.isRequired = isRequired;
   }
-
 
   /**
    * priority.
@@ -78,9 +79,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return priority
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPriority() {
     return priority;
   }
@@ -91,7 +93,6 @@ public class AccountSignatureProvider {
   public void setPriority(String priority) {
     this.priority = priority;
   }
-
 
   /**
    * signatureProviderDisplayName.
@@ -105,9 +106,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderDisplayName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureProviderDisplayName() {
     return signatureProviderDisplayName;
   }
@@ -118,7 +120,6 @@ public class AccountSignatureProvider {
   public void setSignatureProviderDisplayName(String signatureProviderDisplayName) {
     this.signatureProviderDisplayName = signatureProviderDisplayName;
   }
-
 
   /**
    * signatureProviderId.
@@ -132,9 +133,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureProviderId() {
     return signatureProviderId;
   }
@@ -145,7 +147,6 @@ public class AccountSignatureProvider {
   public void setSignatureProviderId(String signatureProviderId) {
     this.signatureProviderId = signatureProviderId;
   }
-
 
   /**
    * signatureProviderName.
@@ -159,9 +160,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureProviderName() {
     return signatureProviderName;
   }
@@ -173,23 +175,24 @@ public class AccountSignatureProvider {
     this.signatureProviderName = signatureProviderName;
   }
 
-
   /**
    * signatureProviderOptionsMetadata.
    *
    * @return AccountSignatureProvider
    **/
-  public AccountSignatureProvider signatureProviderOptionsMetadata(java.util.List<AccountSignatureProviderOption> signatureProviderOptionsMetadata) {
+  public AccountSignatureProvider signatureProviderOptionsMetadata(
+      java.util.List<AccountSignatureProviderOption> signatureProviderOptionsMetadata) {
     this.signatureProviderOptionsMetadata = signatureProviderOptionsMetadata;
     return this;
   }
-  
+
   /**
    * addSignatureProviderOptionsMetadataItem.
    *
    * @return AccountSignatureProvider
    **/
-  public AccountSignatureProvider addSignatureProviderOptionsMetadataItem(AccountSignatureProviderOption signatureProviderOptionsMetadataItem) {
+  public AccountSignatureProvider addSignatureProviderOptionsMetadataItem(
+      AccountSignatureProviderOption signatureProviderOptionsMetadataItem) {
     if (this.signatureProviderOptionsMetadata == null) {
       this.signatureProviderOptionsMetadata = new java.util.ArrayList<>();
     }
@@ -199,9 +202,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderOptionsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<AccountSignatureProviderOption> getSignatureProviderOptionsMetadata() {
     return signatureProviderOptionsMetadata;
   }
@@ -209,27 +213,29 @@ public class AccountSignatureProvider {
   /**
    * setSignatureProviderOptionsMetadata.
    **/
-  public void setSignatureProviderOptionsMetadata(java.util.List<AccountSignatureProviderOption> signatureProviderOptionsMetadata) {
+  public void setSignatureProviderOptionsMetadata(
+      java.util.List<AccountSignatureProviderOption> signatureProviderOptionsMetadata) {
     this.signatureProviderOptionsMetadata = signatureProviderOptionsMetadata;
   }
-
 
   /**
    * signatureProviderRequiredOptions.
    *
    * @return AccountSignatureProvider
    **/
-  public AccountSignatureProvider signatureProviderRequiredOptions(java.util.List<SignatureProviderRequiredOption> signatureProviderRequiredOptions) {
+  public AccountSignatureProvider signatureProviderRequiredOptions(
+      java.util.List<SignatureProviderRequiredOption> signatureProviderRequiredOptions) {
     this.signatureProviderRequiredOptions = signatureProviderRequiredOptions;
     return this;
   }
-  
+
   /**
    * addSignatureProviderRequiredOptionsItem.
    *
    * @return AccountSignatureProvider
    **/
-  public AccountSignatureProvider addSignatureProviderRequiredOptionsItem(SignatureProviderRequiredOption signatureProviderRequiredOptionsItem) {
+  public AccountSignatureProvider addSignatureProviderRequiredOptionsItem(
+      SignatureProviderRequiredOption signatureProviderRequiredOptionsItem) {
     if (this.signatureProviderRequiredOptions == null) {
       this.signatureProviderRequiredOptions = new java.util.ArrayList<>();
     }
@@ -239,9 +245,10 @@ public class AccountSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderRequiredOptions
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SignatureProviderRequiredOption> getSignatureProviderRequiredOptions() {
     return signatureProviderRequiredOptions;
   }
@@ -249,10 +256,10 @@ public class AccountSignatureProvider {
   /**
    * setSignatureProviderRequiredOptions.
    **/
-  public void setSignatureProviderRequiredOptions(java.util.List<SignatureProviderRequiredOption> signatureProviderRequiredOptions) {
+  public void setSignatureProviderRequiredOptions(
+      java.util.List<SignatureProviderRequiredOption> signatureProviderRequiredOptions) {
     this.signatureProviderRequiredOptions = signatureProviderRequiredOptions;
   }
-
 
   /**
    * Compares objects.
@@ -273,8 +280,10 @@ public class AccountSignatureProvider {
         Objects.equals(this.signatureProviderDisplayName, accountSignatureProvider.signatureProviderDisplayName) &&
         Objects.equals(this.signatureProviderId, accountSignatureProvider.signatureProviderId) &&
         Objects.equals(this.signatureProviderName, accountSignatureProvider.signatureProviderName) &&
-        Objects.equals(this.signatureProviderOptionsMetadata, accountSignatureProvider.signatureProviderOptionsMetadata) &&
-        Objects.equals(this.signatureProviderRequiredOptions, accountSignatureProvider.signatureProviderRequiredOptions);
+        Objects.equals(this.signatureProviderOptionsMetadata, accountSignatureProvider.signatureProviderOptionsMetadata)
+        &&
+        Objects.equals(this.signatureProviderRequiredOptions,
+            accountSignatureProvider.signatureProviderRequiredOptions);
   }
 
   /**
@@ -282,9 +291,9 @@ public class AccountSignatureProvider {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(isRequired, priority, signatureProviderDisplayName, signatureProviderId, signatureProviderName, signatureProviderOptionsMetadata, signatureProviderRequiredOptions);
+    return Objects.hash(isRequired, priority, signatureProviderDisplayName, signatureProviderId, signatureProviderName,
+        signatureProviderOptionsMetadata, signatureProviderRequiredOptions);
   }
-
 
   /**
    * Converts the given object to string.
@@ -293,14 +302,16 @@ public class AccountSignatureProvider {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProvider {\n");
-    
+
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    signatureProviderDisplayName: ").append(toIndentedString(signatureProviderDisplayName)).append("\n");
     sb.append("    signatureProviderId: ").append(toIndentedString(signatureProviderId)).append("\n");
     sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    sb.append("    signatureProviderOptionsMetadata: ").append(toIndentedString(signatureProviderOptionsMetadata)).append("\n");
-    sb.append("    signatureProviderRequiredOptions: ").append(toIndentedString(signatureProviderRequiredOptions)).append("\n");
+    sb.append("    signatureProviderOptionsMetadata: ").append(toIndentedString(signatureProviderOptionsMetadata))
+        .append("\n");
+    sb.append("    signatureProviderRequiredOptions: ").append(toIndentedString(signatureProviderRequiredOptions))
+        .append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -317,4 +328,3 @@ public class AccountSignatureProvider {
   }
 
 }
-

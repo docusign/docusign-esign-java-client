@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AskAnAdmin.
@@ -26,7 +26,6 @@ public class AskAnAdmin {
   @JsonProperty("phone")
   private String phone = null;
 
-
   /**
    * email.
    *
@@ -39,9 +38,10 @@ public class AskAnAdmin {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -52,7 +52,6 @@ public class AskAnAdmin {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * message.
@@ -66,9 +65,10 @@ public class AskAnAdmin {
 
   /**
    * .
+   * 
    * @return message
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMessage() {
     return message;
   }
@@ -79,7 +79,6 @@ public class AskAnAdmin {
   public void setMessage(String message) {
     this.message = message;
   }
-
 
   /**
    * name.
@@ -93,9 +92,10 @@ public class AskAnAdmin {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -106,7 +106,6 @@ public class AskAnAdmin {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * phone.
@@ -120,9 +119,10 @@ public class AskAnAdmin {
 
   /**
    * .
+   * 
    * @return phone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhone() {
     return phone;
   }
@@ -133,7 +133,6 @@ public class AskAnAdmin {
   public void setPhone(String phone) {
     this.phone = phone;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class AskAnAdmin {
     return Objects.hash(email, message, name, phone);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class AskAnAdmin {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AskAnAdmin {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -192,4 +190,3 @@ public class AskAnAdmin {
   }
 
 }
-

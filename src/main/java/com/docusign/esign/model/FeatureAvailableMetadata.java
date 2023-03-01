@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FeatureAvailableMetadata.
@@ -20,7 +20,6 @@ public class FeatureAvailableMetadata {
   @JsonProperty("featureName")
   private String featureName = null;
 
-
   /**
    * availabilty.
    *
@@ -33,9 +32,10 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
+   * 
    * @return availabilty
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAvailabilty() {
     return availabilty;
   }
@@ -46,7 +46,6 @@ public class FeatureAvailableMetadata {
   public void setAvailabilty(String availabilty) {
     this.availabilty = availabilty;
   }
-
 
   /**
    * featureName.
@@ -60,9 +59,10 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
+   * 
    * @return featureName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFeatureName() {
     return featureName;
   }
@@ -73,7 +73,6 @@ public class FeatureAvailableMetadata {
   public void setFeatureName(String featureName) {
     this.featureName = featureName;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class FeatureAvailableMetadata {
     return Objects.hash(availabilty, featureName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class FeatureAvailableMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureAvailableMetadata {\n");
-    
+
     sb.append("    availabilty: ").append(toIndentedString(availabilty)).append("\n");
     sb.append("    featureName: ").append(toIndentedString(featureName)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class FeatureAvailableMetadata {
   }
 
 }
-

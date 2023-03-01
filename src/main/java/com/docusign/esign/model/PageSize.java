@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** PageSize */
@@ -18,7 +18,7 @@ public class PageSize {
   }
 
   /** @return pageHeight */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageHeight() {
     return pageHeight;
   }
@@ -33,7 +33,7 @@ public class PageSize {
   }
 
   /** @return pageWidth */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageWidth() {
     return pageWidth;
   }
@@ -72,7 +72,8 @@ public class PageSize {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

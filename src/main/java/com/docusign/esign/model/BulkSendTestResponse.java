@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains the results of a bulk send test..
  *
  */
-@ApiModel(description = "This object contains the results of a bulk send test.")
+@Schema(description = "This object contains the results of a bulk send test.")
 
 public class BulkSendTestResponse {
   @JsonProperty("canBeSent")
@@ -23,7 +23,6 @@ public class BulkSendTestResponse {
 
   @JsonProperty("validationErrors")
   private java.util.List<String> validationErrors = null;
-
 
   /**
    * canBeSent.
@@ -37,9 +36,10 @@ public class BulkSendTestResponse {
 
   /**
    * .
+   * 
    * @return canBeSent
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isCanBeSent() {
     return canBeSent;
   }
@@ -51,7 +51,6 @@ public class BulkSendTestResponse {
     this.canBeSent = canBeSent;
   }
 
-
   /**
    * validationErrorDetails.
    *
@@ -61,7 +60,7 @@ public class BulkSendTestResponse {
     this.validationErrorDetails = validationErrorDetails;
     return this;
   }
-  
+
   /**
    * addValidationErrorDetailsItem.
    *
@@ -77,9 +76,10 @@ public class BulkSendTestResponse {
 
   /**
    * .
+   * 
    * @return validationErrorDetails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getValidationErrorDetails() {
     return validationErrorDetails;
   }
@@ -91,7 +91,6 @@ public class BulkSendTestResponse {
     this.validationErrorDetails = validationErrorDetails;
   }
 
-
   /**
    * validationErrors.
    *
@@ -101,7 +100,7 @@ public class BulkSendTestResponse {
     this.validationErrors = validationErrors;
     return this;
   }
-  
+
   /**
    * addValidationErrorsItem.
    *
@@ -117,9 +116,10 @@ public class BulkSendTestResponse {
 
   /**
    * .
+   * 
    * @return validationErrors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getValidationErrors() {
     return validationErrors;
   }
@@ -130,7 +130,6 @@ public class BulkSendTestResponse {
   public void setValidationErrors(java.util.List<String> validationErrors) {
     this.validationErrors = validationErrors;
   }
-
 
   /**
    * Compares objects.
@@ -159,7 +158,6 @@ public class BulkSendTestResponse {
     return Objects.hash(canBeSent, validationErrorDetails, validationErrors);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -167,7 +165,7 @@ public class BulkSendTestResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendTestResponse {\n");
-    
+
     sb.append("    canBeSent: ").append(toIndentedString(canBeSent)).append("\n");
     sb.append("    validationErrorDetails: ").append(toIndentedString(validationErrorDetails)).append("\n");
     sb.append("    validationErrors: ").append(toIndentedString(validationErrors)).append("\n");
@@ -187,4 +185,3 @@ public class BulkSendTestResponse {
   }
 
 }
-

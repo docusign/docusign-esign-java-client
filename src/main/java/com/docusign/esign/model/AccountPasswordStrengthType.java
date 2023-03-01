@@ -6,8 +6,8 @@ import com.docusign.esign.model.AccountPasswordStrengthTypeOption;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordStrengthType.
@@ -18,7 +18,6 @@ public class AccountPasswordStrengthType {
   @JsonProperty("options")
   private java.util.List<AccountPasswordStrengthTypeOption> options = null;
 
-
   /**
    * options.
    *
@@ -28,7 +27,7 @@ public class AccountPasswordStrengthType {
     this.options = options;
     return this;
   }
-  
+
   /**
    * addOptionsItem.
    *
@@ -44,9 +43,10 @@ public class AccountPasswordStrengthType {
 
   /**
    * .
+   * 
    * @return options
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<AccountPasswordStrengthTypeOption> getOptions() {
     return options;
   }
@@ -57,7 +57,6 @@ public class AccountPasswordStrengthType {
   public void setOptions(java.util.List<AccountPasswordStrengthTypeOption> options) {
     this.options = options;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class AccountPasswordStrengthType {
     return Objects.hash(options);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class AccountPasswordStrengthType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordStrengthType {\n");
-    
+
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class AccountPasswordStrengthType {
   }
 
 }
-

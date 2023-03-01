@@ -6,19 +6,18 @@ import com.docusign.esign.model.WorkspaceItem;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Provides properties that describe the items contained in a workspace..
  *
  */
-@ApiModel(description = "Provides properties that describe the items contained in a workspace.")
+@Schema(description = "Provides properties that describe the items contained in a workspace.")
 
 public class WorkspaceItemList {
   @JsonProperty("items")
   private java.util.List<WorkspaceItem> items = null;
-
 
   /**
    * items.
@@ -29,7 +28,7 @@ public class WorkspaceItemList {
     this.items = items;
     return this;
   }
-  
+
   /**
    * addItemsItem.
    *
@@ -45,9 +44,10 @@ public class WorkspaceItemList {
 
   /**
    * .
+   * 
    * @return items
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<WorkspaceItem> getItems() {
     return items;
   }
@@ -58,7 +58,6 @@ public class WorkspaceItemList {
   public void setItems(java.util.List<WorkspaceItem> items) {
     this.items = items;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class WorkspaceItemList {
     return Objects.hash(items);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class WorkspaceItemList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItemList {\n");
-    
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class WorkspaceItemList {
   }
 
 }
-

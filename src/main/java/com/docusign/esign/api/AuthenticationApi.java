@@ -1,7 +1,7 @@
 
 package com.docusign.esign.api;
 
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.ApiClient;

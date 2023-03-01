@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * OauthAccess.
@@ -33,7 +33,6 @@ public class OauthAccess {
   @JsonProperty("token_type")
   private String tokenType = null;
 
-
   /**
    * accessToken.
    *
@@ -46,9 +45,10 @@ public class OauthAccess {
 
   /**
    * Access token information..
+   * 
    * @return accessToken
    **/
-  @ApiModelProperty(value = "Access token information.")
+  @Schema(description = "Access token information.")
   public String getAccessToken() {
     return accessToken;
   }
@@ -60,7 +60,6 @@ public class OauthAccess {
     this.accessToken = accessToken;
   }
 
-
   /**
    * data.
    *
@@ -70,7 +69,7 @@ public class OauthAccess {
     this.data = data;
     return this;
   }
-  
+
   /**
    * addDataItem.
    *
@@ -86,9 +85,10 @@ public class OauthAccess {
 
   /**
    * .
+   * 
    * @return data
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getData() {
     return data;
   }
@@ -99,7 +99,6 @@ public class OauthAccess {
   public void setData(java.util.List<NameValue> data) {
     this.data = data;
   }
-
 
   /**
    * expiresIn.
@@ -113,9 +112,10 @@ public class OauthAccess {
 
   /**
    * .
+   * 
    * @return expiresIn
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExpiresIn() {
     return expiresIn;
   }
@@ -126,7 +126,6 @@ public class OauthAccess {
   public void setExpiresIn(String expiresIn) {
     this.expiresIn = expiresIn;
   }
-
 
   /**
    * refreshToken.
@@ -140,9 +139,10 @@ public class OauthAccess {
 
   /**
    * .
+   * 
    * @return refreshToken
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRefreshToken() {
     return refreshToken;
   }
@@ -153,7 +153,6 @@ public class OauthAccess {
   public void setRefreshToken(String refreshToken) {
     this.refreshToken = refreshToken;
   }
-
 
   /**
    * scope.
@@ -167,9 +166,10 @@ public class OauthAccess {
 
   /**
    * Must be set to \"api\"..
+   * 
    * @return scope
    **/
-  @ApiModelProperty(value = "Must be set to \"api\".")
+  @Schema(description = "Must be set to \"api\".")
   public String getScope() {
     return scope;
   }
@@ -180,7 +180,6 @@ public class OauthAccess {
   public void setScope(String scope) {
     this.scope = scope;
   }
-
 
   /**
    * tokenType.
@@ -194,9 +193,10 @@ public class OauthAccess {
 
   /**
    * .
+   * 
    * @return tokenType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTokenType() {
     return tokenType;
   }
@@ -207,7 +207,6 @@ public class OauthAccess {
   public void setTokenType(String tokenType) {
     this.tokenType = tokenType;
   }
-
 
   /**
    * Compares objects.
@@ -239,7 +238,6 @@ public class OauthAccess {
     return Objects.hash(accessToken, data, expiresIn, refreshToken, scope, tokenType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -247,7 +245,7 @@ public class OauthAccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OauthAccess {\n");
-    
+
     sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
@@ -270,4 +268,3 @@ public class OauthAccess {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PolyLine.
@@ -26,7 +26,6 @@ public class PolyLine {
   @JsonProperty("y2")
   private String y2 = null;
 
-
   /**
    * x1.
    *
@@ -39,9 +38,10 @@ public class PolyLine {
 
   /**
    * .
+   * 
    * @return x1
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getX1() {
     return x1;
   }
@@ -52,7 +52,6 @@ public class PolyLine {
   public void setX1(String x1) {
     this.x1 = x1;
   }
-
 
   /**
    * x2.
@@ -66,9 +65,10 @@ public class PolyLine {
 
   /**
    * .
+   * 
    * @return x2
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getX2() {
     return x2;
   }
@@ -79,7 +79,6 @@ public class PolyLine {
   public void setX2(String x2) {
     this.x2 = x2;
   }
-
 
   /**
    * y1.
@@ -93,9 +92,10 @@ public class PolyLine {
 
   /**
    * .
+   * 
    * @return y1
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getY1() {
     return y1;
   }
@@ -106,7 +106,6 @@ public class PolyLine {
   public void setY1(String y1) {
     this.y1 = y1;
   }
-
 
   /**
    * y2.
@@ -120,9 +119,10 @@ public class PolyLine {
 
   /**
    * .
+   * 
    * @return y2
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getY2() {
     return y2;
   }
@@ -133,7 +133,6 @@ public class PolyLine {
   public void setY2(String y2) {
     this.y2 = y2;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class PolyLine {
     return Objects.hash(x1, x2, y1, y2);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class PolyLine {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PolyLine {\n");
-    
+
     sb.append("    x1: ").append(toIndentedString(x1)).append("\n");
     sb.append("    x2: ").append(toIndentedString(x2)).append("\n");
     sb.append("    y1: ").append(toIndentedString(y1)).append("\n");
@@ -192,4 +190,3 @@ public class PolyLine {
   }
 
 }
-

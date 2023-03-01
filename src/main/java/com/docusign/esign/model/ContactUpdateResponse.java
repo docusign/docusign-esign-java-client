@@ -6,19 +6,18 @@ import com.docusign.esign.model.Contact;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This response objects shows the updated details for the contacts..
  *
  */
-@ApiModel(description = "This response objects shows the updated details for the contacts.")
+@Schema(description = "This response objects shows the updated details for the contacts.")
 
 public class ContactUpdateResponse {
   @JsonProperty("contacts")
   private java.util.List<Contact> contacts = null;
-
 
   /**
    * contacts.
@@ -29,7 +28,7 @@ public class ContactUpdateResponse {
     this.contacts = contacts;
     return this;
   }
-  
+
   /**
    * addContactsItem.
    *
@@ -45,9 +44,10 @@ public class ContactUpdateResponse {
 
   /**
    * .
+   * 
    * @return contacts
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Contact> getContacts() {
     return contacts;
   }
@@ -58,7 +58,6 @@ public class ContactUpdateResponse {
   public void setContacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class ContactUpdateResponse {
     return Objects.hash(contacts);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class ContactUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactUpdateResponse {\n");
-    
+
     sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class ContactUpdateResponse {
   }
 
 }
-

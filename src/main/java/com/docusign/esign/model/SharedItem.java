@@ -7,14 +7,14 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about the shared item..
  *
  */
-@ApiModel(description = "Information about the shared item.")
+@Schema(description = "Information about the shared item.")
 
 public class SharedItem {
   @JsonProperty("errorDetails")
@@ -25,7 +25,6 @@ public class SharedItem {
 
   @JsonProperty("user")
   private UserInfo user = null;
-
 
   /**
    * errorDetails.
@@ -38,10 +37,12 @@ public class SharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -52,7 +53,6 @@ public class SharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * shared.
@@ -66,9 +66,10 @@ public class SharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -79,7 +80,6 @@ public class SharedItem {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * user.
@@ -93,9 +93,10 @@ public class SharedItem {
 
   /**
    * Information about the user who owns the shared item..
+   * 
    * @return user
    **/
-  @ApiModelProperty(value = "Information about the user who owns the shared item.")
+  @Schema(description = "Information about the user who owns the shared item.")
   public UserInfo getUser() {
     return user;
   }
@@ -106,7 +107,6 @@ public class SharedItem {
   public void setUser(UserInfo user) {
     this.user = user;
   }
-
 
   /**
    * Compares objects.
@@ -135,7 +135,6 @@ public class SharedItem {
     return Objects.hash(errorDetails, shared, user);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -143,7 +142,7 @@ public class SharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SharedItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -163,4 +162,3 @@ public class SharedItem {
   }
 
 }
-

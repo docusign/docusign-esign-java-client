@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information on a billing plan..
  *
  */
-@ApiModel(description = "Contains information on a billing plan.")
+@Schema(description = "Contains information on a billing plan.")
 
 public class BillingPayment {
   @JsonProperty("amount")
@@ -23,7 +23,6 @@ public class BillingPayment {
 
   @JsonProperty("paymentId")
   private String paymentId = null;
-
 
   /**
    * amount.
@@ -37,9 +36,10 @@ public class BillingPayment {
 
   /**
    * Reserved: TBD.
+   * 
    * @return amount
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getAmount() {
     return amount;
   }
@@ -50,7 +50,6 @@ public class BillingPayment {
   public void setAmount(String amount) {
     this.amount = amount;
   }
-
 
   /**
    * invoiceId.
@@ -64,9 +63,10 @@ public class BillingPayment {
 
   /**
    * Reserved: TBD.
+   * 
    * @return invoiceId
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getInvoiceId() {
     return invoiceId;
   }
@@ -77,7 +77,6 @@ public class BillingPayment {
   public void setInvoiceId(String invoiceId) {
     this.invoiceId = invoiceId;
   }
-
 
   /**
    * paymentId.
@@ -91,9 +90,10 @@ public class BillingPayment {
 
   /**
    * .
+   * 
    * @return paymentId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentId() {
     return paymentId;
   }
@@ -104,7 +104,6 @@ public class BillingPayment {
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +132,6 @@ public class BillingPayment {
     return Objects.hash(amount, invoiceId, paymentId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +139,7 @@ public class BillingPayment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPayment {\n");
-    
+
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
     sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
@@ -161,4 +159,3 @@ public class BillingPayment {
   }
 
 }
-

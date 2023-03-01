@@ -6,8 +6,8 @@ import com.docusign.esign.model.NotaryJournalCredibleWitness;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * NotaryJournalMetaData.
@@ -27,7 +27,6 @@ public class NotaryJournalMetaData {
   @JsonProperty("signerIdType")
   private String signerIdType = null;
 
-
   /**
    * comment.
    *
@@ -40,9 +39,10 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   * 
    * @return comment
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getComment() {
     return comment;
   }
@@ -54,7 +54,6 @@ public class NotaryJournalMetaData {
     this.comment = comment;
   }
 
-
   /**
    * credibleWitnesses.
    *
@@ -64,7 +63,7 @@ public class NotaryJournalMetaData {
     this.credibleWitnesses = credibleWitnesses;
     return this;
   }
-  
+
   /**
    * addCredibleWitnessesItem.
    *
@@ -80,9 +79,10 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   * 
    * @return credibleWitnesses
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NotaryJournalCredibleWitness> getCredibleWitnesses() {
     return credibleWitnesses;
   }
@@ -93,7 +93,6 @@ public class NotaryJournalMetaData {
   public void setCredibleWitnesses(java.util.List<NotaryJournalCredibleWitness> credibleWitnesses) {
     this.credibleWitnesses = credibleWitnesses;
   }
-
 
   /**
    * signatureImage.
@@ -107,9 +106,10 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   * 
    * @return signatureImage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureImage() {
     return signatureImage;
   }
@@ -120,7 +120,6 @@ public class NotaryJournalMetaData {
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
-
 
   /**
    * signerIdType.
@@ -134,9 +133,10 @@ public class NotaryJournalMetaData {
 
   /**
    * .
+   * 
    * @return signerIdType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerIdType() {
     return signerIdType;
   }
@@ -147,7 +147,6 @@ public class NotaryJournalMetaData {
   public void setSignerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
   }
-
 
   /**
    * Compares objects.
@@ -177,7 +176,6 @@ public class NotaryJournalMetaData {
     return Objects.hash(comment, credibleWitnesses, signatureImage, signerIdType);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -185,7 +183,7 @@ public class NotaryJournalMetaData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalMetaData {\n");
-    
+
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    credibleWitnesses: ").append(toIndentedString(credibleWitnesses)).append("\n");
     sb.append("    signatureImage: ").append(toIndentedString(signatureImage)).append("\n");
@@ -206,4 +204,3 @@ public class NotaryJournalMetaData {
   }
 
 }
-

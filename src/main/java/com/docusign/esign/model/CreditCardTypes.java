@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CreditCardTypes.
@@ -17,7 +17,6 @@ public class CreditCardTypes {
   @JsonProperty("cardTypes")
   private java.util.List<String> cardTypes = null;
 
-
   /**
    * cardTypes.
    *
@@ -27,7 +26,7 @@ public class CreditCardTypes {
     this.cardTypes = cardTypes;
     return this;
   }
-  
+
   /**
    * addCardTypesItem.
    *
@@ -43,9 +42,10 @@ public class CreditCardTypes {
 
   /**
    * An array containing supported credit card types..
+   * 
    * @return cardTypes
    **/
-  @ApiModelProperty(value = "An array containing supported credit card types.")
+  @Schema(description = "An array containing supported credit card types.")
   public java.util.List<String> getCardTypes() {
     return cardTypes;
   }
@@ -56,7 +56,6 @@ public class CreditCardTypes {
   public void setCardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
   }
-
 
   /**
    * Compares objects.
@@ -83,7 +82,6 @@ public class CreditCardTypes {
     return Objects.hash(cardTypes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -91,7 +89,7 @@ public class CreditCardTypes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardTypes {\n");
-    
+
     sb.append("    cardTypes: ").append(toIndentedString(cardTypes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,4 +107,3 @@ public class CreditCardTypes {
   }
 
 }
-

@@ -5,14 +5,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers..
+ * Allows the sender to pre-specify the signature name, signature initials and
+ * signature font used in the signature stamp for the recipient. Used only with
+ * recipient types In Person Signers and Signers..
  *
  */
-@ApiModel(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.")
+@Schema(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.")
 
 public class RecipientSignatureInformation {
   @JsonProperty("fontStyle")
@@ -23,7 +25,6 @@ public class RecipientSignatureInformation {
 
   @JsonProperty("signatureName")
   private String signatureName = null;
-
 
   /**
    * fontStyle.
@@ -37,9 +38,10 @@ public class RecipientSignatureInformation {
 
   /**
    * .
+   * 
    * @return fontStyle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFontStyle() {
     return fontStyle;
   }
@@ -50,7 +52,6 @@ public class RecipientSignatureInformation {
   public void setFontStyle(String fontStyle) {
     this.fontStyle = fontStyle;
   }
-
 
   /**
    * signatureInitials.
@@ -64,9 +65,10 @@ public class RecipientSignatureInformation {
 
   /**
    * .
+   * 
    * @return signatureInitials
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureInitials() {
     return signatureInitials;
   }
@@ -77,7 +79,6 @@ public class RecipientSignatureInformation {
   public void setSignatureInitials(String signatureInitials) {
     this.signatureInitials = signatureInitials;
   }
-
 
   /**
    * signatureName.
@@ -91,9 +92,10 @@ public class RecipientSignatureInformation {
 
   /**
    * Specifies the user signature name..
+   * 
    * @return signatureName
    **/
-  @ApiModelProperty(value = "Specifies the user signature name.")
+  @Schema(description = "Specifies the user signature name.")
   public String getSignatureName() {
     return signatureName;
   }
@@ -104,7 +106,6 @@ public class RecipientSignatureInformation {
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +134,6 @@ public class RecipientSignatureInformation {
     return Objects.hash(fontStyle, signatureInitials, signatureName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +141,7 @@ public class RecipientSignatureInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureInformation {\n");
-    
+
     sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
     sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
@@ -161,4 +161,3 @@ public class RecipientSignatureInformation {
   }
 
 }
-

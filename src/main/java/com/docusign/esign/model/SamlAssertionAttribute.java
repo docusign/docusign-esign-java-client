@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** SamlAssertionAttribute */
@@ -28,7 +28,7 @@ public class SamlAssertionAttribute {
    *
    * @return errorDetails
    */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -43,7 +43,7 @@ public class SamlAssertionAttribute {
   }
 
   /** @return name */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getName() {
     return name;
   }
@@ -62,9 +62,7 @@ public class SamlAssertionAttribute {
    *
    * @return originalValue
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(example = "null", description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -83,9 +81,7 @@ public class SamlAssertionAttribute {
    *
    * @return value
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The value associated with the named SAML assertion attribute")
+  @Schema(example = "null", description = "The value associated with the named SAML assertion attribute")
   public String getValue() {
     return value;
   }
@@ -128,7 +124,8 @@ public class SamlAssertionAttribute {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

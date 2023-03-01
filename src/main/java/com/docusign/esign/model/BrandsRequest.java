@@ -6,19 +6,18 @@ import com.docusign.esign.model.BrandRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Details about one or more brands..
  *
  */
-@ApiModel(description = "Details about one or more brands.")
+@Schema(description = "Details about one or more brands.")
 
 public class BrandsRequest {
   @JsonProperty("brands")
   private java.util.List<BrandRequest> brands = null;
-
 
   /**
    * brands.
@@ -29,7 +28,7 @@ public class BrandsRequest {
     this.brands = brands;
     return this;
   }
-  
+
   /**
    * addBrandsItem.
    *
@@ -45,9 +44,10 @@ public class BrandsRequest {
 
   /**
    * The list of brands..
+   * 
    * @return brands
    **/
-  @ApiModelProperty(value = "The list of brands.")
+  @Schema(description = "The list of brands.")
   public java.util.List<BrandRequest> getBrands() {
     return brands;
   }
@@ -58,7 +58,6 @@ public class BrandsRequest {
   public void setBrands(java.util.List<BrandRequest> brands) {
     this.brands = brands;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class BrandsRequest {
     return Objects.hash(brands);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class BrandsRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandsRequest {\n");
-    
+
     sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class BrandsRequest {
   }
 
 }
-

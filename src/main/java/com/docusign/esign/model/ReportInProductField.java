@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductField. */
@@ -33,7 +33,7 @@ public class ReportInProductField {
    *
    * @return displayOrder
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
@@ -58,7 +58,7 @@ public class ReportInProductField {
    *
    * @return fieldVersion
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFieldVersion() {
     return fieldVersion;
   }
@@ -83,7 +83,7 @@ public class ReportInProductField {
    *
    * @return name
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -108,7 +108,7 @@ public class ReportInProductField {
    *
    * @return selected
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSelected() {
     return selected;
   }
@@ -159,7 +159,8 @@ public class ReportInProductField {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

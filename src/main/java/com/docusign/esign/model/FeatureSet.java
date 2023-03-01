@@ -6,14 +6,15 @@ import com.docusign.esign.model.CurrencyFeatureSetPrice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only..
+ * This object provides details about a feature set, or add-on product that is
+ * associated with an account. It is reserved for DocuSign internal use only..
  *
  */
-@ApiModel(description = "This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only.")
+@Schema(description = "This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only.")
 
 public class FeatureSet {
   @JsonProperty("currencyFeatureSetPrices")
@@ -43,7 +44,6 @@ public class FeatureSet {
   @JsonProperty("seatFee")
   private String seatFee = null;
 
-
   /**
    * currencyFeatureSetPrices.
    *
@@ -53,7 +53,7 @@ public class FeatureSet {
     this.currencyFeatureSetPrices = currencyFeatureSetPrices;
     return this;
   }
-  
+
   /**
    * addCurrencyFeatureSetPricesItem.
    *
@@ -68,10 +68,12 @@ public class FeatureSet {
   }
 
   /**
-   * A complex type that contains alternate currency values that are configured for this plan feature set..
+   * A complex type that contains alternate currency values that are configured
+   * for this plan feature set..
+   * 
    * @return currencyFeatureSetPrices
    **/
-  @ApiModelProperty(value = "A complex type that contains alternate currency values that are configured for this plan feature set.")
+  @Schema(description = "A complex type that contains alternate currency values that are configured for this plan feature set.")
   public java.util.List<CurrencyFeatureSetPrice> getCurrencyFeatureSetPrices() {
     return currencyFeatureSetPrices;
   }
@@ -82,7 +84,6 @@ public class FeatureSet {
   public void setCurrencyFeatureSetPrices(java.util.List<CurrencyFeatureSetPrice> currencyFeatureSetPrices) {
     this.currencyFeatureSetPrices = currencyFeatureSetPrices;
   }
-
 
   /**
    * envelopeFee.
@@ -96,9 +97,10 @@ public class FeatureSet {
 
   /**
    * .
+   * 
    * @return envelopeFee
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeFee() {
     return envelopeFee;
   }
@@ -109,7 +111,6 @@ public class FeatureSet {
   public void setEnvelopeFee(String envelopeFee) {
     this.envelopeFee = envelopeFee;
   }
-
 
   /**
    * featureSetId.
@@ -123,9 +124,10 @@ public class FeatureSet {
 
   /**
    * A unique ID for the feature set..
+   * 
    * @return featureSetId
    **/
-  @ApiModelProperty(value = "A unique ID for the feature set.")
+  @Schema(description = "A unique ID for the feature set.")
   public String getFeatureSetId() {
     return featureSetId;
   }
@@ -136,7 +138,6 @@ public class FeatureSet {
   public void setFeatureSetId(String featureSetId) {
     this.featureSetId = featureSetId;
   }
-
 
   /**
    * fixedFee.
@@ -150,9 +151,10 @@ public class FeatureSet {
 
   /**
    * .
+   * 
    * @return fixedFee
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFixedFee() {
     return fixedFee;
   }
@@ -163,7 +165,6 @@ public class FeatureSet {
   public void setFixedFee(String fixedFee) {
     this.fixedFee = fixedFee;
   }
-
 
   /**
    * is21CFRPart11.
@@ -177,9 +178,10 @@ public class FeatureSet {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
+   * 
    * @return is21CFRPart11
    **/
-  @ApiModelProperty(value = "When set to **true**, indicates that this module is enabled on the account.")
+  @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -190,7 +192,6 @@ public class FeatureSet {
   public void setIs21CFRPart11(String is21CFRPart11) {
     this.is21CFRPart11 = is21CFRPart11;
   }
-
 
   /**
    * isActive.
@@ -204,9 +205,10 @@ public class FeatureSet {
 
   /**
    * .
+   * 
    * @return isActive
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsActive() {
     return isActive;
   }
@@ -217,7 +219,6 @@ public class FeatureSet {
   public void setIsActive(String isActive) {
     this.isActive = isActive;
   }
-
 
   /**
    * isEnabled.
@@ -231,9 +232,10 @@ public class FeatureSet {
 
   /**
    * Specifies whether the feature set is actively enabled as part of the plan..
+   * 
    * @return isEnabled
    **/
-  @ApiModelProperty(value = "Specifies whether the feature set is actively enabled as part of the plan.")
+  @Schema(description = "Specifies whether the feature set is actively enabled as part of the plan.")
   public String getIsEnabled() {
     return isEnabled;
   }
@@ -244,7 +246,6 @@ public class FeatureSet {
   public void setIsEnabled(String isEnabled) {
     this.isEnabled = isEnabled;
   }
-
 
   /**
    * name.
@@ -258,9 +259,10 @@ public class FeatureSet {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -271,7 +273,6 @@ public class FeatureSet {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * seatFee.
@@ -284,10 +285,12 @@ public class FeatureSet {
   }
 
   /**
-   * An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true..
+   * An incremental seat cost for seat-based plans. Only valid when isEnabled for
+   * the feature set is set to true..
+   * 
    * @return seatFee
    **/
-  @ApiModelProperty(value = "An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.")
+  @Schema(description = "An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.")
   public String getSeatFee() {
     return seatFee;
   }
@@ -298,7 +301,6 @@ public class FeatureSet {
   public void setSeatFee(String seatFee) {
     this.seatFee = seatFee;
   }
-
 
   /**
    * Compares objects.
@@ -330,9 +332,9 @@ public class FeatureSet {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currencyFeatureSetPrices, envelopeFee, featureSetId, fixedFee, is21CFRPart11, isActive, isEnabled, name, seatFee);
+    return Objects.hash(currencyFeatureSetPrices, envelopeFee, featureSetId, fixedFee, is21CFRPart11, isActive,
+        isEnabled, name, seatFee);
   }
-
 
   /**
    * Converts the given object to string.
@@ -341,7 +343,7 @@ public class FeatureSet {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureSet {\n");
-    
+
     sb.append("    currencyFeatureSetPrices: ").append(toIndentedString(currencyFeatureSetPrices)).append("\n");
     sb.append("    envelopeFee: ").append(toIndentedString(envelopeFee)).append("\n");
     sb.append("    featureSetId: ").append(toIndentedString(featureSetId)).append("\n");
@@ -367,4 +369,3 @@ public class FeatureSet {
   }
 
 }
-

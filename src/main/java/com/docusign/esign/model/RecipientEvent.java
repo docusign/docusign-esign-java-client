@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * RecipientEvent.
@@ -20,7 +20,6 @@ public class RecipientEvent {
   @JsonProperty("recipientEventStatusCode")
   private String recipientEventStatusCode = null;
 
-
   /**
    * includeDocuments.
    *
@@ -32,10 +31,12 @@ public class RecipientEvent {
   }
 
   /**
-   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
+   * When set to **true**, the PDF documents are included in the message along
+   * with the updated XML. .
+   * 
    * @return includeDocuments
    **/
-  @ApiModelProperty(value = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
+  @Schema(description = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
   public String getIncludeDocuments() {
     return includeDocuments;
   }
@@ -46,7 +47,6 @@ public class RecipientEvent {
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
-
 
   /**
    * recipientEventStatusCode.
@@ -59,10 +59,12 @@ public class RecipientEvent {
   }
 
   /**
-   * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded..
+   * The recipient status, this can be Sent, Delivered, Completed, Declined,
+   * AuthenticationFailed, and AutoResponded..
+   * 
    * @return recipientEventStatusCode
    **/
-  @ApiModelProperty(value = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
+  @Schema(description = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
   public String getRecipientEventStatusCode() {
     return recipientEventStatusCode;
   }
@@ -73,7 +75,6 @@ public class RecipientEvent {
   public void setRecipientEventStatusCode(String recipientEventStatusCode) {
     this.recipientEventStatusCode = recipientEventStatusCode;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +102,6 @@ public class RecipientEvent {
     return Objects.hash(includeDocuments, recipientEventStatusCode);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +109,7 @@ public class RecipientEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEvent {\n");
-    
+
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
     sb.append("}");
@@ -128,4 +128,3 @@ public class RecipientEvent {
   }
 
 }
-

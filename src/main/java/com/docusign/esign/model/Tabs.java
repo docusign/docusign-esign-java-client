@@ -44,15 +44,17 @@ import com.docusign.esign.model.Zip;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
 
 /**
- * Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients..
+ * Tabs indicate to recipients where they should sign, initial, or enter data on
+ * a document. They are represented graphically as symbols on documents at the
+ * time of signing. Tabs can also display data to the recipients..
  *
  */
-@ApiModel(description = "Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients.")
+@Schema(description = "Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients.")
 
 public class Tabs {
   @JsonProperty("approveTabs")
@@ -175,7 +177,6 @@ public class Tabs {
   @JsonProperty("zipTabs")
   private java.util.List<Zip> zipTabs = null;
 
-
   /**
    * approveTabs.
    *
@@ -185,7 +186,7 @@ public class Tabs {
     this.approveTabs = approveTabs;
     return this;
   }
-  
+
   /**
    * addApproveTabsItem.
    *
@@ -200,10 +201,16 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history..
+   * Specifies a tag on the document where you want the recipient to approve
+   * documents in an envelope without placing a signature or initials on the
+   * document. If the recipient clicks the Approve tag during the signing process,
+   * the recipient is considered to have signed the document. No information is
+   * shown on the document for the approval, but it is recorded as a signature in
+   * the envelope history..
+   * 
    * @return approveTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.")
   public java.util.List<Approve> getApproveTabs() {
     return approveTabs;
   }
@@ -215,7 +222,6 @@ public class Tabs {
     this.approveTabs = approveTabs;
   }
 
-
   /**
    * checkboxTabs.
    *
@@ -225,7 +231,7 @@ public class Tabs {
     this.checkboxTabs = checkboxTabs;
     return this;
   }
-  
+
   /**
    * addCheckboxTabsItem.
    *
@@ -240,10 +246,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select an option..
+   * Specifies a tag on the document in a location where the recipient can select
+   * an option..
+   * 
    * @return checkboxTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document in a location where the recipient can select an option.")
+  @Schema(description = "Specifies a tag on the document in a location where the recipient can select an option.")
   public java.util.List<Checkbox> getCheckboxTabs() {
     return checkboxTabs;
   }
@@ -255,7 +263,6 @@ public class Tabs {
     this.checkboxTabs = checkboxTabs;
   }
 
-
   /**
    * commentThreadTabs.
    *
@@ -265,7 +272,7 @@ public class Tabs {
     this.commentThreadTabs = commentThreadTabs;
     return this;
   }
-  
+
   /**
    * addCommentThreadTabsItem.
    *
@@ -281,9 +288,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return commentThreadTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommentThread> getCommentThreadTabs() {
     return commentThreadTabs;
   }
@@ -295,7 +303,6 @@ public class Tabs {
     this.commentThreadTabs = commentThreadTabs;
   }
 
-
   /**
    * commissionCountyTabs.
    *
@@ -305,7 +312,7 @@ public class Tabs {
     this.commissionCountyTabs = commissionCountyTabs;
     return this;
   }
-  
+
   /**
    * addCommissionCountyTabsItem.
    *
@@ -321,9 +328,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return commissionCountyTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommissionCounty> getCommissionCountyTabs() {
     return commissionCountyTabs;
   }
@@ -335,7 +343,6 @@ public class Tabs {
     this.commissionCountyTabs = commissionCountyTabs;
   }
 
-
   /**
    * commissionExpirationTabs.
    *
@@ -345,7 +352,7 @@ public class Tabs {
     this.commissionExpirationTabs = commissionExpirationTabs;
     return this;
   }
-  
+
   /**
    * addCommissionExpirationTabsItem.
    *
@@ -361,9 +368,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return commissionExpirationTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommissionExpiration> getCommissionExpirationTabs() {
     return commissionExpirationTabs;
   }
@@ -375,7 +383,6 @@ public class Tabs {
     this.commissionExpirationTabs = commissionExpirationTabs;
   }
 
-
   /**
    * commissionNumberTabs.
    *
@@ -385,7 +392,7 @@ public class Tabs {
     this.commissionNumberTabs = commissionNumberTabs;
     return this;
   }
-  
+
   /**
    * addCommissionNumberTabsItem.
    *
@@ -401,9 +408,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return commissionNumberTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommissionNumber> getCommissionNumberTabs() {
     return commissionNumberTabs;
   }
@@ -415,7 +423,6 @@ public class Tabs {
     this.commissionNumberTabs = commissionNumberTabs;
   }
 
-
   /**
    * commissionStateTabs.
    *
@@ -425,7 +432,7 @@ public class Tabs {
     this.commissionStateTabs = commissionStateTabs;
     return this;
   }
-  
+
   /**
    * addCommissionStateTabsItem.
    *
@@ -441,9 +448,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return commissionStateTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<CommissionState> getCommissionStateTabs() {
     return commissionStateTabs;
   }
@@ -455,7 +463,6 @@ public class Tabs {
     this.commissionStateTabs = commissionStateTabs;
   }
 
-
   /**
    * companyTabs.
    *
@@ -465,7 +472,7 @@ public class Tabs {
     this.companyTabs = companyTabs;
     return this;
   }
-  
+
   /**
    * addCompanyTabsItem.
    *
@@ -480,10 +487,14 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient's company name
+   * to appear. When getting information that includes this tab type, the original
+   * value of the tab when the associated envelope was sent is included in the
+   * response..
+   * 
    * @return companyTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient's company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient's company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Company> getCompanyTabs() {
     return companyTabs;
   }
@@ -495,7 +506,6 @@ public class Tabs {
     this.companyTabs = companyTabs;
   }
 
-
   /**
    * currencyTabs.
    *
@@ -505,7 +515,7 @@ public class Tabs {
     this.currencyTabs = currencyTabs;
     return this;
   }
-  
+
   /**
    * addCurrencyTabsItem.
    *
@@ -521,9 +531,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return currencyTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Currency> getCurrencyTabs() {
     return currencyTabs;
   }
@@ -535,7 +546,6 @@ public class Tabs {
     this.currencyTabs = currencyTabs;
   }
 
-
   /**
    * dateSignedTabs.
    *
@@ -545,7 +555,7 @@ public class Tabs {
     this.dateSignedTabs = dateSignedTabs;
     return this;
   }
-  
+
   /**
    * addDateSignedTabsItem.
    *
@@ -560,10 +570,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tab on the document where the date the document was signed will automatically appear..
+   * Specifies a tab on the document where the date the document was signed will
+   * automatically appear..
+   * 
    * @return dateSignedTabs
    **/
-  @ApiModelProperty(value = "Specifies a tab on the document where the date the document was signed will automatically appear.")
+  @Schema(description = "Specifies a tab on the document where the date the document was signed will automatically appear.")
   public java.util.List<DateSigned> getDateSignedTabs() {
     return dateSignedTabs;
   }
@@ -575,7 +587,6 @@ public class Tabs {
     this.dateSignedTabs = dateSignedTabs;
   }
 
-
   /**
    * dateTabs.
    *
@@ -585,7 +596,7 @@ public class Tabs {
     this.dateTabs = dateTabs;
     return this;
   }
-  
+
   /**
    * addDateTabsItem.
    *
@@ -600,10 +611,17 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format..
+   * Specifies a tab on the document where you want the recipient to enter a date.
+   * Date tabs are single-line fields that allow date information to be entered in
+   * any format. The tooltip for this tab recommends entering the date as
+   * MM/DD/YYYY, but this is not enforced. The format entered by the signer is
+   * retained. If you need a particular date format enforced, DocuSign recommends
+   * using a Text tab with a Validation Pattern and Validation Message to enforce
+   * the format..
+   * 
    * @return dateTabs
    **/
-  @ApiModelProperty(value = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
+  @Schema(description = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
   public java.util.List<com.docusign.esign.model.Date> getDateTabs() {
     return dateTabs;
   }
@@ -615,7 +633,6 @@ public class Tabs {
     this.dateTabs = dateTabs;
   }
 
-
   /**
    * declineTabs.
    *
@@ -625,7 +642,7 @@ public class Tabs {
     this.declineTabs = declineTabs;
     return this;
   }
-  
+
   /**
    * addDeclineTabsItem.
    *
@@ -640,10 +657,13 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided..
+   * Specifies a tag on the document where you want to give the recipient the
+   * option of declining an envelope. If the recipient clicks the Decline tag
+   * during the signing process, the envelope is voided..
+   * 
    * @return declineTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.")
+  @Schema(description = "Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.")
   public java.util.List<Decline> getDeclineTabs() {
     return declineTabs;
   }
@@ -655,7 +675,6 @@ public class Tabs {
     this.declineTabs = declineTabs;
   }
 
-
   /**
    * drawTabs.
    *
@@ -665,7 +684,7 @@ public class Tabs {
     this.drawTabs = drawTabs;
     return this;
   }
-  
+
   /**
    * addDrawTabsItem.
    *
@@ -681,9 +700,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return drawTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Draw> getDrawTabs() {
     return drawTabs;
   }
@@ -695,7 +715,6 @@ public class Tabs {
     this.drawTabs = drawTabs;
   }
 
-
   /**
    * emailAddressTabs.
    *
@@ -705,7 +724,7 @@ public class Tabs {
     this.emailAddressTabs = emailAddressTabs;
     return this;
   }
-  
+
   /**
    * addEmailAddressTabsItem.
    *
@@ -720,10 +739,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display..
+   * Specifies a location on the document where you want where you want the
+   * recipient's email, as entered in the recipient information, to display..
+   * 
    * @return emailAddressTabs
    **/
-  @ApiModelProperty(value = "Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.")
+  @Schema(description = "Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.")
   public java.util.List<EmailAddress> getEmailAddressTabs() {
     return emailAddressTabs;
   }
@@ -735,7 +756,6 @@ public class Tabs {
     this.emailAddressTabs = emailAddressTabs;
   }
 
-
   /**
    * emailTabs.
    *
@@ -745,7 +765,7 @@ public class Tabs {
     this.emailTabs = emailTabs;
     return this;
   }
-  
+
   /**
    * addEmailTabsItem.
    *
@@ -760,10 +780,17 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter an
+   * email. Email tags are single-line fields that accept any characters. The
+   * system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the
+   * tag. It uses the same parameters as a Text tab, with the validation message
+   * and pattern set for email information. When getting information that includes
+   * this tab type, the original value of the tab when the associated envelope was
+   * sent is included in the response..
+   * 
    * @return emailTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Email> getEmailTabs() {
     return emailTabs;
   }
@@ -775,7 +802,6 @@ public class Tabs {
     this.emailTabs = emailTabs;
   }
 
-
   /**
    * envelopeIdTabs.
    *
@@ -785,7 +811,7 @@ public class Tabs {
     this.envelopeIdTabs = envelopeIdTabs;
     return this;
   }
-  
+
   /**
    * addEnvelopeIdTabsItem.
    *
@@ -800,10 +826,13 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only..
+   * Specifies a tag on the document where you want the envelope ID for to appear.
+   * Recipients cannot enter or change the information in this tab, it is for
+   * informational purposes only..
+   * 
    * @return envelopeIdTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.")
+  @Schema(description = "Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.")
   public java.util.List<EnvelopeId> getEnvelopeIdTabs() {
     return envelopeIdTabs;
   }
@@ -815,7 +844,6 @@ public class Tabs {
     this.envelopeIdTabs = envelopeIdTabs;
   }
 
-
   /**
    * firstNameTabs.
    *
@@ -825,7 +853,7 @@ public class Tabs {
     this.firstNameTabs = firstNameTabs;
     return this;
   }
-  
+
   /**
    * addFirstNameTabsItem.
    *
@@ -840,10 +868,14 @@ public class Tabs {
   }
 
   /**
-   * Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name..
+   * Specifies tag on a document where you want the recipient's first name to
+   * appear. This tag takes the recipient's name, as entered in the recipient
+   * information, splits it into sections based on spaces and uses the first
+   * section as the first name..
+   * 
    * @return firstNameTabs
    **/
-  @ApiModelProperty(value = "Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.")
+  @Schema(description = "Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.")
   public java.util.List<FirstName> getFirstNameTabs() {
     return firstNameTabs;
   }
@@ -855,7 +887,6 @@ public class Tabs {
     this.firstNameTabs = firstNameTabs;
   }
 
-
   /**
    * formulaTabs.
    *
@@ -865,7 +896,7 @@ public class Tabs {
     this.formulaTabs = formulaTabs;
     return this;
   }
-  
+
   /**
    * addFormulaTabsItem.
    *
@@ -880,10 +911,17 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \"formula\" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas..
+   * Specifies a tag that is used to add a calculated field to a document.
+   * Envelope recipients cannot directly enter information into the tag; the
+   * formula tab calculates and displays a new value when changes are made to the
+   * reference tag values. The reference tag information and calculation
+   * operations are entered in the \"formula\" element. See the [ML:Using the
+   * Calculated Fields Feature] quick start guide or [ML:DocuSign Service User
+   * Guide] for more information about formulas..
+   * 
    * @return formulaTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \"formula\" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.")
+  @Schema(description = "Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \"formula\" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.")
   public java.util.List<FormulaTab> getFormulaTabs() {
     return formulaTabs;
   }
@@ -895,7 +933,6 @@ public class Tabs {
     this.formulaTabs = formulaTabs;
   }
 
-
   /**
    * fullNameTabs.
    *
@@ -905,7 +942,7 @@ public class Tabs {
     this.fullNameTabs = fullNameTabs;
     return this;
   }
-  
+
   /**
    * addFullNameTabsItem.
    *
@@ -920,10 +957,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's name to appear..
+   * Specifies a tag on the document where you want the recipient's name to
+   * appear..
+   * 
    * @return fullNameTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient's name to appear.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient's name to appear.")
   public java.util.List<FullName> getFullNameTabs() {
     return fullNameTabs;
   }
@@ -935,7 +974,6 @@ public class Tabs {
     this.fullNameTabs = fullNameTabs;
   }
 
-
   /**
    * initialHereTabs.
    *
@@ -945,7 +983,7 @@ public class Tabs {
     this.initialHereTabs = initialHereTabs;
     return this;
   }
-  
+
   /**
    * addInitialHereTabsItem.
    *
@@ -960,10 +998,13 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional..
+   * Specifies a tag location in the document at which a recipient will place
+   * their initials. The `optional` parameter specifies whether the initials are
+   * required or optional..
+   * 
    * @return initialHereTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.")
+  @Schema(description = "Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.")
   public java.util.List<InitialHere> getInitialHereTabs() {
     return initialHereTabs;
   }
@@ -975,7 +1016,6 @@ public class Tabs {
     this.initialHereTabs = initialHereTabs;
   }
 
-
   /**
    * lastNameTabs.
    *
@@ -985,7 +1025,7 @@ public class Tabs {
     this.lastNameTabs = lastNameTabs;
     return this;
   }
-  
+
   /**
    * addLastNameTabsItem.
    *
@@ -1000,10 +1040,14 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name..
+   * Specifies a tag on a document where you want the recipient's last name to
+   * appear. This tag takes the recipient's name, as entered in the recipient
+   * information, splits it into sections based on spaces and uses the last
+   * section as the last name..
+   * 
    * @return lastNameTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.")
+  @Schema(description = "Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.")
   public java.util.List<LastName> getLastNameTabs() {
     return lastNameTabs;
   }
@@ -1015,7 +1059,6 @@ public class Tabs {
     this.lastNameTabs = lastNameTabs;
   }
 
-
   /**
    * listTabs.
    *
@@ -1025,7 +1068,7 @@ public class Tabs {
     this.listTabs = listTabs;
     return this;
   }
-  
+
   /**
    * addListTabsItem.
    *
@@ -1040,10 +1083,12 @@ public class Tabs {
   }
 
   /**
-   * Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select..
+   * Specify this tag to give your recipient a list of options, presented as a
+   * drop-down list, from which they can select..
+   * 
    * @return listTabs
    **/
-  @ApiModelProperty(value = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
+  @Schema(description = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
   public java.util.List<List> getListTabs() {
     return listTabs;
   }
@@ -1055,7 +1100,6 @@ public class Tabs {
     this.listTabs = listTabs;
   }
 
-
   /**
    * notarizeTabs.
    *
@@ -1065,7 +1109,7 @@ public class Tabs {
     this.notarizeTabs = notarizeTabs;
     return this;
   }
-  
+
   /**
    * addNotarizeTabsItem.
    *
@@ -1081,9 +1125,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return notarizeTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Notarize> getNotarizeTabs() {
     return notarizeTabs;
   }
@@ -1095,7 +1140,6 @@ public class Tabs {
     this.notarizeTabs = notarizeTabs;
   }
 
-
   /**
    * notarySealTabs.
    *
@@ -1105,7 +1149,7 @@ public class Tabs {
     this.notarySealTabs = notarySealTabs;
     return this;
   }
-  
+
   /**
    * addNotarySealTabsItem.
    *
@@ -1121,9 +1165,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return notarySealTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NotarySeal> getNotarySealTabs() {
     return notarySealTabs;
   }
@@ -1135,7 +1180,6 @@ public class Tabs {
     this.notarySealTabs = notarySealTabs;
   }
 
-
   /**
    * noteTabs.
    *
@@ -1145,7 +1189,7 @@ public class Tabs {
     this.noteTabs = noteTabs;
     return this;
   }
-  
+
   /**
    * addNoteTabsItem.
    *
@@ -1160,10 +1204,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient..
+   * Specifies a location on the document where you want to place additional
+   * information, in the form of a note, for a recipient..
+   * 
    * @return noteTabs
    **/
-  @ApiModelProperty(value = "Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.")
+  @Schema(description = "Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.")
   public java.util.List<Note> getNoteTabs() {
     return noteTabs;
   }
@@ -1175,7 +1221,6 @@ public class Tabs {
     this.noteTabs = noteTabs;
   }
 
-
   /**
    * numberTabs.
    *
@@ -1185,7 +1230,7 @@ public class Tabs {
     this.numberTabs = numberTabs;
     return this;
   }
-  
+
   /**
    * addNumberTabsItem.
    *
@@ -1200,10 +1245,15 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. .
+   * Specifies a tag on the document where you want the recipient to enter a
+   * number. It uses the same parameters as a Text tab, with the validation
+   * message and pattern set for number information. When getting information that
+   * includes this tab type, the original value of the tab when the associated
+   * envelope was sent is included in the response. .
+   * 
    * @return numberTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
   public java.util.List<Number> getNumberTabs() {
     return numberTabs;
   }
@@ -1215,7 +1265,6 @@ public class Tabs {
     this.numberTabs = numberTabs;
   }
 
-
   /**
    * numericalTabs.
    *
@@ -1225,7 +1274,7 @@ public class Tabs {
     this.numericalTabs = numericalTabs;
     return this;
   }
-  
+
   /**
    * addNumericalTabsItem.
    *
@@ -1241,9 +1290,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return numericalTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Numerical> getNumericalTabs() {
     return numericalTabs;
   }
@@ -1255,7 +1305,6 @@ public class Tabs {
     this.numericalTabs = numericalTabs;
   }
 
-
   /**
    * phoneNumberTabs.
    *
@@ -1265,7 +1314,7 @@ public class Tabs {
     this.phoneNumberTabs = phoneNumberTabs;
     return this;
   }
-  
+
   /**
    * addPhoneNumberTabsItem.
    *
@@ -1281,9 +1330,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return phoneNumberTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<PhoneNumber> getPhoneNumberTabs() {
     return phoneNumberTabs;
   }
@@ -1295,7 +1345,6 @@ public class Tabs {
     this.phoneNumberTabs = phoneNumberTabs;
   }
 
-
   /**
    * polyLineOverlayTabs.
    *
@@ -1305,7 +1354,7 @@ public class Tabs {
     this.polyLineOverlayTabs = polyLineOverlayTabs;
     return this;
   }
-  
+
   /**
    * addPolyLineOverlayTabsItem.
    *
@@ -1321,9 +1370,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return polyLineOverlayTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<PolyLineOverlay> getPolyLineOverlayTabs() {
     return polyLineOverlayTabs;
   }
@@ -1334,7 +1384,6 @@ public class Tabs {
   public void setPolyLineOverlayTabs(java.util.List<PolyLineOverlay> polyLineOverlayTabs) {
     this.polyLineOverlayTabs = polyLineOverlayTabs;
   }
-
 
   /**
    * prefillTabs.
@@ -1347,10 +1396,18 @@ public class Tabs {
   }
 
   /**
-   * Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
+   * Prefill tabs are tabs that the sender can fill in before the envelope is
+   * sent. They are sometimes called sender tags or pre-fill fields. [Pre-Fill
+   * Your Own Document Fields][app] describes how prefill tabs work in the web
+   * application. [Customize your envelopes with pre-fill fields][catblog] shows
+   * how to use prefill tabs in your application using the eSignature SDKs. [app]:
+   * https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields
+   * [catblog]:
+   * https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
+   * 
    * @return prefillTabs
    **/
-  @ApiModelProperty(value = "Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields")
+  @Schema(description = "Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields")
   public PrefillTabs getPrefillTabs() {
     return prefillTabs;
   }
@@ -1362,7 +1419,6 @@ public class Tabs {
     this.prefillTabs = prefillTabs;
   }
 
-
   /**
    * radioGroupTabs.
    *
@@ -1372,7 +1428,7 @@ public class Tabs {
     this.radioGroupTabs = radioGroupTabs;
     return this;
   }
-  
+
   /**
    * addRadioGroupTabsItem.
    *
@@ -1387,10 +1443,13 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document..
+   * Specifies a tag on the document in a location where the recipient can select
+   * one option from a group of options using a radio button. The radio buttons do
+   * not have to be on the same page in a document..
+   * 
    * @return radioGroupTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.")
+  @Schema(description = "Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.")
   public java.util.List<RadioGroup> getRadioGroupTabs() {
     return radioGroupTabs;
   }
@@ -1402,7 +1461,6 @@ public class Tabs {
     this.radioGroupTabs = radioGroupTabs;
   }
 
-
   /**
    * signerAttachmentTabs.
    *
@@ -1412,7 +1470,7 @@ public class Tabs {
     this.signerAttachmentTabs = signerAttachmentTabs;
     return this;
   }
-  
+
   /**
    * addSignerAttachmentTabsItem.
    *
@@ -1427,10 +1485,12 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document when you want the recipient to add supporting documents to an envelope..
+   * Specifies a tag on the document when you want the recipient to add supporting
+   * documents to an envelope..
+   * 
    * @return signerAttachmentTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.")
+  @Schema(description = "Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.")
   public java.util.List<SignerAttachment> getSignerAttachmentTabs() {
     return signerAttachmentTabs;
   }
@@ -1442,7 +1502,6 @@ public class Tabs {
     this.signerAttachmentTabs = signerAttachmentTabs;
   }
 
-
   /**
    * signHereTabs.
    *
@@ -1452,7 +1511,7 @@ public class Tabs {
     this.signHereTabs = signHereTabs;
     return this;
   }
-  
+
   /**
    * addSignHereTabsItem.
    *
@@ -1467,10 +1526,13 @@ public class Tabs {
   }
 
   /**
-   * A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \"optional\" parameter sets if the signature is required or optional. .
+   * A complex type the contains information about the tag that specifies where
+   * the recipient places their signature in the document. The \"optional\"
+   * parameter sets if the signature is required or optional. .
+   * 
    * @return signHereTabs
    **/
-  @ApiModelProperty(value = "A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \"optional\" parameter sets if the signature is required or optional. ")
+  @Schema(description = "A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \"optional\" parameter sets if the signature is required or optional. ")
   public java.util.List<SignHere> getSignHereTabs() {
     return signHereTabs;
   }
@@ -1482,7 +1544,6 @@ public class Tabs {
     this.signHereTabs = signHereTabs;
   }
 
-
   /**
    * smartSectionTabs.
    *
@@ -1492,7 +1553,7 @@ public class Tabs {
     this.smartSectionTabs = smartSectionTabs;
     return this;
   }
-  
+
   /**
    * addSmartSectionTabsItem.
    *
@@ -1508,9 +1569,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return smartSectionTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<SmartSection> getSmartSectionTabs() {
     return smartSectionTabs;
   }
@@ -1522,7 +1584,6 @@ public class Tabs {
     this.smartSectionTabs = smartSectionTabs;
   }
 
-
   /**
    * ssnTabs.
    *
@@ -1532,7 +1593,7 @@ public class Tabs {
     this.ssnTabs = ssnTabs;
     return this;
   }
-  
+
   /**
    * addSsnTabsItem.
    *
@@ -1547,10 +1608,16 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter a
+   * Social Security Number (SSN). A SSN can be typed with or without dashes. It
+   * uses the same parameters as a Text tab, with the validation message and
+   * pattern set for SSN information. When getting information that includes this
+   * tab type, the original value of the tab when the associated envelope was sent
+   * is included in the response..
+   * 
    * @return ssnTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Ssn> getSsnTabs() {
     return ssnTabs;
   }
@@ -1562,7 +1629,6 @@ public class Tabs {
     this.ssnTabs = ssnTabs;
   }
 
-
   /**
    * tabGroups.
    *
@@ -1572,7 +1638,7 @@ public class Tabs {
     this.tabGroups = tabGroups;
     return this;
   }
-  
+
   /**
    * addTabGroupsItem.
    *
@@ -1588,9 +1654,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return tabGroups
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<TabGroup> getTabGroups() {
     return tabGroups;
   }
@@ -1602,7 +1669,6 @@ public class Tabs {
     this.tabGroups = tabGroups;
   }
 
-
   /**
    * textTabs.
    *
@@ -1612,7 +1678,7 @@ public class Tabs {
     this.textTabs = textTabs;
     return this;
   }
-  
+
   /**
    * addTextTabsItem.
    *
@@ -1627,10 +1693,14 @@ public class Tabs {
   }
 
   /**
-   * Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a that that is an adaptable field that allows the recipient to
+   * enter different text information. When getting information that includes this
+   * tab type, the original value of the tab when the associated envelope was sent
+   * is included in the response..
+   * 
    * @return textTabs
    **/
-  @ApiModelProperty(value = "Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Text> getTextTabs() {
     return textTabs;
   }
@@ -1642,7 +1712,6 @@ public class Tabs {
     this.textTabs = textTabs;
   }
 
-
   /**
    * titleTabs.
    *
@@ -1652,7 +1721,7 @@ public class Tabs {
     this.titleTabs = titleTabs;
     return this;
   }
-  
+
   /**
    * addTitleTabsItem.
    *
@@ -1667,10 +1736,14 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient's title to
+   * appear. When getting information that includes this tab type, the original
+   * value of the tab when the associated envelope was sent is included in the
+   * response..
+   * 
    * @return titleTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient's title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient's title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Title> getTitleTabs() {
     return titleTabs;
   }
@@ -1682,7 +1755,6 @@ public class Tabs {
     this.titleTabs = titleTabs;
   }
 
-
   /**
    * viewTabs.
    *
@@ -1692,7 +1764,7 @@ public class Tabs {
     this.viewTabs = viewTabs;
     return this;
   }
-  
+
   /**
    * addViewTabsItem.
    *
@@ -1708,9 +1780,10 @@ public class Tabs {
 
   /**
    * .
+   * 
    * @return viewTabs
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<View> getViewTabs() {
     return viewTabs;
   }
@@ -1722,7 +1795,6 @@ public class Tabs {
     this.viewTabs = viewTabs;
   }
 
-
   /**
    * zipTabs.
    *
@@ -1732,7 +1804,7 @@ public class Tabs {
     this.zipTabs = zipTabs;
     return this;
   }
-  
+
   /**
    * addZipTabsItem.
    *
@@ -1747,10 +1819,17 @@ public class Tabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
+   * Specifies a tag on the document where you want the recipient to enter a ZIP
+   * code. The ZIP code can be a five numbers or the ZIP+4 format with nine
+   * numbers. The zip code can be typed with or without dashes. It uses the same
+   * parameters as a Text tab, with the validation message and pattern set for ZIP
+   * code information. When getting information that includes this tab type, the
+   * original value of the tab when the associated envelope was sent is included
+   * in the response..
+   * 
    * @return zipTabs
    **/
-  @ApiModelProperty(value = "Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
+  @Schema(description = "Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
   public java.util.List<Zip> getZipTabs() {
     return zipTabs;
   }
@@ -1761,7 +1840,6 @@ public class Tabs {
   public void setZipTabs(java.util.List<Zip> zipTabs) {
     this.zipTabs = zipTabs;
   }
-
 
   /**
    * Compares objects.
@@ -1824,9 +1902,13 @@ public class Tabs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, numericalTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs,
+        commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs,
+        drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs,
+        initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, numericalTabs,
+        phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs,
+        smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1835,7 +1917,7 @@ public class Tabs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Tabs {\n");
-    
+
     sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    commentThreadTabs: ").append(toIndentedString(commentThreadTabs)).append("\n");
@@ -1892,4 +1974,3 @@ public class Tabs {
   }
 
 }
-

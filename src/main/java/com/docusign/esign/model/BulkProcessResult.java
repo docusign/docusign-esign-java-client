@@ -6,8 +6,8 @@ import com.docusign.esign.model.BulkSendBatchError;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkProcessResult.
@@ -24,7 +24,6 @@ public class BulkProcessResult {
   @JsonProperty("success")
   private String success = null;
 
-
   /**
    * errors.
    *
@@ -34,7 +33,7 @@ public class BulkProcessResult {
     this.errors = errors;
     return this;
   }
-  
+
   /**
    * addErrorsItem.
    *
@@ -50,9 +49,10 @@ public class BulkProcessResult {
 
   /**
    * .
+   * 
    * @return errors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkSendBatchError> getErrors() {
     return errors;
   }
@@ -63,7 +63,6 @@ public class BulkProcessResult {
   public void setErrors(java.util.List<BulkSendBatchError> errors) {
     this.errors = errors;
   }
-
 
   /**
    * listId.
@@ -77,9 +76,10 @@ public class BulkProcessResult {
 
   /**
    * .
+   * 
    * @return listId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getListId() {
     return listId;
   }
@@ -90,7 +90,6 @@ public class BulkProcessResult {
   public void setListId(String listId) {
     this.listId = listId;
   }
-
 
   /**
    * success.
@@ -104,9 +103,10 @@ public class BulkProcessResult {
 
   /**
    * .
+   * 
    * @return success
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuccess() {
     return success;
   }
@@ -117,7 +117,6 @@ public class BulkProcessResult {
   public void setSuccess(String success) {
     this.success = success;
   }
-
 
   /**
    * Compares objects.
@@ -146,7 +145,6 @@ public class BulkProcessResult {
     return Objects.hash(errors, listId, success);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -154,7 +152,7 @@ public class BulkProcessResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessResult {\n");
-    
+
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    success: ").append(toIndentedString(success)).append("\n");
@@ -174,4 +172,3 @@ public class BulkProcessResult {
   }
 
 }
-

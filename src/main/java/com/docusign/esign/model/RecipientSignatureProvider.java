@@ -7,14 +7,17 @@ import com.docusign.esign.model.RecipientSignatureProviderOptions;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/). .
+ * An Electronic or Standards Based Signature (digital signature) provider for
+ * the signer to use. [More
+ * information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
+ * .
  *
  */
-@ApiModel(description = "An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/). ")
+@Schema(description = "An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/). ")
 
 public class RecipientSignatureProvider {
   @JsonProperty("sealDocumentsWithTabsOnly")
@@ -32,7 +35,6 @@ public class RecipientSignatureProvider {
   @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
 
-
   /**
    * sealDocumentsWithTabsOnly.
    *
@@ -45,9 +47,10 @@ public class RecipientSignatureProvider {
 
   /**
    * .
+   * 
    * @return sealDocumentsWithTabsOnly
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSealDocumentsWithTabsOnly() {
     return sealDocumentsWithTabsOnly;
   }
@@ -58,7 +61,6 @@ public class RecipientSignatureProvider {
   public void setSealDocumentsWithTabsOnly(String sealDocumentsWithTabsOnly) {
     this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
   }
-
 
   /**
    * sealName.
@@ -72,9 +74,10 @@ public class RecipientSignatureProvider {
 
   /**
    * .
+   * 
    * @return sealName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSealName() {
     return sealName;
   }
@@ -85,7 +88,6 @@ public class RecipientSignatureProvider {
   public void setSealName(String sealName) {
     this.sealName = sealName;
   }
-
 
   /**
    * signatureProviderName.
@@ -99,9 +101,10 @@ public class RecipientSignatureProvider {
 
   /**
    * .
+   * 
    * @return signatureProviderName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureProviderName() {
     return signatureProviderName;
   }
@@ -112,7 +115,6 @@ public class RecipientSignatureProvider {
   public void setSignatureProviderName(String signatureProviderName) {
     this.signatureProviderName = signatureProviderName;
   }
-
 
   /**
    * signatureProviderNameMetadata.
@@ -125,10 +127,12 @@ public class RecipientSignatureProvider {
   }
 
   /**
-   * Metadata that indicates whether the `signatureProviderName` property is editable. .
+   * Metadata that indicates whether the `signatureProviderName` property is
+   * editable. .
+   * 
    * @return signatureProviderNameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `signatureProviderName` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `signatureProviderName` property is editable. ")
   public PropertyMetadata getSignatureProviderNameMetadata() {
     return signatureProviderNameMetadata;
   }
@@ -140,22 +144,23 @@ public class RecipientSignatureProvider {
     this.signatureProviderNameMetadata = signatureProviderNameMetadata;
   }
 
-
   /**
    * signatureProviderOptions.
    *
    * @return RecipientSignatureProvider
    **/
-  public RecipientSignatureProvider signatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
+  public RecipientSignatureProvider signatureProviderOptions(
+      RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
     return this;
   }
 
   /**
    * Not applicable for this object..
+   * 
    * @return signatureProviderOptions
    **/
-  @ApiModelProperty(value = "Not applicable for this object.")
+  @Schema(description = "Not applicable for this object.")
   public RecipientSignatureProviderOptions getSignatureProviderOptions() {
     return signatureProviderOptions;
   }
@@ -166,7 +171,6 @@ public class RecipientSignatureProvider {
   public void setSignatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
   }
-
 
   /**
    * Compares objects.
@@ -194,9 +198,9 @@ public class RecipientSignatureProvider {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderNameMetadata, signatureProviderOptions);
+    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderNameMetadata,
+        signatureProviderOptions);
   }
-
 
   /**
    * Converts the given object to string.
@@ -205,11 +209,12 @@ public class RecipientSignatureProvider {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProvider {\n");
-    
+
     sb.append("    sealDocumentsWithTabsOnly: ").append(toIndentedString(sealDocumentsWithTabsOnly)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    sb.append("    signatureProviderNameMetadata: ").append(toIndentedString(signatureProviderNameMetadata)).append("\n");
+    sb.append("    signatureProviderNameMetadata: ").append(toIndentedString(signatureProviderNameMetadata))
+        .append("\n");
     sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -227,4 +232,3 @@ public class RecipientSignatureProvider {
   }
 
 }
-

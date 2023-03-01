@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Use this object to create a filtered view of the items in a folder..
  *
  */
-@ApiModel(description = "Use this object to create a filtered view of the items in a folder.")
+@Schema(description = "Use this object to create a filtered view of the items in a folder.")
 
 public class Filter {
   @JsonProperty("actionRequired")
@@ -48,7 +48,6 @@ public class Filter {
   @JsonProperty("toDateTime")
   private String toDateTime = null;
 
-
   /**
    * actionRequired.
    *
@@ -61,9 +60,10 @@ public class Filter {
 
   /**
    * Access token information..
+   * 
    * @return actionRequired
    **/
-  @ApiModelProperty(value = "Access token information.")
+  @Schema(description = "Access token information.")
   public String getActionRequired() {
     return actionRequired;
   }
@@ -74,7 +74,6 @@ public class Filter {
   public void setActionRequired(String actionRequired) {
     this.actionRequired = actionRequired;
   }
-
 
   /**
    * expires.
@@ -88,9 +87,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return expires
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExpires() {
     return expires;
   }
@@ -101,7 +101,6 @@ public class Filter {
   public void setExpires(String expires) {
     this.expires = expires;
   }
-
 
   /**
    * folderIds.
@@ -115,9 +114,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return folderIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFolderIds() {
     return folderIds;
   }
@@ -128,7 +128,6 @@ public class Filter {
   public void setFolderIds(String folderIds) {
     this.folderIds = folderIds;
   }
-
 
   /**
    * fromDateTime.
@@ -142,9 +141,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return fromDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFromDateTime() {
     return fromDateTime;
   }
@@ -155,7 +155,6 @@ public class Filter {
   public void setFromDateTime(String fromDateTime) {
     this.fromDateTime = fromDateTime;
   }
-
 
   /**
    * isTemplate.
@@ -169,9 +168,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return isTemplate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsTemplate() {
     return isTemplate;
   }
@@ -182,7 +182,6 @@ public class Filter {
   public void setIsTemplate(String isTemplate) {
     this.isTemplate = isTemplate;
   }
-
 
   /**
    * order.
@@ -196,9 +195,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return order
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrder() {
     return order;
   }
@@ -209,7 +209,6 @@ public class Filter {
   public void setOrder(String order) {
     this.order = order;
   }
-
 
   /**
    * orderBy.
@@ -223,9 +222,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return orderBy
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOrderBy() {
     return orderBy;
   }
@@ -236,7 +236,6 @@ public class Filter {
   public void setOrderBy(String orderBy) {
     this.orderBy = orderBy;
   }
-
 
   /**
    * searchTarget.
@@ -250,9 +249,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return searchTarget
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSearchTarget() {
     return searchTarget;
   }
@@ -263,7 +263,6 @@ public class Filter {
   public void setSearchTarget(String searchTarget) {
     this.searchTarget = searchTarget;
   }
-
 
   /**
    * searchText.
@@ -277,9 +276,10 @@ public class Filter {
 
   /**
    * .
+   * 
    * @return searchText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSearchText() {
     return searchText;
   }
@@ -290,7 +290,6 @@ public class Filter {
   public void setSearchText(String searchText) {
     this.searchText = searchText;
   }
-
 
   /**
    * status.
@@ -303,10 +302,13 @@ public class Filter {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -317,7 +319,6 @@ public class Filter {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * toDateTime.
@@ -331,9 +332,10 @@ public class Filter {
 
   /**
    * Must be set to \"bearer\"..
+   * 
    * @return toDateTime
    **/
-  @ApiModelProperty(value = "Must be set to \"bearer\".")
+  @Schema(description = "Must be set to \"bearer\".")
   public String getToDateTime() {
     return toDateTime;
   }
@@ -344,7 +346,6 @@ public class Filter {
   public void setToDateTime(String toDateTime) {
     this.toDateTime = toDateTime;
   }
-
 
   /**
    * Compares objects.
@@ -378,9 +379,9 @@ public class Filter {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(actionRequired, expires, folderIds, fromDateTime, isTemplate, order, orderBy, searchTarget, searchText, status, toDateTime);
+    return Objects.hash(actionRequired, expires, folderIds, fromDateTime, isTemplate, order, orderBy, searchTarget,
+        searchText, status, toDateTime);
   }
-
 
   /**
    * Converts the given object to string.
@@ -389,7 +390,7 @@ public class Filter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Filter {\n");
-    
+
     sb.append("    actionRequired: ").append(toIndentedString(actionRequired)).append("\n");
     sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
     sb.append("    folderIds: ").append(toIndentedString(folderIds)).append("\n");
@@ -417,4 +418,3 @@ public class Filter {
   }
 
 }
-

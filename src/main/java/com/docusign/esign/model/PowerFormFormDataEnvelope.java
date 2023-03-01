@@ -6,8 +6,8 @@ import com.docusign.esign.model.PowerFormFormDataRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PowerFormFormDataEnvelope.
@@ -21,7 +21,6 @@ public class PowerFormFormDataEnvelope {
   @JsonProperty("recipients")
   private java.util.List<PowerFormFormDataRecipient> recipients = null;
 
-
   /**
    * envelopeId.
    *
@@ -34,9 +33,10 @@ public class PowerFormFormDataEnvelope {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -48,7 +48,6 @@ public class PowerFormFormDataEnvelope {
     this.envelopeId = envelopeId;
   }
 
-
   /**
    * recipients.
    *
@@ -58,7 +57,7 @@ public class PowerFormFormDataEnvelope {
     this.recipients = recipients;
     return this;
   }
-  
+
   /**
    * addRecipientsItem.
    *
@@ -74,9 +73,10 @@ public class PowerFormFormDataEnvelope {
 
   /**
    * An array of powerform recipients..
+   * 
    * @return recipients
    **/
-  @ApiModelProperty(value = "An array of powerform recipients.")
+  @Schema(description = "An array of powerform recipients.")
   public java.util.List<PowerFormFormDataRecipient> getRecipients() {
     return recipients;
   }
@@ -87,7 +87,6 @@ public class PowerFormFormDataEnvelope {
   public void setRecipients(java.util.List<PowerFormFormDataRecipient> recipients) {
     this.recipients = recipients;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +114,6 @@ public class PowerFormFormDataEnvelope {
     return Objects.hash(envelopeId, recipients);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +121,7 @@ public class PowerFormFormDataEnvelope {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataEnvelope {\n");
-    
+
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("}");
@@ -142,4 +140,3 @@ public class PowerFormFormDataEnvelope {
   }
 
 }
-

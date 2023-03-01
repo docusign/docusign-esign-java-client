@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountPasswordMinimumPasswordAgeDays.
@@ -20,7 +20,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
   @JsonProperty("minimumAge")
   private String minimumAge = null;
 
-
   /**
    * maximumAge.
    *
@@ -33,9 +32,10 @@ public class AccountPasswordMinimumPasswordAgeDays {
 
   /**
    * .
+   * 
    * @return maximumAge
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumAge() {
     return maximumAge;
   }
@@ -46,7 +46,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
   public void setMaximumAge(String maximumAge) {
     this.maximumAge = maximumAge;
   }
-
 
   /**
    * minimumAge.
@@ -60,9 +59,10 @@ public class AccountPasswordMinimumPasswordAgeDays {
 
   /**
    * .
+   * 
    * @return minimumAge
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumAge() {
     return minimumAge;
   }
@@ -73,7 +73,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
   public void setMinimumAge(String minimumAge) {
     this.minimumAge = minimumAge;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
     return Objects.hash(maximumAge, minimumAge);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordMinimumPasswordAgeDays {\n");
-    
+
     sb.append("    maximumAge: ").append(toIndentedString(maximumAge)).append("\n");
     sb.append("    minimumAge: ").append(toIndentedString(minimumAge)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class AccountPasswordMinimumPasswordAgeDays {
   }
 
 }
-

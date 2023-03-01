@@ -6,14 +6,16 @@ import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * One of the selectable items in the &#x60;listItems&#x60; property of a [&#x60;list&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab..
+ * One of the selectable items in the &#x60;listItems&#x60; property of a
+ * [&#x60;list&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/)
+ * tab..
  *
  */
-@ApiModel(description = "One of the selectable items in the `listItems` property of a [`list`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab.")
+@Schema(description = "One of the selectable items in the `listItems` property of a [`list`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab.")
 
 public class ListItem {
   @JsonProperty("selected")
@@ -34,7 +36,6 @@ public class ListItem {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
-
   /**
    * selected.
    *
@@ -46,10 +47,12 @@ public class ListItem {
   }
 
   /**
-   * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default..
+   * When set to **true**, indicates that this item is the default selection shown
+   * to a signer. Only one selection can be set as the default..
+   * 
    * @return selected
    **/
-  @ApiModelProperty(value = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
+  @Schema(description = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
   public String getSelected() {
     return selected;
   }
@@ -60,7 +63,6 @@ public class ListItem {
   public void setSelected(String selected) {
     this.selected = selected;
   }
-
 
   /**
    * selectedMetadata.
@@ -74,9 +76,10 @@ public class ListItem {
 
   /**
    * Metadata that indicates whether the `selected` property is editable..
+   * 
    * @return selectedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `selected` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `selected` property is editable.")
   public PropertyMetadata getSelectedMetadata() {
     return selectedMetadata;
   }
@@ -87,7 +90,6 @@ public class ListItem {
   public void setSelectedMetadata(PropertyMetadata selectedMetadata) {
     this.selectedMetadata = selectedMetadata;
   }
-
 
   /**
    * text.
@@ -101,9 +103,10 @@ public class ListItem {
 
   /**
    * Specifies the text that is shown in the dropdown list. .
+   * 
    * @return text
    **/
-  @ApiModelProperty(value = "Specifies the text that is shown in the dropdown list. ")
+  @Schema(description = "Specifies the text that is shown in the dropdown list. ")
   public String getText() {
     return text;
   }
@@ -114,7 +117,6 @@ public class ListItem {
   public void setText(String text) {
     this.text = text;
   }
-
 
   /**
    * textMetadata.
@@ -128,9 +130,10 @@ public class ListItem {
 
   /**
    * .
+   * 
    * @return textMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTextMetadata() {
     return textMetadata;
   }
@@ -141,7 +144,6 @@ public class ListItem {
   public void setTextMetadata(PropertyMetadata textMetadata) {
     this.textMetadata = textMetadata;
   }
-
 
   /**
    * value.
@@ -155,9 +157,10 @@ public class ListItem {
 
   /**
    * Specifies the value that is used when the list item is selected..
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value that is used when the list item is selected.")
+  @Schema(description = "Specifies the value that is used when the list item is selected.")
   public String getValue() {
     return value;
   }
@@ -168,7 +171,6 @@ public class ListItem {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * valueMetadata.
@@ -182,9 +184,10 @@ public class ListItem {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
+   * 
    * @return valueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `value` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `value` property is editable.")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -195,7 +198,6 @@ public class ListItem {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -227,7 +229,6 @@ public class ListItem {
     return Objects.hash(selected, selectedMetadata, text, textMetadata, value, valueMetadata);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -235,7 +236,7 @@ public class ListItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItem {\n");
-    
+
     sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
     sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
@@ -258,4 +259,3 @@ public class ListItem {
   }
 
 }
-

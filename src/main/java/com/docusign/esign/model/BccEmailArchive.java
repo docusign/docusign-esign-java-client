@@ -6,14 +6,15 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails)..
+ * This object contains information abut a BCC email archive configuration (a
+ * BCC email address used to archive DocuSign-generated emails)..
  *
  */
-@ApiModel(description = "This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails).")
+@Schema(description = "This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails).")
 
 public class BccEmailArchive {
   @JsonProperty("accountId")
@@ -46,7 +47,6 @@ public class BccEmailArchive {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * accountId.
    *
@@ -59,9 +59,10 @@ public class BccEmailArchive {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -72,7 +73,6 @@ public class BccEmailArchive {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * bccEmailArchiveId.
@@ -86,9 +86,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return bccEmailArchiveId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBccEmailArchiveId() {
     return bccEmailArchiveId;
   }
@@ -99,7 +100,6 @@ public class BccEmailArchive {
   public void setBccEmailArchiveId(String bccEmailArchiveId) {
     this.bccEmailArchiveId = bccEmailArchiveId;
   }
-
 
   /**
    * created.
@@ -113,9 +113,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return created
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreated() {
     return created;
   }
@@ -126,7 +127,6 @@ public class BccEmailArchive {
   public void setCreated(String created) {
     this.created = created;
   }
-
 
   /**
    * createdBy.
@@ -140,9 +140,10 @@ public class BccEmailArchive {
 
   /**
    * Details about the user who created the BCC email archive configuration..
+   * 
    * @return createdBy
    **/
-  @ApiModelProperty(value = "Details about the user who created the BCC email archive configuration.")
+  @Schema(description = "Details about the user who created the BCC email archive configuration.")
   public UserInfo getCreatedBy() {
     return createdBy;
   }
@@ -153,7 +154,6 @@ public class BccEmailArchive {
   public void setCreatedBy(UserInfo createdBy) {
     this.createdBy = createdBy;
   }
-
 
   /**
    * email.
@@ -167,9 +167,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -180,7 +181,6 @@ public class BccEmailArchive {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * emailNotificationId.
@@ -194,9 +194,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return emailNotificationId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmailNotificationId() {
     return emailNotificationId;
   }
@@ -207,7 +208,6 @@ public class BccEmailArchive {
   public void setEmailNotificationId(String emailNotificationId) {
     this.emailNotificationId = emailNotificationId;
   }
-
 
   /**
    * modified.
@@ -221,9 +221,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return modified
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModified() {
     return modified;
   }
@@ -234,7 +235,6 @@ public class BccEmailArchive {
   public void setModified(String modified) {
     this.modified = modified;
   }
-
 
   /**
    * modifiedBy.
@@ -247,10 +247,12 @@ public class BccEmailArchive {
   }
 
   /**
-   * Details about the user who last modified the BCC email archive configuration..
+   * Details about the user who last modified the BCC email archive
+   * configuration..
+   * 
    * @return modifiedBy
    **/
-  @ApiModelProperty(value = "Details about the user who last modified the BCC email archive configuration.")
+  @Schema(description = "Details about the user who last modified the BCC email archive configuration.")
   public UserInfo getModifiedBy() {
     return modifiedBy;
   }
@@ -261,7 +263,6 @@ public class BccEmailArchive {
   public void setModifiedBy(UserInfo modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
-
 
   /**
    * status.
@@ -274,10 +275,13 @@ public class BccEmailArchive {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -288,7 +292,6 @@ public class BccEmailArchive {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * uri.
@@ -302,9 +305,10 @@ public class BccEmailArchive {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -315,7 +319,6 @@ public class BccEmailArchive {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -348,9 +351,9 @@ public class BccEmailArchive {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, bccEmailArchiveId, created, createdBy, email, emailNotificationId, modified, modifiedBy, status, uri);
+    return Objects.hash(accountId, bccEmailArchiveId, created, createdBy, email, emailNotificationId, modified,
+        modifiedBy, status, uri);
   }
-
 
   /**
    * Converts the given object to string.
@@ -359,7 +362,7 @@ public class BccEmailArchive {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchive {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    bccEmailArchiveId: ").append(toIndentedString(bccEmailArchiveId)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -386,4 +389,3 @@ public class BccEmailArchive {
   }
 
 }
-

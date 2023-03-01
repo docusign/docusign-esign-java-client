@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains information about a file or folder in cloud storage..
  *
  */
-@ApiModel(description = "This object contains information about a file or folder in cloud storage.")
+@Schema(description = "This object contains information about a file or folder in cloud storage.")
 
 public class ExternalFile {
   @JsonProperty("date")
@@ -45,7 +45,6 @@ public class ExternalFile {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * date.
    *
@@ -58,9 +57,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return date
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDate() {
     return date;
   }
@@ -71,7 +71,6 @@ public class ExternalFile {
   public void setDate(String date) {
     this.date = date;
   }
-
 
   /**
    * hasCompositeTemplate.
@@ -85,9 +84,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return hasCompositeTemplate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHasCompositeTemplate() {
     return hasCompositeTemplate;
   }
@@ -98,7 +98,6 @@ public class ExternalFile {
   public void setHasCompositeTemplate(String hasCompositeTemplate) {
     this.hasCompositeTemplate = hasCompositeTemplate;
   }
-
 
   /**
    * id.
@@ -112,9 +111,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -125,7 +125,6 @@ public class ExternalFile {
   public void setId(String id) {
     this.id = id;
   }
-
 
   /**
    * img.
@@ -139,9 +138,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return img
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImg() {
     return img;
   }
@@ -152,7 +152,6 @@ public class ExternalFile {
   public void setImg(String img) {
     this.img = img;
   }
-
 
   /**
    * name.
@@ -166,9 +165,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -179,7 +179,6 @@ public class ExternalFile {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * ownerName.
@@ -193,9 +192,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return ownerName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerName() {
     return ownerName;
   }
@@ -206,7 +206,6 @@ public class ExternalFile {
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
-
 
   /**
    * size.
@@ -220,9 +219,10 @@ public class ExternalFile {
 
   /**
    * Reserved: TBD.
+   * 
    * @return size
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getSize() {
     return size;
   }
@@ -233,7 +233,6 @@ public class ExternalFile {
   public void setSize(String size) {
     this.size = size;
   }
-
 
   /**
    * supported.
@@ -247,9 +246,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return supported
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSupported() {
     return supported;
   }
@@ -260,7 +260,6 @@ public class ExternalFile {
   public void setSupported(String supported) {
     this.supported = supported;
   }
-
 
   /**
    * type.
@@ -274,9 +273,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -287,7 +287,6 @@ public class ExternalFile {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * uri.
@@ -301,9 +300,10 @@ public class ExternalFile {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -314,7 +314,6 @@ public class ExternalFile {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -350,7 +349,6 @@ public class ExternalFile {
     return Objects.hash(date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -358,7 +356,7 @@ public class ExternalFile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFile {\n");
-    
+
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    hasCompositeTemplate: ").append(toIndentedString(hasCompositeTemplate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -385,4 +383,3 @@ public class ExternalFile {
   }
 
 }
-

@@ -7,14 +7,14 @@ import com.docusign.esign.model.MemberSharedItems;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains shared access information..
  *
  */
-@ApiModel(description = "Contains shared access information.")
+@Schema(description = "Contains shared access information.")
 
 public class AccountSharedAccess {
   @JsonProperty("accountId")
@@ -44,7 +44,6 @@ public class AccountSharedAccess {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * accountId.
    *
@@ -57,9 +56,10 @@ public class AccountSharedAccess {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -70,7 +70,6 @@ public class AccountSharedAccess {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * endPosition.
@@ -84,9 +83,10 @@ public class AccountSharedAccess {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -97,7 +97,6 @@ public class AccountSharedAccess {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * errorDetails.
@@ -110,10 +109,12 @@ public class AccountSharedAccess {
   }
 
   /**
-   * A complex type containing an errorCode and message identifying the error that occurred..
+   * A complex type containing an errorCode and message identifying the error that
+   * occurred..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "A complex type containing an errorCode and message identifying the error that occurred.")
+  @Schema(description = "A complex type containing an errorCode and message identifying the error that occurred.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -124,7 +125,6 @@ public class AccountSharedAccess {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * nextUri.
@@ -137,10 +137,12 @@ public class AccountSharedAccess {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -151,7 +153,6 @@ public class AccountSharedAccess {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -165,9 +166,10 @@ public class AccountSharedAccess {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -178,7 +180,6 @@ public class AccountSharedAccess {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -192,9 +193,10 @@ public class AccountSharedAccess {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -206,7 +208,6 @@ public class AccountSharedAccess {
     this.resultSetSize = resultSetSize;
   }
 
-
   /**
    * sharedAccess.
    *
@@ -216,7 +217,7 @@ public class AccountSharedAccess {
     this.sharedAccess = sharedAccess;
     return this;
   }
-  
+
   /**
    * addSharedAccessItem.
    *
@@ -231,10 +232,12 @@ public class AccountSharedAccess {
   }
 
   /**
-   * A complex type containing the shared access information to an envelope for the users specified in the request..
+   * A complex type containing the shared access information to an envelope for
+   * the users specified in the request..
+   * 
    * @return sharedAccess
    **/
-  @ApiModelProperty(value = "A complex type containing the shared access information to an envelope for the users specified in the request.")
+  @Schema(description = "A complex type containing the shared access information to an envelope for the users specified in the request.")
   public java.util.List<MemberSharedItems> getSharedAccess() {
     return sharedAccess;
   }
@@ -245,7 +248,6 @@ public class AccountSharedAccess {
   public void setSharedAccess(java.util.List<MemberSharedItems> sharedAccess) {
     this.sharedAccess = sharedAccess;
   }
-
 
   /**
    * startPosition.
@@ -259,9 +261,10 @@ public class AccountSharedAccess {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -272,7 +275,6 @@ public class AccountSharedAccess {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -285,10 +287,13 @@ public class AccountSharedAccess {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -299,7 +304,6 @@ public class AccountSharedAccess {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -331,9 +335,9 @@ public class AccountSharedAccess {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, endPosition, errorDetails, nextUri, previousUri, resultSetSize, sharedAccess, startPosition, totalSetSize);
+    return Objects.hash(accountId, endPosition, errorDetails, nextUri, previousUri, resultSetSize, sharedAccess,
+        startPosition, totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -342,7 +346,7 @@ public class AccountSharedAccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSharedAccess {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -368,4 +372,3 @@ public class AccountSharedAccess {
   }
 
 }
-

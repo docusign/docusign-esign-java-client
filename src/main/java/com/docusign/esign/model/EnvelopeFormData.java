@@ -8,14 +8,14 @@ import com.docusign.esign.model.RecipientFormData;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes the form data of the envelope..
  *
  */
-@ApiModel(description = "Describes the form data of the envelope.")
+@Schema(description = "Describes the form data of the envelope.")
 
 public class EnvelopeFormData {
   @JsonProperty("emailSubject")
@@ -39,7 +39,6 @@ public class EnvelopeFormData {
   @JsonProperty("status")
   private String status = null;
 
-
   /**
    * emailSubject.
    *
@@ -51,10 +50,13 @@ public class EnvelopeFormData {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
+   * Specifies the subject of the email that is sent to all recipients. See
+   * [ML:Template Email Subject Merge Fields] for information about adding merge
+   * field information to the email subject..
+   * 
    * @return emailSubject
    **/
-  @ApiModelProperty(value = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
+  @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
   public String getEmailSubject() {
     return emailSubject;
   }
@@ -65,7 +67,6 @@ public class EnvelopeFormData {
   public void setEmailSubject(String emailSubject) {
     this.emailSubject = emailSubject;
   }
-
 
   /**
    * envelopeId.
@@ -79,9 +80,10 @@ public class EnvelopeFormData {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -93,7 +95,6 @@ public class EnvelopeFormData {
     this.envelopeId = envelopeId;
   }
 
-
   /**
    * formData.
    *
@@ -103,7 +104,7 @@ public class EnvelopeFormData {
     this.formData = formData;
     return this;
   }
-  
+
   /**
    * addFormDataItem.
    *
@@ -119,9 +120,10 @@ public class EnvelopeFormData {
 
   /**
    * .
+   * 
    * @return formData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<FormDataItem> getFormData() {
     return formData;
   }
@@ -132,7 +134,6 @@ public class EnvelopeFormData {
   public void setFormData(java.util.List<FormDataItem> formData) {
     this.formData = formData;
   }
-
 
   /**
    * prefillFormData.
@@ -145,10 +146,13 @@ public class EnvelopeFormData {
   }
 
   /**
-   * An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs). .
+   * An array of `formDataItem` objects for [prefill
+   * tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs).
+   * .
+   * 
    * @return prefillFormData
    **/
-  @ApiModelProperty(value = "An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs). ")
+  @Schema(description = "An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs). ")
   public PrefillFormData getPrefillFormData() {
     return prefillFormData;
   }
@@ -160,7 +164,6 @@ public class EnvelopeFormData {
     this.prefillFormData = prefillFormData;
   }
 
-
   /**
    * recipientFormData.
    *
@@ -170,7 +173,7 @@ public class EnvelopeFormData {
     this.recipientFormData = recipientFormData;
     return this;
   }
-  
+
   /**
    * addRecipientFormDataItem.
    *
@@ -186,9 +189,10 @@ public class EnvelopeFormData {
 
   /**
    * .
+   * 
    * @return recipientFormData
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientFormData> getRecipientFormData() {
     return recipientFormData;
   }
@@ -199,7 +203,6 @@ public class EnvelopeFormData {
   public void setRecipientFormData(java.util.List<RecipientFormData> recipientFormData) {
     this.recipientFormData = recipientFormData;
   }
-
 
   /**
    * sentDateTime.
@@ -213,9 +216,10 @@ public class EnvelopeFormData {
 
   /**
    * The date and time the envelope was sent..
+   * 
    * @return sentDateTime
    **/
-  @ApiModelProperty(value = "The date and time the envelope was sent.")
+  @Schema(description = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -226,7 +230,6 @@ public class EnvelopeFormData {
   public void setSentDateTime(String sentDateTime) {
     this.sentDateTime = sentDateTime;
   }
-
 
   /**
    * status.
@@ -239,10 +242,13 @@ public class EnvelopeFormData {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -253,7 +259,6 @@ public class EnvelopeFormData {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * Compares objects.
@@ -286,7 +291,6 @@ public class EnvelopeFormData {
     return Objects.hash(emailSubject, envelopeId, formData, prefillFormData, recipientFormData, sentDateTime, status);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -294,7 +298,7 @@ public class EnvelopeFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeFormData {\n");
-    
+
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
@@ -318,4 +322,3 @@ public class EnvelopeFormData {
   }
 
 }
-

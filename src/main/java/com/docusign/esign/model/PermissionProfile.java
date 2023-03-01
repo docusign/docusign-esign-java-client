@@ -7,14 +7,15 @@ import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object defines the account permissions for a profile that you can apply to a group of users..
+ * This object defines the account permissions for a profile that you can apply
+ * to a group of users..
  *
  */
-@ApiModel(description = "This object defines the account permissions for a profile that you can apply to a group of users.")
+@Schema(description = "This object defines the account permissions for a profile that you can apply to a group of users.")
 
 public class PermissionProfile {
   @JsonProperty("modifiedByUsername")
@@ -38,7 +39,6 @@ public class PermissionProfile {
   @JsonProperty("users")
   private java.util.List<UserInformation> users = null;
 
-
   /**
    * modifiedByUsername.
    *
@@ -51,9 +51,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return modifiedByUsername
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedByUsername() {
     return modifiedByUsername;
   }
@@ -64,7 +65,6 @@ public class PermissionProfile {
   public void setModifiedByUsername(String modifiedByUsername) {
     this.modifiedByUsername = modifiedByUsername;
   }
-
 
   /**
    * modifiedDateTime.
@@ -78,9 +78,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return modifiedDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModifiedDateTime() {
     return modifiedDateTime;
   }
@@ -91,7 +92,6 @@ public class PermissionProfile {
   public void setModifiedDateTime(String modifiedDateTime) {
     this.modifiedDateTime = modifiedDateTime;
   }
-
 
   /**
    * permissionProfileId.
@@ -105,9 +105,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return permissionProfileId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -118,7 +119,6 @@ public class PermissionProfile {
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
-
 
   /**
    * permissionProfileName.
@@ -132,9 +132,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return permissionProfileName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -145,7 +146,6 @@ public class PermissionProfile {
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
-
 
   /**
    * settings.
@@ -158,10 +158,12 @@ public class PermissionProfile {
   }
 
   /**
-   * This object specifies the permissions that are associated with the account permission profile..
+   * This object specifies the permissions that are associated with the account
+   * permission profile..
+   * 
    * @return settings
    **/
-  @ApiModelProperty(value = "This object specifies the permissions that are associated with the account permission profile.")
+  @Schema(description = "This object specifies the permissions that are associated with the account permission profile.")
   public AccountRoleSettings getSettings() {
     return settings;
   }
@@ -172,7 +174,6 @@ public class PermissionProfile {
   public void setSettings(AccountRoleSettings settings) {
     this.settings = settings;
   }
-
 
   /**
    * userCount.
@@ -186,9 +187,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return userCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserCount() {
     return userCount;
   }
@@ -200,7 +202,6 @@ public class PermissionProfile {
     this.userCount = userCount;
   }
 
-
   /**
    * users.
    *
@@ -210,7 +211,7 @@ public class PermissionProfile {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
@@ -226,9 +227,10 @@ public class PermissionProfile {
 
   /**
    * .
+   * 
    * @return users
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserInformation> getUsers() {
     return users;
   }
@@ -239,7 +241,6 @@ public class PermissionProfile {
   public void setUsers(java.util.List<UserInformation> users) {
     this.users = users;
   }
-
 
   /**
    * Compares objects.
@@ -269,9 +270,9 @@ public class PermissionProfile {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(modifiedByUsername, modifiedDateTime, permissionProfileId, permissionProfileName, settings, userCount, users);
+    return Objects.hash(modifiedByUsername, modifiedDateTime, permissionProfileId, permissionProfileName, settings,
+        userCount, users);
   }
-
 
   /**
    * Converts the given object to string.
@@ -280,7 +281,7 @@ public class PermissionProfile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfile {\n");
-    
+
     sb.append("    modifiedByUsername: ").append(toIndentedString(modifiedByUsername)).append("\n");
     sb.append("    modifiedDateTime: ").append(toIndentedString(modifiedDateTime)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
@@ -304,4 +305,3 @@ public class PermissionProfile {
   }
 
 }
-

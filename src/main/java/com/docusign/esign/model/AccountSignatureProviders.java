@@ -6,8 +6,8 @@ import com.docusign.esign.model.AccountSignatureProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountSignatureProviders.
@@ -18,7 +18,6 @@ public class AccountSignatureProviders {
   @JsonProperty("signatureProviders")
   private java.util.List<AccountSignatureProvider> signatureProviders = null;
 
-
   /**
    * signatureProviders.
    *
@@ -28,7 +27,7 @@ public class AccountSignatureProviders {
     this.signatureProviders = signatureProviders;
     return this;
   }
-  
+
   /**
    * addSignatureProvidersItem.
    *
@@ -44,9 +43,10 @@ public class AccountSignatureProviders {
 
   /**
    * .
+   * 
    * @return signatureProviders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<AccountSignatureProvider> getSignatureProviders() {
     return signatureProviders;
   }
@@ -57,7 +57,6 @@ public class AccountSignatureProviders {
   public void setSignatureProviders(java.util.List<AccountSignatureProvider> signatureProviders) {
     this.signatureProviders = signatureProviders;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class AccountSignatureProviders {
     return Objects.hash(signatureProviders);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class AccountSignatureProviders {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProviders {\n");
-    
+
     sb.append("    signatureProviders: ").append(toIndentedString(signatureProviders)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class AccountSignatureProviders {
   }
 
 }
-

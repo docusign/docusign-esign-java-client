@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Province.
@@ -20,7 +20,6 @@ public class Province {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * isoCode.
    *
@@ -33,9 +32,10 @@ public class Province {
 
   /**
    * .
+   * 
    * @return isoCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsoCode() {
     return isoCode;
   }
@@ -46,7 +46,6 @@ public class Province {
   public void setIsoCode(String isoCode) {
     this.isoCode = isoCode;
   }
-
 
   /**
    * name.
@@ -60,9 +59,10 @@ public class Province {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -73,7 +73,6 @@ public class Province {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class Province {
     return Objects.hash(isoCode, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class Province {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Province {\n");
-    
+
     sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class Province {
   }
 
 }
-

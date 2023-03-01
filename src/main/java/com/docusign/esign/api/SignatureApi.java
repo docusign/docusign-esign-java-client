@@ -5,7 +5,7 @@ import com.docusign.esign.client.ApiException;
 import com.docusign.esign.client.Configuration;
 import com.docusign.esign.client.Pair;
 import com.docusign.esign.model.*;
-import javax.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.GenericType;
 
 public class SignatureApi {
   private ApiClient apiClient;

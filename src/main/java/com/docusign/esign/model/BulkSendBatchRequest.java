@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkSendBatchRequest.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class BulkSendBatchRequest {
   @JsonProperty("batchName")
   private String batchName = null;
-
 
   /**
    * batchName.
@@ -30,9 +29,10 @@ public class BulkSendBatchRequest {
 
   /**
    * .
+   * 
    * @return batchName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchName() {
     return batchName;
   }
@@ -43,7 +43,6 @@ public class BulkSendBatchRequest {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class BulkSendBatchRequest {
     return Objects.hash(batchName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class BulkSendBatchRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchRequest {\n");
-    
+
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class BulkSendBatchRequest {
   }
 
 }
-

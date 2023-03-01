@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * SigningGroupUser.
@@ -24,7 +24,6 @@ public class SigningGroupUser {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * email.
    *
@@ -37,9 +36,10 @@ public class SigningGroupUser {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -50,7 +50,6 @@ public class SigningGroupUser {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * errorDetails.
@@ -63,10 +62,12 @@ public class SigningGroupUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -77,7 +78,6 @@ public class SigningGroupUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * userName.
@@ -90,10 +90,11 @@ public class SigningGroupUser {
   }
 
   /**
-   * The name of the group member.   Maximum Length: 100 characters. .
+   * The name of the group member. Maximum Length: 100 characters. .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "The name of the group member.   Maximum Length: 100 characters. ")
+  @Schema(description = "The name of the group member.   Maximum Length: 100 characters. ")
   public String getUserName() {
     return userName;
   }
@@ -104,7 +105,6 @@ public class SigningGroupUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +133,6 @@ public class SigningGroupUser {
     return Objects.hash(email, errorDetails, userName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +140,7 @@ public class SigningGroupUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupUser {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
@@ -161,4 +160,3 @@ public class SigningGroupUser {
   }
 
 }
-

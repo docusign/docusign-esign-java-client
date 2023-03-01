@@ -6,8 +6,8 @@ import com.docusign.esign.model.CloudStorageProvider;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * CloudStorageProviders.
@@ -18,7 +18,6 @@ public class CloudStorageProviders {
   @JsonProperty("storageProviders")
   private java.util.List<CloudStorageProvider> storageProviders = null;
 
-
   /**
    * storageProviders.
    *
@@ -28,7 +27,7 @@ public class CloudStorageProviders {
     this.storageProviders = storageProviders;
     return this;
   }
-  
+
   /**
    * addStorageProvidersItem.
    *
@@ -44,9 +43,10 @@ public class CloudStorageProviders {
 
   /**
    * An Array containing the storage providers associated with the user..
+   * 
    * @return storageProviders
    **/
-  @ApiModelProperty(value = "An Array containing the storage providers associated with the user.")
+  @Schema(description = "An Array containing the storage providers associated with the user.")
   public java.util.List<CloudStorageProvider> getStorageProviders() {
     return storageProviders;
   }
@@ -57,7 +57,6 @@ public class CloudStorageProviders {
   public void setStorageProviders(java.util.List<CloudStorageProvider> storageProviders) {
     this.storageProviders = storageProviders;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class CloudStorageProviders {
     return Objects.hash(storageProviders);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class CloudStorageProviders {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CloudStorageProviders {\n");
-    
+
     sb.append("    storageProviders: ").append(toIndentedString(storageProviders)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class CloudStorageProviders {
   }
 
 }
-

@@ -6,14 +6,14 @@ import com.docusign.esign.model.BillingPlan;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines a billing plan response object..
  *
  */
-@ApiModel(description = "Defines a billing plan response object.")
+@Schema(description = "Defines a billing plan response object.")
 
 public class BillingPlanResponse {
   @JsonProperty("billingPlan")
@@ -21,7 +21,6 @@ public class BillingPlanResponse {
 
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
-
 
   /**
    * billingPlan.
@@ -35,9 +34,10 @@ public class BillingPlanResponse {
 
   /**
    * An object that contains details about the billing plan..
+   * 
    * @return billingPlan
    **/
-  @ApiModelProperty(value = "An object that contains details about the billing plan.")
+  @Schema(description = "An object that contains details about the billing plan.")
   public BillingPlan getBillingPlan() {
     return billingPlan;
   }
@@ -49,7 +49,6 @@ public class BillingPlanResponse {
     this.billingPlan = billingPlan;
   }
 
-
   /**
    * successorPlans.
    *
@@ -59,7 +58,7 @@ public class BillingPlanResponse {
     this.successorPlans = successorPlans;
     return this;
   }
-  
+
   /**
    * addSuccessorPlansItem.
    *
@@ -75,9 +74,10 @@ public class BillingPlanResponse {
 
   /**
    * .
+   * 
    * @return successorPlans
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
@@ -88,7 +88,6 @@ public class BillingPlanResponse {
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
-
 
   /**
    * Compares objects.
@@ -116,7 +115,6 @@ public class BillingPlanResponse {
     return Objects.hash(billingPlan, successorPlans);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -124,7 +122,7 @@ public class BillingPlanResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanResponse {\n");
-    
+
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
@@ -143,4 +141,3 @@ public class BillingPlanResponse {
   }
 
 }
-

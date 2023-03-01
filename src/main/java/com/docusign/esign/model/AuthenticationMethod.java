@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about the method used for authentication..
  *
  */
-@ApiModel(description = "Contains information about the method used for authentication.")
+@Schema(description = "Contains information about the method used for authentication.")
 
 public class AuthenticationMethod {
   @JsonProperty("authenticationType")
@@ -27,7 +27,6 @@ public class AuthenticationMethod {
   @JsonProperty("totalCount")
   private String totalCount = null;
 
-
   /**
    * authenticationType.
    *
@@ -39,10 +38,12 @@ public class AuthenticationMethod {
   }
 
   /**
-   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. .
+   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN,
+   * ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. .
+   * 
    * @return authenticationType
    **/
-  @ApiModelProperty(value = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
+  @Schema(description = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
   public String getAuthenticationType() {
     return authenticationType;
   }
@@ -53,7 +54,6 @@ public class AuthenticationMethod {
   public void setAuthenticationType(String authenticationType) {
     this.authenticationType = authenticationType;
   }
-
 
   /**
    * lastProvider.
@@ -67,9 +67,10 @@ public class AuthenticationMethod {
 
   /**
    * The last provider that authenticated the user. .
+   * 
    * @return lastProvider
    **/
-  @ApiModelProperty(value = "The last provider that authenticated the user. ")
+  @Schema(description = "The last provider that authenticated the user. ")
   public String getLastProvider() {
     return lastProvider;
   }
@@ -80,7 +81,6 @@ public class AuthenticationMethod {
   public void setLastProvider(String lastProvider) {
     this.lastProvider = lastProvider;
   }
-
 
   /**
    * lastTimestamp.
@@ -93,10 +93,11 @@ public class AuthenticationMethod {
   }
 
   /**
-   *  The data and time the user last used the authentication method. .
+   * The data and time the user last used the authentication method. .
+   * 
    * @return lastTimestamp
    **/
-  @ApiModelProperty(value = " The data and time the user last used the authentication method. ")
+  @Schema(description = " The data and time the user last used the authentication method. ")
   public String getLastTimestamp() {
     return lastTimestamp;
   }
@@ -107,7 +108,6 @@ public class AuthenticationMethod {
   public void setLastTimestamp(String lastTimestamp) {
     this.lastTimestamp = lastTimestamp;
   }
-
 
   /**
    * totalCount.
@@ -121,9 +121,10 @@ public class AuthenticationMethod {
 
   /**
    * The number of times the authentication method was used. .
+   * 
    * @return totalCount
    **/
-  @ApiModelProperty(value = "The number of times the authentication method was used. ")
+  @Schema(description = "The number of times the authentication method was used. ")
   public String getTotalCount() {
     return totalCount;
   }
@@ -134,7 +135,6 @@ public class AuthenticationMethod {
   public void setTotalCount(String totalCount) {
     this.totalCount = totalCount;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +164,6 @@ public class AuthenticationMethod {
     return Objects.hash(authenticationType, lastProvider, lastTimestamp, totalCount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +171,7 @@ public class AuthenticationMethod {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationMethod {\n");
-    
+
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
     sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
@@ -193,4 +192,3 @@ public class AuthenticationMethod {
   }
 
 }
-

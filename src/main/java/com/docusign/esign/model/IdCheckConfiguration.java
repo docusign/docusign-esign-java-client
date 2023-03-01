@@ -6,14 +6,14 @@ import com.docusign.esign.model.IdCheckSecurityStep;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A complex object specifying ID check configuration..
  *
  */
-@ApiModel(description = "A complex object specifying ID check configuration.")
+@Schema(description = "A complex object specifying ID check configuration.")
 
 public class IdCheckConfiguration {
   @JsonProperty("authSteps")
@@ -25,7 +25,6 @@ public class IdCheckConfiguration {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * authSteps.
    *
@@ -35,7 +34,7 @@ public class IdCheckConfiguration {
     this.authSteps = authSteps;
     return this;
   }
-  
+
   /**
    * addAuthStepsItem.
    *
@@ -51,9 +50,10 @@ public class IdCheckConfiguration {
 
   /**
    * .
+   * 
    * @return authSteps
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<IdCheckSecurityStep> getAuthSteps() {
     return authSteps;
   }
@@ -64,7 +64,6 @@ public class IdCheckConfiguration {
   public void setAuthSteps(java.util.List<IdCheckSecurityStep> authSteps) {
     this.authSteps = authSteps;
   }
-
 
   /**
    * isDefault.
@@ -78,9 +77,10 @@ public class IdCheckConfiguration {
 
   /**
    * .
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDefault() {
     return isDefault;
   }
@@ -91,7 +91,6 @@ public class IdCheckConfiguration {
   public void setIsDefault(String isDefault) {
     this.isDefault = isDefault;
   }
-
 
   /**
    * name.
@@ -105,9 +104,10 @@ public class IdCheckConfiguration {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -118,7 +118,6 @@ public class IdCheckConfiguration {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -147,7 +146,6 @@ public class IdCheckConfiguration {
     return Objects.hash(authSteps, isDefault, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -155,7 +153,7 @@ public class IdCheckConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdCheckConfiguration {\n");
-    
+
     sb.append("    authSteps: ").append(toIndentedString(authSteps)).append("\n");
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -175,4 +173,3 @@ public class IdCheckConfiguration {
   }
 
 }
-

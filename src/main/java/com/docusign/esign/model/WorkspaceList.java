@@ -6,14 +6,14 @@ import com.docusign.esign.model.Workspace;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Provides properties that describe the workspaces avaialble..
  *
  */
-@ApiModel(description = "Provides properties that describe the workspaces avaialble.")
+@Schema(description = "Provides properties that describe the workspaces avaialble.")
 
 public class WorkspaceList {
   @JsonProperty("endPosition")
@@ -31,7 +31,6 @@ public class WorkspaceList {
   @JsonProperty("workspaces")
   private java.util.List<Workspace> workspaces = null;
 
-
   /**
    * endPosition.
    *
@@ -44,9 +43,10 @@ public class WorkspaceList {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -57,7 +57,6 @@ public class WorkspaceList {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * resultSetSize.
@@ -71,9 +70,10 @@ public class WorkspaceList {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -84,7 +84,6 @@ public class WorkspaceList {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -98,9 +97,10 @@ public class WorkspaceList {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -111,7 +111,6 @@ public class WorkspaceList {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -124,10 +123,13 @@ public class WorkspaceList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -139,7 +141,6 @@ public class WorkspaceList {
     this.totalSetSize = totalSetSize;
   }
 
-
   /**
    * workspaces.
    *
@@ -149,7 +150,7 @@ public class WorkspaceList {
     this.workspaces = workspaces;
     return this;
   }
-  
+
   /**
    * addWorkspacesItem.
    *
@@ -165,9 +166,10 @@ public class WorkspaceList {
 
   /**
    * A list of workspaces..
+   * 
    * @return workspaces
    **/
-  @ApiModelProperty(value = "A list of workspaces.")
+  @Schema(description = "A list of workspaces.")
   public java.util.List<Workspace> getWorkspaces() {
     return workspaces;
   }
@@ -178,7 +180,6 @@ public class WorkspaceList {
   public void setWorkspaces(java.util.List<Workspace> workspaces) {
     this.workspaces = workspaces;
   }
-
 
   /**
    * Compares objects.
@@ -209,7 +210,6 @@ public class WorkspaceList {
     return Objects.hash(endPosition, resultSetSize, startPosition, totalSetSize, workspaces);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -217,7 +217,7 @@ public class WorkspaceList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceList {\n");
-    
+
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
@@ -239,4 +239,3 @@ public class WorkspaceList {
   }
 
 }
-

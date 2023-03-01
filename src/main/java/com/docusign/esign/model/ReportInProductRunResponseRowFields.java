@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** ReportInProductRunResponseRowFields. */
@@ -453,7 +453,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return accessCodeRequired
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccessCodeRequired() {
     return accessCodeRequired;
   }
@@ -478,7 +478,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return accessCodesAttempted
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccessCodesAttempted() {
     return accessCodesAttempted;
   }
@@ -503,7 +503,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return accessCodesFailed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAccessCodesFailed() {
     return accessCodesFailed;
   }
@@ -528,7 +528,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return accountId
    */
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -553,7 +553,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return authenticationCategory
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationCategory() {
     return authenticationCategory;
   }
@@ -578,7 +578,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return authenticationSuccess
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationSuccess() {
     return authenticationSuccess;
   }
@@ -603,7 +603,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return authenticationType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAuthenticationType() {
     return authenticationType;
   }
@@ -629,7 +629,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return averageTimeToCompleteSeconds
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAverageTimeToCompleteSeconds() {
     return averageTimeToCompleteSeconds;
   }
@@ -654,7 +654,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return avgCompleteSeconds
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAvgCompleteSeconds() {
     return avgCompleteSeconds;
   }
@@ -679,7 +679,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return captureMethod
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaptureMethod() {
     return captureMethod;
   }
@@ -704,7 +704,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return completed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompleted() {
     return completed;
   }
@@ -729,7 +729,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return completedTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompletedTs() {
     return completedTs;
   }
@@ -754,7 +754,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return createdDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedDate() {
     return createdDate;
   }
@@ -779,7 +779,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return createdOn
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreatedOn() {
     return createdOn;
   }
@@ -804,7 +804,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return creator
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCreator() {
     return creator;
   }
@@ -829,7 +829,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return customField
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomField() {
     return customField;
   }
@@ -854,7 +854,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return declinedDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeclinedDate() {
     return declinedDate;
   }
@@ -879,7 +879,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return declinedReason
    */
-  @ApiModelProperty(value = "The reason the recipient declined the document.")
+  @Schema(description = "The reason the recipient declined the document.")
   public String getDeclinedReason() {
     return declinedReason;
   }
@@ -904,7 +904,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return deliveredDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDeliveredDate() {
     return deliveredDate;
   }
@@ -929,7 +929,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopeCount
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeCount() {
     return envelopeCount;
   }
@@ -954,7 +954,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopeCreator
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeCreator() {
     return envelopeCreator;
   }
@@ -979,7 +979,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -1004,7 +1004,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopeInitialSendTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeInitialSendTs() {
     return envelopeInitialSendTs;
   }
@@ -1029,7 +1029,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesBilled
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesBilled() {
     return envelopesBilled;
   }
@@ -1054,7 +1054,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesCompleted
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesCompleted() {
     return envelopesCompleted;
   }
@@ -1080,7 +1080,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesCompletedCount
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesCompletedCount() {
     return envelopesCompletedCount;
   }
@@ -1105,7 +1105,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesDeclined
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesDeclined() {
     return envelopesDeclined;
   }
@@ -1130,7 +1130,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesSent
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesSent() {
     return envelopesSent;
   }
@@ -1155,7 +1155,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesSentCount
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesSentCount() {
     return envelopesSentCount;
   }
@@ -1180,7 +1180,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopesVoided
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesVoided() {
     return envelopesVoided;
   }
@@ -1205,7 +1205,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return envelopeVoidedReason
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeVoidedReason() {
     return envelopeVoidedReason;
   }
@@ -1230,7 +1230,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eodDocumentDescription
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEodDocumentDescription() {
     return eodDocumentDescription;
   }
@@ -1255,7 +1255,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eodDocumentName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEodDocumentName() {
     return eodDocumentName;
   }
@@ -1280,7 +1280,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eodDocumentProfileId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEodDocumentProfileId() {
     return eodDocumentProfileId;
   }
@@ -1305,7 +1305,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eodTransactionId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEodTransactionId() {
     return eodTransactionId;
   }
@@ -1330,7 +1330,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eodTransactionName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEodTransactionName() {
     return eodTransactionName;
   }
@@ -1355,7 +1355,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return eventDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEventDate() {
     return eventDate;
   }
@@ -1380,7 +1380,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return expirationDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExpirationDate() {
     return expirationDate;
   }
@@ -1405,7 +1405,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return expiredTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getExpiredTs() {
     return expiredTs;
   }
@@ -1430,7 +1430,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return failureReason
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailureReason() {
     return failureReason;
   }
@@ -1455,7 +1455,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return failures
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailures() {
     return failures;
   }
@@ -1480,7 +1480,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return failureVendorCode
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailureVendorCode() {
     return failureVendorCode;
   }
@@ -1505,7 +1505,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return failureVendorReason
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailureVendorReason() {
     return failureVendorReason;
   }
@@ -1530,7 +1530,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return firstSendTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstSendTs() {
     return firstSendTs;
   }
@@ -1555,7 +1555,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return groupId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupId() {
     return groupId;
   }
@@ -1580,7 +1580,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return groupName
    */
-  @ApiModelProperty(value = "The name of the group.")
+  @Schema(description = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -1605,7 +1605,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return hoursToCompleteEnd
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHoursToCompleteEnd() {
     return hoursToCompleteEnd;
   }
@@ -1630,7 +1630,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return hoursToCompleteStart
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHoursToCompleteStart() {
     return hoursToCompleteStart;
   }
@@ -1655,7 +1655,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return idChecksAttempted
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIdChecksAttempted() {
     return idChecksAttempted;
   }
@@ -1680,7 +1680,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return idChecksFailed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIdChecksFailed() {
     return idChecksFailed;
   }
@@ -1705,7 +1705,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return idCountry
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIdCountry() {
     return idCountry;
   }
@@ -1730,7 +1730,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return idMethod
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIdMethod() {
     return idMethod;
   }
@@ -1755,7 +1755,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return initialSendTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInitialSendTs() {
     return initialSendTs;
   }
@@ -1780,7 +1780,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return ipAddress
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIpAddress() {
     return ipAddress;
   }
@@ -1805,7 +1805,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return lastActivity
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastActivity() {
     return lastActivity;
   }
@@ -1830,7 +1830,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return lastActivityDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastActivityDate() {
     return lastActivityDate;
   }
@@ -1855,7 +1855,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return lastModified
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -1880,7 +1880,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return lastSentDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastSentDate() {
     return lastSentDate;
   }
@@ -1905,7 +1905,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return lastUsed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastUsed() {
     return lastUsed;
   }
@@ -1930,7 +1930,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return metadataRemoved
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMetadataRemoved() {
     return metadataRemoved;
   }
@@ -1955,7 +1955,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return notSigned
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNotSigned() {
     return notSigned;
   }
@@ -1981,7 +1981,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfAuthenticatedRecipients
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfAuthenticatedRecipients() {
     return numberOfAuthenticatedRecipients;
   }
@@ -2007,7 +2007,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfCompletedSignatures
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfCompletedSignatures() {
     return numberOfCompletedSignatures;
   }
@@ -2032,7 +2032,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfDocuments
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfDocuments() {
     return numberOfDocuments;
   }
@@ -2057,7 +2057,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfPages
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfPages() {
     return numberOfPages;
   }
@@ -2082,7 +2082,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfRecipients
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfRecipients() {
     return numberOfRecipients;
   }
@@ -2107,7 +2107,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfSends
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfSends() {
     return numberOfSends;
   }
@@ -2132,7 +2132,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfSigners
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfSigners() {
     return numberOfSigners;
   }
@@ -2157,7 +2157,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfTotalDocuments
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfTotalDocuments() {
     return numberOfTotalDocuments;
   }
@@ -2182,7 +2182,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfTotalPages
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfTotalPages() {
     return numberOfTotalPages;
   }
@@ -2207,7 +2207,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfTotalSigners
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfTotalSigners() {
     return numberOfTotalSigners;
   }
@@ -2232,7 +2232,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberOfUniqueSenders
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberOfUniqueSenders() {
     return numberOfUniqueSenders;
   }
@@ -2257,7 +2257,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return numberTotalRecipients
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumberTotalRecipients() {
     return numberTotalRecipients;
   }
@@ -2282,7 +2282,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return otherRecipientsList
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOtherRecipientsList() {
     return otherRecipientsList;
   }
@@ -2307,7 +2307,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return owner
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwner() {
     return owner;
   }
@@ -2332,7 +2332,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return ownerMail
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerMail() {
     return ownerMail;
   }
@@ -2357,7 +2357,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return periodEnd
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPeriodEnd() {
     return periodEnd;
   }
@@ -2382,7 +2382,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return periodStart
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPeriodStart() {
     return periodStart;
   }
@@ -2407,7 +2407,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return phoneCallsAttempted
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneCallsAttempted() {
     return phoneCallsAttempted;
   }
@@ -2432,7 +2432,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return phoneCallsFailed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPhoneCallsFailed() {
     return phoneCallsFailed;
   }
@@ -2457,7 +2457,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return piiRedacted
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPiiRedacted() {
     return piiRedacted;
   }
@@ -2482,7 +2482,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return purgeDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPurgeDate() {
     return purgeDate;
   }
@@ -2507,7 +2507,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return reasonForDeclining
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReasonForDeclining() {
     return reasonForDeclining;
   }
@@ -2532,7 +2532,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return reasonForVoiding
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReasonForVoiding() {
     return reasonForVoiding;
   }
@@ -2557,7 +2557,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return reassignReason
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReassignReason() {
     return reassignReason;
   }
@@ -2582,7 +2582,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return received
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getReceived() {
     return received;
   }
@@ -2607,7 +2607,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipient
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipient() {
     return recipient;
   }
@@ -2632,7 +2632,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientAction
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientAction() {
     return recipientAction;
   }
@@ -2657,7 +2657,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientCompanyName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientCompanyName() {
     return recipientCompanyName;
   }
@@ -2682,7 +2682,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientCountry
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientCountry() {
     return recipientCountry;
   }
@@ -2707,7 +2707,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientEmail
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientEmail() {
     return recipientEmail;
   }
@@ -2728,14 +2728,13 @@ public class ReportInProductRunResponseRowFields {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign
    * the Document..
    *
    * @return recipientId
    */
-  @ApiModelProperty(
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -2760,7 +2759,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientName() {
     return recipientName;
   }
@@ -2785,7 +2784,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientRoleName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientRoleName() {
     return recipientRoleName;
   }
@@ -2811,7 +2810,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientTemplateRoleName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientTemplateRoleName() {
     return recipientTemplateRoleName;
   }
@@ -2836,7 +2835,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientTitle
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientTitle() {
     return recipientTitle;
   }
@@ -2861,7 +2860,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientType() {
     return recipientType;
   }
@@ -2886,7 +2885,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return recipientUserId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientUserId() {
     return recipientUserId;
   }
@@ -2911,7 +2910,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return remainingSignatures
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemainingSignatures() {
     return remainingSignatures;
   }
@@ -2936,7 +2935,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return routingOrder
    */
-  @ApiModelProperty(value = "Specifies the routing order of the recipient in the envelope. ")
+  @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
   public String getRoutingOrder() {
     return routingOrder;
   }
@@ -2961,7 +2960,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderAccountId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderAccountId() {
     return senderAccountId;
   }
@@ -2986,7 +2985,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderCompanyName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderCompanyName() {
     return senderCompanyName;
   }
@@ -3011,7 +3010,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderCountry
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderCountry() {
     return senderCountry;
   }
@@ -3036,7 +3035,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderEmail
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -3061,7 +3060,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderIPAddress
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderIPAddress() {
     return senderIPAddress;
   }
@@ -3086,7 +3085,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderJobTitle
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderJobTitle() {
     return senderJobTitle;
   }
@@ -3111,7 +3110,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderName() {
     return senderName;
   }
@@ -3136,7 +3135,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return senderUserId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -3161,7 +3160,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signatureType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -3186,7 +3185,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signatureTypeValue
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureTypeValue() {
     return signatureTypeValue;
   }
@@ -3211,7 +3210,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignDate() {
     return signDate;
   }
@@ -3236,7 +3235,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signed
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSigned() {
     return signed;
   }
@@ -3261,7 +3260,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signedDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignedDate() {
     return signedDate;
   }
@@ -3286,7 +3285,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signedOnMobile
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignedOnMobile() {
     return signedOnMobile;
   }
@@ -3311,7 +3310,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signedOnPaper
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignedOnPaper() {
     return signedOnPaper;
   }
@@ -3336,7 +3335,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return signerList
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignerList() {
     return signerList;
   }
@@ -3357,14 +3356,14 @@ public class ReportInProductRunResponseRowFields {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified
+   * and sent later..
    *
    * @return status
    */
-  @ApiModelProperty(
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -3389,7 +3388,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return statusChangedDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatusChangedDate() {
     return statusChangedDate;
   }
@@ -3414,7 +3413,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return statusChangedTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatusChangedTs() {
     return statusChangedTs;
   }
@@ -3439,7 +3438,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return statusComment
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getStatusComment() {
     return statusComment;
   }
@@ -3464,7 +3463,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return subject
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubject() {
     return subject;
   }
@@ -3489,7 +3488,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return successes
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSuccesses() {
     return successes;
   }
@@ -3510,14 +3509,13 @@ public class ReportInProductRunResponseRowFields {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value.
    * .
    *
    * @return templateId
    */
-  @ApiModelProperty(
-      value =
-          "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -3542,7 +3540,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return templateName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplateName() {
     return templateName;
   }
@@ -3567,7 +3565,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return templatesCreated
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplatesCreated() {
     return templatesCreated;
   }
@@ -3592,7 +3590,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return templatesCreatedCount
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplatesCreatedCount() {
     return templatesCreatedCount;
   }
@@ -3617,7 +3615,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return terminalStatusDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTerminalStatusDate() {
     return terminalStatusDate;
   }
@@ -3642,7 +3640,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return timeToCompleteSeconds
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeToCompleteSeconds() {
     return timeToCompleteSeconds;
   }
@@ -3667,7 +3665,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return timeToDeliver
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeToDeliver() {
     return timeToDeliver;
   }
@@ -3692,7 +3690,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return totalDocuments
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalDocuments() {
     return totalDocuments;
   }
@@ -3717,7 +3715,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return totalEnvelopes
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalEnvelopes() {
     return totalEnvelopes;
   }
@@ -3742,7 +3740,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return totalPages
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalPages() {
     return totalPages;
   }
@@ -3767,7 +3765,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return totalRecipients
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalRecipients() {
     return totalRecipients;
   }
@@ -3792,7 +3790,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return totalSigners
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalSigners() {
     return totalSigners;
   }
@@ -3817,7 +3815,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return uniqueSenders
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUniqueSenders() {
     return uniqueSenders;
   }
@@ -3842,7 +3840,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return userAccountEmail
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserAccountEmail() {
     return userAccountEmail;
   }
@@ -3867,7 +3865,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return userAccountName
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserAccountName() {
     return userAccountName;
   }
@@ -3892,7 +3890,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return userAccountStatus
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserAccountStatus() {
     return userAccountStatus;
   }
@@ -3917,7 +3915,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return userCount
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserCount() {
     return userCount;
   }
@@ -3942,7 +3940,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return userId
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -3967,7 +3965,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return verificationStatus
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVerificationStatus() {
     return verificationStatus;
   }
@@ -3992,7 +3990,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return verificationType
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVerificationType() {
     return verificationType;
   }
@@ -4017,7 +4015,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return viewDate
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getViewDate() {
     return viewDate;
   }
@@ -4042,7 +4040,7 @@ public class ReportInProductRunResponseRowFields {
    *
    * @return voidedTs
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVoidedTs() {
     return voidedTs;
   }
@@ -4065,10 +4063,9 @@ public class ReportInProductRunResponseRowFields {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ReportInProductRunResponseRowFields reportInProductRunResponseRowFields =
-        (ReportInProductRunResponseRowFields) o;
+    ReportInProductRunResponseRowFields reportInProductRunResponseRowFields = (ReportInProductRunResponseRowFields) o;
     return Objects.equals(
-            this.accessCodeRequired, reportInProductRunResponseRowFields.accessCodeRequired)
+        this.accessCodeRequired, reportInProductRunResponseRowFields.accessCodeRequired)
         && Objects.equals(
             this.accessCodesAttempted, reportInProductRunResponseRowFields.accessCodesAttempted)
         && Objects.equals(
@@ -4625,7 +4622,8 @@ public class ReportInProductRunResponseRowFields {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

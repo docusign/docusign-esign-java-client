@@ -6,19 +6,19 @@ import com.docusign.esign.model.DocumentVisibility;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A list of &#x60;documentVisibility&#x60; objects that specify whether documents are visible to recipients..
+ * A list of &#x60;documentVisibility&#x60; objects that specify whether
+ * documents are visible to recipients..
  *
  */
-@ApiModel(description = "A list of `documentVisibility` objects that specify whether documents are visible to recipients.")
+@Schema(description = "A list of `documentVisibility` objects that specify whether documents are visible to recipients.")
 
 public class DocumentVisibilityList {
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = null;
-
 
   /**
    * documentVisibility.
@@ -29,7 +29,7 @@ public class DocumentVisibilityList {
     this.documentVisibility = documentVisibility;
     return this;
   }
-  
+
   /**
    * addDocumentVisibilityItem.
    *
@@ -45,9 +45,10 @@ public class DocumentVisibilityList {
 
   /**
    * .
+   * 
    * @return documentVisibility
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocumentVisibility> getDocumentVisibility() {
     return documentVisibility;
   }
@@ -58,7 +59,6 @@ public class DocumentVisibilityList {
   public void setDocumentVisibility(java.util.List<DocumentVisibility> documentVisibility) {
     this.documentVisibility = documentVisibility;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +85,6 @@ public class DocumentVisibilityList {
     return Objects.hash(documentVisibility);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +92,7 @@ public class DocumentVisibilityList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentVisibilityList {\n");
-    
+
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +110,3 @@ public class DocumentVisibilityList {
   }
 
 }
-

@@ -7,14 +7,14 @@ import com.docusign.esign.model.TemplateMatch;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Summary of a template request..
  *
  */
-@ApiModel(description = "Summary of a template request.")
+@Schema(description = "Summary of a template request.")
 
 public class TemplateSummary {
   @JsonProperty("applied")
@@ -41,7 +41,6 @@ public class TemplateSummary {
   @JsonProperty("uri")
   private String uri = null;
 
-
   /**
    * applied.
    *
@@ -54,9 +53,10 @@ public class TemplateSummary {
 
   /**
    * Reserved: TBD.
+   * 
    * @return applied
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getApplied() {
     return applied;
   }
@@ -67,7 +67,6 @@ public class TemplateSummary {
   public void setApplied(String applied) {
     this.applied = applied;
   }
-
 
   /**
    * documentId.
@@ -80,10 +79,12 @@ public class TemplateSummary {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -94,7 +95,6 @@ public class TemplateSummary {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentName.
@@ -108,9 +108,10 @@ public class TemplateSummary {
 
   /**
    * .
+   * 
    * @return documentName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentName() {
     return documentName;
   }
@@ -121,7 +122,6 @@ public class TemplateSummary {
   public void setDocumentName(String documentName) {
     this.documentName = documentName;
   }
-
 
   /**
    * errorDetails.
@@ -134,10 +134,12 @@ public class TemplateSummary {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -148,7 +150,6 @@ public class TemplateSummary {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * name.
@@ -162,9 +163,10 @@ public class TemplateSummary {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -175,7 +177,6 @@ public class TemplateSummary {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * templateId.
@@ -188,10 +189,12 @@ public class TemplateSummary {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value. .
+   * 
    * @return templateId
    **/
-  @ApiModelProperty(value = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -202,7 +205,6 @@ public class TemplateSummary {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
-
 
   /**
    * templateMatch.
@@ -216,9 +218,10 @@ public class TemplateSummary {
 
   /**
    * .
+   * 
    * @return templateMatch
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public TemplateMatch getTemplateMatch() {
     return templateMatch;
   }
@@ -229,7 +232,6 @@ public class TemplateSummary {
   public void setTemplateMatch(TemplateMatch templateMatch) {
     this.templateMatch = templateMatch;
   }
-
 
   /**
    * uri.
@@ -243,9 +245,10 @@ public class TemplateSummary {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -256,7 +259,6 @@ public class TemplateSummary {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * Compares objects.
@@ -290,7 +292,6 @@ public class TemplateSummary {
     return Objects.hash(applied, documentId, documentName, errorDetails, name, templateId, templateMatch, uri);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -298,7 +299,7 @@ public class TemplateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSummary {\n");
-    
+
     sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
@@ -323,4 +324,3 @@ public class TemplateSummary {
   }
 
 }
-

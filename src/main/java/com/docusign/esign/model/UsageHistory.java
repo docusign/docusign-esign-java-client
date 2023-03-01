@@ -5,14 +5,17 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed..
+ * A complex element consisting of: * lastSentDateTime - the date and time the
+ * user last sent an envelope. * lastSignedDateTime - the date and time the user
+ * last signed an envelope. * sentCount - the number of envelopes the user has
+ * sent. * signedCount - the number of envelopes the user has signed..
  *
  */
-@ApiModel(description = "A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.")
+@Schema(description = "A complex element consisting of:   * lastSentDateTime - the date and time the user last sent an envelope.  * lastSignedDateTime - the date and time the user last signed an envelope. * sentCount - the number of envelopes the user has sent. * signedCount - the number of envelopes the user has signed.")
 
 public class UsageHistory {
   @JsonProperty("lastSentDateTime")
@@ -27,7 +30,6 @@ public class UsageHistory {
   @JsonProperty("signedCount")
   private String signedCount = null;
 
-
   /**
    * lastSentDateTime.
    *
@@ -40,9 +42,10 @@ public class UsageHistory {
 
   /**
    * The date and time the user last sent an envelope. .
+   * 
    * @return lastSentDateTime
    **/
-  @ApiModelProperty(value = "The date and time the user last sent an envelope. ")
+  @Schema(description = "The date and time the user last sent an envelope. ")
   public String getLastSentDateTime() {
     return lastSentDateTime;
   }
@@ -53,7 +56,6 @@ public class UsageHistory {
   public void setLastSentDateTime(String lastSentDateTime) {
     this.lastSentDateTime = lastSentDateTime;
   }
-
 
   /**
    * lastSignedDateTime.
@@ -67,9 +69,10 @@ public class UsageHistory {
 
   /**
    * The date and time the user last signed an envelope..
+   * 
    * @return lastSignedDateTime
    **/
-  @ApiModelProperty(value = "The date and time the user last signed an envelope.")
+  @Schema(description = "The date and time the user last signed an envelope.")
   public String getLastSignedDateTime() {
     return lastSignedDateTime;
   }
@@ -80,7 +83,6 @@ public class UsageHistory {
   public void setLastSignedDateTime(String lastSignedDateTime) {
     this.lastSignedDateTime = lastSignedDateTime;
   }
-
 
   /**
    * sentCount.
@@ -94,9 +96,10 @@ public class UsageHistory {
 
   /**
    * The number of envelopes the user has sent. .
+   * 
    * @return sentCount
    **/
-  @ApiModelProperty(value = "The number of envelopes the user has sent. ")
+  @Schema(description = "The number of envelopes the user has sent. ")
   public String getSentCount() {
     return sentCount;
   }
@@ -107,7 +110,6 @@ public class UsageHistory {
   public void setSentCount(String sentCount) {
     this.sentCount = sentCount;
   }
-
 
   /**
    * signedCount.
@@ -121,9 +123,10 @@ public class UsageHistory {
 
   /**
    * The number of envelopes the user has signed. .
+   * 
    * @return signedCount
    **/
-  @ApiModelProperty(value = "The number of envelopes the user has signed. ")
+  @Schema(description = "The number of envelopes the user has signed. ")
   public String getSignedCount() {
     return signedCount;
   }
@@ -134,7 +137,6 @@ public class UsageHistory {
   public void setSignedCount(String signedCount) {
     this.signedCount = signedCount;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +166,6 @@ public class UsageHistory {
     return Objects.hash(lastSentDateTime, lastSignedDateTime, sentCount, signedCount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +173,7 @@ public class UsageHistory {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsageHistory {\n");
-    
+
     sb.append("    lastSentDateTime: ").append(toIndentedString(lastSentDateTime)).append("\n");
     sb.append("    lastSignedDateTime: ").append(toIndentedString(lastSignedDateTime)).append("\n");
     sb.append("    sentCount: ").append(toIndentedString(sentCount)).append("\n");
@@ -193,4 +194,3 @@ public class UsageHistory {
   }
 
 }
-

@@ -9,14 +9,14 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A tab that allows the recipient to select a yes/no (on/off) option. .
  *
  */
-@ApiModel(description = "A tab that allows the recipient to select a yes/no (on/off) option. ")
+@Schema(description = "A tab that allows the recipient to select a yes/no (on/off) option. ")
 
 public class Checkbox {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
@@ -322,7 +322,6 @@ public class Checkbox {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -335,9 +334,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -349,22 +349,24 @@ public class Checkbox {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return Checkbox
    **/
-  public Checkbox anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public Checkbox anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
+   * property is editable..
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -375,7 +377,6 @@ public class Checkbox {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -388,10 +389,12 @@ public class Checkbox {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -402,7 +405,6 @@ public class Checkbox {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -415,10 +417,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
+   * Metadata that indicates whether the `anchorCaseSensitive` property is
+   * editable..
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -429,7 +433,6 @@ public class Checkbox {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -442,10 +445,12 @@ public class Checkbox {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -456,7 +461,6 @@ public class Checkbox {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -469,10 +473,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
+   * editable..
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -483,7 +489,6 @@ public class Checkbox {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -496,10 +501,12 @@ public class Checkbox {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -510,7 +517,6 @@ public class Checkbox {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -523,10 +529,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
+   * editable..
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -537,7 +545,6 @@ public class Checkbox {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -550,10 +557,13 @@ public class Checkbox {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -564,7 +574,6 @@ public class Checkbox {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -577,10 +586,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is
+   * editable..
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -591,7 +602,6 @@ public class Checkbox {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -605,9 +615,10 @@ public class Checkbox {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -618,7 +629,6 @@ public class Checkbox {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -632,9 +642,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -645,7 +656,6 @@ public class Checkbox {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -659,9 +669,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -672,7 +683,6 @@ public class Checkbox {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -686,9 +696,10 @@ public class Checkbox {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -699,7 +710,6 @@ public class Checkbox {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -712,10 +722,12 @@ public class Checkbox {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -726,7 +738,6 @@ public class Checkbox {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -740,9 +751,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -753,7 +765,6 @@ public class Checkbox {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -766,10 +777,12 @@ public class Checkbox {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -780,7 +793,6 @@ public class Checkbox {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -794,9 +806,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -807,7 +820,6 @@ public class Checkbox {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -820,10 +832,12 @@ public class Checkbox {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -834,7 +848,6 @@ public class Checkbox {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -848,9 +861,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -861,7 +875,6 @@ public class Checkbox {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * bold.
@@ -875,9 +888,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the information in the tab is bold..
+   * 
    * @return bold
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @Schema(description = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -888,7 +902,6 @@ public class Checkbox {
   public void setBold(String bold) {
     this.bold = bold;
   }
-
 
   /**
    * boldMetadata.
@@ -902,9 +915,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
+   * 
    * @return boldMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `bold` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -915,7 +929,6 @@ public class Checkbox {
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
-
 
   /**
    * caption.
@@ -929,9 +942,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -942,7 +956,6 @@ public class Checkbox {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -956,9 +969,10 @@ public class Checkbox {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -969,7 +983,6 @@ public class Checkbox {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -982,10 +995,12 @@ public class Checkbox {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -996,7 +1011,6 @@ public class Checkbox {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -1009,10 +1023,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
+   * Metadata that indicates whether the `conditionalParentLabel` property is
+   * editable..
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -1023,7 +1039,6 @@ public class Checkbox {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -1036,10 +1051,14 @@ public class Checkbox {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -1050,7 +1069,6 @@ public class Checkbox {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -1063,10 +1081,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is editable..
+   * Metadata that indicates whether the `conditionalParentValue` property is
+   * editable..
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -1077,7 +1097,6 @@ public class Checkbox {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -1090,10 +1109,13 @@ public class Checkbox {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -1104,7 +1126,6 @@ public class Checkbox {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1118,9 +1139,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1131,7 +1153,6 @@ public class Checkbox {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * documentId.
@@ -1144,10 +1165,12 @@ public class Checkbox {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1158,7 +1181,6 @@ public class Checkbox {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1172,9 +1194,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1185,7 +1208,6 @@ public class Checkbox {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1198,10 +1220,12 @@ public class Checkbox {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1212,7 +1236,6 @@ public class Checkbox {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * font.
@@ -1225,10 +1248,14 @@ public class Checkbox {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
+   * Default..
+   * 
    * @return font
    **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -1239,7 +1266,6 @@ public class Checkbox {
   public void setFont(String font) {
     this.font = font;
   }
-
 
   /**
    * fontColor.
@@ -1252,10 +1278,13 @@ public class Checkbox {
   }
 
   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
+   * Purple, or White..
+   * 
    * @return fontColor
    **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -1266,7 +1295,6 @@ public class Checkbox {
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
-
 
   /**
    * fontColorMetadata.
@@ -1280,9 +1308,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
+   * 
    * @return fontColorMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontColor` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1293,7 +1322,6 @@ public class Checkbox {
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
-
 
   /**
    * fontMetadata.
@@ -1307,9 +1335,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
+   * 
    * @return fontMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `font` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `font` property is editable.")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1320,7 +1349,6 @@ public class Checkbox {
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
-
 
   /**
    * fontSize.
@@ -1333,10 +1361,13 @@ public class Checkbox {
   }
 
   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
+   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * 
    * @return fontSize
    **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1347,7 +1378,6 @@ public class Checkbox {
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   /**
    * fontSizeMetadata.
@@ -1361,9 +1391,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
+   * 
    * @return fontSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fontSize` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1374,7 +1405,6 @@ public class Checkbox {
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
-
 
   /**
    * formOrder.
@@ -1388,9 +1418,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1401,7 +1432,6 @@ public class Checkbox {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1415,9 +1445,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1428,7 +1459,6 @@ public class Checkbox {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1442,9 +1472,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1455,7 +1486,6 @@ public class Checkbox {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1469,9 +1499,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1482,7 +1513,6 @@ public class Checkbox {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1496,9 +1526,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1509,7 +1540,6 @@ public class Checkbox {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1523,9 +1553,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1536,7 +1567,6 @@ public class Checkbox {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * height.
@@ -1550,9 +1580,10 @@ public class Checkbox {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1563,7 +1594,6 @@ public class Checkbox {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1577,9 +1607,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1590,7 +1621,6 @@ public class Checkbox {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * italic.
@@ -1604,9 +1634,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the information in the tab is italic..
+   * 
    * @return italic
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @Schema(description = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1617,7 +1648,6 @@ public class Checkbox {
   public void setItalic(String italic) {
     this.italic = italic;
   }
-
 
   /**
    * italicMetadata.
@@ -1631,9 +1661,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
+   * 
    * @return italicMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `italic` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1644,7 +1675,6 @@ public class Checkbox {
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
-
 
   /**
    * locked.
@@ -1658,9 +1688,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
+   * 
    * @return locked
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1671,7 +1702,6 @@ public class Checkbox {
   public void setLocked(String locked) {
     this.locked = locked;
   }
-
 
   /**
    * lockedMetadata.
@@ -1685,9 +1715,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
+   * 
    * @return lockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `locked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1698,7 +1729,6 @@ public class Checkbox {
   public void setLockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
   }
-
 
   /**
    * mergeField.
@@ -1712,9 +1742,10 @@ public class Checkbox {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
+  @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1725,7 +1756,6 @@ public class Checkbox {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -1739,9 +1769,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1752,7 +1783,6 @@ public class Checkbox {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * name.
@@ -1766,9 +1796,10 @@ public class Checkbox {
 
   /**
    * Specifies the tool tip text for the tab..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "Specifies the tool tip text for the tab.")
+  @Schema(description = "Specifies the tool tip text for the tab.")
   public String getName() {
     return name;
   }
@@ -1779,7 +1810,6 @@ public class Checkbox {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -1792,10 +1822,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This property is read-only..
+   * Metadata that indicates whether the `name` property is editable. This
+   * property is read-only..
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
+  @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -1806,7 +1838,6 @@ public class Checkbox {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -1820,9 +1851,10 @@ public class Checkbox {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1833,7 +1865,6 @@ public class Checkbox {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -1847,9 +1878,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1860,7 +1892,6 @@ public class Checkbox {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -1873,10 +1904,12 @@ public class Checkbox {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1887,7 +1920,6 @@ public class Checkbox {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -1901,9 +1933,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1914,7 +1947,6 @@ public class Checkbox {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -1928,9 +1960,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1941,7 +1974,6 @@ public class Checkbox {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -1955,9 +1987,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1968,7 +2001,6 @@ public class Checkbox {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * required.
@@ -1982,9 +2014,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -1995,7 +2028,6 @@ public class Checkbox {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * requiredMetadata.
@@ -2009,9 +2041,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
+   * 
    * @return requiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `required` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `required` property is editable.")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -2022,7 +2055,6 @@ public class Checkbox {
   public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
   }
-
 
   /**
    * requireInitialOnSharedChange.
@@ -2035,10 +2067,12 @@ public class Checkbox {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
+   * Optional element for field markup. When set to **true**, the signer is
+   * required to initial when they modify a shared field..
+   * 
    * @return requireInitialOnSharedChange
    **/
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -2049,7 +2083,6 @@ public class Checkbox {
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
-
 
   /**
    * requireInitialOnSharedChangeMetadata.
@@ -2062,10 +2095,12 @@ public class Checkbox {
   }
 
   /**
-   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property
+   * is editable..
+   * 
    * @return requireInitialOnSharedChangeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -2076,7 +2111,6 @@ public class Checkbox {
   public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
-
 
   /**
    * selected.
@@ -2090,9 +2124,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the checkbox is selected..
+   * 
    * @return selected
    **/
-  @ApiModelProperty(value = "When set to **true**, the checkbox is selected.")
+  @Schema(description = "When set to **true**, the checkbox is selected.")
   public String getSelected() {
     return selected;
   }
@@ -2103,7 +2138,6 @@ public class Checkbox {
   public void setSelected(String selected) {
     this.selected = selected;
   }
-
 
   /**
    * selectedMetadata.
@@ -2117,9 +2151,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `selected` property is editable..
+   * 
    * @return selectedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `selected` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `selected` property is editable.")
   public PropertyMetadata getSelectedMetadata() {
     return selectedMetadata;
   }
@@ -2130,7 +2165,6 @@ public class Checkbox {
   public void setSelectedMetadata(PropertyMetadata selectedMetadata) {
     this.selectedMetadata = selectedMetadata;
   }
-
 
   /**
    * selectedOriginal.
@@ -2144,9 +2178,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return selectedOriginal
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSelectedOriginal() {
     return selectedOriginal;
   }
@@ -2157,7 +2192,6 @@ public class Checkbox {
   public void setSelectedOriginal(String selectedOriginal) {
     this.selectedOriginal = selectedOriginal;
   }
-
 
   /**
    * selectedOriginalMetadata.
@@ -2171,9 +2205,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return selectedOriginalMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getSelectedOriginalMetadata() {
     return selectedOriginalMetadata;
   }
@@ -2184,7 +2219,6 @@ public class Checkbox {
   public void setSelectedOriginalMetadata(PropertyMetadata selectedOriginalMetadata) {
     this.selectedOriginalMetadata = selectedOriginalMetadata;
   }
-
 
   /**
    * shared.
@@ -2198,9 +2232,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -2211,7 +2246,6 @@ public class Checkbox {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * sharedMetadata.
@@ -2225,9 +2259,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `shared` property is editable. .
+   * 
    * @return sharedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `shared` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `shared` property is editable. ")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -2238,7 +2273,6 @@ public class Checkbox {
   public void setSharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
   }
-
 
   /**
    * shareToRecipients.
@@ -2252,9 +2286,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return shareToRecipients
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShareToRecipients() {
     return shareToRecipients;
   }
@@ -2265,7 +2300,6 @@ public class Checkbox {
   public void setShareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
   }
-
 
   /**
    * shareToRecipientsMetadata.
@@ -2279,9 +2313,10 @@ public class Checkbox {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return shareToRecipientsMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getShareToRecipientsMetadata() {
     return shareToRecipientsMetadata;
   }
@@ -2292,7 +2327,6 @@ public class Checkbox {
   public void setShareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -2306,9 +2340,10 @@ public class Checkbox {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -2319,7 +2354,6 @@ public class Checkbox {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -2333,9 +2367,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -2346,7 +2381,6 @@ public class Checkbox {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -2359,10 +2393,13 @@ public class Checkbox {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -2373,7 +2410,6 @@ public class Checkbox {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -2387,9 +2423,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -2401,7 +2438,6 @@ public class Checkbox {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -2411,7 +2447,7 @@ public class Checkbox {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -2427,9 +2463,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -2440,7 +2477,6 @@ public class Checkbox {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -2454,9 +2490,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -2467,7 +2504,6 @@ public class Checkbox {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -2480,10 +2516,12 @@ public class Checkbox {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -2494,7 +2532,6 @@ public class Checkbox {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -2508,9 +2545,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -2521,7 +2559,6 @@ public class Checkbox {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabLabel.
@@ -2535,9 +2572,10 @@ public class Checkbox {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -2548,7 +2586,6 @@ public class Checkbox {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabLabelMetadata.
@@ -2562,9 +2599,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
+   * 
    * @return tabLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -2575,7 +2613,6 @@ public class Checkbox {
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -2589,9 +2626,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2602,7 +2640,6 @@ public class Checkbox {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2616,9 +2653,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2629,7 +2667,6 @@ public class Checkbox {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabType.
@@ -2643,9 +2680,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -2656,7 +2694,6 @@ public class Checkbox {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -2670,9 +2707,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2683,7 +2721,6 @@ public class Checkbox {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -2696,10 +2733,12 @@ public class Checkbox {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2710,7 +2749,6 @@ public class Checkbox {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -2724,9 +2762,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2737,7 +2776,6 @@ public class Checkbox {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -2750,10 +2788,12 @@ public class Checkbox {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2764,7 +2804,6 @@ public class Checkbox {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -2778,9 +2817,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2791,7 +2831,6 @@ public class Checkbox {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -2805,9 +2844,10 @@ public class Checkbox {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2818,7 +2858,6 @@ public class Checkbox {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -2832,9 +2871,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2845,7 +2885,6 @@ public class Checkbox {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * underline.
@@ -2859,9 +2898,10 @@ public class Checkbox {
 
   /**
    * When set to **true**, the information in the tab is underlined..
+   * 
    * @return underline
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @Schema(description = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -2872,7 +2912,6 @@ public class Checkbox {
   public void setUnderline(String underline) {
     this.underline = underline;
   }
-
 
   /**
    * underlineMetadata.
@@ -2886,9 +2925,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
+   * 
    * @return underlineMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `underline` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -2899,7 +2939,6 @@ public class Checkbox {
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
-
 
   /**
    * width.
@@ -2913,9 +2952,10 @@ public class Checkbox {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2926,7 +2966,6 @@ public class Checkbox {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -2940,9 +2979,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2953,7 +2993,6 @@ public class Checkbox {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -2966,10 +3005,12 @@ public class Checkbox {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2980,7 +3021,6 @@ public class Checkbox {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -2994,9 +3034,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -3007,7 +3048,6 @@ public class Checkbox {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -3020,10 +3060,12 @@ public class Checkbox {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -3034,7 +3076,6 @@ public class Checkbox {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -3048,9 +3089,10 @@ public class Checkbox {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -3061,7 +3103,6 @@ public class Checkbox {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -3078,7 +3119,9 @@ public class Checkbox {
     }
     Checkbox checkbox = (Checkbox) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, checkbox.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, checkbox.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
+            checkbox.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, checkbox.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, checkbox.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, checkbox.anchorHorizontalAlignment) &&
@@ -3185,9 +3228,25 @@ public class Checkbox {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, selected, selectedMetadata, selectedOriginal, selectedOriginalMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
+        boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata,
+        conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId,
+        documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata,
+        formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata,
+        height, heightMetadata, italic, italicMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, name,
+        nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata,
+        recipientIdMetadata, required, requiredMetadata, requireInitialOnSharedChange,
+        requireInitialOnSharedChangeMetadata, selected, selectedMetadata, selectedOriginal, selectedOriginalMetadata,
+        shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status,
+        statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata,
+        tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
+        templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata,
+        xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -3196,21 +3255,26 @@ public class Checkbox {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Checkbox {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3222,9 +3286,11 @@ public class Checkbox {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -3261,7 +3327,8 @@ public class Checkbox {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ")
+        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
     sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
     sb.append("    selectedOriginal: ").append(toIndentedString(selectedOriginal)).append("\n");
@@ -3314,4 +3381,3 @@ public class Checkbox {
   }
 
 }
-

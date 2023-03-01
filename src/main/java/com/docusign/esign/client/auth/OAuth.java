@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.core.Response;
 
 import com.docusign.esign.client.ApiException;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -20,9 +20,9 @@ import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
 
 import com.docusign.esign.client.Pair;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * OAuth class.
@@ -31,31 +31,33 @@ import io.swagger.annotations.ApiModelProperty;
 public class OAuth implements Authentication {
     static final int MILLIS_PER_SECOND = 1000;
 
-	// OAuth Scope constants
-	/** create and send envelopes, and obtain links for starting signing sessions. */
-	public final static String Scope_SIGNATURE = "signature";
-	/** obtain a refresh token with an extended lifetime. */
-	public final static String Scope_EXTENDED = "extended";
-	/** obtain access to the user’s account when the user is not present. */
-	public final static String Scope_IMPERSONATION = "impersonation";
+    // OAuth Scope constants
+    /**
+     * create and send envelopes, and obtain links for starting signing sessions.
+     */
+    public final static String Scope_SIGNATURE = "signature";
+    /** obtain a refresh token with an extended lifetime. */
+    public final static String Scope_EXTENDED = "extended";
+    /** obtain access to the user’s account when the user is not present. */
+    public final static String Scope_IMPERSONATION = "impersonation";
 
-	// OAuth ResponseType constants
-	/** used by public/native client applications. */
-	public final static String CODE = "code";
-	/** used by private/trusted client application. */
-	public final static String TOKEN = "token";
+    // OAuth ResponseType constants
+    /** used by public/native client applications. */
+    public final static String CODE = "code";
+    /** used by private/trusted client application. */
+    public final static String TOKEN = "token";
 
-	// OAuth base path constants
-	/** live/production base path. */
-	public final static String PRODUCTION_OAUTH_BASEPATH = "account.docusign.com";
-	/** sandbox/demo base path. */
-	public final static String DEMO_OAUTH_BASEPATH = "account-d.docusign.com";
-	/** stage base path. */
-	public final static String STAGE_OAUTH_BASEPATH = "account-s.docusign.com";
+    // OAuth base path constants
+    /** live/production base path. */
+    public final static String PRODUCTION_OAUTH_BASEPATH = "account.docusign.com";
+    /** sandbox/demo base path. */
+    public final static String DEMO_OAUTH_BASEPATH = "account-d.docusign.com";
+    /** stage base path. */
+    public final static String STAGE_OAUTH_BASEPATH = "account-s.docusign.com";
 
-	// OAuth grant types
-	/** JWT grant type. */
-	public final static String GRANT_TYPE_JWT = "urn:ietf:params:oauth:grant-type:jwt-bearer";
+    // OAuth grant types
+    /** JWT grant type. */
+    public final static String GRANT_TYPE_JWT = "urn:ietf:params:oauth:grant-type:jwt-bearer";
 
     private volatile String accessToken;
     private Long expirationTimeMillis;
@@ -64,77 +66,79 @@ public class OAuth implements Authentication {
     private AuthenticationRequestBuilder authenticationRequestBuilder;
     private AccessTokenListener accessTokenListener;
 
-   /**
-    * OAuth constructor.
-    *
-    */
+    /**
+     * OAuth constructor.
+     *
+     */
     public OAuth() {
         this(null, null, null);
     }
 
-   /**
-    * OAuth constructor.
-    * 
-    * @param client The client to use
-    * @param tokenRequestBuilder The request builder
-    * @param authenticationRequestBuilder The auth request builder
-    */
-    public OAuth(Client client, TokenRequestBuilder tokenRequestBuilder, AuthenticationRequestBuilder authenticationRequestBuilder) {
+    /**
+     * OAuth constructor.
+     * 
+     * @param client                       The client to use
+     * @param tokenRequestBuilder          The request builder
+     * @param authenticationRequestBuilder The auth request builder
+     */
+    public OAuth(Client client, TokenRequestBuilder tokenRequestBuilder,
+            AuthenticationRequestBuilder authenticationRequestBuilder) {
         this.oauthClient = new OAuthClient(new URLConnectionClient());
         this.tokenRequestBuilder = tokenRequestBuilder;
         this.authenticationRequestBuilder = authenticationRequestBuilder;
     }
 
-   /**
-    * OAuth constructor.
-    * 
-    * @param client The client to use
-    * @param flow The OAuth flow
-    * @param authorizationUrl The auth url
-    * @param tokenUrl The token URL
-    * @param scopes The scopes to use
-    */
+    /**
+     * OAuth constructor.
+     * 
+     * @param client           The client to use
+     * @param flow             The OAuth flow
+     * @param authorizationUrl The auth url
+     * @param tokenUrl         The token URL
+     * @param scopes           The scopes to use
+     */
     public OAuth(Client client, OAuthFlow flow, String authorizationUrl, String tokenUrl, String scopes) {
-        this(client, OAuthClientRequest.tokenLocation(tokenUrl).setScope(scopes), OAuthClientRequest.authorizationLocation(authorizationUrl).setScope(scopes));
+        this(client, OAuthClientRequest.tokenLocation(tokenUrl).setScope(scopes),
+                OAuthClientRequest.authorizationLocation(authorizationUrl).setScope(scopes));
 
         switch (flow) {
-        case accessCode:
-            tokenRequestBuilder.setGrantType(GrantType.AUTHORIZATION_CODE);
-            authenticationRequestBuilder.setResponseType(OAuth.CODE);
-            break;
-        case implicit:
-            tokenRequestBuilder.setGrantType(GrantType.IMPLICIT);
-            authenticationRequestBuilder.setResponseType(OAuth.TOKEN);
-            break;
-        case password:
-            tokenRequestBuilder.setGrantType(GrantType.PASSWORD);
-            break;
-        case application:
-            tokenRequestBuilder.setGrantType(GrantType.CLIENT_CREDENTIALS);
-            break;
-        default:
-            break;
+            case accessCode:
+                tokenRequestBuilder.setGrantType(GrantType.AUTHORIZATION_CODE);
+                authenticationRequestBuilder.setResponseType(OAuth.CODE);
+                break;
+            case implicit:
+                tokenRequestBuilder.setGrantType(GrantType.IMPLICIT);
+                authenticationRequestBuilder.setResponseType(OAuth.TOKEN);
+                break;
+            case password:
+                tokenRequestBuilder.setGrantType(GrantType.PASSWORD);
+                break;
+            case application:
+                tokenRequestBuilder.setGrantType(GrantType.CLIENT_CREDENTIALS);
+                break;
+            default:
+                break;
         }
     }
 
-   /**
-    * OAuth constructor.
-    * 
-    * @param flow The OAuth flow
-    * @param authorizationUrl The auth url
-    * @param tokenUrl The token URL
-    * @param scopes The scopes to use
-    */
+    /**
+     * OAuth constructor.
+     * 
+     * @param flow             The OAuth flow
+     * @param authorizationUrl The auth url
+     * @param tokenUrl         The token URL
+     * @param scopes           The scopes to use
+     */
     public OAuth(OAuthFlow flow, String authorizationUrl, String tokenUrl, String scopes) {
         this(ClientBuilder.newBuilder().build(), flow, authorizationUrl, tokenUrl, scopes);
     }
 
-   /**
-    * applyToParams method.
-    *
-    * @param queryParams The query params
-    * @param headerParams The header params
-    */
+    /**
+     * applyToParams method.
+     *
+     * @param queryParams  The query params
+     * @param headerParams The header params
+     */
     @Override
     public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
         // If first time, get the token
@@ -150,10 +154,10 @@ public class OAuth implements Authentication {
         }
     }
 
-   /**
-    * updateAccessToken method.
-    *
-    */
+    /**
+     * updateAccessToken method.
+     *
+     */
     public synchronized void updateAccessToken() throws ApiException {
         OAuthJSONAccessTokenResponse accessTokenResponse;
         try {
@@ -161,12 +165,12 @@ public class OAuth implements Authentication {
         } catch (Exception e) {
             throw new ApiException(e.getMessage());
         }
-        if (accessTokenResponse != null)
-        {
-            // FIXME: This does not work in case of non HTTP 200 :-( oauthClient needs to return the plain HTTP resonse
-            if (accessTokenResponse.getResponseCode() != Response.Status.OK.getStatusCode())
-            {
-                throw new ApiException("Error while requesting an access token, received HTTP code: " + accessTokenResponse.getResponseCode());
+        if (accessTokenResponse != null) {
+            // FIXME: This does not work in case of non HTTP 200 :-( oauthClient needs to
+            // return the plain HTTP resonse
+            if (accessTokenResponse.getResponseCode() != Response.Status.OK.getStatusCode()) {
+                throw new ApiException("Error while requesting an access token, received HTTP code: "
+                        + accessTokenResponse.getResponseCode());
             }
 
             if (accessTokenResponse.getAccessToken() == null) {
@@ -178,28 +182,30 @@ public class OAuth implements Authentication {
 
             setAccessToken(accessTokenResponse.getAccessToken(), accessTokenResponse.getExpiresIn());
             if (this.accessTokenListener != null) {
-                this.accessTokenListener.notify((BasicOAuthToken)accessTokenResponse.getOAuthToken());
+                this.accessTokenListener.notify((BasicOAuthToken) accessTokenResponse.getOAuthToken());
             }
         } else {
-            // in case of HTTP error codes accessTokenResponse is null, thus no check of accessTokenResponse.getResponseCode() possible :-(
-            throw new ApiException("Error while requesting an access token. No accessTokenResponse object recieved, maybe a non HTTP 200 received?");
+            // in case of HTTP error codes accessTokenResponse is null, thus no check of
+            // accessTokenResponse.getResponseCode() possible :-(
+            throw new ApiException(
+                    "Error while requesting an access token. No accessTokenResponse object recieved, maybe a non HTTP 200 received?");
         }
     }
 
-   /**
-    * registerAccessTokenListener method.
-    *
-    * @param accessTokenListener The access token listener
-    */
+    /**
+     * registerAccessTokenListener method.
+     *
+     * @param accessTokenListener The access token listener
+     */
     public synchronized void registerAccessTokenListener(AccessTokenListener accessTokenListener) {
         this.accessTokenListener = accessTokenListener;
     }
 
-   /**
-    * getAccessToken method.
-    *
-    * @return String
-    */
+    /**
+     * getAccessToken method.
+     *
+     * @return String
+     */
     public synchronized String getAccessToken() {
         return accessToken;
     }
@@ -240,10 +246,17 @@ public class OAuth implements Authentication {
     /**
      *
      * OAuthToken model with the following properties.
-     * <br><b>accessToken</b>: the token you will use in the Authorization header of calls to the DocuSign API.
-     * <br><b>tokenType</b>: this is the type of the accessToken. It is usually "Bearer".
-     * <br><b>refreshToken</b>: a token you can use to get a new accessToken without requiring user interaction.
-     * <br><b>expiresIn</b>: the number of seconds before the accessToken expires.
+     * <br>
+     * <b>accessToken</b>: the token you will use in the Authorization header of
+     * calls to the DocuSign API.
+     * <br>
+     * <b>tokenType</b>: this is the type of the accessToken. It is usually
+     * "Bearer".
+     * <br>
+     * <b>refreshToken</b>: a token you can use to get a new accessToken without
+     * requiring user interaction.
+     * <br>
+     * <b>expiresIn</b>: the number of seconds before the accessToken expires.
      *
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
@@ -270,7 +283,7 @@ public class OAuth implements Authentication {
          *
          * @return accessToken
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getAccessToken() {
             return accessToken;
         }
@@ -289,7 +302,7 @@ public class OAuth implements Authentication {
          *
          * @return tokenType
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getTokenType() {
             return tokenType;
         }
@@ -308,7 +321,7 @@ public class OAuth implements Authentication {
          *
          * @return refreshToken
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getRefreshToken() {
             return refreshToken;
         }
@@ -327,7 +340,7 @@ public class OAuth implements Authentication {
          *
          * @return expiresIn
          **/
-        @ApiModelProperty(example = "3600L", value = "0L")
+        @Schema(example = "3600L", description = "0L")
         public Long getExpiresIn() {
             return expiresIn;
         }
@@ -383,8 +396,10 @@ public class OAuth implements Authentication {
     /**
      *
      * Link model with the below properties.
-     * <br><b>rel</b>: currently the only value is "self".
-     * <br><b>href</b>: the direct link of the organization.
+     * <br>
+     * <b>rel</b>: currently the only value is "self".
+     * <br>
+     * <b>href</b>: the direct link of the organization.
      *
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
@@ -405,7 +420,7 @@ public class OAuth implements Authentication {
          *
          * @return rel
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getRel() {
             return rel;
         }
@@ -424,7 +439,7 @@ public class OAuth implements Authentication {
          *
          * @return href
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getHref() {
             return href;
         }
@@ -476,8 +491,12 @@ public class OAuth implements Authentication {
     /**
      *
      * Organization model with the below properties.
-     * <br><b>organizationId</b>: the organization ID GUID if DocuSign Org Admin is enabled.
-     * <br><b>links</b>: this is list of organization direct links associated with the DocuSign account.
+     * <br>
+     * <b>organizationId</b>: the organization ID GUID if DocuSign Org Admin is
+     * enabled.
+     * <br>
+     * <b>links</b>: this is list of organization direct links associated with the
+     * DocuSign account.
      *
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
@@ -498,7 +517,7 @@ public class OAuth implements Authentication {
          *
          * @return organizationId
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getOrganizationId() {
             return organizationId;
         }
@@ -522,7 +541,7 @@ public class OAuth implements Authentication {
          *
          * @return links
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public java.util.List<Link> getLinks() {
             return links;
         }
@@ -574,12 +593,18 @@ public class OAuth implements Authentication {
     /**
      *
      * Account model with the below properties.
-     * <br><b>accountId</b>: the account ID GUID.
-     * <br><b>isDefault</b>: whether this is the default account, when the user has access to multiple accounts.
-     * <br><b>accountName</b>: the human-readable name of the account.
-     * <br><b>baseUri</b>: the base URI associated with this account.
+     * <br>
+     * <b>accountId</b>: the account ID GUID.
+     * <br>
+     * <b>isDefault</b>: whether this is the default account, when the user has
+     * access to multiple accounts.
+     * <br>
+     * <b>accountName</b>: the human-readable name of the account.
+     * <br>
+     * <b>baseUri</b>: the base URI associated with this account.
      * It also tells which DocuSign data center the account is hosted on.
-     * <br><b>organization</b>: If DocuSign Org Admin is enabled on this account,
+     * <br>
+     * <b>organization</b>: If DocuSign Org Admin is enabled on this account,
      * this property contains the organization information.
      *
      */
@@ -610,7 +635,7 @@ public class OAuth implements Authentication {
          *
          * @return accountId
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getAccountId() {
             return accountId;
         }
@@ -629,7 +654,7 @@ public class OAuth implements Authentication {
          *
          * @return isDefault
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getIsDefault() {
             return isDefault;
         }
@@ -648,7 +673,7 @@ public class OAuth implements Authentication {
          *
          * @return accountName
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getAccountName() {
             return accountName;
         }
@@ -667,7 +692,7 @@ public class OAuth implements Authentication {
          *
          * @return baseUri
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getBaseUri() {
             return baseUri;
         }
@@ -686,7 +711,7 @@ public class OAuth implements Authentication {
          *
          * @return organization
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public Organization getOrganization() {
             return organization;
         }
@@ -744,13 +769,21 @@ public class OAuth implements Authentication {
     /**
      *
      * UserInfo model with the below properties.
-     * <br><b>sub</b>: the user ID GUID.
-     * <br><b>accounts</b>: this is list of DocuSign accounts associated with the current user.
-     * <br><b>name</b>: the user's full name.
-     * <br><b>givenName</b>: the user's given name.
-     * <br><b>familyName</b>: the user's family name.
-     * <br><b>email</b>: the user's email address.
-     * <br><b>created</b>: the UTC DateTime when the user login was created.
+     * <br>
+     * <b>sub</b>: the user ID GUID.
+     * <br>
+     * <b>accounts</b>: this is list of DocuSign accounts associated with the
+     * current user.
+     * <br>
+     * <b>name</b>: the user's full name.
+     * <br>
+     * <b>givenName</b>: the user's given name.
+     * <br>
+     * <b>familyName</b>: the user's family name.
+     * <br>
+     * <b>email</b>: the user's email address.
+     * <br>
+     * <b>created</b>: the UTC DateTime when the user login was created.
      *
      * @see Account
      *
@@ -789,7 +822,7 @@ public class OAuth implements Authentication {
          *
          * @return sub
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getSub() {
             return sub;
         }
@@ -808,7 +841,7 @@ public class OAuth implements Authentication {
          *
          * @return email
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getEmail() {
             return email;
         }
@@ -832,7 +865,7 @@ public class OAuth implements Authentication {
          *
          * @return accounts
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public java.util.List<Account> getAccounts() {
             return accounts;
         }
@@ -851,7 +884,7 @@ public class OAuth implements Authentication {
          *
          * @return name
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getName() {
             return name;
         }
@@ -870,7 +903,7 @@ public class OAuth implements Authentication {
          *
          * @return givenName
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getGivenName() {
             return givenName;
         }
@@ -889,7 +922,7 @@ public class OAuth implements Authentication {
          *
          * @return familyName
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getFamilyName() {
             return familyName;
         }
@@ -908,7 +941,7 @@ public class OAuth implements Authentication {
          *
          * @return created
          **/
-        @ApiModelProperty(example = "null", value = "")
+        @Schema(example = "null", description = "")
         public String getCreated() {
             return created;
         }
@@ -928,7 +961,8 @@ public class OAuth implements Authentication {
             UserInfo userInfo = (UserInfo) o;
             return Objects.equals(this.sub, userInfo.sub) && Objects.equals(this.email, userInfo.email)
                     && Objects.equals(this.accounts, userInfo.accounts) && Objects.equals(this.name, userInfo.name)
-                    && Objects.equals(this.givenName, userInfo.givenName) && Objects.equals(this.familyName, userInfo.familyName)
+                    && Objects.equals(this.givenName, userInfo.givenName)
+                    && Objects.equals(this.familyName, userInfo.familyName)
                     && Objects.equals(this.created, userInfo.created);
         }
 

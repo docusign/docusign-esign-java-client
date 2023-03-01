@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * MatchBox.
@@ -29,7 +29,6 @@ public class MatchBox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
-
   /**
    * height.
    *
@@ -42,9 +41,10 @@ public class MatchBox {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -55,7 +55,6 @@ public class MatchBox {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * pageNumber.
@@ -69,9 +68,10 @@ public class MatchBox {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -82,7 +82,6 @@ public class MatchBox {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * width.
@@ -96,9 +95,10 @@ public class MatchBox {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -109,7 +109,6 @@ public class MatchBox {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * xPosition.
@@ -122,10 +121,12 @@ public class MatchBox {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -136,7 +137,6 @@ public class MatchBox {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * yPosition.
@@ -149,10 +149,12 @@ public class MatchBox {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -163,7 +165,6 @@ public class MatchBox {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * Compares objects.
@@ -194,7 +195,6 @@ public class MatchBox {
     return Objects.hash(height, pageNumber, width, xPosition, yPosition);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -202,7 +202,7 @@ public class MatchBox {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
-    
+
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
@@ -224,4 +224,3 @@ public class MatchBox {
   }
 
 }
-

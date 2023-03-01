@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** Credential */
@@ -21,17 +21,19 @@ public class Credential {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code to view and sign
-   * the envelope. Maximum Length: 50 characters and it must conform to the account's access code
-   * format setting. If blank, but the signer `accessCode` property is set in the envelope, then
-   * that value is used. If blank and the signer `accessCode` property is not set, then the access
+   * If a value is provided, the recipient must enter the value as the access code
+   * to view and sign
+   * the envelope. Maximum Length: 50 characters and it must conform to the
+   * account's access code
+   * format setting. If blank, but the signer `accessCode` property is set in the
+   * envelope, then
+   * that value is used. If blank and the signer `accessCode` property is not set,
+   * then the access
    * code is not required.
    *
    * @return accessCode
    */
-  @ApiModelProperty(
-      value =
-          "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
+  @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
   public String getAccessCode() {
     return accessCode;
   }
@@ -46,7 +48,7 @@ public class Credential {
   }
 
   /** @return type */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -65,7 +67,7 @@ public class Credential {
    *
    * @return value
    */
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -106,7 +108,8 @@ public class Credential {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

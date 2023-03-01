@@ -6,14 +6,14 @@ import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information for a folder request..
  *
  */
-@ApiModel(description = "Information for a folder request.")
+@Schema(description = "Information for a folder request.")
 
 public class FoldersRequest {
   @JsonProperty("envelopeIds")
@@ -25,7 +25,6 @@ public class FoldersRequest {
   @JsonProperty("fromFolderId")
   private String fromFolderId = null;
 
-
   /**
    * envelopeIds.
    *
@@ -35,7 +34,7 @@ public class FoldersRequest {
     this.envelopeIds = envelopeIds;
     return this;
   }
-  
+
   /**
    * addEnvelopeIdsItem.
    *
@@ -51,9 +50,10 @@ public class FoldersRequest {
 
   /**
    * .
+   * 
    * @return envelopeIds
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getEnvelopeIds() {
     return envelopeIds;
   }
@@ -65,7 +65,6 @@ public class FoldersRequest {
     this.envelopeIds = envelopeIds;
   }
 
-
   /**
    * folders.
    *
@@ -75,7 +74,7 @@ public class FoldersRequest {
     this.folders = folders;
     return this;
   }
-  
+
   /**
    * addFoldersItem.
    *
@@ -91,9 +90,10 @@ public class FoldersRequest {
 
   /**
    * .
+   * 
    * @return folders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -104,7 +104,6 @@ public class FoldersRequest {
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
-
 
   /**
    * fromFolderId.
@@ -117,10 +116,11 @@ public class FoldersRequest {
   }
 
   /**
-   *  The folder ID the envelope is being moved from..
+   * The folder ID the envelope is being moved from..
+   * 
    * @return fromFolderId
    **/
-  @ApiModelProperty(value = " The folder ID the envelope is being moved from.")
+  @Schema(description = " The folder ID the envelope is being moved from.")
   public String getFromFolderId() {
     return fromFolderId;
   }
@@ -131,7 +131,6 @@ public class FoldersRequest {
   public void setFromFolderId(String fromFolderId) {
     this.fromFolderId = fromFolderId;
   }
-
 
   /**
    * Compares objects.
@@ -160,7 +159,6 @@ public class FoldersRequest {
     return Objects.hash(envelopeIds, folders, fromFolderId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -168,7 +166,7 @@ public class FoldersRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FoldersRequest {\n");
-    
+
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    fromFolderId: ").append(toIndentedString(fromFolderId)).append("\n");
@@ -188,4 +186,3 @@ public class FoldersRequest {
   }
 
 }
-

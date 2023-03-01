@@ -6,14 +6,14 @@ import com.docusign.esign.model.ConnectCustomConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains the results of a ConnectConfigurations::GET method..
  *
  */
-@ApiModel(description = "This object contains the results of a ConnectConfigurations::GET method.")
+@Schema(description = "This object contains the results of a ConnectConfigurations::GET method.")
 
 public class ConnectConfigResults {
   @JsonProperty("configurations")
@@ -21,7 +21,6 @@ public class ConnectConfigResults {
 
   @JsonProperty("totalRecords")
   private String totalRecords = null;
-
 
   /**
    * configurations.
@@ -32,7 +31,7 @@ public class ConnectConfigResults {
     this.configurations = configurations;
     return this;
   }
-  
+
   /**
    * addConfigurationsItem.
    *
@@ -48,9 +47,10 @@ public class ConnectConfigResults {
 
   /**
    * Reserved: TBD.
+   * 
    * @return configurations
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public java.util.List<ConnectCustomConfiguration> getConfigurations() {
     return configurations;
   }
@@ -61,7 +61,6 @@ public class ConnectConfigResults {
   public void setConfigurations(java.util.List<ConnectCustomConfiguration> configurations) {
     this.configurations = configurations;
   }
-
 
   /**
    * totalRecords.
@@ -75,9 +74,10 @@ public class ConnectConfigResults {
 
   /**
    * .
+   * 
    * @return totalRecords
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalRecords() {
     return totalRecords;
   }
@@ -88,7 +88,6 @@ public class ConnectConfigResults {
   public void setTotalRecords(String totalRecords) {
     this.totalRecords = totalRecords;
   }
-
 
   /**
    * Compares objects.
@@ -116,7 +115,6 @@ public class ConnectConfigResults {
     return Objects.hash(configurations, totalRecords);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -124,7 +122,7 @@ public class ConnectConfigResults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectConfigResults {\n");
-    
+
     sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
     sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
     sb.append("}");
@@ -143,4 +141,3 @@ public class ConnectConfigResults {
   }
 
 }
-

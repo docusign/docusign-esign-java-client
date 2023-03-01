@@ -6,14 +6,14 @@ import com.docusign.esign.model.BulkSendingCopy;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains the details for the bulk send list..
  *
  */
-@ApiModel(description = "This object contains the details for the bulk send list.")
+@Schema(description = "This object contains the details for the bulk send list.")
 
 public class BulkSendingList {
   @JsonProperty("bulkCopies")
@@ -25,7 +25,6 @@ public class BulkSendingList {
   @JsonProperty("name")
   private String name = null;
 
-
   /**
    * bulkCopies.
    *
@@ -35,7 +34,7 @@ public class BulkSendingList {
     this.bulkCopies = bulkCopies;
     return this;
   }
-  
+
   /**
    * addBulkCopiesItem.
    *
@@ -51,9 +50,10 @@ public class BulkSendingList {
 
   /**
    * .
+   * 
    * @return bulkCopies
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkSendingCopy> getBulkCopies() {
     return bulkCopies;
   }
@@ -64,7 +64,6 @@ public class BulkSendingList {
   public void setBulkCopies(java.util.List<BulkSendingCopy> bulkCopies) {
     this.bulkCopies = bulkCopies;
   }
-
 
   /**
    * listId.
@@ -78,9 +77,10 @@ public class BulkSendingList {
 
   /**
    * .
+   * 
    * @return listId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getListId() {
     return listId;
   }
@@ -91,7 +91,6 @@ public class BulkSendingList {
   public void setListId(String listId) {
     this.listId = listId;
   }
-
 
   /**
    * name.
@@ -105,9 +104,10 @@ public class BulkSendingList {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -118,7 +118,6 @@ public class BulkSendingList {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * Compares objects.
@@ -147,7 +146,6 @@ public class BulkSendingList {
     return Objects.hash(bulkCopies, listId, name);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -155,7 +153,7 @@ public class BulkSendingList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingList {\n");
-    
+
     sb.append("    bulkCopies: ").append(toIndentedString(bulkCopies)).append("\n");
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -175,4 +173,3 @@ public class BulkSendingList {
   }
 
 }
-

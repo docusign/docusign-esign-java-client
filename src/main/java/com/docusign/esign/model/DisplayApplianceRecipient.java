@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayApplianceRecipient */
@@ -75,7 +75,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return cfrPart11 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getCfrPart11() {
     return cfrPart11;
   }
@@ -90,7 +90,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return company */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getCompany() {
     return company;
   }
@@ -105,7 +105,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return digitalSignatureBase64 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDigitalSignatureBase64() {
     return digitalSignatureBase64;
   }
@@ -120,7 +120,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return email */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getEmail() {
     return email;
   }
@@ -135,7 +135,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return fullName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getFullName() {
     return fullName;
   }
@@ -150,7 +150,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return initialsBase64 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getInitialsBase64() {
     return initialsBase64;
   }
@@ -165,7 +165,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return inPersonEmail */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getInPersonEmail() {
     return inPersonEmail;
   }
@@ -180,7 +180,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return isNotary */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIsNotary() {
     return isNotary;
   }
@@ -195,7 +195,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return notarySealBase64 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getNotarySealBase64() {
     return notarySealBase64;
   }
@@ -210,7 +210,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return phoneNumber */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -225,7 +225,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return recipientCompleteCount */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getRecipientCompleteCount() {
     return recipientCompleteCount;
   }
@@ -240,7 +240,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return recipientGuidId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getRecipientGuidId() {
     return recipientGuidId;
   }
@@ -255,15 +255,13 @@ public class DisplayApplianceRecipient {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign
    * the Document.
    *
    * @return recipientId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(example = "null", description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -278,7 +276,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return recipientStatus */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getRecipientStatus() {
     return recipientStatus;
   }
@@ -293,7 +291,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return recipientType */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getRecipientType() {
     return recipientType;
   }
@@ -308,7 +306,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return rowState */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getRowState() {
     return rowState;
   }
@@ -323,7 +321,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return signatureBase64 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSignatureBase64() {
     return signatureBase64;
   }
@@ -338,7 +336,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return signed */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getSigned() {
     return signed;
   }
@@ -353,7 +351,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return signerApplyTabs */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getSignerApplyTabs() {
     return signerApplyTabs;
   }
@@ -368,7 +366,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return signerAttachmentBase64 */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSignerAttachmentBase64() {
     return signerAttachmentBase64;
   }
@@ -383,7 +381,7 @@ public class DisplayApplianceRecipient {
   }
 
   /** @return userName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getUserName() {
     return userName;
   }
@@ -490,7 +488,8 @@ public class DisplayApplianceRecipient {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

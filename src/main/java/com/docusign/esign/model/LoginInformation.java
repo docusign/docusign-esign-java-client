@@ -6,8 +6,8 @@ import com.docusign.esign.model.LoginAccount;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * LoginInformation.
@@ -21,7 +21,6 @@ public class LoginInformation {
   @JsonProperty("loginAccounts")
   private java.util.List<LoginAccount> loginAccounts = null;
 
-
   /**
    * apiPassword.
    *
@@ -33,10 +32,13 @@ public class LoginInformation {
   }
 
   /**
-   * Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL..
+   * Contains a token that can be used for authentication in API calls instead of
+   * using the user name and password. Only returned if the `api_password=true`
+   * query string is added to the URL..
+   * 
    * @return apiPassword
    **/
-  @ApiModelProperty(value = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
+  @Schema(description = "Contains a token that can be used for authentication in API calls instead of using the user name and password. Only returned if the `api_password=true` query string is added to the URL.")
   public String getApiPassword() {
     return apiPassword;
   }
@@ -48,7 +50,6 @@ public class LoginInformation {
     this.apiPassword = apiPassword;
   }
 
-
   /**
    * loginAccounts.
    *
@@ -58,7 +59,7 @@ public class LoginInformation {
     this.loginAccounts = loginAccounts;
     return this;
   }
-  
+
   /**
    * addLoginAccountsItem.
    *
@@ -74,9 +75,10 @@ public class LoginInformation {
 
   /**
    * The list of accounts that authenticating user is a member of..
+   * 
    * @return loginAccounts
    **/
-  @ApiModelProperty(value = "The list of accounts that authenticating user is a member of.")
+  @Schema(description = "The list of accounts that authenticating user is a member of.")
   public java.util.List<LoginAccount> getLoginAccounts() {
     return loginAccounts;
   }
@@ -87,7 +89,6 @@ public class LoginInformation {
   public void setLoginAccounts(java.util.List<LoginAccount> loginAccounts) {
     this.loginAccounts = loginAccounts;
   }
-
 
   /**
    * Compares objects.
@@ -115,7 +116,6 @@ public class LoginInformation {
     return Objects.hash(apiPassword, loginAccounts);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -123,7 +123,7 @@ public class LoginInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginInformation {\n");
-    
+
     sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
     sb.append("    loginAccounts: ").append(toIndentedString(loginAccounts)).append("\n");
     sb.append("}");
@@ -142,4 +142,3 @@ public class LoginInformation {
   }
 
 }
-

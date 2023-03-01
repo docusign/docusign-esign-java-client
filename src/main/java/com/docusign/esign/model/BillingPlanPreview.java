@@ -6,14 +6,14 @@ import com.docusign.esign.model.BillingInvoice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about a preview billing plan..
  *
  */
-@ApiModel(description = "Contains information about a preview billing plan.")
+@Schema(description = "Contains information about a preview billing plan.")
 
 public class BillingPlanPreview {
   @JsonProperty("currencyCode")
@@ -34,7 +34,6 @@ public class BillingPlanPreview {
   @JsonProperty("totalAmount")
   private String totalAmount = null;
 
-
   /**
    * currencyCode.
    *
@@ -47,9 +46,10 @@ public class BillingPlanPreview {
 
   /**
    * Specifies the ISO currency code for the account..
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @Schema(description = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -60,7 +60,6 @@ public class BillingPlanPreview {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * invoice.
@@ -74,9 +73,10 @@ public class BillingPlanPreview {
 
   /**
    * .
+   * 
    * @return invoice
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BillingInvoice getInvoice() {
     return invoice;
   }
@@ -87,7 +87,6 @@ public class BillingPlanPreview {
   public void setInvoice(BillingInvoice invoice) {
     this.invoice = invoice;
   }
-
 
   /**
    * isProrated.
@@ -101,9 +100,10 @@ public class BillingPlanPreview {
 
   /**
    * .
+   * 
    * @return isProrated
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsProrated() {
     return isProrated;
   }
@@ -114,7 +114,6 @@ public class BillingPlanPreview {
   public void setIsProrated(String isProrated) {
     this.isProrated = isProrated;
   }
-
 
   /**
    * subtotalAmount.
@@ -128,9 +127,10 @@ public class BillingPlanPreview {
 
   /**
    * .
+   * 
    * @return subtotalAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubtotalAmount() {
     return subtotalAmount;
   }
@@ -141,7 +141,6 @@ public class BillingPlanPreview {
   public void setSubtotalAmount(String subtotalAmount) {
     this.subtotalAmount = subtotalAmount;
   }
-
 
   /**
    * taxAmount.
@@ -155,9 +154,10 @@ public class BillingPlanPreview {
 
   /**
    * .
+   * 
    * @return taxAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTaxAmount() {
     return taxAmount;
   }
@@ -168,7 +168,6 @@ public class BillingPlanPreview {
   public void setTaxAmount(String taxAmount) {
     this.taxAmount = taxAmount;
   }
-
 
   /**
    * totalAmount.
@@ -182,9 +181,10 @@ public class BillingPlanPreview {
 
   /**
    * .
+   * 
    * @return totalAmount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalAmount() {
     return totalAmount;
   }
@@ -195,7 +195,6 @@ public class BillingPlanPreview {
   public void setTotalAmount(String totalAmount) {
     this.totalAmount = totalAmount;
   }
-
 
   /**
    * Compares objects.
@@ -227,7 +226,6 @@ public class BillingPlanPreview {
     return Objects.hash(currencyCode, invoice, isProrated, subtotalAmount, taxAmount, totalAmount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -235,7 +233,7 @@ public class BillingPlanPreview {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanPreview {\n");
-    
+
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    invoice: ").append(toIndentedString(invoice)).append("\n");
     sb.append("    isProrated: ").append(toIndentedString(isProrated)).append("\n");
@@ -258,4 +256,3 @@ public class BillingPlanPreview {
   }
 
 }
-

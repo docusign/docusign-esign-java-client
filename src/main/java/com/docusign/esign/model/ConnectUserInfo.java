@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectUserInfo.
@@ -26,7 +26,6 @@ public class ConnectUserInfo {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * email.
    *
@@ -39,9 +38,10 @@ public class ConnectUserInfo {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -52,7 +52,6 @@ public class ConnectUserInfo {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * isIncluded.
@@ -66,9 +65,10 @@ public class ConnectUserInfo {
 
   /**
    * .
+   * 
    * @return isIncluded
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsIncluded() {
     return isIncluded;
   }
@@ -79,7 +79,6 @@ public class ConnectUserInfo {
   public void setIsIncluded(String isIncluded) {
     this.isIncluded = isIncluded;
   }
-
 
   /**
    * userId.
@@ -93,9 +92,10 @@ public class ConnectUserInfo {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -106,7 +106,6 @@ public class ConnectUserInfo {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -120,9 +119,10 @@ public class ConnectUserInfo {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -133,7 +133,6 @@ public class ConnectUserInfo {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -163,7 +162,6 @@ public class ConnectUserInfo {
     return Objects.hash(email, isIncluded, userId, userName);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -171,7 +169,7 @@ public class ConnectUserInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectUserInfo {\n");
-    
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    isIncluded: ").append(toIndentedString(isIncluded)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -192,4 +190,3 @@ public class ConnectUserInfo {
   }
 
 }
-

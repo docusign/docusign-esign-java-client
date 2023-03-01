@@ -6,19 +6,18 @@ import com.docusign.esign.model.CaptiveRecipient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about captive (embedded) recipients..
  *
  */
-@ApiModel(description = "Contains information about captive (embedded) recipients.")
+@Schema(description = "Contains information about captive (embedded) recipients.")
 
 public class CaptiveRecipientInformation {
   @JsonProperty("captiveRecipients")
   private java.util.List<CaptiveRecipient> captiveRecipients = null;
-
 
   /**
    * captiveRecipients.
@@ -29,7 +28,7 @@ public class CaptiveRecipientInformation {
     this.captiveRecipients = captiveRecipients;
     return this;
   }
-  
+
   /**
    * addCaptiveRecipientsItem.
    *
@@ -45,9 +44,10 @@ public class CaptiveRecipientInformation {
 
   /**
    * A complex type containing information about one or more captive recipients..
+   * 
    * @return captiveRecipients
    **/
-  @ApiModelProperty(value = "A complex type containing information about one or more captive recipients.")
+  @Schema(description = "A complex type containing information about one or more captive recipients.")
   public java.util.List<CaptiveRecipient> getCaptiveRecipients() {
     return captiveRecipients;
   }
@@ -58,7 +58,6 @@ public class CaptiveRecipientInformation {
   public void setCaptiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
   }
-
 
   /**
    * Compares objects.
@@ -85,7 +84,6 @@ public class CaptiveRecipientInformation {
     return Objects.hash(captiveRecipients);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -93,7 +91,7 @@ public class CaptiveRecipientInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CaptiveRecipientInformation {\n");
-    
+
     sb.append("    captiveRecipients: ").append(toIndentedString(captiveRecipients)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -111,4 +109,3 @@ public class CaptiveRecipientInformation {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * LoginAccount.
@@ -48,7 +48,6 @@ public class LoginAccount {
   @JsonProperty("userName")
   private String userName = null;
 
-
   /**
    * accountId.
    *
@@ -61,9 +60,10 @@ public class LoginAccount {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -74,7 +74,6 @@ public class LoginAccount {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * accountIdGuid.
@@ -88,9 +87,10 @@ public class LoginAccount {
 
   /**
    * The GUID associated with the account ID..
+   * 
    * @return accountIdGuid
    **/
-  @ApiModelProperty(value = "The GUID associated with the account ID.")
+  @Schema(description = "The GUID associated with the account ID.")
   public String getAccountIdGuid() {
     return accountIdGuid;
   }
@@ -101,7 +101,6 @@ public class LoginAccount {
   public void setAccountIdGuid(String accountIdGuid) {
     this.accountIdGuid = accountIdGuid;
   }
-
 
   /**
    * baseUrl.
@@ -114,10 +113,14 @@ public class LoginAccount {
   }
 
   /**
-   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
+   * The URL that should be used for successive calls to this account. It includes
+   * the protocal (https), the DocuSign server where the account is located, and
+   * the account number. Use this Url to make API calls against this account. Many
+   * of the API calls provide Uri's that are relative to this baseUrl..
+   * 
    * @return baseUrl
    **/
-  @ApiModelProperty(value = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
+  @Schema(description = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
   public String getBaseUrl() {
     return baseUrl;
   }
@@ -128,7 +131,6 @@ public class LoginAccount {
   public void setBaseUrl(String baseUrl) {
     this.baseUrl = baseUrl;
   }
-
 
   /**
    * email.
@@ -142,9 +144,10 @@ public class LoginAccount {
 
   /**
    * The email address for the user..
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "The email address for the user.")
+  @Schema(description = "The email address for the user.")
   public String getEmail() {
     return email;
   }
@@ -155,7 +158,6 @@ public class LoginAccount {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * isDefault.
@@ -168,10 +170,12 @@ public class LoginAccount {
   }
 
   /**
-   * This value is true if this is the default account for the user, otherwise false is returned..
+   * This value is true if this is the default account for the user, otherwise
+   * false is returned..
+   * 
    * @return isDefault
    **/
-  @ApiModelProperty(value = "This value is true if this is the default account for the user, otherwise false is returned.")
+  @Schema(description = "This value is true if this is the default account for the user, otherwise false is returned.")
   public String getIsDefault() {
     return isDefault;
   }
@@ -183,7 +187,6 @@ public class LoginAccount {
     this.isDefault = isDefault;
   }
 
-
   /**
    * loginAccountSettings.
    *
@@ -193,7 +196,7 @@ public class LoginAccount {
     this.loginAccountSettings = loginAccountSettings;
     return this;
   }
-  
+
   /**
    * addLoginAccountSettingsItem.
    *
@@ -208,10 +211,12 @@ public class LoginAccount {
   }
 
   /**
-   * A list of settings on the acccount that indicate what features are available..
+   * A list of settings on the acccount that indicate what features are
+   * available..
+   * 
    * @return loginAccountSettings
    **/
-  @ApiModelProperty(value = "A list of settings on the acccount that indicate what features are available.")
+  @Schema(description = "A list of settings on the acccount that indicate what features are available.")
   public java.util.List<NameValue> getLoginAccountSettings() {
     return loginAccountSettings;
   }
@@ -223,7 +228,6 @@ public class LoginAccount {
     this.loginAccountSettings = loginAccountSettings;
   }
 
-
   /**
    * loginUserSettings.
    *
@@ -233,7 +237,7 @@ public class LoginAccount {
     this.loginUserSettings = loginUserSettings;
     return this;
   }
-  
+
   /**
    * addLoginUserSettingsItem.
    *
@@ -248,10 +252,12 @@ public class LoginAccount {
   }
 
   /**
-   * A list of user-level settings that indicate what user-specific features are available..
+   * A list of user-level settings that indicate what user-specific features are
+   * available..
+   * 
    * @return loginUserSettings
    **/
-  @ApiModelProperty(value = "A list of user-level settings that indicate what user-specific features are available.")
+  @Schema(description = "A list of user-level settings that indicate what user-specific features are available.")
   public java.util.List<NameValue> getLoginUserSettings() {
     return loginUserSettings;
   }
@@ -262,7 +268,6 @@ public class LoginAccount {
   public void setLoginUserSettings(java.util.List<NameValue> loginUserSettings) {
     this.loginUserSettings = loginUserSettings;
   }
-
 
   /**
    * name.
@@ -276,9 +281,10 @@ public class LoginAccount {
 
   /**
    * The name associated with the account..
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "The name associated with the account.")
+  @Schema(description = "The name associated with the account.")
   public String getName() {
     return name;
   }
@@ -289,7 +295,6 @@ public class LoginAccount {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * siteDescription.
@@ -303,9 +308,10 @@ public class LoginAccount {
 
   /**
    * An optional descirption of the site that hosts the account..
+   * 
    * @return siteDescription
    **/
-  @ApiModelProperty(value = "An optional descirption of the site that hosts the account.")
+  @Schema(description = "An optional descirption of the site that hosts the account.")
   public String getSiteDescription() {
     return siteDescription;
   }
@@ -316,7 +322,6 @@ public class LoginAccount {
   public void setSiteDescription(String siteDescription) {
     this.siteDescription = siteDescription;
   }
-
 
   /**
    * userId.
@@ -330,9 +335,10 @@ public class LoginAccount {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -343,7 +349,6 @@ public class LoginAccount {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -357,9 +362,10 @@ public class LoginAccount {
 
   /**
    * The name of this user as defined by the account..
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "The name of this user as defined by the account.")
+  @Schema(description = "The name of this user as defined by the account.")
   public String getUserName() {
     return userName;
   }
@@ -370,7 +376,6 @@ public class LoginAccount {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * Compares objects.
@@ -404,9 +409,9 @@ public class LoginAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountIdGuid, baseUrl, email, isDefault, loginAccountSettings, loginUserSettings, name, siteDescription, userId, userName);
+    return Objects.hash(accountId, accountIdGuid, baseUrl, email, isDefault, loginAccountSettings, loginUserSettings,
+        name, siteDescription, userId, userName);
   }
-
 
   /**
    * Converts the given object to string.
@@ -415,7 +420,7 @@ public class LoginAccount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginAccount {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
@@ -443,4 +448,3 @@ public class LoginAccount {
   }
 
 }
-

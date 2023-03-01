@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse.
+ * Complex type containing: * dateOfBirth * displayLevelCode *
+ * receiveInResponse.
  *
  */
-@ApiModel(description = "Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse")
+@Schema(description = "Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse")
 
 public class DobInformationInput {
   @JsonProperty("dateOfBirth")
@@ -23,7 +24,6 @@ public class DobInformationInput {
 
   @JsonProperty("receiveInResponse")
   private String receiveInResponse = null;
-
 
   /**
    * dateOfBirth.
@@ -37,9 +37,10 @@ public class DobInformationInput {
 
   /**
    * Specifies the recipient's date, month, and year of birth..
+   * 
    * @return dateOfBirth
    **/
-  @ApiModelProperty(value = "Specifies the recipient's date, month, and year of birth.")
+  @Schema(description = "Specifies the recipient's date, month, and year of birth.")
   public String getDateOfBirth() {
     return dateOfBirth;
   }
@@ -50,7 +51,6 @@ public class DobInformationInput {
   public void setDateOfBirth(String dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
-
 
   /**
    * displayLevelCode.
@@ -63,10 +63,12 @@ public class DobInformationInput {
   }
 
   /**
-   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
+   * Specifies the display level for the recipient. Valid values are: * ReadOnly *
+   * Editable * DoNotDisplay.
+   * 
    * @return displayLevelCode
    **/
-  @ApiModelProperty(value = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
+  @Schema(description = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
   public String getDisplayLevelCode() {
     return displayLevelCode;
   }
@@ -77,7 +79,6 @@ public class DobInformationInput {
   public void setDisplayLevelCode(String displayLevelCode) {
     this.displayLevelCode = displayLevelCode;
   }
-
 
   /**
    * receiveInResponse.
@@ -91,9 +92,10 @@ public class DobInformationInput {
 
   /**
    * When set to **true**, the information needs to be returned in the response..
+   * 
    * @return receiveInResponse
    **/
-  @ApiModelProperty(value = "When set to **true**, the information needs to be returned in the response.")
+  @Schema(description = "When set to **true**, the information needs to be returned in the response.")
   public String getReceiveInResponse() {
     return receiveInResponse;
   }
@@ -104,7 +106,6 @@ public class DobInformationInput {
   public void setReceiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +134,6 @@ public class DobInformationInput {
     return Objects.hash(dateOfBirth, displayLevelCode, receiveInResponse);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +141,7 @@ public class DobInformationInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DobInformationInput {\n");
-    
+
     sb.append("    dateOfBirth: ").append(toIndentedString(dateOfBirth)).append("\n");
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
     sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
@@ -161,4 +161,3 @@ public class DobInformationInput {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocGenFormField.
@@ -29,7 +29,6 @@ public class DocGenFormField {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * label.
    *
@@ -42,9 +41,10 @@ public class DocGenFormField {
 
   /**
    * .
+   * 
    * @return label
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLabel() {
     return label;
   }
@@ -55,7 +55,6 @@ public class DocGenFormField {
   public void setLabel(String label) {
     this.label = label;
   }
-
 
   /**
    * name.
@@ -69,9 +68,10 @@ public class DocGenFormField {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -82,7 +82,6 @@ public class DocGenFormField {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * required.
@@ -96,9 +95,10 @@ public class DocGenFormField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -109,7 +109,6 @@ public class DocGenFormField {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * type.
@@ -123,9 +122,10 @@ public class DocGenFormField {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -136,7 +136,6 @@ public class DocGenFormField {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * value.
@@ -150,9 +149,10 @@ public class DocGenFormField {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -163,7 +163,6 @@ public class DocGenFormField {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -194,7 +193,6 @@ public class DocGenFormField {
     return Objects.hash(label, name, required, type, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -202,7 +200,7 @@ public class DocGenFormField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormField {\n");
-    
+
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
@@ -224,4 +222,3 @@ public class DocGenFormField {
   }
 
 }
-

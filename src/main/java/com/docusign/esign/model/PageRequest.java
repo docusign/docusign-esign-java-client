@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PageRequest.
@@ -20,7 +20,6 @@ public class PageRequest {
   @JsonProperty("rotate")
   private String rotate = null;
 
-
   /**
    * password.
    *
@@ -33,9 +32,10 @@ public class PageRequest {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -46,7 +46,6 @@ public class PageRequest {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * rotate.
@@ -59,10 +58,12 @@ public class PageRequest {
   }
 
   /**
-   * Sets the direction the page image is rotated. The possible settings are: left or right.
+   * Sets the direction the page image is rotated. The possible settings are: left
+   * or right.
+   * 
    * @return rotate
    **/
-  @ApiModelProperty(value = "Sets the direction the page image is rotated. The possible settings are: left or right")
+  @Schema(description = "Sets the direction the page image is rotated. The possible settings are: left or right")
   public String getRotate() {
     return rotate;
   }
@@ -73,7 +74,6 @@ public class PageRequest {
   public void setRotate(String rotate) {
     this.rotate = rotate;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +101,6 @@ public class PageRequest {
     return Objects.hash(password, rotate);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +108,7 @@ public class PageRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageRequest {\n");
-    
+
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("}");
@@ -128,4 +127,3 @@ public class PageRequest {
   }
 
 }
-

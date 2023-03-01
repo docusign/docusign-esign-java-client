@@ -6,14 +6,14 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object configures a recipient&#39;s read/write access to a document..
  *
  */
-@ApiModel(description = "This object configures a recipient's read/write access to a document.")
+@Schema(description = "This object configures a recipient's read/write access to a document.")
 
 public class DocumentVisibility {
   @JsonProperty("documentId")
@@ -31,7 +31,6 @@ public class DocumentVisibility {
   @JsonProperty("visible")
   private String visible = null;
 
-
   /**
    * documentId.
    *
@@ -43,10 +42,12 @@ public class DocumentVisibility {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -57,7 +58,6 @@ public class DocumentVisibility {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * errorDetails.
@@ -70,10 +70,12 @@ public class DocumentVisibility {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -84,7 +86,6 @@ public class DocumentVisibility {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * recipientId.
@@ -97,10 +98,12 @@ public class DocumentVisibility {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -111,7 +114,6 @@ public class DocumentVisibility {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * rights.
@@ -125,9 +127,10 @@ public class DocumentVisibility {
 
   /**
    * .
+   * 
    * @return rights
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRights() {
     return rights;
   }
@@ -138,7 +141,6 @@ public class DocumentVisibility {
   public void setRights(String rights) {
     this.rights = rights;
   }
-
 
   /**
    * visible.
@@ -152,9 +154,10 @@ public class DocumentVisibility {
 
   /**
    * .
+   * 
    * @return visible
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getVisible() {
     return visible;
   }
@@ -165,7 +168,6 @@ public class DocumentVisibility {
   public void setVisible(String visible) {
     this.visible = visible;
   }
-
 
   /**
    * Compares objects.
@@ -196,7 +198,6 @@ public class DocumentVisibility {
     return Objects.hash(documentId, errorDetails, recipientId, rights, visible);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -204,7 +205,7 @@ public class DocumentVisibility {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentVisibility {\n");
-    
+
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -226,4 +227,3 @@ public class DocumentVisibility {
   }
 
 }
-

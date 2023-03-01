@@ -6,14 +6,23 @@ import com.docusign.esign.model.ConnectSalesforceField;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A &#x60;connectSalesforceObject&#x60; is an object that updates envelope and document status or recipient status in your Salesforce account.  When you install DocuSign Connect for Salesforce, the service automatically sets up two Connect objects: one that updates envelope status and documents and one that updates recipient status. You can also customize DocuSign Connect for Salesforce by associating DocuSign objects with Salesforce objects so that DocuSign Connect for Salesforce updates or inserts the information into the Salesforce object. For more information, see  [DocuSign for Salesforce - Adding Completed Documents to the Notes and Attachments](https://support.docusign.com/articles/DocuSign-for-Salesforce-Adding-Completed-Documents-to-the-Notes-and-Attachments-New)..
+ * A &#x60;connectSalesforceObject&#x60; is an object that updates envelope and
+ * document status or recipient status in your Salesforce account. When you
+ * install DocuSign Connect for Salesforce, the service automatically sets up
+ * two Connect objects: one that updates envelope status and documents and one
+ * that updates recipient status. You can also customize DocuSign Connect for
+ * Salesforce by associating DocuSign objects with Salesforce objects so that
+ * DocuSign Connect for Salesforce updates or inserts the information into the
+ * Salesforce object. For more information, see [DocuSign for Salesforce -
+ * Adding Completed Documents to the Notes and
+ * Attachments](https://support.docusign.com/articles/DocuSign-for-Salesforce-Adding-Completed-Documents-to-the-Notes-and-Attachments-New)..
  *
  */
-@ApiModel(description = "A `connectSalesforceObject` is an object that updates envelope and document status or recipient status in your Salesforce account.  When you install DocuSign Connect for Salesforce, the service automatically sets up two Connect objects: one that updates envelope status and documents and one that updates recipient status. You can also customize DocuSign Connect for Salesforce by associating DocuSign objects with Salesforce objects so that DocuSign Connect for Salesforce updates or inserts the information into the Salesforce object. For more information, see  [DocuSign for Salesforce - Adding Completed Documents to the Notes and Attachments](https://support.docusign.com/articles/DocuSign-for-Salesforce-Adding-Completed-Documents-to-the-Notes-and-Attachments-New).")
+@Schema(description = "A `connectSalesforceObject` is an object that updates envelope and document status or recipient status in your Salesforce account.  When you install DocuSign Connect for Salesforce, the service automatically sets up two Connect objects: one that updates envelope status and documents and one that updates recipient status. You can also customize DocuSign Connect for Salesforce by associating DocuSign objects with Salesforce objects so that DocuSign Connect for Salesforce updates or inserts the information into the Salesforce object. For more information, see  [DocuSign for Salesforce - Adding Completed Documents to the Notes and Attachments](https://support.docusign.com/articles/DocuSign-for-Salesforce-Adding-Completed-Documents-to-the-Notes-and-Attachments-New).")
 
 public class ConnectSalesforceObject {
   @JsonProperty("active")
@@ -43,7 +52,6 @@ public class ConnectSalesforceObject {
   @JsonProperty("updateFields")
   private java.util.List<ConnectSalesforceField> updateFields = null;
 
-
   /**
    * active.
    *
@@ -56,9 +64,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return active
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActive() {
     return active;
   }
@@ -69,7 +78,6 @@ public class ConnectSalesforceObject {
   public void setActive(String active) {
     this.active = active;
   }
-
 
   /**
    * description.
@@ -83,9 +91,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return description
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDescription() {
     return description;
   }
@@ -96,7 +105,6 @@ public class ConnectSalesforceObject {
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   /**
    * id.
@@ -110,9 +118,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return id
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getId() {
     return id;
   }
@@ -123,7 +132,6 @@ public class ConnectSalesforceObject {
   public void setId(String id) {
     this.id = id;
   }
-
 
   /**
    * insert.
@@ -137,9 +145,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return insert
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInsert() {
     return insert;
   }
@@ -150,7 +159,6 @@ public class ConnectSalesforceObject {
   public void setInsert(String insert) {
     this.insert = insert;
   }
-
 
   /**
    * onCompleteOnly.
@@ -164,9 +172,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return onCompleteOnly
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOnCompleteOnly() {
     return onCompleteOnly;
   }
@@ -178,7 +187,6 @@ public class ConnectSalesforceObject {
     this.onCompleteOnly = onCompleteOnly;
   }
 
-
   /**
    * selectFields.
    *
@@ -188,7 +196,7 @@ public class ConnectSalesforceObject {
     this.selectFields = selectFields;
     return this;
   }
-  
+
   /**
    * addSelectFieldsItem.
    *
@@ -204,9 +212,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return selectFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConnectSalesforceField> getSelectFields() {
     return selectFields;
   }
@@ -217,7 +226,6 @@ public class ConnectSalesforceObject {
   public void setSelectFields(java.util.List<ConnectSalesforceField> selectFields) {
     this.selectFields = selectFields;
   }
-
 
   /**
    * sfObject.
@@ -231,9 +239,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return sfObject
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSfObject() {
     return sfObject;
   }
@@ -244,7 +253,6 @@ public class ConnectSalesforceObject {
   public void setSfObject(String sfObject) {
     this.sfObject = sfObject;
   }
-
 
   /**
    * sfObjectName.
@@ -258,9 +266,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return sfObjectName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSfObjectName() {
     return sfObjectName;
   }
@@ -272,7 +281,6 @@ public class ConnectSalesforceObject {
     this.sfObjectName = sfObjectName;
   }
 
-
   /**
    * updateFields.
    *
@@ -282,7 +290,7 @@ public class ConnectSalesforceObject {
     this.updateFields = updateFields;
     return this;
   }
-  
+
   /**
    * addUpdateFieldsItem.
    *
@@ -298,9 +306,10 @@ public class ConnectSalesforceObject {
 
   /**
    * .
+   * 
    * @return updateFields
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConnectSalesforceField> getUpdateFields() {
     return updateFields;
   }
@@ -311,7 +320,6 @@ public class ConnectSalesforceObject {
   public void setUpdateFields(java.util.List<ConnectSalesforceField> updateFields) {
     this.updateFields = updateFields;
   }
-
 
   /**
    * Compares objects.
@@ -343,9 +351,9 @@ public class ConnectSalesforceObject {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(active, description, id, insert, onCompleteOnly, selectFields, sfObject, sfObjectName, updateFields);
+    return Objects.hash(active, description, id, insert, onCompleteOnly, selectFields, sfObject, sfObjectName,
+        updateFields);
   }
-
 
   /**
    * Converts the given object to string.
@@ -354,7 +362,7 @@ public class ConnectSalesforceObject {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectSalesforceObject {\n");
-    
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -380,4 +388,3 @@ public class ConnectSalesforceObject {
   }
 
 }
-

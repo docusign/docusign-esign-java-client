@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about a specific step in an Identity Verification workflow..
  *
  */
-@ApiModel(description = "Information about a specific step in an Identity Verification workflow.")
+@Schema(description = "Information about a specific step in an Identity Verification workflow.")
 
 public class AccountIdentityVerificationStep {
   @JsonProperty("name")
@@ -20,7 +20,6 @@ public class AccountIdentityVerificationStep {
 
   @JsonProperty("type")
   private String type = null;
-
 
   /**
    * name.
@@ -34,9 +33,10 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -47,7 +47,6 @@ public class AccountIdentityVerificationStep {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * type.
@@ -61,9 +60,10 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
+   * 
    * @return type
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getType() {
     return type;
   }
@@ -74,7 +74,6 @@ public class AccountIdentityVerificationStep {
   public void setType(String type) {
     this.type = type;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class AccountIdentityVerificationStep {
     return Objects.hash(name, type);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class AccountIdentityVerificationStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationStep {\n");
-    
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class AccountIdentityVerificationStep {
   }
 
 }
-

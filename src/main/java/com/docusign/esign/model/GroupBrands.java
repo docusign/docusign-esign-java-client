@@ -1,12 +1,12 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** . */
-@ApiModel(description = "")
+@Schema(description = "")
 public class GroupBrands {
   @JsonProperty("recipientBrandIdDefault")
   private String recipientBrandIdDefault = null;
@@ -32,8 +32,7 @@ public class GroupBrands {
    *
    * @return recipientBrandIdDefault
    */
-  @ApiModelProperty(
-      value = "The brand seen by envelope recipients when a brand is not explicitly set.")
+  @Schema(description = "The brand seen by envelope recipients when a brand is not explicitly set.")
   public String getRecipientBrandIdDefault() {
     return recipientBrandIdDefault;
   }
@@ -58,8 +57,7 @@ public class GroupBrands {
    *
    * @return senderBrandIdDefault
    */
-  @ApiModelProperty(
-      value = "The brand seen by envelope senders when a brand is not explicitly set.")
+  @Schema(description = "The brand seen by envelope senders when a brand is not explicitly set.")
   public String getSenderBrandIdDefault() {
     return senderBrandIdDefault;
   }
@@ -97,7 +95,7 @@ public class GroupBrands {
    *
    * @return brandOptions
    */
-  @ApiModelProperty(value = "The list of brands.")
+  @Schema(description = "The list of brands.")
   public java.util.List<Brand> getBrandOptions() {
     return brandOptions;
   }
@@ -150,7 +148,8 @@ public class GroupBrands {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

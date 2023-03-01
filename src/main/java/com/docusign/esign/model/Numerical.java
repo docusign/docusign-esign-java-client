@@ -10,8 +10,8 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Numerical.
@@ -367,7 +367,6 @@ public class Numerical {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -380,9 +379,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -394,22 +394,23 @@ public class Numerical {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return Numerical
    **/
-  public Numerical anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public Numerical anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
    * Get anchorAllowWhiteSpaceInCharactersMetadata.
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -420,7 +421,6 @@ public class Numerical {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -433,10 +433,12 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -447,7 +449,6 @@ public class Numerical {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -461,9 +462,10 @@ public class Numerical {
 
   /**
    * Get anchorCaseSensitiveMetadata.
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -474,7 +476,6 @@ public class Numerical {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -487,10 +488,12 @@ public class Numerical {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -501,7 +504,6 @@ public class Numerical {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -515,9 +517,10 @@ public class Numerical {
 
   /**
    * Get anchorHorizontalAlignmentMetadata.
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -528,7 +531,6 @@ public class Numerical {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -541,10 +543,12 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -555,7 +559,6 @@ public class Numerical {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -569,9 +572,10 @@ public class Numerical {
 
   /**
    * Get anchorIgnoreIfNotPresentMetadata.
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -582,7 +586,6 @@ public class Numerical {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -595,10 +598,13 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -609,7 +615,6 @@ public class Numerical {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -623,9 +628,10 @@ public class Numerical {
 
   /**
    * Get anchorMatchWholeWordMetadata.
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -636,7 +642,6 @@ public class Numerical {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -650,9 +655,10 @@ public class Numerical {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -663,7 +669,6 @@ public class Numerical {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -677,9 +682,10 @@ public class Numerical {
 
   /**
    * Get anchorStringMetadata.
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -690,7 +696,6 @@ public class Numerical {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -704,9 +709,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -717,7 +723,6 @@ public class Numerical {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -731,9 +736,10 @@ public class Numerical {
 
   /**
    * Get anchorTabProcessorVersionMetadata.
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -744,7 +750,6 @@ public class Numerical {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -757,10 +762,12 @@ public class Numerical {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -771,7 +778,6 @@ public class Numerical {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -785,9 +791,10 @@ public class Numerical {
 
   /**
    * Get anchorUnitsMetadata.
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -798,7 +805,6 @@ public class Numerical {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -811,10 +817,12 @@ public class Numerical {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -825,7 +833,6 @@ public class Numerical {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -839,9 +846,10 @@ public class Numerical {
 
   /**
    * Get anchorXOffsetMetadata.
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -852,7 +860,6 @@ public class Numerical {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -865,10 +872,12 @@ public class Numerical {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -879,7 +888,6 @@ public class Numerical {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -893,9 +901,10 @@ public class Numerical {
 
   /**
    * Get anchorYOffsetMetadata.
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -906,7 +915,6 @@ public class Numerical {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * bold.
@@ -920,9 +928,10 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is bold..
+   * 
    * @return bold
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is bold.")
+  @Schema(description = "When set to **true**, the information in the tab is bold.")
   public String getBold() {
     return bold;
   }
@@ -933,7 +942,6 @@ public class Numerical {
   public void setBold(String bold) {
     this.bold = bold;
   }
-
 
   /**
    * boldMetadata.
@@ -947,9 +955,10 @@ public class Numerical {
 
   /**
    * Get boldMetadata.
+   * 
    * @return boldMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getBoldMetadata() {
     return boldMetadata;
   }
@@ -960,7 +969,6 @@ public class Numerical {
   public void setBoldMetadata(PropertyMetadata boldMetadata) {
     this.boldMetadata = boldMetadata;
   }
-
 
   /**
    * caption.
@@ -974,9 +982,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -987,7 +996,6 @@ public class Numerical {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -1001,9 +1009,10 @@ public class Numerical {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -1014,7 +1023,6 @@ public class Numerical {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * concealValueOnDocument.
@@ -1027,10 +1035,16 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * When set to **true**, the field appears normally while the recipient is
+   * adding or modifying the information in the field, but the data is not visible
+   * (the characters are hidden by asterisks) to any other signer or the sender.
+   * When an envelope is completed the information is available to the sender
+   * through the Form Data link in the DocuSign Console. This setting applies only
+   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
+   * 
    * @return concealValueOnDocument
    **/
-  @ApiModelProperty(value = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
+  @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
   public String getConcealValueOnDocument() {
     return concealValueOnDocument;
   }
@@ -1041,7 +1055,6 @@ public class Numerical {
   public void setConcealValueOnDocument(String concealValueOnDocument) {
     this.concealValueOnDocument = concealValueOnDocument;
   }
-
 
   /**
    * concealValueOnDocumentMetadata.
@@ -1055,9 +1068,10 @@ public class Numerical {
 
   /**
    * Get concealValueOnDocumentMetadata.
+   * 
    * @return concealValueOnDocumentMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConcealValueOnDocumentMetadata() {
     return concealValueOnDocumentMetadata;
   }
@@ -1068,7 +1082,6 @@ public class Numerical {
   public void setConcealValueOnDocumentMetadata(PropertyMetadata concealValueOnDocumentMetadata) {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -1081,10 +1094,12 @@ public class Numerical {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -1095,7 +1110,6 @@ public class Numerical {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -1109,9 +1123,10 @@ public class Numerical {
 
   /**
    * Get conditionalParentLabelMetadata.
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -1122,7 +1137,6 @@ public class Numerical {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -1135,10 +1149,14 @@ public class Numerical {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -1149,7 +1167,6 @@ public class Numerical {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -1163,9 +1180,10 @@ public class Numerical {
 
   /**
    * Get conditionalParentValueMetadata.
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -1176,7 +1194,6 @@ public class Numerical {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -1189,10 +1206,13 @@ public class Numerical {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -1203,7 +1223,6 @@ public class Numerical {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1217,9 +1236,10 @@ public class Numerical {
 
   /**
    * Get customTabIdMetadata.
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1230,7 +1250,6 @@ public class Numerical {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * disableAutoSize.
@@ -1243,10 +1262,14 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
+   * When set to **true**, disables the auto sizing of single line text boxes in
+   * the signing screen when the signer enters data. If disabled users will only
+   * be able enter as much data as the text box can hold. By default this is
+   * false. This property only affects single line text boxes..
+   * 
    * @return disableAutoSize
    **/
-  @ApiModelProperty(value = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
+  @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
   public String getDisableAutoSize() {
     return disableAutoSize;
   }
@@ -1257,7 +1280,6 @@ public class Numerical {
   public void setDisableAutoSize(String disableAutoSize) {
     this.disableAutoSize = disableAutoSize;
   }
-
 
   /**
    * disableAutoSizeMetadata.
@@ -1271,9 +1293,10 @@ public class Numerical {
 
   /**
    * Get disableAutoSizeMetadata.
+   * 
    * @return disableAutoSizeMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getDisableAutoSizeMetadata() {
     return disableAutoSizeMetadata;
   }
@@ -1284,7 +1307,6 @@ public class Numerical {
   public void setDisableAutoSizeMetadata(PropertyMetadata disableAutoSizeMetadata) {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
-
 
   /**
    * documentId.
@@ -1297,10 +1319,12 @@ public class Numerical {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1311,7 +1335,6 @@ public class Numerical {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1325,9 +1348,10 @@ public class Numerical {
 
   /**
    * Get documentIdMetadata.
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1338,7 +1362,6 @@ public class Numerical {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1352,9 +1375,10 @@ public class Numerical {
 
   /**
    * Get errorDetails.
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1365,7 +1389,6 @@ public class Numerical {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * font.
@@ -1378,10 +1401,14 @@ public class Numerical {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
+   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
+   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
+   * Default..
+   * 
    * @return font
    **/
-  @ApiModelProperty(value = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
+  @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
   public String getFont() {
     return font;
   }
@@ -1392,7 +1419,6 @@ public class Numerical {
   public void setFont(String font) {
     this.font = font;
   }
-
 
   /**
    * fontColor.
@@ -1405,10 +1431,13 @@ public class Numerical {
   }
 
   /**
-   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
+   * The font color used for the information in the tab. Possible values are:
+   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
+   * Purple, or White..
+   * 
    * @return fontColor
    **/
-  @ApiModelProperty(value = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
+  @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
   public String getFontColor() {
     return fontColor;
   }
@@ -1419,7 +1448,6 @@ public class Numerical {
   public void setFontColor(String fontColor) {
     this.fontColor = fontColor;
   }
-
 
   /**
    * fontColorMetadata.
@@ -1433,9 +1461,10 @@ public class Numerical {
 
   /**
    * Get fontColorMetadata.
+   * 
    * @return fontColorMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontColorMetadata() {
     return fontColorMetadata;
   }
@@ -1446,7 +1475,6 @@ public class Numerical {
   public void setFontColorMetadata(PropertyMetadata fontColorMetadata) {
     this.fontColorMetadata = fontColorMetadata;
   }
-
 
   /**
    * fontMetadata.
@@ -1460,9 +1488,10 @@ public class Numerical {
 
   /**
    * Get fontMetadata.
+   * 
    * @return fontMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontMetadata() {
     return fontMetadata;
   }
@@ -1473,7 +1502,6 @@ public class Numerical {
   public void setFontMetadata(PropertyMetadata fontMetadata) {
     this.fontMetadata = fontMetadata;
   }
-
 
   /**
    * fontSize.
@@ -1486,10 +1514,13 @@ public class Numerical {
   }
 
   /**
-   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * The font size used for the information in the tab. Possible values are:
+   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
+   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
+   * 
    * @return fontSize
    **/
-  @ApiModelProperty(value = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
+  @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
   public String getFontSize() {
     return fontSize;
   }
@@ -1500,7 +1531,6 @@ public class Numerical {
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   /**
    * fontSizeMetadata.
@@ -1514,9 +1544,10 @@ public class Numerical {
 
   /**
    * Get fontSizeMetadata.
+   * 
    * @return fontSizeMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFontSizeMetadata() {
     return fontSizeMetadata;
   }
@@ -1527,7 +1558,6 @@ public class Numerical {
   public void setFontSizeMetadata(PropertyMetadata fontSizeMetadata) {
     this.fontSizeMetadata = fontSizeMetadata;
   }
-
 
   /**
    * formOrder.
@@ -1541,9 +1571,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1554,7 +1585,6 @@ public class Numerical {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1568,9 +1598,10 @@ public class Numerical {
 
   /**
    * Get formOrderMetadata.
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1581,7 +1612,6 @@ public class Numerical {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1595,9 +1625,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1608,7 +1639,6 @@ public class Numerical {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1622,9 +1652,10 @@ public class Numerical {
 
   /**
    * Get formPageLabelMetadata.
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1635,7 +1666,6 @@ public class Numerical {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1649,9 +1679,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1662,7 +1693,6 @@ public class Numerical {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1676,9 +1706,10 @@ public class Numerical {
 
   /**
    * Get formPageNumberMetadata.
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1689,7 +1720,6 @@ public class Numerical {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * height.
@@ -1703,9 +1733,10 @@ public class Numerical {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1716,7 +1747,6 @@ public class Numerical {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1730,9 +1760,10 @@ public class Numerical {
 
   /**
    * Get heightMetadata.
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1743,7 +1774,6 @@ public class Numerical {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * italic.
@@ -1757,9 +1787,10 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is italic..
+   * 
    * @return italic
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is italic.")
+  @Schema(description = "When set to **true**, the information in the tab is italic.")
   public String getItalic() {
     return italic;
   }
@@ -1770,7 +1801,6 @@ public class Numerical {
   public void setItalic(String italic) {
     this.italic = italic;
   }
-
 
   /**
    * italicMetadata.
@@ -1784,9 +1814,10 @@ public class Numerical {
 
   /**
    * Get italicMetadata.
+   * 
    * @return italicMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getItalicMetadata() {
     return italicMetadata;
   }
@@ -1797,7 +1828,6 @@ public class Numerical {
   public void setItalicMetadata(PropertyMetadata italicMetadata) {
     this.italicMetadata = italicMetadata;
   }
-
 
   /**
    * localePolicy.
@@ -1811,9 +1841,10 @@ public class Numerical {
 
   /**
    * Get localePolicy.
+   * 
    * @return localePolicy
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public LocalePolicyTab getLocalePolicy() {
     return localePolicy;
   }
@@ -1824,7 +1855,6 @@ public class Numerical {
   public void setLocalePolicy(LocalePolicyTab localePolicy) {
     this.localePolicy = localePolicy;
   }
-
 
   /**
    * locked.
@@ -1838,9 +1868,10 @@ public class Numerical {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
+   * 
    * @return locked
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer cannot change the data of the custom tab.")
+  @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
   public String getLocked() {
     return locked;
   }
@@ -1851,7 +1882,6 @@ public class Numerical {
   public void setLocked(String locked) {
     this.locked = locked;
   }
-
 
   /**
    * lockedMetadata.
@@ -1865,9 +1895,10 @@ public class Numerical {
 
   /**
    * Get lockedMetadata.
+   * 
    * @return lockedMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getLockedMetadata() {
     return lockedMetadata;
   }
@@ -1878,7 +1909,6 @@ public class Numerical {
   public void setLockedMetadata(PropertyMetadata lockedMetadata) {
     this.lockedMetadata = lockedMetadata;
   }
-
 
   /**
    * maxLength.
@@ -1891,10 +1921,12 @@ public class Numerical {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the property is a string..
+   * An optional value that describes the maximum length of the property when the
+   * property is a string..
+   * 
    * @return maxLength
    **/
-  @ApiModelProperty(value = "An optional value that describes the maximum length of the property when the property is a string.")
+  @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
   public String getMaxLength() {
     return maxLength;
   }
@@ -1905,7 +1937,6 @@ public class Numerical {
   public void setMaxLength(String maxLength) {
     this.maxLength = maxLength;
   }
-
 
   /**
    * maxLengthMetadata.
@@ -1919,9 +1950,10 @@ public class Numerical {
 
   /**
    * Get maxLengthMetadata.
+   * 
    * @return maxLengthMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getMaxLengthMetadata() {
     return maxLengthMetadata;
   }
@@ -1932,7 +1964,6 @@ public class Numerical {
   public void setMaxLengthMetadata(PropertyMetadata maxLengthMetadata) {
     this.maxLengthMetadata = maxLengthMetadata;
   }
-
 
   /**
    * maxNumericalValue.
@@ -1946,9 +1977,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return maxNumericalValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxNumericalValue() {
     return maxNumericalValue;
   }
@@ -1959,7 +1991,6 @@ public class Numerical {
   public void setMaxNumericalValue(String maxNumericalValue) {
     this.maxNumericalValue = maxNumericalValue;
   }
-
 
   /**
    * mergeField.
@@ -1973,9 +2004,10 @@ public class Numerical {
 
   /**
    * Get mergeField.
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1986,7 +2018,6 @@ public class Numerical {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -2000,9 +2031,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -2013,7 +2045,6 @@ public class Numerical {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * minNumericalValue.
@@ -2027,9 +2058,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return minNumericalValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinNumericalValue() {
     return minNumericalValue;
   }
@@ -2040,7 +2072,6 @@ public class Numerical {
   public void setMinNumericalValue(String minNumericalValue) {
     this.minNumericalValue = minNumericalValue;
   }
-
 
   /**
    * name.
@@ -2054,9 +2085,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -2067,7 +2099,6 @@ public class Numerical {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * nameMetadata.
@@ -2081,9 +2112,10 @@ public class Numerical {
 
   /**
    * Get nameMetadata.
+   * 
    * @return nameMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getNameMetadata() {
     return nameMetadata;
   }
@@ -2094,7 +2126,6 @@ public class Numerical {
   public void setNameMetadata(PropertyMetadata nameMetadata) {
     this.nameMetadata = nameMetadata;
   }
-
 
   /**
    * numericalValue.
@@ -2108,9 +2139,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return numericalValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumericalValue() {
     return numericalValue;
   }
@@ -2121,7 +2153,6 @@ public class Numerical {
   public void setNumericalValue(String numericalValue) {
     this.numericalValue = numericalValue;
   }
-
 
   /**
    * originalValue.
@@ -2135,9 +2166,10 @@ public class Numerical {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
+   * 
    * @return originalValue
    **/
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -2148,7 +2180,6 @@ public class Numerical {
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
-
 
   /**
    * originalValueMetadata.
@@ -2162,9 +2193,10 @@ public class Numerical {
 
   /**
    * Get originalValueMetadata.
+   * 
    * @return originalValueMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getOriginalValueMetadata() {
     return originalValueMetadata;
   }
@@ -2175,7 +2207,6 @@ public class Numerical {
   public void setOriginalValueMetadata(PropertyMetadata originalValueMetadata) {
     this.originalValueMetadata = originalValueMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -2189,9 +2220,10 @@ public class Numerical {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -2202,7 +2234,6 @@ public class Numerical {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -2216,9 +2247,10 @@ public class Numerical {
 
   /**
    * Get pageNumberMetadata.
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -2229,7 +2261,6 @@ public class Numerical {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -2242,10 +2273,12 @@ public class Numerical {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -2256,7 +2289,6 @@ public class Numerical {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -2270,9 +2302,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -2283,7 +2316,6 @@ public class Numerical {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -2297,9 +2329,10 @@ public class Numerical {
 
   /**
    * Get recipientIdGuidMetadata.
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -2310,7 +2343,6 @@ public class Numerical {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -2324,9 +2356,10 @@ public class Numerical {
 
   /**
    * Get recipientIdMetadata.
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -2337,7 +2370,6 @@ public class Numerical {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * requireAll.
@@ -2350,10 +2382,12 @@ public class Numerical {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
+   * When set to **true** and shared is true, information must be entered in this
+   * field to complete the envelope. .
+   * 
    * @return requireAll
    **/
-  @ApiModelProperty(value = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
+  @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
   public String getRequireAll() {
     return requireAll;
   }
@@ -2364,7 +2398,6 @@ public class Numerical {
   public void setRequireAll(String requireAll) {
     this.requireAll = requireAll;
   }
-
 
   /**
    * requireAllMetadata.
@@ -2378,9 +2411,10 @@ public class Numerical {
 
   /**
    * Get requireAllMetadata.
+   * 
    * @return requireAllMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequireAllMetadata() {
     return requireAllMetadata;
   }
@@ -2391,7 +2425,6 @@ public class Numerical {
   public void setRequireAllMetadata(PropertyMetadata requireAllMetadata) {
     this.requireAllMetadata = requireAllMetadata;
   }
-
 
   /**
    * required.
@@ -2405,9 +2438,10 @@ public class Numerical {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
+   * 
    * @return required
    **/
-  @ApiModelProperty(value = "When set to **true**, the signer is required to fill out this tab")
+  @Schema(description = "When set to **true**, the signer is required to fill out this tab")
   public String getRequired() {
     return required;
   }
@@ -2418,7 +2452,6 @@ public class Numerical {
   public void setRequired(String required) {
     this.required = required;
   }
-
 
   /**
    * requiredMetadata.
@@ -2432,9 +2465,10 @@ public class Numerical {
 
   /**
    * Get requiredMetadata.
+   * 
    * @return requiredMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequiredMetadata() {
     return requiredMetadata;
   }
@@ -2445,7 +2479,6 @@ public class Numerical {
   public void setRequiredMetadata(PropertyMetadata requiredMetadata) {
     this.requiredMetadata = requiredMetadata;
   }
-
 
   /**
    * requireInitialOnSharedChange.
@@ -2458,10 +2491,12 @@ public class Numerical {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
+   * Optional element for field markup. When set to **true**, the signer is
+   * required to initial when they modify a shared field..
+   * 
    * @return requireInitialOnSharedChange
    **/
-  @ApiModelProperty(value = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
+  @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
   public String getRequireInitialOnSharedChange() {
     return requireInitialOnSharedChange;
   }
@@ -2472,7 +2507,6 @@ public class Numerical {
   public void setRequireInitialOnSharedChange(String requireInitialOnSharedChange) {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
-
 
   /**
    * requireInitialOnSharedChangeMetadata.
@@ -2486,9 +2520,10 @@ public class Numerical {
 
   /**
    * Get requireInitialOnSharedChangeMetadata.
+   * 
    * @return requireInitialOnSharedChangeMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getRequireInitialOnSharedChangeMetadata() {
     return requireInitialOnSharedChangeMetadata;
   }
@@ -2499,7 +2534,6 @@ public class Numerical {
   public void setRequireInitialOnSharedChangeMetadata(PropertyMetadata requireInitialOnSharedChangeMetadata) {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
-
 
   /**
    * senderRequired.
@@ -2512,10 +2546,14 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
+   * When set to **true**, the sender must populate the tab before an envelope can
+   * be sent using the template. This value tab can only be changed by modifying
+   * (PUT) the template. Tabs with a `senderRequired` value of true cannot be
+   * deleted from an envelope..
+   * 
    * @return senderRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
+  @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
   public String getSenderRequired() {
     return senderRequired;
   }
@@ -2526,7 +2564,6 @@ public class Numerical {
   public void setSenderRequired(String senderRequired) {
     this.senderRequired = senderRequired;
   }
-
 
   /**
    * senderRequiredMetadata.
@@ -2540,9 +2577,10 @@ public class Numerical {
 
   /**
    * Get senderRequiredMetadata.
+   * 
    * @return senderRequiredMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getSenderRequiredMetadata() {
     return senderRequiredMetadata;
   }
@@ -2553,7 +2591,6 @@ public class Numerical {
   public void setSenderRequiredMetadata(PropertyMetadata senderRequiredMetadata) {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
-
 
   /**
    * shared.
@@ -2567,9 +2604,10 @@ public class Numerical {
 
   /**
    * When set to **true**, this custom tab is shared..
+   * 
    * @return shared
    **/
-  @ApiModelProperty(value = "When set to **true**, this custom tab is shared.")
+  @Schema(description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -2580,7 +2618,6 @@ public class Numerical {
   public void setShared(String shared) {
     this.shared = shared;
   }
-
 
   /**
    * sharedMetadata.
@@ -2594,9 +2631,10 @@ public class Numerical {
 
   /**
    * Get sharedMetadata.
+   * 
    * @return sharedMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getSharedMetadata() {
     return sharedMetadata;
   }
@@ -2607,7 +2645,6 @@ public class Numerical {
   public void setSharedMetadata(PropertyMetadata sharedMetadata) {
     this.sharedMetadata = sharedMetadata;
   }
-
 
   /**
    * shareToRecipients.
@@ -2621,9 +2658,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return shareToRecipients
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShareToRecipients() {
     return shareToRecipients;
   }
@@ -2634,7 +2672,6 @@ public class Numerical {
   public void setShareToRecipients(String shareToRecipients) {
     this.shareToRecipients = shareToRecipients;
   }
-
 
   /**
    * shareToRecipientsMetadata.
@@ -2648,9 +2685,10 @@ public class Numerical {
 
   /**
    * Get shareToRecipientsMetadata.
+   * 
    * @return shareToRecipientsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getShareToRecipientsMetadata() {
     return shareToRecipientsMetadata;
   }
@@ -2661,7 +2699,6 @@ public class Numerical {
   public void setShareToRecipientsMetadata(PropertyMetadata shareToRecipientsMetadata) {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -2675,9 +2712,10 @@ public class Numerical {
 
   /**
    * Get smartContractInformation.
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -2688,7 +2726,6 @@ public class Numerical {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -2702,9 +2739,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -2715,7 +2753,6 @@ public class Numerical {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -2728,10 +2765,13 @@ public class Numerical {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -2742,7 +2782,6 @@ public class Numerical {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -2756,9 +2795,10 @@ public class Numerical {
 
   /**
    * Get statusMetadata.
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -2770,7 +2810,6 @@ public class Numerical {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -2780,7 +2819,7 @@ public class Numerical {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -2796,9 +2835,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -2809,7 +2849,6 @@ public class Numerical {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -2823,9 +2862,10 @@ public class Numerical {
 
   /**
    * Get tabGroupLabelsMetadata.
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -2836,7 +2876,6 @@ public class Numerical {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -2849,10 +2888,12 @@ public class Numerical {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -2863,7 +2904,6 @@ public class Numerical {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -2877,9 +2917,10 @@ public class Numerical {
 
   /**
    * Get tabIdMetadata.
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -2890,7 +2931,6 @@ public class Numerical {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabLabel.
@@ -2904,9 +2944,10 @@ public class Numerical {
 
   /**
    * The label string associated with the tab..
+   * 
    * @return tabLabel
    **/
-  @ApiModelProperty(value = "The label string associated with the tab.")
+  @Schema(description = "The label string associated with the tab.")
   public String getTabLabel() {
     return tabLabel;
   }
@@ -2917,7 +2958,6 @@ public class Numerical {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
-
 
   /**
    * tabLabelMetadata.
@@ -2931,9 +2971,10 @@ public class Numerical {
 
   /**
    * Get tabLabelMetadata.
+   * 
    * @return tabLabelMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabLabelMetadata() {
     return tabLabelMetadata;
   }
@@ -2944,7 +2985,6 @@ public class Numerical {
   public void setTabLabelMetadata(PropertyMetadata tabLabelMetadata) {
     this.tabLabelMetadata = tabLabelMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -2958,9 +2998,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2971,7 +3012,6 @@ public class Numerical {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2985,9 +3025,10 @@ public class Numerical {
 
   /**
    * Get tabOrderMetadata.
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2998,7 +3039,6 @@ public class Numerical {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabType.
@@ -3012,9 +3052,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -3025,7 +3066,6 @@ public class Numerical {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -3039,9 +3079,10 @@ public class Numerical {
 
   /**
    * Get tabTypeMetadata.
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -3052,7 +3093,6 @@ public class Numerical {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -3065,10 +3105,12 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -3079,7 +3121,6 @@ public class Numerical {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -3093,9 +3134,10 @@ public class Numerical {
 
   /**
    * Get templateLockedMetadata.
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -3106,7 +3148,6 @@ public class Numerical {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -3119,10 +3160,12 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -3133,7 +3176,6 @@ public class Numerical {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -3147,9 +3189,10 @@ public class Numerical {
 
   /**
    * Get templateRequiredMetadata.
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -3160,7 +3203,6 @@ public class Numerical {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -3174,9 +3216,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -3187,7 +3230,6 @@ public class Numerical {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -3201,9 +3243,10 @@ public class Numerical {
 
   /**
    * Get toolTipMetadata.
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -3214,7 +3257,6 @@ public class Numerical {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * underline.
@@ -3228,9 +3270,10 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is underlined..
+   * 
    * @return underline
    **/
-  @ApiModelProperty(value = "When set to **true**, the information in the tab is underlined.")
+  @Schema(description = "When set to **true**, the information in the tab is underlined.")
   public String getUnderline() {
     return underline;
   }
@@ -3241,7 +3284,6 @@ public class Numerical {
   public void setUnderline(String underline) {
     this.underline = underline;
   }
-
 
   /**
    * underlineMetadata.
@@ -3255,9 +3297,10 @@ public class Numerical {
 
   /**
    * Get underlineMetadata.
+   * 
    * @return underlineMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getUnderlineMetadata() {
     return underlineMetadata;
   }
@@ -3268,7 +3311,6 @@ public class Numerical {
   public void setUnderlineMetadata(PropertyMetadata underlineMetadata) {
     this.underlineMetadata = underlineMetadata;
   }
-
 
   /**
    * validationType.
@@ -3282,9 +3324,10 @@ public class Numerical {
 
   /**
    * .
+   * 
    * @return validationType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getValidationType() {
     return validationType;
   }
@@ -3295,7 +3338,6 @@ public class Numerical {
   public void setValidationType(String validationType) {
     this.validationType = validationType;
   }
-
 
   /**
    * value.
@@ -3309,9 +3351,10 @@ public class Numerical {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -3322,7 +3365,6 @@ public class Numerical {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * valueMetadata.
@@ -3336,9 +3378,10 @@ public class Numerical {
 
   /**
    * Get valueMetadata.
+   * 
    * @return valueMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getValueMetadata() {
     return valueMetadata;
   }
@@ -3349,7 +3392,6 @@ public class Numerical {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
-
 
   /**
    * width.
@@ -3363,9 +3405,10 @@ public class Numerical {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -3376,7 +3419,6 @@ public class Numerical {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -3390,9 +3432,10 @@ public class Numerical {
 
   /**
    * Get widthMetadata.
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -3403,7 +3446,6 @@ public class Numerical {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -3416,10 +3458,12 @@ public class Numerical {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -3430,7 +3474,6 @@ public class Numerical {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -3444,9 +3487,10 @@ public class Numerical {
 
   /**
    * Get xPositionMetadata.
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -3457,7 +3501,6 @@ public class Numerical {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -3470,10 +3513,12 @@ public class Numerical {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -3484,7 +3529,6 @@ public class Numerical {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -3498,9 +3542,10 @@ public class Numerical {
 
   /**
    * Get yPositionMetadata.
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -3511,7 +3556,6 @@ public class Numerical {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -3528,7 +3572,9 @@ public class Numerical {
     }
     Numerical numerical = (Numerical) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, numerical.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, numerical.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
+            numerical.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, numerical.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, numerical.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, numerical.anchorHorizontalAlignment) &&
@@ -3650,9 +3696,27 @@ public class Numerical {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, maxNumericalValue, mergeField, mergeFieldXml, minNumericalValue, name, nameMetadata, numericalValue, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationType, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
+        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
+        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
+        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
+        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
+        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height,
+        heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata,
+        maxNumericalValue, mergeField, mergeFieldXml, minNumericalValue, name, nameMetadata, numericalValue,
+        originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid,
+        recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata,
+        requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata,
+        shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status,
+        statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata,
+        tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
+        templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationType, value,
+        valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -3661,21 +3725,26 @@ public class Numerical {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Numerical {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3687,11 +3756,14 @@ public class Numerical {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
+        .append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3740,7 +3812,8 @@ public class Numerical {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ")
+        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -3794,4 +3867,3 @@ public class Numerical {
   }
 
 }
-

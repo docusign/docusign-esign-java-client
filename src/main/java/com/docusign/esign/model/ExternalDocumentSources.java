@@ -6,14 +6,14 @@ import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A complex object specifying the external document sources..
  *
  */
-@ApiModel(description = "A complex object specifying the external document sources.")
+@Schema(description = "A complex object specifying the external document sources.")
 
 public class ExternalDocumentSources {
   @JsonProperty("boxnetEnabled")
@@ -46,7 +46,6 @@ public class ExternalDocumentSources {
   @JsonProperty("salesforceMetadata")
   private SettingsMetadata salesforceMetadata = null;
 
-
   /**
    * boxnetEnabled.
    *
@@ -59,9 +58,10 @@ public class ExternalDocumentSources {
 
   /**
    * .
+   * 
    * @return boxnetEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBoxnetEnabled() {
     return boxnetEnabled;
   }
@@ -72,7 +72,6 @@ public class ExternalDocumentSources {
   public void setBoxnetEnabled(String boxnetEnabled) {
     this.boxnetEnabled = boxnetEnabled;
   }
-
 
   /**
    * boxnetMetadata.
@@ -86,9 +85,10 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `boxnetEnabled` property is editable..
+   * 
    * @return boxnetMetadata
    **/
-  @ApiModelProperty(value = "Metadata indicating whether the `boxnetEnabled` property is editable.")
+  @Schema(description = "Metadata indicating whether the `boxnetEnabled` property is editable.")
   public SettingsMetadata getBoxnetMetadata() {
     return boxnetMetadata;
   }
@@ -99,7 +99,6 @@ public class ExternalDocumentSources {
   public void setBoxnetMetadata(SettingsMetadata boxnetMetadata) {
     this.boxnetMetadata = boxnetMetadata;
   }
-
 
   /**
    * dropboxEnabled.
@@ -113,9 +112,10 @@ public class ExternalDocumentSources {
 
   /**
    * .
+   * 
    * @return dropboxEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDropboxEnabled() {
     return dropboxEnabled;
   }
@@ -126,7 +126,6 @@ public class ExternalDocumentSources {
   public void setDropboxEnabled(String dropboxEnabled) {
     this.dropboxEnabled = dropboxEnabled;
   }
-
 
   /**
    * dropboxMetadata.
@@ -140,9 +139,10 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `dropboxEnabled` property is editable..
+   * 
    * @return dropboxMetadata
    **/
-  @ApiModelProperty(value = "Metadata indicating whether the `dropboxEnabled` property is editable.")
+  @Schema(description = "Metadata indicating whether the `dropboxEnabled` property is editable.")
   public SettingsMetadata getDropboxMetadata() {
     return dropboxMetadata;
   }
@@ -153,7 +153,6 @@ public class ExternalDocumentSources {
   public void setDropboxMetadata(SettingsMetadata dropboxMetadata) {
     this.dropboxMetadata = dropboxMetadata;
   }
-
 
   /**
    * googleDriveEnabled.
@@ -167,9 +166,10 @@ public class ExternalDocumentSources {
 
   /**
    * .
+   * 
    * @return googleDriveEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGoogleDriveEnabled() {
     return googleDriveEnabled;
   }
@@ -180,7 +180,6 @@ public class ExternalDocumentSources {
   public void setGoogleDriveEnabled(String googleDriveEnabled) {
     this.googleDriveEnabled = googleDriveEnabled;
   }
-
 
   /**
    * googleDriveMetadata.
@@ -194,9 +193,10 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `googleDriveEnabled` property is editable..
+   * 
    * @return googleDriveMetadata
    **/
-  @ApiModelProperty(value = "Metadata indicating whether the `googleDriveEnabled` property is editable.")
+  @Schema(description = "Metadata indicating whether the `googleDriveEnabled` property is editable.")
   public SettingsMetadata getGoogleDriveMetadata() {
     return googleDriveMetadata;
   }
@@ -207,7 +207,6 @@ public class ExternalDocumentSources {
   public void setGoogleDriveMetadata(SettingsMetadata googleDriveMetadata) {
     this.googleDriveMetadata = googleDriveMetadata;
   }
-
 
   /**
    * oneDriveEnabled.
@@ -221,9 +220,10 @@ public class ExternalDocumentSources {
 
   /**
    * .
+   * 
    * @return oneDriveEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOneDriveEnabled() {
     return oneDriveEnabled;
   }
@@ -234,7 +234,6 @@ public class ExternalDocumentSources {
   public void setOneDriveEnabled(String oneDriveEnabled) {
     this.oneDriveEnabled = oneDriveEnabled;
   }
-
 
   /**
    * oneDriveMetadata.
@@ -248,9 +247,10 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `oneDriveEnabled` property is editable..
+   * 
    * @return oneDriveMetadata
    **/
-  @ApiModelProperty(value = "Metadata indicating whether the `oneDriveEnabled` property is editable.")
+  @Schema(description = "Metadata indicating whether the `oneDriveEnabled` property is editable.")
   public SettingsMetadata getOneDriveMetadata() {
     return oneDriveMetadata;
   }
@@ -261,7 +261,6 @@ public class ExternalDocumentSources {
   public void setOneDriveMetadata(SettingsMetadata oneDriveMetadata) {
     this.oneDriveMetadata = oneDriveMetadata;
   }
-
 
   /**
    * salesforceEnabled.
@@ -275,9 +274,10 @@ public class ExternalDocumentSources {
 
   /**
    * .
+   * 
    * @return salesforceEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSalesforceEnabled() {
     return salesforceEnabled;
   }
@@ -288,7 +288,6 @@ public class ExternalDocumentSources {
   public void setSalesforceEnabled(String salesforceEnabled) {
     this.salesforceEnabled = salesforceEnabled;
   }
-
 
   /**
    * salesforceMetadata.
@@ -302,9 +301,10 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `salesforceEnabled` property is editable..
+   * 
    * @return salesforceMetadata
    **/
-  @ApiModelProperty(value = "Metadata indicating whether the `salesforceEnabled` property is editable.")
+  @Schema(description = "Metadata indicating whether the `salesforceEnabled` property is editable.")
   public SettingsMetadata getSalesforceMetadata() {
     return salesforceMetadata;
   }
@@ -315,7 +315,6 @@ public class ExternalDocumentSources {
   public void setSalesforceMetadata(SettingsMetadata salesforceMetadata) {
     this.salesforceMetadata = salesforceMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -348,9 +347,9 @@ public class ExternalDocumentSources {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(boxnetEnabled, boxnetMetadata, dropboxEnabled, dropboxMetadata, googleDriveEnabled, googleDriveMetadata, oneDriveEnabled, oneDriveMetadata, salesforceEnabled, salesforceMetadata);
+    return Objects.hash(boxnetEnabled, boxnetMetadata, dropboxEnabled, dropboxMetadata, googleDriveEnabled,
+        googleDriveMetadata, oneDriveEnabled, oneDriveMetadata, salesforceEnabled, salesforceMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -359,7 +358,7 @@ public class ExternalDocumentSources {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocumentSources {\n");
-    
+
     sb.append("    boxnetEnabled: ").append(toIndentedString(boxnetEnabled)).append("\n");
     sb.append("    boxnetMetadata: ").append(toIndentedString(boxnetMetadata)).append("\n");
     sb.append("    dropboxEnabled: ").append(toIndentedString(dropboxEnabled)).append("\n");
@@ -386,4 +385,3 @@ public class ExternalDocumentSources {
   }
 
 }
-

@@ -8,14 +8,15 @@ import com.docusign.esign.model.RecipientDomain;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * An object used to identify the features and attributes of the account being created..
+ * An object used to identify the features and attributes of the account being
+ * created..
  *
  */
-@ApiModel(description = "An object used to identify the features and attributes of the account being created.")
+@Schema(description = "An object used to identify the features and attributes of the account being created.")
 
 public class PlanInformation {
   @JsonProperty("addOns")
@@ -36,7 +37,6 @@ public class PlanInformation {
   @JsonProperty("recipientDomains")
   private java.util.List<RecipientDomain> recipientDomains = null;
 
-
   /**
    * addOns.
    *
@@ -46,7 +46,7 @@ public class PlanInformation {
     this.addOns = addOns;
     return this;
   }
-  
+
   /**
    * addAddOnsItem.
    *
@@ -62,9 +62,10 @@ public class PlanInformation {
 
   /**
    * Reserved:.
+   * 
    * @return addOns
    **/
-  @ApiModelProperty(value = "Reserved:")
+  @Schema(description = "Reserved:")
   public java.util.List<AddOn> getAddOns() {
     return addOns;
   }
@@ -75,7 +76,6 @@ public class PlanInformation {
   public void setAddOns(java.util.List<AddOn> addOns) {
     this.addOns = addOns;
   }
-
 
   /**
    * currencyCode.
@@ -89,9 +89,10 @@ public class PlanInformation {
 
   /**
    * Specifies the ISO currency code for the account..
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "Specifies the ISO currency code for the account.")
+  @Schema(description = "Specifies the ISO currency code for the account.")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -102,7 +103,6 @@ public class PlanInformation {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * freeTrialDaysOverride.
@@ -116,9 +116,10 @@ public class PlanInformation {
 
   /**
    * Reserved for DocuSign use only..
+   * 
    * @return freeTrialDaysOverride
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign use only.")
+  @Schema(description = "Reserved for DocuSign use only.")
   public String getFreeTrialDaysOverride() {
     return freeTrialDaysOverride;
   }
@@ -130,7 +131,6 @@ public class PlanInformation {
     this.freeTrialDaysOverride = freeTrialDaysOverride;
   }
 
-
   /**
    * planFeatureSets.
    *
@@ -140,7 +140,7 @@ public class PlanInformation {
     this.planFeatureSets = planFeatureSets;
     return this;
   }
-  
+
   /**
    * addPlanFeatureSetsItem.
    *
@@ -156,9 +156,10 @@ public class PlanInformation {
 
   /**
    * A complex type that sets the feature sets for the account..
+   * 
    * @return planFeatureSets
    **/
-  @ApiModelProperty(value = "A complex type that sets the feature sets for the account.")
+  @Schema(description = "A complex type that sets the feature sets for the account.")
   public java.util.List<FeatureSet> getPlanFeatureSets() {
     return planFeatureSets;
   }
@@ -169,7 +170,6 @@ public class PlanInformation {
   public void setPlanFeatureSets(java.util.List<FeatureSet> planFeatureSets) {
     this.planFeatureSets = planFeatureSets;
   }
-
 
   /**
    * planId.
@@ -183,9 +183,10 @@ public class PlanInformation {
 
   /**
    * The DocuSign Plan ID for the account..
+   * 
    * @return planId
    **/
-  @ApiModelProperty(value = "The DocuSign Plan ID for the account.")
+  @Schema(description = "The DocuSign Plan ID for the account.")
   public String getPlanId() {
     return planId;
   }
@@ -197,7 +198,6 @@ public class PlanInformation {
     this.planId = planId;
   }
 
-
   /**
    * recipientDomains.
    *
@@ -207,7 +207,7 @@ public class PlanInformation {
     this.recipientDomains = recipientDomains;
     return this;
   }
-  
+
   /**
    * addRecipientDomainsItem.
    *
@@ -223,9 +223,10 @@ public class PlanInformation {
 
   /**
    * .
+   * 
    * @return recipientDomains
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<RecipientDomain> getRecipientDomains() {
     return recipientDomains;
   }
@@ -236,7 +237,6 @@ public class PlanInformation {
   public void setRecipientDomains(java.util.List<RecipientDomain> recipientDomains) {
     this.recipientDomains = recipientDomains;
   }
-
 
   /**
    * Compares objects.
@@ -268,7 +268,6 @@ public class PlanInformation {
     return Objects.hash(addOns, currencyCode, freeTrialDaysOverride, planFeatureSets, planId, recipientDomains);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -276,7 +275,7 @@ public class PlanInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PlanInformation {\n");
-    
+
     sb.append("    addOns: ").append(toIndentedString(addOns)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    freeTrialDaysOverride: ").append(toIndentedString(freeTrialDaysOverride)).append("\n");
@@ -299,4 +298,3 @@ public class PlanInformation {
   }
 
 }
-

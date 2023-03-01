@@ -6,14 +6,17 @@ import com.docusign.esign.model.DocumentHtmlDisplayAnchor;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
+ * Holds the properties that define how to generate the responsive-formatted
+ * HTML for the document. See [Responsive
+ * signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the
+ * [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
  *
  */
-@ApiModel(description = "Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
+@Schema(description = "Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
 
 public class DocumentHtmlDefinition {
   @JsonProperty("displayAnchorPrefix")
@@ -49,7 +52,6 @@ public class DocumentHtmlDefinition {
   @JsonProperty("source")
   private String source = null;
 
-
   /**
    * displayAnchorPrefix.
    *
@@ -62,9 +64,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return displayAnchorPrefix
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayAnchorPrefix() {
     return displayAnchorPrefix;
   }
@@ -76,7 +79,6 @@ public class DocumentHtmlDefinition {
     this.displayAnchorPrefix = displayAnchorPrefix;
   }
 
-
   /**
    * displayAnchors.
    *
@@ -86,7 +88,7 @@ public class DocumentHtmlDefinition {
     this.displayAnchors = displayAnchors;
     return this;
   }
-  
+
   /**
    * addDisplayAnchorsItem.
    *
@@ -102,9 +104,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return displayAnchors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<DocumentHtmlDisplayAnchor> getDisplayAnchors() {
     return displayAnchors;
   }
@@ -115,7 +118,6 @@ public class DocumentHtmlDefinition {
   public void setDisplayAnchors(java.util.List<DocumentHtmlDisplayAnchor> displayAnchors) {
     this.displayAnchors = displayAnchors;
   }
-
 
   /**
    * displayOrder.
@@ -129,9 +131,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return displayOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayOrder() {
     return displayOrder;
   }
@@ -142,7 +145,6 @@ public class DocumentHtmlDefinition {
   public void setDisplayOrder(String displayOrder) {
     this.displayOrder = displayOrder;
   }
-
 
   /**
    * displayPageNumber.
@@ -156,9 +158,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return displayPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDisplayPageNumber() {
     return displayPageNumber;
   }
@@ -169,7 +172,6 @@ public class DocumentHtmlDefinition {
   public void setDisplayPageNumber(String displayPageNumber) {
     this.displayPageNumber = displayPageNumber;
   }
-
 
   /**
    * documentGuid.
@@ -183,9 +185,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return documentGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentGuid() {
     return documentGuid;
   }
@@ -196,7 +199,6 @@ public class DocumentHtmlDefinition {
   public void setDocumentGuid(String documentGuid) {
     this.documentGuid = documentGuid;
   }
-
 
   /**
    * documentId.
@@ -209,10 +211,12 @@ public class DocumentHtmlDefinition {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -223,7 +227,6 @@ public class DocumentHtmlDefinition {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * headerLabel.
@@ -237,9 +240,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return headerLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHeaderLabel() {
     return headerLabel;
   }
@@ -250,7 +254,6 @@ public class DocumentHtmlDefinition {
   public void setHeaderLabel(String headerLabel) {
     this.headerLabel = headerLabel;
   }
-
 
   /**
    * maxScreenWidth.
@@ -264,9 +267,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return maxScreenWidth
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaxScreenWidth() {
     return maxScreenWidth;
   }
@@ -277,7 +281,6 @@ public class DocumentHtmlDefinition {
   public void setMaxScreenWidth(String maxScreenWidth) {
     this.maxScreenWidth = maxScreenWidth;
   }
-
 
   /**
    * removeEmptyTags.
@@ -291,9 +294,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return removeEmptyTags
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRemoveEmptyTags() {
     return removeEmptyTags;
   }
@@ -304,7 +308,6 @@ public class DocumentHtmlDefinition {
   public void setRemoveEmptyTags(String removeEmptyTags) {
     this.removeEmptyTags = removeEmptyTags;
   }
-
 
   /**
    * showMobileOptimizedToggle.
@@ -318,9 +321,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return showMobileOptimizedToggle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShowMobileOptimizedToggle() {
     return showMobileOptimizedToggle;
   }
@@ -331,7 +335,6 @@ public class DocumentHtmlDefinition {
   public void setShowMobileOptimizedToggle(String showMobileOptimizedToggle) {
     this.showMobileOptimizedToggle = showMobileOptimizedToggle;
   }
-
 
   /**
    * source.
@@ -345,9 +348,10 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -358,7 +362,6 @@ public class DocumentHtmlDefinition {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * Compares objects.
@@ -392,9 +395,9 @@ public class DocumentHtmlDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(displayAnchorPrefix, displayAnchors, displayOrder, displayPageNumber, documentGuid, documentId, headerLabel, maxScreenWidth, removeEmptyTags, showMobileOptimizedToggle, source);
+    return Objects.hash(displayAnchorPrefix, displayAnchors, displayOrder, displayPageNumber, documentGuid, documentId,
+        headerLabel, maxScreenWidth, removeEmptyTags, showMobileOptimizedToggle, source);
   }
-
 
   /**
    * Converts the given object to string.
@@ -403,7 +406,7 @@ public class DocumentHtmlDefinition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinition {\n");
-    
+
     sb.append("    displayAnchorPrefix: ").append(toIndentedString(displayAnchorPrefix)).append("\n");
     sb.append("    displayAnchors: ").append(toIndentedString(displayAnchors)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
@@ -431,4 +434,3 @@ public class DocumentHtmlDefinition {
   }
 
 }
-

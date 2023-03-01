@@ -6,8 +6,8 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ResourceInformation.
@@ -18,7 +18,6 @@ public class ResourceInformation {
   @JsonProperty("resources")
   private java.util.List<NameValue> resources = null;
 
-
   /**
    * resources.
    *
@@ -28,7 +27,7 @@ public class ResourceInformation {
     this.resources = resources;
     return this;
   }
-  
+
   /**
    * addResourcesItem.
    *
@@ -44,9 +43,10 @@ public class ResourceInformation {
 
   /**
    * .
+   * 
    * @return resources
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getResources() {
     return resources;
   }
@@ -57,7 +57,6 @@ public class ResourceInformation {
   public void setResources(java.util.List<NameValue> resources) {
     this.resources = resources;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class ResourceInformation {
     return Objects.hash(resources);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class ResourceInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceInformation {\n");
-    
+
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class ResourceInformation {
   }
 
 }
-

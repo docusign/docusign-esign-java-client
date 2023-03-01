@@ -6,14 +6,14 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains details about the history of the BCC email archive configuration..
  *
  */
-@ApiModel(description = "Contains details about the history of the BCC email archive configuration.")
+@Schema(description = "Contains details about the history of the BCC email archive configuration.")
 
 public class BccEmailArchiveHistory {
   @JsonProperty("accountId")
@@ -34,7 +34,6 @@ public class BccEmailArchiveHistory {
   @JsonProperty("status")
   private String status = null;
 
-
   /**
    * accountId.
    *
@@ -47,9 +46,10 @@ public class BccEmailArchiveHistory {
 
   /**
    * The account ID associated with the envelope..
+   * 
    * @return accountId
    **/
-  @ApiModelProperty(value = "The account ID associated with the envelope.")
+  @Schema(description = "The account ID associated with the envelope.")
   public String getAccountId() {
     return accountId;
   }
@@ -60,7 +60,6 @@ public class BccEmailArchiveHistory {
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
-
 
   /**
    * action.
@@ -74,9 +73,10 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
+   * 
    * @return action
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAction() {
     return action;
   }
@@ -87,7 +87,6 @@ public class BccEmailArchiveHistory {
   public void setAction(String action) {
     this.action = action;
   }
-
 
   /**
    * email.
@@ -101,9 +100,10 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -114,7 +114,6 @@ public class BccEmailArchiveHistory {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * modified.
@@ -128,9 +127,10 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
+   * 
    * @return modified
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getModified() {
     return modified;
   }
@@ -141,7 +141,6 @@ public class BccEmailArchiveHistory {
   public void setModified(String modified) {
     this.modified = modified;
   }
-
 
   /**
    * modifiedBy.
@@ -154,10 +153,12 @@ public class BccEmailArchiveHistory {
   }
 
   /**
-   * Details about the user who last modified the BCC email archive configuration..
+   * Details about the user who last modified the BCC email archive
+   * configuration..
+   * 
    * @return modifiedBy
    **/
-  @ApiModelProperty(value = "Details about the user who last modified the BCC email archive configuration.")
+  @Schema(description = "Details about the user who last modified the BCC email archive configuration.")
   public UserInfo getModifiedBy() {
     return modifiedBy;
   }
@@ -168,7 +169,6 @@ public class BccEmailArchiveHistory {
   public void setModifiedBy(UserInfo modifiedBy) {
     this.modifiedBy = modifiedBy;
   }
-
 
   /**
    * status.
@@ -181,10 +181,13 @@ public class BccEmailArchiveHistory {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -195,7 +198,6 @@ public class BccEmailArchiveHistory {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * Compares objects.
@@ -227,7 +229,6 @@ public class BccEmailArchiveHistory {
     return Objects.hash(accountId, action, email, modified, modifiedBy, status);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -235,7 +236,7 @@ public class BccEmailArchiveHistory {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchiveHistory {\n");
-    
+
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -258,4 +259,3 @@ public class BccEmailArchiveHistory {
   }
 
 }
-

@@ -6,14 +6,14 @@ import com.docusign.esign.model.BulkSendBatchSummary;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A list of bulk send batch summaries. .
  *
  */
-@ApiModel(description = "A list of bulk send batch summaries. ")
+@Schema(description = "A list of bulk send batch summaries. ")
 
 public class BulkSendBatchSummaries {
   @JsonProperty("batchSizeLimit")
@@ -52,7 +52,6 @@ public class BulkSendBatchSummaries {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * batchSizeLimit.
    *
@@ -65,9 +64,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return batchSizeLimit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchSizeLimit() {
     return batchSizeLimit;
   }
@@ -79,7 +79,6 @@ public class BulkSendBatchSummaries {
     this.batchSizeLimit = batchSizeLimit;
   }
 
-
   /**
    * bulkBatchSummaries.
    *
@@ -89,7 +88,7 @@ public class BulkSendBatchSummaries {
     this.bulkBatchSummaries = bulkBatchSummaries;
     return this;
   }
-  
+
   /**
    * addBulkBatchSummariesItem.
    *
@@ -105,9 +104,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return bulkBatchSummaries
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkSendBatchSummary> getBulkBatchSummaries() {
     return bulkBatchSummaries;
   }
@@ -118,7 +118,6 @@ public class BulkSendBatchSummaries {
   public void setBulkBatchSummaries(java.util.List<BulkSendBatchSummary> bulkBatchSummaries) {
     this.bulkBatchSummaries = bulkBatchSummaries;
   }
-
 
   /**
    * bulkProcessQueueLimit.
@@ -132,9 +131,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return bulkProcessQueueLimit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBulkProcessQueueLimit() {
     return bulkProcessQueueLimit;
   }
@@ -145,7 +145,6 @@ public class BulkSendBatchSummaries {
   public void setBulkProcessQueueLimit(String bulkProcessQueueLimit) {
     this.bulkProcessQueueLimit = bulkProcessQueueLimit;
   }
-
 
   /**
    * bulkProcessTotalQueued.
@@ -159,9 +158,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return bulkProcessTotalQueued
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBulkProcessTotalQueued() {
     return bulkProcessTotalQueued;
   }
@@ -172,7 +172,6 @@ public class BulkSendBatchSummaries {
   public void setBulkProcessTotalQueued(String bulkProcessTotalQueued) {
     this.bulkProcessTotalQueued = bulkProcessTotalQueued;
   }
-
 
   /**
    * endPosition.
@@ -186,9 +185,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -199,7 +199,6 @@ public class BulkSendBatchSummaries {
   public void setEndPosition(String endPosition) {
     this.endPosition = endPosition;
   }
-
 
   /**
    * nextUri.
@@ -212,10 +211,12 @@ public class BulkSendBatchSummaries {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -226,7 +227,6 @@ public class BulkSendBatchSummaries {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -240,9 +240,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -253,7 +254,6 @@ public class BulkSendBatchSummaries {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * queueLimit.
@@ -267,9 +267,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return queueLimit
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getQueueLimit() {
     return queueLimit;
   }
@@ -280,7 +281,6 @@ public class BulkSendBatchSummaries {
   public void setQueueLimit(String queueLimit) {
     this.queueLimit = queueLimit;
   }
-
 
   /**
    * resultSetSize.
@@ -294,9 +294,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -307,7 +308,6 @@ public class BulkSendBatchSummaries {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -321,9 +321,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -334,7 +335,6 @@ public class BulkSendBatchSummaries {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalQueued.
@@ -348,9 +348,10 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
+   * 
    * @return totalQueued
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTotalQueued() {
     return totalQueued;
   }
@@ -361,7 +362,6 @@ public class BulkSendBatchSummaries {
   public void setTotalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
   }
-
 
   /**
    * totalSetSize.
@@ -374,10 +374,13 @@ public class BulkSendBatchSummaries {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -388,7 +391,6 @@ public class BulkSendBatchSummaries {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -423,9 +425,9 @@ public class BulkSendBatchSummaries {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchSizeLimit, bulkBatchSummaries, bulkProcessQueueLimit, bulkProcessTotalQueued, endPosition, nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
+    return Objects.hash(batchSizeLimit, bulkBatchSummaries, bulkProcessQueueLimit, bulkProcessTotalQueued, endPosition,
+        nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -434,7 +436,7 @@ public class BulkSendBatchSummaries {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchSummaries {\n");
-    
+
     sb.append("    batchSizeLimit: ").append(toIndentedString(batchSizeLimit)).append("\n");
     sb.append("    bulkBatchSummaries: ").append(toIndentedString(bulkBatchSummaries)).append("\n");
     sb.append("    bulkProcessQueueLimit: ").append(toIndentedString(bulkProcessQueueLimit)).append("\n");
@@ -463,4 +465,3 @@ public class BulkSendBatchSummaries {
   }
 
 }
-

@@ -8,14 +8,14 @@ import com.docusign.esign.model.Folder;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Result set for the Envelopes: listStatusChanges method.
  *
  */
-@ApiModel(description = "Result set for the Envelopes: listStatusChanges method")
+@Schema(description = "Result set for the Envelopes: listStatusChanges method")
 
 public class EnvelopesInformation {
   @JsonProperty("continuationToken")
@@ -51,7 +51,6 @@ public class EnvelopesInformation {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
-
   /**
    * continuationToken.
    *
@@ -64,9 +63,10 @@ public class EnvelopesInformation {
 
   /**
    * .
+   * 
    * @return continuationToken
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getContinuationToken() {
     return continuationToken;
   }
@@ -77,7 +77,6 @@ public class EnvelopesInformation {
   public void setContinuationToken(String continuationToken) {
     this.continuationToken = continuationToken;
   }
-
 
   /**
    * endPosition.
@@ -91,9 +90,10 @@ public class EnvelopesInformation {
 
   /**
    * The last position in the result set. .
+   * 
    * @return endPosition
    **/
-  @ApiModelProperty(value = "The last position in the result set. ")
+  @Schema(description = "The last position in the result set. ")
   public String getEndPosition() {
     return endPosition;
   }
@@ -105,7 +105,6 @@ public class EnvelopesInformation {
     this.endPosition = endPosition;
   }
 
-
   /**
    * envelopes.
    *
@@ -115,7 +114,7 @@ public class EnvelopesInformation {
     this.envelopes = envelopes;
     return this;
   }
-  
+
   /**
    * addEnvelopesItem.
    *
@@ -131,9 +130,10 @@ public class EnvelopesInformation {
 
   /**
    * .
+   * 
    * @return envelopes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Envelope> getEnvelopes() {
     return envelopes;
   }
@@ -145,23 +145,24 @@ public class EnvelopesInformation {
     this.envelopes = envelopes;
   }
 
-
   /**
    * envelopeTransactionStatuses.
    *
    * @return EnvelopesInformation
    **/
-  public EnvelopesInformation envelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
+  public EnvelopesInformation envelopeTransactionStatuses(
+      java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
     return this;
   }
-  
+
   /**
    * addEnvelopeTransactionStatusesItem.
    *
    * @return EnvelopesInformation
    **/
-  public EnvelopesInformation addEnvelopeTransactionStatusesItem(EnvelopeTransactionStatus envelopeTransactionStatusesItem) {
+  public EnvelopesInformation addEnvelopeTransactionStatusesItem(
+      EnvelopeTransactionStatus envelopeTransactionStatusesItem) {
     if (this.envelopeTransactionStatuses == null) {
       this.envelopeTransactionStatuses = new java.util.ArrayList<>();
     }
@@ -171,9 +172,10 @@ public class EnvelopesInformation {
 
   /**
    * .
+   * 
    * @return envelopeTransactionStatuses
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<EnvelopeTransactionStatus> getEnvelopeTransactionStatuses() {
     return envelopeTransactionStatuses;
   }
@@ -185,7 +187,6 @@ public class EnvelopesInformation {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
   }
 
-
   /**
    * folders.
    *
@@ -195,7 +196,7 @@ public class EnvelopesInformation {
     this.folders = folders;
     return this;
   }
-  
+
   /**
    * addFoldersItem.
    *
@@ -211,9 +212,10 @@ public class EnvelopesInformation {
 
   /**
    * .
+   * 
    * @return folders
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Folder> getFolders() {
     return folders;
   }
@@ -224,7 +226,6 @@ public class EnvelopesInformation {
   public void setFolders(java.util.List<Folder> folders) {
     this.folders = folders;
   }
-
 
   /**
    * lastQueriedDateTime.
@@ -238,9 +239,10 @@ public class EnvelopesInformation {
 
   /**
    * .
+   * 
    * @return lastQueriedDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLastQueriedDateTime() {
     return lastQueriedDateTime;
   }
@@ -251,7 +253,6 @@ public class EnvelopesInformation {
   public void setLastQueriedDateTime(String lastQueriedDateTime) {
     this.lastQueriedDateTime = lastQueriedDateTime;
   }
-
 
   /**
    * nextUri.
@@ -264,10 +265,12 @@ public class EnvelopesInformation {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
+   * The URI to the next chunk of records based on the search request. If the
+   * endPosition is the entire results of the search, this is null. .
+   * 
    * @return nextUri
    **/
-  @ApiModelProperty(value = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
+  @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
   public String getNextUri() {
     return nextUri;
   }
@@ -278,7 +281,6 @@ public class EnvelopesInformation {
   public void setNextUri(String nextUri) {
     this.nextUri = nextUri;
   }
-
 
   /**
    * previousUri.
@@ -292,9 +294,10 @@ public class EnvelopesInformation {
 
   /**
    * The postal code for the billing address..
+   * 
    * @return previousUri
    **/
-  @ApiModelProperty(value = "The postal code for the billing address.")
+  @Schema(description = "The postal code for the billing address.")
   public String getPreviousUri() {
     return previousUri;
   }
@@ -305,7 +308,6 @@ public class EnvelopesInformation {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
-
 
   /**
    * resultSetSize.
@@ -319,9 +321,10 @@ public class EnvelopesInformation {
 
   /**
    * The number of results returned in this response. .
+   * 
    * @return resultSetSize
    **/
-  @ApiModelProperty(value = "The number of results returned in this response. ")
+  @Schema(description = "The number of results returned in this response. ")
   public String getResultSetSize() {
     return resultSetSize;
   }
@@ -332,7 +335,6 @@ public class EnvelopesInformation {
   public void setResultSetSize(String resultSetSize) {
     this.resultSetSize = resultSetSize;
   }
-
 
   /**
    * startPosition.
@@ -346,9 +348,10 @@ public class EnvelopesInformation {
 
   /**
    * Starting position of the current result set..
+   * 
    * @return startPosition
    **/
-  @ApiModelProperty(value = "Starting position of the current result set.")
+  @Schema(description = "Starting position of the current result set.")
   public String getStartPosition() {
     return startPosition;
   }
@@ -359,7 +362,6 @@ public class EnvelopesInformation {
   public void setStartPosition(String startPosition) {
     this.startPosition = startPosition;
   }
-
 
   /**
    * totalSetSize.
@@ -372,10 +374,13 @@ public class EnvelopesInformation {
   }
 
   /**
-   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
+   * The total number of items available in the result set. This will always be
+   * greater than or equal to the value of the property returning the results in
+   * the in the response..
+   * 
    * @return totalSetSize
    **/
-  @ApiModelProperty(value = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
+  @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
   public String getTotalSetSize() {
     return totalSetSize;
   }
@@ -386,7 +391,6 @@ public class EnvelopesInformation {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
-
 
   /**
    * Compares objects.
@@ -420,9 +424,9 @@ public class EnvelopesInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders,
+        lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
-
 
   /**
    * Converts the given object to string.
@@ -431,7 +435,7 @@ public class EnvelopesInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopesInformation {\n");
-    
+
     sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
@@ -459,4 +463,3 @@ public class EnvelopesInformation {
   }
 
 }
-

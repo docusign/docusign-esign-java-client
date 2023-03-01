@@ -5,14 +5,20 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - &#x60;DateAreaX&#x60;: The X axis position of the top-left corner. - &#x60;DateAreaY&#x60;: The Y axis position of the top-left corner. - &#x60;DateAreaWidth&#x60;: The width of the rectangle. - &#x60;DateAreaHeight&#x60;: The height of the rectangle..
+ * Specifies the area in which a date stamp is placed. This parameter uses pixel
+ * positioning to draw a rectangle at the center of the stamp area. The stamp is
+ * superimposed on top of this central area. This property contains the
+ * following information about the central rectangle: - &#x60;DateAreaX&#x60;:
+ * The X axis position of the top-left corner. - &#x60;DateAreaY&#x60;: The Y
+ * axis position of the top-left corner. - &#x60;DateAreaWidth&#x60;: The width
+ * of the rectangle. - &#x60;DateAreaHeight&#x60;: The height of the rectangle..
  *
  */
-@ApiModel(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
+@Schema(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
 
 public class DateStampProperties {
   @JsonProperty("dateAreaHeight")
@@ -27,7 +33,6 @@ public class DateStampProperties {
   @JsonProperty("dateAreaY")
   private String dateAreaY = null;
 
-
   /**
    * dateAreaHeight.
    *
@@ -40,9 +45,10 @@ public class DateStampProperties {
 
   /**
    * .
+   * 
    * @return dateAreaHeight
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateAreaHeight() {
     return dateAreaHeight;
   }
@@ -53,7 +59,6 @@ public class DateStampProperties {
   public void setDateAreaHeight(String dateAreaHeight) {
     this.dateAreaHeight = dateAreaHeight;
   }
-
 
   /**
    * dateAreaWidth.
@@ -67,9 +72,10 @@ public class DateStampProperties {
 
   /**
    * .
+   * 
    * @return dateAreaWidth
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateAreaWidth() {
     return dateAreaWidth;
   }
@@ -80,7 +86,6 @@ public class DateStampProperties {
   public void setDateAreaWidth(String dateAreaWidth) {
     this.dateAreaWidth = dateAreaWidth;
   }
-
 
   /**
    * dateAreaX.
@@ -94,9 +99,10 @@ public class DateStampProperties {
 
   /**
    * .
+   * 
    * @return dateAreaX
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateAreaX() {
     return dateAreaX;
   }
@@ -107,7 +113,6 @@ public class DateStampProperties {
   public void setDateAreaX(String dateAreaX) {
     this.dateAreaX = dateAreaX;
   }
-
 
   /**
    * dateAreaY.
@@ -121,9 +126,10 @@ public class DateStampProperties {
 
   /**
    * .
+   * 
    * @return dateAreaY
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateAreaY() {
     return dateAreaY;
   }
@@ -134,7 +140,6 @@ public class DateStampProperties {
   public void setDateAreaY(String dateAreaY) {
     this.dateAreaY = dateAreaY;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +169,6 @@ public class DateStampProperties {
     return Objects.hash(dateAreaHeight, dateAreaWidth, dateAreaX, dateAreaY);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +176,7 @@ public class DateStampProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DateStampProperties {\n");
-    
+
     sb.append("    dateAreaHeight: ").append(toIndentedString(dateAreaHeight)).append("\n");
     sb.append("    dateAreaWidth: ").append(toIndentedString(dateAreaWidth)).append("\n");
     sb.append("    dateAreaX: ").append(toIndentedString(dateAreaX)).append("\n");
@@ -193,4 +197,3 @@ public class DateStampProperties {
   }
 
 }
-

@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * A complex element that specifies reminder settings for the envelope.
  *
  */
-@ApiModel(description = "A complex element that specifies reminder settings for the envelope")
+@Schema(description = "A complex element that specifies reminder settings for the envelope")
 
 public class Reminders {
   @JsonProperty("reminderDelay")
@@ -23,7 +23,6 @@ public class Reminders {
 
   @JsonProperty("reminderFrequency")
   private String reminderFrequency = null;
-
 
   /**
    * reminderDelay.
@@ -36,10 +35,12 @@ public class Reminders {
   }
 
   /**
-   * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient..
+   * An interger that sets the number of days after the recipient receives the
+   * envelope that reminder emails are sent to the recipient..
+   * 
    * @return reminderDelay
    **/
-  @ApiModelProperty(value = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
+  @Schema(description = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
   public String getReminderDelay() {
     return reminderDelay;
   }
@@ -50,7 +51,6 @@ public class Reminders {
   public void setReminderDelay(String reminderDelay) {
     this.reminderDelay = reminderDelay;
   }
-
 
   /**
    * reminderEnabled.
@@ -63,10 +63,14 @@ public class Reminders {
   }
 
   /**
-   * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used..
+   * When set to **true**, the envelope expires (is no longer available for
+   * signing) in the set number of days. If false, the account default setting is
+   * used. If the account does not have an expiration setting, the DocuSign
+   * default value of 120 days is used..
+   * 
    * @return reminderEnabled
    **/
-  @ApiModelProperty(value = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
+  @Schema(description = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
   public String getReminderEnabled() {
     return reminderEnabled;
   }
@@ -77,7 +81,6 @@ public class Reminders {
   public void setReminderEnabled(String reminderEnabled) {
     this.reminderEnabled = reminderEnabled;
   }
-
 
   /**
    * reminderFrequency.
@@ -91,9 +94,10 @@ public class Reminders {
 
   /**
    * An interger that sets the interval, in days, between reminder emails..
+   * 
    * @return reminderFrequency
    **/
-  @ApiModelProperty(value = "An interger that sets the interval, in days, between reminder emails.")
+  @Schema(description = "An interger that sets the interval, in days, between reminder emails.")
   public String getReminderFrequency() {
     return reminderFrequency;
   }
@@ -104,7 +108,6 @@ public class Reminders {
   public void setReminderFrequency(String reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +136,6 @@ public class Reminders {
     return Objects.hash(reminderDelay, reminderEnabled, reminderFrequency);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +143,7 @@ public class Reminders {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reminders {\n");
-    
+
     sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
     sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
     sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
@@ -161,4 +163,3 @@ public class Reminders {
   }
 
 }
-

@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Information about a link that a brand uses..
  *
  */
-@ApiModel(description = "Information about a link that a brand uses.")
+@Schema(description = "Information about a link that a brand uses.")
 
 public class BrandLink {
   @JsonProperty("linkText")
@@ -27,7 +27,6 @@ public class BrandLink {
   @JsonProperty("urlOrMailTo")
   private String urlOrMailTo = null;
 
-
   /**
    * linkText.
    *
@@ -40,9 +39,10 @@ public class BrandLink {
 
   /**
    * .
+   * 
    * @return linkText
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLinkText() {
     return linkText;
   }
@@ -53,7 +53,6 @@ public class BrandLink {
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
-
 
   /**
    * linkType.
@@ -67,9 +66,10 @@ public class BrandLink {
 
   /**
    * .
+   * 
    * @return linkType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getLinkType() {
     return linkType;
   }
@@ -80,7 +80,6 @@ public class BrandLink {
   public void setLinkType(String linkType) {
     this.linkType = linkType;
   }
-
 
   /**
    * showLink.
@@ -94,9 +93,10 @@ public class BrandLink {
 
   /**
    * .
+   * 
    * @return showLink
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getShowLink() {
     return showLink;
   }
@@ -107,7 +107,6 @@ public class BrandLink {
   public void setShowLink(String showLink) {
     this.showLink = showLink;
   }
-
 
   /**
    * urlOrMailTo.
@@ -121,9 +120,10 @@ public class BrandLink {
 
   /**
    * .
+   * 
    * @return urlOrMailTo
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUrlOrMailTo() {
     return urlOrMailTo;
   }
@@ -134,7 +134,6 @@ public class BrandLink {
   public void setUrlOrMailTo(String urlOrMailTo) {
     this.urlOrMailTo = urlOrMailTo;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +163,6 @@ public class BrandLink {
     return Objects.hash(linkText, linkType, showLink, urlOrMailTo);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +170,7 @@ public class BrandLink {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandLink {\n");
-    
+
     sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
     sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
     sb.append("    showLink: ").append(toIndentedString(showLink)).append("\n");
@@ -193,4 +191,3 @@ public class BrandLink {
   }
 
 }
-

@@ -12,14 +12,14 @@ import com.docusign.esign.model.UserSettingsInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * User information..
  *
  */
-@ApiModel(description = "User information.")
+@Schema(description = "User information.")
 
 public class UserInformation {
   @JsonProperty("activationAccessCode")
@@ -154,7 +154,6 @@ public class UserInformation {
   @JsonProperty("workAddress")
   private AddressInformation workAddress = null;
 
-
   /**
    * activationAccessCode.
    *
@@ -167,9 +166,10 @@ public class UserInformation {
 
   /**
    * The activation code the new user must enter when activating their account..
+   * 
    * @return activationAccessCode
    **/
-  @ApiModelProperty(value = "The activation code the new user must enter when activating their account.")
+  @Schema(description = "The activation code the new user must enter when activating their account.")
   public String getActivationAccessCode() {
     return activationAccessCode;
   }
@@ -180,7 +180,6 @@ public class UserInformation {
   public void setActivationAccessCode(String activationAccessCode) {
     this.activationAccessCode = activationAccessCode;
   }
-
 
   /**
    * company.
@@ -194,9 +193,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return company
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCompany() {
     return company;
   }
@@ -208,7 +208,6 @@ public class UserInformation {
     this.company = company;
   }
 
-
   /**
    * connectConfigurations.
    *
@@ -218,7 +217,7 @@ public class UserInformation {
     this.connectConfigurations = connectConfigurations;
     return this;
   }
-  
+
   /**
    * addConnectConfigurationsItem.
    *
@@ -234,9 +233,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return connectConfigurations
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<ConnectUserObject> getConnectConfigurations() {
     return connectConfigurations;
   }
@@ -247,7 +247,6 @@ public class UserInformation {
   public void setConnectConfigurations(java.util.List<ConnectUserObject> connectConfigurations) {
     this.connectConfigurations = connectConfigurations;
   }
-
 
   /**
    * countryCode.
@@ -261,9 +260,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return countryCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCountryCode() {
     return countryCode;
   }
@@ -274,7 +274,6 @@ public class UserInformation {
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   /**
    * createdDateTime.
@@ -288,9 +287,10 @@ public class UserInformation {
 
   /**
    * Indicates the date and time the item was created..
+   * 
    * @return createdDateTime
    **/
-  @ApiModelProperty(value = "Indicates the date and time the item was created.")
+  @Schema(description = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -302,7 +302,6 @@ public class UserInformation {
     this.createdDateTime = createdDateTime;
   }
 
-
   /**
    * customSettings.
    *
@@ -312,7 +311,7 @@ public class UserInformation {
     this.customSettings = customSettings;
     return this;
   }
-  
+
   /**
    * addCustomSettingsItem.
    *
@@ -328,9 +327,10 @@ public class UserInformation {
 
   /**
    * The name/value pair information for the user custom setting..
+   * 
    * @return customSettings
    **/
-  @ApiModelProperty(value = "The name/value pair information for the user custom setting.")
+  @Schema(description = "The name/value pair information for the user custom setting.")
   public java.util.List<NameValue> getCustomSettings() {
     return customSettings;
   }
@@ -341,7 +341,6 @@ public class UserInformation {
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
   }
-
 
   /**
    * defaultAccountId.
@@ -355,9 +354,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return defaultAccountId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDefaultAccountId() {
     return defaultAccountId;
   }
@@ -368,7 +368,6 @@ public class UserInformation {
   public void setDefaultAccountId(String defaultAccountId) {
     this.defaultAccountId = defaultAccountId;
   }
-
 
   /**
    * email.
@@ -382,9 +381,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -395,7 +395,6 @@ public class UserInformation {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * enableConnectForUser.
@@ -408,10 +407,12 @@ public class UserInformation {
   }
 
   /**
-   * Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false..
+   * Specifies whether the user is enabled for updates from DocuSign Connect.
+   * Valid values: true or false..
+   * 
    * @return enableConnectForUser
    **/
-  @ApiModelProperty(value = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
+  @Schema(description = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
   public String getEnableConnectForUser() {
     return enableConnectForUser;
   }
@@ -422,7 +423,6 @@ public class UserInformation {
   public void setEnableConnectForUser(String enableConnectForUser) {
     this.enableConnectForUser = enableConnectForUser;
   }
-
 
   /**
    * errorDetails.
@@ -435,10 +435,12 @@ public class UserInformation {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -449,7 +451,6 @@ public class UserInformation {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * firstName.
@@ -462,10 +463,11 @@ public class UserInformation {
   }
 
   /**
-   * The user's first name.  Maximum Length: 50 characters..
+   * The user's first name. Maximum Length: 50 characters..
+   * 
    * @return firstName
    **/
-  @ApiModelProperty(value = "The user's first name.  Maximum Length: 50 characters.")
+  @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
   public String getFirstName() {
     return firstName;
   }
@@ -476,7 +478,6 @@ public class UserInformation {
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
-
 
   /**
    * forgottenPasswordInfo.
@@ -489,10 +490,12 @@ public class UserInformation {
   }
 
   /**
-   * A complex element containing up to four Question/Answer pairs for forgotten password information..
+   * A complex element containing up to four Question/Answer pairs for forgotten
+   * password information..
+   * 
    * @return forgottenPasswordInfo
    **/
-  @ApiModelProperty(value = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
+  @Schema(description = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
   public ForgottenPasswordInformation getForgottenPasswordInfo() {
     return forgottenPasswordInfo;
   }
@@ -504,7 +507,6 @@ public class UserInformation {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
-
   /**
    * groupList.
    *
@@ -514,7 +516,7 @@ public class UserInformation {
     this.groupList = groupList;
     return this;
   }
-  
+
   /**
    * addGroupListItem.
    *
@@ -529,10 +531,16 @@ public class UserInformation {
   }
 
   /**
-   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. .
+   * A list of the group information for groups to add the user to. Group
+   * information can be found by calling [ML:GET group information]. The only
+   * required parameter is groupId. The parameters are: * groupId - The DocuSign
+   * group ID for the group. * groupName - The name of the group *
+   * permissionProfileId - The ID of the permission profile associated with the
+   * group. * groupType - The group type. .
+   * 
    * @return groupList
    **/
-  @ApiModelProperty(value = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
+  @Schema(description = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
   public java.util.List<Group> getGroupList() {
     return groupList;
   }
@@ -543,7 +551,6 @@ public class UserInformation {
   public void setGroupList(java.util.List<Group> groupList) {
     this.groupList = groupList;
   }
-
 
   /**
    * hasRemoteNotary.
@@ -557,9 +564,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return hasRemoteNotary
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isHasRemoteNotary() {
     return hasRemoteNotary;
   }
@@ -570,7 +578,6 @@ public class UserInformation {
   public void setHasRemoteNotary(Boolean hasRemoteNotary) {
     this.hasRemoteNotary = hasRemoteNotary;
   }
-
 
   /**
    * homeAddress.
@@ -583,10 +590,12 @@ public class UserInformation {
   }
 
   /**
-   * Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters..
+   * Specifies the email for the signing host. It is a Required element for In
+   * Person Signers recipient Type. Maximum Length: 100 characters..
+   * 
    * @return homeAddress
    **/
-  @ApiModelProperty(value = "Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.")
+  @Schema(description = "Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.")
   public AddressInformation getHomeAddress() {
     return homeAddress;
   }
@@ -597,7 +606,6 @@ public class UserInformation {
   public void setHomeAddress(AddressInformation homeAddress) {
     this.homeAddress = homeAddress;
   }
-
 
   /**
    * initialsImageUri.
@@ -610,10 +618,12 @@ public class UserInformation {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the initials image..
+   * Contains the URI for an endpoint that you can use to retrieve the initials
+   * image..
+   * 
    * @return initialsImageUri
    **/
-  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
+  @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
   public String getInitialsImageUri() {
     return initialsImageUri;
   }
@@ -624,7 +634,6 @@ public class UserInformation {
   public void setInitialsImageUri(String initialsImageUri) {
     this.initialsImageUri = initialsImageUri;
   }
-
 
   /**
    * isAdmin.
@@ -638,9 +647,10 @@ public class UserInformation {
 
   /**
    * Determines if the feature set is actively set as part of the plan..
+   * 
    * @return isAdmin
    **/
-  @ApiModelProperty(value = "Determines if the feature set is actively set as part of the plan.")
+  @Schema(description = "Determines if the feature set is actively set as part of the plan.")
   public String getIsAdmin() {
     return isAdmin;
   }
@@ -651,7 +661,6 @@ public class UserInformation {
   public void setIsAdmin(String isAdmin) {
     this.isAdmin = isAdmin;
   }
-
 
   /**
    * isAlternateAdmin.
@@ -665,9 +674,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return isAlternateAdmin
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsAlternateAdmin() {
     return isAlternateAdmin;
   }
@@ -678,7 +688,6 @@ public class UserInformation {
   public void setIsAlternateAdmin(String isAlternateAdmin) {
     this.isAlternateAdmin = isAlternateAdmin;
   }
-
 
   /**
    * isNAREnabled.
@@ -692,9 +701,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return isNAREnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsNAREnabled() {
     return isNAREnabled;
   }
@@ -705,7 +715,6 @@ public class UserInformation {
   public void setIsNAREnabled(String isNAREnabled) {
     this.isNAREnabled = isNAREnabled;
   }
-
 
   /**
    * jobTitle.
@@ -719,9 +728,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return jobTitle
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getJobTitle() {
     return jobTitle;
   }
@@ -732,7 +742,6 @@ public class UserInformation {
   public void setJobTitle(String jobTitle) {
     this.jobTitle = jobTitle;
   }
-
 
   /**
    * lastLogin.
@@ -746,9 +755,10 @@ public class UserInformation {
 
   /**
    * Shows the date-time when the user last logged on to the system..
+   * 
    * @return lastLogin
    **/
-  @ApiModelProperty(value = "Shows the date-time when the user last logged on to the system.")
+  @Schema(description = "Shows the date-time when the user last logged on to the system.")
   public String getLastLogin() {
     return lastLogin;
   }
@@ -759,7 +769,6 @@ public class UserInformation {
   public void setLastLogin(String lastLogin) {
     this.lastLogin = lastLogin;
   }
-
 
   /**
    * lastName.
@@ -772,10 +781,11 @@ public class UserInformation {
   }
 
   /**
-   * The user's last name.  Maximum Length: 50 characters..
+   * The user's last name. Maximum Length: 50 characters..
+   * 
    * @return lastName
    **/
-  @ApiModelProperty(value = "The user's last name.  Maximum Length: 50 characters.")
+  @Schema(description = "The user's last name.  Maximum Length: 50 characters.")
   public String getLastName() {
     return lastName;
   }
@@ -786,7 +796,6 @@ public class UserInformation {
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
-
 
   /**
    * loginStatus.
@@ -799,10 +808,13 @@ public class UserInformation {
   }
 
   /**
-   * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  .
+   * Shows the current status of the user's password. Possible values are: *
+   * password_reset * password_active * password_expired * password_locked *
+   * password_reset_failed .
+   * 
    * @return loginStatus
    **/
-  @ApiModelProperty(value = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
+  @Schema(description = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
   public String getLoginStatus() {
     return loginStatus;
   }
@@ -813,7 +825,6 @@ public class UserInformation {
   public void setLoginStatus(String loginStatus) {
     this.loginStatus = loginStatus;
   }
-
 
   /**
    * middleName.
@@ -826,10 +837,11 @@ public class UserInformation {
   }
 
   /**
-   * The user's middle name.  Maximum Length: 50 characters..
+   * The user's middle name. Maximum Length: 50 characters..
+   * 
    * @return middleName
    **/
-  @ApiModelProperty(value = "The user's middle name.  Maximum Length: 50 characters.")
+  @Schema(description = "The user's middle name.  Maximum Length: 50 characters.")
   public String getMiddleName() {
     return middleName;
   }
@@ -840,7 +852,6 @@ public class UserInformation {
   public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
-
 
   /**
    * password.
@@ -854,9 +865,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return password
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPassword() {
     return password;
   }
@@ -867,7 +879,6 @@ public class UserInformation {
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   /**
    * passwordExpiration.
@@ -881,9 +892,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return passwordExpiration
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPasswordExpiration() {
     return passwordExpiration;
   }
@@ -894,7 +906,6 @@ public class UserInformation {
   public void setPasswordExpiration(String passwordExpiration) {
     this.passwordExpiration = passwordExpiration;
   }
-
 
   /**
    * permissionProfileId.
@@ -908,9 +919,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return permissionProfileId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -921,7 +933,6 @@ public class UserInformation {
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
   }
-
 
   /**
    * permissionProfileName.
@@ -935,9 +946,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return permissionProfileName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPermissionProfileName() {
     return permissionProfileName;
   }
@@ -948,7 +960,6 @@ public class UserInformation {
   public void setPermissionProfileName(String permissionProfileName) {
     this.permissionProfileName = permissionProfileName;
   }
-
 
   /**
    * profileImageUri.
@@ -962,9 +973,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return profileImageUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
@@ -975,7 +987,6 @@ public class UserInformation {
   public void setProfileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
   }
-
 
   /**
    * sendActivationEmail.
@@ -989,9 +1000,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return sendActivationEmail
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSendActivationEmail() {
     return sendActivationEmail;
   }
@@ -1002,7 +1014,6 @@ public class UserInformation {
   public void setSendActivationEmail(String sendActivationEmail) {
     this.sendActivationEmail = sendActivationEmail;
   }
-
 
   /**
    * sendActivationOnInvalidLogin.
@@ -1015,10 +1026,12 @@ public class UserInformation {
   }
 
   /**
-   * When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. .
+   * When set to **true**, specifies that an additional activation email is sent
+   * to the user if they fail a log on before activating their account. .
+   * 
    * @return sendActivationOnInvalidLogin
    **/
-  @ApiModelProperty(value = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
+  @Schema(description = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
   public String getSendActivationOnInvalidLogin() {
     return sendActivationOnInvalidLogin;
   }
@@ -1029,7 +1042,6 @@ public class UserInformation {
   public void setSendActivationOnInvalidLogin(String sendActivationOnInvalidLogin) {
     this.sendActivationOnInvalidLogin = sendActivationOnInvalidLogin;
   }
-
 
   /**
    * signatureImageUri.
@@ -1042,10 +1054,12 @@ public class UserInformation {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the signature image..
+   * Contains the URI for an endpoint that you can use to retrieve the signature
+   * image..
+   * 
    * @return signatureImageUri
    **/
-  @ApiModelProperty(value = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
+  @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
   public String getSignatureImageUri() {
     return signatureImageUri;
   }
@@ -1056,7 +1070,6 @@ public class UserInformation {
   public void setSignatureImageUri(String signatureImageUri) {
     this.signatureImageUri = signatureImageUri;
   }
-
 
   /**
    * subscribe.
@@ -1070,9 +1083,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return subscribe
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubscribe() {
     return subscribe;
   }
@@ -1083,7 +1097,6 @@ public class UserInformation {
   public void setSubscribe(String subscribe) {
     this.subscribe = subscribe;
   }
-
 
   /**
    * suffixName.
@@ -1096,10 +1109,11 @@ public class UserInformation {
   }
 
   /**
-   * The suffix for the user's name.   Maximum Length: 50 characters. .
+   * The suffix for the user's name. Maximum Length: 50 characters. .
+   * 
    * @return suffixName
    **/
-  @ApiModelProperty(value = "The suffix for the user's name.   Maximum Length: 50 characters. ")
+  @Schema(description = "The suffix for the user's name.   Maximum Length: 50 characters. ")
   public String getSuffixName() {
     return suffixName;
   }
@@ -1110,7 +1124,6 @@ public class UserInformation {
   public void setSuffixName(String suffixName) {
     this.suffixName = suffixName;
   }
-
 
   /**
    * title.
@@ -1124,9 +1137,10 @@ public class UserInformation {
 
   /**
    * The title of the user..
+   * 
    * @return title
    **/
-  @ApiModelProperty(value = "The title of the user.")
+  @Schema(description = "The title of the user.")
   public String getTitle() {
     return title;
   }
@@ -1137,7 +1151,6 @@ public class UserInformation {
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   /**
    * uri.
@@ -1151,9 +1164,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return uri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUri() {
     return uri;
   }
@@ -1164,7 +1178,6 @@ public class UserInformation {
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   /**
    * userAddedToAccountDateTime.
@@ -1178,9 +1191,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userAddedToAccountDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserAddedToAccountDateTime() {
     return userAddedToAccountDateTime;
   }
@@ -1191,7 +1205,6 @@ public class UserInformation {
   public void setUserAddedToAccountDateTime(String userAddedToAccountDateTime) {
     this.userAddedToAccountDateTime = userAddedToAccountDateTime;
   }
-
 
   /**
    * userId.
@@ -1205,9 +1218,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserId() {
     return userId;
   }
@@ -1218,7 +1232,6 @@ public class UserInformation {
   public void setUserId(String userId) {
     this.userId = userId;
   }
-
 
   /**
    * userName.
@@ -1232,9 +1245,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserName() {
     return userName;
   }
@@ -1245,7 +1259,6 @@ public class UserInformation {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   /**
    * userProfileLastModifiedDate.
@@ -1259,9 +1272,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userProfileLastModifiedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
@@ -1272,7 +1286,6 @@ public class UserInformation {
   public void setUserProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
-
 
   /**
    * userSettings.
@@ -1285,10 +1298,13 @@ public class UserInformation {
   }
 
   /**
-   * The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings..
+   * The collection of settings representing the actions a user can perform. See
+   * [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation)
+   * for available settings..
+   * 
    * @return userSettings
    **/
-  @ApiModelProperty(value = "The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.")
+  @Schema(description = "The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.")
   public UserSettingsInformation getUserSettings() {
     return userSettings;
   }
@@ -1299,7 +1315,6 @@ public class UserInformation {
   public void setUserSettings(UserSettingsInformation userSettings) {
     this.userSettings = userSettings;
   }
-
 
   /**
    * userStatus.
@@ -1313,9 +1328,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserStatus() {
     return userStatus;
   }
@@ -1326,7 +1342,6 @@ public class UserInformation {
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
-
 
   /**
    * userType.
@@ -1340,9 +1355,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return userType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserType() {
     return userType;
   }
@@ -1353,7 +1369,6 @@ public class UserInformation {
   public void setUserType(String userType) {
     this.userType = userType;
   }
-
 
   /**
    * workAddress.
@@ -1367,9 +1382,10 @@ public class UserInformation {
 
   /**
    * .
+   * 
    * @return workAddress
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public AddressInformation getWorkAddress() {
     return workAddress;
   }
@@ -1380,7 +1396,6 @@ public class UserInformation {
   public void setWorkAddress(AddressInformation workAddress) {
     this.workAddress = workAddress;
   }
-
 
   /**
    * Compares objects.
@@ -1447,9 +1462,14 @@ public class UserInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime,
+        customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo,
+        groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle,
+        lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId,
+        permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri,
+        subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate,
+        userSettings, userStatus, userType, workAddress);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1458,7 +1478,7 @@ public class UserInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformation {\n");
-    
+
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
     sb.append("    company: ").append(toIndentedString(company)).append("\n");
     sb.append("    connectConfigurations: ").append(toIndentedString(connectConfigurations)).append("\n");
@@ -1519,4 +1539,3 @@ public class UserInformation {
   }
 
 }
-

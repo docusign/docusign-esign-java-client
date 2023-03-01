@@ -7,14 +7,14 @@ import com.docusign.esign.model.BulkSendErrorStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Result of &#x60;getBulkSendBatchStatus&#x60;.
  *
  */
-@ApiModel(description = "Result of `getBulkSendBatchStatus`")
+@Schema(description = "Result of `getBulkSendBatchStatus`")
 
 public class BulkSendBatchStatus {
   @JsonProperty("action")
@@ -71,7 +71,6 @@ public class BulkSendBatchStatus {
   @JsonProperty("submittedDate")
   private String submittedDate = null;
 
-
   /**
    * action.
    *
@@ -84,9 +83,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return action
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAction() {
     return action;
   }
@@ -97,7 +97,6 @@ public class BulkSendBatchStatus {
   public void setAction(String action) {
     this.action = action;
   }
-
 
   /**
    * actionStatus.
@@ -111,9 +110,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return actionStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getActionStatus() {
     return actionStatus;
   }
@@ -124,7 +124,6 @@ public class BulkSendBatchStatus {
   public void setActionStatus(String actionStatus) {
     this.actionStatus = actionStatus;
   }
-
 
   /**
    * batchId.
@@ -138,9 +137,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return batchId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchId() {
     return batchId;
   }
@@ -151,7 +151,6 @@ public class BulkSendBatchStatus {
   public void setBatchId(String batchId) {
     this.batchId = batchId;
   }
-
 
   /**
    * batchName.
@@ -165,9 +164,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return batchName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchName() {
     return batchName;
   }
@@ -178,7 +178,6 @@ public class BulkSendBatchStatus {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * batchSize.
@@ -192,9 +191,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return batchSize
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchSize() {
     return batchSize;
   }
@@ -206,7 +206,6 @@ public class BulkSendBatchStatus {
     this.batchSize = batchSize;
   }
 
-
   /**
    * bulkErrors.
    *
@@ -216,7 +215,7 @@ public class BulkSendBatchStatus {
     this.bulkErrors = bulkErrors;
     return this;
   }
-  
+
   /**
    * addBulkErrorsItem.
    *
@@ -232,9 +231,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return bulkErrors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BulkSendErrorStatus> getBulkErrors() {
     return bulkErrors;
   }
@@ -245,7 +245,6 @@ public class BulkSendBatchStatus {
   public void setBulkErrors(java.util.List<BulkSendErrorStatus> bulkErrors) {
     this.bulkErrors = bulkErrors;
   }
-
 
   /**
    * envelopeIdOrTemplateId.
@@ -259,9 +258,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return envelopeIdOrTemplateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeIdOrTemplateId() {
     return envelopeIdOrTemplateId;
   }
@@ -272,7 +272,6 @@ public class BulkSendBatchStatus {
   public void setEnvelopeIdOrTemplateId(String envelopeIdOrTemplateId) {
     this.envelopeIdOrTemplateId = envelopeIdOrTemplateId;
   }
-
 
   /**
    * envelopesInfo.
@@ -286,9 +285,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return envelopesInfo
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BulkSendEnvelopesInfo getEnvelopesInfo() {
     return envelopesInfo;
   }
@@ -299,7 +299,6 @@ public class BulkSendBatchStatus {
   public void setEnvelopesInfo(BulkSendEnvelopesInfo envelopesInfo) {
     this.envelopesInfo = envelopesInfo;
   }
-
 
   /**
    * envelopesUri.
@@ -313,9 +312,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return envelopesUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopesUri() {
     return envelopesUri;
   }
@@ -326,7 +326,6 @@ public class BulkSendBatchStatus {
   public void setEnvelopesUri(String envelopesUri) {
     this.envelopesUri = envelopesUri;
   }
-
 
   /**
    * failed.
@@ -340,9 +339,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return failed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFailed() {
     return failed;
   }
@@ -353,7 +353,6 @@ public class BulkSendBatchStatus {
   public void setFailed(String failed) {
     this.failed = failed;
   }
-
 
   /**
    * mailingListId.
@@ -367,9 +366,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return mailingListId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMailingListId() {
     return mailingListId;
   }
@@ -380,7 +380,6 @@ public class BulkSendBatchStatus {
   public void setMailingListId(String mailingListId) {
     this.mailingListId = mailingListId;
   }
-
 
   /**
    * mailingListName.
@@ -394,9 +393,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return mailingListName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMailingListName() {
     return mailingListName;
   }
@@ -407,7 +407,6 @@ public class BulkSendBatchStatus {
   public void setMailingListName(String mailingListName) {
     this.mailingListName = mailingListName;
   }
-
 
   /**
    * ownerUserId.
@@ -421,9 +420,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return ownerUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getOwnerUserId() {
     return ownerUserId;
   }
@@ -434,7 +434,6 @@ public class BulkSendBatchStatus {
   public void setOwnerUserId(String ownerUserId) {
     this.ownerUserId = ownerUserId;
   }
-
 
   /**
    * queued.
@@ -448,9 +447,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return queued
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getQueued() {
     return queued;
   }
@@ -461,7 +461,6 @@ public class BulkSendBatchStatus {
   public void setQueued(String queued) {
     this.queued = queued;
   }
-
 
   /**
    * resendsRemaining.
@@ -475,9 +474,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return resendsRemaining
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResendsRemaining() {
     return resendsRemaining;
   }
@@ -488,7 +488,6 @@ public class BulkSendBatchStatus {
   public void setResendsRemaining(String resendsRemaining) {
     this.resendsRemaining = resendsRemaining;
   }
-
 
   /**
    * senderUserId.
@@ -502,9 +501,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return senderUserId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderUserId() {
     return senderUserId;
   }
@@ -515,7 +515,6 @@ public class BulkSendBatchStatus {
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
-
 
   /**
    * sent.
@@ -529,9 +528,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return sent
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSent() {
     return sent;
   }
@@ -542,7 +542,6 @@ public class BulkSendBatchStatus {
   public void setSent(String sent) {
     this.sent = sent;
   }
-
 
   /**
    * submittedDate.
@@ -556,9 +555,10 @@ public class BulkSendBatchStatus {
 
   /**
    * .
+   * 
    * @return submittedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubmittedDate() {
     return submittedDate;
   }
@@ -569,7 +569,6 @@ public class BulkSendBatchStatus {
   public void setSubmittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
   }
-
 
   /**
    * Compares objects.
@@ -610,9 +609,10 @@ public class BulkSendBatchStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, resendsRemaining, senderUserId, sent, submittedDate);
+    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId,
+        envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, resendsRemaining,
+        senderUserId, sent, submittedDate);
   }
-
 
   /**
    * Converts the given object to string.
@@ -621,7 +621,7 @@ public class BulkSendBatchStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchStatus {\n");
-    
+
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    actionStatus: ").append(toIndentedString(actionStatus)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
@@ -656,4 +656,3 @@ public class BulkSendBatchStatus {
   }
 
 }
-

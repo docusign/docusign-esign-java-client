@@ -7,14 +7,14 @@ import com.docusign.esign.model.RecipientPhoneNumber;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Describes an additional notification method..
  *
  */
-@ApiModel(description = "Describes an additional notification method.")
+@Schema(description = "Describes an additional notification method.")
 
 public class RecipientAdditionalNotification {
   @JsonProperty("phoneNumber")
@@ -29,7 +29,6 @@ public class RecipientAdditionalNotification {
   @JsonProperty("secondaryDeliveryStatus")
   private String secondaryDeliveryStatus = null;
 
-
   /**
    * phoneNumber.
    *
@@ -42,9 +41,10 @@ public class RecipientAdditionalNotification {
 
   /**
    * The phone number to receive the additional notifcation..
+   * 
    * @return phoneNumber
    **/
-  @ApiModelProperty(value = "The phone number to receive the additional notifcation.")
+  @Schema(description = "The phone number to receive the additional notifcation.")
   public RecipientPhoneNumber getPhoneNumber() {
     return phoneNumber;
   }
@@ -55,7 +55,6 @@ public class RecipientAdditionalNotification {
   public void setPhoneNumber(RecipientPhoneNumber phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
-
 
   /**
    * secondaryDeliveryMethod.
@@ -69,9 +68,10 @@ public class RecipientAdditionalNotification {
 
   /**
    * .
+   * 
    * @return secondaryDeliveryMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSecondaryDeliveryMethod() {
     return secondaryDeliveryMethod;
   }
@@ -83,22 +83,23 @@ public class RecipientAdditionalNotification {
     this.secondaryDeliveryMethod = secondaryDeliveryMethod;
   }
 
-
   /**
    * secondaryDeliveryMethodMetadata.
    *
    * @return RecipientAdditionalNotification
    **/
-  public RecipientAdditionalNotification secondaryDeliveryMethodMetadata(PropertyMetadata secondaryDeliveryMethodMetadata) {
+  public RecipientAdditionalNotification secondaryDeliveryMethodMetadata(
+      PropertyMetadata secondaryDeliveryMethodMetadata) {
     this.secondaryDeliveryMethodMetadata = secondaryDeliveryMethodMetadata;
     return this;
   }
 
   /**
    * Metadata about the delivery method..
+   * 
    * @return secondaryDeliveryMethodMetadata
    **/
-  @ApiModelProperty(value = "Metadata about the delivery method.")
+  @Schema(description = "Metadata about the delivery method.")
   public PropertyMetadata getSecondaryDeliveryMethodMetadata() {
     return secondaryDeliveryMethodMetadata;
   }
@@ -109,7 +110,6 @@ public class RecipientAdditionalNotification {
   public void setSecondaryDeliveryMethodMetadata(PropertyMetadata secondaryDeliveryMethodMetadata) {
     this.secondaryDeliveryMethodMetadata = secondaryDeliveryMethodMetadata;
   }
-
 
   /**
    * secondaryDeliveryStatus.
@@ -123,9 +123,10 @@ public class RecipientAdditionalNotification {
 
   /**
    * .
+   * 
    * @return secondaryDeliveryStatus
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSecondaryDeliveryStatus() {
     return secondaryDeliveryStatus;
   }
@@ -136,7 +137,6 @@ public class RecipientAdditionalNotification {
   public void setSecondaryDeliveryStatus(String secondaryDeliveryStatus) {
     this.secondaryDeliveryStatus = secondaryDeliveryStatus;
   }
-
 
   /**
    * Compares objects.
@@ -154,7 +154,9 @@ public class RecipientAdditionalNotification {
     RecipientAdditionalNotification recipientAdditionalNotification = (RecipientAdditionalNotification) o;
     return Objects.equals(this.phoneNumber, recipientAdditionalNotification.phoneNumber) &&
         Objects.equals(this.secondaryDeliveryMethod, recipientAdditionalNotification.secondaryDeliveryMethod) &&
-        Objects.equals(this.secondaryDeliveryMethodMetadata, recipientAdditionalNotification.secondaryDeliveryMethodMetadata) &&
+        Objects.equals(this.secondaryDeliveryMethodMetadata,
+            recipientAdditionalNotification.secondaryDeliveryMethodMetadata)
+        &&
         Objects.equals(this.secondaryDeliveryStatus, recipientAdditionalNotification.secondaryDeliveryStatus);
   }
 
@@ -166,7 +168,6 @@ public class RecipientAdditionalNotification {
     return Objects.hash(phoneNumber, secondaryDeliveryMethod, secondaryDeliveryMethodMetadata, secondaryDeliveryStatus);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -174,10 +175,11 @@ public class RecipientAdditionalNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientAdditionalNotification {\n");
-    
+
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    secondaryDeliveryMethod: ").append(toIndentedString(secondaryDeliveryMethod)).append("\n");
-    sb.append("    secondaryDeliveryMethodMetadata: ").append(toIndentedString(secondaryDeliveryMethodMetadata)).append("\n");
+    sb.append("    secondaryDeliveryMethodMetadata: ").append(toIndentedString(secondaryDeliveryMethodMetadata))
+        .append("\n");
     sb.append("    secondaryDeliveryStatus: ").append(toIndentedString(secondaryDeliveryStatus)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -195,4 +197,3 @@ public class RecipientAdditionalNotification {
   }
 
 }
-

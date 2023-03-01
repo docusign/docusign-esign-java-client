@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** FolderItem */
@@ -79,9 +79,7 @@ public class FolderItem {
    *
    * @return completedDateTime
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "Specifies the date and time this item was completed.")
+  @Schema(example = "null", description = "Specifies the date and time this item was completed.")
   public String getCompletedDateTime() {
     return completedDateTime;
   }
@@ -100,7 +98,7 @@ public class FolderItem {
    *
    * @return createdDateTime
    */
-  @ApiModelProperty(example = "null", value = "Indicates the date and time the item was created.")
+  @Schema(example = "null", description = "Indicates the date and time the item was created.")
   public String getCreatedDateTime() {
     return createdDateTime;
   }
@@ -120,16 +118,15 @@ public class FolderItem {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data about the recipient.
-   * This information is returned in the envelope status but otherwise not used by DocuSign. Each
+   * An optional array of strings that allows the sender to provide custom data
+   * about the recipient.
+   * This information is returned in the envelope status but otherwise not used by
+   * DocuSign. Each
    * customField string can be a maximum of 100 characters.
    *
    * @return customFields
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
+  @Schema(example = "null", description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public java.util.List<CustomFieldV2> getCustomFields() {
     return customFields;
   }
@@ -144,7 +141,7 @@ public class FolderItem {
   }
 
   /** @return description */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDescription() {
     return description;
   }
@@ -163,9 +160,7 @@ public class FolderItem {
    *
    * @return envelopeId
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(example = "null", description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -180,14 +175,12 @@ public class FolderItem {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or
+   * envelopes.
    *
    * @return envelopeUri
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @Schema(example = "null", description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -206,9 +199,7 @@ public class FolderItem {
    *
    * @return is21CFRPart11
    */
-  @ApiModelProperty(
-      example = "null",
-      value = "When set to **true**, indicates that this module is enabled on the account.")
+  @Schema(example = "null", description = "When set to **true**, indicates that this module is enabled on the account.")
   public String getIs21CFRPart11() {
     return is21CFRPart11;
   }
@@ -223,7 +214,7 @@ public class FolderItem {
   }
 
   /** @return isSignatureProviderEnvelope */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getIsSignatureProviderEnvelope() {
     return isSignatureProviderEnvelope;
   }
@@ -238,7 +229,7 @@ public class FolderItem {
   }
 
   /** @return lastModified */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getLastModified() {
     return lastModified;
   }
@@ -253,7 +244,7 @@ public class FolderItem {
   }
 
   /** @return name */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getName() {
     return name;
   }
@@ -272,7 +263,7 @@ public class FolderItem {
    *
    * @return ownerName
    */
-  @ApiModelProperty(example = "null", value = "Name of the envelope owner.")
+  @Schema(example = "null", description = "Name of the envelope owner.")
   public String getOwnerName() {
     return ownerName;
   }
@@ -287,7 +278,7 @@ public class FolderItem {
   }
 
   /** @return pageCount */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getPageCount() {
     return pageCount;
   }
@@ -302,7 +293,7 @@ public class FolderItem {
   }
 
   /** @return password */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPassword() {
     return password;
   }
@@ -317,7 +308,7 @@ public class FolderItem {
   }
 
   /** @return senderEmail */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSenderEmail() {
     return senderEmail;
   }
@@ -336,7 +327,7 @@ public class FolderItem {
    *
    * @return senderName
    */
-  @ApiModelProperty(example = "null", value = "Name of the envelope sender.")
+  @Schema(example = "null", description = "Name of the envelope sender.")
   public String getSenderName() {
     return senderName;
   }
@@ -355,7 +346,7 @@ public class FolderItem {
    *
    * @return sentDateTime
    */
-  @ApiModelProperty(example = "null", value = "The date and time the envelope was sent.")
+  @Schema(example = "null", description = "The date and time the envelope was sent.")
   public String getSentDateTime() {
     return sentDateTime;
   }
@@ -374,7 +365,7 @@ public class FolderItem {
    *
    * @return shared
    */
-  @ApiModelProperty(example = "null", value = "When set to **true**, this custom tab is shared.")
+  @Schema(example = "null", description = "When set to **true**, this custom tab is shared.")
   public String getShared() {
     return shared;
   }
@@ -389,15 +380,14 @@ public class FolderItem {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is sent to the
-   * recipients. * created - The envelope is saved as a draft and can be modified and sent later.
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the
+   * recipients. * created - The envelope is saved as a draft and can be modified
+   * and sent later.
    *
    * @return status
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(example = "null", description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -412,7 +402,7 @@ public class FolderItem {
   }
 
   /** @return subject */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getSubject() {
     return subject;
   }
@@ -427,14 +417,12 @@ public class FolderItem {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will generate a value.
+   * The unique identifier of the template. If this is not provided, DocuSign will
+   * generate a value.
    *
    * @return templateId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
+  @Schema(example = "null", description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
   public String getTemplateId() {
     return templateId;
   }
@@ -449,7 +437,7 @@ public class FolderItem {
   }
 
   /** @return uri */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getUri() {
     return uri;
   }
@@ -549,7 +537,8 @@ public class FolderItem {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

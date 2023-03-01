@@ -7,14 +7,14 @@ import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains information about a group..
  *
  */
-@ApiModel(description = "This object contains information about a group.")
+@Schema(description = "This object contains information about a group.")
 
 public class Group {
   @JsonProperty("dsGroupId")
@@ -41,7 +41,6 @@ public class Group {
   @JsonProperty("usersCount")
   private String usersCount = null;
 
-
   /**
    * dsGroupId.
    *
@@ -54,9 +53,10 @@ public class Group {
 
   /**
    * .
+   * 
    * @return dsGroupId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDsGroupId() {
     return dsGroupId;
   }
@@ -67,7 +67,6 @@ public class Group {
   public void setDsGroupId(String dsGroupId) {
     this.dsGroupId = dsGroupId;
   }
-
 
   /**
    * errorDetails.
@@ -80,10 +79,12 @@ public class Group {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -94,7 +95,6 @@ public class Group {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * groupId.
@@ -108,9 +108,10 @@ public class Group {
 
   /**
    * The DocuSign group ID for the group..
+   * 
    * @return groupId
    **/
-  @ApiModelProperty(value = "The DocuSign group ID for the group.")
+  @Schema(description = "The DocuSign group ID for the group.")
   public String getGroupId() {
     return groupId;
   }
@@ -121,7 +122,6 @@ public class Group {
   public void setGroupId(String groupId) {
     this.groupId = groupId;
   }
-
 
   /**
    * groupName.
@@ -135,9 +135,10 @@ public class Group {
 
   /**
    * The name of the group..
+   * 
    * @return groupName
    **/
-  @ApiModelProperty(value = "The name of the group.")
+  @Schema(description = "The name of the group.")
   public String getGroupName() {
     return groupName;
   }
@@ -148,7 +149,6 @@ public class Group {
   public void setGroupName(String groupName) {
     this.groupName = groupName;
   }
-
 
   /**
    * groupType.
@@ -162,9 +162,10 @@ public class Group {
 
   /**
    * The group type..
+   * 
    * @return groupType
    **/
-  @ApiModelProperty(value = "The group type.")
+  @Schema(description = "The group type.")
   public String getGroupType() {
     return groupType;
   }
@@ -175,7 +176,6 @@ public class Group {
   public void setGroupType(String groupType) {
     this.groupType = groupType;
   }
-
 
   /**
    * permissionProfileId.
@@ -189,9 +189,10 @@ public class Group {
 
   /**
    * The ID of the permission profile associated with the group..
+   * 
    * @return permissionProfileId
    **/
-  @ApiModelProperty(value = "The ID of the permission profile associated with the group.")
+  @Schema(description = "The ID of the permission profile associated with the group.")
   public String getPermissionProfileId() {
     return permissionProfileId;
   }
@@ -203,7 +204,6 @@ public class Group {
     this.permissionProfileId = permissionProfileId;
   }
 
-
   /**
    * users.
    *
@@ -213,7 +213,7 @@ public class Group {
     this.users = users;
     return this;
   }
-  
+
   /**
    * addUsersItem.
    *
@@ -229,9 +229,10 @@ public class Group {
 
   /**
    * .
+   * 
    * @return users
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<UserInfo> getUsers() {
     return users;
   }
@@ -242,7 +243,6 @@ public class Group {
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
-
 
   /**
    * usersCount.
@@ -256,9 +256,10 @@ public class Group {
 
   /**
    * .
+   * 
    * @return usersCount
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUsersCount() {
     return usersCount;
   }
@@ -269,7 +270,6 @@ public class Group {
   public void setUsersCount(String usersCount) {
     this.usersCount = usersCount;
   }
-
 
   /**
    * Compares objects.
@@ -303,7 +303,6 @@ public class Group {
     return Objects.hash(dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -311,7 +310,7 @@ public class Group {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
-    
+
     sb.append("    dsGroupId: ").append(toIndentedString(dsGroupId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
@@ -336,4 +335,3 @@ public class Group {
   }
 
 }
-

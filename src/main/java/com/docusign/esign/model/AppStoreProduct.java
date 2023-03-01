@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about an APP store product..
  *
  */
-@ApiModel(description = "Contains information about an APP store product.")
+@Schema(description = "Contains information about an APP store product.")
 
 public class AppStoreProduct {
   @JsonProperty("marketPlace")
@@ -20,7 +20,6 @@ public class AppStoreProduct {
 
   @JsonProperty("productId")
   private String productId = null;
-
 
   /**
    * marketPlace.
@@ -34,9 +33,10 @@ public class AppStoreProduct {
 
   /**
    * .
+   * 
    * @return marketPlace
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMarketPlace() {
     return marketPlace;
   }
@@ -47,7 +47,6 @@ public class AppStoreProduct {
   public void setMarketPlace(String marketPlace) {
     this.marketPlace = marketPlace;
   }
-
 
   /**
    * productId.
@@ -61,9 +60,10 @@ public class AppStoreProduct {
 
   /**
    * The Product ID from the AppStore..
+   * 
    * @return productId
    **/
-  @ApiModelProperty(value = "The Product ID from the AppStore.")
+  @Schema(description = "The Product ID from the AppStore.")
   public String getProductId() {
     return productId;
   }
@@ -74,7 +74,6 @@ public class AppStoreProduct {
   public void setProductId(String productId) {
     this.productId = productId;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +101,6 @@ public class AppStoreProduct {
     return Objects.hash(marketPlace, productId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +108,7 @@ public class AppStoreProduct {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreProduct {\n");
-    
+
     sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("}");
@@ -129,4 +127,3 @@ public class AppStoreProduct {
   }
 
 }
-

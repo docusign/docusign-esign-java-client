@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * IdEvidenceResourceToken.
@@ -20,7 +20,6 @@ public class IdEvidenceResourceToken {
   @JsonProperty("resourceToken")
   private String resourceToken = null;
 
-
   /**
    * proofBaseURI.
    *
@@ -33,9 +32,10 @@ public class IdEvidenceResourceToken {
 
   /**
    * .
+   * 
    * @return proofBaseURI
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProofBaseURI() {
     return proofBaseURI;
   }
@@ -46,7 +46,6 @@ public class IdEvidenceResourceToken {
   public void setProofBaseURI(String proofBaseURI) {
     this.proofBaseURI = proofBaseURI;
   }
-
 
   /**
    * resourceToken.
@@ -60,9 +59,10 @@ public class IdEvidenceResourceToken {
 
   /**
    * .
+   * 
    * @return resourceToken
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getResourceToken() {
     return resourceToken;
   }
@@ -73,7 +73,6 @@ public class IdEvidenceResourceToken {
   public void setResourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class IdEvidenceResourceToken {
     return Objects.hash(proofBaseURI, resourceToken);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class IdEvidenceResourceToken {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdEvidenceResourceToken {\n");
-    
+
     sb.append("    proofBaseURI: ").append(toIndentedString(proofBaseURI)).append("\n");
     sb.append("    resourceToken: ").append(toIndentedString(resourceToken)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class IdEvidenceResourceToken {
   }
 
 }
-

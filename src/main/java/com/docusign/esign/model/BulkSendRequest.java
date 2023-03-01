@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information about the envelope or template that you want to send in bulk..
+ * This object contains information about the envelope or template that you want
+ * to send in bulk..
  *
  */
-@ApiModel(description = "This object contains information about the envelope or template that you want to send in bulk.")
+@Schema(description = "This object contains information about the envelope or template that you want to send in bulk.")
 
 public class BulkSendRequest {
   @JsonProperty("batchName")
@@ -20,7 +21,6 @@ public class BulkSendRequest {
 
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
-
 
   /**
    * batchName.
@@ -34,9 +34,10 @@ public class BulkSendRequest {
 
   /**
    * .
+   * 
    * @return batchName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getBatchName() {
     return batchName;
   }
@@ -47,7 +48,6 @@ public class BulkSendRequest {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
-
 
   /**
    * envelopeOrTemplateId.
@@ -61,9 +61,10 @@ public class BulkSendRequest {
 
   /**
    * .
+   * 
    * @return envelopeOrTemplateId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnvelopeOrTemplateId() {
     return envelopeOrTemplateId;
   }
@@ -74,7 +75,6 @@ public class BulkSendRequest {
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
-
 
   /**
    * Compares objects.
@@ -102,7 +102,6 @@ public class BulkSendRequest {
     return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -110,7 +109,7 @@ public class BulkSendRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendRequest {\n");
-    
+
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("}");
@@ -129,4 +128,3 @@ public class BulkSendRequest {
   }
 
 }
-

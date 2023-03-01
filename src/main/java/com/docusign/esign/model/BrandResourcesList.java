@@ -6,8 +6,8 @@ import com.docusign.esign.model.BrandResources;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BrandResourcesList.
@@ -18,7 +18,6 @@ public class BrandResourcesList {
   @JsonProperty("resourcesContentTypes")
   private java.util.List<BrandResources> resourcesContentTypes = null;
 
-
   /**
    * resourcesContentTypes.
    *
@@ -28,7 +27,7 @@ public class BrandResourcesList {
     this.resourcesContentTypes = resourcesContentTypes;
     return this;
   }
-  
+
   /**
    * addResourcesContentTypesItem.
    *
@@ -44,9 +43,10 @@ public class BrandResourcesList {
 
   /**
    * .
+   * 
    * @return resourcesContentTypes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BrandResources> getResourcesContentTypes() {
     return resourcesContentTypes;
   }
@@ -57,7 +57,6 @@ public class BrandResourcesList {
   public void setResourcesContentTypes(java.util.List<BrandResources> resourcesContentTypes) {
     this.resourcesContentTypes = resourcesContentTypes;
   }
-
 
   /**
    * Compares objects.
@@ -84,7 +83,6 @@ public class BrandResourcesList {
     return Objects.hash(resourcesContentTypes);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -92,7 +90,7 @@ public class BrandResourcesList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourcesList {\n");
-    
+
     sb.append("    resourcesContentTypes: ").append(toIndentedString(resourcesContentTypes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,4 +108,3 @@ public class BrandResourcesList {
   }
 
 }
-

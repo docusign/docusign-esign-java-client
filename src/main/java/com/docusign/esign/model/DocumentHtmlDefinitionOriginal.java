@@ -6,8 +6,8 @@ import com.docusign.esign.model.DocumentHtmlDefinition;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DocumentHtmlDefinitionOriginal.
@@ -24,7 +24,6 @@ public class DocumentHtmlDefinitionOriginal {
   @JsonProperty("htmlDefinition")
   private DocumentHtmlDefinition htmlDefinition = null;
 
-
   /**
    * documentId.
    *
@@ -36,10 +35,12 @@ public class DocumentHtmlDefinitionOriginal {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -50,7 +51,6 @@ public class DocumentHtmlDefinitionOriginal {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdGuid.
@@ -64,9 +64,10 @@ public class DocumentHtmlDefinitionOriginal {
 
   /**
    * .
+   * 
    * @return documentIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDocumentIdGuid() {
     return documentIdGuid;
   }
@@ -77,7 +78,6 @@ public class DocumentHtmlDefinitionOriginal {
   public void setDocumentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
   }
-
 
   /**
    * htmlDefinition.
@@ -91,9 +91,10 @@ public class DocumentHtmlDefinitionOriginal {
 
   /**
    * Defines how to generate the responsive-formatted HTML for the document..
+   * 
    * @return htmlDefinition
    **/
-  @ApiModelProperty(value = "Defines how to generate the responsive-formatted HTML for the document.")
+  @Schema(description = "Defines how to generate the responsive-formatted HTML for the document.")
   public DocumentHtmlDefinition getHtmlDefinition() {
     return htmlDefinition;
   }
@@ -104,7 +105,6 @@ public class DocumentHtmlDefinitionOriginal {
   public void setHtmlDefinition(DocumentHtmlDefinition htmlDefinition) {
     this.htmlDefinition = htmlDefinition;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +133,6 @@ public class DocumentHtmlDefinitionOriginal {
     return Objects.hash(documentId, documentIdGuid, htmlDefinition);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +140,7 @@ public class DocumentHtmlDefinitionOriginal {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitionOriginal {\n");
-    
+
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");
     sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
@@ -161,4 +160,3 @@ public class DocumentHtmlDefinitionOriginal {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * AccountMinimumPasswordLength.
@@ -20,7 +20,6 @@ public class AccountMinimumPasswordLength {
   @JsonProperty("minimumLength")
   private String minimumLength = null;
 
-
   /**
    * maximumLength.
    *
@@ -33,9 +32,10 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
+   * 
    * @return maximumLength
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumLength() {
     return maximumLength;
   }
@@ -46,7 +46,6 @@ public class AccountMinimumPasswordLength {
   public void setMaximumLength(String maximumLength) {
     this.maximumLength = maximumLength;
   }
-
 
   /**
    * minimumLength.
@@ -60,9 +59,10 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
+   * 
    * @return minimumLength
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumLength() {
     return minimumLength;
   }
@@ -73,7 +73,6 @@ public class AccountMinimumPasswordLength {
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
-
 
   /**
    * Compares objects.
@@ -101,7 +100,6 @@ public class AccountMinimumPasswordLength {
     return Objects.hash(maximumLength, minimumLength);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -109,7 +107,7 @@ public class AccountMinimumPasswordLength {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountMinimumPasswordLength {\n");
-    
+
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
     sb.append("    minimumLength: ").append(toIndentedString(minimumLength)).append("\n");
     sb.append("}");
@@ -128,4 +126,3 @@ public class AccountMinimumPasswordLength {
   }
 
 }
-

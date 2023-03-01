@@ -6,14 +6,14 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Description of a page of a document..
  *
  */
-@ApiModel(description = "Description of a page of a document.")
+@Schema(description = "Description of a page of a document.")
 
 public class Page {
   @JsonProperty("dpi")
@@ -40,7 +40,6 @@ public class Page {
   @JsonProperty("width")
   private String width = null;
 
-
   /**
    * dpi.
    *
@@ -53,9 +52,10 @@ public class Page {
 
   /**
    * The number of dots per inch used for the page image..
+   * 
    * @return dpi
    **/
-  @ApiModelProperty(value = "The number of dots per inch used for the page image.")
+  @Schema(description = "The number of dots per inch used for the page image.")
   public String getDpi() {
     return dpi;
   }
@@ -66,7 +66,6 @@ public class Page {
   public void setDpi(String dpi) {
     this.dpi = dpi;
   }
-
 
   /**
    * errorDetails.
@@ -80,9 +79,10 @@ public class Page {
 
   /**
    * If an error occurs, this property describes the error..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "If an error occurs, this property describes the error.")
+  @Schema(description = "If an error occurs, this property describes the error.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -93,7 +93,6 @@ public class Page {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * height.
@@ -107,9 +106,10 @@ public class Page {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -120,7 +120,6 @@ public class Page {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * imageBytes.
@@ -134,9 +133,10 @@ public class Page {
 
   /**
    * .
+   * 
    * @return imageBytes
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getImageBytes() {
     return imageBytes;
   }
@@ -147,7 +147,6 @@ public class Page {
   public void setImageBytes(String imageBytes) {
     this.imageBytes = imageBytes;
   }
-
 
   /**
    * mimeType.
@@ -161,9 +160,10 @@ public class Page {
 
   /**
    * .
+   * 
    * @return mimeType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMimeType() {
     return mimeType;
   }
@@ -174,7 +174,6 @@ public class Page {
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
-
 
   /**
    * pageId.
@@ -188,9 +187,10 @@ public class Page {
 
   /**
    * .
+   * 
    * @return pageId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPageId() {
     return pageId;
   }
@@ -201,7 +201,6 @@ public class Page {
   public void setPageId(String pageId) {
     this.pageId = pageId;
   }
-
 
   /**
    * sequence.
@@ -215,9 +214,10 @@ public class Page {
 
   /**
    * .
+   * 
    * @return sequence
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSequence() {
     return sequence;
   }
@@ -228,7 +228,6 @@ public class Page {
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
-
 
   /**
    * width.
@@ -242,9 +241,10 @@ public class Page {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -255,7 +255,6 @@ public class Page {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * Compares objects.
@@ -289,7 +288,6 @@ public class Page {
     return Objects.hash(dpi, errorDetails, height, imageBytes, mimeType, pageId, sequence, width);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -297,7 +295,7 @@ public class Page {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Page {\n");
-    
+
     sb.append("    dpi: ").append(toIndentedString(dpi)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
@@ -322,4 +320,3 @@ public class Page {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ConnectUserObject.
@@ -29,7 +29,6 @@ public class ConnectUserObject {
   @JsonProperty("senderSearchableItems")
   private java.util.List<String> senderSearchableItems = null;
 
-
   /**
    * configurationtype.
    *
@@ -41,10 +40,12 @@ public class ConnectUserObject {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
+   * If merge field's are being used, specifies the type of the merge field. The
+   * only supported value is **salesforce**..
+   * 
    * @return configurationtype
    **/
-  @ApiModelProperty(value = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
+  @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
   public String getConfigurationtype() {
     return configurationtype;
   }
@@ -55,7 +56,6 @@ public class ConnectUserObject {
   public void setConfigurationtype(String configurationtype) {
     this.configurationtype = configurationtype;
   }
-
 
   /**
    * connectId.
@@ -69,9 +69,10 @@ public class ConnectUserObject {
 
   /**
    * .
+   * 
    * @return connectId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getConnectId() {
     return connectId;
   }
@@ -82,7 +83,6 @@ public class ConnectUserObject {
   public void setConnectId(String connectId) {
     this.connectId = connectId;
   }
-
 
   /**
    * enabled.
@@ -96,9 +96,10 @@ public class ConnectUserObject {
 
   /**
    * .
+   * 
    * @return enabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEnabled() {
     return enabled;
   }
@@ -109,7 +110,6 @@ public class ConnectUserObject {
   public void setEnabled(String enabled) {
     this.enabled = enabled;
   }
-
 
   /**
    * hasAccess.
@@ -123,9 +123,10 @@ public class ConnectUserObject {
 
   /**
    * .
+   * 
    * @return hasAccess
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getHasAccess() {
     return hasAccess;
   }
@@ -137,7 +138,6 @@ public class ConnectUserObject {
     this.hasAccess = hasAccess;
   }
 
-
   /**
    * senderSearchableItems.
    *
@@ -147,7 +147,7 @@ public class ConnectUserObject {
     this.senderSearchableItems = senderSearchableItems;
     return this;
   }
-  
+
   /**
    * addSenderSearchableItemsItem.
    *
@@ -163,9 +163,10 @@ public class ConnectUserObject {
 
   /**
    * .
+   * 
    * @return senderSearchableItems
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getSenderSearchableItems() {
     return senderSearchableItems;
   }
@@ -176,7 +177,6 @@ public class ConnectUserObject {
   public void setSenderSearchableItems(java.util.List<String> senderSearchableItems) {
     this.senderSearchableItems = senderSearchableItems;
   }
-
 
   /**
    * Compares objects.
@@ -207,7 +207,6 @@ public class ConnectUserObject {
     return Objects.hash(configurationtype, connectId, enabled, hasAccess, senderSearchableItems);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -215,7 +214,7 @@ public class ConnectUserObject {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectUserObject {\n");
-    
+
     sb.append("    configurationtype: ").append(toIndentedString(configurationtype)).append("\n");
     sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
@@ -237,4 +236,3 @@ public class ConnectUserObject {
   }
 
 }
-

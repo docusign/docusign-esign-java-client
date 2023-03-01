@@ -11,14 +11,15 @@ import com.docusign.esign.model.NameValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope..
+ * Information about a brand that is associated with an account. A brand applies
+ * custom styles and text to an envelope..
  *
  */
-@ApiModel(description = "Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope.")
+@Schema(description = "Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope.")
 
 public class Brand {
   @JsonProperty("brandCompany")
@@ -66,7 +67,6 @@ public class Brand {
   @JsonProperty("resources")
   private BrandResourceUrls resources = null;
 
-
   /**
    * brandCompany.
    *
@@ -79,9 +79,10 @@ public class Brand {
 
   /**
    * The name of the company associated with this brand..
+   * 
    * @return brandCompany
    **/
-  @ApiModelProperty(value = "The name of the company associated with this brand.")
+  @Schema(description = "The name of the company associated with this brand.")
   public String getBrandCompany() {
     return brandCompany;
   }
@@ -92,7 +93,6 @@ public class Brand {
   public void setBrandCompany(String brandCompany) {
     this.brandCompany = brandCompany;
   }
-
 
   /**
    * brandId.
@@ -106,9 +106,10 @@ public class Brand {
 
   /**
    * The ID used to identify a specific brand in API calls..
+   * 
    * @return brandId
    **/
-  @ApiModelProperty(value = "The ID used to identify a specific brand in API calls.")
+  @Schema(description = "The ID used to identify a specific brand in API calls.")
   public String getBrandId() {
     return brandId;
   }
@@ -120,7 +121,6 @@ public class Brand {
     this.brandId = brandId;
   }
 
-
   /**
    * brandLanguages.
    *
@@ -130,7 +130,7 @@ public class Brand {
     this.brandLanguages = brandLanguages;
     return this;
   }
-  
+
   /**
    * addBrandLanguagesItem.
    *
@@ -146,9 +146,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return brandLanguages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getBrandLanguages() {
     return brandLanguages;
   }
@@ -159,7 +160,6 @@ public class Brand {
   public void setBrandLanguages(java.util.List<String> brandLanguages) {
     this.brandLanguages = brandLanguages;
   }
-
 
   /**
    * brandName.
@@ -173,9 +173,10 @@ public class Brand {
 
   /**
    * The name of the brand..
+   * 
    * @return brandName
    **/
-  @ApiModelProperty(value = "The name of the brand.")
+  @Schema(description = "The name of the brand.")
   public String getBrandName() {
     return brandName;
   }
@@ -187,7 +188,6 @@ public class Brand {
     this.brandName = brandName;
   }
 
-
   /**
    * colors.
    *
@@ -197,7 +197,7 @@ public class Brand {
     this.colors = colors;
     return this;
   }
-  
+
   /**
    * addColorsItem.
    *
@@ -213,9 +213,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return colors
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getColors() {
     return colors;
   }
@@ -226,7 +227,6 @@ public class Brand {
   public void setColors(java.util.List<NameValue> colors) {
     this.colors = colors;
   }
-
 
   /**
    * defaultBrandLanguage.
@@ -240,9 +240,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return defaultBrandLanguage
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDefaultBrandLanguage() {
     return defaultBrandLanguage;
   }
@@ -254,7 +255,6 @@ public class Brand {
     this.defaultBrandLanguage = defaultBrandLanguage;
   }
 
-
   /**
    * emailContent.
    *
@@ -264,7 +264,7 @@ public class Brand {
     this.emailContent = emailContent;
     return this;
   }
-  
+
   /**
    * addEmailContentItem.
    *
@@ -280,9 +280,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return emailContent
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BrandEmailContent> getEmailContent() {
     return emailContent;
   }
@@ -293,7 +294,6 @@ public class Brand {
   public void setEmailContent(java.util.List<BrandEmailContent> emailContent) {
     this.emailContent = emailContent;
   }
-
 
   /**
    * errorDetails.
@@ -306,10 +306,12 @@ public class Brand {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -320,7 +322,6 @@ public class Brand {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * isOverridingCompanyName.
@@ -334,9 +335,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return isOverridingCompanyName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsOverridingCompanyName() {
     return isOverridingCompanyName;
   }
@@ -347,7 +349,6 @@ public class Brand {
   public void setIsOverridingCompanyName(Boolean isOverridingCompanyName) {
     this.isOverridingCompanyName = isOverridingCompanyName;
   }
-
 
   /**
    * isSendingDefault.
@@ -361,9 +362,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return isSendingDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsSendingDefault() {
     return isSendingDefault;
   }
@@ -374,7 +376,6 @@ public class Brand {
   public void setIsSendingDefault(Boolean isSendingDefault) {
     this.isSendingDefault = isSendingDefault;
   }
-
 
   /**
    * isSigningDefault.
@@ -388,9 +389,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return isSigningDefault
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Boolean isIsSigningDefault() {
     return isSigningDefault;
   }
@@ -402,7 +404,6 @@ public class Brand {
     this.isSigningDefault = isSigningDefault;
   }
 
-
   /**
    * landingPages.
    *
@@ -412,7 +413,7 @@ public class Brand {
     this.landingPages = landingPages;
     return this;
   }
-  
+
   /**
    * addLandingPagesItem.
    *
@@ -428,9 +429,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return landingPages
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<NameValue> getLandingPages() {
     return landingPages;
   }
@@ -442,7 +444,6 @@ public class Brand {
     this.landingPages = landingPages;
   }
 
-
   /**
    * links.
    *
@@ -452,7 +453,7 @@ public class Brand {
     this.links = links;
     return this;
   }
-  
+
   /**
    * addLinksItem.
    *
@@ -468,9 +469,10 @@ public class Brand {
 
   /**
    * .
+   * 
    * @return links
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BrandLink> getLinks() {
     return links;
   }
@@ -481,7 +483,6 @@ public class Brand {
   public void setLinks(java.util.List<BrandLink> links) {
     this.links = links;
   }
-
 
   /**
    * logos.
@@ -495,9 +496,10 @@ public class Brand {
 
   /**
    * The URIs for retrieving the logos that are associated with the brand..
+   * 
    * @return logos
    **/
-  @ApiModelProperty(value = "The URIs for retrieving the logos that are associated with the brand.")
+  @Schema(description = "The URIs for retrieving the logos that are associated with the brand.")
   public BrandLogos getLogos() {
     return logos;
   }
@@ -508,7 +510,6 @@ public class Brand {
   public void setLogos(BrandLogos logos) {
     this.logos = logos;
   }
-
 
   /**
    * resources.
@@ -521,10 +522,16 @@ public class Brand {
   }
 
   /**
-   * An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`..
+   * An object containing the URLs for the four DocuSign master resource files
+   * that the brand uses for sending, signing, email messages, and captive
+   * (embedded) signing. You can modify the default email messages and formats in
+   * these file to customize the user experience. **Note:** This object is
+   * returned only when the `resourceContentType` is `sending`, `signing`,
+   * `email`, or `signing_captive`..
+   * 
    * @return resources
    **/
-  @ApiModelProperty(value = "An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.")
+  @Schema(description = "An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.")
   public BrandResourceUrls getResources() {
     return resources;
   }
@@ -535,7 +542,6 @@ public class Brand {
   public void setResources(BrandResourceUrls resources) {
     this.resources = resources;
   }
-
 
   /**
    * Compares objects.
@@ -573,9 +579,10 @@ public class Brand {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
+    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent,
+        errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos,
+        resources);
   }
-
 
   /**
    * Converts the given object to string.
@@ -584,7 +591,7 @@ public class Brand {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Brand {\n");
-    
+
     sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    brandLanguages: ").append(toIndentedString(brandLanguages)).append("\n");
@@ -616,4 +623,3 @@ public class Brand {
   }
 
 }
-

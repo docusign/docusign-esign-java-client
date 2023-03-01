@@ -9,8 +9,8 @@ import com.docusign.esign.model.SmartContractInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TabGroup.
@@ -267,7 +267,6 @@ public class TabGroup {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
-
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -280,9 +279,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorAllowWhiteSpaceInCharacters() {
     return anchorAllowWhiteSpaceInCharacters;
   }
@@ -294,22 +294,24 @@ public class TabGroup {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
-
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return TabGroup
    **/
-  public TabGroup anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public TabGroup anchorAllowWhiteSpaceInCharactersMetadata(
+      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
+   * property is editable..
+   * 
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
   public PropertyMetadata getAnchorAllowWhiteSpaceInCharactersMetadata() {
     return anchorAllowWhiteSpaceInCharactersMetadata;
   }
@@ -320,7 +322,6 @@ public class TabGroup {
   public void setAnchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
-
 
   /**
    * anchorCaseSensitive.
@@ -333,10 +334,12 @@ public class TabGroup {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
+   * When set to **true**, the anchor string does not consider case when matching
+   * strings in the document. The default value is **true**..
+   * 
    * @return anchorCaseSensitive
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
   public String getAnchorCaseSensitive() {
     return anchorCaseSensitive;
   }
@@ -347,7 +350,6 @@ public class TabGroup {
   public void setAnchorCaseSensitive(String anchorCaseSensitive) {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
-
 
   /**
    * anchorCaseSensitiveMetadata.
@@ -360,10 +362,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
+   * Metadata that indicates whether the `anchorCaseSensitive` property is
+   * editable..
+   * 
    * @return anchorCaseSensitiveMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
   public PropertyMetadata getAnchorCaseSensitiveMetadata() {
     return anchorCaseSensitiveMetadata;
   }
@@ -374,7 +378,6 @@ public class TabGroup {
   public void setAnchorCaseSensitiveMetadata(PropertyMetadata anchorCaseSensitiveMetadata) {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
-
 
   /**
    * anchorHorizontalAlignment.
@@ -387,10 +390,12 @@ public class TabGroup {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values
+   * are **left** or **right**. The default value is **left**..
+   * 
    * @return anchorHorizontalAlignment
    **/
-  @ApiModelProperty(value = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
+  @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
   public String getAnchorHorizontalAlignment() {
     return anchorHorizontalAlignment;
   }
@@ -401,7 +406,6 @@ public class TabGroup {
   public void setAnchorHorizontalAlignment(String anchorHorizontalAlignment) {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
-
 
   /**
    * anchorHorizontalAlignmentMetadata.
@@ -414,10 +418,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
+   * editable..
+   * 
    * @return anchorHorizontalAlignmentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
   public PropertyMetadata getAnchorHorizontalAlignmentMetadata() {
     return anchorHorizontalAlignmentMetadata;
   }
@@ -428,7 +434,6 @@ public class TabGroup {
   public void setAnchorHorizontalAlignmentMetadata(PropertyMetadata anchorHorizontalAlignmentMetadata) {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
-
 
   /**
    * anchorIgnoreIfNotPresent.
@@ -441,10 +446,12 @@ public class TabGroup {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the document..
+   * When set to **true**, this tab is ignored if anchorString is not found in the
+   * document..
+   * 
    * @return anchorIgnoreIfNotPresent
    **/
-  @ApiModelProperty(value = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
+  @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
   public String getAnchorIgnoreIfNotPresent() {
     return anchorIgnoreIfNotPresent;
   }
@@ -455,7 +462,6 @@ public class TabGroup {
   public void setAnchorIgnoreIfNotPresent(String anchorIgnoreIfNotPresent) {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
-
 
   /**
    * anchorIgnoreIfNotPresentMetadata.
@@ -468,10 +474,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
+   * editable..
+   * 
    * @return anchorIgnoreIfNotPresentMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
   public PropertyMetadata getAnchorIgnoreIfNotPresentMetadata() {
     return anchorIgnoreIfNotPresentMetadata;
   }
@@ -482,7 +490,6 @@ public class TabGroup {
   public void setAnchorIgnoreIfNotPresentMetadata(PropertyMetadata anchorIgnoreIfNotPresentMetadata) {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
-
 
   /**
    * anchorMatchWholeWord.
@@ -495,10 +502,13 @@ public class TabGroup {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
+   * When set to **true**, the anchor string in this tab matches whole words only
+   * (strings embedded in other strings are ignored.) The default value is
+   * **true**..
+   * 
    * @return anchorMatchWholeWord
    **/
-  @ApiModelProperty(value = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
+  @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
   public String getAnchorMatchWholeWord() {
     return anchorMatchWholeWord;
   }
@@ -509,7 +519,6 @@ public class TabGroup {
   public void setAnchorMatchWholeWord(String anchorMatchWholeWord) {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
-
 
   /**
    * anchorMatchWholeWordMetadata.
@@ -522,10 +531,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is
+   * editable..
+   * 
    * @return anchorMatchWholeWordMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
   public PropertyMetadata getAnchorMatchWholeWordMetadata() {
     return anchorMatchWholeWordMetadata;
   }
@@ -536,7 +547,6 @@ public class TabGroup {
   public void setAnchorMatchWholeWordMetadata(PropertyMetadata anchorMatchWholeWordMetadata) {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
-
 
   /**
    * anchorString.
@@ -550,9 +560,10 @@ public class TabGroup {
 
   /**
    * Anchor text information for a radio button..
+   * 
    * @return anchorString
    **/
-  @ApiModelProperty(value = "Anchor text information for a radio button.")
+  @Schema(description = "Anchor text information for a radio button.")
   public String getAnchorString() {
     return anchorString;
   }
@@ -563,7 +574,6 @@ public class TabGroup {
   public void setAnchorString(String anchorString) {
     this.anchorString = anchorString;
   }
-
 
   /**
    * anchorStringMetadata.
@@ -577,9 +587,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
+   * 
    * @return anchorStringMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorString` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
   public PropertyMetadata getAnchorStringMetadata() {
     return anchorStringMetadata;
   }
@@ -590,7 +601,6 @@ public class TabGroup {
   public void setAnchorStringMetadata(PropertyMetadata anchorStringMetadata) {
     this.anchorStringMetadata = anchorStringMetadata;
   }
-
 
   /**
    * anchorTabProcessorVersion.
@@ -604,9 +614,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return anchorTabProcessorVersion
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAnchorTabProcessorVersion() {
     return anchorTabProcessorVersion;
   }
@@ -617,7 +628,6 @@ public class TabGroup {
   public void setAnchorTabProcessorVersion(String anchorTabProcessorVersion) {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
-
 
   /**
    * anchorTabProcessorVersionMetadata.
@@ -631,9 +641,10 @@ public class TabGroup {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return anchorTabProcessorVersionMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public PropertyMetadata getAnchorTabProcessorVersionMetadata() {
     return anchorTabProcessorVersionMetadata;
   }
@@ -644,7 +655,6 @@ public class TabGroup {
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
-
 
   /**
    * anchorUnits.
@@ -657,10 +667,12 @@ public class TabGroup {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
+   * centimeters, or inches..
+   * 
    * @return anchorUnits
    **/
-  @ApiModelProperty(value = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
+  @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
   public String getAnchorUnits() {
     return anchorUnits;
   }
@@ -671,7 +683,6 @@ public class TabGroup {
   public void setAnchorUnits(String anchorUnits) {
     this.anchorUnits = anchorUnits;
   }
-
 
   /**
    * anchorUnitsMetadata.
@@ -685,9 +696,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
+   * 
    * @return anchorUnitsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorUnits` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
   public PropertyMetadata getAnchorUnitsMetadata() {
     return anchorUnitsMetadata;
   }
@@ -698,7 +710,6 @@ public class TabGroup {
   public void setAnchorUnitsMetadata(PropertyMetadata anchorUnitsMetadata) {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
-
 
   /**
    * anchorXOffset.
@@ -711,10 +722,12 @@ public class TabGroup {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorXOffset
    **/
-  @ApiModelProperty(value = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorXOffset() {
     return anchorXOffset;
   }
@@ -725,7 +738,6 @@ public class TabGroup {
   public void setAnchorXOffset(String anchorXOffset) {
     this.anchorXOffset = anchorXOffset;
   }
-
 
   /**
    * anchorXOffsetMetadata.
@@ -739,9 +751,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
+   * 
    * @return anchorXOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorXOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
   public PropertyMetadata getAnchorXOffsetMetadata() {
     return anchorXOffsetMetadata;
   }
@@ -752,7 +765,6 @@ public class TabGroup {
   public void setAnchorXOffsetMetadata(PropertyMetadata anchorXOffsetMetadata) {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
-
 
   /**
    * anchorYOffset.
@@ -765,10 +777,12 @@ public class TabGroup {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
+   * anchorString..
+   * 
    * @return anchorYOffset
    **/
-  @ApiModelProperty(value = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
+  @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
   public String getAnchorYOffset() {
     return anchorYOffset;
   }
@@ -779,7 +793,6 @@ public class TabGroup {
   public void setAnchorYOffset(String anchorYOffset) {
     this.anchorYOffset = anchorYOffset;
   }
-
 
   /**
    * anchorYOffsetMetadata.
@@ -793,9 +806,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
+   * 
    * @return anchorYOffsetMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `anchorYOffset` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
   public PropertyMetadata getAnchorYOffsetMetadata() {
     return anchorYOffsetMetadata;
   }
@@ -806,7 +820,6 @@ public class TabGroup {
   public void setAnchorYOffsetMetadata(PropertyMetadata anchorYOffsetMetadata) {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
-
 
   /**
    * caption.
@@ -820,9 +833,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return caption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCaption() {
     return caption;
   }
@@ -833,7 +847,6 @@ public class TabGroup {
   public void setCaption(String caption) {
     this.caption = caption;
   }
-
 
   /**
    * captionMetadata.
@@ -847,9 +860,10 @@ public class TabGroup {
 
   /**
    * Get captionMetadata.
+   * 
    * @return captionMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public PropertyMetadata getCaptionMetadata() {
     return captionMetadata;
   }
@@ -860,7 +874,6 @@ public class TabGroup {
   public void setCaptionMetadata(PropertyMetadata captionMetadata) {
     this.captionMetadata = captionMetadata;
   }
-
 
   /**
    * conditionalParentLabel.
@@ -873,10 +886,12 @@ public class TabGroup {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
+   * For conditional fields this is the TabLabel of the parent tab that controls
+   * this tab's visibility..
+   * 
    * @return conditionalParentLabel
    **/
-  @ApiModelProperty(value = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
+  @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
   public String getConditionalParentLabel() {
     return conditionalParentLabel;
   }
@@ -887,7 +902,6 @@ public class TabGroup {
   public void setConditionalParentLabel(String conditionalParentLabel) {
     this.conditionalParentLabel = conditionalParentLabel;
   }
-
 
   /**
    * conditionalParentLabelMetadata.
@@ -900,10 +914,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
+   * Metadata that indicates whether the `conditionalParentLabel` property is
+   * editable..
+   * 
    * @return conditionalParentLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
   public PropertyMetadata getConditionalParentLabelMetadata() {
     return conditionalParentLabelMetadata;
   }
@@ -914,7 +930,6 @@ public class TabGroup {
   public void setConditionalParentLabelMetadata(PropertyMetadata conditionalParentLabelMetadata) {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
-
 
   /**
    * conditionalParentValue.
@@ -927,10 +942,14 @@ public class TabGroup {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
+   * For conditional fields, this is the value of the parent tab that controls the
+   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
+   * Signature, or Optional Initial use \"on\" as the value to show that the
+   * parent tab is active. .
+   * 
    * @return conditionalParentValue
    **/
-  @ApiModelProperty(value = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
+  @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
   public String getConditionalParentValue() {
     return conditionalParentValue;
   }
@@ -941,7 +960,6 @@ public class TabGroup {
   public void setConditionalParentValue(String conditionalParentValue) {
     this.conditionalParentValue = conditionalParentValue;
   }
-
 
   /**
    * conditionalParentValueMetadata.
@@ -954,10 +972,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is editable..
+   * Metadata that indicates whether the `conditionalParentValue` property is
+   * editable..
+   * 
    * @return conditionalParentValueMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
   public PropertyMetadata getConditionalParentValueMetadata() {
     return conditionalParentValueMetadata;
   }
@@ -968,7 +988,6 @@ public class TabGroup {
   public void setConditionalParentValueMetadata(PropertyMetadata conditionalParentValueMetadata) {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
-
 
   /**
    * customTabId.
@@ -981,10 +1000,13 @@ public class TabGroup {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This
+   * can only be used when adding new tabs for a recipient. When used, the new tab
+   * inherits all the custom tab properties..
+   * 
    * @return customTabId
    **/
-  @ApiModelProperty(value = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
+  @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
   public String getCustomTabId() {
     return customTabId;
   }
@@ -995,7 +1017,6 @@ public class TabGroup {
   public void setCustomTabId(String customTabId) {
     this.customTabId = customTabId;
   }
-
 
   /**
    * customTabIdMetadata.
@@ -1009,9 +1030,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
+   * 
    * @return customTabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `customTabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
   public PropertyMetadata getCustomTabIdMetadata() {
     return customTabIdMetadata;
   }
@@ -1022,7 +1044,6 @@ public class TabGroup {
   public void setCustomTabIdMetadata(PropertyMetadata customTabIdMetadata) {
     this.customTabIdMetadata = customTabIdMetadata;
   }
-
 
   /**
    * documentId.
@@ -1035,10 +1056,12 @@ public class TabGroup {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing Document's ID attribute..
+   * 
    * @return documentId
    **/
-  @ApiModelProperty(value = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -1049,7 +1072,6 @@ public class TabGroup {
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
   }
-
 
   /**
    * documentIdMetadata.
@@ -1063,9 +1085,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
+   * 
    * @return documentIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `documentId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
   public PropertyMetadata getDocumentIdMetadata() {
     return documentIdMetadata;
   }
@@ -1076,7 +1099,6 @@ public class TabGroup {
   public void setDocumentIdMetadata(PropertyMetadata documentIdMetadata) {
     this.documentIdMetadata = documentIdMetadata;
   }
-
 
   /**
    * errorDetails.
@@ -1089,10 +1111,12 @@ public class TabGroup {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1103,7 +1127,6 @@ public class TabGroup {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * formOrder.
@@ -1117,9 +1140,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return formOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormOrder() {
     return formOrder;
   }
@@ -1130,7 +1154,6 @@ public class TabGroup {
   public void setFormOrder(String formOrder) {
     this.formOrder = formOrder;
   }
-
 
   /**
    * formOrderMetadata.
@@ -1144,9 +1167,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
+   * 
    * @return formOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
   public PropertyMetadata getFormOrderMetadata() {
     return formOrderMetadata;
   }
@@ -1157,7 +1181,6 @@ public class TabGroup {
   public void setFormOrderMetadata(PropertyMetadata formOrderMetadata) {
     this.formOrderMetadata = formOrderMetadata;
   }
-
 
   /**
    * formPageLabel.
@@ -1171,9 +1194,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return formPageLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageLabel() {
     return formPageLabel;
   }
@@ -1184,7 +1208,6 @@ public class TabGroup {
   public void setFormPageLabel(String formPageLabel) {
     this.formPageLabel = formPageLabel;
   }
-
 
   /**
    * formPageLabelMetadata.
@@ -1198,9 +1221,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
+   * 
    * @return formPageLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `formPageLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
   public PropertyMetadata getFormPageLabelMetadata() {
     return formPageLabelMetadata;
   }
@@ -1211,7 +1235,6 @@ public class TabGroup {
   public void setFormPageLabelMetadata(PropertyMetadata formPageLabelMetadata) {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
-
 
   /**
    * formPageNumber.
@@ -1225,9 +1248,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return formPageNumber
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormPageNumber() {
     return formPageNumber;
   }
@@ -1238,7 +1262,6 @@ public class TabGroup {
   public void setFormPageNumber(String formPageNumber) {
     this.formPageNumber = formPageNumber;
   }
-
 
   /**
    * formPageNumberMetadata.
@@ -1252,9 +1275,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
+   * 
    * @return formPageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `fromPageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
   public PropertyMetadata getFormPageNumberMetadata() {
     return formPageNumberMetadata;
   }
@@ -1265,7 +1289,6 @@ public class TabGroup {
   public void setFormPageNumberMetadata(PropertyMetadata formPageNumberMetadata) {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
-
 
   /**
    * groupLabel.
@@ -1279,9 +1302,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return groupLabel
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupLabel() {
     return groupLabel;
   }
@@ -1292,7 +1316,6 @@ public class TabGroup {
   public void setGroupLabel(String groupLabel) {
     this.groupLabel = groupLabel;
   }
-
 
   /**
    * groupLabelMetadata.
@@ -1306,9 +1329,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `groupLabel` property is editable..
+   * 
    * @return groupLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `groupLabel` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `groupLabel` property is editable.")
   public PropertyMetadata getGroupLabelMetadata() {
     return groupLabelMetadata;
   }
@@ -1319,7 +1343,6 @@ public class TabGroup {
   public void setGroupLabelMetadata(PropertyMetadata groupLabelMetadata) {
     this.groupLabelMetadata = groupLabelMetadata;
   }
-
 
   /**
    * groupRule.
@@ -1333,9 +1356,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return groupRule
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getGroupRule() {
     return groupRule;
   }
@@ -1346,7 +1370,6 @@ public class TabGroup {
   public void setGroupRule(String groupRule) {
     this.groupRule = groupRule;
   }
-
 
   /**
    * groupRuleMetadata.
@@ -1360,9 +1383,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `groupRule` property is editable..
+   * 
    * @return groupRuleMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `groupRule` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `groupRule` property is editable.")
   public PropertyMetadata getGroupRuleMetadata() {
     return groupRuleMetadata;
   }
@@ -1373,7 +1397,6 @@ public class TabGroup {
   public void setGroupRuleMetadata(PropertyMetadata groupRuleMetadata) {
     this.groupRuleMetadata = groupRuleMetadata;
   }
-
 
   /**
    * height.
@@ -1387,9 +1410,10 @@ public class TabGroup {
 
   /**
    * Height of the tab in pixels..
+   * 
    * @return height
    **/
-  @ApiModelProperty(value = "Height of the tab in pixels.")
+  @Schema(description = "Height of the tab in pixels.")
   public String getHeight() {
     return height;
   }
@@ -1400,7 +1424,6 @@ public class TabGroup {
   public void setHeight(String height) {
     this.height = height;
   }
-
 
   /**
    * heightMetadata.
@@ -1414,9 +1437,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
+   * 
    * @return heightMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `height` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `height` property is editable.")
   public PropertyMetadata getHeightMetadata() {
     return heightMetadata;
   }
@@ -1427,7 +1451,6 @@ public class TabGroup {
   public void setHeightMetadata(PropertyMetadata heightMetadata) {
     this.heightMetadata = heightMetadata;
   }
-
 
   /**
    * maximumAllowed.
@@ -1441,9 +1464,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return maximumAllowed
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMaximumAllowed() {
     return maximumAllowed;
   }
@@ -1454,7 +1478,6 @@ public class TabGroup {
   public void setMaximumAllowed(String maximumAllowed) {
     this.maximumAllowed = maximumAllowed;
   }
-
 
   /**
    * maximumAllowedMetadata.
@@ -1468,9 +1491,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `maximumAllowed` property is editable..
+   * 
    * @return maximumAllowedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `maximumAllowed` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `maximumAllowed` property is editable.")
   public PropertyMetadata getMaximumAllowedMetadata() {
     return maximumAllowedMetadata;
   }
@@ -1481,7 +1505,6 @@ public class TabGroup {
   public void setMaximumAllowedMetadata(PropertyMetadata maximumAllowedMetadata) {
     this.maximumAllowedMetadata = maximumAllowedMetadata;
   }
-
 
   /**
    * mergeField.
@@ -1495,9 +1518,10 @@ public class TabGroup {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
+   * 
    * @return mergeField
    **/
-  @ApiModelProperty(value = "Contains the information necessary to map the tab to a field in SalesForce.")
+  @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
   public MergeField getMergeField() {
     return mergeField;
   }
@@ -1508,7 +1532,6 @@ public class TabGroup {
   public void setMergeField(MergeField mergeField) {
     this.mergeField = mergeField;
   }
-
 
   /**
    * mergeFieldXml.
@@ -1522,9 +1545,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return mergeFieldXml
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMergeFieldXml() {
     return mergeFieldXml;
   }
@@ -1535,7 +1559,6 @@ public class TabGroup {
   public void setMergeFieldXml(String mergeFieldXml) {
     this.mergeFieldXml = mergeFieldXml;
   }
-
 
   /**
    * minimumRequired.
@@ -1549,9 +1572,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return minimumRequired
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getMinimumRequired() {
     return minimumRequired;
   }
@@ -1562,7 +1586,6 @@ public class TabGroup {
   public void setMinimumRequired(String minimumRequired) {
     this.minimumRequired = minimumRequired;
   }
-
 
   /**
    * minimumRequiredMetadata.
@@ -1576,9 +1599,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `minimumRequired` property is editable..
+   * 
    * @return minimumRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `minimumRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `minimumRequired` property is editable.")
   public PropertyMetadata getMinimumRequiredMetadata() {
     return minimumRequiredMetadata;
   }
@@ -1589,7 +1613,6 @@ public class TabGroup {
   public void setMinimumRequiredMetadata(PropertyMetadata minimumRequiredMetadata) {
     this.minimumRequiredMetadata = minimumRequiredMetadata;
   }
-
 
   /**
    * pageNumber.
@@ -1603,9 +1626,10 @@ public class TabGroup {
 
   /**
    * Specifies the page number on which the tab is located..
+   * 
    * @return pageNumber
    **/
-  @ApiModelProperty(value = "Specifies the page number on which the tab is located.")
+  @Schema(description = "Specifies the page number on which the tab is located.")
   public String getPageNumber() {
     return pageNumber;
   }
@@ -1616,7 +1640,6 @@ public class TabGroup {
   public void setPageNumber(String pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   /**
    * pageNumberMetadata.
@@ -1630,9 +1653,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
+   * 
    * @return pageNumberMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `pageNumber` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
   public PropertyMetadata getPageNumberMetadata() {
     return pageNumberMetadata;
   }
@@ -1643,7 +1667,6 @@ public class TabGroup {
   public void setPageNumberMetadata(PropertyMetadata pageNumberMetadata) {
     this.pageNumberMetadata = pageNumberMetadata;
   }
-
 
   /**
    * recipientId.
@@ -1656,10 +1679,12 @@ public class TabGroup {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
+   * Unique for the recipient. It is used by the tab element to indicate which
+   * recipient is to sign the Document..
+   * 
    * @return recipientId
    **/
-  @ApiModelProperty(value = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
+  @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
   public String getRecipientId() {
     return recipientId;
   }
@@ -1670,7 +1695,6 @@ public class TabGroup {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
-
 
   /**
    * recipientIdGuid.
@@ -1684,9 +1708,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return recipientIdGuid
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRecipientIdGuid() {
     return recipientIdGuid;
   }
@@ -1697,7 +1722,6 @@ public class TabGroup {
   public void setRecipientIdGuid(String recipientIdGuid) {
     this.recipientIdGuid = recipientIdGuid;
   }
-
 
   /**
    * recipientIdGuidMetadata.
@@ -1711,9 +1735,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
+   * 
    * @return recipientIdGuidMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
   public PropertyMetadata getRecipientIdGuidMetadata() {
     return recipientIdGuidMetadata;
   }
@@ -1724,7 +1749,6 @@ public class TabGroup {
   public void setRecipientIdGuidMetadata(PropertyMetadata recipientIdGuidMetadata) {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
-
 
   /**
    * recipientIdMetadata.
@@ -1738,9 +1762,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
+   * 
    * @return recipientIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `recipientId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
   public PropertyMetadata getRecipientIdMetadata() {
     return recipientIdMetadata;
   }
@@ -1751,7 +1776,6 @@ public class TabGroup {
   public void setRecipientIdMetadata(PropertyMetadata recipientIdMetadata) {
     this.recipientIdMetadata = recipientIdMetadata;
   }
-
 
   /**
    * smartContractInformation.
@@ -1765,9 +1789,10 @@ public class TabGroup {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return smartContractInformation
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SmartContractInformation getSmartContractInformation() {
     return smartContractInformation;
   }
@@ -1778,7 +1803,6 @@ public class TabGroup {
   public void setSmartContractInformation(SmartContractInformation smartContractInformation) {
     this.smartContractInformation = smartContractInformation;
   }
-
 
   /**
    * source.
@@ -1792,9 +1816,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return source
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSource() {
     return source;
   }
@@ -1805,7 +1830,6 @@ public class TabGroup {
   public void setSource(String source) {
     this.source = source;
   }
-
 
   /**
    * status.
@@ -1818,10 +1842,13 @@ public class TabGroup {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * Indicates the envelope status. Valid values are: * sent - The envelope is
+   * sent to the recipients. * created - The envelope is saved as a draft and can
+   * be modified and sent later..
+   * 
    * @return status
    **/
-  @ApiModelProperty(value = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -1832,7 +1859,6 @@ public class TabGroup {
   public void setStatus(String status) {
     this.status = status;
   }
-
 
   /**
    * statusMetadata.
@@ -1846,9 +1872,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
+   * 
    * @return statusMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `status` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `status` property is editable.")
   public PropertyMetadata getStatusMetadata() {
     return statusMetadata;
   }
@@ -1860,7 +1887,6 @@ public class TabGroup {
     this.statusMetadata = statusMetadata;
   }
 
-
   /**
    * tabGroupLabels.
    *
@@ -1870,7 +1896,7 @@ public class TabGroup {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-  
+
   /**
    * addTabGroupLabelsItem.
    *
@@ -1886,9 +1912,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return tabGroupLabels
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<String> getTabGroupLabels() {
     return tabGroupLabels;
   }
@@ -1899,7 +1926,6 @@ public class TabGroup {
   public void setTabGroupLabels(java.util.List<String> tabGroupLabels) {
     this.tabGroupLabels = tabGroupLabels;
   }
-
 
   /**
    * tabGroupLabelsMetadata.
@@ -1913,9 +1939,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
+   * 
    * @return tabGroupLabelsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
   public PropertyMetadata getTabGroupLabelsMetadata() {
     return tabGroupLabelsMetadata;
   }
@@ -1926,7 +1953,6 @@ public class TabGroup {
   public void setTabGroupLabelsMetadata(PropertyMetadata tabGroupLabelsMetadata) {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
-
 
   /**
    * tabId.
@@ -1939,10 +1965,12 @@ public class TabGroup {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
+   * The unique identifier for the tab. The tabid can be retrieved with the
+   * [ML:GET call]. .
+   * 
    * @return tabId
    **/
-  @ApiModelProperty(value = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
+  @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
   public String getTabId() {
     return tabId;
   }
@@ -1953,7 +1981,6 @@ public class TabGroup {
   public void setTabId(String tabId) {
     this.tabId = tabId;
   }
-
 
   /**
    * tabIdMetadata.
@@ -1967,9 +1994,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
+   * 
    * @return tabIdMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabId` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
   public PropertyMetadata getTabIdMetadata() {
     return tabIdMetadata;
   }
@@ -1980,7 +2008,6 @@ public class TabGroup {
   public void setTabIdMetadata(PropertyMetadata tabIdMetadata) {
     this.tabIdMetadata = tabIdMetadata;
   }
-
 
   /**
    * tabOrder.
@@ -1994,9 +2021,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return tabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabOrder() {
     return tabOrder;
   }
@@ -2007,7 +2035,6 @@ public class TabGroup {
   public void setTabOrder(String tabOrder) {
     this.tabOrder = tabOrder;
   }
-
 
   /**
    * tabOrderMetadata.
@@ -2021,9 +2048,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
+   * 
    * @return tabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabOrder` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
   public PropertyMetadata getTabOrderMetadata() {
     return tabOrderMetadata;
   }
@@ -2034,7 +2062,6 @@ public class TabGroup {
   public void setTabOrderMetadata(PropertyMetadata tabOrderMetadata) {
     this.tabOrderMetadata = tabOrderMetadata;
   }
-
 
   /**
    * tabScope.
@@ -2048,9 +2075,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return tabScope
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabScope() {
     return tabScope;
   }
@@ -2061,7 +2089,6 @@ public class TabGroup {
   public void setTabScope(String tabScope) {
     this.tabScope = tabScope;
   }
-
 
   /**
    * tabScopeMetadata.
@@ -2075,9 +2102,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `tabScope` property is editable..
+   * 
    * @return tabScopeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabScope` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabScope` property is editable.")
   public PropertyMetadata getTabScopeMetadata() {
     return tabScopeMetadata;
   }
@@ -2088,7 +2116,6 @@ public class TabGroup {
   public void setTabScopeMetadata(PropertyMetadata tabScopeMetadata) {
     this.tabScopeMetadata = tabScopeMetadata;
   }
-
 
   /**
    * tabType.
@@ -2102,9 +2129,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return tabType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabType() {
     return tabType;
   }
@@ -2115,7 +2143,6 @@ public class TabGroup {
   public void setTabType(String tabType) {
     this.tabType = tabType;
   }
-
 
   /**
    * tabTypeMetadata.
@@ -2129,9 +2156,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
+   * 
    * @return tabTypeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabType` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
   public PropertyMetadata getTabTypeMetadata() {
     return tabTypeMetadata;
   }
@@ -2142,7 +2170,6 @@ public class TabGroup {
   public void setTabTypeMetadata(PropertyMetadata tabTypeMetadata) {
     this.tabTypeMetadata = tabTypeMetadata;
   }
-
 
   /**
    * templateLocked.
@@ -2155,10 +2182,12 @@ public class TabGroup {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
+   * When set to **true**, the sender cannot change any attributes of the
+   * recipient. Used only when working with template recipients. .
+   * 
    * @return templateLocked
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
+  @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
   public String getTemplateLocked() {
     return templateLocked;
   }
@@ -2169,7 +2198,6 @@ public class TabGroup {
   public void setTemplateLocked(String templateLocked) {
     this.templateLocked = templateLocked;
   }
-
 
   /**
    * templateLockedMetadata.
@@ -2183,9 +2211,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
+   * 
    * @return templateLockedMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateLocked` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
   public PropertyMetadata getTemplateLockedMetadata() {
     return templateLockedMetadata;
   }
@@ -2196,7 +2225,6 @@ public class TabGroup {
   public void setTemplateLockedMetadata(PropertyMetadata templateLockedMetadata) {
     this.templateLockedMetadata = templateLockedMetadata;
   }
-
 
   /**
    * templateRequired.
@@ -2209,10 +2237,12 @@ public class TabGroup {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
+   * When set to **true**, the sender may not remove the recipient. Used only when
+   * working with template recipients..
+   * 
    * @return templateRequired
    **/
-  @ApiModelProperty(value = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
+  @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
   public String getTemplateRequired() {
     return templateRequired;
   }
@@ -2223,7 +2253,6 @@ public class TabGroup {
   public void setTemplateRequired(String templateRequired) {
     this.templateRequired = templateRequired;
   }
-
 
   /**
    * templateRequiredMetadata.
@@ -2237,9 +2266,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
+   * 
    * @return templateRequiredMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `templateRequired` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
   public PropertyMetadata getTemplateRequiredMetadata() {
     return templateRequiredMetadata;
   }
@@ -2250,7 +2280,6 @@ public class TabGroup {
   public void setTemplateRequiredMetadata(PropertyMetadata templateRequiredMetadata) {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
-
 
   /**
    * tooltip.
@@ -2264,9 +2293,10 @@ public class TabGroup {
 
   /**
    * .
+   * 
    * @return tooltip
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTooltip() {
     return tooltip;
   }
@@ -2277,7 +2307,6 @@ public class TabGroup {
   public void setTooltip(String tooltip) {
     this.tooltip = tooltip;
   }
-
 
   /**
    * toolTipMetadata.
@@ -2291,9 +2320,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
+   * 
    * @return toolTipMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `toolTip` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
   public PropertyMetadata getToolTipMetadata() {
     return toolTipMetadata;
   }
@@ -2304,7 +2334,6 @@ public class TabGroup {
   public void setToolTipMetadata(PropertyMetadata toolTipMetadata) {
     this.toolTipMetadata = toolTipMetadata;
   }
-
 
   /**
    * validationMessage.
@@ -2317,10 +2346,12 @@ public class TabGroup {
   }
 
   /**
-   * The message displayed if the custom tab fails input validation (either custom of embedded)..
+   * The message displayed if the custom tab fails input validation (either custom
+   * of embedded)..
+   * 
    * @return validationMessage
    **/
-  @ApiModelProperty(value = "The message displayed if the custom tab fails input validation (either custom of embedded).")
+  @Schema(description = "The message displayed if the custom tab fails input validation (either custom of embedded).")
   public String getValidationMessage() {
     return validationMessage;
   }
@@ -2331,7 +2362,6 @@ public class TabGroup {
   public void setValidationMessage(String validationMessage) {
     this.validationMessage = validationMessage;
   }
-
 
   /**
    * validationMessageMetadata.
@@ -2344,10 +2374,12 @@ public class TabGroup {
   }
 
   /**
-   * Metadata that indicates whether the `validationMessage` property is editable..
+   * Metadata that indicates whether the `validationMessage` property is
+   * editable..
+   * 
    * @return validationMessageMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `validationMessage` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `validationMessage` property is editable.")
   public PropertyMetadata getValidationMessageMetadata() {
     return validationMessageMetadata;
   }
@@ -2358,7 +2390,6 @@ public class TabGroup {
   public void setValidationMessageMetadata(PropertyMetadata validationMessageMetadata) {
     this.validationMessageMetadata = validationMessageMetadata;
   }
-
 
   /**
    * width.
@@ -2372,9 +2403,10 @@ public class TabGroup {
 
   /**
    * Width of the tab in pixels..
+   * 
    * @return width
    **/
-  @ApiModelProperty(value = "Width of the tab in pixels.")
+  @Schema(description = "Width of the tab in pixels.")
   public String getWidth() {
     return width;
   }
@@ -2385,7 +2417,6 @@ public class TabGroup {
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   /**
    * widthMetadata.
@@ -2399,9 +2430,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
+   * 
    * @return widthMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `width` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `width` property is editable.")
   public PropertyMetadata getWidthMetadata() {
     return widthMetadata;
   }
@@ -2412,7 +2444,6 @@ public class TabGroup {
   public void setWidthMetadata(PropertyMetadata widthMetadata) {
     this.widthMetadata = widthMetadata;
   }
-
 
   /**
    * xPosition.
@@ -2425,10 +2456,12 @@ public class TabGroup {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the horizontal offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return xPosition
    **/
-  @ApiModelProperty(value = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getXPosition() {
     return xPosition;
   }
@@ -2439,7 +2472,6 @@ public class TabGroup {
   public void setXPosition(String xPosition) {
     this.xPosition = xPosition;
   }
-
 
   /**
    * xPositionMetadata.
@@ -2453,9 +2485,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
+   * 
    * @return xPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `xPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
   public PropertyMetadata getXPositionMetadata() {
     return xPositionMetadata;
   }
@@ -2466,7 +2499,6 @@ public class TabGroup {
   public void setXPositionMetadata(PropertyMetadata xPositionMetadata) {
     this.xPositionMetadata = xPositionMetadata;
   }
-
 
   /**
    * yPosition.
@@ -2479,10 +2511,12 @@ public class TabGroup {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
+   * This indicates the vertical offset of the object on the page. DocuSign uses
+   * 72 DPI when determining position..
+   * 
    * @return yPosition
    **/
-  @ApiModelProperty(value = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
+  @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
   public String getYPosition() {
     return yPosition;
   }
@@ -2493,7 +2527,6 @@ public class TabGroup {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
-
 
   /**
    * yPositionMetadata.
@@ -2507,9 +2540,10 @@ public class TabGroup {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
+   * 
    * @return yPositionMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `yPosition` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
   public PropertyMetadata getYPositionMetadata() {
     return yPositionMetadata;
   }
@@ -2520,7 +2554,6 @@ public class TabGroup {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -2537,7 +2570,9 @@ public class TabGroup {
     }
     TabGroup tabGroup = (TabGroup) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, tabGroup.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, tabGroup.anchorAllowWhiteSpaceInCharactersMetadata) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
+            tabGroup.anchorAllowWhiteSpaceInCharactersMetadata)
+        &&
         Objects.equals(this.anchorCaseSensitive, tabGroup.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, tabGroup.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, tabGroup.anchorHorizontalAlignment) &&
@@ -2626,9 +2661,22 @@ public class TabGroup {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed, maximumAllowedMetadata, mergeField, mergeFieldXml, minimumRequired, minimumRequiredMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage, validationMessageMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
+        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
+        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
+        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
+        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption,
+        captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue,
+        conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails,
+        formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata,
+        groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed,
+        maximumAllowedMetadata, mergeField, mergeFieldXml, minimumRequired, minimumRequiredMetadata, pageNumber,
+        pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata,
+        smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId,
+        tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked,
+        templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage,
+        validationMessageMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -2637,21 +2685,26 @@ public class TabGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabGroup {\n");
-    
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
+        .append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
+        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
+        .append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
+        .append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
+        .append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -2661,9 +2714,11 @@ public class TabGroup {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
+        .append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
+        .append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -2737,4 +2792,3 @@ public class TabGroup {
   }
 
 }
-

@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * BulkEnvelope.
@@ -42,7 +42,6 @@ public class BulkEnvelope {
   @JsonProperty("transactionId")
   private String transactionId = null;
 
-
   /**
    * bulkRecipientRow.
    *
@@ -55,9 +54,10 @@ public class BulkEnvelope {
 
   /**
    * Reserved: TBD.
+   * 
    * @return bulkRecipientRow
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBulkRecipientRow() {
     return bulkRecipientRow;
   }
@@ -68,7 +68,6 @@ public class BulkEnvelope {
   public void setBulkRecipientRow(String bulkRecipientRow) {
     this.bulkRecipientRow = bulkRecipientRow;
   }
-
 
   /**
    * bulkStatus.
@@ -81,10 +80,12 @@ public class BulkEnvelope {
   }
 
   /**
-   * Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed.
+   * Indicates the status of the bulk send operation. Returned values can be: *
+   * queued * processing * sent * failed.
+   * 
    * @return bulkStatus
    **/
-  @ApiModelProperty(value = "Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed")
+  @Schema(description = "Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed")
   public String getBulkStatus() {
     return bulkStatus;
   }
@@ -95,7 +96,6 @@ public class BulkEnvelope {
   public void setBulkStatus(String bulkStatus) {
     this.bulkStatus = bulkStatus;
   }
-
 
   /**
    * email.
@@ -109,9 +109,10 @@ public class BulkEnvelope {
 
   /**
    * .
+   * 
    * @return email
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getEmail() {
     return email;
   }
@@ -122,7 +123,6 @@ public class BulkEnvelope {
   public void setEmail(String email) {
     this.email = email;
   }
-
 
   /**
    * envelopeId.
@@ -136,9 +136,10 @@ public class BulkEnvelope {
 
   /**
    * The envelope ID of the envelope status that failed to post..
+   * 
    * @return envelopeId
    **/
-  @ApiModelProperty(value = "The envelope ID of the envelope status that failed to post.")
+  @Schema(description = "The envelope ID of the envelope status that failed to post.")
   public String getEnvelopeId() {
     return envelopeId;
   }
@@ -149,7 +150,6 @@ public class BulkEnvelope {
   public void setEnvelopeId(String envelopeId) {
     this.envelopeId = envelopeId;
   }
-
 
   /**
    * envelopeUri.
@@ -162,10 +162,12 @@ public class BulkEnvelope {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or
+   * envelopes..
+   * 
    * @return envelopeUri
    **/
-  @ApiModelProperty(value = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
+  @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
   public String getEnvelopeUri() {
     return envelopeUri;
   }
@@ -176,7 +178,6 @@ public class BulkEnvelope {
   public void setEnvelopeUri(String envelopeUri) {
     this.envelopeUri = envelopeUri;
   }
-
 
   /**
    * errorDetails.
@@ -189,10 +190,12 @@ public class BulkEnvelope {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -203,7 +206,6 @@ public class BulkEnvelope {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * name.
@@ -217,9 +219,10 @@ public class BulkEnvelope {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -230,7 +233,6 @@ public class BulkEnvelope {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * submittedDateTime.
@@ -244,9 +246,10 @@ public class BulkEnvelope {
 
   /**
    * .
+   * 
    * @return submittedDateTime
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSubmittedDateTime() {
     return submittedDateTime;
   }
@@ -257,7 +260,6 @@ public class BulkEnvelope {
   public void setSubmittedDateTime(String submittedDateTime) {
     this.submittedDateTime = submittedDateTime;
   }
-
 
   /**
    * transactionId.
@@ -270,10 +272,16 @@ public class BulkEnvelope {
   }
 
   /**
-   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned..
+   * Used to identify an envelope. The id is a sender-generated value and is valid
+   * in the DocuSign system for 7 days. It is recommended that a transaction ID is
+   * used for offline signing to ensure that an envelope is not sent multiple
+   * times. The `transactionId` property can be used determine an envelope's
+   * status (i.e. was it created or not) in cases where the internet connection
+   * was lost before the envelope status was returned..
+   * 
    * @return transactionId
    **/
-  @ApiModelProperty(value = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
+  @Schema(description = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
   public String getTransactionId() {
     return transactionId;
   }
@@ -284,7 +292,6 @@ public class BulkEnvelope {
   public void setTransactionId(String transactionId) {
     this.transactionId = transactionId;
   }
-
 
   /**
    * Compares objects.
@@ -316,9 +323,9 @@ public class BulkEnvelope {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bulkRecipientRow, bulkStatus, email, envelopeId, envelopeUri, errorDetails, name, submittedDateTime, transactionId);
+    return Objects.hash(bulkRecipientRow, bulkStatus, email, envelopeId, envelopeUri, errorDetails, name,
+        submittedDateTime, transactionId);
   }
-
 
   /**
    * Converts the given object to string.
@@ -327,7 +334,7 @@ public class BulkEnvelope {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelope {\n");
-    
+
     sb.append("    bulkRecipientRow: ").append(toIndentedString(bulkRecipientRow)).append("\n");
     sb.append("    bulkStatus: ").append(toIndentedString(bulkStatus)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -353,4 +360,3 @@ public class BulkEnvelope {
   }
 
 }
-

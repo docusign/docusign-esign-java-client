@@ -6,8 +6,8 @@ import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * TabAccountSettings.
@@ -147,7 +147,6 @@ public class TabAccountSettings {
   @JsonProperty("textTabsMetadata")
   private SettingsMetadata textTabsMetadata = null;
 
-
   /**
    * allowTabOrder.
    *
@@ -160,9 +159,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return allowTabOrder
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAllowTabOrder() {
     return allowTabOrder;
   }
@@ -173,7 +173,6 @@ public class TabAccountSettings {
   public void setAllowTabOrder(String allowTabOrder) {
     this.allowTabOrder = allowTabOrder;
   }
-
 
   /**
    * allowTabOrderMetadata.
@@ -187,9 +186,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `allowTabOrder` property is editable. .
+   * 
    * @return allowTabOrderMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `allowTabOrder` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `allowTabOrder` property is editable. ")
   public SettingsMetadata getAllowTabOrderMetadata() {
     return allowTabOrderMetadata;
   }
@@ -200,7 +200,6 @@ public class TabAccountSettings {
   public void setAllowTabOrderMetadata(SettingsMetadata allowTabOrderMetadata) {
     this.allowTabOrderMetadata = allowTabOrderMetadata;
   }
-
 
   /**
    * approveDeclineTabsEnabled.
@@ -214,9 +213,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return approveDeclineTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getApproveDeclineTabsEnabled() {
     return approveDeclineTabsEnabled;
   }
@@ -227,7 +227,6 @@ public class TabAccountSettings {
   public void setApproveDeclineTabsEnabled(String approveDeclineTabsEnabled) {
     this.approveDeclineTabsEnabled = approveDeclineTabsEnabled;
   }
-
 
   /**
    * approveDeclineTabsMetadata.
@@ -240,10 +239,12 @@ public class TabAccountSettings {
   }
 
   /**
-   * Metadata that indicates whether the `approveDeclineTabs` property is editable. .
+   * Metadata that indicates whether the `approveDeclineTabs` property is
+   * editable. .
+   * 
    * @return approveDeclineTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `approveDeclineTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `approveDeclineTabs` property is editable. ")
   public SettingsMetadata getApproveDeclineTabsMetadata() {
     return approveDeclineTabsMetadata;
   }
@@ -254,7 +255,6 @@ public class TabAccountSettings {
   public void setApproveDeclineTabsMetadata(SettingsMetadata approveDeclineTabsMetadata) {
     this.approveDeclineTabsMetadata = approveDeclineTabsMetadata;
   }
-
 
   /**
    * calculatedFieldsEnabled.
@@ -268,9 +268,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return calculatedFieldsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCalculatedFieldsEnabled() {
     return calculatedFieldsEnabled;
   }
@@ -281,7 +282,6 @@ public class TabAccountSettings {
   public void setCalculatedFieldsEnabled(String calculatedFieldsEnabled) {
     this.calculatedFieldsEnabled = calculatedFieldsEnabled;
   }
-
 
   /**
    * calculatedFieldsMetadata.
@@ -294,10 +294,12 @@ public class TabAccountSettings {
   }
 
   /**
-   * Metadata that indicates whether the `calculatedFields` property is editable. .
+   * Metadata that indicates whether the `calculatedFields` property is editable.
+   * .
+   * 
    * @return calculatedFieldsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `calculatedFields` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `calculatedFields` property is editable. ")
   public SettingsMetadata getCalculatedFieldsMetadata() {
     return calculatedFieldsMetadata;
   }
@@ -308,7 +310,6 @@ public class TabAccountSettings {
   public void setCalculatedFieldsMetadata(SettingsMetadata calculatedFieldsMetadata) {
     this.calculatedFieldsMetadata = calculatedFieldsMetadata;
   }
-
 
   /**
    * checkboxTabsEnabled.
@@ -322,9 +323,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return checkboxTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCheckboxTabsEnabled() {
     return checkboxTabsEnabled;
   }
@@ -335,7 +337,6 @@ public class TabAccountSettings {
   public void setCheckboxTabsEnabled(String checkboxTabsEnabled) {
     this.checkboxTabsEnabled = checkboxTabsEnabled;
   }
-
 
   /**
    * checkBoxTabsMetadata.
@@ -349,9 +350,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `checkBoxTabs` property is editable..
+   * 
    * @return checkBoxTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `checkBoxTabs` property is editable.")
+  @Schema(description = "Metadata that indicates whether the `checkBoxTabs` property is editable.")
   public SettingsMetadata getCheckBoxTabsMetadata() {
     return checkBoxTabsMetadata;
   }
@@ -362,7 +364,6 @@ public class TabAccountSettings {
   public void setCheckBoxTabsMetadata(SettingsMetadata checkBoxTabsMetadata) {
     this.checkBoxTabsMetadata = checkBoxTabsMetadata;
   }
-
 
   /**
    * currencyTabsEnabled.
@@ -376,9 +377,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return currencyTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyTabsEnabled() {
     return currencyTabsEnabled;
   }
@@ -389,7 +391,6 @@ public class TabAccountSettings {
   public void setCurrencyTabsEnabled(String currencyTabsEnabled) {
     this.currencyTabsEnabled = currencyTabsEnabled;
   }
-
 
   /**
    * currencyTabsMetadata.
@@ -403,9 +404,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return currencyTabsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getCurrencyTabsMetadata() {
     return currencyTabsMetadata;
   }
@@ -416,7 +418,6 @@ public class TabAccountSettings {
   public void setCurrencyTabsMetadata(SettingsMetadata currencyTabsMetadata) {
     this.currencyTabsMetadata = currencyTabsMetadata;
   }
-
 
   /**
    * dataFieldRegexEnabled.
@@ -430,9 +431,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return dataFieldRegexEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDataFieldRegexEnabled() {
     return dataFieldRegexEnabled;
   }
@@ -443,7 +445,6 @@ public class TabAccountSettings {
   public void setDataFieldRegexEnabled(String dataFieldRegexEnabled) {
     this.dataFieldRegexEnabled = dataFieldRegexEnabled;
   }
-
 
   /**
    * dataFieldRegexMetadata.
@@ -457,9 +458,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `dataFieldRegex` property is editable. .
+   * 
    * @return dataFieldRegexMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `dataFieldRegex` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `dataFieldRegex` property is editable. ")
   public SettingsMetadata getDataFieldRegexMetadata() {
     return dataFieldRegexMetadata;
   }
@@ -470,7 +472,6 @@ public class TabAccountSettings {
   public void setDataFieldRegexMetadata(SettingsMetadata dataFieldRegexMetadata) {
     this.dataFieldRegexMetadata = dataFieldRegexMetadata;
   }
-
 
   /**
    * dataFieldSizeEnabled.
@@ -484,9 +485,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return dataFieldSizeEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDataFieldSizeEnabled() {
     return dataFieldSizeEnabled;
   }
@@ -497,7 +499,6 @@ public class TabAccountSettings {
   public void setDataFieldSizeEnabled(String dataFieldSizeEnabled) {
     this.dataFieldSizeEnabled = dataFieldSizeEnabled;
   }
-
 
   /**
    * dataFieldSizeMetadata.
@@ -511,9 +512,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `dataFieldSize` property is editable. .
+   * 
    * @return dataFieldSizeMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `dataFieldSize` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `dataFieldSize` property is editable. ")
   public SettingsMetadata getDataFieldSizeMetadata() {
     return dataFieldSizeMetadata;
   }
@@ -524,7 +526,6 @@ public class TabAccountSettings {
   public void setDataFieldSizeMetadata(SettingsMetadata dataFieldSizeMetadata) {
     this.dataFieldSizeMetadata = dataFieldSizeMetadata;
   }
-
 
   /**
    * drawTabsEnabled.
@@ -538,9 +539,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return drawTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDrawTabsEnabled() {
     return drawTabsEnabled;
   }
@@ -551,7 +553,6 @@ public class TabAccountSettings {
   public void setDrawTabsEnabled(String drawTabsEnabled) {
     this.drawTabsEnabled = drawTabsEnabled;
   }
-
 
   /**
    * drawTabsMetadata.
@@ -565,9 +566,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return drawTabsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getDrawTabsMetadata() {
     return drawTabsMetadata;
   }
@@ -578,7 +580,6 @@ public class TabAccountSettings {
   public void setDrawTabsMetadata(SettingsMetadata drawTabsMetadata) {
     this.drawTabsMetadata = drawTabsMetadata;
   }
-
 
   /**
    * firstLastEmailTabsEnabled.
@@ -592,9 +593,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return firstLastEmailTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFirstLastEmailTabsEnabled() {
     return firstLastEmailTabsEnabled;
   }
@@ -605,7 +607,6 @@ public class TabAccountSettings {
   public void setFirstLastEmailTabsEnabled(String firstLastEmailTabsEnabled) {
     this.firstLastEmailTabsEnabled = firstLastEmailTabsEnabled;
   }
-
 
   /**
    * firstLastEmailTabsMetadata.
@@ -619,9 +620,10 @@ public class TabAccountSettings {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return firstLastEmailTabsMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SettingsMetadata getFirstLastEmailTabsMetadata() {
     return firstLastEmailTabsMetadata;
   }
@@ -632,7 +634,6 @@ public class TabAccountSettings {
   public void setFirstLastEmailTabsMetadata(SettingsMetadata firstLastEmailTabsMetadata) {
     this.firstLastEmailTabsMetadata = firstLastEmailTabsMetadata;
   }
-
 
   /**
    * listTabsEnabled.
@@ -646,9 +647,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return listTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getListTabsEnabled() {
     return listTabsEnabled;
   }
@@ -659,7 +661,6 @@ public class TabAccountSettings {
   public void setListTabsEnabled(String listTabsEnabled) {
     this.listTabsEnabled = listTabsEnabled;
   }
-
 
   /**
    * listTabsMetadata.
@@ -673,9 +674,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `listTabs` property is editable. .
+   * 
    * @return listTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `listTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `listTabs` property is editable. ")
   public SettingsMetadata getListTabsMetadata() {
     return listTabsMetadata;
   }
@@ -686,7 +688,6 @@ public class TabAccountSettings {
   public void setListTabsMetadata(SettingsMetadata listTabsMetadata) {
     this.listTabsMetadata = listTabsMetadata;
   }
-
 
   /**
    * noteTabsEnabled.
@@ -700,9 +701,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return noteTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNoteTabsEnabled() {
     return noteTabsEnabled;
   }
@@ -713,7 +715,6 @@ public class TabAccountSettings {
   public void setNoteTabsEnabled(String noteTabsEnabled) {
     this.noteTabsEnabled = noteTabsEnabled;
   }
-
 
   /**
    * noteTabsMetadata.
@@ -727,9 +728,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `noteTabs` property is editable. .
+   * 
    * @return noteTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `noteTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `noteTabs` property is editable. ")
   public SettingsMetadata getNoteTabsMetadata() {
     return noteTabsMetadata;
   }
@@ -740,7 +742,6 @@ public class TabAccountSettings {
   public void setNoteTabsMetadata(SettingsMetadata noteTabsMetadata) {
     this.noteTabsMetadata = noteTabsMetadata;
   }
-
 
   /**
    * prefillTabsEnabled.
@@ -754,9 +755,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return prefillTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPrefillTabsEnabled() {
     return prefillTabsEnabled;
   }
@@ -767,7 +769,6 @@ public class TabAccountSettings {
   public void setPrefillTabsEnabled(String prefillTabsEnabled) {
     this.prefillTabsEnabled = prefillTabsEnabled;
   }
-
 
   /**
    * prefillTabsMetadata.
@@ -781,9 +782,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return prefillTabsMetadata
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SettingsMetadata getPrefillTabsMetadata() {
     return prefillTabsMetadata;
   }
@@ -794,7 +796,6 @@ public class TabAccountSettings {
   public void setPrefillTabsMetadata(SettingsMetadata prefillTabsMetadata) {
     this.prefillTabsMetadata = prefillTabsMetadata;
   }
-
 
   /**
    * radioTabsEnabled.
@@ -808,9 +809,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return radioTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getRadioTabsEnabled() {
     return radioTabsEnabled;
   }
@@ -821,7 +823,6 @@ public class TabAccountSettings {
   public void setRadioTabsEnabled(String radioTabsEnabled) {
     this.radioTabsEnabled = radioTabsEnabled;
   }
-
 
   /**
    * radioTabsMetadata.
@@ -835,9 +836,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `radioTabs` property is editable. .
+   * 
    * @return radioTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `radioTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `radioTabs` property is editable. ")
   public SettingsMetadata getRadioTabsMetadata() {
     return radioTabsMetadata;
   }
@@ -848,7 +850,6 @@ public class TabAccountSettings {
   public void setRadioTabsMetadata(SettingsMetadata radioTabsMetadata) {
     this.radioTabsMetadata = radioTabsMetadata;
   }
-
 
   /**
    * savingCustomTabsEnabled.
@@ -862,9 +863,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return savingCustomTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSavingCustomTabsEnabled() {
     return savingCustomTabsEnabled;
   }
@@ -875,7 +877,6 @@ public class TabAccountSettings {
   public void setSavingCustomTabsEnabled(String savingCustomTabsEnabled) {
     this.savingCustomTabsEnabled = savingCustomTabsEnabled;
   }
-
 
   /**
    * savingCustomTabsMetadata.
@@ -888,10 +889,12 @@ public class TabAccountSettings {
   }
 
   /**
-   * Metadata that indicates whether the `savingCustomTabs` property is editable. .
+   * Metadata that indicates whether the `savingCustomTabs` property is editable.
+   * .
+   * 
    * @return savingCustomTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `savingCustomTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `savingCustomTabs` property is editable. ")
   public SettingsMetadata getSavingCustomTabsMetadata() {
     return savingCustomTabsMetadata;
   }
@@ -902,7 +905,6 @@ public class TabAccountSettings {
   public void setSavingCustomTabsMetadata(SettingsMetadata savingCustomTabsMetadata) {
     this.savingCustomTabsMetadata = savingCustomTabsMetadata;
   }
-
 
   /**
    * senderToChangeTabAssignmentsEnabled.
@@ -916,9 +918,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return senderToChangeTabAssignmentsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSenderToChangeTabAssignmentsEnabled() {
     return senderToChangeTabAssignmentsEnabled;
   }
@@ -930,22 +933,23 @@ public class TabAccountSettings {
     this.senderToChangeTabAssignmentsEnabled = senderToChangeTabAssignmentsEnabled;
   }
 
-
   /**
    * senderToChangeTabAssignmentsMetadata.
    *
    * @return TabAccountSettings
    **/
-  public TabAccountSettings senderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
+  public TabAccountSettings senderToChangeTabAssignmentsMetadata(
+      SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return senderToChangeTabAssignmentsMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SettingsMetadata getSenderToChangeTabAssignmentsMetadata() {
     return senderToChangeTabAssignmentsMetadata;
   }
@@ -956,7 +960,6 @@ public class TabAccountSettings {
   public void setSenderToChangeTabAssignmentsMetadata(SettingsMetadata senderToChangeTabAssignmentsMetadata) {
     this.senderToChangeTabAssignmentsMetadata = senderToChangeTabAssignmentsMetadata;
   }
-
 
   /**
    * sharedCustomTabsEnabled.
@@ -970,9 +973,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return sharedCustomTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSharedCustomTabsEnabled() {
     return sharedCustomTabsEnabled;
   }
@@ -983,7 +987,6 @@ public class TabAccountSettings {
   public void setSharedCustomTabsEnabled(String sharedCustomTabsEnabled) {
     this.sharedCustomTabsEnabled = sharedCustomTabsEnabled;
   }
-
 
   /**
    * sharedCustomTabsMetadata.
@@ -996,10 +999,12 @@ public class TabAccountSettings {
   }
 
   /**
-   * Metadata that indicates whether the `sharedCustomTabs` property is editable. .
+   * Metadata that indicates whether the `sharedCustomTabs` property is editable.
+   * .
+   * 
    * @return sharedCustomTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `sharedCustomTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `sharedCustomTabs` property is editable. ")
   public SettingsMetadata getSharedCustomTabsMetadata() {
     return sharedCustomTabsMetadata;
   }
@@ -1010,7 +1015,6 @@ public class TabAccountSettings {
   public void setSharedCustomTabsMetadata(SettingsMetadata sharedCustomTabsMetadata) {
     this.sharedCustomTabsMetadata = sharedCustomTabsMetadata;
   }
-
 
   /**
    * tabDataLabelEnabled.
@@ -1024,9 +1028,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return tabDataLabelEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabDataLabelEnabled() {
     return tabDataLabelEnabled;
   }
@@ -1037,7 +1042,6 @@ public class TabAccountSettings {
   public void setTabDataLabelEnabled(String tabDataLabelEnabled) {
     this.tabDataLabelEnabled = tabDataLabelEnabled;
   }
-
 
   /**
    * tabDataLabelMetadata.
@@ -1051,9 +1055,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `tabDataLabel` property is editable. .
+   * 
    * @return tabDataLabelMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabDataLabel` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `tabDataLabel` property is editable. ")
   public SettingsMetadata getTabDataLabelMetadata() {
     return tabDataLabelMetadata;
   }
@@ -1064,7 +1069,6 @@ public class TabAccountSettings {
   public void setTabDataLabelMetadata(SettingsMetadata tabDataLabelMetadata) {
     this.tabDataLabelMetadata = tabDataLabelMetadata;
   }
-
 
   /**
    * tabLocationEnabled.
@@ -1078,9 +1082,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return tabLocationEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabLocationEnabled() {
     return tabLocationEnabled;
   }
@@ -1091,7 +1096,6 @@ public class TabAccountSettings {
   public void setTabLocationEnabled(String tabLocationEnabled) {
     this.tabLocationEnabled = tabLocationEnabled;
   }
-
 
   /**
    * tabLocationMetadata.
@@ -1105,9 +1109,10 @@ public class TabAccountSettings {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return tabLocationMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SettingsMetadata getTabLocationMetadata() {
     return tabLocationMetadata;
   }
@@ -1118,7 +1123,6 @@ public class TabAccountSettings {
   public void setTabLocationMetadata(SettingsMetadata tabLocationMetadata) {
     this.tabLocationMetadata = tabLocationMetadata;
   }
-
 
   /**
    * tabLockingEnabled.
@@ -1132,9 +1136,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return tabLockingEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabLockingEnabled() {
     return tabLockingEnabled;
   }
@@ -1145,7 +1150,6 @@ public class TabAccountSettings {
   public void setTabLockingEnabled(String tabLockingEnabled) {
     this.tabLockingEnabled = tabLockingEnabled;
   }
-
 
   /**
    * tabLockingMetadata.
@@ -1159,9 +1163,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `tabLocking` property is editable. .
+   * 
    * @return tabLockingMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabLocking` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `tabLocking` property is editable. ")
   public SettingsMetadata getTabLockingMetadata() {
     return tabLockingMetadata;
   }
@@ -1172,7 +1177,6 @@ public class TabAccountSettings {
   public void setTabLockingMetadata(SettingsMetadata tabLockingMetadata) {
     this.tabLockingMetadata = tabLockingMetadata;
   }
-
 
   /**
    * tabScaleEnabled.
@@ -1186,9 +1190,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return tabScaleEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabScaleEnabled() {
     return tabScaleEnabled;
   }
@@ -1199,7 +1204,6 @@ public class TabAccountSettings {
   public void setTabScaleEnabled(String tabScaleEnabled) {
     this.tabScaleEnabled = tabScaleEnabled;
   }
-
 
   /**
    * tabScaleMetadata.
@@ -1213,9 +1217,10 @@ public class TabAccountSettings {
 
   /**
    * Reserved for DocuSign..
+   * 
    * @return tabScaleMetadata
    **/
-  @ApiModelProperty(value = "Reserved for DocuSign.")
+  @Schema(description = "Reserved for DocuSign.")
   public SettingsMetadata getTabScaleMetadata() {
     return tabScaleMetadata;
   }
@@ -1226,7 +1231,6 @@ public class TabAccountSettings {
   public void setTabScaleMetadata(SettingsMetadata tabScaleMetadata) {
     this.tabScaleMetadata = tabScaleMetadata;
   }
-
 
   /**
    * tabTextFormattingEnabled.
@@ -1240,9 +1244,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return tabTextFormattingEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTabTextFormattingEnabled() {
     return tabTextFormattingEnabled;
   }
@@ -1253,7 +1258,6 @@ public class TabAccountSettings {
   public void setTabTextFormattingEnabled(String tabTextFormattingEnabled) {
     this.tabTextFormattingEnabled = tabTextFormattingEnabled;
   }
-
 
   /**
    * tabTextFormattingMetadata.
@@ -1266,10 +1270,12 @@ public class TabAccountSettings {
   }
 
   /**
-   * Metadata that indicates whether the `tabTextFormatting` property is editable. .
+   * Metadata that indicates whether the `tabTextFormatting` property is editable.
+   * .
+   * 
    * @return tabTextFormattingMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `tabTextFormatting` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `tabTextFormatting` property is editable. ")
   public SettingsMetadata getTabTextFormattingMetadata() {
     return tabTextFormattingMetadata;
   }
@@ -1280,7 +1286,6 @@ public class TabAccountSettings {
   public void setTabTextFormattingMetadata(SettingsMetadata tabTextFormattingMetadata) {
     this.tabTextFormattingMetadata = tabTextFormattingMetadata;
   }
-
 
   /**
    * textTabsEnabled.
@@ -1294,9 +1299,10 @@ public class TabAccountSettings {
 
   /**
    * .
+   * 
    * @return textTabsEnabled
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTextTabsEnabled() {
     return textTabsEnabled;
   }
@@ -1307,7 +1313,6 @@ public class TabAccountSettings {
   public void setTextTabsEnabled(String textTabsEnabled) {
     this.textTabsEnabled = textTabsEnabled;
   }
-
 
   /**
    * textTabsMetadata.
@@ -1321,9 +1326,10 @@ public class TabAccountSettings {
 
   /**
    * Metadata that indicates whether the `textTabs` property is editable. .
+   * 
    * @return textTabsMetadata
    **/
-  @ApiModelProperty(value = "Metadata that indicates whether the `textTabs` property is editable. ")
+  @Schema(description = "Metadata that indicates whether the `textTabs` property is editable. ")
   public SettingsMetadata getTextTabsMetadata() {
     return textTabsMetadata;
   }
@@ -1334,7 +1340,6 @@ public class TabAccountSettings {
   public void setTextTabsMetadata(SettingsMetadata textTabsMetadata) {
     this.textTabsMetadata = textTabsMetadata;
   }
-
 
   /**
    * Compares objects.
@@ -1378,8 +1383,11 @@ public class TabAccountSettings {
         Objects.equals(this.radioTabsMetadata, tabAccountSettings.radioTabsMetadata) &&
         Objects.equals(this.savingCustomTabsEnabled, tabAccountSettings.savingCustomTabsEnabled) &&
         Objects.equals(this.savingCustomTabsMetadata, tabAccountSettings.savingCustomTabsMetadata) &&
-        Objects.equals(this.senderToChangeTabAssignmentsEnabled, tabAccountSettings.senderToChangeTabAssignmentsEnabled) &&
-        Objects.equals(this.senderToChangeTabAssignmentsMetadata, tabAccountSettings.senderToChangeTabAssignmentsMetadata) &&
+        Objects.equals(this.senderToChangeTabAssignmentsEnabled, tabAccountSettings.senderToChangeTabAssignmentsEnabled)
+        &&
+        Objects.equals(this.senderToChangeTabAssignmentsMetadata,
+            tabAccountSettings.senderToChangeTabAssignmentsMetadata)
+        &&
         Objects.equals(this.sharedCustomTabsEnabled, tabAccountSettings.sharedCustomTabsEnabled) &&
         Objects.equals(this.sharedCustomTabsMetadata, tabAccountSettings.sharedCustomTabsMetadata) &&
         Objects.equals(this.tabDataLabelEnabled, tabAccountSettings.tabDataLabelEnabled) &&
@@ -1401,9 +1409,17 @@ public class TabAccountSettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, currencyTabsEnabled, currencyTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata,
+        calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata,
+        currencyTabsEnabled, currencyTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled,
+        dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata,
+        listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, prefillTabsEnabled, prefillTabsMetadata,
+        radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata,
+        senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled,
+        sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata,
+        tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled,
+        tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
-
 
   /**
    * Converts the given object to string.
@@ -1412,7 +1428,7 @@ public class TabAccountSettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabAccountSettings {\n");
-    
+
     sb.append("    allowTabOrder: ").append(toIndentedString(allowTabOrder)).append("\n");
     sb.append("    allowTabOrderMetadata: ").append(toIndentedString(allowTabOrderMetadata)).append("\n");
     sb.append("    approveDeclineTabsEnabled: ").append(toIndentedString(approveDeclineTabsEnabled)).append("\n");
@@ -1441,8 +1457,10 @@ public class TabAccountSettings {
     sb.append("    radioTabsMetadata: ").append(toIndentedString(radioTabsMetadata)).append("\n");
     sb.append("    savingCustomTabsEnabled: ").append(toIndentedString(savingCustomTabsEnabled)).append("\n");
     sb.append("    savingCustomTabsMetadata: ").append(toIndentedString(savingCustomTabsMetadata)).append("\n");
-    sb.append("    senderToChangeTabAssignmentsEnabled: ").append(toIndentedString(senderToChangeTabAssignmentsEnabled)).append("\n");
-    sb.append("    senderToChangeTabAssignmentsMetadata: ").append(toIndentedString(senderToChangeTabAssignmentsMetadata)).append("\n");
+    sb.append("    senderToChangeTabAssignmentsEnabled: ").append(toIndentedString(senderToChangeTabAssignmentsEnabled))
+        .append("\n");
+    sb.append("    senderToChangeTabAssignmentsMetadata: ")
+        .append(toIndentedString(senderToChangeTabAssignmentsMetadata)).append("\n");
     sb.append("    sharedCustomTabsEnabled: ").append(toIndentedString(sharedCustomTabsEnabled)).append("\n");
     sb.append("    sharedCustomTabsMetadata: ").append(toIndentedString(sharedCustomTabsMetadata)).append("\n");
     sb.append("    tabDataLabelEnabled: ").append(toIndentedString(tabDataLabelEnabled)).append("\n");
@@ -1473,4 +1491,3 @@ public class TabAccountSettings {
   }
 
 }
-

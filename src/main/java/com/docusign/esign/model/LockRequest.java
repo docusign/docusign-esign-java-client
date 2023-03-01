@@ -5,14 +5,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This request object contains information about the lock that you want to create or update..
+ * This request object contains information about the lock that you want to
+ * create or update..
  *
  */
-@ApiModel(description = "This request object contains information about the lock that you want to create or update.")
+@Schema(description = "This request object contains information about the lock that you want to create or update.")
 
 public class LockRequest {
   @JsonProperty("lockDurationInSeconds")
@@ -30,7 +31,6 @@ public class LockRequest {
   @JsonProperty("useScratchPad")
   private String useScratchPad = null;
 
-
   /**
    * lockDurationInSeconds.
    *
@@ -42,10 +42,12 @@ public class LockRequest {
   }
 
   /**
-   * The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds..
+   * The number of seconds to lock the envelope for editing. Must be greater than
+   * 0 seconds..
+   * 
    * @return lockDurationInSeconds
    **/
-  @ApiModelProperty(value = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
+  @Schema(description = "The number of seconds to lock the envelope for editing.  Must be greater than 0 seconds.")
   public String getLockDurationInSeconds() {
     return lockDurationInSeconds;
   }
@@ -56,7 +58,6 @@ public class LockRequest {
   public void setLockDurationInSeconds(String lockDurationInSeconds) {
     this.lockDurationInSeconds = lockDurationInSeconds;
   }
-
 
   /**
    * lockedByApp.
@@ -69,10 +70,12 @@ public class LockRequest {
   }
 
   /**
-   * A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur..
+   * A friendly name of the application used to lock the envelope. Will be used in
+   * error messages to the user when lock conflicts occur..
+   * 
    * @return lockedByApp
    **/
-  @ApiModelProperty(value = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
+  @Schema(description = "A friendly name of the application used to lock the envelope.  Will be used in error messages to the user when lock conflicts occur.")
   public String getLockedByApp() {
     return lockedByApp;
   }
@@ -83,7 +86,6 @@ public class LockRequest {
   public void setLockedByApp(String lockedByApp) {
     this.lockedByApp = lockedByApp;
   }
-
 
   /**
    * lockType.
@@ -96,10 +98,11 @@ public class LockRequest {
   }
 
   /**
-   * The type of envelope lock.  Currently \"edit\" is the only supported type..
+   * The type of envelope lock. Currently \"edit\" is the only supported type..
+   * 
    * @return lockType
    **/
-  @ApiModelProperty(value = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
+  @Schema(description = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
   public String getLockType() {
     return lockType;
   }
@@ -110,7 +113,6 @@ public class LockRequest {
   public void setLockType(String lockType) {
     this.lockType = lockType;
   }
-
 
   /**
    * templatePassword.
@@ -124,9 +126,10 @@ public class LockRequest {
 
   /**
    * .
+   * 
    * @return templatePassword
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTemplatePassword() {
     return templatePassword;
   }
@@ -137,7 +140,6 @@ public class LockRequest {
   public void setTemplatePassword(String templatePassword) {
     this.templatePassword = templatePassword;
   }
-
 
   /**
    * useScratchPad.
@@ -150,10 +152,12 @@ public class LockRequest {
   }
 
   /**
-   * Reserved for future use.  Indicates whether a scratchpad is used for editing information.  .
+   * Reserved for future use. Indicates whether a scratchpad is used for editing
+   * information. .
+   * 
    * @return useScratchPad
    **/
-  @ApiModelProperty(value = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
+  @Schema(description = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
   public String getUseScratchPad() {
     return useScratchPad;
   }
@@ -164,7 +168,6 @@ public class LockRequest {
   public void setUseScratchPad(String useScratchPad) {
     this.useScratchPad = useScratchPad;
   }
-
 
   /**
    * Compares objects.
@@ -195,7 +198,6 @@ public class LockRequest {
     return Objects.hash(lockDurationInSeconds, lockedByApp, lockType, templatePassword, useScratchPad);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -203,7 +205,7 @@ public class LockRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockRequest {\n");
-    
+
     sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
     sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
     sb.append("    lockType: ").append(toIndentedString(lockType)).append("\n");
@@ -225,4 +227,3 @@ public class LockRequest {
   }
 
 }
-

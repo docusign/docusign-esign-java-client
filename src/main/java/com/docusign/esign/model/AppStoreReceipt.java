@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about an APP store receipt..
  *
  */
-@ApiModel(description = "Contains information about an APP store receipt.")
+@Schema(description = "Contains information about an APP store receipt.")
 
 public class AppStoreReceipt {
   @JsonProperty("downgradeProductId")
@@ -27,7 +27,6 @@ public class AppStoreReceipt {
   @JsonProperty("receiptData")
   private String receiptData = null;
 
-
   /**
    * downgradeProductId.
    *
@@ -40,9 +39,10 @@ public class AppStoreReceipt {
 
   /**
    * .
+   * 
    * @return downgradeProductId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDowngradeProductId() {
     return downgradeProductId;
   }
@@ -53,7 +53,6 @@ public class AppStoreReceipt {
   public void setDowngradeProductId(String downgradeProductId) {
     this.downgradeProductId = downgradeProductId;
   }
-
 
   /**
    * isDowngradeCancellation.
@@ -67,9 +66,10 @@ public class AppStoreReceipt {
 
   /**
    * .
+   * 
    * @return isDowngradeCancellation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getIsDowngradeCancellation() {
     return isDowngradeCancellation;
   }
@@ -80,7 +80,6 @@ public class AppStoreReceipt {
   public void setIsDowngradeCancellation(String isDowngradeCancellation) {
     this.isDowngradeCancellation = isDowngradeCancellation;
   }
-
 
   /**
    * productId.
@@ -94,9 +93,10 @@ public class AppStoreReceipt {
 
   /**
    * .
+   * 
    * @return productId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProductId() {
     return productId;
   }
@@ -107,7 +107,6 @@ public class AppStoreReceipt {
   public void setProductId(String productId) {
     this.productId = productId;
   }
-
 
   /**
    * receiptData.
@@ -121,9 +120,10 @@ public class AppStoreReceipt {
 
   /**
    * Reserved: TBD.
+   * 
    * @return receiptData
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getReceiptData() {
     return receiptData;
   }
@@ -134,7 +134,6 @@ public class AppStoreReceipt {
   public void setReceiptData(String receiptData) {
     this.receiptData = receiptData;
   }
-
 
   /**
    * Compares objects.
@@ -164,7 +163,6 @@ public class AppStoreReceipt {
     return Objects.hash(downgradeProductId, isDowngradeCancellation, productId, receiptData);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -172,7 +170,7 @@ public class AppStoreReceipt {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreReceipt {\n");
-    
+
     sb.append("    downgradeProductId: ").append(toIndentedString(downgradeProductId)).append("\n");
     sb.append("    isDowngradeCancellation: ").append(toIndentedString(isDowngradeCancellation)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
@@ -193,4 +191,3 @@ public class AppStoreReceipt {
   }
 
 }
-

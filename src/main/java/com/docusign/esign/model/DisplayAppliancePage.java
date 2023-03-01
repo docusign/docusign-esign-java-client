@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** DisplayAppliancePage */
@@ -42,15 +42,13 @@ public class DisplayAppliancePage {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      example = "null",
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(example = "null", description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -65,7 +63,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return documentName */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getDocumentName() {
     return documentName;
   }
@@ -80,7 +78,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return externalDocumentId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getExternalDocumentId() {
     return externalDocumentId;
   }
@@ -99,7 +97,7 @@ public class DisplayAppliancePage {
    *
    * @return height
    */
-  @ApiModelProperty(example = "null", value = "Height of the tab in pixels.")
+  @Schema(example = "null", description = "Height of the tab in pixels.")
   public Integer getHeight() {
     return height;
   }
@@ -114,7 +112,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return isFirstPage */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Boolean getIsFirstPage() {
     return isFirstPage;
   }
@@ -129,7 +127,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return pageId */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageId() {
     return pageId;
   }
@@ -144,7 +142,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return pageNo */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public Integer getPageNo() {
     return pageNo;
   }
@@ -159,7 +157,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return pageStatus */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageStatus() {
     return pageStatus;
   }
@@ -174,7 +172,7 @@ public class DisplayAppliancePage {
   }
 
   /** @return pageType */
-  @ApiModelProperty(example = "null", value = "")
+  @Schema(example = "null", description = "")
   public String getPageType() {
     return pageType;
   }
@@ -193,7 +191,7 @@ public class DisplayAppliancePage {
    *
    * @return width
    */
-  @ApiModelProperty(example = "null", value = "Width of the tab in pixels.")
+  @Schema(example = "null", description = "Width of the tab in pixels.")
   public Integer getWidth() {
     return width;
   }
@@ -258,7 +256,8 @@ public class DisplayAppliancePage {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

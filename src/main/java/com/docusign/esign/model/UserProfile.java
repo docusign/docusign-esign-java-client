@@ -9,8 +9,8 @@ import com.docusign.esign.model.UserInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * UserProfile.
@@ -54,7 +54,6 @@ public class UserProfile {
   @JsonProperty("userProfileLastModifiedDate")
   private String userProfileLastModifiedDate = null;
 
-
   /**
    * address.
    *
@@ -67,9 +66,10 @@ public class UserProfile {
 
   /**
    * The user's address..
+   * 
    * @return address
    **/
-  @ApiModelProperty(value = "The user's address.")
+  @Schema(description = "The user's address.")
   public AddressInformation getAddress() {
     return address;
   }
@@ -81,7 +81,6 @@ public class UserProfile {
     this.address = address;
   }
 
-
   /**
    * authenticationMethods.
    *
@@ -91,7 +90,7 @@ public class UserProfile {
     this.authenticationMethods = authenticationMethods;
     return this;
   }
-  
+
   /**
    * addAuthenticationMethodsItem.
    *
@@ -106,10 +105,12 @@ public class UserProfile {
   }
 
   /**
-   * These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user..
+   * These properties cannot be modified in the PUT. Indicates the authentication
+   * methods used by the user..
+   * 
    * @return authenticationMethods
    **/
-  @ApiModelProperty(value = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
+  @Schema(description = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
   public java.util.List<AuthenticationMethod> getAuthenticationMethods() {
     return authenticationMethods;
   }
@@ -120,7 +121,6 @@ public class UserProfile {
   public void setAuthenticationMethods(java.util.List<AuthenticationMethod> authenticationMethods) {
     this.authenticationMethods = authenticationMethods;
   }
-
 
   /**
    * companyName.
@@ -134,9 +134,10 @@ public class UserProfile {
 
   /**
    * The name of the user's Company..
+   * 
    * @return companyName
    **/
-  @ApiModelProperty(value = "The name of the user's Company.")
+  @Schema(description = "The name of the user's Company.")
   public String getCompanyName() {
     return companyName;
   }
@@ -147,7 +148,6 @@ public class UserProfile {
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
-
 
   /**
    * displayOrganizationInfo.
@@ -160,10 +160,12 @@ public class UserProfile {
   }
 
   /**
-   *  When set to **true**, the user's company and title information are shown on the ID card. .
+   * When set to **true**, the user's company and title information are shown on
+   * the ID card. .
+   * 
    * @return displayOrganizationInfo
    **/
-  @ApiModelProperty(value = " When set to **true**, the user's company and title information are shown on the ID card. ")
+  @Schema(description = " When set to **true**, the user's company and title information are shown on the ID card. ")
   public String getDisplayOrganizationInfo() {
     return displayOrganizationInfo;
   }
@@ -174,7 +176,6 @@ public class UserProfile {
   public void setDisplayOrganizationInfo(String displayOrganizationInfo) {
     this.displayOrganizationInfo = displayOrganizationInfo;
   }
-
 
   /**
    * displayPersonalInfo.
@@ -187,10 +188,12 @@ public class UserProfile {
   }
 
   /**
-   * When set to **true**, the user's Address and Phone number are shown on the ID card..
+   * When set to **true**, the user's Address and Phone number are shown on the ID
+   * card..
+   * 
    * @return displayPersonalInfo
    **/
-  @ApiModelProperty(value = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
+  @Schema(description = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
   public String getDisplayPersonalInfo() {
     return displayPersonalInfo;
   }
@@ -201,7 +204,6 @@ public class UserProfile {
   public void setDisplayPersonalInfo(String displayPersonalInfo) {
     this.displayPersonalInfo = displayPersonalInfo;
   }
-
 
   /**
    * displayProfile.
@@ -214,10 +216,12 @@ public class UserProfile {
   }
 
   /**
-   * When set to **true**, the user's ID card can be viewed from signed documents and envelope history..
+   * When set to **true**, the user's ID card can be viewed from signed documents
+   * and envelope history..
+   * 
    * @return displayProfile
    **/
-  @ApiModelProperty(value = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
+  @Schema(description = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
   public String getDisplayProfile() {
     return displayProfile;
   }
@@ -228,7 +232,6 @@ public class UserProfile {
   public void setDisplayProfile(String displayProfile) {
     this.displayProfile = displayProfile;
   }
-
 
   /**
    * displayUsageHistory.
@@ -242,9 +245,10 @@ public class UserProfile {
 
   /**
    * When set to **true**, the user's usage information is shown on the ID card..
+   * 
    * @return displayUsageHistory
    **/
-  @ApiModelProperty(value = "When set to **true**, the user's usage information is shown on the ID card.")
+  @Schema(description = "When set to **true**, the user's usage information is shown on the ID card.")
   public String getDisplayUsageHistory() {
     return displayUsageHistory;
   }
@@ -255,7 +259,6 @@ public class UserProfile {
   public void setDisplayUsageHistory(String displayUsageHistory) {
     this.displayUsageHistory = displayUsageHistory;
   }
-
 
   /**
    * profileImageUri.
@@ -269,9 +272,10 @@ public class UserProfile {
 
   /**
    * .
+   * 
    * @return profileImageUri
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getProfileImageUri() {
     return profileImageUri;
   }
@@ -282,7 +286,6 @@ public class UserProfile {
   public void setProfileImageUri(String profileImageUri) {
     this.profileImageUri = profileImageUri;
   }
-
 
   /**
    * title.
@@ -296,9 +299,10 @@ public class UserProfile {
 
   /**
    * .
+   * 
    * @return title
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTitle() {
     return title;
   }
@@ -309,7 +313,6 @@ public class UserProfile {
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   /**
    * usageHistory.
@@ -322,10 +325,14 @@ public class UserProfile {
   }
 
   /**
-   * A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.  .
+   * A complex element consisting of: - `lastSentDateTime`: The date and time the
+   * user last sent an envelope. - `lastSignedDateTime`: The date and time the
+   * user last signed an envelope. - `sentCount`: The number of envelopes the user
+   * has sent. - `signedCount`: The number of envelopes the user has signed. .
+   * 
    * @return usageHistory
    **/
-  @ApiModelProperty(value = "A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.  ")
+  @Schema(description = "A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.  ")
   public UsageHistory getUsageHistory() {
     return usageHistory;
   }
@@ -336,7 +343,6 @@ public class UserProfile {
   public void setUsageHistory(UsageHistory usageHistory) {
     this.usageHistory = usageHistory;
   }
-
 
   /**
    * userDetails.
@@ -350,9 +356,10 @@ public class UserProfile {
 
   /**
    * .
+   * 
    * @return userDetails
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public UserInformation getUserDetails() {
     return userDetails;
   }
@@ -363,7 +370,6 @@ public class UserProfile {
   public void setUserDetails(UserInformation userDetails) {
     this.userDetails = userDetails;
   }
-
 
   /**
    * userProfileLastModifiedDate.
@@ -377,9 +383,10 @@ public class UserProfile {
 
   /**
    * .
+   * 
    * @return userProfileLastModifiedDate
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUserProfileLastModifiedDate() {
     return userProfileLastModifiedDate;
   }
@@ -390,7 +397,6 @@ public class UserProfile {
   public void setUserProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
-
 
   /**
    * Compares objects.
@@ -425,9 +431,10 @@ public class UserProfile {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(address, authenticationMethods, companyName, displayOrganizationInfo, displayPersonalInfo, displayProfile, displayUsageHistory, profileImageUri, title, usageHistory, userDetails, userProfileLastModifiedDate);
+    return Objects.hash(address, authenticationMethods, companyName, displayOrganizationInfo, displayPersonalInfo,
+        displayProfile, displayUsageHistory, profileImageUri, title, usageHistory, userDetails,
+        userProfileLastModifiedDate);
   }
-
 
   /**
    * Converts the given object to string.
@@ -436,7 +443,7 @@ public class UserProfile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserProfile {\n");
-    
+
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    authenticationMethods: ").append(toIndentedString(authenticationMethods)).append("\n");
     sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
@@ -465,4 +472,3 @@ public class UserProfile {
   }
 
 }
-

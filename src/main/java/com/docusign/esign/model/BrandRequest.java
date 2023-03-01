@@ -5,19 +5,18 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This request object contains information about a specific brand..
  *
  */
-@ApiModel(description = "This request object contains information about a specific brand.")
+@Schema(description = "This request object contains information about a specific brand.")
 
 public class BrandRequest {
   @JsonProperty("brandId")
   private String brandId = null;
-
 
   /**
    * brandId.
@@ -31,9 +30,10 @@ public class BrandRequest {
 
   /**
    * The ID of the brand used in API calls.
+   * 
    * @return brandId
    **/
-  @ApiModelProperty(value = "The ID of the brand used in API calls")
+  @Schema(description = "The ID of the brand used in API calls")
   public String getBrandId() {
     return brandId;
   }
@@ -44,7 +44,6 @@ public class BrandRequest {
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
-
 
   /**
    * Compares objects.
@@ -71,7 +70,6 @@ public class BrandRequest {
     return Objects.hash(brandId);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -79,7 +77,7 @@ public class BrandRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandRequest {\n");
-    
+
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -97,4 +95,3 @@ public class BrandRequest {
   }
 
 }
-

@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * PaymentSignerValues.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class PaymentSignerValues {
   @JsonProperty("paymentOption")
   private String paymentOption = null;
-
 
   /**
    * paymentOption.
@@ -30,9 +29,10 @@ public class PaymentSignerValues {
 
   /**
    * .
+   * 
    * @return paymentOption
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentOption() {
     return paymentOption;
   }
@@ -43,7 +43,6 @@ public class PaymentSignerValues {
   public void setPaymentOption(String paymentOption) {
     this.paymentOption = paymentOption;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class PaymentSignerValues {
     return Objects.hash(paymentOption);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class PaymentSignerValues {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentSignerValues {\n");
-    
+
     sb.append("    paymentOption: ").append(toIndentedString(paymentOption)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class PaymentSignerValues {
   }
 
 }
-

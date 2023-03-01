@@ -6,8 +6,8 @@ import com.docusign.esign.model.ErrorDetails;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * FormDataItem.
@@ -33,7 +33,6 @@ public class FormDataItem {
   @JsonProperty("value")
   private String value = null;
 
-
   /**
    * errorDetails.
    *
@@ -45,10 +44,12 @@ public class FormDataItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and ignored in requests..
+   * This object describes errors that occur. It is only valid for responses and
+   * ignored in requests..
+   * 
    * @return errorDetails
    **/
-  @ApiModelProperty(value = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -59,7 +60,6 @@ public class FormDataItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   /**
    * listSelectedValue.
@@ -73,9 +73,10 @@ public class FormDataItem {
 
   /**
    * .
+   * 
    * @return listSelectedValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getListSelectedValue() {
     return listSelectedValue;
   }
@@ -86,7 +87,6 @@ public class FormDataItem {
   public void setListSelectedValue(String listSelectedValue) {
     this.listSelectedValue = listSelectedValue;
   }
-
 
   /**
    * name.
@@ -100,9 +100,10 @@ public class FormDataItem {
 
   /**
    * .
+   * 
    * @return name
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -113,7 +114,6 @@ public class FormDataItem {
   public void setName(String name) {
     this.name = name;
   }
-
 
   /**
    * numericalValue.
@@ -127,9 +127,10 @@ public class FormDataItem {
 
   /**
    * .
+   * 
    * @return numericalValue
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNumericalValue() {
     return numericalValue;
   }
@@ -140,7 +141,6 @@ public class FormDataItem {
   public void setNumericalValue(String numericalValue) {
     this.numericalValue = numericalValue;
   }
-
 
   /**
    * originalValue.
@@ -154,9 +154,10 @@ public class FormDataItem {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
+   * 
    * @return originalValue
    **/
-  @ApiModelProperty(value = "The initial value of the tab when it was sent to the recipient. ")
+  @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
   public String getOriginalValue() {
     return originalValue;
   }
@@ -167,7 +168,6 @@ public class FormDataItem {
   public void setOriginalValue(String originalValue) {
     this.originalValue = originalValue;
   }
-
 
   /**
    * value.
@@ -181,9 +181,10 @@ public class FormDataItem {
 
   /**
    * Specifies the value of the tab. .
+   * 
    * @return value
    **/
-  @ApiModelProperty(value = "Specifies the value of the tab. ")
+  @Schema(description = "Specifies the value of the tab. ")
   public String getValue() {
     return value;
   }
@@ -194,7 +195,6 @@ public class FormDataItem {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   /**
    * Compares objects.
@@ -226,7 +226,6 @@ public class FormDataItem {
     return Objects.hash(errorDetails, listSelectedValue, name, numericalValue, originalValue, value);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -234,7 +233,7 @@ public class FormDataItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FormDataItem {\n");
-    
+
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -257,4 +256,3 @@ public class FormDataItem {
   }
 
 }
-

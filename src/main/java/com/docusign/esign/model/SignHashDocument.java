@@ -1,7 +1,7 @@
 package com.docusign.esign.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.Objects;
 
 /** SignHashDocument */
@@ -36,7 +36,7 @@ public class SignHashDocument {
   }
 
   /** @return data */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getData() {
     return data;
   }
@@ -51,14 +51,13 @@ public class SignHashDocument {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer to an existing
+   * Specifies the document ID number that the tab is placed on. This must refer
+   * to an existing
    * Document's ID attribute.
    *
    * @return documentId
    */
-  @ApiModelProperty(
-      value =
-          "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
+  @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
   public String getDocumentId() {
     return documentId;
   }
@@ -73,7 +72,7 @@ public class SignHashDocument {
   }
 
   /** @return format */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getFormat() {
     return format;
   }
@@ -88,7 +87,7 @@ public class SignHashDocument {
   }
 
   /** @return name */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getName() {
     return name;
   }
@@ -103,7 +102,7 @@ public class SignHashDocument {
   }
 
   /** @return remainingSignatures */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public Long getRemainingSignatures() {
     return remainingSignatures;
   }
@@ -126,7 +125,7 @@ public class SignHashDocument {
   }
 
   /** @return revisions */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<Revision> getRevisions() {
     return revisions;
   }
@@ -145,7 +144,7 @@ public class SignHashDocument {
    *
    * @return signatureProperties
    */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public SignatureProperties getSignatureProperties() {
     return signatureProperties;
   }
@@ -160,7 +159,7 @@ public class SignHashDocument {
   }
 
   /** @return signatureType */
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getSignatureType() {
     return signatureType;
   }
@@ -223,7 +222,8 @@ public class SignHashDocument {
   }
 
   /**
-   * Convert the given object to string with each line indented by 4 spaces (except the first line).
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
    */
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

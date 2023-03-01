@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * ViewUrl.
@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiModelProperty;
 public class ViewUrl {
   @JsonProperty("url")
   private String url = null;
-
 
   /**
    * url.
@@ -30,9 +29,10 @@ public class ViewUrl {
 
   /**
    * The view URL to be navigated to..
+   * 
    * @return url
    **/
-  @ApiModelProperty(value = "The view URL to be navigated to.")
+  @Schema(description = "The view URL to be navigated to.")
   public String getUrl() {
     return url;
   }
@@ -43,7 +43,6 @@ public class ViewUrl {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   /**
    * Compares objects.
@@ -70,7 +69,6 @@ public class ViewUrl {
     return Objects.hash(url);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -78,7 +76,7 @@ public class ViewUrl {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ViewUrl {\n");
-    
+
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -96,4 +94,3 @@ public class ViewUrl {
   }
 
 }
-

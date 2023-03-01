@@ -5,8 +5,8 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * LocalePolicyTab.
@@ -56,7 +56,6 @@ public class LocalePolicyTab {
   @JsonProperty("useLongCurrencyFormat")
   private String useLongCurrencyFormat = null;
 
-
   /**
    * addressFormat.
    *
@@ -69,9 +68,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return addressFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getAddressFormat() {
     return addressFormat;
   }
@@ -82,7 +82,6 @@ public class LocalePolicyTab {
   public void setAddressFormat(String addressFormat) {
     this.addressFormat = addressFormat;
   }
-
 
   /**
    * calendarType.
@@ -96,9 +95,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return calendarType
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCalendarType() {
     return calendarType;
   }
@@ -109,7 +109,6 @@ public class LocalePolicyTab {
   public void setCalendarType(String calendarType) {
     this.calendarType = calendarType;
   }
-
 
   /**
    * cultureName.
@@ -123,9 +122,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return cultureName
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCultureName() {
     return cultureName;
   }
@@ -136,7 +136,6 @@ public class LocalePolicyTab {
   public void setCultureName(String cultureName) {
     this.cultureName = cultureName;
   }
-
 
   /**
    * currencyCode.
@@ -150,9 +149,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return currencyCode
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -163,7 +163,6 @@ public class LocalePolicyTab {
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   /**
    * currencyNegativeFormat.
@@ -177,9 +176,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return currencyNegativeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyNegativeFormat() {
     return currencyNegativeFormat;
   }
@@ -190,7 +190,6 @@ public class LocalePolicyTab {
   public void setCurrencyNegativeFormat(String currencyNegativeFormat) {
     this.currencyNegativeFormat = currencyNegativeFormat;
   }
-
 
   /**
    * currencyPositiveFormat.
@@ -204,9 +203,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return currencyPositiveFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCurrencyPositiveFormat() {
     return currencyPositiveFormat;
   }
@@ -217,7 +217,6 @@ public class LocalePolicyTab {
   public void setCurrencyPositiveFormat(String currencyPositiveFormat) {
     this.currencyPositiveFormat = currencyPositiveFormat;
   }
-
 
   /**
    * customDateFormat.
@@ -231,9 +230,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return customDateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomDateFormat() {
     return customDateFormat;
   }
@@ -244,7 +244,6 @@ public class LocalePolicyTab {
   public void setCustomDateFormat(String customDateFormat) {
     this.customDateFormat = customDateFormat;
   }
-
 
   /**
    * customTimeFormat.
@@ -258,9 +257,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return customTimeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getCustomTimeFormat() {
     return customTimeFormat;
   }
@@ -271,7 +271,6 @@ public class LocalePolicyTab {
   public void setCustomTimeFormat(String customTimeFormat) {
     this.customTimeFormat = customTimeFormat;
   }
-
 
   /**
    * dateFormat.
@@ -285,9 +284,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return dateFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDateFormat() {
     return dateFormat;
   }
@@ -298,7 +298,6 @@ public class LocalePolicyTab {
   public void setDateFormat(String dateFormat) {
     this.dateFormat = dateFormat;
   }
-
 
   /**
    * initialFormat.
@@ -312,9 +311,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return initialFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getInitialFormat() {
     return initialFormat;
   }
@@ -325,7 +325,6 @@ public class LocalePolicyTab {
   public void setInitialFormat(String initialFormat) {
     this.initialFormat = initialFormat;
   }
-
 
   /**
    * nameFormat.
@@ -339,9 +338,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return nameFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getNameFormat() {
     return nameFormat;
   }
@@ -352,7 +352,6 @@ public class LocalePolicyTab {
   public void setNameFormat(String nameFormat) {
     this.nameFormat = nameFormat;
   }
-
 
   /**
    * timeFormat.
@@ -366,9 +365,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return timeFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeFormat() {
     return timeFormat;
   }
@@ -379,7 +379,6 @@ public class LocalePolicyTab {
   public void setTimeFormat(String timeFormat) {
     this.timeFormat = timeFormat;
   }
-
 
   /**
    * timeZone.
@@ -393,9 +392,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return timeZone
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTimeZone() {
     return timeZone;
   }
@@ -406,7 +406,6 @@ public class LocalePolicyTab {
   public void setTimeZone(String timeZone) {
     this.timeZone = timeZone;
   }
-
 
   /**
    * useLongCurrencyFormat.
@@ -420,9 +419,10 @@ public class LocalePolicyTab {
 
   /**
    * .
+   * 
    * @return useLongCurrencyFormat
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getUseLongCurrencyFormat() {
     return useLongCurrencyFormat;
   }
@@ -433,7 +433,6 @@ public class LocalePolicyTab {
   public void setUseLongCurrencyFormat(String useLongCurrencyFormat) {
     this.useLongCurrencyFormat = useLongCurrencyFormat;
   }
-
 
   /**
    * Compares objects.
@@ -470,9 +469,10 @@ public class LocalePolicyTab {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone, useLongCurrencyFormat);
+    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat,
+        currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat,
+        timeZone, useLongCurrencyFormat);
   }
-
 
   /**
    * Converts the given object to string.
@@ -481,7 +481,7 @@ public class LocalePolicyTab {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocalePolicyTab {\n");
-    
+
     sb.append("    addressFormat: ").append(toIndentedString(addressFormat)).append("\n");
     sb.append("    calendarType: ").append(toIndentedString(calendarType)).append("\n");
     sb.append("    cultureName: ").append(toIndentedString(cultureName)).append("\n");
@@ -512,4 +512,3 @@ public class LocalePolicyTab {
   }
 
 }
-

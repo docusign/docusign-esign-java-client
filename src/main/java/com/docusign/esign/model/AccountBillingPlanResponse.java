@@ -15,14 +15,14 @@ import com.docusign.esign.model.ReferralInformation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Defines an account billing plan response object..
  *
  */
-@ApiModel(description = "Defines an account billing plan response object.")
+@Schema(description = "Defines an account billing plan response object.")
 
 public class AccountBillingPlanResponse {
   @JsonProperty("billingAddress")
@@ -64,7 +64,6 @@ public class AccountBillingPlanResponse {
   @JsonProperty("taxExemptId")
   private String taxExemptId = null;
 
-
   /**
    * billingAddress.
    *
@@ -77,9 +76,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * The billing address for the account..
+   * 
    * @return billingAddress
    **/
-  @ApiModelProperty(value = "The billing address for the account.")
+  @Schema(description = "The billing address for the account.")
   public AccountAddress getBillingAddress() {
     return billingAddress;
   }
@@ -90,7 +90,6 @@ public class AccountBillingPlanResponse {
   public void setBillingAddress(AccountAddress billingAddress) {
     this.billingAddress = billingAddress;
   }
-
 
   /**
    * billingAddressIsCreditCardAddress.
@@ -103,10 +102,14 @@ public class AccountBillingPlanResponse {
   }
 
   /**
-   * When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different..
+   * When set to **true**, the credit card address information is the same as that
+   * returned as the billing address. If false, then the billing address is
+   * considered a billing contact address, and the credit card address can be
+   * different..
+   * 
    * @return billingAddressIsCreditCardAddress
    **/
-  @ApiModelProperty(value = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
+  @Schema(description = "When set to **true**, the credit card address information is the same as that returned as the billing address. If false, then the billing address is considered a billing contact address, and the credit card address can be different.")
   public String getBillingAddressIsCreditCardAddress() {
     return billingAddressIsCreditCardAddress;
   }
@@ -117,7 +120,6 @@ public class AccountBillingPlanResponse {
   public void setBillingAddressIsCreditCardAddress(String billingAddressIsCreditCardAddress) {
     this.billingAddressIsCreditCardAddress = billingAddressIsCreditCardAddress;
   }
-
 
   /**
    * billingPlan.
@@ -131,9 +133,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * An object that contains details about the billing plan..
+   * 
    * @return billingPlan
    **/
-  @ApiModelProperty(value = "An object that contains details about the billing plan.")
+  @Schema(description = "An object that contains details about the billing plan.")
   public AccountBillingPlan getBillingPlan() {
     return billingPlan;
   }
@@ -144,7 +147,6 @@ public class AccountBillingPlanResponse {
   public void setBillingPlan(AccountBillingPlan billingPlan) {
     this.billingPlan = billingPlan;
   }
-
 
   /**
    * creditCardInformation.
@@ -157,10 +159,12 @@ public class AccountBillingPlanResponse {
   }
 
   /**
-   * A complex type that has information about the credit card used to pay for this account..
+   * A complex type that has information about the credit card used to pay for
+   * this account..
+   * 
    * @return creditCardInformation
    **/
-  @ApiModelProperty(value = "A complex type that has information about the credit card used to pay for this account.")
+  @Schema(description = "A complex type that has information about the credit card used to pay for this account.")
   public CreditCardInformation getCreditCardInformation() {
     return creditCardInformation;
   }
@@ -172,22 +176,24 @@ public class AccountBillingPlanResponse {
     this.creditCardInformation = creditCardInformation;
   }
 
-
   /**
    * directDebitProcessorInformation.
    *
    * @return AccountBillingPlanResponse
    **/
-  public AccountBillingPlanResponse directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
+  public AccountBillingPlanResponse directDebitProcessorInformation(
+      DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
   /**
-   * Information about the bank that processes direct debits for the payment plan..
+   * Information about the bank that processes direct debits for the payment
+   * plan..
+   * 
    * @return directDebitProcessorInformation
    **/
-  @ApiModelProperty(value = "Information about the bank that processes direct debits for the payment plan.")
+  @Schema(description = "Information about the bank that processes direct debits for the payment plan.")
   public DirectDebitProcessorInformation getDirectDebitProcessorInformation() {
     return directDebitProcessorInformation;
   }
@@ -198,7 +204,6 @@ public class AccountBillingPlanResponse {
   public void setDirectDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
-
 
   /**
    * downgradePlanInformation.
@@ -212,9 +217,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * .
+   * 
    * @return downgradePlanInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DowngradePlanUpdateResponse getDowngradePlanInformation() {
     return downgradePlanInformation;
   }
@@ -226,22 +232,23 @@ public class AccountBillingPlanResponse {
     this.downgradePlanInformation = downgradePlanInformation;
   }
 
-
   /**
    * downgradeRequestInformation.
    *
    * @return AccountBillingPlanResponse
    **/
-  public AccountBillingPlanResponse downgradeRequestInformation(DowngradeRequestInformation downgradeRequestInformation) {
+  public AccountBillingPlanResponse downgradeRequestInformation(
+      DowngradeRequestInformation downgradeRequestInformation) {
     this.downgradeRequestInformation = downgradeRequestInformation;
     return this;
   }
 
   /**
    * .
+   * 
    * @return downgradeRequestInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public DowngradeRequestInformation getDowngradeRequestInformation() {
     return downgradeRequestInformation;
   }
@@ -252,7 +259,6 @@ public class AccountBillingPlanResponse {
   public void setDowngradeRequestInformation(DowngradeRequestInformation downgradeRequestInformation) {
     this.downgradeRequestInformation = downgradeRequestInformation;
   }
-
 
   /**
    * entityInformation.
@@ -266,9 +272,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * .
+   * 
    * @return entityInformation
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public BillingEntityInformationResponse getEntityInformation() {
     return entityInformation;
   }
@@ -279,7 +286,6 @@ public class AccountBillingPlanResponse {
   public void setEntityInformation(BillingEntityInformationResponse entityInformation) {
     this.entityInformation = entityInformation;
   }
-
 
   /**
    * paymentMethod.
@@ -293,9 +299,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * .
+   * 
    * @return paymentMethod
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getPaymentMethod() {
     return paymentMethod;
   }
@@ -307,22 +314,23 @@ public class AccountBillingPlanResponse {
     this.paymentMethod = paymentMethod;
   }
 
-
   /**
    * paymentProcessorInformation.
    *
    * @return AccountBillingPlanResponse
    **/
-  public AccountBillingPlanResponse paymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
+  public AccountBillingPlanResponse paymentProcessorInformation(
+      PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
     return this;
   }
 
   /**
    * Information about the entity that processes payments for the billing plan..
+   * 
    * @return paymentProcessorInformation
    **/
-  @ApiModelProperty(value = "Information about the entity that processes payments for the billing plan.")
+  @Schema(description = "Information about the entity that processes payments for the billing plan.")
   public PaymentProcessorInformation getPaymentProcessorInformation() {
     return paymentProcessorInformation;
   }
@@ -333,7 +341,6 @@ public class AccountBillingPlanResponse {
   public void setPaymentProcessorInformation(PaymentProcessorInformation paymentProcessorInformation) {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
-
 
   /**
    * referralInformation.
@@ -346,10 +353,12 @@ public class AccountBillingPlanResponse {
   }
 
   /**
-   * A complex type that contains properties for entering referral and discount information..
+   * A complex type that contains properties for entering referral and discount
+   * information..
+   * 
    * @return referralInformation
    **/
-  @ApiModelProperty(value = "A complex type that contains properties for entering referral and discount information.")
+  @Schema(description = "A complex type that contains properties for entering referral and discount information.")
   public ReferralInformation getReferralInformation() {
     return referralInformation;
   }
@@ -361,7 +370,6 @@ public class AccountBillingPlanResponse {
     this.referralInformation = referralInformation;
   }
 
-
   /**
    * successorPlans.
    *
@@ -371,7 +379,7 @@ public class AccountBillingPlanResponse {
     this.successorPlans = successorPlans;
     return this;
   }
-  
+
   /**
    * addSuccessorPlansItem.
    *
@@ -387,9 +395,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * .
+   * 
    * @return successorPlans
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public java.util.List<BillingPlan> getSuccessorPlans() {
     return successorPlans;
   }
@@ -400,7 +409,6 @@ public class AccountBillingPlanResponse {
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
-
 
   /**
    * taxExemptId.
@@ -414,9 +422,10 @@ public class AccountBillingPlanResponse {
 
   /**
    * .
+   * 
    * @return taxExemptId
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getTaxExemptId() {
     return taxExemptId;
   }
@@ -427,7 +436,6 @@ public class AccountBillingPlanResponse {
   public void setTaxExemptId(String taxExemptId) {
     this.taxExemptId = taxExemptId;
   }
-
 
   /**
    * Compares objects.
@@ -444,10 +452,13 @@ public class AccountBillingPlanResponse {
     }
     AccountBillingPlanResponse accountBillingPlanResponse = (AccountBillingPlanResponse) o;
     return Objects.equals(this.billingAddress, accountBillingPlanResponse.billingAddress) &&
-        Objects.equals(this.billingAddressIsCreditCardAddress, accountBillingPlanResponse.billingAddressIsCreditCardAddress) &&
+        Objects.equals(this.billingAddressIsCreditCardAddress,
+            accountBillingPlanResponse.billingAddressIsCreditCardAddress)
+        &&
         Objects.equals(this.billingPlan, accountBillingPlanResponse.billingPlan) &&
         Objects.equals(this.creditCardInformation, accountBillingPlanResponse.creditCardInformation) &&
-        Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation) &&
+        Objects.equals(this.directDebitProcessorInformation, accountBillingPlanResponse.directDebitProcessorInformation)
+        &&
         Objects.equals(this.downgradePlanInformation, accountBillingPlanResponse.downgradePlanInformation) &&
         Objects.equals(this.downgradeRequestInformation, accountBillingPlanResponse.downgradeRequestInformation) &&
         Objects.equals(this.entityInformation, accountBillingPlanResponse.entityInformation) &&
@@ -463,9 +474,10 @@ public class AccountBillingPlanResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation, directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityInformation, paymentMethod, paymentProcessorInformation, referralInformation, successorPlans, taxExemptId);
+    return Objects.hash(billingAddress, billingAddressIsCreditCardAddress, billingPlan, creditCardInformation,
+        directDebitProcessorInformation, downgradePlanInformation, downgradeRequestInformation, entityInformation,
+        paymentMethod, paymentProcessorInformation, referralInformation, successorPlans, taxExemptId);
   }
-
 
   /**
    * Converts the given object to string.
@@ -474,12 +486,14 @@ public class AccountBillingPlanResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountBillingPlanResponse {\n");
-    
+
     sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
-    sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress)).append("\n");
+    sb.append("    billingAddressIsCreditCardAddress: ").append(toIndentedString(billingAddressIsCreditCardAddress))
+        .append("\n");
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation))
+        .append("\n");
     sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    downgradeRequestInformation: ").append(toIndentedString(downgradeRequestInformation)).append("\n");
     sb.append("    entityInformation: ").append(toIndentedString(entityInformation)).append("\n");
@@ -504,4 +518,3 @@ public class AccountBillingPlanResponse {
   }
 
 }
-

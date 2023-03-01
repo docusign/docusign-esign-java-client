@@ -5,14 +5,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object contains information about a seat discount..
  *
  */
-@ApiModel(description = "This object contains information about a seat discount.")
+@Schema(description = "This object contains information about a seat discount.")
 
 public class SeatDiscount {
   @JsonProperty("beginSeatCount")
@@ -23,7 +23,6 @@ public class SeatDiscount {
 
   @JsonProperty("endSeatCount")
   private String endSeatCount = null;
-
 
   /**
    * beginSeatCount.
@@ -37,9 +36,10 @@ public class SeatDiscount {
 
   /**
    * Reserved: TBD.
+   * 
    * @return beginSeatCount
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getBeginSeatCount() {
     return beginSeatCount;
   }
@@ -50,7 +50,6 @@ public class SeatDiscount {
   public void setBeginSeatCount(String beginSeatCount) {
     this.beginSeatCount = beginSeatCount;
   }
-
 
   /**
    * discountPercent.
@@ -64,9 +63,10 @@ public class SeatDiscount {
 
   /**
    * .
+   * 
    * @return discountPercent
    **/
-  @ApiModelProperty(value = "")
+  @Schema(description = "")
   public String getDiscountPercent() {
     return discountPercent;
   }
@@ -77,7 +77,6 @@ public class SeatDiscount {
   public void setDiscountPercent(String discountPercent) {
     this.discountPercent = discountPercent;
   }
-
 
   /**
    * endSeatCount.
@@ -91,9 +90,10 @@ public class SeatDiscount {
 
   /**
    * Reserved: TBD.
+   * 
    * @return endSeatCount
    **/
-  @ApiModelProperty(value = "Reserved: TBD")
+  @Schema(description = "Reserved: TBD")
   public String getEndSeatCount() {
     return endSeatCount;
   }
@@ -104,7 +104,6 @@ public class SeatDiscount {
   public void setEndSeatCount(String endSeatCount) {
     this.endSeatCount = endSeatCount;
   }
-
 
   /**
    * Compares objects.
@@ -133,7 +132,6 @@ public class SeatDiscount {
     return Objects.hash(beginSeatCount, discountPercent, endSeatCount);
   }
 
-
   /**
    * Converts the given object to string.
    */
@@ -141,7 +139,7 @@ public class SeatDiscount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SeatDiscount {\n");
-    
+
     sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
     sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
     sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
@@ -161,4 +159,3 @@ public class SeatDiscount {
   }
 
 }
-
