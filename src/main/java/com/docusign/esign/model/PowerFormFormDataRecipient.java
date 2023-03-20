@@ -27,6 +27,7 @@ public class PowerFormFormDataRecipient {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
+
   /**
    * email.
    *
@@ -39,7 +40,6 @@ public class PowerFormFormDataRecipient {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class PowerFormFormDataRecipient {
     this.email = email;
   }
 
+
   /**
    * formData.
    *
@@ -63,7 +64,7 @@ public class PowerFormFormDataRecipient {
     this.formData = formData;
     return this;
   }
-
+  
   /**
    * addFormDataItem.
    *
@@ -79,7 +80,6 @@ public class PowerFormFormDataRecipient {
 
   /**
    * .
-   * 
    * @return formData
    **/
   @Schema(description = "")
@@ -94,6 +94,7 @@ public class PowerFormFormDataRecipient {
     this.formData = formData;
   }
 
+
   /**
    * name.
    *
@@ -106,7 +107,6 @@ public class PowerFormFormDataRecipient {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -121,6 +121,7 @@ public class PowerFormFormDataRecipient {
     this.name = name;
   }
 
+
   /**
    * recipientId.
    *
@@ -132,9 +133,7 @@ public class PowerFormFormDataRecipient {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -148,6 +147,7 @@ public class PowerFormFormDataRecipient {
   public void setRecipientId(String recipientId) {
     this.recipientId = recipientId;
   }
+
 
   /**
    * Compares objects.
@@ -177,6 +177,7 @@ public class PowerFormFormDataRecipient {
     return Objects.hash(email, formData, name, recipientId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -184,7 +185,7 @@ public class PowerFormFormDataRecipient {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataRecipient {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -205,3 +206,4 @@ public class PowerFormFormDataRecipient {
   }
 
 }
+

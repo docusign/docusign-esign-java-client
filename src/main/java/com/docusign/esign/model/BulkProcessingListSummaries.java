@@ -18,6 +18,7 @@ public class BulkProcessingListSummaries {
   @JsonProperty("bulkListSummaries")
   private java.util.List<BulkProcessingListSummary> bulkListSummaries = null;
 
+
   /**
    * bulkListSummaries.
    *
@@ -27,7 +28,7 @@ public class BulkProcessingListSummaries {
     this.bulkListSummaries = bulkListSummaries;
     return this;
   }
-
+  
   /**
    * addBulkListSummariesItem.
    *
@@ -43,7 +44,6 @@ public class BulkProcessingListSummaries {
 
   /**
    * .
-   * 
    * @return bulkListSummaries
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class BulkProcessingListSummaries {
   public void setBulkListSummaries(java.util.List<BulkProcessingListSummary> bulkListSummaries) {
     this.bulkListSummaries = bulkListSummaries;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class BulkProcessingListSummaries {
     return Objects.hash(bulkListSummaries);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class BulkProcessingListSummaries {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingListSummaries {\n");
-
+    
     sb.append("    bulkListSummaries: ").append(toIndentedString(bulkListSummaries)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class BulkProcessingListSummaries {
   }
 
 }
+

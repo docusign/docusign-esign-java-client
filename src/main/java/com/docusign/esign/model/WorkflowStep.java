@@ -44,6 +44,7 @@ public class WorkflowStep {
   @JsonProperty("workflowStepId")
   private String workflowStepId = null;
 
+
   /**
    * action.
    *
@@ -56,7 +57,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return action
    **/
   @Schema(description = "")
@@ -71,6 +71,7 @@ public class WorkflowStep {
     this.action = action;
   }
 
+
   /**
    * completedDate.
    *
@@ -83,7 +84,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return completedDate
    **/
   @Schema(description = "")
@@ -98,6 +98,7 @@ public class WorkflowStep {
     this.completedDate = completedDate;
   }
 
+
   /**
    * delayedRouting.
    *
@@ -109,9 +110,7 @@ public class WorkflowStep {
   }
 
   /**
-   * A complex element that specifies the delayed routing settings for the
-   * workflow step..
-   * 
+   * A complex element that specifies the delayed routing settings for the workflow step..
    * @return delayedRouting
    **/
   @Schema(description = "A complex element that specifies the delayed routing settings for the workflow step.")
@@ -126,6 +125,7 @@ public class WorkflowStep {
     this.delayedRouting = delayedRouting;
   }
 
+
   /**
    * itemId.
    *
@@ -138,7 +138,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return itemId
    **/
   @Schema(description = "")
@@ -153,6 +152,7 @@ public class WorkflowStep {
     this.itemId = itemId;
   }
 
+
   /**
    * recipientRouting.
    *
@@ -165,7 +165,6 @@ public class WorkflowStep {
 
   /**
    * The rules for recipient routing..
-   * 
    * @return recipientRouting
    **/
   @Schema(description = "The rules for recipient routing.")
@@ -180,6 +179,7 @@ public class WorkflowStep {
     this.recipientRouting = recipientRouting;
   }
 
+
   /**
    * status.
    *
@@ -191,10 +191,7 @@ public class WorkflowStep {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -209,6 +206,7 @@ public class WorkflowStep {
     this.status = status;
   }
 
+
   /**
    * triggeredDate.
    *
@@ -221,7 +219,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return triggeredDate
    **/
   @Schema(description = "")
@@ -236,6 +233,7 @@ public class WorkflowStep {
     this.triggeredDate = triggeredDate;
   }
 
+
   /**
    * triggerOnItem.
    *
@@ -248,7 +246,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return triggerOnItem
    **/
   @Schema(description = "")
@@ -263,6 +260,7 @@ public class WorkflowStep {
     this.triggerOnItem = triggerOnItem;
   }
 
+
   /**
    * workflowStepId.
    *
@@ -275,7 +273,6 @@ public class WorkflowStep {
 
   /**
    * .
-   * 
    * @return workflowStepId
    **/
   @Schema(description = "")
@@ -289,6 +286,7 @@ public class WorkflowStep {
   public void setWorkflowStepId(String workflowStepId) {
     this.workflowStepId = workflowStepId;
   }
+
 
   /**
    * Compares objects.
@@ -320,9 +318,9 @@ public class WorkflowStep {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate,
-        triggerOnItem, workflowStepId);
+    return Objects.hash(action, completedDate, delayedRouting, itemId, recipientRouting, status, triggeredDate, triggerOnItem, workflowStepId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -331,7 +329,7 @@ public class WorkflowStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkflowStep {\n");
-
+    
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    completedDate: ").append(toIndentedString(completedDate)).append("\n");
     sb.append("    delayedRouting: ").append(toIndentedString(delayedRouting)).append("\n");
@@ -357,3 +355,4 @@ public class WorkflowStep {
   }
 
 }
+

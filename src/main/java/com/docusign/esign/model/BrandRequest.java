@@ -18,6 +18,7 @@ public class BrandRequest {
   @JsonProperty("brandId")
   private String brandId = null;
 
+
   /**
    * brandId.
    *
@@ -30,7 +31,6 @@ public class BrandRequest {
 
   /**
    * The ID of the brand used in API calls.
-   * 
    * @return brandId
    **/
   @Schema(description = "The ID of the brand used in API calls")
@@ -44,6 +44,7 @@ public class BrandRequest {
   public void setBrandId(String brandId) {
     this.brandId = brandId;
   }
+
 
   /**
    * Compares objects.
@@ -70,6 +71,7 @@ public class BrandRequest {
     return Objects.hash(brandId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -77,7 +79,7 @@ public class BrandRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandRequest {\n");
-
+    
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -95,3 +97,4 @@ public class BrandRequest {
   }
 
 }
+

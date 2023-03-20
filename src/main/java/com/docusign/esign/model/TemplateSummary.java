@@ -41,6 +41,7 @@ public class TemplateSummary {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * applied.
    *
@@ -53,7 +54,6 @@ public class TemplateSummary {
 
   /**
    * Reserved: TBD.
-   * 
    * @return applied
    **/
   @Schema(description = "Reserved: TBD")
@@ -68,6 +68,7 @@ public class TemplateSummary {
     this.applied = applied;
   }
 
+
   /**
    * documentId.
    *
@@ -79,9 +80,7 @@ public class TemplateSummary {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -96,6 +95,7 @@ public class TemplateSummary {
     this.documentId = documentId;
   }
 
+
   /**
    * documentName.
    *
@@ -108,7 +108,6 @@ public class TemplateSummary {
 
   /**
    * .
-   * 
    * @return documentName
    **/
   @Schema(description = "")
@@ -123,6 +122,7 @@ public class TemplateSummary {
     this.documentName = documentName;
   }
 
+
   /**
    * errorDetails.
    *
@@ -134,12 +134,10 @@ public class TemplateSummary {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -150,6 +148,7 @@ public class TemplateSummary {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * name.
@@ -163,7 +162,6 @@ public class TemplateSummary {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -178,6 +176,7 @@ public class TemplateSummary {
     this.name = name;
   }
 
+
   /**
    * templateId.
    *
@@ -189,9 +188,7 @@ public class TemplateSummary {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -206,6 +203,7 @@ public class TemplateSummary {
     this.templateId = templateId;
   }
 
+
   /**
    * templateMatch.
    *
@@ -218,7 +216,6 @@ public class TemplateSummary {
 
   /**
    * .
-   * 
    * @return templateMatch
    **/
   @Schema(description = "")
@@ -233,6 +230,7 @@ public class TemplateSummary {
     this.templateMatch = templateMatch;
   }
 
+
   /**
    * uri.
    *
@@ -245,7 +243,6 @@ public class TemplateSummary {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -259,6 +256,7 @@ public class TemplateSummary {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -292,6 +290,7 @@ public class TemplateSummary {
     return Objects.hash(applied, documentId, documentName, errorDetails, name, templateId, templateMatch, uri);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -299,7 +298,7 @@ public class TemplateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSummary {\n");
-
+    
     sb.append("    applied: ").append(toIndentedString(applied)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
@@ -324,3 +323,4 @@ public class TemplateSummary {
   }
 
 }
+

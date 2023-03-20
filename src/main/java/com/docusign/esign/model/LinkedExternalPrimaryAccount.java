@@ -39,6 +39,7 @@ public class LinkedExternalPrimaryAccount {
   @JsonProperty("userId")
   private String userId = null;
 
+
   /**
    * accountName.
    *
@@ -51,7 +52,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return accountName
    **/
   @Schema(description = "")
@@ -66,6 +66,7 @@ public class LinkedExternalPrimaryAccount {
     this.accountName = accountName;
   }
 
+
   /**
    * configurationId.
    *
@@ -78,7 +79,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return configurationId
    **/
   @Schema(description = "")
@@ -93,6 +93,7 @@ public class LinkedExternalPrimaryAccount {
     this.configurationId = configurationId;
   }
 
+
   /**
    * email.
    *
@@ -105,7 +106,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -120,6 +120,7 @@ public class LinkedExternalPrimaryAccount {
     this.email = email;
   }
 
+
   /**
    * linkId.
    *
@@ -132,7 +133,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return linkId
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class LinkedExternalPrimaryAccount {
     this.linkId = linkId;
   }
 
+
   /**
    * pdfFieldHandlingOption.
    *
@@ -159,7 +160,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return pdfFieldHandlingOption
    **/
   @Schema(description = "")
@@ -174,20 +174,19 @@ public class LinkedExternalPrimaryAccount {
     this.pdfFieldHandlingOption = pdfFieldHandlingOption;
   }
 
+
   /**
    * recipientAuthRequirements.
    *
    * @return LinkedExternalPrimaryAccount
    **/
-  public LinkedExternalPrimaryAccount recipientAuthRequirements(
-      ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements) {
+  public LinkedExternalPrimaryAccount recipientAuthRequirements(ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements) {
     this.recipientAuthRequirements = recipientAuthRequirements;
     return this;
   }
 
   /**
    * .
-   * 
    * @return recipientAuthRequirements
    **/
   @Schema(description = "")
@@ -202,6 +201,7 @@ public class LinkedExternalPrimaryAccount {
     this.recipientAuthRequirements = recipientAuthRequirements;
   }
 
+
   /**
    * status.
    *
@@ -213,10 +213,7 @@ public class LinkedExternalPrimaryAccount {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -231,6 +228,7 @@ public class LinkedExternalPrimaryAccount {
     this.status = status;
   }
 
+
   /**
    * userId.
    *
@@ -243,7 +241,6 @@ public class LinkedExternalPrimaryAccount {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -257,6 +254,7 @@ public class LinkedExternalPrimaryAccount {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -287,9 +285,9 @@ public class LinkedExternalPrimaryAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, configurationId, email, linkId, pdfFieldHandlingOption, recipientAuthRequirements,
-        status, userId);
+    return Objects.hash(accountName, configurationId, email, linkId, pdfFieldHandlingOption, recipientAuthRequirements, status, userId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -298,7 +296,7 @@ public class LinkedExternalPrimaryAccount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LinkedExternalPrimaryAccount {\n");
-
+    
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    configurationId: ").append(toIndentedString(configurationId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -323,3 +321,4 @@ public class LinkedExternalPrimaryAccount {
   }
 
 }
+

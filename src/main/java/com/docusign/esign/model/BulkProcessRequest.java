@@ -20,6 +20,7 @@ public class BulkProcessRequest {
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
 
+
   /**
    * batchName.
    *
@@ -32,7 +33,6 @@ public class BulkProcessRequest {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class BulkProcessRequest {
     this.batchName = batchName;
   }
 
+
   /**
    * envelopeOrTemplateId.
    *
@@ -59,7 +60,6 @@ public class BulkProcessRequest {
 
   /**
    * .
-   * 
    * @return envelopeOrTemplateId
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class BulkProcessRequest {
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class BulkProcessRequest {
     return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class BulkProcessRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessRequest {\n");
-
+    
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class BulkProcessRequest {
   }
 
 }
+

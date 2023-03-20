@@ -25,6 +25,7 @@ public class RecipientGroup {
   @JsonProperty("recipients")
   private java.util.List<RecipientOption> recipients = null;
 
+
   /**
    * groupMessage.
    *
@@ -37,7 +38,6 @@ public class RecipientGroup {
 
   /**
    * .
-   * 
    * @return groupMessage
    **/
   @Schema(description = "")
@@ -52,6 +52,7 @@ public class RecipientGroup {
     this.groupMessage = groupMessage;
   }
 
+
   /**
    * groupName.
    *
@@ -64,7 +65,6 @@ public class RecipientGroup {
 
   /**
    * The name of the group..
-   * 
    * @return groupName
    **/
   @Schema(description = "The name of the group.")
@@ -79,6 +79,7 @@ public class RecipientGroup {
     this.groupName = groupName;
   }
 
+
   /**
    * recipients.
    *
@@ -88,7 +89,7 @@ public class RecipientGroup {
     this.recipients = recipients;
     return this;
   }
-
+  
   /**
    * addRecipientsItem.
    *
@@ -104,7 +105,6 @@ public class RecipientGroup {
 
   /**
    * An array of powerform recipients..
-   * 
    * @return recipients
    **/
   @Schema(description = "An array of powerform recipients.")
@@ -118,6 +118,7 @@ public class RecipientGroup {
   public void setRecipients(java.util.List<RecipientOption> recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * Compares objects.
@@ -146,6 +147,7 @@ public class RecipientGroup {
     return Objects.hash(groupMessage, groupName, recipients);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -153,7 +155,7 @@ public class RecipientGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientGroup {\n");
-
+    
     sb.append("    groupMessage: ").append(toIndentedString(groupMessage)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
@@ -173,3 +175,4 @@ public class RecipientGroup {
   }
 
 }
+

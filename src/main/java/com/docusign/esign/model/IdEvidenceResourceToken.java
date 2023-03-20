@@ -20,6 +20,7 @@ public class IdEvidenceResourceToken {
   @JsonProperty("resourceToken")
   private String resourceToken = null;
 
+
   /**
    * proofBaseURI.
    *
@@ -32,7 +33,6 @@ public class IdEvidenceResourceToken {
 
   /**
    * .
-   * 
    * @return proofBaseURI
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class IdEvidenceResourceToken {
     this.proofBaseURI = proofBaseURI;
   }
 
+
   /**
    * resourceToken.
    *
@@ -59,7 +60,6 @@ public class IdEvidenceResourceToken {
 
   /**
    * .
-   * 
    * @return resourceToken
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class IdEvidenceResourceToken {
   public void setResourceToken(String resourceToken) {
     this.resourceToken = resourceToken;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class IdEvidenceResourceToken {
     return Objects.hash(proofBaseURI, resourceToken);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class IdEvidenceResourceToken {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdEvidenceResourceToken {\n");
-
+    
     sb.append("    proofBaseURI: ").append(toIndentedString(proofBaseURI)).append("\n");
     sb.append("    resourceToken: ").append(toIndentedString(resourceToken)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class IdEvidenceResourceToken {
   }
 
 }
+

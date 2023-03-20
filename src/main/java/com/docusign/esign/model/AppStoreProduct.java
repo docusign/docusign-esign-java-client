@@ -21,6 +21,7 @@ public class AppStoreProduct {
   @JsonProperty("productId")
   private String productId = null;
 
+
   /**
    * marketPlace.
    *
@@ -33,7 +34,6 @@ public class AppStoreProduct {
 
   /**
    * .
-   * 
    * @return marketPlace
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class AppStoreProduct {
     this.marketPlace = marketPlace;
   }
 
+
   /**
    * productId.
    *
@@ -60,7 +61,6 @@ public class AppStoreProduct {
 
   /**
    * The Product ID from the AppStore..
-   * 
    * @return productId
    **/
   @Schema(description = "The Product ID from the AppStore.")
@@ -74,6 +74,7 @@ public class AppStoreProduct {
   public void setProductId(String productId) {
     this.productId = productId;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class AppStoreProduct {
     return Objects.hash(marketPlace, productId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class AppStoreProduct {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreProduct {\n");
-
+    
     sb.append("    marketPlace: ").append(toIndentedString(marketPlace)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class AppStoreProduct {
   }
 
 }
+

@@ -19,6 +19,7 @@ public class SupportedLanguages {
   @JsonProperty("languages")
   private java.util.List<NameValue> languages = null;
 
+
   /**
    * languages.
    *
@@ -28,7 +29,7 @@ public class SupportedLanguages {
     this.languages = languages;
     return this;
   }
-
+  
   /**
    * addLanguagesItem.
    *
@@ -44,7 +45,6 @@ public class SupportedLanguages {
 
   /**
    * .
-   * 
    * @return languages
    **/
   @Schema(description = "")
@@ -58,6 +58,7 @@ public class SupportedLanguages {
   public void setLanguages(java.util.List<NameValue> languages) {
     this.languages = languages;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class SupportedLanguages {
     return Objects.hash(languages);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class SupportedLanguages {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SupportedLanguages {\n");
-
+    
     sb.append("    languages: ").append(toIndentedString(languages)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class SupportedLanguages {
   }
 
 }
+

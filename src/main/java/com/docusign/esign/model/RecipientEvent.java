@@ -20,6 +20,7 @@ public class RecipientEvent {
   @JsonProperty("recipientEventStatusCode")
   private String recipientEventStatusCode = null;
 
+
   /**
    * includeDocuments.
    *
@@ -31,9 +32,7 @@ public class RecipientEvent {
   }
 
   /**
-   * When set to **true**, the PDF documents are included in the message along
-   * with the updated XML. .
-   * 
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
    * @return includeDocuments
    **/
   @Schema(description = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
@@ -48,6 +47,7 @@ public class RecipientEvent {
     this.includeDocuments = includeDocuments;
   }
 
+
   /**
    * recipientEventStatusCode.
    *
@@ -59,9 +59,7 @@ public class RecipientEvent {
   }
 
   /**
-   * The recipient status, this can be Sent, Delivered, Completed, Declined,
-   * AuthenticationFailed, and AutoResponded..
-   * 
+   * The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded..
    * @return recipientEventStatusCode
    **/
   @Schema(description = "The recipient status, this can be Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
@@ -75,6 +73,7 @@ public class RecipientEvent {
   public void setRecipientEventStatusCode(String recipientEventStatusCode) {
     this.recipientEventStatusCode = recipientEventStatusCode;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +101,7 @@ public class RecipientEvent {
     return Objects.hash(includeDocuments, recipientEventStatusCode);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +109,7 @@ public class RecipientEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEvent {\n");
-
+    
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    recipientEventStatusCode: ").append(toIndentedString(recipientEventStatusCode)).append("\n");
     sb.append("}");
@@ -128,3 +128,4 @@ public class RecipientEvent {
   }
 
 }
+

@@ -37,6 +37,7 @@ public class UserInformationList {
   @JsonProperty("users")
   private java.util.List<UserInformation> users = null;
 
+
   /**
    * endPosition.
    *
@@ -49,7 +50,6 @@ public class UserInformationList {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -64,6 +64,7 @@ public class UserInformationList {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -75,9 +76,7 @@ public class UserInformationList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -92,6 +91,7 @@ public class UserInformationList {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -104,7 +104,6 @@ public class UserInformationList {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -119,6 +118,7 @@ public class UserInformationList {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -131,7 +131,6 @@ public class UserInformationList {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -146,6 +145,7 @@ public class UserInformationList {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -158,7 +158,6 @@ public class UserInformationList {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -173,6 +172,7 @@ public class UserInformationList {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -184,10 +184,7 @@ public class UserInformationList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -202,6 +199,7 @@ public class UserInformationList {
     this.totalSetSize = totalSetSize;
   }
 
+
   /**
    * users.
    *
@@ -211,7 +209,7 @@ public class UserInformationList {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -227,7 +225,6 @@ public class UserInformationList {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -241,6 +238,7 @@ public class UserInformationList {
   public void setUsers(java.util.List<UserInformation> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -273,6 +271,7 @@ public class UserInformationList {
     return Objects.hash(endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -280,7 +279,7 @@ public class UserInformationList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformationList {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -304,3 +303,4 @@ public class UserInformationList {
   }
 
 }
+

@@ -19,17 +19,17 @@ public class RecipientsUpdateSummary {
   @JsonProperty("recipientUpdateResults")
   private java.util.List<RecipientUpdateResponse> recipientUpdateResults = null;
 
+
   /**
    * recipientUpdateResults.
    *
    * @return RecipientsUpdateSummary
    **/
-  public RecipientsUpdateSummary recipientUpdateResults(
-      java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
+  public RecipientsUpdateSummary recipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
   }
-
+  
   /**
    * addRecipientUpdateResultsItem.
    *
@@ -45,7 +45,6 @@ public class RecipientsUpdateSummary {
 
   /**
    * .
-   * 
    * @return recipientUpdateResults
    **/
   @Schema(description = "")
@@ -59,6 +58,7 @@ public class RecipientsUpdateSummary {
   public void setRecipientUpdateResults(java.util.List<RecipientUpdateResponse> recipientUpdateResults) {
     this.recipientUpdateResults = recipientUpdateResults;
   }
+
 
   /**
    * Compares objects.
@@ -85,6 +85,7 @@ public class RecipientsUpdateSummary {
     return Objects.hash(recipientUpdateResults);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -92,7 +93,7 @@ public class RecipientsUpdateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientsUpdateSummary {\n");
-
+    
     sb.append("    recipientUpdateResults: ").append(toIndentedString(recipientUpdateResults)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,3 +111,4 @@ public class RecipientsUpdateSummary {
   }
 
 }
+

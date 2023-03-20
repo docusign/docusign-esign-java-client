@@ -24,6 +24,7 @@ public class DocumentHtmlDefinitionOriginal {
   @JsonProperty("htmlDefinition")
   private DocumentHtmlDefinition htmlDefinition = null;
 
+
   /**
    * documentId.
    *
@@ -35,9 +36,7 @@ public class DocumentHtmlDefinitionOriginal {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -52,6 +51,7 @@ public class DocumentHtmlDefinitionOriginal {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdGuid.
    *
@@ -64,7 +64,6 @@ public class DocumentHtmlDefinitionOriginal {
 
   /**
    * .
-   * 
    * @return documentIdGuid
    **/
   @Schema(description = "")
@@ -79,6 +78,7 @@ public class DocumentHtmlDefinitionOriginal {
     this.documentIdGuid = documentIdGuid;
   }
 
+
   /**
    * htmlDefinition.
    *
@@ -91,7 +91,6 @@ public class DocumentHtmlDefinitionOriginal {
 
   /**
    * Defines how to generate the responsive-formatted HTML for the document..
-   * 
    * @return htmlDefinition
    **/
   @Schema(description = "Defines how to generate the responsive-formatted HTML for the document.")
@@ -105,6 +104,7 @@ public class DocumentHtmlDefinitionOriginal {
   public void setHtmlDefinition(DocumentHtmlDefinition htmlDefinition) {
     this.htmlDefinition = htmlDefinition;
   }
+
 
   /**
    * Compares objects.
@@ -133,6 +133,7 @@ public class DocumentHtmlDefinitionOriginal {
     return Objects.hash(documentId, documentIdGuid, htmlDefinition);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -140,7 +141,7 @@ public class DocumentHtmlDefinitionOriginal {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitionOriginal {\n");
-
+    
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");
     sb.append("    htmlDefinition: ").append(toIndentedString(htmlDefinition)).append("\n");
@@ -160,3 +161,4 @@ public class DocumentHtmlDefinitionOriginal {
   }
 
 }
+

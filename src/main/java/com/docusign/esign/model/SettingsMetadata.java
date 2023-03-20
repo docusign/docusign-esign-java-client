@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Metadata that indicates whether a property is editable and describes
- * setting-specific options..
+ * Metadata that indicates whether a property is editable and describes setting-specific options..
  *
  */
 @Schema(description = "Metadata that indicates whether a property is editable and describes setting-specific options.")
@@ -34,6 +33,7 @@ public class SettingsMetadata {
   @JsonProperty("uiType")
   private String uiType = null;
 
+
   /**
    * is21CFRPart11.
    *
@@ -46,7 +46,6 @@ public class SettingsMetadata {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
-   * 
    * @return is21CFRPart11
    **/
   @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
@@ -61,6 +60,7 @@ public class SettingsMetadata {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+
   /**
    * options.
    *
@@ -70,7 +70,7 @@ public class SettingsMetadata {
     this.options = options;
     return this;
   }
-
+  
   /**
    * addOptionsItem.
    *
@@ -86,7 +86,6 @@ public class SettingsMetadata {
 
   /**
    * .
-   * 
    * @return options
    **/
   @Schema(description = "")
@@ -101,6 +100,7 @@ public class SettingsMetadata {
     this.options = options;
   }
 
+
   /**
    * rights.
    *
@@ -113,7 +113,6 @@ public class SettingsMetadata {
 
   /**
    * .
-   * 
    * @return rights
    **/
   @Schema(description = "")
@@ -128,6 +127,7 @@ public class SettingsMetadata {
     this.rights = rights;
   }
 
+
   /**
    * uiHint.
    *
@@ -140,7 +140,6 @@ public class SettingsMetadata {
 
   /**
    * .
-   * 
    * @return uiHint
    **/
   @Schema(description = "")
@@ -155,6 +154,7 @@ public class SettingsMetadata {
     this.uiHint = uiHint;
   }
 
+
   /**
    * uiOrder.
    *
@@ -167,7 +167,6 @@ public class SettingsMetadata {
 
   /**
    * .
-   * 
    * @return uiOrder
    **/
   @Schema(description = "")
@@ -182,6 +181,7 @@ public class SettingsMetadata {
     this.uiOrder = uiOrder;
   }
 
+
   /**
    * uiType.
    *
@@ -194,7 +194,6 @@ public class SettingsMetadata {
 
   /**
    * .
-   * 
    * @return uiType
    **/
   @Schema(description = "")
@@ -208,6 +207,7 @@ public class SettingsMetadata {
   public void setUiType(String uiType) {
     this.uiType = uiType;
   }
+
 
   /**
    * Compares objects.
@@ -239,6 +239,7 @@ public class SettingsMetadata {
     return Objects.hash(is21CFRPart11, options, rights, uiHint, uiOrder, uiType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -246,7 +247,7 @@ public class SettingsMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SettingsMetadata {\n");
-
+    
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
@@ -269,3 +270,4 @@ public class SettingsMetadata {
   }
 
 }
+

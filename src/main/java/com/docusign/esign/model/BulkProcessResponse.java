@@ -35,6 +35,7 @@ public class BulkProcessResponse {
   @JsonProperty("totalQueued")
   private String totalQueued = null;
 
+
   /**
    * batchId.
    *
@@ -47,7 +48,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return batchId
    **/
   @Schema(description = "")
@@ -62,6 +62,7 @@ public class BulkProcessResponse {
     this.batchId = batchId;
   }
 
+
   /**
    * batchName.
    *
@@ -74,7 +75,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -89,6 +89,7 @@ public class BulkProcessResponse {
     this.batchName = batchName;
   }
 
+
   /**
    * batchSize.
    *
@@ -101,7 +102,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return batchSize
    **/
   @Schema(description = "")
@@ -116,6 +116,7 @@ public class BulkProcessResponse {
     this.batchSize = batchSize;
   }
 
+
   /**
    * errorDetails.
    *
@@ -125,7 +126,7 @@ public class BulkProcessResponse {
     this.errorDetails = errorDetails;
     return this;
   }
-
+  
   /**
    * addErrorDetailsItem.
    *
@@ -141,7 +142,6 @@ public class BulkProcessResponse {
 
   /**
    * Array or errors..
-   * 
    * @return errorDetails
    **/
   @Schema(description = "Array or errors.")
@@ -156,6 +156,7 @@ public class BulkProcessResponse {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * errors.
    *
@@ -165,7 +166,7 @@ public class BulkProcessResponse {
     this.errors = errors;
     return this;
   }
-
+  
   /**
    * addErrorsItem.
    *
@@ -181,7 +182,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return errors
    **/
   @Schema(description = "")
@@ -196,6 +196,7 @@ public class BulkProcessResponse {
     this.errors = errors;
   }
 
+
   /**
    * queueLimit.
    *
@@ -208,7 +209,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return queueLimit
    **/
   @Schema(description = "")
@@ -223,6 +223,7 @@ public class BulkProcessResponse {
     this.queueLimit = queueLimit;
   }
 
+
   /**
    * totalQueued.
    *
@@ -235,7 +236,6 @@ public class BulkProcessResponse {
 
   /**
    * .
-   * 
    * @return totalQueued
    **/
   @Schema(description = "")
@@ -249,6 +249,7 @@ public class BulkProcessResponse {
   public void setTotalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
   }
+
 
   /**
    * Compares objects.
@@ -281,6 +282,7 @@ public class BulkProcessResponse {
     return Objects.hash(batchId, batchName, batchSize, errorDetails, errors, queueLimit, totalQueued);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -288,7 +290,7 @@ public class BulkProcessResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessResponse {\n");
-
+    
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
@@ -312,3 +314,4 @@ public class BulkProcessResponse {
   }
 
 }
+

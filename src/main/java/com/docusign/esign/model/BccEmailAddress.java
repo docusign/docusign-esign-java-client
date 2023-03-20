@@ -21,6 +21,7 @@ public class BccEmailAddress {
   @JsonProperty("email")
   private String email = null;
 
+
   /**
    * bccEmailAddressId.
    *
@@ -32,13 +33,7 @@ public class BccEmailAddress {
   }
 
   /**
-   * Only users with canManageAccount setting can use this option. An array of up
-   * to 5 email addresses the envelope is sent to as a BCC email. Example: If your
-   * account has BCC for Email Archive set up for the email address
-   * 'archive@mycompany.com' and you send an envelope using the BCC Email Override
-   * to send a BCC email to 'salesarchive@mycompany.com', then a copy of the
-   * envelope is only sent to the 'salesarchive@mycompany.com' email address..
-   * 
+   * Only users with canManageAccount setting can use this option. An array of up to 5 email addresses the envelope is sent to as a BCC email.    Example: If your account has BCC for Email Archive set up for the email address 'archive@mycompany.com' and you send an envelope using the BCC Email Override to send a BCC email to 'salesarchive@mycompany.com', then a copy of the envelope is only sent to the 'salesarchive@mycompany.com' email address..
    * @return bccEmailAddressId
    **/
   @Schema(description = "Only users with canManageAccount setting can use this option. An array of up to 5 email addresses the envelope is sent to as a BCC email.    Example: If your account has BCC for Email Archive set up for the email address 'archive@mycompany.com' and you send an envelope using the BCC Email Override to send a BCC email to 'salesarchive@mycompany.com', then a copy of the envelope is only sent to the 'salesarchive@mycompany.com' email address.")
@@ -53,6 +48,7 @@ public class BccEmailAddress {
     this.bccEmailAddressId = bccEmailAddressId;
   }
 
+
   /**
    * email.
    *
@@ -64,11 +60,7 @@ public class BccEmailAddress {
   }
 
   /**
-   * Specifies the BCC email address. DocuSign verifies that the email format is
-   * correct, but does not verify that the email is active.Using this overrides
-   * the BCC for Email Archive information setting for this envelope. Maximum of
-   * length: 100 characters. .
-   * 
+   * Specifies the BCC email address. DocuSign verifies that the email format is correct, but does not verify that the email is active.Using this overrides the BCC for Email Archive information setting for this envelope.  Maximum of length: 100 characters. .
    * @return email
    **/
   @Schema(description = "Specifies the BCC email address. DocuSign verifies that the email format is correct, but does not verify that the email is active.Using this overrides the BCC for Email Archive information setting for this envelope.  Maximum of length: 100 characters. ")
@@ -82,6 +74,7 @@ public class BccEmailAddress {
   public void setEmail(String email) {
     this.email = email;
   }
+
 
   /**
    * Compares objects.
@@ -109,6 +102,7 @@ public class BccEmailAddress {
     return Objects.hash(bccEmailAddressId, email);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -116,7 +110,7 @@ public class BccEmailAddress {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailAddress {\n");
-
+    
     sb.append("    bccEmailAddressId: ").append(toIndentedString(bccEmailAddressId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
@@ -135,3 +129,4 @@ public class BccEmailAddress {
   }
 
 }
+

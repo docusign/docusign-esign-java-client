@@ -29,6 +29,7 @@ public class PayPalLegacySettings {
   @JsonProperty("vendor")
   private String vendor = null;
 
+
   /**
    * currency.
    *
@@ -41,7 +42,6 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   * 
    * @return currency
    **/
   @Schema(description = "")
@@ -56,6 +56,7 @@ public class PayPalLegacySettings {
     this.currency = currency;
   }
 
+
   /**
    * partner.
    *
@@ -68,7 +69,6 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   * 
    * @return partner
    **/
   @Schema(description = "")
@@ -83,6 +83,7 @@ public class PayPalLegacySettings {
     this.partner = partner;
   }
 
+
   /**
    * password.
    *
@@ -95,7 +96,6 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -110,6 +110,7 @@ public class PayPalLegacySettings {
     this.password = password;
   }
 
+
   /**
    * userName.
    *
@@ -122,7 +123,6 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class PayPalLegacySettings {
     this.userName = userName;
   }
 
+
   /**
    * vendor.
    *
@@ -149,7 +150,6 @@ public class PayPalLegacySettings {
 
   /**
    * .
-   * 
    * @return vendor
    **/
   @Schema(description = "")
@@ -163,6 +163,7 @@ public class PayPalLegacySettings {
   public void setVendor(String vendor) {
     this.vendor = vendor;
   }
+
 
   /**
    * Compares objects.
@@ -193,6 +194,7 @@ public class PayPalLegacySettings {
     return Objects.hash(currency, partner, password, userName, vendor);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -200,7 +202,7 @@ public class PayPalLegacySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PayPalLegacySettings {\n");
-
+    
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    partner: ").append(toIndentedString(partner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -222,3 +224,4 @@ public class PayPalLegacySettings {
   }
 
 }
+

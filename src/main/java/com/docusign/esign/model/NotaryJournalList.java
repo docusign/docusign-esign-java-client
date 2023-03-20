@@ -36,6 +36,7 @@ public class NotaryJournalList {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -48,7 +49,6 @@ public class NotaryJournalList {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -63,6 +63,7 @@ public class NotaryJournalList {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -74,9 +75,7 @@ public class NotaryJournalList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -91,6 +90,7 @@ public class NotaryJournalList {
     this.nextUri = nextUri;
   }
 
+
   /**
    * notaryJournals.
    *
@@ -100,7 +100,7 @@ public class NotaryJournalList {
     this.notaryJournals = notaryJournals;
     return this;
   }
-
+  
   /**
    * addNotaryJournalsItem.
    *
@@ -116,7 +116,6 @@ public class NotaryJournalList {
 
   /**
    * .
-   * 
    * @return notaryJournals
    **/
   @Schema(description = "")
@@ -131,6 +130,7 @@ public class NotaryJournalList {
     this.notaryJournals = notaryJournals;
   }
 
+
   /**
    * previousUri.
    *
@@ -143,7 +143,6 @@ public class NotaryJournalList {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -158,6 +157,7 @@ public class NotaryJournalList {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -170,7 +170,6 @@ public class NotaryJournalList {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -185,6 +184,7 @@ public class NotaryJournalList {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -197,7 +197,6 @@ public class NotaryJournalList {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -212,6 +211,7 @@ public class NotaryJournalList {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -223,10 +223,7 @@ public class NotaryJournalList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -240,6 +237,7 @@ public class NotaryJournalList {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -272,6 +270,7 @@ public class NotaryJournalList {
     return Objects.hash(endPosition, nextUri, notaryJournals, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -279,7 +278,7 @@ public class NotaryJournalList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalList {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    notaryJournals: ").append(toIndentedString(notaryJournals)).append("\n");
@@ -303,3 +302,4 @@ public class NotaryJournalList {
   }
 
 }
+

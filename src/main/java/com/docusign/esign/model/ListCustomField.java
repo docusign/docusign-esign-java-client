@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object represents a list custom field from which envelope creators and
- * senders can select custom data..
+ * This object represents a list custom field from which envelope creators and senders can select custom data..
  *
  */
 @Schema(description = "This object represents a list custom field from which envelope creators and senders can select custom data.")
@@ -41,6 +40,7 @@ public class ListCustomField {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * configurationType.
    *
@@ -52,9 +52,7 @@ public class ListCustomField {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The
-   * only supported value is **salesforce**..
-   * 
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
    **/
   @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
@@ -69,6 +67,7 @@ public class ListCustomField {
     this.configurationType = configurationType;
   }
 
+
   /**
    * errorDetails.
    *
@@ -80,12 +79,10 @@ public class ListCustomField {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -96,6 +93,7 @@ public class ListCustomField {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * fieldId.
@@ -109,7 +107,6 @@ public class ListCustomField {
 
   /**
    * An ID used to specify a custom field..
-   * 
    * @return fieldId
    **/
   @Schema(description = "An ID used to specify a custom field.")
@@ -124,6 +121,7 @@ public class ListCustomField {
     this.fieldId = fieldId;
   }
 
+
   /**
    * listItems.
    *
@@ -133,7 +131,7 @@ public class ListCustomField {
     this.listItems = listItems;
     return this;
   }
-
+  
   /**
    * addListItemsItem.
    *
@@ -149,7 +147,6 @@ public class ListCustomField {
 
   /**
    * .
-   * 
    * @return listItems
    **/
   @Schema(description = "")
@@ -164,6 +161,7 @@ public class ListCustomField {
     this.listItems = listItems;
   }
 
+
   /**
    * name.
    *
@@ -176,7 +174,6 @@ public class ListCustomField {
 
   /**
    * The name of the custom field..
-   * 
    * @return name
    **/
   @Schema(description = "The name of the custom field.")
@@ -191,6 +188,7 @@ public class ListCustomField {
     this.name = name;
   }
 
+
   /**
    * required.
    *
@@ -203,7 +201,6 @@ public class ListCustomField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -218,6 +215,7 @@ public class ListCustomField {
     this.required = required;
   }
 
+
   /**
    * show.
    *
@@ -230,7 +228,6 @@ public class ListCustomField {
 
   /**
    * A boolean indicating if the value should be displayed..
-   * 
    * @return show
    **/
   @Schema(description = "A boolean indicating if the value should be displayed.")
@@ -245,6 +242,7 @@ public class ListCustomField {
     this.show = show;
   }
 
+
   /**
    * value.
    *
@@ -256,8 +254,7 @@ public class ListCustomField {
   }
 
   /**
-   * The value of the custom field. Maximum Length: 100 characters..
-   * 
+   * The value of the custom field.  Maximum Length: 100 characters..
    * @return value
    **/
   @Schema(description = "The value of the custom field.  Maximum Length: 100 characters.")
@@ -271,6 +268,7 @@ public class ListCustomField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -304,6 +302,7 @@ public class ListCustomField {
     return Objects.hash(configurationType, errorDetails, fieldId, listItems, name, required, show, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -311,7 +310,7 @@ public class ListCustomField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListCustomField {\n");
-
+    
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -336,3 +335,4 @@ public class ListCustomField {
   }
 
 }
+

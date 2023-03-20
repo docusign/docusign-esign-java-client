@@ -30,6 +30,7 @@ public class RecipientOption {
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
 
+
   /**
    * email.
    *
@@ -42,7 +43,6 @@ public class RecipientOption {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class RecipientOption {
     this.email = email;
   }
 
+
   /**
    * name.
    *
@@ -69,7 +70,6 @@ public class RecipientOption {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -84,6 +84,7 @@ public class RecipientOption {
     this.name = name;
   }
 
+
   /**
    * recipientLabel.
    *
@@ -96,7 +97,6 @@ public class RecipientOption {
 
   /**
    * .
-   * 
    * @return recipientLabel
    **/
   @Schema(description = "")
@@ -111,6 +111,7 @@ public class RecipientOption {
     this.recipientLabel = recipientLabel;
   }
 
+
   /**
    * roleName.
    *
@@ -122,10 +123,7 @@ public class RecipientOption {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/>
-   * <br/>
-   * This is required when working with template recipients..
-   * 
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
    **/
   @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
@@ -140,6 +138,7 @@ public class RecipientOption {
     this.roleName = roleName;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -151,11 +150,7 @@ public class RecipientOption {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -169,6 +164,7 @@ public class RecipientOption {
   public void setSigningGroupId(String signingGroupId) {
     this.signingGroupId = signingGroupId;
   }
+
 
   /**
    * Compares objects.
@@ -199,6 +195,7 @@ public class RecipientOption {
     return Objects.hash(email, name, recipientLabel, roleName, signingGroupId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -206,7 +203,7 @@ public class RecipientOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientOption {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    recipientLabel: ").append(toIndentedString(recipientLabel)).append("\n");
@@ -228,3 +225,4 @@ public class RecipientOption {
   }
 
 }
+

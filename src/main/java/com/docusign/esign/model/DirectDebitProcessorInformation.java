@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information about a bank that processes a customer&#39;s direct
- * debit payments..
+ * Contains information about a bank that processes a customer&#39;s direct debit payments..
  *
  */
 @Schema(description = "Contains information about a bank that processes a customer's direct debit payments.")
@@ -52,6 +51,7 @@ public class DirectDebitProcessorInformation {
   @JsonProperty("lastName")
   private String lastName = null;
 
+
   /**
    * bankBranchCode.
    *
@@ -64,7 +64,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankBranchCode
    **/
   @Schema(description = "")
@@ -79,6 +78,7 @@ public class DirectDebitProcessorInformation {
     this.bankBranchCode = bankBranchCode;
   }
 
+
   /**
    * bankCheckDigit.
    *
@@ -91,7 +91,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankCheckDigit
    **/
   @Schema(description = "")
@@ -106,6 +105,7 @@ public class DirectDebitProcessorInformation {
     this.bankCheckDigit = bankCheckDigit;
   }
 
+
   /**
    * bankCode.
    *
@@ -118,7 +118,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankCode
    **/
   @Schema(description = "")
@@ -133,6 +132,7 @@ public class DirectDebitProcessorInformation {
     this.bankCode = bankCode;
   }
 
+
   /**
    * bankName.
    *
@@ -145,7 +145,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankName
    **/
   @Schema(description = "")
@@ -160,6 +159,7 @@ public class DirectDebitProcessorInformation {
     this.bankName = bankName;
   }
 
+
   /**
    * bankTransferAccountName.
    *
@@ -172,7 +172,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankTransferAccountName
    **/
   @Schema(description = "")
@@ -187,6 +186,7 @@ public class DirectDebitProcessorInformation {
     this.bankTransferAccountName = bankTransferAccountName;
   }
 
+
   /**
    * bankTransferAccountNumber.
    *
@@ -199,7 +199,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankTransferAccountNumber
    **/
   @Schema(description = "")
@@ -214,6 +213,7 @@ public class DirectDebitProcessorInformation {
     this.bankTransferAccountNumber = bankTransferAccountNumber;
   }
 
+
   /**
    * bankTransferType.
    *
@@ -226,7 +226,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return bankTransferType
    **/
   @Schema(description = "")
@@ -241,6 +240,7 @@ public class DirectDebitProcessorInformation {
     this.bankTransferType = bankTransferType;
   }
 
+
   /**
    * country.
    *
@@ -253,7 +253,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * Specifies the country associated with the address..
-   * 
    * @return country
    **/
   @Schema(description = "Specifies the country associated with the address.")
@@ -268,6 +267,7 @@ public class DirectDebitProcessorInformation {
     this.country = country;
   }
 
+
   /**
    * email.
    *
@@ -280,7 +280,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -295,6 +294,7 @@ public class DirectDebitProcessorInformation {
     this.email = email;
   }
 
+
   /**
    * firstName.
    *
@@ -306,8 +306,7 @@ public class DirectDebitProcessorInformation {
   }
 
   /**
-   * The user's first name. Maximum Length: 50 characters..
-   * 
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
    **/
   @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
@@ -322,6 +321,7 @@ public class DirectDebitProcessorInformation {
     this.firstName = firstName;
   }
 
+
   /**
    * iBAN.
    *
@@ -334,7 +334,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return iBAN
    **/
   @Schema(description = "")
@@ -349,6 +348,7 @@ public class DirectDebitProcessorInformation {
     this.iBAN = iBAN;
   }
 
+
   /**
    * lastName.
    *
@@ -361,7 +361,6 @@ public class DirectDebitProcessorInformation {
 
   /**
    * .
-   * 
    * @return lastName
    **/
   @Schema(description = "")
@@ -375,6 +374,7 @@ public class DirectDebitProcessorInformation {
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
+
 
   /**
    * Compares objects.
@@ -409,9 +409,9 @@ public class DirectDebitProcessorInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bankBranchCode, bankCheckDigit, bankCode, bankName, bankTransferAccountName,
-        bankTransferAccountNumber, bankTransferType, country, email, firstName, iBAN, lastName);
+    return Objects.hash(bankBranchCode, bankCheckDigit, bankCode, bankName, bankTransferAccountName, bankTransferAccountNumber, bankTransferType, country, email, firstName, iBAN, lastName);
   }
+
 
   /**
    * Converts the given object to string.
@@ -420,7 +420,7 @@ public class DirectDebitProcessorInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DirectDebitProcessorInformation {\n");
-
+    
     sb.append("    bankBranchCode: ").append(toIndentedString(bankBranchCode)).append("\n");
     sb.append("    bankCheckDigit: ").append(toIndentedString(bankCheckDigit)).append("\n");
     sb.append("    bankCode: ").append(toIndentedString(bankCode)).append("\n");
@@ -449,3 +449,4 @@ public class DirectDebitProcessorInformation {
   }
 
 }
+

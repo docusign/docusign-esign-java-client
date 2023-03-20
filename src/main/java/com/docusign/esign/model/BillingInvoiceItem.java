@@ -36,6 +36,7 @@ public class BillingInvoiceItem {
   @JsonProperty("unitPrice")
   private String unitPrice = null;
 
+
   /**
    * chargeAmount.
    *
@@ -48,7 +49,6 @@ public class BillingInvoiceItem {
 
   /**
    * Reserved: TBD.
-   * 
    * @return chargeAmount
    **/
   @Schema(description = "Reserved: TBD")
@@ -63,6 +63,7 @@ public class BillingInvoiceItem {
     this.chargeAmount = chargeAmount;
   }
 
+
   /**
    * chargeName.
    *
@@ -75,7 +76,6 @@ public class BillingInvoiceItem {
 
   /**
    * Reserved: TBD.
-   * 
    * @return chargeName
    **/
   @Schema(description = "Reserved: TBD")
@@ -90,6 +90,7 @@ public class BillingInvoiceItem {
     this.chargeName = chargeName;
   }
 
+
   /**
    * invoiceItemId.
    *
@@ -102,7 +103,6 @@ public class BillingInvoiceItem {
 
   /**
    * Reserved: TBD.
-   * 
    * @return invoiceItemId
    **/
   @Schema(description = "Reserved: TBD")
@@ -117,6 +117,7 @@ public class BillingInvoiceItem {
     this.invoiceItemId = invoiceItemId;
   }
 
+
   /**
    * quantity.
    *
@@ -129,7 +130,6 @@ public class BillingInvoiceItem {
 
   /**
    * .
-   * 
    * @return quantity
    **/
   @Schema(description = "")
@@ -144,6 +144,7 @@ public class BillingInvoiceItem {
     this.quantity = quantity;
   }
 
+
   /**
    * taxAmount.
    *
@@ -156,7 +157,6 @@ public class BillingInvoiceItem {
 
   /**
    * .
-   * 
    * @return taxAmount
    **/
   @Schema(description = "")
@@ -171,6 +171,7 @@ public class BillingInvoiceItem {
     this.taxAmount = taxAmount;
   }
 
+
   /**
    * taxExemptAmount.
    *
@@ -183,7 +184,6 @@ public class BillingInvoiceItem {
 
   /**
    * .
-   * 
    * @return taxExemptAmount
    **/
   @Schema(description = "")
@@ -198,6 +198,7 @@ public class BillingInvoiceItem {
     this.taxExemptAmount = taxExemptAmount;
   }
 
+
   /**
    * unitPrice.
    *
@@ -210,7 +211,6 @@ public class BillingInvoiceItem {
 
   /**
    * Reserved: TBD.
-   * 
    * @return unitPrice
    **/
   @Schema(description = "Reserved: TBD")
@@ -224,6 +224,7 @@ public class BillingInvoiceItem {
   public void setUnitPrice(String unitPrice) {
     this.unitPrice = unitPrice;
   }
+
 
   /**
    * Compares objects.
@@ -256,6 +257,7 @@ public class BillingInvoiceItem {
     return Objects.hash(chargeAmount, chargeName, invoiceItemId, quantity, taxAmount, taxExemptAmount, unitPrice);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -263,7 +265,7 @@ public class BillingInvoiceItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoiceItem {\n");
-
+    
     sb.append("    chargeAmount: ").append(toIndentedString(chargeAmount)).append("\n");
     sb.append("    chargeName: ").append(toIndentedString(chargeName)).append("\n");
     sb.append("    invoiceItemId: ").append(toIndentedString(invoiceItemId)).append("\n");
@@ -287,3 +289,4 @@ public class BillingInvoiceItem {
   }
 
 }
+

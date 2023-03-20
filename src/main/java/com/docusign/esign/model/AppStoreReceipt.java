@@ -27,6 +27,7 @@ public class AppStoreReceipt {
   @JsonProperty("receiptData")
   private String receiptData = null;
 
+
   /**
    * downgradeProductId.
    *
@@ -39,7 +40,6 @@ public class AppStoreReceipt {
 
   /**
    * .
-   * 
    * @return downgradeProductId
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class AppStoreReceipt {
     this.downgradeProductId = downgradeProductId;
   }
 
+
   /**
    * isDowngradeCancellation.
    *
@@ -66,7 +67,6 @@ public class AppStoreReceipt {
 
   /**
    * .
-   * 
    * @return isDowngradeCancellation
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class AppStoreReceipt {
     this.isDowngradeCancellation = isDowngradeCancellation;
   }
 
+
   /**
    * productId.
    *
@@ -93,7 +94,6 @@ public class AppStoreReceipt {
 
   /**
    * .
-   * 
    * @return productId
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class AppStoreReceipt {
     this.productId = productId;
   }
 
+
   /**
    * receiptData.
    *
@@ -120,7 +121,6 @@ public class AppStoreReceipt {
 
   /**
    * Reserved: TBD.
-   * 
    * @return receiptData
    **/
   @Schema(description = "Reserved: TBD")
@@ -134,6 +134,7 @@ public class AppStoreReceipt {
   public void setReceiptData(String receiptData) {
     this.receiptData = receiptData;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class AppStoreReceipt {
     return Objects.hash(downgradeProductId, isDowngradeCancellation, productId, receiptData);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class AppStoreReceipt {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AppStoreReceipt {\n");
-
+    
     sb.append("    downgradeProductId: ").append(toIndentedString(downgradeProductId)).append("\n");
     sb.append("    isDowngradeCancellation: ").append(toIndentedString(isDowngradeCancellation)).append("\n");
     sb.append("    productId: ").append(toIndentedString(productId)).append("\n");
@@ -191,3 +193,4 @@ public class AppStoreReceipt {
   }
 
 }
+

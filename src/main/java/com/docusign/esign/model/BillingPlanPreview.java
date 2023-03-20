@@ -34,6 +34,7 @@ public class BillingPlanPreview {
   @JsonProperty("totalAmount")
   private String totalAmount = null;
 
+
   /**
    * currencyCode.
    *
@@ -46,7 +47,6 @@ public class BillingPlanPreview {
 
   /**
    * Specifies the ISO currency code for the account..
-   * 
    * @return currencyCode
    **/
   @Schema(description = "Specifies the ISO currency code for the account.")
@@ -61,6 +61,7 @@ public class BillingPlanPreview {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * invoice.
    *
@@ -73,7 +74,6 @@ public class BillingPlanPreview {
 
   /**
    * .
-   * 
    * @return invoice
    **/
   @Schema(description = "")
@@ -88,6 +88,7 @@ public class BillingPlanPreview {
     this.invoice = invoice;
   }
 
+
   /**
    * isProrated.
    *
@@ -100,7 +101,6 @@ public class BillingPlanPreview {
 
   /**
    * .
-   * 
    * @return isProrated
    **/
   @Schema(description = "")
@@ -115,6 +115,7 @@ public class BillingPlanPreview {
     this.isProrated = isProrated;
   }
 
+
   /**
    * subtotalAmount.
    *
@@ -127,7 +128,6 @@ public class BillingPlanPreview {
 
   /**
    * .
-   * 
    * @return subtotalAmount
    **/
   @Schema(description = "")
@@ -142,6 +142,7 @@ public class BillingPlanPreview {
     this.subtotalAmount = subtotalAmount;
   }
 
+
   /**
    * taxAmount.
    *
@@ -154,7 +155,6 @@ public class BillingPlanPreview {
 
   /**
    * .
-   * 
    * @return taxAmount
    **/
   @Schema(description = "")
@@ -169,6 +169,7 @@ public class BillingPlanPreview {
     this.taxAmount = taxAmount;
   }
 
+
   /**
    * totalAmount.
    *
@@ -181,7 +182,6 @@ public class BillingPlanPreview {
 
   /**
    * .
-   * 
    * @return totalAmount
    **/
   @Schema(description = "")
@@ -195,6 +195,7 @@ public class BillingPlanPreview {
   public void setTotalAmount(String totalAmount) {
     this.totalAmount = totalAmount;
   }
+
 
   /**
    * Compares objects.
@@ -226,6 +227,7 @@ public class BillingPlanPreview {
     return Objects.hash(currencyCode, invoice, isProrated, subtotalAmount, taxAmount, totalAmount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -233,7 +235,7 @@ public class BillingPlanPreview {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanPreview {\n");
-
+    
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    invoice: ").append(toIndentedString(invoice)).append("\n");
     sb.append("    isProrated: ").append(toIndentedString(isProrated)).append("\n");
@@ -256,3 +258,4 @@ public class BillingPlanPreview {
   }
 
 }
+

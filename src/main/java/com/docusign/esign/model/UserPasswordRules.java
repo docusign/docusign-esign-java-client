@@ -22,6 +22,7 @@ public class UserPasswordRules {
   @JsonProperty("userId")
   private String userId = null;
 
+
   /**
    * passwordRules.
    *
@@ -34,7 +35,6 @@ public class UserPasswordRules {
 
   /**
    * Contains details about the password rules for the user..
-   * 
    * @return passwordRules
    **/
   @Schema(description = "Contains details about the password rules for the user.")
@@ -49,6 +49,7 @@ public class UserPasswordRules {
     this.passwordRules = passwordRules;
   }
 
+
   /**
    * userId.
    *
@@ -61,7 +62,6 @@ public class UserPasswordRules {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -75,6 +75,7 @@ public class UserPasswordRules {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +103,7 @@ public class UserPasswordRules {
     return Objects.hash(passwordRules, userId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +111,7 @@ public class UserPasswordRules {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordRules {\n");
-
+    
     sb.append("    passwordRules: ").append(toIndentedString(passwordRules)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
@@ -128,3 +130,4 @@ public class UserPasswordRules {
   }
 
 }
+

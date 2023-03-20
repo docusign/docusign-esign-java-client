@@ -18,6 +18,7 @@ public class WorkspaceSettings {
   @JsonProperty("commentsAllowed")
   private String commentsAllowed = null;
 
+
   /**
    * commentsAllowed.
    *
@@ -30,7 +31,6 @@ public class WorkspaceSettings {
 
   /**
    * .
-   * 
    * @return commentsAllowed
    **/
   @Schema(description = "")
@@ -44,6 +44,7 @@ public class WorkspaceSettings {
   public void setCommentsAllowed(String commentsAllowed) {
     this.commentsAllowed = commentsAllowed;
   }
+
 
   /**
    * Compares objects.
@@ -70,6 +71,7 @@ public class WorkspaceSettings {
     return Objects.hash(commentsAllowed);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -77,7 +79,7 @@ public class WorkspaceSettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceSettings {\n");
-
+    
     sb.append("    commentsAllowed: ").append(toIndentedString(commentsAllowed)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -95,3 +97,4 @@ public class WorkspaceSettings {
   }
 
 }
+

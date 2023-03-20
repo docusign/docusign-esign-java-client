@@ -18,6 +18,7 @@ public class EnvelopeAuditEventResponse {
   @JsonProperty("auditEvents")
   private java.util.List<EnvelopeAuditEvent> auditEvents = null;
 
+
   /**
    * auditEvents.
    *
@@ -27,7 +28,7 @@ public class EnvelopeAuditEventResponse {
     this.auditEvents = auditEvents;
     return this;
   }
-
+  
   /**
    * addAuditEventsItem.
    *
@@ -43,7 +44,6 @@ public class EnvelopeAuditEventResponse {
 
   /**
    * Reserved: TBD.
-   * 
    * @return auditEvents
    **/
   @Schema(description = "Reserved: TBD")
@@ -57,6 +57,7 @@ public class EnvelopeAuditEventResponse {
   public void setAuditEvents(java.util.List<EnvelopeAuditEvent> auditEvents) {
     this.auditEvents = auditEvents;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class EnvelopeAuditEventResponse {
     return Objects.hash(auditEvents);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class EnvelopeAuditEventResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEventResponse {\n");
-
+    
     sb.append("    auditEvents: ").append(toIndentedString(auditEvents)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class EnvelopeAuditEventResponse {
   }
 
 }
+

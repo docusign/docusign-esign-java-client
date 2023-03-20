@@ -19,17 +19,17 @@ public class PaymentGatewayAccountsInfo {
   @JsonProperty("paymentGatewayAccounts")
   private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = null;
 
+
   /**
    * paymentGatewayAccounts.
    *
    * @return PaymentGatewayAccountsInfo
    **/
-  public PaymentGatewayAccountsInfo paymentGatewayAccounts(
-      java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
+  public PaymentGatewayAccountsInfo paymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
     return this;
   }
-
+  
   /**
    * addPaymentGatewayAccountsItem.
    *
@@ -45,7 +45,6 @@ public class PaymentGatewayAccountsInfo {
 
   /**
    * .
-   * 
    * @return paymentGatewayAccounts
    **/
   @Schema(description = "")
@@ -59,6 +58,7 @@ public class PaymentGatewayAccountsInfo {
   public void setPaymentGatewayAccounts(java.util.List<PaymentGatewayAccount> paymentGatewayAccounts) {
     this.paymentGatewayAccounts = paymentGatewayAccounts;
   }
+
 
   /**
    * Compares objects.
@@ -85,6 +85,7 @@ public class PaymentGatewayAccountsInfo {
     return Objects.hash(paymentGatewayAccounts);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -92,7 +93,7 @@ public class PaymentGatewayAccountsInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccountsInfo {\n");
-
+    
     sb.append("    paymentGatewayAccounts: ").append(toIndentedString(paymentGatewayAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,3 +111,4 @@ public class PaymentGatewayAccountsInfo {
   }
 
 }
+

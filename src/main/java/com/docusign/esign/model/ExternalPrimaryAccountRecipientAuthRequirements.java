@@ -26,6 +26,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
   @JsonProperty("phone")
   private String phone = null;
 
+
   /**
    * accessCode.
    *
@@ -37,13 +38,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code
-   * to view and sign the envelope. Maximum Length: 50 characters and it must
-   * conform to the account's access code format setting. If blank, but the signer
-   * `accessCode` property is set in the envelope, then that value is used. If
-   * blank and the signer `accessCode` property is not set, then the access code
-   * is not required..
-   * 
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
    **/
   @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
@@ -58,6 +53,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
     this.accessCode = accessCode;
   }
 
+
   /**
    * idVerification.
    *
@@ -70,7 +66,6 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
 
   /**
    * .
-   * 
    * @return idVerification
    **/
   @Schema(description = "")
@@ -85,6 +80,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
     this.idVerification = idVerification;
   }
 
+
   /**
    * kba.
    *
@@ -97,7 +93,6 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
 
   /**
    * .
-   * 
    * @return kba
    **/
   @Schema(description = "")
@@ -112,6 +107,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
     this.kba = kba;
   }
 
+
   /**
    * phone.
    *
@@ -124,7 +120,6 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
 
   /**
    * .
-   * 
    * @return phone
    **/
   @Schema(description = "")
@@ -138,6 +133,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
   public void setPhone(String phone) {
     this.phone = phone;
   }
+
 
   /**
    * Compares objects.
@@ -167,6 +163,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
     return Objects.hash(accessCode, idVerification, kba, phone);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -174,7 +171,7 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalPrimaryAccountRecipientAuthRequirements {\n");
-
+    
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    idVerification: ").append(toIndentedString(idVerification)).append("\n");
     sb.append("    kba: ").append(toIndentedString(kba)).append("\n");
@@ -195,3 +192,4 @@ public class ExternalPrimaryAccountRecipientAuthRequirements {
   }
 
 }
+

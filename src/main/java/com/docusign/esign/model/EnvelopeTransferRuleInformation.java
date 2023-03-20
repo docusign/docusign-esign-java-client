@@ -36,6 +36,7 @@ public class EnvelopeTransferRuleInformation {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -48,7 +49,6 @@ public class EnvelopeTransferRuleInformation {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -63,17 +63,17 @@ public class EnvelopeTransferRuleInformation {
     this.endPosition = endPosition;
   }
 
+
   /**
    * envelopeTransferRules.
    *
    * @return EnvelopeTransferRuleInformation
    **/
-  public EnvelopeTransferRuleInformation envelopeTransferRules(
-      java.util.List<EnvelopeTransferRule> envelopeTransferRules) {
+  public EnvelopeTransferRuleInformation envelopeTransferRules(java.util.List<EnvelopeTransferRule> envelopeTransferRules) {
     this.envelopeTransferRules = envelopeTransferRules;
     return this;
   }
-
+  
   /**
    * addEnvelopeTransferRulesItem.
    *
@@ -89,7 +89,6 @@ public class EnvelopeTransferRuleInformation {
 
   /**
    * .
-   * 
    * @return envelopeTransferRules
    **/
   @Schema(description = "")
@@ -104,6 +103,7 @@ public class EnvelopeTransferRuleInformation {
     this.envelopeTransferRules = envelopeTransferRules;
   }
 
+
   /**
    * nextUri.
    *
@@ -115,9 +115,7 @@ public class EnvelopeTransferRuleInformation {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -132,6 +130,7 @@ public class EnvelopeTransferRuleInformation {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -144,7 +143,6 @@ public class EnvelopeTransferRuleInformation {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -159,6 +157,7 @@ public class EnvelopeTransferRuleInformation {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -171,7 +170,6 @@ public class EnvelopeTransferRuleInformation {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -186,6 +184,7 @@ public class EnvelopeTransferRuleInformation {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -198,7 +197,6 @@ public class EnvelopeTransferRuleInformation {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -213,6 +211,7 @@ public class EnvelopeTransferRuleInformation {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -224,10 +223,7 @@ public class EnvelopeTransferRuleInformation {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -241,6 +237,7 @@ public class EnvelopeTransferRuleInformation {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -270,9 +267,9 @@ public class EnvelopeTransferRuleInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, envelopeTransferRules, nextUri, previousUri, resultSetSize, startPosition,
-        totalSetSize);
+    return Objects.hash(endPosition, envelopeTransferRules, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -281,7 +278,7 @@ public class EnvelopeTransferRuleInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransferRuleInformation {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopeTransferRules: ").append(toIndentedString(envelopeTransferRules)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -305,3 +302,4 @@ public class EnvelopeTransferRuleInformation {
   }
 
 }
+

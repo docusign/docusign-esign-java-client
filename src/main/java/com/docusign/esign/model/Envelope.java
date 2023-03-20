@@ -264,6 +264,7 @@ public class Envelope {
   @JsonProperty("workflow")
   private Workflow workflow = null;
 
+
   /**
    * accessControlListBase64.
    *
@@ -276,7 +277,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return accessControlListBase64
    **/
   @Schema(description = "")
@@ -291,6 +291,7 @@ public class Envelope {
     this.accessControlListBase64 = accessControlListBase64;
   }
 
+
   /**
    * allowComments.
    *
@@ -303,7 +304,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return allowComments
    **/
   @Schema(description = "")
@@ -318,6 +318,7 @@ public class Envelope {
     this.allowComments = allowComments;
   }
 
+
   /**
    * allowMarkup.
    *
@@ -329,9 +330,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, Document Markup is enabled for envelope. Account must
-   * have Document Markup enabled to use this.
-   * 
+   * When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this.
    * @return allowMarkup
    **/
   @Schema(description = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
@@ -346,6 +345,7 @@ public class Envelope {
     this.allowMarkup = allowMarkup;
   }
 
+
   /**
    * allowReassign.
    *
@@ -357,9 +357,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, the recipient can redirect an envelope to a more
-   * appropriate recipient..
-   * 
+   * When set to **true**, the recipient can redirect an envelope to a more appropriate recipient..
    * @return allowReassign
    **/
   @Schema(description = "When set to **true**, the recipient can redirect an envelope to a more appropriate recipient.")
@@ -374,6 +372,7 @@ public class Envelope {
     this.allowReassign = allowReassign;
   }
 
+
   /**
    * allowViewHistory.
    *
@@ -386,7 +385,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return allowViewHistory
    **/
   @Schema(description = "")
@@ -401,6 +399,7 @@ public class Envelope {
     this.allowViewHistory = allowViewHistory;
   }
 
+
   /**
    * anySigner.
    *
@@ -413,7 +412,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return anySigner
    **/
   @Schema(description = "")
@@ -428,6 +426,7 @@ public class Envelope {
     this.anySigner = anySigner;
   }
 
+
   /**
    * asynchronous.
    *
@@ -439,10 +438,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, the envelope is queued for processing and the value of
-   * the `status` property is set to 'Processing'. Additionally, get status calls
-   * return 'Processing' until completed..
-   * 
+   * When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed..
    * @return asynchronous
    **/
   @Schema(description = "When set to **true**, the envelope is queued for processing and the value of the `status` property is set to 'Processing'. Additionally, get status calls return 'Processing' until completed.")
@@ -457,6 +453,7 @@ public class Envelope {
     this.asynchronous = asynchronous;
   }
 
+
   /**
    * attachmentsUri.
    *
@@ -469,7 +466,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return attachmentsUri
    **/
   @Schema(description = "")
@@ -484,6 +480,7 @@ public class Envelope {
     this.attachmentsUri = attachmentsUri;
   }
 
+
   /**
    * authoritativeCopy.
    *
@@ -495,9 +492,7 @@ public class Envelope {
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative
-   * copy feature is enabled..
-   * 
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
    * @return authoritativeCopy
    **/
   @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
@@ -512,6 +507,7 @@ public class Envelope {
     this.authoritativeCopy = authoritativeCopy;
   }
 
+
   /**
    * authoritativeCopyDefault.
    *
@@ -524,7 +520,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return authoritativeCopyDefault
    **/
   @Schema(description = "")
@@ -539,6 +534,7 @@ public class Envelope {
     this.authoritativeCopyDefault = authoritativeCopyDefault;
   }
 
+
   /**
    * autoNavigation.
    *
@@ -551,7 +547,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return autoNavigation
    **/
   @Schema(description = "")
@@ -566,6 +561,7 @@ public class Envelope {
     this.autoNavigation = autoNavigation;
   }
 
+
   /**
    * brandId.
    *
@@ -578,7 +574,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return brandId
    **/
   @Schema(description = "")
@@ -593,6 +588,7 @@ public class Envelope {
     this.brandId = brandId;
   }
 
+
   /**
    * brandLock.
    *
@@ -605,7 +601,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return brandLock
    **/
   @Schema(description = "")
@@ -620,6 +615,7 @@ public class Envelope {
     this.brandLock = brandLock;
   }
 
+
   /**
    * burnDefaultTabData.
    *
@@ -632,7 +628,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return burnDefaultTabData
    **/
   @Schema(description = "")
@@ -647,6 +642,7 @@ public class Envelope {
     this.burnDefaultTabData = burnDefaultTabData;
   }
 
+
   /**
    * certificateUri.
    *
@@ -658,9 +654,7 @@ public class Envelope {
   }
 
   /**
-   * Retrieves a URI for an endpoint that allows you to easily retrieve
-   * certificate information..
-   * 
+   * Retrieves a URI for an endpoint that allows you to easily retrieve certificate information..
    * @return certificateUri
    **/
   @Schema(description = "Retrieves a URI for an endpoint that allows you to easily retrieve certificate information.")
@@ -675,6 +669,7 @@ public class Envelope {
     this.certificateUri = certificateUri;
   }
 
+
   /**
    * completedDateTime.
    *
@@ -687,7 +682,6 @@ public class Envelope {
 
   /**
    * Specifies the date and time this item was completed..
-   * 
    * @return completedDateTime
    **/
   @Schema(description = "Specifies the date and time this item was completed.")
@@ -702,6 +696,7 @@ public class Envelope {
     this.completedDateTime = completedDateTime;
   }
 
+
   /**
    * copyRecipientData.
    *
@@ -714,7 +709,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return copyRecipientData
    **/
   @Schema(description = "")
@@ -729,6 +723,7 @@ public class Envelope {
     this.copyRecipientData = copyRecipientData;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -741,7 +736,6 @@ public class Envelope {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -756,6 +750,7 @@ public class Envelope {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * customFields.
    *
@@ -767,14 +762,10 @@ public class Envelope {
   }
 
   /**
-   * An optional array of strings that enables the sender to provide custom data
-   * about the recipient. This information is returned in the envelope status but
-   * otherwise not used by DocuSign. Each `customField` string can be a maximum of
-   * 100 characters..
-   * 
+   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
    * @return customFields
    **/
-  @Schema(description = "An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.")
+  @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public CustomFields getCustomFields() {
     return customFields;
   }
@@ -785,6 +776,7 @@ public class Envelope {
   public void setCustomFields(CustomFields customFields) {
     this.customFields = customFields;
   }
+
 
   /**
    * customFieldsUri.
@@ -797,9 +789,7 @@ public class Envelope {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the custom
-   * fields..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve the custom fields..
    * @return customFieldsUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the custom fields.")
@@ -814,6 +804,7 @@ public class Envelope {
     this.customFieldsUri = customFieldsUri;
   }
 
+
   /**
    * declinedDateTime.
    *
@@ -826,7 +817,6 @@ public class Envelope {
 
   /**
    * The date and time the recipient declined the document..
-   * 
    * @return declinedDateTime
    **/
   @Schema(description = "The date and time the recipient declined the document.")
@@ -841,6 +831,7 @@ public class Envelope {
     this.declinedDateTime = declinedDateTime;
   }
 
+
   /**
    * deletedDateTime.
    *
@@ -853,7 +844,6 @@ public class Envelope {
 
   /**
    * Specifies the data and time the item was deleted..
-   * 
    * @return deletedDateTime
    **/
   @Schema(description = "Specifies the data and time the item was deleted.")
@@ -868,6 +858,7 @@ public class Envelope {
     this.deletedDateTime = deletedDateTime;
   }
 
+
   /**
    * deliveredDateTime.
    *
@@ -880,7 +871,6 @@ public class Envelope {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveredDateTime
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -895,6 +885,7 @@ public class Envelope {
     this.deliveredDateTime = deliveredDateTime;
   }
 
+
   /**
    * disableResponsiveDocument.
    *
@@ -907,7 +898,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return disableResponsiveDocument
    **/
   @Schema(description = "")
@@ -922,6 +912,7 @@ public class Envelope {
     this.disableResponsiveDocument = disableResponsiveDocument;
   }
 
+
   /**
    * documentBase64.
    *
@@ -934,7 +925,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return documentBase64
    **/
   @Schema(description = "")
@@ -949,6 +939,7 @@ public class Envelope {
     this.documentBase64 = documentBase64;
   }
 
+
   /**
    * documentsCombinedUri.
    *
@@ -961,7 +952,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return documentsCombinedUri
    **/
   @Schema(description = "")
@@ -976,6 +966,7 @@ public class Envelope {
     this.documentsCombinedUri = documentsCombinedUri;
   }
 
+
   /**
    * documentsUri.
    *
@@ -988,7 +979,6 @@ public class Envelope {
 
   /**
    * Contains a URI for an endpoint that you can use to retrieve the documents..
-   * 
    * @return documentsUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the documents.")
@@ -1003,6 +993,7 @@ public class Envelope {
     this.documentsUri = documentsUri;
   }
 
+
   /**
    * emailBlurb.
    *
@@ -1014,9 +1005,7 @@ public class Envelope {
   }
 
   /**
-   * This is the same as the email body. If specified it is included in email body
-   * for all envelope recipients..
-   * 
+   * This is the same as the email body. If specified it is included in email body for all envelope recipients..
    * @return emailBlurb
    **/
   @Schema(description = "This is the same as the email body. If specified it is included in email body for all envelope recipients.")
@@ -1031,6 +1020,7 @@ public class Envelope {
     this.emailBlurb = emailBlurb;
   }
 
+
   /**
    * emailSettings.
    *
@@ -1043,7 +1033,6 @@ public class Envelope {
 
   /**
    * A complex type that contains email settings..
-   * 
    * @return emailSettings
    **/
   @Schema(description = "A complex type that contains email settings.")
@@ -1058,6 +1047,7 @@ public class Envelope {
     this.emailSettings = emailSettings;
   }
 
+
   /**
    * emailSubject.
    *
@@ -1069,10 +1059,7 @@ public class Envelope {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients. See
-   * [ML:Template Email Subject Merge Fields] for information about adding merge
-   * field information to the email subject..
-   * 
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
    **/
   @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
@@ -1087,6 +1074,7 @@ public class Envelope {
     this.emailSubject = emailSubject;
   }
 
+
   /**
    * enableWetSign.
    *
@@ -1098,9 +1086,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, the signer is allowed to print the document and sign it
-   * on paper..
-   * 
+   * When set to **true**, the signer is allowed to print the document and sign it on paper..
    * @return enableWetSign
    **/
   @Schema(description = "When set to **true**, the signer is allowed to print the document and sign it on paper.")
@@ -1115,6 +1101,7 @@ public class Envelope {
     this.enableWetSign = enableWetSign;
   }
 
+
   /**
    * enforceSignerVisibility.
    *
@@ -1126,15 +1113,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, documents with tabs can only be viewed by signers that
-   * have a tab on that document. Recipients that have an administrative role
-   * (Agent, Editor, or Intermediaries) or informational role (Certified
-   * Deliveries or Carbon Copies) can always see all the documents in an envelope,
-   * unless they are specifically excluded using this setting when an envelope is
-   * sent. Documents that do not have tabs are always visible to all recipients,
-   * unless they are specifically excluded using this setting when an envelope is
-   * sent. Your account must have Document Visibility enabled to use this..
-   * 
+   * When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.  Your account must have Document Visibility enabled to use this..
    * @return enforceSignerVisibility
    **/
   @Schema(description = "When set to **true**, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.  Your account must have Document Visibility enabled to use this.")
@@ -1149,6 +1128,7 @@ public class Envelope {
     this.enforceSignerVisibility = enforceSignerVisibility;
   }
 
+
   /**
    * envelopeAttachments.
    *
@@ -1158,7 +1138,7 @@ public class Envelope {
     this.envelopeAttachments = envelopeAttachments;
     return this;
   }
-
+  
   /**
    * addEnvelopeAttachmentsItem.
    *
@@ -1174,7 +1154,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return envelopeAttachments
    **/
   @Schema(description = "")
@@ -1189,6 +1168,7 @@ public class Envelope {
     this.envelopeAttachments = envelopeAttachments;
   }
 
+
   /**
    * envelopeCustomMetadata.
    *
@@ -1201,7 +1181,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return envelopeCustomMetadata
    **/
   @Schema(description = "")
@@ -1216,6 +1195,7 @@ public class Envelope {
     this.envelopeCustomMetadata = envelopeCustomMetadata;
   }
 
+
   /**
    * envelopeDocuments.
    *
@@ -1225,7 +1205,7 @@ public class Envelope {
     this.envelopeDocuments = envelopeDocuments;
     return this;
   }
-
+  
   /**
    * addEnvelopeDocumentsItem.
    *
@@ -1241,7 +1221,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return envelopeDocuments
    **/
   @Schema(description = "")
@@ -1256,6 +1235,7 @@ public class Envelope {
     this.envelopeDocuments = envelopeDocuments;
   }
 
+
   /**
    * envelopeId.
    *
@@ -1268,7 +1248,6 @@ public class Envelope {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -1283,6 +1262,7 @@ public class Envelope {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * envelopeIdStamping.
    *
@@ -1295,7 +1275,6 @@ public class Envelope {
 
   /**
    * When set to **true**, Envelope ID Stamping is enabled..
-   * 
    * @return envelopeIdStamping
    **/
   @Schema(description = "When set to **true**, Envelope ID Stamping is enabled.")
@@ -1310,6 +1289,7 @@ public class Envelope {
     this.envelopeIdStamping = envelopeIdStamping;
   }
 
+
   /**
    * envelopeLocation.
    *
@@ -1322,7 +1302,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return envelopeLocation
    **/
   @Schema(description = "")
@@ -1337,6 +1316,7 @@ public class Envelope {
     this.envelopeLocation = envelopeLocation;
   }
 
+
   /**
    * envelopeMetadata.
    *
@@ -1348,10 +1328,7 @@ public class Envelope {
   }
 
   /**
-   * Provides information about the features and services that are enabled for the
-   * envelope, including the Correct feature, the Advanced Correct feature, and
-   * DocuSign eNotary service..
-   * 
+   * Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service..
    * @return envelopeMetadata
    **/
   @Schema(description = "Provides information about the features and services that are enabled for the envelope, including the Correct feature, the Advanced Correct feature, and DocuSign eNotary service.")
@@ -1366,6 +1343,7 @@ public class Envelope {
     this.envelopeMetadata = envelopeMetadata;
   }
 
+
   /**
    * envelopeUri.
    *
@@ -1377,9 +1355,7 @@ public class Envelope {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or
-   * envelopes..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
    * @return envelopeUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
@@ -1394,6 +1370,7 @@ public class Envelope {
     this.envelopeUri = envelopeUri;
   }
 
+
   /**
    * expireAfter.
    *
@@ -1406,7 +1383,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return expireAfter
    **/
   @Schema(description = "")
@@ -1421,6 +1397,7 @@ public class Envelope {
     this.expireAfter = expireAfter;
   }
 
+
   /**
    * expireDateTime.
    *
@@ -1433,7 +1410,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return expireDateTime
    **/
   @Schema(description = "")
@@ -1448,6 +1424,7 @@ public class Envelope {
     this.expireDateTime = expireDateTime;
   }
 
+
   /**
    * expireEnabled.
    *
@@ -1460,7 +1437,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return expireEnabled
    **/
   @Schema(description = "")
@@ -1475,6 +1451,7 @@ public class Envelope {
     this.expireEnabled = expireEnabled;
   }
 
+
   /**
    * externalEnvelopeId.
    *
@@ -1487,7 +1464,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return externalEnvelopeId
    **/
   @Schema(description = "")
@@ -1502,6 +1478,7 @@ public class Envelope {
     this.externalEnvelopeId = externalEnvelopeId;
   }
 
+
   /**
    * folders.
    *
@@ -1511,7 +1488,7 @@ public class Envelope {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -1527,7 +1504,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return folders
    **/
   @Schema(description = "")
@@ -1542,6 +1518,7 @@ public class Envelope {
     this.folders = folders;
   }
 
+
   /**
    * hasComments.
    *
@@ -1554,7 +1531,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return hasComments
    **/
   @Schema(description = "")
@@ -1569,6 +1545,7 @@ public class Envelope {
     this.hasComments = hasComments;
   }
 
+
   /**
    * hasFormDataChanged.
    *
@@ -1581,7 +1558,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return hasFormDataChanged
    **/
   @Schema(description = "")
@@ -1596,6 +1572,7 @@ public class Envelope {
     this.hasFormDataChanged = hasFormDataChanged;
   }
 
+
   /**
    * hasWavFile.
    *
@@ -1608,7 +1585,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return hasWavFile
    **/
   @Schema(description = "")
@@ -1623,6 +1599,7 @@ public class Envelope {
     this.hasWavFile = hasWavFile;
   }
 
+
   /**
    * holder.
    *
@@ -1635,7 +1612,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return holder
    **/
   @Schema(description = "")
@@ -1650,6 +1626,7 @@ public class Envelope {
     this.holder = holder;
   }
 
+
   /**
    * initialSentDateTime.
    *
@@ -1662,7 +1639,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return initialSentDateTime
    **/
   @Schema(description = "")
@@ -1677,6 +1653,7 @@ public class Envelope {
     this.initialSentDateTime = initialSentDateTime;
   }
 
+
   /**
    * is21CFRPart11.
    *
@@ -1689,7 +1666,6 @@ public class Envelope {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
-   * 
    * @return is21CFRPart11
    **/
   @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
@@ -1704,6 +1680,7 @@ public class Envelope {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+
   /**
    * isDynamicEnvelope.
    *
@@ -1716,7 +1693,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return isDynamicEnvelope
    **/
   @Schema(description = "")
@@ -1731,6 +1707,7 @@ public class Envelope {
     this.isDynamicEnvelope = isDynamicEnvelope;
   }
 
+
   /**
    * isSignatureProviderEnvelope.
    *
@@ -1743,7 +1720,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return isSignatureProviderEnvelope
    **/
   @Schema(description = "")
@@ -1758,6 +1734,7 @@ public class Envelope {
     this.isSignatureProviderEnvelope = isSignatureProviderEnvelope;
   }
 
+
   /**
    * lastModifiedDateTime.
    *
@@ -1770,7 +1747,6 @@ public class Envelope {
 
   /**
    * The date and time the item was last modified..
-   * 
    * @return lastModifiedDateTime
    **/
   @Schema(description = "The date and time the item was last modified.")
@@ -1785,6 +1761,7 @@ public class Envelope {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
+
   /**
    * location.
    *
@@ -1797,7 +1774,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return location
    **/
   @Schema(description = "")
@@ -1812,6 +1788,7 @@ public class Envelope {
     this.location = location;
   }
 
+
   /**
    * lockInformation.
    *
@@ -1824,7 +1801,6 @@ public class Envelope {
 
   /**
    * Provides lock information about an envelope that a user has locked..
-   * 
    * @return lockInformation
    **/
   @Schema(description = "Provides lock information about an envelope that a user has locked.")
@@ -1839,6 +1815,7 @@ public class Envelope {
     this.lockInformation = lockInformation;
   }
 
+
   /**
    * messageLock.
    *
@@ -1850,13 +1827,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, prevents senders from changing the contents of
-   * `emailBlurb` and `emailSubject` properties for the envelope. Additionally,
-   * this prevents users from making changes to the contents of `emailBlurb` and
-   * `emailSubject` properties when correcting envelopes. However, if the
-   * `messageLock` node is set to true**** and the `emailSubject` property is
-   * empty, senders and correctors are able to add a subject to the envelope..
-   * 
+   * When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope.   Additionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes.   However, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope..
    * @return messageLock
    **/
   @Schema(description = "When set to **true**, prevents senders from changing the contents of `emailBlurb` and `emailSubject` properties for the envelope.   Additionally, this prevents users from making changes to the contents of `emailBlurb` and `emailSubject` properties when correcting envelopes.   However, if the `messageLock` node is set to true**** and the `emailSubject` property is empty, senders and correctors are able to add a subject to the envelope.")
@@ -1871,6 +1842,7 @@ public class Envelope {
     this.messageLock = messageLock;
   }
 
+
   /**
    * notification.
    *
@@ -1883,7 +1855,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return notification
    **/
   @Schema(description = "")
@@ -1898,6 +1869,7 @@ public class Envelope {
     this.notification = notification;
   }
 
+
   /**
    * notificationUri.
    *
@@ -1909,9 +1881,7 @@ public class Envelope {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the
-   * notifications..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve the notifications..
    * @return notificationUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the notifications.")
@@ -1926,6 +1896,7 @@ public class Envelope {
     this.notificationUri = notificationUri;
   }
 
+
   /**
    * powerForm.
    *
@@ -1938,7 +1909,6 @@ public class Envelope {
 
   /**
    * Information about any PowerForms that are included in the envelope..
-   * 
    * @return powerForm
    **/
   @Schema(description = "Information about any PowerForms that are included in the envelope.")
@@ -1953,6 +1923,7 @@ public class Envelope {
     this.powerForm = powerForm;
   }
 
+
   /**
    * purgeCompletedDate.
    *
@@ -1965,7 +1936,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return purgeCompletedDate
    **/
   @Schema(description = "")
@@ -1980,6 +1950,7 @@ public class Envelope {
     this.purgeCompletedDate = purgeCompletedDate;
   }
 
+
   /**
    * purgeRequestDate.
    *
@@ -1992,7 +1963,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return purgeRequestDate
    **/
   @Schema(description = "")
@@ -2007,6 +1977,7 @@ public class Envelope {
     this.purgeRequestDate = purgeRequestDate;
   }
 
+
   /**
    * purgeState.
    *
@@ -2019,7 +1990,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return purgeState
    **/
   @Schema(description = "")
@@ -2034,6 +2004,7 @@ public class Envelope {
     this.purgeState = purgeState;
   }
 
+
   /**
    * recipients.
    *
@@ -2045,12 +2016,10 @@ public class Envelope {
   }
 
   /**
-   * An array of recipient objects that provides details about the recipients of
-   * the envelope..
-   * 
+   * An array of powerform recipients..
    * @return recipients
    **/
-  @Schema(description = "An array of recipient objects that provides details about the recipients of the envelope.")
+  @Schema(description = "An array of powerform recipients.")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -2061,6 +2030,7 @@ public class Envelope {
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * recipientsLock.
@@ -2073,9 +2043,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, prevents senders from changing, correcting, or deleting
-   * the recipient information for the envelope..
-   * 
+   * When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope..
    * @return recipientsLock
    **/
   @Schema(description = "When set to **true**, prevents senders from changing, correcting, or deleting the recipient information for the envelope.")
@@ -2090,6 +2058,7 @@ public class Envelope {
     this.recipientsLock = recipientsLock;
   }
 
+
   /**
    * recipientsUri.
    *
@@ -2102,7 +2071,6 @@ public class Envelope {
 
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients..
-   * 
    * @return recipientsUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
@@ -2117,6 +2085,7 @@ public class Envelope {
     this.recipientsUri = recipientsUri;
   }
 
+
   /**
    * sender.
    *
@@ -2129,7 +2098,6 @@ public class Envelope {
 
   /**
    * Information about the sender of the envelope..
-   * 
    * @return sender
    **/
   @Schema(description = "Information about the sender of the envelope.")
@@ -2144,6 +2112,7 @@ public class Envelope {
     this.sender = sender;
   }
 
+
   /**
    * sentDateTime.
    *
@@ -2156,7 +2125,6 @@ public class Envelope {
 
   /**
    * The date and time the envelope was sent..
-   * 
    * @return sentDateTime
    **/
   @Schema(description = "The date and time the envelope was sent.")
@@ -2171,6 +2139,7 @@ public class Envelope {
     this.sentDateTime = sentDateTime;
   }
 
+
   /**
    * signerCanSignOnMobile.
    *
@@ -2183,7 +2152,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return signerCanSignOnMobile
    **/
   @Schema(description = "")
@@ -2198,6 +2166,7 @@ public class Envelope {
     this.signerCanSignOnMobile = signerCanSignOnMobile;
   }
 
+
   /**
    * signingLocation.
    *
@@ -2209,9 +2178,7 @@ public class Envelope {
   }
 
   /**
-   * Specifies the physical location where the signing takes place. It can have
-   * two enumeration values; InPerson and Online. The default value is Online..
-   * 
+   * Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online..
    * @return signingLocation
    **/
   @Schema(description = "Specifies the physical location where the signing takes place. It can have two enumeration values; InPerson and Online. The default value is Online.")
@@ -2226,6 +2193,7 @@ public class Envelope {
     this.signingLocation = signingLocation;
   }
 
+
   /**
    * status.
    *
@@ -2237,10 +2205,7 @@ public class Envelope {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. *created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  *created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  *created - The envelope is saved as a draft and can be modified and sent later.")
@@ -2255,6 +2220,7 @@ public class Envelope {
     this.status = status;
   }
 
+
   /**
    * statusChangedDateTime.
    *
@@ -2267,7 +2233,6 @@ public class Envelope {
 
   /**
    * The data and time the status changed..
-   * 
    * @return statusChangedDateTime
    **/
   @Schema(description = "The data and time the status changed.")
@@ -2282,6 +2247,7 @@ public class Envelope {
     this.statusChangedDateTime = statusChangedDateTime;
   }
 
+
   /**
    * statusDateTime.
    *
@@ -2294,7 +2260,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return statusDateTime
    **/
   @Schema(description = "")
@@ -2309,6 +2274,7 @@ public class Envelope {
     this.statusDateTime = statusDateTime;
   }
 
+
   /**
    * templatesUri.
    *
@@ -2321,7 +2287,6 @@ public class Envelope {
 
   /**
    * Contains a URI for an endpoint which you can use to retrieve the templates..
-   * 
    * @return templatesUri
    **/
   @Schema(description = "Contains a URI for an endpoint which you can use to retrieve the templates.")
@@ -2336,6 +2301,7 @@ public class Envelope {
     this.templatesUri = templatesUri;
   }
 
+
   /**
    * transactionId.
    *
@@ -2347,13 +2313,7 @@ public class Envelope {
   }
 
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid
-   * in the DocuSign system for 7 days. It is recommended that a transaction ID is
-   * used for offline signing to ensure that an envelope is not sent multiple
-   * times. The `transactionId` property can be used determine an envelope's
-   * status (i.e. was it created or not) in cases where the internet connection
-   * was lost before the envelope status was returned..
-   * 
+   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned..
    * @return transactionId
    **/
   @Schema(description = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
@@ -2368,6 +2328,7 @@ public class Envelope {
     this.transactionId = transactionId;
   }
 
+
   /**
    * useDisclosure.
    *
@@ -2379,14 +2340,7 @@ public class Envelope {
   }
 
   /**
-   * When set to **true**, the disclosure is shown to recipients in accordance
-   * with the account's Electronic Record and Signature Disclosure frequency
-   * setting. When set to **false**, the Electronic Record and Signature
-   * Disclosure is not shown to any envelope recipients. If the `useDisclosure`
-   * property is not set, then the account's normal disclosure setting is used and
-   * the value of the `useDisclosure` property is not returned in responses when
-   * getting envelope information..
-   * 
+   * When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information..
    * @return useDisclosure
    **/
   @Schema(description = "When set to **true**, the disclosure is shown to recipients in accordance with the account's Electronic Record and Signature Disclosure frequency setting. When set to **false**, the Electronic Record and Signature Disclosure is not shown to any envelope recipients.   If the `useDisclosure` property is not set, then the account's normal disclosure setting is used and the value of the `useDisclosure` property is not returned in responses when getting envelope information.")
@@ -2401,6 +2355,7 @@ public class Envelope {
     this.useDisclosure = useDisclosure;
   }
 
+
   /**
    * voidedDateTime.
    *
@@ -2413,7 +2368,6 @@ public class Envelope {
 
   /**
    * The date and time the envelope or template was voided..
-   * 
    * @return voidedDateTime
    **/
   @Schema(description = "The date and time the envelope or template was voided.")
@@ -2428,6 +2382,7 @@ public class Envelope {
     this.voidedDateTime = voidedDateTime;
   }
 
+
   /**
    * voidedReason.
    *
@@ -2440,7 +2395,6 @@ public class Envelope {
 
   /**
    * The reason the envelope or template was voided..
-   * 
    * @return voidedReason
    **/
   @Schema(description = "The reason the envelope or template was voided.")
@@ -2455,6 +2409,7 @@ public class Envelope {
     this.voidedReason = voidedReason;
   }
 
+
   /**
    * workflow.
    *
@@ -2467,7 +2422,6 @@ public class Envelope {
 
   /**
    * .
-   * 
    * @return workflow
    **/
   @Schema(description = "")
@@ -2481,6 +2435,7 @@ public class Envelope {
   public void setWorkflow(Workflow workflow) {
     this.workflow = workflow;
   }
+
 
   /**
    * Compares objects.
@@ -2582,20 +2537,9 @@ public class Envelope {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner,
-        asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock,
-        burnDefaultTabData, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields,
-        customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument,
-        documentBase64, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign,
-        enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId,
-        envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled,
-        externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime,
-        is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation,
-        messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState,
-        recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status,
-        statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason,
-        workflow);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templatesUri, transactionId, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
+
 
   /**
    * Converts the given object to string.
@@ -2604,7 +2548,7 @@ public class Envelope {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Envelope {\n");
-
+    
     sb.append("    accessControlListBase64: ").append(toIndentedString(accessControlListBase64)).append("\n");
     sb.append("    allowComments: ").append(toIndentedString(allowComments)).append("\n");
     sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
@@ -2700,3 +2644,4 @@ public class Envelope {
   }
 
 }
+

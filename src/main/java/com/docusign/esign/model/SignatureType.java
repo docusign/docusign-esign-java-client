@@ -21,6 +21,7 @@ public class SignatureType {
   @JsonProperty("type")
   private String type = null;
 
+
   /**
    * isDefault.
    *
@@ -33,7 +34,6 @@ public class SignatureType {
 
   /**
    * .
-   * 
    * @return isDefault
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class SignatureType {
     this.isDefault = isDefault;
   }
 
+
   /**
    * type.
    *
@@ -60,7 +61,6 @@ public class SignatureType {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -74,6 +74,7 @@ public class SignatureType {
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class SignatureType {
     return Objects.hash(isDefault, type);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class SignatureType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureType {\n");
-
+    
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class SignatureType {
   }
 
 }
+

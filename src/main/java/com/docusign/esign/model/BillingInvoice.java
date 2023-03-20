@@ -46,6 +46,7 @@ public class BillingInvoice {
   @JsonProperty("taxableAmount")
   private String taxableAmount = null;
 
+
   /**
    * amount.
    *
@@ -58,7 +59,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return amount
    **/
   @Schema(description = "Reserved: TBD")
@@ -73,6 +73,7 @@ public class BillingInvoice {
     this.amount = amount;
   }
 
+
   /**
    * balance.
    *
@@ -85,7 +86,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return balance
    **/
   @Schema(description = "Reserved: TBD")
@@ -100,6 +100,7 @@ public class BillingInvoice {
     this.balance = balance;
   }
 
+
   /**
    * dueDate.
    *
@@ -112,7 +113,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return dueDate
    **/
   @Schema(description = "Reserved: TBD")
@@ -127,6 +127,7 @@ public class BillingInvoice {
     this.dueDate = dueDate;
   }
 
+
   /**
    * invoiceId.
    *
@@ -139,7 +140,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return invoiceId
    **/
   @Schema(description = "Reserved: TBD")
@@ -154,6 +154,7 @@ public class BillingInvoice {
     this.invoiceId = invoiceId;
   }
 
+
   /**
    * invoiceItems.
    *
@@ -163,7 +164,7 @@ public class BillingInvoice {
     this.invoiceItems = invoiceItems;
     return this;
   }
-
+  
   /**
    * addInvoiceItemsItem.
    *
@@ -179,7 +180,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return invoiceItems
    **/
   @Schema(description = "Reserved: TBD")
@@ -194,6 +194,7 @@ public class BillingInvoice {
     this.invoiceItems = invoiceItems;
   }
 
+
   /**
    * invoiceNumber.
    *
@@ -206,7 +207,6 @@ public class BillingInvoice {
 
   /**
    * Reserved: TBD.
-   * 
    * @return invoiceNumber
    **/
   @Schema(description = "Reserved: TBD")
@@ -221,6 +221,7 @@ public class BillingInvoice {
     this.invoiceNumber = invoiceNumber;
   }
 
+
   /**
    * invoiceUri.
    *
@@ -232,9 +233,7 @@ public class BillingInvoice {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve invoice
-   * information..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve invoice information..
    * @return invoiceUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve invoice information.")
@@ -249,6 +248,7 @@ public class BillingInvoice {
     this.invoiceUri = invoiceUri;
   }
 
+
   /**
    * nonTaxableAmount.
    *
@@ -261,7 +261,6 @@ public class BillingInvoice {
 
   /**
    * .
-   * 
    * @return nonTaxableAmount
    **/
   @Schema(description = "")
@@ -276,6 +275,7 @@ public class BillingInvoice {
     this.nonTaxableAmount = nonTaxableAmount;
   }
 
+
   /**
    * pdfAvailable.
    *
@@ -288,7 +288,6 @@ public class BillingInvoice {
 
   /**
    * .
-   * 
    * @return pdfAvailable
    **/
   @Schema(description = "")
@@ -303,6 +302,7 @@ public class BillingInvoice {
     this.pdfAvailable = pdfAvailable;
   }
 
+
   /**
    * taxableAmount.
    *
@@ -315,7 +315,6 @@ public class BillingInvoice {
 
   /**
    * .
-   * 
    * @return taxableAmount
    **/
   @Schema(description = "")
@@ -329,6 +328,7 @@ public class BillingInvoice {
   public void setTaxableAmount(String taxableAmount) {
     this.taxableAmount = taxableAmount;
   }
+
 
   /**
    * Compares objects.
@@ -361,9 +361,9 @@ public class BillingInvoice {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount,
-        pdfAvailable, taxableAmount);
+    return Objects.hash(amount, balance, dueDate, invoiceId, invoiceItems, invoiceNumber, invoiceUri, nonTaxableAmount, pdfAvailable, taxableAmount);
   }
+
 
   /**
    * Converts the given object to string.
@@ -372,7 +372,7 @@ public class BillingInvoice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoice {\n");
-
+    
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    balance: ").append(toIndentedString(balance)).append("\n");
     sb.append("    dueDate: ").append(toIndentedString(dueDate)).append("\n");
@@ -399,3 +399,4 @@ public class BillingInvoice {
   }
 
 }
+

@@ -20,6 +20,7 @@ public class SmartContractInformation {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * code.
    *
@@ -32,7 +33,6 @@ public class SmartContractInformation {
 
   /**
    * .
-   * 
    * @return code
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class SmartContractInformation {
     this.code = code;
   }
 
+
   /**
    * uri.
    *
@@ -59,7 +60,6 @@ public class SmartContractInformation {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class SmartContractInformation {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class SmartContractInformation {
     return Objects.hash(code, uri);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class SmartContractInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartContractInformation {\n");
-
+    
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    uri: ").append(toIndentedString(uri)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class SmartContractInformation {
   }
 
 }
+

@@ -30,6 +30,7 @@ public class ConnectDebugLog {
   @JsonProperty("payload")
   private String payload = null;
 
+
   /**
    * connectConfig.
    *
@@ -42,7 +43,6 @@ public class ConnectDebugLog {
 
   /**
    * .
-   * 
    * @return connectConfig
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class ConnectDebugLog {
     this.connectConfig = connectConfig;
   }
 
+
   /**
    * errorDetails.
    *
@@ -68,12 +69,10 @@ public class ConnectDebugLog {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -84,6 +83,7 @@ public class ConnectDebugLog {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * eventDateTime.
@@ -97,7 +97,6 @@ public class ConnectDebugLog {
 
   /**
    * .
-   * 
    * @return eventDateTime
    **/
   @Schema(description = "")
@@ -112,6 +111,7 @@ public class ConnectDebugLog {
     this.eventDateTime = eventDateTime;
   }
 
+
   /**
    * eventDescription.
    *
@@ -124,7 +124,6 @@ public class ConnectDebugLog {
 
   /**
    * .
-   * 
    * @return eventDescription
    **/
   @Schema(description = "")
@@ -139,6 +138,7 @@ public class ConnectDebugLog {
     this.eventDescription = eventDescription;
   }
 
+
   /**
    * payload.
    *
@@ -151,7 +151,6 @@ public class ConnectDebugLog {
 
   /**
    * .
-   * 
    * @return payload
    **/
   @Schema(description = "")
@@ -165,6 +164,7 @@ public class ConnectDebugLog {
   public void setPayload(String payload) {
     this.payload = payload;
   }
+
 
   /**
    * Compares objects.
@@ -195,6 +195,7 @@ public class ConnectDebugLog {
     return Objects.hash(connectConfig, errorDetails, eventDateTime, eventDescription, payload);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -202,7 +203,7 @@ public class ConnectDebugLog {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectDebugLog {\n");
-
+    
     sb.append("    connectConfig: ").append(toIndentedString(connectConfig)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    eventDateTime: ").append(toIndentedString(eventDateTime)).append("\n");
@@ -224,3 +225,4 @@ public class ConnectDebugLog {
   }
 
 }
+

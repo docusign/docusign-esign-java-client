@@ -24,6 +24,7 @@ public class MobileNotifierConfiguration {
   @JsonProperty("platform")
   private String platform = null;
 
+
   /**
    * deviceId.
    *
@@ -36,7 +37,6 @@ public class MobileNotifierConfiguration {
 
   /**
    * .
-   * 
    * @return deviceId
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class MobileNotifierConfiguration {
     this.deviceId = deviceId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -62,12 +63,10 @@ public class MobileNotifierConfiguration {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -78,6 +77,7 @@ public class MobileNotifierConfiguration {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * platform.
@@ -91,7 +91,6 @@ public class MobileNotifierConfiguration {
 
   /**
    * .
-   * 
    * @return platform
    **/
   @Schema(description = "")
@@ -105,6 +104,7 @@ public class MobileNotifierConfiguration {
   public void setPlatform(String platform) {
     this.platform = platform;
   }
+
 
   /**
    * Compares objects.
@@ -133,6 +133,7 @@ public class MobileNotifierConfiguration {
     return Objects.hash(deviceId, errorDetails, platform);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -140,7 +141,7 @@ public class MobileNotifierConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MobileNotifierConfiguration {\n");
-
+    
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
@@ -160,3 +161,4 @@ public class MobileNotifierConfiguration {
   }
 
 }
+

@@ -27,6 +27,7 @@ public class CommentHistoryResult {
   @JsonProperty("startTimetoken")
   private String startTimetoken = null;
 
+
   /**
    * comments.
    *
@@ -36,7 +37,7 @@ public class CommentHistoryResult {
     this.comments = comments;
     return this;
   }
-
+  
   /**
    * addCommentsItem.
    *
@@ -52,7 +53,6 @@ public class CommentHistoryResult {
 
   /**
    * .
-   * 
    * @return comments
    **/
   @Schema(description = "")
@@ -67,6 +67,7 @@ public class CommentHistoryResult {
     this.comments = comments;
   }
 
+
   /**
    * count.
    *
@@ -79,7 +80,6 @@ public class CommentHistoryResult {
 
   /**
    * .
-   * 
    * @return count
    **/
   @Schema(description = "")
@@ -94,6 +94,7 @@ public class CommentHistoryResult {
     this.count = count;
   }
 
+
   /**
    * endTimetoken.
    *
@@ -106,7 +107,6 @@ public class CommentHistoryResult {
 
   /**
    * .
-   * 
    * @return endTimetoken
    **/
   @Schema(description = "")
@@ -121,6 +121,7 @@ public class CommentHistoryResult {
     this.endTimetoken = endTimetoken;
   }
 
+
   /**
    * startTimetoken.
    *
@@ -133,7 +134,6 @@ public class CommentHistoryResult {
 
   /**
    * .
-   * 
    * @return startTimetoken
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class CommentHistoryResult {
   public void setStartTimetoken(String startTimetoken) {
     this.startTimetoken = startTimetoken;
   }
+
 
   /**
    * Compares objects.
@@ -176,6 +177,7 @@ public class CommentHistoryResult {
     return Objects.hash(comments, count, endTimetoken, startTimetoken);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -183,7 +185,7 @@ public class CommentHistoryResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentHistoryResult {\n");
-
+    
     sb.append("    comments: ").append(toIndentedString(comments)).append("\n");
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    endTimetoken: ").append(toIndentedString(endTimetoken)).append("\n");
@@ -204,3 +206,4 @@ public class CommentHistoryResult {
   }
 
 }
+

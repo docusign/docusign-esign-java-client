@@ -24,6 +24,7 @@ public class BrandsResponse {
   @JsonProperty("senderBrandIdDefault")
   private String senderBrandIdDefault = null;
 
+
   /**
    * brands.
    *
@@ -33,7 +34,7 @@ public class BrandsResponse {
     this.brands = brands;
     return this;
   }
-
+  
   /**
    * addBrandsItem.
    *
@@ -49,7 +50,6 @@ public class BrandsResponse {
 
   /**
    * The list of brands..
-   * 
    * @return brands
    **/
   @Schema(description = "The list of brands.")
@@ -64,6 +64,7 @@ public class BrandsResponse {
     this.brands = brands;
   }
 
+
   /**
    * recipientBrandIdDefault.
    *
@@ -76,7 +77,6 @@ public class BrandsResponse {
 
   /**
    * The brand seen by envelope recipients when a brand is not explicitly set..
-   * 
    * @return recipientBrandIdDefault
    **/
   @Schema(description = "The brand seen by envelope recipients when a brand is not explicitly set.")
@@ -91,6 +91,7 @@ public class BrandsResponse {
     this.recipientBrandIdDefault = recipientBrandIdDefault;
   }
 
+
   /**
    * senderBrandIdDefault.
    *
@@ -103,7 +104,6 @@ public class BrandsResponse {
 
   /**
    * The brand seen by envelope senders when a brand is not explicitly set..
-   * 
    * @return senderBrandIdDefault
    **/
   @Schema(description = "The brand seen by envelope senders when a brand is not explicitly set.")
@@ -117,6 +117,7 @@ public class BrandsResponse {
   public void setSenderBrandIdDefault(String senderBrandIdDefault) {
     this.senderBrandIdDefault = senderBrandIdDefault;
   }
+
 
   /**
    * Compares objects.
@@ -145,6 +146,7 @@ public class BrandsResponse {
     return Objects.hash(brands, recipientBrandIdDefault, senderBrandIdDefault);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -152,7 +154,7 @@ public class BrandsResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandsResponse {\n");
-
+    
     sb.append("    brands: ").append(toIndentedString(brands)).append("\n");
     sb.append("    recipientBrandIdDefault: ").append(toIndentedString(recipientBrandIdDefault)).append("\n");
     sb.append("    senderBrandIdDefault: ").append(toIndentedString(senderBrandIdDefault)).append("\n");
@@ -172,3 +174,4 @@ public class BrandsResponse {
   }
 
 }
+

@@ -26,6 +26,7 @@ public class AskAnAdmin {
   @JsonProperty("phone")
   private String phone = null;
 
+
   /**
    * email.
    *
@@ -38,7 +39,6 @@ public class AskAnAdmin {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class AskAnAdmin {
     this.email = email;
   }
 
+
   /**
    * message.
    *
@@ -65,7 +66,6 @@ public class AskAnAdmin {
 
   /**
    * .
-   * 
    * @return message
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class AskAnAdmin {
     this.message = message;
   }
 
+
   /**
    * name.
    *
@@ -92,7 +93,6 @@ public class AskAnAdmin {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class AskAnAdmin {
     this.name = name;
   }
 
+
   /**
    * phone.
    *
@@ -119,7 +120,6 @@ public class AskAnAdmin {
 
   /**
    * .
-   * 
    * @return phone
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class AskAnAdmin {
   public void setPhone(String phone) {
     this.phone = phone;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class AskAnAdmin {
     return Objects.hash(email, message, name, phone);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class AskAnAdmin {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AskAnAdmin {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -190,3 +192,4 @@ public class AskAnAdmin {
   }
 
 }
+

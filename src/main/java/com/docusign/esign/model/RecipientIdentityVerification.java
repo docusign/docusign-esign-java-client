@@ -11,14 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Specifies ID Verification applied on an envelope by workflow ID. See the
- * [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/)
- * method in the
- * [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/)
- * resource for more information on how to retrieve workflow IDs available for
- * an account. This can be used in addition to other [recipient
- * authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication)
- * methods..
+ * Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods..
  *
  */
 @Schema(description = "Specifies ID Verification applied on an envelope by workflow ID. See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods.")
@@ -36,6 +29,7 @@ public class RecipientIdentityVerification {
   @JsonProperty("workflowLabel")
   private String workflowLabel = null;
 
+
   /**
    * inputOptions.
    *
@@ -45,7 +39,7 @@ public class RecipientIdentityVerification {
     this.inputOptions = inputOptions;
     return this;
   }
-
+  
   /**
    * addInputOptionsItem.
    *
@@ -61,7 +55,6 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   * 
    * @return inputOptions
    **/
   @Schema(description = "")
@@ -76,6 +69,7 @@ public class RecipientIdentityVerification {
     this.inputOptions = inputOptions;
   }
 
+
   /**
    * workflowId.
    *
@@ -88,7 +82,6 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   * 
    * @return workflowId
    **/
   @Schema(description = "")
@@ -103,6 +96,7 @@ public class RecipientIdentityVerification {
     this.workflowId = workflowId;
   }
 
+
   /**
    * workflowIdMetadata.
    *
@@ -115,7 +109,6 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   * 
    * @return workflowIdMetadata
    **/
   @Schema(description = "")
@@ -130,6 +123,7 @@ public class RecipientIdentityVerification {
     this.workflowIdMetadata = workflowIdMetadata;
   }
 
+
   /**
    * workflowLabel.
    *
@@ -142,7 +136,6 @@ public class RecipientIdentityVerification {
 
   /**
    * .
-   * 
    * @return workflowLabel
    **/
   @Schema(description = "")
@@ -156,6 +149,7 @@ public class RecipientIdentityVerification {
   public void setWorkflowLabel(String workflowLabel) {
     this.workflowLabel = workflowLabel;
   }
+
 
   /**
    * Compares objects.
@@ -185,6 +179,7 @@ public class RecipientIdentityVerification {
     return Objects.hash(inputOptions, workflowId, workflowIdMetadata, workflowLabel);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -192,7 +187,7 @@ public class RecipientIdentityVerification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityVerification {\n");
-
+    
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("    workflowIdMetadata: ").append(toIndentedString(workflowIdMetadata)).append("\n");
@@ -213,3 +208,4 @@ public class RecipientIdentityVerification {
   }
 
 }
+

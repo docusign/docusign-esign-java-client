@@ -11,27 +11,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element that specifies the notification options for the envelope.
- * It consists of: * useAccountDefaults - When set to **true**, the account
- * default notification settings are used for the envelope. * reminders - A
- * complex element that specifies reminder settings for the envelope. It
- * consists of: * reminderEnabled - When set to **true**, a reminder message is
- * sent to the recipient. * reminderDelay - An interger that sets the number of
- * days after the recipient receives the envelope that reminder emails are sent
- * to the recipient. * reminderFrequency - An interger that sets the interval,
- * in days, between reminder emails. * expirations - A complex element that
- * specifies the expiration settings for the envelope. It consists of: *
- * expireEnabled - When set to **true**, the envelope expires (is no longer
- * available for signing) in the set number of days. If false, the account
- * default setting is used. If the account does not have an expiration setting,
- * the DocuSign default value of 120 days is used. * expireAfter - An integer
- * that sets the number of days the envelope is active. * expireWarn - An
- * integer that sets the number of days before envelope expiration that an
- * expiration warning email is sent to the recipient. If set to 0 (zero), no
- * warning email is sent..
+ * A complex element that specifies the notification options for the envelope. It consists of:  * useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope.  * reminders - A complex element that specifies reminder settings for the envelope. It consists of:      * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.    * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.     * reminderFrequency - An interger that sets the interval, in days, between reminder emails.   * expirations - A complex element that specifies the expiration settings for the envelope. It consists of:     * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.     * expireAfter - An integer that sets the number of days the envelope is active.    * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent..
  *
  */
-@Schema(description = "A complex element that specifies the notification options for the envelope. It consists of:  * useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope.  * reminders - A complex element that specifies reminder settings for the envelope. It consists of:      * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.    * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.     * reminderFrequency - An interger that sets the interval, in days, between reminder emails.   * expirations - A complex element that specifies the expiration settings for the envelope. It consists of:     * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default description of 120 days is used.     * expireAfter - An integer that sets the number of days the envelope is active.    * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
+@Schema(description = "A complex element that specifies the notification options for the envelope. It consists of:  * useAccountDefaults - When set to **true**, the account default notification settings are used for the envelope.  * reminders - A complex element that specifies reminder settings for the envelope. It consists of:      * reminderEnabled - When set to **true**, a reminder message is sent to the recipient.    * reminderDelay - An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.     * reminderFrequency - An interger that sets the interval, in days, between reminder emails.   * expirations - A complex element that specifies the expiration settings for the envelope. It consists of:     * expireEnabled - When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.     * expireAfter - An integer that sets the number of days the envelope is active.    * expireWarn - An integer that sets the number of days before envelope expiration that an expiration warning email is sent to the recipient. If set to 0 (zero), no warning email is sent.")
 
 public class Notification {
   @JsonProperty("expirations")
@@ -42,6 +25,7 @@ public class Notification {
 
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
+
 
   /**
    * expirations.
@@ -55,7 +39,6 @@ public class Notification {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
-   * 
    * @return expirations
    **/
   @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
@@ -70,6 +53,7 @@ public class Notification {
     this.expirations = expirations;
   }
 
+
   /**
    * reminders.
    *
@@ -82,7 +66,6 @@ public class Notification {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
-   * 
    * @return reminders
    **/
   @Schema(description = "A complex element that specifies reminder settings for the envelope.")
@@ -97,6 +80,7 @@ public class Notification {
     this.reminders = reminders;
   }
 
+
   /**
    * useAccountDefaults.
    *
@@ -108,9 +92,7 @@ public class Notification {
   }
 
   /**
-   * When set to **true**, the account default notification settings are used for
-   * the envelope..
-   * 
+   * When set to **true**, the account default notification settings are used for the envelope..
    * @return useAccountDefaults
    **/
   @Schema(description = "When set to **true**, the account default notification settings are used for the envelope.")
@@ -124,6 +106,7 @@ public class Notification {
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
+
 
   /**
    * Compares objects.
@@ -152,6 +135,7 @@ public class Notification {
     return Objects.hash(expirations, reminders, useAccountDefaults);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -159,7 +143,7 @@ public class Notification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notification {\n");
-
+    
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
     sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
@@ -179,3 +163,4 @@ public class Notification {
   }
 
 }
+

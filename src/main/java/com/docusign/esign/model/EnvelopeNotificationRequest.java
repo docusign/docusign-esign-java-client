@@ -26,6 +26,7 @@ public class EnvelopeNotificationRequest {
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
 
+
   /**
    * expirations.
    *
@@ -38,7 +39,6 @@ public class EnvelopeNotificationRequest {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
-   * 
    * @return expirations
    **/
   @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
@@ -53,6 +53,7 @@ public class EnvelopeNotificationRequest {
     this.expirations = expirations;
   }
 
+
   /**
    * reminders.
    *
@@ -65,7 +66,6 @@ public class EnvelopeNotificationRequest {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
-   * 
    * @return reminders
    **/
   @Schema(description = "A complex element that specifies reminder settings for the envelope.")
@@ -80,6 +80,7 @@ public class EnvelopeNotificationRequest {
     this.reminders = reminders;
   }
 
+
   /**
    * useAccountDefaults.
    *
@@ -92,7 +93,6 @@ public class EnvelopeNotificationRequest {
 
   /**
    * .
-   * 
    * @return useAccountDefaults
    **/
   @Schema(description = "")
@@ -106,6 +106,7 @@ public class EnvelopeNotificationRequest {
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
+
 
   /**
    * Compares objects.
@@ -134,6 +135,7 @@ public class EnvelopeNotificationRequest {
     return Objects.hash(expirations, reminders, useAccountDefaults);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -141,7 +143,7 @@ public class EnvelopeNotificationRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeNotificationRequest {\n");
-
+    
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
     sb.append("    useAccountDefaults: ").append(toIndentedString(useAccountDefaults)).append("\n");
@@ -161,3 +163,4 @@ public class EnvelopeNotificationRequest {
   }
 
 }
+

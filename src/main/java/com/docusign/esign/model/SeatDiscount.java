@@ -24,6 +24,7 @@ public class SeatDiscount {
   @JsonProperty("endSeatCount")
   private String endSeatCount = null;
 
+
   /**
    * beginSeatCount.
    *
@@ -36,7 +37,6 @@ public class SeatDiscount {
 
   /**
    * Reserved: TBD.
-   * 
    * @return beginSeatCount
    **/
   @Schema(description = "Reserved: TBD")
@@ -51,6 +51,7 @@ public class SeatDiscount {
     this.beginSeatCount = beginSeatCount;
   }
 
+
   /**
    * discountPercent.
    *
@@ -63,7 +64,6 @@ public class SeatDiscount {
 
   /**
    * .
-   * 
    * @return discountPercent
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class SeatDiscount {
     this.discountPercent = discountPercent;
   }
 
+
   /**
    * endSeatCount.
    *
@@ -90,7 +91,6 @@ public class SeatDiscount {
 
   /**
    * Reserved: TBD.
-   * 
    * @return endSeatCount
    **/
   @Schema(description = "Reserved: TBD")
@@ -104,6 +104,7 @@ public class SeatDiscount {
   public void setEndSeatCount(String endSeatCount) {
     this.endSeatCount = endSeatCount;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +133,7 @@ public class SeatDiscount {
     return Objects.hash(beginSeatCount, discountPercent, endSeatCount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +141,7 @@ public class SeatDiscount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SeatDiscount {\n");
-
+    
     sb.append("    beginSeatCount: ").append(toIndentedString(beginSeatCount)).append("\n");
     sb.append("    discountPercent: ").append(toIndentedString(discountPercent)).append("\n");
     sb.append("    endSeatCount: ").append(toIndentedString(endSeatCount)).append("\n");
@@ -159,3 +161,4 @@ public class SeatDiscount {
   }
 
 }
+

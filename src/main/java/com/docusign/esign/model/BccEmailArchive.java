@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information abut a BCC email archive configuration (a
- * BCC email address used to archive DocuSign-generated emails)..
+ * This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails)..
  *
  */
 @Schema(description = "This object contains information abut a BCC email archive configuration (a BCC email address used to archive DocuSign-generated emails).")
@@ -47,6 +46,7 @@ public class BccEmailArchive {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * accountId.
    *
@@ -59,7 +59,6 @@ public class BccEmailArchive {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -74,6 +73,7 @@ public class BccEmailArchive {
     this.accountId = accountId;
   }
 
+
   /**
    * bccEmailArchiveId.
    *
@@ -86,7 +86,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return bccEmailArchiveId
    **/
   @Schema(description = "")
@@ -101,6 +100,7 @@ public class BccEmailArchive {
     this.bccEmailArchiveId = bccEmailArchiveId;
   }
 
+
   /**
    * created.
    *
@@ -113,7 +113,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return created
    **/
   @Schema(description = "")
@@ -128,6 +127,7 @@ public class BccEmailArchive {
     this.created = created;
   }
 
+
   /**
    * createdBy.
    *
@@ -140,7 +140,6 @@ public class BccEmailArchive {
 
   /**
    * Details about the user who created the BCC email archive configuration..
-   * 
    * @return createdBy
    **/
   @Schema(description = "Details about the user who created the BCC email archive configuration.")
@@ -155,6 +154,7 @@ public class BccEmailArchive {
     this.createdBy = createdBy;
   }
 
+
   /**
    * email.
    *
@@ -167,7 +167,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -182,6 +181,7 @@ public class BccEmailArchive {
     this.email = email;
   }
 
+
   /**
    * emailNotificationId.
    *
@@ -194,7 +194,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return emailNotificationId
    **/
   @Schema(description = "")
@@ -209,6 +208,7 @@ public class BccEmailArchive {
     this.emailNotificationId = emailNotificationId;
   }
 
+
   /**
    * modified.
    *
@@ -221,7 +221,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return modified
    **/
   @Schema(description = "")
@@ -236,6 +235,7 @@ public class BccEmailArchive {
     this.modified = modified;
   }
 
+
   /**
    * modifiedBy.
    *
@@ -247,9 +247,7 @@ public class BccEmailArchive {
   }
 
   /**
-   * Details about the user who last modified the BCC email archive
-   * configuration..
-   * 
+   * Details about the user who last modified the BCC email archive configuration..
    * @return modifiedBy
    **/
   @Schema(description = "Details about the user who last modified the BCC email archive configuration.")
@@ -264,6 +262,7 @@ public class BccEmailArchive {
     this.modifiedBy = modifiedBy;
   }
 
+
   /**
    * status.
    *
@@ -275,10 +274,7 @@ public class BccEmailArchive {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -293,6 +289,7 @@ public class BccEmailArchive {
     this.status = status;
   }
 
+
   /**
    * uri.
    *
@@ -305,7 +302,6 @@ public class BccEmailArchive {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -319,6 +315,7 @@ public class BccEmailArchive {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -351,9 +348,9 @@ public class BccEmailArchive {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, bccEmailArchiveId, created, createdBy, email, emailNotificationId, modified,
-        modifiedBy, status, uri);
+    return Objects.hash(accountId, bccEmailArchiveId, created, createdBy, email, emailNotificationId, modified, modifiedBy, status, uri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -362,7 +359,7 @@ public class BccEmailArchive {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchive {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    bccEmailArchiveId: ").append(toIndentedString(bccEmailArchiveId)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -389,3 +386,4 @@ public class BccEmailArchive {
   }
 
 }
+

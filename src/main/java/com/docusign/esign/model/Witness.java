@@ -31,9 +31,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex type containing information about a witness recipient. Witnesses
- * are recipients whose signatures affirm that the identified signers have
- * signed the documents in the envelope..
+ * A complex type containing information about a witness recipient. Witnesses are recipients whose signatures affirm that the identified signers have signed the documents in the envelope..
  *
  */
 @Schema(description = "A complex type containing information about a witness recipient. Witnesses are recipients whose signatures affirm that the identified signers have signed the documents in the envelope.")
@@ -68,6 +66,9 @@ public class Witness {
 
   @JsonProperty("bulkRecipientsUri")
   private String bulkRecipientsUri = null;
+
+  @JsonProperty("bulkSendV2Recipient")
+  private String bulkSendV2Recipient = null;
 
   @JsonProperty("canSignOffline")
   private String canSignOffline = null;
@@ -336,6 +337,7 @@ public class Witness {
   @JsonProperty("witnessForGuid")
   private String witnessForGuid = null;
 
+
   /**
    * accessCode.
    *
@@ -347,13 +349,7 @@ public class Witness {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code
-   * to view and sign the envelope. Maximum Length: 50 characters and it must
-   * conform to the account's access code format setting. If blank, but the signer
-   * `accessCode` property is set in the envelope, then that value is used. If
-   * blank and the signer `accessCode` property is not set, then the access code
-   * is not required..
-   * 
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
    **/
   @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
@@ -368,6 +364,7 @@ public class Witness {
     this.accessCode = accessCode;
   }
 
+
   /**
    * accessCodeMetadata.
    *
@@ -379,9 +376,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `accessCode` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `accessCode` property is editable. This property is read-only..
    * @return accessCodeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `accessCode` property is editable. This property is read-only.")
@@ -396,6 +391,7 @@ public class Witness {
     this.accessCodeMetadata = accessCodeMetadata;
   }
 
+
   /**
    * addAccessCodeToEmail.
    *
@@ -407,10 +403,7 @@ public class Witness {
   }
 
   /**
-   * This Optional attribute indicates that the access code will be added to the
-   * email sent to the recipient; this nullifies the Security measure of Access
-   * Code on the recipient..
-   * 
+   * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient..
    * @return addAccessCodeToEmail
    **/
   @Schema(description = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
@@ -425,6 +418,7 @@ public class Witness {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
   }
 
+
   /**
    * additionalNotifications.
    *
@@ -434,7 +428,7 @@ public class Witness {
     this.additionalNotifications = additionalNotifications;
     return this;
   }
-
+  
   /**
    * addAdditionalNotificationsItem.
    *
@@ -450,7 +444,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return additionalNotifications
    **/
   @Schema(description = "")
@@ -465,6 +458,7 @@ public class Witness {
     this.additionalNotifications = additionalNotifications;
   }
 
+
   /**
    * agentCanEditEmail.
    *
@@ -477,7 +471,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return agentCanEditEmail
    **/
   @Schema(description = "")
@@ -492,6 +485,7 @@ public class Witness {
     this.agentCanEditEmail = agentCanEditEmail;
   }
 
+
   /**
    * agentCanEditName.
    *
@@ -504,7 +498,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return agentCanEditName
    **/
   @Schema(description = "")
@@ -519,6 +512,7 @@ public class Witness {
     this.agentCanEditName = agentCanEditName;
   }
 
+
   /**
    * allowSystemOverrideForLockedRecipient.
    *
@@ -531,7 +525,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return allowSystemOverrideForLockedRecipient
    **/
   @Schema(description = "")
@@ -546,6 +539,7 @@ public class Witness {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
+
   /**
    * autoNavigation.
    *
@@ -558,7 +552,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return autoNavigation
    **/
   @Schema(description = "")
@@ -573,6 +566,7 @@ public class Witness {
     this.autoNavigation = autoNavigation;
   }
 
+
   /**
    * autoRespondedReason.
    *
@@ -585,7 +579,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return autoRespondedReason
    **/
   @Schema(description = "")
@@ -600,6 +593,7 @@ public class Witness {
     this.autoRespondedReason = autoRespondedReason;
   }
 
+
   /**
    * bulkRecipientsUri.
    *
@@ -611,9 +605,7 @@ public class Witness {
   }
 
   /**
-   * Contains a URI for an endpoint that allows you to easily retrieve bulk
-   * recipient information..
-   * 
+   * Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information..
    * @return bulkRecipientsUri
    **/
   @Schema(description = "Contains a URI for an endpoint that allows you to easily retrieve bulk recipient information.")
@@ -628,6 +620,34 @@ public class Witness {
     this.bulkRecipientsUri = bulkRecipientsUri;
   }
 
+
+  /**
+   * bulkSendV2Recipient.
+   *
+   * @return Witness
+   **/
+  public Witness bulkSendV2Recipient(String bulkSendV2Recipient) {
+    this.bulkSendV2Recipient = bulkSendV2Recipient;
+    return this;
+  }
+
+  /**
+   * .
+   * @return bulkSendV2Recipient
+   **/
+  @Schema(description = "")
+  public String getBulkSendV2Recipient() {
+    return bulkSendV2Recipient;
+  }
+
+  /**
+   * setBulkSendV2Recipient.
+   **/
+  public void setBulkSendV2Recipient(String bulkSendV2Recipient) {
+    this.bulkSendV2Recipient = bulkSendV2Recipient;
+  }
+
+
   /**
    * canSignOffline.
    *
@@ -639,9 +659,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true**, specifies that the signer can perform the signing
-   * ceremony offline..
-   * 
+   * When set to **true**, specifies that the signer can perform the signing ceremony offline..
    * @return canSignOffline
    **/
   @Schema(description = "When set to **true**, specifies that the signer can perform the signing ceremony offline.")
@@ -656,6 +674,7 @@ public class Witness {
     this.canSignOffline = canSignOffline;
   }
 
+
   /**
    * clientUserId.
    *
@@ -667,12 +686,7 @@ public class Witness {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
-   * property is not null then the recipient is embedded. Note that if the
-   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
-   * `SignerMustLoginToSign` property of the account settings is set to **true**,
-   * an error is generated on sending.ng. Maximum length: 100 characters. .
-   * 
+   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
    * @return clientUserId
    **/
   @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
@@ -687,6 +701,7 @@ public class Witness {
     this.clientUserId = clientUserId;
   }
 
+
   /**
    * completedCount.
    *
@@ -699,7 +714,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return completedCount
    **/
   @Schema(description = "")
@@ -714,6 +728,7 @@ public class Witness {
     this.completedCount = completedCount;
   }
 
+
   /**
    * consentDetailsList.
    *
@@ -723,7 +738,7 @@ public class Witness {
     this.consentDetailsList = consentDetailsList;
     return this;
   }
-
+  
   /**
    * addConsentDetailsListItem.
    *
@@ -739,7 +754,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return consentDetailsList
    **/
   @Schema(description = "")
@@ -754,6 +768,7 @@ public class Witness {
     this.consentDetailsList = consentDetailsList;
   }
 
+
   /**
    * creationReason.
    *
@@ -766,7 +781,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return creationReason
    **/
   @Schema(description = "")
@@ -781,6 +795,7 @@ public class Witness {
     this.creationReason = creationReason;
   }
 
+
   /**
    * customFields.
    *
@@ -790,7 +805,7 @@ public class Witness {
     this.customFields = customFields;
     return this;
   }
-
+  
   /**
    * addCustomFieldsItem.
    *
@@ -805,11 +820,7 @@ public class Witness {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data
-   * about the recipient. This information is returned in the envelope status but
-   * otherwise not used by DocuSign. Each customField string can be a maximum of
-   * 100 characters..
-   * 
+   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
    * @return customFields
    **/
   @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
@@ -824,6 +835,7 @@ public class Witness {
     this.customFields = customFields;
   }
 
+
   /**
    * declinedDateTime.
    *
@@ -836,7 +848,6 @@ public class Witness {
 
   /**
    * The date and time the recipient declined the document..
-   * 
    * @return declinedDateTime
    **/
   @Schema(description = "The date and time the recipient declined the document.")
@@ -851,6 +862,7 @@ public class Witness {
     this.declinedDateTime = declinedDateTime;
   }
 
+
   /**
    * declinedReason.
    *
@@ -863,7 +875,6 @@ public class Witness {
 
   /**
    * The reason the recipient declined the document..
-   * 
    * @return declinedReason
    **/
   @Schema(description = "The reason the recipient declined the document.")
@@ -878,6 +889,7 @@ public class Witness {
     this.declinedReason = declinedReason;
   }
 
+
   /**
    * defaultRecipient.
    *
@@ -890,7 +902,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return defaultRecipient
    **/
   @Schema(description = "")
@@ -905,6 +916,7 @@ public class Witness {
     this.defaultRecipient = defaultRecipient;
   }
 
+
   /**
    * delegatedBy.
    *
@@ -917,7 +929,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return delegatedBy
    **/
   @Schema(description = "")
@@ -932,6 +943,7 @@ public class Witness {
     this.delegatedBy = delegatedBy;
   }
 
+
   /**
    * delegatedTo.
    *
@@ -941,7 +953,7 @@ public class Witness {
     this.delegatedTo = delegatedTo;
     return this;
   }
-
+  
   /**
    * addDelegatedToItem.
    *
@@ -957,7 +969,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return delegatedTo
    **/
   @Schema(description = "")
@@ -972,6 +983,7 @@ public class Witness {
     this.delegatedTo = delegatedTo;
   }
 
+
   /**
    * deliveredDateTime.
    *
@@ -984,7 +996,6 @@ public class Witness {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveredDateTime
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -999,6 +1010,7 @@ public class Witness {
     this.deliveredDateTime = deliveredDateTime;
   }
 
+
   /**
    * deliveryMethod.
    *
@@ -1011,7 +1023,6 @@ public class Witness {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveryMethod
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -1026,6 +1037,7 @@ public class Witness {
     this.deliveryMethod = deliveryMethod;
   }
 
+
   /**
    * deliveryMethodMetadata.
    *
@@ -1038,7 +1050,6 @@ public class Witness {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return deliveryMethodMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1053,6 +1064,7 @@ public class Witness {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
   }
 
+
   /**
    * designatorId.
    *
@@ -1065,7 +1077,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return designatorId
    **/
   @Schema(description = "")
@@ -1080,6 +1091,7 @@ public class Witness {
     this.designatorId = designatorId;
   }
 
+
   /**
    * designatorIdGuid.
    *
@@ -1092,7 +1104,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return designatorIdGuid
    **/
   @Schema(description = "")
@@ -1107,6 +1118,7 @@ public class Witness {
     this.designatorIdGuid = designatorIdGuid;
   }
 
+
   /**
    * documentVisibility.
    *
@@ -1116,7 +1128,7 @@ public class Witness {
     this.documentVisibility = documentVisibility;
     return this;
   }
-
+  
   /**
    * addDocumentVisibilityItem.
    *
@@ -1132,7 +1144,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return documentVisibility
    **/
   @Schema(description = "")
@@ -1147,6 +1158,7 @@ public class Witness {
     this.documentVisibility = documentVisibility;
   }
 
+
   /**
    * email.
    *
@@ -1159,7 +1171,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -1174,6 +1185,7 @@ public class Witness {
     this.email = email;
   }
 
+
   /**
    * emailMetadata.
    *
@@ -1185,9 +1197,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `email` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `email` property is editable. This property is read-only..
    * @return emailMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `email` property is editable. This property is read-only.")
@@ -1202,6 +1212,7 @@ public class Witness {
     this.emailMetadata = emailMetadata;
   }
 
+
   /**
    * emailNotification.
    *
@@ -1213,15 +1224,10 @@ public class Witness {
   }
 
   /**
-   * An optional complex type that sets a specific email subject and body for this
-   * recipient's notification email. **Note:** You can set the `emailNotification`
-   * property separately for each recipient. If you set the value only for certain
-   * recipients, the other recipients will inherit the this value from the
-   * top-level `emailSubject` and `emailBlurb`. .
-   * 
+   * A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. .
    * @return emailNotification
    **/
-  @Schema(description = "An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. ")
+  @Schema(description = "A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. ")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -1232,6 +1238,7 @@ public class Witness {
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
+
 
   /**
    * emailRecipientPostSigningURL.
@@ -1245,7 +1252,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return emailRecipientPostSigningURL
    **/
   @Schema(description = "")
@@ -1260,6 +1266,7 @@ public class Witness {
     this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
+
   /**
    * embeddedRecipientStartURL.
    *
@@ -1271,39 +1278,7 @@ public class Witness {
   }
 
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded
-   * recipient. When using this option, the embedded recipient still receives an
-   * email from DocuSign, just as a remote recipient would. When the document link
-   * in the email is clicked the recipient is redirected, through DocuSign, to the
-   * supplied URL to complete their actions. When routing to the URL, the sender's
-   * system (the server responding to the URL) must request a recipient token to
-   * launch a signing session. If set to `SIGN_AT_DOCUSIGN`, the recipient is
-   * directed to an embedded signing or viewing process directly at DocuSign. The
-   * signing or viewing action is initiated by the DocuSign system and the
-   * transaction activity and Certificate of Completion records will reflect this.
-   * In all other ways the process is identical to an embedded signing or viewing
-   * operation that is launched by any partner. It is important to remember that
-   * in a typical embedded workflow the authentication of an embedded recipient is
-   * the responsibility of the sending application, DocuSign expects that senders
-   * will follow their own process for establishing the recipient's identity. In
-   * this workflow the recipient goes through the sending application before the
-   * embedded signing or viewing process in initiated. However, when the sending
-   * application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient
-   * goes directly to the embedded signing or viewing process bypassing the
-   * sending application and any authentication steps the sending application
-   * would use. In this case, DocuSign recommends that you use one of the normal
-   * DocuSign authentication features (Access Code, Phone Authentication, SMS
-   * Authentication, etc.) to verify the identity of the recipient. If the
-   * `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is
-   * set, DocuSign will ignore the redirect URL and launch the standard signing
-   * process for the email recipient. Information can be appended to the embedded
-   * recipient start URL using merge fields. The available merge fields items are:
-   * envelopeId, recipientId, recipientName, recipientEmail, and customFields. The
-   * `customFields` property must be set fort the recipient or envelope. The merge
-   * fields are enclosed in double brackets. *Example*:
-   * `http://senderHost/[[mergeField1]]/ beginSigningSession?
-   * [[mergeField2]]&[[mergeField3]]` .
-   * 
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` .
    * @return embeddedRecipientStartURL
    **/
   @Schema(description = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
@@ -1318,6 +1293,7 @@ public class Witness {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1329,12 +1305,10 @@ public class Witness {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1346,6 +1320,7 @@ public class Witness {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * excludedDocuments.
    *
@@ -1355,7 +1330,7 @@ public class Witness {
     this.excludedDocuments = excludedDocuments;
     return this;
   }
-
+  
   /**
    * addExcludedDocumentsItem.
    *
@@ -1370,18 +1345,7 @@ public class Witness {
   }
 
   /**
-   * Specifies the documents that are not visible to this recipient. Document
-   * Visibility must be enabled for the account and the `enforceSignerVisibility`
-   * property must be set to **true** for the envelope to use this. When enforce
-   * signer visibility is enabled, documents with tabs can only be viewed by
-   * signers that have a tab on that document. Recipients that have an
-   * administrative role (Agent, Editor, or Intermediaries) or informational role
-   * (Certified Deliveries or Carbon Copies) can always see all the documents in
-   * an envelope, unless they are specifically excluded using this setting when an
-   * envelope is sent. Documents that do not have tabs are always visible to all
-   * recipients, unless they are specifically excluded using this setting when an
-   * envelope is sent..
-   * 
+   * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent..
    * @return excludedDocuments
    **/
   @Schema(description = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
@@ -1396,6 +1360,7 @@ public class Witness {
     this.excludedDocuments = excludedDocuments;
   }
 
+
   /**
    * faxNumber.
    *
@@ -1408,7 +1373,6 @@ public class Witness {
 
   /**
    * Reserved:.
-   * 
    * @return faxNumber
    **/
   @Schema(description = "Reserved:")
@@ -1423,6 +1387,7 @@ public class Witness {
     this.faxNumber = faxNumber;
   }
 
+
   /**
    * faxNumberMetadata.
    *
@@ -1435,7 +1400,6 @@ public class Witness {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return faxNumberMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1450,6 +1414,7 @@ public class Witness {
     this.faxNumberMetadata = faxNumberMetadata;
   }
 
+
   /**
    * firstName.
    *
@@ -1461,8 +1426,7 @@ public class Witness {
   }
 
   /**
-   * The user's first name. Maximum Length: 50 characters..
-   * 
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
    **/
   @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
@@ -1477,6 +1441,7 @@ public class Witness {
     this.firstName = firstName;
   }
 
+
   /**
    * firstNameMetadata.
    *
@@ -1488,9 +1453,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `firstName` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `firstName` property is editable. This property is read-only..
    * @return firstNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `firstName` property is editable. This property is read-only.")
@@ -1505,6 +1468,7 @@ public class Witness {
     this.firstNameMetadata = firstNameMetadata;
   }
 
+
   /**
    * fullName.
    *
@@ -1517,7 +1481,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return fullName
    **/
   @Schema(description = "")
@@ -1532,6 +1495,7 @@ public class Witness {
     this.fullName = fullName;
   }
 
+
   /**
    * fullNameMetadata.
    *
@@ -1544,7 +1508,6 @@ public class Witness {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return fullNameMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1559,6 +1522,7 @@ public class Witness {
     this.fullNameMetadata = fullNameMetadata;
   }
 
+
   /**
    * idCheckConfigurationName.
    *
@@ -1570,17 +1534,7 @@ public class Witness {
   }
 
   /**
-   * Specifies authentication check by name. The names used here must be the same
-   * as the authentication type names used by the account (these name can also be
-   * found in the web console sending interface in the Identify list for a
-   * recipient,) This overrides any default authentication setting. *Example*:
-   * Your account has ID Check and SMS Authentication available and in the web
-   * console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use
-   * ID check in an envelope, the idCheckConfigurationName should be 'ID Check '.
-   * If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add
-   * you would need to add phone number information to the `smsAuthentication`
-   * node..
-   * 
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
    * @return idCheckConfigurationName
    **/
   @Schema(description = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
@@ -1595,6 +1549,7 @@ public class Witness {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+
   /**
    * idCheckConfigurationNameMetadata.
    *
@@ -1606,9 +1561,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `idCheckConfigurationName` property is
-   * editable. This property is read-only..
-   * 
+   * Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only..
    * @return idCheckConfigurationNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.")
@@ -1623,6 +1576,7 @@ public class Witness {
     this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
+
   /**
    * idCheckInformationInput.
    *
@@ -1635,7 +1589,6 @@ public class Witness {
 
   /**
    * An object that contains input information related to a recipient ID check..
-   * 
    * @return idCheckInformationInput
    **/
   @Schema(description = "An object that contains input information related to a recipient ID check.")
@@ -1650,6 +1603,7 @@ public class Witness {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+
   /**
    * identityVerification.
    *
@@ -1661,22 +1615,7 @@ public class Witness {
   }
 
   /**
-   * Specifies the ID Verification workflow applied on an envelope by workflow ID.
-   * <br/>
-   * See the
-   * [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/)
-   * method in the
-   * [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/)
-   * resource for more information on how to retrieve workflow IDs available for
-   * an account. <br/>
-   * This can be used in addition to other [recipient
-   * authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication)
-   * methods. <br/>
-   * Note that ID Verification and ID Check are two distinct methods. ID
-   * Verification checks recipients' identity by verifying their ID while ID Check
-   * relies on data available on public records (such as current and former
-   * address)..
-   * 
+   * Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address)..
    * @return identityVerification
    **/
   @Schema(description = "Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).")
@@ -1691,6 +1630,7 @@ public class Witness {
     this.identityVerification = identityVerification;
   }
 
+
   /**
    * inheritEmailNotificationConfiguration.
    *
@@ -1702,10 +1642,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true** and the envelope recipient creates a DocuSign account
-   * after signing, the Manage Account Email Notification settings are used as the
-   * default settings for the recipient's account. .
-   * 
+   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. .
    * @return inheritEmailNotificationConfiguration
    **/
   @Schema(description = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
@@ -1720,6 +1657,7 @@ public class Witness {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
+
   /**
    * isBulkRecipient.
    *
@@ -1732,7 +1670,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return isBulkRecipient
    **/
   @Schema(description = "")
@@ -1747,6 +1684,7 @@ public class Witness {
     this.isBulkRecipient = isBulkRecipient;
   }
 
+
   /**
    * isBulkRecipientMetadata.
    *
@@ -1759,7 +1697,6 @@ public class Witness {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return isBulkRecipientMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1774,6 +1711,7 @@ public class Witness {
     this.isBulkRecipientMetadata = isBulkRecipientMetadata;
   }
 
+
   /**
    * lastName.
    *
@@ -1786,7 +1724,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return lastName
    **/
   @Schema(description = "")
@@ -1801,6 +1738,7 @@ public class Witness {
     this.lastName = lastName;
   }
 
+
   /**
    * lastNameMetadata.
    *
@@ -1812,9 +1750,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `lastName` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `lastName` property is editable. This property is read-only..
    * @return lastNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `lastName` property is editable. This property is read-only.")
@@ -1829,6 +1765,7 @@ public class Witness {
     this.lastNameMetadata = lastNameMetadata;
   }
 
+
   /**
    * lockedRecipientPhoneAuthEditable.
    *
@@ -1841,7 +1778,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return lockedRecipientPhoneAuthEditable
    **/
   @Schema(description = "")
@@ -1856,6 +1792,7 @@ public class Witness {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
   }
 
+
   /**
    * lockedRecipientSmsEditable.
    *
@@ -1868,7 +1805,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return lockedRecipientSmsEditable
    **/
   @Schema(description = "")
@@ -1883,6 +1819,7 @@ public class Witness {
     this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
   }
 
+
   /**
    * name.
    *
@@ -1895,7 +1832,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -1910,6 +1846,7 @@ public class Witness {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -1921,9 +1858,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `name` property is editable. This property is read-only..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
@@ -1938,6 +1873,7 @@ public class Witness {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * notaryId.
    *
@@ -1950,7 +1886,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return notaryId
    **/
   @Schema(description = "")
@@ -1965,6 +1900,7 @@ public class Witness {
     this.notaryId = notaryId;
   }
 
+
   /**
    * notarySignerEmailSent.
    *
@@ -1977,7 +1913,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return notarySignerEmailSent
    **/
   @Schema(description = "")
@@ -1992,6 +1927,7 @@ public class Witness {
     this.notarySignerEmailSent = notarySignerEmailSent;
   }
 
+
   /**
    * note.
    *
@@ -2003,11 +1939,7 @@ public class Witness {
   }
 
   /**
-   * Specifies a note that is unique to this recipient. This note is sent to the
-   * recipient via the signing email. The note displays in the signing UI near the
-   * upper left corner of the document on the signing screen. Maximum Length: 1000
-   * characters..
-   * 
+   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters..
    * @return note
    **/
   @Schema(description = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
@@ -2022,6 +1954,7 @@ public class Witness {
     this.note = note;
   }
 
+
   /**
    * noteMetadata.
    *
@@ -2033,9 +1966,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `note` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `note` property is editable. This property is read-only..
    * @return noteMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `note` property is editable. This property is read-only.")
@@ -2050,6 +1981,7 @@ public class Witness {
     this.noteMetadata = noteMetadata;
   }
 
+
   /**
    * offlineAttributes.
    *
@@ -2062,7 +1994,6 @@ public class Witness {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return offlineAttributes
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2077,6 +2008,7 @@ public class Witness {
     this.offlineAttributes = offlineAttributes;
   }
 
+
   /**
    * phoneAuthentication.
    *
@@ -2088,14 +2020,7 @@ public class Witness {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this
-   * complex type to provide the recipient authentication method details. It
-   * contains the following elements: * `recipMayProvideNumber`: Boolean. When
-   * **true,** the recipient can use whatever phone number they choose. *
-   * `senderProvidedNumbers`: ArrayOfStrings. A list of phone numbers the
-   * recipient can use. * `recordVoicePrint`: Reserved for DocuSign. *
-   * `validateRecipProvidedNumber`: Reserved for DocuSign. .
-   * 
+   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  .
    * @return phoneAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  ")
@@ -2110,6 +2035,7 @@ public class Witness {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+
   /**
    * phoneNumber.
    *
@@ -2122,7 +2048,6 @@ public class Witness {
 
   /**
    * Describes the recipient phone number..
-   * 
    * @return phoneNumber
    **/
   @Schema(description = "Describes the recipient phone number.")
@@ -2137,6 +2062,7 @@ public class Witness {
     this.phoneNumber = phoneNumber;
   }
 
+
   /**
    * proofFile.
    *
@@ -2149,7 +2075,6 @@ public class Witness {
 
   /**
    * The proof file of the recipient..
-   * 
    * @return proofFile
    **/
   @Schema(description = "The proof file of the recipient.")
@@ -2164,6 +2089,7 @@ public class Witness {
     this.proofFile = proofFile;
   }
 
+
   /**
    * recipientAttachments.
    *
@@ -2173,7 +2099,7 @@ public class Witness {
     this.recipientAttachments = recipientAttachments;
     return this;
   }
-
+  
   /**
    * addRecipientAttachmentsItem.
    *
@@ -2189,7 +2115,6 @@ public class Witness {
 
   /**
    * Reserved:.
-   * 
    * @return recipientAttachments
    **/
   @Schema(description = "Reserved:")
@@ -2204,6 +2129,7 @@ public class Witness {
     this.recipientAttachments = recipientAttachments;
   }
 
+
   /**
    * recipientAuthenticationStatus.
    *
@@ -2215,9 +2141,7 @@ public class Witness {
   }
 
   /**
-   * Information about the recipient's authentication status. This property is
-   * read-only..
-   * 
+   * Information about the recipient's authentication status. This property is read-only..
    * @return recipientAuthenticationStatus
    **/
   @Schema(description = "Information about the recipient's authentication status. This property is read-only.")
@@ -2232,6 +2156,7 @@ public class Witness {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+
   /**
    * recipientFeatureMetadata.
    *
@@ -2241,7 +2166,7 @@ public class Witness {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
     return this;
   }
-
+  
   /**
    * addRecipientFeatureMetadataItem.
    *
@@ -2257,7 +2182,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return recipientFeatureMetadata
    **/
   @Schema(description = "")
@@ -2272,6 +2196,7 @@ public class Witness {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
   }
 
+
   /**
    * recipientId.
    *
@@ -2283,9 +2208,7 @@ public class Witness {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -2300,6 +2223,7 @@ public class Witness {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -2312,7 +2236,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -2327,6 +2250,7 @@ public class Witness {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientSignatureProviders.
    *
@@ -2336,7 +2260,7 @@ public class Witness {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
   }
-
+  
   /**
    * addRecipientSignatureProvidersItem.
    *
@@ -2352,7 +2276,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return recipientSignatureProviders
    **/
   @Schema(description = "")
@@ -2367,6 +2290,7 @@ public class Witness {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
 
+
   /**
    * recipientSuppliesTabs.
    *
@@ -2379,7 +2303,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return recipientSuppliesTabs
    **/
   @Schema(description = "")
@@ -2394,6 +2317,7 @@ public class Witness {
     this.recipientSuppliesTabs = recipientSuppliesTabs;
   }
 
+
   /**
    * recipientType.
    *
@@ -2406,7 +2330,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return recipientType
    **/
   @Schema(description = "")
@@ -2421,6 +2344,7 @@ public class Witness {
     this.recipientType = recipientType;
   }
 
+
   /**
    * recipientTypeMetadata.
    *
@@ -2432,9 +2356,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `recipientType` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `recipientType` property is editable. This property is read-only..
    * @return recipientTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientType` property is editable. This property is read-only.")
@@ -2449,6 +2371,7 @@ public class Witness {
     this.recipientTypeMetadata = recipientTypeMetadata;
   }
 
+
   /**
    * requireIdLookup.
    *
@@ -2460,9 +2383,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true**, the recipient is required to use the specified ID check
-   * method (including Phone and SMS authentication) to validate their identity. .
-   * 
+   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. .
    * @return requireIdLookup
    **/
   @Schema(description = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
@@ -2477,6 +2398,7 @@ public class Witness {
     this.requireIdLookup = requireIdLookup;
   }
 
+
   /**
    * requireIdLookupMetadata.
    *
@@ -2488,9 +2410,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `requireIdLookup` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only..
    * @return requireIdLookupMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.")
@@ -2505,6 +2425,7 @@ public class Witness {
     this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
+
   /**
    * requireSignerCertificate.
    *
@@ -2517,7 +2438,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return requireSignerCertificate
    **/
   @Schema(description = "")
@@ -2532,6 +2452,7 @@ public class Witness {
     this.requireSignerCertificate = requireSignerCertificate;
   }
 
+
   /**
    * requireSignOnPaper.
    *
@@ -2544,7 +2465,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return requireSignOnPaper
    **/
   @Schema(description = "")
@@ -2559,6 +2479,7 @@ public class Witness {
     this.requireSignOnPaper = requireSignOnPaper;
   }
 
+
   /**
    * requireUploadSignature.
    *
@@ -2571,7 +2492,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return requireUploadSignature
    **/
   @Schema(description = "")
@@ -2586,6 +2506,7 @@ public class Witness {
     this.requireUploadSignature = requireUploadSignature;
   }
 
+
   /**
    * roleName.
    *
@@ -2597,10 +2518,7 @@ public class Witness {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/>
-   * <br/>
-   * This is required when working with template recipients..
-   * 
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
    **/
   @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
@@ -2615,6 +2533,7 @@ public class Witness {
     this.roleName = roleName;
   }
 
+
   /**
    * routingOrder.
    *
@@ -2627,7 +2546,6 @@ public class Witness {
 
   /**
    * Specifies the routing order of the recipient in the envelope. .
-   * 
    * @return routingOrder
    **/
   @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
@@ -2642,6 +2560,7 @@ public class Witness {
     this.routingOrder = routingOrder;
   }
 
+
   /**
    * routingOrderMetadata.
    *
@@ -2653,9 +2572,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `routingOrder` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `routingOrder` property is editable. This property is read-only..
    * @return routingOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.")
@@ -2670,6 +2587,7 @@ public class Witness {
     this.routingOrderMetadata = routingOrderMetadata;
   }
 
+
   /**
    * sentDateTime.
    *
@@ -2682,7 +2600,6 @@ public class Witness {
 
   /**
    * The date and time the envelope was sent..
-   * 
    * @return sentDateTime
    **/
   @Schema(description = "The date and time the envelope was sent.")
@@ -2697,6 +2614,7 @@ public class Witness {
     this.sentDateTime = sentDateTime;
   }
 
+
   /**
    * signatureInfo.
    *
@@ -2708,10 +2626,7 @@ public class Witness {
   }
 
   /**
-   * Allows the sender to pre-specify the signature name, signature initials and
-   * signature font used in the signature stamp for the recipient. Used only with
-   * recipient types In Person Signers and Signers..
-   * 
+   * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers..
    * @return signatureInfo
    **/
   @Schema(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.")
@@ -2726,6 +2641,7 @@ public class Witness {
     this.signatureInfo = signatureInfo;
   }
 
+
   /**
    * signedDateTime.
    *
@@ -2738,7 +2654,6 @@ public class Witness {
 
   /**
    * Reserved: For DocuSign use only. .
-   * 
    * @return signedDateTime
    **/
   @Schema(description = "Reserved: For DocuSign use only. ")
@@ -2753,6 +2668,7 @@ public class Witness {
     this.signedDateTime = signedDateTime;
   }
 
+
   /**
    * signInEachLocation.
    *
@@ -2765,7 +2681,6 @@ public class Witness {
 
   /**
    * When set to **true**, specifies that the signer must sign in all locations..
-   * 
    * @return signInEachLocation
    **/
   @Schema(description = "When set to **true**, specifies that the signer must sign in all locations.")
@@ -2780,6 +2695,7 @@ public class Witness {
     this.signInEachLocation = signInEachLocation;
   }
 
+
   /**
    * signInEachLocationMetadata.
    *
@@ -2791,9 +2707,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `signInEachLocation` property is
-   * editable. This property is read-only..
-   * 
+   * Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only..
    * @return signInEachLocationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signInEachLocation` property is editable. This property is read-only.")
@@ -2808,6 +2722,7 @@ public class Witness {
     this.signInEachLocationMetadata = signInEachLocationMetadata;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -2819,11 +2734,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -2838,6 +2749,7 @@ public class Witness {
     this.signingGroupId = signingGroupId;
   }
 
+
   /**
    * signingGroupIdMetadata.
    *
@@ -2849,9 +2761,7 @@ public class Witness {
   }
 
   /**
-   * Metadata that indicates whether the `signingGroupId` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only..
    * @return signingGroupIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.")
@@ -2866,6 +2776,7 @@ public class Witness {
     this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
+
   /**
    * signingGroupName.
    *
@@ -2877,8 +2788,7 @@ public class Witness {
   }
 
   /**
-   * The display name for the signing group. Maximum Length: 100 characters. .
-   * 
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
    **/
   @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
@@ -2893,6 +2803,7 @@ public class Witness {
     this.signingGroupName = signingGroupName;
   }
 
+
   /**
    * signingGroupUsers.
    *
@@ -2902,7 +2813,7 @@ public class Witness {
     this.signingGroupUsers = signingGroupUsers;
     return this;
   }
-
+  
   /**
    * addSigningGroupUsersItem.
    *
@@ -2918,7 +2829,6 @@ public class Witness {
 
   /**
    * A complex type that contains information about users in the signing group..
-   * 
    * @return signingGroupUsers
    **/
   @Schema(description = "A complex type that contains information about users in the signing group.")
@@ -2933,6 +2843,7 @@ public class Witness {
     this.signingGroupUsers = signingGroupUsers;
   }
 
+
   /**
    * smsAuthentication.
    *
@@ -2944,11 +2855,7 @@ public class Witness {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex
-   * type to provide the recipient authentication method details. It contains the
-   * element `senderProvidedNumbers`, which is an array of phone numbers that the
-   * recipient can use for SMS text authentication. .
-   * 
+   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   .
    * @return smsAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   ")
@@ -2963,6 +2870,7 @@ public class Witness {
     this.smsAuthentication = smsAuthentication;
   }
 
+
   /**
    * socialAuthentications.
    *
@@ -2972,7 +2880,7 @@ public class Witness {
     this.socialAuthentications = socialAuthentications;
     return this;
   }
-
+  
   /**
    * addSocialAuthenticationsItem.
    *
@@ -2987,8 +2895,7 @@ public class Witness {
   }
 
   /**
-   * Lists the social ID type that can be used for recipient authentication..
-   * 
+   *  Lists the social ID type that can be used for recipient authentication..
    * @return socialAuthentications
    **/
   @Schema(description = " Lists the social ID type that can be used for recipient authentication.")
@@ -3003,6 +2910,7 @@ public class Witness {
     this.socialAuthentications = socialAuthentications;
   }
 
+
   /**
    * status.
    *
@@ -3014,10 +2922,7 @@ public class Witness {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -3032,6 +2937,7 @@ public class Witness {
     this.status = status;
   }
 
+
   /**
    * statusCode.
    *
@@ -3044,7 +2950,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return statusCode
    **/
   @Schema(description = "")
@@ -3059,6 +2964,7 @@ public class Witness {
     this.statusCode = statusCode;
   }
 
+
   /**
    * suppressEmails.
    *
@@ -3071,7 +2977,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return suppressEmails
    **/
   @Schema(description = "")
@@ -3086,6 +2991,7 @@ public class Witness {
     this.suppressEmails = suppressEmails;
   }
 
+
   /**
    * tabs.
    *
@@ -3097,10 +3003,7 @@ public class Witness {
   }
 
   /**
-   * A list of tabs, which are represented graphically as symbols on documents at
-   * the time of signing. Tabs show recipients where to sign, initial, or enter
-   * data. They may also display data to the recipients..
-   * 
+   * A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients..
    * @return tabs
    **/
   @Schema(description = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
@@ -3115,6 +3018,7 @@ public class Witness {
     this.tabs = tabs;
   }
 
+
   /**
    * templateLocked.
    *
@@ -3126,9 +3030,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -3143,6 +3045,7 @@ public class Witness {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateRequired.
    *
@@ -3154,9 +3057,7 @@ public class Witness {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -3171,6 +3072,7 @@ public class Witness {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * totalTabCount.
    *
@@ -3183,7 +3085,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return totalTabCount
    **/
   @Schema(description = "")
@@ -3198,6 +3099,7 @@ public class Witness {
     this.totalTabCount = totalTabCount;
   }
 
+
   /**
    * userId.
    *
@@ -3210,7 +3112,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -3225,6 +3126,7 @@ public class Witness {
     this.userId = userId;
   }
 
+
   /**
    * witnessFor.
    *
@@ -3237,7 +3139,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return witnessFor
    **/
   @Schema(description = "")
@@ -3252,6 +3153,7 @@ public class Witness {
     this.witnessFor = witnessFor;
   }
 
+
   /**
    * witnessForGuid.
    *
@@ -3264,7 +3166,6 @@ public class Witness {
 
   /**
    * .
-   * 
    * @return witnessForGuid
    **/
   @Schema(description = "")
@@ -3278,6 +3179,7 @@ public class Witness {
   public void setWitnessForGuid(String witnessForGuid) {
     this.witnessForGuid = witnessForGuid;
   }
+
 
   /**
    * Compares objects.
@@ -3303,6 +3205,7 @@ public class Witness {
         Objects.equals(this.autoNavigation, witness.autoNavigation) &&
         Objects.equals(this.autoRespondedReason, witness.autoRespondedReason) &&
         Objects.equals(this.bulkRecipientsUri, witness.bulkRecipientsUri) &&
+        Objects.equals(this.bulkSendV2Recipient, witness.bulkSendV2Recipient) &&
         Objects.equals(this.canSignOffline, witness.canSignOffline) &&
         Objects.equals(this.clientUserId, witness.clientUserId) &&
         Objects.equals(this.completedCount, witness.completedCount) &&
@@ -3399,25 +3302,9 @@ public class Witness {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications,
-        agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason,
-        bulkRecipientsUri, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason,
-        customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime,
-        deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email,
-        emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails,
-        excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata,
-        idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification,
-        inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata,
-        lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId,
-        notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile,
-        recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid,
-        recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup,
-        requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName,
-        routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation,
-        signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers,
-        smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked,
-        templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
   }
+
 
   /**
    * Converts the given object to string.
@@ -3426,18 +3313,18 @@ public class Witness {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Witness {\n");
-
+    
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
-    sb.append("    allowSystemOverrideForLockedRecipient: ")
-        .append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoNavigation: ").append(toIndentedString(autoNavigation)).append("\n");
     sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    bulkRecipientsUri: ").append(toIndentedString(bulkRecipientsUri)).append("\n");
+    sb.append("    bulkSendV2Recipient: ").append(toIndentedString(bulkSendV2Recipient)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
@@ -3469,18 +3356,15 @@ public class Witness {
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata))
-        .append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
-    sb.append("    inheritEmailNotificationConfiguration: ")
-        .append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    isBulkRecipient: ").append(toIndentedString(isBulkRecipient)).append("\n");
     sb.append("    isBulkRecipientMetadata: ").append(toIndentedString(isBulkRecipientMetadata)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
-    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable))
-        .append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
     sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
@@ -3493,8 +3377,7 @@ public class Witness {
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
-    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus))
-        .append("\n");
+    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
@@ -3547,3 +3430,4 @@ public class Witness {
   }
 
 }
+

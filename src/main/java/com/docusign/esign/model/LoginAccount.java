@@ -48,6 +48,7 @@ public class LoginAccount {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * accountId.
    *
@@ -60,7 +61,6 @@ public class LoginAccount {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -75,6 +75,7 @@ public class LoginAccount {
     this.accountId = accountId;
   }
 
+
   /**
    * accountIdGuid.
    *
@@ -87,7 +88,6 @@ public class LoginAccount {
 
   /**
    * The GUID associated with the account ID..
-   * 
    * @return accountIdGuid
    **/
   @Schema(description = "The GUID associated with the account ID.")
@@ -102,6 +102,7 @@ public class LoginAccount {
     this.accountIdGuid = accountIdGuid;
   }
 
+
   /**
    * baseUrl.
    *
@@ -113,11 +114,7 @@ public class LoginAccount {
   }
 
   /**
-   * The URL that should be used for successive calls to this account. It includes
-   * the protocal (https), the DocuSign server where the account is located, and
-   * the account number. Use this Url to make API calls against this account. Many
-   * of the API calls provide Uri's that are relative to this baseUrl..
-   * 
+   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
    * @return baseUrl
    **/
   @Schema(description = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
@@ -132,6 +129,7 @@ public class LoginAccount {
     this.baseUrl = baseUrl;
   }
 
+
   /**
    * email.
    *
@@ -144,7 +142,6 @@ public class LoginAccount {
 
   /**
    * The email address for the user..
-   * 
    * @return email
    **/
   @Schema(description = "The email address for the user.")
@@ -159,6 +156,7 @@ public class LoginAccount {
     this.email = email;
   }
 
+
   /**
    * isDefault.
    *
@@ -170,9 +168,7 @@ public class LoginAccount {
   }
 
   /**
-   * This value is true if this is the default account for the user, otherwise
-   * false is returned..
-   * 
+   * This value is true if this is the default account for the user, otherwise false is returned..
    * @return isDefault
    **/
   @Schema(description = "This value is true if this is the default account for the user, otherwise false is returned.")
@@ -187,6 +183,7 @@ public class LoginAccount {
     this.isDefault = isDefault;
   }
 
+
   /**
    * loginAccountSettings.
    *
@@ -196,7 +193,7 @@ public class LoginAccount {
     this.loginAccountSettings = loginAccountSettings;
     return this;
   }
-
+  
   /**
    * addLoginAccountSettingsItem.
    *
@@ -211,9 +208,7 @@ public class LoginAccount {
   }
 
   /**
-   * A list of settings on the acccount that indicate what features are
-   * available..
-   * 
+   * A list of settings on the acccount that indicate what features are available..
    * @return loginAccountSettings
    **/
   @Schema(description = "A list of settings on the acccount that indicate what features are available.")
@@ -228,6 +223,7 @@ public class LoginAccount {
     this.loginAccountSettings = loginAccountSettings;
   }
 
+
   /**
    * loginUserSettings.
    *
@@ -237,7 +233,7 @@ public class LoginAccount {
     this.loginUserSettings = loginUserSettings;
     return this;
   }
-
+  
   /**
    * addLoginUserSettingsItem.
    *
@@ -252,9 +248,7 @@ public class LoginAccount {
   }
 
   /**
-   * A list of user-level settings that indicate what user-specific features are
-   * available..
-   * 
+   * A list of user-level settings that indicate what user-specific features are available..
    * @return loginUserSettings
    **/
   @Schema(description = "A list of user-level settings that indicate what user-specific features are available.")
@@ -269,6 +263,7 @@ public class LoginAccount {
     this.loginUserSettings = loginUserSettings;
   }
 
+
   /**
    * name.
    *
@@ -281,7 +276,6 @@ public class LoginAccount {
 
   /**
    * The name associated with the account..
-   * 
    * @return name
    **/
   @Schema(description = "The name associated with the account.")
@@ -296,6 +290,7 @@ public class LoginAccount {
     this.name = name;
   }
 
+
   /**
    * siteDescription.
    *
@@ -308,7 +303,6 @@ public class LoginAccount {
 
   /**
    * An optional descirption of the site that hosts the account..
-   * 
    * @return siteDescription
    **/
   @Schema(description = "An optional descirption of the site that hosts the account.")
@@ -323,6 +317,7 @@ public class LoginAccount {
     this.siteDescription = siteDescription;
   }
 
+
   /**
    * userId.
    *
@@ -335,7 +330,6 @@ public class LoginAccount {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -350,6 +344,7 @@ public class LoginAccount {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -362,7 +357,6 @@ public class LoginAccount {
 
   /**
    * The name of this user as defined by the account..
-   * 
    * @return userName
    **/
   @Schema(description = "The name of this user as defined by the account.")
@@ -376,6 +370,7 @@ public class LoginAccount {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -409,9 +404,9 @@ public class LoginAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountIdGuid, baseUrl, email, isDefault, loginAccountSettings, loginUserSettings,
-        name, siteDescription, userId, userName);
+    return Objects.hash(accountId, accountIdGuid, baseUrl, email, isDefault, loginAccountSettings, loginUserSettings, name, siteDescription, userId, userName);
   }
+
 
   /**
    * Converts the given object to string.
@@ -420,7 +415,7 @@ public class LoginAccount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoginAccount {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    baseUrl: ").append(toIndentedString(baseUrl)).append("\n");
@@ -448,3 +443,4 @@ public class LoginAccount {
   }
 
 }
+

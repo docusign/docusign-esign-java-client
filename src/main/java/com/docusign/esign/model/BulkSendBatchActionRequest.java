@@ -24,6 +24,7 @@ public class BulkSendBatchActionRequest {
   @JsonProperty("voidReason")
   private String voidReason = null;
 
+
   /**
    * action.
    *
@@ -36,7 +37,6 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
-   * 
    * @return action
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class BulkSendBatchActionRequest {
     this.action = action;
   }
 
+
   /**
    * notification.
    *
@@ -63,7 +64,6 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
-   * 
    * @return notification
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class BulkSendBatchActionRequest {
     this.notification = notification;
   }
 
+
   /**
    * voidReason.
    *
@@ -90,7 +91,6 @@ public class BulkSendBatchActionRequest {
 
   /**
    * .
-   * 
    * @return voidReason
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class BulkSendBatchActionRequest {
   public void setVoidReason(String voidReason) {
     this.voidReason = voidReason;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +133,7 @@ public class BulkSendBatchActionRequest {
     return Objects.hash(action, notification, voidReason);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +141,7 @@ public class BulkSendBatchActionRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchActionRequest {\n");
-
+    
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    notification: ").append(toIndentedString(notification)).append("\n");
     sb.append("    voidReason: ").append(toIndentedString(voidReason)).append("\n");
@@ -159,3 +161,4 @@ public class BulkSendBatchActionRequest {
   }
 
 }
+

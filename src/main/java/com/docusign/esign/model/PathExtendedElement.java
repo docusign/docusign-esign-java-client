@@ -23,6 +23,7 @@ public class PathExtendedElement {
   @JsonProperty("typeName")
   private String typeName = null;
 
+
   /**
    * name.
    *
@@ -35,7 +36,6 @@ public class PathExtendedElement {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class PathExtendedElement {
     this.name = name;
   }
 
+
   /**
    * type.
    *
@@ -62,7 +63,6 @@ public class PathExtendedElement {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class PathExtendedElement {
     this.type = type;
   }
 
+
   /**
    * typeName.
    *
@@ -89,7 +90,6 @@ public class PathExtendedElement {
 
   /**
    * .
-   * 
    * @return typeName
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class PathExtendedElement {
   public void setTypeName(String typeName) {
     this.typeName = typeName;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class PathExtendedElement {
     return Objects.hash(name, type, typeName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class PathExtendedElement {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PathExtendedElement {\n");
-
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    typeName: ").append(toIndentedString(typeName)).append("\n");
@@ -158,3 +160,4 @@ public class PathExtendedElement {
   }
 
 }
+

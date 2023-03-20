@@ -5,7 +5,7 @@
     <artifactId>docusign-esign-java</artifactId>
     <packaging>jar</packaging>
     <name>docusign-esign-java</name>
-    <version>4.0.0-RC1</version>
+    <version>4.1.0</version>
     <url>https://developers.docusign.com</url>
     <description>The official DocuSign eSignature JAVA client is based on version 2 of the DocuSign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
 
@@ -394,7 +394,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <swagger-core-version>2.2.8</swagger-core-version>
-        <jersey-version>3.0.9</jersey-version>
+            <jersey-version>3.0.9</jersey-version>
         <jackson-version>2.14.2</jackson-version>
         <junit-version>4.13.1</junit-version>
         <oltu-version>1.0.2</oltu-version>

@@ -24,6 +24,7 @@ public class BulkSendTestResponse {
   @JsonProperty("validationErrors")
   private java.util.List<String> validationErrors = null;
 
+
   /**
    * canBeSent.
    *
@@ -36,7 +37,6 @@ public class BulkSendTestResponse {
 
   /**
    * .
-   * 
    * @return canBeSent
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class BulkSendTestResponse {
     this.canBeSent = canBeSent;
   }
 
+
   /**
    * validationErrorDetails.
    *
@@ -60,7 +61,7 @@ public class BulkSendTestResponse {
     this.validationErrorDetails = validationErrorDetails;
     return this;
   }
-
+  
   /**
    * addValidationErrorDetailsItem.
    *
@@ -76,7 +77,6 @@ public class BulkSendTestResponse {
 
   /**
    * .
-   * 
    * @return validationErrorDetails
    **/
   @Schema(description = "")
@@ -91,6 +91,7 @@ public class BulkSendTestResponse {
     this.validationErrorDetails = validationErrorDetails;
   }
 
+
   /**
    * validationErrors.
    *
@@ -100,7 +101,7 @@ public class BulkSendTestResponse {
     this.validationErrors = validationErrors;
     return this;
   }
-
+  
   /**
    * addValidationErrorsItem.
    *
@@ -116,7 +117,6 @@ public class BulkSendTestResponse {
 
   /**
    * .
-   * 
    * @return validationErrors
    **/
   @Schema(description = "")
@@ -130,6 +130,7 @@ public class BulkSendTestResponse {
   public void setValidationErrors(java.util.List<String> validationErrors) {
     this.validationErrors = validationErrors;
   }
+
 
   /**
    * Compares objects.
@@ -158,6 +159,7 @@ public class BulkSendTestResponse {
     return Objects.hash(canBeSent, validationErrorDetails, validationErrors);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -165,7 +167,7 @@ public class BulkSendTestResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendTestResponse {\n");
-
+    
     sb.append("    canBeSent: ").append(toIndentedString(canBeSent)).append("\n");
     sb.append("    validationErrorDetails: ").append(toIndentedString(validationErrorDetails)).append("\n");
     sb.append("    validationErrors: ").append(toIndentedString(validationErrors)).append("\n");
@@ -185,3 +187,4 @@ public class BulkSendTestResponse {
   }
 
 }
+

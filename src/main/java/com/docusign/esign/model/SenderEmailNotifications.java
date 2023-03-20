@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains the settings for the email notifications that senders receive about
- * the envelopes that they send..
+ * Contains the settings for the email notifications that senders receive about the envelopes that they send..
  *
  */
 @Schema(description = "Contains the settings for the email notifications that senders receive about the envelopes that they send.")
@@ -52,6 +51,7 @@ public class SenderEmailNotifications {
   @JsonProperty("withdrawnConsent")
   private String withdrawnConsent = null;
 
+
   /**
    * changedSigner.
    *
@@ -63,9 +63,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the sender receives notification if the signer
-   * changes..
-   * 
+   * When set to **true**, the sender receives notification if the signer changes..
    * @return changedSigner
    **/
   @Schema(description = "When set to **true**, the sender receives notification if the signer changes.")
@@ -80,20 +78,19 @@ public class SenderEmailNotifications {
     this.changedSigner = changedSigner;
   }
 
+
   /**
    * clickwrapResponsesLimitNotificationEmail.
    *
    * @return SenderEmailNotifications
    **/
-  public SenderEmailNotifications clickwrapResponsesLimitNotificationEmail(
-      String clickwrapResponsesLimitNotificationEmail) {
+  public SenderEmailNotifications clickwrapResponsesLimitNotificationEmail(String clickwrapResponsesLimitNotificationEmail) {
     this.clickwrapResponsesLimitNotificationEmail = clickwrapResponsesLimitNotificationEmail;
     return this;
   }
 
   /**
    * .
-   * 
    * @return clickwrapResponsesLimitNotificationEmail
    **/
   @Schema(description = "")
@@ -108,6 +105,7 @@ public class SenderEmailNotifications {
     this.clickwrapResponsesLimitNotificationEmail = clickwrapResponsesLimitNotificationEmail;
   }
 
+
   /**
    * commentsOnlyPrivateAndMention.
    *
@@ -120,7 +118,6 @@ public class SenderEmailNotifications {
 
   /**
    * .
-   * 
    * @return commentsOnlyPrivateAndMention
    **/
   @Schema(description = "")
@@ -135,6 +132,7 @@ public class SenderEmailNotifications {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
   }
 
+
   /**
    * commentsReceiveAll.
    *
@@ -147,7 +145,6 @@ public class SenderEmailNotifications {
 
   /**
    * .
-   * 
    * @return commentsReceiveAll
    **/
   @Schema(description = "")
@@ -162,6 +159,7 @@ public class SenderEmailNotifications {
     this.commentsReceiveAll = commentsReceiveAll;
   }
 
+
   /**
    * deliveryFailed.
    *
@@ -173,9 +171,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the sender receives notification if the delivery of the
-   * envelope fails..
-   * 
+   * When set to **true**, the sender receives notification if the delivery of the envelope fails..
    * @return deliveryFailed
    **/
   @Schema(description = "When set to **true**, the sender receives notification if the delivery of the envelope fails.")
@@ -190,6 +186,7 @@ public class SenderEmailNotifications {
     this.deliveryFailed = deliveryFailed;
   }
 
+
   /**
    * envelopeComplete.
    *
@@ -201,9 +198,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been completed..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been completed..
    * @return envelopeComplete
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been completed.")
@@ -218,6 +213,7 @@ public class SenderEmailNotifications {
     this.envelopeComplete = envelopeComplete;
   }
 
+
   /**
    * offlineSigningFailed.
    *
@@ -229,9 +225,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification if the offline signing
-   * failed..
-   * 
+   * When set to **true**, the user receives notification if the offline signing failed..
    * @return offlineSigningFailed
    **/
   @Schema(description = "When set to **true**, the user receives notification if the offline signing failed.")
@@ -246,20 +240,19 @@ public class SenderEmailNotifications {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+
   /**
    * powerformResponsesLimitNotificationEmail.
    *
    * @return SenderEmailNotifications
    **/
-  public SenderEmailNotifications powerformResponsesLimitNotificationEmail(
-      String powerformResponsesLimitNotificationEmail) {
+  public SenderEmailNotifications powerformResponsesLimitNotificationEmail(String powerformResponsesLimitNotificationEmail) {
     this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
     return this;
   }
 
   /**
    * .
-   * 
    * @return powerformResponsesLimitNotificationEmail
    **/
   @Schema(description = "")
@@ -274,6 +267,7 @@ public class SenderEmailNotifications {
     this.powerformResponsesLimitNotificationEmail = powerformResponsesLimitNotificationEmail;
   }
 
+
   /**
    * purgeDocuments.
    *
@@ -286,7 +280,6 @@ public class SenderEmailNotifications {
 
   /**
    * .
-   * 
    * @return purgeDocuments
    **/
   @Schema(description = "")
@@ -301,6 +294,7 @@ public class SenderEmailNotifications {
     this.purgeDocuments = purgeDocuments;
   }
 
+
   /**
    * recipientViewed.
    *
@@ -312,9 +306,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the sender receives notification that the recipient
-   * viewed the enveloper..
-   * 
+   * When set to **true**, the sender receives notification that the recipient viewed the enveloper..
    * @return recipientViewed
    **/
   @Schema(description = "When set to **true**, the sender receives notification that the recipient viewed the enveloper.")
@@ -329,6 +321,7 @@ public class SenderEmailNotifications {
     this.recipientViewed = recipientViewed;
   }
 
+
   /**
    * senderEnvelopeDeclined.
    *
@@ -341,7 +334,6 @@ public class SenderEmailNotifications {
 
   /**
    * .
-   * 
    * @return senderEnvelopeDeclined
    **/
   @Schema(description = "")
@@ -356,6 +348,7 @@ public class SenderEmailNotifications {
     this.senderEnvelopeDeclined = senderEnvelopeDeclined;
   }
 
+
   /**
    * withdrawnConsent.
    *
@@ -367,9 +360,7 @@ public class SenderEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification if consent is
-   * withdrawn..
-   * 
+   * When set to **true**, the user receives notification if consent is withdrawn..
    * @return withdrawnConsent
    **/
   @Schema(description = "When set to **true**, the user receives notification if consent is withdrawn.")
@@ -383,6 +374,7 @@ public class SenderEmailNotifications {
   public void setWithdrawnConsent(String withdrawnConsent) {
     this.withdrawnConsent = withdrawnConsent;
   }
+
 
   /**
    * Compares objects.
@@ -399,17 +391,13 @@ public class SenderEmailNotifications {
     }
     SenderEmailNotifications senderEmailNotifications = (SenderEmailNotifications) o;
     return Objects.equals(this.changedSigner, senderEmailNotifications.changedSigner) &&
-        Objects.equals(this.clickwrapResponsesLimitNotificationEmail,
-            senderEmailNotifications.clickwrapResponsesLimitNotificationEmail)
-        &&
+        Objects.equals(this.clickwrapResponsesLimitNotificationEmail, senderEmailNotifications.clickwrapResponsesLimitNotificationEmail) &&
         Objects.equals(this.commentsOnlyPrivateAndMention, senderEmailNotifications.commentsOnlyPrivateAndMention) &&
         Objects.equals(this.commentsReceiveAll, senderEmailNotifications.commentsReceiveAll) &&
         Objects.equals(this.deliveryFailed, senderEmailNotifications.deliveryFailed) &&
         Objects.equals(this.envelopeComplete, senderEmailNotifications.envelopeComplete) &&
         Objects.equals(this.offlineSigningFailed, senderEmailNotifications.offlineSigningFailed) &&
-        Objects.equals(this.powerformResponsesLimitNotificationEmail,
-            senderEmailNotifications.powerformResponsesLimitNotificationEmail)
-        &&
+        Objects.equals(this.powerformResponsesLimitNotificationEmail, senderEmailNotifications.powerformResponsesLimitNotificationEmail) &&
         Objects.equals(this.purgeDocuments, senderEmailNotifications.purgeDocuments) &&
         Objects.equals(this.recipientViewed, senderEmailNotifications.recipientViewed) &&
         Objects.equals(this.senderEnvelopeDeclined, senderEmailNotifications.senderEnvelopeDeclined) &&
@@ -421,11 +409,9 @@ public class SenderEmailNotifications {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(changedSigner, clickwrapResponsesLimitNotificationEmail, commentsOnlyPrivateAndMention,
-        commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed,
-        powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined,
-        withdrawnConsent);
+    return Objects.hash(changedSigner, clickwrapResponsesLimitNotificationEmail, commentsOnlyPrivateAndMention, commentsReceiveAll, deliveryFailed, envelopeComplete, offlineSigningFailed, powerformResponsesLimitNotificationEmail, purgeDocuments, recipientViewed, senderEnvelopeDeclined, withdrawnConsent);
   }
+
 
   /**
    * Converts the given object to string.
@@ -434,18 +420,15 @@ public class SenderEmailNotifications {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SenderEmailNotifications {\n");
-
+    
     sb.append("    changedSigner: ").append(toIndentedString(changedSigner)).append("\n");
-    sb.append("    clickwrapResponsesLimitNotificationEmail: ")
-        .append(toIndentedString(clickwrapResponsesLimitNotificationEmail)).append("\n");
-    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention))
-        .append("\n");
+    sb.append("    clickwrapResponsesLimitNotificationEmail: ").append(toIndentedString(clickwrapResponsesLimitNotificationEmail)).append("\n");
+    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention)).append("\n");
     sb.append("    commentsReceiveAll: ").append(toIndentedString(commentsReceiveAll)).append("\n");
     sb.append("    deliveryFailed: ").append(toIndentedString(deliveryFailed)).append("\n");
     sb.append("    envelopeComplete: ").append(toIndentedString(envelopeComplete)).append("\n");
     sb.append("    offlineSigningFailed: ").append(toIndentedString(offlineSigningFailed)).append("\n");
-    sb.append("    powerformResponsesLimitNotificationEmail: ")
-        .append(toIndentedString(powerformResponsesLimitNotificationEmail)).append("\n");
+    sb.append("    powerformResponsesLimitNotificationEmail: ").append(toIndentedString(powerformResponsesLimitNotificationEmail)).append("\n");
     sb.append("    purgeDocuments: ").append(toIndentedString(purgeDocuments)).append("\n");
     sb.append("    recipientViewed: ").append(toIndentedString(recipientViewed)).append("\n");
     sb.append("    senderEnvelopeDeclined: ").append(toIndentedString(senderEnvelopeDeclined)).append("\n");
@@ -466,3 +449,4 @@ public class SenderEmailNotifications {
   }
 
 }
+

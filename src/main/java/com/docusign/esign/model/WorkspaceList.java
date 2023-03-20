@@ -31,6 +31,7 @@ public class WorkspaceList {
   @JsonProperty("workspaces")
   private java.util.List<Workspace> workspaces = null;
 
+
   /**
    * endPosition.
    *
@@ -43,7 +44,6 @@ public class WorkspaceList {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -58,6 +58,7 @@ public class WorkspaceList {
     this.endPosition = endPosition;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -70,7 +71,6 @@ public class WorkspaceList {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -85,6 +85,7 @@ public class WorkspaceList {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -97,7 +98,6 @@ public class WorkspaceList {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -112,6 +112,7 @@ public class WorkspaceList {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -123,10 +124,7 @@ public class WorkspaceList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -141,6 +139,7 @@ public class WorkspaceList {
     this.totalSetSize = totalSetSize;
   }
 
+
   /**
    * workspaces.
    *
@@ -150,7 +149,7 @@ public class WorkspaceList {
     this.workspaces = workspaces;
     return this;
   }
-
+  
   /**
    * addWorkspacesItem.
    *
@@ -166,7 +165,6 @@ public class WorkspaceList {
 
   /**
    * A list of workspaces..
-   * 
    * @return workspaces
    **/
   @Schema(description = "A list of workspaces.")
@@ -180,6 +178,7 @@ public class WorkspaceList {
   public void setWorkspaces(java.util.List<Workspace> workspaces) {
     this.workspaces = workspaces;
   }
+
 
   /**
    * Compares objects.
@@ -210,6 +209,7 @@ public class WorkspaceList {
     return Objects.hash(endPosition, resultSetSize, startPosition, totalSetSize, workspaces);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -217,7 +217,7 @@ public class WorkspaceList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceList {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
@@ -239,3 +239,4 @@ public class WorkspaceList {
   }
 
 }
+

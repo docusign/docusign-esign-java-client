@@ -27,6 +27,7 @@ public class ConnectLogs {
   @JsonProperty("type")
   private String type = null;
 
+
   /**
    * failures.
    *
@@ -36,7 +37,7 @@ public class ConnectLogs {
     this.failures = failures;
     return this;
   }
-
+  
   /**
    * addFailuresItem.
    *
@@ -52,7 +53,6 @@ public class ConnectLogs {
 
   /**
    * An array of containing failure information from the Connect failure log..
-   * 
    * @return failures
    **/
   @Schema(description = "An array of containing failure information from the Connect failure log.")
@@ -67,6 +67,7 @@ public class ConnectLogs {
     this.failures = failures;
   }
 
+
   /**
    * logs.
    *
@@ -76,7 +77,7 @@ public class ConnectLogs {
     this.logs = logs;
     return this;
   }
-
+  
   /**
    * addLogsItem.
    *
@@ -91,9 +92,7 @@ public class ConnectLogs {
   }
 
   /**
-   * A complex type containing Connect log information. It is divided into two
-   * sections, one for regular logs and one for Connect failures. .
-   * 
+   * A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. .
    * @return logs
    **/
   @Schema(description = "A complex type containing Connect log information. It is divided into two sections, one for regular logs and one for Connect failures. ")
@@ -108,6 +107,7 @@ public class ConnectLogs {
     this.logs = logs;
   }
 
+
   /**
    * totalRecords.
    *
@@ -120,7 +120,6 @@ public class ConnectLogs {
 
   /**
    * .
-   * 
    * @return totalRecords
    **/
   @Schema(description = "")
@@ -135,6 +134,7 @@ public class ConnectLogs {
     this.totalRecords = totalRecords;
   }
 
+
   /**
    * type.
    *
@@ -147,7 +147,6 @@ public class ConnectLogs {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -161,6 +160,7 @@ public class ConnectLogs {
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * Compares objects.
@@ -190,6 +190,7 @@ public class ConnectLogs {
     return Objects.hash(failures, logs, totalRecords, type);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -197,7 +198,7 @@ public class ConnectLogs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLogs {\n");
-
+    
     sb.append("    failures: ").append(toIndentedString(failures)).append("\n");
     sb.append("    logs: ").append(toIndentedString(logs)).append("\n");
     sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
@@ -218,3 +219,4 @@ public class ConnectLogs {
   }
 
 }
+

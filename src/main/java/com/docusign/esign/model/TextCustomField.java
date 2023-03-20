@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object represents a free text custom field where envelope creators and
- * senders can enter custom data..
+ * This object represents a free text custom field where envelope creators and senders can enter custom data..
  *
  */
 @Schema(description = "This object represents a free text custom field where envelope creators and senders can enter custom data.")
@@ -38,6 +37,7 @@ public class TextCustomField {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * configurationType.
    *
@@ -49,9 +49,7 @@ public class TextCustomField {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The
-   * only supported value is **salesforce**..
-   * 
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
    **/
   @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
@@ -66,6 +64,7 @@ public class TextCustomField {
     this.configurationType = configurationType;
   }
 
+
   /**
    * errorDetails.
    *
@@ -77,12 +76,10 @@ public class TextCustomField {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -93,6 +90,7 @@ public class TextCustomField {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * fieldId.
@@ -106,7 +104,6 @@ public class TextCustomField {
 
   /**
    * An ID used to specify a custom field..
-   * 
    * @return fieldId
    **/
   @Schema(description = "An ID used to specify a custom field.")
@@ -121,6 +118,7 @@ public class TextCustomField {
     this.fieldId = fieldId;
   }
 
+
   /**
    * name.
    *
@@ -133,7 +131,6 @@ public class TextCustomField {
 
   /**
    * The name of the custom field..
-   * 
    * @return name
    **/
   @Schema(description = "The name of the custom field.")
@@ -148,6 +145,7 @@ public class TextCustomField {
     this.name = name;
   }
 
+
   /**
    * required.
    *
@@ -160,7 +158,6 @@ public class TextCustomField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -175,6 +172,7 @@ public class TextCustomField {
     this.required = required;
   }
 
+
   /**
    * show.
    *
@@ -187,7 +185,6 @@ public class TextCustomField {
 
   /**
    * A boolean indicating if the value should be displayed..
-   * 
    * @return show
    **/
   @Schema(description = "A boolean indicating if the value should be displayed.")
@@ -202,6 +199,7 @@ public class TextCustomField {
     this.show = show;
   }
 
+
   /**
    * value.
    *
@@ -214,7 +212,6 @@ public class TextCustomField {
 
   /**
    * The value of the custom field..
-   * 
    * @return value
    **/
   @Schema(description = "The value of the custom field.")
@@ -228,6 +225,7 @@ public class TextCustomField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -260,6 +258,7 @@ public class TextCustomField {
     return Objects.hash(configurationType, errorDetails, fieldId, name, required, show, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -267,7 +266,7 @@ public class TextCustomField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TextCustomField {\n");
-
+    
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -291,3 +290,4 @@ public class TextCustomField {
   }
 
 }
+

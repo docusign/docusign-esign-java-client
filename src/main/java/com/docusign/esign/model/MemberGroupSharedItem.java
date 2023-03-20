@@ -26,6 +26,7 @@ public class MemberGroupSharedItem {
   @JsonProperty("shared")
   private String shared = null;
 
+
   /**
    * errorDetails.
    *
@@ -37,12 +38,10 @@ public class MemberGroupSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -53,6 +52,7 @@ public class MemberGroupSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * group.
@@ -66,7 +66,6 @@ public class MemberGroupSharedItem {
 
   /**
    * The group sharing the item..
-   * 
    * @return group
    **/
   @Schema(description = "The group sharing the item.")
@@ -81,6 +80,7 @@ public class MemberGroupSharedItem {
     this.group = group;
   }
 
+
   /**
    * shared.
    *
@@ -93,7 +93,6 @@ public class MemberGroupSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -107,6 +106,7 @@ public class MemberGroupSharedItem {
   public void setShared(String shared) {
     this.shared = shared;
   }
+
 
   /**
    * Compares objects.
@@ -135,6 +135,7 @@ public class MemberGroupSharedItem {
     return Objects.hash(errorDetails, group, shared);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -142,7 +143,7 @@ public class MemberGroupSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberGroupSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -162,3 +163,4 @@ public class MemberGroupSharedItem {
   }
 
 }
+

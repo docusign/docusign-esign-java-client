@@ -93,6 +93,7 @@ public class PowerForm {
   @JsonProperty("usesRemaining")
   private String usesRemaining = null;
 
+
   /**
    * createdBy.
    *
@@ -105,7 +106,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return createdBy
    **/
   @Schema(description = "")
@@ -120,6 +120,7 @@ public class PowerForm {
     this.createdBy = createdBy;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -132,7 +133,6 @@ public class PowerForm {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -147,6 +147,7 @@ public class PowerForm {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * emailBody.
    *
@@ -158,9 +159,7 @@ public class PowerForm {
   }
 
   /**
-   * Specifies the email body of the message sent to the recipient. Maximum
-   * length: 10000 characters. .
-   * 
+   * Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. .
    * @return emailBody
    **/
   @Schema(description = "Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. ")
@@ -175,6 +174,7 @@ public class PowerForm {
     this.emailBody = emailBody;
   }
 
+
   /**
    * emailSubject.
    *
@@ -186,10 +186,7 @@ public class PowerForm {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients. See
-   * [ML:Template Email Subject Merge Fields] for information about adding merge
-   * field information to the email subject..
-   * 
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
    **/
   @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
@@ -204,6 +201,7 @@ public class PowerForm {
     this.emailSubject = emailSubject;
   }
 
+
   /**
    * envelopes.
    *
@@ -213,7 +211,7 @@ public class PowerForm {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
@@ -229,7 +227,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return envelopes
    **/
   @Schema(description = "")
@@ -244,6 +241,7 @@ public class PowerForm {
     this.envelopes = envelopes;
   }
 
+
   /**
    * errorDetails.
    *
@@ -255,12 +253,10 @@ public class PowerForm {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -271,6 +267,7 @@ public class PowerForm {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * instructions.
@@ -284,7 +281,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return instructions
    **/
   @Schema(description = "")
@@ -299,6 +295,7 @@ public class PowerForm {
     this.instructions = instructions;
   }
 
+
   /**
    * isActive.
    *
@@ -311,7 +308,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return isActive
    **/
   @Schema(description = "")
@@ -326,6 +322,7 @@ public class PowerForm {
     this.isActive = isActive;
   }
 
+
   /**
    * lastUsed.
    *
@@ -338,7 +335,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return lastUsed
    **/
   @Schema(description = "")
@@ -353,6 +349,7 @@ public class PowerForm {
     this.lastUsed = lastUsed;
   }
 
+
   /**
    * limitUseInterval.
    *
@@ -365,7 +362,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return limitUseInterval
    **/
   @Schema(description = "")
@@ -380,6 +376,7 @@ public class PowerForm {
     this.limitUseInterval = limitUseInterval;
   }
 
+
   /**
    * limitUseIntervalEnabled.
    *
@@ -392,7 +389,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return limitUseIntervalEnabled
    **/
   @Schema(description = "")
@@ -407,6 +403,7 @@ public class PowerForm {
     this.limitUseIntervalEnabled = limitUseIntervalEnabled;
   }
 
+
   /**
    * limitUseIntervalUnits.
    *
@@ -419,7 +416,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return limitUseIntervalUnits
    **/
   @Schema(description = "")
@@ -434,6 +430,7 @@ public class PowerForm {
     this.limitUseIntervalUnits = limitUseIntervalUnits;
   }
 
+
   /**
    * maxUseEnabled.
    *
@@ -446,7 +443,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return maxUseEnabled
    **/
   @Schema(description = "")
@@ -461,6 +457,7 @@ public class PowerForm {
     this.maxUseEnabled = maxUseEnabled;
   }
 
+
   /**
    * name.
    *
@@ -473,7 +470,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -488,6 +484,7 @@ public class PowerForm {
     this.name = name;
   }
 
+
   /**
    * powerFormId.
    *
@@ -500,7 +497,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return powerFormId
    **/
   @Schema(description = "")
@@ -515,6 +511,7 @@ public class PowerForm {
     this.powerFormId = powerFormId;
   }
 
+
   /**
    * powerFormUrl.
    *
@@ -527,7 +524,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return powerFormUrl
    **/
   @Schema(description = "")
@@ -542,6 +538,7 @@ public class PowerForm {
     this.powerFormUrl = powerFormUrl;
   }
 
+
   /**
    * recipients.
    *
@@ -551,7 +548,7 @@ public class PowerForm {
     this.recipients = recipients;
     return this;
   }
-
+  
   /**
    * addRecipientsItem.
    *
@@ -567,7 +564,6 @@ public class PowerForm {
 
   /**
    * An array of powerform recipients..
-   * 
    * @return recipients
    **/
   @Schema(description = "An array of powerform recipients.")
@@ -582,6 +578,7 @@ public class PowerForm {
     this.recipients = recipients;
   }
 
+
   /**
    * senderName.
    *
@@ -594,7 +591,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return senderName
    **/
   @Schema(description = "")
@@ -609,6 +605,7 @@ public class PowerForm {
     this.senderName = senderName;
   }
 
+
   /**
    * senderUserId.
    *
@@ -621,7 +618,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return senderUserId
    **/
   @Schema(description = "")
@@ -636,6 +632,7 @@ public class PowerForm {
     this.senderUserId = senderUserId;
   }
 
+
   /**
    * signingMode.
    *
@@ -648,7 +645,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return signingMode
    **/
   @Schema(description = "")
@@ -663,6 +659,7 @@ public class PowerForm {
     this.signingMode = signingMode;
   }
 
+
   /**
    * templateId.
    *
@@ -674,9 +671,7 @@ public class PowerForm {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -691,6 +686,7 @@ public class PowerForm {
     this.templateId = templateId;
   }
 
+
   /**
    * templateName.
    *
@@ -703,7 +699,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return templateName
    **/
   @Schema(description = "")
@@ -718,6 +713,7 @@ public class PowerForm {
     this.templateName = templateName;
   }
 
+
   /**
    * timesUsed.
    *
@@ -730,7 +726,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return timesUsed
    **/
   @Schema(description = "")
@@ -745,6 +740,7 @@ public class PowerForm {
     this.timesUsed = timesUsed;
   }
 
+
   /**
    * uri.
    *
@@ -757,7 +753,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -772,6 +767,7 @@ public class PowerForm {
     this.uri = uri;
   }
 
+
   /**
    * usesRemaining.
    *
@@ -784,7 +780,6 @@ public class PowerForm {
 
   /**
    * .
-   * 
    * @return usesRemaining
    **/
   @Schema(description = "")
@@ -798,6 +793,7 @@ public class PowerForm {
   public void setUsesRemaining(String usesRemaining) {
     this.usesRemaining = usesRemaining;
   }
+
 
   /**
    * Compares objects.
@@ -845,11 +841,9 @@ public class PowerForm {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(createdBy, createdDateTime, emailBody, emailSubject, envelopes, errorDetails, instructions,
-        isActive, lastUsed, limitUseInterval, limitUseIntervalEnabled, limitUseIntervalUnits, maxUseEnabled, name,
-        powerFormId, powerFormUrl, recipients, senderName, senderUserId, signingMode, templateId, templateName,
-        timesUsed, uri, usesRemaining);
+    return Objects.hash(createdBy, createdDateTime, emailBody, emailSubject, envelopes, errorDetails, instructions, isActive, lastUsed, limitUseInterval, limitUseIntervalEnabled, limitUseIntervalUnits, maxUseEnabled, name, powerFormId, powerFormUrl, recipients, senderName, senderUserId, signingMode, templateId, templateName, timesUsed, uri, usesRemaining);
   }
+
 
   /**
    * Converts the given object to string.
@@ -858,7 +852,7 @@ public class PowerForm {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerForm {\n");
-
+    
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
@@ -900,3 +894,4 @@ public class PowerForm {
   }
 
 }
+

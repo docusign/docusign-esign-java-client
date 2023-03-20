@@ -37,6 +37,7 @@ public class BccEmailArchiveList {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * bccEmailArchives.
    *
@@ -46,7 +47,7 @@ public class BccEmailArchiveList {
     this.bccEmailArchives = bccEmailArchives;
     return this;
   }
-
+  
   /**
    * addBccEmailArchivesItem.
    *
@@ -62,7 +63,6 @@ public class BccEmailArchiveList {
 
   /**
    * .
-   * 
    * @return bccEmailArchives
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class BccEmailArchiveList {
     this.bccEmailArchives = bccEmailArchives;
   }
 
+
   /**
    * endPosition.
    *
@@ -89,7 +90,6 @@ public class BccEmailArchiveList {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -104,6 +104,7 @@ public class BccEmailArchiveList {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -115,9 +116,7 @@ public class BccEmailArchiveList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -132,6 +131,7 @@ public class BccEmailArchiveList {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -144,7 +144,6 @@ public class BccEmailArchiveList {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -159,6 +158,7 @@ public class BccEmailArchiveList {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -171,7 +171,6 @@ public class BccEmailArchiveList {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -186,6 +185,7 @@ public class BccEmailArchiveList {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -198,7 +198,6 @@ public class BccEmailArchiveList {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -213,6 +212,7 @@ public class BccEmailArchiveList {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -224,10 +224,7 @@ public class BccEmailArchiveList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -241,6 +238,7 @@ public class BccEmailArchiveList {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -270,9 +268,9 @@ public class BccEmailArchiveList {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bccEmailArchives, endPosition, nextUri, previousUri, resultSetSize, startPosition,
-        totalSetSize);
+    return Objects.hash(bccEmailArchives, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -281,7 +279,7 @@ public class BccEmailArchiveList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchiveList {\n");
-
+    
     sb.append("    bccEmailArchives: ").append(toIndentedString(bccEmailArchives)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -305,3 +303,4 @@ public class BccEmailArchiveList {
   }
 
 }
+

@@ -39,6 +39,7 @@ public class BulkSendBatchSummary {
   @JsonProperty("submittedDate")
   private String submittedDate = null;
 
+
   /**
    * batchId.
    *
@@ -51,7 +52,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return batchId
    **/
   @Schema(description = "")
@@ -66,6 +66,7 @@ public class BulkSendBatchSummary {
     this.batchId = batchId;
   }
 
+
   /**
    * batchName.
    *
@@ -78,7 +79,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -93,6 +93,7 @@ public class BulkSendBatchSummary {
     this.batchName = batchName;
   }
 
+
   /**
    * batchSize.
    *
@@ -105,7 +106,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return batchSize
    **/
   @Schema(description = "")
@@ -120,6 +120,7 @@ public class BulkSendBatchSummary {
     this.batchSize = batchSize;
   }
 
+
   /**
    * batchUri.
    *
@@ -132,7 +133,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return batchUri
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class BulkSendBatchSummary {
     this.batchUri = batchUri;
   }
 
+
   /**
    * failed.
    *
@@ -159,7 +160,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return failed
    **/
   @Schema(description = "")
@@ -174,6 +174,7 @@ public class BulkSendBatchSummary {
     this.failed = failed;
   }
 
+
   /**
    * queued.
    *
@@ -186,7 +187,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return queued
    **/
   @Schema(description = "")
@@ -201,6 +201,7 @@ public class BulkSendBatchSummary {
     this.queued = queued;
   }
 
+
   /**
    * sent.
    *
@@ -213,7 +214,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return sent
    **/
   @Schema(description = "")
@@ -228,6 +228,7 @@ public class BulkSendBatchSummary {
     this.sent = sent;
   }
 
+
   /**
    * submittedDate.
    *
@@ -240,7 +241,6 @@ public class BulkSendBatchSummary {
 
   /**
    * .
-   * 
    * @return submittedDate
    **/
   @Schema(description = "")
@@ -254,6 +254,7 @@ public class BulkSendBatchSummary {
   public void setSubmittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
   }
+
 
   /**
    * Compares objects.
@@ -287,6 +288,7 @@ public class BulkSendBatchSummary {
     return Objects.hash(batchId, batchName, batchSize, batchUri, failed, queued, sent, submittedDate);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -294,7 +296,7 @@ public class BulkSendBatchSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchSummary {\n");
-
+    
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
@@ -319,3 +321,4 @@ public class BulkSendBatchSummary {
   }
 
 }
+

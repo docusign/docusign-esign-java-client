@@ -18,6 +18,7 @@ public class PowerFormsRequest {
   @JsonProperty("powerForms")
   private java.util.List<PowerForm> powerForms = null;
 
+
   /**
    * powerForms.
    *
@@ -27,7 +28,7 @@ public class PowerFormsRequest {
     this.powerForms = powerForms;
     return this;
   }
-
+  
   /**
    * addPowerFormsItem.
    *
@@ -43,7 +44,6 @@ public class PowerFormsRequest {
 
   /**
    * .
-   * 
    * @return powerForms
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class PowerFormsRequest {
   public void setPowerForms(java.util.List<PowerForm> powerForms) {
     this.powerForms = powerForms;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class PowerFormsRequest {
     return Objects.hash(powerForms);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class PowerFormsRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsRequest {\n");
-
+    
     sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class PowerFormsRequest {
   }
 
 }
+

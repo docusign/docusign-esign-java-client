@@ -18,6 +18,7 @@ public class CustomSettingsInformation {
   @JsonProperty("customSettings")
   private java.util.List<NameValue> customSettings = null;
 
+
   /**
    * customSettings.
    *
@@ -27,7 +28,7 @@ public class CustomSettingsInformation {
     this.customSettings = customSettings;
     return this;
   }
-
+  
   /**
    * addCustomSettingsItem.
    *
@@ -43,7 +44,6 @@ public class CustomSettingsInformation {
 
   /**
    * .
-   * 
    * @return customSettings
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class CustomSettingsInformation {
   public void setCustomSettings(java.util.List<NameValue> customSettings) {
     this.customSettings = customSettings;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class CustomSettingsInformation {
     return Objects.hash(customSettings);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class CustomSettingsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomSettingsInformation {\n");
-
+    
     sb.append("    customSettings: ").append(toIndentedString(customSettings)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class CustomSettingsInformation {
   }
 
 }
+

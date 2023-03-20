@@ -27,6 +27,7 @@ public class Country {
   @JsonProperty("provinceValidated")
   private String provinceValidated = null;
 
+
   /**
    * isoCode.
    *
@@ -39,7 +40,6 @@ public class Country {
 
   /**
    * .
-   * 
    * @return isoCode
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class Country {
     this.isoCode = isoCode;
   }
 
+
   /**
    * name.
    *
@@ -66,7 +67,6 @@ public class Country {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class Country {
     this.name = name;
   }
 
+
   /**
    * provinces.
    *
@@ -90,7 +91,7 @@ public class Country {
     this.provinces = provinces;
     return this;
   }
-
+  
   /**
    * addProvincesItem.
    *
@@ -106,7 +107,6 @@ public class Country {
 
   /**
    * .
-   * 
    * @return provinces
    **/
   @Schema(description = "")
@@ -121,6 +121,7 @@ public class Country {
     this.provinces = provinces;
   }
 
+
   /**
    * provinceValidated.
    *
@@ -133,7 +134,6 @@ public class Country {
 
   /**
    * .
-   * 
    * @return provinceValidated
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class Country {
   public void setProvinceValidated(String provinceValidated) {
     this.provinceValidated = provinceValidated;
   }
+
 
   /**
    * Compares objects.
@@ -176,6 +177,7 @@ public class Country {
     return Objects.hash(isoCode, name, provinces, provinceValidated);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -183,7 +185,7 @@ public class Country {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Country {\n");
-
+    
     sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    provinces: ").append(toIndentedString(provinces)).append("\n");
@@ -204,3 +206,4 @@ public class Country {
   }
 
 }
+

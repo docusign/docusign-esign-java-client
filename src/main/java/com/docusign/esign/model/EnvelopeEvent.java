@@ -21,6 +21,7 @@ public class EnvelopeEvent {
   @JsonProperty("includeDocuments")
   private String includeDocuments = null;
 
+
   /**
    * envelopeEventStatusCode.
    *
@@ -32,9 +33,7 @@ public class EnvelopeEvent {
   }
 
   /**
-   * he envelope status, this can be Sent, Delivered, Completed, Declined, or
-   * Voided..
-   * 
+   * he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided..
    * @return envelopeEventStatusCode
    **/
   @Schema(description = "he envelope status, this can be Sent, Delivered, Completed, Declined, or Voided.")
@@ -49,6 +48,7 @@ public class EnvelopeEvent {
     this.envelopeEventStatusCode = envelopeEventStatusCode;
   }
 
+
   /**
    * includeDocuments.
    *
@@ -60,9 +60,7 @@ public class EnvelopeEvent {
   }
 
   /**
-   * When set to **true**, the PDF documents are included in the message along
-   * with the updated XML. .
-   * 
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
    * @return includeDocuments
    **/
   @Schema(description = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
@@ -76,6 +74,7 @@ public class EnvelopeEvent {
   public void setIncludeDocuments(String includeDocuments) {
     this.includeDocuments = includeDocuments;
   }
+
 
   /**
    * Compares objects.
@@ -103,6 +102,7 @@ public class EnvelopeEvent {
     return Objects.hash(envelopeEventStatusCode, includeDocuments);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -110,7 +110,7 @@ public class EnvelopeEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeEvent {\n");
-
+    
     sb.append("    envelopeEventStatusCode: ").append(toIndentedString(envelopeEventStatusCode)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("}");
@@ -129,3 +129,4 @@ public class EnvelopeEvent {
   }
 
 }
+

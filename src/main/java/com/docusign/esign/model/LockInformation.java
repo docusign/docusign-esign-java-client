@@ -40,6 +40,7 @@ public class LockInformation {
   @JsonProperty("useScratchPad")
   private String useScratchPad = null;
 
+
   /**
    * errorDetails.
    *
@@ -51,12 +52,10 @@ public class LockInformation {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -67,6 +66,7 @@ public class LockInformation {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * lockDurationInSeconds.
@@ -79,11 +79,7 @@ public class LockInformation {
   }
 
   /**
-   * Sets the time, in seconds, until the lock expires when there is no activity
-   * on the envelope. If no value is entered, then the default value of 300
-   * seconds is used. The maximum value is 1,800 seconds. The lock duration can be
-   * extended. .
-   * 
+   * Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended. .
    * @return lockDurationInSeconds
    **/
   @Schema(description = "Sets the time, in seconds, until the lock expires when there is no activity on the envelope.  If no value is entered, then the default value of 300 seconds is used. The maximum value is 1,800 seconds.  The lock duration can be extended. ")
@@ -98,6 +94,7 @@ public class LockInformation {
     this.lockDurationInSeconds = lockDurationInSeconds;
   }
 
+
   /**
    * lockedByApp.
    *
@@ -109,8 +106,7 @@ public class LockInformation {
   }
 
   /**
-   * Specifies the friendly name of the application that is locking the envelope..
-   * 
+   * Specifies the friendly name of  the application that is locking the envelope..
    * @return lockedByApp
    **/
   @Schema(description = "Specifies the friendly name of  the application that is locking the envelope.")
@@ -125,6 +121,7 @@ public class LockInformation {
     this.lockedByApp = lockedByApp;
   }
 
+
   /**
    * lockedByUser.
    *
@@ -136,9 +133,7 @@ public class LockInformation {
   }
 
   /**
-   * A complex type containing information about the user that has the envelope or
-   * template locked..
-   * 
+   * A complex type containing information about the user that has the envelope or template locked..
    * @return lockedByUser
    **/
   @Schema(description = "A complex type containing information about the user that has the envelope or template locked.")
@@ -153,6 +148,7 @@ public class LockInformation {
     this.lockedByUser = lockedByUser;
   }
 
+
   /**
    * lockedUntilDateTime.
    *
@@ -165,7 +161,6 @@ public class LockInformation {
 
   /**
    * The datetime until the envelope lock expires..
-   * 
    * @return lockedUntilDateTime
    **/
   @Schema(description = "The datetime until the envelope lock expires.")
@@ -180,6 +175,7 @@ public class LockInformation {
     this.lockedUntilDateTime = lockedUntilDateTime;
   }
 
+
   /**
    * lockToken.
    *
@@ -191,9 +187,7 @@ public class LockInformation {
   }
 
   /**
-   * A unique identifier provided to the owner of the envelope lock. Used to prove
-   * ownership of the lock..
-   * 
+   * A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock..
    * @return lockToken
    **/
   @Schema(description = "A unique identifier provided to the owner of the envelope lock.   Used to prove ownership of the lock.")
@@ -208,6 +202,7 @@ public class LockInformation {
     this.lockToken = lockToken;
   }
 
+
   /**
    * lockType.
    *
@@ -219,8 +214,7 @@ public class LockInformation {
   }
 
   /**
-   * The type of envelope lock. Currently \"edit\" is the only supported type..
-   * 
+   * The type of envelope lock.  Currently \"edit\" is the only supported type..
    * @return lockType
    **/
   @Schema(description = "The type of envelope lock.  Currently \"edit\" is the only supported type.")
@@ -235,6 +229,7 @@ public class LockInformation {
     this.lockType = lockType;
   }
 
+
   /**
    * useScratchPad.
    *
@@ -246,9 +241,7 @@ public class LockInformation {
   }
 
   /**
-   * Reserved for future use. Indicates whether a scratchpad is used for editing
-   * information. .
-   * 
+   * Reserved for future use.  Indicates whether a scratchpad is used for editing information.  .
    * @return useScratchPad
    **/
   @Schema(description = "Reserved for future use.  Indicates whether a scratchpad is used for editing information.  ")
@@ -262,6 +255,7 @@ public class LockInformation {
   public void setUseScratchPad(String useScratchPad) {
     this.useScratchPad = useScratchPad;
   }
+
 
   /**
    * Compares objects.
@@ -292,9 +286,9 @@ public class LockInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, lockDurationInSeconds, lockedByApp, lockedByUser, lockedUntilDateTime, lockToken,
-        lockType, useScratchPad);
+    return Objects.hash(errorDetails, lockDurationInSeconds, lockedByApp, lockedByUser, lockedUntilDateTime, lockToken, lockType, useScratchPad);
   }
+
 
   /**
    * Converts the given object to string.
@@ -303,7 +297,7 @@ public class LockInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LockInformation {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    lockDurationInSeconds: ").append(toIndentedString(lockDurationInSeconds)).append("\n");
     sb.append("    lockedByApp: ").append(toIndentedString(lockedByApp)).append("\n");
@@ -328,3 +322,4 @@ public class LockInformation {
   }
 
 }
+

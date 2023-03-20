@@ -53,6 +53,7 @@ public class DowngradePlanUpdateResponse {
   @JsonProperty("saleDiscountType")
   private String saleDiscountType = null;
 
+
   /**
    * accountPaymentMethod.
    *
@@ -65,7 +66,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return accountPaymentMethod
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class DowngradePlanUpdateResponse {
     this.accountPaymentMethod = accountPaymentMethod;
   }
 
+
   /**
    * discountApplied.
    *
@@ -92,7 +93,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return discountApplied
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class DowngradePlanUpdateResponse {
     this.discountApplied = discountApplied;
   }
 
+
   /**
    * downgradeEffectiveDate.
    *
@@ -119,7 +120,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return downgradeEffectiveDate
    **/
   @Schema(description = "")
@@ -134,6 +134,7 @@ public class DowngradePlanUpdateResponse {
     this.downgradeEffectiveDate = downgradeEffectiveDate;
   }
 
+
   /**
    * downgradePaymentCycle.
    *
@@ -146,7 +147,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return downgradePaymentCycle
    **/
   @Schema(description = "")
@@ -161,6 +161,7 @@ public class DowngradePlanUpdateResponse {
     this.downgradePaymentCycle = downgradePaymentCycle;
   }
 
+
   /**
    * downgradePlanId.
    *
@@ -173,7 +174,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return downgradePlanId
    **/
   @Schema(description = "")
@@ -188,6 +188,7 @@ public class DowngradePlanUpdateResponse {
     this.downgradePlanId = downgradePlanId;
   }
 
+
   /**
    * downgradePlanName.
    *
@@ -200,7 +201,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return downgradePlanName
    **/
   @Schema(description = "")
@@ -215,6 +215,7 @@ public class DowngradePlanUpdateResponse {
     this.downgradePlanName = downgradePlanName;
   }
 
+
   /**
    * downgradeRequestStatus.
    *
@@ -227,7 +228,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return downgradeRequestStatus
    **/
   @Schema(description = "")
@@ -242,6 +242,7 @@ public class DowngradePlanUpdateResponse {
     this.downgradeRequestStatus = downgradeRequestStatus;
   }
 
+
   /**
    * message.
    *
@@ -254,7 +255,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return message
    **/
   @Schema(description = "")
@@ -269,6 +269,7 @@ public class DowngradePlanUpdateResponse {
     this.message = message;
   }
 
+
   /**
    * productId.
    *
@@ -281,7 +282,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return productId
    **/
   @Schema(description = "")
@@ -296,6 +296,7 @@ public class DowngradePlanUpdateResponse {
     this.productId = productId;
   }
 
+
   /**
    * promoCode.
    *
@@ -308,7 +309,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return promoCode
    **/
   @Schema(description = "")
@@ -323,6 +323,7 @@ public class DowngradePlanUpdateResponse {
     this.promoCode = promoCode;
   }
 
+
   /**
    * saleDiscount.
    *
@@ -335,7 +336,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return saleDiscount
    **/
   @Schema(description = "")
@@ -350,6 +350,7 @@ public class DowngradePlanUpdateResponse {
     this.saleDiscount = saleDiscount;
   }
 
+
   /**
    * saleDiscountPeriods.
    *
@@ -362,7 +363,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return saleDiscountPeriods
    **/
   @Schema(description = "")
@@ -377,6 +377,7 @@ public class DowngradePlanUpdateResponse {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
   /**
    * saleDiscountType.
    *
@@ -389,7 +390,6 @@ public class DowngradePlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return saleDiscountType
    **/
   @Schema(description = "")
@@ -403,6 +403,7 @@ public class DowngradePlanUpdateResponse {
   public void setSaleDiscountType(String saleDiscountType) {
     this.saleDiscountType = saleDiscountType;
   }
+
 
   /**
    * Compares objects.
@@ -438,10 +439,9 @@ public class DowngradePlanUpdateResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountPaymentMethod, discountApplied, downgradeEffectiveDate, downgradePaymentCycle,
-        downgradePlanId, downgradePlanName, downgradeRequestStatus, message, productId, promoCode, saleDiscount,
-        saleDiscountPeriods, saleDiscountType);
+    return Objects.hash(accountPaymentMethod, discountApplied, downgradeEffectiveDate, downgradePaymentCycle, downgradePlanId, downgradePlanName, downgradeRequestStatus, message, productId, promoCode, saleDiscount, saleDiscountPeriods, saleDiscountType);
   }
+
 
   /**
    * Converts the given object to string.
@@ -450,7 +450,7 @@ public class DowngradePlanUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradePlanUpdateResponse {\n");
-
+    
     sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
     sb.append("    discountApplied: ").append(toIndentedString(discountApplied)).append("\n");
     sb.append("    downgradeEffectiveDate: ").append(toIndentedString(downgradeEffectiveDate)).append("\n");
@@ -480,3 +480,4 @@ public class DowngradePlanUpdateResponse {
   }
 
 }
+

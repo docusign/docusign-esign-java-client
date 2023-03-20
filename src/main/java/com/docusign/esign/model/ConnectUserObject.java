@@ -29,6 +29,7 @@ public class ConnectUserObject {
   @JsonProperty("senderSearchableItems")
   private java.util.List<String> senderSearchableItems = null;
 
+
   /**
    * configurationtype.
    *
@@ -40,9 +41,7 @@ public class ConnectUserObject {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The
-   * only supported value is **salesforce**..
-   * 
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationtype
    **/
   @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
@@ -57,6 +56,7 @@ public class ConnectUserObject {
     this.configurationtype = configurationtype;
   }
 
+
   /**
    * connectId.
    *
@@ -69,7 +69,6 @@ public class ConnectUserObject {
 
   /**
    * .
-   * 
    * @return connectId
    **/
   @Schema(description = "")
@@ -84,6 +83,7 @@ public class ConnectUserObject {
     this.connectId = connectId;
   }
 
+
   /**
    * enabled.
    *
@@ -96,7 +96,6 @@ public class ConnectUserObject {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -111,6 +110,7 @@ public class ConnectUserObject {
     this.enabled = enabled;
   }
 
+
   /**
    * hasAccess.
    *
@@ -123,7 +123,6 @@ public class ConnectUserObject {
 
   /**
    * .
-   * 
    * @return hasAccess
    **/
   @Schema(description = "")
@@ -138,6 +137,7 @@ public class ConnectUserObject {
     this.hasAccess = hasAccess;
   }
 
+
   /**
    * senderSearchableItems.
    *
@@ -147,7 +147,7 @@ public class ConnectUserObject {
     this.senderSearchableItems = senderSearchableItems;
     return this;
   }
-
+  
   /**
    * addSenderSearchableItemsItem.
    *
@@ -163,7 +163,6 @@ public class ConnectUserObject {
 
   /**
    * .
-   * 
    * @return senderSearchableItems
    **/
   @Schema(description = "")
@@ -177,6 +176,7 @@ public class ConnectUserObject {
   public void setSenderSearchableItems(java.util.List<String> senderSearchableItems) {
     this.senderSearchableItems = senderSearchableItems;
   }
+
 
   /**
    * Compares objects.
@@ -207,6 +207,7 @@ public class ConnectUserObject {
     return Objects.hash(configurationtype, connectId, enabled, hasAccess, senderSearchableItems);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -214,7 +215,7 @@ public class ConnectUserObject {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectUserObject {\n");
-
+    
     sb.append("    configurationtype: ").append(toIndentedString(configurationtype)).append("\n");
     sb.append("    connectId: ").append(toIndentedString(connectId)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
@@ -236,3 +237,4 @@ public class ConnectUserObject {
   }
 
 }
+

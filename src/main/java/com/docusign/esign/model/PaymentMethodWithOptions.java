@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information about a payment method that the gateway
- * accepts and the payment options that are compatible with it..
+ * This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it..
  *
  */
 @Schema(description = "This object contains information about a payment method that the gateway accepts and the payment options that are compatible with it.")
@@ -25,6 +24,7 @@ public class PaymentMethodWithOptions {
   @JsonProperty("type")
   private String type = null;
 
+
   /**
    * supportedCurrencies.
    *
@@ -34,7 +34,7 @@ public class PaymentMethodWithOptions {
     this.supportedCurrencies = supportedCurrencies;
     return this;
   }
-
+  
   /**
    * addSupportedCurrenciesItem.
    *
@@ -50,7 +50,6 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
-   * 
    * @return supportedCurrencies
    **/
   @Schema(description = "")
@@ -65,6 +64,7 @@ public class PaymentMethodWithOptions {
     this.supportedCurrencies = supportedCurrencies;
   }
 
+
   /**
    * supportedOptions.
    *
@@ -74,7 +74,7 @@ public class PaymentMethodWithOptions {
     this.supportedOptions = supportedOptions;
     return this;
   }
-
+  
   /**
    * addSupportedOptionsItem.
    *
@@ -90,7 +90,6 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
-   * 
    * @return supportedOptions
    **/
   @Schema(description = "")
@@ -105,6 +104,7 @@ public class PaymentMethodWithOptions {
     this.supportedOptions = supportedOptions;
   }
 
+
   /**
    * type.
    *
@@ -117,7 +117,6 @@ public class PaymentMethodWithOptions {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -131,6 +130,7 @@ public class PaymentMethodWithOptions {
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * Compares objects.
@@ -159,6 +159,7 @@ public class PaymentMethodWithOptions {
     return Objects.hash(supportedCurrencies, supportedOptions, type);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -166,7 +167,7 @@ public class PaymentMethodWithOptions {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentMethodWithOptions {\n");
-
+    
     sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
     sb.append("    supportedOptions: ").append(toIndentedString(supportedOptions)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
@@ -186,3 +187,4 @@ public class PaymentMethodWithOptions {
   }
 
 }
+

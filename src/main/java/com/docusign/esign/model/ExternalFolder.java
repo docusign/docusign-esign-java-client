@@ -46,6 +46,7 @@ public class ExternalFolder {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -58,7 +59,6 @@ public class ExternalFolder {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -73,6 +73,7 @@ public class ExternalFolder {
     this.endPosition = endPosition;
   }
 
+
   /**
    * errorDetails.
    *
@@ -84,12 +85,10 @@ public class ExternalFolder {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ExternalDocServiceErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -100,6 +99,7 @@ public class ExternalFolder {
   public void setErrorDetails(ExternalDocServiceErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * id.
@@ -113,7 +113,6 @@ public class ExternalFolder {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -128,6 +127,7 @@ public class ExternalFolder {
     this.id = id;
   }
 
+
   /**
    * items.
    *
@@ -137,7 +137,7 @@ public class ExternalFolder {
     this.items = items;
     return this;
   }
-
+  
   /**
    * addItemsItem.
    *
@@ -153,7 +153,6 @@ public class ExternalFolder {
 
   /**
    * .
-   * 
    * @return items
    **/
   @Schema(description = "")
@@ -168,6 +167,7 @@ public class ExternalFolder {
     this.items = items;
   }
 
+
   /**
    * name.
    *
@@ -180,7 +180,6 @@ public class ExternalFolder {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -195,6 +194,7 @@ public class ExternalFolder {
     this.name = name;
   }
 
+
   /**
    * nextUri.
    *
@@ -206,9 +206,7 @@ public class ExternalFolder {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -223,6 +221,7 @@ public class ExternalFolder {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -235,7 +234,6 @@ public class ExternalFolder {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -250,6 +248,7 @@ public class ExternalFolder {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -262,7 +261,6 @@ public class ExternalFolder {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -277,6 +275,7 @@ public class ExternalFolder {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -289,7 +288,6 @@ public class ExternalFolder {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -304,6 +302,7 @@ public class ExternalFolder {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -315,10 +314,7 @@ public class ExternalFolder {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -332,6 +328,7 @@ public class ExternalFolder {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -364,9 +361,9 @@ public class ExternalFolder {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, startPosition,
-        totalSetSize);
+    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -375,7 +372,7 @@ public class ExternalFolder {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFolder {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -402,3 +399,4 @@ public class ExternalFolder {
   }
 
 }
+

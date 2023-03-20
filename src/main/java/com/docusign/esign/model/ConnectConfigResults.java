@@ -22,6 +22,7 @@ public class ConnectConfigResults {
   @JsonProperty("totalRecords")
   private String totalRecords = null;
 
+
   /**
    * configurations.
    *
@@ -31,7 +32,7 @@ public class ConnectConfigResults {
     this.configurations = configurations;
     return this;
   }
-
+  
   /**
    * addConfigurationsItem.
    *
@@ -47,7 +48,6 @@ public class ConnectConfigResults {
 
   /**
    * Reserved: TBD.
-   * 
    * @return configurations
    **/
   @Schema(description = "Reserved: TBD")
@@ -62,6 +62,7 @@ public class ConnectConfigResults {
     this.configurations = configurations;
   }
 
+
   /**
    * totalRecords.
    *
@@ -74,7 +75,6 @@ public class ConnectConfigResults {
 
   /**
    * .
-   * 
    * @return totalRecords
    **/
   @Schema(description = "")
@@ -88,6 +88,7 @@ public class ConnectConfigResults {
   public void setTotalRecords(String totalRecords) {
     this.totalRecords = totalRecords;
   }
+
 
   /**
    * Compares objects.
@@ -115,6 +116,7 @@ public class ConnectConfigResults {
     return Objects.hash(configurations, totalRecords);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -122,7 +124,7 @@ public class ConnectConfigResults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectConfigResults {\n");
-
+    
     sb.append("    configurations: ").append(toIndentedString(configurations)).append("\n");
     sb.append("    totalRecords: ").append(toIndentedString(totalRecords)).append("\n");
     sb.append("}");
@@ -141,3 +143,4 @@ public class ConnectConfigResults {
   }
 
 }
+

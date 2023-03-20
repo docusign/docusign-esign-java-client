@@ -39,6 +39,7 @@ public class BulkSendResponse {
   @JsonProperty("totalQueued")
   private String totalQueued = null;
 
+
   /**
    * batchId.
    *
@@ -51,7 +52,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return batchId
    **/
   @Schema(description = "")
@@ -66,6 +66,7 @@ public class BulkSendResponse {
     this.batchId = batchId;
   }
 
+
   /**
    * batchName.
    *
@@ -78,7 +79,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -93,6 +93,7 @@ public class BulkSendResponse {
     this.batchName = batchName;
   }
 
+
   /**
    * batchSize.
    *
@@ -105,7 +106,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return batchSize
    **/
   @Schema(description = "")
@@ -120,6 +120,7 @@ public class BulkSendResponse {
     this.batchSize = batchSize;
   }
 
+
   /**
    * envelopeOrTemplateId.
    *
@@ -132,7 +133,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return envelopeOrTemplateId
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class BulkSendResponse {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -156,7 +157,7 @@ public class BulkSendResponse {
     this.errorDetails = errorDetails;
     return this;
   }
-
+  
   /**
    * addErrorDetailsItem.
    *
@@ -172,7 +173,6 @@ public class BulkSendResponse {
 
   /**
    * Array or errors..
-   * 
    * @return errorDetails
    **/
   @Schema(description = "Array or errors.")
@@ -187,6 +187,7 @@ public class BulkSendResponse {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * errors.
    *
@@ -196,7 +197,7 @@ public class BulkSendResponse {
     this.errors = errors;
     return this;
   }
-
+  
   /**
    * addErrorsItem.
    *
@@ -212,7 +213,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return errors
    **/
   @Schema(description = "")
@@ -227,6 +227,7 @@ public class BulkSendResponse {
     this.errors = errors;
   }
 
+
   /**
    * queueLimit.
    *
@@ -239,7 +240,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return queueLimit
    **/
   @Schema(description = "")
@@ -254,6 +254,7 @@ public class BulkSendResponse {
     this.queueLimit = queueLimit;
   }
 
+
   /**
    * totalQueued.
    *
@@ -266,7 +267,6 @@ public class BulkSendResponse {
 
   /**
    * .
-   * 
    * @return totalQueued
    **/
   @Schema(description = "")
@@ -280,6 +280,7 @@ public class BulkSendResponse {
   public void setTotalQueued(String totalQueued) {
     this.totalQueued = totalQueued;
   }
+
 
   /**
    * Compares objects.
@@ -310,9 +311,9 @@ public class BulkSendResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit,
-        totalQueued);
+    return Objects.hash(batchId, batchName, batchSize, envelopeOrTemplateId, errorDetails, errors, queueLimit, totalQueued);
   }
+
 
   /**
    * Converts the given object to string.
@@ -321,7 +322,7 @@ public class BulkSendResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendResponse {\n");
-
+    
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
@@ -346,3 +347,4 @@ public class BulkSendResponse {
   }
 
 }
+

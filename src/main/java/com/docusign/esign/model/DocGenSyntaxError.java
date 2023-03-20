@@ -23,6 +23,7 @@ public class DocGenSyntaxError {
   @JsonProperty("tagIdentifier")
   private String tagIdentifier = null;
 
+
   /**
    * errorCode.
    *
@@ -35,7 +36,6 @@ public class DocGenSyntaxError {
 
   /**
    * .
-   * 
    * @return errorCode
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class DocGenSyntaxError {
     this.errorCode = errorCode;
   }
 
+
   /**
    * message.
    *
@@ -62,7 +63,6 @@ public class DocGenSyntaxError {
 
   /**
    * .
-   * 
    * @return message
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class DocGenSyntaxError {
     this.message = message;
   }
 
+
   /**
    * tagIdentifier.
    *
@@ -89,7 +90,6 @@ public class DocGenSyntaxError {
 
   /**
    * .
-   * 
    * @return tagIdentifier
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class DocGenSyntaxError {
   public void setTagIdentifier(String tagIdentifier) {
     this.tagIdentifier = tagIdentifier;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class DocGenSyntaxError {
     return Objects.hash(errorCode, message, tagIdentifier);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class DocGenSyntaxError {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenSyntaxError {\n");
-
+    
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("    tagIdentifier: ").append(toIndentedString(tagIdentifier)).append("\n");
@@ -158,3 +160,4 @@ public class DocGenSyntaxError {
   }
 
 }
+

@@ -50,6 +50,7 @@ public class WorkspaceUserAuthorization {
   @JsonProperty("workspaceUserInformation")
   private WorkspaceUser workspaceUserInformation = null;
 
+
   /**
    * canDelete.
    *
@@ -62,7 +63,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return canDelete
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class WorkspaceUserAuthorization {
     this.canDelete = canDelete;
   }
 
+
   /**
    * canMove.
    *
@@ -89,7 +90,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return canMove
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class WorkspaceUserAuthorization {
     this.canMove = canMove;
   }
 
+
   /**
    * canTransact.
    *
@@ -116,7 +117,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return canTransact
    **/
   @Schema(description = "")
@@ -131,6 +131,7 @@ public class WorkspaceUserAuthorization {
     this.canTransact = canTransact;
   }
 
+
   /**
    * canView.
    *
@@ -143,7 +144,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return canView
    **/
   @Schema(description = "")
@@ -158,6 +158,7 @@ public class WorkspaceUserAuthorization {
     this.canView = canView;
   }
 
+
   /**
    * created.
    *
@@ -170,7 +171,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * The UTC DateTime when the workspace user authorization was created..
-   * 
    * @return created
    **/
   @Schema(description = "The UTC DateTime when the workspace user authorization was created.")
@@ -185,6 +185,7 @@ public class WorkspaceUserAuthorization {
     this.created = created;
   }
 
+
   /**
    * createdById.
    *
@@ -197,7 +198,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return createdById
    **/
   @Schema(description = "")
@@ -212,6 +212,7 @@ public class WorkspaceUserAuthorization {
     this.createdById = createdById;
   }
 
+
   /**
    * errorDetails.
    *
@@ -223,12 +224,10 @@ public class WorkspaceUserAuthorization {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -239,6 +238,7 @@ public class WorkspaceUserAuthorization {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * modified.
@@ -252,7 +252,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return modified
    **/
   @Schema(description = "")
@@ -267,6 +266,7 @@ public class WorkspaceUserAuthorization {
     this.modified = modified;
   }
 
+
   /**
    * modifiedById.
    *
@@ -279,7 +279,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return modifiedById
    **/
   @Schema(description = "")
@@ -294,6 +293,7 @@ public class WorkspaceUserAuthorization {
     this.modifiedById = modifiedById;
   }
 
+
   /**
    * workspaceUserId.
    *
@@ -306,7 +306,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * .
-   * 
    * @return workspaceUserId
    **/
   @Schema(description = "")
@@ -321,6 +320,7 @@ public class WorkspaceUserAuthorization {
     this.workspaceUserId = workspaceUserId;
   }
 
+
   /**
    * workspaceUserInformation.
    *
@@ -333,7 +333,6 @@ public class WorkspaceUserAuthorization {
 
   /**
    * An object that provides details about the workspace user..
-   * 
    * @return workspaceUserInformation
    **/
   @Schema(description = "An object that provides details about the workspace user.")
@@ -347,6 +346,7 @@ public class WorkspaceUserAuthorization {
   public void setWorkspaceUserInformation(WorkspaceUser workspaceUserInformation) {
     this.workspaceUserInformation = workspaceUserInformation;
   }
+
 
   /**
    * Compares objects.
@@ -380,9 +380,9 @@ public class WorkspaceUserAuthorization {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified,
-        modifiedById, workspaceUserId, workspaceUserInformation);
+    return Objects.hash(canDelete, canMove, canTransact, canView, created, createdById, errorDetails, modified, modifiedById, workspaceUserId, workspaceUserInformation);
   }
+
 
   /**
    * Converts the given object to string.
@@ -391,7 +391,7 @@ public class WorkspaceUserAuthorization {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUserAuthorization {\n");
-
+    
     sb.append("    canDelete: ").append(toIndentedString(canDelete)).append("\n");
     sb.append("    canMove: ").append(toIndentedString(canMove)).append("\n");
     sb.append("    canTransact: ").append(toIndentedString(canTransact)).append("\n");
@@ -419,3 +419,4 @@ public class WorkspaceUserAuthorization {
   }
 
 }
+

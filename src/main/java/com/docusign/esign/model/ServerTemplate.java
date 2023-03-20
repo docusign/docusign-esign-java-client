@@ -20,6 +20,7 @@ public class ServerTemplate {
   @JsonProperty("templateId")
   private String templateId = null;
 
+
   /**
    * sequence.
    *
@@ -32,7 +33,6 @@ public class ServerTemplate {
 
   /**
    * .
-   * 
    * @return sequence
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class ServerTemplate {
     this.sequence = sequence;
   }
 
+
   /**
    * templateId.
    *
@@ -58,9 +59,7 @@ public class ServerTemplate {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -74,6 +73,7 @@ public class ServerTemplate {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +101,7 @@ public class ServerTemplate {
     return Objects.hash(sequence, templateId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +109,7 @@ public class ServerTemplate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerTemplate {\n");
-
+    
     sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("}");
@@ -127,3 +128,4 @@ public class ServerTemplate {
   }
 
 }
+

@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains the element senderProvidedNumbers which is an Array of phone numbers
- * the recipient can use for SMS text authentication..
+ * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication..
  *
  */
 @Schema(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
@@ -23,6 +22,7 @@ public class RecipientSMSAuthentication {
   @JsonProperty("senderProvidedNumbersMetadata")
   private PropertyMetadata senderProvidedNumbersMetadata = null;
 
+
   /**
    * senderProvidedNumbers.
    *
@@ -32,7 +32,7 @@ public class RecipientSMSAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-
+  
   /**
    * addSenderProvidedNumbersItem.
    *
@@ -47,9 +47,7 @@ public class RecipientSMSAuthentication {
   }
 
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS
-   * text authentication. .
-   * 
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
    * @return senderProvidedNumbers
    **/
   @Schema(description = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
@@ -64,6 +62,7 @@ public class RecipientSMSAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+
   /**
    * senderProvidedNumbersMetadata.
    *
@@ -75,9 +74,7 @@ public class RecipientSMSAuthentication {
   }
 
   /**
-   * Metadata that indicates whether the `senderProvidedNumbers` property can be
-   * edited..
-   * 
+   * Metadata that indicates whether the `senderProvidedNumbers` property can be edited..
    * @return senderProvidedNumbersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderProvidedNumbers` property can be edited.")
@@ -91,6 +88,7 @@ public class RecipientSMSAuthentication {
   public void setSenderProvidedNumbersMetadata(PropertyMetadata senderProvidedNumbersMetadata) {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -118,6 +116,7 @@ public class RecipientSMSAuthentication {
     return Objects.hash(senderProvidedNumbers, senderProvidedNumbersMetadata);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -125,10 +124,9 @@ public class RecipientSMSAuthentication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSMSAuthentication {\n");
-
+    
     sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
-    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata))
-        .append("\n");
+    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -145,3 +143,4 @@ public class RecipientSMSAuthentication {
   }
 
 }
+

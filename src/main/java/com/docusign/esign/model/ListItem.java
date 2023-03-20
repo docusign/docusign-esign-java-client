@@ -10,9 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * One of the selectable items in the &#x60;listItems&#x60; property of a
- * [&#x60;list&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/)
- * tab..
+ * One of the selectable items in the &#x60;listItems&#x60; property of a [&#x60;list&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab..
  *
  */
 @Schema(description = "One of the selectable items in the `listItems` property of a [`list`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) tab.")
@@ -36,6 +34,7 @@ public class ListItem {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
+
   /**
    * selected.
    *
@@ -47,9 +46,7 @@ public class ListItem {
   }
 
   /**
-   * When set to **true**, indicates that this item is the default selection shown
-   * to a signer. Only one selection can be set as the default..
-   * 
+   * When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default..
    * @return selected
    **/
   @Schema(description = "When set to **true**, indicates that this item is the default selection shown to a signer.   Only one selection can be set as the default.")
@@ -64,6 +61,7 @@ public class ListItem {
     this.selected = selected;
   }
 
+
   /**
    * selectedMetadata.
    *
@@ -76,7 +74,6 @@ public class ListItem {
 
   /**
    * Metadata that indicates whether the `selected` property is editable..
-   * 
    * @return selectedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `selected` property is editable.")
@@ -91,6 +88,7 @@ public class ListItem {
     this.selectedMetadata = selectedMetadata;
   }
 
+
   /**
    * text.
    *
@@ -103,7 +101,6 @@ public class ListItem {
 
   /**
    * Specifies the text that is shown in the dropdown list. .
-   * 
    * @return text
    **/
   @Schema(description = "Specifies the text that is shown in the dropdown list. ")
@@ -118,6 +115,7 @@ public class ListItem {
     this.text = text;
   }
 
+
   /**
    * textMetadata.
    *
@@ -130,7 +128,6 @@ public class ListItem {
 
   /**
    * .
-   * 
    * @return textMetadata
    **/
   @Schema(description = "")
@@ -145,6 +142,7 @@ public class ListItem {
     this.textMetadata = textMetadata;
   }
 
+
   /**
    * value.
    *
@@ -157,7 +155,6 @@ public class ListItem {
 
   /**
    * Specifies the value that is used when the list item is selected..
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value that is used when the list item is selected.")
@@ -172,6 +169,7 @@ public class ListItem {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -184,7 +182,6 @@ public class ListItem {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -198,6 +195,7 @@ public class ListItem {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -229,6 +227,7 @@ public class ListItem {
     return Objects.hash(selected, selectedMetadata, text, textMetadata, value, valueMetadata);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -236,7 +235,7 @@ public class ListItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ListItem {\n");
-
+    
     sb.append("    selected: ").append(toIndentedString(selected)).append("\n");
     sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
@@ -259,3 +258,4 @@ public class ListItem {
   }
 
 }
+

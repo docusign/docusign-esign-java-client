@@ -18,6 +18,7 @@ public class FileTypeList {
   @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = null;
 
+
   /**
    * fileTypes.
    *
@@ -27,7 +28,7 @@ public class FileTypeList {
     this.fileTypes = fileTypes;
     return this;
   }
-
+  
   /**
    * addFileTypesItem.
    *
@@ -43,7 +44,6 @@ public class FileTypeList {
 
   /**
    * A collection of file types..
-   * 
    * @return fileTypes
    **/
   @Schema(description = "A collection of file types.")
@@ -57,6 +57,7 @@ public class FileTypeList {
   public void setFileTypes(java.util.List<FileType> fileTypes) {
     this.fileTypes = fileTypes;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class FileTypeList {
     return Objects.hash(fileTypes);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class FileTypeList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileTypeList {\n");
-
+    
     sb.append("    fileTypes: ").append(toIndentedString(fileTypes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class FileTypeList {
   }
 
 }
+

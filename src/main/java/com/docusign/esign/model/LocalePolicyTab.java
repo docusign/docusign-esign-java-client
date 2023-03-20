@@ -56,6 +56,7 @@ public class LocalePolicyTab {
   @JsonProperty("useLongCurrencyFormat")
   private String useLongCurrencyFormat = null;
 
+
   /**
    * addressFormat.
    *
@@ -68,7 +69,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return addressFormat
    **/
   @Schema(description = "")
@@ -83,6 +83,7 @@ public class LocalePolicyTab {
     this.addressFormat = addressFormat;
   }
 
+
   /**
    * calendarType.
    *
@@ -95,7 +96,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return calendarType
    **/
   @Schema(description = "")
@@ -110,6 +110,7 @@ public class LocalePolicyTab {
     this.calendarType = calendarType;
   }
 
+
   /**
    * cultureName.
    *
@@ -122,7 +123,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return cultureName
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class LocalePolicyTab {
     this.cultureName = cultureName;
   }
 
+
   /**
    * currencyCode.
    *
@@ -149,7 +150,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return currencyCode
    **/
   @Schema(description = "")
@@ -164,6 +164,7 @@ public class LocalePolicyTab {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * currencyNegativeFormat.
    *
@@ -176,7 +177,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return currencyNegativeFormat
    **/
   @Schema(description = "")
@@ -191,6 +191,7 @@ public class LocalePolicyTab {
     this.currencyNegativeFormat = currencyNegativeFormat;
   }
 
+
   /**
    * currencyPositiveFormat.
    *
@@ -203,7 +204,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return currencyPositiveFormat
    **/
   @Schema(description = "")
@@ -218,6 +218,7 @@ public class LocalePolicyTab {
     this.currencyPositiveFormat = currencyPositiveFormat;
   }
 
+
   /**
    * customDateFormat.
    *
@@ -230,7 +231,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return customDateFormat
    **/
   @Schema(description = "")
@@ -245,6 +245,7 @@ public class LocalePolicyTab {
     this.customDateFormat = customDateFormat;
   }
 
+
   /**
    * customTimeFormat.
    *
@@ -257,7 +258,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return customTimeFormat
    **/
   @Schema(description = "")
@@ -272,6 +272,7 @@ public class LocalePolicyTab {
     this.customTimeFormat = customTimeFormat;
   }
 
+
   /**
    * dateFormat.
    *
@@ -284,7 +285,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return dateFormat
    **/
   @Schema(description = "")
@@ -299,6 +299,7 @@ public class LocalePolicyTab {
     this.dateFormat = dateFormat;
   }
 
+
   /**
    * initialFormat.
    *
@@ -311,7 +312,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return initialFormat
    **/
   @Schema(description = "")
@@ -326,6 +326,7 @@ public class LocalePolicyTab {
     this.initialFormat = initialFormat;
   }
 
+
   /**
    * nameFormat.
    *
@@ -338,7 +339,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return nameFormat
    **/
   @Schema(description = "")
@@ -353,6 +353,7 @@ public class LocalePolicyTab {
     this.nameFormat = nameFormat;
   }
 
+
   /**
    * timeFormat.
    *
@@ -365,7 +366,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return timeFormat
    **/
   @Schema(description = "")
@@ -380,6 +380,7 @@ public class LocalePolicyTab {
     this.timeFormat = timeFormat;
   }
 
+
   /**
    * timeZone.
    *
@@ -392,7 +393,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return timeZone
    **/
   @Schema(description = "")
@@ -407,6 +407,7 @@ public class LocalePolicyTab {
     this.timeZone = timeZone;
   }
 
+
   /**
    * useLongCurrencyFormat.
    *
@@ -419,7 +420,6 @@ public class LocalePolicyTab {
 
   /**
    * .
-   * 
    * @return useLongCurrencyFormat
    **/
   @Schema(description = "")
@@ -433,6 +433,7 @@ public class LocalePolicyTab {
   public void setUseLongCurrencyFormat(String useLongCurrencyFormat) {
     this.useLongCurrencyFormat = useLongCurrencyFormat;
   }
+
 
   /**
    * Compares objects.
@@ -469,10 +470,9 @@ public class LocalePolicyTab {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat,
-        currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat,
-        timeZone, useLongCurrencyFormat);
+    return Objects.hash(addressFormat, calendarType, cultureName, currencyCode, currencyNegativeFormat, currencyPositiveFormat, customDateFormat, customTimeFormat, dateFormat, initialFormat, nameFormat, timeFormat, timeZone, useLongCurrencyFormat);
   }
+
 
   /**
    * Converts the given object to string.
@@ -481,7 +481,7 @@ public class LocalePolicyTab {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocalePolicyTab {\n");
-
+    
     sb.append("    addressFormat: ").append(toIndentedString(addressFormat)).append("\n");
     sb.append("    calendarType: ").append(toIndentedString(calendarType)).append("\n");
     sb.append("    cultureName: ").append(toIndentedString(cultureName)).append("\n");
@@ -512,3 +512,4 @@ public class LocalePolicyTab {
   }
 
 }
+

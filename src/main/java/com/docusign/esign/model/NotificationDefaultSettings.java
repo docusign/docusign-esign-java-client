@@ -11,8 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains details about the default notification settings for the envelope
- * notifications that senders and signers receive..
+ * Contains details about the default notification settings for the envelope notifications that senders and signers receive..
  *
  */
 @Schema(description = "Contains details about the default notification settings for the envelope notifications that senders and signers receive.")
@@ -23,6 +22,7 @@ public class NotificationDefaultSettings {
 
   @JsonProperty("signerEmailNotifications")
   private SignerEmailNotifications signerEmailNotifications = null;
+
 
   /**
    * senderEmailNotifications.
@@ -35,14 +35,7 @@ public class NotificationDefaultSettings {
   }
 
   /**
-   * An array of email notifications that sets the email the user receives when
-   * they are a sender. When the specific email notification is set to true, the
-   * user will receive those types of email notifications from DocuSign. The user
-   * inherits the default account sender email notification settings when the user
-   * is created. The email notifications are: * envelopeComplete * changedSigner *
-   * senderEnvelopeDeclined * withdrawnConsent * recipientViewed * deliveryFailed
-   * .
-   * 
+   *   An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   .
    * @return senderEmailNotifications
    **/
   @Schema(description = "  An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   ")
@@ -57,6 +50,7 @@ public class NotificationDefaultSettings {
     this.senderEmailNotifications = senderEmailNotifications;
   }
 
+
   /**
    * signerEmailNotifications.
    *
@@ -68,12 +62,7 @@ public class NotificationDefaultSettings {
   }
 
   /**
-   * An array of email notifications that specifies the email the user receives
-   * when they are a recipient. When the specific email notification is set to
-   * true, the user receives those types of email notifications from DocuSign. The
-   * user inherits the default account email notification settings when the user
-   * is created. .
-   * 
+   * An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. .
    * @return signerEmailNotifications
    **/
   @Schema(description = "An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. ")
@@ -87,6 +76,7 @@ public class NotificationDefaultSettings {
   public void setSignerEmailNotifications(SignerEmailNotifications signerEmailNotifications) {
     this.signerEmailNotifications = signerEmailNotifications;
   }
+
 
   /**
    * Compares objects.
@@ -114,6 +104,7 @@ public class NotificationDefaultSettings {
     return Objects.hash(senderEmailNotifications, signerEmailNotifications);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -121,7 +112,7 @@ public class NotificationDefaultSettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationDefaultSettings {\n");
-
+    
     sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
     sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
     sb.append("}");
@@ -140,3 +131,4 @@ public class NotificationDefaultSettings {
   }
 
 }
+

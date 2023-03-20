@@ -10,11 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex type that Contains the elements: * recipMayProvideNumber - Boolean.
- * When set to **true**, the recipient can use whatever phone number they
- * choose. * senderProvidedNumbers - ArrayOfString. A list of phone numbers the
- * recipient can use. * recordVoicePrint - Reserved. *
- * validateRecipProvidedNumber - Reserved..
+ * A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved..
  *
  */
 @Schema(description = "A complex type that Contains the elements:  * recipMayProvideNumber - Boolean. When set to **true**, the recipient can use whatever phone number they choose. * senderProvidedNumbers - ArrayOfString.  A list of phone numbers the recipient can use. * recordVoicePrint - Reserved. * validateRecipProvidedNumber - Reserved.")
@@ -44,6 +40,7 @@ public class RecipientPhoneAuthentication {
   @JsonProperty("validateRecipProvidedNumberMetadata")
   private PropertyMetadata validateRecipProvidedNumberMetadata = null;
 
+
   /**
    * recipMayProvideNumber.
    *
@@ -55,9 +52,7 @@ public class RecipientPhoneAuthentication {
   }
 
   /**
-   * Boolean. When set to **true**, the recipient can supply a phone number their
-   * choice..
-   * 
+   * Boolean. When set to **true**, the recipient can supply a phone number their choice..
    * @return recipMayProvideNumber
    **/
   @Schema(description = "Boolean. When set to **true**, the recipient can supply a phone number their choice.")
@@ -72,6 +67,7 @@ public class RecipientPhoneAuthentication {
     this.recipMayProvideNumber = recipMayProvideNumber;
   }
 
+
   /**
    * recipMayProvideNumberMetadata.
    *
@@ -83,9 +79,7 @@ public class RecipientPhoneAuthentication {
   }
 
   /**
-   * Metadata that indicates whether the `recipMayProvideNumber` property can be
-   * edited..
-   * 
+   * Metadata that indicates whether the `recipMayProvideNumber` property can be edited..
    * @return recipMayProvideNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipMayProvideNumber` property can be edited.")
@@ -100,6 +94,7 @@ public class RecipientPhoneAuthentication {
     this.recipMayProvideNumberMetadata = recipMayProvideNumberMetadata;
   }
 
+
   /**
    * recordVoicePrint.
    *
@@ -112,7 +107,6 @@ public class RecipientPhoneAuthentication {
 
   /**
    * Reserved..
-   * 
    * @return recordVoicePrint
    **/
   @Schema(description = "Reserved.")
@@ -127,6 +121,7 @@ public class RecipientPhoneAuthentication {
     this.recordVoicePrint = recordVoicePrint;
   }
 
+
   /**
    * recordVoicePrintMetadata.
    *
@@ -139,7 +134,6 @@ public class RecipientPhoneAuthentication {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return recordVoicePrintMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -154,6 +148,7 @@ public class RecipientPhoneAuthentication {
     this.recordVoicePrintMetadata = recordVoicePrintMetadata;
   }
 
+
   /**
    * senderProvidedNumbers.
    *
@@ -163,7 +158,7 @@ public class RecipientPhoneAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
     return this;
   }
-
+  
   /**
    * addSenderProvidedNumbersItem.
    *
@@ -178,9 +173,7 @@ public class RecipientPhoneAuthentication {
   }
 
   /**
-   * An Array containing a list of phone numbers the recipient may use for SMS
-   * text authentication. .
-   * 
+   * An Array containing a list of phone numbers the recipient may use for SMS text authentication. .
    * @return senderProvidedNumbers
    **/
   @Schema(description = "An Array containing a list of phone numbers the recipient may use for SMS text authentication. ")
@@ -195,6 +188,7 @@ public class RecipientPhoneAuthentication {
     this.senderProvidedNumbers = senderProvidedNumbers;
   }
 
+
   /**
    * senderProvidedNumbersMetadata.
    *
@@ -206,9 +200,7 @@ public class RecipientPhoneAuthentication {
   }
 
   /**
-   * Metadata that indicates whether the `senderProvidedNumbers` property can be
-   * edited..
-   * 
+   * Metadata that indicates whether the `senderProvidedNumbers` property can be edited..
    * @return senderProvidedNumbersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderProvidedNumbers` property can be edited.")
@@ -223,6 +215,7 @@ public class RecipientPhoneAuthentication {
     this.senderProvidedNumbersMetadata = senderProvidedNumbersMetadata;
   }
 
+
   /**
    * validateRecipProvidedNumber.
    *
@@ -234,8 +227,7 @@ public class RecipientPhoneAuthentication {
   }
 
   /**
-   * Reserved..
-   * 
+   *  Reserved..
    * @return validateRecipProvidedNumber
    **/
   @Schema(description = " Reserved.")
@@ -250,20 +242,19 @@ public class RecipientPhoneAuthentication {
     this.validateRecipProvidedNumber = validateRecipProvidedNumber;
   }
 
+
   /**
    * validateRecipProvidedNumberMetadata.
    *
    * @return RecipientPhoneAuthentication
    **/
-  public RecipientPhoneAuthentication validateRecipProvidedNumberMetadata(
-      PropertyMetadata validateRecipProvidedNumberMetadata) {
+  public RecipientPhoneAuthentication validateRecipProvidedNumberMetadata(PropertyMetadata validateRecipProvidedNumberMetadata) {
     this.validateRecipProvidedNumberMetadata = validateRecipProvidedNumberMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return validateRecipProvidedNumberMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -277,6 +268,7 @@ public class RecipientPhoneAuthentication {
   public void setValidateRecipProvidedNumberMetadata(PropertyMetadata validateRecipProvidedNumberMetadata) {
     this.validateRecipProvidedNumberMetadata = validateRecipProvidedNumberMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -293,16 +285,13 @@ public class RecipientPhoneAuthentication {
     }
     RecipientPhoneAuthentication recipientPhoneAuthentication = (RecipientPhoneAuthentication) o;
     return Objects.equals(this.recipMayProvideNumber, recipientPhoneAuthentication.recipMayProvideNumber) &&
-        Objects.equals(this.recipMayProvideNumberMetadata, recipientPhoneAuthentication.recipMayProvideNumberMetadata)
-        &&
+        Objects.equals(this.recipMayProvideNumberMetadata, recipientPhoneAuthentication.recipMayProvideNumberMetadata) &&
         Objects.equals(this.recordVoicePrint, recipientPhoneAuthentication.recordVoicePrint) &&
         Objects.equals(this.recordVoicePrintMetadata, recipientPhoneAuthentication.recordVoicePrintMetadata) &&
         Objects.equals(this.senderProvidedNumbers, recipientPhoneAuthentication.senderProvidedNumbers) &&
-        Objects.equals(this.senderProvidedNumbersMetadata, recipientPhoneAuthentication.senderProvidedNumbersMetadata)
-        &&
+        Objects.equals(this.senderProvidedNumbersMetadata, recipientPhoneAuthentication.senderProvidedNumbersMetadata) &&
         Objects.equals(this.validateRecipProvidedNumber, recipientPhoneAuthentication.validateRecipProvidedNumber) &&
-        Objects.equals(this.validateRecipProvidedNumberMetadata,
-            recipientPhoneAuthentication.validateRecipProvidedNumberMetadata);
+        Objects.equals(this.validateRecipProvidedNumberMetadata, recipientPhoneAuthentication.validateRecipProvidedNumberMetadata);
   }
 
   /**
@@ -310,10 +299,9 @@ public class RecipientPhoneAuthentication {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(recipMayProvideNumber, recipMayProvideNumberMetadata, recordVoicePrint,
-        recordVoicePrintMetadata, senderProvidedNumbers, senderProvidedNumbersMetadata, validateRecipProvidedNumber,
-        validateRecipProvidedNumberMetadata);
+    return Objects.hash(recipMayProvideNumber, recipMayProvideNumberMetadata, recordVoicePrint, recordVoicePrintMetadata, senderProvidedNumbers, senderProvidedNumbersMetadata, validateRecipProvidedNumber, validateRecipProvidedNumberMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -322,18 +310,15 @@ public class RecipientPhoneAuthentication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneAuthentication {\n");
-
+    
     sb.append("    recipMayProvideNumber: ").append(toIndentedString(recipMayProvideNumber)).append("\n");
-    sb.append("    recipMayProvideNumberMetadata: ").append(toIndentedString(recipMayProvideNumberMetadata))
-        .append("\n");
+    sb.append("    recipMayProvideNumberMetadata: ").append(toIndentedString(recipMayProvideNumberMetadata)).append("\n");
     sb.append("    recordVoicePrint: ").append(toIndentedString(recordVoicePrint)).append("\n");
     sb.append("    recordVoicePrintMetadata: ").append(toIndentedString(recordVoicePrintMetadata)).append("\n");
     sb.append("    senderProvidedNumbers: ").append(toIndentedString(senderProvidedNumbers)).append("\n");
-    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata))
-        .append("\n");
+    sb.append("    senderProvidedNumbersMetadata: ").append(toIndentedString(senderProvidedNumbersMetadata)).append("\n");
     sb.append("    validateRecipProvidedNumber: ").append(toIndentedString(validateRecipProvidedNumber)).append("\n");
-    sb.append("    validateRecipProvidedNumberMetadata: ").append(toIndentedString(validateRecipProvidedNumberMetadata))
-        .append("\n");
+    sb.append("    validateRecipProvidedNumberMetadata: ").append(toIndentedString(validateRecipProvidedNumberMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -350,3 +335,4 @@ public class RecipientPhoneAuthentication {
   }
 
 }
+

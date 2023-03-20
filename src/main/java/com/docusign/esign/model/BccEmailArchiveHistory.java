@@ -34,6 +34,7 @@ public class BccEmailArchiveHistory {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * accountId.
    *
@@ -46,7 +47,6 @@ public class BccEmailArchiveHistory {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -61,6 +61,7 @@ public class BccEmailArchiveHistory {
     this.accountId = accountId;
   }
 
+
   /**
    * action.
    *
@@ -73,7 +74,6 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
-   * 
    * @return action
    **/
   @Schema(description = "")
@@ -88,6 +88,7 @@ public class BccEmailArchiveHistory {
     this.action = action;
   }
 
+
   /**
    * email.
    *
@@ -100,7 +101,6 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -115,6 +115,7 @@ public class BccEmailArchiveHistory {
     this.email = email;
   }
 
+
   /**
    * modified.
    *
@@ -127,7 +128,6 @@ public class BccEmailArchiveHistory {
 
   /**
    * .
-   * 
    * @return modified
    **/
   @Schema(description = "")
@@ -142,6 +142,7 @@ public class BccEmailArchiveHistory {
     this.modified = modified;
   }
 
+
   /**
    * modifiedBy.
    *
@@ -153,9 +154,7 @@ public class BccEmailArchiveHistory {
   }
 
   /**
-   * Details about the user who last modified the BCC email archive
-   * configuration..
-   * 
+   * Details about the user who last modified the BCC email archive configuration..
    * @return modifiedBy
    **/
   @Schema(description = "Details about the user who last modified the BCC email archive configuration.")
@@ -170,6 +169,7 @@ public class BccEmailArchiveHistory {
     this.modifiedBy = modifiedBy;
   }
 
+
   /**
    * status.
    *
@@ -181,10 +181,7 @@ public class BccEmailArchiveHistory {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -198,6 +195,7 @@ public class BccEmailArchiveHistory {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -229,6 +227,7 @@ public class BccEmailArchiveHistory {
     return Objects.hash(accountId, action, email, modified, modifiedBy, status);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -236,7 +235,7 @@ public class BccEmailArchiveHistory {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BccEmailArchiveHistory {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -259,3 +258,4 @@ public class BccEmailArchiveHistory {
   }
 
 }
+

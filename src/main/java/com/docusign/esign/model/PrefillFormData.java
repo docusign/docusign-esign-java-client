@@ -27,6 +27,7 @@ public class PrefillFormData {
   @JsonProperty("senderUserId")
   private String senderUserId = null;
 
+
   /**
    * formData.
    *
@@ -36,7 +37,7 @@ public class PrefillFormData {
     this.formData = formData;
     return this;
   }
-
+  
   /**
    * addFormDataItem.
    *
@@ -52,7 +53,6 @@ public class PrefillFormData {
 
   /**
    * .
-   * 
    * @return formData
    **/
   @Schema(description = "")
@@ -67,6 +67,7 @@ public class PrefillFormData {
     this.formData = formData;
   }
 
+
   /**
    * senderEmail.
    *
@@ -79,7 +80,6 @@ public class PrefillFormData {
 
   /**
    * .
-   * 
    * @return senderEmail
    **/
   @Schema(description = "")
@@ -94,6 +94,7 @@ public class PrefillFormData {
     this.senderEmail = senderEmail;
   }
 
+
   /**
    * senderName.
    *
@@ -106,7 +107,6 @@ public class PrefillFormData {
 
   /**
    * .
-   * 
    * @return senderName
    **/
   @Schema(description = "")
@@ -121,6 +121,7 @@ public class PrefillFormData {
     this.senderName = senderName;
   }
 
+
   /**
    * senderUserId.
    *
@@ -133,7 +134,6 @@ public class PrefillFormData {
 
   /**
    * .
-   * 
    * @return senderUserId
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class PrefillFormData {
   public void setSenderUserId(String senderUserId) {
     this.senderUserId = senderUserId;
   }
+
 
   /**
    * Compares objects.
@@ -176,6 +177,7 @@ public class PrefillFormData {
     return Objects.hash(formData, senderEmail, senderName, senderUserId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -183,7 +185,7 @@ public class PrefillFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrefillFormData {\n");
-
+    
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
     sb.append("    senderEmail: ").append(toIndentedString(senderEmail)).append("\n");
     sb.append("    senderName: ").append(toIndentedString(senderName)).append("\n");
@@ -204,3 +206,4 @@ public class PrefillFormData {
   }
 
 }
+

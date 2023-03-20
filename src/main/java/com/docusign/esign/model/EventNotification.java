@@ -12,15 +12,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This optional complex element allows a message to be sent a specified URL
- * when the envelope or recipient changes status. It is similar to DocuSign
- * Connect. For example, if an envelope changes from \&quot;Sent\&quot; to
- * \&quot;Delivered\&quot;, a message containing the updated envelope status and
- * optionally the documents is sent to the URL. When an eventNotification is
- * attached to an envelope using the API, it only applies to the envelope
- * (treating the envelope as the sender). This is different from envelopes
- * created through the console user interface, where the user is treated as the
- * sender..
+ * This optional complex element allows a message to be sent a specified URL when the envelope or recipient changes status. It is similar to DocuSign Connect. For example, if an envelope changes from \&quot;Sent\&quot; to \&quot;Delivered\&quot;, a message containing the updated envelope status and optionally the documents is sent to the URL. When an eventNotification is attached to an envelope using the API, it only applies to the envelope (treating the envelope as the sender). This is different from envelopes created through the console user interface, where the user is treated as the sender..
  *
  */
 @Schema(description = "This optional complex element allows a message to be sent a specified URL when the envelope or recipient changes status. It is similar to DocuSign Connect. For example, if an envelope changes from \"Sent\" to \"Delivered\", a message containing the updated envelope status and optionally the documents is sent to the URL. When an eventNotification is attached to an envelope using the API, it only applies to the envelope (treating the envelope as the sender). This is different from envelopes created through the console user interface, where the user is treated as the sender.")
@@ -89,6 +81,7 @@ public class EventNotification {
   @JsonProperty("useSoapInterface")
   private String useSoapInterface = null;
 
+
   /**
    * deliveryMode.
    *
@@ -101,7 +94,6 @@ public class EventNotification {
 
   /**
    * .
-   * 
    * @return deliveryMode
    **/
   @Schema(description = "")
@@ -116,6 +108,7 @@ public class EventNotification {
     this.deliveryMode = deliveryMode;
   }
 
+
   /**
    * envelopeEvents.
    *
@@ -125,7 +118,7 @@ public class EventNotification {
     this.envelopeEvents = envelopeEvents;
     return this;
   }
-
+  
   /**
    * addEnvelopeEventsItem.
    *
@@ -140,11 +133,7 @@ public class EventNotification {
   }
 
   /**
-   * A list of envelope-level event statuses that will trigger Connect to send
-   * updates to the endpoint specified in the `url` property. To receive
-   * notifications, you must include either an `envelopeEvents` node or a
-   * `recipientEvents` node. You do not need to specify both..
-   * 
+   * A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both..
    * @return envelopeEvents
    **/
   @Schema(description = "A list of envelope-level event statuses that will trigger Connect to send updates to the endpoint specified in the `url` property.   To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
@@ -159,6 +148,7 @@ public class EventNotification {
     this.envelopeEvents = envelopeEvents;
   }
 
+
   /**
    * eventData.
    *
@@ -170,10 +160,7 @@ public class EventNotification {
   }
 
   /**
-   * Allows you to specify the format of the information the Connect webhooks
-   * returns. For more information, see [Connect webhooks with JSON
-   * notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
-   * 
+   * Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
    * @return eventData
    **/
   @Schema(description = "Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)")
@@ -188,6 +175,7 @@ public class EventNotification {
     this.eventData = eventData;
   }
 
+
   /**
    * events.
    *
@@ -197,7 +185,7 @@ public class EventNotification {
     this.events = events;
     return this;
   }
-
+  
   /**
    * addEventsItem.
    *
@@ -213,7 +201,6 @@ public class EventNotification {
 
   /**
    * .
-   * 
    * @return events
    **/
   @Schema(description = "")
@@ -228,6 +215,7 @@ public class EventNotification {
     this.events = events;
   }
 
+
   /**
    * includeCertificateOfCompletion.
    *
@@ -239,9 +227,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the Connect Service includes the Certificate of
-   * Completion with completed envelopes. .
-   * 
+   * When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. .
    * @return includeCertificateOfCompletion
    **/
   @Schema(description = "When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. ")
@@ -256,6 +242,7 @@ public class EventNotification {
     this.includeCertificateOfCompletion = includeCertificateOfCompletion;
   }
 
+
   /**
    * includeCertificateWithSoap.
    *
@@ -267,10 +254,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, this tells the Connect service to send the DocuSign
-   * signedby certificate as part of the outgoing SOAP xml. This appears in the
-   * XML as wsse:BinarySecurityToken..
-   * 
+   * When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken..
    * @return includeCertificateWithSoap
    **/
   @Schema(description = "When set to **true**, this tells the Connect service to send the DocuSign signedby certificate as part of the outgoing SOAP xml. This appears in the XML as wsse:BinarySecurityToken.")
@@ -285,6 +269,7 @@ public class EventNotification {
     this.includeCertificateWithSoap = includeCertificateWithSoap;
   }
 
+
   /**
    * includeDocumentFields.
    *
@@ -296,10 +281,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the Document Fields associated with envelope documents
-   * are included in the data. Document Fields are optional custom name-value
-   * pairs added to documents using the API. .
-   * 
+   * When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. .
    * @return includeDocumentFields
    **/
   @Schema(description = "When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. ")
@@ -314,6 +296,7 @@ public class EventNotification {
     this.includeDocumentFields = includeDocumentFields;
   }
 
+
   /**
    * includeDocuments.
    *
@@ -325,9 +308,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the PDF documents are included in the message along
-   * with the updated XML. .
-   * 
+   * When set to **true**, the PDF documents are included in the message along with the updated XML. .
    * @return includeDocuments
    **/
   @Schema(description = "When set to **true**, the PDF documents are included in the message along with the updated XML. ")
@@ -342,6 +323,7 @@ public class EventNotification {
     this.includeDocuments = includeDocuments;
   }
 
+
   /**
    * includeEnvelopeVoidReason.
    *
@@ -353,9 +335,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, this tells the Connect Service to include the void
-   * reason, as entered by the person that voided the envelope, in the message. .
-   * 
+   * When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message. .
    * @return includeEnvelopeVoidReason
    **/
   @Schema(description = "When set to **true**, this tells the Connect Service to include the void reason, as entered by the person that voided the envelope, in the message. ")
@@ -370,6 +350,7 @@ public class EventNotification {
     this.includeEnvelopeVoidReason = includeEnvelopeVoidReason;
   }
 
+
   /**
    * includeHMAC.
    *
@@ -382,7 +363,6 @@ public class EventNotification {
 
   /**
    * .
-   * 
    * @return includeHMAC
    **/
   @Schema(description = "")
@@ -397,6 +377,7 @@ public class EventNotification {
     this.includeHMAC = includeHMAC;
   }
 
+
   /**
    * includeOAuth.
    *
@@ -409,7 +390,6 @@ public class EventNotification {
 
   /**
    * .
-   * 
    * @return includeOAuth
    **/
   @Schema(description = "")
@@ -424,6 +404,7 @@ public class EventNotification {
     this.includeOAuth = includeOAuth;
   }
 
+
   /**
    * includeSenderAccountAsCustomField.
    *
@@ -435,9 +416,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the sender account ID is included as a envelope custom
-   * field in the data. .
-   * 
+   * When set to **true**, the sender account ID is included as a envelope custom field in the data. .
    * @return includeSenderAccountAsCustomField
    **/
   @Schema(description = "When set to **true**, the sender account ID is included as a envelope custom field in the data. ")
@@ -452,6 +431,7 @@ public class EventNotification {
     this.includeSenderAccountAsCustomField = includeSenderAccountAsCustomField;
   }
 
+
   /**
    * includeTimeZone.
    *
@@ -463,9 +443,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the envelope time zone information is included in the
-   * message. .
-   * 
+   * When set to **true**, the envelope time zone information is included in the message. .
    * @return includeTimeZone
    **/
   @Schema(description = "When set to **true**, the envelope time zone information is included in the message. ")
@@ -480,6 +458,7 @@ public class EventNotification {
     this.includeTimeZone = includeTimeZone;
   }
 
+
   /**
    * integratorManaged.
    *
@@ -492,7 +471,6 @@ public class EventNotification {
 
   /**
    * .
-   * 
    * @return integratorManaged
    **/
   @Schema(description = "")
@@ -507,6 +485,7 @@ public class EventNotification {
     this.integratorManaged = integratorManaged;
   }
 
+
   /**
    * loggingEnabled.
    *
@@ -518,9 +497,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, logging is turned on for envelope events on the Web
-   * Console Connect page. .
-   * 
+   * When set to **true**, logging is turned on for envelope events on the Web Console Connect page. .
    * @return loggingEnabled
    **/
   @Schema(description = "When set to **true**, logging is turned on for envelope events on the Web Console Connect page. ")
@@ -535,6 +512,7 @@ public class EventNotification {
     this.loggingEnabled = loggingEnabled;
   }
 
+
   /**
    * recipientEvents.
    *
@@ -544,7 +522,7 @@ public class EventNotification {
     this.recipientEvents = recipientEvents;
     return this;
   }
-
+  
   /**
    * addRecipientEventsItem.
    *
@@ -559,11 +537,7 @@ public class EventNotification {
   }
 
   /**
-   * A list of recipient event statuses that will trigger Connect to send updates
-   * to the endpoint specified in the url property. To receive notifications, you
-   * must include either an `envelopeEvents` node or a `recipientEvents` node. You
-   * do not need to specify both..
-   * 
+   * A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both..
    * @return recipientEvents
    **/
   @Schema(description = "A list of recipient event statuses that will trigger Connect to send updates to   the endpoint specified in the url property.  To receive notifications, you must include either an `envelopeEvents` node or a `recipientEvents` node. You do not need to specify both.")
@@ -578,6 +552,7 @@ public class EventNotification {
     this.recipientEvents = recipientEvents;
   }
 
+
   /**
    * requireAcknowledgment.
    *
@@ -589,9 +564,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, the DocuSign Connect service checks that the message
-   * was received and retries on failures. .
-   * 
+   * When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures. .
    * @return requireAcknowledgment
    **/
   @Schema(description = "When set to **true**, the DocuSign Connect service checks that the message was received and retries on failures. ")
@@ -606,6 +579,7 @@ public class EventNotification {
     this.requireAcknowledgment = requireAcknowledgment;
   }
 
+
   /**
    * signMessageWithX509Cert.
    *
@@ -617,9 +591,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, messages are signed with an X509 certificate. This
-   * provides support for 2-way SSL in the envelope. .
-   * 
+   * When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope. .
    * @return signMessageWithX509Cert
    **/
   @Schema(description = "When set to **true**, messages are signed with an X509 certificate. This provides support for 2-way SSL in the envelope. ")
@@ -634,6 +606,7 @@ public class EventNotification {
     this.signMessageWithX509Cert = signMessageWithX509Cert;
   }
 
+
   /**
    * soapNameSpace.
    *
@@ -646,7 +619,6 @@ public class EventNotification {
 
   /**
    * This lists the namespace in the SOAP listener provided..
-   * 
    * @return soapNameSpace
    **/
   @Schema(description = "This lists the namespace in the SOAP listener provided.")
@@ -661,6 +633,7 @@ public class EventNotification {
     this.soapNameSpace = soapNameSpace;
   }
 
+
   /**
    * url.
    *
@@ -672,9 +645,7 @@ public class EventNotification {
   }
 
   /**
-   * Specifies the endpoint to which envelope updates are sent. Udpates are sent
-   * as XML unless `useSoapInterface` property is set to **true**..
-   * 
+   * Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**..
    * @return url
    **/
   @Schema(description = "Specifies the endpoint to which envelope updates are sent. Udpates are sent as XML unless `useSoapInterface` property is set to **true**.")
@@ -689,6 +660,7 @@ public class EventNotification {
     this.url = url;
   }
 
+
   /**
    * useSoapInterface.
    *
@@ -700,9 +672,7 @@ public class EventNotification {
   }
 
   /**
-   * When set to **true**, this tells the Connect service that the user's endpoint
-   * has implemented a SOAP interface. .
-   * 
+   * When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface. .
    * @return useSoapInterface
    **/
   @Schema(description = "When set to **true**, this tells the Connect service that the user's endpoint has implemented a SOAP interface. ")
@@ -716,6 +686,7 @@ public class EventNotification {
   public void setUseSoapInterface(String useSoapInterface) {
     this.useSoapInterface = useSoapInterface;
   }
+
 
   /**
    * Compares objects.
@@ -759,11 +730,9 @@ public class EventNotification {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(deliveryMode, envelopeEvents, eventData, events, includeCertificateOfCompletion,
-        includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC,
-        includeOAuth, includeSenderAccountAsCustomField, includeTimeZone, integratorManaged, loggingEnabled,
-        recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
+    return Objects.hash(deliveryMode, envelopeEvents, eventData, events, includeCertificateOfCompletion, includeCertificateWithSoap, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountAsCustomField, includeTimeZone, integratorManaged, loggingEnabled, recipientEvents, requireAcknowledgment, signMessageWithX509Cert, soapNameSpace, url, useSoapInterface);
   }
+
 
   /**
    * Converts the given object to string.
@@ -772,21 +741,19 @@ public class EventNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventNotification {\n");
-
+    
     sb.append("    deliveryMode: ").append(toIndentedString(deliveryMode)).append("\n");
     sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
     sb.append("    eventData: ").append(toIndentedString(eventData)).append("\n");
     sb.append("    events: ").append(toIndentedString(events)).append("\n");
-    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion))
-        .append("\n");
+    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
     sb.append("    includeCertificateWithSoap: ").append(toIndentedString(includeCertificateWithSoap)).append("\n");
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
     sb.append("    includeHMAC: ").append(toIndentedString(includeHMAC)).append("\n");
     sb.append("    includeOAuth: ").append(toIndentedString(includeOAuth)).append("\n");
-    sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField))
-        .append("\n");
+    sb.append("    includeSenderAccountAsCustomField: ").append(toIndentedString(includeSenderAccountAsCustomField)).append("\n");
     sb.append("    includeTimeZone: ").append(toIndentedString(includeTimeZone)).append("\n");
     sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    loggingEnabled: ").append(toIndentedString(loggingEnabled)).append("\n");
@@ -812,3 +779,4 @@ public class EventNotification {
   }
 
 }
+

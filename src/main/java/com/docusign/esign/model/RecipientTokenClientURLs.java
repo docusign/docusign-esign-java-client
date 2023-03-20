@@ -44,6 +44,7 @@ public class RecipientTokenClientURLs {
   @JsonProperty("onViewingComplete")
   private String onViewingComplete = null;
 
+
   /**
    * onAccessCodeFailed.
    *
@@ -56,7 +57,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onAccessCodeFailed
    **/
   @Schema(description = "")
@@ -71,6 +71,7 @@ public class RecipientTokenClientURLs {
     this.onAccessCodeFailed = onAccessCodeFailed;
   }
 
+
   /**
    * onCancel.
    *
@@ -83,7 +84,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onCancel
    **/
   @Schema(description = "")
@@ -98,6 +98,7 @@ public class RecipientTokenClientURLs {
     this.onCancel = onCancel;
   }
 
+
   /**
    * onDecline.
    *
@@ -110,7 +111,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onDecline
    **/
   @Schema(description = "")
@@ -125,6 +125,7 @@ public class RecipientTokenClientURLs {
     this.onDecline = onDecline;
   }
 
+
   /**
    * onException.
    *
@@ -137,7 +138,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onException
    **/
   @Schema(description = "")
@@ -152,6 +152,7 @@ public class RecipientTokenClientURLs {
     this.onException = onException;
   }
 
+
   /**
    * onFaxPending.
    *
@@ -164,7 +165,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onFaxPending
    **/
   @Schema(description = "")
@@ -179,6 +179,7 @@ public class RecipientTokenClientURLs {
     this.onFaxPending = onFaxPending;
   }
 
+
   /**
    * onIdCheckFailed.
    *
@@ -191,7 +192,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onIdCheckFailed
    **/
   @Schema(description = "")
@@ -206,6 +206,7 @@ public class RecipientTokenClientURLs {
     this.onIdCheckFailed = onIdCheckFailed;
   }
 
+
   /**
    * onSessionTimeout.
    *
@@ -218,7 +219,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onSessionTimeout
    **/
   @Schema(description = "")
@@ -233,6 +233,7 @@ public class RecipientTokenClientURLs {
     this.onSessionTimeout = onSessionTimeout;
   }
 
+
   /**
    * onSigningComplete.
    *
@@ -245,7 +246,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onSigningComplete
    **/
   @Schema(description = "")
@@ -260,6 +260,7 @@ public class RecipientTokenClientURLs {
     this.onSigningComplete = onSigningComplete;
   }
 
+
   /**
    * onTTLExpired.
    *
@@ -272,7 +273,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onTTLExpired
    **/
   @Schema(description = "")
@@ -287,6 +287,7 @@ public class RecipientTokenClientURLs {
     this.onTTLExpired = onTTLExpired;
   }
 
+
   /**
    * onViewingComplete.
    *
@@ -299,7 +300,6 @@ public class RecipientTokenClientURLs {
 
   /**
    * .
-   * 
    * @return onViewingComplete
    **/
   @Schema(description = "")
@@ -313,6 +313,7 @@ public class RecipientTokenClientURLs {
   public void setOnViewingComplete(String onViewingComplete) {
     this.onViewingComplete = onViewingComplete;
   }
+
 
   /**
    * Compares objects.
@@ -345,9 +346,9 @@ public class RecipientTokenClientURLs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(onAccessCodeFailed, onCancel, onDecline, onException, onFaxPending, onIdCheckFailed,
-        onSessionTimeout, onSigningComplete, onTTLExpired, onViewingComplete);
+    return Objects.hash(onAccessCodeFailed, onCancel, onDecline, onException, onFaxPending, onIdCheckFailed, onSessionTimeout, onSigningComplete, onTTLExpired, onViewingComplete);
   }
+
 
   /**
    * Converts the given object to string.
@@ -356,7 +357,7 @@ public class RecipientTokenClientURLs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientTokenClientURLs {\n");
-
+    
     sb.append("    onAccessCodeFailed: ").append(toIndentedString(onAccessCodeFailed)).append("\n");
     sb.append("    onCancel: ").append(toIndentedString(onCancel)).append("\n");
     sb.append("    onDecline: ").append(toIndentedString(onDecline)).append("\n");
@@ -383,3 +384,4 @@ public class RecipientTokenClientURLs {
   }
 
 }
+

@@ -27,6 +27,7 @@ public class AuthenticationMethod {
   @JsonProperty("totalCount")
   private String totalCount = null;
 
+
   /**
    * authenticationType.
    *
@@ -38,9 +39,7 @@ public class AuthenticationMethod {
   }
 
   /**
-   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN,
-   * ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. .
-   * 
+   * Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. .
    * @return authenticationType
    **/
   @Schema(description = "Indicates the type of authentication. Valid values are: PhoneAuth, STAN, ISCheck, OFAC, AccessCode, AgeVerify, or SSOAuth. ")
@@ -55,6 +54,7 @@ public class AuthenticationMethod {
     this.authenticationType = authenticationType;
   }
 
+
   /**
    * lastProvider.
    *
@@ -67,7 +67,6 @@ public class AuthenticationMethod {
 
   /**
    * The last provider that authenticated the user. .
-   * 
    * @return lastProvider
    **/
   @Schema(description = "The last provider that authenticated the user. ")
@@ -82,6 +81,7 @@ public class AuthenticationMethod {
     this.lastProvider = lastProvider;
   }
 
+
   /**
    * lastTimestamp.
    *
@@ -93,8 +93,7 @@ public class AuthenticationMethod {
   }
 
   /**
-   * The data and time the user last used the authentication method. .
-   * 
+   *  The data and time the user last used the authentication method. .
    * @return lastTimestamp
    **/
   @Schema(description = " The data and time the user last used the authentication method. ")
@@ -109,6 +108,7 @@ public class AuthenticationMethod {
     this.lastTimestamp = lastTimestamp;
   }
 
+
   /**
    * totalCount.
    *
@@ -121,7 +121,6 @@ public class AuthenticationMethod {
 
   /**
    * The number of times the authentication method was used. .
-   * 
    * @return totalCount
    **/
   @Schema(description = "The number of times the authentication method was used. ")
@@ -135,6 +134,7 @@ public class AuthenticationMethod {
   public void setTotalCount(String totalCount) {
     this.totalCount = totalCount;
   }
+
 
   /**
    * Compares objects.
@@ -164,6 +164,7 @@ public class AuthenticationMethod {
     return Objects.hash(authenticationType, lastProvider, lastTimestamp, totalCount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -171,7 +172,7 @@ public class AuthenticationMethod {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationMethod {\n");
-
+    
     sb.append("    authenticationType: ").append(toIndentedString(authenticationType)).append("\n");
     sb.append("    lastProvider: ").append(toIndentedString(lastProvider)).append("\n");
     sb.append("    lastTimestamp: ").append(toIndentedString(lastTimestamp)).append("\n");
@@ -192,3 +193,4 @@ public class AuthenticationMethod {
   }
 
 }
+

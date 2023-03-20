@@ -54,6 +54,7 @@ public class UserProfile {
   @JsonProperty("userProfileLastModifiedDate")
   private String userProfileLastModifiedDate = null;
 
+
   /**
    * address.
    *
@@ -66,7 +67,6 @@ public class UserProfile {
 
   /**
    * The user's address..
-   * 
    * @return address
    **/
   @Schema(description = "The user's address.")
@@ -81,6 +81,7 @@ public class UserProfile {
     this.address = address;
   }
 
+
   /**
    * authenticationMethods.
    *
@@ -90,7 +91,7 @@ public class UserProfile {
     this.authenticationMethods = authenticationMethods;
     return this;
   }
-
+  
   /**
    * addAuthenticationMethodsItem.
    *
@@ -105,9 +106,7 @@ public class UserProfile {
   }
 
   /**
-   * These properties cannot be modified in the PUT. Indicates the authentication
-   * methods used by the user..
-   * 
+   * These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user..
    * @return authenticationMethods
    **/
   @Schema(description = "These properties cannot be modified in the PUT.   Indicates the authentication methods used by the user.")
@@ -122,6 +121,7 @@ public class UserProfile {
     this.authenticationMethods = authenticationMethods;
   }
 
+
   /**
    * companyName.
    *
@@ -134,7 +134,6 @@ public class UserProfile {
 
   /**
    * The name of the user's Company..
-   * 
    * @return companyName
    **/
   @Schema(description = "The name of the user's Company.")
@@ -149,6 +148,7 @@ public class UserProfile {
     this.companyName = companyName;
   }
 
+
   /**
    * displayOrganizationInfo.
    *
@@ -160,9 +160,7 @@ public class UserProfile {
   }
 
   /**
-   * When set to **true**, the user's company and title information are shown on
-   * the ID card. .
-   * 
+   *  When set to **true**, the user's company and title information are shown on the ID card. .
    * @return displayOrganizationInfo
    **/
   @Schema(description = " When set to **true**, the user's company and title information are shown on the ID card. ")
@@ -177,6 +175,7 @@ public class UserProfile {
     this.displayOrganizationInfo = displayOrganizationInfo;
   }
 
+
   /**
    * displayPersonalInfo.
    *
@@ -188,9 +187,7 @@ public class UserProfile {
   }
 
   /**
-   * When set to **true**, the user's Address and Phone number are shown on the ID
-   * card..
-   * 
+   * When set to **true**, the user's Address and Phone number are shown on the ID card..
    * @return displayPersonalInfo
    **/
   @Schema(description = "When set to **true**, the user's Address and Phone number are shown on the ID card.")
@@ -205,6 +202,7 @@ public class UserProfile {
     this.displayPersonalInfo = displayPersonalInfo;
   }
 
+
   /**
    * displayProfile.
    *
@@ -216,9 +214,7 @@ public class UserProfile {
   }
 
   /**
-   * When set to **true**, the user's ID card can be viewed from signed documents
-   * and envelope history..
-   * 
+   * When set to **true**, the user's ID card can be viewed from signed documents and envelope history..
    * @return displayProfile
    **/
   @Schema(description = "When set to **true**, the user's ID card can be viewed from signed documents and envelope history.")
@@ -233,6 +229,7 @@ public class UserProfile {
     this.displayProfile = displayProfile;
   }
 
+
   /**
    * displayUsageHistory.
    *
@@ -245,7 +242,6 @@ public class UserProfile {
 
   /**
    * When set to **true**, the user's usage information is shown on the ID card..
-   * 
    * @return displayUsageHistory
    **/
   @Schema(description = "When set to **true**, the user's usage information is shown on the ID card.")
@@ -260,6 +256,7 @@ public class UserProfile {
     this.displayUsageHistory = displayUsageHistory;
   }
 
+
   /**
    * profileImageUri.
    *
@@ -272,7 +269,6 @@ public class UserProfile {
 
   /**
    * .
-   * 
    * @return profileImageUri
    **/
   @Schema(description = "")
@@ -287,6 +283,7 @@ public class UserProfile {
     this.profileImageUri = profileImageUri;
   }
 
+
   /**
    * title.
    *
@@ -299,7 +296,6 @@ public class UserProfile {
 
   /**
    * .
-   * 
    * @return title
    **/
   @Schema(description = "")
@@ -314,6 +310,7 @@ public class UserProfile {
     this.title = title;
   }
 
+
   /**
    * usageHistory.
    *
@@ -325,11 +322,7 @@ public class UserProfile {
   }
 
   /**
-   * A complex element consisting of: - `lastSentDateTime`: The date and time the
-   * user last sent an envelope. - `lastSignedDateTime`: The date and time the
-   * user last signed an envelope. - `sentCount`: The number of envelopes the user
-   * has sent. - `signedCount`: The number of envelopes the user has signed. .
-   * 
+   * A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.  .
    * @return usageHistory
    **/
   @Schema(description = "A complex element consisting of:   - `lastSentDateTime`: The date and time the user last sent an envelope.  - `lastSignedDateTime`: The date and time the user last signed an envelope. - `sentCount`: The number of envelopes the user has sent. - `signedCount`: The number of envelopes the user has signed.  ")
@@ -344,6 +337,7 @@ public class UserProfile {
     this.usageHistory = usageHistory;
   }
 
+
   /**
    * userDetails.
    *
@@ -356,7 +350,6 @@ public class UserProfile {
 
   /**
    * .
-   * 
    * @return userDetails
    **/
   @Schema(description = "")
@@ -371,6 +364,7 @@ public class UserProfile {
     this.userDetails = userDetails;
   }
 
+
   /**
    * userProfileLastModifiedDate.
    *
@@ -383,7 +377,6 @@ public class UserProfile {
 
   /**
    * .
-   * 
    * @return userProfileLastModifiedDate
    **/
   @Schema(description = "")
@@ -397,6 +390,7 @@ public class UserProfile {
   public void setUserProfileLastModifiedDate(String userProfileLastModifiedDate) {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
+
 
   /**
    * Compares objects.
@@ -431,10 +425,9 @@ public class UserProfile {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(address, authenticationMethods, companyName, displayOrganizationInfo, displayPersonalInfo,
-        displayProfile, displayUsageHistory, profileImageUri, title, usageHistory, userDetails,
-        userProfileLastModifiedDate);
+    return Objects.hash(address, authenticationMethods, companyName, displayOrganizationInfo, displayPersonalInfo, displayProfile, displayUsageHistory, profileImageUri, title, usageHistory, userDetails, userProfileLastModifiedDate);
   }
+
 
   /**
    * Converts the given object to string.
@@ -443,7 +436,7 @@ public class UserProfile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserProfile {\n");
-
+    
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    authenticationMethods: ").append(toIndentedString(authenticationMethods)).append("\n");
     sb.append("    companyName: ").append(toIndentedString(companyName)).append("\n");
@@ -472,3 +465,4 @@ public class UserProfile {
   }
 
 }
+

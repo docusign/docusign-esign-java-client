@@ -33,6 +33,7 @@ public class ServiceInformation {
   @JsonProperty("serviceVersions")
   private java.util.List<ServiceVersion> serviceVersions = null;
 
+
   /**
    * buildBranch.
    *
@@ -45,7 +46,6 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return buildBranch
    **/
   @Schema(description = "Reserved: TBD")
@@ -60,6 +60,7 @@ public class ServiceInformation {
     this.buildBranch = buildBranch;
   }
 
+
   /**
    * buildBranchDeployedDateTime.
    *
@@ -72,7 +73,6 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return buildBranchDeployedDateTime
    **/
   @Schema(description = "Reserved: TBD")
@@ -87,6 +87,7 @@ public class ServiceInformation {
     this.buildBranchDeployedDateTime = buildBranchDeployedDateTime;
   }
 
+
   /**
    * buildSHA.
    *
@@ -99,7 +100,6 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return buildSHA
    **/
   @Schema(description = "Reserved: TBD")
@@ -114,6 +114,7 @@ public class ServiceInformation {
     this.buildSHA = buildSHA;
   }
 
+
   /**
    * buildVersion.
    *
@@ -126,7 +127,6 @@ public class ServiceInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return buildVersion
    **/
   @Schema(description = "Reserved: TBD")
@@ -141,6 +141,7 @@ public class ServiceInformation {
     this.buildVersion = buildVersion;
   }
 
+
   /**
    * linkedSites.
    *
@@ -150,7 +151,7 @@ public class ServiceInformation {
     this.linkedSites = linkedSites;
     return this;
   }
-
+  
   /**
    * addLinkedSitesItem.
    *
@@ -166,7 +167,6 @@ public class ServiceInformation {
 
   /**
    * .
-   * 
    * @return linkedSites
    **/
   @Schema(description = "")
@@ -181,6 +181,7 @@ public class ServiceInformation {
     this.linkedSites = linkedSites;
   }
 
+
   /**
    * serviceVersions.
    *
@@ -190,7 +191,7 @@ public class ServiceInformation {
     this.serviceVersions = serviceVersions;
     return this;
   }
-
+  
   /**
    * addServiceVersionsItem.
    *
@@ -206,7 +207,6 @@ public class ServiceInformation {
 
   /**
    * .
-   * 
    * @return serviceVersions
    **/
   @Schema(description = "")
@@ -220,6 +220,7 @@ public class ServiceInformation {
   public void setServiceVersions(java.util.List<ServiceVersion> serviceVersions) {
     this.serviceVersions = serviceVersions;
   }
+
 
   /**
    * Compares objects.
@@ -251,6 +252,7 @@ public class ServiceInformation {
     return Objects.hash(buildBranch, buildBranchDeployedDateTime, buildSHA, buildVersion, linkedSites, serviceVersions);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -258,7 +260,7 @@ public class ServiceInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceInformation {\n");
-
+    
     sb.append("    buildBranch: ").append(toIndentedString(buildBranch)).append("\n");
     sb.append("    buildBranchDeployedDateTime: ").append(toIndentedString(buildBranchDeployedDateTime)).append("\n");
     sb.append("    buildSHA: ").append(toIndentedString(buildSHA)).append("\n");
@@ -281,3 +283,4 @@ public class ServiceInformation {
   }
 
 }
+

@@ -12,8 +12,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains details about the envelope transfer rule that you want
- * to create..
+ * This object contains details about the envelope transfer rule that you want to create..
  *
  */
 @Schema(description = "This object contains details about the envelope transfer rule that you want to create.")
@@ -49,6 +48,7 @@ public class EnvelopeTransferRuleRequest {
   @JsonProperty("toUser")
   private UserInformation toUser = null;
 
+
   /**
    * carbonCopyOriginalOwner.
    *
@@ -61,7 +61,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return carbonCopyOriginalOwner
    **/
   @Schema(description = "")
@@ -76,6 +75,7 @@ public class EnvelopeTransferRuleRequest {
     this.carbonCopyOriginalOwner = carbonCopyOriginalOwner;
   }
 
+
   /**
    * enabled.
    *
@@ -88,7 +88,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -103,6 +102,7 @@ public class EnvelopeTransferRuleRequest {
     this.enabled = enabled;
   }
 
+
   /**
    * envelopeTransferRuleId.
    *
@@ -115,7 +115,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return envelopeTransferRuleId
    **/
   @Schema(description = "")
@@ -130,6 +129,7 @@ public class EnvelopeTransferRuleRequest {
     this.envelopeTransferRuleId = envelopeTransferRuleId;
   }
 
+
   /**
    * eventType.
    *
@@ -142,7 +142,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return eventType
    **/
   @Schema(description = "")
@@ -157,6 +156,7 @@ public class EnvelopeTransferRuleRequest {
     this.eventType = eventType;
   }
 
+
   /**
    * fromGroups.
    *
@@ -166,7 +166,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromGroups = fromGroups;
     return this;
   }
-
+  
   /**
    * addFromGroupsItem.
    *
@@ -182,7 +182,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return fromGroups
    **/
   @Schema(description = "")
@@ -197,6 +196,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromGroups = fromGroups;
   }
 
+
   /**
    * fromUsers.
    *
@@ -206,7 +206,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromUsers = fromUsers;
     return this;
   }
-
+  
   /**
    * addFromUsersItem.
    *
@@ -222,7 +222,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return fromUsers
    **/
   @Schema(description = "")
@@ -237,6 +236,7 @@ public class EnvelopeTransferRuleRequest {
     this.fromUsers = fromUsers;
   }
 
+
   /**
    * modifiedDate.
    *
@@ -249,7 +249,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * .
-   * 
    * @return modifiedDate
    **/
   @Schema(description = "")
@@ -264,6 +263,7 @@ public class EnvelopeTransferRuleRequest {
     this.modifiedDate = modifiedDate;
   }
 
+
   /**
    * modifiedUser.
    *
@@ -276,7 +276,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * Information about the user who last modified the envelope transfer rule..
-   * 
    * @return modifiedUser
    **/
   @Schema(description = "Information about the user who last modified the envelope transfer rule.")
@@ -291,6 +290,7 @@ public class EnvelopeTransferRuleRequest {
     this.modifiedUser = modifiedUser;
   }
 
+
   /**
    * toFolder.
    *
@@ -302,9 +302,7 @@ public class EnvelopeTransferRuleRequest {
   }
 
   /**
-   * Information about the destination folder to which the envelope is
-   * transferred..
-   * 
+   * Information about the destination folder to which the envelope is transferred..
    * @return toFolder
    **/
   @Schema(description = "Information about the destination folder to which the envelope is transferred.")
@@ -319,6 +317,7 @@ public class EnvelopeTransferRuleRequest {
     this.toFolder = toFolder;
   }
 
+
   /**
    * toUser.
    *
@@ -331,7 +330,6 @@ public class EnvelopeTransferRuleRequest {
 
   /**
    * Information about the user to which the envelope is transferred..
-   * 
    * @return toUser
    **/
   @Schema(description = "Information about the user to which the envelope is transferred.")
@@ -345,6 +343,7 @@ public class EnvelopeTransferRuleRequest {
   public void setToUser(UserInformation toUser) {
     this.toUser = toUser;
   }
+
 
   /**
    * Compares objects.
@@ -377,9 +376,9 @@ public class EnvelopeTransferRuleRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroups, fromUsers,
-        modifiedDate, modifiedUser, toFolder, toUser);
+    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroups, fromUsers, modifiedDate, modifiedUser, toFolder, toUser);
   }
+
 
   /**
    * Converts the given object to string.
@@ -388,7 +387,7 @@ public class EnvelopeTransferRuleRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransferRuleRequest {\n");
-
+    
     sb.append("    carbonCopyOriginalOwner: ").append(toIndentedString(carbonCopyOriginalOwner)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    envelopeTransferRuleId: ").append(toIndentedString(envelopeTransferRuleId)).append("\n");
@@ -415,3 +414,4 @@ public class EnvelopeTransferRuleRequest {
   }
 
 }
+

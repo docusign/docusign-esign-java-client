@@ -23,6 +23,7 @@ public class CustomFields {
   @JsonProperty("textCustomFields")
   private java.util.List<TextCustomField> textCustomFields = null;
 
+
   /**
    * listCustomFields.
    *
@@ -32,7 +33,7 @@ public class CustomFields {
     this.listCustomFields = listCustomFields;
     return this;
   }
-
+  
   /**
    * addListCustomFieldsItem.
    *
@@ -48,7 +49,6 @@ public class CustomFields {
 
   /**
    * An array of list custom fields..
-   * 
    * @return listCustomFields
    **/
   @Schema(description = "An array of list custom fields.")
@@ -63,6 +63,7 @@ public class CustomFields {
     this.listCustomFields = listCustomFields;
   }
 
+
   /**
    * textCustomFields.
    *
@@ -72,7 +73,7 @@ public class CustomFields {
     this.textCustomFields = textCustomFields;
     return this;
   }
-
+  
   /**
    * addTextCustomFieldsItem.
    *
@@ -88,7 +89,6 @@ public class CustomFields {
 
   /**
    * An array of text custom fields..
-   * 
    * @return textCustomFields
    **/
   @Schema(description = "An array of text custom fields.")
@@ -102,6 +102,7 @@ public class CustomFields {
   public void setTextCustomFields(java.util.List<TextCustomField> textCustomFields) {
     this.textCustomFields = textCustomFields;
   }
+
 
   /**
    * Compares objects.
@@ -129,6 +130,7 @@ public class CustomFields {
     return Objects.hash(listCustomFields, textCustomFields);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -136,7 +138,7 @@ public class CustomFields {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomFields {\n");
-
+    
     sb.append("    listCustomFields: ").append(toIndentedString(listCustomFields)).append("\n");
     sb.append("    textCustomFields: ").append(toIndentedString(textCustomFields)).append("\n");
     sb.append("}");
@@ -155,3 +157,4 @@ public class CustomFields {
   }
 
 }
+

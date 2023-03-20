@@ -41,6 +41,7 @@ public class EnvelopeTemplateResults {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -53,7 +54,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -68,6 +68,7 @@ public class EnvelopeTemplateResults {
     this.endPosition = endPosition;
   }
 
+
   /**
    * envelopeTemplates.
    *
@@ -77,7 +78,7 @@ public class EnvelopeTemplateResults {
     this.envelopeTemplates = envelopeTemplates;
     return this;
   }
-
+  
   /**
    * addEnvelopeTemplatesItem.
    *
@@ -93,7 +94,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * The list of requested templates..
-   * 
    * @return envelopeTemplates
    **/
   @Schema(description = "The list of requested templates.")
@@ -108,6 +108,7 @@ public class EnvelopeTemplateResults {
     this.envelopeTemplates = envelopeTemplates;
   }
 
+
   /**
    * folders.
    *
@@ -117,7 +118,7 @@ public class EnvelopeTemplateResults {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -133,7 +134,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * .
-   * 
    * @return folders
    **/
   @Schema(description = "")
@@ -148,6 +148,7 @@ public class EnvelopeTemplateResults {
     this.folders = folders;
   }
 
+
   /**
    * nextUri.
    *
@@ -159,9 +160,7 @@ public class EnvelopeTemplateResults {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -176,6 +175,7 @@ public class EnvelopeTemplateResults {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -188,7 +188,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -203,6 +202,7 @@ public class EnvelopeTemplateResults {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -215,7 +215,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -230,6 +229,7 @@ public class EnvelopeTemplateResults {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -242,7 +242,6 @@ public class EnvelopeTemplateResults {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -257,6 +256,7 @@ public class EnvelopeTemplateResults {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -268,10 +268,7 @@ public class EnvelopeTemplateResults {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -285,6 +282,7 @@ public class EnvelopeTemplateResults {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -315,9 +313,9 @@ public class EnvelopeTemplateResults {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, envelopeTemplates, folders, nextUri, previousUri, resultSetSize, startPosition,
-        totalSetSize);
+    return Objects.hash(endPosition, envelopeTemplates, folders, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -326,7 +324,7 @@ public class EnvelopeTemplateResults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTemplateResults {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopeTemplates: ").append(toIndentedString(envelopeTemplates)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
@@ -351,3 +349,4 @@ public class EnvelopeTemplateResults {
   }
 
 }
+

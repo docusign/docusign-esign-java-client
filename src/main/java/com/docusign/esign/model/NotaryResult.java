@@ -23,6 +23,7 @@ public class NotaryResult {
   @JsonProperty("notary")
   private Notary notary = null;
 
+
   /**
    * jurisdictions.
    *
@@ -32,7 +33,7 @@ public class NotaryResult {
     this.jurisdictions = jurisdictions;
     return this;
   }
-
+  
   /**
    * addJurisdictionsItem.
    *
@@ -48,7 +49,6 @@ public class NotaryResult {
 
   /**
    * .
-   * 
    * @return jurisdictions
    **/
   @Schema(description = "")
@@ -63,6 +63,7 @@ public class NotaryResult {
     this.jurisdictions = jurisdictions;
   }
 
+
   /**
    * notary.
    *
@@ -75,7 +76,6 @@ public class NotaryResult {
 
   /**
    * .
-   * 
    * @return notary
    **/
   @Schema(description = "")
@@ -89,6 +89,7 @@ public class NotaryResult {
   public void setNotary(Notary notary) {
     this.notary = notary;
   }
+
 
   /**
    * Compares objects.
@@ -116,6 +117,7 @@ public class NotaryResult {
     return Objects.hash(jurisdictions, notary);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -123,7 +125,7 @@ public class NotaryResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryResult {\n");
-
+    
     sb.append("    jurisdictions: ").append(toIndentedString(jurisdictions)).append("\n");
     sb.append("    notary: ").append(toIndentedString(notary)).append("\n");
     sb.append("}");
@@ -142,3 +144,4 @@ public class NotaryResult {
   }
 
 }
+

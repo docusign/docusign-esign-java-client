@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A workspaceUser representing the user. This property is only returned in
- * response to user specific GET call. .
+ * A workspaceUser representing the user. This property is only returned in response to user specific GET call. .
  *
  */
 @Schema(description = "A workspaceUser representing the user. This property is only returned in response to user specific GET call. ")
@@ -74,6 +73,7 @@ public class WorkspaceUser {
   @JsonProperty("workspaceUserUri")
   private String workspaceUserUri = null;
 
+
   /**
    * accountId.
    *
@@ -86,7 +86,6 @@ public class WorkspaceUser {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -101,6 +100,7 @@ public class WorkspaceUser {
     this.accountId = accountId;
   }
 
+
   /**
    * accountName.
    *
@@ -113,7 +113,6 @@ public class WorkspaceUser {
 
   /**
    * The name of the account that the workspace user belongs to..
-   * 
    * @return accountName
    **/
   @Schema(description = "The name of the account that the workspace user belongs to.")
@@ -128,6 +127,7 @@ public class WorkspaceUser {
     this.accountName = accountName;
   }
 
+
   /**
    * activeSince.
    *
@@ -140,7 +140,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return activeSince
    **/
   @Schema(description = "")
@@ -155,6 +154,7 @@ public class WorkspaceUser {
     this.activeSince = activeSince;
   }
 
+
   /**
    * created.
    *
@@ -167,7 +167,6 @@ public class WorkspaceUser {
 
   /**
    * The UTC DateTime when the workspace user was created..
-   * 
    * @return created
    **/
   @Schema(description = "The UTC DateTime when the workspace user was created.")
@@ -182,6 +181,7 @@ public class WorkspaceUser {
     this.created = created;
   }
 
+
   /**
    * createdById.
    *
@@ -194,7 +194,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return createdById
    **/
   @Schema(description = "")
@@ -209,6 +208,7 @@ public class WorkspaceUser {
     this.createdById = createdById;
   }
 
+
   /**
    * email.
    *
@@ -221,7 +221,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -236,6 +235,7 @@ public class WorkspaceUser {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -247,12 +247,10 @@ public class WorkspaceUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -263,6 +261,7 @@ public class WorkspaceUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * invitationEmailBlurb.
@@ -276,7 +275,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return invitationEmailBlurb
    **/
   @Schema(description = "")
@@ -291,6 +289,7 @@ public class WorkspaceUser {
     this.invitationEmailBlurb = invitationEmailBlurb;
   }
 
+
   /**
    * invitationEmailSubject.
    *
@@ -303,7 +302,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return invitationEmailSubject
    **/
   @Schema(description = "")
@@ -318,6 +316,7 @@ public class WorkspaceUser {
     this.invitationEmailSubject = invitationEmailSubject;
   }
 
+
   /**
    * lastModified.
    *
@@ -329,9 +328,7 @@ public class WorkspaceUser {
   }
 
   /**
-   * Utc date and time the comment was last updated (can only be done by
-   * creator.).
-   * 
+   * Utc date and time the comment was last updated (can only be done by creator.).
    * @return lastModified
    **/
   @Schema(description = "Utc date and time the comment was last updated (can only be done by creator.)")
@@ -346,6 +343,7 @@ public class WorkspaceUser {
     this.lastModified = lastModified;
   }
 
+
   /**
    * lastModifiedById.
    *
@@ -358,7 +356,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return lastModifiedById
    **/
   @Schema(description = "")
@@ -373,6 +370,7 @@ public class WorkspaceUser {
     this.lastModifiedById = lastModifiedById;
   }
 
+
   /**
    * status.
    *
@@ -384,10 +382,7 @@ public class WorkspaceUser {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -402,6 +397,7 @@ public class WorkspaceUser {
     this.status = status;
   }
 
+
   /**
    * type.
    *
@@ -414,7 +410,6 @@ public class WorkspaceUser {
 
   /**
    * Type of the user. Valid values: type_owner, type_participant..
-   * 
    * @return type
    **/
   @Schema(description = "Type of the user. Valid values: type_owner, type_participant.")
@@ -429,6 +424,7 @@ public class WorkspaceUser {
     this.type = type;
   }
 
+
   /**
    * userId.
    *
@@ -441,7 +437,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -456,6 +451,7 @@ public class WorkspaceUser {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -468,7 +464,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -483,6 +478,7 @@ public class WorkspaceUser {
     this.userName = userName;
   }
 
+
   /**
    * workspaceId.
    *
@@ -495,7 +491,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return workspaceId
    **/
   @Schema(description = "")
@@ -510,6 +505,7 @@ public class WorkspaceUser {
     this.workspaceId = workspaceId;
   }
 
+
   /**
    * workspaceUserBaseUrl.
    *
@@ -522,7 +518,6 @@ public class WorkspaceUser {
 
   /**
    * The relative URI that may be used to access a workspace user..
-   * 
    * @return workspaceUserBaseUrl
    **/
   @Schema(description = "The relative URI that may be used to access a workspace user.")
@@ -537,6 +532,7 @@ public class WorkspaceUser {
     this.workspaceUserBaseUrl = workspaceUserBaseUrl;
   }
 
+
   /**
    * workspaceUserId.
    *
@@ -549,7 +545,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return workspaceUserId
    **/
   @Schema(description = "")
@@ -564,6 +559,7 @@ public class WorkspaceUser {
     this.workspaceUserId = workspaceUserId;
   }
 
+
   /**
    * workspaceUserUri.
    *
@@ -576,7 +572,6 @@ public class WorkspaceUser {
 
   /**
    * .
-   * 
    * @return workspaceUserUri
    **/
   @Schema(description = "")
@@ -590,6 +585,7 @@ public class WorkspaceUser {
   public void setWorkspaceUserUri(String workspaceUserUri) {
     this.workspaceUserUri = workspaceUserUri;
   }
+
 
   /**
    * Compares objects.
@@ -631,10 +627,9 @@ public class WorkspaceUser {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails,
-        invitationEmailBlurb, invitationEmailSubject, lastModified, lastModifiedById, status, type, userId, userName,
-        workspaceId, workspaceUserBaseUrl, workspaceUserId, workspaceUserUri);
+    return Objects.hash(accountId, accountName, activeSince, created, createdById, email, errorDetails, invitationEmailBlurb, invitationEmailSubject, lastModified, lastModifiedById, status, type, userId, userName, workspaceId, workspaceUserBaseUrl, workspaceUserId, workspaceUserUri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -643,7 +638,7 @@ public class WorkspaceUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceUser {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    activeSince: ").append(toIndentedString(activeSince)).append("\n");
@@ -679,3 +674,4 @@ public class WorkspaceUser {
   }
 
 }
+

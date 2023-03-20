@@ -25,6 +25,7 @@ public class FoldersRequest {
   @JsonProperty("fromFolderId")
   private String fromFolderId = null;
 
+
   /**
    * envelopeIds.
    *
@@ -34,7 +35,7 @@ public class FoldersRequest {
     this.envelopeIds = envelopeIds;
     return this;
   }
-
+  
   /**
    * addEnvelopeIdsItem.
    *
@@ -50,7 +51,6 @@ public class FoldersRequest {
 
   /**
    * .
-   * 
    * @return envelopeIds
    **/
   @Schema(description = "")
@@ -65,6 +65,7 @@ public class FoldersRequest {
     this.envelopeIds = envelopeIds;
   }
 
+
   /**
    * folders.
    *
@@ -74,7 +75,7 @@ public class FoldersRequest {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -90,7 +91,6 @@ public class FoldersRequest {
 
   /**
    * .
-   * 
    * @return folders
    **/
   @Schema(description = "")
@@ -105,6 +105,7 @@ public class FoldersRequest {
     this.folders = folders;
   }
 
+
   /**
    * fromFolderId.
    *
@@ -116,8 +117,7 @@ public class FoldersRequest {
   }
 
   /**
-   * The folder ID the envelope is being moved from..
-   * 
+   *  The folder ID the envelope is being moved from..
    * @return fromFolderId
    **/
   @Schema(description = " The folder ID the envelope is being moved from.")
@@ -131,6 +131,7 @@ public class FoldersRequest {
   public void setFromFolderId(String fromFolderId) {
     this.fromFolderId = fromFolderId;
   }
+
 
   /**
    * Compares objects.
@@ -159,6 +160,7 @@ public class FoldersRequest {
     return Objects.hash(envelopeIds, folders, fromFolderId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -166,7 +168,7 @@ public class FoldersRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FoldersRequest {\n");
-
+    
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    fromFolderId: ").append(toIndentedString(fromFolderId)).append("\n");
@@ -186,3 +188,4 @@ public class FoldersRequest {
   }
 
 }
+

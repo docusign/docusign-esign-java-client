@@ -13,7 +13,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  * A name-value pair that describes an item and provides a value for the item..
  *
  */
-@Schema(description = "A name-description pair that describes an item and provides a value for the item.")
+@Schema(description = "A name-value pair that describes an item and provides a value for the item.")
 
 public class NameValue {
   @JsonProperty("errorDetails")
@@ -28,6 +28,7 @@ public class NameValue {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * errorDetails.
    *
@@ -39,12 +40,10 @@ public class NameValue {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -55,6 +54,7 @@ public class NameValue {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * name.
@@ -68,7 +68,6 @@ public class NameValue {
 
   /**
    * The name or key of a name/value pair..
-   * 
    * @return name
    **/
   @Schema(description = "The name or key of a name/value pair.")
@@ -83,6 +82,7 @@ public class NameValue {
     this.name = name;
   }
 
+
   /**
    * originalValue.
    *
@@ -95,7 +95,6 @@ public class NameValue {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -110,6 +109,7 @@ public class NameValue {
     this.originalValue = originalValue;
   }
 
+
   /**
    * value.
    *
@@ -122,7 +122,6 @@ public class NameValue {
 
   /**
    * The value field of a name/value pair..
-   * 
    * @return value
    **/
   @Schema(description = "The value field of a name/value pair.")
@@ -136,6 +135,7 @@ public class NameValue {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -165,6 +165,7 @@ public class NameValue {
     return Objects.hash(errorDetails, name, originalValue, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -172,7 +173,7 @@ public class NameValue {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NameValue {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
@@ -193,3 +194,4 @@ public class NameValue {
   }
 
 }
+

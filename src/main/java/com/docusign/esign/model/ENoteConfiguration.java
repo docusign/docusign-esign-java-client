@@ -9,10 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information used to configure
- * [eNote](https://www.docusign.com/products/enote) functionality. To use eNote,
- * the Allow eNote for eOriginal account plan item must be on, and the Connect
- * configuration for eOriginal must be set correctly..
+ * This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly..
  *
  */
 @Schema(description = "This object contains information used to configure [eNote](https://www.docusign.com/products/enote) functionality. To use eNote, the Allow eNote for eOriginal account plan item must be on, and the Connect configuration for eOriginal must be set correctly.")
@@ -36,6 +33,7 @@ public class ENoteConfiguration {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * apiKey.
    *
@@ -48,7 +46,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return apiKey
    **/
   @Schema(description = "")
@@ -63,6 +60,7 @@ public class ENoteConfiguration {
     this.apiKey = apiKey;
   }
 
+
   /**
    * connectConfigured.
    *
@@ -75,7 +73,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return connectConfigured
    **/
   @Schema(description = "")
@@ -90,6 +87,7 @@ public class ENoteConfiguration {
     this.connectConfigured = connectConfigured;
   }
 
+
   /**
    * eNoteConfigured.
    *
@@ -102,7 +100,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return eNoteConfigured
    **/
   @Schema(description = "")
@@ -117,6 +114,7 @@ public class ENoteConfiguration {
     this.eNoteConfigured = eNoteConfigured;
   }
 
+
   /**
    * organization.
    *
@@ -129,7 +127,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return organization
    **/
   @Schema(description = "")
@@ -144,6 +141,7 @@ public class ENoteConfiguration {
     this.organization = organization;
   }
 
+
   /**
    * password.
    *
@@ -156,7 +154,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -171,6 +168,7 @@ public class ENoteConfiguration {
     this.password = password;
   }
 
+
   /**
    * userName.
    *
@@ -183,7 +181,6 @@ public class ENoteConfiguration {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -197,6 +194,7 @@ public class ENoteConfiguration {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -228,6 +226,7 @@ public class ENoteConfiguration {
     return Objects.hash(apiKey, connectConfigured, eNoteConfigured, organization, password, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -235,7 +234,7 @@ public class ENoteConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ENoteConfiguration {\n");
-
+    
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    connectConfigured: ").append(toIndentedString(connectConfigured)).append("\n");
     sb.append("    eNoteConfigured: ").append(toIndentedString(eNoteConfigured)).append("\n");
@@ -258,3 +257,4 @@ public class ENoteConfiguration {
   }
 
 }
+

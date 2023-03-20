@@ -40,6 +40,7 @@ public class BillingPlanUpdateResponse {
   @JsonProperty("planName")
   private String planName = null;
 
+
   /**
    * accountPaymentMethod.
    *
@@ -52,7 +53,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return accountPaymentMethod
    **/
   @Schema(description = "")
@@ -67,6 +67,7 @@ public class BillingPlanUpdateResponse {
     this.accountPaymentMethod = accountPaymentMethod;
   }
 
+
   /**
    * billingPlanPreview.
    *
@@ -79,7 +80,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return billingPlanPreview
    **/
   @Schema(description = "")
@@ -94,6 +94,7 @@ public class BillingPlanUpdateResponse {
     this.billingPlanPreview = billingPlanPreview;
   }
 
+
   /**
    * currencyCode.
    *
@@ -106,7 +107,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * Specifies the ISO currency code for the account..
-   * 
    * @return currencyCode
    **/
   @Schema(description = "Specifies the ISO currency code for the account.")
@@ -121,6 +121,7 @@ public class BillingPlanUpdateResponse {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * includedSeats.
    *
@@ -133,7 +134,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * The number of seats (users) included..
-   * 
    * @return includedSeats
    **/
   @Schema(description = "The number of seats (users) included.")
@@ -148,6 +148,7 @@ public class BillingPlanUpdateResponse {
     this.includedSeats = includedSeats;
   }
 
+
   /**
    * paymentCycle.
    *
@@ -160,7 +161,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return paymentCycle
    **/
   @Schema(description = "")
@@ -175,6 +175,7 @@ public class BillingPlanUpdateResponse {
     this.paymentCycle = paymentCycle;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -187,7 +188,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -202,6 +202,7 @@ public class BillingPlanUpdateResponse {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * planId.
    *
@@ -214,7 +215,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return planId
    **/
   @Schema(description = "")
@@ -229,6 +229,7 @@ public class BillingPlanUpdateResponse {
     this.planId = planId;
   }
 
+
   /**
    * planName.
    *
@@ -241,7 +242,6 @@ public class BillingPlanUpdateResponse {
 
   /**
    * .
-   * 
    * @return planName
    **/
   @Schema(description = "")
@@ -255,6 +255,7 @@ public class BillingPlanUpdateResponse {
   public void setPlanName(String planName) {
     this.planName = planName;
   }
+
 
   /**
    * Compares objects.
@@ -285,9 +286,9 @@ public class BillingPlanUpdateResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle,
-        paymentMethod, planId, planName);
+    return Objects.hash(accountPaymentMethod, billingPlanPreview, currencyCode, includedSeats, paymentCycle, paymentMethod, planId, planName);
   }
+
 
   /**
    * Converts the given object to string.
@@ -296,7 +297,7 @@ public class BillingPlanUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanUpdateResponse {\n");
-
+    
     sb.append("    accountPaymentMethod: ").append(toIndentedString(accountPaymentMethod)).append("\n");
     sb.append("    billingPlanPreview: ").append(toIndentedString(billingPlanPreview)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -321,3 +322,4 @@ public class BillingPlanUpdateResponse {
   }
 
 }
+

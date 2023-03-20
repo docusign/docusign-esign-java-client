@@ -45,6 +45,7 @@ public class ExternalFile {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * date.
    *
@@ -57,7 +58,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return date
    **/
   @Schema(description = "")
@@ -72,6 +72,7 @@ public class ExternalFile {
     this.date = date;
   }
 
+
   /**
    * hasCompositeTemplate.
    *
@@ -84,7 +85,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return hasCompositeTemplate
    **/
   @Schema(description = "")
@@ -99,6 +99,7 @@ public class ExternalFile {
     this.hasCompositeTemplate = hasCompositeTemplate;
   }
 
+
   /**
    * id.
    *
@@ -111,7 +112,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -126,6 +126,7 @@ public class ExternalFile {
     this.id = id;
   }
 
+
   /**
    * img.
    *
@@ -138,7 +139,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return img
    **/
   @Schema(description = "")
@@ -153,6 +153,7 @@ public class ExternalFile {
     this.img = img;
   }
 
+
   /**
    * name.
    *
@@ -165,7 +166,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -180,6 +180,7 @@ public class ExternalFile {
     this.name = name;
   }
 
+
   /**
    * ownerName.
    *
@@ -192,7 +193,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return ownerName
    **/
   @Schema(description = "")
@@ -207,6 +207,7 @@ public class ExternalFile {
     this.ownerName = ownerName;
   }
 
+
   /**
    * size.
    *
@@ -219,7 +220,6 @@ public class ExternalFile {
 
   /**
    * Reserved: TBD.
-   * 
    * @return size
    **/
   @Schema(description = "Reserved: TBD")
@@ -234,6 +234,7 @@ public class ExternalFile {
     this.size = size;
   }
 
+
   /**
    * supported.
    *
@@ -246,7 +247,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return supported
    **/
   @Schema(description = "")
@@ -261,6 +261,7 @@ public class ExternalFile {
     this.supported = supported;
   }
 
+
   /**
    * type.
    *
@@ -273,7 +274,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -288,6 +288,7 @@ public class ExternalFile {
     this.type = type;
   }
 
+
   /**
    * uri.
    *
@@ -300,7 +301,6 @@ public class ExternalFile {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -314,6 +314,7 @@ public class ExternalFile {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -349,6 +350,7 @@ public class ExternalFile {
     return Objects.hash(date, hasCompositeTemplate, id, img, name, ownerName, size, supported, type, uri);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -356,7 +358,7 @@ public class ExternalFile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalFile {\n");
-
+    
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    hasCompositeTemplate: ").append(toIndentedString(hasCompositeTemplate)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -383,3 +385,4 @@ public class ExternalFile {
   }
 
 }
+

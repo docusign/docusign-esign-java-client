@@ -27,6 +27,7 @@ public class BrandLink {
   @JsonProperty("urlOrMailTo")
   private String urlOrMailTo = null;
 
+
   /**
    * linkText.
    *
@@ -39,7 +40,6 @@ public class BrandLink {
 
   /**
    * .
-   * 
    * @return linkText
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class BrandLink {
     this.linkText = linkText;
   }
 
+
   /**
    * linkType.
    *
@@ -66,7 +67,6 @@ public class BrandLink {
 
   /**
    * .
-   * 
    * @return linkType
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class BrandLink {
     this.linkType = linkType;
   }
 
+
   /**
    * showLink.
    *
@@ -93,7 +94,6 @@ public class BrandLink {
 
   /**
    * .
-   * 
    * @return showLink
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class BrandLink {
     this.showLink = showLink;
   }
 
+
   /**
    * urlOrMailTo.
    *
@@ -120,7 +121,6 @@ public class BrandLink {
 
   /**
    * .
-   * 
    * @return urlOrMailTo
    **/
   @Schema(description = "")
@@ -134,6 +134,7 @@ public class BrandLink {
   public void setUrlOrMailTo(String urlOrMailTo) {
     this.urlOrMailTo = urlOrMailTo;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class BrandLink {
     return Objects.hash(linkText, linkType, showLink, urlOrMailTo);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class BrandLink {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandLink {\n");
-
+    
     sb.append("    linkText: ").append(toIndentedString(linkText)).append("\n");
     sb.append("    linkType: ").append(toIndentedString(linkType)).append("\n");
     sb.append("    showLink: ").append(toIndentedString(showLink)).append("\n");
@@ -191,3 +193,4 @@ public class BrandLink {
   }
 
 }
+

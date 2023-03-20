@@ -106,6 +106,7 @@ public class AccountBillingPlan {
   @JsonProperty("taxExemptId")
   private String taxExemptId = null;
 
+
   /**
    * addOns.
    *
@@ -115,7 +116,7 @@ public class AccountBillingPlan {
     this.addOns = addOns;
     return this;
   }
-
+  
   /**
    * addAddOnsItem.
    *
@@ -131,7 +132,6 @@ public class AccountBillingPlan {
 
   /**
    * Reserved:.
-   * 
    * @return addOns
    **/
   @Schema(description = "Reserved:")
@@ -146,6 +146,7 @@ public class AccountBillingPlan {
     this.addOns = addOns;
   }
 
+
   /**
    * appStoreReceiptExpirationDate.
    *
@@ -158,7 +159,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return appStoreReceiptExpirationDate
    **/
   @Schema(description = "")
@@ -173,6 +173,7 @@ public class AccountBillingPlan {
     this.appStoreReceiptExpirationDate = appStoreReceiptExpirationDate;
   }
 
+
   /**
    * appStoreReceiptPurchaseDate.
    *
@@ -185,7 +186,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return appStoreReceiptPurchaseDate
    **/
   @Schema(description = "")
@@ -200,6 +200,7 @@ public class AccountBillingPlan {
     this.appStoreReceiptPurchaseDate = appStoreReceiptPurchaseDate;
   }
 
+
   /**
    * canCancelRenewal.
    *
@@ -212,7 +213,6 @@ public class AccountBillingPlan {
 
   /**
    * Reserved: TBD.
-   * 
    * @return canCancelRenewal
    **/
   @Schema(description = "Reserved: TBD")
@@ -227,6 +227,7 @@ public class AccountBillingPlan {
     this.canCancelRenewal = canCancelRenewal;
   }
 
+
   /**
    * canUpgrade.
    *
@@ -238,9 +239,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * When set to **true**, specifies that you can upgrade the account through the
-   * API..
-   * 
+   * When set to **true**, specifies that you can upgrade the account through the API..
    * @return canUpgrade
    **/
   @Schema(description = "When set to **true**, specifies that you can upgrade the account through the API.")
@@ -255,6 +254,7 @@ public class AccountBillingPlan {
     this.canUpgrade = canUpgrade;
   }
 
+
   /**
    * currencyCode.
    *
@@ -267,7 +267,6 @@ public class AccountBillingPlan {
 
   /**
    * Specifies the ISO currency code for the account..
-   * 
    * @return currencyCode
    **/
   @Schema(description = "Specifies the ISO currency code for the account.")
@@ -282,6 +281,7 @@ public class AccountBillingPlan {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * downgradePlanInformation.
    *
@@ -294,7 +294,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return downgradePlanInformation
    **/
   @Schema(description = "")
@@ -309,6 +308,7 @@ public class AccountBillingPlan {
     this.downgradePlanInformation = downgradePlanInformation;
   }
 
+
   /**
    * enableSupport.
    *
@@ -320,9 +320,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * When set to **true**, then customer support is provided as part of the
-   * account plan..
-   * 
+   * When set to **true**, then customer support is provided as part of the account plan..
    * @return enableSupport
    **/
   @Schema(description = "When set to **true**, then customer support is provided as part of the account plan.")
@@ -337,6 +335,7 @@ public class AccountBillingPlan {
     this.enableSupport = enableSupport;
   }
 
+
   /**
    * includedSeats.
    *
@@ -349,7 +348,6 @@ public class AccountBillingPlan {
 
   /**
    * The number of seats (users) included..
-   * 
    * @return includedSeats
    **/
   @Schema(description = "The number of seats (users) included.")
@@ -364,6 +362,7 @@ public class AccountBillingPlan {
     this.includedSeats = includedSeats;
   }
 
+
   /**
    * incrementalSeats.
    *
@@ -376,7 +375,6 @@ public class AccountBillingPlan {
 
   /**
    * Reserved: TBD.
-   * 
    * @return incrementalSeats
    **/
   @Schema(description = "Reserved: TBD")
@@ -391,6 +389,7 @@ public class AccountBillingPlan {
     this.incrementalSeats = incrementalSeats;
   }
 
+
   /**
    * isDowngrade.
    *
@@ -403,7 +402,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return isDowngrade
    **/
   @Schema(description = "")
@@ -418,6 +416,7 @@ public class AccountBillingPlan {
     this.isDowngrade = isDowngrade;
   }
 
+
   /**
    * notificationType.
    *
@@ -430,7 +429,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return notificationType
    **/
   @Schema(description = "")
@@ -445,6 +443,7 @@ public class AccountBillingPlan {
     this.notificationType = notificationType;
   }
 
+
   /**
    * otherDiscountPercent.
    *
@@ -456,8 +455,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * Any other percentage discount for the plan. .
-   * 
+   *  Any other percentage discount for the plan. .
    * @return otherDiscountPercent
    **/
   @Schema(description = " Any other percentage discount for the plan. ")
@@ -472,6 +470,7 @@ public class AccountBillingPlan {
     this.otherDiscountPercent = otherDiscountPercent;
   }
 
+
   /**
    * paymentCycle.
    *
@@ -484,7 +483,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return paymentCycle
    **/
   @Schema(description = "")
@@ -499,6 +497,7 @@ public class AccountBillingPlan {
     this.paymentCycle = paymentCycle;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -510,9 +509,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * The payment method used with the plan. The possible values are: CreditCard,
-   * PurchaseOrder, Premium, or Freemium. .
-   * 
+   *  The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium. .
    * @return paymentMethod
    **/
   @Schema(description = " The payment method used with the plan. The possible values are: CreditCard, PurchaseOrder, Premium, or Freemium. ")
@@ -527,6 +524,7 @@ public class AccountBillingPlan {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * perSeatPrice.
    *
@@ -539,7 +537,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return perSeatPrice
    **/
   @Schema(description = "")
@@ -554,6 +551,7 @@ public class AccountBillingPlan {
     this.perSeatPrice = perSeatPrice;
   }
 
+
   /**
    * planClassification.
    *
@@ -565,9 +563,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * Identifies the type of plan. Examples include Business, Corporate,
-   * Enterprise, Free..
-   * 
+   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
    * @return planClassification
    **/
   @Schema(description = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
@@ -582,6 +578,7 @@ public class AccountBillingPlan {
     this.planClassification = planClassification;
   }
 
+
   /**
    * planFeatureSets.
    *
@@ -591,7 +588,7 @@ public class AccountBillingPlan {
     this.planFeatureSets = planFeatureSets;
     return this;
   }
-
+  
   /**
    * addPlanFeatureSetsItem.
    *
@@ -606,19 +603,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * A complex type that sets the feature sets for the account. It contains the
-   * following information (all string content): * currencyFeatureSetPrices -
-   * Contains the currencyCode and currencySymbol for the alternate currency
-   * values for envelopeFee, fixedFee, seatFee that are configured for this plan
-   * feature set. * envelopeFee - An incremental envelope cost for plans with
-   * envelope overages (when isEnabled=true). * featureSetId - A unique ID for the
-   * feature set. * fixedFee - A one-time fee associated with the plan (when
-   * isEnabled=true). * isActive - Specifies whether the feature set is actively
-   * set as part of the plan. * isEnabled - Specifies whether the feature set is
-   * actively enabled as part of the plan. * name - The name of the feature set. *
-   * seatFee - An incremental seat cost for seat-based plans (when
-   * isEnabled=true). .
-   * 
+   * A complex type that sets the feature sets for the account. It contains the following information (all string content):  * currencyFeatureSetPrices - Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, seatFee that are configured for this plan feature set. * envelopeFee - An incremental envelope cost for plans with envelope overages (when isEnabled=true). * featureSetId - A unique ID for the feature set. * fixedFee - A one-time fee associated with the plan (when isEnabled=true). * isActive - Specifies whether the feature set is actively set as part of the plan. * isEnabled - Specifies whether the feature set is actively enabled as part of the plan. * name - The name of the feature set. * seatFee - An incremental seat cost for seat-based plans (when isEnabled=true). .
    * @return planFeatureSets
    **/
   @Schema(description = "A complex type that sets the feature sets for the account. It contains the following information (all string content):  * currencyFeatureSetPrices - Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, seatFee that are configured for this plan feature set. * envelopeFee - An incremental envelope cost for plans with envelope overages (when isEnabled=true). * featureSetId - A unique ID for the feature set. * fixedFee - A one-time fee associated with the plan (when isEnabled=true). * isActive - Specifies whether the feature set is actively set as part of the plan. * isEnabled - Specifies whether the feature set is actively enabled as part of the plan. * name - The name of the feature set. * seatFee - An incremental seat cost for seat-based plans (when isEnabled=true). ")
@@ -633,6 +618,7 @@ public class AccountBillingPlan {
     this.planFeatureSets = planFeatureSets;
   }
 
+
   /**
    * planId.
    *
@@ -645,7 +631,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return planId
    **/
   @Schema(description = "")
@@ -660,6 +645,7 @@ public class AccountBillingPlan {
     this.planId = planId;
   }
 
+
   /**
    * planName.
    *
@@ -672,7 +658,6 @@ public class AccountBillingPlan {
 
   /**
    * The name of the Billing Plan..
-   * 
    * @return planName
    **/
   @Schema(description = "The name of the Billing Plan.")
@@ -687,6 +672,7 @@ public class AccountBillingPlan {
     this.planName = planName;
   }
 
+
   /**
    * planStartDate.
    *
@@ -699,7 +685,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return planStartDate
    **/
   @Schema(description = "")
@@ -714,6 +699,7 @@ public class AccountBillingPlan {
     this.planStartDate = planStartDate;
   }
 
+
   /**
    * productId.
    *
@@ -726,7 +712,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return productId
    **/
   @Schema(description = "")
@@ -741,6 +726,7 @@ public class AccountBillingPlan {
     this.productId = productId;
   }
 
+
   /**
    * renewalDate.
    *
@@ -753,7 +739,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return renewalDate
    **/
   @Schema(description = "")
@@ -768,6 +753,7 @@ public class AccountBillingPlan {
     this.renewalDate = renewalDate;
   }
 
+
   /**
    * renewalStatus.
    *
@@ -779,11 +765,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * The renewal status for the account. The acceptable values are: * auto: The
-   * account automatically renews. * queued_for_close: Account will be closed at
-   * the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded
-   * at the billingPeriodEndDate..
-   * 
+   * The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate..
    * @return renewalStatus
    **/
   @Schema(description = "The renewal status for the account. The acceptable values are:  * auto: The account automatically renews. * queued_for_close: Account will be closed at the billingPeriodEndDate. * queued_for_downgrade: Account will be downgraded at the billingPeriodEndDate.")
@@ -798,6 +780,7 @@ public class AccountBillingPlan {
     this.renewalStatus = renewalStatus;
   }
 
+
   /**
    * seatDiscounts.
    *
@@ -807,7 +790,7 @@ public class AccountBillingPlan {
     this.seatDiscounts = seatDiscounts;
     return this;
   }
-
+  
   /**
    * addSeatDiscountsItem.
    *
@@ -822,9 +805,7 @@ public class AccountBillingPlan {
   }
 
   /**
-   * A complex type that contains any seat discount information. Values are:
-   * BeginSeatCount, EndSeatCount, and SeatDiscountPercent. .
-   * 
+   *  A complex type that contains any seat discount information.  Values are: BeginSeatCount, EndSeatCount, and SeatDiscountPercent.  .
    * @return seatDiscounts
    **/
   @Schema(description = " A complex type that contains any seat discount information.  Values are: BeginSeatCount, EndSeatCount, and SeatDiscountPercent.  ")
@@ -839,6 +820,7 @@ public class AccountBillingPlan {
     this.seatDiscounts = seatDiscounts;
   }
 
+
   /**
    * subscriptionStartDate.
    *
@@ -851,7 +833,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return subscriptionStartDate
    **/
   @Schema(description = "")
@@ -866,6 +847,7 @@ public class AccountBillingPlan {
     this.subscriptionStartDate = subscriptionStartDate;
   }
 
+
   /**
    * supportIncidentFee.
    *
@@ -878,7 +860,6 @@ public class AccountBillingPlan {
 
   /**
    * The support incident fee charged for each support incident..
-   * 
    * @return supportIncidentFee
    **/
   @Schema(description = "The support incident fee charged for each support incident.")
@@ -893,6 +874,7 @@ public class AccountBillingPlan {
     this.supportIncidentFee = supportIncidentFee;
   }
 
+
   /**
    * supportPlanFee.
    *
@@ -905,7 +887,6 @@ public class AccountBillingPlan {
 
   /**
    * The support plan fee charged for this plan..
-   * 
    * @return supportPlanFee
    **/
   @Schema(description = "The support plan fee charged for this plan.")
@@ -920,6 +901,7 @@ public class AccountBillingPlan {
     this.supportPlanFee = supportPlanFee;
   }
 
+
   /**
    * taxExemptId.
    *
@@ -932,7 +914,6 @@ public class AccountBillingPlan {
 
   /**
    * .
-   * 
    * @return taxExemptId
    **/
   @Schema(description = "")
@@ -946,6 +927,7 @@ public class AccountBillingPlan {
   public void setTaxExemptId(String taxExemptId) {
     this.taxExemptId = taxExemptId;
   }
+
 
   /**
    * Compares objects.
@@ -997,12 +979,9 @@ public class AccountBillingPlan {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal,
-        canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade,
-        notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification,
-        planFeatureSets, planId, planName, planStartDate, productId, renewalDate, renewalStatus, seatDiscounts,
-        subscriptionStartDate, supportIncidentFee, supportPlanFee, taxExemptId);
+    return Objects.hash(addOns, appStoreReceiptExpirationDate, appStoreReceiptPurchaseDate, canCancelRenewal, canUpgrade, currencyCode, downgradePlanInformation, enableSupport, includedSeats, incrementalSeats, isDowngrade, notificationType, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, planStartDate, productId, renewalDate, renewalStatus, seatDiscounts, subscriptionStartDate, supportIncidentFee, supportPlanFee, taxExemptId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1011,10 +990,9 @@ public class AccountBillingPlan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountBillingPlan {\n");
-
+    
     sb.append("    addOns: ").append(toIndentedString(addOns)).append("\n");
-    sb.append("    appStoreReceiptExpirationDate: ").append(toIndentedString(appStoreReceiptExpirationDate))
-        .append("\n");
+    sb.append("    appStoreReceiptExpirationDate: ").append(toIndentedString(appStoreReceiptExpirationDate)).append("\n");
     sb.append("    appStoreReceiptPurchaseDate: ").append(toIndentedString(appStoreReceiptPurchaseDate)).append("\n");
     sb.append("    canCancelRenewal: ").append(toIndentedString(canCancelRenewal)).append("\n");
     sb.append("    canUpgrade: ").append(toIndentedString(canUpgrade)).append("\n");
@@ -1058,3 +1036,4 @@ public class AccountBillingPlan {
   }
 
 }
+

@@ -21,6 +21,7 @@ public class ContactPhoneNumber {
   @JsonProperty("phoneType")
   private String phoneType = null;
 
+
   /**
    * phoneNumber.
    *
@@ -33,7 +34,6 @@ public class ContactPhoneNumber {
 
   /**
    * .
-   * 
    * @return phoneNumber
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class ContactPhoneNumber {
     this.phoneNumber = phoneNumber;
   }
 
+
   /**
    * phoneType.
    *
@@ -60,7 +61,6 @@ public class ContactPhoneNumber {
 
   /**
    * .
-   * 
    * @return phoneType
    **/
   @Schema(description = "")
@@ -74,6 +74,7 @@ public class ContactPhoneNumber {
   public void setPhoneType(String phoneType) {
     this.phoneType = phoneType;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class ContactPhoneNumber {
     return Objects.hash(phoneNumber, phoneType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class ContactPhoneNumber {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactPhoneNumber {\n");
-
+    
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    phoneType: ").append(toIndentedString(phoneType)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class ContactPhoneNumber {
   }
 
 }
+

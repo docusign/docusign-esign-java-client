@@ -35,6 +35,7 @@ public class ProvisioningInformation {
   @JsonProperty("purchaseOrderOrPromAllowed")
   private String purchaseOrderOrPromAllowed = null;
 
+
   /**
    * defaultConnectionId.
    *
@@ -47,7 +48,6 @@ public class ProvisioningInformation {
 
   /**
    * .
-   * 
    * @return defaultConnectionId
    **/
   @Schema(description = "")
@@ -62,6 +62,7 @@ public class ProvisioningInformation {
     this.defaultConnectionId = defaultConnectionId;
   }
 
+
   /**
    * defaultPlanId.
    *
@@ -74,7 +75,6 @@ public class ProvisioningInformation {
 
   /**
    * .
-   * 
    * @return defaultPlanId
    **/
   @Schema(description = "")
@@ -89,6 +89,7 @@ public class ProvisioningInformation {
     this.defaultPlanId = defaultPlanId;
   }
 
+
   /**
    * distributorCode.
    *
@@ -100,9 +101,7 @@ public class ProvisioningInformation {
   }
 
   /**
-   * The code that identifies the billing plan groups and plans for the new
-   * account..
-   * 
+   * The code that identifies the billing plan groups and plans for the new account..
    * @return distributorCode
    **/
   @Schema(description = "The code that identifies the billing plan groups and plans for the new account.")
@@ -117,6 +116,7 @@ public class ProvisioningInformation {
     this.distributorCode = distributorCode;
   }
 
+
   /**
    * distributorPassword.
    *
@@ -129,7 +129,6 @@ public class ProvisioningInformation {
 
   /**
    * The password for the distributorCode..
-   * 
    * @return distributorPassword
    **/
   @Schema(description = "The password for the distributorCode.")
@@ -144,6 +143,7 @@ public class ProvisioningInformation {
     this.distributorPassword = distributorPassword;
   }
 
+
   /**
    * passwordRuleText.
    *
@@ -156,7 +156,6 @@ public class ProvisioningInformation {
 
   /**
    * .
-   * 
    * @return passwordRuleText
    **/
   @Schema(description = "")
@@ -171,6 +170,7 @@ public class ProvisioningInformation {
     this.passwordRuleText = passwordRuleText;
   }
 
+
   /**
    * planPromotionText.
    *
@@ -183,7 +183,6 @@ public class ProvisioningInformation {
 
   /**
    * .
-   * 
    * @return planPromotionText
    **/
   @Schema(description = "")
@@ -198,6 +197,7 @@ public class ProvisioningInformation {
     this.planPromotionText = planPromotionText;
   }
 
+
   /**
    * purchaseOrderOrPromAllowed.
    *
@@ -210,7 +210,6 @@ public class ProvisioningInformation {
 
   /**
    * .
-   * 
    * @return purchaseOrderOrPromAllowed
    **/
   @Schema(description = "")
@@ -224,6 +223,7 @@ public class ProvisioningInformation {
   public void setPurchaseOrderOrPromAllowed(String purchaseOrderOrPromAllowed) {
     this.purchaseOrderOrPromAllowed = purchaseOrderOrPromAllowed;
   }
+
 
   /**
    * Compares objects.
@@ -253,9 +253,9 @@ public class ProvisioningInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultConnectionId, defaultPlanId, distributorCode, distributorPassword, passwordRuleText,
-        planPromotionText, purchaseOrderOrPromAllowed);
+    return Objects.hash(defaultConnectionId, defaultPlanId, distributorCode, distributorPassword, passwordRuleText, planPromotionText, purchaseOrderOrPromAllowed);
   }
+
 
   /**
    * Converts the given object to string.
@@ -264,7 +264,7 @@ public class ProvisioningInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProvisioningInformation {\n");
-
+    
     sb.append("    defaultConnectionId: ").append(toIndentedString(defaultConnectionId)).append("\n");
     sb.append("    defaultPlanId: ").append(toIndentedString(defaultPlanId)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
@@ -288,3 +288,4 @@ public class ProvisioningInformation {
   }
 
 }
+

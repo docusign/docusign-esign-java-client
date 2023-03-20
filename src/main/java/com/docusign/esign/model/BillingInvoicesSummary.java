@@ -30,6 +30,7 @@ public class BillingInvoicesSummary {
   @JsonProperty("paymentAllowed")
   private String paymentAllowed = null;
 
+
   /**
    * accountBalance.
    *
@@ -42,7 +43,6 @@ public class BillingInvoicesSummary {
 
   /**
    * .
-   * 
    * @return accountBalance
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class BillingInvoicesSummary {
     this.accountBalance = accountBalance;
   }
 
+
   /**
    * billingInvoices.
    *
@@ -66,7 +67,7 @@ public class BillingInvoicesSummary {
     this.billingInvoices = billingInvoices;
     return this;
   }
-
+  
   /**
    * addBillingInvoicesItem.
    *
@@ -82,7 +83,6 @@ public class BillingInvoicesSummary {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingInvoices
    **/
   @Schema(description = "Reserved: TBD")
@@ -97,6 +97,7 @@ public class BillingInvoicesSummary {
     this.billingInvoices = billingInvoices;
   }
 
+
   /**
    * currencyCode.
    *
@@ -109,7 +110,6 @@ public class BillingInvoicesSummary {
 
   /**
    * .
-   * 
    * @return currencyCode
    **/
   @Schema(description = "")
@@ -124,6 +124,7 @@ public class BillingInvoicesSummary {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * pastDueBalance.
    *
@@ -136,7 +137,6 @@ public class BillingInvoicesSummary {
 
   /**
    * .
-   * 
    * @return pastDueBalance
    **/
   @Schema(description = "")
@@ -151,6 +151,7 @@ public class BillingInvoicesSummary {
     this.pastDueBalance = pastDueBalance;
   }
 
+
   /**
    * paymentAllowed.
    *
@@ -163,7 +164,6 @@ public class BillingInvoicesSummary {
 
   /**
    * .
-   * 
    * @return paymentAllowed
    **/
   @Schema(description = "")
@@ -177,6 +177,7 @@ public class BillingInvoicesSummary {
   public void setPaymentAllowed(String paymentAllowed) {
     this.paymentAllowed = paymentAllowed;
   }
+
 
   /**
    * Compares objects.
@@ -207,6 +208,7 @@ public class BillingInvoicesSummary {
     return Objects.hash(accountBalance, billingInvoices, currencyCode, pastDueBalance, paymentAllowed);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -214,7 +216,7 @@ public class BillingInvoicesSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingInvoicesSummary {\n");
-
+    
     sb.append("    accountBalance: ").append(toIndentedString(accountBalance)).append("\n");
     sb.append("    billingInvoices: ").append(toIndentedString(billingInvoices)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -236,3 +238,4 @@ public class BillingInvoicesSummary {
   }
 
 }
+

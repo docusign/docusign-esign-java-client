@@ -28,6 +28,7 @@ public class RecipientPhoneNumber {
   @JsonProperty("numberMetadata")
   private PropertyMetadata numberMetadata = null;
 
+
   /**
    * countryCode.
    *
@@ -40,7 +41,6 @@ public class RecipientPhoneNumber {
 
   /**
    * .
-   * 
    * @return countryCode
    **/
   @Schema(description = "")
@@ -55,6 +55,7 @@ public class RecipientPhoneNumber {
     this.countryCode = countryCode;
   }
 
+
   /**
    * countryCodeMetadata.
    *
@@ -67,7 +68,6 @@ public class RecipientPhoneNumber {
 
   /**
    * Metadata that indicates if the `countryCode` property is editable..
-   * 
    * @return countryCodeMetadata
    **/
   @Schema(description = "Metadata that indicates if the `countryCode` property is editable.")
@@ -82,6 +82,7 @@ public class RecipientPhoneNumber {
     this.countryCodeMetadata = countryCodeMetadata;
   }
 
+
   /**
    * number.
    *
@@ -94,7 +95,6 @@ public class RecipientPhoneNumber {
 
   /**
    * .
-   * 
    * @return number
    **/
   @Schema(description = "")
@@ -109,6 +109,7 @@ public class RecipientPhoneNumber {
     this.number = number;
   }
 
+
   /**
    * numberMetadata.
    *
@@ -121,7 +122,6 @@ public class RecipientPhoneNumber {
 
   /**
    * Metadata that indicates if the `number` property is editable..
-   * 
    * @return numberMetadata
    **/
   @Schema(description = "Metadata that indicates if the `number` property is editable.")
@@ -135,6 +135,7 @@ public class RecipientPhoneNumber {
   public void setNumberMetadata(PropertyMetadata numberMetadata) {
     this.numberMetadata = numberMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -164,6 +165,7 @@ public class RecipientPhoneNumber {
     return Objects.hash(countryCode, countryCodeMetadata, number, numberMetadata);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -171,7 +173,7 @@ public class RecipientPhoneNumber {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPhoneNumber {\n");
-
+    
     sb.append("    countryCode: ").append(toIndentedString(countryCode)).append("\n");
     sb.append("    countryCodeMetadata: ").append(toIndentedString(countryCodeMetadata)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
@@ -192,3 +194,4 @@ public class RecipientPhoneNumber {
   }
 
 }
+

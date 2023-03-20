@@ -27,6 +27,7 @@ public class AddOn {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * active.
    *
@@ -39,7 +40,6 @@ public class AddOn {
 
   /**
    * Reserved:.
-   * 
    * @return active
    **/
   @Schema(description = "Reserved:")
@@ -54,6 +54,7 @@ public class AddOn {
     this.active = active;
   }
 
+
   /**
    * addOnId.
    *
@@ -66,7 +67,6 @@ public class AddOn {
 
   /**
    * Reserved:.
-   * 
    * @return addOnId
    **/
   @Schema(description = "Reserved:")
@@ -81,6 +81,7 @@ public class AddOn {
     this.addOnId = addOnId;
   }
 
+
   /**
    * id.
    *
@@ -93,7 +94,6 @@ public class AddOn {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class AddOn {
     this.id = id;
   }
 
+
   /**
    * name.
    *
@@ -120,7 +121,6 @@ public class AddOn {
 
   /**
    * Reserved:.
-   * 
    * @return name
    **/
   @Schema(description = "Reserved:")
@@ -134,6 +134,7 @@ public class AddOn {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class AddOn {
     return Objects.hash(active, addOnId, id, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class AddOn {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOn {\n");
-
+    
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    addOnId: ").append(toIndentedString(addOnId)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -191,3 +193,4 @@ public class AddOn {
   }
 
 }
+

@@ -42,6 +42,7 @@ public class AccountIdentityVerificationWorkflow {
   @JsonProperty("workflowResourceKey")
   private String workflowResourceKey = null;
 
+
   /**
    * defaultDescription.
    *
@@ -54,7 +55,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return defaultDescription
    **/
   @Schema(description = "")
@@ -69,6 +69,7 @@ public class AccountIdentityVerificationWorkflow {
     this.defaultDescription = defaultDescription;
   }
 
+
   /**
    * defaultName.
    *
@@ -81,7 +82,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return defaultName
    **/
   @Schema(description = "")
@@ -96,6 +96,7 @@ public class AccountIdentityVerificationWorkflow {
     this.defaultName = defaultName;
   }
 
+
   /**
    * inputOptions.
    *
@@ -105,7 +106,7 @@ public class AccountIdentityVerificationWorkflow {
     this.inputOptions = inputOptions;
     return this;
   }
-
+  
   /**
    * addInputOptionsItem.
    *
@@ -121,7 +122,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return inputOptions
    **/
   @Schema(description = "")
@@ -136,6 +136,7 @@ public class AccountIdentityVerificationWorkflow {
     this.inputOptions = inputOptions;
   }
 
+
   /**
    * signatureProvider.
    *
@@ -148,7 +149,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * The signature provider associated with the Identity Verification workflow..
-   * 
    * @return signatureProvider
    **/
   @Schema(description = "The signature provider associated with the Identity Verification workflow.")
@@ -163,6 +163,7 @@ public class AccountIdentityVerificationWorkflow {
     this.signatureProvider = signatureProvider;
   }
 
+
   /**
    * steps.
    *
@@ -172,7 +173,7 @@ public class AccountIdentityVerificationWorkflow {
     this.steps = steps;
     return this;
   }
-
+  
   /**
    * addStepsItem.
    *
@@ -188,7 +189,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return steps
    **/
   @Schema(description = "")
@@ -203,6 +203,7 @@ public class AccountIdentityVerificationWorkflow {
     this.steps = steps;
   }
 
+
   /**
    * workflowId.
    *
@@ -215,7 +216,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return workflowId
    **/
   @Schema(description = "")
@@ -230,6 +230,7 @@ public class AccountIdentityVerificationWorkflow {
     this.workflowId = workflowId;
   }
 
+
   /**
    * workflowLabel.
    *
@@ -242,7 +243,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return workflowLabel
    **/
   @Schema(description = "")
@@ -257,6 +257,7 @@ public class AccountIdentityVerificationWorkflow {
     this.workflowLabel = workflowLabel;
   }
 
+
   /**
    * workflowResourceKey.
    *
@@ -269,7 +270,6 @@ public class AccountIdentityVerificationWorkflow {
 
   /**
    * .
-   * 
    * @return workflowResourceKey
    **/
   @Schema(description = "")
@@ -283,6 +283,7 @@ public class AccountIdentityVerificationWorkflow {
   public void setWorkflowResourceKey(String workflowResourceKey) {
     this.workflowResourceKey = workflowResourceKey;
   }
+
 
   /**
    * Compares objects.
@@ -313,9 +314,9 @@ public class AccountIdentityVerificationWorkflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId,
-        workflowLabel, workflowResourceKey);
+    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
   }
+
 
   /**
    * Converts the given object to string.
@@ -324,7 +325,7 @@ public class AccountIdentityVerificationWorkflow {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationWorkflow {\n");
-
+    
     sb.append("    defaultDescription: ").append(toIndentedString(defaultDescription)).append("\n");
     sb.append("    defaultName: ").append(toIndentedString(defaultName)).append("\n");
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
@@ -349,3 +350,4 @@ public class AccountIdentityVerificationWorkflow {
   }
 
 }
+

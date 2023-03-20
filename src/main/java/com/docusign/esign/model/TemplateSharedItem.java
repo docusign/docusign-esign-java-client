@@ -43,6 +43,7 @@ public class TemplateSharedItem {
   @JsonProperty("templateName")
   private String templateName = null;
 
+
   /**
    * errorDetails.
    *
@@ -54,12 +55,10 @@ public class TemplateSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -70,6 +69,7 @@ public class TemplateSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * owner.
@@ -83,7 +83,6 @@ public class TemplateSharedItem {
 
   /**
    * Information about the user who owns the template..
-   * 
    * @return owner
    **/
   @Schema(description = "Information about the user who owns the template.")
@@ -98,6 +97,7 @@ public class TemplateSharedItem {
     this.owner = owner;
   }
 
+
   /**
    * password.
    *
@@ -110,7 +110,6 @@ public class TemplateSharedItem {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -125,6 +124,7 @@ public class TemplateSharedItem {
     this.password = password;
   }
 
+
   /**
    * shared.
    *
@@ -137,7 +137,6 @@ public class TemplateSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -152,6 +151,7 @@ public class TemplateSharedItem {
     this.shared = shared;
   }
 
+
   /**
    * sharedGroups.
    *
@@ -161,7 +161,7 @@ public class TemplateSharedItem {
     this.sharedGroups = sharedGroups;
     return this;
   }
-
+  
   /**
    * addSharedGroupsItem.
    *
@@ -177,7 +177,6 @@ public class TemplateSharedItem {
 
   /**
    * .
-   * 
    * @return sharedGroups
    **/
   @Schema(description = "")
@@ -192,6 +191,7 @@ public class TemplateSharedItem {
     this.sharedGroups = sharedGroups;
   }
 
+
   /**
    * sharedUsers.
    *
@@ -201,7 +201,7 @@ public class TemplateSharedItem {
     this.sharedUsers = sharedUsers;
     return this;
   }
-
+  
   /**
    * addSharedUsersItem.
    *
@@ -217,7 +217,6 @@ public class TemplateSharedItem {
 
   /**
    * .
-   * 
    * @return sharedUsers
    **/
   @Schema(description = "")
@@ -232,6 +231,7 @@ public class TemplateSharedItem {
     this.sharedUsers = sharedUsers;
   }
 
+
   /**
    * templateId.
    *
@@ -243,9 +243,7 @@ public class TemplateSharedItem {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -260,6 +258,7 @@ public class TemplateSharedItem {
     this.templateId = templateId;
   }
 
+
   /**
    * templateName.
    *
@@ -272,7 +271,6 @@ public class TemplateSharedItem {
 
   /**
    * .
-   * 
    * @return templateName
    **/
   @Schema(description = "")
@@ -286,6 +284,7 @@ public class TemplateSharedItem {
   public void setTemplateName(String templateName) {
     this.templateName = templateName;
   }
+
 
   /**
    * Compares objects.
@@ -319,6 +318,7 @@ public class TemplateSharedItem {
     return Objects.hash(errorDetails, owner, password, shared, sharedGroups, sharedUsers, templateId, templateName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -326,7 +326,7 @@ public class TemplateSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
@@ -351,3 +351,4 @@ public class TemplateSharedItem {
   }
 
 }
+

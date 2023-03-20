@@ -20,6 +20,7 @@ public class BulkSendBatchError {
   @JsonProperty("errorDetail")
   private String errorDetail = null;
 
+
   /**
    * error.
    *
@@ -32,7 +33,6 @@ public class BulkSendBatchError {
 
   /**
    * .
-   * 
    * @return error
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class BulkSendBatchError {
     this.error = error;
   }
 
+
   /**
    * errorDetail.
    *
@@ -59,7 +60,6 @@ public class BulkSendBatchError {
 
   /**
    * .
-   * 
    * @return errorDetail
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class BulkSendBatchError {
   public void setErrorDetail(String errorDetail) {
     this.errorDetail = errorDetail;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class BulkSendBatchError {
     return Objects.hash(error, errorDetail);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class BulkSendBatchError {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchError {\n");
-
+    
     sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("    errorDetail: ").append(toIndentedString(errorDetail)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class BulkSendBatchError {
   }
 
 }
+

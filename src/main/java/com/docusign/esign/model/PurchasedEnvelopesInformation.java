@@ -41,6 +41,7 @@ public class PurchasedEnvelopesInformation {
   @JsonProperty("transactionId")
   private String transactionId = null;
 
+
   /**
    * amount.
    *
@@ -53,7 +54,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The total amount of the purchase..
-   * 
    * @return amount
    **/
   @Schema(description = "The total amount of the purchase.")
@@ -68,6 +68,7 @@ public class PurchasedEnvelopesInformation {
     this.amount = amount;
   }
 
+
   /**
    * appName.
    *
@@ -80,7 +81,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The AppName of the client application..
-   * 
    * @return appName
    **/
   @Schema(description = "The AppName of the client application.")
@@ -95,6 +95,7 @@ public class PurchasedEnvelopesInformation {
     this.appName = appName;
   }
 
+
   /**
    * currencyCode.
    *
@@ -106,9 +107,7 @@ public class PurchasedEnvelopesInformation {
   }
 
   /**
-   * Specifies the ISO currency code of the purchase. This is based on the ISO
-   * 4217 currency code information..
-   * 
+   * Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information..
    * @return currencyCode
    **/
   @Schema(description = "Specifies the ISO currency code of the purchase. This is based on the ISO 4217 currency code information.")
@@ -123,6 +122,7 @@ public class PurchasedEnvelopesInformation {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * platform.
    *
@@ -135,7 +135,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The Platform of the client application.
-   * 
    * @return platform
    **/
   @Schema(description = "The Platform of the client application")
@@ -150,6 +149,7 @@ public class PurchasedEnvelopesInformation {
     this.platform = platform;
   }
 
+
   /**
    * productId.
    *
@@ -162,7 +162,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The Product ID from the AppStore..
-   * 
    * @return productId
    **/
   @Schema(description = "The Product ID from the AppStore.")
@@ -177,6 +176,7 @@ public class PurchasedEnvelopesInformation {
     this.productId = productId;
   }
 
+
   /**
    * quantity.
    *
@@ -189,7 +189,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The quantity of envelopes to add to the account..
-   * 
    * @return quantity
    **/
   @Schema(description = "The quantity of envelopes to add to the account.")
@@ -204,6 +203,7 @@ public class PurchasedEnvelopesInformation {
     this.quantity = quantity;
   }
 
+
   /**
    * receiptData.
    *
@@ -216,7 +216,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The encrypted Base64 encoded receipt data..
-   * 
    * @return receiptData
    **/
   @Schema(description = "The encrypted Base64 encoded receipt data.")
@@ -231,6 +230,7 @@ public class PurchasedEnvelopesInformation {
     this.receiptData = receiptData;
   }
 
+
   /**
    * storeName.
    *
@@ -243,7 +243,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * The name of the AppStore..
-   * 
    * @return storeName
    **/
   @Schema(description = "The name of the AppStore.")
@@ -258,6 +257,7 @@ public class PurchasedEnvelopesInformation {
     this.storeName = storeName;
   }
 
+
   /**
    * transactionId.
    *
@@ -270,7 +270,6 @@ public class PurchasedEnvelopesInformation {
 
   /**
    * Specifies the Transaction ID from the AppStore..
-   * 
    * @return transactionId
    **/
   @Schema(description = "Specifies the Transaction ID from the AppStore.")
@@ -284,6 +283,7 @@ public class PurchasedEnvelopesInformation {
   public void setTransactionId(String transactionId) {
     this.transactionId = transactionId;
   }
+
 
   /**
    * Compares objects.
@@ -315,9 +315,9 @@ public class PurchasedEnvelopesInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(amount, appName, currencyCode, platform, productId, quantity, receiptData, storeName,
-        transactionId);
+    return Objects.hash(amount, appName, currencyCode, platform, productId, quantity, receiptData, storeName, transactionId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -326,7 +326,7 @@ public class PurchasedEnvelopesInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PurchasedEnvelopesInformation {\n");
-
+    
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -352,3 +352,4 @@ public class PurchasedEnvelopesInformation {
   }
 
 }
+

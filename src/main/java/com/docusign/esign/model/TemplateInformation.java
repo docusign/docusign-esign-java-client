@@ -18,6 +18,7 @@ public class TemplateInformation {
   @JsonProperty("templates")
   private java.util.List<TemplateSummary> templates = null;
 
+
   /**
    * templates.
    *
@@ -27,7 +28,7 @@ public class TemplateInformation {
     this.templates = templates;
     return this;
   }
-
+  
   /**
    * addTemplatesItem.
    *
@@ -43,7 +44,6 @@ public class TemplateInformation {
 
   /**
    * .
-   * 
    * @return templates
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class TemplateInformation {
   public void setTemplates(java.util.List<TemplateSummary> templates) {
     this.templates = templates;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class TemplateInformation {
     return Objects.hash(templates);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class TemplateInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateInformation {\n");
-
+    
     sb.append("    templates: ").append(toIndentedString(templates)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class TemplateInformation {
   }
 
 }
+

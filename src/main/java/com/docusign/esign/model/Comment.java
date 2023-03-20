@@ -77,6 +77,7 @@ public class Comment {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
+
   /**
    * envelopeId.
    *
@@ -89,7 +90,6 @@ public class Comment {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -104,6 +104,7 @@ public class Comment {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * hmac.
    *
@@ -116,7 +117,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return hmac
    **/
   @Schema(description = "")
@@ -131,6 +131,7 @@ public class Comment {
     this.hmac = hmac;
   }
 
+
   /**
    * id.
    *
@@ -143,7 +144,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -158,6 +158,7 @@ public class Comment {
     this.id = id;
   }
 
+
   /**
    * mentions.
    *
@@ -167,7 +168,7 @@ public class Comment {
     this.mentions = mentions;
     return this;
   }
-
+  
   /**
    * addMentionsItem.
    *
@@ -183,7 +184,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return mentions
    **/
   @Schema(description = "")
@@ -198,6 +198,7 @@ public class Comment {
     this.mentions = mentions;
   }
 
+
   /**
    * read.
    *
@@ -210,7 +211,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return read
    **/
   @Schema(description = "")
@@ -225,6 +225,7 @@ public class Comment {
     this.read = read;
   }
 
+
   /**
    * sentByEmail.
    *
@@ -237,7 +238,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByEmail
    **/
   @Schema(description = "")
@@ -252,6 +252,7 @@ public class Comment {
     this.sentByEmail = sentByEmail;
   }
 
+
   /**
    * sentByFullName.
    *
@@ -264,7 +265,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByFullName
    **/
   @Schema(description = "")
@@ -279,6 +279,7 @@ public class Comment {
     this.sentByFullName = sentByFullName;
   }
 
+
   /**
    * sentByImageId.
    *
@@ -291,7 +292,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByImageId
    **/
   @Schema(description = "")
@@ -306,6 +306,7 @@ public class Comment {
     this.sentByImageId = sentByImageId;
   }
 
+
   /**
    * sentByInitials.
    *
@@ -318,7 +319,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByInitials
    **/
   @Schema(description = "")
@@ -333,6 +333,7 @@ public class Comment {
     this.sentByInitials = sentByInitials;
   }
 
+
   /**
    * sentByRecipientId.
    *
@@ -345,7 +346,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByRecipientId
    **/
   @Schema(description = "")
@@ -360,6 +360,7 @@ public class Comment {
     this.sentByRecipientId = sentByRecipientId;
   }
 
+
   /**
    * sentByUserId.
    *
@@ -372,7 +373,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return sentByUserId
    **/
   @Schema(description = "")
@@ -387,6 +387,7 @@ public class Comment {
     this.sentByUserId = sentByUserId;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -398,11 +399,7 @@ public class Comment {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -417,6 +414,7 @@ public class Comment {
     this.signingGroupId = signingGroupId;
   }
 
+
   /**
    * signingGroupName.
    *
@@ -428,8 +426,7 @@ public class Comment {
   }
 
   /**
-   * The display name for the signing group. Maximum Length: 100 characters. .
-   * 
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
    **/
   @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
@@ -444,6 +441,7 @@ public class Comment {
     this.signingGroupName = signingGroupName;
   }
 
+
   /**
    * subject.
    *
@@ -456,7 +454,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return subject
    **/
   @Schema(description = "")
@@ -471,6 +468,7 @@ public class Comment {
     this.subject = subject;
   }
 
+
   /**
    * tabId.
    *
@@ -482,9 +480,7 @@ public class Comment {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -499,6 +495,7 @@ public class Comment {
     this.tabId = tabId;
   }
 
+
   /**
    * text.
    *
@@ -511,7 +508,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return text
    **/
   @Schema(description = "")
@@ -526,6 +522,7 @@ public class Comment {
     this.text = text;
   }
 
+
   /**
    * threadId.
    *
@@ -538,7 +535,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return threadId
    **/
   @Schema(description = "")
@@ -553,6 +549,7 @@ public class Comment {
     this.threadId = threadId;
   }
 
+
   /**
    * threadOriginatorId.
    *
@@ -565,7 +562,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return threadOriginatorId
    **/
   @Schema(description = "")
@@ -580,6 +576,7 @@ public class Comment {
     this.threadOriginatorId = threadOriginatorId;
   }
 
+
   /**
    * timestamp.
    *
@@ -592,7 +589,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return timestamp
    **/
   @Schema(description = "")
@@ -607,6 +603,7 @@ public class Comment {
     this.timestamp = timestamp;
   }
 
+
   /**
    * timeStampFormatted.
    *
@@ -619,7 +616,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return timeStampFormatted
    **/
   @Schema(description = "")
@@ -634,6 +630,7 @@ public class Comment {
     this.timeStampFormatted = timeStampFormatted;
   }
 
+
   /**
    * visibleTo.
    *
@@ -643,7 +640,7 @@ public class Comment {
     this.visibleTo = visibleTo;
     return this;
   }
-
+  
   /**
    * addVisibleToItem.
    *
@@ -659,7 +656,6 @@ public class Comment {
 
   /**
    * .
-   * 
    * @return visibleTo
    **/
   @Schema(description = "")
@@ -673,6 +669,7 @@ public class Comment {
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
+
 
   /**
    * Compares objects.
@@ -716,10 +713,9 @@ public class Comment {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(envelopeId, hmac, id, mentions, read, sentByEmail, sentByFullName, sentByImageId,
-        sentByInitials, sentByRecipientId, sentByUserId, signingGroupId, signingGroupName, subject, tabId, text,
-        threadId, threadOriginatorId, timestamp, timeStampFormatted, visibleTo);
+    return Objects.hash(envelopeId, hmac, id, mentions, read, sentByEmail, sentByFullName, sentByImageId, sentByInitials, sentByRecipientId, sentByUserId, signingGroupId, signingGroupName, subject, tabId, text, threadId, threadOriginatorId, timestamp, timeStampFormatted, visibleTo);
   }
+
 
   /**
    * Converts the given object to string.
@@ -728,7 +724,7 @@ public class Comment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Comment {\n");
-
+    
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    hmac: ").append(toIndentedString(hmac)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -766,3 +762,4 @@ public class Comment {
   }
 
 }
+

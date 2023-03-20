@@ -40,6 +40,7 @@ public class Page {
   @JsonProperty("width")
   private String width = null;
 
+
   /**
    * dpi.
    *
@@ -52,7 +53,6 @@ public class Page {
 
   /**
    * The number of dots per inch used for the page image..
-   * 
    * @return dpi
    **/
   @Schema(description = "The number of dots per inch used for the page image.")
@@ -67,6 +67,7 @@ public class Page {
     this.dpi = dpi;
   }
 
+
   /**
    * errorDetails.
    *
@@ -78,11 +79,10 @@ public class Page {
   }
 
   /**
-   * If an error occurs, this property describes the error..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "If an error occurs, this property describes the error.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -93,6 +93,7 @@ public class Page {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * height.
@@ -106,7 +107,6 @@ public class Page {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -121,6 +121,7 @@ public class Page {
     this.height = height;
   }
 
+
   /**
    * imageBytes.
    *
@@ -133,7 +134,6 @@ public class Page {
 
   /**
    * .
-   * 
    * @return imageBytes
    **/
   @Schema(description = "")
@@ -148,6 +148,7 @@ public class Page {
     this.imageBytes = imageBytes;
   }
 
+
   /**
    * mimeType.
    *
@@ -160,7 +161,6 @@ public class Page {
 
   /**
    * .
-   * 
    * @return mimeType
    **/
   @Schema(description = "")
@@ -175,6 +175,7 @@ public class Page {
     this.mimeType = mimeType;
   }
 
+
   /**
    * pageId.
    *
@@ -187,7 +188,6 @@ public class Page {
 
   /**
    * .
-   * 
    * @return pageId
    **/
   @Schema(description = "")
@@ -202,6 +202,7 @@ public class Page {
     this.pageId = pageId;
   }
 
+
   /**
    * sequence.
    *
@@ -214,7 +215,6 @@ public class Page {
 
   /**
    * .
-   * 
    * @return sequence
    **/
   @Schema(description = "")
@@ -229,6 +229,7 @@ public class Page {
     this.sequence = sequence;
   }
 
+
   /**
    * width.
    *
@@ -241,7 +242,6 @@ public class Page {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -255,6 +255,7 @@ public class Page {
   public void setWidth(String width) {
     this.width = width;
   }
+
 
   /**
    * Compares objects.
@@ -288,6 +289,7 @@ public class Page {
     return Objects.hash(dpi, errorDetails, height, imageBytes, mimeType, pageId, sequence, width);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -295,7 +297,7 @@ public class Page {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Page {\n");
-
+    
     sb.append("    dpi: ").append(toIndentedString(dpi)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
@@ -320,3 +322,4 @@ public class Page {
   }
 
 }
+

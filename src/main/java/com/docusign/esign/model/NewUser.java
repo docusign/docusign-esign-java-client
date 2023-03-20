@@ -49,6 +49,7 @@ public class NewUser {
   @JsonProperty("userStatus")
   private String userStatus = null;
 
+
   /**
    * apiPassword.
    *
@@ -60,9 +61,7 @@ public class NewUser {
   }
 
   /**
-   * Contains a token that can be used for authentication in API calls instead of
-   * using the user name and password..
-   * 
+   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
    * @return apiPassword
    **/
   @Schema(description = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
@@ -77,6 +76,7 @@ public class NewUser {
     this.apiPassword = apiPassword;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -89,7 +89,6 @@ public class NewUser {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -104,6 +103,7 @@ public class NewUser {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * email.
    *
@@ -116,7 +116,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -131,6 +130,7 @@ public class NewUser {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -142,12 +142,10 @@ public class NewUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -158,6 +156,7 @@ public class NewUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * membershipId.
@@ -171,7 +170,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return membershipId
    **/
   @Schema(description = "")
@@ -186,6 +184,7 @@ public class NewUser {
     this.membershipId = membershipId;
   }
 
+
   /**
    * permissionProfileId.
    *
@@ -198,7 +197,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return permissionProfileId
    **/
   @Schema(description = "")
@@ -213,6 +211,7 @@ public class NewUser {
     this.permissionProfileId = permissionProfileId;
   }
 
+
   /**
    * permissionProfileName.
    *
@@ -225,7 +224,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return permissionProfileName
    **/
   @Schema(description = "")
@@ -240,6 +238,7 @@ public class NewUser {
     this.permissionProfileName = permissionProfileName;
   }
 
+
   /**
    * uri.
    *
@@ -252,7 +251,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -267,6 +265,7 @@ public class NewUser {
     this.uri = uri;
   }
 
+
   /**
    * userId.
    *
@@ -279,7 +278,6 @@ public class NewUser {
 
   /**
    * Specifies the user ID for the new user..
-   * 
    * @return userId
    **/
   @Schema(description = "Specifies the user ID for the new user.")
@@ -294,6 +292,7 @@ public class NewUser {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -306,7 +305,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -321,6 +319,7 @@ public class NewUser {
     this.userName = userName;
   }
 
+
   /**
    * userStatus.
    *
@@ -333,7 +332,6 @@ public class NewUser {
 
   /**
    * .
-   * 
    * @return userStatus
    **/
   @Schema(description = "")
@@ -347,6 +345,7 @@ public class NewUser {
   public void setUserStatus(String userStatus) {
     this.userStatus = userStatus;
   }
+
 
   /**
    * Compares objects.
@@ -380,9 +379,9 @@ public class NewUser {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId,
-        permissionProfileName, uri, userId, userName, userStatus);
+    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
   }
+
 
   /**
    * Converts the given object to string.
@@ -391,7 +390,7 @@ public class NewUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUser {\n");
-
+    
     sb.append("    apiPassword: ").append(toIndentedString(apiPassword)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -419,3 +418,4 @@ public class NewUser {
   }
 
 }
+

@@ -33,6 +33,7 @@ public class RecipientEmailNotification {
   @JsonProperty("supportedLanguageMetadata")
   private PropertyMetadata supportedLanguageMetadata = null;
 
+
   /**
    * emailBody.
    *
@@ -44,9 +45,7 @@ public class RecipientEmailNotification {
   }
 
   /**
-   * Specifies the email body of the message sent to the recipient. Maximum
-   * length: 10000 characters. .
-   * 
+   * Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. .
    * @return emailBody
    **/
   @Schema(description = "Specifies the email body of the message sent to the recipient.   Maximum length: 10000 characters. ")
@@ -61,6 +60,7 @@ public class RecipientEmailNotification {
     this.emailBody = emailBody;
   }
 
+
   /**
    * emailBodyMetadata.
    *
@@ -73,7 +73,6 @@ public class RecipientEmailNotification {
 
   /**
    * Metadata that indicates whether the `emailBody` property can be edited..
-   * 
    * @return emailBodyMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `emailBody` property can be edited.")
@@ -88,6 +87,7 @@ public class RecipientEmailNotification {
     this.emailBodyMetadata = emailBodyMetadata;
   }
 
+
   /**
    * emailSubject.
    *
@@ -99,10 +99,7 @@ public class RecipientEmailNotification {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients. See
-   * [ML:Template Email Subject Merge Fields] for information about adding merge
-   * field information to the email subject..
-   * 
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
    **/
   @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
@@ -117,6 +114,7 @@ public class RecipientEmailNotification {
     this.emailSubject = emailSubject;
   }
 
+
   /**
    * emailSubjectMetadata.
    *
@@ -129,7 +127,6 @@ public class RecipientEmailNotification {
 
   /**
    * Metadata that indicates whether the `emailSubject` property can be edited..
-   * 
    * @return emailSubjectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `emailSubject` property can be edited.")
@@ -144,6 +141,7 @@ public class RecipientEmailNotification {
     this.emailSubjectMetadata = emailSubjectMetadata;
   }
 
+
   /**
    * supportedLanguage.
    *
@@ -155,18 +153,7 @@ public class RecipientEmailNotification {
   }
 
   /**
-   * A simple type enumeration of the language used. The supported languages, with
-   * the language value shown in parenthesis, are: Arabic (ar), Armenian (hy),
-   * Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese
-   * Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da),
-   * Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa),
-   * Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el),
-   * Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean
-   * (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese
-   * (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr),
-   * Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX),
-   * Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi)..
-   * 
+   * A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi)..
    * @return supportedLanguage
    **/
   @Schema(description = "A simple type enumeration of the language used. The supported languages, with the language value shown in parenthesis, are: Arabic (ar), Armenian (hy), Bahasa Indonesia (id), Bahasa Melayu (ms) Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro),Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk), and Vietnamese (vi).")
@@ -181,6 +168,7 @@ public class RecipientEmailNotification {
     this.supportedLanguage = supportedLanguage;
   }
 
+
   /**
    * supportedLanguageMetadata.
    *
@@ -192,9 +180,7 @@ public class RecipientEmailNotification {
   }
 
   /**
-   * Metadata that indicates whether the `supportedLanguage` property can be
-   * edited..
-   * 
+   * Metadata that indicates whether the `supportedLanguage` property can be edited..
    * @return supportedLanguageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supportedLanguage` property can be edited.")
@@ -208,6 +194,7 @@ public class RecipientEmailNotification {
   public void setSupportedLanguageMetadata(PropertyMetadata supportedLanguageMetadata) {
     this.supportedLanguageMetadata = supportedLanguageMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -236,9 +223,9 @@ public class RecipientEmailNotification {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(emailBody, emailBodyMetadata, emailSubject, emailSubjectMetadata, supportedLanguage,
-        supportedLanguageMetadata);
+    return Objects.hash(emailBody, emailBodyMetadata, emailSubject, emailSubjectMetadata, supportedLanguage, supportedLanguageMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -247,7 +234,7 @@ public class RecipientEmailNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientEmailNotification {\n");
-
+    
     sb.append("    emailBody: ").append(toIndentedString(emailBody)).append("\n");
     sb.append("    emailBodyMetadata: ").append(toIndentedString(emailBodyMetadata)).append("\n");
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
@@ -270,3 +257,4 @@ public class RecipientEmailNotification {
   }
 
 }
+

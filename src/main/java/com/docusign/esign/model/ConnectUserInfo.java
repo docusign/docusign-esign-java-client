@@ -26,6 +26,7 @@ public class ConnectUserInfo {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * email.
    *
@@ -38,7 +39,6 @@ public class ConnectUserInfo {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class ConnectUserInfo {
     this.email = email;
   }
 
+
   /**
    * isIncluded.
    *
@@ -65,7 +66,6 @@ public class ConnectUserInfo {
 
   /**
    * .
-   * 
    * @return isIncluded
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class ConnectUserInfo {
     this.isIncluded = isIncluded;
   }
 
+
   /**
    * userId.
    *
@@ -92,7 +93,6 @@ public class ConnectUserInfo {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class ConnectUserInfo {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -119,7 +120,6 @@ public class ConnectUserInfo {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class ConnectUserInfo {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class ConnectUserInfo {
     return Objects.hash(email, isIncluded, userId, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class ConnectUserInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectUserInfo {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    isIncluded: ").append(toIndentedString(isIncluded)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -190,3 +192,4 @@ public class ConnectUserInfo {
   }
 
 }
+

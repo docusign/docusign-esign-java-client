@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Complex type containing: * dateOfBirth * displayLevelCode *
- * receiveInResponse.
+ * Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse.
  *
  */
 @Schema(description = "Complex type containing:  * dateOfBirth * displayLevelCode * receiveInResponse")
@@ -25,6 +24,7 @@ public class DobInformationInput {
   @JsonProperty("receiveInResponse")
   private String receiveInResponse = null;
 
+
   /**
    * dateOfBirth.
    *
@@ -37,7 +37,6 @@ public class DobInformationInput {
 
   /**
    * Specifies the recipient's date, month, and year of birth..
-   * 
    * @return dateOfBirth
    **/
   @Schema(description = "Specifies the recipient's date, month, and year of birth.")
@@ -52,6 +51,7 @@ public class DobInformationInput {
     this.dateOfBirth = dateOfBirth;
   }
 
+
   /**
    * displayLevelCode.
    *
@@ -63,9 +63,7 @@ public class DobInformationInput {
   }
 
   /**
-   * Specifies the display level for the recipient. Valid values are: * ReadOnly *
-   * Editable * DoNotDisplay.
-   * 
+   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
    * @return displayLevelCode
    **/
   @Schema(description = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
@@ -80,6 +78,7 @@ public class DobInformationInput {
     this.displayLevelCode = displayLevelCode;
   }
 
+
   /**
    * receiveInResponse.
    *
@@ -92,7 +91,6 @@ public class DobInformationInput {
 
   /**
    * When set to **true**, the information needs to be returned in the response..
-   * 
    * @return receiveInResponse
    **/
   @Schema(description = "When set to **true**, the information needs to be returned in the response.")
@@ -106,6 +104,7 @@ public class DobInformationInput {
   public void setReceiveInResponse(String receiveInResponse) {
     this.receiveInResponse = receiveInResponse;
   }
+
 
   /**
    * Compares objects.
@@ -134,6 +133,7 @@ public class DobInformationInput {
     return Objects.hash(dateOfBirth, displayLevelCode, receiveInResponse);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -141,7 +141,7 @@ public class DobInformationInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DobInformationInput {\n");
-
+    
     sb.append("    dateOfBirth: ").append(toIndentedString(dateOfBirth)).append("\n");
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
     sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
@@ -161,3 +161,4 @@ public class DobInformationInput {
   }
 
 }
+

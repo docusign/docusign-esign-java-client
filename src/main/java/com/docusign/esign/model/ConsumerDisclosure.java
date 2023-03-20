@@ -112,6 +112,7 @@ public class ConsumerDisclosure {
   @JsonProperty("withdrawState")
   private String withdrawState = null;
 
+
   /**
    * accountEsignId.
    *
@@ -124,7 +125,6 @@ public class ConsumerDisclosure {
 
   /**
    * A GUID identifying the account associated with the consumer disclosure.
-   * 
    * @return accountEsignId
    **/
   @Schema(description = "A GUID identifying the account associated with the consumer disclosure")
@@ -139,6 +139,7 @@ public class ConsumerDisclosure {
     this.accountEsignId = accountEsignId;
   }
 
+
   /**
    * allowCDWithdraw.
    *
@@ -150,9 +151,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Indicates whether the customer can withdraw their acceptance of the consumer
-   * disclosure..
-   * 
+   * Indicates whether the customer can withdraw their acceptance of the consumer disclosure..
    * @return allowCDWithdraw
    **/
   @Schema(description = "Indicates whether the customer can withdraw their acceptance of the consumer disclosure.")
@@ -167,6 +166,7 @@ public class ConsumerDisclosure {
     this.allowCDWithdraw = allowCDWithdraw;
   }
 
+
   /**
    * allowCDWithdrawMetadata.
    *
@@ -179,7 +179,6 @@ public class ConsumerDisclosure {
 
   /**
    * Metadata that indicates whether the `allowCDWithdraw` property is editable. .
-   * 
    * @return allowCDWithdrawMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowCDWithdraw` property is editable. ")
@@ -194,6 +193,7 @@ public class ConsumerDisclosure {
     this.allowCDWithdrawMetadata = allowCDWithdrawMetadata;
   }
 
+
   /**
    * changeEmail.
    *
@@ -206,7 +206,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return changeEmail
    **/
   @Schema(description = "")
@@ -221,6 +220,7 @@ public class ConsumerDisclosure {
     this.changeEmail = changeEmail;
   }
 
+
   /**
    * changeEmailOther.
    *
@@ -233,7 +233,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return changeEmailOther
    **/
   @Schema(description = "")
@@ -248,6 +247,7 @@ public class ConsumerDisclosure {
     this.changeEmailOther = changeEmailOther;
   }
 
+
   /**
    * companyName.
    *
@@ -260,7 +260,6 @@ public class ConsumerDisclosure {
 
   /**
    * The name of the company associated with the consumer disclosure..
-   * 
    * @return companyName
    **/
   @Schema(description = "The name of the company associated with the consumer disclosure.")
@@ -275,6 +274,7 @@ public class ConsumerDisclosure {
     this.companyName = companyName;
   }
 
+
   /**
    * companyPhone.
    *
@@ -287,7 +287,6 @@ public class ConsumerDisclosure {
 
   /**
    * The phone number of the company associated with the consumer disclosure..
-   * 
    * @return companyPhone
    **/
   @Schema(description = "The phone number of the company associated with the consumer disclosure.")
@@ -302,6 +301,7 @@ public class ConsumerDisclosure {
     this.companyPhone = companyPhone;
   }
 
+
   /**
    * copyCostPerPage.
    *
@@ -314,7 +314,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return copyCostPerPage
    **/
   @Schema(description = "")
@@ -329,6 +328,7 @@ public class ConsumerDisclosure {
     this.copyCostPerPage = copyCostPerPage;
   }
 
+
   /**
    * copyFeeCollectionMethod.
    *
@@ -340,9 +340,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Specifies the fee collection method for cases in which the customer requires
-   * paper copies of the document. Maximum Length: 255 characters.
-   * 
+   * Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters.
    * @return copyFeeCollectionMethod
    **/
   @Schema(description = "Specifies the fee collection method for cases in which the customer requires paper copies of the document.  Maximum Length: 255 characters")
@@ -357,6 +355,7 @@ public class ConsumerDisclosure {
     this.copyFeeCollectionMethod = copyFeeCollectionMethod;
   }
 
+
   /**
    * copyRequestEmail.
    *
@@ -369,7 +368,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return copyRequestEmail
    **/
   @Schema(description = "")
@@ -384,6 +382,7 @@ public class ConsumerDisclosure {
     this.copyRequestEmail = copyRequestEmail;
   }
 
+
   /**
    * custom.
    *
@@ -396,7 +395,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return custom
    **/
   @Schema(description = "")
@@ -411,6 +409,7 @@ public class ConsumerDisclosure {
     this.custom = custom;
   }
 
+
   /**
    * enableEsign.
    *
@@ -423,7 +422,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return enableEsign
    **/
   @Schema(description = "")
@@ -438,6 +436,7 @@ public class ConsumerDisclosure {
     this.enableEsign = enableEsign;
   }
 
+
   /**
    * esignAgreement.
    *
@@ -449,9 +448,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * The Electronic Record and Signature Disclosure text. The disclosure text
-   * includes the html formatting..
-   * 
+   * The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting..
    * @return esignAgreement
    **/
   @Schema(description = "The Electronic Record and Signature Disclosure text. The disclosure text includes the html formatting.")
@@ -466,6 +463,7 @@ public class ConsumerDisclosure {
     this.esignAgreement = esignAgreement;
   }
 
+
   /**
    * esignText.
    *
@@ -478,7 +476,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return esignText
    **/
   @Schema(description = "")
@@ -493,6 +490,7 @@ public class ConsumerDisclosure {
     this.esignText = esignText;
   }
 
+
   /**
    * languageCode.
    *
@@ -505,7 +503,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return languageCode
    **/
   @Schema(description = "")
@@ -520,6 +517,7 @@ public class ConsumerDisclosure {
     this.languageCode = languageCode;
   }
 
+
   /**
    * mustAgreeToEsign.
    *
@@ -532,7 +530,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return mustAgreeToEsign
    **/
   @Schema(description = "")
@@ -547,6 +544,7 @@ public class ConsumerDisclosure {
     this.mustAgreeToEsign = mustAgreeToEsign;
   }
 
+
   /**
    * pdfId.
    *
@@ -559,7 +557,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return pdfId
    **/
   @Schema(description = "")
@@ -574,6 +571,7 @@ public class ConsumerDisclosure {
     this.pdfId = pdfId;
   }
 
+
   /**
    * useBrand.
    *
@@ -586,7 +584,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return useBrand
    **/
   @Schema(description = "")
@@ -601,6 +598,7 @@ public class ConsumerDisclosure {
     this.useBrand = useBrand;
   }
 
+
   /**
    * useConsumerDisclosureWithinAccount.
    *
@@ -613,7 +611,6 @@ public class ConsumerDisclosure {
 
   /**
    * .
-   * 
    * @return useConsumerDisclosureWithinAccount
    **/
   @Schema(description = "")
@@ -628,21 +625,19 @@ public class ConsumerDisclosure {
     this.useConsumerDisclosureWithinAccount = useConsumerDisclosureWithinAccount;
   }
 
+
   /**
    * useConsumerDisclosureWithinAccountMetadata.
    *
    * @return ConsumerDisclosure
    **/
-  public ConsumerDisclosure useConsumerDisclosureWithinAccountMetadata(
-      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public ConsumerDisclosure useConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. .
    * @return useConsumerDisclosureWithinAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. ")
@@ -653,10 +648,10 @@ public class ConsumerDisclosure {
   /**
    * setUseConsumerDisclosureWithinAccountMetadata.
    **/
-  public void setUseConsumerDisclosureWithinAccountMetadata(
-      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public void setUseConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
   }
+
 
   /**
    * withdrawAddressLine1.
@@ -669,9 +664,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the first address line of the postal address to which a customer can
-   * send a consent withdrawal notification. Maximum length: 100 characters. .
-   * 
+   * Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
    * @return withdrawAddressLine1
    **/
   @Schema(description = "Contains the first address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
@@ -686,6 +679,7 @@ public class ConsumerDisclosure {
     this.withdrawAddressLine1 = withdrawAddressLine1;
   }
 
+
   /**
    * withdrawAddressLine2.
    *
@@ -697,9 +691,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the second address line of the postal address to which a customer
-   * can send a consent withdrawal notification. Maximum length: 100 characters. .
-   * 
+   * Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
    * @return withdrawAddressLine2
    **/
   @Schema(description = "Contains the second address line of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
@@ -714,6 +706,7 @@ public class ConsumerDisclosure {
     this.withdrawAddressLine2 = withdrawAddressLine2;
   }
 
+
   /**
    * withdrawByEmail.
    *
@@ -726,7 +719,6 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by email..
-   * 
    * @return withdrawByEmail
    **/
   @Schema(description = "Indicates whether the customer can withdraw consent by email.")
@@ -741,6 +733,7 @@ public class ConsumerDisclosure {
     this.withdrawByEmail = withdrawByEmail;
   }
 
+
   /**
    * withdrawByMail.
    *
@@ -753,7 +746,6 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by postal mail..
-   * 
    * @return withdrawByMail
    **/
   @Schema(description = "Indicates whether the customer can withdraw consent by postal mail.")
@@ -768,6 +760,7 @@ public class ConsumerDisclosure {
     this.withdrawByMail = withdrawByMail;
   }
 
+
   /**
    * withdrawByPhone.
    *
@@ -780,7 +773,6 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates whether the customer can withdraw consent by phone..
-   * 
    * @return withdrawByPhone
    **/
   @Schema(description = "Indicates whether the customer can withdraw consent by phone.")
@@ -795,6 +787,7 @@ public class ConsumerDisclosure {
     this.withdrawByPhone = withdrawByPhone;
   }
 
+
   /**
    * withdrawCity.
    *
@@ -806,9 +799,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the city of the postal address to which a customer can send a
-   * consent withdrawal notification. Maximum length: 50 characters. .
-   * 
+   * Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. .
    * @return withdrawCity
    **/
   @Schema(description = "Contains the city of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 50 characters. ")
@@ -823,6 +814,7 @@ public class ConsumerDisclosure {
     this.withdrawCity = withdrawCity;
   }
 
+
   /**
    * withdrawConsequences.
    *
@@ -835,7 +827,6 @@ public class ConsumerDisclosure {
 
   /**
    * Indicates the consequences of withdrawing consent..
-   * 
    * @return withdrawConsequences
    **/
   @Schema(description = "Indicates the consequences of withdrawing consent.")
@@ -850,6 +841,7 @@ public class ConsumerDisclosure {
     this.withdrawConsequences = withdrawConsequences;
   }
 
+
   /**
    * withdrawEmail.
    *
@@ -861,9 +853,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the email address to which a customer can send a consent withdrawal
-   * notification. Maximum length: 100 characters. .
-   * 
+   * Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. .
    * @return withdrawEmail
    **/
   @Schema(description = "Contains the email address to which a customer can send a consent withdrawal notification.  Maximum length: 100 characters. ")
@@ -878,6 +868,7 @@ public class ConsumerDisclosure {
     this.withdrawEmail = withdrawEmail;
   }
 
+
   /**
    * withdrawOther.
    *
@@ -889,9 +880,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Indicates other information need to withdraw consent. Maximum length: 255
-   * characters..
-   * 
+   * Indicates other information need to withdraw consent.  Maximum length: 255 characters..
    * @return withdrawOther
    **/
   @Schema(description = "Indicates other information need to withdraw consent.  Maximum length: 255 characters.")
@@ -906,6 +895,7 @@ public class ConsumerDisclosure {
     this.withdrawOther = withdrawOther;
   }
 
+
   /**
    * withdrawPhone.
    *
@@ -917,9 +907,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the phone number which a customer can call to register consent
-   * withdrawal notification. Maximum length: 20 characters. .
-   * 
+   * Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. .
    * @return withdrawPhone
    **/
   @Schema(description = "Contains the phone number which a customer can call to register consent withdrawal notification.  Maximum length: 20 characters. ")
@@ -934,6 +922,7 @@ public class ConsumerDisclosure {
     this.withdrawPhone = withdrawPhone;
   }
 
+
   /**
    * withdrawPostalCode.
    *
@@ -945,9 +934,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the postal code of the postal address to which a customer can send a
-   * consent withdrawal notification. Maximum length: 20 characters. .
-   * 
+   * Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. .
    * @return withdrawPostalCode
    **/
   @Schema(description = "Contains the postal code of the postal address to which a customer can send a consent withdrawal notification.  Maximum length: 20 characters. ")
@@ -962,6 +949,7 @@ public class ConsumerDisclosure {
     this.withdrawPostalCode = withdrawPostalCode;
   }
 
+
   /**
    * withdrawState.
    *
@@ -973,9 +961,7 @@ public class ConsumerDisclosure {
   }
 
   /**
-   * Contains the state of the postal address to which a customer can send a
-   * consent withdrawal notification..
-   * 
+   * Contains the state of the postal address to which a customer can send a consent withdrawal notification..
    * @return withdrawState
    **/
   @Schema(description = "Contains the state of the postal address to which a customer can send a consent withdrawal notification.")
@@ -989,6 +975,7 @@ public class ConsumerDisclosure {
   public void setWithdrawState(String withdrawState) {
     this.withdrawState = withdrawState;
   }
+
 
   /**
    * Compares objects.
@@ -1022,11 +1009,8 @@ public class ConsumerDisclosure {
         Objects.equals(this.mustAgreeToEsign, consumerDisclosure.mustAgreeToEsign) &&
         Objects.equals(this.pdfId, consumerDisclosure.pdfId) &&
         Objects.equals(this.useBrand, consumerDisclosure.useBrand) &&
-        Objects.equals(this.useConsumerDisclosureWithinAccount, consumerDisclosure.useConsumerDisclosureWithinAccount)
-        &&
-        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata,
-            consumerDisclosure.useConsumerDisclosureWithinAccountMetadata)
-        &&
+        Objects.equals(this.useConsumerDisclosureWithinAccount, consumerDisclosure.useConsumerDisclosureWithinAccount) &&
+        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata, consumerDisclosure.useConsumerDisclosureWithinAccountMetadata) &&
         Objects.equals(this.withdrawAddressLine1, consumerDisclosure.withdrawAddressLine1) &&
         Objects.equals(this.withdrawAddressLine2, consumerDisclosure.withdrawAddressLine2) &&
         Objects.equals(this.withdrawByEmail, consumerDisclosure.withdrawByEmail) &&
@@ -1046,13 +1030,9 @@ public class ConsumerDisclosure {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountEsignId, allowCDWithdraw, allowCDWithdrawMetadata, changeEmail, changeEmailOther,
-        companyName, companyPhone, copyCostPerPage, copyFeeCollectionMethod, copyRequestEmail, custom, enableEsign,
-        esignAgreement, esignText, languageCode, mustAgreeToEsign, pdfId, useBrand, useConsumerDisclosureWithinAccount,
-        useConsumerDisclosureWithinAccountMetadata, withdrawAddressLine1, withdrawAddressLine2, withdrawByEmail,
-        withdrawByMail, withdrawByPhone, withdrawCity, withdrawConsequences, withdrawEmail, withdrawOther,
-        withdrawPhone, withdrawPostalCode, withdrawState);
+    return Objects.hash(accountEsignId, allowCDWithdraw, allowCDWithdrawMetadata, changeEmail, changeEmailOther, companyName, companyPhone, copyCostPerPage, copyFeeCollectionMethod, copyRequestEmail, custom, enableEsign, esignAgreement, esignText, languageCode, mustAgreeToEsign, pdfId, useBrand, useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, withdrawAddressLine1, withdrawAddressLine2, withdrawByEmail, withdrawByMail, withdrawByPhone, withdrawCity, withdrawConsequences, withdrawEmail, withdrawOther, withdrawPhone, withdrawPostalCode, withdrawState);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1061,7 +1041,7 @@ public class ConsumerDisclosure {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsumerDisclosure {\n");
-
+    
     sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
     sb.append("    allowCDWithdraw: ").append(toIndentedString(allowCDWithdraw)).append("\n");
     sb.append("    allowCDWithdrawMetadata: ").append(toIndentedString(allowCDWithdrawMetadata)).append("\n");
@@ -1080,10 +1060,8 @@ public class ConsumerDisclosure {
     sb.append("    mustAgreeToEsign: ").append(toIndentedString(mustAgreeToEsign)).append("\n");
     sb.append("    pdfId: ").append(toIndentedString(pdfId)).append("\n");
     sb.append("    useBrand: ").append(toIndentedString(useBrand)).append("\n");
-    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount))
-        .append("\n");
-    sb.append("    useConsumerDisclosureWithinAccountMetadata: ")
-        .append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
+    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount)).append("\n");
+    sb.append("    useConsumerDisclosureWithinAccountMetadata: ").append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
     sb.append("    withdrawAddressLine1: ").append(toIndentedString(withdrawAddressLine1)).append("\n");
     sb.append("    withdrawAddressLine2: ").append(toIndentedString(withdrawAddressLine2)).append("\n");
     sb.append("    withdrawByEmail: ").append(toIndentedString(withdrawByEmail)).append("\n");
@@ -1112,3 +1090,4 @@ public class ConsumerDisclosure {
   }
 
 }
+

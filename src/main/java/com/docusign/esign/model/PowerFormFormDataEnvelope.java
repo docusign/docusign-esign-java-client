@@ -21,6 +21,7 @@ public class PowerFormFormDataEnvelope {
   @JsonProperty("recipients")
   private java.util.List<PowerFormFormDataRecipient> recipients = null;
 
+
   /**
    * envelopeId.
    *
@@ -33,7 +34,6 @@ public class PowerFormFormDataEnvelope {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -48,6 +48,7 @@ public class PowerFormFormDataEnvelope {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * recipients.
    *
@@ -57,7 +58,7 @@ public class PowerFormFormDataEnvelope {
     this.recipients = recipients;
     return this;
   }
-
+  
   /**
    * addRecipientsItem.
    *
@@ -73,7 +74,6 @@ public class PowerFormFormDataEnvelope {
 
   /**
    * An array of powerform recipients..
-   * 
    * @return recipients
    **/
   @Schema(description = "An array of powerform recipients.")
@@ -87,6 +87,7 @@ public class PowerFormFormDataEnvelope {
   public void setRecipients(java.util.List<PowerFormFormDataRecipient> recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * Compares objects.
@@ -114,6 +115,7 @@ public class PowerFormFormDataEnvelope {
     return Objects.hash(envelopeId, recipients);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -121,7 +123,7 @@ public class PowerFormFormDataEnvelope {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormFormDataEnvelope {\n");
-
+    
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("}");
@@ -140,3 +142,4 @@ public class PowerFormFormDataEnvelope {
   }
 
 }
+

@@ -45,6 +45,7 @@ public class Jurisdiction {
   @JsonProperty("stateNameInSeal")
   private String stateNameInSeal = null;
 
+
   /**
    * allowSystemCreatedSeal.
    *
@@ -57,7 +58,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return allowSystemCreatedSeal
    **/
   @Schema(description = "")
@@ -72,6 +72,7 @@ public class Jurisdiction {
     this.allowSystemCreatedSeal = allowSystemCreatedSeal;
   }
 
+
   /**
    * allowUserUploadedSeal.
    *
@@ -84,7 +85,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return allowUserUploadedSeal
    **/
   @Schema(description = "")
@@ -99,6 +99,7 @@ public class Jurisdiction {
     this.allowUserUploadedSeal = allowUserUploadedSeal;
   }
 
+
   /**
    * commissionIdInSeal.
    *
@@ -111,7 +112,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return commissionIdInSeal
    **/
   @Schema(description = "")
@@ -126,6 +126,7 @@ public class Jurisdiction {
     this.commissionIdInSeal = commissionIdInSeal;
   }
 
+
   /**
    * county.
    *
@@ -138,7 +139,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return county
    **/
   @Schema(description = "")
@@ -153,6 +153,7 @@ public class Jurisdiction {
     this.county = county;
   }
 
+
   /**
    * countyInSeal.
    *
@@ -165,7 +166,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return countyInSeal
    **/
   @Schema(description = "")
@@ -180,6 +180,7 @@ public class Jurisdiction {
     this.countyInSeal = countyInSeal;
   }
 
+
   /**
    * enabled.
    *
@@ -192,7 +193,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -207,6 +207,7 @@ public class Jurisdiction {
     this.enabled = enabled;
   }
 
+
   /**
    * jurisdictionId.
    *
@@ -219,7 +220,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return jurisdictionId
    **/
   @Schema(description = "")
@@ -234,6 +234,7 @@ public class Jurisdiction {
     this.jurisdictionId = jurisdictionId;
   }
 
+
   /**
    * name.
    *
@@ -246,7 +247,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -261,6 +261,7 @@ public class Jurisdiction {
     this.name = name;
   }
 
+
   /**
    * notaryPublicInSeal.
    *
@@ -273,7 +274,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return notaryPublicInSeal
    **/
   @Schema(description = "")
@@ -288,6 +288,7 @@ public class Jurisdiction {
     this.notaryPublicInSeal = notaryPublicInSeal;
   }
 
+
   /**
    * stateNameInSeal.
    *
@@ -300,7 +301,6 @@ public class Jurisdiction {
 
   /**
    * .
-   * 
    * @return stateNameInSeal
    **/
   @Schema(description = "")
@@ -314,6 +314,7 @@ public class Jurisdiction {
   public void setStateNameInSeal(String stateNameInSeal) {
     this.stateNameInSeal = stateNameInSeal;
   }
+
 
   /**
    * Compares objects.
@@ -346,9 +347,9 @@ public class Jurisdiction {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowSystemCreatedSeal, allowUserUploadedSeal, commissionIdInSeal, county, countyInSeal,
-        enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
+    return Objects.hash(allowSystemCreatedSeal, allowUserUploadedSeal, commissionIdInSeal, county, countyInSeal, enabled, jurisdictionId, name, notaryPublicInSeal, stateNameInSeal);
   }
+
 
   /**
    * Converts the given object to string.
@@ -357,7 +358,7 @@ public class Jurisdiction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Jurisdiction {\n");
-
+    
     sb.append("    allowSystemCreatedSeal: ").append(toIndentedString(allowSystemCreatedSeal)).append("\n");
     sb.append("    allowUserUploadedSeal: ").append(toIndentedString(allowUserUploadedSeal)).append("\n");
     sb.append("    commissionIdInSeal: ").append(toIndentedString(commissionIdInSeal)).append("\n");
@@ -384,3 +385,4 @@ public class Jurisdiction {
   }
 
 }
+

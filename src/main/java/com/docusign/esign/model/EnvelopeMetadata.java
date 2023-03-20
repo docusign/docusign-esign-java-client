@@ -23,6 +23,7 @@ public class EnvelopeMetadata {
   @JsonProperty("enableSignWithNotary")
   private String enableSignWithNotary = null;
 
+
   /**
    * allowAdvancedCorrect.
    *
@@ -35,7 +36,6 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   * 
    * @return allowAdvancedCorrect
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class EnvelopeMetadata {
     this.allowAdvancedCorrect = allowAdvancedCorrect;
   }
 
+
   /**
    * allowCorrect.
    *
@@ -62,7 +63,6 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   * 
    * @return allowCorrect
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class EnvelopeMetadata {
     this.allowCorrect = allowCorrect;
   }
 
+
   /**
    * enableSignWithNotary.
    *
@@ -89,7 +90,6 @@ public class EnvelopeMetadata {
 
   /**
    * .
-   * 
    * @return enableSignWithNotary
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class EnvelopeMetadata {
   public void setEnableSignWithNotary(String enableSignWithNotary) {
     this.enableSignWithNotary = enableSignWithNotary;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class EnvelopeMetadata {
     return Objects.hash(allowAdvancedCorrect, allowCorrect, enableSignWithNotary);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class EnvelopeMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeMetadata {\n");
-
+    
     sb.append("    allowAdvancedCorrect: ").append(toIndentedString(allowAdvancedCorrect)).append("\n");
     sb.append("    allowCorrect: ").append(toIndentedString(allowCorrect)).append("\n");
     sb.append("    enableSignWithNotary: ").append(toIndentedString(enableSignWithNotary)).append("\n");
@@ -158,3 +160,4 @@ public class EnvelopeMetadata {
   }
 
 }
+

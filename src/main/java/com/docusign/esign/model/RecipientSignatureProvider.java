@@ -11,10 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * An Electronic or Standards Based Signature (digital signature) provider for
- * the signer to use. [More
- * information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/).
- * .
+ * An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/). .
  *
  */
 @Schema(description = "An Electronic or Standards Based Signature (digital signature) provider for the signer to use. [More information](/docs/esign-rest-api/esign101/concepts/standards-based-signatures/). ")
@@ -35,6 +32,7 @@ public class RecipientSignatureProvider {
   @JsonProperty("signatureProviderOptions")
   private RecipientSignatureProviderOptions signatureProviderOptions = null;
 
+
   /**
    * sealDocumentsWithTabsOnly.
    *
@@ -47,7 +45,6 @@ public class RecipientSignatureProvider {
 
   /**
    * .
-   * 
    * @return sealDocumentsWithTabsOnly
    **/
   @Schema(description = "")
@@ -62,6 +59,7 @@ public class RecipientSignatureProvider {
     this.sealDocumentsWithTabsOnly = sealDocumentsWithTabsOnly;
   }
 
+
   /**
    * sealName.
    *
@@ -74,7 +72,6 @@ public class RecipientSignatureProvider {
 
   /**
    * .
-   * 
    * @return sealName
    **/
   @Schema(description = "")
@@ -89,6 +86,7 @@ public class RecipientSignatureProvider {
     this.sealName = sealName;
   }
 
+
   /**
    * signatureProviderName.
    *
@@ -101,7 +99,6 @@ public class RecipientSignatureProvider {
 
   /**
    * .
-   * 
    * @return signatureProviderName
    **/
   @Schema(description = "")
@@ -116,6 +113,7 @@ public class RecipientSignatureProvider {
     this.signatureProviderName = signatureProviderName;
   }
 
+
   /**
    * signatureProviderNameMetadata.
    *
@@ -127,9 +125,7 @@ public class RecipientSignatureProvider {
   }
 
   /**
-   * Metadata that indicates whether the `signatureProviderName` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signatureProviderName` property is editable. .
    * @return signatureProviderNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signatureProviderName` property is editable. ")
@@ -144,20 +140,19 @@ public class RecipientSignatureProvider {
     this.signatureProviderNameMetadata = signatureProviderNameMetadata;
   }
 
+
   /**
    * signatureProviderOptions.
    *
    * @return RecipientSignatureProvider
    **/
-  public RecipientSignatureProvider signatureProviderOptions(
-      RecipientSignatureProviderOptions signatureProviderOptions) {
+  public RecipientSignatureProvider signatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
     return this;
   }
 
   /**
    * Not applicable for this object..
-   * 
    * @return signatureProviderOptions
    **/
   @Schema(description = "Not applicable for this object.")
@@ -171,6 +166,7 @@ public class RecipientSignatureProvider {
   public void setSignatureProviderOptions(RecipientSignatureProviderOptions signatureProviderOptions) {
     this.signatureProviderOptions = signatureProviderOptions;
   }
+
 
   /**
    * Compares objects.
@@ -198,9 +194,9 @@ public class RecipientSignatureProvider {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderNameMetadata,
-        signatureProviderOptions);
+    return Objects.hash(sealDocumentsWithTabsOnly, sealName, signatureProviderName, signatureProviderNameMetadata, signatureProviderOptions);
   }
+
 
   /**
    * Converts the given object to string.
@@ -209,12 +205,11 @@ public class RecipientSignatureProvider {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureProvider {\n");
-
+    
     sb.append("    sealDocumentsWithTabsOnly: ").append(toIndentedString(sealDocumentsWithTabsOnly)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("    signatureProviderName: ").append(toIndentedString(signatureProviderName)).append("\n");
-    sb.append("    signatureProviderNameMetadata: ").append(toIndentedString(signatureProviderNameMetadata))
-        .append("\n");
+    sb.append("    signatureProviderNameMetadata: ").append(toIndentedString(signatureProviderNameMetadata)).append("\n");
     sb.append("    signatureProviderOptions: ").append(toIndentedString(signatureProviderOptions)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -232,3 +227,4 @@ public class RecipientSignatureProvider {
   }
 
 }
+

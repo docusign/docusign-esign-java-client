@@ -27,6 +27,7 @@ public class Notary {
   @JsonProperty("userInfo")
   private UserInformation userInfo = null;
 
+
   /**
    * createdDate.
    *
@@ -39,7 +40,6 @@ public class Notary {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class Notary {
     this.createdDate = createdDate;
   }
 
+
   /**
    * enabled.
    *
@@ -66,7 +67,6 @@ public class Notary {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class Notary {
     this.enabled = enabled;
   }
 
+
   /**
    * searchable.
    *
@@ -93,7 +94,6 @@ public class Notary {
 
   /**
    * .
-   * 
    * @return searchable
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class Notary {
     this.searchable = searchable;
   }
 
+
   /**
    * userInfo.
    *
@@ -120,7 +121,6 @@ public class Notary {
 
   /**
    * Information about the user registering to be a notary..
-   * 
    * @return userInfo
    **/
   @Schema(description = "Information about the user registering to be a notary.")
@@ -134,6 +134,7 @@ public class Notary {
   public void setUserInfo(UserInformation userInfo) {
     this.userInfo = userInfo;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class Notary {
     return Objects.hash(createdDate, enabled, searchable, userInfo);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class Notary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Notary {\n");
-
+    
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    searchable: ").append(toIndentedString(searchable)).append("\n");
@@ -191,3 +193,4 @@ public class Notary {
   }
 
 }
+

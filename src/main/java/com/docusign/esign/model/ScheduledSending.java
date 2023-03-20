@@ -27,6 +27,7 @@ public class ScheduledSending {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * bulkListId.
    *
@@ -39,7 +40,6 @@ public class ScheduledSending {
 
   /**
    * .
-   * 
    * @return bulkListId
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class ScheduledSending {
     this.bulkListId = bulkListId;
   }
 
+
   /**
    * resumeDate.
    *
@@ -65,10 +66,7 @@ public class ScheduledSending {
   }
 
   /**
-   * An ISO 8601 formatted datetime string indicating the date and time that the
-   * envelope is (or was) scheduled to be sent or null if the envelope has not yet
-   * been sent..
-   * 
+   * An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent..
    * @return resumeDate
    **/
   @Schema(description = "An ISO 8601 formatted datetime string indicating the date and time that the envelope is (or was) scheduled to be sent or null if the envelope has not yet been sent.")
@@ -83,6 +81,7 @@ public class ScheduledSending {
     this.resumeDate = resumeDate;
   }
 
+
   /**
    * rules.
    *
@@ -92,7 +91,7 @@ public class ScheduledSending {
     this.rules = rules;
     return this;
   }
-
+  
   /**
    * addRulesItem.
    *
@@ -107,10 +106,7 @@ public class ScheduledSending {
   }
 
   /**
-   * A list of envelope delay rules specified by the user indicating how and when
-   * the envelope should be scheduled for sending in the future. Currently only 1
-   * rule may be specified..
-   * 
+   * A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified..
    * @return rules
    **/
   @Schema(description = "A list of envelope delay rules specified by the user indicating how and when the envelope should be scheduled for sending in the future. Currently only 1 rule may be specified.")
@@ -125,6 +121,7 @@ public class ScheduledSending {
     this.rules = rules;
   }
 
+
   /**
    * status.
    *
@@ -136,14 +133,10 @@ public class ScheduledSending {
   }
 
   /**
-   * \\\"pending\\\" if the envelope has not yet been sent and the scheduled
-   * sending delay has not iniaited. \\\"started\\\" if the scheduled sending
-   * delay is in progress. \\\"completed\\\" if the scheduled sending delay has
-   * elapsed and the envelope has been sent..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
-  @Schema(description = "\\\"pending\\\" if the envelope has not yet been sent and the scheduled sending delay has not iniaited. \\\"started\\\" if the scheduled sending delay is in progress. \\\"completed\\\" if the scheduled sending delay has elapsed and the envelope has been sent.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }
@@ -154,6 +147,7 @@ public class ScheduledSending {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -183,6 +177,7 @@ public class ScheduledSending {
     return Objects.hash(bulkListId, resumeDate, rules, status);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -190,7 +185,7 @@ public class ScheduledSending {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ScheduledSending {\n");
-
+    
     sb.append("    bulkListId: ").append(toIndentedString(bulkListId)).append("\n");
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
@@ -211,3 +206,4 @@ public class ScheduledSending {
   }
 
 }
+

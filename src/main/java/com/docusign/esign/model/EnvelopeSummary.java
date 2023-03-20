@@ -11,7 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object describes an envelope..
+ *  This object describes an envelope..
  *
  */
 @Schema(description = " This object describes an envelope.")
@@ -41,6 +41,7 @@ public class EnvelopeSummary {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * bulkEnvelopeStatus.
    *
@@ -53,7 +54,6 @@ public class EnvelopeSummary {
 
   /**
    * An object that describes the status of the bulk send envelopes..
-   * 
    * @return bulkEnvelopeStatus
    **/
   @Schema(description = "An object that describes the status of the bulk send envelopes.")
@@ -68,6 +68,7 @@ public class EnvelopeSummary {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
   }
 
+
   /**
    * envelopeId.
    *
@@ -80,7 +81,6 @@ public class EnvelopeSummary {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -95,6 +95,7 @@ public class EnvelopeSummary {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -106,12 +107,10 @@ public class EnvelopeSummary {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -122,6 +121,7 @@ public class EnvelopeSummary {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * recipientSigningUri.
@@ -135,7 +135,6 @@ public class EnvelopeSummary {
 
   /**
    * .
-   * 
    * @return recipientSigningUri
    **/
   @Schema(description = "")
@@ -150,6 +149,7 @@ public class EnvelopeSummary {
     this.recipientSigningUri = recipientSigningUri;
   }
 
+
   /**
    * recipientSigningUriError.
    *
@@ -162,7 +162,6 @@ public class EnvelopeSummary {
 
   /**
    * .
-   * 
    * @return recipientSigningUriError
    **/
   @Schema(description = "")
@@ -177,6 +176,7 @@ public class EnvelopeSummary {
     this.recipientSigningUriError = recipientSigningUriError;
   }
 
+
   /**
    * status.
    *
@@ -188,10 +188,7 @@ public class EnvelopeSummary {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -206,6 +203,7 @@ public class EnvelopeSummary {
     this.status = status;
   }
 
+
   /**
    * statusDateTime.
    *
@@ -218,7 +216,6 @@ public class EnvelopeSummary {
 
   /**
    * The DateTime that the envelope changed status (i.e. was created or sent.).
-   * 
    * @return statusDateTime
    **/
   @Schema(description = "The DateTime that the envelope changed status (i.e. was created or sent.)")
@@ -233,6 +230,7 @@ public class EnvelopeSummary {
     this.statusDateTime = statusDateTime;
   }
 
+
   /**
    * uri.
    *
@@ -245,7 +243,6 @@ public class EnvelopeSummary {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -259,6 +256,7 @@ public class EnvelopeSummary {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -289,9 +287,9 @@ public class EnvelopeSummary {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, recipientSigningUri, recipientSigningUriError,
-        status, statusDateTime, uri);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, recipientSigningUri, recipientSigningUriError, status, statusDateTime, uri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -300,7 +298,7 @@ public class EnvelopeSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeSummary {\n");
-
+    
     sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -325,3 +323,4 @@ public class EnvelopeSummary {
   }
 
 }
+

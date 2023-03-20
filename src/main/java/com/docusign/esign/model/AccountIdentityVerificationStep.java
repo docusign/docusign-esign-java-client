@@ -21,6 +21,7 @@ public class AccountIdentityVerificationStep {
   @JsonProperty("type")
   private String type = null;
 
+
   /**
    * name.
    *
@@ -33,7 +34,6 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class AccountIdentityVerificationStep {
     this.name = name;
   }
 
+
   /**
    * type.
    *
@@ -60,7 +61,6 @@ public class AccountIdentityVerificationStep {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -74,6 +74,7 @@ public class AccountIdentityVerificationStep {
   public void setType(String type) {
     this.type = type;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class AccountIdentityVerificationStep {
     return Objects.hash(name, type);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class AccountIdentityVerificationStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationStep {\n");
-
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class AccountIdentityVerificationStep {
   }
 
 }
+

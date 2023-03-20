@@ -19,6 +19,7 @@ public class NewUsersSummary {
   @JsonProperty("newUsers")
   private java.util.List<NewUser> newUsers = null;
 
+
   /**
    * newUsers.
    *
@@ -28,7 +29,7 @@ public class NewUsersSummary {
     this.newUsers = newUsers;
     return this;
   }
-
+  
   /**
    * addNewUsersItem.
    *
@@ -44,7 +45,6 @@ public class NewUsersSummary {
 
   /**
    * .
-   * 
    * @return newUsers
    **/
   @Schema(description = "")
@@ -58,6 +58,7 @@ public class NewUsersSummary {
   public void setNewUsers(java.util.List<NewUser> newUsers) {
     this.newUsers = newUsers;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class NewUsersSummary {
     return Objects.hash(newUsers);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class NewUsersSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUsersSummary {\n");
-
+    
     sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class NewUsersSummary {
   }
 
 }
+

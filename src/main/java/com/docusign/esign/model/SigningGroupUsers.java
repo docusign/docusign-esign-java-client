@@ -18,6 +18,7 @@ public class SigningGroupUsers {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
+
   /**
    * users.
    *
@@ -27,7 +28,7 @@ public class SigningGroupUsers {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -43,7 +44,6 @@ public class SigningGroupUsers {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class SigningGroupUsers {
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class SigningGroupUsers {
     return Objects.hash(users);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class SigningGroupUsers {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupUsers {\n");
-
+    
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class SigningGroupUsers {
   }
 
 }
+

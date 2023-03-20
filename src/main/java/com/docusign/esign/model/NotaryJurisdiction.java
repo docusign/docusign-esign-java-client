@@ -38,6 +38,7 @@ public class NotaryJurisdiction {
   @JsonProperty("sealType")
   private String sealType = null;
 
+
   /**
    * commissionExpiration.
    *
@@ -50,7 +51,6 @@ public class NotaryJurisdiction {
 
   /**
    * .
-   * 
    * @return commissionExpiration
    **/
   @Schema(description = "")
@@ -65,6 +65,7 @@ public class NotaryJurisdiction {
     this.commissionExpiration = commissionExpiration;
   }
 
+
   /**
    * commissionId.
    *
@@ -77,7 +78,6 @@ public class NotaryJurisdiction {
 
   /**
    * .
-   * 
    * @return commissionId
    **/
   @Schema(description = "")
@@ -92,6 +92,7 @@ public class NotaryJurisdiction {
     this.commissionId = commissionId;
   }
 
+
   /**
    * county.
    *
@@ -104,7 +105,6 @@ public class NotaryJurisdiction {
 
   /**
    * .
-   * 
    * @return county
    **/
   @Schema(description = "")
@@ -119,6 +119,7 @@ public class NotaryJurisdiction {
     this.county = county;
   }
 
+
   /**
    * errorDetails.
    *
@@ -130,12 +131,10 @@ public class NotaryJurisdiction {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -146,6 +145,7 @@ public class NotaryJurisdiction {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * jurisdiction.
@@ -158,9 +158,7 @@ public class NotaryJurisdiction {
   }
 
   /**
-   * Description of the jurisdiction for this notary. This is a read-only
-   * property..
-   * 
+   * Description of the jurisdiction for this notary. This is a read-only property..
    * @return jurisdiction
    **/
   @Schema(description = "Description of the jurisdiction for this notary. This is a read-only property.")
@@ -175,6 +173,7 @@ public class NotaryJurisdiction {
     this.jurisdiction = jurisdiction;
   }
 
+
   /**
    * registeredName.
    *
@@ -187,7 +186,6 @@ public class NotaryJurisdiction {
 
   /**
    * .
-   * 
    * @return registeredName
    **/
   @Schema(description = "")
@@ -202,6 +200,7 @@ public class NotaryJurisdiction {
     this.registeredName = registeredName;
   }
 
+
   /**
    * sealType.
    *
@@ -214,7 +213,6 @@ public class NotaryJurisdiction {
 
   /**
    * .
-   * 
    * @return sealType
    **/
   @Schema(description = "")
@@ -228,6 +226,7 @@ public class NotaryJurisdiction {
   public void setSealType(String sealType) {
     this.sealType = sealType;
   }
+
 
   /**
    * Compares objects.
@@ -257,9 +256,9 @@ public class NotaryJurisdiction {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(commissionExpiration, commissionId, county, errorDetails, jurisdiction, registeredName,
-        sealType);
+    return Objects.hash(commissionExpiration, commissionId, county, errorDetails, jurisdiction, registeredName, sealType);
   }
+
 
   /**
    * Converts the given object to string.
@@ -268,7 +267,7 @@ public class NotaryJurisdiction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJurisdiction {\n");
-
+    
     sb.append("    commissionExpiration: ").append(toIndentedString(commissionExpiration)).append("\n");
     sb.append("    commissionId: ").append(toIndentedString(commissionId)).append("\n");
     sb.append("    county: ").append(toIndentedString(county)).append("\n");
@@ -292,3 +291,4 @@ public class NotaryJurisdiction {
   }
 
 }
+

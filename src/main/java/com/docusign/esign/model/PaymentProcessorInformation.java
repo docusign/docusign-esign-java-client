@@ -24,6 +24,7 @@ public class PaymentProcessorInformation {
   @JsonProperty("email")
   private String email = null;
 
+
   /**
    * address.
    *
@@ -36,7 +37,6 @@ public class PaymentProcessorInformation {
 
   /**
    * The mailing address associated with the payment processor..
-   * 
    * @return address
    **/
   @Schema(description = "The mailing address associated with the payment processor.")
@@ -51,6 +51,7 @@ public class PaymentProcessorInformation {
     this.address = address;
   }
 
+
   /**
    * billingAgreementId.
    *
@@ -63,7 +64,6 @@ public class PaymentProcessorInformation {
 
   /**
    * .
-   * 
    * @return billingAgreementId
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class PaymentProcessorInformation {
     this.billingAgreementId = billingAgreementId;
   }
 
+
   /**
    * email.
    *
@@ -90,7 +91,6 @@ public class PaymentProcessorInformation {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class PaymentProcessorInformation {
   public void setEmail(String email) {
     this.email = email;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +133,7 @@ public class PaymentProcessorInformation {
     return Objects.hash(address, billingAgreementId, email);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +141,7 @@ public class PaymentProcessorInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentProcessorInformation {\n");
-
+    
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    billingAgreementId: ").append(toIndentedString(billingAgreementId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -159,3 +161,4 @@ public class PaymentProcessorInformation {
   }
 
 }
+

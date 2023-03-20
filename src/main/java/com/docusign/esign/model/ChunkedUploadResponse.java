@@ -43,6 +43,7 @@ public class ChunkedUploadResponse {
   @JsonProperty("totalSize")
   private String totalSize = null;
 
+
   /**
    * checksum.
    *
@@ -55,7 +56,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return checksum
    **/
   @Schema(description = "")
@@ -70,6 +70,7 @@ public class ChunkedUploadResponse {
     this.checksum = checksum;
   }
 
+
   /**
    * chunkedUploadId.
    *
@@ -82,7 +83,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return chunkedUploadId
    **/
   @Schema(description = "")
@@ -97,6 +97,7 @@ public class ChunkedUploadResponse {
     this.chunkedUploadId = chunkedUploadId;
   }
 
+
   /**
    * chunkedUploadParts.
    *
@@ -106,7 +107,7 @@ public class ChunkedUploadResponse {
     this.chunkedUploadParts = chunkedUploadParts;
     return this;
   }
-
+  
   /**
    * addChunkedUploadPartsItem.
    *
@@ -122,7 +123,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return chunkedUploadParts
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class ChunkedUploadResponse {
     this.chunkedUploadParts = chunkedUploadParts;
   }
 
+
   /**
    * chunkedUploadUri.
    *
@@ -149,7 +150,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return chunkedUploadUri
    **/
   @Schema(description = "")
@@ -164,6 +164,7 @@ public class ChunkedUploadResponse {
     this.chunkedUploadUri = chunkedUploadUri;
   }
 
+
   /**
    * committed.
    *
@@ -176,7 +177,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return committed
    **/
   @Schema(description = "")
@@ -191,6 +191,7 @@ public class ChunkedUploadResponse {
     this.committed = committed;
   }
 
+
   /**
    * expirationDateTime.
    *
@@ -203,7 +204,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return expirationDateTime
    **/
   @Schema(description = "")
@@ -218,6 +218,7 @@ public class ChunkedUploadResponse {
     this.expirationDateTime = expirationDateTime;
   }
 
+
   /**
    * maxChunkedUploadParts.
    *
@@ -230,7 +231,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return maxChunkedUploadParts
    **/
   @Schema(description = "")
@@ -245,6 +245,7 @@ public class ChunkedUploadResponse {
     this.maxChunkedUploadParts = maxChunkedUploadParts;
   }
 
+
   /**
    * maxTotalSize.
    *
@@ -257,7 +258,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return maxTotalSize
    **/
   @Schema(description = "")
@@ -272,6 +272,7 @@ public class ChunkedUploadResponse {
     this.maxTotalSize = maxTotalSize;
   }
 
+
   /**
    * totalSize.
    *
@@ -284,7 +285,6 @@ public class ChunkedUploadResponse {
 
   /**
    * .
-   * 
    * @return totalSize
    **/
   @Schema(description = "")
@@ -298,6 +298,7 @@ public class ChunkedUploadResponse {
   public void setTotalSize(String totalSize) {
     this.totalSize = totalSize;
   }
+
 
   /**
    * Compares objects.
@@ -329,9 +330,9 @@ public class ChunkedUploadResponse {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(checksum, chunkedUploadId, chunkedUploadParts, chunkedUploadUri, committed, expirationDateTime,
-        maxChunkedUploadParts, maxTotalSize, totalSize);
+    return Objects.hash(checksum, chunkedUploadId, chunkedUploadParts, chunkedUploadUri, committed, expirationDateTime, maxChunkedUploadParts, maxTotalSize, totalSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -340,7 +341,7 @@ public class ChunkedUploadResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadResponse {\n");
-
+    
     sb.append("    checksum: ").append(toIndentedString(checksum)).append("\n");
     sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
     sb.append("    chunkedUploadParts: ").append(toIndentedString(chunkedUploadParts)).append("\n");
@@ -366,3 +367,4 @@ public class ChunkedUploadResponse {
   }
 
 }
+

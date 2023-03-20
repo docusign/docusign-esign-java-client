@@ -15,10 +15,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 
 public class RecipientFormData {
-  @JsonProperty("declinedTime")
+  @JsonProperty("DeclinedTime")
   private String declinedTime = null;
 
-  @JsonProperty("deliveredTime")
+  @JsonProperty("DeliveredTime")
   private String deliveredTime = null;
 
   @JsonProperty("email")
@@ -33,11 +33,12 @@ public class RecipientFormData {
   @JsonProperty("recipientId")
   private String recipientId = null;
 
-  @JsonProperty("sentTime")
+  @JsonProperty("SentTime")
   private String sentTime = null;
 
-  @JsonProperty("signedTime")
+  @JsonProperty("SignedTime")
   private String signedTime = null;
+
 
   /**
    * declinedTime.
@@ -51,7 +52,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return declinedTime
    **/
   @Schema(description = "")
@@ -66,6 +66,7 @@ public class RecipientFormData {
     this.declinedTime = declinedTime;
   }
 
+
   /**
    * deliveredTime.
    *
@@ -78,7 +79,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return deliveredTime
    **/
   @Schema(description = "")
@@ -93,6 +93,7 @@ public class RecipientFormData {
     this.deliveredTime = deliveredTime;
   }
 
+
   /**
    * email.
    *
@@ -105,7 +106,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -120,6 +120,7 @@ public class RecipientFormData {
     this.email = email;
   }
 
+
   /**
    * formData.
    *
@@ -129,7 +130,7 @@ public class RecipientFormData {
     this.formData = formData;
     return this;
   }
-
+  
   /**
    * addFormDataItem.
    *
@@ -145,7 +146,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return formData
    **/
   @Schema(description = "")
@@ -160,6 +160,7 @@ public class RecipientFormData {
     this.formData = formData;
   }
 
+
   /**
    * name.
    *
@@ -172,7 +173,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -187,6 +187,7 @@ public class RecipientFormData {
     this.name = name;
   }
 
+
   /**
    * recipientId.
    *
@@ -198,9 +199,7 @@ public class RecipientFormData {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -215,6 +214,7 @@ public class RecipientFormData {
     this.recipientId = recipientId;
   }
 
+
   /**
    * sentTime.
    *
@@ -227,7 +227,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return sentTime
    **/
   @Schema(description = "")
@@ -242,6 +241,7 @@ public class RecipientFormData {
     this.sentTime = sentTime;
   }
 
+
   /**
    * signedTime.
    *
@@ -254,7 +254,6 @@ public class RecipientFormData {
 
   /**
    * .
-   * 
    * @return signedTime
    **/
   @Schema(description = "")
@@ -268,6 +267,7 @@ public class RecipientFormData {
   public void setSignedTime(String signedTime) {
     this.signedTime = signedTime;
   }
+
 
   /**
    * Compares objects.
@@ -301,6 +301,7 @@ public class RecipientFormData {
     return Objects.hash(declinedTime, deliveredTime, email, formData, name, recipientId, sentTime, signedTime);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -308,7 +309,7 @@ public class RecipientFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientFormData {\n");
-
+    
     sb.append("    declinedTime: ").append(toIndentedString(declinedTime)).append("\n");
     sb.append("    deliveredTime: ").append(toIndentedString(deliveredTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -333,3 +334,4 @@ public class RecipientFormData {
   }
 
 }
+

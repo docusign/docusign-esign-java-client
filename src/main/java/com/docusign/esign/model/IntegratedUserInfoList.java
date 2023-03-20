@@ -39,6 +39,7 @@ public class IntegratedUserInfoList {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
 
+
   /**
    * allUsersSelected.
    *
@@ -51,7 +52,6 @@ public class IntegratedUserInfoList {
 
   /**
    * .
-   * 
    * @return allUsersSelected
    **/
   @Schema(description = "")
@@ -66,6 +66,7 @@ public class IntegratedUserInfoList {
     this.allUsersSelected = allUsersSelected;
   }
 
+
   /**
    * endPosition.
    *
@@ -78,7 +79,6 @@ public class IntegratedUserInfoList {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -93,6 +93,7 @@ public class IntegratedUserInfoList {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -104,9 +105,7 @@ public class IntegratedUserInfoList {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -121,6 +120,7 @@ public class IntegratedUserInfoList {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -133,7 +133,6 @@ public class IntegratedUserInfoList {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -148,6 +147,7 @@ public class IntegratedUserInfoList {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -160,7 +160,6 @@ public class IntegratedUserInfoList {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -175,6 +174,7 @@ public class IntegratedUserInfoList {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -187,7 +187,6 @@ public class IntegratedUserInfoList {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -202,6 +201,7 @@ public class IntegratedUserInfoList {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -213,10 +213,7 @@ public class IntegratedUserInfoList {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -231,6 +228,7 @@ public class IntegratedUserInfoList {
     this.totalSetSize = totalSetSize;
   }
 
+
   /**
    * users.
    *
@@ -240,7 +238,7 @@ public class IntegratedUserInfoList {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -256,7 +254,6 @@ public class IntegratedUserInfoList {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -270,6 +267,7 @@ public class IntegratedUserInfoList {
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -300,9 +298,9 @@ public class IntegratedUserInfoList {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allUsersSelected, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize,
-        users);
+    return Objects.hash(allUsersSelected, endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
   }
+
 
   /**
    * Converts the given object to string.
@@ -311,7 +309,7 @@ public class IntegratedUserInfoList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IntegratedUserInfoList {\n");
-
+    
     sb.append("    allUsersSelected: ").append(toIndentedString(allUsersSelected)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -336,3 +334,4 @@ public class IntegratedUserInfoList {
   }
 
 }
+

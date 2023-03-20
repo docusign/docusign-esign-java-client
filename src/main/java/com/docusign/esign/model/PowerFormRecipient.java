@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * **Note:** For a self-service PowerForm on a website, you can specify the
- * intended recipients generically (for example, use &#x60;Member&#x60; as the
- * &#x60;Name&#x60;), and omit personal details such as &#x60;email&#x60;..
+ * **Note:** For a self-service PowerForm on a website, you can specify the intended recipients generically (for example, use &#x60;Member&#x60; as the &#x60;Name&#x60;), and omit personal details such as &#x60;email&#x60;..
  *
  */
 @Schema(description = "**Note:** For a self-service PowerForm on a website, you can specify the intended recipients generically (for example, use `Member` as the `Name`), and omit personal details such as `email`.")
@@ -56,6 +54,7 @@ public class PowerFormRecipient {
   @JsonProperty("userNameLocked")
   private String userNameLocked = null;
 
+
   /**
    * accessCode.
    *
@@ -67,13 +66,7 @@ public class PowerFormRecipient {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code
-   * to view and sign the envelope. Maximum Length: 50 characters and it must
-   * conform to the account's access code format setting. If blank, but the signer
-   * `accessCode` property is set in the envelope, then that value is used. If
-   * blank and the signer `accessCode` property is not set, then the access code
-   * is not required..
-   * 
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
    **/
   @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
@@ -88,6 +81,7 @@ public class PowerFormRecipient {
     this.accessCode = accessCode;
   }
 
+
   /**
    * accessCodeLocked.
    *
@@ -100,7 +94,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return accessCodeLocked
    **/
   @Schema(description = "")
@@ -115,6 +108,7 @@ public class PowerFormRecipient {
     this.accessCodeLocked = accessCodeLocked;
   }
 
+
   /**
    * accessCodeRequired.
    *
@@ -127,7 +121,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return accessCodeRequired
    **/
   @Schema(description = "")
@@ -142,6 +135,7 @@ public class PowerFormRecipient {
     this.accessCodeRequired = accessCodeRequired;
   }
 
+
   /**
    * email.
    *
@@ -154,7 +148,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -169,6 +162,7 @@ public class PowerFormRecipient {
     this.email = email;
   }
 
+
   /**
    * emailLocked.
    *
@@ -181,7 +175,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return emailLocked
    **/
   @Schema(description = "")
@@ -196,6 +189,7 @@ public class PowerFormRecipient {
     this.emailLocked = emailLocked;
   }
 
+
   /**
    * idCheckConfigurationName.
    *
@@ -207,17 +201,7 @@ public class PowerFormRecipient {
   }
 
   /**
-   * Specifies authentication check by name. The names used here must be the same
-   * as the authentication type names used by the account (these name can also be
-   * found in the web console sending interface in the Identify list for a
-   * recipient,) This overrides any default authentication setting. *Example*:
-   * Your account has ID Check and SMS Authentication available and in the web
-   * console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use
-   * ID check in an envelope, the idCheckConfigurationName should be 'ID Check '.
-   * If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add
-   * you would need to add phone number information to the `smsAuthentication`
-   * node..
-   * 
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
    * @return idCheckConfigurationName
    **/
   @Schema(description = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
@@ -232,6 +216,7 @@ public class PowerFormRecipient {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+
   /**
    * idCheckRequired.
    *
@@ -244,7 +229,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return idCheckRequired
    **/
   @Schema(description = "")
@@ -259,6 +243,7 @@ public class PowerFormRecipient {
     this.idCheckRequired = idCheckRequired;
   }
 
+
   /**
    * name.
    *
@@ -271,7 +256,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -286,6 +270,7 @@ public class PowerFormRecipient {
     this.name = name;
   }
 
+
   /**
    * recipientType.
    *
@@ -298,7 +283,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return recipientType
    **/
   @Schema(description = "")
@@ -313,6 +297,7 @@ public class PowerFormRecipient {
     this.recipientType = recipientType;
   }
 
+
   /**
    * roleName.
    *
@@ -324,10 +309,7 @@ public class PowerFormRecipient {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/>
-   * <br/>
-   * This is required when working with template recipients..
-   * 
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
    **/
   @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
@@ -342,6 +324,7 @@ public class PowerFormRecipient {
     this.roleName = roleName;
   }
 
+
   /**
    * routingOrder.
    *
@@ -354,7 +337,6 @@ public class PowerFormRecipient {
 
   /**
    * Specifies the routing order of the recipient in the envelope. .
-   * 
    * @return routingOrder
    **/
   @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
@@ -369,6 +351,7 @@ public class PowerFormRecipient {
     this.routingOrder = routingOrder;
   }
 
+
   /**
    * templateRequiresIdLookup.
    *
@@ -381,7 +364,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return templateRequiresIdLookup
    **/
   @Schema(description = "")
@@ -396,6 +378,7 @@ public class PowerFormRecipient {
     this.templateRequiresIdLookup = templateRequiresIdLookup;
   }
 
+
   /**
    * userNameLocked.
    *
@@ -408,7 +391,6 @@ public class PowerFormRecipient {
 
   /**
    * .
-   * 
    * @return userNameLocked
    **/
   @Schema(description = "")
@@ -422,6 +404,7 @@ public class PowerFormRecipient {
   public void setUserNameLocked(String userNameLocked) {
     this.userNameLocked = userNameLocked;
   }
+
 
   /**
    * Compares objects.
@@ -457,9 +440,9 @@ public class PowerFormRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeLocked, accessCodeRequired, email, emailLocked, idCheckConfigurationName,
-        idCheckRequired, name, recipientType, roleName, routingOrder, templateRequiresIdLookup, userNameLocked);
+    return Objects.hash(accessCode, accessCodeLocked, accessCodeRequired, email, emailLocked, idCheckConfigurationName, idCheckRequired, name, recipientType, roleName, routingOrder, templateRequiresIdLookup, userNameLocked);
   }
+
 
   /**
    * Converts the given object to string.
@@ -468,7 +451,7 @@ public class PowerFormRecipient {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormRecipient {\n");
-
+    
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeLocked: ").append(toIndentedString(accessCodeLocked)).append("\n");
     sb.append("    accessCodeRequired: ").append(toIndentedString(accessCodeRequired)).append("\n");
@@ -498,3 +481,4 @@ public class PowerFormRecipient {
   }
 
 }
+

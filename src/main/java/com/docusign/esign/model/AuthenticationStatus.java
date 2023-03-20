@@ -73,6 +73,7 @@ public class AuthenticationStatus {
   @JsonProperty("yahooResult")
   private EventResult yahooResult = null;
 
+
   /**
    * accessCodeResult.
    *
@@ -84,12 +85,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of a user's attempt to authenticate by using an access code. It
-   * returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that
-   * the event occurred. - `FailureDescription`: A string containing the details
-   * about a failed authentication. - `VendorFailureStatusCode`: A string
-   * containing the vendor's status code for a failed authentication. .
-   * 
+   * The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return accessCodeResult
    **/
   @Schema(description = "The result of a user's attempt to authenticate by using an access code. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -104,6 +100,7 @@ public class AuthenticationStatus {
     this.accessCodeResult = accessCodeResult;
   }
 
+
   /**
    * ageVerifyResult.
    *
@@ -115,12 +112,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an age verification check. It returns: - `Status`: `Pass` or
-   * `Fail`. - `dateTime`: The date and time that the event occurred. -
-   * `FailureDescription`: A string containing the details about a failed
-   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
-   * status code for a failed authentication. .
-   * 
+   * The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return ageVerifyResult
    **/
   @Schema(description = "The result of an age verification check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -135,6 +127,7 @@ public class AuthenticationStatus {
     this.ageVerifyResult = ageVerifyResult;
   }
 
+
   /**
    * anySocialIDResult.
    *
@@ -147,7 +140,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return anySocialIDResult
    **/
   @Schema(description = "Deprecated.")
@@ -162,6 +154,7 @@ public class AuthenticationStatus {
     this.anySocialIDResult = anySocialIDResult;
   }
 
+
   /**
    * facebookResult.
    *
@@ -174,7 +167,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return facebookResult
    **/
   @Schema(description = "Deprecated.")
@@ -189,6 +181,7 @@ public class AuthenticationStatus {
     this.facebookResult = facebookResult;
   }
 
+
   /**
    * googleResult.
    *
@@ -201,7 +194,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return googleResult
    **/
   @Schema(description = "Deprecated.")
@@ -216,6 +208,7 @@ public class AuthenticationStatus {
     this.googleResult = googleResult;
   }
 
+
   /**
    * identityVerificationResult.
    *
@@ -227,9 +220,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an [Identity Verification][IDV] workflow. [IDV]:
-   * /docs/esign-rest-api/reference/accounts/identityverifications/.
-   * 
+   * The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/.
    * @return identityVerificationResult
    **/
   @Schema(description = "The result of an [Identity Verification][IDV] workflow.  [IDV]: /docs/esign-rest-api/reference/accounts/identityverifications/")
@@ -244,6 +235,7 @@ public class AuthenticationStatus {
     this.identityVerificationResult = identityVerificationResult;
   }
 
+
   /**
    * idLookupResult.
    *
@@ -255,12 +247,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an ID lookup authentication check. It returns: - `Status`:
-   * `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. -
-   * `FailureDescription`: A string containing the details about a failed
-   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
-   * status code for a failed authentication. .
-   * 
+   * The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return idLookupResult
    **/
   @Schema(description = "The result of an ID lookup authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -275,6 +262,7 @@ public class AuthenticationStatus {
     this.idLookupResult = idLookupResult;
   }
 
+
   /**
    * idQuestionsResult.
    *
@@ -286,12 +274,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's answers to ID challenge questions. It returns: -
-   * `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event
-   * occurred. - `FailureDescription`: A string containing the details about a
-   * failed authentication. - `VendorFailureStatusCode`: A string containing the
-   * vendor's status code for a failed authentication. .
-   * 
+   * The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return idQuestionsResult
    **/
   @Schema(description = "The result of the user's answers to ID challenge questions. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -306,6 +289,7 @@ public class AuthenticationStatus {
     this.idQuestionsResult = idQuestionsResult;
   }
 
+
   /**
    * linkedinResult.
    *
@@ -318,7 +302,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return linkedinResult
    **/
   @Schema(description = "Deprecated.")
@@ -333,6 +316,7 @@ public class AuthenticationStatus {
     this.linkedinResult = linkedinResult;
   }
 
+
   /**
    * liveIDResult.
    *
@@ -345,7 +329,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return liveIDResult
    **/
   @Schema(description = "Deprecated.")
@@ -360,6 +343,7 @@ public class AuthenticationStatus {
     this.liveIDResult = liveIDResult;
   }
 
+
   /**
    * ofacResult.
    *
@@ -371,12 +355,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of an Office of Foreign Asset Control (OFAC) check. It returns: -
-   * `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event
-   * occurred. - `FailureDescription`: A string containing the details about a
-   * failed authentication. - `VendorFailureStatusCode`: A string containing the
-   * vendor's status code for a failed authentication. .
-   * 
+   * The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return ofacResult
    **/
   @Schema(description = "The result of an Office of Foreign Asset Control (OFAC) check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -391,6 +370,7 @@ public class AuthenticationStatus {
     this.ofacResult = ofacResult;
   }
 
+
   /**
    * openIDResult.
    *
@@ -403,7 +383,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return openIDResult
    **/
   @Schema(description = "Deprecated.")
@@ -418,6 +397,7 @@ public class AuthenticationStatus {
     this.openIDResult = openIDResult;
   }
 
+
   /**
    * phoneAuthResult.
    *
@@ -429,13 +409,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using two-factor
-   * authentication (2FA) through phone messaging. It returns: - `Status`: `Pass`
-   * or `Fail`. - `dateTime`: The date and time that the event occurred. -
-   * `FailureDescription`: A string containing the details about a failed
-   * authentication. - `VendorFailureStatusCode`: A string containing the vendor's
-   * status code for a failed authentication. .
-   * 
+   * The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return phoneAuthResult
    **/
   @Schema(description = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through phone messaging. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -450,6 +424,7 @@ public class AuthenticationStatus {
     this.phoneAuthResult = phoneAuthResult;
   }
 
+
   /**
    * salesforceResult.
    *
@@ -461,12 +436,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * Success/failure result of authentication using sign-in with a Salesforce
-   * account. It returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and
-   * time that the event occurred. - `FailureDescription`: A string containing the
-   * details about a failed authentication. - `VendorFailureStatusCode`: A string
-   * containing the vendor's status code for a failed authentication. .
-   * 
+   * Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return salesforceResult
    **/
   @Schema(description = "Success/failure result of authentication using sign-in with a Salesforce account. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -481,6 +451,7 @@ public class AuthenticationStatus {
     this.salesforceResult = salesforceResult;
   }
 
+
   /**
    * signatureProviderResult.
    *
@@ -492,9 +463,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using a signature
-   * provider..
-   * 
+   * The result of the user's attempt to authenticate by using a signature provider..
    * @return signatureProviderResult
    **/
   @Schema(description = "The result of the user's attempt to authenticate by using a signature provider.")
@@ -509,6 +478,7 @@ public class AuthenticationStatus {
     this.signatureProviderResult = signatureProviderResult;
   }
 
+
   /**
    * smsAuthResult.
    *
@@ -520,9 +490,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of the user's attempt to authenticate by using two-factor
-   * authentication (2FA) through SMS messaging on a mobile phone..
-   * 
+   * The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone..
    * @return smsAuthResult
    **/
   @Schema(description = "The result of the user's attempt to authenticate by using two-factor authentication (2FA) through SMS messaging on a mobile phone.")
@@ -537,6 +505,7 @@ public class AuthenticationStatus {
     this.smsAuthResult = smsAuthResult;
   }
 
+
   /**
    * sTANPinResult.
    *
@@ -548,12 +517,7 @@ public class AuthenticationStatus {
   }
 
   /**
-   * The result of a Student Authentication Network (STAN) authentication check.
-   * It returns: - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time
-   * that the event occurred. - `FailureDescription`: A string containing the
-   * details about a failed authentication. - `VendorFailureStatusCode`: A string
-   * containing the vendor's status code for a failed authentication. .
-   * 
+   * The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. .
    * @return sTANPinResult
    **/
   @Schema(description = "The result of a Student Authentication Network (STAN) authentication check. It returns:  - `Status`: `Pass` or `Fail`. - `dateTime`: The date and time that the event occurred. - `FailureDescription`: A string containing the details about a failed authentication. - `VendorFailureStatusCode`: A string containing the vendor's status code for a failed authentication. ")
@@ -568,6 +532,7 @@ public class AuthenticationStatus {
     this.sTANPinResult = sTANPinResult;
   }
 
+
   /**
    * twitterResult.
    *
@@ -580,7 +545,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return twitterResult
    **/
   @Schema(description = "Deprecated.")
@@ -595,6 +559,7 @@ public class AuthenticationStatus {
     this.twitterResult = twitterResult;
   }
 
+
   /**
    * yahooResult.
    *
@@ -607,7 +572,6 @@ public class AuthenticationStatus {
 
   /**
    * Deprecated..
-   * 
    * @return yahooResult
    **/
   @Schema(description = "Deprecated.")
@@ -621,6 +585,7 @@ public class AuthenticationStatus {
   public void setYahooResult(EventResult yahooResult) {
     this.yahooResult = yahooResult;
   }
+
 
   /**
    * Compares objects.
@@ -662,11 +627,9 @@ public class AuthenticationStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult,
-        identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult,
-        openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult,
-        twitterResult, yahooResult);
+    return Objects.hash(accessCodeResult, ageVerifyResult, anySocialIDResult, facebookResult, googleResult, identityVerificationResult, idLookupResult, idQuestionsResult, linkedinResult, liveIDResult, ofacResult, openIDResult, phoneAuthResult, salesforceResult, signatureProviderResult, smsAuthResult, sTANPinResult, twitterResult, yahooResult);
   }
+
 
   /**
    * Converts the given object to string.
@@ -675,7 +638,7 @@ public class AuthenticationStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AuthenticationStatus {\n");
-
+    
     sb.append("    accessCodeResult: ").append(toIndentedString(accessCodeResult)).append("\n");
     sb.append("    ageVerifyResult: ").append(toIndentedString(ageVerifyResult)).append("\n");
     sb.append("    anySocialIDResult: ").append(toIndentedString(anySocialIDResult)).append("\n");
@@ -711,3 +674,4 @@ public class AuthenticationStatus {
   }
 
 }
+

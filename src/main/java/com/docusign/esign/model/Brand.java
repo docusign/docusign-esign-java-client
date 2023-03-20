@@ -15,8 +15,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about a brand that is associated with an account. A brand applies
- * custom styles and text to an envelope..
+ * Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope..
  *
  */
 @Schema(description = "Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope.")
@@ -67,6 +66,7 @@ public class Brand {
   @JsonProperty("resources")
   private BrandResourceUrls resources = null;
 
+
   /**
    * brandCompany.
    *
@@ -79,7 +79,6 @@ public class Brand {
 
   /**
    * The name of the company associated with this brand..
-   * 
    * @return brandCompany
    **/
   @Schema(description = "The name of the company associated with this brand.")
@@ -94,6 +93,7 @@ public class Brand {
     this.brandCompany = brandCompany;
   }
 
+
   /**
    * brandId.
    *
@@ -106,7 +106,6 @@ public class Brand {
 
   /**
    * The ID used to identify a specific brand in API calls..
-   * 
    * @return brandId
    **/
   @Schema(description = "The ID used to identify a specific brand in API calls.")
@@ -121,6 +120,7 @@ public class Brand {
     this.brandId = brandId;
   }
 
+
   /**
    * brandLanguages.
    *
@@ -130,7 +130,7 @@ public class Brand {
     this.brandLanguages = brandLanguages;
     return this;
   }
-
+  
   /**
    * addBrandLanguagesItem.
    *
@@ -146,7 +146,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return brandLanguages
    **/
   @Schema(description = "")
@@ -161,6 +160,7 @@ public class Brand {
     this.brandLanguages = brandLanguages;
   }
 
+
   /**
    * brandName.
    *
@@ -173,7 +173,6 @@ public class Brand {
 
   /**
    * The name of the brand..
-   * 
    * @return brandName
    **/
   @Schema(description = "The name of the brand.")
@@ -188,6 +187,7 @@ public class Brand {
     this.brandName = brandName;
   }
 
+
   /**
    * colors.
    *
@@ -197,7 +197,7 @@ public class Brand {
     this.colors = colors;
     return this;
   }
-
+  
   /**
    * addColorsItem.
    *
@@ -213,7 +213,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return colors
    **/
   @Schema(description = "")
@@ -228,6 +227,7 @@ public class Brand {
     this.colors = colors;
   }
 
+
   /**
    * defaultBrandLanguage.
    *
@@ -240,7 +240,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return defaultBrandLanguage
    **/
   @Schema(description = "")
@@ -255,6 +254,7 @@ public class Brand {
     this.defaultBrandLanguage = defaultBrandLanguage;
   }
 
+
   /**
    * emailContent.
    *
@@ -264,7 +264,7 @@ public class Brand {
     this.emailContent = emailContent;
     return this;
   }
-
+  
   /**
    * addEmailContentItem.
    *
@@ -280,7 +280,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return emailContent
    **/
   @Schema(description = "")
@@ -295,6 +294,7 @@ public class Brand {
     this.emailContent = emailContent;
   }
 
+
   /**
    * errorDetails.
    *
@@ -306,12 +306,10 @@ public class Brand {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -322,6 +320,7 @@ public class Brand {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * isOverridingCompanyName.
@@ -335,7 +334,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return isOverridingCompanyName
    **/
   @Schema(description = "")
@@ -350,6 +348,7 @@ public class Brand {
     this.isOverridingCompanyName = isOverridingCompanyName;
   }
 
+
   /**
    * isSendingDefault.
    *
@@ -362,7 +361,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return isSendingDefault
    **/
   @Schema(description = "")
@@ -377,6 +375,7 @@ public class Brand {
     this.isSendingDefault = isSendingDefault;
   }
 
+
   /**
    * isSigningDefault.
    *
@@ -389,7 +388,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return isSigningDefault
    **/
   @Schema(description = "")
@@ -404,6 +402,7 @@ public class Brand {
     this.isSigningDefault = isSigningDefault;
   }
 
+
   /**
    * landingPages.
    *
@@ -413,7 +412,7 @@ public class Brand {
     this.landingPages = landingPages;
     return this;
   }
-
+  
   /**
    * addLandingPagesItem.
    *
@@ -429,7 +428,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return landingPages
    **/
   @Schema(description = "")
@@ -444,6 +442,7 @@ public class Brand {
     this.landingPages = landingPages;
   }
 
+
   /**
    * links.
    *
@@ -453,7 +452,7 @@ public class Brand {
     this.links = links;
     return this;
   }
-
+  
   /**
    * addLinksItem.
    *
@@ -469,7 +468,6 @@ public class Brand {
 
   /**
    * .
-   * 
    * @return links
    **/
   @Schema(description = "")
@@ -484,6 +482,7 @@ public class Brand {
     this.links = links;
   }
 
+
   /**
    * logos.
    *
@@ -496,7 +495,6 @@ public class Brand {
 
   /**
    * The URIs for retrieving the logos that are associated with the brand..
-   * 
    * @return logos
    **/
   @Schema(description = "The URIs for retrieving the logos that are associated with the brand.")
@@ -511,6 +509,7 @@ public class Brand {
     this.logos = logos;
   }
 
+
   /**
    * resources.
    *
@@ -522,13 +521,7 @@ public class Brand {
   }
 
   /**
-   * An object containing the URLs for the four DocuSign master resource files
-   * that the brand uses for sending, signing, email messages, and captive
-   * (embedded) signing. You can modify the default email messages and formats in
-   * these file to customize the user experience. **Note:** This object is
-   * returned only when the `resourceContentType` is `sending`, `signing`,
-   * `email`, or `signing_captive`..
-   * 
+   * An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`..
    * @return resources
    **/
   @Schema(description = "An object containing the URLs for the four DocuSign master resource files that the brand uses for sending, signing, email messages, and captive (embedded) signing. You can modify the default email messages and formats in these file to customize the user experience.  **Note:** This object is returned only when the `resourceContentType` is `sending`, `signing`, `email`, or `signing_captive`.")
@@ -542,6 +535,7 @@ public class Brand {
   public void setResources(BrandResourceUrls resources) {
     this.resources = resources;
   }
+
 
   /**
    * Compares objects.
@@ -579,10 +573,9 @@ public class Brand {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent,
-        errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos,
-        resources);
+    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
   }
+
 
   /**
    * Converts the given object to string.
@@ -591,7 +584,7 @@ public class Brand {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Brand {\n");
-
+    
     sb.append("    brandCompany: ").append(toIndentedString(brandCompany)).append("\n");
     sb.append("    brandId: ").append(toIndentedString(brandId)).append("\n");
     sb.append("    brandLanguages: ").append(toIndentedString(brandLanguages)).append("\n");
@@ -623,3 +616,4 @@ public class Brand {
   }
 
 }
+

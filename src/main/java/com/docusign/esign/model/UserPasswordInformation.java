@@ -27,6 +27,7 @@ public class UserPasswordInformation {
   @JsonProperty("newPassword")
   private String newPassword = null;
 
+
   /**
    * currentPassword.
    *
@@ -39,7 +40,6 @@ public class UserPasswordInformation {
 
   /**
    * The user's current password to be changed..
-   * 
    * @return currentPassword
    **/
   @Schema(description = "The user's current password to be changed.")
@@ -54,6 +54,7 @@ public class UserPasswordInformation {
     this.currentPassword = currentPassword;
   }
 
+
   /**
    * email.
    *
@@ -66,7 +67,6 @@ public class UserPasswordInformation {
 
   /**
    * The user's email address for the associated account..
-   * 
    * @return email
    **/
   @Schema(description = "The user's email address for the associated account.")
@@ -81,6 +81,7 @@ public class UserPasswordInformation {
     this.email = email;
   }
 
+
   /**
    * forgottenPasswordInfo.
    *
@@ -92,9 +93,7 @@ public class UserPasswordInformation {
   }
 
   /**
-   * A complex element containing up to four Question/Answer pairs for forgotten
-   * password information..
-   * 
+   * A complex element containing up to four Question/Answer pairs for forgotten password information..
    * @return forgottenPasswordInfo
    **/
   @Schema(description = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
@@ -109,6 +108,7 @@ public class UserPasswordInformation {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
+
   /**
    * newPassword.
    *
@@ -121,7 +121,6 @@ public class UserPasswordInformation {
 
   /**
    * The user's new password..
-   * 
    * @return newPassword
    **/
   @Schema(description = "The user's new password.")
@@ -135,6 +134,7 @@ public class UserPasswordInformation {
   public void setNewPassword(String newPassword) {
     this.newPassword = newPassword;
   }
+
 
   /**
    * Compares objects.
@@ -164,6 +164,7 @@ public class UserPasswordInformation {
     return Objects.hash(currentPassword, email, forgottenPasswordInfo, newPassword);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -171,7 +172,7 @@ public class UserPasswordInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPasswordInformation {\n");
-
+    
     sb.append("    currentPassword: ").append(toIndentedString(currentPassword)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    forgottenPasswordInfo: ").append(toIndentedString(forgottenPasswordInfo)).append("\n");
@@ -192,3 +193,4 @@ public class UserPasswordInformation {
   }
 
 }
+

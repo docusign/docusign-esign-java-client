@@ -179,6 +179,7 @@ public class TabMetadata {
   @JsonProperty("width")
   private String width = null;
 
+
   /**
    * anchor.
    *
@@ -190,9 +191,7 @@ public class TabMetadata {
   }
 
   /**
-   * An optional string that is used to auto-match tabs to strings located in the
-   * documents of an envelope..
-   * 
+   * An optional string that is used to auto-match tabs to strings located in the documents of an envelope..
    * @return anchor
    **/
   @Schema(description = "An optional string that is used to auto-match tabs to strings located in the documents of an envelope.")
@@ -207,6 +206,7 @@ public class TabMetadata {
     this.anchor = anchor;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -218,9 +218,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -235,6 +233,7 @@ public class TabMetadata {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -246,9 +245,7 @@ public class TabMetadata {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -263,6 +260,7 @@ public class TabMetadata {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -274,9 +272,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -291,6 +287,7 @@ public class TabMetadata {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -302,10 +299,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -320,6 +314,7 @@ public class TabMetadata {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -331,9 +326,7 @@ public class TabMetadata {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -348,6 +341,7 @@ public class TabMetadata {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -359,9 +353,7 @@ public class TabMetadata {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -376,6 +368,7 @@ public class TabMetadata {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -387,9 +380,7 @@ public class TabMetadata {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -404,6 +395,7 @@ public class TabMetadata {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * bold.
    *
@@ -416,7 +408,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -431,6 +422,7 @@ public class TabMetadata {
     this.bold = bold;
   }
 
+
   /**
    * collaborative.
    *
@@ -443,7 +435,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return collaborative
    **/
   @Schema(description = "")
@@ -458,6 +449,7 @@ public class TabMetadata {
     this.collaborative = collaborative;
   }
 
+
   /**
    * concealValueOnDocument.
    *
@@ -469,13 +461,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is
-   * adding or modifying the information in the field, but the data is not visible
-   * (the characters are hidden by asterisks) to any other signer or the sender.
-   * When an envelope is completed the information is available to the sender
-   * through the Form Data link in the DocuSign Console. This setting applies only
-   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
-   * 
+   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
    * @return concealValueOnDocument
    **/
   @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
@@ -490,6 +476,7 @@ public class TabMetadata {
     this.concealValueOnDocument = concealValueOnDocument;
   }
 
+
   /**
    * createdByDisplayName.
    *
@@ -502,7 +489,6 @@ public class TabMetadata {
 
   /**
    * The user name of the DocuSign user who created this object..
-   * 
    * @return createdByDisplayName
    **/
   @Schema(description = "The user name of the DocuSign user who created this object.")
@@ -517,6 +503,7 @@ public class TabMetadata {
     this.createdByDisplayName = createdByDisplayName;
   }
 
+
   /**
    * createdByUserId.
    *
@@ -529,7 +516,6 @@ public class TabMetadata {
 
   /**
    * The userId of the DocuSign user who created this object..
-   * 
    * @return createdByUserId
    **/
   @Schema(description = "The userId of the DocuSign user who created this object.")
@@ -544,6 +530,7 @@ public class TabMetadata {
     this.createdByUserId = createdByUserId;
   }
 
+
   /**
    * customTabId.
    *
@@ -555,10 +542,7 @@ public class TabMetadata {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This
-   * can only be used when adding new tabs for a recipient. When used, the new tab
-   * inherits all the custom tab properties..
-   * 
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
    **/
   @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
@@ -573,6 +557,7 @@ public class TabMetadata {
     this.customTabId = customTabId;
   }
 
+
   /**
    * disableAutoSize.
    *
@@ -584,11 +569,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in
-   * the signing screen when the signer enters data. If disabled users will only
-   * be able enter as much data as the text box can hold. By default this is
-   * false. This property only affects single line text boxes..
-   * 
+   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
    * @return disableAutoSize
    **/
   @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
@@ -603,6 +584,7 @@ public class TabMetadata {
     this.disableAutoSize = disableAutoSize;
   }
 
+
   /**
    * editable.
    *
@@ -614,9 +596,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, the custom tab is editable. Otherwise the custom tab
-   * cannot be modified..
-   * 
+   * When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified..
    * @return editable
    **/
   @Schema(description = "When set to **true**, the custom tab is editable. Otherwise the custom tab cannot be modified.")
@@ -631,6 +611,7 @@ public class TabMetadata {
     this.editable = editable;
   }
 
+
   /**
    * font.
    *
@@ -642,11 +623,7 @@ public class TabMetadata {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -661,6 +638,7 @@ public class TabMetadata {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -672,10 +650,7 @@ public class TabMetadata {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -690,6 +665,7 @@ public class TabMetadata {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontSize.
    *
@@ -701,10 +677,7 @@ public class TabMetadata {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -719,6 +692,7 @@ public class TabMetadata {
     this.fontSize = fontSize;
   }
 
+
   /**
    * height.
    *
@@ -731,7 +705,6 @@ public class TabMetadata {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -746,6 +719,7 @@ public class TabMetadata {
     this.height = height;
   }
 
+
   /**
    * includedInEmail.
    *
@@ -757,9 +731,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true**, the tab is included in e-mails related to the envelope
-   * on which it exists. This applies to only specific tabs..
-   * 
+   * When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs..
    * @return includedInEmail
    **/
   @Schema(description = "When set to **true**, the tab is included in e-mails related to the envelope on which it exists. This applies to only specific tabs.")
@@ -774,6 +746,7 @@ public class TabMetadata {
     this.includedInEmail = includedInEmail;
   }
 
+
   /**
    * initialValue.
    *
@@ -786,7 +759,6 @@ public class TabMetadata {
 
   /**
    * The original value of the tab..
-   * 
    * @return initialValue
    **/
   @Schema(description = "The original value of the tab.")
@@ -801,6 +773,7 @@ public class TabMetadata {
     this.initialValue = initialValue;
   }
 
+
   /**
    * italic.
    *
@@ -813,7 +786,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -828,6 +800,7 @@ public class TabMetadata {
     this.italic = italic;
   }
 
+
   /**
    * items.
    *
@@ -837,7 +810,7 @@ public class TabMetadata {
     this.items = items;
     return this;
   }
-
+  
   /**
    * addItemsItem.
    *
@@ -852,9 +825,7 @@ public class TabMetadata {
   }
 
   /**
-   * If the tab is a list, this represents the values that are possible for the
-   * tab..
-   * 
+   * If the tab is a list, this represents the values that are possible for the tab..
    * @return items
    **/
   @Schema(description = "If the tab is a list, this represents the values that are possible for the tab.")
@@ -869,6 +840,7 @@ public class TabMetadata {
     this.items = items;
   }
 
+
   /**
    * lastModified.
    *
@@ -881,7 +853,6 @@ public class TabMetadata {
 
   /**
    * The UTC DateTime this object was last modified. This is in ISO8601 format..
-   * 
    * @return lastModified
    **/
   @Schema(description = "The UTC DateTime this object was last modified. This is in ISO8601 format.")
@@ -896,6 +867,7 @@ public class TabMetadata {
     this.lastModified = lastModified;
   }
 
+
   /**
    * lastModifiedByDisplayName.
    *
@@ -908,7 +880,6 @@ public class TabMetadata {
 
   /**
    * The User Name of the DocuSign user who last modified this object..
-   * 
    * @return lastModifiedByDisplayName
    **/
   @Schema(description = "The User Name of the DocuSign user who last modified this object.")
@@ -923,6 +894,7 @@ public class TabMetadata {
     this.lastModifiedByDisplayName = lastModifiedByDisplayName;
   }
 
+
   /**
    * lastModifiedByUserId.
    *
@@ -935,7 +907,6 @@ public class TabMetadata {
 
   /**
    * The userId of the DocuSign user who last modified this object..
-   * 
    * @return lastModifiedByUserId
    **/
   @Schema(description = "The userId of the DocuSign user who last modified this object.")
@@ -950,6 +921,7 @@ public class TabMetadata {
     this.lastModifiedByUserId = lastModifiedByUserId;
   }
 
+
   /**
    * localePolicy.
    *
@@ -962,7 +934,6 @@ public class TabMetadata {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return localePolicy
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -977,6 +948,7 @@ public class TabMetadata {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * locked.
    *
@@ -989,7 +961,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   * 
    * @return locked
    **/
   @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
@@ -1004,6 +975,7 @@ public class TabMetadata {
     this.locked = locked;
   }
 
+
   /**
    * maximumLength.
    *
@@ -1016,7 +988,6 @@ public class TabMetadata {
 
   /**
    * The maximum number of entry characters supported by the custom tab..
-   * 
    * @return maximumLength
    **/
   @Schema(description = "The maximum number of entry characters supported by the custom tab.")
@@ -1031,6 +1002,7 @@ public class TabMetadata {
     this.maximumLength = maximumLength;
   }
 
+
   /**
    * maxNumericalValue.
    *
@@ -1043,7 +1015,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return maxNumericalValue
    **/
   @Schema(description = "")
@@ -1058,6 +1029,7 @@ public class TabMetadata {
     this.maxNumericalValue = maxNumericalValue;
   }
 
+
   /**
    * mergeField.
    *
@@ -1070,7 +1042,6 @@ public class TabMetadata {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
-   * 
    * @return mergeField
    **/
   @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
@@ -1085,6 +1056,7 @@ public class TabMetadata {
     this.mergeField = mergeField;
   }
 
+
   /**
    * minNumericalValue.
    *
@@ -1097,7 +1069,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return minNumericalValue
    **/
   @Schema(description = "")
@@ -1112,6 +1083,7 @@ public class TabMetadata {
     this.minNumericalValue = minNumericalValue;
   }
 
+
   /**
    * name.
    *
@@ -1124,7 +1096,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -1139,6 +1110,7 @@ public class TabMetadata {
     this.name = name;
   }
 
+
   /**
    * numericalValue.
    *
@@ -1151,7 +1123,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return numericalValue
    **/
   @Schema(description = "")
@@ -1166,6 +1137,7 @@ public class TabMetadata {
     this.numericalValue = numericalValue;
   }
 
+
   /**
    * paymentItemCode.
    *
@@ -1178,7 +1150,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return paymentItemCode
    **/
   @Schema(description = "")
@@ -1193,6 +1164,7 @@ public class TabMetadata {
     this.paymentItemCode = paymentItemCode;
   }
 
+
   /**
    * paymentItemDescription.
    *
@@ -1205,7 +1177,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return paymentItemDescription
    **/
   @Schema(description = "")
@@ -1220,6 +1191,7 @@ public class TabMetadata {
     this.paymentItemDescription = paymentItemDescription;
   }
 
+
   /**
    * paymentItemName.
    *
@@ -1232,7 +1204,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return paymentItemName
    **/
   @Schema(description = "")
@@ -1247,6 +1218,7 @@ public class TabMetadata {
     this.paymentItemName = paymentItemName;
   }
 
+
   /**
    * requireAll.
    *
@@ -1258,9 +1230,7 @@ public class TabMetadata {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this
-   * field to complete the envelope. .
-   * 
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
    **/
   @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
@@ -1275,6 +1245,7 @@ public class TabMetadata {
     this.requireAll = requireAll;
   }
 
+
   /**
    * required.
    *
@@ -1287,7 +1258,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -1302,6 +1272,7 @@ public class TabMetadata {
     this.required = required;
   }
 
+
   /**
    * requireInitialOnSharedChange.
    *
@@ -1313,9 +1284,7 @@ public class TabMetadata {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is
-   * required to initial when they modify a shared field..
-   * 
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
    **/
   @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
@@ -1330,6 +1299,7 @@ public class TabMetadata {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
   /**
    * scaleValue.
    *
@@ -1342,7 +1312,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return scaleValue
    **/
   @Schema(description = "")
@@ -1357,6 +1326,7 @@ public class TabMetadata {
     this.scaleValue = scaleValue;
   }
 
+
   /**
    * selected.
    *
@@ -1369,7 +1339,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return selected
    **/
   @Schema(description = "")
@@ -1384,6 +1353,7 @@ public class TabMetadata {
     this.selected = selected;
   }
 
+
   /**
    * shared.
    *
@@ -1396,7 +1366,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -1411,6 +1380,7 @@ public class TabMetadata {
     this.shared = shared;
   }
 
+
   /**
    * signatureProviderId.
    *
@@ -1423,7 +1393,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return signatureProviderId
    **/
   @Schema(description = "")
@@ -1438,6 +1407,7 @@ public class TabMetadata {
     this.signatureProviderId = signatureProviderId;
   }
 
+
   /**
    * stampType.
    *
@@ -1450,7 +1420,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return stampType
    **/
   @Schema(description = "")
@@ -1465,6 +1434,7 @@ public class TabMetadata {
     this.stampType = stampType;
   }
 
+
   /**
    * stampTypeMetadata.
    *
@@ -1477,7 +1447,6 @@ public class TabMetadata {
 
   /**
    * Metadata that indicates whether the `stampType` property is editable..
-   * 
    * @return stampTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `stampType` property is editable.")
@@ -1492,6 +1461,7 @@ public class TabMetadata {
     this.stampTypeMetadata = stampTypeMetadata;
   }
 
+
   /**
    * tabLabel.
    *
@@ -1504,7 +1474,6 @@ public class TabMetadata {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -1519,6 +1488,7 @@ public class TabMetadata {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * type.
    *
@@ -1530,12 +1500,7 @@ public class TabMetadata {
   }
 
   /**
-   * The type of this tab. Values are: Approve, CheckBox, Company, Date,
-   * DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula,
-   * FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number,
-   * Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5,
-   * or Zip5Dash4..
-   * 
+   * The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4..
    * @return type
    **/
   @Schema(description = "The type of this tab. Values are: Approve, CheckBox, Company, Date, DateSigned, Decline, Email, EmailAddress, EnvelopeId, FirstName, Formula, FullName, InitialHere, InitialHereOptional, LastName, List, Note, Number, Radio, SignerAttachment, SignHere, SignHereOptional, Ssn, Text, Title, Zip5, or Zip5Dash4.")
@@ -1550,6 +1515,7 @@ public class TabMetadata {
     this.type = type;
   }
 
+
   /**
    * underline.
    *
@@ -1562,7 +1528,6 @@ public class TabMetadata {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -1577,6 +1542,7 @@ public class TabMetadata {
     this.underline = underline;
   }
 
+
   /**
    * validationMessage.
    *
@@ -1588,9 +1554,7 @@ public class TabMetadata {
   }
 
   /**
-   * The message displayed if the custom tab fails input validation (either custom
-   * of embedded)..
-   * 
+   * The message displayed if the custom tab fails input validation (either custom of embedded)..
    * @return validationMessage
    **/
   @Schema(description = "The message displayed if the custom tab fails input validation (either custom of embedded).")
@@ -1605,6 +1569,7 @@ public class TabMetadata {
     this.validationMessage = validationMessage;
   }
 
+
   /**
    * validationPattern.
    *
@@ -1617,7 +1582,6 @@ public class TabMetadata {
 
   /**
    * A regular expression used to validate input for the tab..
-   * 
    * @return validationPattern
    **/
   @Schema(description = "A regular expression used to validate input for the tab.")
@@ -1632,6 +1596,7 @@ public class TabMetadata {
     this.validationPattern = validationPattern;
   }
 
+
   /**
    * validationType.
    *
@@ -1644,7 +1609,6 @@ public class TabMetadata {
 
   /**
    * .
-   * 
    * @return validationType
    **/
   @Schema(description = "")
@@ -1659,6 +1623,7 @@ public class TabMetadata {
     this.validationType = validationType;
   }
 
+
   /**
    * width.
    *
@@ -1671,7 +1636,6 @@ public class TabMetadata {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -1685,6 +1649,7 @@ public class TabMetadata {
   public void setWidth(String width) {
     this.width = width;
   }
+
 
   /**
    * Compares objects.
@@ -1761,15 +1726,9 @@ public class TabMetadata {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent,
-        anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument,
-        createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize,
-        height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName,
-        lastModifiedByUserId, localePolicy, locked, maximumLength, maxNumericalValue, mergeField, minNumericalValue,
-        name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required,
-        requireInitialOnSharedChange, scaleValue, selected, shared, signatureProviderId, stampType, stampTypeMetadata,
-        tabLabel, type, underline, validationMessage, validationPattern, validationType, width);
+    return Objects.hash(anchor, anchorCaseSensitive, anchorHorizontalAlignment, anchorIgnoreIfNotPresent, anchorMatchWholeWord, anchorUnits, anchorXOffset, anchorYOffset, bold, collaborative, concealValueOnDocument, createdByDisplayName, createdByUserId, customTabId, disableAutoSize, editable, font, fontColor, fontSize, height, includedInEmail, initialValue, italic, items, lastModified, lastModifiedByDisplayName, lastModifiedByUserId, localePolicy, locked, maximumLength, maxNumericalValue, mergeField, minNumericalValue, name, numericalValue, paymentItemCode, paymentItemDescription, paymentItemName, requireAll, required, requireInitialOnSharedChange, scaleValue, selected, shared, signatureProviderId, stampType, stampTypeMetadata, tabLabel, type, underline, validationMessage, validationPattern, validationType, width);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1778,7 +1737,7 @@ public class TabMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadata {\n");
-
+    
     sb.append("    anchor: ").append(toIndentedString(anchor)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
@@ -1849,3 +1808,4 @@ public class TabMetadata {
   }
 
 }
+

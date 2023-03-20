@@ -11,8 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The &#x60;connectCustomConfiguration&#x60; object describes how Connect is
- * configured for your account..
+ * The &#x60;connectCustomConfiguration&#x60; object describes how Connect is configured for your account..
  *
  */
 @Schema(description = "The `connectCustomConfiguration` object describes how Connect is configured for your account.")
@@ -147,6 +146,7 @@ public class ConnectCustomConfiguration {
   @JsonProperty("useSoapInterface")
   private String useSoapInterface = null;
 
+
   /**
    * allowEnvelopePublish.
    *
@@ -158,10 +158,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, data is sent to the urlToPublishTo web address. This
-   * option can be set to false to stop sending data while maintaining the Connect
-   * configuration information..
-   * 
+   * When set to **true**, data is sent to the urlToPublishTo web address. This option can be set to false to stop sending data while maintaining the Connect configuration information..
    * @return allowEnvelopePublish
    **/
   @Schema(description = "When set to **true**, data is sent to the urlToPublishTo web address. This option can be set to false to stop sending data while maintaining the Connect configuration information.")
@@ -176,6 +173,7 @@ public class ConnectCustomConfiguration {
     this.allowEnvelopePublish = allowEnvelopePublish;
   }
 
+
   /**
    * allowSalesforcePublish.
    *
@@ -188,7 +186,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return allowSalesforcePublish
    **/
   @Schema(description = "")
@@ -203,6 +200,7 @@ public class ConnectCustomConfiguration {
     this.allowSalesforcePublish = allowSalesforcePublish;
   }
 
+
   /**
    * allUsers.
    *
@@ -214,10 +212,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, the tracked envelope and recipient events for all
-   * users, including users that are added a later time, are sent through
-   * Connect..
-   * 
+   * When set to **true**, the tracked envelope and recipient events for all users, including users that are added a later time, are sent through Connect..
    * @return allUsers
    **/
   @Schema(description = "When set to **true**, the tracked envelope and recipient events for all users, including users that are added a later time, are sent through Connect.")
@@ -232,6 +227,7 @@ public class ConnectCustomConfiguration {
     this.allUsers = allUsers;
   }
 
+
   /**
    * allUsersExcept.
    *
@@ -244,7 +240,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return allUsersExcept
    **/
   @Schema(description = "")
@@ -259,6 +254,7 @@ public class ConnectCustomConfiguration {
     this.allUsersExcept = allUsersExcept;
   }
 
+
   /**
    * configurationType.
    *
@@ -270,9 +266,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The
-   * only supported value is **salesforce**..
-   * 
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
    **/
   @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
@@ -287,6 +281,7 @@ public class ConnectCustomConfiguration {
     this.configurationType = configurationType;
   }
 
+
   /**
    * connectId.
    *
@@ -298,8 +293,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * Specifies the DocuSign generated ID for the Connect configuration. .
-   * 
+   *  Specifies the DocuSign generated ID for the Connect configuration.  .
    * @return connectId
    **/
   @Schema(description = " Specifies the DocuSign generated ID for the Connect configuration.  ")
@@ -314,6 +308,7 @@ public class ConnectCustomConfiguration {
     this.connectId = connectId;
   }
 
+
   /**
    * deliveryMode.
    *
@@ -326,7 +321,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return deliveryMode
    **/
   @Schema(description = "")
@@ -341,6 +335,7 @@ public class ConnectCustomConfiguration {
     this.deliveryMode = deliveryMode;
   }
 
+
   /**
    * disabledBy.
    *
@@ -353,7 +348,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return disabledBy
    **/
   @Schema(description = "")
@@ -368,6 +362,7 @@ public class ConnectCustomConfiguration {
     this.disabledBy = disabledBy;
   }
 
+
   /**
    * enableLog.
    *
@@ -379,9 +374,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * This turns Connect logging on or off. When set to **true**, logging is turned
-   * on..
-   * 
+   * This turns Connect logging on or off. When set to **true**, logging is turned on..
    * @return enableLog
    **/
   @Schema(description = "This turns Connect logging on or off. When set to **true**, logging is turned on.")
@@ -396,6 +389,7 @@ public class ConnectCustomConfiguration {
     this.enableLog = enableLog;
   }
 
+
   /**
    * envelopeEvents.
    *
@@ -405,7 +399,7 @@ public class ConnectCustomConfiguration {
     this.envelopeEvents = envelopeEvents;
     return this;
   }
-
+  
   /**
    * addEnvelopeEventsItem.
    *
@@ -420,10 +414,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * A comma separated list of ï¿½Envelopeï¿½ related events that are tracked
-   * through Connect. The possible event values are: Sent, Delivered, Completed,
-   * Declined, and Voided..
-   * 
+   * A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided..
    * @return envelopeEvents
    **/
   @Schema(description = "A comma separated list of ï¿½Envelopeï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, and Voided.")
@@ -438,6 +429,7 @@ public class ConnectCustomConfiguration {
     this.envelopeEvents = envelopeEvents;
   }
 
+
   /**
    * eventData.
    *
@@ -449,10 +441,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * Allows you to specify the format of the information the Connect webhooks
-   * returns. For more information, see [Connect webhooks with JSON
-   * notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
-   * 
+   * Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications).
    * @return eventData
    **/
   @Schema(description = "Allows you to specify the format of the information the Connect webhooks returns. For more information, see [Connect webhooks with JSON notifications](https://www.docusign.com/blog/developers/connect-webhooks-json-notifications)")
@@ -467,6 +456,7 @@ public class ConnectCustomConfiguration {
     this.eventData = eventData;
   }
 
+
   /**
    * events.
    *
@@ -476,7 +466,7 @@ public class ConnectCustomConfiguration {
     this.events = events;
     return this;
   }
-
+  
   /**
    * addEventsItem.
    *
@@ -492,7 +482,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return events
    **/
   @Schema(description = "")
@@ -507,6 +496,7 @@ public class ConnectCustomConfiguration {
     this.events = events;
   }
 
+
   /**
    * externalFolderId.
    *
@@ -519,7 +509,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return externalFolderId
    **/
   @Schema(description = "")
@@ -534,6 +523,7 @@ public class ConnectCustomConfiguration {
     this.externalFolderId = externalFolderId;
   }
 
+
   /**
    * externalFolderLabel.
    *
@@ -546,7 +536,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return externalFolderLabel
    **/
   @Schema(description = "")
@@ -561,6 +550,7 @@ public class ConnectCustomConfiguration {
     this.externalFolderLabel = externalFolderLabel;
   }
 
+
   /**
    * groupIds.
    *
@@ -570,7 +560,7 @@ public class ConnectCustomConfiguration {
     this.groupIds = groupIds;
     return this;
   }
-
+  
   /**
    * addGroupIdsItem.
    *
@@ -586,7 +576,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return groupIds
    **/
   @Schema(description = "")
@@ -601,6 +590,7 @@ public class ConnectCustomConfiguration {
     this.groupIds = groupIds;
   }
 
+
   /**
    * includeCertificateOfCompletion.
    *
@@ -612,9 +602,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, the Connect Service includes the Certificate of
-   * Completion with completed envelopes. .
-   * 
+   * When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. .
    * @return includeCertificateOfCompletion
    **/
   @Schema(description = "When set to **true**, the Connect Service includes the Certificate of Completion with completed envelopes. ")
@@ -629,6 +617,7 @@ public class ConnectCustomConfiguration {
     this.includeCertificateOfCompletion = includeCertificateOfCompletion;
   }
 
+
   /**
    * includeCertSoapHeader.
    *
@@ -641,7 +630,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return includeCertSoapHeader
    **/
   @Schema(description = "")
@@ -656,6 +644,7 @@ public class ConnectCustomConfiguration {
     this.includeCertSoapHeader = includeCertSoapHeader;
   }
 
+
   /**
    * includeDocumentFields.
    *
@@ -667,10 +656,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, the Document Fields associated with envelope documents
-   * are included in the data. Document Fields are optional custom name-value
-   * pairs added to documents using the API. .
-   * 
+   * When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. .
    * @return includeDocumentFields
    **/
   @Schema(description = "When set to **true**, the Document Fields associated with envelope documents are included in the data. Document Fields are optional custom name-value pairs added to documents using the API. ")
@@ -685,6 +671,7 @@ public class ConnectCustomConfiguration {
     this.includeDocumentFields = includeDocumentFields;
   }
 
+
   /**
    * includeDocuments.
    *
@@ -696,9 +683,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, Connect will send the PDF document along with the
-   * update XML..
-   * 
+   * When set to **true**, Connect will send the PDF document along with the update XML..
    * @return includeDocuments
    **/
   @Schema(description = "When set to **true**, Connect will send the PDF document along with the update XML.")
@@ -713,6 +698,7 @@ public class ConnectCustomConfiguration {
     this.includeDocuments = includeDocuments;
   }
 
+
   /**
    * includeEnvelopeVoidReason.
    *
@@ -724,9 +710,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, Connect will include the voidedReason for voided
-   * envelopes..
-   * 
+   * When set to **true**, Connect will include the voidedReason for voided envelopes..
    * @return includeEnvelopeVoidReason
    **/
   @Schema(description = "When set to **true**, Connect will include the voidedReason for voided envelopes.")
@@ -741,6 +725,7 @@ public class ConnectCustomConfiguration {
     this.includeEnvelopeVoidReason = includeEnvelopeVoidReason;
   }
 
+
   /**
    * includeHMAC.
    *
@@ -753,7 +738,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return includeHMAC
    **/
   @Schema(description = "")
@@ -768,6 +752,7 @@ public class ConnectCustomConfiguration {
     this.includeHMAC = includeHMAC;
   }
 
+
   /**
    * includeOAuth.
    *
@@ -780,7 +765,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return includeOAuth
    **/
   @Schema(description = "")
@@ -795,6 +779,7 @@ public class ConnectCustomConfiguration {
     this.includeOAuth = includeOAuth;
   }
 
+
   /**
    * includeSenderAccountasCustomField.
    *
@@ -806,9 +791,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, Connect will include the sender account as Custom Field
-   * in the data..
-   * 
+   * When set to **true**, Connect will include the sender account as Custom Field in the data..
    * @return includeSenderAccountasCustomField
    **/
   @Schema(description = "When set to **true**, Connect will include the sender account as Custom Field in the data.")
@@ -823,6 +806,7 @@ public class ConnectCustomConfiguration {
     this.includeSenderAccountasCustomField = includeSenderAccountasCustomField;
   }
 
+
   /**
    * includeTimeZoneInformation.
    *
@@ -834,9 +818,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, Connect will include the envelope time zone
-   * information..
-   * 
+   * When set to **true**, Connect will include the envelope time zone information..
    * @return includeTimeZoneInformation
    **/
   @Schema(description = "When set to **true**, Connect will include the envelope time zone information.")
@@ -851,6 +833,7 @@ public class ConnectCustomConfiguration {
     this.includeTimeZoneInformation = includeTimeZoneInformation;
   }
 
+
   /**
    * integratorManaged.
    *
@@ -863,7 +846,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return integratorManaged
    **/
   @Schema(description = "")
@@ -878,6 +860,7 @@ public class ConnectCustomConfiguration {
     this.integratorManaged = integratorManaged;
   }
 
+
   /**
    * name.
    *
@@ -889,9 +872,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * The name of the Connect configuration. The name helps identify the
-   * configuration in the list..
-   * 
+   * The name of the Connect configuration. The name helps identify the configuration in the list..
    * @return name
    **/
   @Schema(description = "The name of the Connect configuration. The name helps identify the configuration in the list.")
@@ -906,6 +887,7 @@ public class ConnectCustomConfiguration {
     this.name = name;
   }
 
+
   /**
    * password.
    *
@@ -918,7 +900,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -933,6 +914,7 @@ public class ConnectCustomConfiguration {
     this.password = password;
   }
 
+
   /**
    * recipientEvents.
    *
@@ -942,7 +924,7 @@ public class ConnectCustomConfiguration {
     this.recipientEvents = recipientEvents;
     return this;
   }
-
+  
   /**
    * addRecipientEventsItem.
    *
@@ -957,10 +939,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * A comma separated list of ï¿½Recipientï¿½ related events that are tracked
-   * through Connect. The possible event values are: Sent, Delivered, Completed,
-   * Declined, AuthenticationFailed, and AutoResponded..
-   * 
+   * A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded..
    * @return recipientEvents
    **/
   @Schema(description = "A comma separated list of ï¿½Recipientï¿½ related events that are tracked through Connect. The possible event values are: Sent, Delivered, Completed, Declined, AuthenticationFailed, and AutoResponded.")
@@ -975,6 +954,7 @@ public class ConnectCustomConfiguration {
     this.recipientEvents = recipientEvents;
   }
 
+
   /**
    * requireMutualTls.
    *
@@ -987,7 +967,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return requireMutualTls
    **/
   @Schema(description = "")
@@ -1002,6 +981,7 @@ public class ConnectCustomConfiguration {
     this.requireMutualTls = requireMutualTls;
   }
 
+
   /**
    * requiresAcknowledgement.
    *
@@ -1013,15 +993,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, and a publication message fails to be acknowledged, the
-   * message goes back into the queue and the system will retry delivery after a
-   * successful acknowledgement is received. If the delivery fails a second time,
-   * the message is not returned to the queue for sending until Connect receives a
-   * successful acknowledgement and it has been at least 24 hours since the
-   * previous retry. There is a maximum of ten retries Alternately, you can use
-   * Republish Connect Information to manually republish the envelope
-   * information..
-   * 
+   * When set to **true**, and a publication message fails to be acknowledged, the message goes back into the queue and the system will retry delivery after a successful acknowledgement is received. If the delivery fails a second time, the message is not returned to the queue for sending until Connect receives a successful acknowledgement and it has been at least 24 hours since the previous retry. There is a maximum of ten retries Alternately, you can use Republish Connect Information to manually republish the envelope information..
    * @return requiresAcknowledgement
    **/
   @Schema(description = "When set to **true**, and a publication message fails to be acknowledged, the message goes back into the queue and the system will retry delivery after a successful acknowledgement is received. If the delivery fails a second time, the message is not returned to the queue for sending until Connect receives a successful acknowledgement and it has been at least 24 hours since the previous retry. There is a maximum of ten retries Alternately, you can use Republish Connect Information to manually republish the envelope information.")
@@ -1036,6 +1008,7 @@ public class ConnectCustomConfiguration {
     this.requiresAcknowledgement = requiresAcknowledgement;
   }
 
+
   /**
    * salesforceApiVersion.
    *
@@ -1048,7 +1021,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return salesforceApiVersion
    **/
   @Schema(description = "")
@@ -1063,6 +1035,7 @@ public class ConnectCustomConfiguration {
     this.salesforceApiVersion = salesforceApiVersion;
   }
 
+
   /**
    * salesforceAuthcode.
    *
@@ -1075,7 +1048,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return salesforceAuthcode
    **/
   @Schema(description = "")
@@ -1090,6 +1062,7 @@ public class ConnectCustomConfiguration {
     this.salesforceAuthcode = salesforceAuthcode;
   }
 
+
   /**
    * salesforceCallBackUrl.
    *
@@ -1102,7 +1075,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return salesforceCallBackUrl
    **/
   @Schema(description = "")
@@ -1117,6 +1089,7 @@ public class ConnectCustomConfiguration {
     this.salesforceCallBackUrl = salesforceCallBackUrl;
   }
 
+
   /**
    * salesforceDocumentsAsContentFiles.
    *
@@ -1129,7 +1102,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return salesforceDocumentsAsContentFiles
    **/
   @Schema(description = "")
@@ -1144,6 +1116,7 @@ public class ConnectCustomConfiguration {
     this.salesforceDocumentsAsContentFiles = salesforceDocumentsAsContentFiles;
   }
 
+
   /**
    * senderOverride.
    *
@@ -1156,7 +1129,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return senderOverride
    **/
   @Schema(description = "")
@@ -1171,6 +1143,7 @@ public class ConnectCustomConfiguration {
     this.senderOverride = senderOverride;
   }
 
+
   /**
    * senderSelectableItems.
    *
@@ -1180,7 +1153,7 @@ public class ConnectCustomConfiguration {
     this.senderSelectableItems = senderSelectableItems;
     return this;
   }
-
+  
   /**
    * addSenderSelectableItemsItem.
    *
@@ -1196,7 +1169,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return senderSelectableItems
    **/
   @Schema(description = "")
@@ -1211,6 +1183,7 @@ public class ConnectCustomConfiguration {
     this.senderSelectableItems = senderSelectableItems;
   }
 
+
   /**
    * sfObjects.
    *
@@ -1220,7 +1193,7 @@ public class ConnectCustomConfiguration {
     this.sfObjects = sfObjects;
     return this;
   }
-
+  
   /**
    * addSfObjectsItem.
    *
@@ -1236,7 +1209,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return sfObjects
    **/
   @Schema(description = "")
@@ -1251,6 +1223,7 @@ public class ConnectCustomConfiguration {
     this.sfObjects = sfObjects;
   }
 
+
   /**
    * signMessageWithX509Certificate.
    *
@@ -1262,9 +1235,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, Connect messages are signed with an X509 certificate.
-   * This provides support for 2-way SSL..
-   * 
+   * When set to **true**, Connect messages are signed with an X509 certificate. This provides support for 2-way SSL..
    * @return signMessageWithX509Certificate
    **/
   @Schema(description = "When set to **true**, Connect messages are signed with an X509 certificate. This provides support for 2-way SSL.")
@@ -1279,6 +1250,7 @@ public class ConnectCustomConfiguration {
     this.signMessageWithX509Certificate = signMessageWithX509Certificate;
   }
 
+
   /**
    * soapNamespace.
    *
@@ -1290,9 +1262,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * The namespace of the SOAP interface. The namespace value must be set if
-   * useSoapInterface is set to true..
-   * 
+   * The namespace of the SOAP interface.  The namespace value must be set if useSoapInterface is set to true..
    * @return soapNamespace
    **/
   @Schema(description = "The namespace of the SOAP interface.  The namespace value must be set if useSoapInterface is set to true.")
@@ -1307,6 +1277,7 @@ public class ConnectCustomConfiguration {
     this.soapNamespace = soapNamespace;
   }
 
+
   /**
    * urlToPublishTo.
    *
@@ -1318,9 +1289,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * This is the web address and name of your listener or Retrieving Service
-   * endpoint. You need to include HTTPS:// in the web address..
-   * 
+   * This is the web address and name of your listener or Retrieving Service endpoint. You need to include HTTPS:// in the web address..
    * @return urlToPublishTo
    **/
   @Schema(description = "This is the web address and name of your listener or Retrieving Service endpoint. You need to include HTTPS:// in the web address.")
@@ -1335,6 +1304,7 @@ public class ConnectCustomConfiguration {
     this.urlToPublishTo = urlToPublishTo;
   }
 
+
   /**
    * userIds.
    *
@@ -1344,7 +1314,7 @@ public class ConnectCustomConfiguration {
     this.userIds = userIds;
     return this;
   }
-
+  
   /**
    * addUserIdsItem.
    *
@@ -1359,11 +1329,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * A comma separated list of userIds. This sets the users associated with the
-   * tracked envelope and recipient events. When one of the event occurs for a set
-   * user, the information is sent through Connect. ###### Note: If allUsers is
-   * set to ï¿½falseï¿½ then you must provide a list of user idï¿½s..
-   * 
+   * A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s..
    * @return userIds
    **/
   @Schema(description = "A comma separated list of userIds. This sets the users associated with the tracked envelope and recipient events. When one of the event occurs for a set user, the information is sent through Connect.   ###### Note: If allUsers is set to ï¿½falseï¿½ then you must provide a list of user idï¿½s.")
@@ -1378,6 +1344,7 @@ public class ConnectCustomConfiguration {
     this.userIds = userIds;
   }
 
+
   /**
    * userName.
    *
@@ -1390,7 +1357,6 @@ public class ConnectCustomConfiguration {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -1405,6 +1371,7 @@ public class ConnectCustomConfiguration {
     this.userName = userName;
   }
 
+
   /**
    * useSoapInterface.
    *
@@ -1416,9 +1383,7 @@ public class ConnectCustomConfiguration {
   }
 
   /**
-   * When set to **true**, indicates that the `urlToPublishTo` property contains a
-   * SOAP endpoint..
-   * 
+   * When set to **true**, indicates that the `urlToPublishTo` property contains a SOAP endpoint..
    * @return useSoapInterface
    **/
   @Schema(description = "When set to **true**, indicates that the `urlToPublishTo` property contains a SOAP endpoint.")
@@ -1432,6 +1397,7 @@ public class ConnectCustomConfiguration {
   public void setUseSoapInterface(String useSoapInterface) {
     this.useSoapInterface = useSoapInterface;
   }
+
 
   /**
    * Compares objects.
@@ -1462,17 +1428,14 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.externalFolderId, connectCustomConfiguration.externalFolderId) &&
         Objects.equals(this.externalFolderLabel, connectCustomConfiguration.externalFolderLabel) &&
         Objects.equals(this.groupIds, connectCustomConfiguration.groupIds) &&
-        Objects.equals(this.includeCertificateOfCompletion, connectCustomConfiguration.includeCertificateOfCompletion)
-        &&
+        Objects.equals(this.includeCertificateOfCompletion, connectCustomConfiguration.includeCertificateOfCompletion) &&
         Objects.equals(this.includeCertSoapHeader, connectCustomConfiguration.includeCertSoapHeader) &&
         Objects.equals(this.includeDocumentFields, connectCustomConfiguration.includeDocumentFields) &&
         Objects.equals(this.includeDocuments, connectCustomConfiguration.includeDocuments) &&
         Objects.equals(this.includeEnvelopeVoidReason, connectCustomConfiguration.includeEnvelopeVoidReason) &&
         Objects.equals(this.includeHMAC, connectCustomConfiguration.includeHMAC) &&
         Objects.equals(this.includeOAuth, connectCustomConfiguration.includeOAuth) &&
-        Objects.equals(this.includeSenderAccountasCustomField,
-            connectCustomConfiguration.includeSenderAccountasCustomField)
-        &&
+        Objects.equals(this.includeSenderAccountasCustomField, connectCustomConfiguration.includeSenderAccountasCustomField) &&
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
         Objects.equals(this.integratorManaged, connectCustomConfiguration.integratorManaged) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
@@ -1483,14 +1446,11 @@ public class ConnectCustomConfiguration {
         Objects.equals(this.salesforceApiVersion, connectCustomConfiguration.salesforceApiVersion) &&
         Objects.equals(this.salesforceAuthcode, connectCustomConfiguration.salesforceAuthcode) &&
         Objects.equals(this.salesforceCallBackUrl, connectCustomConfiguration.salesforceCallBackUrl) &&
-        Objects.equals(this.salesforceDocumentsAsContentFiles,
-            connectCustomConfiguration.salesforceDocumentsAsContentFiles)
-        &&
+        Objects.equals(this.salesforceDocumentsAsContentFiles, connectCustomConfiguration.salesforceDocumentsAsContentFiles) &&
         Objects.equals(this.senderOverride, connectCustomConfiguration.senderOverride) &&
         Objects.equals(this.senderSelectableItems, connectCustomConfiguration.senderSelectableItems) &&
         Objects.equals(this.sfObjects, connectCustomConfiguration.sfObjects) &&
-        Objects.equals(this.signMessageWithX509Certificate, connectCustomConfiguration.signMessageWithX509Certificate)
-        &&
+        Objects.equals(this.signMessageWithX509Certificate, connectCustomConfiguration.signMessageWithX509Certificate) &&
         Objects.equals(this.soapNamespace, connectCustomConfiguration.soapNamespace) &&
         Objects.equals(this.urlToPublishTo, connectCustomConfiguration.urlToPublishTo) &&
         Objects.equals(this.userIds, connectCustomConfiguration.userIds) &&
@@ -1503,15 +1463,9 @@ public class ConnectCustomConfiguration {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType,
-        connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId,
-        externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields,
-        includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField,
-        includeTimeZoneInformation, integratorManaged, name, password, recipientEvents, requireMutualTls,
-        requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl,
-        salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects,
-        signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1520,7 +1474,7 @@ public class ConnectCustomConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectCustomConfiguration {\n");
-
+    
     sb.append("    allowEnvelopePublish: ").append(toIndentedString(allowEnvelopePublish)).append("\n");
     sb.append("    allowSalesforcePublish: ").append(toIndentedString(allowSalesforcePublish)).append("\n");
     sb.append("    allUsers: ").append(toIndentedString(allUsers)).append("\n");
@@ -1536,16 +1490,14 @@ public class ConnectCustomConfiguration {
     sb.append("    externalFolderId: ").append(toIndentedString(externalFolderId)).append("\n");
     sb.append("    externalFolderLabel: ").append(toIndentedString(externalFolderLabel)).append("\n");
     sb.append("    groupIds: ").append(toIndentedString(groupIds)).append("\n");
-    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion))
-        .append("\n");
+    sb.append("    includeCertificateOfCompletion: ").append(toIndentedString(includeCertificateOfCompletion)).append("\n");
     sb.append("    includeCertSoapHeader: ").append(toIndentedString(includeCertSoapHeader)).append("\n");
     sb.append("    includeDocumentFields: ").append(toIndentedString(includeDocumentFields)).append("\n");
     sb.append("    includeDocuments: ").append(toIndentedString(includeDocuments)).append("\n");
     sb.append("    includeEnvelopeVoidReason: ").append(toIndentedString(includeEnvelopeVoidReason)).append("\n");
     sb.append("    includeHMAC: ").append(toIndentedString(includeHMAC)).append("\n");
     sb.append("    includeOAuth: ").append(toIndentedString(includeOAuth)).append("\n");
-    sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField))
-        .append("\n");
+    sb.append("    includeSenderAccountasCustomField: ").append(toIndentedString(includeSenderAccountasCustomField)).append("\n");
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
     sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -1556,13 +1508,11 @@ public class ConnectCustomConfiguration {
     sb.append("    salesforceApiVersion: ").append(toIndentedString(salesforceApiVersion)).append("\n");
     sb.append("    salesforceAuthcode: ").append(toIndentedString(salesforceAuthcode)).append("\n");
     sb.append("    salesforceCallBackUrl: ").append(toIndentedString(salesforceCallBackUrl)).append("\n");
-    sb.append("    salesforceDocumentsAsContentFiles: ").append(toIndentedString(salesforceDocumentsAsContentFiles))
-        .append("\n");
+    sb.append("    salesforceDocumentsAsContentFiles: ").append(toIndentedString(salesforceDocumentsAsContentFiles)).append("\n");
     sb.append("    senderOverride: ").append(toIndentedString(senderOverride)).append("\n");
     sb.append("    senderSelectableItems: ").append(toIndentedString(senderSelectableItems)).append("\n");
     sb.append("    sfObjects: ").append(toIndentedString(sfObjects)).append("\n");
-    sb.append("    signMessageWithX509Certificate: ").append(toIndentedString(signMessageWithX509Certificate))
-        .append("\n");
+    sb.append("    signMessageWithX509Certificate: ").append(toIndentedString(signMessageWithX509Certificate)).append("\n");
     sb.append("    soapNamespace: ").append(toIndentedString(soapNamespace)).append("\n");
     sb.append("    urlToPublishTo: ").append(toIndentedString(urlToPublishTo)).append("\n");
     sb.append("    userIds: ").append(toIndentedString(userIds)).append("\n");
@@ -1584,3 +1534,4 @@ public class ConnectCustomConfiguration {
   }
 
 }
+

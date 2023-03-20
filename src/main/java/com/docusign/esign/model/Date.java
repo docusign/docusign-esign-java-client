@@ -14,12 +14,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A tab that allows the recipient to enter a date. Date tabs are one-line
- * fields that allow date information to be entered in any format. The tooltip
- * for this tab recommends entering the date as MM/DD/YYYY, but this is not
- * enforced. The format entered by the signer is retained. If you need a
- * particular date format enforced, DocuSign recommends using a Text tab with a
- * validation pattern and a validation message to enforce the format. .
+ * A tab that allows the recipient to enter a date. Date tabs are one-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained. If you need a particular date format enforced, DocuSign recommends using a Text tab with a validation pattern and a validation message to enforce the format. .
  *
  */
 @Schema(description = "A tab that allows the recipient to enter a date. Date tabs are one-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained. If you need a particular date format enforced, DocuSign recommends using a Text tab with a validation pattern and a validation message to enforce the format. ")
@@ -373,6 +368,7 @@ public class Date {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -385,7 +381,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
   @Schema(description = "")
@@ -400,6 +395,7 @@ public class Date {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
+
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
@@ -411,9 +407,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
-   * property is editable..
-   * 
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
@@ -428,6 +422,7 @@ public class Date {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -439,9 +434,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -456,6 +449,7 @@ public class Date {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorCaseSensitiveMetadata.
    *
@@ -467,9 +461,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
@@ -484,6 +476,7 @@ public class Date {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -495,9 +488,7 @@ public class Date {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -512,6 +503,7 @@ public class Date {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorHorizontalAlignmentMetadata.
    *
@@ -523,9 +515,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
@@ -540,6 +530,7 @@ public class Date {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -551,9 +542,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -568,6 +557,7 @@ public class Date {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
@@ -579,9 +569,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
@@ -596,6 +584,7 @@ public class Date {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -607,10 +596,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -625,6 +611,7 @@ public class Date {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorMatchWholeWordMetadata.
    *
@@ -636,9 +623,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
@@ -653,6 +638,7 @@ public class Date {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
+
   /**
    * anchorString.
    *
@@ -665,7 +651,6 @@ public class Date {
 
   /**
    * Anchor text information for a radio button..
-   * 
    * @return anchorString
    **/
   @Schema(description = "Anchor text information for a radio button.")
@@ -680,6 +665,7 @@ public class Date {
     this.anchorString = anchorString;
   }
 
+
   /**
    * anchorStringMetadata.
    *
@@ -692,7 +678,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
-   * 
    * @return anchorStringMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
@@ -707,6 +692,7 @@ public class Date {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
+
   /**
    * anchorTabProcessorVersion.
    *
@@ -719,7 +705,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return anchorTabProcessorVersion
    **/
   @Schema(description = "")
@@ -734,6 +719,7 @@ public class Date {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
+
   /**
    * anchorTabProcessorVersionMetadata.
    *
@@ -746,7 +732,6 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return anchorTabProcessorVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -761,6 +746,7 @@ public class Date {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -772,9 +758,7 @@ public class Date {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -789,6 +773,7 @@ public class Date {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorUnitsMetadata.
    *
@@ -801,7 +786,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
-   * 
    * @return anchorUnitsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
@@ -816,6 +800,7 @@ public class Date {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -827,9 +812,7 @@ public class Date {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -844,6 +827,7 @@ public class Date {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorXOffsetMetadata.
    *
@@ -856,7 +840,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
-   * 
    * @return anchorXOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
@@ -871,6 +854,7 @@ public class Date {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -882,9 +866,7 @@ public class Date {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -899,6 +881,7 @@ public class Date {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * anchorYOffsetMetadata.
    *
@@ -911,7 +894,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
-   * 
    * @return anchorYOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
@@ -926,6 +908,7 @@ public class Date {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
+
   /**
    * bold.
    *
@@ -938,7 +921,6 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -953,6 +935,7 @@ public class Date {
     this.bold = bold;
   }
 
+
   /**
    * boldMetadata.
    *
@@ -965,7 +948,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
-   * 
    * @return boldMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
@@ -980,6 +962,7 @@ public class Date {
     this.boldMetadata = boldMetadata;
   }
 
+
   /**
    * caption.
    *
@@ -992,7 +975,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return caption
    **/
   @Schema(description = "")
@@ -1007,6 +989,7 @@ public class Date {
     this.caption = caption;
   }
 
+
   /**
    * captionMetadata.
    *
@@ -1018,8 +1001,7 @@ public class Date {
   }
 
   /**
-   * Get captionMetadata.
-   * 
+   * .
    * @return captionMetadata
    **/
   @Schema(description = "")
@@ -1034,6 +1016,7 @@ public class Date {
     this.captionMetadata = captionMetadata;
   }
 
+
   /**
    * concealValueOnDocument.
    *
@@ -1045,13 +1028,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is
-   * adding or modifying the information in the field, but the data is not visible
-   * (the characters are hidden by asterisks) to any other signer or the sender.
-   * When an envelope is completed the information is available to the sender
-   * through the Form Data link in the DocuSign Console. This setting applies only
-   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
-   * 
+   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
    * @return concealValueOnDocument
    **/
   @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
@@ -1066,6 +1043,7 @@ public class Date {
     this.concealValueOnDocument = concealValueOnDocument;
   }
 
+
   /**
    * concealValueOnDocumentMetadata.
    *
@@ -1077,9 +1055,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `concealValueOnDocument` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `concealValueOnDocument` property is editable..
    * @return concealValueOnDocumentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
@@ -1094,6 +1070,7 @@ public class Date {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
 
+
   /**
    * conditionalParentLabel.
    *
@@ -1105,9 +1082,7 @@ public class Date {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls
-   * this tab's visibility..
-   * 
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
    **/
   @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
@@ -1122,6 +1097,7 @@ public class Date {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
   /**
    * conditionalParentLabelMetadata.
    *
@@ -1133,9 +1109,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
@@ -1150,6 +1124,7 @@ public class Date {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
+
   /**
    * conditionalParentValue.
    *
@@ -1161,11 +1136,7 @@ public class Date {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the
-   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
-   * Signature, or Optional Initial use \"on\" as the value to show that the
-   * parent tab is active. .
-   * 
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
    **/
   @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
@@ -1180,6 +1151,7 @@ public class Date {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
   /**
    * conditionalParentValueMetadata.
    *
@@ -1191,9 +1163,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
@@ -1208,6 +1178,7 @@ public class Date {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
+
   /**
    * customTabId.
    *
@@ -1219,10 +1190,7 @@ public class Date {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This
-   * can only be used when adding new tabs for a recipient. When used, the new tab
-   * inherits all the custom tab properties..
-   * 
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
    **/
   @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
@@ -1237,6 +1205,7 @@ public class Date {
     this.customTabId = customTabId;
   }
 
+
   /**
    * customTabIdMetadata.
    *
@@ -1249,7 +1218,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
-   * 
    * @return customTabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
@@ -1264,6 +1232,7 @@ public class Date {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
+
   /**
    * disableAutoSize.
    *
@@ -1275,11 +1244,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in
-   * the signing screen when the signer enters data. If disabled users will only
-   * be able enter as much data as the text box can hold. By default this is
-   * false. This property only affects single line text boxes..
-   * 
+   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
    * @return disableAutoSize
    **/
   @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
@@ -1294,6 +1259,7 @@ public class Date {
     this.disableAutoSize = disableAutoSize;
   }
 
+
   /**
    * disableAutoSizeMetadata.
    *
@@ -1306,7 +1272,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `disableAutoSize` property is editable..
-   * 
    * @return disableAutoSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableAutoSize` property is editable.")
@@ -1321,6 +1286,7 @@ public class Date {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
 
+
   /**
    * documentId.
    *
@@ -1332,9 +1298,7 @@ public class Date {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -1349,6 +1313,7 @@ public class Date {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdMetadata.
    *
@@ -1361,7 +1326,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
-   * 
    * @return documentIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
@@ -1376,6 +1340,7 @@ public class Date {
     this.documentIdMetadata = documentIdMetadata;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1387,12 +1352,10 @@ public class Date {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1403,6 +1366,7 @@ public class Date {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
@@ -1415,11 +1379,7 @@ public class Date {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -1434,6 +1394,7 @@ public class Date {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -1445,10 +1406,7 @@ public class Date {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -1463,6 +1421,7 @@ public class Date {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontColorMetadata.
    *
@@ -1475,7 +1434,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
-   * 
    * @return fontColorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
@@ -1490,6 +1448,7 @@ public class Date {
     this.fontColorMetadata = fontColorMetadata;
   }
 
+
   /**
    * fontMetadata.
    *
@@ -1502,7 +1461,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
-   * 
    * @return fontMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `font` property is editable.")
@@ -1517,6 +1475,7 @@ public class Date {
     this.fontMetadata = fontMetadata;
   }
 
+
   /**
    * fontSize.
    *
@@ -1528,10 +1487,7 @@ public class Date {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -1546,6 +1502,7 @@ public class Date {
     this.fontSize = fontSize;
   }
 
+
   /**
    * fontSizeMetadata.
    *
@@ -1558,7 +1515,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
-   * 
    * @return fontSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
@@ -1573,6 +1529,7 @@ public class Date {
     this.fontSizeMetadata = fontSizeMetadata;
   }
 
+
   /**
    * formOrder.
    *
@@ -1585,7 +1542,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return formOrder
    **/
   @Schema(description = "")
@@ -1600,6 +1556,7 @@ public class Date {
     this.formOrder = formOrder;
   }
 
+
   /**
    * formOrderMetadata.
    *
@@ -1612,7 +1569,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
-   * 
    * @return formOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
@@ -1627,6 +1583,7 @@ public class Date {
     this.formOrderMetadata = formOrderMetadata;
   }
 
+
   /**
    * formPageLabel.
    *
@@ -1639,7 +1596,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return formPageLabel
    **/
   @Schema(description = "")
@@ -1654,6 +1610,7 @@ public class Date {
     this.formPageLabel = formPageLabel;
   }
 
+
   /**
    * formPageLabelMetadata.
    *
@@ -1666,7 +1623,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
-   * 
    * @return formPageLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
@@ -1681,6 +1637,7 @@ public class Date {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
+
   /**
    * formPageNumber.
    *
@@ -1693,7 +1650,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return formPageNumber
    **/
   @Schema(description = "")
@@ -1708,6 +1664,7 @@ public class Date {
     this.formPageNumber = formPageNumber;
   }
 
+
   /**
    * formPageNumberMetadata.
    *
@@ -1720,7 +1677,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
-   * 
    * @return formPageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
@@ -1735,6 +1691,7 @@ public class Date {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
+
   /**
    * height.
    *
@@ -1747,7 +1704,6 @@ public class Date {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -1762,6 +1718,7 @@ public class Date {
     this.height = height;
   }
 
+
   /**
    * heightMetadata.
    *
@@ -1774,7 +1731,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
-   * 
    * @return heightMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `height` property is editable.")
@@ -1789,6 +1745,7 @@ public class Date {
     this.heightMetadata = heightMetadata;
   }
 
+
   /**
    * italic.
    *
@@ -1801,7 +1758,6 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -1816,6 +1772,7 @@ public class Date {
     this.italic = italic;
   }
 
+
   /**
    * italicMetadata.
    *
@@ -1828,7 +1785,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
-   * 
    * @return italicMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
@@ -1843,6 +1799,7 @@ public class Date {
     this.italicMetadata = italicMetadata;
   }
 
+
   /**
    * localePolicy.
    *
@@ -1855,7 +1812,6 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return localePolicy
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1870,6 +1826,7 @@ public class Date {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * locked.
    *
@@ -1882,7 +1839,6 @@ public class Date {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   * 
    * @return locked
    **/
   @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
@@ -1897,6 +1853,7 @@ public class Date {
     this.locked = locked;
   }
 
+
   /**
    * lockedMetadata.
    *
@@ -1909,7 +1866,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
-   * 
    * @return lockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
@@ -1924,6 +1880,7 @@ public class Date {
     this.lockedMetadata = lockedMetadata;
   }
 
+
   /**
    * maxLength.
    *
@@ -1935,9 +1892,7 @@ public class Date {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the
-   * property is a string..
-   * 
+   * An optional value that describes the maximum length of the property when the property is a string..
    * @return maxLength
    **/
   @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
@@ -1952,6 +1907,7 @@ public class Date {
     this.maxLength = maxLength;
   }
 
+
   /**
    * maxLengthMetadata.
    *
@@ -1964,7 +1920,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `maxLength` property is editable..
-   * 
    * @return maxLengthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `maxLength` property is editable.")
@@ -1979,6 +1934,7 @@ public class Date {
     this.maxLengthMetadata = maxLengthMetadata;
   }
 
+
   /**
    * mergeField.
    *
@@ -1991,7 +1947,6 @@ public class Date {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
-   * 
    * @return mergeField
    **/
   @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
@@ -2006,6 +1961,7 @@ public class Date {
     this.mergeField = mergeField;
   }
 
+
   /**
    * mergeFieldXml.
    *
@@ -2018,7 +1974,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return mergeFieldXml
    **/
   @Schema(description = "")
@@ -2033,6 +1988,7 @@ public class Date {
     this.mergeFieldXml = mergeFieldXml;
   }
 
+
   /**
    * name.
    *
@@ -2045,7 +2001,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -2060,6 +2015,7 @@ public class Date {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -2071,9 +2027,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `name` property is editable. This property is read-only..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
@@ -2088,6 +2042,7 @@ public class Date {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * originalValue.
    *
@@ -2100,7 +2055,6 @@ public class Date {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -2115,6 +2069,7 @@ public class Date {
     this.originalValue = originalValue;
   }
 
+
   /**
    * originalValueMetadata.
    *
@@ -2127,7 +2082,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `originalValue` property is editable..
-   * 
    * @return originalValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `originalValue` property is editable.")
@@ -2142,6 +2096,7 @@ public class Date {
     this.originalValueMetadata = originalValueMetadata;
   }
 
+
   /**
    * pageNumber.
    *
@@ -2154,7 +2109,6 @@ public class Date {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -2169,6 +2123,7 @@ public class Date {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * pageNumberMetadata.
    *
@@ -2181,7 +2136,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
-   * 
    * @return pageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
@@ -2196,6 +2150,7 @@ public class Date {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
+
   /**
    * recipientId.
    *
@@ -2207,9 +2162,7 @@ public class Date {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -2224,6 +2177,7 @@ public class Date {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -2236,7 +2190,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -2251,6 +2204,7 @@ public class Date {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientIdGuidMetadata.
    *
@@ -2263,7 +2217,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
-   * 
    * @return recipientIdGuidMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
@@ -2278,6 +2231,7 @@ public class Date {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
+
   /**
    * recipientIdMetadata.
    *
@@ -2290,7 +2244,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
-   * 
    * @return recipientIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
@@ -2305,6 +2258,7 @@ public class Date {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+
   /**
    * requireAll.
    *
@@ -2316,9 +2270,7 @@ public class Date {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this
-   * field to complete the envelope. .
-   * 
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
    **/
   @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
@@ -2333,6 +2285,7 @@ public class Date {
     this.requireAll = requireAll;
   }
 
+
   /**
    * requireAllMetadata.
    *
@@ -2345,7 +2298,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `requireAll` property is editable..
-   * 
    * @return requireAllMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireAll` property is editable.")
@@ -2360,6 +2312,7 @@ public class Date {
     this.requireAllMetadata = requireAllMetadata;
   }
 
+
   /**
    * required.
    *
@@ -2372,7 +2325,6 @@ public class Date {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -2387,6 +2339,7 @@ public class Date {
     this.required = required;
   }
 
+
   /**
    * requiredMetadata.
    *
@@ -2399,7 +2352,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
-   * 
    * @return requiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `required` property is editable.")
@@ -2414,6 +2366,7 @@ public class Date {
     this.requiredMetadata = requiredMetadata;
   }
 
+
   /**
    * requireInitialOnSharedChange.
    *
@@ -2425,9 +2378,7 @@ public class Date {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is
-   * required to initial when they modify a shared field..
-   * 
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
    **/
   @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
@@ -2442,6 +2393,7 @@ public class Date {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
   /**
    * requireInitialOnSharedChangeMetadata.
    *
@@ -2453,9 +2405,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `requireInitialOnSharedChange` property
-   * is editable..
-   * 
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
    * @return requireInitialOnSharedChangeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
@@ -2470,6 +2420,7 @@ public class Date {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
 
+
   /**
    * senderRequired.
    *
@@ -2481,11 +2432,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can
-   * be sent using the template. This value tab can only be changed by modifying
-   * (PUT) the template. Tabs with a `senderRequired` value of true cannot be
-   * deleted from an envelope..
-   * 
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
    * @return senderRequired
    **/
   @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
@@ -2500,6 +2447,7 @@ public class Date {
     this.senderRequired = senderRequired;
   }
 
+
   /**
    * senderRequiredMetadata.
    *
@@ -2512,7 +2460,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `senderRequired` property is editable..
-   * 
    * @return senderRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderRequired` property is editable.")
@@ -2527,6 +2474,7 @@ public class Date {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
 
+
   /**
    * shared.
    *
@@ -2539,7 +2487,6 @@ public class Date {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -2554,6 +2501,7 @@ public class Date {
     this.shared = shared;
   }
 
+
   /**
    * sharedMetadata.
    *
@@ -2566,7 +2514,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `shared` property is editable..
-   * 
    * @return sharedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `shared` property is editable.")
@@ -2581,6 +2528,7 @@ public class Date {
     this.sharedMetadata = sharedMetadata;
   }
 
+
   /**
    * shareToRecipients.
    *
@@ -2593,7 +2541,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return shareToRecipients
    **/
   @Schema(description = "")
@@ -2608,6 +2555,7 @@ public class Date {
     this.shareToRecipients = shareToRecipients;
   }
 
+
   /**
    * shareToRecipientsMetadata.
    *
@@ -2620,7 +2568,6 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return shareToRecipientsMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2635,6 +2582,7 @@ public class Date {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
 
+
   /**
    * smartContractInformation.
    *
@@ -2647,7 +2595,6 @@ public class Date {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return smartContractInformation
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2662,6 +2609,7 @@ public class Date {
     this.smartContractInformation = smartContractInformation;
   }
 
+
   /**
    * source.
    *
@@ -2674,7 +2622,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return source
    **/
   @Schema(description = "")
@@ -2689,6 +2636,7 @@ public class Date {
     this.source = source;
   }
 
+
   /**
    * status.
    *
@@ -2700,10 +2648,7 @@ public class Date {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -2718,6 +2663,7 @@ public class Date {
     this.status = status;
   }
 
+
   /**
    * statusMetadata.
    *
@@ -2730,7 +2676,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
-   * 
    * @return statusMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `status` property is editable.")
@@ -2745,6 +2690,7 @@ public class Date {
     this.statusMetadata = statusMetadata;
   }
 
+
   /**
    * tabGroupLabels.
    *
@@ -2754,7 +2700,7 @@ public class Date {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
@@ -2770,7 +2716,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return tabGroupLabels
    **/
   @Schema(description = "")
@@ -2785,6 +2730,7 @@ public class Date {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
   /**
    * tabGroupLabelsMetadata.
    *
@@ -2797,7 +2743,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
-   * 
    * @return tabGroupLabelsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
@@ -2812,6 +2757,7 @@ public class Date {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
+
   /**
    * tabId.
    *
@@ -2823,9 +2769,7 @@ public class Date {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -2840,6 +2784,7 @@ public class Date {
     this.tabId = tabId;
   }
 
+
   /**
    * tabIdMetadata.
    *
@@ -2852,7 +2797,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
-   * 
    * @return tabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
@@ -2867,6 +2811,7 @@ public class Date {
     this.tabIdMetadata = tabIdMetadata;
   }
 
+
   /**
    * tabLabel.
    *
@@ -2879,7 +2824,6 @@ public class Date {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -2894,6 +2838,7 @@ public class Date {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * tabLabelMetadata.
    *
@@ -2906,7 +2851,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
-   * 
    * @return tabLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
@@ -2921,6 +2865,7 @@ public class Date {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
+
   /**
    * tabOrder.
    *
@@ -2933,7 +2878,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return tabOrder
    **/
   @Schema(description = "")
@@ -2948,6 +2892,7 @@ public class Date {
     this.tabOrder = tabOrder;
   }
 
+
   /**
    * tabOrderMetadata.
    *
@@ -2960,7 +2905,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
-   * 
    * @return tabOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
@@ -2975,6 +2919,7 @@ public class Date {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
+
   /**
    * tabType.
    *
@@ -2987,7 +2932,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -3002,6 +2946,7 @@ public class Date {
     this.tabType = tabType;
   }
 
+
   /**
    * tabTypeMetadata.
    *
@@ -3014,7 +2959,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
-   * 
    * @return tabTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
@@ -3029,6 +2973,7 @@ public class Date {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
+
   /**
    * templateLocked.
    *
@@ -3040,9 +2985,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -3057,6 +3000,7 @@ public class Date {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateLockedMetadata.
    *
@@ -3069,7 +3013,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
-   * 
    * @return templateLockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
@@ -3084,6 +3027,7 @@ public class Date {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
+
   /**
    * templateRequired.
    *
@@ -3095,9 +3039,7 @@ public class Date {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -3112,6 +3054,7 @@ public class Date {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * templateRequiredMetadata.
    *
@@ -3124,7 +3067,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
-   * 
    * @return templateRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
@@ -3139,6 +3081,7 @@ public class Date {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
+
   /**
    * tooltip.
    *
@@ -3151,7 +3094,6 @@ public class Date {
 
   /**
    * .
-   * 
    * @return tooltip
    **/
   @Schema(description = "")
@@ -3166,6 +3108,7 @@ public class Date {
     this.tooltip = tooltip;
   }
 
+
   /**
    * toolTipMetadata.
    *
@@ -3178,7 +3121,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
-   * 
    * @return toolTipMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
@@ -3193,6 +3135,7 @@ public class Date {
     this.toolTipMetadata = toolTipMetadata;
   }
 
+
   /**
    * underline.
    *
@@ -3205,7 +3148,6 @@ public class Date {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -3220,6 +3162,7 @@ public class Date {
     this.underline = underline;
   }
 
+
   /**
    * underlineMetadata.
    *
@@ -3232,7 +3175,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
-   * 
    * @return underlineMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
@@ -3247,6 +3189,7 @@ public class Date {
     this.underlineMetadata = underlineMetadata;
   }
 
+
   /**
    * validationMessage.
    *
@@ -3258,9 +3201,7 @@ public class Date {
   }
 
   /**
-   * The message displayed if the custom tab fails input validation (either custom
-   * of embedded)..
-   * 
+   * The message displayed if the custom tab fails input validation (either custom of embedded)..
    * @return validationMessage
    **/
   @Schema(description = "The message displayed if the custom tab fails input validation (either custom of embedded).")
@@ -3275,6 +3216,7 @@ public class Date {
     this.validationMessage = validationMessage;
   }
 
+
   /**
    * validationMessageMetadata.
    *
@@ -3286,9 +3228,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `validationMessage` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `validationMessage` property is editable..
    * @return validationMessageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationMessage` property is editable.")
@@ -3303,6 +3243,7 @@ public class Date {
     this.validationMessageMetadata = validationMessageMetadata;
   }
 
+
   /**
    * validationPattern.
    *
@@ -3315,7 +3256,6 @@ public class Date {
 
   /**
    * A regular expression used to validate input for the tab..
-   * 
    * @return validationPattern
    **/
   @Schema(description = "A regular expression used to validate input for the tab.")
@@ -3330,6 +3270,7 @@ public class Date {
     this.validationPattern = validationPattern;
   }
 
+
   /**
    * validationPatternMetadata.
    *
@@ -3341,9 +3282,7 @@ public class Date {
   }
 
   /**
-   * Metadata that indicates whether the `validationPattern` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `validationPattern` property is editable..
    * @return validationPatternMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationPattern` property is editable.")
@@ -3358,6 +3297,7 @@ public class Date {
     this.validationPatternMetadata = validationPatternMetadata;
   }
 
+
   /**
    * value.
    *
@@ -3370,7 +3310,6 @@ public class Date {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -3385,6 +3324,7 @@ public class Date {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -3397,7 +3337,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -3412,6 +3351,7 @@ public class Date {
     this.valueMetadata = valueMetadata;
   }
 
+
   /**
    * width.
    *
@@ -3424,7 +3364,6 @@ public class Date {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -3439,6 +3378,7 @@ public class Date {
     this.width = width;
   }
 
+
   /**
    * widthMetadata.
    *
@@ -3451,7 +3391,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
-   * 
    * @return widthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `width` property is editable.")
@@ -3466,6 +3405,7 @@ public class Date {
     this.widthMetadata = widthMetadata;
   }
 
+
   /**
    * xPosition.
    *
@@ -3477,9 +3417,7 @@ public class Date {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3494,6 +3432,7 @@ public class Date {
     this.xPosition = xPosition;
   }
 
+
   /**
    * xPositionMetadata.
    *
@@ -3506,7 +3445,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
-   * 
    * @return xPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
@@ -3521,6 +3459,7 @@ public class Date {
     this.xPositionMetadata = xPositionMetadata;
   }
 
+
   /**
    * yPosition.
    *
@@ -3532,9 +3471,7 @@ public class Date {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3549,6 +3486,7 @@ public class Date {
     this.yPosition = yPosition;
   }
 
+
   /**
    * yPositionMetadata.
    *
@@ -3561,7 +3499,6 @@ public class Date {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
-   * 
    * @return yPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
@@ -3575,6 +3512,7 @@ public class Date {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3591,8 +3529,7 @@ public class Date {
     }
     Date date = (Date) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, date.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, date.anchorAllowWhiteSpaceInCharactersMetadata)
-        &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, date.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, date.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, date.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, date.anchorHorizontalAlignment) &&
@@ -3714,28 +3651,9 @@ public class Date {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
-        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
-        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
-        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
-        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
-        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
-        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
-        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height,
-        heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata,
-        mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber,
-        pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll,
-        requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange,
-        requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata,
-        shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata,
-        tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder,
-        tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
-        templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage,
-        validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width,
-        widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -3744,26 +3662,21 @@ public class Date {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Date {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3775,14 +3688,11 @@ public class Date {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
-        .append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3828,8 +3738,7 @@ public class Date {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ")
-        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -3886,3 +3795,4 @@ public class Date {
   }
 
 }
+

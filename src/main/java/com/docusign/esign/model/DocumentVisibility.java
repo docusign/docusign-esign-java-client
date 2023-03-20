@@ -31,6 +31,7 @@ public class DocumentVisibility {
   @JsonProperty("visible")
   private String visible = null;
 
+
   /**
    * documentId.
    *
@@ -42,9 +43,7 @@ public class DocumentVisibility {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -59,6 +58,7 @@ public class DocumentVisibility {
     this.documentId = documentId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -70,12 +70,10 @@ public class DocumentVisibility {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -86,6 +84,7 @@ public class DocumentVisibility {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * recipientId.
@@ -98,9 +97,7 @@ public class DocumentVisibility {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -115,6 +112,7 @@ public class DocumentVisibility {
     this.recipientId = recipientId;
   }
 
+
   /**
    * rights.
    *
@@ -127,7 +125,6 @@ public class DocumentVisibility {
 
   /**
    * .
-   * 
    * @return rights
    **/
   @Schema(description = "")
@@ -142,6 +139,7 @@ public class DocumentVisibility {
     this.rights = rights;
   }
 
+
   /**
    * visible.
    *
@@ -154,7 +152,6 @@ public class DocumentVisibility {
 
   /**
    * .
-   * 
    * @return visible
    **/
   @Schema(description = "")
@@ -168,6 +165,7 @@ public class DocumentVisibility {
   public void setVisible(String visible) {
     this.visible = visible;
   }
+
 
   /**
    * Compares objects.
@@ -198,6 +196,7 @@ public class DocumentVisibility {
     return Objects.hash(documentId, errorDetails, recipientId, rights, visible);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -205,7 +204,7 @@ public class DocumentVisibility {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentVisibility {\n");
-
+    
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -227,3 +226,4 @@ public class DocumentVisibility {
   }
 
 }
+

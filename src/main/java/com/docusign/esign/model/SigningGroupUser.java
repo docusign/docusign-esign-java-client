@@ -24,6 +24,7 @@ public class SigningGroupUser {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * email.
    *
@@ -36,7 +37,6 @@ public class SigningGroupUser {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class SigningGroupUser {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -62,12 +63,10 @@ public class SigningGroupUser {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -78,6 +77,7 @@ public class SigningGroupUser {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * userName.
@@ -90,8 +90,7 @@ public class SigningGroupUser {
   }
 
   /**
-   * The name of the group member. Maximum Length: 100 characters. .
-   * 
+   * The name of the group member.   Maximum Length: 100 characters. .
    * @return userName
    **/
   @Schema(description = "The name of the group member.   Maximum Length: 100 characters. ")
@@ -105,6 +104,7 @@ public class SigningGroupUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -133,6 +133,7 @@ public class SigningGroupUser {
     return Objects.hash(email, errorDetails, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -140,7 +141,7 @@ public class SigningGroupUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupUser {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
@@ -160,3 +161,4 @@ public class SigningGroupUser {
   }
 
 }
+

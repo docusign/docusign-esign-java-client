@@ -30,6 +30,9 @@ public class UserInfo {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("ipAddress")
+  private String ipAddress = null;
+
   @JsonProperty("loginStatus")
   private String loginStatus = null;
 
@@ -54,6 +57,7 @@ public class UserInfo {
   @JsonProperty("userType")
   private String userType = null;
 
+
   /**
    * accountId.
    *
@@ -66,7 +70,6 @@ public class UserInfo {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -81,6 +84,7 @@ public class UserInfo {
     this.accountId = accountId;
   }
 
+
   /**
    * accountName.
    *
@@ -93,7 +97,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return accountName
    **/
   @Schema(description = "")
@@ -108,6 +111,7 @@ public class UserInfo {
     this.accountName = accountName;
   }
 
+
   /**
    * activationAccessCode.
    *
@@ -120,7 +124,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return activationAccessCode
    **/
   @Schema(description = "")
@@ -135,6 +138,7 @@ public class UserInfo {
     this.activationAccessCode = activationAccessCode;
   }
 
+
   /**
    * email.
    *
@@ -147,7 +151,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -162,6 +165,7 @@ public class UserInfo {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -173,12 +177,10 @@ public class UserInfo {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -189,6 +191,34 @@ public class UserInfo {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
+
+  /**
+   * ipAddress.
+   *
+   * @return UserInfo
+   **/
+  public UserInfo ipAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * .
+   * @return ipAddress
+   **/
+  @Schema(description = "")
+  public String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * setIpAddress.
+   **/
+  public void setIpAddress(String ipAddress) {
+    this.ipAddress = ipAddress;
+  }
+
 
   /**
    * loginStatus.
@@ -202,7 +232,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return loginStatus
    **/
   @Schema(description = "")
@@ -217,6 +246,7 @@ public class UserInfo {
     this.loginStatus = loginStatus;
   }
 
+
   /**
    * membershipId.
    *
@@ -229,7 +259,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return membershipId
    **/
   @Schema(description = "")
@@ -244,6 +273,7 @@ public class UserInfo {
     this.membershipId = membershipId;
   }
 
+
   /**
    * sendActivationEmail.
    *
@@ -256,7 +286,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return sendActivationEmail
    **/
   @Schema(description = "")
@@ -271,6 +300,7 @@ public class UserInfo {
     this.sendActivationEmail = sendActivationEmail;
   }
 
+
   /**
    * uri.
    *
@@ -283,7 +313,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -298,6 +327,7 @@ public class UserInfo {
     this.uri = uri;
   }
 
+
   /**
    * userId.
    *
@@ -310,7 +340,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -325,6 +354,7 @@ public class UserInfo {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -337,7 +367,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -352,6 +381,7 @@ public class UserInfo {
     this.userName = userName;
   }
 
+
   /**
    * userStatus.
    *
@@ -364,7 +394,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return userStatus
    **/
   @Schema(description = "")
@@ -379,6 +408,7 @@ public class UserInfo {
     this.userStatus = userStatus;
   }
 
+
   /**
    * userType.
    *
@@ -391,7 +421,6 @@ public class UserInfo {
 
   /**
    * .
-   * 
    * @return userType
    **/
   @Schema(description = "")
@@ -405,6 +434,7 @@ public class UserInfo {
   public void setUserType(String userType) {
     this.userType = userType;
   }
+
 
   /**
    * Compares objects.
@@ -425,6 +455,7 @@ public class UserInfo {
         Objects.equals(this.activationAccessCode, userInfo.activationAccessCode) &&
         Objects.equals(this.email, userInfo.email) &&
         Objects.equals(this.errorDetails, userInfo.errorDetails) &&
+        Objects.equals(this.ipAddress, userInfo.ipAddress) &&
         Objects.equals(this.loginStatus, userInfo.loginStatus) &&
         Objects.equals(this.membershipId, userInfo.membershipId) &&
         Objects.equals(this.sendActivationEmail, userInfo.sendActivationEmail) &&
@@ -440,9 +471,9 @@ public class UserInfo {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, loginStatus, membershipId,
-        sendActivationEmail, uri, userId, userName, userStatus, userType);
+    return Objects.hash(accountId, accountName, activationAccessCode, email, errorDetails, ipAddress, loginStatus, membershipId, sendActivationEmail, uri, userId, userName, userStatus, userType);
   }
+
 
   /**
    * Converts the given object to string.
@@ -451,12 +482,13 @@ public class UserInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInfo {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    ipAddress: ").append(toIndentedString(ipAddress)).append("\n");
     sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
     sb.append("    membershipId: ").append(toIndentedString(membershipId)).append("\n");
     sb.append("    sendActivationEmail: ").append(toIndentedString(sendActivationEmail)).append("\n");
@@ -481,3 +513,4 @@ public class UserInfo {
   }
 
 }
+

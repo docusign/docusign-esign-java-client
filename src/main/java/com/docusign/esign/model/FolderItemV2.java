@@ -79,6 +79,7 @@ public class FolderItemV2 {
   @JsonProperty("templateUri")
   private String templateUri = null;
 
+
   /**
    * completedDateTime.
    *
@@ -91,7 +92,6 @@ public class FolderItemV2 {
 
   /**
    * Specifies the date and time this item was completed..
-   * 
    * @return completedDateTime
    **/
   @Schema(description = "Specifies the date and time this item was completed.")
@@ -106,6 +106,7 @@ public class FolderItemV2 {
     this.completedDateTime = completedDateTime;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -118,7 +119,6 @@ public class FolderItemV2 {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -133,6 +133,7 @@ public class FolderItemV2 {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * envelopeId.
    *
@@ -145,7 +146,6 @@ public class FolderItemV2 {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -160,6 +160,7 @@ public class FolderItemV2 {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * envelopeUri.
    *
@@ -171,9 +172,7 @@ public class FolderItemV2 {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or
-   * envelopes..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
    * @return envelopeUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
@@ -188,6 +187,7 @@ public class FolderItemV2 {
     this.envelopeUri = envelopeUri;
   }
 
+
   /**
    * expireDateTime.
    *
@@ -200,7 +200,6 @@ public class FolderItemV2 {
 
   /**
    * The date and time the envelope is set to expire..
-   * 
    * @return expireDateTime
    **/
   @Schema(description = "The date and time the envelope is set to expire.")
@@ -215,6 +214,7 @@ public class FolderItemV2 {
     this.expireDateTime = expireDateTime;
   }
 
+
   /**
    * folderId.
    *
@@ -227,7 +227,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return folderId
    **/
   @Schema(description = "")
@@ -242,6 +241,7 @@ public class FolderItemV2 {
     this.folderId = folderId;
   }
 
+
   /**
    * folderUri.
    *
@@ -254,7 +254,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return folderUri
    **/
   @Schema(description = "")
@@ -269,6 +268,7 @@ public class FolderItemV2 {
     this.folderUri = folderUri;
   }
 
+
   /**
    * is21CFRPart11.
    *
@@ -281,7 +281,6 @@ public class FolderItemV2 {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
-   * 
    * @return is21CFRPart11
    **/
   @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
@@ -296,6 +295,7 @@ public class FolderItemV2 {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+
   /**
    * lastModifiedDateTime.
    *
@@ -308,7 +308,6 @@ public class FolderItemV2 {
 
   /**
    * The date and time the item was last modified..
-   * 
    * @return lastModifiedDateTime
    **/
   @Schema(description = "The date and time the item was last modified.")
@@ -323,6 +322,7 @@ public class FolderItemV2 {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
+
   /**
    * ownerName.
    *
@@ -335,7 +335,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return ownerName
    **/
   @Schema(description = "")
@@ -350,6 +349,7 @@ public class FolderItemV2 {
     this.ownerName = ownerName;
   }
 
+
   /**
    * recipients.
    *
@@ -361,12 +361,10 @@ public class FolderItemV2 {
   }
 
   /**
-   * An array of recipient objects that provides details about the recipients of
-   * the envelope..
-   * 
+   * An array of powerform recipients..
    * @return recipients
    **/
-  @Schema(description = "An array of recipient objects that provides details about the recipients of the envelope.")
+  @Schema(description = "An array of powerform recipients.")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -377,6 +375,7 @@ public class FolderItemV2 {
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * recipientsUri.
@@ -390,7 +389,6 @@ public class FolderItemV2 {
 
   /**
    * Contains a URI for an endpoint that you can use to retrieve the recipients..
-   * 
    * @return recipientsUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the recipients.")
@@ -405,6 +403,7 @@ public class FolderItemV2 {
     this.recipientsUri = recipientsUri;
   }
 
+
   /**
    * senderCompany.
    *
@@ -417,7 +416,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return senderCompany
    **/
   @Schema(description = "")
@@ -432,6 +430,7 @@ public class FolderItemV2 {
     this.senderCompany = senderCompany;
   }
 
+
   /**
    * senderEmail.
    *
@@ -444,7 +443,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return senderEmail
    **/
   @Schema(description = "")
@@ -459,6 +457,7 @@ public class FolderItemV2 {
     this.senderEmail = senderEmail;
   }
 
+
   /**
    * senderName.
    *
@@ -471,7 +470,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return senderName
    **/
   @Schema(description = "")
@@ -486,6 +484,7 @@ public class FolderItemV2 {
     this.senderName = senderName;
   }
 
+
   /**
    * senderUserId.
    *
@@ -498,7 +497,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return senderUserId
    **/
   @Schema(description = "")
@@ -513,6 +511,7 @@ public class FolderItemV2 {
     this.senderUserId = senderUserId;
   }
 
+
   /**
    * sentDateTime.
    *
@@ -525,7 +524,6 @@ public class FolderItemV2 {
 
   /**
    * The date and time the envelope was sent..
-   * 
    * @return sentDateTime
    **/
   @Schema(description = "The date and time the envelope was sent.")
@@ -540,6 +538,7 @@ public class FolderItemV2 {
     this.sentDateTime = sentDateTime;
   }
 
+
   /**
    * status.
    *
@@ -551,10 +550,7 @@ public class FolderItemV2 {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -569,6 +565,7 @@ public class FolderItemV2 {
     this.status = status;
   }
 
+
   /**
    * subject.
    *
@@ -581,7 +578,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return subject
    **/
   @Schema(description = "")
@@ -596,6 +592,7 @@ public class FolderItemV2 {
     this.subject = subject;
   }
 
+
   /**
    * templateId.
    *
@@ -607,9 +604,7 @@ public class FolderItemV2 {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -624,6 +619,7 @@ public class FolderItemV2 {
     this.templateId = templateId;
   }
 
+
   /**
    * templateUri.
    *
@@ -636,7 +632,6 @@ public class FolderItemV2 {
 
   /**
    * .
-   * 
    * @return templateUri
    **/
   @Schema(description = "")
@@ -650,6 +645,7 @@ public class FolderItemV2 {
   public void setTemplateUri(String templateUri) {
     this.templateUri = templateUri;
   }
+
 
   /**
    * Compares objects.
@@ -693,10 +689,9 @@ public class FolderItemV2 {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId,
-        folderUri, is21CFRPart11, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany,
-        senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
+    return Objects.hash(completedDateTime, createdDateTime, envelopeId, envelopeUri, expireDateTime, folderId, folderUri, is21CFRPart11, lastModifiedDateTime, ownerName, recipients, recipientsUri, senderCompany, senderEmail, senderName, senderUserId, sentDateTime, status, subject, templateId, templateUri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -705,7 +700,7 @@ public class FolderItemV2 {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemV2 {\n");
-
+    
     sb.append("    completedDateTime: ").append(toIndentedString(completedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -743,3 +738,4 @@ public class FolderItemV2 {
   }
 
 }
+

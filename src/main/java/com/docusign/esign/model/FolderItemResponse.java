@@ -37,6 +37,7 @@ public class FolderItemResponse {
   @JsonProperty("totalRows")
   private String totalRows = null;
 
+
   /**
    * endPosition.
    *
@@ -49,7 +50,6 @@ public class FolderItemResponse {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -64,6 +64,7 @@ public class FolderItemResponse {
     this.endPosition = endPosition;
   }
 
+
   /**
    * folderItems.
    *
@@ -73,7 +74,7 @@ public class FolderItemResponse {
     this.folderItems = folderItems;
     return this;
   }
-
+  
   /**
    * addFolderItemsItem.
    *
@@ -89,7 +90,6 @@ public class FolderItemResponse {
 
   /**
    * A list of the envelopes in the specified folder or folders. .
-   * 
    * @return folderItems
    **/
   @Schema(description = "A list of the envelopes in the specified folder or folders. ")
@@ -104,6 +104,7 @@ public class FolderItemResponse {
     this.folderItems = folderItems;
   }
 
+
   /**
    * nextUri.
    *
@@ -115,9 +116,7 @@ public class FolderItemResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -132,6 +131,7 @@ public class FolderItemResponse {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -144,7 +144,6 @@ public class FolderItemResponse {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -159,6 +158,7 @@ public class FolderItemResponse {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -171,7 +171,6 @@ public class FolderItemResponse {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -186,6 +185,7 @@ public class FolderItemResponse {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -198,7 +198,6 @@ public class FolderItemResponse {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -213,6 +212,7 @@ public class FolderItemResponse {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalRows.
    *
@@ -225,7 +225,6 @@ public class FolderItemResponse {
 
   /**
    * .
-   * 
    * @return totalRows
    **/
   @Schema(description = "")
@@ -239,6 +238,7 @@ public class FolderItemResponse {
   public void setTotalRows(String totalRows) {
     this.totalRows = totalRows;
   }
+
 
   /**
    * Compares objects.
@@ -271,6 +271,7 @@ public class FolderItemResponse {
     return Objects.hash(endPosition, folderItems, nextUri, previousUri, resultSetSize, startPosition, totalRows);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -278,7 +279,7 @@ public class FolderItemResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderItemResponse {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    folderItems: ").append(toIndentedString(folderItems)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -302,3 +303,4 @@ public class FolderItemResponse {
   }
 
 }
+

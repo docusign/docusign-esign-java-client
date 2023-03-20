@@ -21,6 +21,7 @@ public class ConnectFailureFilter {
   @JsonProperty("synchronous")
   private String synchronous = null;
 
+
   /**
    * envelopeIds.
    *
@@ -30,7 +31,7 @@ public class ConnectFailureFilter {
     this.envelopeIds = envelopeIds;
     return this;
   }
-
+  
   /**
    * addEnvelopeIdsItem.
    *
@@ -46,7 +47,6 @@ public class ConnectFailureFilter {
 
   /**
    * .
-   * 
    * @return envelopeIds
    **/
   @Schema(description = "")
@@ -61,6 +61,7 @@ public class ConnectFailureFilter {
     this.envelopeIds = envelopeIds;
   }
 
+
   /**
    * synchronous.
    *
@@ -73,7 +74,6 @@ public class ConnectFailureFilter {
 
   /**
    * .
-   * 
    * @return synchronous
    **/
   @Schema(description = "")
@@ -87,6 +87,7 @@ public class ConnectFailureFilter {
   public void setSynchronous(String synchronous) {
     this.synchronous = synchronous;
   }
+
 
   /**
    * Compares objects.
@@ -114,6 +115,7 @@ public class ConnectFailureFilter {
     return Objects.hash(envelopeIds, synchronous);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -121,7 +123,7 @@ public class ConnectFailureFilter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureFilter {\n");
-
+    
     sb.append("    envelopeIds: ").append(toIndentedString(envelopeIds)).append("\n");
     sb.append("    synchronous: ").append(toIndentedString(synchronous)).append("\n");
     sb.append("}");
@@ -140,3 +142,4 @@ public class ConnectFailureFilter {
   }
 
 }
+

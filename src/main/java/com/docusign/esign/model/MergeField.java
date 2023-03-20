@@ -11,8 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information for transfering values between Salesforce data fields
- * and DocuSign Tabs..
+ * Contains information for transfering values between Salesforce data fields and DocuSign Tabs..
  *
  */
 @Schema(description = "Contains information for transfering values between Salesforce data fields and DocuSign Tabs.")
@@ -54,6 +53,7 @@ public class MergeField {
   @JsonProperty("writeBackMetadata")
   private PropertyMetadata writeBackMetadata = null;
 
+
   /**
    * allowSenderToEdit.
    *
@@ -65,9 +65,7 @@ public class MergeField {
   }
 
   /**
-   * When set to **true**, the sender can modify the value of the custom tab
-   * during the sending process..
-   * 
+   * When set to **true**, the sender can modify the value of the custom tab during the sending process..
    * @return allowSenderToEdit
    **/
   @Schema(description = "When set to **true**, the sender can modify the value of the custom tab during the sending process.")
@@ -82,6 +80,7 @@ public class MergeField {
     this.allowSenderToEdit = allowSenderToEdit;
   }
 
+
   /**
    * allowSenderToEditMetadata.
    *
@@ -93,9 +92,7 @@ public class MergeField {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `allowSenderToEdit`
-   * property..
-   * 
+   * Metadata that indicates if the sender can edit the `allowSenderToEdit` property..
    * @return allowSenderToEditMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `allowSenderToEdit` property.")
@@ -110,6 +107,7 @@ public class MergeField {
     this.allowSenderToEditMetadata = allowSenderToEditMetadata;
   }
 
+
   /**
    * configurationType.
    *
@@ -121,9 +119,7 @@ public class MergeField {
   }
 
   /**
-   * If merge field's are being used, specifies the type of the merge field. The
-   * only supported value is **salesforce**..
-   * 
+   * If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**..
    * @return configurationType
    **/
   @Schema(description = "If merge field's are being used, specifies the type of the merge field. The only  supported value is **salesforce**.")
@@ -138,6 +134,7 @@ public class MergeField {
     this.configurationType = configurationType;
   }
 
+
   /**
    * configurationTypeMetadata.
    *
@@ -149,9 +146,7 @@ public class MergeField {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `configurationType`
-   * property..
-   * 
+   * Metadata that indicates if the sender can edit the `configurationType` property..
    * @return configurationTypeMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `configurationType` property.")
@@ -166,6 +161,7 @@ public class MergeField {
     this.configurationTypeMetadata = configurationTypeMetadata;
   }
 
+
   /**
    * path.
    *
@@ -177,9 +173,7 @@ public class MergeField {
   }
 
   /**
-   * Sets the object associated with the custom tab. Currently this is the
-   * Salesforce Object..
-   * 
+   * Sets the object associated with the custom tab. Currently this is the Salesforce Object..
    * @return path
    **/
   @Schema(description = "Sets the object associated with the custom tab. Currently this is the Salesforce Object.")
@@ -194,6 +188,7 @@ public class MergeField {
     this.path = path;
   }
 
+
   /**
    * pathExtended.
    *
@@ -203,7 +198,7 @@ public class MergeField {
     this.pathExtended = pathExtended;
     return this;
   }
-
+  
   /**
    * addPathExtendedItem.
    *
@@ -219,7 +214,6 @@ public class MergeField {
 
   /**
    * .
-   * 
    * @return pathExtended
    **/
   @Schema(description = "")
@@ -234,6 +228,7 @@ public class MergeField {
     this.pathExtended = pathExtended;
   }
 
+
   /**
    * pathExtendedMetadata.
    *
@@ -246,7 +241,6 @@ public class MergeField {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return pathExtendedMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -261,6 +255,7 @@ public class MergeField {
     this.pathExtendedMetadata = pathExtendedMetadata;
   }
 
+
   /**
    * pathMetadata.
    *
@@ -273,7 +268,6 @@ public class MergeField {
 
   /**
    * Metadata that indicates whether the `path` property is editable. .
-   * 
    * @return pathMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `path` property is editable. ")
@@ -288,6 +282,7 @@ public class MergeField {
     this.pathMetadata = pathMetadata;
   }
 
+
   /**
    * row.
    *
@@ -299,9 +294,7 @@ public class MergeField {
   }
 
   /**
-   * Specifies the row number in a Salesforce table that the merge field value
-   * corresponds to..
-   * 
+   * Specifies the row number in a Salesforce table that the merge field value corresponds to..
    * @return row
    **/
   @Schema(description = "Specifies the row number in a Salesforce table that the merge field value corresponds to.")
@@ -316,6 +309,7 @@ public class MergeField {
     this.row = row;
   }
 
+
   /**
    * rowMetadata.
    *
@@ -328,7 +322,6 @@ public class MergeField {
 
   /**
    * Metadata that indicates whether the `row` property is editable. .
-   * 
    * @return rowMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `row` property is editable. ")
@@ -343,6 +336,7 @@ public class MergeField {
     this.rowMetadata = rowMetadata;
   }
 
+
   /**
    * writeBack.
    *
@@ -354,9 +348,7 @@ public class MergeField {
   }
 
   /**
-   * When wet to true, the information entered in the tab automatically updates
-   * the related Salesforce data when an envelope is completed..
-   * 
+   * When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed..
    * @return writeBack
    **/
   @Schema(description = "When wet to true, the information entered in the tab automatically updates the related Salesforce data when an envelope is completed.")
@@ -371,6 +363,7 @@ public class MergeField {
     this.writeBack = writeBack;
   }
 
+
   /**
    * writeBackMetadata.
    *
@@ -383,7 +376,6 @@ public class MergeField {
 
   /**
    * Metadata that indicates if the sender can edit the `writeBack` property..
-   * 
    * @return writeBackMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `writeBack` property.")
@@ -397,6 +389,7 @@ public class MergeField {
   public void setWriteBackMetadata(PropertyMetadata writeBackMetadata) {
     this.writeBackMetadata = writeBackMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -431,9 +424,9 @@ public class MergeField {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowSenderToEdit, allowSenderToEditMetadata, configurationType, configurationTypeMetadata,
-        path, pathExtended, pathExtendedMetadata, pathMetadata, row, rowMetadata, writeBack, writeBackMetadata);
+    return Objects.hash(allowSenderToEdit, allowSenderToEditMetadata, configurationType, configurationTypeMetadata, path, pathExtended, pathExtendedMetadata, pathMetadata, row, rowMetadata, writeBack, writeBackMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -442,7 +435,7 @@ public class MergeField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MergeField {\n");
-
+    
     sb.append("    allowSenderToEdit: ").append(toIndentedString(allowSenderToEdit)).append("\n");
     sb.append("    allowSenderToEditMetadata: ").append(toIndentedString(allowSenderToEditMetadata)).append("\n");
     sb.append("    configurationType: ").append(toIndentedString(configurationType)).append("\n");
@@ -471,3 +464,4 @@ public class MergeField {
   }
 
 }
+

@@ -25,6 +25,7 @@ public class FavoriteTemplatesInfo {
   @JsonProperty("templatesUpdatedCount")
   private Integer templatesUpdatedCount = null;
 
+
   /**
    * errorDetails.
    *
@@ -36,12 +37,10 @@ public class FavoriteTemplatesInfo {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -53,6 +52,7 @@ public class FavoriteTemplatesInfo {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * favoriteTemplates.
    *
@@ -62,7 +62,7 @@ public class FavoriteTemplatesInfo {
     this.favoriteTemplates = favoriteTemplates;
     return this;
   }
-
+  
   /**
    * addFavoriteTemplatesItem.
    *
@@ -78,7 +78,6 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
-   * 
    * @return favoriteTemplates
    **/
   @Schema(description = "")
@@ -93,6 +92,7 @@ public class FavoriteTemplatesInfo {
     this.favoriteTemplates = favoriteTemplates;
   }
 
+
   /**
    * templatesUpdatedCount.
    *
@@ -105,7 +105,6 @@ public class FavoriteTemplatesInfo {
 
   /**
    * .
-   * 
    * @return templatesUpdatedCount
    **/
   @Schema(description = "")
@@ -119,6 +118,7 @@ public class FavoriteTemplatesInfo {
   public void setTemplatesUpdatedCount(Integer templatesUpdatedCount) {
     this.templatesUpdatedCount = templatesUpdatedCount;
   }
+
 
   /**
    * Compares objects.
@@ -147,6 +147,7 @@ public class FavoriteTemplatesInfo {
     return Objects.hash(errorDetails, favoriteTemplates, templatesUpdatedCount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -154,7 +155,7 @@ public class FavoriteTemplatesInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FavoriteTemplatesInfo {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    favoriteTemplates: ").append(toIndentedString(favoriteTemplates)).append("\n");
     sb.append("    templatesUpdatedCount: ").append(toIndentedString(templatesUpdatedCount)).append("\n");
@@ -174,3 +175,4 @@ public class FavoriteTemplatesInfo {
   }
 
 }
+

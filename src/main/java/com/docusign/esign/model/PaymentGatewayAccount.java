@@ -60,6 +60,7 @@ public class PaymentGatewayAccount {
   @JsonProperty("zeroDecimalCurrencies")
   private java.util.List<String> zeroDecimalCurrencies = null;
 
+
   /**
    * allowCustomMetadata.
    *
@@ -72,7 +73,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return allowCustomMetadata
    **/
   @Schema(description = "")
@@ -87,6 +87,7 @@ public class PaymentGatewayAccount {
     this.allowCustomMetadata = allowCustomMetadata;
   }
 
+
   /**
    * config.
    *
@@ -98,9 +99,7 @@ public class PaymentGatewayAccount {
   }
 
   /**
-   * This property contains metadata about the payment gateway account's
-   * configuration such as the API key, `userId`, and `merchantId` details..
-   * 
+   * This property contains metadata about the payment gateway account's configuration such as the API key, `userId`, and `merchantId` details..
    * @return config
    **/
   @Schema(description = "This property contains metadata about the payment gateway account's configuration such as the API key, `userId`, and `merchantId` details.")
@@ -115,6 +114,7 @@ public class PaymentGatewayAccount {
     this.config = config;
   }
 
+
   /**
    * displayName.
    *
@@ -127,7 +127,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return displayName
    **/
   @Schema(description = "")
@@ -142,6 +141,7 @@ public class PaymentGatewayAccount {
     this.displayName = displayName;
   }
 
+
   /**
    * isEnabled.
    *
@@ -154,7 +154,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return isEnabled
    **/
   @Schema(description = "")
@@ -169,6 +168,7 @@ public class PaymentGatewayAccount {
     this.isEnabled = isEnabled;
   }
 
+
   /**
    * isLegacy.
    *
@@ -181,7 +181,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return isLegacy
    **/
   @Schema(description = "")
@@ -196,6 +195,7 @@ public class PaymentGatewayAccount {
     this.isLegacy = isLegacy;
   }
 
+
   /**
    * lastModified.
    *
@@ -208,7 +208,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return lastModified
    **/
   @Schema(description = "")
@@ -223,6 +222,7 @@ public class PaymentGatewayAccount {
     this.lastModified = lastModified;
   }
 
+
   /**
    * paymentGateway.
    *
@@ -235,7 +235,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return paymentGateway
    **/
   @Schema(description = "")
@@ -250,6 +249,7 @@ public class PaymentGatewayAccount {
     this.paymentGateway = paymentGateway;
   }
 
+
   /**
    * paymentGatewayAccountId.
    *
@@ -262,7 +262,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return paymentGatewayAccountId
    **/
   @Schema(description = "")
@@ -277,6 +276,7 @@ public class PaymentGatewayAccount {
     this.paymentGatewayAccountId = paymentGatewayAccountId;
   }
 
+
   /**
    * paymentGatewayDisplayName.
    *
@@ -289,7 +289,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return paymentGatewayDisplayName
    **/
   @Schema(description = "")
@@ -304,6 +303,7 @@ public class PaymentGatewayAccount {
     this.paymentGatewayDisplayName = paymentGatewayDisplayName;
   }
 
+
   /**
    * payPalLegacySettings.
    *
@@ -316,7 +316,6 @@ public class PaymentGatewayAccount {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return payPalLegacySettings
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -331,6 +330,7 @@ public class PaymentGatewayAccount {
     this.payPalLegacySettings = payPalLegacySettings;
   }
 
+
   /**
    * supportedCurrencies.
    *
@@ -340,7 +340,7 @@ public class PaymentGatewayAccount {
     this.supportedCurrencies = supportedCurrencies;
     return this;
   }
-
+  
   /**
    * addSupportedCurrenciesItem.
    *
@@ -356,7 +356,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return supportedCurrencies
    **/
   @Schema(description = "")
@@ -371,6 +370,7 @@ public class PaymentGatewayAccount {
     this.supportedCurrencies = supportedCurrencies;
   }
 
+
   /**
    * supportedPaymentMethods.
    *
@@ -380,7 +380,7 @@ public class PaymentGatewayAccount {
     this.supportedPaymentMethods = supportedPaymentMethods;
     return this;
   }
-
+  
   /**
    * addSupportedPaymentMethodsItem.
    *
@@ -396,7 +396,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return supportedPaymentMethods
    **/
   @Schema(description = "")
@@ -411,24 +410,23 @@ public class PaymentGatewayAccount {
     this.supportedPaymentMethods = supportedPaymentMethods;
   }
 
+
   /**
    * supportedPaymentMethodsWithOptions.
    *
    * @return PaymentGatewayAccount
    **/
-  public PaymentGatewayAccount supportedPaymentMethodsWithOptions(
-      java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
+  public PaymentGatewayAccount supportedPaymentMethodsWithOptions(java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
     this.supportedPaymentMethodsWithOptions = supportedPaymentMethodsWithOptions;
     return this;
   }
-
+  
   /**
    * addSupportedPaymentMethodsWithOptionsItem.
    *
    * @return PaymentGatewayAccount
    **/
-  public PaymentGatewayAccount addSupportedPaymentMethodsWithOptionsItem(
-      PaymentMethodWithOptions supportedPaymentMethodsWithOptionsItem) {
+  public PaymentGatewayAccount addSupportedPaymentMethodsWithOptionsItem(PaymentMethodWithOptions supportedPaymentMethodsWithOptionsItem) {
     if (this.supportedPaymentMethodsWithOptions == null) {
       this.supportedPaymentMethodsWithOptions = new java.util.ArrayList<>();
     }
@@ -438,7 +436,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return supportedPaymentMethodsWithOptions
    **/
   @Schema(description = "")
@@ -449,10 +446,10 @@ public class PaymentGatewayAccount {
   /**
    * setSupportedPaymentMethodsWithOptions.
    **/
-  public void setSupportedPaymentMethodsWithOptions(
-      java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
+  public void setSupportedPaymentMethodsWithOptions(java.util.List<PaymentMethodWithOptions> supportedPaymentMethodsWithOptions) {
     this.supportedPaymentMethodsWithOptions = supportedPaymentMethodsWithOptions;
   }
+
 
   /**
    * zeroDecimalCurrencies.
@@ -463,7 +460,7 @@ public class PaymentGatewayAccount {
     this.zeroDecimalCurrencies = zeroDecimalCurrencies;
     return this;
   }
-
+  
   /**
    * addZeroDecimalCurrenciesItem.
    *
@@ -479,7 +476,6 @@ public class PaymentGatewayAccount {
 
   /**
    * .
-   * 
    * @return zeroDecimalCurrencies
    **/
   @Schema(description = "")
@@ -493,6 +489,7 @@ public class PaymentGatewayAccount {
   public void setZeroDecimalCurrencies(java.util.List<String> zeroDecimalCurrencies) {
     this.zeroDecimalCurrencies = zeroDecimalCurrencies;
   }
+
 
   /**
    * Compares objects.
@@ -520,9 +517,7 @@ public class PaymentGatewayAccount {
         Objects.equals(this.payPalLegacySettings, paymentGatewayAccount.payPalLegacySettings) &&
         Objects.equals(this.supportedCurrencies, paymentGatewayAccount.supportedCurrencies) &&
         Objects.equals(this.supportedPaymentMethods, paymentGatewayAccount.supportedPaymentMethods) &&
-        Objects.equals(this.supportedPaymentMethodsWithOptions,
-            paymentGatewayAccount.supportedPaymentMethodsWithOptions)
-        &&
+        Objects.equals(this.supportedPaymentMethodsWithOptions, paymentGatewayAccount.supportedPaymentMethodsWithOptions) &&
         Objects.equals(this.zeroDecimalCurrencies, paymentGatewayAccount.zeroDecimalCurrencies);
   }
 
@@ -531,10 +526,9 @@ public class PaymentGatewayAccount {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway,
-        paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies,
-        supportedPaymentMethods, supportedPaymentMethodsWithOptions, zeroDecimalCurrencies);
+    return Objects.hash(allowCustomMetadata, config, displayName, isEnabled, isLegacy, lastModified, paymentGateway, paymentGatewayAccountId, paymentGatewayDisplayName, payPalLegacySettings, supportedCurrencies, supportedPaymentMethods, supportedPaymentMethodsWithOptions, zeroDecimalCurrencies);
   }
+
 
   /**
    * Converts the given object to string.
@@ -543,7 +537,7 @@ public class PaymentGatewayAccount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccount {\n");
-
+    
     sb.append("    allowCustomMetadata: ").append(toIndentedString(allowCustomMetadata)).append("\n");
     sb.append("    config: ").append(toIndentedString(config)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
@@ -556,8 +550,7 @@ public class PaymentGatewayAccount {
     sb.append("    payPalLegacySettings: ").append(toIndentedString(payPalLegacySettings)).append("\n");
     sb.append("    supportedCurrencies: ").append(toIndentedString(supportedCurrencies)).append("\n");
     sb.append("    supportedPaymentMethods: ").append(toIndentedString(supportedPaymentMethods)).append("\n");
-    sb.append("    supportedPaymentMethodsWithOptions: ").append(toIndentedString(supportedPaymentMethodsWithOptions))
-        .append("\n");
+    sb.append("    supportedPaymentMethodsWithOptions: ").append(toIndentedString(supportedPaymentMethodsWithOptions)).append("\n");
     sb.append("    zeroDecimalCurrencies: ").append(toIndentedString(zeroDecimalCurrencies)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -575,3 +568,4 @@ public class PaymentGatewayAccount {
   }
 
 }
+

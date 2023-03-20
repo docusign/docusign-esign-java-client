@@ -33,6 +33,7 @@ public class EnvelopeAttachment {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * accessControl.
    *
@@ -45,7 +46,6 @@ public class EnvelopeAttachment {
 
   /**
    * .
-   * 
    * @return accessControl
    **/
   @Schema(description = "")
@@ -60,6 +60,7 @@ public class EnvelopeAttachment {
     this.accessControl = accessControl;
   }
 
+
   /**
    * attachmentId.
    *
@@ -72,7 +73,6 @@ public class EnvelopeAttachment {
 
   /**
    * .
-   * 
    * @return attachmentId
    **/
   @Schema(description = "")
@@ -87,6 +87,7 @@ public class EnvelopeAttachment {
     this.attachmentId = attachmentId;
   }
 
+
   /**
    * attachmentType.
    *
@@ -99,7 +100,6 @@ public class EnvelopeAttachment {
 
   /**
    * .
-   * 
    * @return attachmentType
    **/
   @Schema(description = "")
@@ -114,6 +114,7 @@ public class EnvelopeAttachment {
     this.attachmentType = attachmentType;
   }
 
+
   /**
    * errorDetails.
    *
@@ -125,12 +126,10 @@ public class EnvelopeAttachment {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -141,6 +140,7 @@ public class EnvelopeAttachment {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * label.
@@ -154,7 +154,6 @@ public class EnvelopeAttachment {
 
   /**
    * .
-   * 
    * @return label
    **/
   @Schema(description = "")
@@ -169,6 +168,7 @@ public class EnvelopeAttachment {
     this.label = label;
   }
 
+
   /**
    * name.
    *
@@ -181,7 +181,6 @@ public class EnvelopeAttachment {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -195,6 +194,7 @@ public class EnvelopeAttachment {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -226,6 +226,7 @@ public class EnvelopeAttachment {
     return Objects.hash(accessControl, attachmentId, attachmentType, errorDetails, label, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -233,7 +234,7 @@ public class EnvelopeAttachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachment {\n");
-
+    
     sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
@@ -256,3 +257,4 @@ public class EnvelopeAttachment {
   }
 
 }
+

@@ -21,6 +21,7 @@ public class ConnectHistoricalEnvelopeRepublish {
   @JsonProperty("envelopes")
   private java.util.List<String> envelopes = null;
 
+
   /**
    * config.
    *
@@ -32,8 +33,7 @@ public class ConnectHistoricalEnvelopeRepublish {
   }
 
   /**
-   * Get config.
-   * 
+   * .
    * @return config
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class ConnectHistoricalEnvelopeRepublish {
     this.config = config;
   }
 
+
   /**
    * envelopes.
    *
@@ -57,7 +58,7 @@ public class ConnectHistoricalEnvelopeRepublish {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
@@ -73,7 +74,6 @@ public class ConnectHistoricalEnvelopeRepublish {
 
   /**
    * .
-   * 
    * @return envelopes
    **/
   @Schema(description = "")
@@ -87,6 +87,7 @@ public class ConnectHistoricalEnvelopeRepublish {
   public void setEnvelopes(java.util.List<String> envelopes) {
     this.envelopes = envelopes;
   }
+
 
   /**
    * Compares objects.
@@ -114,6 +115,7 @@ public class ConnectHistoricalEnvelopeRepublish {
     return Objects.hash(config, envelopes);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -121,7 +123,7 @@ public class ConnectHistoricalEnvelopeRepublish {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectHistoricalEnvelopeRepublish {\n");
-
+    
     sb.append("    config: ").append(toIndentedString(config)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("}");
@@ -140,3 +142,4 @@ public class ConnectHistoricalEnvelopeRepublish {
   }
 
 }
+

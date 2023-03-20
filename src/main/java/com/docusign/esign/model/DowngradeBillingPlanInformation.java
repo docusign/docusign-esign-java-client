@@ -33,6 +33,7 @@ public class DowngradeBillingPlanInformation {
   @JsonProperty("saleDiscountType")
   private String saleDiscountType = null;
 
+
   /**
    * downgradeEventType.
    *
@@ -45,7 +46,6 @@ public class DowngradeBillingPlanInformation {
 
   /**
    * .
-   * 
    * @return downgradeEventType
    **/
   @Schema(description = "")
@@ -60,6 +60,7 @@ public class DowngradeBillingPlanInformation {
     this.downgradeEventType = downgradeEventType;
   }
 
+
   /**
    * planInformation.
    *
@@ -71,9 +72,7 @@ public class DowngradeBillingPlanInformation {
   }
 
   /**
-   * An object used to identify the features and attributes of the account being
-   * created..
-   * 
+   * An object used to identify the features and attributes of the account being created..
    * @return planInformation
    **/
   @Schema(description = "An object used to identify the features and attributes of the account being created.")
@@ -88,6 +87,7 @@ public class DowngradeBillingPlanInformation {
     this.planInformation = planInformation;
   }
 
+
   /**
    * promoCode.
    *
@@ -100,7 +100,6 @@ public class DowngradeBillingPlanInformation {
 
   /**
    * .
-   * 
    * @return promoCode
    **/
   @Schema(description = "")
@@ -115,6 +114,7 @@ public class DowngradeBillingPlanInformation {
     this.promoCode = promoCode;
   }
 
+
   /**
    * saleDiscount.
    *
@@ -127,7 +127,6 @@ public class DowngradeBillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscount
    **/
   @Schema(description = "")
@@ -142,6 +141,7 @@ public class DowngradeBillingPlanInformation {
     this.saleDiscount = saleDiscount;
   }
 
+
   /**
    * saleDiscountPeriods.
    *
@@ -154,7 +154,6 @@ public class DowngradeBillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountPeriods
    **/
   @Schema(description = "")
@@ -169,6 +168,7 @@ public class DowngradeBillingPlanInformation {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
   /**
    * saleDiscountType.
    *
@@ -181,7 +181,6 @@ public class DowngradeBillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountType
    **/
   @Schema(description = "")
@@ -195,6 +194,7 @@ public class DowngradeBillingPlanInformation {
   public void setSaleDiscountType(String saleDiscountType) {
     this.saleDiscountType = saleDiscountType;
   }
+
 
   /**
    * Compares objects.
@@ -223,9 +223,9 @@ public class DowngradeBillingPlanInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(downgradeEventType, planInformation, promoCode, saleDiscount, saleDiscountPeriods,
-        saleDiscountType);
+    return Objects.hash(downgradeEventType, planInformation, promoCode, saleDiscount, saleDiscountPeriods, saleDiscountType);
   }
+
 
   /**
    * Converts the given object to string.
@@ -234,7 +234,7 @@ public class DowngradeBillingPlanInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradeBillingPlanInformation {\n");
-
+    
     sb.append("    downgradeEventType: ").append(toIndentedString(downgradeEventType)).append("\n");
     sb.append("    planInformation: ").append(toIndentedString(planInformation)).append("\n");
     sb.append("    promoCode: ").append(toIndentedString(promoCode)).append("\n");
@@ -257,3 +257,4 @@ public class DowngradeBillingPlanInformation {
   }
 
 }
+

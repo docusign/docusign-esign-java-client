@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object describes errors that occur. It is only valid for responses, and
- * ignored in requests..
+ * This object describes errors that occur. It is only valid for responses, and ignored in requests..
  *
  */
 @Schema(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
@@ -21,6 +20,7 @@ public class ErrorDetails {
 
   @JsonProperty("message")
   private String message = null;
+
 
   /**
    * errorCode.
@@ -34,7 +34,6 @@ public class ErrorDetails {
 
   /**
    * An error code associated with the error..
-   * 
    * @return errorCode
    **/
   @Schema(description = "An error code associated with the error.")
@@ -49,6 +48,7 @@ public class ErrorDetails {
     this.errorCode = errorCode;
   }
 
+
   /**
    * message.
    *
@@ -61,7 +61,6 @@ public class ErrorDetails {
 
   /**
    * A short error message..
-   * 
    * @return message
    **/
   @Schema(description = "A short error message.")
@@ -75,6 +74,7 @@ public class ErrorDetails {
   public void setMessage(String message) {
     this.message = message;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +102,7 @@ public class ErrorDetails {
     return Objects.hash(errorCode, message);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +110,7 @@ public class ErrorDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ErrorDetails {\n");
-
+    
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
     sb.append("}");
@@ -128,3 +129,4 @@ public class ErrorDetails {
   }
 
 }
+

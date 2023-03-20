@@ -21,20 +21,19 @@ public class DowngradRequestBillingInfoResponse {
   @JsonProperty("paymentMethod")
   private String paymentMethod = null;
 
+
   /**
    * downgradePlanInformation.
    *
    * @return DowngradRequestBillingInfoResponse
    **/
-  public DowngradRequestBillingInfoResponse downgradePlanInformation(
-      DowngradePlanUpdateResponse downgradePlanInformation) {
+  public DowngradRequestBillingInfoResponse downgradePlanInformation(DowngradePlanUpdateResponse downgradePlanInformation) {
     this.downgradePlanInformation = downgradePlanInformation;
     return this;
   }
 
   /**
    * .
-   * 
    * @return downgradePlanInformation
    **/
   @Schema(description = "")
@@ -49,6 +48,7 @@ public class DowngradRequestBillingInfoResponse {
     this.downgradePlanInformation = downgradePlanInformation;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -61,7 +61,6 @@ public class DowngradRequestBillingInfoResponse {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -75,6 +74,7 @@ public class DowngradRequestBillingInfoResponse {
   public void setPaymentMethod(String paymentMethod) {
     this.paymentMethod = paymentMethod;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +102,7 @@ public class DowngradRequestBillingInfoResponse {
     return Objects.hash(downgradePlanInformation, paymentMethod);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +110,7 @@ public class DowngradRequestBillingInfoResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradRequestBillingInfoResponse {\n");
-
+    
     sb.append("    downgradePlanInformation: ").append(toIndentedString(downgradePlanInformation)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("}");
@@ -128,3 +129,4 @@ public class DowngradRequestBillingInfoResponse {
   }
 
 }
+

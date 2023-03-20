@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Object specifying the format of the string provided to a recipient in order
- * to access an envelope..
+ * Object specifying the format of the string provided to a recipient in order to access an envelope..
  *
  */
 @Schema(description = "Object specifying the format of the string provided to a recipient in order to access an envelope.")
@@ -47,6 +46,7 @@ public class AccessCodeFormat {
   @JsonProperty("specialCharacterRequiredMetadata")
   private SettingsMetadata specialCharacterRequiredMetadata = null;
 
+
   /**
    * formatRequired.
    *
@@ -59,7 +59,6 @@ public class AccessCodeFormat {
 
   /**
    * .
-   * 
    * @return formatRequired
    **/
   @Schema(description = "")
@@ -74,6 +73,7 @@ public class AccessCodeFormat {
     this.formatRequired = formatRequired;
   }
 
+
   /**
    * formatRequiredMetadata.
    *
@@ -86,7 +86,6 @@ public class AccessCodeFormat {
 
   /**
    * Metadata indicating whether the `formatRequired` property is editable..
-   * 
    * @return formatRequiredMetadata
    **/
   @Schema(description = "Metadata indicating whether the `formatRequired` property is editable.")
@@ -101,6 +100,7 @@ public class AccessCodeFormat {
     this.formatRequiredMetadata = formatRequiredMetadata;
   }
 
+
   /**
    * letterRequired.
    *
@@ -113,7 +113,6 @@ public class AccessCodeFormat {
 
   /**
    * .
-   * 
    * @return letterRequired
    **/
   @Schema(description = "")
@@ -128,6 +127,7 @@ public class AccessCodeFormat {
     this.letterRequired = letterRequired;
   }
 
+
   /**
    * letterRequiredMetadata.
    *
@@ -140,7 +140,6 @@ public class AccessCodeFormat {
 
   /**
    * Metadata indicating whether the `letterRequired` property is editable..
-   * 
    * @return letterRequiredMetadata
    **/
   @Schema(description = "Metadata indicating whether the `letterRequired` property is editable.")
@@ -155,6 +154,7 @@ public class AccessCodeFormat {
     this.letterRequiredMetadata = letterRequiredMetadata;
   }
 
+
   /**
    * minimumLength.
    *
@@ -167,7 +167,6 @@ public class AccessCodeFormat {
 
   /**
    * .
-   * 
    * @return minimumLength
    **/
   @Schema(description = "")
@@ -182,6 +181,7 @@ public class AccessCodeFormat {
     this.minimumLength = minimumLength;
   }
 
+
   /**
    * minimumLengthMetadata.
    *
@@ -194,7 +194,6 @@ public class AccessCodeFormat {
 
   /**
    * Metadata indicating whether the `minimumLength` property is editable..
-   * 
    * @return minimumLengthMetadata
    **/
   @Schema(description = "Metadata indicating whether the `minimumLength` property is editable.")
@@ -209,6 +208,7 @@ public class AccessCodeFormat {
     this.minimumLengthMetadata = minimumLengthMetadata;
   }
 
+
   /**
    * numberRequired.
    *
@@ -221,7 +221,6 @@ public class AccessCodeFormat {
 
   /**
    * .
-   * 
    * @return numberRequired
    **/
   @Schema(description = "")
@@ -236,6 +235,7 @@ public class AccessCodeFormat {
     this.numberRequired = numberRequired;
   }
 
+
   /**
    * numberRequiredMetadata.
    *
@@ -248,7 +248,6 @@ public class AccessCodeFormat {
 
   /**
    * Metadata indicating whether the `numberRequired` property is editable..
-   * 
    * @return numberRequiredMetadata
    **/
   @Schema(description = "Metadata indicating whether the `numberRequired` property is editable.")
@@ -263,6 +262,7 @@ public class AccessCodeFormat {
     this.numberRequiredMetadata = numberRequiredMetadata;
   }
 
+
   /**
    * specialCharacterRequired.
    *
@@ -275,7 +275,6 @@ public class AccessCodeFormat {
 
   /**
    * .
-   * 
    * @return specialCharacterRequired
    **/
   @Schema(description = "")
@@ -290,6 +289,7 @@ public class AccessCodeFormat {
     this.specialCharacterRequired = specialCharacterRequired;
   }
 
+
   /**
    * specialCharacterRequiredMetadata.
    *
@@ -301,9 +301,7 @@ public class AccessCodeFormat {
   }
 
   /**
-   * Metadata indicating whether the `specialCharacterRequired` property is
-   * editable..
-   * 
+   * Metadata indicating whether the `specialCharacterRequired` property is editable..
    * @return specialCharacterRequiredMetadata
    **/
   @Schema(description = "Metadata indicating whether the `specialCharacterRequired` property is editable.")
@@ -317,6 +315,7 @@ public class AccessCodeFormat {
   public void setSpecialCharacterRequiredMetadata(SettingsMetadata specialCharacterRequiredMetadata) {
     this.specialCharacterRequiredMetadata = specialCharacterRequiredMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -349,10 +348,9 @@ public class AccessCodeFormat {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(formatRequired, formatRequiredMetadata, letterRequired, letterRequiredMetadata, minimumLength,
-        minimumLengthMetadata, numberRequired, numberRequiredMetadata, specialCharacterRequired,
-        specialCharacterRequiredMetadata);
+    return Objects.hash(formatRequired, formatRequiredMetadata, letterRequired, letterRequiredMetadata, minimumLength, minimumLengthMetadata, numberRequired, numberRequiredMetadata, specialCharacterRequired, specialCharacterRequiredMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -361,7 +359,7 @@ public class AccessCodeFormat {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccessCodeFormat {\n");
-
+    
     sb.append("    formatRequired: ").append(toIndentedString(formatRequired)).append("\n");
     sb.append("    formatRequiredMetadata: ").append(toIndentedString(formatRequiredMetadata)).append("\n");
     sb.append("    letterRequired: ").append(toIndentedString(letterRequired)).append("\n");
@@ -371,8 +369,7 @@ public class AccessCodeFormat {
     sb.append("    numberRequired: ").append(toIndentedString(numberRequired)).append("\n");
     sb.append("    numberRequiredMetadata: ").append(toIndentedString(numberRequiredMetadata)).append("\n");
     sb.append("    specialCharacterRequired: ").append(toIndentedString(specialCharacterRequired)).append("\n");
-    sb.append("    specialCharacterRequiredMetadata: ").append(toIndentedString(specialCharacterRequiredMetadata))
-        .append("\n");
+    sb.append("    specialCharacterRequiredMetadata: ").append(toIndentedString(specialCharacterRequiredMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -389,3 +386,4 @@ public class AccessCodeFormat {
   }
 
 }
+

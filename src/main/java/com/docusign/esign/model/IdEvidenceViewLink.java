@@ -17,6 +17,7 @@ public class IdEvidenceViewLink {
   @JsonProperty("viewLink")
   private String viewLink = null;
 
+
   /**
    * viewLink.
    *
@@ -29,7 +30,6 @@ public class IdEvidenceViewLink {
 
   /**
    * .
-   * 
    * @return viewLink
    **/
   @Schema(description = "")
@@ -43,6 +43,7 @@ public class IdEvidenceViewLink {
   public void setViewLink(String viewLink) {
     this.viewLink = viewLink;
   }
+
 
   /**
    * Compares objects.
@@ -69,6 +70,7 @@ public class IdEvidenceViewLink {
     return Objects.hash(viewLink);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -76,7 +78,7 @@ public class IdEvidenceViewLink {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdEvidenceViewLink {\n");
-
+    
     sb.append("    viewLink: ").append(toIndentedString(viewLink)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -94,3 +96,4 @@ public class IdEvidenceViewLink {
   }
 
 }
+

@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the number of password questions required (0 to 4) to
- * confirm a user&#39;s identity when a user needs to reset their password..
+ * Information about the number of password questions required (0 to 4) to confirm a user&#39;s identity when a user needs to reset their password..
  *
  */
 @Schema(description = "Information about the number of password questions required (0 to 4) to confirm a user's identity when a user needs to reset their password.")
@@ -21,6 +20,7 @@ public class AccountPasswordQuestionsRequired {
 
   @JsonProperty("minimumQuestions")
   private String minimumQuestions = null;
+
 
   /**
    * maximumQuestions.
@@ -34,7 +34,6 @@ public class AccountPasswordQuestionsRequired {
 
   /**
    * .
-   * 
    * @return maximumQuestions
    **/
   @Schema(description = "")
@@ -49,6 +48,7 @@ public class AccountPasswordQuestionsRequired {
     this.maximumQuestions = maximumQuestions;
   }
 
+
   /**
    * minimumQuestions.
    *
@@ -61,7 +61,6 @@ public class AccountPasswordQuestionsRequired {
 
   /**
    * .
-   * 
    * @return minimumQuestions
    **/
   @Schema(description = "")
@@ -75,6 +74,7 @@ public class AccountPasswordQuestionsRequired {
   public void setMinimumQuestions(String minimumQuestions) {
     this.minimumQuestions = minimumQuestions;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +102,7 @@ public class AccountPasswordQuestionsRequired {
     return Objects.hash(maximumQuestions, minimumQuestions);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +110,7 @@ public class AccountPasswordQuestionsRequired {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordQuestionsRequired {\n");
-
+    
     sb.append("    maximumQuestions: ").append(toIndentedString(maximumQuestions)).append("\n");
     sb.append("    minimumQuestions: ").append(toIndentedString(minimumQuestions)).append("\n");
     sb.append("}");
@@ -128,3 +129,4 @@ public class AccountPasswordQuestionsRequired {
   }
 
 }
+

@@ -26,6 +26,7 @@ public class JurisdictionSummary {
   @JsonProperty("jurisdictionName")
   private String jurisdictionName = null;
 
+
   /**
    * authorizedForIPen.
    *
@@ -38,7 +39,6 @@ public class JurisdictionSummary {
 
   /**
    * .
-   * 
    * @return authorizedForIPen
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class JurisdictionSummary {
     this.authorizedForIPen = authorizedForIPen;
   }
 
+
   /**
    * authorizedForRon.
    *
@@ -65,7 +66,6 @@ public class JurisdictionSummary {
 
   /**
    * .
-   * 
    * @return authorizedForRon
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class JurisdictionSummary {
     this.authorizedForRon = authorizedForRon;
   }
 
+
   /**
    * jurisdictionId.
    *
@@ -92,7 +93,6 @@ public class JurisdictionSummary {
 
   /**
    * .
-   * 
    * @return jurisdictionId
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class JurisdictionSummary {
     this.jurisdictionId = jurisdictionId;
   }
 
+
   /**
    * jurisdictionName.
    *
@@ -119,7 +120,6 @@ public class JurisdictionSummary {
 
   /**
    * .
-   * 
    * @return jurisdictionName
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class JurisdictionSummary {
   public void setJurisdictionName(String jurisdictionName) {
     this.jurisdictionName = jurisdictionName;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class JurisdictionSummary {
     return Objects.hash(authorizedForIPen, authorizedForRon, jurisdictionId, jurisdictionName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class JurisdictionSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class JurisdictionSummary {\n");
-
+    
     sb.append("    authorizedForIPen: ").append(toIndentedString(authorizedForIPen)).append("\n");
     sb.append("    authorizedForRon: ").append(toIndentedString(authorizedForRon)).append("\n");
     sb.append("    jurisdictionId: ").append(toIndentedString(jurisdictionId)).append("\n");
@@ -190,3 +192,4 @@ public class JurisdictionSummary {
   }
 
 }
+

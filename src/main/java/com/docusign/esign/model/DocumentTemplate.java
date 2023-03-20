@@ -30,6 +30,7 @@ public class DocumentTemplate {
   @JsonProperty("templateId")
   private String templateId = null;
 
+
   /**
    * documentEndPage.
    *
@@ -42,7 +43,6 @@ public class DocumentTemplate {
 
   /**
    * .
-   * 
    * @return documentEndPage
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class DocumentTemplate {
     this.documentEndPage = documentEndPage;
   }
 
+
   /**
    * documentId.
    *
@@ -68,9 +69,7 @@ public class DocumentTemplate {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -85,6 +84,7 @@ public class DocumentTemplate {
     this.documentId = documentId;
   }
 
+
   /**
    * documentStartPage.
    *
@@ -97,7 +97,6 @@ public class DocumentTemplate {
 
   /**
    * .
-   * 
    * @return documentStartPage
    **/
   @Schema(description = "")
@@ -112,6 +111,7 @@ public class DocumentTemplate {
     this.documentStartPage = documentStartPage;
   }
 
+
   /**
    * errorDetails.
    *
@@ -123,12 +123,10 @@ public class DocumentTemplate {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -139,6 +137,7 @@ public class DocumentTemplate {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * templateId.
@@ -151,9 +150,7 @@ public class DocumentTemplate {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -167,6 +164,7 @@ public class DocumentTemplate {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
+
 
   /**
    * Compares objects.
@@ -197,6 +195,7 @@ public class DocumentTemplate {
     return Objects.hash(documentEndPage, documentId, documentStartPage, errorDetails, templateId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -204,7 +203,7 @@ public class DocumentTemplate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplate {\n");
-
+    
     sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
@@ -226,3 +225,4 @@ public class DocumentTemplate {
   }
 
 }
+

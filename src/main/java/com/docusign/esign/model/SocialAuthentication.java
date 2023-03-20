@@ -17,6 +17,7 @@ public class SocialAuthentication {
   @JsonProperty("authentication")
   private String authentication = null;
 
+
   /**
    * authentication.
    *
@@ -29,7 +30,6 @@ public class SocialAuthentication {
 
   /**
    * Reserved: TBD.
-   * 
    * @return authentication
    **/
   @Schema(description = "Reserved: TBD")
@@ -43,6 +43,7 @@ public class SocialAuthentication {
   public void setAuthentication(String authentication) {
     this.authentication = authentication;
   }
+
 
   /**
    * Compares objects.
@@ -69,6 +70,7 @@ public class SocialAuthentication {
     return Objects.hash(authentication);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -76,7 +78,7 @@ public class SocialAuthentication {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAuthentication {\n");
-
+    
     sb.append("    authentication: ").append(toIndentedString(authentication)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -94,3 +96,4 @@ public class SocialAuthentication {
   }
 
 }
+

@@ -18,6 +18,7 @@ public class ResourceInformation {
   @JsonProperty("resources")
   private java.util.List<NameValue> resources = null;
 
+
   /**
    * resources.
    *
@@ -27,7 +28,7 @@ public class ResourceInformation {
     this.resources = resources;
     return this;
   }
-
+  
   /**
    * addResourcesItem.
    *
@@ -43,7 +44,6 @@ public class ResourceInformation {
 
   /**
    * .
-   * 
    * @return resources
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class ResourceInformation {
   public void setResources(java.util.List<NameValue> resources) {
     this.resources = resources;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class ResourceInformation {
     return Objects.hash(resources);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class ResourceInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceInformation {\n");
-
+    
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class ResourceInformation {
   }
 
 }
+

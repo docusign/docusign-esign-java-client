@@ -27,11 +27,15 @@ public class FormDataItem {
   @JsonProperty("numericalValue")
   private String numericalValue = null;
 
+  @JsonProperty("originalNumericalValue")
+  private String originalNumericalValue = null;
+
   @JsonProperty("originalValue")
   private String originalValue = null;
 
   @JsonProperty("value")
   private String value = null;
+
 
   /**
    * errorDetails.
@@ -44,12 +48,10 @@ public class FormDataItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -60,6 +62,7 @@ public class FormDataItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * listSelectedValue.
@@ -73,7 +76,6 @@ public class FormDataItem {
 
   /**
    * .
-   * 
    * @return listSelectedValue
    **/
   @Schema(description = "")
@@ -88,6 +90,7 @@ public class FormDataItem {
     this.listSelectedValue = listSelectedValue;
   }
 
+
   /**
    * name.
    *
@@ -100,7 +103,6 @@ public class FormDataItem {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -115,6 +117,7 @@ public class FormDataItem {
     this.name = name;
   }
 
+
   /**
    * numericalValue.
    *
@@ -127,7 +130,6 @@ public class FormDataItem {
 
   /**
    * .
-   * 
    * @return numericalValue
    **/
   @Schema(description = "")
@@ -142,6 +144,34 @@ public class FormDataItem {
     this.numericalValue = numericalValue;
   }
 
+
+  /**
+   * originalNumericalValue.
+   *
+   * @return FormDataItem
+   **/
+  public FormDataItem originalNumericalValue(String originalNumericalValue) {
+    this.originalNumericalValue = originalNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return originalNumericalValue
+   **/
+  @Schema(description = "")
+  public String getOriginalNumericalValue() {
+    return originalNumericalValue;
+  }
+
+  /**
+   * setOriginalNumericalValue.
+   **/
+  public void setOriginalNumericalValue(String originalNumericalValue) {
+    this.originalNumericalValue = originalNumericalValue;
+  }
+
+
   /**
    * originalValue.
    *
@@ -154,7 +184,6 @@ public class FormDataItem {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -169,6 +198,7 @@ public class FormDataItem {
     this.originalValue = originalValue;
   }
 
+
   /**
    * value.
    *
@@ -181,7 +211,6 @@ public class FormDataItem {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -195,6 +224,7 @@ public class FormDataItem {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -214,6 +244,7 @@ public class FormDataItem {
         Objects.equals(this.listSelectedValue, formDataItem.listSelectedValue) &&
         Objects.equals(this.name, formDataItem.name) &&
         Objects.equals(this.numericalValue, formDataItem.numericalValue) &&
+        Objects.equals(this.originalNumericalValue, formDataItem.originalNumericalValue) &&
         Objects.equals(this.originalValue, formDataItem.originalValue) &&
         Objects.equals(this.value, formDataItem.value);
   }
@@ -223,8 +254,9 @@ public class FormDataItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, listSelectedValue, name, numericalValue, originalValue, value);
+    return Objects.hash(errorDetails, listSelectedValue, name, numericalValue, originalNumericalValue, originalValue, value);
   }
+
 
   /**
    * Converts the given object to string.
@@ -233,11 +265,12 @@ public class FormDataItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FormDataItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    listSelectedValue: ").append(toIndentedString(listSelectedValue)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");
+    sb.append("    originalNumericalValue: ").append(toIndentedString(originalNumericalValue)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
@@ -256,3 +289,4 @@ public class FormDataItem {
   }
 
 }
+

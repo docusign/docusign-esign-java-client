@@ -23,6 +23,7 @@ public class BillingDiscount {
   @JsonProperty("endQuantity")
   private String endQuantity = null;
 
+
   /**
    * beginQuantity.
    *
@@ -35,7 +36,6 @@ public class BillingDiscount {
 
   /**
    * Reserved: TBD.
-   * 
    * @return beginQuantity
    **/
   @Schema(description = "Reserved: TBD")
@@ -50,6 +50,7 @@ public class BillingDiscount {
     this.beginQuantity = beginQuantity;
   }
 
+
   /**
    * discount.
    *
@@ -62,7 +63,6 @@ public class BillingDiscount {
 
   /**
    * .
-   * 
    * @return discount
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class BillingDiscount {
     this.discount = discount;
   }
 
+
   /**
    * endQuantity.
    *
@@ -89,7 +90,6 @@ public class BillingDiscount {
 
   /**
    * .
-   * 
    * @return endQuantity
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class BillingDiscount {
   public void setEndQuantity(String endQuantity) {
     this.endQuantity = endQuantity;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class BillingDiscount {
     return Objects.hash(beginQuantity, discount, endQuantity);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class BillingDiscount {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingDiscount {\n");
-
+    
     sb.append("    beginQuantity: ").append(toIndentedString(beginQuantity)).append("\n");
     sb.append("    discount: ").append(toIndentedString(discount)).append("\n");
     sb.append("    endQuantity: ").append(toIndentedString(endQuantity)).append("\n");
@@ -158,3 +160,4 @@ public class BillingDiscount {
   }
 
 }
+

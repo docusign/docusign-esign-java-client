@@ -23,6 +23,7 @@ public class NotaryJournalCredibleWitness {
   @JsonProperty("signatureImage")
   private String signatureImage = null;
 
+
   /**
    * address.
    *
@@ -35,7 +36,6 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
-   * 
    * @return address
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class NotaryJournalCredibleWitness {
     this.address = address;
   }
 
+
   /**
    * name.
    *
@@ -62,7 +63,6 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class NotaryJournalCredibleWitness {
     this.name = name;
   }
 
+
   /**
    * signatureImage.
    *
@@ -89,7 +90,6 @@ public class NotaryJournalCredibleWitness {
 
   /**
    * .
-   * 
    * @return signatureImage
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class NotaryJournalCredibleWitness {
   public void setSignatureImage(String signatureImage) {
     this.signatureImage = signatureImage;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class NotaryJournalCredibleWitness {
     return Objects.hash(address, name, signatureImage);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class NotaryJournalCredibleWitness {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalCredibleWitness {\n");
-
+    
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    signatureImage: ").append(toIndentedString(signatureImage)).append("\n");
@@ -158,3 +160,4 @@ public class NotaryJournalCredibleWitness {
   }
 
 }
+

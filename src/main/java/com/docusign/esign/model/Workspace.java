@@ -56,6 +56,7 @@ public class Workspace {
   @JsonProperty("workspaceUri")
   private String workspaceUri = null;
 
+
   /**
    * billableAccountId.
    *
@@ -68,7 +69,6 @@ public class Workspace {
 
   /**
    * .
-   * 
    * @return billableAccountId
    **/
   @Schema(description = "")
@@ -83,6 +83,7 @@ public class Workspace {
     this.billableAccountId = billableAccountId;
   }
 
+
   /**
    * callerInformation.
    *
@@ -95,7 +96,6 @@ public class Workspace {
 
   /**
    * .
-   * 
    * @return callerInformation
    **/
   @Schema(description = "")
@@ -110,6 +110,7 @@ public class Workspace {
     this.callerInformation = callerInformation;
   }
 
+
   /**
    * created.
    *
@@ -122,7 +123,6 @@ public class Workspace {
 
   /**
    * .
-   * 
    * @return created
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class Workspace {
     this.created = created;
   }
 
+
   /**
    * createdByInformation.
    *
@@ -149,7 +150,6 @@ public class Workspace {
 
   /**
    * Details about the user who created the workspace..
-   * 
    * @return createdByInformation
    **/
   @Schema(description = "Details about the user who created the workspace.")
@@ -164,6 +164,7 @@ public class Workspace {
     this.createdByInformation = createdByInformation;
   }
 
+
   /**
    * lastModified.
    *
@@ -175,9 +176,7 @@ public class Workspace {
   }
 
   /**
-   * Utc date and time the comment was last updated (can only be done by
-   * creator.).
-   * 
+   * Utc date and time the comment was last updated (can only be done by creator.).
    * @return lastModified
    **/
   @Schema(description = "Utc date and time the comment was last updated (can only be done by creator.)")
@@ -192,6 +191,7 @@ public class Workspace {
     this.lastModified = lastModified;
   }
 
+
   /**
    * lastModifiedByInformation.
    *
@@ -204,7 +204,6 @@ public class Workspace {
 
   /**
    * Details about the user who last modified the workspace..
-   * 
    * @return lastModifiedByInformation
    **/
   @Schema(description = "Details about the user who last modified the workspace.")
@@ -219,6 +218,7 @@ public class Workspace {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
 
+
   /**
    * settings.
    *
@@ -231,7 +231,6 @@ public class Workspace {
 
   /**
    * Information about the settings for the workspace..
-   * 
    * @return settings
    **/
   @Schema(description = "Information about the settings for the workspace.")
@@ -246,6 +245,7 @@ public class Workspace {
     this.settings = settings;
   }
 
+
   /**
    * status.
    *
@@ -257,10 +257,7 @@ public class Workspace {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -275,6 +272,7 @@ public class Workspace {
     this.status = status;
   }
 
+
   /**
    * workspaceBaseUrl.
    *
@@ -287,7 +285,6 @@ public class Workspace {
 
   /**
    * The relative URL that may be used to access the workspace..
-   * 
    * @return workspaceBaseUrl
    **/
   @Schema(description = "The relative URL that may be used to access the workspace.")
@@ -302,6 +299,7 @@ public class Workspace {
     this.workspaceBaseUrl = workspaceBaseUrl;
   }
 
+
   /**
    * workspaceDescription.
    *
@@ -314,7 +312,6 @@ public class Workspace {
 
   /**
    * Text describing the purpose of the workspace..
-   * 
    * @return workspaceDescription
    **/
   @Schema(description = "Text describing the purpose of the workspace.")
@@ -329,6 +326,7 @@ public class Workspace {
     this.workspaceDescription = workspaceDescription;
   }
 
+
   /**
    * workspaceId.
    *
@@ -341,7 +339,6 @@ public class Workspace {
 
   /**
    * The id of the workspace, always populated..
-   * 
    * @return workspaceId
    **/
   @Schema(description = "The id of the workspace, always populated.")
@@ -356,6 +353,7 @@ public class Workspace {
     this.workspaceId = workspaceId;
   }
 
+
   /**
    * workspaceName.
    *
@@ -368,7 +366,6 @@ public class Workspace {
 
   /**
    * The name of the workspace..
-   * 
    * @return workspaceName
    **/
   @Schema(description = "The name of the workspace.")
@@ -383,6 +380,7 @@ public class Workspace {
     this.workspaceName = workspaceName;
   }
 
+
   /**
    * workspaceUri.
    *
@@ -395,7 +393,6 @@ public class Workspace {
 
   /**
    * The relative URI that may be used to access the workspace..
-   * 
    * @return workspaceUri
    **/
   @Schema(description = "The relative URI that may be used to access the workspace.")
@@ -409,6 +406,7 @@ public class Workspace {
   public void setWorkspaceUri(String workspaceUri) {
     this.workspaceUri = workspaceUri;
   }
+
 
   /**
    * Compares objects.
@@ -444,10 +442,9 @@ public class Workspace {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(billableAccountId, callerInformation, created, createdByInformation, lastModified,
-        lastModifiedByInformation, settings, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName,
-        workspaceUri);
+    return Objects.hash(billableAccountId, callerInformation, created, createdByInformation, lastModified, lastModifiedByInformation, settings, status, workspaceBaseUrl, workspaceDescription, workspaceId, workspaceName, workspaceUri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -456,7 +453,7 @@ public class Workspace {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Workspace {\n");
-
+    
     sb.append("    billableAccountId: ").append(toIndentedString(billableAccountId)).append("\n");
     sb.append("    callerInformation: ").append(toIndentedString(callerInformation)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -486,3 +483,4 @@ public class Workspace {
   }
 
 }
+

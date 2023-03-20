@@ -11,8 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object defines the account permissions for a profile that you can apply
- * to a group of users..
+ * This object defines the account permissions for a profile that you can apply to a group of users..
  *
  */
 @Schema(description = "This object defines the account permissions for a profile that you can apply to a group of users.")
@@ -39,6 +38,7 @@ public class PermissionProfile {
   @JsonProperty("users")
   private java.util.List<UserInformation> users = null;
 
+
   /**
    * modifiedByUsername.
    *
@@ -51,7 +51,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return modifiedByUsername
    **/
   @Schema(description = "")
@@ -66,6 +65,7 @@ public class PermissionProfile {
     this.modifiedByUsername = modifiedByUsername;
   }
 
+
   /**
    * modifiedDateTime.
    *
@@ -78,7 +78,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return modifiedDateTime
    **/
   @Schema(description = "")
@@ -93,6 +92,7 @@ public class PermissionProfile {
     this.modifiedDateTime = modifiedDateTime;
   }
 
+
   /**
    * permissionProfileId.
    *
@@ -105,7 +105,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return permissionProfileId
    **/
   @Schema(description = "")
@@ -120,6 +119,7 @@ public class PermissionProfile {
     this.permissionProfileId = permissionProfileId;
   }
 
+
   /**
    * permissionProfileName.
    *
@@ -132,7 +132,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return permissionProfileName
    **/
   @Schema(description = "")
@@ -147,6 +146,7 @@ public class PermissionProfile {
     this.permissionProfileName = permissionProfileName;
   }
 
+
   /**
    * settings.
    *
@@ -158,9 +158,7 @@ public class PermissionProfile {
   }
 
   /**
-   * This object specifies the permissions that are associated with the account
-   * permission profile..
-   * 
+   * This object specifies the permissions that are associated with the account permission profile..
    * @return settings
    **/
   @Schema(description = "This object specifies the permissions that are associated with the account permission profile.")
@@ -175,6 +173,7 @@ public class PermissionProfile {
     this.settings = settings;
   }
 
+
   /**
    * userCount.
    *
@@ -187,7 +186,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return userCount
    **/
   @Schema(description = "")
@@ -202,6 +200,7 @@ public class PermissionProfile {
     this.userCount = userCount;
   }
 
+
   /**
    * users.
    *
@@ -211,7 +210,7 @@ public class PermissionProfile {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -227,7 +226,6 @@ public class PermissionProfile {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -241,6 +239,7 @@ public class PermissionProfile {
   public void setUsers(java.util.List<UserInformation> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -270,9 +269,9 @@ public class PermissionProfile {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(modifiedByUsername, modifiedDateTime, permissionProfileId, permissionProfileName, settings,
-        userCount, users);
+    return Objects.hash(modifiedByUsername, modifiedDateTime, permissionProfileId, permissionProfileName, settings, userCount, users);
   }
+
 
   /**
    * Converts the given object to string.
@@ -281,7 +280,7 @@ public class PermissionProfile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfile {\n");
-
+    
     sb.append("    modifiedByUsername: ").append(toIndentedString(modifiedByUsername)).append("\n");
     sb.append("    modifiedDateTime: ").append(toIndentedString(modifiedDateTime)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
@@ -305,3 +304,4 @@ public class PermissionProfile {
   }
 
 }
+

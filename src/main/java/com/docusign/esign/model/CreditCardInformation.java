@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information about a credit card that is associated with
- * an account..
+ * This object contains information about a credit card that is associated with an account..
  *
  */
 @Schema(description = "This object contains information about a credit card that is associated with an account.")
@@ -44,6 +43,7 @@ public class CreditCardInformation {
   @JsonProperty("tokenizedCard")
   private String tokenizedCard = null;
 
+
   /**
    * address.
    *
@@ -56,7 +56,6 @@ public class CreditCardInformation {
 
   /**
    * A complex element containing the credit card billing address information..
-   * 
    * @return address
    **/
   @Schema(description = "A complex element containing the credit card billing address information.")
@@ -71,6 +70,7 @@ public class CreditCardInformation {
     this.address = address;
   }
 
+
   /**
    * cardLastDigits.
    *
@@ -83,7 +83,6 @@ public class CreditCardInformation {
 
   /**
    * .
-   * 
    * @return cardLastDigits
    **/
   @Schema(description = "")
@@ -98,6 +97,7 @@ public class CreditCardInformation {
     this.cardLastDigits = cardLastDigits;
   }
 
+
   /**
    * cardNumber.
    *
@@ -110,7 +110,6 @@ public class CreditCardInformation {
 
   /**
    * The number on the credit card..
-   * 
    * @return cardNumber
    **/
   @Schema(description = "The number on the credit card.")
@@ -125,6 +124,7 @@ public class CreditCardInformation {
     this.cardNumber = cardNumber;
   }
 
+
   /**
    * cardType.
    *
@@ -137,7 +137,6 @@ public class CreditCardInformation {
 
   /**
    * The credit card type. Valid values are: visa, mastercard, or amex..
-   * 
    * @return cardType
    **/
   @Schema(description = "The credit card type. Valid values are: visa, mastercard, or amex.")
@@ -152,6 +151,7 @@ public class CreditCardInformation {
     this.cardType = cardType;
   }
 
+
   /**
    * cvNumber.
    *
@@ -164,7 +164,6 @@ public class CreditCardInformation {
 
   /**
    * .
-   * 
    * @return cvNumber
    **/
   @Schema(description = "")
@@ -179,6 +178,7 @@ public class CreditCardInformation {
     this.cvNumber = cvNumber;
   }
 
+
   /**
    * expirationMonth.
    *
@@ -191,7 +191,6 @@ public class CreditCardInformation {
 
   /**
    * The month that the credit card expires (1-12)..
-   * 
    * @return expirationMonth
    **/
   @Schema(description = "The month that the credit card expires (1-12).")
@@ -206,6 +205,7 @@ public class CreditCardInformation {
     this.expirationMonth = expirationMonth;
   }
 
+
   /**
    * expirationYear.
    *
@@ -218,7 +218,6 @@ public class CreditCardInformation {
 
   /**
    * The year 4 digit year in which the credit card expires..
-   * 
    * @return expirationYear
    **/
   @Schema(description = "The year 4 digit year in which the credit card expires.")
@@ -233,6 +232,7 @@ public class CreditCardInformation {
     this.expirationYear = expirationYear;
   }
 
+
   /**
    * nameOnCard.
    *
@@ -245,7 +245,6 @@ public class CreditCardInformation {
 
   /**
    * The exact name printed on the credit card..
-   * 
    * @return nameOnCard
    **/
   @Schema(description = "The exact name printed on the credit card.")
@@ -260,6 +259,7 @@ public class CreditCardInformation {
     this.nameOnCard = nameOnCard;
   }
 
+
   /**
    * tokenizedCard.
    *
@@ -272,7 +272,6 @@ public class CreditCardInformation {
 
   /**
    * .
-   * 
    * @return tokenizedCard
    **/
   @Schema(description = "")
@@ -286,6 +285,7 @@ public class CreditCardInformation {
   public void setTokenizedCard(String tokenizedCard) {
     this.tokenizedCard = tokenizedCard;
   }
+
 
   /**
    * Compares objects.
@@ -317,9 +317,9 @@ public class CreditCardInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(address, cardLastDigits, cardNumber, cardType, cvNumber, expirationMonth, expirationYear,
-        nameOnCard, tokenizedCard);
+    return Objects.hash(address, cardLastDigits, cardNumber, cardType, cvNumber, expirationMonth, expirationYear, nameOnCard, tokenizedCard);
   }
+
 
   /**
    * Converts the given object to string.
@@ -328,7 +328,7 @@ public class CreditCardInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardInformation {\n");
-
+    
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
     sb.append("    cardLastDigits: ").append(toIndentedString(cardLastDigits)).append("\n");
     sb.append("    cardNumber: ").append(toIndentedString(cardNumber)).append("\n");
@@ -354,3 +354,4 @@ public class CreditCardInformation {
   }
 
 }
+

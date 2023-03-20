@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains information about the envelope or template that you want
- * to send in bulk..
+ * This object contains information about the envelope or template that you want to send in bulk..
  *
  */
 @Schema(description = "This object contains information about the envelope or template that you want to send in bulk.")
@@ -21,6 +20,7 @@ public class BulkSendRequest {
 
   @JsonProperty("envelopeOrTemplateId")
   private String envelopeOrTemplateId = null;
+
 
   /**
    * batchName.
@@ -34,7 +34,6 @@ public class BulkSendRequest {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -49,6 +48,7 @@ public class BulkSendRequest {
     this.batchName = batchName;
   }
 
+
   /**
    * envelopeOrTemplateId.
    *
@@ -61,7 +61,6 @@ public class BulkSendRequest {
 
   /**
    * .
-   * 
    * @return envelopeOrTemplateId
    **/
   @Schema(description = "")
@@ -75,6 +74,7 @@ public class BulkSendRequest {
   public void setEnvelopeOrTemplateId(String envelopeOrTemplateId) {
     this.envelopeOrTemplateId = envelopeOrTemplateId;
   }
+
 
   /**
    * Compares objects.
@@ -102,6 +102,7 @@ public class BulkSendRequest {
     return Objects.hash(batchName, envelopeOrTemplateId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -109,7 +110,7 @@ public class BulkSendRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendRequest {\n");
-
+    
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    envelopeOrTemplateId: ").append(toIndentedString(envelopeOrTemplateId)).append("\n");
     sb.append("}");
@@ -128,3 +129,4 @@ public class BulkSendRequest {
   }
 
 }
+

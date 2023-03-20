@@ -64,6 +64,7 @@ public class BillingPlan {
   @JsonProperty("supportPlanFee")
   private String supportPlanFee = null;
 
+
   /**
    * appStoreProducts.
    *
@@ -73,7 +74,7 @@ public class BillingPlan {
     this.appStoreProducts = appStoreProducts;
     return this;
   }
-
+  
   /**
    * addAppStoreProductsItem.
    *
@@ -89,7 +90,6 @@ public class BillingPlan {
 
   /**
    * Reserved: TBD.
-   * 
    * @return appStoreProducts
    **/
   @Schema(description = "Reserved: TBD")
@@ -104,6 +104,7 @@ public class BillingPlan {
     this.appStoreProducts = appStoreProducts;
   }
 
+
   /**
    * currencyPlanPrices.
    *
@@ -113,7 +114,7 @@ public class BillingPlan {
     this.currencyPlanPrices = currencyPlanPrices;
     return this;
   }
-
+  
   /**
    * addCurrencyPlanPricesItem.
    *
@@ -128,10 +129,7 @@ public class BillingPlan {
   }
 
   /**
-   * Contains the currencyCode and currencySymbol for the alternate currency
-   * values for envelopeFee, fixedFee, and seatFee that are configured for this
-   * plan feature set..
-   * 
+   * Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set..
    * @return currencyPlanPrices
    **/
   @Schema(description = "Contains the currencyCode and currencySymbol for the alternate currency values for envelopeFee, fixedFee, and seatFee that are configured for this plan feature set.")
@@ -146,6 +144,7 @@ public class BillingPlan {
     this.currencyPlanPrices = currencyPlanPrices;
   }
 
+
   /**
    * enableSupport.
    *
@@ -157,9 +156,7 @@ public class BillingPlan {
   }
 
   /**
-   * When set to **true**, then customer support is provided as part of the
-   * account plan..
-   * 
+   * When set to **true**, then customer support is provided as part of the account plan..
    * @return enableSupport
    **/
   @Schema(description = "When set to **true**, then customer support is provided as part of the account plan.")
@@ -174,6 +171,7 @@ public class BillingPlan {
     this.enableSupport = enableSupport;
   }
 
+
   /**
    * includedSeats.
    *
@@ -186,7 +184,6 @@ public class BillingPlan {
 
   /**
    * The number of seats (users) included..
-   * 
    * @return includedSeats
    **/
   @Schema(description = "The number of seats (users) included.")
@@ -201,6 +198,7 @@ public class BillingPlan {
     this.includedSeats = includedSeats;
   }
 
+
   /**
    * otherDiscountPercent.
    *
@@ -213,7 +211,6 @@ public class BillingPlan {
 
   /**
    * .
-   * 
    * @return otherDiscountPercent
    **/
   @Schema(description = "")
@@ -228,6 +225,7 @@ public class BillingPlan {
     this.otherDiscountPercent = otherDiscountPercent;
   }
 
+
   /**
    * paymentCycle.
    *
@@ -239,9 +237,7 @@ public class BillingPlan {
   }
 
   /**
-   * The payment cycle associated with the plan. The possible values are: Monthly
-   * or Annually. .
-   * 
+   *  The payment cycle associated with the plan. The possible values are: Monthly or Annually. .
    * @return paymentCycle
    **/
   @Schema(description = " The payment cycle associated with the plan. The possible values are: Monthly or Annually. ")
@@ -256,6 +252,7 @@ public class BillingPlan {
     this.paymentCycle = paymentCycle;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -268,7 +265,6 @@ public class BillingPlan {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -283,6 +279,7 @@ public class BillingPlan {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * perSeatPrice.
    *
@@ -295,7 +292,6 @@ public class BillingPlan {
 
   /**
    * The per seat price for the plan..
-   * 
    * @return perSeatPrice
    **/
   @Schema(description = "The per seat price for the plan.")
@@ -310,6 +306,7 @@ public class BillingPlan {
     this.perSeatPrice = perSeatPrice;
   }
 
+
   /**
    * planClassification.
    *
@@ -321,9 +318,7 @@ public class BillingPlan {
   }
 
   /**
-   * Identifies the type of plan. Examples include Business, Corporate,
-   * Enterprise, Free..
-   * 
+   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
    * @return planClassification
    **/
   @Schema(description = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
@@ -338,6 +333,7 @@ public class BillingPlan {
     this.planClassification = planClassification;
   }
 
+
   /**
    * planFeatureSets.
    *
@@ -347,7 +343,7 @@ public class BillingPlan {
     this.planFeatureSets = planFeatureSets;
     return this;
   }
-
+  
   /**
    * addPlanFeatureSetsItem.
    *
@@ -363,7 +359,6 @@ public class BillingPlan {
 
   /**
    * .
-   * 
    * @return planFeatureSets
    **/
   @Schema(description = "")
@@ -378,6 +373,7 @@ public class BillingPlan {
     this.planFeatureSets = planFeatureSets;
   }
 
+
   /**
    * planId.
    *
@@ -390,7 +386,6 @@ public class BillingPlan {
 
   /**
    * .
-   * 
    * @return planId
    **/
   @Schema(description = "")
@@ -405,6 +400,7 @@ public class BillingPlan {
     this.planId = planId;
   }
 
+
   /**
    * planName.
    *
@@ -417,7 +413,6 @@ public class BillingPlan {
 
   /**
    * The name of the Billing Plan..
-   * 
    * @return planName
    **/
   @Schema(description = "The name of the Billing Plan.")
@@ -432,6 +427,7 @@ public class BillingPlan {
     this.planName = planName;
   }
 
+
   /**
    * seatDiscounts.
    *
@@ -441,7 +437,7 @@ public class BillingPlan {
     this.seatDiscounts = seatDiscounts;
     return this;
   }
-
+  
   /**
    * addSeatDiscountsItem.
    *
@@ -457,7 +453,6 @@ public class BillingPlan {
 
   /**
    * .
-   * 
    * @return seatDiscounts
    **/
   @Schema(description = "")
@@ -472,6 +467,7 @@ public class BillingPlan {
     this.seatDiscounts = seatDiscounts;
   }
 
+
   /**
    * supportIncidentFee.
    *
@@ -484,7 +480,6 @@ public class BillingPlan {
 
   /**
    * The support incident fee charged for each support incident..
-   * 
    * @return supportIncidentFee
    **/
   @Schema(description = "The support incident fee charged for each support incident.")
@@ -499,6 +494,7 @@ public class BillingPlan {
     this.supportIncidentFee = supportIncidentFee;
   }
 
+
   /**
    * supportPlanFee.
    *
@@ -511,7 +507,6 @@ public class BillingPlan {
 
   /**
    * The support plan fee charged for this plan..
-   * 
    * @return supportPlanFee
    **/
   @Schema(description = "The support plan fee charged for this plan.")
@@ -525,6 +520,7 @@ public class BillingPlan {
   public void setSupportPlanFee(String supportPlanFee) {
     this.supportPlanFee = supportPlanFee;
   }
+
 
   /**
    * Compares objects.
@@ -562,10 +558,9 @@ public class BillingPlan {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(appStoreProducts, currencyPlanPrices, enableSupport, includedSeats, otherDiscountPercent,
-        paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, seatDiscounts,
-        supportIncidentFee, supportPlanFee);
+    return Objects.hash(appStoreProducts, currencyPlanPrices, enableSupport, includedSeats, otherDiscountPercent, paymentCycle, paymentMethod, perSeatPrice, planClassification, planFeatureSets, planId, planName, seatDiscounts, supportIncidentFee, supportPlanFee);
   }
+
 
   /**
    * Converts the given object to string.
@@ -574,7 +569,7 @@ public class BillingPlan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlan {\n");
-
+    
     sb.append("    appStoreProducts: ").append(toIndentedString(appStoreProducts)).append("\n");
     sb.append("    currencyPlanPrices: ").append(toIndentedString(currencyPlanPrices)).append("\n");
     sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
@@ -606,3 +601,4 @@ public class BillingPlan {
   }
 
 }
+

@@ -11,8 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element that specifies notifications (expirations and reminders)
- * for the envelope..
+ * A complex element that specifies notifications (expirations and reminders) for the envelope..
  *
  */
 @Schema(description = "A complex element that specifies notifications (expirations and reminders) for the envelope.")
@@ -27,6 +26,7 @@ public class AccountNotification {
   @JsonProperty("userOverrideEnabled")
   private String userOverrideEnabled = null;
 
+
   /**
    * expirations.
    *
@@ -39,7 +39,6 @@ public class AccountNotification {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
-   * 
    * @return expirations
    **/
   @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
@@ -54,6 +53,7 @@ public class AccountNotification {
     this.expirations = expirations;
   }
 
+
   /**
    * reminders.
    *
@@ -66,7 +66,6 @@ public class AccountNotification {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
-   * 
    * @return reminders
    **/
   @Schema(description = "A complex element that specifies reminder settings for the envelope.")
@@ -81,6 +80,7 @@ public class AccountNotification {
     this.reminders = reminders;
   }
 
+
   /**
    * userOverrideEnabled.
    *
@@ -93,7 +93,6 @@ public class AccountNotification {
 
   /**
    * .
-   * 
    * @return userOverrideEnabled
    **/
   @Schema(description = "")
@@ -107,6 +106,7 @@ public class AccountNotification {
   public void setUserOverrideEnabled(String userOverrideEnabled) {
     this.userOverrideEnabled = userOverrideEnabled;
   }
+
 
   /**
    * Compares objects.
@@ -135,6 +135,7 @@ public class AccountNotification {
     return Objects.hash(expirations, reminders, userOverrideEnabled);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -142,7 +143,7 @@ public class AccountNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountNotification {\n");
-
+    
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
     sb.append("    userOverrideEnabled: ").append(toIndentedString(userOverrideEnabled)).append("\n");
@@ -162,3 +163,4 @@ public class AccountNotification {
   }
 
 }
+

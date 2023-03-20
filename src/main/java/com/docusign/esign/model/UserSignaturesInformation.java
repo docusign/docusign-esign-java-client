@@ -18,6 +18,7 @@ public class UserSignaturesInformation {
   @JsonProperty("userSignatures")
   private java.util.List<UserSignature> userSignatures = null;
 
+
   /**
    * userSignatures.
    *
@@ -27,7 +28,7 @@ public class UserSignaturesInformation {
     this.userSignatures = userSignatures;
     return this;
   }
-
+  
   /**
    * addUserSignaturesItem.
    *
@@ -43,7 +44,6 @@ public class UserSignaturesInformation {
 
   /**
    * .
-   * 
    * @return userSignatures
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class UserSignaturesInformation {
   public void setUserSignatures(java.util.List<UserSignature> userSignatures) {
     this.userSignatures = userSignatures;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class UserSignaturesInformation {
     return Objects.hash(userSignatures);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class UserSignaturesInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignaturesInformation {\n");
-
+    
     sb.append("    userSignatures: ").append(toIndentedString(userSignatures)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class UserSignaturesInformation {
   }
 
 }
+

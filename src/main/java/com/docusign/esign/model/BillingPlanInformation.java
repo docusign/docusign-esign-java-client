@@ -88,6 +88,7 @@ public class BillingPlanInformation {
   @JsonProperty("taxExemptId")
   private String taxExemptId = null;
 
+
   /**
    * appStoreReceipt.
    *
@@ -100,7 +101,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return appStoreReceipt
    **/
   @Schema(description = "")
@@ -115,6 +115,7 @@ public class BillingPlanInformation {
     this.appStoreReceipt = appStoreReceipt;
   }
 
+
   /**
    * billingAddress.
    *
@@ -127,7 +128,6 @@ public class BillingPlanInformation {
 
   /**
    * The billing address for the account..
-   * 
    * @return billingAddress
    **/
   @Schema(description = "The billing address for the account.")
@@ -142,6 +142,7 @@ public class BillingPlanInformation {
     this.billingAddress = billingAddress;
   }
 
+
   /**
    * creditCardInformation.
    *
@@ -153,9 +154,7 @@ public class BillingPlanInformation {
   }
 
   /**
-   * A complex type that has information about the credit card used to pay for
-   * this account..
-   * 
+   * A complex type that has information about the credit card used to pay for this account..
    * @return creditCardInformation
    **/
   @Schema(description = "A complex type that has information about the credit card used to pay for this account.")
@@ -170,21 +169,19 @@ public class BillingPlanInformation {
     this.creditCardInformation = creditCardInformation;
   }
 
+
   /**
    * directDebitProcessorInformation.
    *
    * @return BillingPlanInformation
    **/
-  public BillingPlanInformation directDebitProcessorInformation(
-      DirectDebitProcessorInformation directDebitProcessorInformation) {
+  public BillingPlanInformation directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
   /**
-   * Information about the bank that processes direct debits for the payment
-   * plan..
-   * 
+   * Information about the bank that processes direct debits for the payment plan..
    * @return directDebitProcessorInformation
    **/
   @Schema(description = "Information about the bank that processes direct debits for the payment plan.")
@@ -199,6 +196,7 @@ public class BillingPlanInformation {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+
   /**
    * downgradeReason.
    *
@@ -211,7 +209,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return downgradeReason
    **/
   @Schema(description = "")
@@ -226,6 +223,7 @@ public class BillingPlanInformation {
     this.downgradeReason = downgradeReason;
   }
 
+
   /**
    * enablePreAuth.
    *
@@ -238,7 +236,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return enablePreAuth
    **/
   @Schema(description = "")
@@ -253,6 +250,7 @@ public class BillingPlanInformation {
     this.enablePreAuth = enablePreAuth;
   }
 
+
   /**
    * enableSupport.
    *
@@ -265,7 +263,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return enableSupport
    **/
   @Schema(description = "")
@@ -280,6 +277,7 @@ public class BillingPlanInformation {
     this.enableSupport = enableSupport;
   }
 
+
   /**
    * includedSeats.
    *
@@ -292,7 +290,6 @@ public class BillingPlanInformation {
 
   /**
    * The number of seats (users) included..
-   * 
    * @return includedSeats
    **/
   @Schema(description = "The number of seats (users) included.")
@@ -307,6 +304,7 @@ public class BillingPlanInformation {
     this.includedSeats = includedSeats;
   }
 
+
   /**
    * incrementalSeats.
    *
@@ -319,7 +317,6 @@ public class BillingPlanInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return incrementalSeats
    **/
   @Schema(description = "Reserved: TBD")
@@ -334,6 +331,7 @@ public class BillingPlanInformation {
     this.incrementalSeats = incrementalSeats;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -346,7 +344,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -361,6 +358,7 @@ public class BillingPlanInformation {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * paymentProcessor.
    *
@@ -373,7 +371,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return paymentProcessor
    **/
   @Schema(description = "")
@@ -388,6 +385,7 @@ public class BillingPlanInformation {
     this.paymentProcessor = paymentProcessor;
   }
 
+
   /**
    * paymentProcessorInformation.
    *
@@ -400,7 +398,6 @@ public class BillingPlanInformation {
 
   /**
    * Information about the entity that processes payments for the billing plan..
-   * 
    * @return paymentProcessorInformation
    **/
   @Schema(description = "Information about the entity that processes payments for the billing plan.")
@@ -415,6 +412,7 @@ public class BillingPlanInformation {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
   /**
    * planInformation.
    *
@@ -426,9 +424,7 @@ public class BillingPlanInformation {
   }
 
   /**
-   * An object used to identify the features and attributes of the account being
-   * created..
-   * 
+   * An object used to identify the features and attributes of the account being created..
    * @return planInformation
    **/
   @Schema(description = "An object used to identify the features and attributes of the account being created.")
@@ -443,6 +439,7 @@ public class BillingPlanInformation {
     this.planInformation = planInformation;
   }
 
+
   /**
    * processPayment.
    *
@@ -455,7 +452,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return processPayment
    **/
   @Schema(description = "")
@@ -470,6 +466,7 @@ public class BillingPlanInformation {
     this.processPayment = processPayment;
   }
 
+
   /**
    * referralInformation.
    *
@@ -481,9 +478,7 @@ public class BillingPlanInformation {
   }
 
   /**
-   * A complex type that contains properties for entering referral and discount
-   * information..
-   * 
+   * A complex type that contains properties for entering referral and discount information..
    * @return referralInformation
    **/
   @Schema(description = "A complex type that contains properties for entering referral and discount information.")
@@ -498,6 +493,7 @@ public class BillingPlanInformation {
     this.referralInformation = referralInformation;
   }
 
+
   /**
    * renewalStatus.
    *
@@ -510,7 +506,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return renewalStatus
    **/
   @Schema(description = "")
@@ -525,6 +520,7 @@ public class BillingPlanInformation {
     this.renewalStatus = renewalStatus;
   }
 
+
   /**
    * saleDiscountAmount.
    *
@@ -537,7 +533,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountAmount
    **/
   @Schema(description = "")
@@ -552,6 +547,7 @@ public class BillingPlanInformation {
     this.saleDiscountAmount = saleDiscountAmount;
   }
 
+
   /**
    * saleDiscountFixedAmount.
    *
@@ -564,7 +560,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountFixedAmount
    **/
   @Schema(description = "")
@@ -579,6 +574,7 @@ public class BillingPlanInformation {
     this.saleDiscountFixedAmount = saleDiscountFixedAmount;
   }
 
+
   /**
    * saleDiscountPercent.
    *
@@ -591,7 +587,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountPercent
    **/
   @Schema(description = "")
@@ -606,6 +601,7 @@ public class BillingPlanInformation {
     this.saleDiscountPercent = saleDiscountPercent;
   }
 
+
   /**
    * saleDiscountPeriods.
    *
@@ -618,7 +614,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountPeriods
    **/
   @Schema(description = "")
@@ -633,6 +628,7 @@ public class BillingPlanInformation {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
   /**
    * saleDiscountSeatPriceOverride.
    *
@@ -645,7 +641,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return saleDiscountSeatPriceOverride
    **/
   @Schema(description = "")
@@ -660,6 +655,7 @@ public class BillingPlanInformation {
     this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
   }
 
+
   /**
    * taxExemptId.
    *
@@ -672,7 +668,6 @@ public class BillingPlanInformation {
 
   /**
    * .
-   * 
    * @return taxExemptId
    **/
   @Schema(description = "")
@@ -686,6 +681,7 @@ public class BillingPlanInformation {
   public void setTaxExemptId(String taxExemptId) {
     this.taxExemptId = taxExemptId;
   }
+
 
   /**
    * Compares objects.
@@ -730,12 +726,9 @@ public class BillingPlanInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation,
-        downgradeReason, enablePreAuth, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessor,
-        paymentProcessorInformation, planInformation, processPayment, referralInformation, renewalStatus,
-        saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods,
-        saleDiscountSeatPriceOverride, taxExemptId);
+    return Objects.hash(appStoreReceipt, billingAddress, creditCardInformation, directDebitProcessorInformation, downgradeReason, enablePreAuth, enableSupport, includedSeats, incrementalSeats, paymentMethod, paymentProcessor, paymentProcessorInformation, planInformation, processPayment, referralInformation, renewalStatus, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride, taxExemptId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -744,12 +737,11 @@ public class BillingPlanInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanInformation {\n");
-
+    
     sb.append("    appStoreReceipt: ").append(toIndentedString(appStoreReceipt)).append("\n");
     sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation))
-        .append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    downgradeReason: ").append(toIndentedString(downgradeReason)).append("\n");
     sb.append("    enablePreAuth: ").append(toIndentedString(enablePreAuth)).append("\n");
     sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
@@ -766,8 +758,7 @@ public class BillingPlanInformation {
     sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
     sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
     sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
-    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride))
-        .append("\n");
+    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
     sb.append("    taxExemptId: ").append(toIndentedString(taxExemptId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -785,3 +776,4 @@ public class BillingPlanInformation {
   }
 
 }
+

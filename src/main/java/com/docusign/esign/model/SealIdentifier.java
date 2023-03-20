@@ -20,6 +20,7 @@ public class SealIdentifier {
   @JsonProperty("sealName")
   private String sealName = null;
 
+
   /**
    * sealDisplayName.
    *
@@ -32,7 +33,6 @@ public class SealIdentifier {
 
   /**
    * .
-   * 
    * @return sealDisplayName
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class SealIdentifier {
     this.sealDisplayName = sealDisplayName;
   }
 
+
   /**
    * sealName.
    *
@@ -59,7 +60,6 @@ public class SealIdentifier {
 
   /**
    * .
-   * 
    * @return sealName
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class SealIdentifier {
   public void setSealName(String sealName) {
     this.sealName = sealName;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class SealIdentifier {
     return Objects.hash(sealDisplayName, sealName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class SealIdentifier {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SealIdentifier {\n");
-
+    
     sb.append("    sealDisplayName: ").append(toIndentedString(sealDisplayName)).append("\n");
     sb.append("    sealName: ").append(toIndentedString(sealName)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class SealIdentifier {
   }
 
 }
+

@@ -19,6 +19,7 @@ public class WorkspaceItemList {
   @JsonProperty("items")
   private java.util.List<WorkspaceItem> items = null;
 
+
   /**
    * items.
    *
@@ -28,7 +29,7 @@ public class WorkspaceItemList {
     this.items = items;
     return this;
   }
-
+  
   /**
    * addItemsItem.
    *
@@ -44,7 +45,6 @@ public class WorkspaceItemList {
 
   /**
    * .
-   * 
    * @return items
    **/
   @Schema(description = "")
@@ -58,6 +58,7 @@ public class WorkspaceItemList {
   public void setItems(java.util.List<WorkspaceItem> items) {
     this.items = items;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class WorkspaceItemList {
     return Objects.hash(items);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class WorkspaceItemList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItemList {\n");
-
+    
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class WorkspaceItemList {
   }
 
 }
+

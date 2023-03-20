@@ -32,6 +32,7 @@ public class RecipientUpdateResponse {
   @JsonProperty("tabs")
   private Tabs tabs = null;
 
+
   /**
    * combined.
    *
@@ -44,7 +45,6 @@ public class RecipientUpdateResponse {
 
   /**
    * .
-   * 
    * @return combined
    **/
   @Schema(description = "")
@@ -59,6 +59,7 @@ public class RecipientUpdateResponse {
     this.combined = combined;
   }
 
+
   /**
    * errorDetails.
    *
@@ -70,12 +71,10 @@ public class RecipientUpdateResponse {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -86,6 +85,7 @@ public class RecipientUpdateResponse {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * recipientId.
@@ -98,9 +98,7 @@ public class RecipientUpdateResponse {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -115,6 +113,7 @@ public class RecipientUpdateResponse {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -127,7 +126,6 @@ public class RecipientUpdateResponse {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -142,6 +140,7 @@ public class RecipientUpdateResponse {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * tabs.
    *
@@ -154,7 +153,6 @@ public class RecipientUpdateResponse {
 
   /**
    * All of the tabs associated with the recipient..
-   * 
    * @return tabs
    **/
   @Schema(description = "All of the tabs associated with the recipient.")
@@ -168,6 +166,7 @@ public class RecipientUpdateResponse {
   public void setTabs(Tabs tabs) {
     this.tabs = tabs;
   }
+
 
   /**
    * Compares objects.
@@ -198,6 +197,7 @@ public class RecipientUpdateResponse {
     return Objects.hash(combined, errorDetails, recipientId, recipientIdGuid, tabs);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -205,7 +205,7 @@ public class RecipientUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientUpdateResponse {\n");
-
+    
     sb.append("    combined: ").append(toIndentedString(combined)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
@@ -227,3 +227,4 @@ public class RecipientUpdateResponse {
   }
 
 }
+

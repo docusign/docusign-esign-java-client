@@ -19,6 +19,7 @@ public class PermissionProfileInformation {
   @JsonProperty("permissionProfiles")
   private java.util.List<PermissionProfile> permissionProfiles = null;
 
+
   /**
    * permissionProfiles.
    *
@@ -28,7 +29,7 @@ public class PermissionProfileInformation {
     this.permissionProfiles = permissionProfiles;
     return this;
   }
-
+  
   /**
    * addPermissionProfilesItem.
    *
@@ -44,7 +45,6 @@ public class PermissionProfileInformation {
 
   /**
    * A complex type containing a collection of permission profiles..
-   * 
    * @return permissionProfiles
    **/
   @Schema(description = "A complex type containing a collection of permission profiles.")
@@ -58,6 +58,7 @@ public class PermissionProfileInformation {
   public void setPermissionProfiles(java.util.List<PermissionProfile> permissionProfiles) {
     this.permissionProfiles = permissionProfiles;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class PermissionProfileInformation {
     return Objects.hash(permissionProfiles);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class PermissionProfileInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PermissionProfileInformation {\n");
-
+    
     sb.append("    permissionProfiles: ").append(toIndentedString(permissionProfiles)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class PermissionProfileInformation {
   }
 
 }
+

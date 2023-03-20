@@ -29,6 +29,7 @@ public class DocGenFormField {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * label.
    *
@@ -41,7 +42,6 @@ public class DocGenFormField {
 
   /**
    * .
-   * 
    * @return label
    **/
   @Schema(description = "")
@@ -56,6 +56,7 @@ public class DocGenFormField {
     this.label = label;
   }
 
+
   /**
    * name.
    *
@@ -68,7 +69,6 @@ public class DocGenFormField {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -83,6 +83,7 @@ public class DocGenFormField {
     this.name = name;
   }
 
+
   /**
    * required.
    *
@@ -95,7 +96,6 @@ public class DocGenFormField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -110,6 +110,7 @@ public class DocGenFormField {
     this.required = required;
   }
 
+
   /**
    * type.
    *
@@ -122,7 +123,6 @@ public class DocGenFormField {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class DocGenFormField {
     this.type = type;
   }
 
+
   /**
    * value.
    *
@@ -149,7 +150,6 @@ public class DocGenFormField {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -163,6 +163,7 @@ public class DocGenFormField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -193,6 +194,7 @@ public class DocGenFormField {
     return Objects.hash(label, name, required, type, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -200,7 +202,7 @@ public class DocGenFormField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormField {\n");
-
+    
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
@@ -222,3 +224,4 @@ public class DocGenFormField {
   }
 
 }
+

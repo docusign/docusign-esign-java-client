@@ -12,8 +12,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A workspaceItem (file type only) representing the file. This property is only
- * returned in response to file specific GET call..
+ * A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call..
  *
  */
 @Schema(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
@@ -91,6 +90,7 @@ public class WorkspaceItem {
   @JsonProperty("userAuthorization")
   private WorkspaceUserAuthorization userAuthorization = null;
 
+
   /**
    * callerAuthorization.
    *
@@ -103,7 +103,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return callerAuthorization
    **/
   @Schema(description = "")
@@ -118,6 +117,7 @@ public class WorkspaceItem {
     this.callerAuthorization = callerAuthorization;
   }
 
+
   /**
    * contentType.
    *
@@ -130,7 +130,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return contentType
    **/
   @Schema(description = "")
@@ -145,6 +144,7 @@ public class WorkspaceItem {
     this.contentType = contentType;
   }
 
+
   /**
    * created.
    *
@@ -157,7 +157,6 @@ public class WorkspaceItem {
 
   /**
    * The UTC DateTime when the workspace item was created..
-   * 
    * @return created
    **/
   @Schema(description = "The UTC DateTime when the workspace item was created.")
@@ -172,6 +171,7 @@ public class WorkspaceItem {
     this.created = created;
   }
 
+
   /**
    * createdById.
    *
@@ -184,7 +184,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return createdById
    **/
   @Schema(description = "")
@@ -199,6 +198,7 @@ public class WorkspaceItem {
     this.createdById = createdById;
   }
 
+
   /**
    * createdByInformation.
    *
@@ -211,7 +211,6 @@ public class WorkspaceItem {
 
   /**
    * Details about the user who created the workspace item..
-   * 
    * @return createdByInformation
    **/
   @Schema(description = "Details about the user who created the workspace item.")
@@ -226,6 +225,7 @@ public class WorkspaceItem {
     this.createdByInformation = createdByInformation;
   }
 
+
   /**
    * extension.
    *
@@ -238,7 +238,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return extension
    **/
   @Schema(description = "")
@@ -253,6 +252,7 @@ public class WorkspaceItem {
     this.extension = extension;
   }
 
+
   /**
    * fileSize.
    *
@@ -265,7 +265,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return fileSize
    **/
   @Schema(description = "")
@@ -280,6 +279,7 @@ public class WorkspaceItem {
     this.fileSize = fileSize;
   }
 
+
   /**
    * fileUri.
    *
@@ -292,7 +292,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return fileUri
    **/
   @Schema(description = "")
@@ -307,6 +306,7 @@ public class WorkspaceItem {
     this.fileUri = fileUri;
   }
 
+
   /**
    * id.
    *
@@ -319,7 +319,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -334,6 +333,7 @@ public class WorkspaceItem {
     this.id = id;
   }
 
+
   /**
    * isPublic.
    *
@@ -345,9 +345,7 @@ public class WorkspaceItem {
   }
 
   /**
-   * If true, this supersedes need for bit mask permission with
-   * workspaceUserAuthorization.
-   * 
+   *  If true, this supersedes need for bit mask permission with workspaceUserAuthorization.
    * @return isPublic
    **/
   @Schema(description = " If true, this supersedes need for bit mask permission with workspaceUserAuthorization")
@@ -362,6 +360,7 @@ public class WorkspaceItem {
     this.isPublic = isPublic;
   }
 
+
   /**
    * lastModified.
    *
@@ -374,7 +373,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return lastModified
    **/
   @Schema(description = "")
@@ -389,6 +387,7 @@ public class WorkspaceItem {
     this.lastModified = lastModified;
   }
 
+
   /**
    * lastModifiedById.
    *
@@ -401,7 +400,6 @@ public class WorkspaceItem {
 
   /**
    * Utc date and time the comment was last updated (can only be done by creator).
-   * 
    * @return lastModifiedById
    **/
   @Schema(description = "Utc date and time the comment was last updated (can only be done by creator)")
@@ -416,6 +414,7 @@ public class WorkspaceItem {
     this.lastModifiedById = lastModifiedById;
   }
 
+
   /**
    * lastModifiedByInformation.
    *
@@ -428,7 +427,6 @@ public class WorkspaceItem {
 
   /**
    * Details about the user who last modified the workspace item..
-   * 
    * @return lastModifiedByInformation
    **/
   @Schema(description = "Details about the user who last modified the workspace item.")
@@ -443,6 +441,7 @@ public class WorkspaceItem {
     this.lastModifiedByInformation = lastModifiedByInformation;
   }
 
+
   /**
    * name.
    *
@@ -454,9 +453,7 @@ public class WorkspaceItem {
   }
 
   /**
-   * A simple string description of the item, such as a file name or a folder
-   * name..
-   * 
+   * A simple string description of the item, such as a file name or a folder name..
    * @return name
    **/
   @Schema(description = "A simple string description of the item, such as a file name or a folder name.")
@@ -471,6 +468,7 @@ public class WorkspaceItem {
     this.name = name;
   }
 
+
   /**
    * pageCount.
    *
@@ -483,7 +481,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return pageCount
    **/
   @Schema(description = "")
@@ -498,6 +495,7 @@ public class WorkspaceItem {
     this.pageCount = pageCount;
   }
 
+
   /**
    * parentFolderId.
    *
@@ -509,9 +507,7 @@ public class WorkspaceItem {
   }
 
   /**
-   * The ID of the parent folder. This is the GUID of the parent folder, or the
-   * special value 'root' for the root folder..
-   * 
+   * The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder..
    * @return parentFolderId
    **/
   @Schema(description = "The ID of the parent folder. This is the GUID of the parent folder, or the special value 'root' for the root folder.")
@@ -526,6 +522,7 @@ public class WorkspaceItem {
     this.parentFolderId = parentFolderId;
   }
 
+
   /**
    * parentFolderUri.
    *
@@ -538,7 +535,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return parentFolderUri
    **/
   @Schema(description = "")
@@ -553,6 +549,7 @@ public class WorkspaceItem {
     this.parentFolderUri = parentFolderUri;
   }
 
+
   /**
    * sha256.
    *
@@ -565,7 +562,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return sha256
    **/
   @Schema(description = "")
@@ -580,6 +576,7 @@ public class WorkspaceItem {
     this.sha256 = sha256;
   }
 
+
   /**
    * thumbHeight.
    *
@@ -592,7 +589,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return thumbHeight
    **/
   @Schema(description = "")
@@ -607,6 +603,7 @@ public class WorkspaceItem {
     this.thumbHeight = thumbHeight;
   }
 
+
   /**
    * thumbnail.
    *
@@ -619,7 +616,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return thumbnail
    **/
   @Schema(description = "")
@@ -634,6 +630,7 @@ public class WorkspaceItem {
     this.thumbnail = thumbnail;
   }
 
+
   /**
    * thumbWidth.
    *
@@ -646,7 +643,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return thumbWidth
    **/
   @Schema(description = "")
@@ -661,6 +657,7 @@ public class WorkspaceItem {
     this.thumbWidth = thumbWidth;
   }
 
+
   /**
    * type.
    *
@@ -673,7 +670,6 @@ public class WorkspaceItem {
 
   /**
    * The type of the workspace item. Valid values are file, folder..
-   * 
    * @return type
    **/
   @Schema(description = "The type of the workspace item. Valid values are file, folder.")
@@ -688,6 +684,7 @@ public class WorkspaceItem {
     this.type = type;
   }
 
+
   /**
    * uri.
    *
@@ -700,7 +697,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -715,6 +711,7 @@ public class WorkspaceItem {
     this.uri = uri;
   }
 
+
   /**
    * userAuthorization.
    *
@@ -727,7 +724,6 @@ public class WorkspaceItem {
 
   /**
    * .
-   * 
    * @return userAuthorization
    **/
   @Schema(description = "")
@@ -741,6 +737,7 @@ public class WorkspaceItem {
   public void setUserAuthorization(WorkspaceUserAuthorization userAuthorization) {
     this.userAuthorization = userAuthorization;
   }
+
 
   /**
    * Compares objects.
@@ -787,10 +784,9 @@ public class WorkspaceItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension,
-        fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount,
-        parentFolderId, parentFolderUri, sha256, thumbHeight, thumbnail, thumbWidth, type, uri, userAuthorization);
+    return Objects.hash(callerAuthorization, contentType, created, createdById, createdByInformation, extension, fileSize, fileUri, id, isPublic, lastModified, lastModifiedById, lastModifiedByInformation, name, pageCount, parentFolderId, parentFolderUri, sha256, thumbHeight, thumbnail, thumbWidth, type, uri, userAuthorization);
   }
+
 
   /**
    * Converts the given object to string.
@@ -799,7 +795,7 @@ public class WorkspaceItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceItem {\n");
-
+    
     sb.append("    callerAuthorization: ").append(toIndentedString(callerAuthorization)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
@@ -840,3 +836,4 @@ public class WorkspaceItem {
   }
 
 }
+

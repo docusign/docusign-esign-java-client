@@ -23,6 +23,7 @@ public class SmartSectionAnchorPosition {
   @JsonProperty("yPosition")
   private Double yPosition = null;
 
+
   /**
    * pageNumber.
    *
@@ -35,7 +36,6 @@ public class SmartSectionAnchorPosition {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -50,6 +50,7 @@ public class SmartSectionAnchorPosition {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * xPosition.
    *
@@ -61,9 +62,7 @@ public class SmartSectionAnchorPosition {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -78,6 +77,7 @@ public class SmartSectionAnchorPosition {
     this.xPosition = xPosition;
   }
 
+
   /**
    * yPosition.
    *
@@ -89,9 +89,7 @@ public class SmartSectionAnchorPosition {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -105,6 +103,7 @@ public class SmartSectionAnchorPosition {
   public void setYPosition(Double yPosition) {
     this.yPosition = yPosition;
   }
+
 
   /**
    * Compares objects.
@@ -133,6 +132,7 @@ public class SmartSectionAnchorPosition {
     return Objects.hash(pageNumber, xPosition, yPosition);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -140,7 +140,7 @@ public class SmartSectionAnchorPosition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartSectionAnchorPosition {\n");
-
+    
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");
     sb.append("    yPosition: ").append(toIndentedString(yPosition)).append("\n");
@@ -160,3 +160,4 @@ public class SmartSectionAnchorPosition {
   }
 
 }
+

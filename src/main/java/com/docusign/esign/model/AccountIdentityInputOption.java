@@ -23,6 +23,7 @@ public class AccountIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
+
   /**
    * isRequired.
    *
@@ -35,7 +36,6 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   * 
    * @return isRequired
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class AccountIdentityInputOption {
     this.isRequired = isRequired;
   }
 
+
   /**
    * optionName.
    *
@@ -62,7 +63,6 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   * 
    * @return optionName
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class AccountIdentityInputOption {
     this.optionName = optionName;
   }
 
+
   /**
    * valueType.
    *
@@ -89,7 +90,6 @@ public class AccountIdentityInputOption {
 
   /**
    * .
-   * 
    * @return valueType
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class AccountIdentityInputOption {
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class AccountIdentityInputOption {
     return Objects.hash(isRequired, optionName, valueType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class AccountIdentityInputOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityInputOption {\n");
-
+    
     sb.append("    isRequired: ").append(toIndentedString(isRequired)).append("\n");
     sb.append("    optionName: ").append(toIndentedString(optionName)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
@@ -158,3 +160,4 @@ public class AccountIdentityInputOption {
   }
 
 }
+

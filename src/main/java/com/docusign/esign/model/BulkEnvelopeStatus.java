@@ -57,6 +57,7 @@ public class BulkEnvelopeStatus {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * batchId.
    *
@@ -68,9 +69,7 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * Specifies an identifier which can be used to retrieve a more detailed status
-   * of individual bulk recipient batches..
-   * 
+   * Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches..
    * @return batchId
    **/
   @Schema(description = "Specifies an identifier which can be used to retrieve a more detailed status of individual bulk recipient batches.")
@@ -85,6 +84,7 @@ public class BulkEnvelopeStatus {
     this.batchId = batchId;
   }
 
+
   /**
    * batchSize.
    *
@@ -97,7 +97,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of items returned in this response..
-   * 
    * @return batchSize
    **/
   @Schema(description = "The number of items returned in this response.")
@@ -112,6 +111,7 @@ public class BulkEnvelopeStatus {
     this.batchSize = batchSize;
   }
 
+
   /**
    * bulkEnvelopes.
    *
@@ -121,7 +121,7 @@ public class BulkEnvelopeStatus {
     this.bulkEnvelopes = bulkEnvelopes;
     return this;
   }
-
+  
   /**
    * addBulkEnvelopesItem.
    *
@@ -137,7 +137,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * Reserved: TBD.
-   * 
    * @return bulkEnvelopes
    **/
   @Schema(description = "Reserved: TBD")
@@ -152,6 +151,7 @@ public class BulkEnvelopeStatus {
     this.bulkEnvelopes = bulkEnvelopes;
   }
 
+
   /**
    * bulkEnvelopesBatchUri.
    *
@@ -164,7 +164,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * Reserved: TBD.
-   * 
    * @return bulkEnvelopesBatchUri
    **/
   @Schema(description = "Reserved: TBD")
@@ -179,6 +178,7 @@ public class BulkEnvelopeStatus {
     this.bulkEnvelopesBatchUri = bulkEnvelopesBatchUri;
   }
 
+
   /**
    * endPosition.
    *
@@ -191,7 +191,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -206,6 +205,7 @@ public class BulkEnvelopeStatus {
     this.endPosition = endPosition;
   }
 
+
   /**
    * failed.
    *
@@ -218,7 +218,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of failed. .
-   * 
    * @return failed
    **/
   @Schema(description = "The number of entries with a status of failed. ")
@@ -233,6 +232,7 @@ public class BulkEnvelopeStatus {
     this.failed = failed;
   }
 
+
   /**
    * nextUri.
    *
@@ -244,9 +244,7 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -261,6 +259,7 @@ public class BulkEnvelopeStatus {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -273,7 +272,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -288,6 +286,7 @@ public class BulkEnvelopeStatus {
     this.previousUri = previousUri;
   }
 
+
   /**
    * queued.
    *
@@ -300,7 +299,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of queued. .
-   * 
    * @return queued
    **/
   @Schema(description = "The number of entries with a status of queued. ")
@@ -315,6 +313,7 @@ public class BulkEnvelopeStatus {
     this.queued = queued;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -327,7 +326,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -342,6 +340,7 @@ public class BulkEnvelopeStatus {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * sent.
    *
@@ -354,7 +353,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * The number of entries with a status of sent..
-   * 
    * @return sent
    **/
   @Schema(description = "The number of entries with a status of sent.")
@@ -369,6 +367,7 @@ public class BulkEnvelopeStatus {
     this.sent = sent;
   }
 
+
   /**
    * startPosition.
    *
@@ -381,7 +380,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -396,6 +394,7 @@ public class BulkEnvelopeStatus {
     this.startPosition = startPosition;
   }
 
+
   /**
    * submittedDate.
    *
@@ -408,7 +407,6 @@ public class BulkEnvelopeStatus {
 
   /**
    * .
-   * 
    * @return submittedDate
    **/
   @Schema(description = "")
@@ -423,6 +421,7 @@ public class BulkEnvelopeStatus {
     this.submittedDate = submittedDate;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -434,10 +433,7 @@ public class BulkEnvelopeStatus {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -451,6 +447,7 @@ public class BulkEnvelopeStatus {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -487,9 +484,9 @@ public class BulkEnvelopeStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchSize, bulkEnvelopes, bulkEnvelopesBatchUri, endPosition, failed, nextUri,
-        previousUri, queued, resultSetSize, sent, startPosition, submittedDate, totalSetSize);
+    return Objects.hash(batchId, batchSize, bulkEnvelopes, bulkEnvelopesBatchUri, endPosition, failed, nextUri, previousUri, queued, resultSetSize, sent, startPosition, submittedDate, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -498,7 +495,7 @@ public class BulkEnvelopeStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelopeStatus {\n");
-
+    
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");
     sb.append("    bulkEnvelopes: ").append(toIndentedString(bulkEnvelopes)).append("\n");
@@ -529,3 +526,4 @@ public class BulkEnvelopeStatus {
   }
 
 }
+

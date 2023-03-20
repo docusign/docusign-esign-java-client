@@ -10,7 +10,6 @@ import com.docusign.esign.model.CommissionExpiration;
 import com.docusign.esign.model.CommissionNumber;
 import com.docusign.esign.model.CommissionState;
 import com.docusign.esign.model.Company;
-import com.docusign.esign.model.Currency;
 import com.docusign.esign.model.DateSigned;
 import com.docusign.esign.model.Decline;
 import com.docusign.esign.model.Draw;
@@ -77,9 +76,6 @@ public class TemplateTabs {
 
   @JsonProperty("companyTabs")
   private java.util.List<Company> companyTabs = null;
-
-  @JsonProperty("currencyTabs")
-  private java.util.List<Currency> currencyTabs = null;
 
   @JsonProperty("dateSignedTabs")
   private java.util.List<DateSigned> dateSignedTabs = null;
@@ -174,6 +170,7 @@ public class TemplateTabs {
   @JsonProperty("zipTabs")
   private java.util.List<Zip> zipTabs = null;
 
+
   /**
    * approveTabs.
    *
@@ -183,7 +180,7 @@ public class TemplateTabs {
     this.approveTabs = approveTabs;
     return this;
   }
-
+  
   /**
    * addApproveTabsItem.
    *
@@ -198,13 +195,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to approve
-   * documents in an envelope without placing a signature or initials on the
-   * document. If the recipient clicks the Approve tag during the signing process,
-   * the recipient is considered to have signed the document. No information is
-   * shown on the document for the approval, but it is recorded as a signature in
-   * the envelope history..
-   * 
+   * Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history..
    * @return approveTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient to approve documents in an envelope without placing a signature or initials on the document. If the recipient clicks the Approve tag during the signing process, the recipient is considered to have signed the document. No information is shown on the document for the approval, but it is recorded as a signature in the envelope history.")
@@ -219,6 +210,7 @@ public class TemplateTabs {
     this.approveTabs = approveTabs;
   }
 
+
   /**
    * checkboxTabs.
    *
@@ -228,7 +220,7 @@ public class TemplateTabs {
     this.checkboxTabs = checkboxTabs;
     return this;
   }
-
+  
   /**
    * addCheckboxTabsItem.
    *
@@ -243,9 +235,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select
-   * an option..
-   * 
+   * Specifies a tag on the document in a location where the recipient can select an option..
    * @return checkboxTabs
    **/
   @Schema(description = "Specifies a tag on the document in a location where the recipient can select an option.")
@@ -260,6 +250,7 @@ public class TemplateTabs {
     this.checkboxTabs = checkboxTabs;
   }
 
+
   /**
    * commentThreadTabs.
    *
@@ -269,7 +260,7 @@ public class TemplateTabs {
     this.commentThreadTabs = commentThreadTabs;
     return this;
   }
-
+  
   /**
    * addCommentThreadTabsItem.
    *
@@ -285,7 +276,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return commentThreadTabs
    **/
   @Schema(description = "")
@@ -300,6 +290,7 @@ public class TemplateTabs {
     this.commentThreadTabs = commentThreadTabs;
   }
 
+
   /**
    * commissionCountyTabs.
    *
@@ -309,7 +300,7 @@ public class TemplateTabs {
     this.commissionCountyTabs = commissionCountyTabs;
     return this;
   }
-
+  
   /**
    * addCommissionCountyTabsItem.
    *
@@ -325,7 +316,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return commissionCountyTabs
    **/
   @Schema(description = "")
@@ -340,6 +330,7 @@ public class TemplateTabs {
     this.commissionCountyTabs = commissionCountyTabs;
   }
 
+
   /**
    * commissionExpirationTabs.
    *
@@ -349,7 +340,7 @@ public class TemplateTabs {
     this.commissionExpirationTabs = commissionExpirationTabs;
     return this;
   }
-
+  
   /**
    * addCommissionExpirationTabsItem.
    *
@@ -365,7 +356,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return commissionExpirationTabs
    **/
   @Schema(description = "")
@@ -380,6 +370,7 @@ public class TemplateTabs {
     this.commissionExpirationTabs = commissionExpirationTabs;
   }
 
+
   /**
    * commissionNumberTabs.
    *
@@ -389,7 +380,7 @@ public class TemplateTabs {
     this.commissionNumberTabs = commissionNumberTabs;
     return this;
   }
-
+  
   /**
    * addCommissionNumberTabsItem.
    *
@@ -405,7 +396,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return commissionNumberTabs
    **/
   @Schema(description = "")
@@ -420,6 +410,7 @@ public class TemplateTabs {
     this.commissionNumberTabs = commissionNumberTabs;
   }
 
+
   /**
    * commissionStateTabs.
    *
@@ -429,7 +420,7 @@ public class TemplateTabs {
     this.commissionStateTabs = commissionStateTabs;
     return this;
   }
-
+  
   /**
    * addCommissionStateTabsItem.
    *
@@ -445,7 +436,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return commissionStateTabs
    **/
   @Schema(description = "")
@@ -460,6 +450,7 @@ public class TemplateTabs {
     this.commissionStateTabs = commissionStateTabs;
   }
 
+
   /**
    * companyTabs.
    *
@@ -469,7 +460,7 @@ public class TemplateTabs {
     this.companyTabs = companyTabs;
     return this;
   }
-
+  
   /**
    * addCompanyTabsItem.
    *
@@ -484,11 +475,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's company name
-   * to appear. When getting information that includes this tab type, the original
-   * value of the tab when the associated envelope was sent is included in the
-   * response..
-   * 
+   * Specifies a tag on the document where you want the recipient's company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return companyTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient's company name to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -503,45 +490,6 @@ public class TemplateTabs {
     this.companyTabs = companyTabs;
   }
 
-  /**
-   * currencyTabs.
-   *
-   * @return TemplateTabs
-   **/
-  public TemplateTabs currencyTabs(java.util.List<Currency> currencyTabs) {
-    this.currencyTabs = currencyTabs;
-    return this;
-  }
-
-  /**
-   * addCurrencyTabsItem.
-   *
-   * @return TemplateTabs
-   **/
-  public TemplateTabs addCurrencyTabsItem(Currency currencyTabsItem) {
-    if (this.currencyTabs == null) {
-      this.currencyTabs = new java.util.ArrayList<>();
-    }
-    this.currencyTabs.add(currencyTabsItem);
-    return this;
-  }
-
-  /**
-   * .
-   * 
-   * @return currencyTabs
-   **/
-  @Schema(description = "")
-  public java.util.List<Currency> getCurrencyTabs() {
-    return currencyTabs;
-  }
-
-  /**
-   * setCurrencyTabs.
-   **/
-  public void setCurrencyTabs(java.util.List<Currency> currencyTabs) {
-    this.currencyTabs = currencyTabs;
-  }
 
   /**
    * dateSignedTabs.
@@ -552,7 +500,7 @@ public class TemplateTabs {
     this.dateSignedTabs = dateSignedTabs;
     return this;
   }
-
+  
   /**
    * addDateSignedTabsItem.
    *
@@ -567,9 +515,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tab on the document where the date the document was signed will
-   * automatically appear..
-   * 
+   * Specifies a tab on the document where the date the document was signed will automatically appear..
    * @return dateSignedTabs
    **/
   @Schema(description = "Specifies a tab on the document where the date the document was signed will automatically appear.")
@@ -584,6 +530,7 @@ public class TemplateTabs {
     this.dateSignedTabs = dateSignedTabs;
   }
 
+
   /**
    * dateTabs.
    *
@@ -593,7 +540,7 @@ public class TemplateTabs {
     this.dateTabs = dateTabs;
     return this;
   }
-
+  
   /**
    * addDateTabsItem.
    *
@@ -608,14 +555,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tab on the document where you want the recipient to enter a date.
-   * Date tabs are single-line fields that allow date information to be entered in
-   * any format. The tooltip for this tab recommends entering the date as
-   * MM/DD/YYYY, but this is not enforced. The format entered by the signer is
-   * retained. If you need a particular date format enforced, DocuSign recommends
-   * using a Text tab with a Validation Pattern and Validation Message to enforce
-   * the format..
-   * 
+   * Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format..
    * @return dateTabs
    **/
   @Schema(description = "Specifies a tab on the document where you want the recipient to enter a date. Date tabs are single-line fields that allow date information to be entered in any format. The tooltip for this tab recommends entering the date as MM/DD/YYYY, but this is not enforced. The format entered by the signer is retained.   If you need a particular date format enforced, DocuSign recommends using a Text tab with a Validation Pattern and Validation Message to enforce the format.")
@@ -630,6 +570,7 @@ public class TemplateTabs {
     this.dateTabs = dateTabs;
   }
 
+
   /**
    * declineTabs.
    *
@@ -639,7 +580,7 @@ public class TemplateTabs {
     this.declineTabs = declineTabs;
     return this;
   }
-
+  
   /**
    * addDeclineTabsItem.
    *
@@ -654,10 +595,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want to give the recipient the
-   * option of declining an envelope. If the recipient clicks the Decline tag
-   * during the signing process, the envelope is voided..
-   * 
+   * Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided..
    * @return declineTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want to give the recipient the option of declining an envelope. If the recipient clicks the Decline tag during the signing process, the envelope is voided.")
@@ -672,6 +610,7 @@ public class TemplateTabs {
     this.declineTabs = declineTabs;
   }
 
+
   /**
    * drawTabs.
    *
@@ -681,7 +620,7 @@ public class TemplateTabs {
     this.drawTabs = drawTabs;
     return this;
   }
-
+  
   /**
    * addDrawTabsItem.
    *
@@ -697,7 +636,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return drawTabs
    **/
   @Schema(description = "")
@@ -712,6 +650,7 @@ public class TemplateTabs {
     this.drawTabs = drawTabs;
   }
 
+
   /**
    * emailAddressTabs.
    *
@@ -721,7 +660,7 @@ public class TemplateTabs {
     this.emailAddressTabs = emailAddressTabs;
     return this;
   }
-
+  
   /**
    * addEmailAddressTabsItem.
    *
@@ -736,9 +675,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a location on the document where you want where you want the
-   * recipient's email, as entered in the recipient information, to display..
-   * 
+   * Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display..
    * @return emailAddressTabs
    **/
   @Schema(description = "Specifies a location on the document where you want where you want the recipient's email, as entered in the recipient information, to display.")
@@ -753,6 +690,7 @@ public class TemplateTabs {
     this.emailAddressTabs = emailAddressTabs;
   }
 
+
   /**
    * emailTabs.
    *
@@ -762,7 +700,7 @@ public class TemplateTabs {
     this.emailTabs = emailTabs;
     return this;
   }
-
+  
   /**
    * addEmailTabsItem.
    *
@@ -777,14 +715,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter an
-   * email. Email tags are single-line fields that accept any characters. The
-   * system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the
-   * tag. It uses the same parameters as a Text tab, with the validation message
-   * and pattern set for email information. When getting information that includes
-   * this tab type, the original value of the tab when the associated envelope was
-   * sent is included in the response..
-   * 
+   * Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return emailTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient to enter an email. Email tags are single-line fields that accept any characters. The system checks that a valid email format (i.e. xxx@yyy.zzz) is entered in the tag. It uses the same parameters as a Text tab, with the validation message and pattern set for email information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -799,6 +730,7 @@ public class TemplateTabs {
     this.emailTabs = emailTabs;
   }
 
+
   /**
    * envelopeIdTabs.
    *
@@ -808,7 +740,7 @@ public class TemplateTabs {
     this.envelopeIdTabs = envelopeIdTabs;
     return this;
   }
-
+  
   /**
    * addEnvelopeIdTabsItem.
    *
@@ -823,10 +755,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the envelope ID for to appear.
-   * Recipients cannot enter or change the information in this tab, it is for
-   * informational purposes only..
-   * 
+   * Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only..
    * @return envelopeIdTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the envelope ID for to appear. Recipients cannot enter or change the information in this tab, it is for informational purposes only.")
@@ -841,6 +770,7 @@ public class TemplateTabs {
     this.envelopeIdTabs = envelopeIdTabs;
   }
 
+
   /**
    * firstNameTabs.
    *
@@ -850,7 +780,7 @@ public class TemplateTabs {
     this.firstNameTabs = firstNameTabs;
     return this;
   }
-
+  
   /**
    * addFirstNameTabsItem.
    *
@@ -865,11 +795,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies tag on a document where you want the recipient's first name to
-   * appear. This tag takes the recipient's name, as entered in the recipient
-   * information, splits it into sections based on spaces and uses the first
-   * section as the first name..
-   * 
+   * Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name..
    * @return firstNameTabs
    **/
   @Schema(description = "Specifies tag on a document where you want the recipient's first name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the first section as the first name.")
@@ -884,6 +810,7 @@ public class TemplateTabs {
     this.firstNameTabs = firstNameTabs;
   }
 
+
   /**
    * formulaTabs.
    *
@@ -893,7 +820,7 @@ public class TemplateTabs {
     this.formulaTabs = formulaTabs;
     return this;
   }
-
+  
   /**
    * addFormulaTabsItem.
    *
@@ -908,14 +835,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag that is used to add a calculated field to a document.
-   * Envelope recipients cannot directly enter information into the tag; the
-   * formula tab calculates and displays a new value when changes are made to the
-   * reference tag values. The reference tag information and calculation
-   * operations are entered in the \"formula\" element. See the [ML:Using the
-   * Calculated Fields Feature] quick start guide or [ML:DocuSign Service User
-   * Guide] for more information about formulas..
-   * 
+   * Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \"formula\" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas..
    * @return formulaTabs
    **/
   @Schema(description = "Specifies a tag that is used to add a calculated field to a document. Envelope recipients cannot directly enter information into the tag; the formula tab calculates and displays a new value when changes are made to the reference tag values. The reference tag information and calculation operations are entered in the \"formula\" element. See the [ML:Using the Calculated Fields Feature] quick start guide or [ML:DocuSign Service User Guide] for more information about formulas.")
@@ -930,6 +850,7 @@ public class TemplateTabs {
     this.formulaTabs = formulaTabs;
   }
 
+
   /**
    * fullNameTabs.
    *
@@ -939,7 +860,7 @@ public class TemplateTabs {
     this.fullNameTabs = fullNameTabs;
     return this;
   }
-
+  
   /**
    * addFullNameTabsItem.
    *
@@ -954,9 +875,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's name to
-   * appear..
-   * 
+   * Specifies a tag on the document where you want the recipient's name to appear..
    * @return fullNameTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient's name to appear.")
@@ -971,6 +890,7 @@ public class TemplateTabs {
     this.fullNameTabs = fullNameTabs;
   }
 
+
   /**
    * initialHereTabs.
    *
@@ -980,7 +900,7 @@ public class TemplateTabs {
     this.initialHereTabs = initialHereTabs;
     return this;
   }
-
+  
   /**
    * addInitialHereTabsItem.
    *
@@ -995,10 +915,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag location in the document at which a recipient will place
-   * their initials. The `optional` parameter specifies whether the initials are
-   * required or optional..
-   * 
+   * Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional..
    * @return initialHereTabs
    **/
   @Schema(description = "Specifies a tag location in the document at which a recipient will place their initials. The `optional` parameter specifies whether the initials are required or optional.")
@@ -1013,6 +930,7 @@ public class TemplateTabs {
     this.initialHereTabs = initialHereTabs;
   }
 
+
   /**
    * lastNameTabs.
    *
@@ -1022,7 +940,7 @@ public class TemplateTabs {
     this.lastNameTabs = lastNameTabs;
     return this;
   }
-
+  
   /**
    * addLastNameTabsItem.
    *
@@ -1037,11 +955,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on a document where you want the recipient's last name to
-   * appear. This tag takes the recipient's name, as entered in the recipient
-   * information, splits it into sections based on spaces and uses the last
-   * section as the last name..
-   * 
+   * Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name..
    * @return lastNameTabs
    **/
   @Schema(description = "Specifies a tag on a document where you want the recipient's last name to appear. This tag takes the recipient's name, as entered in the recipient information, splits it into sections based on spaces and uses the last section as the last name.")
@@ -1056,6 +970,7 @@ public class TemplateTabs {
     this.lastNameTabs = lastNameTabs;
   }
 
+
   /**
    * listTabs.
    *
@@ -1065,7 +980,7 @@ public class TemplateTabs {
     this.listTabs = listTabs;
     return this;
   }
-
+  
   /**
    * addListTabsItem.
    *
@@ -1080,9 +995,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specify this tag to give your recipient a list of options, presented as a
-   * drop-down list, from which they can select..
-   * 
+   * Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select..
    * @return listTabs
    **/
   @Schema(description = "Specify this tag to give your recipient a list of options, presented as a drop-down list, from which they can select.")
@@ -1097,6 +1010,7 @@ public class TemplateTabs {
     this.listTabs = listTabs;
   }
 
+
   /**
    * notarizeTabs.
    *
@@ -1106,7 +1020,7 @@ public class TemplateTabs {
     this.notarizeTabs = notarizeTabs;
     return this;
   }
-
+  
   /**
    * addNotarizeTabsItem.
    *
@@ -1122,7 +1036,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return notarizeTabs
    **/
   @Schema(description = "")
@@ -1137,6 +1050,7 @@ public class TemplateTabs {
     this.notarizeTabs = notarizeTabs;
   }
 
+
   /**
    * notarySealTabs.
    *
@@ -1146,7 +1060,7 @@ public class TemplateTabs {
     this.notarySealTabs = notarySealTabs;
     return this;
   }
-
+  
   /**
    * addNotarySealTabsItem.
    *
@@ -1162,7 +1076,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return notarySealTabs
    **/
   @Schema(description = "")
@@ -1177,6 +1090,7 @@ public class TemplateTabs {
     this.notarySealTabs = notarySealTabs;
   }
 
+
   /**
    * noteTabs.
    *
@@ -1186,7 +1100,7 @@ public class TemplateTabs {
     this.noteTabs = noteTabs;
     return this;
   }
-
+  
   /**
    * addNoteTabsItem.
    *
@@ -1201,9 +1115,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a location on the document where you want to place additional
-   * information, in the form of a note, for a recipient..
-   * 
+   * Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient..
    * @return noteTabs
    **/
   @Schema(description = "Specifies a location on the document where you want to place additional information, in the form of a note, for a recipient.")
@@ -1218,6 +1130,7 @@ public class TemplateTabs {
     this.noteTabs = noteTabs;
   }
 
+
   /**
    * numberTabs.
    *
@@ -1227,7 +1140,7 @@ public class TemplateTabs {
     this.numberTabs = numberTabs;
     return this;
   }
-
+  
   /**
    * addNumberTabsItem.
    *
@@ -1242,12 +1155,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a
-   * number. It uses the same parameters as a Text tab, with the validation
-   * message and pattern set for number information. When getting information that
-   * includes this tab type, the original value of the tab when the associated
-   * envelope was sent is included in the response. .
-   * 
+   * Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. .
    * @return numberTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient to enter a number. It uses the same parameters as a Text tab, with the validation message and pattern set for number information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response. ")
@@ -1262,6 +1170,7 @@ public class TemplateTabs {
     this.numberTabs = numberTabs;
   }
 
+
   /**
    * numericalTabs.
    *
@@ -1271,7 +1180,7 @@ public class TemplateTabs {
     this.numericalTabs = numericalTabs;
     return this;
   }
-
+  
   /**
    * addNumericalTabsItem.
    *
@@ -1287,7 +1196,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return numericalTabs
    **/
   @Schema(description = "")
@@ -1302,6 +1210,7 @@ public class TemplateTabs {
     this.numericalTabs = numericalTabs;
   }
 
+
   /**
    * phoneNumberTabs.
    *
@@ -1311,7 +1220,7 @@ public class TemplateTabs {
     this.phoneNumberTabs = phoneNumberTabs;
     return this;
   }
-
+  
   /**
    * addPhoneNumberTabsItem.
    *
@@ -1327,7 +1236,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return phoneNumberTabs
    **/
   @Schema(description = "")
@@ -1342,6 +1250,7 @@ public class TemplateTabs {
     this.phoneNumberTabs = phoneNumberTabs;
   }
 
+
   /**
    * polyLineOverlayTabs.
    *
@@ -1351,7 +1260,7 @@ public class TemplateTabs {
     this.polyLineOverlayTabs = polyLineOverlayTabs;
     return this;
   }
-
+  
   /**
    * addPolyLineOverlayTabsItem.
    *
@@ -1367,7 +1276,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return polyLineOverlayTabs
    **/
   @Schema(description = "")
@@ -1382,6 +1290,7 @@ public class TemplateTabs {
     this.polyLineOverlayTabs = polyLineOverlayTabs;
   }
 
+
   /**
    * prefillTabs.
    *
@@ -1393,15 +1302,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Prefill tabs are tabs that the sender can fill in before the envelope is
-   * sent. They are sometimes called sender tags or pre-fill fields. [Pre-Fill
-   * Your Own Document Fields][app] describes how prefill tabs work in the web
-   * application. [Customize your envelopes with pre-fill fields][catblog] shows
-   * how to use prefill tabs in your application using the eSignature SDKs. [app]:
-   * https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields
-   * [catblog]:
-   * https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
-   * 
+   * Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields.
    * @return prefillTabs
    **/
   @Schema(description = "Prefill tabs are tabs that the sender can fill in before the envelope is sent. They are sometimes called sender tags or pre-fill fields.   [Pre-Fill Your Own Document Fields][app] describes how prefill tabs work in the web application.   [Customize your envelopes with pre-fill fields][catblog] shows how to use prefill tabs in your application using the eSignature SDKs.  [app]:      https://support.docusign.com/en/guides/ndse-user-guide-prefill-fields [catblog]:  https://www.docusign.com/blog/developers/common-api-tasks-customize-your-envelopes-pre-fill-fields")
@@ -1416,6 +1317,7 @@ public class TemplateTabs {
     this.prefillTabs = prefillTabs;
   }
 
+
   /**
    * radioGroupTabs.
    *
@@ -1425,7 +1327,7 @@ public class TemplateTabs {
     this.radioGroupTabs = radioGroupTabs;
     return this;
   }
-
+  
   /**
    * addRadioGroupTabsItem.
    *
@@ -1440,10 +1342,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document in a location where the recipient can select
-   * one option from a group of options using a radio button. The radio buttons do
-   * not have to be on the same page in a document..
-   * 
+   * Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document..
    * @return radioGroupTabs
    **/
   @Schema(description = "Specifies a tag on the document in a location where the recipient can select one option from a group of options using a radio button. The radio buttons do not have to be on the same page in a document.")
@@ -1458,6 +1357,7 @@ public class TemplateTabs {
     this.radioGroupTabs = radioGroupTabs;
   }
 
+
   /**
    * signerAttachmentTabs.
    *
@@ -1467,7 +1367,7 @@ public class TemplateTabs {
     this.signerAttachmentTabs = signerAttachmentTabs;
     return this;
   }
-
+  
   /**
    * addSignerAttachmentTabsItem.
    *
@@ -1482,9 +1382,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document when you want the recipient to add supporting
-   * documents to an envelope..
-   * 
+   * Specifies a tag on the document when you want the recipient to add supporting documents to an envelope..
    * @return signerAttachmentTabs
    **/
   @Schema(description = "Specifies a tag on the document when you want the recipient to add supporting documents to an envelope.")
@@ -1499,6 +1397,7 @@ public class TemplateTabs {
     this.signerAttachmentTabs = signerAttachmentTabs;
   }
 
+
   /**
    * signHereTabs.
    *
@@ -1508,7 +1407,7 @@ public class TemplateTabs {
     this.signHereTabs = signHereTabs;
     return this;
   }
-
+  
   /**
    * addSignHereTabsItem.
    *
@@ -1523,10 +1422,7 @@ public class TemplateTabs {
   }
 
   /**
-   * A complex type the contains information about the tag that specifies where
-   * the recipient places their signature in the document. The \"optional\"
-   * parameter sets if the signature is required or optional. .
-   * 
+   * A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \"optional\" parameter sets if the signature is required or optional. .
    * @return signHereTabs
    **/
   @Schema(description = "A complex type the contains information about the tag that specifies where the recipient places their signature in the document. The \"optional\" parameter sets if the signature is required or optional. ")
@@ -1541,6 +1437,7 @@ public class TemplateTabs {
     this.signHereTabs = signHereTabs;
   }
 
+
   /**
    * smartSectionTabs.
    *
@@ -1550,7 +1447,7 @@ public class TemplateTabs {
     this.smartSectionTabs = smartSectionTabs;
     return this;
   }
-
+  
   /**
    * addSmartSectionTabsItem.
    *
@@ -1566,7 +1463,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return smartSectionTabs
    **/
   @Schema(description = "")
@@ -1581,6 +1477,7 @@ public class TemplateTabs {
     this.smartSectionTabs = smartSectionTabs;
   }
 
+
   /**
    * ssnTabs.
    *
@@ -1590,7 +1487,7 @@ public class TemplateTabs {
     this.ssnTabs = ssnTabs;
     return this;
   }
-
+  
   /**
    * addSsnTabsItem.
    *
@@ -1605,13 +1502,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a
-   * Social Security Number (SSN). A SSN can be typed with or without dashes. It
-   * uses the same parameters as a Text tab, with the validation message and
-   * pattern set for SSN information. When getting information that includes this
-   * tab type, the original value of the tab when the associated envelope was sent
-   * is included in the response..
-   * 
+   * Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return ssnTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient to enter a Social Security Number (SSN). A SSN can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for SSN information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -1626,6 +1517,7 @@ public class TemplateTabs {
     this.ssnTabs = ssnTabs;
   }
 
+
   /**
    * tabGroups.
    *
@@ -1635,7 +1527,7 @@ public class TemplateTabs {
     this.tabGroups = tabGroups;
     return this;
   }
-
+  
   /**
    * addTabGroupsItem.
    *
@@ -1651,7 +1543,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return tabGroups
    **/
   @Schema(description = "")
@@ -1666,6 +1557,7 @@ public class TemplateTabs {
     this.tabGroups = tabGroups;
   }
 
+
   /**
    * textTabs.
    *
@@ -1675,7 +1567,7 @@ public class TemplateTabs {
     this.textTabs = textTabs;
     return this;
   }
-
+  
   /**
    * addTextTabsItem.
    *
@@ -1690,11 +1582,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a that that is an adaptable field that allows the recipient to
-   * enter different text information. When getting information that includes this
-   * tab type, the original value of the tab when the associated envelope was sent
-   * is included in the response..
-   * 
+   * Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return textTabs
    **/
   @Schema(description = "Specifies a that that is an adaptable field that allows the recipient to enter different text information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -1709,6 +1597,7 @@ public class TemplateTabs {
     this.textTabs = textTabs;
   }
 
+
   /**
    * titleTabs.
    *
@@ -1718,7 +1607,7 @@ public class TemplateTabs {
     this.titleTabs = titleTabs;
     return this;
   }
-
+  
   /**
    * addTitleTabsItem.
    *
@@ -1733,11 +1622,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient's title to
-   * appear. When getting information that includes this tab type, the original
-   * value of the tab when the associated envelope was sent is included in the
-   * response..
-   * 
+   * Specifies a tag on the document where you want the recipient's title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return titleTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient's title to appear.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -1752,6 +1637,7 @@ public class TemplateTabs {
     this.titleTabs = titleTabs;
   }
 
+
   /**
    * viewTabs.
    *
@@ -1761,7 +1647,7 @@ public class TemplateTabs {
     this.viewTabs = viewTabs;
     return this;
   }
-
+  
   /**
    * addViewTabsItem.
    *
@@ -1777,7 +1663,6 @@ public class TemplateTabs {
 
   /**
    * .
-   * 
    * @return viewTabs
    **/
   @Schema(description = "")
@@ -1792,6 +1677,7 @@ public class TemplateTabs {
     this.viewTabs = viewTabs;
   }
 
+
   /**
    * zipTabs.
    *
@@ -1801,7 +1687,7 @@ public class TemplateTabs {
     this.zipTabs = zipTabs;
     return this;
   }
-
+  
   /**
    * addZipTabsItem.
    *
@@ -1816,14 +1702,7 @@ public class TemplateTabs {
   }
 
   /**
-   * Specifies a tag on the document where you want the recipient to enter a ZIP
-   * code. The ZIP code can be a five numbers or the ZIP+4 format with nine
-   * numbers. The zip code can be typed with or without dashes. It uses the same
-   * parameters as a Text tab, with the validation message and pattern set for ZIP
-   * code information. When getting information that includes this tab type, the
-   * original value of the tab when the associated envelope was sent is included
-   * in the response..
-   * 
+   * Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response..
    * @return zipTabs
    **/
   @Schema(description = "Specifies a tag on the document where you want the recipient to enter a ZIP code. The ZIP code can be a five numbers or the ZIP+4 format with nine numbers. The zip code can be typed with or without dashes. It uses the same parameters as a Text tab, with the validation message and pattern set for ZIP code information.  When getting information that includes this tab type, the original value of the tab when the associated envelope was sent is included in the response.")
@@ -1837,6 +1716,7 @@ public class TemplateTabs {
   public void setZipTabs(java.util.List<Zip> zipTabs) {
     this.zipTabs = zipTabs;
   }
+
 
   /**
    * Compares objects.
@@ -1860,7 +1740,6 @@ public class TemplateTabs {
         Objects.equals(this.commissionNumberTabs, templateTabs.commissionNumberTabs) &&
         Objects.equals(this.commissionStateTabs, templateTabs.commissionStateTabs) &&
         Objects.equals(this.companyTabs, templateTabs.companyTabs) &&
-        Objects.equals(this.currencyTabs, templateTabs.currencyTabs) &&
         Objects.equals(this.dateSignedTabs, templateTabs.dateSignedTabs) &&
         Objects.equals(this.dateTabs, templateTabs.dateTabs) &&
         Objects.equals(this.declineTabs, templateTabs.declineTabs) &&
@@ -1899,13 +1778,9 @@ public class TemplateTabs {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs,
-        commissionNumberTabs, commissionStateTabs, companyTabs, currencyTabs, dateSignedTabs, dateTabs, declineTabs,
-        drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs,
-        initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, numericalTabs,
-        phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs,
-        smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
+    return Objects.hash(approveTabs, checkboxTabs, commentThreadTabs, commissionCountyTabs, commissionExpirationTabs, commissionNumberTabs, commissionStateTabs, companyTabs, dateSignedTabs, dateTabs, declineTabs, drawTabs, emailAddressTabs, emailTabs, envelopeIdTabs, firstNameTabs, formulaTabs, fullNameTabs, initialHereTabs, lastNameTabs, listTabs, notarizeTabs, notarySealTabs, noteTabs, numberTabs, numericalTabs, phoneNumberTabs, polyLineOverlayTabs, prefillTabs, radioGroupTabs, signerAttachmentTabs, signHereTabs, smartSectionTabs, ssnTabs, tabGroups, textTabs, titleTabs, viewTabs, zipTabs);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1914,7 +1789,7 @@ public class TemplateTabs {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateTabs {\n");
-
+    
     sb.append("    approveTabs: ").append(toIndentedString(approveTabs)).append("\n");
     sb.append("    checkboxTabs: ").append(toIndentedString(checkboxTabs)).append("\n");
     sb.append("    commentThreadTabs: ").append(toIndentedString(commentThreadTabs)).append("\n");
@@ -1923,7 +1798,6 @@ public class TemplateTabs {
     sb.append("    commissionNumberTabs: ").append(toIndentedString(commissionNumberTabs)).append("\n");
     sb.append("    commissionStateTabs: ").append(toIndentedString(commissionStateTabs)).append("\n");
     sb.append("    companyTabs: ").append(toIndentedString(companyTabs)).append("\n");
-    sb.append("    currencyTabs: ").append(toIndentedString(currencyTabs)).append("\n");
     sb.append("    dateSignedTabs: ").append(toIndentedString(dateSignedTabs)).append("\n");
     sb.append("    dateTabs: ").append(toIndentedString(dateTabs)).append("\n");
     sb.append("    declineTabs: ").append(toIndentedString(declineTabs)).append("\n");
@@ -1971,3 +1845,4 @@ public class TemplateTabs {
   }
 
 }
+

@@ -71,6 +71,7 @@ public class BulkSendBatchStatus {
   @JsonProperty("submittedDate")
   private String submittedDate = null;
 
+
   /**
    * action.
    *
@@ -83,7 +84,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return action
    **/
   @Schema(description = "")
@@ -98,6 +98,7 @@ public class BulkSendBatchStatus {
     this.action = action;
   }
 
+
   /**
    * actionStatus.
    *
@@ -110,7 +111,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return actionStatus
    **/
   @Schema(description = "")
@@ -125,6 +125,7 @@ public class BulkSendBatchStatus {
     this.actionStatus = actionStatus;
   }
 
+
   /**
    * batchId.
    *
@@ -137,7 +138,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return batchId
    **/
   @Schema(description = "")
@@ -152,6 +152,7 @@ public class BulkSendBatchStatus {
     this.batchId = batchId;
   }
 
+
   /**
    * batchName.
    *
@@ -164,7 +165,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -179,6 +179,7 @@ public class BulkSendBatchStatus {
     this.batchName = batchName;
   }
 
+
   /**
    * batchSize.
    *
@@ -191,7 +192,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return batchSize
    **/
   @Schema(description = "")
@@ -206,6 +206,7 @@ public class BulkSendBatchStatus {
     this.batchSize = batchSize;
   }
 
+
   /**
    * bulkErrors.
    *
@@ -215,7 +216,7 @@ public class BulkSendBatchStatus {
     this.bulkErrors = bulkErrors;
     return this;
   }
-
+  
   /**
    * addBulkErrorsItem.
    *
@@ -231,7 +232,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return bulkErrors
    **/
   @Schema(description = "")
@@ -246,6 +246,7 @@ public class BulkSendBatchStatus {
     this.bulkErrors = bulkErrors;
   }
 
+
   /**
    * envelopeIdOrTemplateId.
    *
@@ -258,7 +259,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return envelopeIdOrTemplateId
    **/
   @Schema(description = "")
@@ -273,6 +273,7 @@ public class BulkSendBatchStatus {
     this.envelopeIdOrTemplateId = envelopeIdOrTemplateId;
   }
 
+
   /**
    * envelopesInfo.
    *
@@ -285,7 +286,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return envelopesInfo
    **/
   @Schema(description = "")
@@ -300,6 +300,7 @@ public class BulkSendBatchStatus {
     this.envelopesInfo = envelopesInfo;
   }
 
+
   /**
    * envelopesUri.
    *
@@ -312,7 +313,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return envelopesUri
    **/
   @Schema(description = "")
@@ -327,6 +327,7 @@ public class BulkSendBatchStatus {
     this.envelopesUri = envelopesUri;
   }
 
+
   /**
    * failed.
    *
@@ -339,7 +340,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return failed
    **/
   @Schema(description = "")
@@ -354,6 +354,7 @@ public class BulkSendBatchStatus {
     this.failed = failed;
   }
 
+
   /**
    * mailingListId.
    *
@@ -366,7 +367,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return mailingListId
    **/
   @Schema(description = "")
@@ -381,6 +381,7 @@ public class BulkSendBatchStatus {
     this.mailingListId = mailingListId;
   }
 
+
   /**
    * mailingListName.
    *
@@ -393,7 +394,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return mailingListName
    **/
   @Schema(description = "")
@@ -408,6 +408,7 @@ public class BulkSendBatchStatus {
     this.mailingListName = mailingListName;
   }
 
+
   /**
    * ownerUserId.
    *
@@ -420,7 +421,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return ownerUserId
    **/
   @Schema(description = "")
@@ -435,6 +435,7 @@ public class BulkSendBatchStatus {
     this.ownerUserId = ownerUserId;
   }
 
+
   /**
    * queued.
    *
@@ -447,7 +448,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return queued
    **/
   @Schema(description = "")
@@ -462,6 +462,7 @@ public class BulkSendBatchStatus {
     this.queued = queued;
   }
 
+
   /**
    * resendsRemaining.
    *
@@ -474,7 +475,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return resendsRemaining
    **/
   @Schema(description = "")
@@ -489,6 +489,7 @@ public class BulkSendBatchStatus {
     this.resendsRemaining = resendsRemaining;
   }
 
+
   /**
    * senderUserId.
    *
@@ -501,7 +502,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return senderUserId
    **/
   @Schema(description = "")
@@ -516,6 +516,7 @@ public class BulkSendBatchStatus {
     this.senderUserId = senderUserId;
   }
 
+
   /**
    * sent.
    *
@@ -528,7 +529,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return sent
    **/
   @Schema(description = "")
@@ -543,6 +543,7 @@ public class BulkSendBatchStatus {
     this.sent = sent;
   }
 
+
   /**
    * submittedDate.
    *
@@ -555,7 +556,6 @@ public class BulkSendBatchStatus {
 
   /**
    * .
-   * 
    * @return submittedDate
    **/
   @Schema(description = "")
@@ -569,6 +569,7 @@ public class BulkSendBatchStatus {
   public void setSubmittedDate(String submittedDate) {
     this.submittedDate = submittedDate;
   }
+
 
   /**
    * Compares objects.
@@ -609,10 +610,9 @@ public class BulkSendBatchStatus {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId,
-        envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, resendsRemaining,
-        senderUserId, sent, submittedDate);
+    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, bulkErrors, envelopeIdOrTemplateId, envelopesInfo, envelopesUri, failed, mailingListId, mailingListName, ownerUserId, queued, resendsRemaining, senderUserId, sent, submittedDate);
   }
+
 
   /**
    * Converts the given object to string.
@@ -621,7 +621,7 @@ public class BulkSendBatchStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchStatus {\n");
-
+    
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    actionStatus: ").append(toIndentedString(actionStatus)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
@@ -656,3 +656,4 @@ public class BulkSendBatchStatus {
   }
 
 }
+

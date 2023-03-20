@@ -23,6 +23,7 @@ public class GraphicsContext {
   @JsonProperty("lineWeight")
   private String lineWeight = null;
 
+
   /**
    * fillColor.
    *
@@ -35,7 +36,6 @@ public class GraphicsContext {
 
   /**
    * .
-   * 
    * @return fillColor
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class GraphicsContext {
     this.fillColor = fillColor;
   }
 
+
   /**
    * lineColor.
    *
@@ -62,7 +63,6 @@ public class GraphicsContext {
 
   /**
    * .
-   * 
    * @return lineColor
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class GraphicsContext {
     this.lineColor = lineColor;
   }
 
+
   /**
    * lineWeight.
    *
@@ -89,7 +90,6 @@ public class GraphicsContext {
 
   /**
    * .
-   * 
    * @return lineWeight
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class GraphicsContext {
   public void setLineWeight(String lineWeight) {
     this.lineWeight = lineWeight;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class GraphicsContext {
     return Objects.hash(fillColor, lineColor, lineWeight);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class GraphicsContext {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GraphicsContext {\n");
-
+    
     sb.append("    fillColor: ").append(toIndentedString(fillColor)).append("\n");
     sb.append("    lineColor: ").append(toIndentedString(lineColor)).append("\n");
     sb.append("    lineWeight: ").append(toIndentedString(lineWeight)).append("\n");
@@ -158,3 +160,4 @@ public class GraphicsContext {
   }
 
 }
+

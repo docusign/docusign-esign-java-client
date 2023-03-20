@@ -33,6 +33,7 @@ public class DocumentHtmlDisplayAnchor {
   @JsonProperty("startAnchor")
   private String startAnchor = null;
 
+
   /**
    * caseSensitive.
    *
@@ -45,7 +46,6 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
-   * 
    * @return caseSensitive
    **/
   @Schema(description = "")
@@ -60,6 +60,7 @@ public class DocumentHtmlDisplayAnchor {
     this.caseSensitive = caseSensitive;
   }
 
+
   /**
    * displaySettings.
    *
@@ -71,9 +72,7 @@ public class DocumentHtmlDisplayAnchor {
   }
 
   /**
-   * This object defines how the HTML section inside the `startAnchor` and
-   * `endAnchor` displays..
-   * 
+   * This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays..
    * @return displaySettings
    **/
   @Schema(description = "This object defines how the HTML section inside the `startAnchor` and `endAnchor` displays.")
@@ -88,6 +87,7 @@ public class DocumentHtmlDisplayAnchor {
     this.displaySettings = displaySettings;
   }
 
+
   /**
    * endAnchor.
    *
@@ -100,7 +100,6 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
-   * 
    * @return endAnchor
    **/
   @Schema(description = "")
@@ -115,6 +114,7 @@ public class DocumentHtmlDisplayAnchor {
     this.endAnchor = endAnchor;
   }
 
+
   /**
    * removeEndAnchor.
    *
@@ -127,7 +127,6 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
-   * 
    * @return removeEndAnchor
    **/
   @Schema(description = "")
@@ -142,6 +141,7 @@ public class DocumentHtmlDisplayAnchor {
     this.removeEndAnchor = removeEndAnchor;
   }
 
+
   /**
    * removeStartAnchor.
    *
@@ -154,7 +154,6 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
-   * 
    * @return removeStartAnchor
    **/
   @Schema(description = "")
@@ -169,6 +168,7 @@ public class DocumentHtmlDisplayAnchor {
     this.removeStartAnchor = removeStartAnchor;
   }
 
+
   /**
    * startAnchor.
    *
@@ -181,7 +181,6 @@ public class DocumentHtmlDisplayAnchor {
 
   /**
    * .
-   * 
    * @return startAnchor
    **/
   @Schema(description = "")
@@ -195,6 +194,7 @@ public class DocumentHtmlDisplayAnchor {
   public void setStartAnchor(String startAnchor) {
     this.startAnchor = startAnchor;
   }
+
 
   /**
    * Compares objects.
@@ -226,6 +226,7 @@ public class DocumentHtmlDisplayAnchor {
     return Objects.hash(caseSensitive, displaySettings, endAnchor, removeEndAnchor, removeStartAnchor, startAnchor);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -233,7 +234,7 @@ public class DocumentHtmlDisplayAnchor {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDisplayAnchor {\n");
-
+    
     sb.append("    caseSensitive: ").append(toIndentedString(caseSensitive)).append("\n");
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
     sb.append("    endAnchor: ").append(toIndentedString(endAnchor)).append("\n");
@@ -256,3 +257,4 @@ public class DocumentHtmlDisplayAnchor {
   }
 
 }
+

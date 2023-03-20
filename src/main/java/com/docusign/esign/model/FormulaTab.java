@@ -15,22 +15,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The value of a formula tab is calculated from the values of other number or
- * date tabs in the document. When the recipient completes the underlying
- * fields, the formula tab calculates and displays the result. The
- * &#x60;formula&#x60; property of the tab contains the references to the
- * underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign
- * Support Center to learn more about formulas. If a formula tab contains a
- * &#x60;paymentDetails&#x60; property, the tab is considered a payment item.
- * See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign
- * Support Center to learn more about payments. [calculatedfields]:
- * https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields
- * [paymentguide]:
- * https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
- * .
+ * The value of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The &#x60;formula&#x60; property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a &#x60;paymentDetails&#x60; property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
  *
  */
-@Schema(description = "The description of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The `formula` property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a `paymentDetails` property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
+@Schema(description = "The value of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The `formula` property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a `paymentDetails` property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
 
 public class FormulaTab {
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
@@ -408,6 +396,7 @@ public class FormulaTab {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -420,7 +409,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
   @Schema(description = "")
@@ -435,21 +423,19 @@ public class FormulaTab {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
+
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return FormulaTab
    **/
-  public FormulaTab anchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public FormulaTab anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
-   * property is editable..
-   * 
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
@@ -464,6 +450,7 @@ public class FormulaTab {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -475,9 +462,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -492,6 +477,7 @@ public class FormulaTab {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorCaseSensitiveMetadata.
    *
@@ -503,9 +489,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
@@ -520,6 +504,7 @@ public class FormulaTab {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -531,9 +516,7 @@ public class FormulaTab {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -548,6 +531,7 @@ public class FormulaTab {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorHorizontalAlignmentMetadata.
    *
@@ -559,9 +543,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
@@ -576,6 +558,7 @@ public class FormulaTab {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -587,9 +570,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -604,6 +585,7 @@ public class FormulaTab {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
@@ -615,9 +597,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
@@ -632,6 +612,7 @@ public class FormulaTab {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -643,10 +624,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -661,6 +639,7 @@ public class FormulaTab {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorMatchWholeWordMetadata.
    *
@@ -672,9 +651,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
@@ -689,6 +666,7 @@ public class FormulaTab {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
+
   /**
    * anchorString.
    *
@@ -701,7 +679,6 @@ public class FormulaTab {
 
   /**
    * Anchor text information for a radio button..
-   * 
    * @return anchorString
    **/
   @Schema(description = "Anchor text information for a radio button.")
@@ -716,6 +693,7 @@ public class FormulaTab {
     this.anchorString = anchorString;
   }
 
+
   /**
    * anchorStringMetadata.
    *
@@ -728,7 +706,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
-   * 
    * @return anchorStringMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
@@ -743,6 +720,7 @@ public class FormulaTab {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
+
   /**
    * anchorTabProcessorVersion.
    *
@@ -755,7 +733,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return anchorTabProcessorVersion
    **/
   @Schema(description = "")
@@ -770,6 +747,7 @@ public class FormulaTab {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
+
   /**
    * anchorTabProcessorVersionMetadata.
    *
@@ -782,7 +760,6 @@ public class FormulaTab {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return anchorTabProcessorVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -797,6 +774,7 @@ public class FormulaTab {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -808,9 +786,7 @@ public class FormulaTab {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -825,6 +801,7 @@ public class FormulaTab {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorUnitsMetadata.
    *
@@ -837,7 +814,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
-   * 
    * @return anchorUnitsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
@@ -852,6 +828,7 @@ public class FormulaTab {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -863,9 +840,7 @@ public class FormulaTab {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -880,6 +855,7 @@ public class FormulaTab {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorXOffsetMetadata.
    *
@@ -892,7 +868,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
-   * 
    * @return anchorXOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
@@ -907,6 +882,7 @@ public class FormulaTab {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -918,9 +894,7 @@ public class FormulaTab {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -935,6 +909,7 @@ public class FormulaTab {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * anchorYOffsetMetadata.
    *
@@ -947,7 +922,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
-   * 
    * @return anchorYOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
@@ -962,6 +936,7 @@ public class FormulaTab {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
+
   /**
    * bold.
    *
@@ -974,7 +949,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -989,6 +963,7 @@ public class FormulaTab {
     this.bold = bold;
   }
 
+
   /**
    * boldMetadata.
    *
@@ -1001,7 +976,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
-   * 
    * @return boldMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
@@ -1016,6 +990,7 @@ public class FormulaTab {
     this.boldMetadata = boldMetadata;
   }
 
+
   /**
    * caption.
    *
@@ -1028,7 +1003,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return caption
    **/
   @Schema(description = "")
@@ -1043,6 +1017,7 @@ public class FormulaTab {
     this.caption = caption;
   }
 
+
   /**
    * captionMetadata.
    *
@@ -1054,8 +1029,7 @@ public class FormulaTab {
   }
 
   /**
-   * Get captionMetadata.
-   * 
+   * .
    * @return captionMetadata
    **/
   @Schema(description = "")
@@ -1070,6 +1044,7 @@ public class FormulaTab {
     this.captionMetadata = captionMetadata;
   }
 
+
   /**
    * concealValueOnDocument.
    *
@@ -1081,13 +1056,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is
-   * adding or modifying the information in the field, but the data is not visible
-   * (the characters are hidden by asterisks) to any other signer or the sender.
-   * When an envelope is completed the information is available to the sender
-   * through the Form Data link in the DocuSign Console. This setting applies only
-   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
-   * 
+   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
    * @return concealValueOnDocument
    **/
   @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
@@ -1102,6 +1071,7 @@ public class FormulaTab {
     this.concealValueOnDocument = concealValueOnDocument;
   }
 
+
   /**
    * concealValueOnDocumentMetadata.
    *
@@ -1113,9 +1083,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `concealValueOnDocument` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `concealValueOnDocument` property is editable..
    * @return concealValueOnDocumentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `concealValueOnDocument` property is editable.")
@@ -1130,6 +1098,7 @@ public class FormulaTab {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
 
+
   /**
    * conditionalParentLabel.
    *
@@ -1141,9 +1110,7 @@ public class FormulaTab {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls
-   * this tab's visibility..
-   * 
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
    **/
   @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
@@ -1158,6 +1125,7 @@ public class FormulaTab {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
   /**
    * conditionalParentLabelMetadata.
    *
@@ -1169,9 +1137,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
@@ -1186,6 +1152,7 @@ public class FormulaTab {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
+
   /**
    * conditionalParentValue.
    *
@@ -1197,11 +1164,7 @@ public class FormulaTab {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the
-   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
-   * Signature, or Optional Initial use \"on\" as the value to show that the
-   * parent tab is active. .
-   * 
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
    **/
   @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
@@ -1216,6 +1179,7 @@ public class FormulaTab {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
   /**
    * conditionalParentValueMetadata.
    *
@@ -1227,9 +1191,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
@@ -1244,6 +1206,7 @@ public class FormulaTab {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
+
   /**
    * customTabId.
    *
@@ -1255,10 +1218,7 @@ public class FormulaTab {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This
-   * can only be used when adding new tabs for a recipient. When used, the new tab
-   * inherits all the custom tab properties..
-   * 
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
    **/
   @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
@@ -1273,6 +1233,7 @@ public class FormulaTab {
     this.customTabId = customTabId;
   }
 
+
   /**
    * customTabIdMetadata.
    *
@@ -1285,7 +1246,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
-   * 
    * @return customTabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
@@ -1300,6 +1260,7 @@ public class FormulaTab {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
+
   /**
    * disableAutoSize.
    *
@@ -1311,11 +1272,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in
-   * the signing screen when the signer enters data. If disabled users will only
-   * be able enter as much data as the text box can hold. By default this is
-   * false. This property only affects single line text boxes..
-   * 
+   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
    * @return disableAutoSize
    **/
   @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
@@ -1330,6 +1287,7 @@ public class FormulaTab {
     this.disableAutoSize = disableAutoSize;
   }
 
+
   /**
    * disableAutoSizeMetadata.
    *
@@ -1342,7 +1300,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `disableAutoSize` property is editable..
-   * 
    * @return disableAutoSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableAutoSize` property is editable.")
@@ -1357,6 +1314,7 @@ public class FormulaTab {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
 
+
   /**
    * documentId.
    *
@@ -1368,9 +1326,7 @@ public class FormulaTab {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -1385,6 +1341,7 @@ public class FormulaTab {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdMetadata.
    *
@@ -1397,7 +1354,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
-   * 
    * @return documentIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
@@ -1412,6 +1368,7 @@ public class FormulaTab {
     this.documentIdMetadata = documentIdMetadata;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1423,12 +1380,10 @@ public class FormulaTab {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1439,6 +1394,7 @@ public class FormulaTab {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
@@ -1451,11 +1407,7 @@ public class FormulaTab {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -1470,6 +1422,7 @@ public class FormulaTab {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -1481,10 +1434,7 @@ public class FormulaTab {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -1499,6 +1449,7 @@ public class FormulaTab {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontColorMetadata.
    *
@@ -1511,7 +1462,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
-   * 
    * @return fontColorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
@@ -1526,6 +1476,7 @@ public class FormulaTab {
     this.fontColorMetadata = fontColorMetadata;
   }
 
+
   /**
    * fontMetadata.
    *
@@ -1538,7 +1489,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
-   * 
    * @return fontMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `font` property is editable.")
@@ -1553,6 +1503,7 @@ public class FormulaTab {
     this.fontMetadata = fontMetadata;
   }
 
+
   /**
    * fontSize.
    *
@@ -1564,10 +1515,7 @@ public class FormulaTab {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -1582,6 +1530,7 @@ public class FormulaTab {
     this.fontSize = fontSize;
   }
 
+
   /**
    * fontSizeMetadata.
    *
@@ -1594,7 +1543,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
-   * 
    * @return fontSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
@@ -1609,6 +1557,7 @@ public class FormulaTab {
     this.fontSizeMetadata = fontSizeMetadata;
   }
 
+
   /**
    * formOrder.
    *
@@ -1621,7 +1570,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return formOrder
    **/
   @Schema(description = "")
@@ -1636,6 +1584,7 @@ public class FormulaTab {
     this.formOrder = formOrder;
   }
 
+
   /**
    * formOrderMetadata.
    *
@@ -1648,7 +1597,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
-   * 
    * @return formOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
@@ -1663,6 +1611,7 @@ public class FormulaTab {
     this.formOrderMetadata = formOrderMetadata;
   }
 
+
   /**
    * formPageLabel.
    *
@@ -1675,7 +1624,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return formPageLabel
    **/
   @Schema(description = "")
@@ -1690,6 +1638,7 @@ public class FormulaTab {
     this.formPageLabel = formPageLabel;
   }
 
+
   /**
    * formPageLabelMetadata.
    *
@@ -1702,7 +1651,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
-   * 
    * @return formPageLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
@@ -1717,6 +1665,7 @@ public class FormulaTab {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
+
   /**
    * formPageNumber.
    *
@@ -1729,7 +1678,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return formPageNumber
    **/
   @Schema(description = "")
@@ -1744,6 +1692,7 @@ public class FormulaTab {
     this.formPageNumber = formPageNumber;
   }
 
+
   /**
    * formPageNumberMetadata.
    *
@@ -1756,7 +1705,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
-   * 
    * @return formPageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
@@ -1771,6 +1719,7 @@ public class FormulaTab {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
+
   /**
    * formula.
    *
@@ -1782,12 +1731,7 @@ public class FormulaTab {
   }
 
   /**
-   * The Formula string contains the TabLabel for the reference tabs used in the
-   * formula and calculation operators. Each TabLabel must be contained in
-   * brackets. Maximum Length: 2000 characters. *Example*: Three tabs (TabLabels:
-   * Line1, Line2, and Tax) need to be added together. The formula string would
-   * be: [Line1]+[Line2]+[Tax].
-   * 
+   * The Formula string contains the TabLabel for the reference tabs used in the formula and calculation operators. Each TabLabel must be contained in brackets.  Maximum Length: 2000 characters.  *Example*: Three tabs (TabLabels: Line1, Line2, and Tax) need to be added together. The formula string would be:   [Line1]+[Line2]+[Tax].
    * @return formula
    **/
   @Schema(description = "The Formula string contains the TabLabel for the reference tabs used in the formula and calculation operators. Each TabLabel must be contained in brackets.  Maximum Length: 2000 characters.  *Example*: Three tabs (TabLabels: Line1, Line2, and Tax) need to be added together. The formula string would be:   [Line1]+[Line2]+[Tax]")
@@ -1802,6 +1746,7 @@ public class FormulaTab {
     this.formula = formula;
   }
 
+
   /**
    * formulaMetadata.
    *
@@ -1814,7 +1759,6 @@ public class FormulaTab {
 
   /**
    * Metadata indicating if the sender can edit the `formula` property..
-   * 
    * @return formulaMetadata
    **/
   @Schema(description = "Metadata indicating if the sender can edit the `formula` property.")
@@ -1829,6 +1773,7 @@ public class FormulaTab {
     this.formulaMetadata = formulaMetadata;
   }
 
+
   /**
    * height.
    *
@@ -1841,7 +1786,6 @@ public class FormulaTab {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -1856,6 +1800,7 @@ public class FormulaTab {
     this.height = height;
   }
 
+
   /**
    * heightMetadata.
    *
@@ -1868,7 +1813,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
-   * 
    * @return heightMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `height` property is editable.")
@@ -1883,6 +1827,7 @@ public class FormulaTab {
     this.heightMetadata = heightMetadata;
   }
 
+
   /**
    * hidden.
    *
@@ -1895,7 +1840,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return hidden
    **/
   @Schema(description = "")
@@ -1910,6 +1854,7 @@ public class FormulaTab {
     this.hidden = hidden;
   }
 
+
   /**
    * hiddenMetadata.
    *
@@ -1922,7 +1867,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `hidden` property is editable..
-   * 
    * @return hiddenMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `hidden` property is editable.")
@@ -1937,6 +1881,7 @@ public class FormulaTab {
     this.hiddenMetadata = hiddenMetadata;
   }
 
+
   /**
    * isPaymentAmount.
    *
@@ -1948,9 +1893,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, sets this as a payment tab. Can only be used with Text,
-   * Number, Formula, or List tabs. The value of the tab must be a number. .
-   * 
+   * When set to **true**, sets this as a payment tab. Can only be used with Text, Number, Formula, or List tabs. The value of the tab must be a number. .
    * @return isPaymentAmount
    **/
   @Schema(description = "When set to **true**, sets this as a payment tab. Can only be used with Text, Number, Formula, or List tabs. The value of the tab must be a number. ")
@@ -1965,6 +1908,7 @@ public class FormulaTab {
     this.isPaymentAmount = isPaymentAmount;
   }
 
+
   /**
    * isPaymentAmountMetadata.
    *
@@ -1977,7 +1921,6 @@ public class FormulaTab {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return isPaymentAmountMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1992,6 +1935,7 @@ public class FormulaTab {
     this.isPaymentAmountMetadata = isPaymentAmountMetadata;
   }
 
+
   /**
    * italic.
    *
@@ -2004,7 +1948,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -2019,6 +1962,7 @@ public class FormulaTab {
     this.italic = italic;
   }
 
+
   /**
    * italicMetadata.
    *
@@ -2031,7 +1975,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
-   * 
    * @return italicMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
@@ -2046,6 +1989,7 @@ public class FormulaTab {
     this.italicMetadata = italicMetadata;
   }
 
+
   /**
    * localePolicy.
    *
@@ -2058,7 +2002,6 @@ public class FormulaTab {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return localePolicy
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2073,6 +2016,7 @@ public class FormulaTab {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * locked.
    *
@@ -2085,7 +2029,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   * 
    * @return locked
    **/
   @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
@@ -2100,6 +2043,7 @@ public class FormulaTab {
     this.locked = locked;
   }
 
+
   /**
    * lockedMetadata.
    *
@@ -2112,7 +2056,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
-   * 
    * @return lockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
@@ -2127,6 +2070,7 @@ public class FormulaTab {
     this.lockedMetadata = lockedMetadata;
   }
 
+
   /**
    * maxLength.
    *
@@ -2138,9 +2082,7 @@ public class FormulaTab {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the
-   * property is a string..
-   * 
+   * An optional value that describes the maximum length of the property when the property is a string..
    * @return maxLength
    **/
   @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
@@ -2155,6 +2097,7 @@ public class FormulaTab {
     this.maxLength = maxLength;
   }
 
+
   /**
    * maxLengthMetadata.
    *
@@ -2167,7 +2110,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `maxLength` property is editable..
-   * 
    * @return maxLengthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `maxLength` property is editable.")
@@ -2182,6 +2124,7 @@ public class FormulaTab {
     this.maxLengthMetadata = maxLengthMetadata;
   }
 
+
   /**
    * mergeField.
    *
@@ -2194,7 +2137,6 @@ public class FormulaTab {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
-   * 
    * @return mergeField
    **/
   @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
@@ -2209,6 +2151,7 @@ public class FormulaTab {
     this.mergeField = mergeField;
   }
 
+
   /**
    * mergeFieldXml.
    *
@@ -2221,7 +2164,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return mergeFieldXml
    **/
   @Schema(description = "")
@@ -2236,6 +2178,7 @@ public class FormulaTab {
     this.mergeFieldXml = mergeFieldXml;
   }
 
+
   /**
    * name.
    *
@@ -2248,7 +2191,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -2263,6 +2205,7 @@ public class FormulaTab {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -2274,9 +2217,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `name` property is editable. This property is read-only..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
@@ -2291,6 +2232,7 @@ public class FormulaTab {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * originalValue.
    *
@@ -2303,7 +2245,6 @@ public class FormulaTab {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -2318,6 +2259,7 @@ public class FormulaTab {
     this.originalValue = originalValue;
   }
 
+
   /**
    * originalValueMetadata.
    *
@@ -2330,7 +2272,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `originalValue` property is editable..
-   * 
    * @return originalValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `originalValue` property is editable.")
@@ -2345,6 +2286,7 @@ public class FormulaTab {
     this.originalValueMetadata = originalValueMetadata;
   }
 
+
   /**
    * pageNumber.
    *
@@ -2357,7 +2299,6 @@ public class FormulaTab {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -2372,6 +2313,7 @@ public class FormulaTab {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * pageNumberMetadata.
    *
@@ -2384,7 +2326,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
-   * 
    * @return pageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
@@ -2399,6 +2340,7 @@ public class FormulaTab {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
+
   /**
    * paymentDetails.
    *
@@ -2410,12 +2352,7 @@ public class FormulaTab {
   }
 
   /**
-   * This property indicates that this formula tab is a payment item. See
-   * [Requesting Payments Along with Signatures][paymentguide] in the DocuSign
-   * Support Center to learn more about payments. [paymentguide]:
-   * https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
-   * .
-   * 
+   * This property indicates  that this formula tab  is a payment item.   See [Requesting Payments Along with Signatures][paymentguide]  in the DocuSign Support Center  to learn more about payments.   [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
    * @return paymentDetails
    **/
   @Schema(description = "This property indicates  that this formula tab  is a payment item.   See [Requesting Payments Along with Signatures][paymentguide]  in the DocuSign Support Center  to learn more about payments.   [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
@@ -2430,6 +2367,7 @@ public class FormulaTab {
     this.paymentDetails = paymentDetails;
   }
 
+
   /**
    * recipientId.
    *
@@ -2441,9 +2379,7 @@ public class FormulaTab {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -2458,6 +2394,7 @@ public class FormulaTab {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -2470,7 +2407,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -2485,6 +2421,7 @@ public class FormulaTab {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientIdGuidMetadata.
    *
@@ -2497,7 +2434,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
-   * 
    * @return recipientIdGuidMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
@@ -2512,6 +2448,7 @@ public class FormulaTab {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
+
   /**
    * recipientIdMetadata.
    *
@@ -2524,7 +2461,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
-   * 
    * @return recipientIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
@@ -2539,6 +2475,7 @@ public class FormulaTab {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+
   /**
    * requireAll.
    *
@@ -2550,9 +2487,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this
-   * field to complete the envelope. .
-   * 
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
    **/
   @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
@@ -2567,6 +2502,7 @@ public class FormulaTab {
     this.requireAll = requireAll;
   }
 
+
   /**
    * requireAllMetadata.
    *
@@ -2579,7 +2515,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `requireAll` property is editable..
-   * 
    * @return requireAllMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireAll` property is editable.")
@@ -2594,6 +2529,7 @@ public class FormulaTab {
     this.requireAllMetadata = requireAllMetadata;
   }
 
+
   /**
    * required.
    *
@@ -2606,7 +2542,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -2621,6 +2556,7 @@ public class FormulaTab {
     this.required = required;
   }
 
+
   /**
    * requiredMetadata.
    *
@@ -2633,7 +2569,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
-   * 
    * @return requiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `required` property is editable.")
@@ -2648,6 +2583,7 @@ public class FormulaTab {
     this.requiredMetadata = requiredMetadata;
   }
 
+
   /**
    * requireInitialOnSharedChange.
    *
@@ -2659,9 +2595,7 @@ public class FormulaTab {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is
-   * required to initial when they modify a shared field..
-   * 
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
    **/
   @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
@@ -2676,6 +2610,7 @@ public class FormulaTab {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
   /**
    * requireInitialOnSharedChangeMetadata.
    *
@@ -2687,9 +2622,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `requireInitialOnSharedChange` property
-   * is editable..
-   * 
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
    * @return requireInitialOnSharedChangeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
@@ -2704,6 +2637,7 @@ public class FormulaTab {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
 
+
   /**
    * roundDecimalPlaces.
    *
@@ -2716,7 +2650,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return roundDecimalPlaces
    **/
   @Schema(description = "")
@@ -2731,6 +2664,7 @@ public class FormulaTab {
     this.roundDecimalPlaces = roundDecimalPlaces;
   }
 
+
   /**
    * roundDecimalPlacesMetadata.
    *
@@ -2742,9 +2676,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `roundDecimalPlaces` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `roundDecimalPlaces` property is editable..
    * @return roundDecimalPlacesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `roundDecimalPlaces` property is editable.")
@@ -2759,6 +2691,7 @@ public class FormulaTab {
     this.roundDecimalPlacesMetadata = roundDecimalPlacesMetadata;
   }
 
+
   /**
    * senderRequired.
    *
@@ -2770,11 +2703,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can
-   * be sent using the template. This value tab can only be changed by modifying
-   * (PUT) the template. Tabs with a `senderRequired` value of true cannot be
-   * deleted from an envelope..
-   * 
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
    * @return senderRequired
    **/
   @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
@@ -2789,6 +2718,7 @@ public class FormulaTab {
     this.senderRequired = senderRequired;
   }
 
+
   /**
    * senderRequiredMetadata.
    *
@@ -2801,7 +2731,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `senderRequired` property is editable..
-   * 
    * @return senderRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderRequired` property is editable.")
@@ -2816,6 +2745,7 @@ public class FormulaTab {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
 
+
   /**
    * shared.
    *
@@ -2828,7 +2758,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -2843,6 +2772,7 @@ public class FormulaTab {
     this.shared = shared;
   }
 
+
   /**
    * sharedMetadata.
    *
@@ -2855,7 +2785,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `shared` property is editable..
-   * 
    * @return sharedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `shared` property is editable.")
@@ -2870,6 +2799,7 @@ public class FormulaTab {
     this.sharedMetadata = sharedMetadata;
   }
 
+
   /**
    * shareToRecipients.
    *
@@ -2882,7 +2812,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return shareToRecipients
    **/
   @Schema(description = "")
@@ -2897,6 +2826,7 @@ public class FormulaTab {
     this.shareToRecipients = shareToRecipients;
   }
 
+
   /**
    * shareToRecipientsMetadata.
    *
@@ -2909,7 +2839,6 @@ public class FormulaTab {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return shareToRecipientsMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2924,6 +2853,7 @@ public class FormulaTab {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
 
+
   /**
    * smartContractInformation.
    *
@@ -2936,7 +2866,6 @@ public class FormulaTab {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return smartContractInformation
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2951,6 +2880,7 @@ public class FormulaTab {
     this.smartContractInformation = smartContractInformation;
   }
 
+
   /**
    * source.
    *
@@ -2963,7 +2893,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return source
    **/
   @Schema(description = "")
@@ -2978,6 +2907,7 @@ public class FormulaTab {
     this.source = source;
   }
 
+
   /**
    * status.
    *
@@ -2989,10 +2919,7 @@ public class FormulaTab {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -3007,6 +2934,7 @@ public class FormulaTab {
     this.status = status;
   }
 
+
   /**
    * statusMetadata.
    *
@@ -3019,7 +2947,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
-   * 
    * @return statusMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `status` property is editable.")
@@ -3034,6 +2961,7 @@ public class FormulaTab {
     this.statusMetadata = statusMetadata;
   }
 
+
   /**
    * tabGroupLabels.
    *
@@ -3043,7 +2971,7 @@ public class FormulaTab {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
@@ -3059,7 +2987,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return tabGroupLabels
    **/
   @Schema(description = "")
@@ -3074,6 +3001,7 @@ public class FormulaTab {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
   /**
    * tabGroupLabelsMetadata.
    *
@@ -3086,7 +3014,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
-   * 
    * @return tabGroupLabelsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
@@ -3101,6 +3028,7 @@ public class FormulaTab {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
+
   /**
    * tabId.
    *
@@ -3112,9 +3040,7 @@ public class FormulaTab {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -3129,6 +3055,7 @@ public class FormulaTab {
     this.tabId = tabId;
   }
 
+
   /**
    * tabIdMetadata.
    *
@@ -3141,7 +3068,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
-   * 
    * @return tabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
@@ -3156,6 +3082,7 @@ public class FormulaTab {
     this.tabIdMetadata = tabIdMetadata;
   }
 
+
   /**
    * tabLabel.
    *
@@ -3168,7 +3095,6 @@ public class FormulaTab {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -3183,6 +3109,7 @@ public class FormulaTab {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * tabLabelMetadata.
    *
@@ -3195,7 +3122,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
-   * 
    * @return tabLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
@@ -3210,6 +3136,7 @@ public class FormulaTab {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
+
   /**
    * tabOrder.
    *
@@ -3222,7 +3149,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return tabOrder
    **/
   @Schema(description = "")
@@ -3237,6 +3163,7 @@ public class FormulaTab {
     this.tabOrder = tabOrder;
   }
 
+
   /**
    * tabOrderMetadata.
    *
@@ -3249,7 +3176,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
-   * 
    * @return tabOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
@@ -3264,6 +3190,7 @@ public class FormulaTab {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
+
   /**
    * tabType.
    *
@@ -3276,7 +3203,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -3291,6 +3217,7 @@ public class FormulaTab {
     this.tabType = tabType;
   }
 
+
   /**
    * tabTypeMetadata.
    *
@@ -3303,7 +3230,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
-   * 
    * @return tabTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
@@ -3318,6 +3244,7 @@ public class FormulaTab {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
+
   /**
    * templateLocked.
    *
@@ -3329,9 +3256,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -3346,6 +3271,7 @@ public class FormulaTab {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateLockedMetadata.
    *
@@ -3358,7 +3284,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
-   * 
    * @return templateLockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
@@ -3373,6 +3298,7 @@ public class FormulaTab {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
+
   /**
    * templateRequired.
    *
@@ -3384,9 +3310,7 @@ public class FormulaTab {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -3401,6 +3325,7 @@ public class FormulaTab {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * templateRequiredMetadata.
    *
@@ -3413,7 +3338,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
-   * 
    * @return templateRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
@@ -3428,6 +3352,7 @@ public class FormulaTab {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
+
   /**
    * tooltip.
    *
@@ -3440,7 +3365,6 @@ public class FormulaTab {
 
   /**
    * .
-   * 
    * @return tooltip
    **/
   @Schema(description = "")
@@ -3455,6 +3379,7 @@ public class FormulaTab {
     this.tooltip = tooltip;
   }
 
+
   /**
    * toolTipMetadata.
    *
@@ -3467,7 +3392,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
-   * 
    * @return toolTipMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
@@ -3482,6 +3406,7 @@ public class FormulaTab {
     this.toolTipMetadata = toolTipMetadata;
   }
 
+
   /**
    * underline.
    *
@@ -3494,7 +3419,6 @@ public class FormulaTab {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -3509,6 +3433,7 @@ public class FormulaTab {
     this.underline = underline;
   }
 
+
   /**
    * underlineMetadata.
    *
@@ -3521,7 +3446,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
-   * 
    * @return underlineMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
@@ -3536,6 +3460,7 @@ public class FormulaTab {
     this.underlineMetadata = underlineMetadata;
   }
 
+
   /**
    * validationMessage.
    *
@@ -3547,9 +3472,7 @@ public class FormulaTab {
   }
 
   /**
-   * The message displayed if the custom tab fails input validation (either custom
-   * of embedded)..
-   * 
+   * The message displayed if the custom tab fails input validation (either custom of embedded)..
    * @return validationMessage
    **/
   @Schema(description = "The message displayed if the custom tab fails input validation (either custom of embedded).")
@@ -3564,6 +3487,7 @@ public class FormulaTab {
     this.validationMessage = validationMessage;
   }
 
+
   /**
    * validationMessageMetadata.
    *
@@ -3575,9 +3499,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `validationMessage` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `validationMessage` property is editable..
    * @return validationMessageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationMessage` property is editable.")
@@ -3592,6 +3514,7 @@ public class FormulaTab {
     this.validationMessageMetadata = validationMessageMetadata;
   }
 
+
   /**
    * validationPattern.
    *
@@ -3604,7 +3527,6 @@ public class FormulaTab {
 
   /**
    * A regular expression used to validate input for the tab..
-   * 
    * @return validationPattern
    **/
   @Schema(description = "A regular expression used to validate input for the tab.")
@@ -3619,6 +3541,7 @@ public class FormulaTab {
     this.validationPattern = validationPattern;
   }
 
+
   /**
    * validationPatternMetadata.
    *
@@ -3630,9 +3553,7 @@ public class FormulaTab {
   }
 
   /**
-   * Metadata that indicates whether the `validationPattern` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `validationPattern` property is editable..
    * @return validationPatternMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationPattern` property is editable.")
@@ -3647,6 +3568,7 @@ public class FormulaTab {
     this.validationPatternMetadata = validationPatternMetadata;
   }
 
+
   /**
    * value.
    *
@@ -3659,7 +3581,6 @@ public class FormulaTab {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -3674,6 +3595,7 @@ public class FormulaTab {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -3686,7 +3608,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -3701,6 +3622,7 @@ public class FormulaTab {
     this.valueMetadata = valueMetadata;
   }
 
+
   /**
    * width.
    *
@@ -3713,7 +3635,6 @@ public class FormulaTab {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -3728,6 +3649,7 @@ public class FormulaTab {
     this.width = width;
   }
 
+
   /**
    * widthMetadata.
    *
@@ -3740,7 +3662,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
-   * 
    * @return widthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `width` property is editable.")
@@ -3755,6 +3676,7 @@ public class FormulaTab {
     this.widthMetadata = widthMetadata;
   }
 
+
   /**
    * xPosition.
    *
@@ -3766,9 +3688,7 @@ public class FormulaTab {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3783,6 +3703,7 @@ public class FormulaTab {
     this.xPosition = xPosition;
   }
 
+
   /**
    * xPositionMetadata.
    *
@@ -3795,7 +3716,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
-   * 
    * @return xPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
@@ -3810,6 +3730,7 @@ public class FormulaTab {
     this.xPositionMetadata = xPositionMetadata;
   }
 
+
   /**
    * yPosition.
    *
@@ -3821,9 +3742,7 @@ public class FormulaTab {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3838,6 +3757,7 @@ public class FormulaTab {
     this.yPosition = yPosition;
   }
 
+
   /**
    * yPositionMetadata.
    *
@@ -3850,7 +3770,6 @@ public class FormulaTab {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
-   * 
    * @return yPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
@@ -3864,6 +3783,7 @@ public class FormulaTab {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3880,9 +3800,7 @@ public class FormulaTab {
     }
     FormulaTab formulaTab = (FormulaTab) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, formulaTab.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
-            formulaTab.anchorAllowWhiteSpaceInCharactersMetadata)
-        &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, formulaTab.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, formulaTab.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, formulaTab.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, formulaTab.anchorHorizontalAlignment) &&
@@ -4013,29 +3931,9 @@ public class FormulaTab {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
-        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
-        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
-        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
-        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
-        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
-        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
-        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula,
-        formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata,
-        italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField,
-        mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata,
-        paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll,
-        requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange,
-        requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired,
-        senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata,
-        smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId,
-        tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked,
-        templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline,
-        underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata,
-        value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -4044,26 +3942,21 @@ public class FormulaTab {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FormulaTab {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -4075,14 +3968,11 @@ public class FormulaTab {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
-        .append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -4135,8 +4025,7 @@ public class FormulaTab {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ")
-        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    roundDecimalPlaces: ").append(toIndentedString(roundDecimalPlaces)).append("\n");
     sb.append("    roundDecimalPlacesMetadata: ").append(toIndentedString(roundDecimalPlacesMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
@@ -4195,3 +4084,4 @@ public class FormulaTab {
   }
 
 }
+

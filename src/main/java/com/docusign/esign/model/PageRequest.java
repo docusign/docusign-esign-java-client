@@ -20,6 +20,7 @@ public class PageRequest {
   @JsonProperty("rotate")
   private String rotate = null;
 
+
   /**
    * password.
    *
@@ -32,7 +33,6 @@ public class PageRequest {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class PageRequest {
     this.password = password;
   }
 
+
   /**
    * rotate.
    *
@@ -58,9 +59,7 @@ public class PageRequest {
   }
 
   /**
-   * Sets the direction the page image is rotated. The possible settings are: left
-   * or right.
-   * 
+   * Sets the direction the page image is rotated. The possible settings are: left or right.
    * @return rotate
    **/
   @Schema(description = "Sets the direction the page image is rotated. The possible settings are: left or right")
@@ -74,6 +73,7 @@ public class PageRequest {
   public void setRotate(String rotate) {
     this.rotate = rotate;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +101,7 @@ public class PageRequest {
     return Objects.hash(password, rotate);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +109,7 @@ public class PageRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageRequest {\n");
-
+    
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    rotate: ").append(toIndentedString(rotate)).append("\n");
     sb.append("}");
@@ -127,3 +128,4 @@ public class PageRequest {
   }
 
 }
+

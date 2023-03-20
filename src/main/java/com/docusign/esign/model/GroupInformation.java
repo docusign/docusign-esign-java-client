@@ -36,6 +36,7 @@ public class GroupInformation {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -48,7 +49,6 @@ public class GroupInformation {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -63,6 +63,7 @@ public class GroupInformation {
     this.endPosition = endPosition;
   }
 
+
   /**
    * groups.
    *
@@ -72,7 +73,7 @@ public class GroupInformation {
     this.groups = groups;
     return this;
   }
-
+  
   /**
    * addGroupsItem.
    *
@@ -88,7 +89,6 @@ public class GroupInformation {
 
   /**
    * A collection group objects containing information about the groups returned..
-   * 
    * @return groups
    **/
   @Schema(description = "A collection group objects containing information about the groups returned.")
@@ -103,6 +103,7 @@ public class GroupInformation {
     this.groups = groups;
   }
 
+
   /**
    * nextUri.
    *
@@ -114,9 +115,7 @@ public class GroupInformation {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -131,6 +130,7 @@ public class GroupInformation {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -143,7 +143,6 @@ public class GroupInformation {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -158,6 +157,7 @@ public class GroupInformation {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -170,7 +170,6 @@ public class GroupInformation {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -185,6 +184,7 @@ public class GroupInformation {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -197,7 +197,6 @@ public class GroupInformation {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -212,6 +211,7 @@ public class GroupInformation {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -223,10 +223,7 @@ public class GroupInformation {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -240,6 +237,7 @@ public class GroupInformation {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -272,6 +270,7 @@ public class GroupInformation {
     return Objects.hash(endPosition, groups, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -279,7 +278,7 @@ public class GroupInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupInformation {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
@@ -303,3 +302,4 @@ public class GroupInformation {
   }
 
 }
+
