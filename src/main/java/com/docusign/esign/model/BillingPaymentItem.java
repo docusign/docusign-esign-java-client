@@ -30,6 +30,7 @@ public class BillingPaymentItem {
   @JsonProperty("paymentNumber")
   private String paymentNumber = null;
 
+
   /**
    * amount.
    *
@@ -42,7 +43,6 @@ public class BillingPaymentItem {
 
   /**
    * Reserved: TBD.
-   * 
    * @return amount
    **/
   @Schema(description = "Reserved: TBD")
@@ -57,6 +57,7 @@ public class BillingPaymentItem {
     this.amount = amount;
   }
 
+
   /**
    * description.
    *
@@ -69,7 +70,6 @@ public class BillingPaymentItem {
 
   /**
    * .
-   * 
    * @return description
    **/
   @Schema(description = "")
@@ -84,6 +84,7 @@ public class BillingPaymentItem {
     this.description = description;
   }
 
+
   /**
    * paymentDate.
    *
@@ -96,7 +97,6 @@ public class BillingPaymentItem {
 
   /**
    * .
-   * 
    * @return paymentDate
    **/
   @Schema(description = "")
@@ -111,6 +111,7 @@ public class BillingPaymentItem {
     this.paymentDate = paymentDate;
   }
 
+
   /**
    * paymentId.
    *
@@ -123,7 +124,6 @@ public class BillingPaymentItem {
 
   /**
    * .
-   * 
    * @return paymentId
    **/
   @Schema(description = "")
@@ -138,6 +138,7 @@ public class BillingPaymentItem {
     this.paymentId = paymentId;
   }
 
+
   /**
    * paymentNumber.
    *
@@ -149,10 +150,7 @@ public class BillingPaymentItem {
   }
 
   /**
-   * When set to **true**, a PDF version of the invoice is available. To get the
-   * PDF, make the call again and change \"Accept:\" in the header to \"Accept:
-   * application/pdf\"..
-   * 
+   * When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\"..
    * @return paymentNumber
    **/
   @Schema(description = "When set to **true**, a PDF version of the invoice is available.   To get the PDF, make the call again and change \"Accept:\" in the header to \"Accept: application/pdf\".")
@@ -166,6 +164,7 @@ public class BillingPaymentItem {
   public void setPaymentNumber(String paymentNumber) {
     this.paymentNumber = paymentNumber;
   }
+
 
   /**
    * Compares objects.
@@ -196,6 +195,7 @@ public class BillingPaymentItem {
     return Objects.hash(amount, description, paymentDate, paymentId, paymentNumber);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -203,7 +203,7 @@ public class BillingPaymentItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentItem {\n");
-
+    
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    paymentDate: ").append(toIndentedString(paymentDate)).append("\n");
@@ -225,3 +225,4 @@ public class BillingPaymentItem {
   }
 
 }
+

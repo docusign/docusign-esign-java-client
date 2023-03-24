@@ -27,6 +27,7 @@ public class BulkSendErrorStatus {
   @JsonProperty("recipientEmails")
   private java.util.List<String> recipientEmails = null;
 
+
   /**
    * created.
    *
@@ -39,7 +40,6 @@ public class BulkSendErrorStatus {
 
   /**
    * .
-   * 
    * @return created
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class BulkSendErrorStatus {
     this.created = created;
   }
 
+
   /**
    * envelopeId.
    *
@@ -66,7 +67,6 @@ public class BulkSendErrorStatus {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -81,6 +81,7 @@ public class BulkSendErrorStatus {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * errorMessage.
    *
@@ -93,7 +94,6 @@ public class BulkSendErrorStatus {
 
   /**
    * .
-   * 
    * @return errorMessage
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class BulkSendErrorStatus {
     this.errorMessage = errorMessage;
   }
 
+
   /**
    * recipientEmails.
    *
@@ -117,7 +118,7 @@ public class BulkSendErrorStatus {
     this.recipientEmails = recipientEmails;
     return this;
   }
-
+  
   /**
    * addRecipientEmailsItem.
    *
@@ -133,7 +134,6 @@ public class BulkSendErrorStatus {
 
   /**
    * .
-   * 
    * @return recipientEmails
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class BulkSendErrorStatus {
   public void setRecipientEmails(java.util.List<String> recipientEmails) {
     this.recipientEmails = recipientEmails;
   }
+
 
   /**
    * Compares objects.
@@ -176,6 +177,7 @@ public class BulkSendErrorStatus {
     return Objects.hash(created, envelopeId, errorMessage, recipientEmails);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -183,7 +185,7 @@ public class BulkSendErrorStatus {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendErrorStatus {\n");
-
+    
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorMessage: ").append(toIndentedString(errorMessage)).append("\n");
@@ -204,3 +206,4 @@ public class BulkSendErrorStatus {
   }
 
 }
+

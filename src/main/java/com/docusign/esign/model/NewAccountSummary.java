@@ -36,6 +36,7 @@ public class NewAccountSummary {
   @JsonProperty("userId")
   private String userId = null;
 
+
   /**
    * accountId.
    *
@@ -48,7 +49,6 @@ public class NewAccountSummary {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -63,6 +63,7 @@ public class NewAccountSummary {
     this.accountId = accountId;
   }
 
+
   /**
    * accountIdGuid.
    *
@@ -75,7 +76,6 @@ public class NewAccountSummary {
 
   /**
    * The GUID associated with the account ID..
-   * 
    * @return accountIdGuid
    **/
   @Schema(description = "The GUID associated with the account ID.")
@@ -90,6 +90,7 @@ public class NewAccountSummary {
     this.accountIdGuid = accountIdGuid;
   }
 
+
   /**
    * accountName.
    *
@@ -102,7 +103,6 @@ public class NewAccountSummary {
 
   /**
    * The account name for the new account..
-   * 
    * @return accountName
    **/
   @Schema(description = "The account name for the new account.")
@@ -117,6 +117,7 @@ public class NewAccountSummary {
     this.accountName = accountName;
   }
 
+
   /**
    * apiPassword.
    *
@@ -128,9 +129,7 @@ public class NewAccountSummary {
   }
 
   /**
-   * Contains a token that can be used for authentication in API calls instead of
-   * using the user name and password..
-   * 
+   * Contains a token that can be used for authentication in API calls instead of using the user name and password..
    * @return apiPassword
    **/
   @Schema(description = "Contains a token that can be used for authentication in API calls instead of using the user name and password.")
@@ -145,6 +144,7 @@ public class NewAccountSummary {
     this.apiPassword = apiPassword;
   }
 
+
   /**
    * baseUrl.
    *
@@ -156,11 +156,7 @@ public class NewAccountSummary {
   }
 
   /**
-   * The URL that should be used for successive calls to this account. It includes
-   * the protocal (https), the DocuSign server where the account is located, and
-   * the account number. Use this Url to make API calls against this account. Many
-   * of the API calls provide Uri's that are relative to this baseUrl..
-   * 
+   * The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl..
    * @return baseUrl
    **/
   @Schema(description = "The URL that should be used for successive calls to this account. It includes the protocal (https), the DocuSign server where the account is located, and the account number. Use this Url to make API calls against this account. Many of the API calls provide Uri's that are relative to this baseUrl.")
@@ -175,6 +171,7 @@ public class NewAccountSummary {
     this.baseUrl = baseUrl;
   }
 
+
   /**
    * billingPlanPreview.
    *
@@ -187,7 +184,6 @@ public class NewAccountSummary {
 
   /**
    * .
-   * 
    * @return billingPlanPreview
    **/
   @Schema(description = "")
@@ -202,6 +198,7 @@ public class NewAccountSummary {
     this.billingPlanPreview = billingPlanPreview;
   }
 
+
   /**
    * userId.
    *
@@ -214,7 +211,6 @@ public class NewAccountSummary {
 
   /**
    * Specifies the user ID of the new user..
-   * 
    * @return userId
    **/
   @Schema(description = "Specifies the user ID of the new user.")
@@ -228,6 +224,7 @@ public class NewAccountSummary {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -260,6 +257,7 @@ public class NewAccountSummary {
     return Objects.hash(accountId, accountIdGuid, accountName, apiPassword, baseUrl, billingPlanPreview, userId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -267,7 +265,7 @@ public class NewAccountSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountSummary {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
@@ -291,3 +289,4 @@ public class NewAccountSummary {
   }
 
 }
+

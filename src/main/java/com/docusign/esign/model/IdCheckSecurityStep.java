@@ -17,6 +17,7 @@ public class IdCheckSecurityStep {
   @JsonProperty("authType")
   private String authType = null;
 
+
   /**
    * authType.
    *
@@ -29,7 +30,6 @@ public class IdCheckSecurityStep {
 
   /**
    * .
-   * 
    * @return authType
    **/
   @Schema(description = "")
@@ -43,6 +43,7 @@ public class IdCheckSecurityStep {
   public void setAuthType(String authType) {
     this.authType = authType;
   }
+
 
   /**
    * Compares objects.
@@ -69,6 +70,7 @@ public class IdCheckSecurityStep {
     return Objects.hash(authType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -76,7 +78,7 @@ public class IdCheckSecurityStep {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IdCheckSecurityStep {\n");
-
+    
     sb.append("    authType: ").append(toIndentedString(authType)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -94,3 +96,4 @@ public class IdCheckSecurityStep {
   }
 
 }
+

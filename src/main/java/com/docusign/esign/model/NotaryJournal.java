@@ -34,6 +34,7 @@ public class NotaryJournal {
   @JsonProperty("signerName")
   private String signerName = null;
 
+
   /**
    * createdDate.
    *
@@ -46,7 +47,6 @@ public class NotaryJournal {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -61,6 +61,7 @@ public class NotaryJournal {
     this.createdDate = createdDate;
   }
 
+
   /**
    * documentName.
    *
@@ -73,7 +74,6 @@ public class NotaryJournal {
 
   /**
    * .
-   * 
    * @return documentName
    **/
   @Schema(description = "")
@@ -88,6 +88,7 @@ public class NotaryJournal {
     this.documentName = documentName;
   }
 
+
   /**
    * jurisdiction.
    *
@@ -100,7 +101,6 @@ public class NotaryJournal {
 
   /**
    * The notary's jurisdiction. .
-   * 
    * @return jurisdiction
    **/
   @Schema(description = "The notary's jurisdiction. ")
@@ -115,6 +115,7 @@ public class NotaryJournal {
     this.jurisdiction = jurisdiction;
   }
 
+
   /**
    * notaryJournalId.
    *
@@ -127,7 +128,6 @@ public class NotaryJournal {
 
   /**
    * .
-   * 
    * @return notaryJournalId
    **/
   @Schema(description = "")
@@ -142,6 +142,7 @@ public class NotaryJournal {
     this.notaryJournalId = notaryJournalId;
   }
 
+
   /**
    * notaryJournalMetaData.
    *
@@ -154,7 +155,6 @@ public class NotaryJournal {
 
   /**
    * Additional journal data such as the witness list and signature image..
-   * 
    * @return notaryJournalMetaData
    **/
   @Schema(description = "Additional journal data such as the witness list and signature image.")
@@ -169,6 +169,7 @@ public class NotaryJournal {
     this.notaryJournalMetaData = notaryJournalMetaData;
   }
 
+
   /**
    * signerName.
    *
@@ -181,7 +182,6 @@ public class NotaryJournal {
 
   /**
    * .
-   * 
    * @return signerName
    **/
   @Schema(description = "")
@@ -195,6 +195,7 @@ public class NotaryJournal {
   public void setSignerName(String signerName) {
     this.signerName = signerName;
   }
+
 
   /**
    * Compares objects.
@@ -226,6 +227,7 @@ public class NotaryJournal {
     return Objects.hash(createdDate, documentName, jurisdiction, notaryJournalId, notaryJournalMetaData, signerName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -233,7 +235,7 @@ public class NotaryJournal {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournal {\n");
-
+    
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    jurisdiction: ").append(toIndentedString(jurisdiction)).append("\n");
@@ -256,3 +258,4 @@ public class NotaryJournal {
   }
 
 }
+

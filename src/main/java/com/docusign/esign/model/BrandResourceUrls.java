@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Brands use resource files to style the following experiences: - Email -
- * Sending - Signing - Captive (embedded) signing You can modify these resource
- * files to customize these experiences..
+ * Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences..
  *
  */
 @Schema(description = "Brands use resource files to style the following experiences:   - Email - Sending - Signing - Captive (embedded) signing   You can modify these resource files to customize these experiences.")
@@ -29,6 +27,7 @@ public class BrandResourceUrls {
   @JsonProperty("signingCaptive")
   private String signingCaptive = null;
 
+
   /**
    * email.
    *
@@ -41,7 +40,6 @@ public class BrandResourceUrls {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -56,6 +54,7 @@ public class BrandResourceUrls {
     this.email = email;
   }
 
+
   /**
    * sending.
    *
@@ -68,7 +67,6 @@ public class BrandResourceUrls {
 
   /**
    * .
-   * 
    * @return sending
    **/
   @Schema(description = "")
@@ -83,6 +81,7 @@ public class BrandResourceUrls {
     this.sending = sending;
   }
 
+
   /**
    * signing.
    *
@@ -95,7 +94,6 @@ public class BrandResourceUrls {
 
   /**
    * .
-   * 
    * @return signing
    **/
   @Schema(description = "")
@@ -110,6 +108,7 @@ public class BrandResourceUrls {
     this.signing = signing;
   }
 
+
   /**
    * signingCaptive.
    *
@@ -122,7 +121,6 @@ public class BrandResourceUrls {
 
   /**
    * .
-   * 
    * @return signingCaptive
    **/
   @Schema(description = "")
@@ -136,6 +134,7 @@ public class BrandResourceUrls {
   public void setSigningCaptive(String signingCaptive) {
     this.signingCaptive = signingCaptive;
   }
+
 
   /**
    * Compares objects.
@@ -165,6 +164,7 @@ public class BrandResourceUrls {
     return Objects.hash(email, sending, signing, signingCaptive);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -172,7 +172,7 @@ public class BrandResourceUrls {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResourceUrls {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    sending: ").append(toIndentedString(sending)).append("\n");
     sb.append("    signing: ").append(toIndentedString(signing)).append("\n");
@@ -193,3 +193,4 @@ public class BrandResourceUrls {
   }
 
 }
+

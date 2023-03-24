@@ -26,6 +26,7 @@ public class UserSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * errorDetails.
    *
@@ -37,12 +38,10 @@ public class UserSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -53,6 +52,7 @@ public class UserSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * shared.
@@ -66,7 +66,6 @@ public class UserSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -81,6 +80,7 @@ public class UserSharedItem {
     this.shared = shared;
   }
 
+
   /**
    * user.
    *
@@ -93,7 +93,6 @@ public class UserSharedItem {
 
   /**
    * The user whose sharing information is being requested..
-   * 
    * @return user
    **/
   @Schema(description = "The user whose sharing information is being requested.")
@@ -107,6 +106,7 @@ public class UserSharedItem {
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -135,6 +135,7 @@ public class UserSharedItem {
     return Objects.hash(errorDetails, shared, user);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -142,7 +143,7 @@ public class UserSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
@@ -162,3 +163,4 @@ public class UserSharedItem {
   }
 
 }
+

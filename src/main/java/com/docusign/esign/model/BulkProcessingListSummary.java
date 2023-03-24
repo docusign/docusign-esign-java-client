@@ -26,6 +26,7 @@ public class BulkProcessingListSummary {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * bulkProcessListId.
    *
@@ -38,7 +39,6 @@ public class BulkProcessingListSummary {
 
   /**
    * .
-   * 
    * @return bulkProcessListId
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class BulkProcessingListSummary {
     this.bulkProcessListId = bulkProcessListId;
   }
 
+
   /**
    * createdByUser.
    *
@@ -65,7 +66,6 @@ public class BulkProcessingListSummary {
 
   /**
    * .
-   * 
    * @return createdByUser
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class BulkProcessingListSummary {
     this.createdByUser = createdByUser;
   }
 
+
   /**
    * createdDate.
    *
@@ -92,7 +93,6 @@ public class BulkProcessingListSummary {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class BulkProcessingListSummary {
     this.createdDate = createdDate;
   }
 
+
   /**
    * name.
    *
@@ -119,7 +120,6 @@ public class BulkProcessingListSummary {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class BulkProcessingListSummary {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class BulkProcessingListSummary {
     return Objects.hash(bulkProcessListId, createdByUser, createdDate, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class BulkProcessingListSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingListSummary {\n");
-
+    
     sb.append("    bulkProcessListId: ").append(toIndentedString(bulkProcessListId)).append("\n");
     sb.append("    createdByUser: ").append(toIndentedString(createdByUser)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -190,3 +192,4 @@ public class BulkProcessingListSummary {
   }
 
 }
+

@@ -20,6 +20,7 @@ public class FileType {
   @JsonProperty("mimeType")
   private String mimeType = null;
 
+
   /**
    * fileExtension.
    *
@@ -32,7 +33,6 @@ public class FileType {
 
   /**
    * .
-   * 
    * @return fileExtension
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class FileType {
     this.fileExtension = fileExtension;
   }
 
+
   /**
    * mimeType.
    *
@@ -59,7 +60,6 @@ public class FileType {
 
   /**
    * The mime-type of a file type listed in a fileTypes collection..
-   * 
    * @return mimeType
    **/
   @Schema(description = "The mime-type of a file type listed in a fileTypes collection.")
@@ -73,6 +73,7 @@ public class FileType {
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class FileType {
     return Objects.hash(fileExtension, mimeType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class FileType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FileType {\n");
-
+    
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
     sb.append("    mimeType: ").append(toIndentedString(mimeType)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class FileType {
   }
 
 }
+

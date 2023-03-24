@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object provides details about a feature set, or add-on product that is
- * associated with an account. It is reserved for DocuSign internal use only..
+ * This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only..
  *
  */
 @Schema(description = "This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only.")
@@ -44,6 +43,7 @@ public class FeatureSet {
   @JsonProperty("seatFee")
   private String seatFee = null;
 
+
   /**
    * currencyFeatureSetPrices.
    *
@@ -53,7 +53,7 @@ public class FeatureSet {
     this.currencyFeatureSetPrices = currencyFeatureSetPrices;
     return this;
   }
-
+  
   /**
    * addCurrencyFeatureSetPricesItem.
    *
@@ -68,9 +68,7 @@ public class FeatureSet {
   }
 
   /**
-   * A complex type that contains alternate currency values that are configured
-   * for this plan feature set..
-   * 
+   * A complex type that contains alternate currency values that are configured for this plan feature set..
    * @return currencyFeatureSetPrices
    **/
   @Schema(description = "A complex type that contains alternate currency values that are configured for this plan feature set.")
@@ -85,6 +83,7 @@ public class FeatureSet {
     this.currencyFeatureSetPrices = currencyFeatureSetPrices;
   }
 
+
   /**
    * envelopeFee.
    *
@@ -97,7 +96,6 @@ public class FeatureSet {
 
   /**
    * .
-   * 
    * @return envelopeFee
    **/
   @Schema(description = "")
@@ -112,6 +110,7 @@ public class FeatureSet {
     this.envelopeFee = envelopeFee;
   }
 
+
   /**
    * featureSetId.
    *
@@ -124,7 +123,6 @@ public class FeatureSet {
 
   /**
    * A unique ID for the feature set..
-   * 
    * @return featureSetId
    **/
   @Schema(description = "A unique ID for the feature set.")
@@ -139,6 +137,7 @@ public class FeatureSet {
     this.featureSetId = featureSetId;
   }
 
+
   /**
    * fixedFee.
    *
@@ -151,7 +150,6 @@ public class FeatureSet {
 
   /**
    * .
-   * 
    * @return fixedFee
    **/
   @Schema(description = "")
@@ -166,6 +164,7 @@ public class FeatureSet {
     this.fixedFee = fixedFee;
   }
 
+
   /**
    * is21CFRPart11.
    *
@@ -178,7 +177,6 @@ public class FeatureSet {
 
   /**
    * When set to **true**, indicates that this module is enabled on the account..
-   * 
    * @return is21CFRPart11
    **/
   @Schema(description = "When set to **true**, indicates that this module is enabled on the account.")
@@ -193,6 +191,7 @@ public class FeatureSet {
     this.is21CFRPart11 = is21CFRPart11;
   }
 
+
   /**
    * isActive.
    *
@@ -205,7 +204,6 @@ public class FeatureSet {
 
   /**
    * .
-   * 
    * @return isActive
    **/
   @Schema(description = "")
@@ -220,6 +218,7 @@ public class FeatureSet {
     this.isActive = isActive;
   }
 
+
   /**
    * isEnabled.
    *
@@ -232,7 +231,6 @@ public class FeatureSet {
 
   /**
    * Specifies whether the feature set is actively enabled as part of the plan..
-   * 
    * @return isEnabled
    **/
   @Schema(description = "Specifies whether the feature set is actively enabled as part of the plan.")
@@ -247,6 +245,7 @@ public class FeatureSet {
     this.isEnabled = isEnabled;
   }
 
+
   /**
    * name.
    *
@@ -259,7 +258,6 @@ public class FeatureSet {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -274,6 +272,7 @@ public class FeatureSet {
     this.name = name;
   }
 
+
   /**
    * seatFee.
    *
@@ -285,9 +284,7 @@ public class FeatureSet {
   }
 
   /**
-   * An incremental seat cost for seat-based plans. Only valid when isEnabled for
-   * the feature set is set to true..
-   * 
+   * An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true..
    * @return seatFee
    **/
   @Schema(description = "An incremental seat cost for seat-based plans. Only valid when isEnabled for the feature set is set to true.")
@@ -301,6 +298,7 @@ public class FeatureSet {
   public void setSeatFee(String seatFee) {
     this.seatFee = seatFee;
   }
+
 
   /**
    * Compares objects.
@@ -332,9 +330,9 @@ public class FeatureSet {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currencyFeatureSetPrices, envelopeFee, featureSetId, fixedFee, is21CFRPart11, isActive,
-        isEnabled, name, seatFee);
+    return Objects.hash(currencyFeatureSetPrices, envelopeFee, featureSetId, fixedFee, is21CFRPart11, isActive, isEnabled, name, seatFee);
   }
+
 
   /**
    * Converts the given object to string.
@@ -343,7 +341,7 @@ public class FeatureSet {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureSet {\n");
-
+    
     sb.append("    currencyFeatureSetPrices: ").append(toIndentedString(currencyFeatureSetPrices)).append("\n");
     sb.append("    envelopeFee: ").append(toIndentedString(envelopeFee)).append("\n");
     sb.append("    featureSetId: ").append(toIndentedString(featureSetId)).append("\n");
@@ -369,3 +367,4 @@ public class FeatureSet {
   }
 
 }
+

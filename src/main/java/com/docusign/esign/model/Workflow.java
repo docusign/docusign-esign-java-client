@@ -35,6 +35,7 @@ public class Workflow {
   @JsonProperty("workflowSteps")
   private java.util.List<WorkflowStep> workflowSteps = null;
 
+
   /**
    * currentWorkflowStepId.
    *
@@ -47,7 +48,6 @@ public class Workflow {
 
   /**
    * .
-   * 
    * @return currentWorkflowStepId
    **/
   @Schema(description = "")
@@ -62,6 +62,7 @@ public class Workflow {
     this.currentWorkflowStepId = currentWorkflowStepId;
   }
 
+
   /**
    * overwriteUpdateMode.
    *
@@ -74,7 +75,6 @@ public class Workflow {
 
   /**
    * .
-   * 
    * @return overwriteUpdateMode
    **/
   @Schema(description = "")
@@ -89,6 +89,7 @@ public class Workflow {
     this.overwriteUpdateMode = overwriteUpdateMode;
   }
 
+
   /**
    * resumeDate.
    *
@@ -101,7 +102,6 @@ public class Workflow {
 
   /**
    * .
-   * 
    * @return resumeDate
    **/
   @Schema(description = "")
@@ -116,6 +116,7 @@ public class Workflow {
     this.resumeDate = resumeDate;
   }
 
+
   /**
    * scheduledSending.
    *
@@ -128,7 +129,6 @@ public class Workflow {
 
   /**
    * An object that describes the settings for scheduled sending..
-   * 
    * @return scheduledSending
    **/
   @Schema(description = "An object that describes the settings for scheduled sending.")
@@ -143,6 +143,7 @@ public class Workflow {
     this.scheduledSending = scheduledSending;
   }
 
+
   /**
    * workflowStatus.
    *
@@ -155,7 +156,6 @@ public class Workflow {
 
   /**
    * .
-   * 
    * @return workflowStatus
    **/
   @Schema(description = "")
@@ -170,6 +170,7 @@ public class Workflow {
     this.workflowStatus = workflowStatus;
   }
 
+
   /**
    * workflowSteps.
    *
@@ -179,7 +180,7 @@ public class Workflow {
     this.workflowSteps = workflowSteps;
     return this;
   }
-
+  
   /**
    * addWorkflowStepsItem.
    *
@@ -195,7 +196,6 @@ public class Workflow {
 
   /**
    * .
-   * 
    * @return workflowSteps
    **/
   @Schema(description = "")
@@ -209,6 +209,7 @@ public class Workflow {
   public void setWorkflowSteps(java.util.List<WorkflowStep> workflowSteps) {
     this.workflowSteps = workflowSteps;
   }
+
 
   /**
    * Compares objects.
@@ -237,9 +238,9 @@ public class Workflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(currentWorkflowStepId, overwriteUpdateMode, resumeDate, scheduledSending, workflowStatus,
-        workflowSteps);
+    return Objects.hash(currentWorkflowStepId, overwriteUpdateMode, resumeDate, scheduledSending, workflowStatus, workflowSteps);
   }
+
 
   /**
    * Converts the given object to string.
@@ -248,7 +249,7 @@ public class Workflow {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Workflow {\n");
-
+    
     sb.append("    currentWorkflowStepId: ").append(toIndentedString(currentWorkflowStepId)).append("\n");
     sb.append("    overwriteUpdateMode: ").append(toIndentedString(overwriteUpdateMode)).append("\n");
     sb.append("    resumeDate: ").append(toIndentedString(resumeDate)).append("\n");
@@ -271,3 +272,4 @@ public class Workflow {
   }
 
 }
+

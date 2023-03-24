@@ -19,6 +19,7 @@ public class CaptiveRecipientInformation {
   @JsonProperty("captiveRecipients")
   private java.util.List<CaptiveRecipient> captiveRecipients = null;
 
+
   /**
    * captiveRecipients.
    *
@@ -28,7 +29,7 @@ public class CaptiveRecipientInformation {
     this.captiveRecipients = captiveRecipients;
     return this;
   }
-
+  
   /**
    * addCaptiveRecipientsItem.
    *
@@ -44,7 +45,6 @@ public class CaptiveRecipientInformation {
 
   /**
    * A complex type containing information about one or more captive recipients..
-   * 
    * @return captiveRecipients
    **/
   @Schema(description = "A complex type containing information about one or more captive recipients.")
@@ -58,6 +58,7 @@ public class CaptiveRecipientInformation {
   public void setCaptiveRecipients(java.util.List<CaptiveRecipient> captiveRecipients) {
     this.captiveRecipients = captiveRecipients;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class CaptiveRecipientInformation {
     return Objects.hash(captiveRecipients);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class CaptiveRecipientInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CaptiveRecipientInformation {\n");
-
+    
     sb.append("    captiveRecipients: ").append(toIndentedString(captiveRecipients)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class CaptiveRecipientInformation {
   }
 
 }
+

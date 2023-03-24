@@ -40,6 +40,7 @@ public class CustomField {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * customFieldType.
    *
@@ -52,7 +53,6 @@ public class CustomField {
 
   /**
    * .
-   * 
    * @return customFieldType
    **/
   @Schema(description = "")
@@ -67,6 +67,7 @@ public class CustomField {
     this.customFieldType = customFieldType;
   }
 
+
   /**
    * errorDetails.
    *
@@ -78,12 +79,10 @@ public class CustomField {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -94,6 +93,7 @@ public class CustomField {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * fieldId.
@@ -107,7 +107,6 @@ public class CustomField {
 
   /**
    * .
-   * 
    * @return fieldId
    **/
   @Schema(description = "")
@@ -122,6 +121,7 @@ public class CustomField {
     this.fieldId = fieldId;
   }
 
+
   /**
    * listItems.
    *
@@ -131,7 +131,7 @@ public class CustomField {
     this.listItems = listItems;
     return this;
   }
-
+  
   /**
    * addListItemsItem.
    *
@@ -147,7 +147,6 @@ public class CustomField {
 
   /**
    * .
-   * 
    * @return listItems
    **/
   @Schema(description = "")
@@ -162,6 +161,7 @@ public class CustomField {
     this.listItems = listItems;
   }
 
+
   /**
    * name.
    *
@@ -174,7 +174,6 @@ public class CustomField {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -189,6 +188,7 @@ public class CustomField {
     this.name = name;
   }
 
+
   /**
    * required.
    *
@@ -201,7 +201,6 @@ public class CustomField {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -216,6 +215,7 @@ public class CustomField {
     this.required = required;
   }
 
+
   /**
    * show.
    *
@@ -228,7 +228,6 @@ public class CustomField {
 
   /**
    * .
-   * 
    * @return show
    **/
   @Schema(description = "")
@@ -243,6 +242,7 @@ public class CustomField {
     this.show = show;
   }
 
+
   /**
    * value.
    *
@@ -255,7 +255,6 @@ public class CustomField {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -269,6 +268,7 @@ public class CustomField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -302,6 +302,7 @@ public class CustomField {
     return Objects.hash(customFieldType, errorDetails, fieldId, listItems, name, required, show, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -309,7 +310,7 @@ public class CustomField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CustomField {\n");
-
+    
     sb.append("    customFieldType: ").append(toIndentedString(customFieldType)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    fieldId: ").append(toIndentedString(fieldId)).append("\n");
@@ -334,3 +335,4 @@ public class CustomField {
   }
 
 }
+

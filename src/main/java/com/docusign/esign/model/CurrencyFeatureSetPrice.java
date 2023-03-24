@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the price and currency associated with the feature set.
- * Reserved for internal DocuSign use only..
+ * Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only..
  *
  */
 @Schema(description = "Information about the price and currency associated with the feature set. Reserved for internal DocuSign use only.")
@@ -31,6 +30,7 @@ public class CurrencyFeatureSetPrice {
   @JsonProperty("seatFee")
   private String seatFee = null;
 
+
   /**
    * currencyCode.
    *
@@ -43,7 +43,6 @@ public class CurrencyFeatureSetPrice {
 
   /**
    * Specifies the alternate ISO currency code for the account. .
-   * 
    * @return currencyCode
    **/
   @Schema(description = "Specifies the alternate ISO currency code for the account. ")
@@ -58,6 +57,7 @@ public class CurrencyFeatureSetPrice {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * currencySymbol.
    *
@@ -70,7 +70,6 @@ public class CurrencyFeatureSetPrice {
 
   /**
    * Specifies the alternate currency symbol for the account..
-   * 
    * @return currencySymbol
    **/
   @Schema(description = "Specifies the alternate currency symbol for the account.")
@@ -85,6 +84,7 @@ public class CurrencyFeatureSetPrice {
     this.currencySymbol = currencySymbol;
   }
 
+
   /**
    * envelopeFee.
    *
@@ -96,9 +96,7 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * An incremental envelope cost for plans with envelope overages (when
-   * `isEnabled` is set to **true**.).
-   * 
+   * An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.).
    * @return envelopeFee
    **/
   @Schema(description = "An incremental envelope cost for plans with envelope overages (when `isEnabled` is set to **true**.)")
@@ -113,6 +111,7 @@ public class CurrencyFeatureSetPrice {
     this.envelopeFee = envelopeFee;
   }
 
+
   /**
    * fixedFee.
    *
@@ -124,9 +123,7 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * Specifies a one-time fee associated with the plan (when `isEnabled` is set to
-   * **true**.).
-   * 
+   * Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.).
    * @return fixedFee
    **/
   @Schema(description = "Specifies a one-time fee associated with the plan (when `isEnabled` is set to **true**.)")
@@ -141,6 +138,7 @@ public class CurrencyFeatureSetPrice {
     this.fixedFee = fixedFee;
   }
 
+
   /**
    * seatFee.
    *
@@ -152,9 +150,7 @@ public class CurrencyFeatureSetPrice {
   }
 
   /**
-   * Specifies an incremental seat cost for seat-based plans (when `isEnabled` is
-   * set to **true**.).
-   * 
+   * Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.).
    * @return seatFee
    **/
   @Schema(description = "Specifies an incremental seat cost for seat-based plans (when `isEnabled` is set to **true**.)")
@@ -168,6 +164,7 @@ public class CurrencyFeatureSetPrice {
   public void setSeatFee(String seatFee) {
     this.seatFee = seatFee;
   }
+
 
   /**
    * Compares objects.
@@ -198,6 +195,7 @@ public class CurrencyFeatureSetPrice {
     return Objects.hash(currencyCode, currencySymbol, envelopeFee, fixedFee, seatFee);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -205,7 +203,7 @@ public class CurrencyFeatureSetPrice {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CurrencyFeatureSetPrice {\n");
-
+    
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
     sb.append("    envelopeFee: ").append(toIndentedString(envelopeFee)).append("\n");
@@ -227,3 +225,4 @@ public class CurrencyFeatureSetPrice {
   }
 
 }
+

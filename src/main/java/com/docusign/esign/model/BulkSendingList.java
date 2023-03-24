@@ -25,6 +25,7 @@ public class BulkSendingList {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * bulkCopies.
    *
@@ -34,7 +35,7 @@ public class BulkSendingList {
     this.bulkCopies = bulkCopies;
     return this;
   }
-
+  
   /**
    * addBulkCopiesItem.
    *
@@ -50,7 +51,6 @@ public class BulkSendingList {
 
   /**
    * .
-   * 
    * @return bulkCopies
    **/
   @Schema(description = "")
@@ -65,6 +65,7 @@ public class BulkSendingList {
     this.bulkCopies = bulkCopies;
   }
 
+
   /**
    * listId.
    *
@@ -77,7 +78,6 @@ public class BulkSendingList {
 
   /**
    * .
-   * 
    * @return listId
    **/
   @Schema(description = "")
@@ -92,6 +92,7 @@ public class BulkSendingList {
     this.listId = listId;
   }
 
+
   /**
    * name.
    *
@@ -104,7 +105,6 @@ public class BulkSendingList {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -118,6 +118,7 @@ public class BulkSendingList {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -146,6 +147,7 @@ public class BulkSendingList {
     return Objects.hash(bulkCopies, listId, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -153,7 +155,7 @@ public class BulkSendingList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingList {\n");
-
+    
     sb.append("    bulkCopies: ").append(toIndentedString(bulkCopies)).append("\n");
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -173,3 +175,4 @@ public class BulkSendingList {
   }
 
 }
+

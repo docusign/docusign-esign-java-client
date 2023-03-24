@@ -27,6 +27,7 @@ public class BulkSendingListSummary {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * bulkSendListId.
    *
@@ -39,7 +40,6 @@ public class BulkSendingListSummary {
 
   /**
    * .
-   * 
    * @return bulkSendListId
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class BulkSendingListSummary {
     this.bulkSendListId = bulkSendListId;
   }
 
+
   /**
    * createdByUser.
    *
@@ -66,7 +67,6 @@ public class BulkSendingListSummary {
 
   /**
    * .
-   * 
    * @return createdByUser
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class BulkSendingListSummary {
     this.createdByUser = createdByUser;
   }
 
+
   /**
    * createdDate.
    *
@@ -93,7 +94,6 @@ public class BulkSendingListSummary {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class BulkSendingListSummary {
     this.createdDate = createdDate;
   }
 
+
   /**
    * name.
    *
@@ -120,7 +121,6 @@ public class BulkSendingListSummary {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -134,6 +134,7 @@ public class BulkSendingListSummary {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class BulkSendingListSummary {
     return Objects.hash(bulkSendListId, createdByUser, createdDate, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class BulkSendingListSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingListSummary {\n");
-
+    
     sb.append("    bulkSendListId: ").append(toIndentedString(bulkSendListId)).append("\n");
     sb.append("    createdByUser: ").append(toIndentedString(createdByUser)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
@@ -191,3 +193,4 @@ public class BulkSendingListSummary {
   }
 
 }
+

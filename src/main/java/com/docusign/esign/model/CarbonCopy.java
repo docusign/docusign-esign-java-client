@@ -27,9 +27,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information about a carbon copy recipient. Carbon copy recipients
- * get a copy of the envelope but don&#39;t need to sign, initial, date or add
- * information to any of the documents. .
+ * Contains information about a carbon copy recipient. Carbon copy recipients get a copy of the envelope but don&#39;t need to sign, initial, date or add information to any of the documents. .
  *
  */
 @Schema(description = "Contains information about a carbon copy recipient. Carbon copy recipients get a copy of the envelope but don't need to sign, initial, date or add information to any of the documents. ")
@@ -58,6 +56,9 @@ public class CarbonCopy {
 
   @JsonProperty("autoRespondedReason")
   private String autoRespondedReason = null;
+
+  @JsonProperty("bulkSendV2Recipient")
+  private String bulkSendV2Recipient = null;
 
   @JsonProperty("clientUserId")
   private String clientUserId = null;
@@ -269,6 +270,7 @@ public class CarbonCopy {
   @JsonProperty("userId")
   private String userId = null;
 
+
   /**
    * accessCode.
    *
@@ -280,13 +282,7 @@ public class CarbonCopy {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code
-   * to view and sign the envelope. Maximum Length: 50 characters and it must
-   * conform to the account's access code format setting. If blank, but the signer
-   * `accessCode` property is set in the envelope, then that value is used. If
-   * blank and the signer `accessCode` property is not set, then the access code
-   * is not required..
-   * 
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
    **/
   @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
@@ -301,6 +297,7 @@ public class CarbonCopy {
     this.accessCode = accessCode;
   }
 
+
   /**
    * accessCodeMetadata.
    *
@@ -312,9 +309,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `accessCode` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `accessCode` property is editable. This property is read-only..
    * @return accessCodeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `accessCode` property is editable. This property is read-only.")
@@ -329,6 +324,7 @@ public class CarbonCopy {
     this.accessCodeMetadata = accessCodeMetadata;
   }
 
+
   /**
    * addAccessCodeToEmail.
    *
@@ -340,10 +336,7 @@ public class CarbonCopy {
   }
 
   /**
-   * This Optional attribute indicates that the access code will be added to the
-   * email sent to the recipient; this nullifies the Security measure of Access
-   * Code on the recipient..
-   * 
+   * This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient..
    * @return addAccessCodeToEmail
    **/
   @Schema(description = "This Optional attribute indicates that the access code will be added to the email sent to the recipient; this nullifies the Security measure of Access Code on the recipient.")
@@ -358,6 +351,7 @@ public class CarbonCopy {
     this.addAccessCodeToEmail = addAccessCodeToEmail;
   }
 
+
   /**
    * additionalNotifications.
    *
@@ -367,7 +361,7 @@ public class CarbonCopy {
     this.additionalNotifications = additionalNotifications;
     return this;
   }
-
+  
   /**
    * addAdditionalNotificationsItem.
    *
@@ -383,7 +377,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return additionalNotifications
    **/
   @Schema(description = "")
@@ -398,6 +391,7 @@ public class CarbonCopy {
     this.additionalNotifications = additionalNotifications;
   }
 
+
   /**
    * agentCanEditEmail.
    *
@@ -410,7 +404,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return agentCanEditEmail
    **/
   @Schema(description = "")
@@ -425,6 +418,7 @@ public class CarbonCopy {
     this.agentCanEditEmail = agentCanEditEmail;
   }
 
+
   /**
    * agentCanEditName.
    *
@@ -437,7 +431,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return agentCanEditName
    **/
   @Schema(description = "")
@@ -452,6 +445,7 @@ public class CarbonCopy {
     this.agentCanEditName = agentCanEditName;
   }
 
+
   /**
    * allowSystemOverrideForLockedRecipient.
    *
@@ -464,7 +458,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return allowSystemOverrideForLockedRecipient
    **/
   @Schema(description = "")
@@ -479,6 +472,7 @@ public class CarbonCopy {
     this.allowSystemOverrideForLockedRecipient = allowSystemOverrideForLockedRecipient;
   }
 
+
   /**
    * autoRespondedReason.
    *
@@ -491,7 +485,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return autoRespondedReason
    **/
   @Schema(description = "")
@@ -506,6 +499,34 @@ public class CarbonCopy {
     this.autoRespondedReason = autoRespondedReason;
   }
 
+
+  /**
+   * bulkSendV2Recipient.
+   *
+   * @return CarbonCopy
+   **/
+  public CarbonCopy bulkSendV2Recipient(String bulkSendV2Recipient) {
+    this.bulkSendV2Recipient = bulkSendV2Recipient;
+    return this;
+  }
+
+  /**
+   * .
+   * @return bulkSendV2Recipient
+   **/
+  @Schema(description = "")
+  public String getBulkSendV2Recipient() {
+    return bulkSendV2Recipient;
+  }
+
+  /**
+   * setBulkSendV2Recipient.
+   **/
+  public void setBulkSendV2Recipient(String bulkSendV2Recipient) {
+    this.bulkSendV2Recipient = bulkSendV2Recipient;
+  }
+
+
   /**
    * clientUserId.
    *
@@ -517,12 +538,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
-   * property is not null then the recipient is embedded. Note that if the
-   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
-   * `SignerMustLoginToSign` property of the account settings is set to **true**,
-   * an error is generated on sending.ng. Maximum length: 100 characters. .
-   * 
+   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
    * @return clientUserId
    **/
   @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
@@ -537,6 +553,7 @@ public class CarbonCopy {
     this.clientUserId = clientUserId;
   }
 
+
   /**
    * completedCount.
    *
@@ -549,7 +566,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return completedCount
    **/
   @Schema(description = "")
@@ -564,6 +580,7 @@ public class CarbonCopy {
     this.completedCount = completedCount;
   }
 
+
   /**
    * consentDetailsList.
    *
@@ -573,7 +590,7 @@ public class CarbonCopy {
     this.consentDetailsList = consentDetailsList;
     return this;
   }
-
+  
   /**
    * addConsentDetailsListItem.
    *
@@ -589,7 +606,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return consentDetailsList
    **/
   @Schema(description = "")
@@ -604,6 +620,7 @@ public class CarbonCopy {
     this.consentDetailsList = consentDetailsList;
   }
 
+
   /**
    * customFields.
    *
@@ -613,7 +630,7 @@ public class CarbonCopy {
     this.customFields = customFields;
     return this;
   }
-
+  
   /**
    * addCustomFieldsItem.
    *
@@ -628,11 +645,7 @@ public class CarbonCopy {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data
-   * about the recipient. This information is returned in the envelope status but
-   * otherwise not used by DocuSign. Each customField string can be a maximum of
-   * 100 characters..
-   * 
+   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
    * @return customFields
    **/
   @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
@@ -647,6 +660,7 @@ public class CarbonCopy {
     this.customFields = customFields;
   }
 
+
   /**
    * declinedDateTime.
    *
@@ -659,7 +673,6 @@ public class CarbonCopy {
 
   /**
    * The date and time the recipient declined the document..
-   * 
    * @return declinedDateTime
    **/
   @Schema(description = "The date and time the recipient declined the document.")
@@ -674,6 +687,7 @@ public class CarbonCopy {
     this.declinedDateTime = declinedDateTime;
   }
 
+
   /**
    * declinedReason.
    *
@@ -686,7 +700,6 @@ public class CarbonCopy {
 
   /**
    * The reason the recipient declined the document..
-   * 
    * @return declinedReason
    **/
   @Schema(description = "The reason the recipient declined the document.")
@@ -701,6 +714,7 @@ public class CarbonCopy {
     this.declinedReason = declinedReason;
   }
 
+
   /**
    * deliveredDateTime.
    *
@@ -713,7 +727,6 @@ public class CarbonCopy {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveredDateTime
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -728,6 +741,7 @@ public class CarbonCopy {
     this.deliveredDateTime = deliveredDateTime;
   }
 
+
   /**
    * deliveryMethod.
    *
@@ -740,7 +754,6 @@ public class CarbonCopy {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveryMethod
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -755,6 +768,7 @@ public class CarbonCopy {
     this.deliveryMethod = deliveryMethod;
   }
 
+
   /**
    * deliveryMethodMetadata.
    *
@@ -767,7 +781,6 @@ public class CarbonCopy {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return deliveryMethodMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -782,6 +795,7 @@ public class CarbonCopy {
     this.deliveryMethodMetadata = deliveryMethodMetadata;
   }
 
+
   /**
    * designatorId.
    *
@@ -794,7 +808,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return designatorId
    **/
   @Schema(description = "")
@@ -809,6 +822,7 @@ public class CarbonCopy {
     this.designatorId = designatorId;
   }
 
+
   /**
    * designatorIdGuid.
    *
@@ -821,7 +835,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return designatorIdGuid
    **/
   @Schema(description = "")
@@ -836,6 +849,7 @@ public class CarbonCopy {
     this.designatorIdGuid = designatorIdGuid;
   }
 
+
   /**
    * documentVisibility.
    *
@@ -845,7 +859,7 @@ public class CarbonCopy {
     this.documentVisibility = documentVisibility;
     return this;
   }
-
+  
   /**
    * addDocumentVisibilityItem.
    *
@@ -861,7 +875,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return documentVisibility
    **/
   @Schema(description = "")
@@ -876,6 +889,7 @@ public class CarbonCopy {
     this.documentVisibility = documentVisibility;
   }
 
+
   /**
    * email.
    *
@@ -887,9 +901,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Email id of the recipient. Notification of the document to sign is sent to
-   * this email id. Maximum length: 100 characters. .
-   * 
+   * Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. .
    * @return email
    **/
   @Schema(description = "Email id of the recipient. Notification of the document to sign is sent to this email id.   Maximum length: 100 characters. ")
@@ -904,6 +916,7 @@ public class CarbonCopy {
     this.email = email;
   }
 
+
   /**
    * emailMetadata.
    *
@@ -915,9 +928,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `email` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `email` property is editable. This property is read-only..
    * @return emailMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `email` property is editable. This property is read-only.")
@@ -932,6 +943,7 @@ public class CarbonCopy {
     this.emailMetadata = emailMetadata;
   }
 
+
   /**
    * emailNotification.
    *
@@ -943,15 +955,10 @@ public class CarbonCopy {
   }
 
   /**
-   * An optional complex type that sets a specific email subject and body for this
-   * recipient's notification email. **Note:** You can set the `emailNotification`
-   * property separately for each recipient. If you set the value only for certain
-   * recipients, the other recipients will inherit the this value from the
-   * top-level `emailSubject` and `emailBlurb`. .
-   * 
+   * A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. .
    * @return emailNotification
    **/
-  @Schema(description = "An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. ")
+  @Schema(description = "A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. ")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -962,6 +969,7 @@ public class CarbonCopy {
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
+
 
   /**
    * emailRecipientPostSigningURL.
@@ -975,7 +983,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return emailRecipientPostSigningURL
    **/
   @Schema(description = "")
@@ -990,6 +997,7 @@ public class CarbonCopy {
     this.emailRecipientPostSigningURL = emailRecipientPostSigningURL;
   }
 
+
   /**
    * embeddedRecipientStartURL.
    *
@@ -1001,39 +1009,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded
-   * recipient. When using this option, the embedded recipient still receives an
-   * email from DocuSign, just as a remote recipient would. When the document link
-   * in the email is clicked the recipient is redirected, through DocuSign, to the
-   * supplied URL to complete their actions. When routing to the URL, the sender's
-   * system (the server responding to the URL) must request a recipient token to
-   * launch a signing session. If set to `SIGN_AT_DOCUSIGN`, the recipient is
-   * directed to an embedded signing or viewing process directly at DocuSign. The
-   * signing or viewing action is initiated by the DocuSign system and the
-   * transaction activity and Certificate of Completion records will reflect this.
-   * In all other ways the process is identical to an embedded signing or viewing
-   * operation that is launched by any partner. It is important to remember that
-   * in a typical embedded workflow the authentication of an embedded recipient is
-   * the responsibility of the sending application, DocuSign expects that senders
-   * will follow their own process for establishing the recipient's identity. In
-   * this workflow the recipient goes through the sending application before the
-   * embedded signing or viewing process in initiated. However, when the sending
-   * application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient
-   * goes directly to the embedded signing or viewing process bypassing the
-   * sending application and any authentication steps the sending application
-   * would use. In this case, DocuSign recommends that you use one of the normal
-   * DocuSign authentication features (Access Code, Phone Authentication, SMS
-   * Authentication, etc.) to verify the identity of the recipient. If the
-   * `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is
-   * set, DocuSign will ignore the redirect URL and launch the standard signing
-   * process for the email recipient. Information can be appended to the embedded
-   * recipient start URL using merge fields. The available merge fields items are:
-   * envelopeId, recipientId, recipientName, recipientEmail, and customFields. The
-   * `customFields` property must be set fort the recipient or envelope. The merge
-   * fields are enclosed in double brackets. *Example*:
-   * `http://senderHost/[[mergeField1]]/ beginSigningSession?
-   * [[mergeField2]]&[[mergeField3]]` .
-   * 
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` .
    * @return embeddedRecipientStartURL
    **/
   @Schema(description = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
@@ -1048,6 +1024,7 @@ public class CarbonCopy {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1059,12 +1036,10 @@ public class CarbonCopy {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1076,6 +1051,7 @@ public class CarbonCopy {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * excludedDocuments.
    *
@@ -1085,7 +1061,7 @@ public class CarbonCopy {
     this.excludedDocuments = excludedDocuments;
     return this;
   }
-
+  
   /**
    * addExcludedDocumentsItem.
    *
@@ -1100,18 +1076,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies the documents that are not visible to this recipient. Document
-   * Visibility must be enabled for the account and the `enforceSignerVisibility`
-   * property must be set to **true** for the envelope to use this. When enforce
-   * signer visibility is enabled, documents with tabs can only be viewed by
-   * signers that have a tab on that document. Recipients that have an
-   * administrative role (Agent, Editor, or Intermediaries) or informational role
-   * (Certified Deliveries or Carbon Copies) can always see all the documents in
-   * an envelope, unless they are specifically excluded using this setting when an
-   * envelope is sent. Documents that do not have tabs are always visible to all
-   * recipients, unless they are specifically excluded using this setting when an
-   * envelope is sent..
-   * 
+   * Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent..
    * @return excludedDocuments
    **/
   @Schema(description = "Specifies the documents that are not visible to this recipient. Document Visibility must be enabled for the account and the `enforceSignerVisibility` property must be set to **true** for the envelope to use this.  When enforce signer visibility is enabled, documents with tabs can only be viewed by signers that have a tab on that document. Recipients that have an administrative role (Agent, Editor, or Intermediaries) or informational role (Certified Deliveries or Carbon Copies) can always see all the documents in an envelope, unless they are specifically excluded using this setting when an envelope is sent. Documents that do not have tabs are always visible to all recipients, unless they are specifically excluded using this setting when an envelope is sent.")
@@ -1126,6 +1091,7 @@ public class CarbonCopy {
     this.excludedDocuments = excludedDocuments;
   }
 
+
   /**
    * faxNumber.
    *
@@ -1138,7 +1104,6 @@ public class CarbonCopy {
 
   /**
    * Reserved:.
-   * 
    * @return faxNumber
    **/
   @Schema(description = "Reserved:")
@@ -1153,6 +1118,7 @@ public class CarbonCopy {
     this.faxNumber = faxNumber;
   }
 
+
   /**
    * faxNumberMetadata.
    *
@@ -1165,7 +1131,6 @@ public class CarbonCopy {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return faxNumberMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1180,6 +1145,7 @@ public class CarbonCopy {
     this.faxNumberMetadata = faxNumberMetadata;
   }
 
+
   /**
    * firstName.
    *
@@ -1191,8 +1157,7 @@ public class CarbonCopy {
   }
 
   /**
-   * The user's first name. Maximum Length: 50 characters..
-   * 
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
    **/
   @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
@@ -1207,6 +1172,7 @@ public class CarbonCopy {
     this.firstName = firstName;
   }
 
+
   /**
    * firstNameMetadata.
    *
@@ -1218,9 +1184,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `firstName` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `firstName` property is editable. This property is read-only..
    * @return firstNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `firstName` property is editable. This property is read-only.")
@@ -1235,6 +1199,7 @@ public class CarbonCopy {
     this.firstNameMetadata = firstNameMetadata;
   }
 
+
   /**
    * fullName.
    *
@@ -1247,7 +1212,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return fullName
    **/
   @Schema(description = "")
@@ -1262,6 +1226,7 @@ public class CarbonCopy {
     this.fullName = fullName;
   }
 
+
   /**
    * fullNameMetadata.
    *
@@ -1274,7 +1239,6 @@ public class CarbonCopy {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return fullNameMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1289,6 +1253,7 @@ public class CarbonCopy {
     this.fullNameMetadata = fullNameMetadata;
   }
 
+
   /**
    * idCheckConfigurationName.
    *
@@ -1300,17 +1265,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies authentication check by name. The names used here must be the same
-   * as the authentication type names used by the account (these name can also be
-   * found in the web console sending interface in the Identify list for a
-   * recipient,) This overrides any default authentication setting. *Example*:
-   * Your account has ID Check and SMS Authentication available and in the web
-   * console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use
-   * ID check in an envelope, the idCheckConfigurationName should be 'ID Check '.
-   * If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add
-   * you would need to add phone number information to the `smsAuthentication`
-   * node..
-   * 
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
    * @return idCheckConfigurationName
    **/
   @Schema(description = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
@@ -1325,6 +1280,7 @@ public class CarbonCopy {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+
   /**
    * idCheckConfigurationNameMetadata.
    *
@@ -1336,9 +1292,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `idCheckConfigurationName` property is
-   * editable. This property is read-only..
-   * 
+   * Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only..
    * @return idCheckConfigurationNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckConfigurationName` property is editable. This property is read-only.")
@@ -1353,6 +1307,7 @@ public class CarbonCopy {
     this.idCheckConfigurationNameMetadata = idCheckConfigurationNameMetadata;
   }
 
+
   /**
    * idCheckInformationInput.
    *
@@ -1365,7 +1320,6 @@ public class CarbonCopy {
 
   /**
    * An object that contains input information related to a recipient ID check..
-   * 
    * @return idCheckInformationInput
    **/
   @Schema(description = "An object that contains input information related to a recipient ID check.")
@@ -1380,6 +1334,7 @@ public class CarbonCopy {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+
   /**
    * identityVerification.
    *
@@ -1391,22 +1346,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies the ID Verification workflow applied on an envelope by workflow ID.
-   * <br/>
-   * See the
-   * [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/)
-   * method in the
-   * [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/)
-   * resource for more information on how to retrieve workflow IDs available for
-   * an account. <br/>
-   * This can be used in addition to other [recipient
-   * authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication)
-   * methods. <br/>
-   * Note that ID Verification and ID Check are two distinct methods. ID
-   * Verification checks recipients' identity by verifying their ID while ID Check
-   * relies on data available on public records (such as current and former
-   * address)..
-   * 
+   * Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address)..
    * @return identityVerification
    **/
   @Schema(description = "Specifies the ID Verification workflow applied on an envelope by workflow ID. <br/>See the [list](/docs/esign-rest-api/reference/accounts/identityverifications/list/) method in the [IdentityVerifications](/docs/esign-rest-api/reference/accounts/identityverifications/) resource for more information on how to retrieve workflow IDs available for an account. <br/>This can be used in addition to other [recipient authentication](https://support.docusign.com/en/guides/ndse-user-guide-recipient-authentication) methods. <br/>Note that ID Verification and ID Check are two distinct methods. ID Verification checks recipients' identity by verifying their ID while ID Check relies on data available on public records (such as current and former address).")
@@ -1421,6 +1361,7 @@ public class CarbonCopy {
     this.identityVerification = identityVerification;
   }
 
+
   /**
    * inheritEmailNotificationConfiguration.
    *
@@ -1432,10 +1373,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When set to **true** and the envelope recipient creates a DocuSign account
-   * after signing, the Manage Account Email Notification settings are used as the
-   * default settings for the recipient's account. .
-   * 
+   * When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. .
    * @return inheritEmailNotificationConfiguration
    **/
   @Schema(description = "When set to **true** and the envelope recipient creates a DocuSign account after signing, the Manage Account Email Notification settings are used as the default settings for the recipient's account. ")
@@ -1450,6 +1388,7 @@ public class CarbonCopy {
     this.inheritEmailNotificationConfiguration = inheritEmailNotificationConfiguration;
   }
 
+
   /**
    * lastName.
    *
@@ -1462,7 +1401,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return lastName
    **/
   @Schema(description = "")
@@ -1477,6 +1415,7 @@ public class CarbonCopy {
     this.lastName = lastName;
   }
 
+
   /**
    * lastNameMetadata.
    *
@@ -1488,9 +1427,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `lastName` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `lastName` property is editable. This property is read-only..
    * @return lastNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `lastName` property is editable. This property is read-only.")
@@ -1505,6 +1442,7 @@ public class CarbonCopy {
     this.lastNameMetadata = lastNameMetadata;
   }
 
+
   /**
    * linkedAccountConfigurationId.
    *
@@ -1517,7 +1455,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return linkedAccountConfigurationId
    **/
   @Schema(description = "")
@@ -1532,6 +1469,7 @@ public class CarbonCopy {
     this.linkedAccountConfigurationId = linkedAccountConfigurationId;
   }
 
+
   /**
    * lockedRecipientPhoneAuthEditable.
    *
@@ -1544,7 +1482,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return lockedRecipientPhoneAuthEditable
    **/
   @Schema(description = "")
@@ -1559,6 +1496,7 @@ public class CarbonCopy {
     this.lockedRecipientPhoneAuthEditable = lockedRecipientPhoneAuthEditable;
   }
 
+
   /**
    * lockedRecipientSmsEditable.
    *
@@ -1571,7 +1509,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return lockedRecipientSmsEditable
    **/
   @Schema(description = "")
@@ -1586,6 +1523,7 @@ public class CarbonCopy {
     this.lockedRecipientSmsEditable = lockedRecipientSmsEditable;
   }
 
+
   /**
    * name.
    *
@@ -1597,8 +1535,7 @@ public class CarbonCopy {
   }
 
   /**
-   * legal name of the recipient. Maximum Length: 100 characters..
-   * 
+   * legal name of the recipient.  Maximum Length: 100 characters..
    * @return name
    **/
   @Schema(description = "legal name of the recipient.  Maximum Length: 100 characters.")
@@ -1613,6 +1550,7 @@ public class CarbonCopy {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -1624,9 +1562,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `name` property is editable. This property is read-only..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
@@ -1641,6 +1577,7 @@ public class CarbonCopy {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * note.
    *
@@ -1652,11 +1589,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Specifies a note that is unique to this recipient. This note is sent to the
-   * recipient via the signing email. The note displays in the signing UI near the
-   * upper left corner of the document on the signing screen. Maximum Length: 1000
-   * characters..
-   * 
+   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters..
    * @return note
    **/
   @Schema(description = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
@@ -1671,6 +1604,7 @@ public class CarbonCopy {
     this.note = note;
   }
 
+
   /**
    * noteMetadata.
    *
@@ -1682,9 +1616,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `note` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `note` property is editable. This property is read-only..
    * @return noteMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `note` property is editable. This property is read-only.")
@@ -1699,6 +1631,7 @@ public class CarbonCopy {
     this.noteMetadata = noteMetadata;
   }
 
+
   /**
    * phoneAuthentication.
    *
@@ -1710,14 +1643,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this
-   * complex type to provide the recipient authentication method details. It
-   * contains the following elements: * `recipMayProvideNumber`: Boolean. When
-   * **true,** the recipient can use whatever phone number they choose. *
-   * `senderProvidedNumbers`: ArrayOfStrings. A list of phone numbers the
-   * recipient can use. * `recordVoicePrint`: Reserved for DocuSign. *
-   * `validateRecipProvidedNumber`: Reserved for DocuSign. .
-   * 
+   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  .
    * @return phoneAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  ")
@@ -1732,6 +1658,7 @@ public class CarbonCopy {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+
   /**
    * phoneNumber.
    *
@@ -1744,7 +1671,6 @@ public class CarbonCopy {
 
   /**
    * Describes the recipient phone number..
-   * 
    * @return phoneNumber
    **/
   @Schema(description = "Describes the recipient phone number.")
@@ -1759,6 +1685,7 @@ public class CarbonCopy {
     this.phoneNumber = phoneNumber;
   }
 
+
   /**
    * proofFile.
    *
@@ -1771,7 +1698,6 @@ public class CarbonCopy {
 
   /**
    * The proof file of the recipient..
-   * 
    * @return proofFile
    **/
   @Schema(description = "The proof file of the recipient.")
@@ -1786,6 +1712,7 @@ public class CarbonCopy {
     this.proofFile = proofFile;
   }
 
+
   /**
    * recipientAttachments.
    *
@@ -1795,7 +1722,7 @@ public class CarbonCopy {
     this.recipientAttachments = recipientAttachments;
     return this;
   }
-
+  
   /**
    * addRecipientAttachmentsItem.
    *
@@ -1811,7 +1738,6 @@ public class CarbonCopy {
 
   /**
    * Reserved:.
-   * 
    * @return recipientAttachments
    **/
   @Schema(description = "Reserved:")
@@ -1826,6 +1752,7 @@ public class CarbonCopy {
     this.recipientAttachments = recipientAttachments;
   }
 
+
   /**
    * recipientAuthenticationStatus.
    *
@@ -1837,9 +1764,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Information about the recipient's authentication status. This property is
-   * read-only..
-   * 
+   * Information about the recipient's authentication status. This property is read-only..
    * @return recipientAuthenticationStatus
    **/
   @Schema(description = "Information about the recipient's authentication status. This property is read-only.")
@@ -1854,6 +1779,7 @@ public class CarbonCopy {
     this.recipientAuthenticationStatus = recipientAuthenticationStatus;
   }
 
+
   /**
    * recipientFeatureMetadata.
    *
@@ -1863,7 +1789,7 @@ public class CarbonCopy {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
     return this;
   }
-
+  
   /**
    * addRecipientFeatureMetadataItem.
    *
@@ -1879,7 +1805,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return recipientFeatureMetadata
    **/
   @Schema(description = "")
@@ -1894,6 +1819,7 @@ public class CarbonCopy {
     this.recipientFeatureMetadata = recipientFeatureMetadata;
   }
 
+
   /**
    * recipientId.
    *
@@ -1905,9 +1831,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -1922,6 +1846,7 @@ public class CarbonCopy {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -1934,7 +1859,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -1949,6 +1873,7 @@ public class CarbonCopy {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientType.
    *
@@ -1961,7 +1886,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return recipientType
    **/
   @Schema(description = "")
@@ -1976,6 +1900,7 @@ public class CarbonCopy {
     this.recipientType = recipientType;
   }
 
+
   /**
    * recipientTypeMetadata.
    *
@@ -1987,9 +1912,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `recipientType` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `recipientType` property is editable. This property is read-only..
    * @return recipientTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientType` property is editable. This property is read-only.")
@@ -2004,6 +1927,7 @@ public class CarbonCopy {
     this.recipientTypeMetadata = recipientTypeMetadata;
   }
 
+
   /**
    * requireIdLookup.
    *
@@ -2015,9 +1939,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When set to **true**, the recipient is required to use the specified ID check
-   * method (including Phone and SMS authentication) to validate their identity. .
-   * 
+   * When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. .
    * @return requireIdLookup
    **/
   @Schema(description = "When set to **true**, the recipient is required to use the specified ID check method (including Phone and SMS authentication) to validate their identity. ")
@@ -2032,6 +1954,7 @@ public class CarbonCopy {
     this.requireIdLookup = requireIdLookup;
   }
 
+
   /**
    * requireIdLookupMetadata.
    *
@@ -2043,9 +1966,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `requireIdLookup` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only..
    * @return requireIdLookupMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireIdLookup` property is editable. This property is read-only.")
@@ -2060,6 +1981,7 @@ public class CarbonCopy {
     this.requireIdLookupMetadata = requireIdLookupMetadata;
   }
 
+
   /**
    * roleName.
    *
@@ -2071,10 +1993,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/>
-   * <br/>
-   * This is required when working with template recipients..
-   * 
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
    **/
   @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
@@ -2089,6 +2008,7 @@ public class CarbonCopy {
     this.roleName = roleName;
   }
 
+
   /**
    * routingOrder.
    *
@@ -2101,7 +2021,6 @@ public class CarbonCopy {
 
   /**
    * Specifies the routing order of the recipient in the envelope. .
-   * 
    * @return routingOrder
    **/
   @Schema(description = "Specifies the routing order of the recipient in the envelope. ")
@@ -2116,6 +2035,7 @@ public class CarbonCopy {
     this.routingOrder = routingOrder;
   }
 
+
   /**
    * routingOrderMetadata.
    *
@@ -2127,9 +2047,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `routingOrder` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `routingOrder` property is editable. This property is read-only..
    * @return routingOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `routingOrder` property is editable. This property is read-only.")
@@ -2144,6 +2062,7 @@ public class CarbonCopy {
     this.routingOrderMetadata = routingOrderMetadata;
   }
 
+
   /**
    * sentDateTime.
    *
@@ -2156,7 +2075,6 @@ public class CarbonCopy {
 
   /**
    * The date and time the envelope was sent..
-   * 
    * @return sentDateTime
    **/
   @Schema(description = "The date and time the envelope was sent.")
@@ -2171,6 +2089,7 @@ public class CarbonCopy {
     this.sentDateTime = sentDateTime;
   }
 
+
   /**
    * signedDateTime.
    *
@@ -2183,7 +2102,6 @@ public class CarbonCopy {
 
   /**
    * Reserved: For DocuSign use only. .
-   * 
    * @return signedDateTime
    **/
   @Schema(description = "Reserved: For DocuSign use only. ")
@@ -2198,6 +2116,7 @@ public class CarbonCopy {
     this.signedDateTime = signedDateTime;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -2209,11 +2128,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -2228,6 +2143,7 @@ public class CarbonCopy {
     this.signingGroupId = signingGroupId;
   }
 
+
   /**
    * signingGroupIdMetadata.
    *
@@ -2239,9 +2155,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Metadata that indicates whether the `signingGroupId` property is editable.
-   * This property is read-only..
-   * 
+   * Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only..
    * @return signingGroupIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signingGroupId` property is editable. This property is read-only.")
@@ -2256,6 +2170,7 @@ public class CarbonCopy {
     this.signingGroupIdMetadata = signingGroupIdMetadata;
   }
 
+
   /**
    * signingGroupName.
    *
@@ -2267,8 +2182,7 @@ public class CarbonCopy {
   }
 
   /**
-   * The display name for the signing group. Maximum Length: 100 characters. .
-   * 
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
    **/
   @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
@@ -2283,6 +2197,7 @@ public class CarbonCopy {
     this.signingGroupName = signingGroupName;
   }
 
+
   /**
    * signingGroupUsers.
    *
@@ -2292,7 +2207,7 @@ public class CarbonCopy {
     this.signingGroupUsers = signingGroupUsers;
     return this;
   }
-
+  
   /**
    * addSigningGroupUsersItem.
    *
@@ -2308,7 +2223,6 @@ public class CarbonCopy {
 
   /**
    * A complex type that contains information about users in the signing group..
-   * 
    * @return signingGroupUsers
    **/
   @Schema(description = "A complex type that contains information about users in the signing group.")
@@ -2323,6 +2237,7 @@ public class CarbonCopy {
     this.signingGroupUsers = signingGroupUsers;
   }
 
+
   /**
    * smsAuthentication.
    *
@@ -2334,11 +2249,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex
-   * type to provide the recipient authentication method details. It contains the
-   * element `senderProvidedNumbers`, which is an array of phone numbers that the
-   * recipient can use for SMS text authentication. .
-   * 
+   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   .
    * @return smsAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   ")
@@ -2353,6 +2264,7 @@ public class CarbonCopy {
     this.smsAuthentication = smsAuthentication;
   }
 
+
   /**
    * socialAuthentications.
    *
@@ -2362,7 +2274,7 @@ public class CarbonCopy {
     this.socialAuthentications = socialAuthentications;
     return this;
   }
-
+  
   /**
    * addSocialAuthenticationsItem.
    *
@@ -2377,8 +2289,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Lists the social ID type that can be used for recipient authentication..
-   * 
+   *  Lists the social ID type that can be used for recipient authentication..
    * @return socialAuthentications
    **/
   @Schema(description = " Lists the social ID type that can be used for recipient authentication.")
@@ -2393,6 +2304,7 @@ public class CarbonCopy {
     this.socialAuthentications = socialAuthentications;
   }
 
+
   /**
    * status.
    *
@@ -2404,10 +2316,7 @@ public class CarbonCopy {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -2422,6 +2331,7 @@ public class CarbonCopy {
     this.status = status;
   }
 
+
   /**
    * statusCode.
    *
@@ -2434,7 +2344,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return statusCode
    **/
   @Schema(description = "")
@@ -2449,6 +2358,7 @@ public class CarbonCopy {
     this.statusCode = statusCode;
   }
 
+
   /**
    * suppressEmails.
    *
@@ -2461,7 +2371,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return suppressEmails
    **/
   @Schema(description = "")
@@ -2476,6 +2385,7 @@ public class CarbonCopy {
     this.suppressEmails = suppressEmails;
   }
 
+
   /**
    * tabs.
    *
@@ -2488,7 +2398,6 @@ public class CarbonCopy {
 
   /**
    * A list of `commentTabs` that contains the Carbon Copy recipient's comments..
-   * 
    * @return tabs
    **/
   @Schema(description = "A list of `commentTabs` that contains the Carbon Copy recipient's comments.")
@@ -2503,6 +2412,7 @@ public class CarbonCopy {
     this.tabs = tabs;
   }
 
+
   /**
    * templateLocked.
    *
@@ -2514,9 +2424,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -2531,6 +2439,7 @@ public class CarbonCopy {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateRequired.
    *
@@ -2542,9 +2451,7 @@ public class CarbonCopy {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -2559,6 +2466,7 @@ public class CarbonCopy {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * totalTabCount.
    *
@@ -2571,7 +2479,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return totalTabCount
    **/
   @Schema(description = "")
@@ -2586,6 +2493,7 @@ public class CarbonCopy {
     this.totalTabCount = totalTabCount;
   }
 
+
   /**
    * userId.
    *
@@ -2598,7 +2506,6 @@ public class CarbonCopy {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -2612,6 +2519,7 @@ public class CarbonCopy {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -2635,6 +2543,7 @@ public class CarbonCopy {
         Objects.equals(this.agentCanEditName, carbonCopy.agentCanEditName) &&
         Objects.equals(this.allowSystemOverrideForLockedRecipient, carbonCopy.allowSystemOverrideForLockedRecipient) &&
         Objects.equals(this.autoRespondedReason, carbonCopy.autoRespondedReason) &&
+        Objects.equals(this.bulkSendV2Recipient, carbonCopy.bulkSendV2Recipient) &&
         Objects.equals(this.clientUserId, carbonCopy.clientUserId) &&
         Objects.equals(this.completedCount, carbonCopy.completedCount) &&
         Objects.equals(this.consentDetailsList, carbonCopy.consentDetailsList) &&
@@ -2712,22 +2621,9 @@ public class CarbonCopy {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications,
-        agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, clientUserId,
-        completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime,
-        deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email,
-        emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails,
-        excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata,
-        idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification,
-        inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId,
-        lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata,
-        phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus,
-        recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup,
-        requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime,
-        signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication,
-        socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired,
-        totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -2736,16 +2632,16 @@ public class CarbonCopy {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CarbonCopy {\n");
-
+    
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    accessCodeMetadata: ").append(toIndentedString(accessCodeMetadata)).append("\n");
     sb.append("    addAccessCodeToEmail: ").append(toIndentedString(addAccessCodeToEmail)).append("\n");
     sb.append("    additionalNotifications: ").append(toIndentedString(additionalNotifications)).append("\n");
     sb.append("    agentCanEditEmail: ").append(toIndentedString(agentCanEditEmail)).append("\n");
     sb.append("    agentCanEditName: ").append(toIndentedString(agentCanEditName)).append("\n");
-    sb.append("    allowSystemOverrideForLockedRecipient: ")
-        .append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
+    sb.append("    allowSystemOverrideForLockedRecipient: ").append(toIndentedString(allowSystemOverrideForLockedRecipient)).append("\n");
     sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
+    sb.append("    bulkSendV2Recipient: ").append(toIndentedString(bulkSendV2Recipient)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");
     sb.append("    consentDetailsList: ").append(toIndentedString(consentDetailsList)).append("\n");
@@ -2772,17 +2668,14 @@ public class CarbonCopy {
     sb.append("    fullName: ").append(toIndentedString(fullName)).append("\n");
     sb.append("    fullNameMetadata: ").append(toIndentedString(fullNameMetadata)).append("\n");
     sb.append("    idCheckConfigurationName: ").append(toIndentedString(idCheckConfigurationName)).append("\n");
-    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata))
-        .append("\n");
+    sb.append("    idCheckConfigurationNameMetadata: ").append(toIndentedString(idCheckConfigurationNameMetadata)).append("\n");
     sb.append("    idCheckInformationInput: ").append(toIndentedString(idCheckInformationInput)).append("\n");
     sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
-    sb.append("    inheritEmailNotificationConfiguration: ")
-        .append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
+    sb.append("    inheritEmailNotificationConfiguration: ").append(toIndentedString(inheritEmailNotificationConfiguration)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastNameMetadata: ").append(toIndentedString(lastNameMetadata)).append("\n");
     sb.append("    linkedAccountConfigurationId: ").append(toIndentedString(linkedAccountConfigurationId)).append("\n");
-    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable))
-        .append("\n");
+    sb.append("    lockedRecipientPhoneAuthEditable: ").append(toIndentedString(lockedRecipientPhoneAuthEditable)).append("\n");
     sb.append("    lockedRecipientSmsEditable: ").append(toIndentedString(lockedRecipientSmsEditable)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
@@ -2792,8 +2685,7 @@ public class CarbonCopy {
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
-    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus))
-        .append("\n");
+    sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    recipientIdGuid: ").append(toIndentedString(recipientIdGuid)).append("\n");
@@ -2836,3 +2728,4 @@ public class CarbonCopy {
   }
 
 }
+

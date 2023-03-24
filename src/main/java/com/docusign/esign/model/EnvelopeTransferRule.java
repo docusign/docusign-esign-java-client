@@ -48,6 +48,7 @@ public class EnvelopeTransferRule {
   @JsonProperty("toUser")
   private UserInformation toUser = null;
 
+
   /**
    * carbonCopyOriginalOwner.
    *
@@ -60,7 +61,6 @@ public class EnvelopeTransferRule {
 
   /**
    * .
-   * 
    * @return carbonCopyOriginalOwner
    **/
   @Schema(description = "")
@@ -75,6 +75,7 @@ public class EnvelopeTransferRule {
     this.carbonCopyOriginalOwner = carbonCopyOriginalOwner;
   }
 
+
   /**
    * enabled.
    *
@@ -87,7 +88,6 @@ public class EnvelopeTransferRule {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -102,6 +102,7 @@ public class EnvelopeTransferRule {
     this.enabled = enabled;
   }
 
+
   /**
    * envelopeTransferRuleId.
    *
@@ -114,7 +115,6 @@ public class EnvelopeTransferRule {
 
   /**
    * .
-   * 
    * @return envelopeTransferRuleId
    **/
   @Schema(description = "")
@@ -129,6 +129,7 @@ public class EnvelopeTransferRule {
     this.envelopeTransferRuleId = envelopeTransferRuleId;
   }
 
+
   /**
    * eventType.
    *
@@ -141,7 +142,6 @@ public class EnvelopeTransferRule {
 
   /**
    * .
-   * 
    * @return eventType
    **/
   @Schema(description = "")
@@ -156,6 +156,7 @@ public class EnvelopeTransferRule {
     this.eventType = eventType;
   }
 
+
   /**
    * fromGroup.
    *
@@ -168,7 +169,6 @@ public class EnvelopeTransferRule {
 
   /**
    * Information about the group that triggers the transfer..
-   * 
    * @return fromGroup
    **/
   @Schema(description = "Information about the group that triggers the transfer.")
@@ -183,6 +183,7 @@ public class EnvelopeTransferRule {
     this.fromGroup = fromGroup;
   }
 
+
   /**
    * fromUser.
    *
@@ -195,7 +196,6 @@ public class EnvelopeTransferRule {
 
   /**
    * Information about the user who triggers the transfer..
-   * 
    * @return fromUser
    **/
   @Schema(description = "Information about the user who triggers the transfer.")
@@ -210,6 +210,7 @@ public class EnvelopeTransferRule {
     this.fromUser = fromUser;
   }
 
+
   /**
    * modifiedDate.
    *
@@ -222,7 +223,6 @@ public class EnvelopeTransferRule {
 
   /**
    * .
-   * 
    * @return modifiedDate
    **/
   @Schema(description = "")
@@ -237,6 +237,7 @@ public class EnvelopeTransferRule {
     this.modifiedDate = modifiedDate;
   }
 
+
   /**
    * modifiedUser.
    *
@@ -249,7 +250,6 @@ public class EnvelopeTransferRule {
 
   /**
    * Information about the user who last modified the envelope transfer rule..
-   * 
    * @return modifiedUser
    **/
   @Schema(description = "Information about the user who last modified the envelope transfer rule.")
@@ -264,6 +264,7 @@ public class EnvelopeTransferRule {
     this.modifiedUser = modifiedUser;
   }
 
+
   /**
    * toFolder.
    *
@@ -275,9 +276,7 @@ public class EnvelopeTransferRule {
   }
 
   /**
-   * Information about the destination folder to which the envelope is
-   * transferred..
-   * 
+   * Information about the destination folder to which the envelope is transferred..
    * @return toFolder
    **/
   @Schema(description = "Information about the destination folder to which the envelope is transferred.")
@@ -292,6 +291,7 @@ public class EnvelopeTransferRule {
     this.toFolder = toFolder;
   }
 
+
   /**
    * toUser.
    *
@@ -304,7 +304,6 @@ public class EnvelopeTransferRule {
 
   /**
    * Information about the user to which the envelope is transferred..
-   * 
    * @return toUser
    **/
   @Schema(description = "Information about the user to which the envelope is transferred.")
@@ -318,6 +317,7 @@ public class EnvelopeTransferRule {
   public void setToUser(UserInformation toUser) {
     this.toUser = toUser;
   }
+
 
   /**
    * Compares objects.
@@ -350,9 +350,9 @@ public class EnvelopeTransferRule {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroup, fromUser,
-        modifiedDate, modifiedUser, toFolder, toUser);
+    return Objects.hash(carbonCopyOriginalOwner, enabled, envelopeTransferRuleId, eventType, fromGroup, fromUser, modifiedDate, modifiedUser, toFolder, toUser);
   }
+
 
   /**
    * Converts the given object to string.
@@ -361,7 +361,7 @@ public class EnvelopeTransferRule {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeTransferRule {\n");
-
+    
     sb.append("    carbonCopyOriginalOwner: ").append(toIndentedString(carbonCopyOriginalOwner)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    envelopeTransferRuleId: ").append(toIndentedString(envelopeTransferRuleId)).append("\n");
@@ -388,3 +388,4 @@ public class EnvelopeTransferRule {
   }
 
 }
+

@@ -26,6 +26,7 @@ public class SignatureUser {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * isDefault.
    *
@@ -38,7 +39,6 @@ public class SignatureUser {
 
   /**
    * .
-   * 
    * @return isDefault
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class SignatureUser {
     this.isDefault = isDefault;
   }
 
+
   /**
    * rights.
    *
@@ -65,7 +66,6 @@ public class SignatureUser {
 
   /**
    * .
-   * 
    * @return rights
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class SignatureUser {
     this.rights = rights;
   }
 
+
   /**
    * userId.
    *
@@ -92,7 +93,6 @@ public class SignatureUser {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class SignatureUser {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -119,7 +120,6 @@ public class SignatureUser {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class SignatureUser {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class SignatureUser {
     return Objects.hash(isDefault, rights, userId, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class SignatureUser {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureUser {\n");
-
+    
     sb.append("    isDefault: ").append(toIndentedString(isDefault)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
@@ -190,3 +192,4 @@ public class SignatureUser {
   }
 
 }
+

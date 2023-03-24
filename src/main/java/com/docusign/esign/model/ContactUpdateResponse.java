@@ -19,6 +19,7 @@ public class ContactUpdateResponse {
   @JsonProperty("contacts")
   private java.util.List<Contact> contacts = null;
 
+
   /**
    * contacts.
    *
@@ -28,7 +29,7 @@ public class ContactUpdateResponse {
     this.contacts = contacts;
     return this;
   }
-
+  
   /**
    * addContactsItem.
    *
@@ -44,7 +45,6 @@ public class ContactUpdateResponse {
 
   /**
    * .
-   * 
    * @return contacts
    **/
   @Schema(description = "")
@@ -58,6 +58,7 @@ public class ContactUpdateResponse {
   public void setContacts(java.util.List<Contact> contacts) {
     this.contacts = contacts;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class ContactUpdateResponse {
     return Objects.hash(contacts);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class ContactUpdateResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactUpdateResponse {\n");
-
+    
     sb.append("    contacts: ").append(toIndentedString(contacts)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class ContactUpdateResponse {
   }
 
 }
+

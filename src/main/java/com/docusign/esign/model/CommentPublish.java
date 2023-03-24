@@ -32,6 +32,7 @@ public class CommentPublish {
   @JsonProperty("visibleTo")
   private java.util.List<String> visibleTo = null;
 
+
   /**
    * id.
    *
@@ -44,7 +45,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -59,6 +59,7 @@ public class CommentPublish {
     this.id = id;
   }
 
+
   /**
    * mentions.
    *
@@ -68,7 +69,7 @@ public class CommentPublish {
     this.mentions = mentions;
     return this;
   }
-
+  
   /**
    * addMentionsItem.
    *
@@ -84,7 +85,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return mentions
    **/
   @Schema(description = "")
@@ -99,6 +99,7 @@ public class CommentPublish {
     this.mentions = mentions;
   }
 
+
   /**
    * text.
    *
@@ -111,7 +112,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return text
    **/
   @Schema(description = "")
@@ -125,6 +125,7 @@ public class CommentPublish {
   public void setText(String text) {
     this.text = text;
   }
+
 
   /**
    * threadAnchorKeys.
@@ -151,7 +152,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return threadAnchorKeys
    **/
   @Schema(description = "")
@@ -166,6 +166,7 @@ public class CommentPublish {
     this.threadAnchorKeys = threadAnchorKeys;
   }
 
+
   /**
    * threadId.
    *
@@ -178,7 +179,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return threadId
    **/
   @Schema(description = "")
@@ -193,6 +193,7 @@ public class CommentPublish {
     this.threadId = threadId;
   }
 
+
   /**
    * visibleTo.
    *
@@ -202,7 +203,7 @@ public class CommentPublish {
     this.visibleTo = visibleTo;
     return this;
   }
-
+  
   /**
    * addVisibleToItem.
    *
@@ -218,7 +219,6 @@ public class CommentPublish {
 
   /**
    * .
-   * 
    * @return visibleTo
    **/
   @Schema(description = "")
@@ -232,6 +232,7 @@ public class CommentPublish {
   public void setVisibleTo(java.util.List<String> visibleTo) {
     this.visibleTo = visibleTo;
   }
+
 
   /**
    * Compares objects.
@@ -263,6 +264,7 @@ public class CommentPublish {
     return Objects.hash(id, mentions, text, threadAnchorKeys, threadId, visibleTo);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -270,7 +272,7 @@ public class CommentPublish {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommentPublish {\n");
-
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    mentions: ").append(toIndentedString(mentions)).append("\n");
     sb.append("    text: ").append(toIndentedString(text)).append("\n");
@@ -293,3 +295,4 @@ public class CommentPublish {
   }
 
 }
+

@@ -20,6 +20,7 @@ public class AdminMessage {
   @JsonProperty("moreInformation")
   private String moreInformation = null;
 
+
   /**
    * baseMessage.
    *
@@ -32,7 +33,6 @@ public class AdminMessage {
 
   /**
    * .
-   * 
    * @return baseMessage
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class AdminMessage {
     this.baseMessage = baseMessage;
   }
 
+
   /**
    * moreInformation.
    *
@@ -59,7 +60,6 @@ public class AdminMessage {
 
   /**
    * .
-   * 
    * @return moreInformation
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class AdminMessage {
   public void setMoreInformation(String moreInformation) {
     this.moreInformation = moreInformation;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class AdminMessage {
     return Objects.hash(baseMessage, moreInformation);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class AdminMessage {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdminMessage {\n");
-
+    
     sb.append("    baseMessage: ").append(toIndentedString(baseMessage)).append("\n");
     sb.append("    moreInformation: ").append(toIndentedString(moreInformation)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class AdminMessage {
   }
 
 }
+

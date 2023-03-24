@@ -20,6 +20,7 @@ public class AccountMinimumPasswordLength {
   @JsonProperty("minimumLength")
   private String minimumLength = null;
 
+
   /**
    * maximumLength.
    *
@@ -32,7 +33,6 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
-   * 
    * @return maximumLength
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class AccountMinimumPasswordLength {
     this.maximumLength = maximumLength;
   }
 
+
   /**
    * minimumLength.
    *
@@ -59,7 +60,6 @@ public class AccountMinimumPasswordLength {
 
   /**
    * .
-   * 
    * @return minimumLength
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class AccountMinimumPasswordLength {
   public void setMinimumLength(String minimumLength) {
     this.minimumLength = minimumLength;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class AccountMinimumPasswordLength {
     return Objects.hash(maximumLength, minimumLength);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class AccountMinimumPasswordLength {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountMinimumPasswordLength {\n");
-
+    
     sb.append("    maximumLength: ").append(toIndentedString(maximumLength)).append("\n");
     sb.append("    minimumLength: ").append(toIndentedString(minimumLength)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class AccountMinimumPasswordLength {
   }
 
 }
+

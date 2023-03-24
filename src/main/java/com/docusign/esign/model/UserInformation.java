@@ -154,6 +154,7 @@ public class UserInformation {
   @JsonProperty("workAddress")
   private AddressInformation workAddress = null;
 
+
   /**
    * activationAccessCode.
    *
@@ -166,7 +167,6 @@ public class UserInformation {
 
   /**
    * The activation code the new user must enter when activating their account..
-   * 
    * @return activationAccessCode
    **/
   @Schema(description = "The activation code the new user must enter when activating their account.")
@@ -181,6 +181,7 @@ public class UserInformation {
     this.activationAccessCode = activationAccessCode;
   }
 
+
   /**
    * company.
    *
@@ -193,7 +194,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return company
    **/
   @Schema(description = "")
@@ -208,6 +208,7 @@ public class UserInformation {
     this.company = company;
   }
 
+
   /**
    * connectConfigurations.
    *
@@ -217,7 +218,7 @@ public class UserInformation {
     this.connectConfigurations = connectConfigurations;
     return this;
   }
-
+  
   /**
    * addConnectConfigurationsItem.
    *
@@ -233,7 +234,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return connectConfigurations
    **/
   @Schema(description = "")
@@ -248,6 +248,7 @@ public class UserInformation {
     this.connectConfigurations = connectConfigurations;
   }
 
+
   /**
    * countryCode.
    *
@@ -260,7 +261,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return countryCode
    **/
   @Schema(description = "")
@@ -275,6 +275,7 @@ public class UserInformation {
     this.countryCode = countryCode;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -287,7 +288,6 @@ public class UserInformation {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -302,6 +302,7 @@ public class UserInformation {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * customSettings.
    *
@@ -311,7 +312,7 @@ public class UserInformation {
     this.customSettings = customSettings;
     return this;
   }
-
+  
   /**
    * addCustomSettingsItem.
    *
@@ -327,7 +328,6 @@ public class UserInformation {
 
   /**
    * The name/value pair information for the user custom setting..
-   * 
    * @return customSettings
    **/
   @Schema(description = "The name/value pair information for the user custom setting.")
@@ -342,6 +342,7 @@ public class UserInformation {
     this.customSettings = customSettings;
   }
 
+
   /**
    * defaultAccountId.
    *
@@ -354,7 +355,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return defaultAccountId
    **/
   @Schema(description = "")
@@ -369,6 +369,7 @@ public class UserInformation {
     this.defaultAccountId = defaultAccountId;
   }
 
+
   /**
    * email.
    *
@@ -381,7 +382,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -396,6 +396,7 @@ public class UserInformation {
     this.email = email;
   }
 
+
   /**
    * enableConnectForUser.
    *
@@ -407,9 +408,7 @@ public class UserInformation {
   }
 
   /**
-   * Specifies whether the user is enabled for updates from DocuSign Connect.
-   * Valid values: true or false..
-   * 
+   * Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false..
    * @return enableConnectForUser
    **/
   @Schema(description = "Specifies whether the user is enabled for updates from DocuSign Connect. Valid values: true or false.")
@@ -424,6 +423,7 @@ public class UserInformation {
     this.enableConnectForUser = enableConnectForUser;
   }
 
+
   /**
    * errorDetails.
    *
@@ -435,12 +435,10 @@ public class UserInformation {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -451,6 +449,7 @@ public class UserInformation {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * firstName.
@@ -463,8 +462,7 @@ public class UserInformation {
   }
 
   /**
-   * The user's first name. Maximum Length: 50 characters..
-   * 
+   * The user's first name.  Maximum Length: 50 characters..
    * @return firstName
    **/
   @Schema(description = "The user's first name.  Maximum Length: 50 characters.")
@@ -479,6 +477,7 @@ public class UserInformation {
     this.firstName = firstName;
   }
 
+
   /**
    * forgottenPasswordInfo.
    *
@@ -490,9 +489,7 @@ public class UserInformation {
   }
 
   /**
-   * A complex element containing up to four Question/Answer pairs for forgotten
-   * password information..
-   * 
+   * A complex element containing up to four Question/Answer pairs for forgotten password information..
    * @return forgottenPasswordInfo
    **/
   @Schema(description = "A complex element containing up to four Question/Answer pairs for forgotten password information.")
@@ -507,6 +504,7 @@ public class UserInformation {
     this.forgottenPasswordInfo = forgottenPasswordInfo;
   }
 
+
   /**
    * groupList.
    *
@@ -516,7 +514,7 @@ public class UserInformation {
     this.groupList = groupList;
     return this;
   }
-
+  
   /**
    * addGroupListItem.
    *
@@ -531,13 +529,7 @@ public class UserInformation {
   }
 
   /**
-   * A list of the group information for groups to add the user to. Group
-   * information can be found by calling [ML:GET group information]. The only
-   * required parameter is groupId. The parameters are: * groupId - The DocuSign
-   * group ID for the group. * groupName - The name of the group *
-   * permissionProfileId - The ID of the permission profile associated with the
-   * group. * groupType - The group type. .
-   * 
+   * A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. .
    * @return groupList
    **/
   @Schema(description = "A list of the group information for groups to add the user to. Group information can be found by calling [ML:GET group information]. The only required parameter is groupId.   The parameters are:  * groupId - The DocuSign group ID for the group. * groupName - The name of the group * permissionProfileId - The ID of the permission profile associated with the group. * groupType - The group type. ")
@@ -552,6 +544,7 @@ public class UserInformation {
     this.groupList = groupList;
   }
 
+
   /**
    * hasRemoteNotary.
    *
@@ -564,7 +557,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return hasRemoteNotary
    **/
   @Schema(description = "")
@@ -579,6 +571,7 @@ public class UserInformation {
     this.hasRemoteNotary = hasRemoteNotary;
   }
 
+
   /**
    * homeAddress.
    *
@@ -590,9 +583,7 @@ public class UserInformation {
   }
 
   /**
-   * Specifies the email for the signing host. It is a Required element for In
-   * Person Signers recipient Type. Maximum Length: 100 characters..
-   * 
+   * Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters..
    * @return homeAddress
    **/
   @Schema(description = "Specifies the email for the signing host. It is a Required element for In Person Signers recipient Type.  Maximum Length: 100 characters.")
@@ -607,6 +598,7 @@ public class UserInformation {
     this.homeAddress = homeAddress;
   }
 
+
   /**
    * initialsImageUri.
    *
@@ -618,9 +610,7 @@ public class UserInformation {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the initials
-   * image..
-   * 
+   * Contains the URI for an endpoint that you can use to retrieve the initials image..
    * @return initialsImageUri
    **/
   @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
@@ -635,6 +625,7 @@ public class UserInformation {
     this.initialsImageUri = initialsImageUri;
   }
 
+
   /**
    * isAdmin.
    *
@@ -647,7 +638,6 @@ public class UserInformation {
 
   /**
    * Determines if the feature set is actively set as part of the plan..
-   * 
    * @return isAdmin
    **/
   @Schema(description = "Determines if the feature set is actively set as part of the plan.")
@@ -662,6 +652,7 @@ public class UserInformation {
     this.isAdmin = isAdmin;
   }
 
+
   /**
    * isAlternateAdmin.
    *
@@ -674,7 +665,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return isAlternateAdmin
    **/
   @Schema(description = "")
@@ -689,6 +679,7 @@ public class UserInformation {
     this.isAlternateAdmin = isAlternateAdmin;
   }
 
+
   /**
    * isNAREnabled.
    *
@@ -701,7 +692,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return isNAREnabled
    **/
   @Schema(description = "")
@@ -716,6 +706,7 @@ public class UserInformation {
     this.isNAREnabled = isNAREnabled;
   }
 
+
   /**
    * jobTitle.
    *
@@ -728,7 +719,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return jobTitle
    **/
   @Schema(description = "")
@@ -743,6 +733,7 @@ public class UserInformation {
     this.jobTitle = jobTitle;
   }
 
+
   /**
    * lastLogin.
    *
@@ -755,7 +746,6 @@ public class UserInformation {
 
   /**
    * Shows the date-time when the user last logged on to the system..
-   * 
    * @return lastLogin
    **/
   @Schema(description = "Shows the date-time when the user last logged on to the system.")
@@ -770,6 +760,7 @@ public class UserInformation {
     this.lastLogin = lastLogin;
   }
 
+
   /**
    * lastName.
    *
@@ -781,8 +772,7 @@ public class UserInformation {
   }
 
   /**
-   * The user's last name. Maximum Length: 50 characters..
-   * 
+   * The user's last name.  Maximum Length: 50 characters..
    * @return lastName
    **/
   @Schema(description = "The user's last name.  Maximum Length: 50 characters.")
@@ -797,6 +787,7 @@ public class UserInformation {
     this.lastName = lastName;
   }
 
+
   /**
    * loginStatus.
    *
@@ -808,10 +799,7 @@ public class UserInformation {
   }
 
   /**
-   * Shows the current status of the user's password. Possible values are: *
-   * password_reset * password_active * password_expired * password_locked *
-   * password_reset_failed .
-   * 
+   * Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  .
    * @return loginStatus
    **/
   @Schema(description = "Shows the current status of the user's password. Possible values are:   * password_reset * password_active * password_expired * password_locked * password_reset_failed  ")
@@ -826,6 +814,7 @@ public class UserInformation {
     this.loginStatus = loginStatus;
   }
 
+
   /**
    * middleName.
    *
@@ -837,8 +826,7 @@ public class UserInformation {
   }
 
   /**
-   * The user's middle name. Maximum Length: 50 characters..
-   * 
+   * The user's middle name.  Maximum Length: 50 characters..
    * @return middleName
    **/
   @Schema(description = "The user's middle name.  Maximum Length: 50 characters.")
@@ -853,6 +841,7 @@ public class UserInformation {
     this.middleName = middleName;
   }
 
+
   /**
    * password.
    *
@@ -865,7 +854,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -880,6 +868,7 @@ public class UserInformation {
     this.password = password;
   }
 
+
   /**
    * passwordExpiration.
    *
@@ -892,7 +881,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return passwordExpiration
    **/
   @Schema(description = "")
@@ -907,6 +895,7 @@ public class UserInformation {
     this.passwordExpiration = passwordExpiration;
   }
 
+
   /**
    * permissionProfileId.
    *
@@ -919,7 +908,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return permissionProfileId
    **/
   @Schema(description = "")
@@ -934,6 +922,7 @@ public class UserInformation {
     this.permissionProfileId = permissionProfileId;
   }
 
+
   /**
    * permissionProfileName.
    *
@@ -946,7 +935,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return permissionProfileName
    **/
   @Schema(description = "")
@@ -961,6 +949,7 @@ public class UserInformation {
     this.permissionProfileName = permissionProfileName;
   }
 
+
   /**
    * profileImageUri.
    *
@@ -973,7 +962,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return profileImageUri
    **/
   @Schema(description = "")
@@ -988,6 +976,7 @@ public class UserInformation {
     this.profileImageUri = profileImageUri;
   }
 
+
   /**
    * sendActivationEmail.
    *
@@ -1000,7 +989,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return sendActivationEmail
    **/
   @Schema(description = "")
@@ -1015,6 +1003,7 @@ public class UserInformation {
     this.sendActivationEmail = sendActivationEmail;
   }
 
+
   /**
    * sendActivationOnInvalidLogin.
    *
@@ -1026,9 +1015,7 @@ public class UserInformation {
   }
 
   /**
-   * When set to **true**, specifies that an additional activation email is sent
-   * to the user if they fail a log on before activating their account. .
-   * 
+   * When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. .
    * @return sendActivationOnInvalidLogin
    **/
   @Schema(description = "When set to **true**, specifies that an additional activation email is sent to the user if they fail a log on before activating their account. ")
@@ -1043,6 +1030,7 @@ public class UserInformation {
     this.sendActivationOnInvalidLogin = sendActivationOnInvalidLogin;
   }
 
+
   /**
    * signatureImageUri.
    *
@@ -1054,9 +1042,7 @@ public class UserInformation {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the signature
-   * image..
-   * 
+   * Contains the URI for an endpoint that you can use to retrieve the signature image..
    * @return signatureImageUri
    **/
   @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
@@ -1071,6 +1057,7 @@ public class UserInformation {
     this.signatureImageUri = signatureImageUri;
   }
 
+
   /**
    * subscribe.
    *
@@ -1083,7 +1070,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return subscribe
    **/
   @Schema(description = "")
@@ -1098,6 +1084,7 @@ public class UserInformation {
     this.subscribe = subscribe;
   }
 
+
   /**
    * suffixName.
    *
@@ -1109,8 +1096,7 @@ public class UserInformation {
   }
 
   /**
-   * The suffix for the user's name. Maximum Length: 50 characters. .
-   * 
+   * The suffix for the user's name.   Maximum Length: 50 characters. .
    * @return suffixName
    **/
   @Schema(description = "The suffix for the user's name.   Maximum Length: 50 characters. ")
@@ -1125,6 +1111,7 @@ public class UserInformation {
     this.suffixName = suffixName;
   }
 
+
   /**
    * title.
    *
@@ -1137,7 +1124,6 @@ public class UserInformation {
 
   /**
    * The title of the user..
-   * 
    * @return title
    **/
   @Schema(description = "The title of the user.")
@@ -1152,6 +1138,7 @@ public class UserInformation {
     this.title = title;
   }
 
+
   /**
    * uri.
    *
@@ -1164,7 +1151,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -1179,6 +1165,7 @@ public class UserInformation {
     this.uri = uri;
   }
 
+
   /**
    * userAddedToAccountDateTime.
    *
@@ -1191,7 +1178,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userAddedToAccountDateTime
    **/
   @Schema(description = "")
@@ -1206,6 +1192,7 @@ public class UserInformation {
     this.userAddedToAccountDateTime = userAddedToAccountDateTime;
   }
 
+
   /**
    * userId.
    *
@@ -1218,7 +1205,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -1233,6 +1219,7 @@ public class UserInformation {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -1245,7 +1232,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userName
    **/
   @Schema(description = "")
@@ -1260,6 +1246,7 @@ public class UserInformation {
     this.userName = userName;
   }
 
+
   /**
    * userProfileLastModifiedDate.
    *
@@ -1272,7 +1259,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userProfileLastModifiedDate
    **/
   @Schema(description = "")
@@ -1287,6 +1273,7 @@ public class UserInformation {
     this.userProfileLastModifiedDate = userProfileLastModifiedDate;
   }
 
+
   /**
    * userSettings.
    *
@@ -1298,13 +1285,10 @@ public class UserInformation {
   }
 
   /**
-   * The collection of settings representing the actions a user can perform. See
-   * [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation)
-   * for available settings..
-   * 
+   *  The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below..
    * @return userSettings
    **/
-  @Schema(description = "The collection of settings representing the actions a user can perform. See [userSettingsInformation](/docs/esign-rest-api/reference/users/users/get/#userSettingsInformation) for available settings.")
+  @Schema(description = " The name/value pair information for user settings. These determine the actions that a user can take in the account. The `[ML:userSettings]` are listed and described below.")
   public UserSettingsInformation getUserSettings() {
     return userSettings;
   }
@@ -1315,6 +1299,7 @@ public class UserInformation {
   public void setUserSettings(UserSettingsInformation userSettings) {
     this.userSettings = userSettings;
   }
+
 
   /**
    * userStatus.
@@ -1328,7 +1313,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userStatus
    **/
   @Schema(description = "")
@@ -1343,6 +1327,7 @@ public class UserInformation {
     this.userStatus = userStatus;
   }
 
+
   /**
    * userType.
    *
@@ -1355,7 +1340,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return userType
    **/
   @Schema(description = "")
@@ -1370,6 +1354,7 @@ public class UserInformation {
     this.userType = userType;
   }
 
+
   /**
    * workAddress.
    *
@@ -1382,7 +1367,6 @@ public class UserInformation {
 
   /**
    * .
-   * 
    * @return workAddress
    **/
   @Schema(description = "")
@@ -1396,6 +1380,7 @@ public class UserInformation {
   public void setWorkAddress(AddressInformation workAddress) {
     this.workAddress = workAddress;
   }
+
 
   /**
    * Compares objects.
@@ -1462,14 +1447,9 @@ public class UserInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime,
-        customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo,
-        groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle,
-        lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId,
-        permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri,
-        subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate,
-        userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1478,7 +1458,7 @@ public class UserInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserInformation {\n");
-
+    
     sb.append("    activationAccessCode: ").append(toIndentedString(activationAccessCode)).append("\n");
     sb.append("    company: ").append(toIndentedString(company)).append("\n");
     sb.append("    connectConfigurations: ").append(toIndentedString(connectConfigurations)).append("\n");
@@ -1539,3 +1519,4 @@ public class UserInformation {
   }
 
 }
+

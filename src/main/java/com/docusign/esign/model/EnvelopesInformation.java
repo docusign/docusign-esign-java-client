@@ -51,6 +51,7 @@ public class EnvelopesInformation {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * continuationToken.
    *
@@ -63,7 +64,6 @@ public class EnvelopesInformation {
 
   /**
    * .
-   * 
    * @return continuationToken
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class EnvelopesInformation {
     this.continuationToken = continuationToken;
   }
 
+
   /**
    * endPosition.
    *
@@ -90,7 +91,6 @@ public class EnvelopesInformation {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -105,6 +105,7 @@ public class EnvelopesInformation {
     this.endPosition = endPosition;
   }
 
+
   /**
    * envelopes.
    *
@@ -114,7 +115,7 @@ public class EnvelopesInformation {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
@@ -130,7 +131,6 @@ public class EnvelopesInformation {
 
   /**
    * .
-   * 
    * @return envelopes
    **/
   @Schema(description = "")
@@ -145,24 +145,23 @@ public class EnvelopesInformation {
     this.envelopes = envelopes;
   }
 
+
   /**
    * envelopeTransactionStatuses.
    *
    * @return EnvelopesInformation
    **/
-  public EnvelopesInformation envelopeTransactionStatuses(
-      java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
+  public EnvelopesInformation envelopeTransactionStatuses(java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses) {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
     return this;
   }
-
+  
   /**
    * addEnvelopeTransactionStatusesItem.
    *
    * @return EnvelopesInformation
    **/
-  public EnvelopesInformation addEnvelopeTransactionStatusesItem(
-      EnvelopeTransactionStatus envelopeTransactionStatusesItem) {
+  public EnvelopesInformation addEnvelopeTransactionStatusesItem(EnvelopeTransactionStatus envelopeTransactionStatusesItem) {
     if (this.envelopeTransactionStatuses == null) {
       this.envelopeTransactionStatuses = new java.util.ArrayList<>();
     }
@@ -172,7 +171,6 @@ public class EnvelopesInformation {
 
   /**
    * .
-   * 
    * @return envelopeTransactionStatuses
    **/
   @Schema(description = "")
@@ -187,6 +185,7 @@ public class EnvelopesInformation {
     this.envelopeTransactionStatuses = envelopeTransactionStatuses;
   }
 
+
   /**
    * folders.
    *
@@ -196,7 +195,7 @@ public class EnvelopesInformation {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -212,7 +211,6 @@ public class EnvelopesInformation {
 
   /**
    * .
-   * 
    * @return folders
    **/
   @Schema(description = "")
@@ -227,6 +225,7 @@ public class EnvelopesInformation {
     this.folders = folders;
   }
 
+
   /**
    * lastQueriedDateTime.
    *
@@ -239,7 +238,6 @@ public class EnvelopesInformation {
 
   /**
    * .
-   * 
    * @return lastQueriedDateTime
    **/
   @Schema(description = "")
@@ -254,6 +252,7 @@ public class EnvelopesInformation {
     this.lastQueriedDateTime = lastQueriedDateTime;
   }
 
+
   /**
    * nextUri.
    *
@@ -265,9 +264,7 @@ public class EnvelopesInformation {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -282,6 +279,7 @@ public class EnvelopesInformation {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -294,7 +292,6 @@ public class EnvelopesInformation {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -309,6 +306,7 @@ public class EnvelopesInformation {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -321,7 +319,6 @@ public class EnvelopesInformation {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -336,6 +333,7 @@ public class EnvelopesInformation {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -348,7 +346,6 @@ public class EnvelopesInformation {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -363,6 +360,7 @@ public class EnvelopesInformation {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -374,10 +372,7 @@ public class EnvelopesInformation {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -391,6 +386,7 @@ public class EnvelopesInformation {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -424,9 +420,9 @@ public class EnvelopesInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders,
-        lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -435,7 +431,7 @@ public class EnvelopesInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopesInformation {\n");
-
+    
     sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
@@ -463,3 +459,4 @@ public class EnvelopesInformation {
   }
 
 }
+

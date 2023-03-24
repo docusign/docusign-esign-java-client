@@ -77,6 +77,7 @@ public class NewAccountDefinition {
   @JsonProperty("taxExemptId")
   private String taxExemptId = null;
 
+
   /**
    * accountName.
    *
@@ -89,7 +90,6 @@ public class NewAccountDefinition {
 
   /**
    * The account name for the new account..
-   * 
    * @return accountName
    **/
   @Schema(description = "The account name for the new account.")
@@ -104,6 +104,7 @@ public class NewAccountDefinition {
     this.accountName = accountName;
   }
 
+
   /**
    * accountSettings.
    *
@@ -115,13 +116,10 @@ public class NewAccountDefinition {
   }
 
   /**
-   * The list of account settings accountsettings that determine the features
-   * available for the account. Note that some features are determined by the plan
-   * used to create the account and cannot be overridden. .
-   * 
+   * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden..
    * @return accountSettings
    **/
-  @Schema(description = "The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.  ")
+  @Schema(description = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
@@ -132,6 +130,7 @@ public class NewAccountDefinition {
   public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
+
 
   /**
    * addressInformation.
@@ -144,9 +143,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * A complex type that contains the following information for the new account:
-   * `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`..
-   * 
+   * A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`..
    * @return addressInformation
    **/
   @Schema(description = "A complex type that contains the following information for the new account: `Street1`, `Street2`, `City`, `State`, `Zip`, `Phone`, and `Fax`.")
@@ -161,6 +158,7 @@ public class NewAccountDefinition {
     this.addressInformation = addressInformation;
   }
 
+
   /**
    * creditCardInformation.
    *
@@ -172,9 +170,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * A complex type that has information about the credit card used to pay for
-   * this account..
-   * 
+   * A complex type that has information about the credit card used to pay for this account..
    * @return creditCardInformation
    **/
   @Schema(description = "A complex type that has information about the credit card used to pay for this account.")
@@ -189,21 +185,19 @@ public class NewAccountDefinition {
     this.creditCardInformation = creditCardInformation;
   }
 
+
   /**
    * directDebitProcessorInformation.
    *
    * @return NewAccountDefinition
    **/
-  public NewAccountDefinition directDebitProcessorInformation(
-      DirectDebitProcessorInformation directDebitProcessorInformation) {
+  public NewAccountDefinition directDebitProcessorInformation(DirectDebitProcessorInformation directDebitProcessorInformation) {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
     return this;
   }
 
   /**
-   * Information about the bank that processes direct debits for the payment
-   * plan..
-   * 
+   * Information about the bank that processes direct debits for the payment plan..
    * @return directDebitProcessorInformation
    **/
   @Schema(description = "Information about the bank that processes direct debits for the payment plan.")
@@ -218,6 +212,7 @@ public class NewAccountDefinition {
     this.directDebitProcessorInformation = directDebitProcessorInformation;
   }
 
+
   /**
    * distributorCode.
    *
@@ -229,9 +224,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * The code that identifies the billing plan groups and plans for the new
-   * account..
-   * 
+   * The code that identifies the billing plan groups and plans for the new account..
    * @return distributorCode
    **/
   @Schema(description = "The code that identifies the billing plan groups and plans for the new account.")
@@ -246,6 +239,7 @@ public class NewAccountDefinition {
     this.distributorCode = distributorCode;
   }
 
+
   /**
    * distributorPassword.
    *
@@ -258,7 +252,6 @@ public class NewAccountDefinition {
 
   /**
    * The password for the distributorCode..
-   * 
    * @return distributorPassword
    **/
   @Schema(description = "The password for the distributorCode.")
@@ -273,6 +266,7 @@ public class NewAccountDefinition {
     this.distributorPassword = distributorPassword;
   }
 
+
   /**
    * enablePreAuth.
    *
@@ -285,7 +279,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return enablePreAuth
    **/
   @Schema(description = "")
@@ -300,6 +293,7 @@ public class NewAccountDefinition {
     this.enablePreAuth = enablePreAuth;
   }
 
+
   /**
    * envelopePartitionId.
    *
@@ -312,7 +306,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return envelopePartitionId
    **/
   @Schema(description = "")
@@ -327,6 +320,7 @@ public class NewAccountDefinition {
     this.envelopePartitionId = envelopePartitionId;
   }
 
+
   /**
    * initialUser.
    *
@@ -338,10 +332,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * A complex type with the initial user information for the new account. Note
-   * that some user information is set internally based on the plan and cannot be
-   * overridden..
-   * 
+   * A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden..
    * @return initialUser
    **/
   @Schema(description = "A complex type with the initial user information for the new account. Note that some user information is set internally based on the plan and cannot be overridden.")
@@ -356,6 +347,7 @@ public class NewAccountDefinition {
     this.initialUser = initialUser;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -368,7 +360,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -383,6 +374,7 @@ public class NewAccountDefinition {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * paymentProcessor.
    *
@@ -395,7 +387,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return paymentProcessor
    **/
   @Schema(description = "")
@@ -410,6 +401,7 @@ public class NewAccountDefinition {
     this.paymentProcessor = paymentProcessor;
   }
 
+
   /**
    * paymentProcessorInformation.
    *
@@ -422,7 +414,6 @@ public class NewAccountDefinition {
 
   /**
    * Information about the entity that processes payments for the billing plan..
-   * 
    * @return paymentProcessorInformation
    **/
   @Schema(description = "Information about the entity that processes payments for the billing plan.")
@@ -437,6 +428,7 @@ public class NewAccountDefinition {
     this.paymentProcessorInformation = paymentProcessorInformation;
   }
 
+
   /**
    * planInformation.
    *
@@ -448,9 +440,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * An object used to identify the features and attributes of the account being
-   * created..
-   * 
+   * An object used to identify the features and attributes of the account being created..
    * @return planInformation
    **/
   @Schema(description = "An object used to identify the features and attributes of the account being created.")
@@ -465,6 +455,7 @@ public class NewAccountDefinition {
     this.planInformation = planInformation;
   }
 
+
   /**
    * processPayment.
    *
@@ -477,7 +468,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return processPayment
    **/
   @Schema(description = "")
@@ -492,6 +482,7 @@ public class NewAccountDefinition {
     this.processPayment = processPayment;
   }
 
+
   /**
    * referralInformation.
    *
@@ -503,9 +494,7 @@ public class NewAccountDefinition {
   }
 
   /**
-   * A complex type that contains properties for entering referral and discount
-   * information..
-   * 
+   * A complex type that contains properties for entering referral and discount information..
    * @return referralInformation
    **/
   @Schema(description = "A complex type that contains properties for entering referral and discount information.")
@@ -520,6 +509,7 @@ public class NewAccountDefinition {
     this.referralInformation = referralInformation;
   }
 
+
   /**
    * socialAccountInformation.
    *
@@ -531,12 +521,10 @@ public class NewAccountDefinition {
   }
 
   /**
-   * Contains properties that map a DocuSign user to a social account such as
-   * Facebook or Yahoo..
-   * 
+   * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.).
    * @return socialAccountInformation
    **/
-  @Schema(description = "Contains properties that map a DocuSign user to a social account such as Facebook or Yahoo.")
+  @Schema(description = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
   public SocialAccountInformation getSocialAccountInformation() {
     return socialAccountInformation;
   }
@@ -547,6 +535,7 @@ public class NewAccountDefinition {
   public void setSocialAccountInformation(SocialAccountInformation socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
   }
+
 
   /**
    * taxExemptId.
@@ -560,7 +549,6 @@ public class NewAccountDefinition {
 
   /**
    * .
-   * 
    * @return taxExemptId
    **/
   @Schema(description = "")
@@ -574,6 +562,7 @@ public class NewAccountDefinition {
   public void setTaxExemptId(String taxExemptId) {
     this.taxExemptId = taxExemptId;
   }
+
 
   /**
    * Compares objects.
@@ -614,11 +603,9 @@ public class NewAccountDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation,
-        directDebitProcessorInformation, distributorCode, distributorPassword, enablePreAuth, envelopePartitionId,
-        initialUser, paymentMethod, paymentProcessor, paymentProcessorInformation, planInformation, processPayment,
-        referralInformation, socialAccountInformation, taxExemptId);
+    return Objects.hash(accountName, accountSettings, addressInformation, creditCardInformation, directDebitProcessorInformation, distributorCode, distributorPassword, enablePreAuth, envelopePartitionId, initialUser, paymentMethod, paymentProcessor, paymentProcessorInformation, planInformation, processPayment, referralInformation, socialAccountInformation, taxExemptId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -627,13 +614,12 @@ public class NewAccountDefinition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewAccountDefinition {\n");
-
+    
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("    addressInformation: ").append(toIndentedString(addressInformation)).append("\n");
     sb.append("    creditCardInformation: ").append(toIndentedString(creditCardInformation)).append("\n");
-    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation))
-        .append("\n");
+    sb.append("    directDebitProcessorInformation: ").append(toIndentedString(directDebitProcessorInformation)).append("\n");
     sb.append("    distributorCode: ").append(toIndentedString(distributorCode)).append("\n");
     sb.append("    distributorPassword: ").append(toIndentedString(distributorPassword)).append("\n");
     sb.append("    enablePreAuth: ").append(toIndentedString(enablePreAuth)).append("\n");
@@ -663,3 +649,4 @@ public class NewAccountDefinition {
   }
 
 }
+

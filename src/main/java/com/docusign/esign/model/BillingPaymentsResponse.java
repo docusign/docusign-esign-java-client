@@ -25,6 +25,7 @@ public class BillingPaymentsResponse {
   @JsonProperty("previousUri")
   private String previousUri = null;
 
+
   /**
    * billingPayments.
    *
@@ -34,7 +35,7 @@ public class BillingPaymentsResponse {
     this.billingPayments = billingPayments;
     return this;
   }
-
+  
   /**
    * addBillingPaymentsItem.
    *
@@ -50,7 +51,6 @@ public class BillingPaymentsResponse {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPayments
    **/
   @Schema(description = "Reserved: TBD")
@@ -65,6 +65,7 @@ public class BillingPaymentsResponse {
     this.billingPayments = billingPayments;
   }
 
+
   /**
    * nextUri.
    *
@@ -76,9 +77,7 @@ public class BillingPaymentsResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -93,6 +92,7 @@ public class BillingPaymentsResponse {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -105,7 +105,6 @@ public class BillingPaymentsResponse {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -119,6 +118,7 @@ public class BillingPaymentsResponse {
   public void setPreviousUri(String previousUri) {
     this.previousUri = previousUri;
   }
+
 
   /**
    * Compares objects.
@@ -147,6 +147,7 @@ public class BillingPaymentsResponse {
     return Objects.hash(billingPayments, nextUri, previousUri);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -154,7 +155,7 @@ public class BillingPaymentsResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPaymentsResponse {\n");
-
+    
     sb.append("    billingPayments: ").append(toIndentedString(billingPayments)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -174,3 +175,4 @@ public class BillingPaymentsResponse {
   }
 
 }
+

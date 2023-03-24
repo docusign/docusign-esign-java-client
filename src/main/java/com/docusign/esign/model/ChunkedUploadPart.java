@@ -21,6 +21,7 @@ public class ChunkedUploadPart {
   @JsonProperty("size")
   private String size = null;
 
+
   /**
    * sequence.
    *
@@ -33,7 +34,6 @@ public class ChunkedUploadPart {
 
   /**
    * .
-   * 
    * @return sequence
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class ChunkedUploadPart {
     this.sequence = sequence;
   }
 
+
   /**
    * size.
    *
@@ -60,7 +61,6 @@ public class ChunkedUploadPart {
 
   /**
    * .
-   * 
    * @return size
    **/
   @Schema(description = "")
@@ -74,6 +74,7 @@ public class ChunkedUploadPart {
   public void setSize(String size) {
     this.size = size;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class ChunkedUploadPart {
     return Objects.hash(sequence, size);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class ChunkedUploadPart {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadPart {\n");
-
+    
     sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class ChunkedUploadPart {
   }
 
 }
+

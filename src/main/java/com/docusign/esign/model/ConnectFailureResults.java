@@ -18,6 +18,7 @@ public class ConnectFailureResults {
   @JsonProperty("retryQueue")
   private java.util.List<ConnectFailureResult> retryQueue = null;
 
+
   /**
    * retryQueue.
    *
@@ -27,7 +28,7 @@ public class ConnectFailureResults {
     this.retryQueue = retryQueue;
     return this;
   }
-
+  
   /**
    * addRetryQueueItem.
    *
@@ -43,7 +44,6 @@ public class ConnectFailureResults {
 
   /**
    * .
-   * 
    * @return retryQueue
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class ConnectFailureResults {
   public void setRetryQueue(java.util.List<ConnectFailureResult> retryQueue) {
     this.retryQueue = retryQueue;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class ConnectFailureResults {
     return Objects.hash(retryQueue);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class ConnectFailureResults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResults {\n");
-
+    
     sb.append("    retryQueue: ").append(toIndentedString(retryQueue)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class ConnectFailureResults {
   }
 
 }
+

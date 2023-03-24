@@ -18,6 +18,7 @@ public class NewUsersDefinition {
   @JsonProperty("newUsers")
   private java.util.List<UserInformation> newUsers = null;
 
+
   /**
    * newUsers.
    *
@@ -27,7 +28,7 @@ public class NewUsersDefinition {
     this.newUsers = newUsers;
     return this;
   }
-
+  
   /**
    * addNewUsersItem.
    *
@@ -43,7 +44,6 @@ public class NewUsersDefinition {
 
   /**
    * .
-   * 
    * @return newUsers
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class NewUsersDefinition {
   public void setNewUsers(java.util.List<UserInformation> newUsers) {
     this.newUsers = newUsers;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class NewUsersDefinition {
     return Objects.hash(newUsers);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class NewUsersDefinition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NewUsersDefinition {\n");
-
+    
     sb.append("    newUsers: ").append(toIndentedString(newUsers)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class NewUsersDefinition {
   }
 
 }
+

@@ -18,6 +18,7 @@ public class PowerFormsFormDataResponse {
   @JsonProperty("envelopes")
   private java.util.List<PowerFormFormDataEnvelope> envelopes = null;
 
+
   /**
    * envelopes.
    *
@@ -27,7 +28,7 @@ public class PowerFormsFormDataResponse {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
@@ -43,7 +44,6 @@ public class PowerFormsFormDataResponse {
 
   /**
    * .
-   * 
    * @return envelopes
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class PowerFormsFormDataResponse {
   public void setEnvelopes(java.util.List<PowerFormFormDataEnvelope> envelopes) {
     this.envelopes = envelopes;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class PowerFormsFormDataResponse {
     return Objects.hash(envelopes);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class PowerFormsFormDataResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsFormDataResponse {\n");
-
+    
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class PowerFormsFormDataResponse {
   }
 
 }
+

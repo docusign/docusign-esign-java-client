@@ -24,6 +24,7 @@ public class AccountSignatureProviderOption {
   @JsonProperty("signatureProviderOptionName")
   private String signatureProviderOptionName = null;
 
+
   /**
    * signatureProviderOptionDisplayName.
    *
@@ -36,7 +37,6 @@ public class AccountSignatureProviderOption {
 
   /**
    * .
-   * 
    * @return signatureProviderOptionDisplayName
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class AccountSignatureProviderOption {
     this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
   }
 
+
   /**
    * signatureProviderOptionId.
    *
@@ -63,7 +64,6 @@ public class AccountSignatureProviderOption {
 
   /**
    * .
-   * 
    * @return signatureProviderOptionId
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class AccountSignatureProviderOption {
     this.signatureProviderOptionId = signatureProviderOptionId;
   }
 
+
   /**
    * signatureProviderOptionName.
    *
@@ -90,7 +91,6 @@ public class AccountSignatureProviderOption {
 
   /**
    * .
-   * 
    * @return signatureProviderOptionName
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class AccountSignatureProviderOption {
   public void setSignatureProviderOptionName(String signatureProviderOptionName) {
     this.signatureProviderOptionName = signatureProviderOptionName;
   }
+
 
   /**
    * Compares objects.
@@ -119,8 +120,7 @@ public class AccountSignatureProviderOption {
       return false;
     }
     AccountSignatureProviderOption accountSignatureProviderOption = (AccountSignatureProviderOption) o;
-    return Objects.equals(this.signatureProviderOptionDisplayName,
-        accountSignatureProviderOption.signatureProviderOptionDisplayName) &&
+    return Objects.equals(this.signatureProviderOptionDisplayName, accountSignatureProviderOption.signatureProviderOptionDisplayName) &&
         Objects.equals(this.signatureProviderOptionId, accountSignatureProviderOption.signatureProviderOptionId) &&
         Objects.equals(this.signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName);
   }
@@ -133,6 +133,7 @@ public class AccountSignatureProviderOption {
     return Objects.hash(signatureProviderOptionDisplayName, signatureProviderOptionId, signatureProviderOptionName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -140,9 +141,8 @@ public class AccountSignatureProviderOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignatureProviderOption {\n");
-
-    sb.append("    signatureProviderOptionDisplayName: ").append(toIndentedString(signatureProviderOptionDisplayName))
-        .append("\n");
+    
+    sb.append("    signatureProviderOptionDisplayName: ").append(toIndentedString(signatureProviderOptionDisplayName)).append("\n");
     sb.append("    signatureProviderOptionId: ").append(toIndentedString(signatureProviderOptionId)).append("\n");
     sb.append("    signatureProviderOptionName: ").append(toIndentedString(signatureProviderOptionName)).append("\n");
     sb.append("}");
@@ -161,3 +161,4 @@ public class AccountSignatureProviderOption {
   }
 
 }
+

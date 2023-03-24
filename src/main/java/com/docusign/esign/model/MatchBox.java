@@ -29,6 +29,7 @@ public class MatchBox {
   @JsonProperty("yPosition")
   private String yPosition = null;
 
+
   /**
    * height.
    *
@@ -41,7 +42,6 @@ public class MatchBox {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -56,6 +56,7 @@ public class MatchBox {
     this.height = height;
   }
 
+
   /**
    * pageNumber.
    *
@@ -68,7 +69,6 @@ public class MatchBox {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -83,6 +83,7 @@ public class MatchBox {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * width.
    *
@@ -95,7 +96,6 @@ public class MatchBox {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -110,6 +110,7 @@ public class MatchBox {
     this.width = width;
   }
 
+
   /**
    * xPosition.
    *
@@ -121,9 +122,7 @@ public class MatchBox {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -138,6 +137,7 @@ public class MatchBox {
     this.xPosition = xPosition;
   }
 
+
   /**
    * yPosition.
    *
@@ -149,9 +149,7 @@ public class MatchBox {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -165,6 +163,7 @@ public class MatchBox {
   public void setYPosition(String yPosition) {
     this.yPosition = yPosition;
   }
+
 
   /**
    * Compares objects.
@@ -195,6 +194,7 @@ public class MatchBox {
     return Objects.hash(height, pageNumber, width, xPosition, yPosition);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -202,7 +202,7 @@ public class MatchBox {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MatchBox {\n");
-
+    
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
@@ -224,3 +224,4 @@ public class MatchBox {
   }
 
 }
+

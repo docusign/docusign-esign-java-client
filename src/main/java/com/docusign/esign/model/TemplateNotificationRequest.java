@@ -28,6 +28,7 @@ public class TemplateNotificationRequest {
   @JsonProperty("useAccountDefaults")
   private String useAccountDefaults = null;
 
+
   /**
    * expirations.
    *
@@ -40,7 +41,6 @@ public class TemplateNotificationRequest {
 
   /**
    * A complex element that specifies the expiration settings for the envelope..
-   * 
    * @return expirations
    **/
   @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
@@ -55,6 +55,7 @@ public class TemplateNotificationRequest {
     this.expirations = expirations;
   }
 
+
   /**
    * password.
    *
@@ -67,7 +68,6 @@ public class TemplateNotificationRequest {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -82,6 +82,7 @@ public class TemplateNotificationRequest {
     this.password = password;
   }
 
+
   /**
    * reminders.
    *
@@ -94,7 +95,6 @@ public class TemplateNotificationRequest {
 
   /**
    * A complex element that specifies reminder settings for the envelope..
-   * 
    * @return reminders
    **/
   @Schema(description = "A complex element that specifies reminder settings for the envelope.")
@@ -109,6 +109,7 @@ public class TemplateNotificationRequest {
     this.reminders = reminders;
   }
 
+
   /**
    * useAccountDefaults.
    *
@@ -120,9 +121,7 @@ public class TemplateNotificationRequest {
   }
 
   /**
-   * When set to **true**, the account default notification settings are used for
-   * the envelope..
-   * 
+   * When set to **true**, the account default notification settings are used for the envelope..
    * @return useAccountDefaults
    **/
   @Schema(description = "When set to **true**, the account default notification settings are used for the envelope.")
@@ -136,6 +135,7 @@ public class TemplateNotificationRequest {
   public void setUseAccountDefaults(String useAccountDefaults) {
     this.useAccountDefaults = useAccountDefaults;
   }
+
 
   /**
    * Compares objects.
@@ -165,6 +165,7 @@ public class TemplateNotificationRequest {
     return Objects.hash(expirations, password, reminders, useAccountDefaults);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -172,7 +173,7 @@ public class TemplateNotificationRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateNotificationRequest {\n");
-
+    
     sb.append("    expirations: ").append(toIndentedString(expirations)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    reminders: ").append(toIndentedString(reminders)).append("\n");
@@ -193,3 +194,4 @@ public class TemplateNotificationRequest {
   }
 
 }
+

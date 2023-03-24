@@ -20,6 +20,7 @@ public class Province {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * isoCode.
    *
@@ -32,7 +33,6 @@ public class Province {
 
   /**
    * .
-   * 
    * @return isoCode
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class Province {
     this.isoCode = isoCode;
   }
 
+
   /**
    * name.
    *
@@ -59,7 +60,6 @@ public class Province {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class Province {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class Province {
     return Objects.hash(isoCode, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class Province {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Province {\n");
-
+    
     sb.append("    isoCode: ").append(toIndentedString(isoCode)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class Province {
   }
 
 }
+

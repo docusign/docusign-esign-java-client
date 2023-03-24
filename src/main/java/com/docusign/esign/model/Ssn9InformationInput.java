@@ -20,6 +20,7 @@ public class Ssn9InformationInput {
   @JsonProperty("ssn9")
   private String ssn9 = null;
 
+
   /**
    * displayLevelCode.
    *
@@ -31,9 +32,7 @@ public class Ssn9InformationInput {
   }
 
   /**
-   * Specifies the display level for the recipient. Valid values are: * ReadOnly *
-   * Editable * DoNotDisplay.
-   * 
+   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
    * @return displayLevelCode
    **/
   @Schema(description = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
@@ -48,6 +47,7 @@ public class Ssn9InformationInput {
     this.displayLevelCode = displayLevelCode;
   }
 
+
   /**
    * ssn9.
    *
@@ -59,8 +59,7 @@ public class Ssn9InformationInput {
   }
 
   /**
-   * The recipient's Social Security Number(SSN)..
-   * 
+   *  The recipient's Social Security Number(SSN)..
    * @return ssn9
    **/
   @Schema(description = " The recipient's Social Security Number(SSN).")
@@ -74,6 +73,7 @@ public class Ssn9InformationInput {
   public void setSsn9(String ssn9) {
     this.ssn9 = ssn9;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +101,7 @@ public class Ssn9InformationInput {
     return Objects.hash(displayLevelCode, ssn9);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +109,7 @@ public class Ssn9InformationInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ssn9InformationInput {\n");
-
+    
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
     sb.append("    ssn9: ").append(toIndentedString(ssn9)).append("\n");
     sb.append("}");
@@ -127,3 +128,4 @@ public class Ssn9InformationInput {
   }
 
 }
+

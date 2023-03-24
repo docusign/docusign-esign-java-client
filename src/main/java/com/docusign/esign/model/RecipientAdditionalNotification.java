@@ -29,6 +29,7 @@ public class RecipientAdditionalNotification {
   @JsonProperty("secondaryDeliveryStatus")
   private String secondaryDeliveryStatus = null;
 
+
   /**
    * phoneNumber.
    *
@@ -41,7 +42,6 @@ public class RecipientAdditionalNotification {
 
   /**
    * The phone number to receive the additional notifcation..
-   * 
    * @return phoneNumber
    **/
   @Schema(description = "The phone number to receive the additional notifcation.")
@@ -56,6 +56,7 @@ public class RecipientAdditionalNotification {
     this.phoneNumber = phoneNumber;
   }
 
+
   /**
    * secondaryDeliveryMethod.
    *
@@ -68,7 +69,6 @@ public class RecipientAdditionalNotification {
 
   /**
    * .
-   * 
    * @return secondaryDeliveryMethod
    **/
   @Schema(description = "")
@@ -83,20 +83,19 @@ public class RecipientAdditionalNotification {
     this.secondaryDeliveryMethod = secondaryDeliveryMethod;
   }
 
+
   /**
    * secondaryDeliveryMethodMetadata.
    *
    * @return RecipientAdditionalNotification
    **/
-  public RecipientAdditionalNotification secondaryDeliveryMethodMetadata(
-      PropertyMetadata secondaryDeliveryMethodMetadata) {
+  public RecipientAdditionalNotification secondaryDeliveryMethodMetadata(PropertyMetadata secondaryDeliveryMethodMetadata) {
     this.secondaryDeliveryMethodMetadata = secondaryDeliveryMethodMetadata;
     return this;
   }
 
   /**
    * Metadata about the delivery method..
-   * 
    * @return secondaryDeliveryMethodMetadata
    **/
   @Schema(description = "Metadata about the delivery method.")
@@ -111,6 +110,7 @@ public class RecipientAdditionalNotification {
     this.secondaryDeliveryMethodMetadata = secondaryDeliveryMethodMetadata;
   }
 
+
   /**
    * secondaryDeliveryStatus.
    *
@@ -123,7 +123,6 @@ public class RecipientAdditionalNotification {
 
   /**
    * .
-   * 
    * @return secondaryDeliveryStatus
    **/
   @Schema(description = "")
@@ -137,6 +136,7 @@ public class RecipientAdditionalNotification {
   public void setSecondaryDeliveryStatus(String secondaryDeliveryStatus) {
     this.secondaryDeliveryStatus = secondaryDeliveryStatus;
   }
+
 
   /**
    * Compares objects.
@@ -154,9 +154,7 @@ public class RecipientAdditionalNotification {
     RecipientAdditionalNotification recipientAdditionalNotification = (RecipientAdditionalNotification) o;
     return Objects.equals(this.phoneNumber, recipientAdditionalNotification.phoneNumber) &&
         Objects.equals(this.secondaryDeliveryMethod, recipientAdditionalNotification.secondaryDeliveryMethod) &&
-        Objects.equals(this.secondaryDeliveryMethodMetadata,
-            recipientAdditionalNotification.secondaryDeliveryMethodMetadata)
-        &&
+        Objects.equals(this.secondaryDeliveryMethodMetadata, recipientAdditionalNotification.secondaryDeliveryMethodMetadata) &&
         Objects.equals(this.secondaryDeliveryStatus, recipientAdditionalNotification.secondaryDeliveryStatus);
   }
 
@@ -168,6 +166,7 @@ public class RecipientAdditionalNotification {
     return Objects.hash(phoneNumber, secondaryDeliveryMethod, secondaryDeliveryMethodMetadata, secondaryDeliveryStatus);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -175,11 +174,10 @@ public class RecipientAdditionalNotification {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientAdditionalNotification {\n");
-
+    
     sb.append("    phoneNumber: ").append(toIndentedString(phoneNumber)).append("\n");
     sb.append("    secondaryDeliveryMethod: ").append(toIndentedString(secondaryDeliveryMethod)).append("\n");
-    sb.append("    secondaryDeliveryMethodMetadata: ").append(toIndentedString(secondaryDeliveryMethodMetadata))
-        .append("\n");
+    sb.append("    secondaryDeliveryMethodMetadata: ").append(toIndentedString(secondaryDeliveryMethodMetadata)).append("\n");
     sb.append("    secondaryDeliveryStatus: ").append(toIndentedString(secondaryDeliveryStatus)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -197,3 +195,4 @@ public class RecipientAdditionalNotification {
   }
 
 }
+

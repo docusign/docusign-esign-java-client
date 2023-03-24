@@ -18,6 +18,7 @@ public class RecipientRules {
   @JsonProperty("conditionalRecipients")
   private java.util.List<ConditionalRecipientRule> conditionalRecipients = null;
 
+
   /**
    * conditionalRecipients.
    *
@@ -27,7 +28,7 @@ public class RecipientRules {
     this.conditionalRecipients = conditionalRecipients;
     return this;
   }
-
+  
   /**
    * addConditionalRecipientsItem.
    *
@@ -43,7 +44,6 @@ public class RecipientRules {
 
   /**
    * .
-   * 
    * @return conditionalRecipients
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class RecipientRules {
   public void setConditionalRecipients(java.util.List<ConditionalRecipientRule> conditionalRecipients) {
     this.conditionalRecipients = conditionalRecipients;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class RecipientRules {
     return Objects.hash(conditionalRecipients);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class RecipientRules {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientRules {\n");
-
+    
     sb.append("    conditionalRecipients: ").append(toIndentedString(conditionalRecipients)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class RecipientRules {
   }
 
 }
+

@@ -41,6 +41,7 @@ public class Watermark {
   @JsonProperty("watermarkText")
   private String watermarkText = null;
 
+
   /**
    * displayAngle.
    *
@@ -53,7 +54,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return displayAngle
    **/
   @Schema(description = "")
@@ -68,6 +68,7 @@ public class Watermark {
     this.displayAngle = displayAngle;
   }
 
+
   /**
    * enabled.
    *
@@ -80,7 +81,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return enabled
    **/
   @Schema(description = "")
@@ -95,6 +95,7 @@ public class Watermark {
     this.enabled = enabled;
   }
 
+
   /**
    * font.
    *
@@ -106,11 +107,7 @@ public class Watermark {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -125,6 +122,7 @@ public class Watermark {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -136,10 +134,7 @@ public class Watermark {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -154,6 +149,7 @@ public class Watermark {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontSize.
    *
@@ -165,10 +161,7 @@ public class Watermark {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -183,6 +176,7 @@ public class Watermark {
     this.fontSize = fontSize;
   }
 
+
   /**
    * id.
    *
@@ -195,7 +189,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -210,6 +203,7 @@ public class Watermark {
     this.id = id;
   }
 
+
   /**
    * imageBase64.
    *
@@ -222,7 +216,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return imageBase64
    **/
   @Schema(description = "")
@@ -237,6 +230,7 @@ public class Watermark {
     this.imageBase64 = imageBase64;
   }
 
+
   /**
    * transparency.
    *
@@ -249,7 +243,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return transparency
    **/
   @Schema(description = "")
@@ -264,6 +257,7 @@ public class Watermark {
     this.transparency = transparency;
   }
 
+
   /**
    * watermarkText.
    *
@@ -276,7 +270,6 @@ public class Watermark {
 
   /**
    * .
-   * 
    * @return watermarkText
    **/
   @Schema(description = "")
@@ -290,6 +283,7 @@ public class Watermark {
   public void setWatermarkText(String watermarkText) {
     this.watermarkText = watermarkText;
   }
+
 
   /**
    * Compares objects.
@@ -324,6 +318,7 @@ public class Watermark {
     return Objects.hash(displayAngle, enabled, font, fontColor, fontSize, id, imageBase64, transparency, watermarkText);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -331,7 +326,7 @@ public class Watermark {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Watermark {\n");
-
+    
     sb.append("    displayAngle: ").append(toIndentedString(displayAngle)).append("\n");
     sb.append("    enabled: ").append(toIndentedString(enabled)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
@@ -357,3 +352,4 @@ public class Watermark {
   }
 
 }
+

@@ -33,6 +33,7 @@ public class OauthAccess {
   @JsonProperty("token_type")
   private String tokenType = null;
 
+
   /**
    * accessToken.
    *
@@ -45,7 +46,6 @@ public class OauthAccess {
 
   /**
    * Access token information..
-   * 
    * @return accessToken
    **/
   @Schema(description = "Access token information.")
@@ -60,6 +60,7 @@ public class OauthAccess {
     this.accessToken = accessToken;
   }
 
+
   /**
    * data.
    *
@@ -69,7 +70,7 @@ public class OauthAccess {
     this.data = data;
     return this;
   }
-
+  
   /**
    * addDataItem.
    *
@@ -85,7 +86,6 @@ public class OauthAccess {
 
   /**
    * .
-   * 
    * @return data
    **/
   @Schema(description = "")
@@ -100,6 +100,7 @@ public class OauthAccess {
     this.data = data;
   }
 
+
   /**
    * expiresIn.
    *
@@ -112,7 +113,6 @@ public class OauthAccess {
 
   /**
    * .
-   * 
    * @return expiresIn
    **/
   @Schema(description = "")
@@ -127,6 +127,7 @@ public class OauthAccess {
     this.expiresIn = expiresIn;
   }
 
+
   /**
    * refreshToken.
    *
@@ -139,7 +140,6 @@ public class OauthAccess {
 
   /**
    * .
-   * 
    * @return refreshToken
    **/
   @Schema(description = "")
@@ -154,6 +154,7 @@ public class OauthAccess {
     this.refreshToken = refreshToken;
   }
 
+
   /**
    * scope.
    *
@@ -166,7 +167,6 @@ public class OauthAccess {
 
   /**
    * Must be set to \"api\"..
-   * 
    * @return scope
    **/
   @Schema(description = "Must be set to \"api\".")
@@ -181,6 +181,7 @@ public class OauthAccess {
     this.scope = scope;
   }
 
+
   /**
    * tokenType.
    *
@@ -193,7 +194,6 @@ public class OauthAccess {
 
   /**
    * .
-   * 
    * @return tokenType
    **/
   @Schema(description = "")
@@ -207,6 +207,7 @@ public class OauthAccess {
   public void setTokenType(String tokenType) {
     this.tokenType = tokenType;
   }
+
 
   /**
    * Compares objects.
@@ -238,6 +239,7 @@ public class OauthAccess {
     return Objects.hash(accessToken, data, expiresIn, refreshToken, scope, tokenType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -245,7 +247,7 @@ public class OauthAccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OauthAccess {\n");
-
+    
     sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    expiresIn: ").append(toIndentedString(expiresIn)).append("\n");
@@ -268,3 +270,4 @@ public class OauthAccess {
   }
 
 }
+

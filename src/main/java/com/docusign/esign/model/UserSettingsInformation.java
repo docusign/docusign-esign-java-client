@@ -15,13 +15,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Properties that configure the settings for a user. Some elements of this
- * object have a &#x60;metadata&#x60; property, which includes the following: -
- * &#x60;rights&#x60;: The calling users permissions to edit this setting (can
- * be &#x60;editable&#x60; or &#x60;read_only&#x60;) - &#x60;uiHint&#x60;:
- * Internally used to build UIs (can be &#x60;available&#x60; or
- * &#x60;hidden&#x60;) - &#x60;options&#x60;: The values supported for this
- * setting (not all settings have this element).
+ * Properties that configure the settings for a user. Some elements of this object have a &#x60;metadata&#x60; property, which includes the following: - &#x60;rights&#x60;: The calling users permissions to edit this setting (can be &#x60;editable&#x60; or &#x60;read_only&#x60;) - &#x60;uiHint&#x60;: Internally used to build UIs (can be &#x60;available&#x60; or &#x60;hidden&#x60;) - &#x60;options&#x60;: The values supported for this setting (not all settings have this element).
  *
  */
 @Schema(description = "Properties that configure the settings for a user. Some elements of this object have a `metadata` property, which includes the following: - `rights`: The calling users permissions to edit this setting (can be `editable` or `read_only`) - `uiHint`: Internally used to build UIs (can be `available` or `hidden`) - `options`: The values supported for this setting (not all settings have this element)")
@@ -402,20 +396,19 @@ public class UserSettingsInformation {
   @JsonProperty("webFormsMetadata")
   private SettingsMetadata webFormsMetadata = null;
 
+
   /**
    * accountManagementGranular.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation accountManagementGranular(
-      UserAccountManagementGranularInformation accountManagementGranular) {
+  public UserSettingsInformation accountManagementGranular(UserAccountManagementGranularInformation accountManagementGranular) {
     this.accountManagementGranular = accountManagementGranular;
     return this;
   }
 
   /**
    * Describes which account management capabilities a user has..
-   * 
    * @return accountManagementGranular
    **/
   @Schema(description = "Describes which account management capabilities a user has.")
@@ -430,6 +423,7 @@ public class UserSettingsInformation {
     this.accountManagementGranular = accountManagementGranular;
   }
 
+
   /**
    * adminOnly.
    *
@@ -442,7 +436,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return adminOnly
    **/
   @Schema(description = "")
@@ -457,6 +450,7 @@ public class UserSettingsInformation {
     this.adminOnly = adminOnly;
   }
 
+
   /**
    * adminOnlyMetadata.
    *
@@ -469,7 +463,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return adminOnlyMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -484,6 +477,7 @@ public class UserSettingsInformation {
     this.adminOnlyMetadata = adminOnlyMetadata;
   }
 
+
   /**
    * allowAutoTagging.
    *
@@ -496,7 +490,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAutoTagging
    **/
   @Schema(description = "")
@@ -511,6 +504,7 @@ public class UserSettingsInformation {
     this.allowAutoTagging = allowAutoTagging;
   }
 
+
   /**
    * allowEnvelopeTransferTo.
    *
@@ -523,7 +517,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopeTransferTo
    **/
   @Schema(description = "")
@@ -538,6 +531,7 @@ public class UserSettingsInformation {
     this.allowEnvelopeTransferTo = allowEnvelopeTransferTo;
   }
 
+
   /**
    * allowEnvelopeTransferToMetadata.
    *
@@ -550,7 +544,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return allowEnvelopeTransferToMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -565,6 +558,7 @@ public class UserSettingsInformation {
     this.allowEnvelopeTransferToMetadata = allowEnvelopeTransferToMetadata;
   }
 
+
   /**
    * allowEsealRecipients.
    *
@@ -577,7 +571,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEsealRecipients
    **/
   @Schema(description = "")
@@ -592,6 +585,7 @@ public class UserSettingsInformation {
     this.allowEsealRecipients = allowEsealRecipients;
   }
 
+
   /**
    * allowEsealRecipientsMetadata.
    *
@@ -604,7 +598,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `allowEsealRecipientsMetadata` property..
-   * 
    * @return allowEsealRecipientsMetadata
    **/
   @Schema(description = "Metadata about the `allowEsealRecipientsMetadata` property.")
@@ -619,20 +612,19 @@ public class UserSettingsInformation {
     this.allowEsealRecipientsMetadata = allowEsealRecipientsMetadata;
   }
 
+
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelope.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelope(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
+  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelope(String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelope = allowPowerFormsAdminToAccessAllPowerFormEnvelope;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelope
    **/
   @Schema(description = "")
@@ -643,26 +635,23 @@ public class UserSettingsInformation {
   /**
    * setAllowPowerFormsAdminToAccessAllPowerFormEnvelope.
    **/
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelope(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelope(String allowPowerFormsAdminToAccessAllPowerFormEnvelope) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelope = allowPowerFormsAdminToAccessAllPowerFormEnvelope;
   }
+
 
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
+  public UserSettingsInformation allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
     return this;
   }
 
   /**
-   * Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata`
-   * property..
-   * 
+   * Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property..
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata
    **/
   @Schema(description = "Metadata about the `allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata` property.")
@@ -673,10 +662,10 @@ public class UserSettingsInformation {
   /**
    * setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata.
    **/
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata;
   }
+
 
   /**
    * allowRecipientLanguageSelection.
@@ -690,7 +679,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowRecipientLanguageSelection
    **/
   @Schema(description = "")
@@ -705,20 +693,19 @@ public class UserSettingsInformation {
     this.allowRecipientLanguageSelection = allowRecipientLanguageSelection;
   }
 
+
   /**
    * allowRecipientLanguageSelectionMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation allowRecipientLanguageSelectionMetadata(
-      SettingsMetadata allowRecipientLanguageSelectionMetadata) {
+  public UserSettingsInformation allowRecipientLanguageSelectionMetadata(SettingsMetadata allowRecipientLanguageSelectionMetadata) {
     this.allowRecipientLanguageSelectionMetadata = allowRecipientLanguageSelectionMetadata;
     return this;
   }
 
   /**
    * Metadata for allowRecipientLanguageSelection..
-   * 
    * @return allowRecipientLanguageSelectionMetadata
    **/
   @Schema(description = "Metadata for allowRecipientLanguageSelection.")
@@ -733,6 +720,7 @@ public class UserSettingsInformation {
     this.allowRecipientLanguageSelectionMetadata = allowRecipientLanguageSelectionMetadata;
   }
 
+
   /**
    * allowSendOnBehalfOf.
    *
@@ -745,7 +733,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSendOnBehalfOf
    **/
   @Schema(description = "")
@@ -760,6 +747,7 @@ public class UserSettingsInformation {
     this.allowSendOnBehalfOf = allowSendOnBehalfOf;
   }
 
+
   /**
    * allowSendOnBehalfOfMetadata.
    *
@@ -772,7 +760,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata for allowSendOnBehalfOf..
-   * 
    * @return allowSendOnBehalfOfMetadata
    **/
   @Schema(description = "Metadata for allowSendOnBehalfOf.")
@@ -787,6 +774,7 @@ public class UserSettingsInformation {
     this.allowSendOnBehalfOfMetadata = allowSendOnBehalfOfMetadata;
   }
 
+
   /**
    * allowSupplementalDocuments.
    *
@@ -799,7 +787,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSupplementalDocuments
    **/
   @Schema(description = "")
@@ -814,21 +801,19 @@ public class UserSettingsInformation {
     this.allowSupplementalDocuments = allowSupplementalDocuments;
   }
 
+
   /**
    * allowSupplementalDocumentsMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation allowSupplementalDocumentsMetadata(
-      SettingsMetadata allowSupplementalDocumentsMetadata) {
+  public UserSettingsInformation allowSupplementalDocumentsMetadata(SettingsMetadata allowSupplementalDocumentsMetadata) {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSupplementalDocuments` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `allowSupplementalDocuments` property is editable..
    * @return allowSupplementalDocumentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSupplementalDocuments` property is editable.")
@@ -843,6 +828,7 @@ public class UserSettingsInformation {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
   }
 
+
   /**
    * anchorTagVersionedPlacementEnabled.
    *
@@ -855,7 +841,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return anchorTagVersionedPlacementEnabled
    **/
   @Schema(description = "")
@@ -870,6 +855,7 @@ public class UserSettingsInformation {
     this.anchorTagVersionedPlacementEnabled = anchorTagVersionedPlacementEnabled;
   }
 
+
   /**
    * apiAccountWideAccess.
    *
@@ -882,7 +868,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return apiAccountWideAccess
    **/
   @Schema(description = "")
@@ -897,6 +882,7 @@ public class UserSettingsInformation {
     this.apiAccountWideAccess = apiAccountWideAccess;
   }
 
+
   /**
    * apiAccountWideAccessMetadata.
    *
@@ -909,7 +895,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata for apiAccountWideAccess..
-   * 
    * @return apiAccountWideAccessMetadata
    **/
   @Schema(description = "Metadata for apiAccountWideAccess.")
@@ -924,6 +909,7 @@ public class UserSettingsInformation {
     this.apiAccountWideAccessMetadata = apiAccountWideAccessMetadata;
   }
 
+
   /**
    * apiCanExportAC.
    *
@@ -936,7 +922,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return apiCanExportAC
    **/
   @Schema(description = "")
@@ -951,6 +936,7 @@ public class UserSettingsInformation {
     this.apiCanExportAC = apiCanExportAC;
   }
 
+
   /**
    * apiCanExportACMetadata.
    *
@@ -963,7 +949,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `apiCanExportACMetadata` property..
-   * 
    * @return apiCanExportACMetadata
    **/
   @Schema(description = "Metadata about the `apiCanExportACMetadata` property.")
@@ -978,6 +963,7 @@ public class UserSettingsInformation {
     this.apiCanExportACMetadata = apiCanExportACMetadata;
   }
 
+
   /**
    * bulkSend.
    *
@@ -990,7 +976,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return bulkSend
    **/
   @Schema(description = "")
@@ -1005,6 +990,7 @@ public class UserSettingsInformation {
     this.bulkSend = bulkSend;
   }
 
+
   /**
    * bulkSendMetadata.
    *
@@ -1017,7 +1003,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata that indicates whether the `bulkSend` property is editable. .
-   * 
    * @return bulkSendMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bulkSend` property is editable. ")
@@ -1032,6 +1017,7 @@ public class UserSettingsInformation {
     this.bulkSendMetadata = bulkSendMetadata;
   }
 
+
   /**
    * canChargeAccount.
    *
@@ -1044,7 +1030,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canChargeAccount
    **/
   @Schema(description = "")
@@ -1059,6 +1044,7 @@ public class UserSettingsInformation {
     this.canChargeAccount = canChargeAccount;
   }
 
+
   /**
    * canChargeAccountMetadata.
    *
@@ -1071,7 +1057,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return canChargeAccountMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1086,6 +1071,7 @@ public class UserSettingsInformation {
     this.canChargeAccountMetadata = canChargeAccountMetadata;
   }
 
+
   /**
    * canEditSharedAddressbook.
    *
@@ -1098,7 +1084,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canEditSharedAddressbook
    **/
   @Schema(description = "")
@@ -1113,6 +1098,7 @@ public class UserSettingsInformation {
     this.canEditSharedAddressbook = canEditSharedAddressbook;
   }
 
+
   /**
    * canEditSharedAddressbookMetadata.
    *
@@ -1125,7 +1111,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canEditSharedAddressbookMetadata` property..
-   * 
    * @return canEditSharedAddressbookMetadata
    **/
   @Schema(description = "Metadata about the `canEditSharedAddressbookMetadata` property.")
@@ -1140,6 +1125,7 @@ public class UserSettingsInformation {
     this.canEditSharedAddressbookMetadata = canEditSharedAddressbookMetadata;
   }
 
+
   /**
    * canLockEnvelopes.
    *
@@ -1152,7 +1138,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canLockEnvelopes
    **/
   @Schema(description = "")
@@ -1167,6 +1152,7 @@ public class UserSettingsInformation {
     this.canLockEnvelopes = canLockEnvelopes;
   }
 
+
   /**
    * canLockEnvelopesMetadata.
    *
@@ -1179,7 +1165,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canLockEnvelopes` property..
-   * 
    * @return canLockEnvelopesMetadata
    **/
   @Schema(description = "Metadata about the `canLockEnvelopes` property.")
@@ -1194,6 +1179,7 @@ public class UserSettingsInformation {
     this.canLockEnvelopesMetadata = canLockEnvelopesMetadata;
   }
 
+
   /**
    * canManageAccount.
    *
@@ -1206,7 +1192,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canManageAccount
    **/
   @Schema(description = "")
@@ -1221,6 +1206,7 @@ public class UserSettingsInformation {
     this.canManageAccount = canManageAccount;
   }
 
+
   /**
    * canManageAccountMetadata.
    *
@@ -1233,7 +1219,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canManageAccountMetadata` property..
-   * 
    * @return canManageAccountMetadata
    **/
   @Schema(description = "Metadata about the `canManageAccountMetadata` property.")
@@ -1248,6 +1233,7 @@ public class UserSettingsInformation {
     this.canManageAccountMetadata = canManageAccountMetadata;
   }
 
+
   /**
    * canManageDistributor.
    *
@@ -1260,7 +1246,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canManageDistributor
    **/
   @Schema(description = "")
@@ -1275,6 +1260,7 @@ public class UserSettingsInformation {
     this.canManageDistributor = canManageDistributor;
   }
 
+
   /**
    * canManageDistributorMetadata.
    *
@@ -1287,7 +1273,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canManageDistributor` property..
-   * 
    * @return canManageDistributorMetadata
    **/
   @Schema(description = "Metadata about the `canManageDistributor` property.")
@@ -1302,6 +1287,7 @@ public class UserSettingsInformation {
     this.canManageDistributorMetadata = canManageDistributorMetadata;
   }
 
+
   /**
    * canManageTemplates.
    *
@@ -1314,7 +1300,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canManageTemplates
    **/
   @Schema(description = "")
@@ -1329,6 +1314,7 @@ public class UserSettingsInformation {
     this.canManageTemplates = canManageTemplates;
   }
 
+
   /**
    * canManageTemplatesMetadata.
    *
@@ -1341,7 +1327,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canManageTemplates` property..
-   * 
    * @return canManageTemplatesMetadata
    **/
   @Schema(description = "Metadata about the `canManageTemplates` property.")
@@ -1356,6 +1341,7 @@ public class UserSettingsInformation {
     this.canManageTemplatesMetadata = canManageTemplatesMetadata;
   }
 
+
   /**
    * canSendAPIRequests.
    *
@@ -1368,7 +1354,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSendAPIRequests
    **/
   @Schema(description = "")
@@ -1383,6 +1368,7 @@ public class UserSettingsInformation {
     this.canSendAPIRequests = canSendAPIRequests;
   }
 
+
   /**
    * canSendAPIRequestsMetadata.
    *
@@ -1395,7 +1381,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canSendAPIRequests` property..
-   * 
    * @return canSendAPIRequestsMetadata
    **/
   @Schema(description = "Metadata about the `canSendAPIRequests` property.")
@@ -1410,6 +1395,7 @@ public class UserSettingsInformation {
     this.canSendAPIRequestsMetadata = canSendAPIRequestsMetadata;
   }
 
+
   /**
    * canSendEnvelope.
    *
@@ -1422,7 +1408,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSendEnvelope
    **/
   @Schema(description = "")
@@ -1437,6 +1422,7 @@ public class UserSettingsInformation {
     this.canSendEnvelope = canSendEnvelope;
   }
 
+
   /**
    * canSendEnvelopeMetadata.
    *
@@ -1449,7 +1435,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canSendEnvelope` property..
-   * 
    * @return canSendEnvelopeMetadata
    **/
   @Schema(description = "Metadata about the `canSendEnvelope` property.")
@@ -1464,6 +1449,7 @@ public class UserSettingsInformation {
     this.canSendEnvelopeMetadata = canSendEnvelopeMetadata;
   }
 
+
   /**
    * canSendEnvelopesViaSMS.
    *
@@ -1476,7 +1462,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSendEnvelopesViaSMS
    **/
   @Schema(description = "")
@@ -1491,6 +1476,7 @@ public class UserSettingsInformation {
     this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
   }
 
+
   /**
    * canSendEnvelopesViaSMSMetadata.
    *
@@ -1503,7 +1489,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSendEnvelopesViaSMSMetadata
    **/
   @Schema(description = "")
@@ -1518,6 +1503,7 @@ public class UserSettingsInformation {
     this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
   }
 
+
   /**
    * canSignEnvelope.
    *
@@ -1530,7 +1516,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSignEnvelope
    **/
   @Schema(description = "")
@@ -1545,6 +1530,7 @@ public class UserSettingsInformation {
     this.canSignEnvelope = canSignEnvelope;
   }
 
+
   /**
    * canSignEnvelopeMetadata.
    *
@@ -1557,7 +1543,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canSignEnvelope` property..
-   * 
    * @return canSignEnvelopeMetadata
    **/
   @Schema(description = "Metadata about the `canSignEnvelope` property.")
@@ -1572,6 +1557,7 @@ public class UserSettingsInformation {
     this.canSignEnvelopeMetadata = canSignEnvelopeMetadata;
   }
 
+
   /**
    * canUseScratchpad.
    *
@@ -1584,7 +1570,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canUseScratchpad
    **/
   @Schema(description = "")
@@ -1599,6 +1584,7 @@ public class UserSettingsInformation {
     this.canUseScratchpad = canUseScratchpad;
   }
 
+
   /**
    * canUseScratchpadMetadata.
    *
@@ -1611,7 +1597,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `canUseScratchpad` property..
-   * 
    * @return canUseScratchpadMetadata
    **/
   @Schema(description = "Metadata about the `canUseScratchpad` property.")
@@ -1626,6 +1611,7 @@ public class UserSettingsInformation {
     this.canUseScratchpadMetadata = canUseScratchpadMetadata;
   }
 
+
   /**
    * canUseSmartContracts.
    *
@@ -1638,7 +1624,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return canUseSmartContracts
    **/
   @Schema(description = "")
@@ -1653,6 +1638,7 @@ public class UserSettingsInformation {
     this.canUseSmartContracts = canUseSmartContracts;
   }
 
+
   /**
    * canUseSmartContractsMetadata.
    *
@@ -1665,7 +1651,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return canUseSmartContractsMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1680,6 +1665,7 @@ public class UserSettingsInformation {
     this.canUseSmartContractsMetadata = canUseSmartContractsMetadata;
   }
 
+
   /**
    * disableDocumentUpload.
    *
@@ -1692,7 +1678,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableDocumentUpload
    **/
   @Schema(description = "")
@@ -1707,6 +1692,7 @@ public class UserSettingsInformation {
     this.disableDocumentUpload = disableDocumentUpload;
   }
 
+
   /**
    * disableDocumentUploadMetadata.
    *
@@ -1718,9 +1704,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableDocumentUpload` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableDocumentUpload` property is editable. .
    * @return disableDocumentUploadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableDocumentUpload` property is editable. ")
@@ -1735,6 +1719,7 @@ public class UserSettingsInformation {
     this.disableDocumentUploadMetadata = disableDocumentUploadMetadata;
   }
 
+
   /**
    * disableOtherActions.
    *
@@ -1747,7 +1732,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableOtherActions
    **/
   @Schema(description = "")
@@ -1762,6 +1746,7 @@ public class UserSettingsInformation {
     this.disableOtherActions = disableOtherActions;
   }
 
+
   /**
    * disableOtherActionsMetadata.
    *
@@ -1773,9 +1758,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableOtherActions` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableOtherActions` property is editable. .
    * @return disableOtherActionsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableOtherActions` property is editable. ")
@@ -1790,6 +1773,7 @@ public class UserSettingsInformation {
     this.disableOtherActionsMetadata = disableOtherActionsMetadata;
   }
 
+
   /**
    * enableDSPro.
    *
@@ -1802,7 +1786,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableDSPro
    **/
   @Schema(description = "")
@@ -1817,6 +1800,7 @@ public class UserSettingsInformation {
     this.enableDSPro = enableDSPro;
   }
 
+
   /**
    * enableDSProMetadata.
    *
@@ -1829,7 +1813,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enableDSPro` property is editable. .
-   * 
    * @return enableDSProMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableDSPro` property is editable. ")
@@ -1844,20 +1827,19 @@ public class UserSettingsInformation {
     this.enableDSProMetadata = enableDSProMetadata;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentType.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentType(
-      String enableKeyTermsSuggestionsByDocumentType) {
+  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentType(String enableKeyTermsSuggestionsByDocumentType) {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableKeyTermsSuggestionsByDocumentType
    **/
   @Schema(description = "")
@@ -1872,20 +1854,19 @@ public class UserSettingsInformation {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentTypeMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public UserSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
     return this;
   }
 
   /**
-   * Get enableKeyTermsSuggestionsByDocumentTypeMetadata.
-   * 
+   * .
    * @return enableKeyTermsSuggestionsByDocumentTypeMetadata
    **/
   @Schema(description = "")
@@ -1896,10 +1877,10 @@ public class UserSettingsInformation {
   /**
    * setEnableKeyTermsSuggestionsByDocumentTypeMetadata.
    **/
-  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
   }
+
 
   /**
    * enableSequentialSigningAPI.
@@ -1913,7 +1894,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSequentialSigningAPI
    **/
   @Schema(description = "")
@@ -1928,21 +1908,19 @@ public class UserSettingsInformation {
     this.enableSequentialSigningAPI = enableSequentialSigningAPI;
   }
 
+
   /**
    * enableSequentialSigningAPIMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation enableSequentialSigningAPIMetadata(
-      SettingsMetadata enableSequentialSigningAPIMetadata) {
+  public UserSettingsInformation enableSequentialSigningAPIMetadata(SettingsMetadata enableSequentialSigningAPIMetadata) {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSequentialSigningAPI` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. .
    * @return enableSequentialSigningAPIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. ")
@@ -1957,6 +1935,7 @@ public class UserSettingsInformation {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
   }
 
+
   /**
    * enableSequentialSigningUI.
    *
@@ -1969,7 +1948,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSequentialSigningUI
    **/
   @Schema(description = "")
@@ -1984,6 +1962,7 @@ public class UserSettingsInformation {
     this.enableSequentialSigningUI = enableSequentialSigningUI;
   }
 
+
   /**
    * enableSequentialSigningUIMetadata.
    *
@@ -1995,9 +1974,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSequentialSigningUI` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSequentialSigningUI` property is editable. .
    * @return enableSequentialSigningUIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSequentialSigningUI` property is editable. ")
@@ -2012,6 +1989,7 @@ public class UserSettingsInformation {
     this.enableSequentialSigningUIMetadata = enableSequentialSigningUIMetadata;
   }
 
+
   /**
    * enableSignerAttachments.
    *
@@ -2024,7 +2002,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignerAttachments
    **/
   @Schema(description = "")
@@ -2039,6 +2016,7 @@ public class UserSettingsInformation {
     this.enableSignerAttachments = enableSignerAttachments;
   }
 
+
   /**
    * enableSignerAttachmentsMetadata.
    *
@@ -2050,9 +2028,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSignerAttachments` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSignerAttachments` property is editable. .
    * @return enableSignerAttachmentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignerAttachments` property is editable. ")
@@ -2067,6 +2043,7 @@ public class UserSettingsInformation {
     this.enableSignerAttachmentsMetadata = enableSignerAttachmentsMetadata;
   }
 
+
   /**
    * enableSignOnPaperOverride.
    *
@@ -2079,7 +2056,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignOnPaperOverride
    **/
   @Schema(description = "")
@@ -2094,6 +2070,7 @@ public class UserSettingsInformation {
     this.enableSignOnPaperOverride = enableSignOnPaperOverride;
   }
 
+
   /**
    * enableSignOnPaperOverrideMetadata.
    *
@@ -2105,9 +2082,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSignOnPaperOverride` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. .
    * @return enableSignOnPaperOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. ")
@@ -2122,6 +2097,7 @@ public class UserSettingsInformation {
     this.enableSignOnPaperOverrideMetadata = enableSignOnPaperOverrideMetadata;
   }
 
+
   /**
    * enableTransactionPoint.
    *
@@ -2134,7 +2110,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableTransactionPoint
    **/
   @Schema(description = "")
@@ -2149,6 +2124,7 @@ public class UserSettingsInformation {
     this.enableTransactionPoint = enableTransactionPoint;
   }
 
+
   /**
    * enableTransactionPointMetadata.
    *
@@ -2161,7 +2137,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return enableTransactionPointMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2176,6 +2151,7 @@ public class UserSettingsInformation {
     this.enableTransactionPointMetadata = enableTransactionPointMetadata;
   }
 
+
   /**
    * enableVaulting.
    *
@@ -2188,7 +2164,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableVaulting
    **/
   @Schema(description = "")
@@ -2203,6 +2178,7 @@ public class UserSettingsInformation {
     this.enableVaulting = enableVaulting;
   }
 
+
   /**
    * enableVaultingMetadata.
    *
@@ -2215,7 +2191,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enableVaulting` property is editable. .
-   * 
    * @return enableVaultingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableVaulting` property is editable. ")
@@ -2230,6 +2205,7 @@ public class UserSettingsInformation {
     this.enableVaultingMetadata = enableVaultingMetadata;
   }
 
+
   /**
    * expressSendOnly.
    *
@@ -2242,7 +2218,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return expressSendOnly
    **/
   @Schema(description = "")
@@ -2257,6 +2232,7 @@ public class UserSettingsInformation {
     this.expressSendOnly = expressSendOnly;
   }
 
+
   /**
    * locale.
    *
@@ -2269,7 +2245,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return locale
    **/
   @Schema(description = "")
@@ -2284,6 +2259,7 @@ public class UserSettingsInformation {
     this.locale = locale;
   }
 
+
   /**
    * localeMetadata.
    *
@@ -2296,7 +2272,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `locale` property..
-   * 
    * @return localeMetadata
    **/
   @Schema(description = "Metadata about the `locale` property.")
@@ -2311,6 +2286,7 @@ public class UserSettingsInformation {
     this.localeMetadata = localeMetadata;
   }
 
+
   /**
    * localePolicy.
    *
@@ -2323,7 +2299,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return localePolicy
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2338,6 +2313,7 @@ public class UserSettingsInformation {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * manageClickwrapsMode.
    *
@@ -2350,7 +2326,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return manageClickwrapsMode
    **/
   @Schema(description = "")
@@ -2365,6 +2340,7 @@ public class UserSettingsInformation {
     this.manageClickwrapsMode = manageClickwrapsMode;
   }
 
+
   /**
    * manageClickwrapsModeMetadata.
    *
@@ -2377,7 +2353,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `manageClickwrapsMode` property..
-   * 
    * @return manageClickwrapsModeMetadata
    **/
   @Schema(description = "Metadata about the `manageClickwrapsMode` property.")
@@ -2392,6 +2367,7 @@ public class UserSettingsInformation {
     this.manageClickwrapsModeMetadata = manageClickwrapsModeMetadata;
   }
 
+
   /**
    * modifiedBy.
    *
@@ -2404,7 +2380,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return modifiedBy
    **/
   @Schema(description = "")
@@ -2419,6 +2394,7 @@ public class UserSettingsInformation {
     this.modifiedBy = modifiedBy;
   }
 
+
   /**
    * modifiedByMetadata.
    *
@@ -2431,7 +2407,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `modifiedBy` property..
-   * 
    * @return modifiedByMetadata
    **/
   @Schema(description = "Metadata about the `modifiedBy` property.")
@@ -2446,6 +2421,7 @@ public class UserSettingsInformation {
     this.modifiedByMetadata = modifiedByMetadata;
   }
 
+
   /**
    * modifiedDate.
    *
@@ -2458,7 +2434,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return modifiedDate
    **/
   @Schema(description = "")
@@ -2473,6 +2448,7 @@ public class UserSettingsInformation {
     this.modifiedDate = modifiedDate;
   }
 
+
   /**
    * modifiedDateMetadata.
    *
@@ -2485,7 +2461,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `modifiedDate` property..
-   * 
    * @return modifiedDateMetadata
    **/
   @Schema(description = "Metadata about the `modifiedDate` property.")
@@ -2500,6 +2475,7 @@ public class UserSettingsInformation {
     this.modifiedDateMetadata = modifiedDateMetadata;
   }
 
+
   /**
    * modifiedPage.
    *
@@ -2512,7 +2488,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return modifiedPage
    **/
   @Schema(description = "")
@@ -2527,6 +2502,7 @@ public class UserSettingsInformation {
     this.modifiedPage = modifiedPage;
   }
 
+
   /**
    * modifiedPageMetadata.
    *
@@ -2539,7 +2515,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `modifiedPage` property..
-   * 
    * @return modifiedPageMetadata
    **/
   @Schema(description = "Metadata about the `modifiedPage` property.")
@@ -2554,6 +2529,7 @@ public class UserSettingsInformation {
     this.modifiedPageMetadata = modifiedPageMetadata;
   }
 
+
   /**
    * newSendUI.
    *
@@ -2566,7 +2542,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return newSendUI
    **/
   @Schema(description = "")
@@ -2581,6 +2556,7 @@ public class UserSettingsInformation {
     this.newSendUI = newSendUI;
   }
 
+
   /**
    * newSendUIMetadata.
    *
@@ -2593,7 +2569,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `newSendUI` property..
-   * 
    * @return newSendUIMetadata
    **/
   @Schema(description = "Metadata about the `newSendUI` property.")
@@ -2608,6 +2583,7 @@ public class UserSettingsInformation {
     this.newSendUIMetadata = newSendUIMetadata;
   }
 
+
   /**
    * powerFormMode.
    *
@@ -2620,7 +2596,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return powerFormMode
    **/
   @Schema(description = "")
@@ -2635,6 +2610,7 @@ public class UserSettingsInformation {
     this.powerFormMode = powerFormMode;
   }
 
+
   /**
    * powerFormModeMetadata.
    *
@@ -2647,7 +2623,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `powerFormMode` property..
-   * 
    * @return powerFormModeMetadata
    **/
   @Schema(description = "Metadata about the `powerFormMode` property.")
@@ -2662,6 +2637,7 @@ public class UserSettingsInformation {
     this.powerFormModeMetadata = powerFormModeMetadata;
   }
 
+
   /**
    * recipientViewedNotification.
    *
@@ -2674,7 +2650,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return recipientViewedNotification
    **/
   @Schema(description = "")
@@ -2689,20 +2664,19 @@ public class UserSettingsInformation {
     this.recipientViewedNotification = recipientViewedNotification;
   }
 
+
   /**
    * recipientViewedNotificationMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation recipientViewedNotificationMetadata(
-      SettingsMetadata recipientViewedNotificationMetadata) {
+  public UserSettingsInformation recipientViewedNotificationMetadata(SettingsMetadata recipientViewedNotificationMetadata) {
     this.recipientViewedNotificationMetadata = recipientViewedNotificationMetadata;
     return this;
   }
 
   /**
    * Metadata about the `recipientViewedNotification` property..
-   * 
    * @return recipientViewedNotificationMetadata
    **/
   @Schema(description = "Metadata about the `recipientViewedNotification` property.")
@@ -2717,6 +2691,7 @@ public class UserSettingsInformation {
     this.recipientViewedNotificationMetadata = recipientViewedNotificationMetadata;
   }
 
+
   /**
    * sealIdentifiers.
    *
@@ -2726,7 +2701,7 @@ public class UserSettingsInformation {
     this.sealIdentifiers = sealIdentifiers;
     return this;
   }
-
+  
   /**
    * addSealIdentifiersItem.
    *
@@ -2742,7 +2717,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return sealIdentifiers
    **/
   @Schema(description = "")
@@ -2757,6 +2731,7 @@ public class UserSettingsInformation {
     this.sealIdentifiers = sealIdentifiers;
   }
 
+
   /**
    * selfSignedRecipientEmailDocument.
    *
@@ -2769,7 +2744,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return selfSignedRecipientEmailDocument
    **/
   @Schema(description = "")
@@ -2784,21 +2758,19 @@ public class UserSettingsInformation {
     this.selfSignedRecipientEmailDocument = selfSignedRecipientEmailDocument;
   }
 
+
   /**
    * selfSignedRecipientEmailDocumentMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation selfSignedRecipientEmailDocumentMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
+  public UserSettingsInformation selfSignedRecipientEmailDocumentMetadata(SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `selfSignedRecipientEmailDocument`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. .
    * @return selfSignedRecipientEmailDocumentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. ")
@@ -2813,6 +2785,7 @@ public class UserSettingsInformation {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
   }
 
+
   /**
    * senderEmailNotifications.
    *
@@ -2824,14 +2797,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * An array of email notifications that sets the email the user receives when
-   * they are a sender. When the specific email notification is set to true, the
-   * user will receive those types of email notifications from DocuSign. The user
-   * inherits the default account sender email notification settings when the user
-   * is created. The email notifications are: * envelopeComplete * changedSigner *
-   * senderEnvelopeDeclined * withdrawnConsent * recipientViewed * deliveryFailed
-   * .
-   * 
+   *   An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   .
    * @return senderEmailNotifications
    **/
   @Schema(description = "  An array of email notifications that sets the email the user receives when they are a sender. When the specific email notification is set to true, the user will receive those types of email notifications from DocuSign.   The user inherits the default account sender email notification settings when the user is created. The email notifications are:  * envelopeComplete * changedSigner  * senderEnvelopeDeclined  * withdrawnConsent  * recipientViewed  * deliveryFailed   ")
@@ -2846,6 +2812,7 @@ public class UserSettingsInformation {
     this.senderEmailNotifications = senderEmailNotifications;
   }
 
+
   /**
    * signerEmailNotifications.
    *
@@ -2857,12 +2824,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * An array of email notifications that specifies the email the user receives
-   * when they are a recipient. When the specific email notification is set to
-   * true, the user receives those types of email notifications from DocuSign. The
-   * user inherits the default account email notification settings when the user
-   * is created. .
-   * 
+   * An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. .
    * @return signerEmailNotifications
    **/
   @Schema(description = "An array of email notifications that specifies the email the user receives when they are a recipient. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account email notification settings when the user is created. ")
@@ -2877,6 +2839,7 @@ public class UserSettingsInformation {
     this.signerEmailNotifications = signerEmailNotifications;
   }
 
+
   /**
    * supplementalDocumentIncludeInDownload.
    *
@@ -2889,7 +2852,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentIncludeInDownload
    **/
   @Schema(description = "")
@@ -2904,6 +2866,7 @@ public class UserSettingsInformation {
     this.supplementalDocumentIncludeInDownload = supplementalDocumentIncludeInDownload;
   }
 
+
   /**
    * supplementalDocumentsMustAccept.
    *
@@ -2916,7 +2879,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustAccept
    **/
   @Schema(description = "")
@@ -2931,21 +2893,19 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustAccept = supplementalDocumentsMustAccept;
   }
 
+
   /**
    * supplementalDocumentsMustAcceptMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation supplementalDocumentsMustAcceptMetadata(
-      SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
+  public UserSettingsInformation supplementalDocumentsMustAcceptMetadata(SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustAccept`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. .
    * @return supplementalDocumentsMustAcceptMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. ")
@@ -2960,6 +2920,7 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustRead.
    *
@@ -2972,7 +2933,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustRead
    **/
   @Schema(description = "")
@@ -2987,21 +2947,19 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustRead = supplementalDocumentsMustRead;
   }
 
+
   /**
    * supplementalDocumentsMustReadMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation supplementalDocumentsMustReadMetadata(
-      SettingsMetadata supplementalDocumentsMustReadMetadata) {
+  public UserSettingsInformation supplementalDocumentsMustReadMetadata(SettingsMetadata supplementalDocumentsMustReadMetadata) {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustRead` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. .
    * @return supplementalDocumentsMustReadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. ")
@@ -3016,6 +2974,7 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustView.
    *
@@ -3028,7 +2987,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustView
    **/
   @Schema(description = "")
@@ -3043,21 +3001,19 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustView = supplementalDocumentsMustView;
   }
 
+
   /**
    * supplementalDocumentsMustViewMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation supplementalDocumentsMustViewMetadata(
-      SettingsMetadata supplementalDocumentsMustViewMetadata) {
+  public UserSettingsInformation supplementalDocumentsMustViewMetadata(SettingsMetadata supplementalDocumentsMustViewMetadata) {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustView` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. .
    * @return supplementalDocumentsMustViewMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. ")
@@ -3072,6 +3028,7 @@ public class UserSettingsInformation {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
   }
 
+
   /**
    * templateActiveCreation.
    *
@@ -3084,7 +3041,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return templateActiveCreation
    **/
   @Schema(description = "")
@@ -3099,6 +3055,7 @@ public class UserSettingsInformation {
     this.templateActiveCreation = templateActiveCreation;
   }
 
+
   /**
    * templateActiveCreationMetadata.
    *
@@ -3111,7 +3068,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `templateActiveCreation` property..
-   * 
    * @return templateActiveCreationMetadata
    **/
   @Schema(description = "Metadata about the `templateActiveCreation` property.")
@@ -3126,6 +3082,7 @@ public class UserSettingsInformation {
     this.templateActiveCreationMetadata = templateActiveCreationMetadata;
   }
 
+
   /**
    * templateApplyNotify.
    *
@@ -3138,7 +3095,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return templateApplyNotify
    **/
   @Schema(description = "")
@@ -3153,6 +3109,7 @@ public class UserSettingsInformation {
     this.templateApplyNotify = templateApplyNotify;
   }
 
+
   /**
    * templateApplyNotifyMetadata.
    *
@@ -3165,7 +3122,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `templateApplyNotify` property..
-   * 
    * @return templateApplyNotifyMetadata
    **/
   @Schema(description = "Metadata about the `templateApplyNotify` property.")
@@ -3180,6 +3136,7 @@ public class UserSettingsInformation {
     this.templateApplyNotifyMetadata = templateApplyNotifyMetadata;
   }
 
+
   /**
    * templateAutoMatching.
    *
@@ -3192,7 +3149,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return templateAutoMatching
    **/
   @Schema(description = "")
@@ -3207,6 +3163,7 @@ public class UserSettingsInformation {
     this.templateAutoMatching = templateAutoMatching;
   }
 
+
   /**
    * templateAutoMatchingMetadata.
    *
@@ -3219,7 +3176,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `templateAutoMatching` property..
-   * 
    * @return templateAutoMatchingMetadata
    **/
   @Schema(description = "Metadata about the `templateAutoMatching` property.")
@@ -3234,6 +3190,7 @@ public class UserSettingsInformation {
     this.templateAutoMatchingMetadata = templateAutoMatchingMetadata;
   }
 
+
   /**
    * templateMatchingSensitivity.
    *
@@ -3246,7 +3203,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return templateMatchingSensitivity
    **/
   @Schema(description = "")
@@ -3261,20 +3217,19 @@ public class UserSettingsInformation {
     this.templateMatchingSensitivity = templateMatchingSensitivity;
   }
 
+
   /**
    * templateMatchingSensitivityMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation templateMatchingSensitivityMetadata(
-      SettingsMetadata templateMatchingSensitivityMetadata) {
+  public UserSettingsInformation templateMatchingSensitivityMetadata(SettingsMetadata templateMatchingSensitivityMetadata) {
     this.templateMatchingSensitivityMetadata = templateMatchingSensitivityMetadata;
     return this;
   }
 
   /**
    * Metadata about the `tempalteMatchingSensitivity` property..
-   * 
    * @return templateMatchingSensitivityMetadata
    **/
   @Schema(description = "Metadata about the `tempalteMatchingSensitivity` property.")
@@ -3289,6 +3244,7 @@ public class UserSettingsInformation {
     this.templateMatchingSensitivityMetadata = templateMatchingSensitivityMetadata;
   }
 
+
   /**
    * templatePageLevelMatching.
    *
@@ -3301,7 +3257,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return templatePageLevelMatching
    **/
   @Schema(description = "")
@@ -3316,6 +3271,7 @@ public class UserSettingsInformation {
     this.templatePageLevelMatching = templatePageLevelMatching;
   }
 
+
   /**
    * templatePageLevelMatchingMetadata.
    *
@@ -3328,7 +3284,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `templatePageLevelMatching` property..
-   * 
    * @return templatePageLevelMatchingMetadata
    **/
   @Schema(description = "Metadata about the `templatePageLevelMatching` property.")
@@ -3343,6 +3298,7 @@ public class UserSettingsInformation {
     this.templatePageLevelMatchingMetadata = templatePageLevelMatchingMetadata;
   }
 
+
   /**
    * timezoneDST.
    *
@@ -3355,7 +3311,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneDST
    **/
   @Schema(description = "")
@@ -3370,6 +3325,7 @@ public class UserSettingsInformation {
     this.timezoneDST = timezoneDST;
   }
 
+
   /**
    * timezoneDSTMetadata.
    *
@@ -3382,7 +3338,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `timezoneDST` property..
-   * 
    * @return timezoneDSTMetadata
    **/
   @Schema(description = "Metadata about the `timezoneDST` property.")
@@ -3397,6 +3352,7 @@ public class UserSettingsInformation {
     this.timezoneDSTMetadata = timezoneDSTMetadata;
   }
 
+
   /**
    * timezoneMask.
    *
@@ -3409,7 +3365,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneMask
    **/
   @Schema(description = "")
@@ -3424,6 +3379,7 @@ public class UserSettingsInformation {
     this.timezoneMask = timezoneMask;
   }
 
+
   /**
    * timezoneMaskMetadata.
    *
@@ -3436,7 +3392,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `timezoneMask` property..
-   * 
    * @return timezoneMaskMetadata
    **/
   @Schema(description = "Metadata about the `timezoneMask` property.")
@@ -3451,6 +3406,7 @@ public class UserSettingsInformation {
     this.timezoneMaskMetadata = timezoneMaskMetadata;
   }
 
+
   /**
    * timezoneOffset.
    *
@@ -3463,7 +3419,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneOffset
    **/
   @Schema(description = "")
@@ -3478,6 +3433,7 @@ public class UserSettingsInformation {
     this.timezoneOffset = timezoneOffset;
   }
 
+
   /**
    * timezoneOffsetMetadata.
    *
@@ -3490,7 +3446,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `timezoneOffset` property..
-   * 
    * @return timezoneOffsetMetadata
    **/
   @Schema(description = "Metadata about the `timezoneOffset` property.")
@@ -3505,6 +3460,7 @@ public class UserSettingsInformation {
     this.timezoneOffsetMetadata = timezoneOffsetMetadata;
   }
 
+
   /**
    * timezoneSendingPref.
    *
@@ -3517,7 +3473,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneSendingPref
    **/
   @Schema(description = "")
@@ -3532,6 +3487,7 @@ public class UserSettingsInformation {
     this.timezoneSendingPref = timezoneSendingPref;
   }
 
+
   /**
    * timezoneSendingPrefMetadata.
    *
@@ -3544,7 +3500,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return timezoneSendingPrefMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -3559,6 +3514,7 @@ public class UserSettingsInformation {
     this.timezoneSendingPrefMetadata = timezoneSendingPrefMetadata;
   }
 
+
   /**
    * timezoneSigningPref.
    *
@@ -3571,7 +3527,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneSigningPref
    **/
   @Schema(description = "")
@@ -3586,6 +3541,7 @@ public class UserSettingsInformation {
     this.timezoneSigningPref = timezoneSigningPref;
   }
 
+
   /**
    * timezoneSigningPrefMetadata.
    *
@@ -3598,7 +3554,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return timezoneSigningPrefMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -3613,6 +3568,7 @@ public class UserSettingsInformation {
     this.timezoneSigningPrefMetadata = timezoneSigningPrefMetadata;
   }
 
+
   /**
    * transactionPointSiteNameURL.
    *
@@ -3625,7 +3581,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return transactionPointSiteNameURL
    **/
   @Schema(description = "")
@@ -3640,20 +3595,19 @@ public class UserSettingsInformation {
     this.transactionPointSiteNameURL = transactionPointSiteNameURL;
   }
 
+
   /**
    * transactionPointSiteNameURLMetadata.
    *
    * @return UserSettingsInformation
    **/
-  public UserSettingsInformation transactionPointSiteNameURLMetadata(
-      SettingsMetadata transactionPointSiteNameURLMetadata) {
+  public UserSettingsInformation transactionPointSiteNameURLMetadata(SettingsMetadata transactionPointSiteNameURLMetadata) {
     this.transactionPointSiteNameURLMetadata = transactionPointSiteNameURLMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return transactionPointSiteNameURLMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -3668,6 +3622,7 @@ public class UserSettingsInformation {
     this.transactionPointSiteNameURLMetadata = transactionPointSiteNameURLMetadata;
   }
 
+
   /**
    * transactionPointUserName.
    *
@@ -3680,7 +3635,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return transactionPointUserName
    **/
   @Schema(description = "")
@@ -3695,6 +3649,7 @@ public class UserSettingsInformation {
     this.transactionPointUserName = transactionPointUserName;
   }
 
+
   /**
    * transactionPointUserNameMetadata.
    *
@@ -3707,7 +3662,6 @@ public class UserSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return transactionPointUserNameMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -3722,6 +3676,7 @@ public class UserSettingsInformation {
     this.transactionPointUserNameMetadata = transactionPointUserNameMetadata;
   }
 
+
   /**
    * vaultingMode.
    *
@@ -3734,7 +3689,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return vaultingMode
    **/
   @Schema(description = "")
@@ -3749,6 +3703,7 @@ public class UserSettingsInformation {
     this.vaultingMode = vaultingMode;
   }
 
+
   /**
    * vaultingModeMetadata.
    *
@@ -3761,7 +3716,6 @@ public class UserSettingsInformation {
 
   /**
    * Metadata about the `vaultingMode` property..
-   * 
    * @return vaultingModeMetadata
    **/
   @Schema(description = "Metadata about the `vaultingMode` property.")
@@ -3776,6 +3730,7 @@ public class UserSettingsInformation {
     this.vaultingModeMetadata = vaultingModeMetadata;
   }
 
+
   /**
    * webForms.
    *
@@ -3788,7 +3743,6 @@ public class UserSettingsInformation {
 
   /**
    * .
-   * 
    * @return webForms
    **/
   @Schema(description = "")
@@ -3803,6 +3757,7 @@ public class UserSettingsInformation {
     this.webForms = webForms;
   }
 
+
   /**
    * webFormsMetadata.
    *
@@ -3814,8 +3769,7 @@ public class UserSettingsInformation {
   }
 
   /**
-   * Get webFormsMetadata.
-   * 
+   * .
    * @return webFormsMetadata
    **/
   @Schema(description = "")
@@ -3829,6 +3783,7 @@ public class UserSettingsInformation {
   public void setWebFormsMetadata(SettingsMetadata webFormsMetadata) {
     this.webFormsMetadata = webFormsMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3852,25 +3807,15 @@ public class UserSettingsInformation {
         Objects.equals(this.allowEnvelopeTransferToMetadata, userSettingsInformation.allowEnvelopeTransferToMetadata) &&
         Objects.equals(this.allowEsealRecipients, userSettingsInformation.allowEsealRecipients) &&
         Objects.equals(this.allowEsealRecipientsMetadata, userSettingsInformation.allowEsealRecipientsMetadata) &&
-        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelope,
-            userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelope)
-        &&
-        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata,
-            userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata)
-        &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelope, userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelope) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, userSettingsInformation.allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata) &&
         Objects.equals(this.allowRecipientLanguageSelection, userSettingsInformation.allowRecipientLanguageSelection) &&
-        Objects.equals(this.allowRecipientLanguageSelectionMetadata,
-            userSettingsInformation.allowRecipientLanguageSelectionMetadata)
-        &&
+        Objects.equals(this.allowRecipientLanguageSelectionMetadata, userSettingsInformation.allowRecipientLanguageSelectionMetadata) &&
         Objects.equals(this.allowSendOnBehalfOf, userSettingsInformation.allowSendOnBehalfOf) &&
         Objects.equals(this.allowSendOnBehalfOfMetadata, userSettingsInformation.allowSendOnBehalfOfMetadata) &&
         Objects.equals(this.allowSupplementalDocuments, userSettingsInformation.allowSupplementalDocuments) &&
-        Objects
-            .equals(this.allowSupplementalDocumentsMetadata, userSettingsInformation.allowSupplementalDocumentsMetadata)
-        &&
-        Objects.equals(this.anchorTagVersionedPlacementEnabled,
-            userSettingsInformation.anchorTagVersionedPlacementEnabled)
-        &&
+        Objects.equals(this.allowSupplementalDocumentsMetadata, userSettingsInformation.allowSupplementalDocumentsMetadata) &&
+        Objects.equals(this.anchorTagVersionedPlacementEnabled, userSettingsInformation.anchorTagVersionedPlacementEnabled) &&
         Objects.equals(this.apiAccountWideAccess, userSettingsInformation.apiAccountWideAccess) &&
         Objects.equals(this.apiAccountWideAccessMetadata, userSettingsInformation.apiAccountWideAccessMetadata) &&
         Objects.equals(this.apiCanExportAC, userSettingsInformation.apiCanExportAC) &&
@@ -3880,8 +3825,7 @@ public class UserSettingsInformation {
         Objects.equals(this.canChargeAccount, userSettingsInformation.canChargeAccount) &&
         Objects.equals(this.canChargeAccountMetadata, userSettingsInformation.canChargeAccountMetadata) &&
         Objects.equals(this.canEditSharedAddressbook, userSettingsInformation.canEditSharedAddressbook) &&
-        Objects.equals(this.canEditSharedAddressbookMetadata, userSettingsInformation.canEditSharedAddressbookMetadata)
-        &&
+        Objects.equals(this.canEditSharedAddressbookMetadata, userSettingsInformation.canEditSharedAddressbookMetadata) &&
         Objects.equals(this.canLockEnvelopes, userSettingsInformation.canLockEnvelopes) &&
         Objects.equals(this.canLockEnvelopesMetadata, userSettingsInformation.canLockEnvelopesMetadata) &&
         Objects.equals(this.canManageAccount, userSettingsInformation.canManageAccount) &&
@@ -3908,26 +3852,16 @@ public class UserSettingsInformation {
         Objects.equals(this.disableOtherActionsMetadata, userSettingsInformation.disableOtherActionsMetadata) &&
         Objects.equals(this.enableDSPro, userSettingsInformation.enableDSPro) &&
         Objects.equals(this.enableDSProMetadata, userSettingsInformation.enableDSProMetadata) &&
-        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType,
-            userSettingsInformation.enableKeyTermsSuggestionsByDocumentType)
-        &&
-        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata,
-            userSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata)
-        &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType, userSettingsInformation.enableKeyTermsSuggestionsByDocumentType) &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata, userSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata) &&
         Objects.equals(this.enableSequentialSigningAPI, userSettingsInformation.enableSequentialSigningAPI) &&
-        Objects.equals(this.enableSequentialSigningAPIMetadata,
-            userSettingsInformation.enableSequentialSigningAPIMetadata)
-        &&
+        Objects.equals(this.enableSequentialSigningAPIMetadata, userSettingsInformation.enableSequentialSigningAPIMetadata) &&
         Objects.equals(this.enableSequentialSigningUI, userSettingsInformation.enableSequentialSigningUI) &&
-        Objects.equals(this.enableSequentialSigningUIMetadata,
-            userSettingsInformation.enableSequentialSigningUIMetadata)
-        &&
+        Objects.equals(this.enableSequentialSigningUIMetadata, userSettingsInformation.enableSequentialSigningUIMetadata) &&
         Objects.equals(this.enableSignerAttachments, userSettingsInformation.enableSignerAttachments) &&
         Objects.equals(this.enableSignerAttachmentsMetadata, userSettingsInformation.enableSignerAttachmentsMetadata) &&
         Objects.equals(this.enableSignOnPaperOverride, userSettingsInformation.enableSignOnPaperOverride) &&
-        Objects.equals(this.enableSignOnPaperOverrideMetadata,
-            userSettingsInformation.enableSignOnPaperOverrideMetadata)
-        &&
+        Objects.equals(this.enableSignOnPaperOverrideMetadata, userSettingsInformation.enableSignOnPaperOverrideMetadata) &&
         Objects.equals(this.enableTransactionPoint, userSettingsInformation.enableTransactionPoint) &&
         Objects.equals(this.enableTransactionPointMetadata, userSettingsInformation.enableTransactionPointMetadata) &&
         Objects.equals(this.enableVaulting, userSettingsInformation.enableVaulting) &&
@@ -3949,32 +3883,19 @@ public class UserSettingsInformation {
         Objects.equals(this.powerFormMode, userSettingsInformation.powerFormMode) &&
         Objects.equals(this.powerFormModeMetadata, userSettingsInformation.powerFormModeMetadata) &&
         Objects.equals(this.recipientViewedNotification, userSettingsInformation.recipientViewedNotification) &&
-        Objects.equals(this.recipientViewedNotificationMetadata,
-            userSettingsInformation.recipientViewedNotificationMetadata)
-        &&
+        Objects.equals(this.recipientViewedNotificationMetadata, userSettingsInformation.recipientViewedNotificationMetadata) &&
         Objects.equals(this.sealIdentifiers, userSettingsInformation.sealIdentifiers) &&
-        Objects.equals(this.selfSignedRecipientEmailDocument, userSettingsInformation.selfSignedRecipientEmailDocument)
-        &&
-        Objects.equals(this.selfSignedRecipientEmailDocumentMetadata,
-            userSettingsInformation.selfSignedRecipientEmailDocumentMetadata)
-        &&
+        Objects.equals(this.selfSignedRecipientEmailDocument, userSettingsInformation.selfSignedRecipientEmailDocument) &&
+        Objects.equals(this.selfSignedRecipientEmailDocumentMetadata, userSettingsInformation.selfSignedRecipientEmailDocumentMetadata) &&
         Objects.equals(this.senderEmailNotifications, userSettingsInformation.senderEmailNotifications) &&
         Objects.equals(this.signerEmailNotifications, userSettingsInformation.signerEmailNotifications) &&
-        Objects.equals(this.supplementalDocumentIncludeInDownload,
-            userSettingsInformation.supplementalDocumentIncludeInDownload)
-        &&
+        Objects.equals(this.supplementalDocumentIncludeInDownload, userSettingsInformation.supplementalDocumentIncludeInDownload) &&
         Objects.equals(this.supplementalDocumentsMustAccept, userSettingsInformation.supplementalDocumentsMustAccept) &&
-        Objects.equals(this.supplementalDocumentsMustAcceptMetadata,
-            userSettingsInformation.supplementalDocumentsMustAcceptMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustAcceptMetadata, userSettingsInformation.supplementalDocumentsMustAcceptMetadata) &&
         Objects.equals(this.supplementalDocumentsMustRead, userSettingsInformation.supplementalDocumentsMustRead) &&
-        Objects.equals(this.supplementalDocumentsMustReadMetadata,
-            userSettingsInformation.supplementalDocumentsMustReadMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustReadMetadata, userSettingsInformation.supplementalDocumentsMustReadMetadata) &&
         Objects.equals(this.supplementalDocumentsMustView, userSettingsInformation.supplementalDocumentsMustView) &&
-        Objects.equals(this.supplementalDocumentsMustViewMetadata,
-            userSettingsInformation.supplementalDocumentsMustViewMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustViewMetadata, userSettingsInformation.supplementalDocumentsMustViewMetadata) &&
         Objects.equals(this.templateActiveCreation, userSettingsInformation.templateActiveCreation) &&
         Objects.equals(this.templateActiveCreationMetadata, userSettingsInformation.templateActiveCreationMetadata) &&
         Objects.equals(this.templateApplyNotify, userSettingsInformation.templateApplyNotify) &&
@@ -3982,13 +3903,9 @@ public class UserSettingsInformation {
         Objects.equals(this.templateAutoMatching, userSettingsInformation.templateAutoMatching) &&
         Objects.equals(this.templateAutoMatchingMetadata, userSettingsInformation.templateAutoMatchingMetadata) &&
         Objects.equals(this.templateMatchingSensitivity, userSettingsInformation.templateMatchingSensitivity) &&
-        Objects.equals(this.templateMatchingSensitivityMetadata,
-            userSettingsInformation.templateMatchingSensitivityMetadata)
-        &&
+        Objects.equals(this.templateMatchingSensitivityMetadata, userSettingsInformation.templateMatchingSensitivityMetadata) &&
         Objects.equals(this.templatePageLevelMatching, userSettingsInformation.templatePageLevelMatching) &&
-        Objects.equals(this.templatePageLevelMatchingMetadata,
-            userSettingsInformation.templatePageLevelMatchingMetadata)
-        &&
+        Objects.equals(this.templatePageLevelMatchingMetadata, userSettingsInformation.templatePageLevelMatchingMetadata) &&
         Objects.equals(this.timezoneDST, userSettingsInformation.timezoneDST) &&
         Objects.equals(this.timezoneDSTMetadata, userSettingsInformation.timezoneDSTMetadata) &&
         Objects.equals(this.timezoneMask, userSettingsInformation.timezoneMask) &&
@@ -4000,12 +3917,9 @@ public class UserSettingsInformation {
         Objects.equals(this.timezoneSigningPref, userSettingsInformation.timezoneSigningPref) &&
         Objects.equals(this.timezoneSigningPrefMetadata, userSettingsInformation.timezoneSigningPrefMetadata) &&
         Objects.equals(this.transactionPointSiteNameURL, userSettingsInformation.transactionPointSiteNameURL) &&
-        Objects.equals(this.transactionPointSiteNameURLMetadata,
-            userSettingsInformation.transactionPointSiteNameURLMetadata)
-        &&
+        Objects.equals(this.transactionPointSiteNameURLMetadata, userSettingsInformation.transactionPointSiteNameURLMetadata) &&
         Objects.equals(this.transactionPointUserName, userSettingsInformation.transactionPointUserName) &&
-        Objects.equals(this.transactionPointUserNameMetadata, userSettingsInformation.transactionPointUserNameMetadata)
-        &&
+        Objects.equals(this.transactionPointUserNameMetadata, userSettingsInformation.transactionPointUserNameMetadata) &&
         Objects.equals(this.vaultingMode, userSettingsInformation.vaultingMode) &&
         Objects.equals(this.vaultingModeMetadata, userSettingsInformation.vaultingModeMetadata) &&
         Objects.equals(this.webForms, userSettingsInformation.webForms) &&
@@ -4017,40 +3931,9 @@ public class UserSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging,
-        allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata,
-        allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata,
-        allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf,
-        allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata,
-        anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC,
-        apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata,
-        canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata,
-        canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata,
-        canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope,
-        canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope,
-        canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts,
-        canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions,
-        disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType,
-        enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata,
-        enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments,
-        enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata,
-        enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly,
-        locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy,
-        modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI,
-        newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification,
-        recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument,
-        selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications,
-        supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata,
-        supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView,
-        supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata,
-        templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata,
-        templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching,
-        templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata,
-        timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref,
-        timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata,
-        transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms,
-        webFormsMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -4059,31 +3942,24 @@ public class UserSettingsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSettingsInformation {\n");
-
+    
     sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
     sb.append("    allowEnvelopeTransferTo: ").append(toIndentedString(allowEnvelopeTransferTo)).append("\n");
-    sb.append("    allowEnvelopeTransferToMetadata: ").append(toIndentedString(allowEnvelopeTransferToMetadata))
-        .append("\n");
+    sb.append("    allowEnvelopeTransferToMetadata: ").append(toIndentedString(allowEnvelopeTransferToMetadata)).append("\n");
     sb.append("    allowEsealRecipients: ").append(toIndentedString(allowEsealRecipients)).append("\n");
     sb.append("    allowEsealRecipientsMetadata: ").append(toIndentedString(allowEsealRecipientsMetadata)).append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelope: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelope)).append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata)).append("\n");
-    sb.append("    allowRecipientLanguageSelection: ").append(toIndentedString(allowRecipientLanguageSelection))
-        .append("\n");
-    sb.append("    allowRecipientLanguageSelectionMetadata: ")
-        .append(toIndentedString(allowRecipientLanguageSelectionMetadata)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelope: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelope)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata)).append("\n");
+    sb.append("    allowRecipientLanguageSelection: ").append(toIndentedString(allowRecipientLanguageSelection)).append("\n");
+    sb.append("    allowRecipientLanguageSelectionMetadata: ").append(toIndentedString(allowRecipientLanguageSelectionMetadata)).append("\n");
     sb.append("    allowSendOnBehalfOf: ").append(toIndentedString(allowSendOnBehalfOf)).append("\n");
     sb.append("    allowSendOnBehalfOfMetadata: ").append(toIndentedString(allowSendOnBehalfOfMetadata)).append("\n");
     sb.append("    allowSupplementalDocuments: ").append(toIndentedString(allowSupplementalDocuments)).append("\n");
-    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata))
-        .append("\n");
-    sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled))
-        .append("\n");
+    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
+    sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled)).append("\n");
     sb.append("    apiAccountWideAccess: ").append(toIndentedString(apiAccountWideAccess)).append("\n");
     sb.append("    apiAccountWideAccessMetadata: ").append(toIndentedString(apiAccountWideAccessMetadata)).append("\n");
     sb.append("    apiCanExportAC: ").append(toIndentedString(apiCanExportAC)).append("\n");
@@ -4093,8 +3969,7 @@ public class UserSettingsInformation {
     sb.append("    canChargeAccount: ").append(toIndentedString(canChargeAccount)).append("\n");
     sb.append("    canChargeAccountMetadata: ").append(toIndentedString(canChargeAccountMetadata)).append("\n");
     sb.append("    canEditSharedAddressbook: ").append(toIndentedString(canEditSharedAddressbook)).append("\n");
-    sb.append("    canEditSharedAddressbookMetadata: ").append(toIndentedString(canEditSharedAddressbookMetadata))
-        .append("\n");
+    sb.append("    canEditSharedAddressbookMetadata: ").append(toIndentedString(canEditSharedAddressbookMetadata)).append("\n");
     sb.append("    canLockEnvelopes: ").append(toIndentedString(canLockEnvelopes)).append("\n");
     sb.append("    canLockEnvelopesMetadata: ").append(toIndentedString(canLockEnvelopesMetadata)).append("\n");
     sb.append("    canManageAccount: ").append(toIndentedString(canManageAccount)).append("\n");
@@ -4108,8 +3983,7 @@ public class UserSettingsInformation {
     sb.append("    canSendEnvelope: ").append(toIndentedString(canSendEnvelope)).append("\n");
     sb.append("    canSendEnvelopeMetadata: ").append(toIndentedString(canSendEnvelopeMetadata)).append("\n");
     sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
-    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata))
-        .append("\n");
+    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    canSignEnvelope: ").append(toIndentedString(canSignEnvelope)).append("\n");
     sb.append("    canSignEnvelopeMetadata: ").append(toIndentedString(canSignEnvelopeMetadata)).append("\n");
     sb.append("    canUseScratchpad: ").append(toIndentedString(canUseScratchpad)).append("\n");
@@ -4117,31 +3991,23 @@ public class UserSettingsInformation {
     sb.append("    canUseSmartContracts: ").append(toIndentedString(canUseSmartContracts)).append("\n");
     sb.append("    canUseSmartContractsMetadata: ").append(toIndentedString(canUseSmartContractsMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
-    sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata))
-        .append("\n");
+    sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata)).append("\n");
     sb.append("    disableOtherActions: ").append(toIndentedString(disableOtherActions)).append("\n");
     sb.append("    disableOtherActionsMetadata: ").append(toIndentedString(disableOtherActionsMetadata)).append("\n");
     sb.append("    enableDSPro: ").append(toIndentedString(enableDSPro)).append("\n");
     sb.append("    enableDSProMetadata: ").append(toIndentedString(enableDSProMetadata)).append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentType: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentType: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
     sb.append("    enableSequentialSigningAPI: ").append(toIndentedString(enableSequentialSigningAPI)).append("\n");
-    sb.append("    enableSequentialSigningAPIMetadata: ").append(toIndentedString(enableSequentialSigningAPIMetadata))
-        .append("\n");
+    sb.append("    enableSequentialSigningAPIMetadata: ").append(toIndentedString(enableSequentialSigningAPIMetadata)).append("\n");
     sb.append("    enableSequentialSigningUI: ").append(toIndentedString(enableSequentialSigningUI)).append("\n");
-    sb.append("    enableSequentialSigningUIMetadata: ").append(toIndentedString(enableSequentialSigningUIMetadata))
-        .append("\n");
+    sb.append("    enableSequentialSigningUIMetadata: ").append(toIndentedString(enableSequentialSigningUIMetadata)).append("\n");
     sb.append("    enableSignerAttachments: ").append(toIndentedString(enableSignerAttachments)).append("\n");
-    sb.append("    enableSignerAttachmentsMetadata: ").append(toIndentedString(enableSignerAttachmentsMetadata))
-        .append("\n");
+    sb.append("    enableSignerAttachmentsMetadata: ").append(toIndentedString(enableSignerAttachmentsMetadata)).append("\n");
     sb.append("    enableSignOnPaperOverride: ").append(toIndentedString(enableSignOnPaperOverride)).append("\n");
-    sb.append("    enableSignOnPaperOverrideMetadata: ").append(toIndentedString(enableSignOnPaperOverrideMetadata))
-        .append("\n");
+    sb.append("    enableSignOnPaperOverrideMetadata: ").append(toIndentedString(enableSignOnPaperOverrideMetadata)).append("\n");
     sb.append("    enableTransactionPoint: ").append(toIndentedString(enableTransactionPoint)).append("\n");
-    sb.append("    enableTransactionPointMetadata: ").append(toIndentedString(enableTransactionPointMetadata))
-        .append("\n");
+    sb.append("    enableTransactionPointMetadata: ").append(toIndentedString(enableTransactionPointMetadata)).append("\n");
     sb.append("    enableVaulting: ").append(toIndentedString(enableVaulting)).append("\n");
     sb.append("    enableVaultingMetadata: ").append(toIndentedString(enableVaultingMetadata)).append("\n");
     sb.append("    expressSendOnly: ").append(toIndentedString(expressSendOnly)).append("\n");
@@ -4161,42 +4027,29 @@ public class UserSettingsInformation {
     sb.append("    powerFormMode: ").append(toIndentedString(powerFormMode)).append("\n");
     sb.append("    powerFormModeMetadata: ").append(toIndentedString(powerFormModeMetadata)).append("\n");
     sb.append("    recipientViewedNotification: ").append(toIndentedString(recipientViewedNotification)).append("\n");
-    sb.append("    recipientViewedNotificationMetadata: ").append(toIndentedString(recipientViewedNotificationMetadata))
-        .append("\n");
+    sb.append("    recipientViewedNotificationMetadata: ").append(toIndentedString(recipientViewedNotificationMetadata)).append("\n");
     sb.append("    sealIdentifiers: ").append(toIndentedString(sealIdentifiers)).append("\n");
-    sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument))
-        .append("\n");
-    sb.append("    selfSignedRecipientEmailDocumentMetadata: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocumentMetadata: ").append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");
     sb.append("    senderEmailNotifications: ").append(toIndentedString(senderEmailNotifications)).append("\n");
     sb.append("    signerEmailNotifications: ").append(toIndentedString(signerEmailNotifications)).append("\n");
-    sb.append("    supplementalDocumentIncludeInDownload: ")
-        .append(toIndentedString(supplementalDocumentIncludeInDownload)).append("\n");
-    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAcceptMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustReadMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustViewMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
+    sb.append("    supplementalDocumentIncludeInDownload: ").append(toIndentedString(supplementalDocumentIncludeInDownload)).append("\n");
+    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept)).append("\n");
+    sb.append("    supplementalDocumentsMustAcceptMetadata: ").append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead)).append("\n");
+    sb.append("    supplementalDocumentsMustReadMetadata: ").append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView)).append("\n");
+    sb.append("    supplementalDocumentsMustViewMetadata: ").append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
     sb.append("    templateActiveCreation: ").append(toIndentedString(templateActiveCreation)).append("\n");
-    sb.append("    templateActiveCreationMetadata: ").append(toIndentedString(templateActiveCreationMetadata))
-        .append("\n");
+    sb.append("    templateActiveCreationMetadata: ").append(toIndentedString(templateActiveCreationMetadata)).append("\n");
     sb.append("    templateApplyNotify: ").append(toIndentedString(templateApplyNotify)).append("\n");
     sb.append("    templateApplyNotifyMetadata: ").append(toIndentedString(templateApplyNotifyMetadata)).append("\n");
     sb.append("    templateAutoMatching: ").append(toIndentedString(templateAutoMatching)).append("\n");
     sb.append("    templateAutoMatchingMetadata: ").append(toIndentedString(templateAutoMatchingMetadata)).append("\n");
     sb.append("    templateMatchingSensitivity: ").append(toIndentedString(templateMatchingSensitivity)).append("\n");
-    sb.append("    templateMatchingSensitivityMetadata: ").append(toIndentedString(templateMatchingSensitivityMetadata))
-        .append("\n");
+    sb.append("    templateMatchingSensitivityMetadata: ").append(toIndentedString(templateMatchingSensitivityMetadata)).append("\n");
     sb.append("    templatePageLevelMatching: ").append(toIndentedString(templatePageLevelMatching)).append("\n");
-    sb.append("    templatePageLevelMatchingMetadata: ").append(toIndentedString(templatePageLevelMatchingMetadata))
-        .append("\n");
+    sb.append("    templatePageLevelMatchingMetadata: ").append(toIndentedString(templatePageLevelMatchingMetadata)).append("\n");
     sb.append("    timezoneDST: ").append(toIndentedString(timezoneDST)).append("\n");
     sb.append("    timezoneDSTMetadata: ").append(toIndentedString(timezoneDSTMetadata)).append("\n");
     sb.append("    timezoneMask: ").append(toIndentedString(timezoneMask)).append("\n");
@@ -4208,11 +4061,9 @@ public class UserSettingsInformation {
     sb.append("    timezoneSigningPref: ").append(toIndentedString(timezoneSigningPref)).append("\n");
     sb.append("    timezoneSigningPrefMetadata: ").append(toIndentedString(timezoneSigningPrefMetadata)).append("\n");
     sb.append("    transactionPointSiteNameURL: ").append(toIndentedString(transactionPointSiteNameURL)).append("\n");
-    sb.append("    transactionPointSiteNameURLMetadata: ").append(toIndentedString(transactionPointSiteNameURLMetadata))
-        .append("\n");
+    sb.append("    transactionPointSiteNameURLMetadata: ").append(toIndentedString(transactionPointSiteNameURLMetadata)).append("\n");
     sb.append("    transactionPointUserName: ").append(toIndentedString(transactionPointUserName)).append("\n");
-    sb.append("    transactionPointUserNameMetadata: ").append(toIndentedString(transactionPointUserNameMetadata))
-        .append("\n");
+    sb.append("    transactionPointUserNameMetadata: ").append(toIndentedString(transactionPointUserNameMetadata)).append("\n");
     sb.append("    vaultingMode: ").append(toIndentedString(vaultingMode)).append("\n");
     sb.append("    vaultingModeMetadata: ").append(toIndentedString(vaultingModeMetadata)).append("\n");
     sb.append("    webForms: ").append(toIndentedString(webForms)).append("\n");
@@ -4233,3 +4084,4 @@ public class UserSettingsInformation {
   }
 
 }
+

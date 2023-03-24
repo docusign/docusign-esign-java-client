@@ -36,6 +36,7 @@ public class UsersResponse {
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
 
+
   /**
    * endPosition.
    *
@@ -48,7 +49,6 @@ public class UsersResponse {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -63,6 +63,7 @@ public class UsersResponse {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -74,9 +75,7 @@ public class UsersResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -91,6 +90,7 @@ public class UsersResponse {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -103,7 +103,6 @@ public class UsersResponse {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -118,6 +117,7 @@ public class UsersResponse {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -130,7 +130,6 @@ public class UsersResponse {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -145,6 +144,7 @@ public class UsersResponse {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -157,7 +157,6 @@ public class UsersResponse {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -172,6 +171,7 @@ public class UsersResponse {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -183,10 +183,7 @@ public class UsersResponse {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -201,6 +198,7 @@ public class UsersResponse {
     this.totalSetSize = totalSetSize;
   }
 
+
   /**
    * users.
    *
@@ -210,7 +208,7 @@ public class UsersResponse {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -226,7 +224,6 @@ public class UsersResponse {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -240,6 +237,7 @@ public class UsersResponse {
   public void setUsers(java.util.List<UserInfo> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -272,6 +270,7 @@ public class UsersResponse {
     return Objects.hash(endPosition, nextUri, previousUri, resultSetSize, startPosition, totalSetSize, users);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -279,7 +278,7 @@ public class UsersResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsersResponse {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
@@ -303,3 +302,4 @@ public class UsersResponse {
   }
 
 }
+

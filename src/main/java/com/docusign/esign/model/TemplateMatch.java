@@ -23,6 +23,7 @@ public class TemplateMatch {
   @JsonProperty("matchPercentage")
   private String matchPercentage = null;
 
+
   /**
    * documentEndPage.
    *
@@ -35,7 +36,6 @@ public class TemplateMatch {
 
   /**
    * .
-   * 
    * @return documentEndPage
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class TemplateMatch {
     this.documentEndPage = documentEndPage;
   }
 
+
   /**
    * documentStartPage.
    *
@@ -62,7 +63,6 @@ public class TemplateMatch {
 
   /**
    * .
-   * 
    * @return documentStartPage
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class TemplateMatch {
     this.documentStartPage = documentStartPage;
   }
 
+
   /**
    * matchPercentage.
    *
@@ -89,7 +90,6 @@ public class TemplateMatch {
 
   /**
    * .
-   * 
    * @return matchPercentage
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class TemplateMatch {
   public void setMatchPercentage(String matchPercentage) {
     this.matchPercentage = matchPercentage;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class TemplateMatch {
     return Objects.hash(documentEndPage, documentStartPage, matchPercentage);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class TemplateMatch {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateMatch {\n");
-
+    
     sb.append("    documentEndPage: ").append(toIndentedString(documentEndPage)).append("\n");
     sb.append("    documentStartPage: ").append(toIndentedString(documentStartPage)).append("\n");
     sb.append("    matchPercentage: ").append(toIndentedString(matchPercentage)).append("\n");
@@ -158,3 +160,4 @@ public class TemplateMatch {
   }
 
 }
+

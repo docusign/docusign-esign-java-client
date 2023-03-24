@@ -23,6 +23,7 @@ public class DowngradeRequestInformation {
   @JsonProperty("downgradeRequestStatus")
   private String downgradeRequestStatus = null;
 
+
   /**
    * downgradeRequestCreation.
    *
@@ -35,7 +36,6 @@ public class DowngradeRequestInformation {
 
   /**
    * .
-   * 
    * @return downgradeRequestCreation
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class DowngradeRequestInformation {
     this.downgradeRequestCreation = downgradeRequestCreation;
   }
 
+
   /**
    * downgradeRequestProductId.
    *
@@ -62,7 +63,6 @@ public class DowngradeRequestInformation {
 
   /**
    * .
-   * 
    * @return downgradeRequestProductId
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class DowngradeRequestInformation {
     this.downgradeRequestProductId = downgradeRequestProductId;
   }
 
+
   /**
    * downgradeRequestStatus.
    *
@@ -89,7 +90,6 @@ public class DowngradeRequestInformation {
 
   /**
    * .
-   * 
    * @return downgradeRequestStatus
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class DowngradeRequestInformation {
   public void setDowngradeRequestStatus(String downgradeRequestStatus) {
     this.downgradeRequestStatus = downgradeRequestStatus;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class DowngradeRequestInformation {
     return Objects.hash(downgradeRequestCreation, downgradeRequestProductId, downgradeRequestStatus);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class DowngradeRequestInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DowngradeRequestInformation {\n");
-
+    
     sb.append("    downgradeRequestCreation: ").append(toIndentedString(downgradeRequestCreation)).append("\n");
     sb.append("    downgradeRequestProductId: ").append(toIndentedString(downgradeRequestProductId)).append("\n");
     sb.append("    downgradeRequestStatus: ").append(toIndentedString(downgradeRequestStatus)).append("\n");
@@ -158,3 +160,4 @@ public class DowngradeRequestInformation {
   }
 
 }
+

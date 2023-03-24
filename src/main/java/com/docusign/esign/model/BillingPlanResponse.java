@@ -22,6 +22,7 @@ public class BillingPlanResponse {
   @JsonProperty("successorPlans")
   private java.util.List<BillingPlan> successorPlans = null;
 
+
   /**
    * billingPlan.
    *
@@ -34,7 +35,6 @@ public class BillingPlanResponse {
 
   /**
    * An object that contains details about the billing plan..
-   * 
    * @return billingPlan
    **/
   @Schema(description = "An object that contains details about the billing plan.")
@@ -49,6 +49,7 @@ public class BillingPlanResponse {
     this.billingPlan = billingPlan;
   }
 
+
   /**
    * successorPlans.
    *
@@ -58,7 +59,7 @@ public class BillingPlanResponse {
     this.successorPlans = successorPlans;
     return this;
   }
-
+  
   /**
    * addSuccessorPlansItem.
    *
@@ -74,7 +75,6 @@ public class BillingPlanResponse {
 
   /**
    * .
-   * 
    * @return successorPlans
    **/
   @Schema(description = "")
@@ -88,6 +88,7 @@ public class BillingPlanResponse {
   public void setSuccessorPlans(java.util.List<BillingPlan> successorPlans) {
     this.successorPlans = successorPlans;
   }
+
 
   /**
    * Compares objects.
@@ -115,6 +116,7 @@ public class BillingPlanResponse {
     return Objects.hash(billingPlan, successorPlans);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -122,7 +124,7 @@ public class BillingPlanResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPlanResponse {\n");
-
+    
     sb.append("    billingPlan: ").append(toIndentedString(billingPlan)).append("\n");
     sb.append("    successorPlans: ").append(toIndentedString(successorPlans)).append("\n");
     sb.append("}");
@@ -141,3 +143,4 @@ public class BillingPlanResponse {
   }
 
 }
+

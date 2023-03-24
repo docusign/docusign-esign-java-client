@@ -33,6 +33,7 @@ public class OfflineAttributes {
   @JsonProperty("offlineSigningHash")
   private String offlineSigningHash = null;
 
+
   /**
    * accountEsignId.
    *
@@ -45,7 +46,6 @@ public class OfflineAttributes {
 
   /**
    * A GUID identifying the account associated with the consumer disclosure.
-   * 
    * @return accountEsignId
    **/
   @Schema(description = "A GUID identifying the account associated with the consumer disclosure")
@@ -60,6 +60,7 @@ public class OfflineAttributes {
     this.accountEsignId = accountEsignId;
   }
 
+
   /**
    * deviceModel.
    *
@@ -71,9 +72,7 @@ public class OfflineAttributes {
   }
 
   /**
-   * A string containing information about the model of the device used for
-   * offline signing..
-   * 
+   * A string containing information about the model of the device used for offline signing..
    * @return deviceModel
    **/
   @Schema(description = "A string containing information about the model of the device used for offline signing.")
@@ -88,6 +87,7 @@ public class OfflineAttributes {
     this.deviceModel = deviceModel;
   }
 
+
   /**
    * deviceName.
    *
@@ -99,9 +99,7 @@ public class OfflineAttributes {
   }
 
   /**
-   * A string containing information about the type of device used for offline
-   * signing..
-   * 
+   * A string containing information about the type of device used for offline signing..
    * @return deviceName
    **/
   @Schema(description = "A string containing information about the type of device used for offline signing.")
@@ -116,6 +114,7 @@ public class OfflineAttributes {
     this.deviceName = deviceName;
   }
 
+
   /**
    * gpsLatitude.
    *
@@ -127,9 +126,7 @@ public class OfflineAttributes {
   }
 
   /**
-   * A string containing the latitude of the device location at the time of
-   * signing..
-   * 
+   * A string containing the latitude of the device location at the time of signing..
    * @return gpsLatitude
    **/
   @Schema(description = "A string containing the latitude of the device location at the time of signing.")
@@ -144,6 +141,7 @@ public class OfflineAttributes {
     this.gpsLatitude = gpsLatitude;
   }
 
+
   /**
    * gpsLongitude.
    *
@@ -155,9 +153,7 @@ public class OfflineAttributes {
   }
 
   /**
-   * A string containing the longitude of the device location at the time of
-   * signing..
-   * 
+   * A string containing the longitude of the device location at the time of signing..
    * @return gpsLongitude
    **/
   @Schema(description = "A string containing the longitude of the device location at the time of signing.")
@@ -172,6 +168,7 @@ public class OfflineAttributes {
     this.gpsLongitude = gpsLongitude;
   }
 
+
   /**
    * offlineSigningHash.
    *
@@ -184,7 +181,6 @@ public class OfflineAttributes {
 
   /**
    * .
-   * 
    * @return offlineSigningHash
    **/
   @Schema(description = "")
@@ -198,6 +194,7 @@ public class OfflineAttributes {
   public void setOfflineSigningHash(String offlineSigningHash) {
     this.offlineSigningHash = offlineSigningHash;
   }
+
 
   /**
    * Compares objects.
@@ -229,6 +226,7 @@ public class OfflineAttributes {
     return Objects.hash(accountEsignId, deviceModel, deviceName, gpsLatitude, gpsLongitude, offlineSigningHash);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -236,7 +234,7 @@ public class OfflineAttributes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class OfflineAttributes {\n");
-
+    
     sb.append("    accountEsignId: ").append(toIndentedString(accountEsignId)).append("\n");
     sb.append("    deviceModel: ").append(toIndentedString(deviceModel)).append("\n");
     sb.append("    deviceName: ").append(toIndentedString(deviceName)).append("\n");
@@ -259,3 +257,4 @@ public class OfflineAttributes {
   }
 
 }
+

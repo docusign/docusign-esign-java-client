@@ -23,6 +23,7 @@ public class DiagnosticsSettingsInformation {
   @JsonProperty("apiRequestLogRemainingEntries")
   private String apiRequestLogRemainingEntries = null;
 
+
   /**
    * apiRequestLogging.
    *
@@ -34,8 +35,7 @@ public class DiagnosticsSettingsInformation {
   }
 
   /**
-   * When set to **true**, enables API request logging for the user. .
-   * 
+   *  When set to **true**, enables API request logging for the user. .
    * @return apiRequestLogging
    **/
   @Schema(description = " When set to **true**, enables API request logging for the user. ")
@@ -50,6 +50,7 @@ public class DiagnosticsSettingsInformation {
     this.apiRequestLogging = apiRequestLogging;
   }
 
+
   /**
    * apiRequestLogMaxEntries.
    *
@@ -62,7 +63,6 @@ public class DiagnosticsSettingsInformation {
 
   /**
    * Specifies the maximum number of API requests to log..
-   * 
    * @return apiRequestLogMaxEntries
    **/
   @Schema(description = "Specifies the maximum number of API requests to log.")
@@ -77,6 +77,7 @@ public class DiagnosticsSettingsInformation {
     this.apiRequestLogMaxEntries = apiRequestLogMaxEntries;
   }
 
+
   /**
    * apiRequestLogRemainingEntries.
    *
@@ -89,7 +90,6 @@ public class DiagnosticsSettingsInformation {
 
   /**
    * Indicates the remaining number of API requests that can be logged..
-   * 
    * @return apiRequestLogRemainingEntries
    **/
   @Schema(description = "Indicates the remaining number of API requests that can be logged.")
@@ -103,6 +103,7 @@ public class DiagnosticsSettingsInformation {
   public void setApiRequestLogRemainingEntries(String apiRequestLogRemainingEntries) {
     this.apiRequestLogRemainingEntries = apiRequestLogRemainingEntries;
   }
+
 
   /**
    * Compares objects.
@@ -120,8 +121,7 @@ public class DiagnosticsSettingsInformation {
     DiagnosticsSettingsInformation diagnosticsSettingsInformation = (DiagnosticsSettingsInformation) o;
     return Objects.equals(this.apiRequestLogging, diagnosticsSettingsInformation.apiRequestLogging) &&
         Objects.equals(this.apiRequestLogMaxEntries, diagnosticsSettingsInformation.apiRequestLogMaxEntries) &&
-        Objects.equals(this.apiRequestLogRemainingEntries,
-            diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
+        Objects.equals(this.apiRequestLogRemainingEntries, diagnosticsSettingsInformation.apiRequestLogRemainingEntries);
   }
 
   /**
@@ -132,6 +132,7 @@ public class DiagnosticsSettingsInformation {
     return Objects.hash(apiRequestLogging, apiRequestLogMaxEntries, apiRequestLogRemainingEntries);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,11 +140,10 @@ public class DiagnosticsSettingsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DiagnosticsSettingsInformation {\n");
-
+    
     sb.append("    apiRequestLogging: ").append(toIndentedString(apiRequestLogging)).append("\n");
     sb.append("    apiRequestLogMaxEntries: ").append(toIndentedString(apiRequestLogMaxEntries)).append("\n");
-    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries))
-        .append("\n");
+    sb.append("    apiRequestLogRemainingEntries: ").append(toIndentedString(apiRequestLogRemainingEntries)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -160,3 +160,4 @@ public class DiagnosticsSettingsInformation {
   }
 
 }
+

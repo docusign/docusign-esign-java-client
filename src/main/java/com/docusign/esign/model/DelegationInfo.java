@@ -14,17 +14,18 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 
 public class DelegationInfo {
-  @JsonProperty("email")
+  @JsonProperty("Email")
   private String email = null;
 
-  @JsonProperty("name")
+  @JsonProperty("Name")
   private String name = null;
 
-  @JsonProperty("userAuthorizationId")
+  @JsonProperty("UserAuthorizationId")
   private String userAuthorizationId = null;
 
-  @JsonProperty("userId")
+  @JsonProperty("UserId")
   private String userId = null;
+
 
   /**
    * email.
@@ -38,7 +39,6 @@ public class DelegationInfo {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class DelegationInfo {
     this.email = email;
   }
 
+
   /**
    * name.
    *
@@ -65,7 +66,6 @@ public class DelegationInfo {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class DelegationInfo {
     this.name = name;
   }
 
+
   /**
    * userAuthorizationId.
    *
@@ -92,7 +93,6 @@ public class DelegationInfo {
 
   /**
    * .
-   * 
    * @return userAuthorizationId
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class DelegationInfo {
     this.userAuthorizationId = userAuthorizationId;
   }
 
+
   /**
    * userId.
    *
@@ -119,7 +120,6 @@ public class DelegationInfo {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class DelegationInfo {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class DelegationInfo {
     return Objects.hash(email, name, userAuthorizationId, userId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class DelegationInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DelegationInfo {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    userAuthorizationId: ").append(toIndentedString(userAuthorizationId)).append("\n");
@@ -190,3 +192,4 @@ public class DelegationInfo {
   }
 
 }
+

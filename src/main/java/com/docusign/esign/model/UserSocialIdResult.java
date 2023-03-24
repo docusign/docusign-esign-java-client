@@ -21,17 +21,17 @@ public class UserSocialIdResult {
   @JsonProperty("userId")
   private String userId = null;
 
+
   /**
    * socialAccountInformation.
    *
    * @return UserSocialIdResult
    **/
-  public UserSocialIdResult socialAccountInformation(
-      java.util.List<SocialAccountInformation> socialAccountInformation) {
+  public UserSocialIdResult socialAccountInformation(java.util.List<SocialAccountInformation> socialAccountInformation) {
     this.socialAccountInformation = socialAccountInformation;
     return this;
   }
-
+  
   /**
    * addSocialAccountInformationItem.
    *
@@ -46,9 +46,7 @@ public class UserSocialIdResult {
   }
 
   /**
-   * Contains properties that map a DocuSign user to a social account (Facebook,
-   * Yahoo, etc.).
-   * 
+   * Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.).
    * @return socialAccountInformation
    **/
   @Schema(description = "Contains properties that map a DocuSign user to a social account (Facebook, Yahoo, etc.)")
@@ -63,6 +61,7 @@ public class UserSocialIdResult {
     this.socialAccountInformation = socialAccountInformation;
   }
 
+
   /**
    * userId.
    *
@@ -75,7 +74,6 @@ public class UserSocialIdResult {
 
   /**
    * .
-   * 
    * @return userId
    **/
   @Schema(description = "")
@@ -89,6 +87,7 @@ public class UserSocialIdResult {
   public void setUserId(String userId) {
     this.userId = userId;
   }
+
 
   /**
    * Compares objects.
@@ -116,6 +115,7 @@ public class UserSocialIdResult {
     return Objects.hash(socialAccountInformation, userId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -123,7 +123,7 @@ public class UserSocialIdResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSocialIdResult {\n");
-
+    
     sb.append("    socialAccountInformation: ").append(toIndentedString(socialAccountInformation)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
@@ -142,3 +142,4 @@ public class UserSocialIdResult {
   }
 
 }
+

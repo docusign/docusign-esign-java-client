@@ -40,6 +40,7 @@ public class WorkspaceFolderContents {
   @JsonProperty("workspaceId")
   private String workspaceId = null;
 
+
   /**
    * endPosition.
    *
@@ -52,7 +53,6 @@ public class WorkspaceFolderContents {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -67,6 +67,7 @@ public class WorkspaceFolderContents {
     this.endPosition = endPosition;
   }
 
+
   /**
    * folder.
    *
@@ -78,9 +79,7 @@ public class WorkspaceFolderContents {
   }
 
   /**
-   * The folder from which to return items. You can enter either the folder name
-   * or folder ID..
-   * 
+   * The folder from which to return items. You can enter either the folder name or folder ID..
    * @return folder
    **/
   @Schema(description = "The folder from which to return items. You can enter either the folder name or folder ID.")
@@ -95,6 +94,7 @@ public class WorkspaceFolderContents {
     this.folder = folder;
   }
 
+
   /**
    * items.
    *
@@ -104,7 +104,7 @@ public class WorkspaceFolderContents {
     this.items = items;
     return this;
   }
-
+  
   /**
    * addItemsItem.
    *
@@ -120,7 +120,6 @@ public class WorkspaceFolderContents {
 
   /**
    * .
-   * 
    * @return items
    **/
   @Schema(description = "")
@@ -135,6 +134,7 @@ public class WorkspaceFolderContents {
     this.items = items;
   }
 
+
   /**
    * parentFolders.
    *
@@ -144,7 +144,7 @@ public class WorkspaceFolderContents {
     this.parentFolders = parentFolders;
     return this;
   }
-
+  
   /**
    * addParentFoldersItem.
    *
@@ -160,7 +160,6 @@ public class WorkspaceFolderContents {
 
   /**
    * .
-   * 
    * @return parentFolders
    **/
   @Schema(description = "")
@@ -175,6 +174,7 @@ public class WorkspaceFolderContents {
     this.parentFolders = parentFolders;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -187,7 +187,6 @@ public class WorkspaceFolderContents {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -202,6 +201,7 @@ public class WorkspaceFolderContents {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -214,7 +214,6 @@ public class WorkspaceFolderContents {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -229,6 +228,7 @@ public class WorkspaceFolderContents {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -240,10 +240,7 @@ public class WorkspaceFolderContents {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -258,6 +255,7 @@ public class WorkspaceFolderContents {
     this.totalSetSize = totalSetSize;
   }
 
+
   /**
    * workspaceId.
    *
@@ -270,7 +268,6 @@ public class WorkspaceFolderContents {
 
   /**
    * The id of the workspace, always populated..
-   * 
    * @return workspaceId
    **/
   @Schema(description = "The id of the workspace, always populated.")
@@ -284,6 +281,7 @@ public class WorkspaceFolderContents {
   public void setWorkspaceId(String workspaceId) {
     this.workspaceId = workspaceId;
   }
+
 
   /**
    * Compares objects.
@@ -314,9 +312,9 @@ public class WorkspaceFolderContents {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, folder, items, parentFolders, resultSetSize, startPosition, totalSetSize,
-        workspaceId);
+    return Objects.hash(endPosition, folder, items, parentFolders, resultSetSize, startPosition, totalSetSize, workspaceId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -325,7 +323,7 @@ public class WorkspaceFolderContents {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class WorkspaceFolderContents {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    folder: ").append(toIndentedString(folder)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
@@ -350,3 +348,4 @@ public class WorkspaceFolderContents {
   }
 
 }
+

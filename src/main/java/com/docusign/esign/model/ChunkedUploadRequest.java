@@ -21,6 +21,7 @@ public class ChunkedUploadRequest {
   @JsonProperty("data")
   private String data = null;
 
+
   /**
    * chunkedUploadId.
    *
@@ -33,7 +34,6 @@ public class ChunkedUploadRequest {
 
   /**
    * .
-   * 
    * @return chunkedUploadId
    **/
   @Schema(description = "")
@@ -48,6 +48,7 @@ public class ChunkedUploadRequest {
     this.chunkedUploadId = chunkedUploadId;
   }
 
+
   /**
    * data.
    *
@@ -60,7 +61,6 @@ public class ChunkedUploadRequest {
 
   /**
    * .
-   * 
    * @return data
    **/
   @Schema(description = "")
@@ -74,6 +74,7 @@ public class ChunkedUploadRequest {
   public void setData(String data) {
     this.data = data;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class ChunkedUploadRequest {
     return Objects.hash(chunkedUploadId, data);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class ChunkedUploadRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ChunkedUploadRequest {\n");
-
+    
     sb.append("    chunkedUploadId: ").append(toIndentedString(chunkedUploadId)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class ChunkedUploadRequest {
   }
 
 }
+

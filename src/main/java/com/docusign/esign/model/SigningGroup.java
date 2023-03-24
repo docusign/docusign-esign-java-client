@@ -11,10 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains details about a signing group. Signing groups enable you to send an
- * envelope to a predefined group of recipients and have any one member of the
- * group sign your documents. When you send an envelope to a signing group,
- * anyone in the group can open it and sign it with their own signature..
+ * Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature..
  *
  */
 @Schema(description = "Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature.")
@@ -50,6 +47,7 @@ public class SigningGroup {
   @JsonProperty("users")
   private java.util.List<SigningGroupUser> users = null;
 
+
   /**
    * created.
    *
@@ -62,7 +60,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return created
    **/
   @Schema(description = "")
@@ -77,6 +74,7 @@ public class SigningGroup {
     this.created = created;
   }
 
+
   /**
    * createdBy.
    *
@@ -89,7 +87,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return createdBy
    **/
   @Schema(description = "")
@@ -104,6 +101,7 @@ public class SigningGroup {
     this.createdBy = createdBy;
   }
 
+
   /**
    * errorDetails.
    *
@@ -115,12 +113,10 @@ public class SigningGroup {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -131,6 +127,7 @@ public class SigningGroup {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * groupEmail.
@@ -144,7 +141,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return groupEmail
    **/
   @Schema(description = "")
@@ -159,6 +155,7 @@ public class SigningGroup {
     this.groupEmail = groupEmail;
   }
 
+
   /**
    * groupName.
    *
@@ -171,7 +168,6 @@ public class SigningGroup {
 
   /**
    * The name of the group..
-   * 
    * @return groupName
    **/
   @Schema(description = "The name of the group.")
@@ -186,6 +182,7 @@ public class SigningGroup {
     this.groupName = groupName;
   }
 
+
   /**
    * groupType.
    *
@@ -198,7 +195,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return groupType
    **/
   @Schema(description = "")
@@ -213,6 +209,7 @@ public class SigningGroup {
     this.groupType = groupType;
   }
 
+
   /**
    * modified.
    *
@@ -225,7 +222,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return modified
    **/
   @Schema(description = "")
@@ -240,6 +236,7 @@ public class SigningGroup {
     this.modified = modified;
   }
 
+
   /**
    * modifiedBy.
    *
@@ -252,7 +249,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return modifiedBy
    **/
   @Schema(description = "")
@@ -267,6 +263,7 @@ public class SigningGroup {
     this.modifiedBy = modifiedBy;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -278,11 +275,7 @@ public class SigningGroup {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -297,6 +290,7 @@ public class SigningGroup {
     this.signingGroupId = signingGroupId;
   }
 
+
   /**
    * users.
    *
@@ -306,7 +300,7 @@ public class SigningGroup {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -322,7 +316,6 @@ public class SigningGroup {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -336,6 +329,7 @@ public class SigningGroup {
   public void setUsers(java.util.List<SigningGroupUser> users) {
     this.users = users;
   }
+
 
   /**
    * Compares objects.
@@ -368,9 +362,9 @@ public class SigningGroup {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(created, createdBy, errorDetails, groupEmail, groupName, groupType, modified, modifiedBy,
-        signingGroupId, users);
+    return Objects.hash(created, createdBy, errorDetails, groupEmail, groupName, groupType, modified, modifiedBy, signingGroupId, users);
   }
+
 
   /**
    * Converts the given object to string.
@@ -379,7 +373,7 @@ public class SigningGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroup {\n");
-
+    
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -406,3 +400,4 @@ public class SigningGroup {
   }
 
 }
+

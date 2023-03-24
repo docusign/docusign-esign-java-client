@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request object for the [EnvelopeViews:
- * createConsole](/docs/esign-rest-api/reference/envelopes/envelopeviews/createconsole/)
- * method..
+ * The request object for the [EnvelopeViews: createConsole](/docs/esign-rest-api/reference/envelopes/envelopeviews/createconsole/) method..
  *
  */
 @Schema(description = "The request object for the [EnvelopeViews: createConsole](/docs/esign-rest-api/reference/envelopes/envelopeviews/createconsole/) method.")
@@ -22,6 +20,7 @@ public class ConsoleViewRequest {
 
   @JsonProperty("returnUrl")
   private String returnUrl = null;
+
 
   /**
    * envelopeId.
@@ -35,7 +34,6 @@ public class ConsoleViewRequest {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -50,6 +48,7 @@ public class ConsoleViewRequest {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * returnUrl.
    *
@@ -62,7 +61,6 @@ public class ConsoleViewRequest {
 
   /**
    * The URL to be redirected to after the console view session has ended..
-   * 
    * @return returnUrl
    **/
   @Schema(description = "The URL to be redirected to after the console view session has ended.")
@@ -76,6 +74,7 @@ public class ConsoleViewRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
+
 
   /**
    * Compares objects.
@@ -103,6 +102,7 @@ public class ConsoleViewRequest {
     return Objects.hash(envelopeId, returnUrl);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -110,7 +110,7 @@ public class ConsoleViewRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsoleViewRequest {\n");
-
+    
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
@@ -129,3 +129,4 @@ public class ConsoleViewRequest {
   }
 
 }
+

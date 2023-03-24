@@ -18,17 +18,17 @@ public class DocumentHtmlDefinitionOriginals {
   @JsonProperty("htmlDefinitions")
   private java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions = null;
 
+
   /**
    * htmlDefinitions.
    *
    * @return DocumentHtmlDefinitionOriginals
    **/
-  public DocumentHtmlDefinitionOriginals htmlDefinitions(
-      java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
+  public DocumentHtmlDefinitionOriginals htmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
     return this;
   }
-
+  
   /**
    * addHtmlDefinitionsItem.
    *
@@ -44,7 +44,6 @@ public class DocumentHtmlDefinitionOriginals {
 
   /**
    * .
-   * 
    * @return htmlDefinitions
    **/
   @Schema(description = "")
@@ -58,6 +57,7 @@ public class DocumentHtmlDefinitionOriginals {
   public void setHtmlDefinitions(java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions) {
     this.htmlDefinitions = htmlDefinitions;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +84,7 @@ public class DocumentHtmlDefinitionOriginals {
     return Objects.hash(htmlDefinitions);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +92,7 @@ public class DocumentHtmlDefinitionOriginals {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinitionOriginals {\n");
-
+    
     sb.append("    htmlDefinitions: ").append(toIndentedString(htmlDefinitions)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +110,4 @@ public class DocumentHtmlDefinitionOriginals {
   }
 
 }
+

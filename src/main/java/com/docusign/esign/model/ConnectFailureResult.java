@@ -30,6 +30,7 @@ public class ConnectFailureResult {
   @JsonProperty("statusMessage")
   private String statusMessage = null;
 
+
   /**
    * configId.
    *
@@ -42,7 +43,6 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
-   * 
    * @return configId
    **/
   @Schema(description = "Reserved: TBD")
@@ -57,6 +57,7 @@ public class ConnectFailureResult {
     this.configId = configId;
   }
 
+
   /**
    * configUrl.
    *
@@ -69,7 +70,6 @@ public class ConnectFailureResult {
 
   /**
    * Reserved: TBD.
-   * 
    * @return configUrl
    **/
   @Schema(description = "Reserved: TBD")
@@ -84,6 +84,7 @@ public class ConnectFailureResult {
     this.configUrl = configUrl;
   }
 
+
   /**
    * envelopeId.
    *
@@ -96,7 +97,6 @@ public class ConnectFailureResult {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -111,6 +111,7 @@ public class ConnectFailureResult {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * status.
    *
@@ -122,10 +123,7 @@ public class ConnectFailureResult {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -140,6 +138,7 @@ public class ConnectFailureResult {
     this.status = status;
   }
 
+
   /**
    * statusMessage.
    *
@@ -152,7 +151,6 @@ public class ConnectFailureResult {
 
   /**
    * .
-   * 
    * @return statusMessage
    **/
   @Schema(description = "")
@@ -166,6 +164,7 @@ public class ConnectFailureResult {
   public void setStatusMessage(String statusMessage) {
     this.statusMessage = statusMessage;
   }
+
 
   /**
    * Compares objects.
@@ -196,6 +195,7 @@ public class ConnectFailureResult {
     return Objects.hash(configId, configUrl, envelopeId, status, statusMessage);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -203,7 +203,7 @@ public class ConnectFailureResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectFailureResult {\n");
-
+    
     sb.append("    configId: ").append(toIndentedString(configId)).append("\n");
     sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -225,3 +225,4 @@ public class ConnectFailureResult {
   }
 
 }
+

@@ -37,6 +37,7 @@ public class PowerFormsResponse {
   @JsonProperty("totalSetSize")
   private Integer totalSetSize = null;
 
+
   /**
    * endPosition.
    *
@@ -49,7 +50,6 @@ public class PowerFormsResponse {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -64,6 +64,7 @@ public class PowerFormsResponse {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -75,9 +76,7 @@ public class PowerFormsResponse {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -92,6 +91,7 @@ public class PowerFormsResponse {
     this.nextUri = nextUri;
   }
 
+
   /**
    * powerForms.
    *
@@ -101,7 +101,7 @@ public class PowerFormsResponse {
     this.powerForms = powerForms;
     return this;
   }
-
+  
   /**
    * addPowerFormsItem.
    *
@@ -117,7 +117,6 @@ public class PowerFormsResponse {
 
   /**
    * .
-   * 
    * @return powerForms
    **/
   @Schema(description = "")
@@ -132,6 +131,7 @@ public class PowerFormsResponse {
     this.powerForms = powerForms;
   }
 
+
   /**
    * previousUri.
    *
@@ -144,7 +144,6 @@ public class PowerFormsResponse {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -159,6 +158,7 @@ public class PowerFormsResponse {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -171,7 +171,6 @@ public class PowerFormsResponse {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -186,6 +185,7 @@ public class PowerFormsResponse {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -198,7 +198,6 @@ public class PowerFormsResponse {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -213,6 +212,7 @@ public class PowerFormsResponse {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -224,10 +224,7 @@ public class PowerFormsResponse {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -241,6 +238,7 @@ public class PowerFormsResponse {
   public void setTotalSetSize(Integer totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -273,6 +271,7 @@ public class PowerFormsResponse {
     return Objects.hash(endPosition, nextUri, powerForms, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -280,7 +279,7 @@ public class PowerFormsResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PowerFormsResponse {\n");
-
+    
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    powerForms: ").append(toIndentedString(powerForms)).append("\n");
@@ -304,3 +303,4 @@ public class PowerFormsResponse {
   }
 
 }
+

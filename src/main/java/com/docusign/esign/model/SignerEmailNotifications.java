@@ -9,11 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * An array of email notifications that specifies the email the user receives
- * when they are a sender. When the specific email notification is set to true,
- * the user receives those types of email notifications from DocuSign. The user
- * inherits the default account sender email notification settings when the user
- * is created..
+ * An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created..
  *
  */
 @Schema(description = "An array of email notifications that specifies the email the user receives when they are a sender. When the specific email notification is set to true, the user receives those types of email notifications from DocuSign. The user inherits the default account sender email notification settings when the user is created.")
@@ -67,6 +63,7 @@ public class SignerEmailNotifications {
   @JsonProperty("whenSigningGroupMember")
   private String whenSigningGroupMember = null;
 
+
   /**
    * agentNotification.
    *
@@ -79,7 +76,6 @@ public class SignerEmailNotifications {
 
   /**
    * When set to **true**, the user receives agent notification emails..
-   * 
    * @return agentNotification
    **/
   @Schema(description = "When set to **true**, the user receives agent notification emails.")
@@ -94,6 +90,7 @@ public class SignerEmailNotifications {
     this.agentNotification = agentNotification;
   }
 
+
   /**
    * carbonCopyNotification.
    *
@@ -105,9 +102,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notifications of carbon copy
-   * deliveries..
-   * 
+   * When set to **true**, the user receives notifications of carbon copy deliveries..
    * @return carbonCopyNotification
    **/
   @Schema(description = "When set to **true**, the user receives notifications of carbon copy deliveries.")
@@ -122,6 +117,7 @@ public class SignerEmailNotifications {
     this.carbonCopyNotification = carbonCopyNotification;
   }
 
+
   /**
    * certifiedDeliveryNotification.
    *
@@ -133,9 +129,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notifications of certified
-   * deliveries..
-   * 
+   * When set to **true**, the user receives notifications of certified deliveries..
    * @return certifiedDeliveryNotification
    **/
   @Schema(description = "When set to **true**, the user receives notifications of certified deliveries.")
@@ -150,6 +144,7 @@ public class SignerEmailNotifications {
     this.certifiedDeliveryNotification = certifiedDeliveryNotification;
   }
 
+
   /**
    * commentsOnlyPrivateAndMention.
    *
@@ -162,7 +157,6 @@ public class SignerEmailNotifications {
 
   /**
    * .
-   * 
    * @return commentsOnlyPrivateAndMention
    **/
   @Schema(description = "")
@@ -177,6 +171,7 @@ public class SignerEmailNotifications {
     this.commentsOnlyPrivateAndMention = commentsOnlyPrivateAndMention;
   }
 
+
   /**
    * commentsReceiveAll.
    *
@@ -189,7 +184,6 @@ public class SignerEmailNotifications {
 
   /**
    * .
-   * 
    * @return commentsReceiveAll
    **/
   @Schema(description = "")
@@ -204,6 +198,7 @@ public class SignerEmailNotifications {
     this.commentsReceiveAll = commentsReceiveAll;
   }
 
+
   /**
    * documentMarkupActivation.
    *
@@ -215,9 +210,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that document markup has
-   * been activated..
-   * 
+   * When set to **true**, the user receives notification that document markup has been activated..
    * @return documentMarkupActivation
    **/
   @Schema(description = "When set to **true**, the user receives notification that document markup has been activated.")
@@ -232,6 +225,7 @@ public class SignerEmailNotifications {
     this.documentMarkupActivation = documentMarkupActivation;
   }
 
+
   /**
    * envelopeActivation.
    *
@@ -243,9 +237,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been activated..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been activated..
    * @return envelopeActivation
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been activated.")
@@ -260,6 +252,7 @@ public class SignerEmailNotifications {
     this.envelopeActivation = envelopeActivation;
   }
 
+
   /**
    * envelopeComplete.
    *
@@ -271,9 +264,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been completed..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been completed..
    * @return envelopeComplete
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been completed.")
@@ -288,6 +279,7 @@ public class SignerEmailNotifications {
     this.envelopeComplete = envelopeComplete;
   }
 
+
   /**
    * envelopeCorrected.
    *
@@ -299,9 +291,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been corrected..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been corrected..
    * @return envelopeCorrected
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been corrected.")
@@ -316,6 +306,7 @@ public class SignerEmailNotifications {
     this.envelopeCorrected = envelopeCorrected;
   }
 
+
   /**
    * envelopeDeclined.
    *
@@ -327,9 +318,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been declined..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been declined..
    * @return envelopeDeclined
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been declined.")
@@ -344,6 +333,7 @@ public class SignerEmailNotifications {
     this.envelopeDeclined = envelopeDeclined;
   }
 
+
   /**
    * envelopeVoided.
    *
@@ -355,9 +345,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been voided..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been voided..
    * @return envelopeVoided
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been voided.")
@@ -372,6 +360,7 @@ public class SignerEmailNotifications {
     this.envelopeVoided = envelopeVoided;
   }
 
+
   /**
    * faxReceived.
    *
@@ -384,7 +373,6 @@ public class SignerEmailNotifications {
 
   /**
    * Reserved:.
-   * 
    * @return faxReceived
    **/
   @Schema(description = "Reserved:")
@@ -399,6 +387,7 @@ public class SignerEmailNotifications {
     this.faxReceived = faxReceived;
   }
 
+
   /**
    * offlineSigningFailed.
    *
@@ -410,9 +399,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification if the offline signing
-   * failed..
-   * 
+   * When set to **true**, the user receives notification if the offline signing failed..
    * @return offlineSigningFailed
    **/
   @Schema(description = "When set to **true**, the user receives notification if the offline signing failed.")
@@ -427,6 +414,7 @@ public class SignerEmailNotifications {
     this.offlineSigningFailed = offlineSigningFailed;
   }
 
+
   /**
    * purgeDocuments.
    *
@@ -439,7 +427,6 @@ public class SignerEmailNotifications {
 
   /**
    * When set to **true**, the user receives notification of document purges..
-   * 
    * @return purgeDocuments
    **/
   @Schema(description = "When set to **true**, the user receives notification of document purges.")
@@ -454,6 +441,7 @@ public class SignerEmailNotifications {
     this.purgeDocuments = purgeDocuments;
   }
 
+
   /**
    * reassignedSigner.
    *
@@ -465,9 +453,7 @@ public class SignerEmailNotifications {
   }
 
   /**
-   * When set to **true**, the user receives notification that the envelope has
-   * been reassigned..
-   * 
+   * When set to **true**, the user receives notification that the envelope has been reassigned..
    * @return reassignedSigner
    **/
   @Schema(description = "When set to **true**, the user receives notification that the envelope has been reassigned.")
@@ -482,6 +468,7 @@ public class SignerEmailNotifications {
     this.reassignedSigner = reassignedSigner;
   }
 
+
   /**
    * whenSigningGroupMember.
    *
@@ -494,7 +481,6 @@ public class SignerEmailNotifications {
 
   /**
    * .
-   * 
    * @return whenSigningGroupMember
    **/
   @Schema(description = "")
@@ -508,6 +494,7 @@ public class SignerEmailNotifications {
   public void setWhenSigningGroupMember(String whenSigningGroupMember) {
     this.whenSigningGroupMember = whenSigningGroupMember;
   }
+
 
   /**
    * Compares objects.
@@ -546,11 +533,9 @@ public class SignerEmailNotifications {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agentNotification, carbonCopyNotification, certifiedDeliveryNotification,
-        commentsOnlyPrivateAndMention, commentsReceiveAll, documentMarkupActivation, envelopeActivation,
-        envelopeComplete, envelopeCorrected, envelopeDeclined, envelopeVoided, faxReceived, offlineSigningFailed,
-        purgeDocuments, reassignedSigner, whenSigningGroupMember);
+    return Objects.hash(agentNotification, carbonCopyNotification, certifiedDeliveryNotification, commentsOnlyPrivateAndMention, commentsReceiveAll, documentMarkupActivation, envelopeActivation, envelopeComplete, envelopeCorrected, envelopeDeclined, envelopeVoided, faxReceived, offlineSigningFailed, purgeDocuments, reassignedSigner, whenSigningGroupMember);
   }
+
 
   /**
    * Converts the given object to string.
@@ -559,13 +544,11 @@ public class SignerEmailNotifications {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerEmailNotifications {\n");
-
+    
     sb.append("    agentNotification: ").append(toIndentedString(agentNotification)).append("\n");
     sb.append("    carbonCopyNotification: ").append(toIndentedString(carbonCopyNotification)).append("\n");
-    sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification))
-        .append("\n");
-    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention))
-        .append("\n");
+    sb.append("    certifiedDeliveryNotification: ").append(toIndentedString(certifiedDeliveryNotification)).append("\n");
+    sb.append("    commentsOnlyPrivateAndMention: ").append(toIndentedString(commentsOnlyPrivateAndMention)).append("\n");
     sb.append("    commentsReceiveAll: ").append(toIndentedString(commentsReceiveAll)).append("\n");
     sb.append("    documentMarkupActivation: ").append(toIndentedString(documentMarkupActivation)).append("\n");
     sb.append("    envelopeActivation: ").append(toIndentedString(envelopeActivation)).append("\n");
@@ -594,3 +577,4 @@ public class SignerEmailNotifications {
   }
 
 }
+

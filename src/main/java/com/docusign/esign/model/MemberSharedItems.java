@@ -35,6 +35,7 @@ public class MemberSharedItems {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * envelopes.
    *
@@ -44,7 +45,7 @@ public class MemberSharedItems {
     this.envelopes = envelopes;
     return this;
   }
-
+  
   /**
    * addEnvelopesItem.
    *
@@ -60,7 +61,6 @@ public class MemberSharedItems {
 
   /**
    * .
-   * 
    * @return envelopes
    **/
   @Schema(description = "")
@@ -75,6 +75,7 @@ public class MemberSharedItems {
     this.envelopes = envelopes;
   }
 
+
   /**
    * errorDetails.
    *
@@ -86,12 +87,10 @@ public class MemberSharedItems {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -103,6 +102,7 @@ public class MemberSharedItems {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * folders.
    *
@@ -112,7 +112,7 @@ public class MemberSharedItems {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -128,7 +128,6 @@ public class MemberSharedItems {
 
   /**
    * .
-   * 
    * @return folders
    **/
   @Schema(description = "")
@@ -143,6 +142,7 @@ public class MemberSharedItems {
     this.folders = folders;
   }
 
+
   /**
    * templates.
    *
@@ -152,7 +152,7 @@ public class MemberSharedItems {
     this.templates = templates;
     return this;
   }
-
+  
   /**
    * addTemplatesItem.
    *
@@ -168,7 +168,6 @@ public class MemberSharedItems {
 
   /**
    * .
-   * 
    * @return templates
    **/
   @Schema(description = "")
@@ -183,6 +182,7 @@ public class MemberSharedItems {
     this.templates = templates;
   }
 
+
   /**
    * user.
    *
@@ -195,7 +195,6 @@ public class MemberSharedItems {
 
   /**
    * Information about the user requesting sharing information..
-   * 
    * @return user
    **/
   @Schema(description = "Information about the user requesting sharing information.")
@@ -209,6 +208,7 @@ public class MemberSharedItems {
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -239,6 +239,7 @@ public class MemberSharedItems {
     return Objects.hash(envelopes, errorDetails, folders, templates, user);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -246,7 +247,7 @@ public class MemberSharedItems {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MemberSharedItems {\n");
-
+    
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
@@ -268,3 +269,4 @@ public class MemberSharedItems {
   }
 
 }
+

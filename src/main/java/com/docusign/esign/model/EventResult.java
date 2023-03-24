@@ -27,6 +27,7 @@ public class EventResult {
   @JsonProperty("vendorFailureStatusCode")
   private String vendorFailureStatusCode = null;
 
+
   /**
    * eventTimestamp.
    *
@@ -39,7 +40,6 @@ public class EventResult {
 
   /**
    * .
-   * 
    * @return eventTimestamp
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class EventResult {
     this.eventTimestamp = eventTimestamp;
   }
 
+
   /**
    * failureDescription.
    *
@@ -66,7 +67,6 @@ public class EventResult {
 
   /**
    * .
-   * 
    * @return failureDescription
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class EventResult {
     this.failureDescription = failureDescription;
   }
 
+
   /**
    * status.
    *
@@ -92,10 +93,7 @@ public class EventResult {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -110,6 +108,7 @@ public class EventResult {
     this.status = status;
   }
 
+
   /**
    * vendorFailureStatusCode.
    *
@@ -122,7 +121,6 @@ public class EventResult {
 
   /**
    * .
-   * 
    * @return vendorFailureStatusCode
    **/
   @Schema(description = "")
@@ -136,6 +134,7 @@ public class EventResult {
   public void setVendorFailureStatusCode(String vendorFailureStatusCode) {
     this.vendorFailureStatusCode = vendorFailureStatusCode;
   }
+
 
   /**
    * Compares objects.
@@ -165,6 +164,7 @@ public class EventResult {
     return Objects.hash(eventTimestamp, failureDescription, status, vendorFailureStatusCode);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -172,7 +172,7 @@ public class EventResult {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EventResult {\n");
-
+    
     sb.append("    eventTimestamp: ").append(toIndentedString(eventTimestamp)).append("\n");
     sb.append("    failureDescription: ").append(toIndentedString(failureDescription)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
@@ -193,3 +193,4 @@ public class EventResult {
   }
 
 }
+

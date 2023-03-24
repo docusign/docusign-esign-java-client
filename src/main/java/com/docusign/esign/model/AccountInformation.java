@@ -132,6 +132,7 @@ public class AccountInformation {
   @JsonProperty("useDisplayAppliance")
   private Boolean useDisplayAppliance = null;
 
+
   /**
    * accountIdGuid.
    *
@@ -144,7 +145,6 @@ public class AccountInformation {
 
   /**
    * The GUID associated with the account ID..
-   * 
    * @return accountIdGuid
    **/
   @Schema(description = "The GUID associated with the account ID.")
@@ -159,6 +159,7 @@ public class AccountInformation {
     this.accountIdGuid = accountIdGuid;
   }
 
+
   /**
    * accountName.
    *
@@ -171,7 +172,6 @@ public class AccountInformation {
 
   /**
    * The name of the current account..
-   * 
    * @return accountName
    **/
   @Schema(description = "The name of the current account.")
@@ -186,6 +186,7 @@ public class AccountInformation {
     this.accountName = accountName;
   }
 
+
   /**
    * accountSettings.
    *
@@ -197,13 +198,10 @@ public class AccountInformation {
   }
 
   /**
-   * The list of account settings accountsettings that determine the features
-   * available for the account. Note that some features are determined by the plan
-   * used to create the account and cannot be overridden. .
-   * 
+   * The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden..
    * @return accountSettings
    **/
-  @Schema(description = "The list of account settings accountsettings that determine the features available for the account. Note that some features are determined by the plan used to create the account and cannot be overridden.  ")
+  @Schema(description = "The list of account settings. These determine the features available for the account. Note that some features are determined by the plan used to create the account, and cannot be overridden.")
   public AccountSettingsInformation getAccountSettings() {
     return accountSettings;
   }
@@ -214,6 +212,7 @@ public class AccountInformation {
   public void setAccountSettings(AccountSettingsInformation accountSettings) {
     this.accountSettings = accountSettings;
   }
+
 
   /**
    * allowTransactionRooms.
@@ -226,9 +225,7 @@ public class AccountInformation {
   }
 
   /**
-   * When set to **true**, the transaction rooms feature exposed through the
-   * Workspaces API is enabled..
-   * 
+   * When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled..
    * @return allowTransactionRooms
    **/
   @Schema(description = "When set to **true**, the transaction rooms feature exposed through the Workspaces API is enabled.")
@@ -243,6 +240,7 @@ public class AccountInformation {
     this.allowTransactionRooms = allowTransactionRooms;
   }
 
+
   /**
    * billingPeriodDaysRemaining.
    *
@@ -255,7 +253,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPeriodDaysRemaining
    **/
   @Schema(description = "Reserved: TBD")
@@ -270,6 +267,7 @@ public class AccountInformation {
     this.billingPeriodDaysRemaining = billingPeriodDaysRemaining;
   }
 
+
   /**
    * billingPeriodEndDate.
    *
@@ -282,7 +280,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPeriodEndDate
    **/
   @Schema(description = "Reserved: TBD")
@@ -297,6 +294,7 @@ public class AccountInformation {
     this.billingPeriodEndDate = billingPeriodEndDate;
   }
 
+
   /**
    * billingPeriodEnvelopesAllowed.
    *
@@ -309,7 +307,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPeriodEnvelopesAllowed
    **/
   @Schema(description = "Reserved: TBD")
@@ -324,6 +321,7 @@ public class AccountInformation {
     this.billingPeriodEnvelopesAllowed = billingPeriodEnvelopesAllowed;
   }
 
+
   /**
    * billingPeriodEnvelopesSent.
    *
@@ -336,7 +334,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPeriodEnvelopesSent
    **/
   @Schema(description = "Reserved: TBD")
@@ -351,6 +348,7 @@ public class AccountInformation {
     this.billingPeriodEnvelopesSent = billingPeriodEnvelopesSent;
   }
 
+
   /**
    * billingPeriodStartDate.
    *
@@ -363,7 +361,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingPeriodStartDate
    **/
   @Schema(description = "Reserved: TBD")
@@ -378,6 +375,7 @@ public class AccountInformation {
     this.billingPeriodStartDate = billingPeriodStartDate;
   }
 
+
   /**
    * billingProfile.
    *
@@ -390,7 +388,6 @@ public class AccountInformation {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingProfile
    **/
   @Schema(description = "Reserved: TBD")
@@ -405,6 +402,7 @@ public class AccountInformation {
     this.billingProfile = billingProfile;
   }
 
+
   /**
    * brands.
    *
@@ -416,8 +414,7 @@ public class AccountInformation {
   }
 
   /**
-   * Get brands.
-   * 
+   * .
    * @return brands
    **/
   @Schema(description = "")
@@ -432,6 +429,7 @@ public class AccountInformation {
     this.brands = brands;
   }
 
+
   /**
    * canUpgrade.
    *
@@ -443,9 +441,7 @@ public class AccountInformation {
   }
 
   /**
-   * When set to **true**, specifies that you can upgrade the account through the
-   * API..
-   * 
+   * When set to **true**, specifies that you can upgrade the account through the API..
    * @return canUpgrade
    **/
   @Schema(description = "When set to **true**, specifies that you can upgrade the account through the API.")
@@ -460,6 +456,7 @@ public class AccountInformation {
     this.canUpgrade = canUpgrade;
   }
 
+
   /**
    * connectPermission.
    *
@@ -472,7 +469,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return connectPermission
    **/
   @Schema(description = "")
@@ -487,6 +483,7 @@ public class AccountInformation {
     this.connectPermission = connectPermission;
   }
 
+
   /**
    * createdDate.
    *
@@ -499,7 +496,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -514,6 +510,7 @@ public class AccountInformation {
     this.createdDate = createdDate;
   }
 
+
   /**
    * currencyCode.
    *
@@ -526,7 +523,6 @@ public class AccountInformation {
 
   /**
    * Specifies the ISO currency code for the account..
-   * 
    * @return currencyCode
    **/
   @Schema(description = "Specifies the ISO currency code for the account.")
@@ -541,6 +537,7 @@ public class AccountInformation {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * currentPlanId.
    *
@@ -553,7 +550,6 @@ public class AccountInformation {
 
   /**
    * Identifies the plan that was used create this account..
-   * 
    * @return currentPlanId
    **/
   @Schema(description = "Identifies the plan that was used create this account.")
@@ -568,6 +564,7 @@ public class AccountInformation {
     this.currentPlanId = currentPlanId;
   }
 
+
   /**
    * displayApplianceStartUrl.
    *
@@ -580,7 +577,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return displayApplianceStartUrl
    **/
   @Schema(description = "")
@@ -595,6 +591,7 @@ public class AccountInformation {
     this.displayApplianceStartUrl = displayApplianceStartUrl;
   }
 
+
   /**
    * displayApplianceUrl.
    *
@@ -607,7 +604,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return displayApplianceUrl
    **/
   @Schema(description = "")
@@ -622,6 +618,7 @@ public class AccountInformation {
     this.displayApplianceUrl = displayApplianceUrl;
   }
 
+
   /**
    * distributorCode.
    *
@@ -633,9 +630,7 @@ public class AccountInformation {
   }
 
   /**
-   * The code that identifies the billing plan groups and plans for the new
-   * account..
-   * 
+   * The code that identifies the billing plan groups and plans for the new account..
    * @return distributorCode
    **/
   @Schema(description = "The code that identifies the billing plan groups and plans for the new account.")
@@ -650,6 +645,7 @@ public class AccountInformation {
     this.distributorCode = distributorCode;
   }
 
+
   /**
    * docuSignLandingUrl.
    *
@@ -662,7 +658,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return docuSignLandingUrl
    **/
   @Schema(description = "")
@@ -676,6 +671,7 @@ public class AccountInformation {
   public void setDocuSignLandingUrl(String docuSignLandingUrl) {
     this.docuSignLandingUrl = docuSignLandingUrl;
   }
+
 
   /**
    * dssValues.
@@ -702,7 +698,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return dssValues
    **/
   @Schema(description = "")
@@ -717,6 +712,7 @@ public class AccountInformation {
     this.dssValues = dssValues;
   }
 
+
   /**
    * envelopeSendingBlocked.
    *
@@ -729,7 +725,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return envelopeSendingBlocked
    **/
   @Schema(description = "")
@@ -744,6 +739,7 @@ public class AccountInformation {
     this.envelopeSendingBlocked = envelopeSendingBlocked;
   }
 
+
   /**
    * envelopeUnitPrice.
    *
@@ -756,7 +752,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return envelopeUnitPrice
    **/
   @Schema(description = "")
@@ -771,6 +766,7 @@ public class AccountInformation {
     this.envelopeUnitPrice = envelopeUnitPrice;
   }
 
+
   /**
    * externalAccountId.
    *
@@ -783,7 +779,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return externalAccountId
    **/
   @Schema(description = "")
@@ -798,6 +793,7 @@ public class AccountInformation {
     this.externalAccountId = externalAccountId;
   }
 
+
   /**
    * forgottenPasswordQuestionsCount.
    *
@@ -809,9 +805,7 @@ public class AccountInformation {
   }
 
   /**
-   * A complex element that contains up to four Question/Answer pairs for
-   * forgotten password information for a user..
-   * 
+   *  A complex element that contains up to four Question/Answer pairs for forgotten password information for a user..
    * @return forgottenPasswordQuestionsCount
    **/
   @Schema(description = " A complex element that contains up to four Question/Answer pairs for forgotten password information for a user.")
@@ -826,6 +820,7 @@ public class AccountInformation {
     this.forgottenPasswordQuestionsCount = forgottenPasswordQuestionsCount;
   }
 
+
   /**
    * isDowngrade.
    *
@@ -838,7 +833,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return isDowngrade
    **/
   @Schema(description = "")
@@ -853,6 +847,7 @@ public class AccountInformation {
     this.isDowngrade = isDowngrade;
   }
 
+
   /**
    * paymentMethod.
    *
@@ -865,7 +860,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return paymentMethod
    **/
   @Schema(description = "")
@@ -880,6 +874,7 @@ public class AccountInformation {
     this.paymentMethod = paymentMethod;
   }
 
+
   /**
    * planClassification.
    *
@@ -891,9 +886,7 @@ public class AccountInformation {
   }
 
   /**
-   * Identifies the type of plan. Examples include Business, Corporate,
-   * Enterprise, Free..
-   * 
+   * Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free..
    * @return planClassification
    **/
   @Schema(description = "Identifies the type of plan. Examples include Business, Corporate, Enterprise, Free.")
@@ -908,6 +901,7 @@ public class AccountInformation {
     this.planClassification = planClassification;
   }
 
+
   /**
    * planEndDate.
    *
@@ -920,7 +914,6 @@ public class AccountInformation {
 
   /**
    * The date that the current plan will end..
-   * 
    * @return planEndDate
    **/
   @Schema(description = "The date that the current plan will end.")
@@ -935,6 +928,7 @@ public class AccountInformation {
     this.planEndDate = planEndDate;
   }
 
+
   /**
    * planName.
    *
@@ -947,7 +941,6 @@ public class AccountInformation {
 
   /**
    * The name of the Billing Plan..
-   * 
    * @return planName
    **/
   @Schema(description = "The name of the Billing Plan.")
@@ -962,6 +955,7 @@ public class AccountInformation {
     this.planName = planName;
   }
 
+
   /**
    * planStartDate.
    *
@@ -974,7 +968,6 @@ public class AccountInformation {
 
   /**
    * The date that the Account started using the current plan..
-   * 
    * @return planStartDate
    **/
   @Schema(description = "The date that the Account started using the current plan.")
@@ -989,6 +982,7 @@ public class AccountInformation {
     this.planStartDate = planStartDate;
   }
 
+
   /**
    * recipientDomains.
    *
@@ -998,7 +992,7 @@ public class AccountInformation {
     this.recipientDomains = recipientDomains;
     return this;
   }
-
+  
   /**
    * addRecipientDomainsItem.
    *
@@ -1014,7 +1008,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return recipientDomains
    **/
   @Schema(description = "")
@@ -1029,6 +1022,7 @@ public class AccountInformation {
     this.recipientDomains = recipientDomains;
   }
 
+
   /**
    * seatsAllowed.
    *
@@ -1041,7 +1035,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return seatsAllowed
    **/
   @Schema(description = "")
@@ -1056,6 +1049,7 @@ public class AccountInformation {
     this.seatsAllowed = seatsAllowed;
   }
 
+
   /**
    * seatsInUse.
    *
@@ -1068,7 +1062,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return seatsInUse
    **/
   @Schema(description = "")
@@ -1083,6 +1076,7 @@ public class AccountInformation {
     this.seatsInUse = seatsInUse;
   }
 
+
   /**
    * status21CFRPart11.
    *
@@ -1095,7 +1089,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return status21CFRPart11
    **/
   @Schema(description = "")
@@ -1110,6 +1103,7 @@ public class AccountInformation {
     this.status21CFRPart11 = status21CFRPart11;
   }
 
+
   /**
    * suspensionDate.
    *
@@ -1122,7 +1116,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return suspensionDate
    **/
   @Schema(description = "")
@@ -1137,6 +1130,7 @@ public class AccountInformation {
     this.suspensionDate = suspensionDate;
   }
 
+
   /**
    * suspensionStatus.
    *
@@ -1149,7 +1143,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return suspensionStatus
    **/
   @Schema(description = "")
@@ -1164,6 +1157,7 @@ public class AccountInformation {
     this.suspensionStatus = suspensionStatus;
   }
 
+
   /**
    * useDisplayAppliance.
    *
@@ -1176,7 +1170,6 @@ public class AccountInformation {
 
   /**
    * .
-   * 
    * @return useDisplayAppliance
    **/
   @Schema(description = "")
@@ -1190,6 +1183,7 @@ public class AccountInformation {
   public void setUseDisplayAppliance(Boolean useDisplayAppliance) {
     this.useDisplayAppliance = useDisplayAppliance;
   }
+
 
   /**
    * Compares objects.
@@ -1250,14 +1244,9 @@ public class AccountInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining,
-        billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate,
-        billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId,
-        displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues,
-        envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade,
-        paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed,
-        seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1266,15 +1255,14 @@ public class AccountInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountInformation {\n");
-
+    
     sb.append("    accountIdGuid: ").append(toIndentedString(accountIdGuid)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountSettings: ").append(toIndentedString(accountSettings)).append("\n");
     sb.append("    allowTransactionRooms: ").append(toIndentedString(allowTransactionRooms)).append("\n");
     sb.append("    billingPeriodDaysRemaining: ").append(toIndentedString(billingPeriodDaysRemaining)).append("\n");
     sb.append("    billingPeriodEndDate: ").append(toIndentedString(billingPeriodEndDate)).append("\n");
-    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed))
-        .append("\n");
+    sb.append("    billingPeriodEnvelopesAllowed: ").append(toIndentedString(billingPeriodEnvelopesAllowed)).append("\n");
     sb.append("    billingPeriodEnvelopesSent: ").append(toIndentedString(billingPeriodEnvelopesSent)).append("\n");
     sb.append("    billingPeriodStartDate: ").append(toIndentedString(billingPeriodStartDate)).append("\n");
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
@@ -1292,8 +1280,7 @@ public class AccountInformation {
     sb.append("    envelopeSendingBlocked: ").append(toIndentedString(envelopeSendingBlocked)).append("\n");
     sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
     sb.append("    externalAccountId: ").append(toIndentedString(externalAccountId)).append("\n");
-    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount))
-        .append("\n");
+    sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
@@ -1323,3 +1310,4 @@ public class AccountInformation {
   }
 
 }
+

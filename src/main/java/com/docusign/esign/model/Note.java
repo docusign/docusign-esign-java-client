@@ -14,8 +14,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A tab that displays additional information, in the form of a note, for the
- * recipient. .
+ * A tab that displays additional information, in the form of a note, for the recipient. .
  *
  */
 @Schema(description = "A tab that displays additional information, in the form of a note, for the recipient. ")
@@ -297,6 +296,7 @@ public class Note {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -309,7 +309,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
   @Schema(description = "")
@@ -324,6 +323,7 @@ public class Note {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
+
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
@@ -335,9 +335,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
-   * property is editable..
-   * 
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
@@ -352,6 +350,7 @@ public class Note {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -363,9 +362,7 @@ public class Note {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -380,6 +377,7 @@ public class Note {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorCaseSensitiveMetadata.
    *
@@ -391,9 +389,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
@@ -408,6 +404,7 @@ public class Note {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -419,9 +416,7 @@ public class Note {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -436,6 +431,7 @@ public class Note {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorHorizontalAlignmentMetadata.
    *
@@ -447,9 +443,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
@@ -464,6 +458,7 @@ public class Note {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -475,9 +470,7 @@ public class Note {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -492,6 +485,7 @@ public class Note {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
@@ -503,9 +497,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
@@ -520,6 +512,7 @@ public class Note {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -531,10 +524,7 @@ public class Note {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -549,6 +539,7 @@ public class Note {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorMatchWholeWordMetadata.
    *
@@ -560,9 +551,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
@@ -577,6 +566,7 @@ public class Note {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
+
   /**
    * anchorString.
    *
@@ -589,7 +579,6 @@ public class Note {
 
   /**
    * Anchor text information for a radio button..
-   * 
    * @return anchorString
    **/
   @Schema(description = "Anchor text information for a radio button.")
@@ -604,6 +593,7 @@ public class Note {
     this.anchorString = anchorString;
   }
 
+
   /**
    * anchorStringMetadata.
    *
@@ -616,7 +606,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
-   * 
    * @return anchorStringMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
@@ -631,6 +620,7 @@ public class Note {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
+
   /**
    * anchorTabProcessorVersion.
    *
@@ -643,7 +633,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return anchorTabProcessorVersion
    **/
   @Schema(description = "")
@@ -658,6 +647,7 @@ public class Note {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
+
   /**
    * anchorTabProcessorVersionMetadata.
    *
@@ -670,7 +660,6 @@ public class Note {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return anchorTabProcessorVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -685,6 +674,7 @@ public class Note {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -696,9 +686,7 @@ public class Note {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -713,6 +701,7 @@ public class Note {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorUnitsMetadata.
    *
@@ -725,7 +714,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
-   * 
    * @return anchorUnitsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
@@ -740,6 +728,7 @@ public class Note {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -751,9 +740,7 @@ public class Note {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -768,6 +755,7 @@ public class Note {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorXOffsetMetadata.
    *
@@ -780,7 +768,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
-   * 
    * @return anchorXOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
@@ -795,6 +782,7 @@ public class Note {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -806,9 +794,7 @@ public class Note {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -823,6 +809,7 @@ public class Note {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * anchorYOffsetMetadata.
    *
@@ -835,7 +822,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
-   * 
    * @return anchorYOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
@@ -850,6 +836,7 @@ public class Note {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
+
   /**
    * bold.
    *
@@ -862,7 +849,6 @@ public class Note {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -877,6 +863,7 @@ public class Note {
     this.bold = bold;
   }
 
+
   /**
    * boldMetadata.
    *
@@ -889,7 +876,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
-   * 
    * @return boldMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
@@ -904,6 +890,7 @@ public class Note {
     this.boldMetadata = boldMetadata;
   }
 
+
   /**
    * caption.
    *
@@ -916,7 +903,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return caption
    **/
   @Schema(description = "")
@@ -931,6 +917,7 @@ public class Note {
     this.caption = caption;
   }
 
+
   /**
    * captionMetadata.
    *
@@ -942,8 +929,7 @@ public class Note {
   }
 
   /**
-   * Get captionMetadata.
-   * 
+   * .
    * @return captionMetadata
    **/
   @Schema(description = "")
@@ -958,6 +944,7 @@ public class Note {
     this.captionMetadata = captionMetadata;
   }
 
+
   /**
    * conditionalParentLabel.
    *
@@ -969,9 +956,7 @@ public class Note {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls
-   * this tab's visibility..
-   * 
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
    **/
   @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
@@ -986,6 +971,7 @@ public class Note {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
   /**
    * conditionalParentLabelMetadata.
    *
@@ -997,9 +983,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
@@ -1014,6 +998,7 @@ public class Note {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
+
   /**
    * conditionalParentValue.
    *
@@ -1025,11 +1010,7 @@ public class Note {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the
-   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
-   * Signature, or Optional Initial use \"on\" as the value to show that the
-   * parent tab is active. .
-   * 
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
    **/
   @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
@@ -1044,6 +1025,7 @@ public class Note {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
   /**
    * conditionalParentValueMetadata.
    *
@@ -1055,9 +1037,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
@@ -1072,6 +1052,7 @@ public class Note {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
+
   /**
    * customTabId.
    *
@@ -1083,10 +1064,7 @@ public class Note {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This
-   * can only be used when adding new tabs for a recipient. When used, the new tab
-   * inherits all the custom tab properties..
-   * 
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
    **/
   @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
@@ -1101,6 +1079,7 @@ public class Note {
     this.customTabId = customTabId;
   }
 
+
   /**
    * customTabIdMetadata.
    *
@@ -1113,7 +1092,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `customTabId` property is editable..
-   * 
    * @return customTabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `customTabId` property is editable.")
@@ -1128,6 +1106,7 @@ public class Note {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
+
   /**
    * documentId.
    *
@@ -1139,9 +1118,7 @@ public class Note {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -1156,6 +1133,7 @@ public class Note {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdMetadata.
    *
@@ -1168,7 +1146,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
-   * 
    * @return documentIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
@@ -1183,6 +1160,7 @@ public class Note {
     this.documentIdMetadata = documentIdMetadata;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1194,12 +1172,10 @@ public class Note {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1210,6 +1186,7 @@ public class Note {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
@@ -1222,11 +1199,7 @@ public class Note {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -1241,6 +1214,7 @@ public class Note {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -1252,10 +1226,7 @@ public class Note {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -1270,6 +1241,7 @@ public class Note {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontColorMetadata.
    *
@@ -1282,7 +1254,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
-   * 
    * @return fontColorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
@@ -1297,6 +1268,7 @@ public class Note {
     this.fontColorMetadata = fontColorMetadata;
   }
 
+
   /**
    * fontMetadata.
    *
@@ -1309,7 +1281,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
-   * 
    * @return fontMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `font` property is editable.")
@@ -1324,6 +1295,7 @@ public class Note {
     this.fontMetadata = fontMetadata;
   }
 
+
   /**
    * fontSize.
    *
@@ -1335,10 +1307,7 @@ public class Note {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -1353,6 +1322,7 @@ public class Note {
     this.fontSize = fontSize;
   }
 
+
   /**
    * fontSizeMetadata.
    *
@@ -1365,7 +1335,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
-   * 
    * @return fontSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
@@ -1380,6 +1349,7 @@ public class Note {
     this.fontSizeMetadata = fontSizeMetadata;
   }
 
+
   /**
    * formOrder.
    *
@@ -1392,7 +1362,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return formOrder
    **/
   @Schema(description = "")
@@ -1407,6 +1376,7 @@ public class Note {
     this.formOrder = formOrder;
   }
 
+
   /**
    * formOrderMetadata.
    *
@@ -1419,7 +1389,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `formOrder` property is editable..
-   * 
    * @return formOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formOrder` property is editable.")
@@ -1434,6 +1403,7 @@ public class Note {
     this.formOrderMetadata = formOrderMetadata;
   }
 
+
   /**
    * formPageLabel.
    *
@@ -1446,7 +1416,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return formPageLabel
    **/
   @Schema(description = "")
@@ -1461,6 +1430,7 @@ public class Note {
     this.formPageLabel = formPageLabel;
   }
 
+
   /**
    * formPageLabelMetadata.
    *
@@ -1473,7 +1443,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `formPageLabel` property is editable..
-   * 
    * @return formPageLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `formPageLabel` property is editable.")
@@ -1488,6 +1457,7 @@ public class Note {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
+
   /**
    * formPageNumber.
    *
@@ -1500,7 +1470,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return formPageNumber
    **/
   @Schema(description = "")
@@ -1515,6 +1484,7 @@ public class Note {
     this.formPageNumber = formPageNumber;
   }
 
+
   /**
    * formPageNumberMetadata.
    *
@@ -1527,7 +1497,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `fromPageNumber` property is editable..
-   * 
    * @return formPageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fromPageNumber` property is editable.")
@@ -1542,6 +1511,7 @@ public class Note {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
+
   /**
    * height.
    *
@@ -1554,7 +1524,6 @@ public class Note {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -1569,6 +1538,7 @@ public class Note {
     this.height = height;
   }
 
+
   /**
    * heightMetadata.
    *
@@ -1581,7 +1551,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `height` property is editable..
-   * 
    * @return heightMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `height` property is editable.")
@@ -1596,6 +1565,7 @@ public class Note {
     this.heightMetadata = heightMetadata;
   }
 
+
   /**
    * italic.
    *
@@ -1608,7 +1578,6 @@ public class Note {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -1623,6 +1592,7 @@ public class Note {
     this.italic = italic;
   }
 
+
   /**
    * italicMetadata.
    *
@@ -1635,7 +1605,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
-   * 
    * @return italicMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
@@ -1650,6 +1619,7 @@ public class Note {
     this.italicMetadata = italicMetadata;
   }
 
+
   /**
    * localePolicy.
    *
@@ -1662,7 +1632,6 @@ public class Note {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return localePolicy
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1677,6 +1646,7 @@ public class Note {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * mergeField.
    *
@@ -1689,7 +1659,6 @@ public class Note {
 
   /**
    * Contains the information necessary to map the tab to a field in SalesForce..
-   * 
    * @return mergeField
    **/
   @Schema(description = "Contains the information necessary to map the tab to a field in SalesForce.")
@@ -1704,6 +1673,7 @@ public class Note {
     this.mergeField = mergeField;
   }
 
+
   /**
    * mergeFieldXml.
    *
@@ -1716,7 +1686,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return mergeFieldXml
    **/
   @Schema(description = "")
@@ -1731,6 +1700,7 @@ public class Note {
     this.mergeFieldXml = mergeFieldXml;
   }
 
+
   /**
    * name.
    *
@@ -1743,7 +1713,6 @@ public class Note {
 
   /**
    * Specifies the tool tip text for the tab..
-   * 
    * @return name
    **/
   @Schema(description = "Specifies the tool tip text for the tab.")
@@ -1758,6 +1727,7 @@ public class Note {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -1769,9 +1739,7 @@ public class Note {
   }
 
   /**
-   * Metadata that indicates whether the `name` property is editable. This
-   * property is read-only..
-   * 
+   * Metadata that indicates whether the `name` property is editable. This property is read-only..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `name` property is editable. This property is read-only.")
@@ -1786,6 +1754,7 @@ public class Note {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * pageNumber.
    *
@@ -1798,7 +1767,6 @@ public class Note {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -1813,6 +1781,7 @@ public class Note {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * pageNumberMetadata.
    *
@@ -1825,7 +1794,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
-   * 
    * @return pageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
@@ -1840,6 +1808,7 @@ public class Note {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
+
   /**
    * recipientId.
    *
@@ -1851,9 +1820,7 @@ public class Note {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -1868,6 +1835,7 @@ public class Note {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -1880,7 +1848,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -1895,6 +1862,7 @@ public class Note {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientIdGuidMetadata.
    *
@@ -1907,7 +1875,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
-   * 
    * @return recipientIdGuidMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
@@ -1922,6 +1889,7 @@ public class Note {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
+
   /**
    * recipientIdMetadata.
    *
@@ -1934,7 +1902,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
-   * 
    * @return recipientIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
@@ -1949,6 +1916,7 @@ public class Note {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+
   /**
    * shared.
    *
@@ -1961,7 +1929,6 @@ public class Note {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -1976,6 +1943,7 @@ public class Note {
     this.shared = shared;
   }
 
+
   /**
    * sharedMetadata.
    *
@@ -1988,7 +1956,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `shared` property is editable..
-   * 
    * @return sharedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `shared` property is editable.")
@@ -2003,6 +1970,7 @@ public class Note {
     this.sharedMetadata = sharedMetadata;
   }
 
+
   /**
    * smartContractInformation.
    *
@@ -2015,7 +1983,6 @@ public class Note {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return smartContractInformation
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2030,6 +1997,7 @@ public class Note {
     this.smartContractInformation = smartContractInformation;
   }
 
+
   /**
    * source.
    *
@@ -2042,7 +2010,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return source
    **/
   @Schema(description = "")
@@ -2057,6 +2024,7 @@ public class Note {
     this.source = source;
   }
 
+
   /**
    * status.
    *
@@ -2068,10 +2036,7 @@ public class Note {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -2086,6 +2051,7 @@ public class Note {
     this.status = status;
   }
 
+
   /**
    * statusMetadata.
    *
@@ -2098,7 +2064,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
-   * 
    * @return statusMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `status` property is editable.")
@@ -2113,6 +2078,7 @@ public class Note {
     this.statusMetadata = statusMetadata;
   }
 
+
   /**
    * tabGroupLabels.
    *
@@ -2122,7 +2088,7 @@ public class Note {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
@@ -2138,7 +2104,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return tabGroupLabels
    **/
   @Schema(description = "")
@@ -2153,6 +2118,7 @@ public class Note {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
   /**
    * tabGroupLabelsMetadata.
    *
@@ -2165,7 +2131,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `tabGroupLabels` property is editable..
-   * 
    * @return tabGroupLabelsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabGroupLabels` property is editable.")
@@ -2180,6 +2145,7 @@ public class Note {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
+
   /**
    * tabId.
    *
@@ -2191,9 +2157,7 @@ public class Note {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -2208,6 +2172,7 @@ public class Note {
     this.tabId = tabId;
   }
 
+
   /**
    * tabIdMetadata.
    *
@@ -2220,7 +2185,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
-   * 
    * @return tabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
@@ -2235,6 +2199,7 @@ public class Note {
     this.tabIdMetadata = tabIdMetadata;
   }
 
+
   /**
    * tabLabel.
    *
@@ -2247,7 +2212,6 @@ public class Note {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -2262,6 +2226,7 @@ public class Note {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * tabLabelMetadata.
    *
@@ -2274,7 +2239,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `tabLabel` property is editable..
-   * 
    * @return tabLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabLabel` property is editable.")
@@ -2289,6 +2253,7 @@ public class Note {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
+
   /**
    * tabOrder.
    *
@@ -2301,7 +2266,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return tabOrder
    **/
   @Schema(description = "")
@@ -2316,6 +2280,7 @@ public class Note {
     this.tabOrder = tabOrder;
   }
 
+
   /**
    * tabOrderMetadata.
    *
@@ -2328,7 +2293,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
-   * 
    * @return tabOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
@@ -2343,6 +2307,7 @@ public class Note {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
+
   /**
    * tabType.
    *
@@ -2355,7 +2320,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -2370,6 +2334,7 @@ public class Note {
     this.tabType = tabType;
   }
 
+
   /**
    * tabTypeMetadata.
    *
@@ -2382,7 +2347,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
-   * 
    * @return tabTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
@@ -2397,6 +2361,7 @@ public class Note {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
+
   /**
    * templateLocked.
    *
@@ -2408,9 +2373,7 @@ public class Note {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -2425,6 +2388,7 @@ public class Note {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateLockedMetadata.
    *
@@ -2437,7 +2401,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
-   * 
    * @return templateLockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
@@ -2452,6 +2415,7 @@ public class Note {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
+
   /**
    * templateRequired.
    *
@@ -2463,9 +2427,7 @@ public class Note {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -2480,6 +2442,7 @@ public class Note {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * templateRequiredMetadata.
    *
@@ -2492,7 +2455,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
-   * 
    * @return templateRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
@@ -2507,6 +2469,7 @@ public class Note {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
+
   /**
    * tooltip.
    *
@@ -2519,7 +2482,6 @@ public class Note {
 
   /**
    * .
-   * 
    * @return tooltip
    **/
   @Schema(description = "")
@@ -2534,6 +2496,7 @@ public class Note {
     this.tooltip = tooltip;
   }
 
+
   /**
    * toolTipMetadata.
    *
@@ -2546,7 +2509,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `toolTip` property is editable..
-   * 
    * @return toolTipMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `toolTip` property is editable.")
@@ -2561,6 +2523,7 @@ public class Note {
     this.toolTipMetadata = toolTipMetadata;
   }
 
+
   /**
    * underline.
    *
@@ -2573,7 +2536,6 @@ public class Note {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -2588,6 +2550,7 @@ public class Note {
     this.underline = underline;
   }
 
+
   /**
    * underlineMetadata.
    *
@@ -2600,7 +2563,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
-   * 
    * @return underlineMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
@@ -2615,6 +2577,7 @@ public class Note {
     this.underlineMetadata = underlineMetadata;
   }
 
+
   /**
    * value.
    *
@@ -2627,7 +2590,6 @@ public class Note {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -2642,6 +2604,7 @@ public class Note {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -2654,7 +2617,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -2669,6 +2631,7 @@ public class Note {
     this.valueMetadata = valueMetadata;
   }
 
+
   /**
    * width.
    *
@@ -2681,7 +2644,6 @@ public class Note {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -2696,6 +2658,7 @@ public class Note {
     this.width = width;
   }
 
+
   /**
    * widthMetadata.
    *
@@ -2708,7 +2671,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `width` property is editable..
-   * 
    * @return widthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `width` property is editable.")
@@ -2723,6 +2685,7 @@ public class Note {
     this.widthMetadata = widthMetadata;
   }
 
+
   /**
    * xPosition.
    *
@@ -2734,9 +2697,7 @@ public class Note {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -2751,6 +2712,7 @@ public class Note {
     this.xPosition = xPosition;
   }
 
+
   /**
    * xPositionMetadata.
    *
@@ -2763,7 +2725,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
-   * 
    * @return xPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
@@ -2778,6 +2739,7 @@ public class Note {
     this.xPositionMetadata = xPositionMetadata;
   }
 
+
   /**
    * yPosition.
    *
@@ -2789,9 +2751,7 @@ public class Note {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -2806,6 +2766,7 @@ public class Note {
     this.yPosition = yPosition;
   }
 
+
   /**
    * yPositionMetadata.
    *
@@ -2818,7 +2779,6 @@ public class Note {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
-   * 
    * @return yPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
@@ -2832,6 +2792,7 @@ public class Note {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -2848,8 +2809,7 @@ public class Note {
     }
     Note note = (Note) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, note.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, note.anchorAllowWhiteSpaceInCharactersMetadata)
-        &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, note.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, note.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, note.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, note.anchorHorizontalAlignment) &&
@@ -2947,23 +2907,9 @@ public class Note {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
-        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
-        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
-        boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata,
-        conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId,
-        documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata,
-        formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata,
-        height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata,
-        pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata,
-        shared, sharedMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels,
-        tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType,
-        tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip,
-        toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition,
-        xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, shared, sharedMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -2972,26 +2918,21 @@ public class Note {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Note {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3003,11 +2944,9 @@ public class Note {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
@@ -3088,3 +3027,4 @@ public class Note {
   }
 
 }
+

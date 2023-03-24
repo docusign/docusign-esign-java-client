@@ -17,6 +17,7 @@ public class AccountPasswordLockoutDurationType {
   @JsonProperty("options")
   private java.util.List<String> options = null;
 
+
   /**
    * options.
    *
@@ -26,7 +27,7 @@ public class AccountPasswordLockoutDurationType {
     this.options = options;
     return this;
   }
-
+  
   /**
    * addOptionsItem.
    *
@@ -42,7 +43,6 @@ public class AccountPasswordLockoutDurationType {
 
   /**
    * .
-   * 
    * @return options
    **/
   @Schema(description = "")
@@ -56,6 +56,7 @@ public class AccountPasswordLockoutDurationType {
   public void setOptions(java.util.List<String> options) {
     this.options = options;
   }
+
 
   /**
    * Compares objects.
@@ -82,6 +83,7 @@ public class AccountPasswordLockoutDurationType {
     return Objects.hash(options);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -89,7 +91,7 @@ public class AccountPasswordLockoutDurationType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordLockoutDurationType {\n");
-
+    
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -107,3 +109,4 @@ public class AccountPasswordLockoutDurationType {
   }
 
 }
+

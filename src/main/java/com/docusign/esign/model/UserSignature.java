@@ -106,6 +106,7 @@ public class UserSignature {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * adoptedDateTime.
    *
@@ -118,7 +119,6 @@ public class UserSignature {
 
   /**
    * The date and time the user adopted their signature..
-   * 
    * @return adoptedDateTime
    **/
   @Schema(description = "The date and time the user adopted their signature.")
@@ -133,6 +133,7 @@ public class UserSignature {
     this.adoptedDateTime = adoptedDateTime;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -145,7 +146,6 @@ public class UserSignature {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -160,6 +160,7 @@ public class UserSignature {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * customField.
    *
@@ -172,7 +173,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return customField
    **/
   @Schema(description = "")
@@ -187,6 +187,7 @@ public class UserSignature {
     this.customField = customField;
   }
 
+
   /**
    * dateStampProperties.
    *
@@ -198,14 +199,7 @@ public class UserSignature {
   }
 
   /**
-   * Specifies the area in which a date stamp is placed. This parameter uses pixel
-   * positioning to draw a rectangle at the center of the stamp area. The stamp is
-   * superimposed on top of this central area. This property contains the
-   * following information about the central rectangle: - `DateAreaX`: The X axis
-   * position of the top-left corner. - `DateAreaY`: The Y axis position of the
-   * top-left corner. - `DateAreaWidth`: The width of the rectangle. -
-   * `DateAreaHeight`: The height of the rectangle..
-   * 
+   * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle..
    * @return dateStampProperties
    **/
   @Schema(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
@@ -220,6 +214,7 @@ public class UserSignature {
     this.dateStampProperties = dateStampProperties;
   }
 
+
   /**
    * disallowUserResizeStamp.
    *
@@ -232,7 +227,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return disallowUserResizeStamp
    **/
   @Schema(description = "")
@@ -247,6 +241,7 @@ public class UserSignature {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
 
+
   /**
    * errorDetails.
    *
@@ -258,12 +253,10 @@ public class UserSignature {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -274,6 +267,7 @@ public class UserSignature {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * externalID.
@@ -287,7 +281,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return externalID
    **/
   @Schema(description = "")
@@ -302,6 +295,7 @@ public class UserSignature {
     this.externalID = externalID;
   }
 
+
   /**
    * imageBase64.
    *
@@ -314,7 +308,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return imageBase64
    **/
   @Schema(description = "")
@@ -329,6 +322,7 @@ public class UserSignature {
     this.imageBase64 = imageBase64;
   }
 
+
   /**
    * imageType.
    *
@@ -341,7 +335,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return imageType
    **/
   @Schema(description = "")
@@ -356,6 +349,7 @@ public class UserSignature {
     this.imageType = imageType;
   }
 
+
   /**
    * initials150ImageId.
    *
@@ -368,7 +362,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return initials150ImageId
    **/
   @Schema(description = "")
@@ -383,6 +376,7 @@ public class UserSignature {
     this.initials150ImageId = initials150ImageId;
   }
 
+
   /**
    * initialsImageUri.
    *
@@ -394,9 +388,7 @@ public class UserSignature {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the initials
-   * image..
-   * 
+   * Contains the URI for an endpoint that you can use to retrieve the initials image..
    * @return initialsImageUri
    **/
   @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the initials image.")
@@ -411,6 +403,7 @@ public class UserSignature {
     this.initialsImageUri = initialsImageUri;
   }
 
+
   /**
    * isDefault.
    *
@@ -423,7 +416,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return isDefault
    **/
   @Schema(description = "")
@@ -438,6 +430,7 @@ public class UserSignature {
     this.isDefault = isDefault;
   }
 
+
   /**
    * lastModifiedDateTime.
    *
@@ -450,7 +443,6 @@ public class UserSignature {
 
   /**
    * The date and time the item was last modified..
-   * 
    * @return lastModifiedDateTime
    **/
   @Schema(description = "The date and time the item was last modified.")
@@ -465,6 +457,7 @@ public class UserSignature {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
+
   /**
    * nrdsId.
    *
@@ -477,7 +470,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return nrdsId
    **/
   @Schema(description = "")
@@ -492,6 +484,7 @@ public class UserSignature {
     this.nrdsId = nrdsId;
   }
 
+
   /**
    * nrdsLastName.
    *
@@ -504,7 +497,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return nrdsLastName
    **/
   @Schema(description = "")
@@ -519,6 +511,7 @@ public class UserSignature {
     this.nrdsLastName = nrdsLastName;
   }
 
+
   /**
    * nrdsStatus.
    *
@@ -531,7 +524,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return nrdsStatus
    **/
   @Schema(description = "")
@@ -546,6 +538,7 @@ public class UserSignature {
     this.nrdsStatus = nrdsStatus;
   }
 
+
   /**
    * phoneticName.
    *
@@ -558,7 +551,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return phoneticName
    **/
   @Schema(description = "")
@@ -573,6 +565,7 @@ public class UserSignature {
     this.phoneticName = phoneticName;
   }
 
+
   /**
    * signature150ImageId.
    *
@@ -585,7 +578,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return signature150ImageId
    **/
   @Schema(description = "")
@@ -600,6 +592,7 @@ public class UserSignature {
     this.signature150ImageId = signature150ImageId;
   }
 
+
   /**
    * signatureFont.
    *
@@ -611,11 +604,7 @@ public class UserSignature {
   }
 
   /**
-   * The font type for the signature, if the signature is not drawn. The supported
-   * font types are: \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\",
-   * \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\",
-   * \"5_DocuSign\", \"Rage Italic\" .
-   * 
+   * The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" .
    * @return signatureFont
    **/
   @Schema(description = "The font type for the signature, if the signature is not drawn. The supported font types are:  \"7_DocuSign\", \"1_DocuSign\", \"6_DocuSign\", \"8_DocuSign\", \"3_DocuSign\", \"Mistral\", \"4_DocuSign\", \"2_DocuSign\", \"5_DocuSign\", \"Rage Italic\" ")
@@ -630,6 +619,7 @@ public class UserSignature {
     this.signatureFont = signatureFont;
   }
 
+
   /**
    * signatureId.
    *
@@ -641,14 +631,7 @@ public class UserSignature {
   }
 
   /**
-   * Specifies the signature ID associated with the signature name. You can use
-   * the signature ID in the URI in place of the signature name, and the value
-   * stored in the `signatureName` property in the body is used. This allows the
-   * use of special characters (such as \"&\", \"<\", \">\") in a the signature
-   * name. Note that with each update to signatures, the returned signature ID
-   * might change, so the caller will need to trigger off the signature name to
-   * get the new signature ID..
-   * 
+   * Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID..
    * @return signatureId
    **/
   @Schema(description = "Specifies the signature ID associated with the signature name. You can use the signature ID in the URI in place of the signature name, and the value stored in the `signatureName` property in the body is used. This allows the use of special characters (such as \"&\", \"<\", \">\") in a the signature name. Note that with each update to signatures, the returned signature ID might change, so the caller will need to trigger off the signature name to get the new signature ID.")
@@ -663,6 +646,7 @@ public class UserSignature {
     this.signatureId = signatureId;
   }
 
+
   /**
    * signatureImageUri.
    *
@@ -674,9 +658,7 @@ public class UserSignature {
   }
 
   /**
-   * Contains the URI for an endpoint that you can use to retrieve the signature
-   * image..
-   * 
+   * Contains the URI for an endpoint that you can use to retrieve the signature image..
    * @return signatureImageUri
    **/
   @Schema(description = "Contains the URI for an endpoint that you can use to retrieve the signature image.")
@@ -691,6 +673,7 @@ public class UserSignature {
     this.signatureImageUri = signatureImageUri;
   }
 
+
   /**
    * signatureInitials.
    *
@@ -702,8 +685,7 @@ public class UserSignature {
   }
 
   /**
-   * The initials associated with the signature..
-   * 
+   *  The initials associated with the signature..
    * @return signatureInitials
    **/
   @Schema(description = " The initials associated with the signature.")
@@ -718,6 +700,7 @@ public class UserSignature {
     this.signatureInitials = signatureInitials;
   }
 
+
   /**
    * signatureName.
    *
@@ -730,7 +713,6 @@ public class UserSignature {
 
   /**
    * Specifies the user signature name..
-   * 
    * @return signatureName
    **/
   @Schema(description = "Specifies the user signature name.")
@@ -745,6 +727,7 @@ public class UserSignature {
     this.signatureName = signatureName;
   }
 
+
   /**
    * signatureRights.
    *
@@ -757,7 +740,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return signatureRights
    **/
   @Schema(description = "")
@@ -772,6 +754,7 @@ public class UserSignature {
     this.signatureRights = signatureRights;
   }
 
+
   /**
    * signatureType.
    *
@@ -784,7 +767,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return signatureType
    **/
   @Schema(description = "")
@@ -799,6 +781,7 @@ public class UserSignature {
     this.signatureType = signatureType;
   }
 
+
   /**
    * stampFormat.
    *
@@ -811,7 +794,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return stampFormat
    **/
   @Schema(description = "")
@@ -826,6 +808,7 @@ public class UserSignature {
     this.stampFormat = stampFormat;
   }
 
+
   /**
    * stampImageUri.
    *
@@ -838,7 +821,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return stampImageUri
    **/
   @Schema(description = "")
@@ -853,6 +835,7 @@ public class UserSignature {
     this.stampImageUri = stampImageUri;
   }
 
+
   /**
    * stampSizeMM.
    *
@@ -865,7 +848,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return stampSizeMM
    **/
   @Schema(description = "")
@@ -880,6 +862,7 @@ public class UserSignature {
     this.stampSizeMM = stampSizeMM;
   }
 
+
   /**
    * stampType.
    *
@@ -892,7 +875,6 @@ public class UserSignature {
 
   /**
    * .
-   * 
    * @return stampType
    **/
   @Schema(description = "")
@@ -907,6 +889,7 @@ public class UserSignature {
     this.stampType = stampType;
   }
 
+
   /**
    * status.
    *
@@ -918,10 +901,7 @@ public class UserSignature {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -935,6 +915,7 @@ public class UserSignature {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -987,12 +968,9 @@ public class UserSignature {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp,
-        errorDetails, externalID, imageBase64, imageType, initials150ImageId, initialsImageUri, isDefault,
-        lastModifiedDateTime, nrdsId, nrdsLastName, nrdsStatus, phoneticName, signature150ImageId, signatureFont,
-        signatureId, signatureImageUri, signatureInitials, signatureName, signatureRights, signatureType, stampFormat,
-        stampImageUri, stampSizeMM, stampType, status);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, initials150ImageId, initialsImageUri, isDefault, lastModifiedDateTime, nrdsId, nrdsLastName, nrdsStatus, phoneticName, signature150ImageId, signatureFont, signatureId, signatureImageUri, signatureInitials, signatureName, signatureRights, signatureType, stampFormat, stampImageUri, stampSizeMM, stampType, status);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1001,7 +979,7 @@ public class UserSignature {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSignature {\n");
-
+    
     sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
@@ -1048,3 +1026,4 @@ public class UserSignature {
   }
 
 }
+

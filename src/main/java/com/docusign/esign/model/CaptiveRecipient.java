@@ -28,6 +28,7 @@ public class CaptiveRecipient {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * clientUserId.
    *
@@ -39,12 +40,7 @@ public class CaptiveRecipient {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
-   * property is not null then the recipient is embedded. Note that if the
-   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
-   * `SignerMustLoginToSign` property of the account settings is set to **true**,
-   * an error is generated on sending.ng. Maximum length: 100 characters. .
-   * 
+   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
    * @return clientUserId
    **/
   @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
@@ -59,6 +55,7 @@ public class CaptiveRecipient {
     this.clientUserId = clientUserId;
   }
 
+
   /**
    * email.
    *
@@ -71,7 +68,6 @@ public class CaptiveRecipient {
 
   /**
    * Specifies the email address associated with the captive recipient..
-   * 
    * @return email
    **/
   @Schema(description = "Specifies the email address associated with the captive recipient.")
@@ -86,6 +82,7 @@ public class CaptiveRecipient {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -97,12 +94,10 @@ public class CaptiveRecipient {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -113,6 +108,7 @@ public class CaptiveRecipient {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * userName.
@@ -126,7 +122,6 @@ public class CaptiveRecipient {
 
   /**
    * Specifies the user name associated with the captive recipient..
-   * 
    * @return userName
    **/
   @Schema(description = "Specifies the user name associated with the captive recipient.")
@@ -140,6 +135,7 @@ public class CaptiveRecipient {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -169,6 +165,7 @@ public class CaptiveRecipient {
     return Objects.hash(clientUserId, email, errorDetails, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -176,7 +173,7 @@ public class CaptiveRecipient {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CaptiveRecipient {\n");
-
+    
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -197,3 +194,4 @@ public class CaptiveRecipient {
   }
 
 }
+

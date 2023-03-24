@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex element that has up to four Question/Answer pairs for forgotten
- * password information..
+ * A complex element that has up to four Question/Answer pairs for forgotten password information..
  *
  */
 @Schema(description = "A complex element that has up to four Question/Answer pairs for forgotten password information.")
@@ -40,6 +39,7 @@ public class ForgottenPasswordInformation {
   @JsonProperty("forgottenPasswordQuestion4")
   private String forgottenPasswordQuestion4 = null;
 
+
   /**
    * forgottenPasswordAnswer1.
    *
@@ -52,7 +52,6 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the first forgotten password challenge question..
-   * 
    * @return forgottenPasswordAnswer1
    **/
   @Schema(description = "The answer to the first forgotten password challenge question.")
@@ -67,6 +66,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordAnswer1 = forgottenPasswordAnswer1;
   }
 
+
   /**
    * forgottenPasswordAnswer2.
    *
@@ -79,7 +79,6 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the second forgotten password challenge question..
-   * 
    * @return forgottenPasswordAnswer2
    **/
   @Schema(description = "The answer to the second forgotten password challenge question.")
@@ -94,6 +93,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordAnswer2 = forgottenPasswordAnswer2;
   }
 
+
   /**
    * forgottenPasswordAnswer3.
    *
@@ -106,7 +106,6 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the third forgotten password challenge question..
-   * 
    * @return forgottenPasswordAnswer3
    **/
   @Schema(description = "The answer to the third forgotten password challenge question.")
@@ -121,6 +120,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordAnswer3 = forgottenPasswordAnswer3;
   }
 
+
   /**
    * forgottenPasswordAnswer4.
    *
@@ -133,7 +133,6 @@ public class ForgottenPasswordInformation {
 
   /**
    * The answer to the fourth forgotten password challenge question..
-   * 
    * @return forgottenPasswordAnswer4
    **/
   @Schema(description = "The answer to the fourth forgotten password challenge question.")
@@ -148,6 +147,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordAnswer4 = forgottenPasswordAnswer4;
   }
 
+
   /**
    * forgottenPasswordQuestion1.
    *
@@ -159,9 +159,7 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The first challenge question presented to a user who has forgotten their
-   * password..
-   * 
+   * The first challenge question presented to a user who has forgotten their password..
    * @return forgottenPasswordQuestion1
    **/
   @Schema(description = "The first challenge question presented to a user who has forgotten their password.")
@@ -176,6 +174,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordQuestion1 = forgottenPasswordQuestion1;
   }
 
+
   /**
    * forgottenPasswordQuestion2.
    *
@@ -187,9 +186,7 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The second challenge question presented to a user who has forgotten their
-   * password..
-   * 
+   * The second challenge question presented to a user who has forgotten their password..
    * @return forgottenPasswordQuestion2
    **/
   @Schema(description = "The second challenge question presented to a user who has forgotten their password.")
@@ -204,6 +201,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordQuestion2 = forgottenPasswordQuestion2;
   }
 
+
   /**
    * forgottenPasswordQuestion3.
    *
@@ -215,9 +213,7 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The third challenge question presented to a user who has forgotten their
-   * password..
-   * 
+   * The third challenge question presented to a user who has forgotten their password..
    * @return forgottenPasswordQuestion3
    **/
   @Schema(description = "The third challenge question presented to a user who has forgotten their password.")
@@ -232,6 +228,7 @@ public class ForgottenPasswordInformation {
     this.forgottenPasswordQuestion3 = forgottenPasswordQuestion3;
   }
 
+
   /**
    * forgottenPasswordQuestion4.
    *
@@ -243,9 +240,7 @@ public class ForgottenPasswordInformation {
   }
 
   /**
-   * The fourth challenge question presented to a user who has forgotten their
-   * password..
-   * 
+   * The fourth challenge question presented to a user who has forgotten their password..
    * @return forgottenPasswordQuestion4
    **/
   @Schema(description = "The fourth challenge question presented to a user who has forgotten their password.")
@@ -259,6 +254,7 @@ public class ForgottenPasswordInformation {
   public void setForgottenPasswordQuestion4(String forgottenPasswordQuestion4) {
     this.forgottenPasswordQuestion4 = forgottenPasswordQuestion4;
   }
+
 
   /**
    * Compares objects.
@@ -289,10 +285,9 @@ public class ForgottenPasswordInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(forgottenPasswordAnswer1, forgottenPasswordAnswer2, forgottenPasswordAnswer3,
-        forgottenPasswordAnswer4, forgottenPasswordQuestion1, forgottenPasswordQuestion2, forgottenPasswordQuestion3,
-        forgottenPasswordQuestion4);
+    return Objects.hash(forgottenPasswordAnswer1, forgottenPasswordAnswer2, forgottenPasswordAnswer3, forgottenPasswordAnswer4, forgottenPasswordQuestion1, forgottenPasswordQuestion2, forgottenPasswordQuestion3, forgottenPasswordQuestion4);
   }
+
 
   /**
    * Converts the given object to string.
@@ -301,7 +296,7 @@ public class ForgottenPasswordInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ForgottenPasswordInformation {\n");
-
+    
     sb.append("    forgottenPasswordAnswer1: ").append(toIndentedString(forgottenPasswordAnswer1)).append("\n");
     sb.append("    forgottenPasswordAnswer2: ").append(toIndentedString(forgottenPasswordAnswer2)).append("\n");
     sb.append("    forgottenPasswordAnswer3: ").append(toIndentedString(forgottenPasswordAnswer3)).append("\n");
@@ -326,3 +321,4 @@ public class ForgottenPasswordInformation {
   }
 
 }
+

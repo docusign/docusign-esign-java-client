@@ -32,6 +32,7 @@ public class RecipientAttachment {
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
+
   /**
    * attachmentId.
    *
@@ -44,7 +45,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return attachmentId
    **/
   @Schema(description = "")
@@ -59,6 +59,7 @@ public class RecipientAttachment {
     this.attachmentId = attachmentId;
   }
 
+
   /**
    * attachmentType.
    *
@@ -71,7 +72,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return attachmentType
    **/
   @Schema(description = "")
@@ -86,6 +86,7 @@ public class RecipientAttachment {
     this.attachmentType = attachmentType;
   }
 
+
   /**
    * data.
    *
@@ -98,7 +99,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return data
    **/
   @Schema(description = "")
@@ -113,6 +113,7 @@ public class RecipientAttachment {
     this.data = data;
   }
 
+
   /**
    * label.
    *
@@ -125,7 +126,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return label
    **/
   @Schema(description = "")
@@ -140,6 +140,7 @@ public class RecipientAttachment {
     this.label = label;
   }
 
+
   /**
    * name.
    *
@@ -152,7 +153,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -167,6 +167,7 @@ public class RecipientAttachment {
     this.name = name;
   }
 
+
   /**
    * remoteUrl.
    *
@@ -179,7 +180,6 @@ public class RecipientAttachment {
 
   /**
    * .
-   * 
    * @return remoteUrl
    **/
   @Schema(description = "")
@@ -193,6 +193,7 @@ public class RecipientAttachment {
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
+
 
   /**
    * Compares objects.
@@ -224,6 +225,7 @@ public class RecipientAttachment {
     return Objects.hash(attachmentId, attachmentType, data, label, name, remoteUrl);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -231,7 +233,7 @@ public class RecipientAttachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientAttachment {\n");
-
+    
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
@@ -254,3 +256,4 @@ public class RecipientAttachment {
   }
 
 }
+

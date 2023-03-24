@@ -101,6 +101,7 @@ public class Document {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * applyAnchorTabs.
    *
@@ -113,7 +114,6 @@ public class Document {
 
   /**
    * Reserved: TBD.
-   * 
    * @return applyAnchorTabs
    **/
   @Schema(description = "Reserved: TBD")
@@ -128,6 +128,7 @@ public class Document {
     this.applyAnchorTabs = applyAnchorTabs;
   }
 
+
   /**
    * assignTabsToRecipientId.
    *
@@ -140,7 +141,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return assignTabsToRecipientId
    **/
   @Schema(description = "")
@@ -155,6 +155,7 @@ public class Document {
     this.assignTabsToRecipientId = assignTabsToRecipientId;
   }
 
+
   /**
    * display.
    *
@@ -167,7 +168,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return display
    **/
   @Schema(description = "")
@@ -182,6 +182,7 @@ public class Document {
     this.display = display;
   }
 
+
   /**
    * docGenFormFields.
    *
@@ -191,7 +192,7 @@ public class Document {
     this.docGenFormFields = docGenFormFields;
     return this;
   }
-
+  
   /**
    * addDocGenFormFieldsItem.
    *
@@ -207,7 +208,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return docGenFormFields
    **/
   @Schema(description = "")
@@ -222,6 +222,7 @@ public class Document {
     this.docGenFormFields = docGenFormFields;
   }
 
+
   /**
    * documentBase64.
    *
@@ -233,11 +234,7 @@ public class Document {
   }
 
   /**
-   * The document's bytes. This field can be used to include a base64 version of
-   * the document bytes within an envelope definition instead of sending the
-   * document using a multi-part HTTP request. The maximum document size is
-   * smaller if this field is used due to the overhead of the base64 encoding..
-   * 
+   * The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding..
    * @return documentBase64
    **/
   @Schema(description = "The document's bytes. This field can be used to include a base64 version of the document bytes within an envelope definition instead of sending the document using a multi-part HTTP request. The maximum document size is smaller if this field is used due to the overhead of the base64 encoding.")
@@ -252,6 +249,7 @@ public class Document {
     this.documentBase64 = documentBase64;
   }
 
+
   /**
    * documentFields.
    *
@@ -261,7 +259,7 @@ public class Document {
     this.documentFields = documentFields;
     return this;
   }
-
+  
   /**
    * addDocumentFieldsItem.
    *
@@ -277,7 +275,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return documentFields
    **/
   @Schema(description = "")
@@ -292,6 +289,7 @@ public class Document {
     this.documentFields = documentFields;
   }
 
+
   /**
    * documentId.
    *
@@ -303,9 +301,7 @@ public class Document {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -320,6 +316,7 @@ public class Document {
     this.documentId = documentId;
   }
 
+
   /**
    * encryptedWithKeyManager.
    *
@@ -331,9 +328,7 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the document is been already encrypted by the sender
-   * for use with the DocuSign Key Manager Security Appliance. .
-   * 
+   * When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  .
    * @return encryptedWithKeyManager
    **/
   @Schema(description = "When set to **true**, the document is been already encrypted by the sender for use with the DocuSign Key Manager Security Appliance.  ")
@@ -348,6 +343,7 @@ public class Document {
     this.encryptedWithKeyManager = encryptedWithKeyManager;
   }
 
+
   /**
    * fileExtension.
    *
@@ -359,9 +355,7 @@ public class Document {
   }
 
   /**
-   * The file extension type of the document. If the document is not a PDF it is
-   * converted to a PDF. .
-   * 
+   * The file extension type of the document. If the document is not a PDF it is converted to a PDF.  .
    * @return fileExtension
    **/
   @Schema(description = "The file extension type of the document. If the document is not a PDF it is converted to a PDF.  ")
@@ -376,6 +370,7 @@ public class Document {
     this.fileExtension = fileExtension;
   }
 
+
   /**
    * fileFormatHint.
    *
@@ -388,7 +383,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return fileFormatHint
    **/
   @Schema(description = "")
@@ -403,6 +397,7 @@ public class Document {
     this.fileFormatHint = fileFormatHint;
   }
 
+
   /**
    * htmlDefinition.
    *
@@ -414,10 +409,7 @@ public class Document {
   }
 
   /**
-   * Defines how to generate the responsive-formatted HTML for the document. See
-   * [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in
-   * the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
-   * 
+   * Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
    * @return htmlDefinition
    **/
   @Schema(description = "Defines how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
@@ -432,6 +424,7 @@ public class Document {
     this.htmlDefinition = htmlDefinition;
   }
 
+
   /**
    * includeInDownload.
    *
@@ -444,7 +437,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return includeInDownload
    **/
   @Schema(description = "")
@@ -459,6 +451,7 @@ public class Document {
     this.includeInDownload = includeInDownload;
   }
 
+
   /**
    * isDocGenDocument.
    *
@@ -471,7 +464,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return isDocGenDocument
    **/
   @Schema(description = "")
@@ -486,6 +478,7 @@ public class Document {
     this.isDocGenDocument = isDocGenDocument;
   }
 
+
   /**
    * matchBoxes.
    *
@@ -495,7 +488,7 @@ public class Document {
     this.matchBoxes = matchBoxes;
     return this;
   }
-
+  
   /**
    * addMatchBoxesItem.
    *
@@ -510,13 +503,7 @@ public class Document {
   }
 
   /**
-   * Matchboxes define areas in a document for document matching when you are
-   * creating envelopes. They are only used when you upload and edit a template. A
-   * matchbox consists of 5 elements: * pageNumber - The document page number on
-   * which the matchbox will appear. * xPosition - The x position of the matchbox
-   * on a page. * yPosition - The y position of the matchbox on a page. * width -
-   * The width of the matchbox. * height - The height of the matchbox. .
-   * 
+   * Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  .
    * @return matchBoxes
    **/
   @Schema(description = "Matchboxes define areas in a document for document matching when you are creating envelopes. They are only used when you upload and edit a template.   A matchbox consists of 5 elements:  * pageNumber - The document page number  on which the matchbox will appear.  * xPosition - The x position of the matchbox on a page.  * yPosition - The y position of the matchbox on a page. * width - The width of the matchbox.  * height - The height of the matchbox.  ")
@@ -531,6 +518,7 @@ public class Document {
     this.matchBoxes = matchBoxes;
   }
 
+
   /**
    * name.
    *
@@ -543,7 +531,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -558,6 +545,7 @@ public class Document {
     this.name = name;
   }
 
+
   /**
    * order.
    *
@@ -570,7 +558,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return order
    **/
   @Schema(description = "")
@@ -585,6 +572,7 @@ public class Document {
     this.order = order;
   }
 
+
   /**
    * pages.
    *
@@ -597,7 +585,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return pages
    **/
   @Schema(description = "")
@@ -612,6 +599,7 @@ public class Document {
     this.pages = pages;
   }
 
+
   /**
    * password.
    *
@@ -624,7 +612,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return password
    **/
   @Schema(description = "")
@@ -639,6 +626,7 @@ public class Document {
     this.password = password;
   }
 
+
   /**
    * pdfFormFieldOption.
    *
@@ -651,7 +639,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return pdfFormFieldOption
    **/
   @Schema(description = "")
@@ -666,6 +653,7 @@ public class Document {
     this.pdfFormFieldOption = pdfFormFieldOption;
   }
 
+
   /**
    * remoteUrl.
    *
@@ -677,10 +665,7 @@ public class Document {
   }
 
   /**
-   * The file id from the cloud storage service where the document is located.
-   * This information is returned using [ML:GET /folders] or
-   * [ML:/folders/{folderid}]. .
-   * 
+   * The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. .
    * @return remoteUrl
    **/
   @Schema(description = "The file id from the cloud storage service where the document is located. This information is returned using [ML:GET /folders] or [ML:/folders/{folderid}]. ")
@@ -695,6 +680,7 @@ public class Document {
     this.remoteUrl = remoteUrl;
   }
 
+
   /**
    * signerMustAcknowledge.
    *
@@ -707,7 +693,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return signerMustAcknowledge
    **/
   @Schema(description = "")
@@ -722,6 +707,7 @@ public class Document {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
 
+
   /**
    * signerMustAcknowledgeUseAccountDefault.
    *
@@ -734,7 +720,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return signerMustAcknowledgeUseAccountDefault
    **/
   @Schema(description = "")
@@ -749,6 +734,7 @@ public class Document {
     this.signerMustAcknowledgeUseAccountDefault = signerMustAcknowledgeUseAccountDefault;
   }
 
+
   /**
    * tabs.
    *
@@ -760,10 +746,7 @@ public class Document {
   }
 
   /**
-   * A list of tabs, which are represented graphically as symbols on documents at
-   * the time of signing. Tabs show recipients where to sign, initial, or enter
-   * data. They may also display data to the recipients..
-   * 
+   * A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients..
    * @return tabs
    **/
   @Schema(description = "A list of tabs, which are represented graphically as symbols on documents at the time of signing. Tabs show recipients where to sign, initial, or enter data. They may also display data to the recipients.")
@@ -778,6 +761,7 @@ public class Document {
     this.tabs = tabs;
   }
 
+
   /**
    * templateLocked.
    *
@@ -789,9 +773,7 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -806,6 +788,7 @@ public class Document {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateRequired.
    *
@@ -817,9 +800,7 @@ public class Document {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -834,6 +815,7 @@ public class Document {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * transformPdfFields.
    *
@@ -845,12 +827,7 @@ public class Document {
   }
 
   /**
-   * When set to **true**, PDF form field data is transformed into document tab
-   * values when the PDF form field name matches the DocuSign custom tab tabLabel.
-   * The resulting PDF form data is also returned in the PDF meta data when
-   * requesting the document PDF. See the [ML:Transform PDF Fields] section for
-   * more information about how fields are transformed into DocuSign tabs. .
-   * 
+   * When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. .
    * @return transformPdfFields
    **/
   @Schema(description = "When set to **true**, PDF form field data is transformed into document tab values when the PDF form field name matches the DocuSign custom tab tabLabel. The resulting PDF form data is also returned in the PDF meta data when requesting the document PDF. See the [ML:Transform PDF Fields] section for more information about how fields are transformed into DocuSign tabs. ")
@@ -865,6 +842,7 @@ public class Document {
     this.transformPdfFields = transformPdfFields;
   }
 
+
   /**
    * uri.
    *
@@ -877,7 +855,6 @@ public class Document {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -891,6 +868,7 @@ public class Document {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -940,12 +918,9 @@ public class Document {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64,
-        documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition,
-        includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl,
-        signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired,
-        transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -954,7 +929,7 @@ public class Document {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Document {\n");
-
+    
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
     sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
@@ -976,8 +951,7 @@ public class Document {
     sb.append("    pdfFormFieldOption: ").append(toIndentedString(pdfFormFieldOption)).append("\n");
     sb.append("    remoteUrl: ").append(toIndentedString(remoteUrl)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    signerMustAcknowledgeUseAccountDefault: ")
-        .append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
+    sb.append("    signerMustAcknowledgeUseAccountDefault: ").append(toIndentedString(signerMustAcknowledgeUseAccountDefault)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
@@ -999,3 +973,4 @@ public class Document {
   }
 
 }
+

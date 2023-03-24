@@ -10,10 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Holds the properties that define how to generate the responsive-formatted
- * HTML for the document. See [Responsive
- * signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the
- * [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
+ * Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/)..
  *
  */
 @Schema(description = "Holds the properties that define how to generate the responsive-formatted HTML for the document. See [Responsive signing](/docs/esign-rest-api/esign101/concepts/responsive/) in the [eSignature concepts guide](/docs/esign-rest-api/esign101/concepts/).")
@@ -52,6 +49,7 @@ public class DocumentHtmlDefinition {
   @JsonProperty("source")
   private String source = null;
 
+
   /**
    * displayAnchorPrefix.
    *
@@ -64,7 +62,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return displayAnchorPrefix
    **/
   @Schema(description = "")
@@ -79,6 +76,7 @@ public class DocumentHtmlDefinition {
     this.displayAnchorPrefix = displayAnchorPrefix;
   }
 
+
   /**
    * displayAnchors.
    *
@@ -88,7 +86,7 @@ public class DocumentHtmlDefinition {
     this.displayAnchors = displayAnchors;
     return this;
   }
-
+  
   /**
    * addDisplayAnchorsItem.
    *
@@ -104,7 +102,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return displayAnchors
    **/
   @Schema(description = "")
@@ -119,6 +116,7 @@ public class DocumentHtmlDefinition {
     this.displayAnchors = displayAnchors;
   }
 
+
   /**
    * displayOrder.
    *
@@ -131,7 +129,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return displayOrder
    **/
   @Schema(description = "")
@@ -146,6 +143,7 @@ public class DocumentHtmlDefinition {
     this.displayOrder = displayOrder;
   }
 
+
   /**
    * displayPageNumber.
    *
@@ -158,7 +156,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return displayPageNumber
    **/
   @Schema(description = "")
@@ -173,6 +170,7 @@ public class DocumentHtmlDefinition {
     this.displayPageNumber = displayPageNumber;
   }
 
+
   /**
    * documentGuid.
    *
@@ -185,7 +183,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return documentGuid
    **/
   @Schema(description = "")
@@ -200,6 +197,7 @@ public class DocumentHtmlDefinition {
     this.documentGuid = documentGuid;
   }
 
+
   /**
    * documentId.
    *
@@ -211,9 +209,7 @@ public class DocumentHtmlDefinition {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -228,6 +224,7 @@ public class DocumentHtmlDefinition {
     this.documentId = documentId;
   }
 
+
   /**
    * headerLabel.
    *
@@ -240,7 +237,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return headerLabel
    **/
   @Schema(description = "")
@@ -255,6 +251,7 @@ public class DocumentHtmlDefinition {
     this.headerLabel = headerLabel;
   }
 
+
   /**
    * maxScreenWidth.
    *
@@ -267,7 +264,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return maxScreenWidth
    **/
   @Schema(description = "")
@@ -282,6 +278,7 @@ public class DocumentHtmlDefinition {
     this.maxScreenWidth = maxScreenWidth;
   }
 
+
   /**
    * removeEmptyTags.
    *
@@ -294,7 +291,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return removeEmptyTags
    **/
   @Schema(description = "")
@@ -309,6 +305,7 @@ public class DocumentHtmlDefinition {
     this.removeEmptyTags = removeEmptyTags;
   }
 
+
   /**
    * showMobileOptimizedToggle.
    *
@@ -321,7 +318,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return showMobileOptimizedToggle
    **/
   @Schema(description = "")
@@ -336,6 +332,7 @@ public class DocumentHtmlDefinition {
     this.showMobileOptimizedToggle = showMobileOptimizedToggle;
   }
 
+
   /**
    * source.
    *
@@ -348,7 +345,6 @@ public class DocumentHtmlDefinition {
 
   /**
    * .
-   * 
    * @return source
    **/
   @Schema(description = "")
@@ -362,6 +358,7 @@ public class DocumentHtmlDefinition {
   public void setSource(String source) {
     this.source = source;
   }
+
 
   /**
    * Compares objects.
@@ -395,9 +392,9 @@ public class DocumentHtmlDefinition {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(displayAnchorPrefix, displayAnchors, displayOrder, displayPageNumber, documentGuid, documentId,
-        headerLabel, maxScreenWidth, removeEmptyTags, showMobileOptimizedToggle, source);
+    return Objects.hash(displayAnchorPrefix, displayAnchors, displayOrder, displayPageNumber, documentGuid, documentId, headerLabel, maxScreenWidth, removeEmptyTags, showMobileOptimizedToggle, source);
   }
+
 
   /**
    * Converts the given object to string.
@@ -406,7 +403,7 @@ public class DocumentHtmlDefinition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDefinition {\n");
-
+    
     sb.append("    displayAnchorPrefix: ").append(toIndentedString(displayAnchorPrefix)).append("\n");
     sb.append("    displayAnchors: ").append(toIndentedString(displayAnchors)).append("\n");
     sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
@@ -434,3 +431,4 @@ public class DocumentHtmlDefinition {
   }
 
 }
+

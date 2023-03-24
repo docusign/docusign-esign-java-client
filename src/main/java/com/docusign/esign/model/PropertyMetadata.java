@@ -21,6 +21,7 @@ public class PropertyMetadata {
   @JsonProperty("rights")
   private String rights = null;
 
+
   /**
    * options.
    *
@@ -30,7 +31,7 @@ public class PropertyMetadata {
     this.options = options;
     return this;
   }
-
+  
   /**
    * addOptionsItem.
    *
@@ -46,7 +47,6 @@ public class PropertyMetadata {
 
   /**
    * .
-   * 
    * @return options
    **/
   @Schema(description = "")
@@ -61,6 +61,7 @@ public class PropertyMetadata {
     this.options = options;
   }
 
+
   /**
    * rights.
    *
@@ -73,7 +74,6 @@ public class PropertyMetadata {
 
   /**
    * .
-   * 
    * @return rights
    **/
   @Schema(description = "")
@@ -87,6 +87,7 @@ public class PropertyMetadata {
   public void setRights(String rights) {
     this.rights = rights;
   }
+
 
   /**
    * Compares objects.
@@ -114,6 +115,7 @@ public class PropertyMetadata {
     return Objects.hash(options, rights);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -121,7 +123,7 @@ public class PropertyMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertyMetadata {\n");
-
+    
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
@@ -140,3 +142,4 @@ public class PropertyMetadata {
   }
 
 }
+

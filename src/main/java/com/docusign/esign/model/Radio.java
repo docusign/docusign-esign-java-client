@@ -11,9 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * One of the selectable radio buttons in the &#x60;radios&#x60; property of a
- * [&#x60;radioGroup&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/)
- * tab. .
+ * One of the selectable radio buttons in the &#x60;radios&#x60; property of a [&#x60;radioGroup&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab. .
  *
  */
 @Schema(description = "One of the selectable radio buttons in the `radios` property of a [`radioGroup`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab. ")
@@ -124,6 +122,9 @@ public class Radio {
   @JsonProperty("lockedMetadata")
   private PropertyMetadata lockedMetadata = null;
 
+  @JsonProperty("mergeFieldXml")
+  private String mergeFieldXml = null;
+
   @JsonProperty("pageNumber")
   private String pageNumber = null;
 
@@ -184,6 +185,7 @@ public class Radio {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -196,7 +198,6 @@ public class Radio {
 
   /**
    * .
-   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
   @Schema(description = "")
@@ -211,6 +212,7 @@ public class Radio {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
+
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
@@ -222,9 +224,7 @@ public class Radio {
   }
 
   /**
-   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters`
-   * property is editable..
-   * 
+   * Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable..
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorAllowWhiteSpaceInCharacters` property is editable.")
@@ -239,6 +239,7 @@ public class Radio {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -250,9 +251,7 @@ public class Radio {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -267,6 +266,7 @@ public class Radio {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorCaseSensitiveMetadata.
    *
@@ -278,9 +278,7 @@ public class Radio {
   }
 
   /**
-   * Metadata that indicates whether the `anchorCaseSensitive` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorCaseSensitive` property is editable..
    * @return anchorCaseSensitiveMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorCaseSensitive` property is editable.")
@@ -295,6 +293,7 @@ public class Radio {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -306,9 +305,7 @@ public class Radio {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -323,6 +320,7 @@ public class Radio {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorHorizontalAlignmentMetadata.
    *
@@ -334,9 +332,7 @@ public class Radio {
   }
 
   /**
-   * Metadata that indicates whether the `anchorHorizontalAlignment` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorHorizontalAlignment` property is editable..
    * @return anchorHorizontalAlignmentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorHorizontalAlignment` property is editable.")
@@ -351,6 +347,7 @@ public class Radio {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -362,9 +359,7 @@ public class Radio {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -379,6 +374,7 @@ public class Radio {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
@@ -390,9 +386,7 @@ public class Radio {
   }
 
   /**
-   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable..
    * @return anchorIgnoreIfNotPresentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorIgnoreIfNotPresent` property is editable.")
@@ -407,6 +401,7 @@ public class Radio {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -418,10 +413,7 @@ public class Radio {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -436,6 +428,7 @@ public class Radio {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorMatchWholeWordMetadata.
    *
@@ -447,9 +440,7 @@ public class Radio {
   }
 
   /**
-   * Metadata that indicates whether the `anchorMatchWholeWord` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `anchorMatchWholeWord` property is editable..
    * @return anchorMatchWholeWordMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorMatchWholeWord` property is editable.")
@@ -464,6 +455,7 @@ public class Radio {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
+
   /**
    * anchorString.
    *
@@ -476,7 +468,6 @@ public class Radio {
 
   /**
    * Anchor text information for a radio button..
-   * 
    * @return anchorString
    **/
   @Schema(description = "Anchor text information for a radio button.")
@@ -491,6 +482,7 @@ public class Radio {
     this.anchorString = anchorString;
   }
 
+
   /**
    * anchorStringMetadata.
    *
@@ -503,7 +495,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `anchorString` property is editable..
-   * 
    * @return anchorStringMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorString` property is editable.")
@@ -518,6 +509,7 @@ public class Radio {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
+
   /**
    * anchorTabProcessorVersion.
    *
@@ -530,7 +522,6 @@ public class Radio {
 
   /**
    * .
-   * 
    * @return anchorTabProcessorVersion
    **/
   @Schema(description = "")
@@ -545,6 +536,7 @@ public class Radio {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
+
   /**
    * anchorTabProcessorVersionMetadata.
    *
@@ -557,7 +549,6 @@ public class Radio {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return anchorTabProcessorVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -572,6 +563,7 @@ public class Radio {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -583,9 +575,7 @@ public class Radio {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -600,6 +590,7 @@ public class Radio {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorUnitsMetadata.
    *
@@ -612,7 +603,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `anchorUnits` property is editable..
-   * 
    * @return anchorUnitsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorUnits` property is editable.")
@@ -627,6 +617,7 @@ public class Radio {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -638,9 +629,7 @@ public class Radio {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -655,6 +644,7 @@ public class Radio {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorXOffsetMetadata.
    *
@@ -667,7 +657,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `anchorXOffset` property is editable..
-   * 
    * @return anchorXOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorXOffset` property is editable.")
@@ -682,6 +671,7 @@ public class Radio {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -693,9 +683,7 @@ public class Radio {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -710,6 +698,7 @@ public class Radio {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * anchorYOffsetMetadata.
    *
@@ -722,7 +711,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `anchorYOffset` property is editable..
-   * 
    * @return anchorYOffsetMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorYOffset` property is editable.")
@@ -737,6 +725,7 @@ public class Radio {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
+
   /**
    * bold.
    *
@@ -749,7 +738,6 @@ public class Radio {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -764,6 +752,7 @@ public class Radio {
     this.bold = bold;
   }
 
+
   /**
    * boldMetadata.
    *
@@ -776,7 +765,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `bold` property is editable..
-   * 
    * @return boldMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bold` property is editable.")
@@ -791,6 +779,7 @@ public class Radio {
     this.boldMetadata = boldMetadata;
   }
 
+
   /**
    * caption.
    *
@@ -803,7 +792,6 @@ public class Radio {
 
   /**
    * .
-   * 
    * @return caption
    **/
   @Schema(description = "")
@@ -818,6 +806,7 @@ public class Radio {
     this.caption = caption;
   }
 
+
   /**
    * captionMetadata.
    *
@@ -829,8 +818,7 @@ public class Radio {
   }
 
   /**
-   * Get captionMetadata.
-   * 
+   * .
    * @return captionMetadata
    **/
   @Schema(description = "")
@@ -845,6 +833,7 @@ public class Radio {
     this.captionMetadata = captionMetadata;
   }
 
+
   /**
    * errorDetails.
    *
@@ -856,12 +845,10 @@ public class Radio {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -872,6 +859,7 @@ public class Radio {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
@@ -884,11 +872,7 @@ public class Radio {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -903,6 +887,7 @@ public class Radio {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -914,10 +899,7 @@ public class Radio {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -932,6 +914,7 @@ public class Radio {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontColorMetadata.
    *
@@ -944,7 +927,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `fontColor` property is editable..
-   * 
    * @return fontColorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontColor` property is editable.")
@@ -959,6 +941,7 @@ public class Radio {
     this.fontColorMetadata = fontColorMetadata;
   }
 
+
   /**
    * fontMetadata.
    *
@@ -971,7 +954,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `font` property is editable..
-   * 
    * @return fontMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `font` property is editable.")
@@ -986,6 +968,7 @@ public class Radio {
     this.fontMetadata = fontMetadata;
   }
 
+
   /**
    * fontSize.
    *
@@ -997,10 +980,7 @@ public class Radio {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -1015,6 +995,7 @@ public class Radio {
     this.fontSize = fontSize;
   }
 
+
   /**
    * fontSizeMetadata.
    *
@@ -1027,7 +1008,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `fontSize` property is editable..
-   * 
    * @return fontSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `fontSize` property is editable.")
@@ -1042,6 +1022,7 @@ public class Radio {
     this.fontSizeMetadata = fontSizeMetadata;
   }
 
+
   /**
    * italic.
    *
@@ -1054,7 +1035,6 @@ public class Radio {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -1069,6 +1049,7 @@ public class Radio {
     this.italic = italic;
   }
 
+
   /**
    * italicMetadata.
    *
@@ -1081,7 +1062,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `italic` property is editable..
-   * 
    * @return italicMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `italic` property is editable.")
@@ -1096,6 +1076,7 @@ public class Radio {
     this.italicMetadata = italicMetadata;
   }
 
+
   /**
    * locked.
    *
@@ -1108,7 +1089,6 @@ public class Radio {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   * 
    * @return locked
    **/
   @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
@@ -1123,6 +1103,7 @@ public class Radio {
     this.locked = locked;
   }
 
+
   /**
    * lockedMetadata.
    *
@@ -1135,7 +1116,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `locked` property is editable..
-   * 
    * @return lockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `locked` property is editable.")
@@ -1150,6 +1130,34 @@ public class Radio {
     this.lockedMetadata = lockedMetadata;
   }
 
+
+  /**
+   * mergeFieldXml.
+   *
+   * @return Radio
+   **/
+  public Radio mergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+    return this;
+  }
+
+  /**
+   * .
+   * @return mergeFieldXml
+   **/
+  @Schema(description = "")
+  public String getMergeFieldXml() {
+    return mergeFieldXml;
+  }
+
+  /**
+   * setMergeFieldXml.
+   **/
+  public void setMergeFieldXml(String mergeFieldXml) {
+    this.mergeFieldXml = mergeFieldXml;
+  }
+
+
   /**
    * pageNumber.
    *
@@ -1162,7 +1170,6 @@ public class Radio {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -1177,6 +1184,7 @@ public class Radio {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * pageNumberMetadata.
    *
@@ -1189,7 +1197,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `pageNumber` property is editable..
-   * 
    * @return pageNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `pageNumber` property is editable.")
@@ -1204,6 +1211,7 @@ public class Radio {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
+
   /**
    * required.
    *
@@ -1216,7 +1224,6 @@ public class Radio {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -1231,6 +1238,7 @@ public class Radio {
     this.required = required;
   }
 
+
   /**
    * requiredMetadata.
    *
@@ -1243,7 +1251,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `required` property is editable..
-   * 
    * @return requiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `required` property is editable.")
@@ -1258,6 +1265,7 @@ public class Radio {
     this.requiredMetadata = requiredMetadata;
   }
 
+
   /**
    * selected.
    *
@@ -1270,7 +1278,6 @@ public class Radio {
 
   /**
    * When set to **true**, the radio button is selected..
-   * 
    * @return selected
    **/
   @Schema(description = "When set to **true**, the radio button is selected.")
@@ -1285,6 +1292,7 @@ public class Radio {
     this.selected = selected;
   }
 
+
   /**
    * selectedMetadata.
    *
@@ -1297,7 +1305,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `selected` property is editable..
-   * 
    * @return selectedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `selected` property is editable.")
@@ -1312,6 +1319,7 @@ public class Radio {
     this.selectedMetadata = selectedMetadata;
   }
 
+
   /**
    * status.
    *
@@ -1323,10 +1331,7 @@ public class Radio {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -1341,6 +1346,7 @@ public class Radio {
     this.status = status;
   }
 
+
   /**
    * statusMetadata.
    *
@@ -1353,7 +1359,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `status` property is editable..
-   * 
    * @return statusMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `status` property is editable.")
@@ -1368,6 +1373,7 @@ public class Radio {
     this.statusMetadata = statusMetadata;
   }
 
+
   /**
    * tabId.
    *
@@ -1379,9 +1385,7 @@ public class Radio {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -1396,6 +1400,7 @@ public class Radio {
     this.tabId = tabId;
   }
 
+
   /**
    * tabIdMetadata.
    *
@@ -1408,7 +1413,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `tabId` property is editable..
-   * 
    * @return tabIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabId` property is editable.")
@@ -1423,6 +1427,7 @@ public class Radio {
     this.tabIdMetadata = tabIdMetadata;
   }
 
+
   /**
    * tabOrder.
    *
@@ -1435,7 +1440,6 @@ public class Radio {
 
   /**
    * .
-   * 
    * @return tabOrder
    **/
   @Schema(description = "")
@@ -1450,6 +1454,7 @@ public class Radio {
     this.tabOrder = tabOrder;
   }
 
+
   /**
    * tabOrderMetadata.
    *
@@ -1462,7 +1467,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `tabOrder` property is editable..
-   * 
    * @return tabOrderMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabOrder` property is editable.")
@@ -1477,6 +1481,7 @@ public class Radio {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
+
   /**
    * underline.
    *
@@ -1489,7 +1494,6 @@ public class Radio {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -1504,6 +1508,7 @@ public class Radio {
     this.underline = underline;
   }
 
+
   /**
    * underlineMetadata.
    *
@@ -1516,7 +1521,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `underline` property is editable..
-   * 
    * @return underlineMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `underline` property is editable.")
@@ -1531,6 +1535,7 @@ public class Radio {
     this.underlineMetadata = underlineMetadata;
   }
 
+
   /**
    * value.
    *
@@ -1543,7 +1548,6 @@ public class Radio {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -1558,6 +1562,7 @@ public class Radio {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -1570,7 +1575,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -1585,6 +1589,7 @@ public class Radio {
     this.valueMetadata = valueMetadata;
   }
 
+
   /**
    * xPosition.
    *
@@ -1596,9 +1601,7 @@ public class Radio {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -1613,6 +1616,7 @@ public class Radio {
     this.xPosition = xPosition;
   }
 
+
   /**
    * xPositionMetadata.
    *
@@ -1625,7 +1629,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `xPosition` property is editable..
-   * 
    * @return xPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `xPosition` property is editable.")
@@ -1640,6 +1643,7 @@ public class Radio {
     this.xPositionMetadata = xPositionMetadata;
   }
 
+
   /**
    * yPosition.
    *
@@ -1651,9 +1655,7 @@ public class Radio {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -1668,6 +1670,7 @@ public class Radio {
     this.yPosition = yPosition;
   }
 
+
   /**
    * yPositionMetadata.
    *
@@ -1680,7 +1683,6 @@ public class Radio {
 
   /**
    * Metadata that indicates whether the `yPosition` property is editable..
-   * 
    * @return yPositionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `yPosition` property is editable.")
@@ -1694,6 +1696,7 @@ public class Radio {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -1710,8 +1713,7 @@ public class Radio {
     }
     Radio radio = (Radio) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, radio.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, radio.anchorAllowWhiteSpaceInCharactersMetadata)
-        &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, radio.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, radio.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, radio.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, radio.anchorHorizontalAlignment) &&
@@ -1745,6 +1747,7 @@ public class Radio {
         Objects.equals(this.italicMetadata, radio.italicMetadata) &&
         Objects.equals(this.locked, radio.locked) &&
         Objects.equals(this.lockedMetadata, radio.lockedMetadata) &&
+        Objects.equals(this.mergeFieldXml, radio.mergeFieldXml) &&
         Objects.equals(this.pageNumber, radio.pageNumber) &&
         Objects.equals(this.pageNumberMetadata, radio.pageNumberMetadata) &&
         Objects.equals(this.required, radio.required) &&
@@ -1772,17 +1775,9 @@ public class Radio {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
-        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
-        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
-        boldMetadata, caption, captionMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata,
-        fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, pageNumber, pageNumberMetadata,
-        required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabId, tabIdMetadata, tabOrder,
-        tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition,
-        yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, mergeFieldXml, pageNumber, pageNumberMetadata, required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1791,26 +1786,21 @@ public class Radio {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Radio {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -1832,6 +1822,7 @@ public class Radio {
     sb.append("    italicMetadata: ").append(toIndentedString(italicMetadata)).append("\n");
     sb.append("    locked: ").append(toIndentedString(locked)).append("\n");
     sb.append("    lockedMetadata: ").append(toIndentedString(lockedMetadata)).append("\n");
+    sb.append("    mergeFieldXml: ").append(toIndentedString(mergeFieldXml)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
     sb.append("    pageNumberMetadata: ").append(toIndentedString(pageNumberMetadata)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
@@ -1868,3 +1859,4 @@ public class Radio {
   }
 
 }
+

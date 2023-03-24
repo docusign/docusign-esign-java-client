@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Allows the sender to pre-specify the signature name, signature initials and
- * signature font used in the signature stamp for the recipient. Used only with
- * recipient types In Person Signers and Signers..
+ * Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers..
  *
  */
 @Schema(description = "Allows the sender to pre-specify the signature name, signature initials and signature font used in the signature stamp for the recipient.  Used only with recipient types In Person Signers and Signers.")
@@ -26,6 +24,7 @@ public class RecipientSignatureInformation {
   @JsonProperty("signatureName")
   private String signatureName = null;
 
+
   /**
    * fontStyle.
    *
@@ -38,7 +37,6 @@ public class RecipientSignatureInformation {
 
   /**
    * .
-   * 
    * @return fontStyle
    **/
   @Schema(description = "")
@@ -53,6 +51,7 @@ public class RecipientSignatureInformation {
     this.fontStyle = fontStyle;
   }
 
+
   /**
    * signatureInitials.
    *
@@ -65,7 +64,6 @@ public class RecipientSignatureInformation {
 
   /**
    * .
-   * 
    * @return signatureInitials
    **/
   @Schema(description = "")
@@ -80,6 +78,7 @@ public class RecipientSignatureInformation {
     this.signatureInitials = signatureInitials;
   }
 
+
   /**
    * signatureName.
    *
@@ -92,7 +91,6 @@ public class RecipientSignatureInformation {
 
   /**
    * Specifies the user signature name..
-   * 
    * @return signatureName
    **/
   @Schema(description = "Specifies the user signature name.")
@@ -106,6 +104,7 @@ public class RecipientSignatureInformation {
   public void setSignatureName(String signatureName) {
     this.signatureName = signatureName;
   }
+
 
   /**
    * Compares objects.
@@ -134,6 +133,7 @@ public class RecipientSignatureInformation {
     return Objects.hash(fontStyle, signatureInitials, signatureName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -141,7 +141,7 @@ public class RecipientSignatureInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientSignatureInformation {\n");
-
+    
     sb.append("    fontStyle: ").append(toIndentedString(fontStyle)).append("\n");
     sb.append("    signatureInitials: ").append(toIndentedString(signatureInitials)).append("\n");
     sb.append("    signatureName: ").append(toIndentedString(signatureName)).append("\n");
@@ -161,3 +161,4 @@ public class RecipientSignatureInformation {
   }
 
 }
+

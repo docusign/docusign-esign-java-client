@@ -20,6 +20,7 @@ public class EnvelopePublishTransactionErrorRollup {
   @JsonProperty("errorType")
   private String errorType = null;
 
+
   /**
    * count.
    *
@@ -32,7 +33,6 @@ public class EnvelopePublishTransactionErrorRollup {
 
   /**
    * .
-   * 
    * @return count
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class EnvelopePublishTransactionErrorRollup {
     this.count = count;
   }
 
+
   /**
    * errorType.
    *
@@ -59,7 +60,6 @@ public class EnvelopePublishTransactionErrorRollup {
 
   /**
    * .
-   * 
    * @return errorType
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class EnvelopePublishTransactionErrorRollup {
   public void setErrorType(String errorType) {
     this.errorType = errorType;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class EnvelopePublishTransactionErrorRollup {
     return Objects.hash(count, errorType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class EnvelopePublishTransactionErrorRollup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePublishTransactionErrorRollup {\n");
-
+    
     sb.append("    count: ").append(toIndentedString(count)).append("\n");
     sb.append("    errorType: ").append(toIndentedString(errorType)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class EnvelopePublishTransactionErrorRollup {
   }
 
 }
+

@@ -98,6 +98,7 @@ public class BulkSendingCopyRecipient {
   @JsonProperty("tabs")
   private java.util.List<BulkSendingCopyTab> tabs = null;
 
+
   /**
    * accessCode.
    *
@@ -109,13 +110,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * If a value is provided, the recipient must enter the value as the access code
-   * to view and sign the envelope. Maximum Length: 50 characters and it must
-   * conform to the account's access code format setting. If blank, but the signer
-   * `accessCode` property is set in the envelope, then that value is used. If
-   * blank and the signer `accessCode` property is not set, then the access code
-   * is not required..
-   * 
+   * If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required..
    * @return accessCode
    **/
   @Schema(description = "If a value is provided, the recipient must enter the value as the access code to view and sign the envelope.   Maximum Length: 50 characters and it must conform to the account's access code format setting.  If blank, but the signer `accessCode` property is set in the envelope, then that value is used.  If blank and the signer `accessCode` property is not set, then the access code is not required.")
@@ -130,6 +125,7 @@ public class BulkSendingCopyRecipient {
     this.accessCode = accessCode;
   }
 
+
   /**
    * clientUserId.
    *
@@ -141,12 +137,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Specifies whether the recipient is embedded or remote. If the `clientUserId`
-   * property is not null then the recipient is embedded. Note that if the
-   * `ClientUserId` property is set and either `SignerMustHaveAccount` or
-   * `SignerMustLoginToSign` property of the account settings is set to **true**,
-   * an error is generated on sending.ng. Maximum length: 100 characters. .
-   * 
+   * Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. .
    * @return clientUserId
    **/
   @Schema(description = "Specifies whether the recipient is embedded or remote.   If the `clientUserId` property is not null then the recipient is embedded. Note that if the `ClientUserId` property is set and either `SignerMustHaveAccount` or `SignerMustLoginToSign` property of the account settings is set to  **true**, an error is generated on sending.ng.   Maximum length: 100 characters. ")
@@ -161,6 +152,7 @@ public class BulkSendingCopyRecipient {
     this.clientUserId = clientUserId;
   }
 
+
   /**
    * customFields.
    *
@@ -170,7 +162,7 @@ public class BulkSendingCopyRecipient {
     this.customFields = customFields;
     return this;
   }
-
+  
   /**
    * addCustomFieldsItem.
    *
@@ -185,11 +177,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * An optional array of strings that allows the sender to provide custom data
-   * about the recipient. This information is returned in the envelope status but
-   * otherwise not used by DocuSign. Each customField string can be a maximum of
-   * 100 characters..
-   * 
+   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
    * @return customFields
    **/
   @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
@@ -204,6 +192,7 @@ public class BulkSendingCopyRecipient {
     this.customFields = customFields;
   }
 
+
   /**
    * deliveryMethod.
    *
@@ -216,7 +205,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveryMethod
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -231,6 +219,7 @@ public class BulkSendingCopyRecipient {
     this.deliveryMethod = deliveryMethod;
   }
 
+
   /**
    * email.
    *
@@ -243,7 +232,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -258,6 +246,7 @@ public class BulkSendingCopyRecipient {
     this.email = email;
   }
 
+
   /**
    * emailNotification.
    *
@@ -269,15 +258,10 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * An optional complex type that sets a specific email subject and body for this
-   * recipient's notification email. **Note:** You can set the `emailNotification`
-   * property separately for each recipient. If you set the value only for certain
-   * recipients, the other recipients will inherit the this value from the
-   * top-level `emailSubject` and `emailBlurb`. .
-   * 
+   * A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. .
    * @return emailNotification
    **/
-  @Schema(description = "An optional complex type that sets a specific email subject and body for this recipient's notification email.   **Note:** You can set the `emailNotification` property separately for each recipient. If you set the value only for certain recipients, the other recipients will inherit the this value from the top-level `emailSubject` and `emailBlurb`. ")
+  @Schema(description = "A complex type that contains information sets the language of the recipient's email information.   **IMPORTANT**: If you enable email notification for one recipient, you must enable email notification for all recipients as it overrides the Envelope Subject and `EmailBlurb` property settings. ")
   public RecipientEmailNotification getEmailNotification() {
     return emailNotification;
   }
@@ -288,6 +272,7 @@ public class BulkSendingCopyRecipient {
   public void setEmailNotification(RecipientEmailNotification emailNotification) {
     this.emailNotification = emailNotification;
   }
+
 
   /**
    * embeddedRecipientStartURL.
@@ -300,39 +285,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Specifies a sender provided valid URL string for redirecting an embedded
-   * recipient. When using this option, the embedded recipient still receives an
-   * email from DocuSign, just as a remote recipient would. When the document link
-   * in the email is clicked the recipient is redirected, through DocuSign, to the
-   * supplied URL to complete their actions. When routing to the URL, the sender's
-   * system (the server responding to the URL) must request a recipient token to
-   * launch a signing session. If set to `SIGN_AT_DOCUSIGN`, the recipient is
-   * directed to an embedded signing or viewing process directly at DocuSign. The
-   * signing or viewing action is initiated by the DocuSign system and the
-   * transaction activity and Certificate of Completion records will reflect this.
-   * In all other ways the process is identical to an embedded signing or viewing
-   * operation that is launched by any partner. It is important to remember that
-   * in a typical embedded workflow the authentication of an embedded recipient is
-   * the responsibility of the sending application, DocuSign expects that senders
-   * will follow their own process for establishing the recipient's identity. In
-   * this workflow the recipient goes through the sending application before the
-   * embedded signing or viewing process in initiated. However, when the sending
-   * application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient
-   * goes directly to the embedded signing or viewing process bypassing the
-   * sending application and any authentication steps the sending application
-   * would use. In this case, DocuSign recommends that you use one of the normal
-   * DocuSign authentication features (Access Code, Phone Authentication, SMS
-   * Authentication, etc.) to verify the identity of the recipient. If the
-   * `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is
-   * set, DocuSign will ignore the redirect URL and launch the standard signing
-   * process for the email recipient. Information can be appended to the embedded
-   * recipient start URL using merge fields. The available merge fields items are:
-   * envelopeId, recipientId, recipientName, recipientEmail, and customFields. The
-   * `customFields` property must be set fort the recipient or envelope. The merge
-   * fields are enclosed in double brackets. *Example*:
-   * `http://senderHost/[[mergeField1]]/ beginSigningSession?
-   * [[mergeField2]]&[[mergeField3]]` .
-   * 
+   * Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` .
    * @return embeddedRecipientStartURL
    **/
   @Schema(description = "Specifies a sender provided valid URL string for redirecting an embedded recipient. When using this option, the embedded recipient still receives an email from DocuSign, just as a remote recipient would. When the document link in the email is clicked the recipient is redirected, through DocuSign, to the supplied URL to complete their actions. When routing to the URL, the sender's system (the server responding to the URL) must request a recipient token to launch a signing session.   If set to `SIGN_AT_DOCUSIGN`, the recipient is directed to an embedded signing or viewing process directly at DocuSign. The signing or viewing action is initiated by the DocuSign system and the transaction activity and Certificate of Completion records will reflect this. In all other ways the process is identical to an embedded signing or viewing operation that is launched by any partner.  It is important to remember that in a typical embedded workflow the authentication of an embedded recipient is the responsibility of the sending application, DocuSign expects that senders will follow their own process for establishing the recipient's identity. In this workflow the recipient goes through the sending application before the embedded signing or viewing process in initiated. However, when the sending application sets `EmbeddedRecipientStartURL=SIGN_AT_DOCUSIGN`, the recipient goes directly to the embedded signing or viewing process bypassing the sending application and any authentication steps the sending application would use. In this case, DocuSign recommends that you use one of the normal DocuSign authentication features (Access Code, Phone Authentication, SMS Authentication, etc.) to verify the identity of the recipient.  If the `clientUserId` property is NOT set, and the `embeddedRecipientStartURL` is set, DocuSign will ignore the redirect URL and launch the standard signing process for the email recipient. Information can be appended to the embedded recipient start URL using merge fields. The available merge fields items are: envelopeId, recipientId, recipientName, recipientEmail, and customFields. The `customFields` property must be set fort the recipient or envelope. The merge fields are enclosed in double brackets.   *Example*:   `http://senderHost/[[mergeField1]]/ beginSigningSession? [[mergeField2]]&[[mergeField3]]` ")
@@ -347,6 +300,7 @@ public class BulkSendingCopyRecipient {
     this.embeddedRecipientStartURL = embeddedRecipientStartURL;
   }
 
+
   /**
    * faxNumber.
    *
@@ -359,7 +313,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * Reserved:.
-   * 
    * @return faxNumber
    **/
   @Schema(description = "Reserved:")
@@ -374,6 +327,7 @@ public class BulkSendingCopyRecipient {
     this.faxNumber = faxNumber;
   }
 
+
   /**
    * hostEmail.
    *
@@ -386,7 +340,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return hostEmail
    **/
   @Schema(description = "")
@@ -401,6 +354,7 @@ public class BulkSendingCopyRecipient {
     this.hostEmail = hostEmail;
   }
 
+
   /**
    * hostName.
    *
@@ -413,7 +367,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return hostName
    **/
   @Schema(description = "")
@@ -428,6 +381,7 @@ public class BulkSendingCopyRecipient {
     this.hostName = hostName;
   }
 
+
   /**
    * idCheckConfigurationName.
    *
@@ -439,17 +393,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Specifies authentication check by name. The names used here must be the same
-   * as the authentication type names used by the account (these name can also be
-   * found in the web console sending interface in the Identify list for a
-   * recipient,) This overrides any default authentication setting. *Example*:
-   * Your account has ID Check and SMS Authentication available and in the web
-   * console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use
-   * ID check in an envelope, the idCheckConfigurationName should be 'ID Check '.
-   * If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add
-   * you would need to add phone number information to the `smsAuthentication`
-   * node..
-   * 
+   * Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node..
    * @return idCheckConfigurationName
    **/
   @Schema(description = "Specifies authentication check by name. The names used here must be the same as the authentication type names used by the account (these name can also be found in the web console sending interface in the Identify list for a recipient,) This overrides any default authentication setting.  *Example*: Your account has ID Check and SMS Authentication available and in the web console Identify list these appear as 'ID Check $' and 'SMS Auth $'. To use ID check in an envelope, the idCheckConfigurationName should be 'ID Check '. If you wanted to use SMS, it would be 'SMS Auth $' and you would need to add you would need to add phone number information to the `smsAuthentication` node.")
@@ -464,6 +408,7 @@ public class BulkSendingCopyRecipient {
     this.idCheckConfigurationName = idCheckConfigurationName;
   }
 
+
   /**
    * idCheckInformationInput.
    *
@@ -476,7 +421,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * An object that contains input information related to a recipient ID check..
-   * 
    * @return idCheckInformationInput
    **/
   @Schema(description = "An object that contains input information related to a recipient ID check.")
@@ -491,6 +435,7 @@ public class BulkSendingCopyRecipient {
     this.idCheckInformationInput = idCheckInformationInput;
   }
 
+
   /**
    * identificationMethod.
    *
@@ -503,7 +448,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return identificationMethod
    **/
   @Schema(description = "")
@@ -518,6 +462,7 @@ public class BulkSendingCopyRecipient {
     this.identificationMethod = identificationMethod;
   }
 
+
   /**
    * identityVerification.
    *
@@ -529,8 +474,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Get identityVerification.
-   * 
+   * .
    * @return identityVerification
    **/
   @Schema(description = "")
@@ -545,6 +489,7 @@ public class BulkSendingCopyRecipient {
     this.identityVerification = identityVerification;
   }
 
+
   /**
    * name.
    *
@@ -557,7 +502,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -572,6 +516,7 @@ public class BulkSendingCopyRecipient {
     this.name = name;
   }
 
+
   /**
    * note.
    *
@@ -583,11 +528,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Specifies a note that is unique to this recipient. This note is sent to the
-   * recipient via the signing email. The note displays in the signing UI near the
-   * upper left corner of the document on the signing screen. Maximum Length: 1000
-   * characters..
-   * 
+   * Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters..
    * @return note
    **/
   @Schema(description = "Specifies a note that is unique to this recipient. This note is sent to the recipient via the signing email. The note displays in the signing UI near the upper left corner of the document on the signing screen.  Maximum Length: 1000 characters.")
@@ -602,6 +543,7 @@ public class BulkSendingCopyRecipient {
     this.note = note;
   }
 
+
   /**
    * phoneAuthentication.
    *
@@ -613,14 +555,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this
-   * complex type to provide the recipient authentication method details. It
-   * contains the following elements: * `recipMayProvideNumber`: Boolean. When
-   * **true,** the recipient can use whatever phone number they choose. *
-   * `senderProvidedNumbers`: ArrayOfStrings. A list of phone numbers the
-   * recipient can use. * `recordVoicePrint`: Reserved for DocuSign. *
-   * `validateRecipProvidedNumber`: Reserved for DocuSign. .
-   * 
+   * When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  .
    * @return phoneAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `Phone Auth $`, you use this complex type to provide the recipient authentication method details. It contains the following elements:  * `recipMayProvideNumber`: Boolean. When **true,** the recipient can use whatever phone number they choose. * `senderProvidedNumbers`: ArrayOfStrings.  A list of phone numbers the recipient can use. * `recordVoicePrint`: Reserved for DocuSign. * `validateRecipProvidedNumber`: Reserved for DocuSign.  ")
@@ -635,6 +570,7 @@ public class BulkSendingCopyRecipient {
     this.phoneAuthentication = phoneAuthentication;
   }
 
+
   /**
    * recipientId.
    *
@@ -646,9 +582,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -663,24 +597,23 @@ public class BulkSendingCopyRecipient {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientSignatureProviders.
    *
    * @return BulkSendingCopyRecipient
    **/
-  public BulkSendingCopyRecipient recipientSignatureProviders(
-      java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
+  public BulkSendingCopyRecipient recipientSignatureProviders(java.util.List<RecipientSignatureProvider> recipientSignatureProviders) {
     this.recipientSignatureProviders = recipientSignatureProviders;
     return this;
   }
-
+  
   /**
    * addRecipientSignatureProvidersItem.
    *
    * @return BulkSendingCopyRecipient
    **/
-  public BulkSendingCopyRecipient addRecipientSignatureProvidersItem(
-      RecipientSignatureProvider recipientSignatureProvidersItem) {
+  public BulkSendingCopyRecipient addRecipientSignatureProvidersItem(RecipientSignatureProvider recipientSignatureProvidersItem) {
     if (this.recipientSignatureProviders == null) {
       this.recipientSignatureProviders = new java.util.ArrayList<>();
     }
@@ -690,7 +623,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return recipientSignatureProviders
    **/
   @Schema(description = "")
@@ -705,6 +637,7 @@ public class BulkSendingCopyRecipient {
     this.recipientSignatureProviders = recipientSignatureProviders;
   }
 
+
   /**
    * roleName.
    *
@@ -716,10 +649,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Optional element. Specifies the role name associated with the recipient.<br/>
-   * <br/>
-   * This is required when working with template recipients..
-   * 
+   * Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients..
    * @return roleName
    **/
   @Schema(description = "Optional element. Specifies the role name associated with the recipient.<br/><br/>This is required when working with template recipients.")
@@ -734,6 +664,7 @@ public class BulkSendingCopyRecipient {
     this.roleName = roleName;
   }
 
+
   /**
    * signerName.
    *
@@ -746,7 +677,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return signerName
    **/
   @Schema(description = "")
@@ -761,6 +691,7 @@ public class BulkSendingCopyRecipient {
     this.signerName = signerName;
   }
 
+
   /**
    * signingGroupId.
    *
@@ -772,11 +703,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * When set to **true** and the feature is enabled in the sender's account, the
-   * signing recipient is required to draw signatures and initials at each
-   * signature/initial tab ( instead of adopting a signature/initial style or only
-   * drawing a signature/initial once)..
-   * 
+   * When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once)..
    * @return signingGroupId
    **/
   @Schema(description = "When set to **true** and the feature is enabled in the sender's account, the signing recipient is required to draw signatures and initials at each signature/initial tab ( instead of adopting a signature/initial style or only drawing a signature/initial once).")
@@ -791,6 +718,7 @@ public class BulkSendingCopyRecipient {
     this.signingGroupId = signingGroupId;
   }
 
+
   /**
    * smsAuthentication.
    *
@@ -802,11 +730,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex
-   * type to provide the recipient authentication method details. It contains the
-   * element `senderProvidedNumbers`, which is an array of phone numbers that the
-   * recipient can use for SMS text authentication. .
-   * 
+   * When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   .
    * @return smsAuthentication
    **/
   @Schema(description = "When `idCheckConfigurationName` is set to `SMS Auth $`, you use this complex type to provide the recipient authentication method details. It contains the element `senderProvidedNumbers`, which is an array of phone numbers that the recipient can use for SMS text authentication.   ")
@@ -821,6 +745,7 @@ public class BulkSendingCopyRecipient {
     this.smsAuthentication = smsAuthentication;
   }
 
+
   /**
    * socialAuthentications.
    *
@@ -830,7 +755,7 @@ public class BulkSendingCopyRecipient {
     this.socialAuthentications = socialAuthentications;
     return this;
   }
-
+  
   /**
    * addSocialAuthenticationsItem.
    *
@@ -845,8 +770,7 @@ public class BulkSendingCopyRecipient {
   }
 
   /**
-   * Lists the social ID type that can be used for recipient authentication..
-   * 
+   *  Lists the social ID type that can be used for recipient authentication..
    * @return socialAuthentications
    **/
   @Schema(description = " Lists the social ID type that can be used for recipient authentication.")
@@ -861,6 +785,7 @@ public class BulkSendingCopyRecipient {
     this.socialAuthentications = socialAuthentications;
   }
 
+
   /**
    * tabs.
    *
@@ -870,7 +795,7 @@ public class BulkSendingCopyRecipient {
     this.tabs = tabs;
     return this;
   }
-
+  
   /**
    * addTabsItem.
    *
@@ -886,7 +811,6 @@ public class BulkSendingCopyRecipient {
 
   /**
    * .
-   * 
    * @return tabs
    **/
   @Schema(description = "")
@@ -900,6 +824,7 @@ public class BulkSendingCopyRecipient {
   public void setTabs(java.util.List<BulkSendingCopyTab> tabs) {
     this.tabs = tabs;
   }
+
 
   /**
    * Compares objects.
@@ -947,12 +872,9 @@ public class BulkSendingCopyRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification,
-        embeddedRecipientStartURL, faxNumber, hostEmail, hostName, idCheckConfigurationName, idCheckInformationInput,
-        identificationMethod, identityVerification, name, note, phoneAuthentication, recipientId,
-        recipientSignatureProviders, roleName, signerName, signingGroupId, smsAuthentication, socialAuthentications,
-        tabs);
+    return Objects.hash(accessCode, clientUserId, customFields, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, faxNumber, hostEmail, hostName, idCheckConfigurationName, idCheckInformationInput, identificationMethod, identityVerification, name, note, phoneAuthentication, recipientId, recipientSignatureProviders, roleName, signerName, signingGroupId, smsAuthentication, socialAuthentications, tabs);
   }
+
 
   /**
    * Converts the given object to string.
@@ -961,7 +883,7 @@ public class BulkSendingCopyRecipient {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingCopyRecipient {\n");
-
+    
     sb.append("    accessCode: ").append(toIndentedString(accessCode)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
@@ -1003,3 +925,4 @@ public class BulkSendingCopyRecipient {
   }
 
 }
+

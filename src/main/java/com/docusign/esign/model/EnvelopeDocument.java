@@ -112,6 +112,7 @@ public class EnvelopeDocument {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * addedRecipientIds.
    *
@@ -121,7 +122,7 @@ public class EnvelopeDocument {
     this.addedRecipientIds = addedRecipientIds;
     return this;
   }
-
+  
   /**
    * addAddedRecipientIdsItem.
    *
@@ -137,7 +138,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return addedRecipientIds
    **/
   @Schema(description = "")
@@ -152,6 +152,7 @@ public class EnvelopeDocument {
     this.addedRecipientIds = addedRecipientIds;
   }
 
+
   /**
    * attachmentTabId.
    *
@@ -164,7 +165,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return attachmentTabId
    **/
   @Schema(description = "")
@@ -179,6 +179,7 @@ public class EnvelopeDocument {
     this.attachmentTabId = attachmentTabId;
   }
 
+
   /**
    * authoritativeCopy.
    *
@@ -190,9 +191,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative
-   * copy feature is enabled..
-   * 
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
    * @return authoritativeCopy
    **/
   @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
@@ -207,6 +206,7 @@ public class EnvelopeDocument {
     this.authoritativeCopy = authoritativeCopy;
   }
 
+
   /**
    * authoritativeCopyMetadata.
    *
@@ -218,9 +218,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `authoritativeCopy`
-   * property. Not applicable for template documents..
-   * 
+   * Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents..
    * @return authoritativeCopyMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `authoritativeCopy` property. Not applicable for template documents.")
@@ -235,6 +233,7 @@ public class EnvelopeDocument {
     this.authoritativeCopyMetadata = authoritativeCopyMetadata;
   }
 
+
   /**
    * availableDocumentTypes.
    *
@@ -244,7 +243,7 @@ public class EnvelopeDocument {
     this.availableDocumentTypes = availableDocumentTypes;
     return this;
   }
-
+  
   /**
    * addAvailableDocumentTypesItem.
    *
@@ -260,7 +259,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return availableDocumentTypes
    **/
   @Schema(description = "")
@@ -275,6 +273,7 @@ public class EnvelopeDocument {
     this.availableDocumentTypes = availableDocumentTypes;
   }
 
+
   /**
    * containsPdfFormFields.
    *
@@ -287,7 +286,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return containsPdfFormFields
    **/
   @Schema(description = "")
@@ -302,6 +300,7 @@ public class EnvelopeDocument {
     this.containsPdfFormFields = containsPdfFormFields;
   }
 
+
   /**
    * display.
    *
@@ -314,7 +313,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return display
    **/
   @Schema(description = "")
@@ -329,6 +327,7 @@ public class EnvelopeDocument {
     this.display = display;
   }
 
+
   /**
    * displayMetadata.
    *
@@ -340,9 +339,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `display` property. Not
-   * applicable for template documents..
-   * 
+   * Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents..
    * @return displayMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `display` property. Not applicable for template documents.")
@@ -357,6 +354,7 @@ public class EnvelopeDocument {
     this.displayMetadata = displayMetadata;
   }
 
+
   /**
    * docGenDocumentStatus.
    *
@@ -369,7 +367,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return docGenDocumentStatus
    **/
   @Schema(description = "")
@@ -384,6 +381,7 @@ public class EnvelopeDocument {
     this.docGenDocumentStatus = docGenDocumentStatus;
   }
 
+
   /**
    * docGenErrors.
    *
@@ -393,7 +391,7 @@ public class EnvelopeDocument {
     this.docGenErrors = docGenErrors;
     return this;
   }
-
+  
   /**
    * addDocGenErrorsItem.
    *
@@ -409,7 +407,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return docGenErrors
    **/
   @Schema(description = "")
@@ -424,6 +421,7 @@ public class EnvelopeDocument {
     this.docGenErrors = docGenErrors;
   }
 
+
   /**
    * docGenFormFields.
    *
@@ -433,7 +431,7 @@ public class EnvelopeDocument {
     this.docGenFormFields = docGenFormFields;
     return this;
   }
-
+  
   /**
    * addDocGenFormFieldsItem.
    *
@@ -449,7 +447,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return docGenFormFields
    **/
   @Schema(description = "")
@@ -464,6 +461,7 @@ public class EnvelopeDocument {
     this.docGenFormFields = docGenFormFields;
   }
 
+
   /**
    * documentBase64.
    *
@@ -476,7 +474,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return documentBase64
    **/
   @Schema(description = "")
@@ -491,6 +488,7 @@ public class EnvelopeDocument {
     this.documentBase64 = documentBase64;
   }
 
+
   /**
    * documentFields.
    *
@@ -500,7 +498,7 @@ public class EnvelopeDocument {
     this.documentFields = documentFields;
     return this;
   }
-
+  
   /**
    * addDocumentFieldsItem.
    *
@@ -516,7 +514,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return documentFields
    **/
   @Schema(description = "")
@@ -531,6 +528,7 @@ public class EnvelopeDocument {
     this.documentFields = documentFields;
   }
 
+
   /**
    * documentId.
    *
@@ -542,9 +540,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -559,6 +555,7 @@ public class EnvelopeDocument {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdGuid.
    *
@@ -571,7 +568,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return documentIdGuid
    **/
   @Schema(description = "")
@@ -586,6 +582,7 @@ public class EnvelopeDocument {
     this.documentIdGuid = documentIdGuid;
   }
 
+
   /**
    * errorDetails.
    *
@@ -597,12 +594,10 @@ public class EnvelopeDocument {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -613,6 +608,7 @@ public class EnvelopeDocument {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * includeInDownload.
@@ -626,7 +622,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return includeInDownload
    **/
   @Schema(description = "")
@@ -641,6 +636,7 @@ public class EnvelopeDocument {
     this.includeInDownload = includeInDownload;
   }
 
+
   /**
    * includeInDownloadMetadata.
    *
@@ -652,9 +648,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `includeInDownload`
-   * property. Not applicable for template documents..
-   * 
+   * Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents..
    * @return includeInDownloadMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `includeInDownload` property. Not applicable for template documents.")
@@ -669,6 +663,7 @@ public class EnvelopeDocument {
     this.includeInDownloadMetadata = includeInDownloadMetadata;
   }
 
+
   /**
    * isDocGenDocument.
    *
@@ -681,7 +676,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return isDocGenDocument
    **/
   @Schema(description = "")
@@ -696,6 +690,7 @@ public class EnvelopeDocument {
     this.isDocGenDocument = isDocGenDocument;
   }
 
+
   /**
    * name.
    *
@@ -708,7 +703,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -723,6 +717,7 @@ public class EnvelopeDocument {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -734,9 +729,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `name` property. Not
-   * applicable for template documents..
-   * 
+   * Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents..
    * @return nameMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `name` property. Not applicable for template documents.")
@@ -751,6 +744,7 @@ public class EnvelopeDocument {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * order.
    *
@@ -763,7 +757,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return order
    **/
   @Schema(description = "")
@@ -778,6 +771,7 @@ public class EnvelopeDocument {
     this.order = order;
   }
 
+
   /**
    * pages.
    *
@@ -787,7 +781,7 @@ public class EnvelopeDocument {
     this.pages = pages;
     return this;
   }
-
+  
   /**
    * addPagesItem.
    *
@@ -803,7 +797,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return pages
    **/
   @Schema(description = "")
@@ -818,6 +811,7 @@ public class EnvelopeDocument {
     this.pages = pages;
   }
 
+
   /**
    * signerMustAcknowledge.
    *
@@ -830,7 +824,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return signerMustAcknowledge
    **/
   @Schema(description = "")
@@ -845,6 +838,7 @@ public class EnvelopeDocument {
     this.signerMustAcknowledge = signerMustAcknowledge;
   }
 
+
   /**
    * signerMustAcknowledgeMetadata.
    *
@@ -856,9 +850,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * Metadata that indicates if the sender can edit the `signerMustAcknowledge`
-   * property. Not applicable for template documents..
-   * 
+   * Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents..
    * @return signerMustAcknowledgeMetadata
    **/
   @Schema(description = "Metadata that indicates if the sender can edit the `signerMustAcknowledge` property. Not applicable for template documents.")
@@ -873,6 +865,7 @@ public class EnvelopeDocument {
     this.signerMustAcknowledgeMetadata = signerMustAcknowledgeMetadata;
   }
 
+
   /**
    * sizeBytes.
    *
@@ -885,7 +878,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return sizeBytes
    **/
   @Schema(description = "")
@@ -900,6 +892,7 @@ public class EnvelopeDocument {
     this.sizeBytes = sizeBytes;
   }
 
+
   /**
    * templateLocked.
    *
@@ -911,9 +904,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -928,6 +919,7 @@ public class EnvelopeDocument {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateRequired.
    *
@@ -939,9 +931,7 @@ public class EnvelopeDocument {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -956,6 +946,7 @@ public class EnvelopeDocument {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * type.
    *
@@ -968,7 +959,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -983,6 +973,7 @@ public class EnvelopeDocument {
     this.type = type;
   }
 
+
   /**
    * uri.
    *
@@ -995,7 +986,6 @@ public class EnvelopeDocument {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -1009,6 +999,7 @@ public class EnvelopeDocument {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -1061,12 +1052,9 @@ public class EnvelopeDocument {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata,
-        availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors,
-        docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload,
-        includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge,
-        signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1075,7 +1063,7 @@ public class EnvelopeDocument {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeDocument {\n");
-
+    
     sb.append("    addedRecipientIds: ").append(toIndentedString(addedRecipientIds)).append("\n");
     sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
@@ -1100,8 +1088,7 @@ public class EnvelopeDocument {
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    pages: ").append(toIndentedString(pages)).append("\n");
     sb.append("    signerMustAcknowledge: ").append(toIndentedString(signerMustAcknowledge)).append("\n");
-    sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata))
-        .append("\n");
+    sb.append("    signerMustAcknowledgeMetadata: ").append(toIndentedString(signerMustAcknowledgeMetadata)).append("\n");
     sb.append("    sizeBytes: ").append(toIndentedString(sizeBytes)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
@@ -1123,3 +1110,4 @@ public class EnvelopeDocument {
   }
 
 }
+

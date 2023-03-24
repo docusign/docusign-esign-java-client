@@ -9,10 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The proof file of the recipient. [ID Evidence](/docs/idevidence-api/) uses
- * proof files to store the identification data that recipients submit when
- * verifying their ID with [ID
- * Verification](/docs/esign-rest-api/esign101/concepts/documents/).
+ * The proof file of the recipient. [ID Evidence](/docs/idevidence-api/) uses proof files to store the identification data that recipients submit when verifying their ID with [ID Verification](/docs/esign-rest-api/esign101/concepts/documents/).
  *
  */
 @Schema(description = "The proof file of the recipient. [ID Evidence](/docs/idevidence-api/) uses proof files to store the identification data that recipients submit when verifying their ID with [ID Verification](/docs/esign-rest-api/esign101/concepts/documents/)")
@@ -23,6 +20,7 @@ public class RecipientProofFile {
 
   @JsonProperty("isInProofFile")
   private String isInProofFile = null;
+
 
   /**
    * hasIdentityAttempts.
@@ -36,7 +34,6 @@ public class RecipientProofFile {
 
   /**
    * .
-   * 
    * @return hasIdentityAttempts
    **/
   @Schema(description = "")
@@ -51,6 +48,7 @@ public class RecipientProofFile {
     this.hasIdentityAttempts = hasIdentityAttempts;
   }
 
+
   /**
    * isInProofFile.
    *
@@ -63,7 +61,6 @@ public class RecipientProofFile {
 
   /**
    * .
-   * 
    * @return isInProofFile
    **/
   @Schema(description = "")
@@ -77,6 +74,7 @@ public class RecipientProofFile {
   public void setIsInProofFile(String isInProofFile) {
     this.isInProofFile = isInProofFile;
   }
+
 
   /**
    * Compares objects.
@@ -104,6 +102,7 @@ public class RecipientProofFile {
     return Objects.hash(hasIdentityAttempts, isInProofFile);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -111,7 +110,7 @@ public class RecipientProofFile {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientProofFile {\n");
-
+    
     sb.append("    hasIdentityAttempts: ").append(toIndentedString(hasIdentityAttempts)).append("\n");
     sb.append("    isInProofFile: ").append(toIndentedString(isInProofFile)).append("\n");
     sb.append("}");
@@ -130,3 +129,4 @@ public class RecipientProofFile {
   }
 
 }
+

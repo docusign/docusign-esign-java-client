@@ -44,6 +44,7 @@ public class AccountSharedAccess {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * accountId.
    *
@@ -56,7 +57,6 @@ public class AccountSharedAccess {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -71,6 +71,7 @@ public class AccountSharedAccess {
     this.accountId = accountId;
   }
 
+
   /**
    * endPosition.
    *
@@ -83,7 +84,6 @@ public class AccountSharedAccess {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -98,6 +98,7 @@ public class AccountSharedAccess {
     this.endPosition = endPosition;
   }
 
+
   /**
    * errorDetails.
    *
@@ -109,12 +110,10 @@ public class AccountSharedAccess {
   }
 
   /**
-   * A complex type containing an errorCode and message identifying the error that
-   * occurred..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "A complex type containing an errorCode and message identifying the error that occurred.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -125,6 +124,7 @@ public class AccountSharedAccess {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * nextUri.
@@ -137,9 +137,7 @@ public class AccountSharedAccess {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -154,6 +152,7 @@ public class AccountSharedAccess {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -166,7 +165,6 @@ public class AccountSharedAccess {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -181,6 +179,7 @@ public class AccountSharedAccess {
     this.previousUri = previousUri;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -193,7 +192,6 @@ public class AccountSharedAccess {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -208,6 +206,7 @@ public class AccountSharedAccess {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * sharedAccess.
    *
@@ -217,7 +216,7 @@ public class AccountSharedAccess {
     this.sharedAccess = sharedAccess;
     return this;
   }
-
+  
   /**
    * addSharedAccessItem.
    *
@@ -232,9 +231,7 @@ public class AccountSharedAccess {
   }
 
   /**
-   * A complex type containing the shared access information to an envelope for
-   * the users specified in the request..
-   * 
+   * A complex type containing the shared access information to an envelope for the users specified in the request..
    * @return sharedAccess
    **/
   @Schema(description = "A complex type containing the shared access information to an envelope for the users specified in the request.")
@@ -249,6 +246,7 @@ public class AccountSharedAccess {
     this.sharedAccess = sharedAccess;
   }
 
+
   /**
    * startPosition.
    *
@@ -261,7 +259,6 @@ public class AccountSharedAccess {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -276,6 +273,7 @@ public class AccountSharedAccess {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -287,10 +285,7 @@ public class AccountSharedAccess {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -304,6 +299,7 @@ public class AccountSharedAccess {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -335,9 +331,9 @@ public class AccountSharedAccess {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, endPosition, errorDetails, nextUri, previousUri, resultSetSize, sharedAccess,
-        startPosition, totalSetSize);
+    return Objects.hash(accountId, endPosition, errorDetails, nextUri, previousUri, resultSetSize, sharedAccess, startPosition, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -346,7 +342,7 @@ public class AccountSharedAccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSharedAccess {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -372,3 +368,4 @@ public class AccountSharedAccess {
   }
 
 }
+

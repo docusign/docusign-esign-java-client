@@ -20,6 +20,7 @@ public class ServiceVersion {
   @JsonProperty("versionUrl")
   private String versionUrl = null;
 
+
   /**
    * version.
    *
@@ -32,7 +33,6 @@ public class ServiceVersion {
 
   /**
    * The version of the rest API..
-   * 
    * @return version
    **/
   @Schema(description = "The version of the rest API.")
@@ -47,6 +47,7 @@ public class ServiceVersion {
     this.version = version;
   }
 
+
   /**
    * versionUrl.
    *
@@ -59,7 +60,6 @@ public class ServiceVersion {
 
   /**
    * .
-   * 
    * @return versionUrl
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class ServiceVersion {
   public void setVersionUrl(String versionUrl) {
     this.versionUrl = versionUrl;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class ServiceVersion {
     return Objects.hash(version, versionUrl);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class ServiceVersion {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServiceVersion {\n");
-
+    
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    versionUrl: ").append(toIndentedString(versionUrl)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class ServiceVersion {
   }
 
 }
+

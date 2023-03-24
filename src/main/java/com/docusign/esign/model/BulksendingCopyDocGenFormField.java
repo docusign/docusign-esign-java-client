@@ -14,38 +14,39 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 
 public class BulksendingCopyDocGenFormField {
-  @JsonProperty("label")
-  private String label = null;
+  @JsonProperty("name")
+  private String name = null;
 
   @JsonProperty("value")
   private String value = null;
 
+
   /**
-   * label.
+   * name.
    *
    * @return BulksendingCopyDocGenFormField
    **/
-  public BulksendingCopyDocGenFormField label(String label) {
-    this.label = label;
+  public BulksendingCopyDocGenFormField name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
    * .
-   * 
-   * @return label
+   * @return name
    **/
   @Schema(description = "")
-  public String getLabel() {
-    return label;
+  public String getName() {
+    return name;
   }
 
   /**
-   * setLabel.
+   * setName.
    **/
-  public void setLabel(String label) {
-    this.label = label;
+  public void setName(String name) {
+    this.name = name;
   }
+
 
   /**
    * value.
@@ -59,7 +60,6 @@ public class BulksendingCopyDocGenFormField {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -73,6 +73,7 @@ public class BulksendingCopyDocGenFormField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -88,7 +89,7 @@ public class BulksendingCopyDocGenFormField {
       return false;
     }
     BulksendingCopyDocGenFormField bulksendingCopyDocGenFormField = (BulksendingCopyDocGenFormField) o;
-    return Objects.equals(this.label, bulksendingCopyDocGenFormField.label) &&
+    return Objects.equals(this.name, bulksendingCopyDocGenFormField.name) &&
         Objects.equals(this.value, bulksendingCopyDocGenFormField.value);
   }
 
@@ -97,8 +98,9 @@ public class BulksendingCopyDocGenFormField {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(label, value);
+    return Objects.hash(name, value);
   }
+
 
   /**
    * Converts the given object to string.
@@ -107,8 +109,8 @@ public class BulksendingCopyDocGenFormField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulksendingCopyDocGenFormField {\n");
-
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -126,3 +128,4 @@ public class BulksendingCopyDocGenFormField {
   }
 
 }
+

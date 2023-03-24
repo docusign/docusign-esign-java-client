@@ -65,6 +65,7 @@ public class Folder {
   @JsonProperty("uri")
   private String uri = null;
 
+
   /**
    * errorDetails.
    *
@@ -76,12 +77,10 @@ public class Folder {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -92,6 +91,7 @@ public class Folder {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * filter.
@@ -105,7 +105,6 @@ public class Folder {
 
   /**
    * An object used to present a filtered view of the items in a folder..
-   * 
    * @return filter
    **/
   @Schema(description = "An object used to present a filtered view of the items in a folder.")
@@ -120,6 +119,7 @@ public class Folder {
     this.filter = filter;
   }
 
+
   /**
    * folderId.
    *
@@ -132,7 +132,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return folderId
    **/
   @Schema(description = "")
@@ -147,6 +146,7 @@ public class Folder {
     this.folderId = folderId;
   }
 
+
   /**
    * folderItems.
    *
@@ -156,7 +156,7 @@ public class Folder {
     this.folderItems = folderItems;
     return this;
   }
-
+  
   /**
    * addFolderItemsItem.
    *
@@ -172,7 +172,6 @@ public class Folder {
 
   /**
    * A list of the envelopes in the specified folder or folders. .
-   * 
    * @return folderItems
    **/
   @Schema(description = "A list of the envelopes in the specified folder or folders. ")
@@ -187,6 +186,7 @@ public class Folder {
     this.folderItems = folderItems;
   }
 
+
   /**
    * folders.
    *
@@ -196,7 +196,7 @@ public class Folder {
     this.folders = folders;
     return this;
   }
-
+  
   /**
    * addFoldersItem.
    *
@@ -212,7 +212,6 @@ public class Folder {
 
   /**
    * A collection of folder objects returned in a response..
-   * 
    * @return folders
    **/
   @Schema(description = "A collection of folder objects returned in a response.")
@@ -227,6 +226,7 @@ public class Folder {
     this.folders = folders;
   }
 
+
   /**
    * hasAccess.
    *
@@ -239,7 +239,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return hasAccess
    **/
   @Schema(description = "")
@@ -254,6 +253,7 @@ public class Folder {
     this.hasAccess = hasAccess;
   }
 
+
   /**
    * hasSubFolders.
    *
@@ -266,7 +266,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return hasSubFolders
    **/
   @Schema(description = "")
@@ -281,6 +280,7 @@ public class Folder {
     this.hasSubFolders = hasSubFolders;
   }
 
+
   /**
    * itemCount.
    *
@@ -293,7 +293,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return itemCount
    **/
   @Schema(description = "")
@@ -308,6 +307,7 @@ public class Folder {
     this.itemCount = itemCount;
   }
 
+
   /**
    * name.
    *
@@ -320,7 +320,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -335,6 +334,7 @@ public class Folder {
     this.name = name;
   }
 
+
   /**
    * owner.
    *
@@ -347,7 +347,6 @@ public class Folder {
 
   /**
    * Information about the user who owns the folder..
-   * 
    * @return owner
    **/
   @Schema(description = "Information about the user who owns the folder.")
@@ -362,6 +361,7 @@ public class Folder {
     this.owner = owner;
   }
 
+
   /**
    * parentFolderId.
    *
@@ -374,7 +374,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return parentFolderId
    **/
   @Schema(description = "")
@@ -389,6 +388,7 @@ public class Folder {
     this.parentFolderId = parentFolderId;
   }
 
+
   /**
    * parentFolderUri.
    *
@@ -401,7 +401,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return parentFolderUri
    **/
   @Schema(description = "")
@@ -416,6 +415,7 @@ public class Folder {
     this.parentFolderUri = parentFolderUri;
   }
 
+
   /**
    * subFolderCount.
    *
@@ -428,7 +428,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return subFolderCount
    **/
   @Schema(description = "")
@@ -443,6 +442,7 @@ public class Folder {
     this.subFolderCount = subFolderCount;
   }
 
+
   /**
    * type.
    *
@@ -455,7 +455,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return type
    **/
   @Schema(description = "")
@@ -470,6 +469,7 @@ public class Folder {
     this.type = type;
   }
 
+
   /**
    * uri.
    *
@@ -482,7 +482,6 @@ public class Folder {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -496,6 +495,7 @@ public class Folder {
   public void setUri(String uri) {
     this.uri = uri;
   }
+
 
   /**
    * Compares objects.
@@ -533,9 +533,9 @@ public class Folder {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, filter, folderId, folderItems, folders, hasAccess, hasSubFolders, itemCount, name,
-        owner, parentFolderId, parentFolderUri, subFolderCount, type, uri);
+    return Objects.hash(errorDetails, filter, folderId, folderItems, folders, hasAccess, hasSubFolders, itemCount, name, owner, parentFolderId, parentFolderUri, subFolderCount, type, uri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -544,7 +544,7 @@ public class Folder {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Folder {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
@@ -576,3 +576,4 @@ public class Folder {
   }
 
 }
+

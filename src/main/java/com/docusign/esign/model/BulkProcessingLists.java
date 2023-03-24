@@ -17,6 +17,7 @@ public class BulkProcessingLists {
   @JsonProperty("bulkProcessListIds")
   private java.util.List<String> bulkProcessListIds = null;
 
+
   /**
    * bulkProcessListIds.
    *
@@ -26,7 +27,7 @@ public class BulkProcessingLists {
     this.bulkProcessListIds = bulkProcessListIds;
     return this;
   }
-
+  
   /**
    * addBulkProcessListIdsItem.
    *
@@ -42,7 +43,6 @@ public class BulkProcessingLists {
 
   /**
    * .
-   * 
    * @return bulkProcessListIds
    **/
   @Schema(description = "")
@@ -56,6 +56,7 @@ public class BulkProcessingLists {
   public void setBulkProcessListIds(java.util.List<String> bulkProcessListIds) {
     this.bulkProcessListIds = bulkProcessListIds;
   }
+
 
   /**
    * Compares objects.
@@ -82,6 +83,7 @@ public class BulkProcessingLists {
     return Objects.hash(bulkProcessListIds);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -89,7 +91,7 @@ public class BulkProcessingLists {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkProcessingLists {\n");
-
+    
     sb.append("    bulkProcessListIds: ").append(toIndentedString(bulkProcessListIds)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -107,3 +109,4 @@ public class BulkProcessingLists {
   }
 
 }
+

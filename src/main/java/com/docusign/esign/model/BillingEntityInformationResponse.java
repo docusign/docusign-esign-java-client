@@ -26,6 +26,7 @@ public class BillingEntityInformationResponse {
   @JsonProperty("isExternallyBilled")
   private String isExternallyBilled = null;
 
+
   /**
    * billingProfile.
    *
@@ -38,7 +39,6 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   * 
    * @return billingProfile
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class BillingEntityInformationResponse {
     this.billingProfile = billingProfile;
   }
 
+
   /**
    * entityName.
    *
@@ -65,7 +66,6 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   * 
    * @return entityName
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class BillingEntityInformationResponse {
     this.entityName = entityName;
   }
 
+
   /**
    * externalEntityId.
    *
@@ -92,7 +93,6 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   * 
    * @return externalEntityId
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class BillingEntityInformationResponse {
     this.externalEntityId = externalEntityId;
   }
 
+
   /**
    * isExternallyBilled.
    *
@@ -119,7 +120,6 @@ public class BillingEntityInformationResponse {
 
   /**
    * .
-   * 
    * @return isExternallyBilled
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class BillingEntityInformationResponse {
   public void setIsExternallyBilled(String isExternallyBilled) {
     this.isExternallyBilled = isExternallyBilled;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class BillingEntityInformationResponse {
     return Objects.hash(billingProfile, entityName, externalEntityId, isExternallyBilled);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class BillingEntityInformationResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingEntityInformationResponse {\n");
-
+    
     sb.append("    billingProfile: ").append(toIndentedString(billingProfile)).append("\n");
     sb.append("    entityName: ").append(toIndentedString(entityName)).append("\n");
     sb.append("    externalEntityId: ").append(toIndentedString(externalEntityId)).append("\n");
@@ -190,3 +192,4 @@ public class BillingEntityInformationResponse {
   }
 
 }
+

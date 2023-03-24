@@ -48,6 +48,7 @@ public class Filter {
   @JsonProperty("toDateTime")
   private String toDateTime = null;
 
+
   /**
    * actionRequired.
    *
@@ -60,7 +61,6 @@ public class Filter {
 
   /**
    * Access token information..
-   * 
    * @return actionRequired
    **/
   @Schema(description = "Access token information.")
@@ -75,6 +75,7 @@ public class Filter {
     this.actionRequired = actionRequired;
   }
 
+
   /**
    * expires.
    *
@@ -87,7 +88,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return expires
    **/
   @Schema(description = "")
@@ -102,6 +102,7 @@ public class Filter {
     this.expires = expires;
   }
 
+
   /**
    * folderIds.
    *
@@ -114,7 +115,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return folderIds
    **/
   @Schema(description = "")
@@ -129,6 +129,7 @@ public class Filter {
     this.folderIds = folderIds;
   }
 
+
   /**
    * fromDateTime.
    *
@@ -141,7 +142,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return fromDateTime
    **/
   @Schema(description = "")
@@ -156,6 +156,7 @@ public class Filter {
     this.fromDateTime = fromDateTime;
   }
 
+
   /**
    * isTemplate.
    *
@@ -168,7 +169,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return isTemplate
    **/
   @Schema(description = "")
@@ -183,6 +183,7 @@ public class Filter {
     this.isTemplate = isTemplate;
   }
 
+
   /**
    * order.
    *
@@ -195,7 +196,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return order
    **/
   @Schema(description = "")
@@ -210,6 +210,7 @@ public class Filter {
     this.order = order;
   }
 
+
   /**
    * orderBy.
    *
@@ -222,7 +223,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return orderBy
    **/
   @Schema(description = "")
@@ -237,6 +237,7 @@ public class Filter {
     this.orderBy = orderBy;
   }
 
+
   /**
    * searchTarget.
    *
@@ -249,7 +250,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return searchTarget
    **/
   @Schema(description = "")
@@ -264,6 +264,7 @@ public class Filter {
     this.searchTarget = searchTarget;
   }
 
+
   /**
    * searchText.
    *
@@ -276,7 +277,6 @@ public class Filter {
 
   /**
    * .
-   * 
    * @return searchText
    **/
   @Schema(description = "")
@@ -291,6 +291,7 @@ public class Filter {
     this.searchText = searchText;
   }
 
+
   /**
    * status.
    *
@@ -302,10 +303,7 @@ public class Filter {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -320,6 +318,7 @@ public class Filter {
     this.status = status;
   }
 
+
   /**
    * toDateTime.
    *
@@ -332,7 +331,6 @@ public class Filter {
 
   /**
    * Must be set to \"bearer\"..
-   * 
    * @return toDateTime
    **/
   @Schema(description = "Must be set to \"bearer\".")
@@ -346,6 +344,7 @@ public class Filter {
   public void setToDateTime(String toDateTime) {
     this.toDateTime = toDateTime;
   }
+
 
   /**
    * Compares objects.
@@ -379,9 +378,9 @@ public class Filter {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(actionRequired, expires, folderIds, fromDateTime, isTemplate, order, orderBy, searchTarget,
-        searchText, status, toDateTime);
+    return Objects.hash(actionRequired, expires, folderIds, fromDateTime, isTemplate, order, orderBy, searchTarget, searchText, status, toDateTime);
   }
+
 
   /**
    * Converts the given object to string.
@@ -390,7 +389,7 @@ public class Filter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Filter {\n");
-
+    
     sb.append("    actionRequired: ").append(toIndentedString(actionRequired)).append("\n");
     sb.append("    expires: ").append(toIndentedString(expires)).append("\n");
     sb.append("    folderIds: ").append(toIndentedString(folderIds)).append("\n");
@@ -418,3 +417,4 @@ public class Filter {
   }
 
 }
+

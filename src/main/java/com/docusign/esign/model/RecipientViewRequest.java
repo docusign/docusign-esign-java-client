@@ -10,11 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request body for the [EnvelopeViews:
- * createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/)
- * and [EnvelopeViews:
- * createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/)
- * methods..
+ * The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods..
  *
  */
 @Schema(description = "The request body for the [EnvelopeViews: createRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createrecipient/) and [EnvelopeViews: createSharedRecipient](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsharedrecipient/) methods.")
@@ -71,6 +67,7 @@ public class RecipientViewRequest {
   @JsonProperty("xFrameOptionsAllowFromUrl")
   private String xFrameOptionsAllowFromUrl = null;
 
+
   /**
    * assertionId.
    *
@@ -82,9 +79,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A unique identifier of the authentication event executed by the client
-   * application..
-   * 
+   * A unique identifier of the authentication event executed by the client application..
    * @return assertionId
    **/
   @Schema(description = "A unique identifier of the authentication event executed by the client application.")
@@ -99,6 +94,7 @@ public class RecipientViewRequest {
     this.assertionId = assertionId;
   }
 
+
   /**
    * authenticationInstant.
    *
@@ -110,9 +106,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender generated value that indicates the date/time that the signer was
-   * authenticated..
-   * 
+   * A sender generated value that indicates the date/time that the signer was authenticated..
    * @return authenticationInstant
    **/
   @Schema(description = "A sender generated value that indicates the date/time that the signer was authenticated.")
@@ -127,6 +121,7 @@ public class RecipientViewRequest {
     this.authenticationInstant = authenticationInstant;
   }
 
+
   /**
    * authenticationMethod.
    *
@@ -138,9 +133,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender created value that indicates the convention used to authenticate the
-   * signer. This information is included in the Certificate of Completion..
-   * 
+   * A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion..
    * @return authenticationMethod
    **/
   @Schema(description = "A sender created value that indicates the convention used to authenticate the signer. This information is included in the Certificate of Completion.")
@@ -155,6 +148,7 @@ public class RecipientViewRequest {
     this.authenticationMethod = authenticationMethod;
   }
 
+
   /**
    * clientURLs.
    *
@@ -167,7 +161,6 @@ public class RecipientViewRequest {
 
   /**
    * .
-   * 
    * @return clientURLs
    **/
   @Schema(description = "")
@@ -182,6 +175,7 @@ public class RecipientViewRequest {
     this.clientURLs = clientURLs;
   }
 
+
   /**
    * clientUserId.
    *
@@ -193,9 +187,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A sender created value that shows the recipient is embedded (captive).
-   * Maximum length: 100 characters..
-   * 
+   * A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters..
    * @return clientUserId
    **/
   @Schema(description = "A sender created value that shows the recipient is embedded (captive).   Maximum length: 100 characters.")
@@ -210,6 +202,7 @@ public class RecipientViewRequest {
     this.clientUserId = clientUserId;
   }
 
+
   /**
    * email.
    *
@@ -221,9 +214,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the email of the recipient. You can use either email and userName
-   * or userId to identify the recipient..
-   * 
+   * Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient..
    * @return email
    **/
   @Schema(description = "Specifies the email of the recipient. You can use either email and userName or userId to identify the recipient.")
@@ -238,6 +229,7 @@ public class RecipientViewRequest {
     this.email = email;
   }
 
+
   /**
    * frameAncestors.
    *
@@ -247,7 +239,7 @@ public class RecipientViewRequest {
     this.frameAncestors = frameAncestors;
     return this;
   }
-
+  
   /**
    * addFrameAncestorsItem.
    *
@@ -263,7 +255,6 @@ public class RecipientViewRequest {
 
   /**
    * .
-   * 
    * @return frameAncestors
    **/
   @Schema(description = "")
@@ -278,6 +269,7 @@ public class RecipientViewRequest {
     this.frameAncestors = frameAncestors;
   }
 
+
   /**
    * messageOrigins.
    *
@@ -287,7 +279,7 @@ public class RecipientViewRequest {
     this.messageOrigins = messageOrigins;
     return this;
   }
-
+  
   /**
    * addMessageOriginsItem.
    *
@@ -303,7 +295,6 @@ public class RecipientViewRequest {
 
   /**
    * .
-   * 
    * @return messageOrigins
    **/
   @Schema(description = "")
@@ -318,6 +309,7 @@ public class RecipientViewRequest {
     this.messageOrigins = messageOrigins;
   }
 
+
   /**
    * pingFrequency.
    *
@@ -329,10 +321,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Only used if pingUrl is specified. This is the interval, in seconds, between
-   * pings on the pingUrl. The default is 300 seconds. Valid values are 60-1200
-   * seconds..
-   * 
+   * Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds..
    * @return pingFrequency
    **/
   @Schema(description = "Only used if pingUrl is specified. This is the interval, in seconds, between pings on the pingUrl.  The default is 300 seconds. Valid values are 60-1200 seconds.")
@@ -347,6 +336,7 @@ public class RecipientViewRequest {
     this.pingFrequency = pingFrequency;
   }
 
+
   /**
    * pingUrl.
    *
@@ -358,11 +348,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * A client Url to be pinged by the DocuSign Signing experience to indicate to
-   * the client that Signing is active. An HTTP Get is executed against the
-   * client. The response from the client is ignored. The intent is for the client
-   * to reset it's session timer when the request is received..
-   * 
+   * A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received..
    * @return pingUrl
    **/
   @Schema(description = "A client Url to be pinged by the DocuSign Signing experience to indicate to the client that Signing is active. An HTTP Get is executed against the client. The response from the client is ignored. The intent is for the client to reset it's session timer when the request is received.")
@@ -377,6 +363,7 @@ public class RecipientViewRequest {
     this.pingUrl = pingUrl;
   }
 
+
   /**
    * recipientId.
    *
@@ -388,9 +375,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -405,6 +390,7 @@ public class RecipientViewRequest {
     this.recipientId = recipientId;
   }
 
+
   /**
    * returnUrl.
    *
@@ -416,17 +402,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * The url the recipient is redirected to after the signing session has ended.
-   * DocuSign redirects to the url and includes an event parameter that can be
-   * used by your application. Possible event parameter values: * cancel
-   * (recipient canceled the signing operation) * decline (recipient declined to
-   * sign) * exception (an exception occurred) * fax_pending (recipient has a fax
-   * pending) * session_timeout (session timed out) * signing_complete (signer
-   * completed the signing ceremony) * ttl_expired (the TTL, time to live, timer
-   * expired) * viewing_complete (recipient completed viewing the envelope) ######
-   * Note: Include https:// in the URL or the redirect might not succeed on some
-   * browsers. .
-   * 
+   * The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. .
    * @return returnUrl
    **/
   @Schema(description = "The url the recipient is redirected to after the signing session has ended. DocuSign redirects to the url and includes an event parameter that can be used by your application. Possible event parameter values:   * cancel (recipient canceled the signing operation) * decline (recipient declined to sign) * exception (an exception occurred) * fax_pending (recipient has a fax pending) * session_timeout (session timed out) * signing_complete (signer completed the signing ceremony) * ttl_expired (the TTL, time to live, timer expired) * viewing_complete (recipient completed viewing the envelope)  ###### Note: Include https:// in the URL or the redirect might not succeed on some browsers. ")
@@ -441,6 +417,7 @@ public class RecipientViewRequest {
     this.returnUrl = returnUrl;
   }
 
+
   /**
    * securityDomain.
    *
@@ -453,7 +430,6 @@ public class RecipientViewRequest {
 
   /**
    * The domain in which the user authenticated..
-   * 
    * @return securityDomain
    **/
   @Schema(description = "The domain in which the user authenticated.")
@@ -468,6 +444,7 @@ public class RecipientViewRequest {
     this.securityDomain = securityDomain;
   }
 
+
   /**
    * userId.
    *
@@ -479,13 +456,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the user ID of the recipient. You can use with user ID or email and
-   * user name to identify the recipient. If user ID is used and a client user ID
-   * is provided, the value in the `userId` property must match a recipient ID
-   * (which can be retrieved with a GET recipients call) for the envelope. If a
-   * user ID is used and a clientUser ID is not provided, the user ID match the
-   * user ID of the authenticating user..
-   * 
+   * Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user..
    * @return userId
    **/
   @Schema(description = "Specifies the user ID of the recipient. You can use with user ID or email and user name to identify the recipient. If user ID is used and a client user ID is provided, the value in the `userId` property must match a recipient ID (which can be retrieved with a GET recipients call) for the envelope. If a user ID is used and a clientUser ID is not provided, the user ID match the user ID of the authenticating user.")
@@ -500,6 +471,7 @@ public class RecipientViewRequest {
     this.userId = userId;
   }
 
+
   /**
    * userName.
    *
@@ -511,9 +483,7 @@ public class RecipientViewRequest {
   }
 
   /**
-   * Specifies the username of the recipient. You can use either email and
-   * userName or userId to identify the recipient..
-   * 
+   * Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient..
    * @return userName
    **/
   @Schema(description = "Specifies the username of the recipient. You can use either email and userName or userId to identify the recipient.")
@@ -528,6 +498,7 @@ public class RecipientViewRequest {
     this.userName = userName;
   }
 
+
   /**
    * xFrameOptions.
    *
@@ -540,7 +511,6 @@ public class RecipientViewRequest {
 
   /**
    * .
-   * 
    * @return xFrameOptions
    **/
   @Schema(description = "")
@@ -555,6 +525,7 @@ public class RecipientViewRequest {
     this.xFrameOptions = xFrameOptions;
   }
 
+
   /**
    * xFrameOptionsAllowFromUrl.
    *
@@ -567,7 +538,6 @@ public class RecipientViewRequest {
 
   /**
    * .
-   * 
    * @return xFrameOptionsAllowFromUrl
    **/
   @Schema(description = "")
@@ -581,6 +551,7 @@ public class RecipientViewRequest {
   public void setXFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
     this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
   }
+
 
   /**
    * Compares objects.
@@ -620,10 +591,9 @@ public class RecipientViewRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email,
-        frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId,
-        userName, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
+
 
   /**
    * Converts the given object to string.
@@ -632,7 +602,7 @@ public class RecipientViewRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientViewRequest {\n");
-
+    
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
@@ -666,3 +636,4 @@ public class RecipientViewRequest {
   }
 
 }
+

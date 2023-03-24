@@ -21,6 +21,7 @@ public class NotificationDefaults {
   @JsonProperty("emailNotifications")
   private NotificationDefaultSettings emailNotifications = null;
 
+
   /**
    * apiEmailNotifications.
    *
@@ -33,7 +34,6 @@ public class NotificationDefaults {
 
   /**
    * The default notification settings for envelopes sent by using the console..
-   * 
    * @return apiEmailNotifications
    **/
   @Schema(description = "The default notification settings for envelopes sent by using the console.")
@@ -48,6 +48,7 @@ public class NotificationDefaults {
     this.apiEmailNotifications = apiEmailNotifications;
   }
 
+
   /**
    * emailNotifications.
    *
@@ -60,7 +61,6 @@ public class NotificationDefaults {
 
   /**
    * The default notification settings for envelopes sent by using the API..
-   * 
    * @return emailNotifications
    **/
   @Schema(description = "The default notification settings for envelopes sent by using the API.")
@@ -74,6 +74,7 @@ public class NotificationDefaults {
   public void setEmailNotifications(NotificationDefaultSettings emailNotifications) {
     this.emailNotifications = emailNotifications;
   }
+
 
   /**
    * Compares objects.
@@ -101,6 +102,7 @@ public class NotificationDefaults {
     return Objects.hash(apiEmailNotifications, emailNotifications);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -108,7 +110,7 @@ public class NotificationDefaults {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotificationDefaults {\n");
-
+    
     sb.append("    apiEmailNotifications: ").append(toIndentedString(apiEmailNotifications)).append("\n");
     sb.append("    emailNotifications: ").append(toIndentedString(emailNotifications)).append("\n");
     sb.append("}");
@@ -127,3 +129,4 @@ public class NotificationDefaults {
   }
 
 }
+

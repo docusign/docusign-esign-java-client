@@ -42,6 +42,7 @@ public class AddressInformation {
   @JsonProperty("zipPlus4")
   private String zipPlus4 = null;
 
+
   /**
    * address1.
    *
@@ -54,7 +55,6 @@ public class AddressInformation {
 
   /**
    * First Line of the address. Maximum length: 100 characters..
-   * 
    * @return address1
    **/
   @Schema(description = "First Line of the address. Maximum length: 100 characters.")
@@ -69,6 +69,7 @@ public class AddressInformation {
     this.address1 = address1;
   }
 
+
   /**
    * address2.
    *
@@ -81,7 +82,6 @@ public class AddressInformation {
 
   /**
    * Second Line of the address. Maximum length: 100 characters..
-   * 
    * @return address2
    **/
   @Schema(description = "Second Line of the address. Maximum length: 100 characters.")
@@ -96,6 +96,7 @@ public class AddressInformation {
     this.address2 = address2;
   }
 
+
   /**
    * city.
    *
@@ -108,7 +109,6 @@ public class AddressInformation {
 
   /**
    * The city associated with the address..
-   * 
    * @return city
    **/
   @Schema(description = "The city associated with the address.")
@@ -123,6 +123,7 @@ public class AddressInformation {
     this.city = city;
   }
 
+
   /**
    * country.
    *
@@ -135,7 +136,6 @@ public class AddressInformation {
 
   /**
    * Specifies the country associated with the address..
-   * 
    * @return country
    **/
   @Schema(description = "Specifies the country associated with the address.")
@@ -150,6 +150,7 @@ public class AddressInformation {
     this.country = country;
   }
 
+
   /**
    * fax.
    *
@@ -162,7 +163,6 @@ public class AddressInformation {
 
   /**
    * A Fax number associated with the address if one is available..
-   * 
    * @return fax
    **/
   @Schema(description = "A Fax number associated with the address if one is available.")
@@ -177,6 +177,7 @@ public class AddressInformation {
     this.fax = fax;
   }
 
+
   /**
    * phone.
    *
@@ -189,7 +190,6 @@ public class AddressInformation {
 
   /**
    * A phone number associated with the address..
-   * 
    * @return phone
    **/
   @Schema(description = "A phone number associated with the address.")
@@ -204,6 +204,7 @@ public class AddressInformation {
     this.phone = phone;
   }
 
+
   /**
    * postalCode.
    *
@@ -216,7 +217,6 @@ public class AddressInformation {
 
   /**
    * .
-   * 
    * @return postalCode
    **/
   @Schema(description = "")
@@ -231,6 +231,7 @@ public class AddressInformation {
     this.postalCode = postalCode;
   }
 
+
   /**
    * stateOrProvince.
    *
@@ -243,7 +244,6 @@ public class AddressInformation {
 
   /**
    * .
-   * 
    * @return stateOrProvince
    **/
   @Schema(description = "")
@@ -258,6 +258,7 @@ public class AddressInformation {
     this.stateOrProvince = stateOrProvince;
   }
 
+
   /**
    * zipPlus4.
    *
@@ -270,7 +271,6 @@ public class AddressInformation {
 
   /**
    * .
-   * 
    * @return zipPlus4
    **/
   @Schema(description = "")
@@ -284,6 +284,7 @@ public class AddressInformation {
   public void setZipPlus4(String zipPlus4) {
     this.zipPlus4 = zipPlus4;
   }
+
 
   /**
    * Compares objects.
@@ -318,6 +319,7 @@ public class AddressInformation {
     return Objects.hash(address1, address2, city, country, fax, phone, postalCode, stateOrProvince, zipPlus4);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -325,7 +327,7 @@ public class AddressInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddressInformation {\n");
-
+    
     sb.append("    address1: ").append(toIndentedString(address1)).append("\n");
     sb.append("    address2: ").append(toIndentedString(address2)).append("\n");
     sb.append("    city: ").append(toIndentedString(city)).append("\n");
@@ -351,3 +353,4 @@ public class AddressInformation {
   }
 
 }
+

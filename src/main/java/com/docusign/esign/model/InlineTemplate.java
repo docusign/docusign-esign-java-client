@@ -33,6 +33,7 @@ public class InlineTemplate {
   @JsonProperty("sequence")
   private String sequence = null;
 
+
   /**
    * customFields.
    *
@@ -44,14 +45,10 @@ public class InlineTemplate {
   }
 
   /**
-   * An optional array of strings that enables the sender to provide custom data
-   * about the recipient. This information is returned in the envelope status but
-   * otherwise not used by DocuSign. Each `customField` string can be a maximum of
-   * 100 characters..
-   * 
+   * An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters..
    * @return customFields
    **/
-  @Schema(description = "An optional array of strings that enables the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each `customField` string can be a maximum of 100 characters.")
+  @Schema(description = "An optional array of strings that allows the sender to provide custom data about the recipient. This information is returned in the envelope status but otherwise not used by DocuSign. Each customField string can be a maximum of 100 characters.")
   public CustomFields getCustomFields() {
     return customFields;
   }
@@ -63,6 +60,7 @@ public class InlineTemplate {
     this.customFields = customFields;
   }
 
+
   /**
    * documents.
    *
@@ -72,7 +70,7 @@ public class InlineTemplate {
     this.documents = documents;
     return this;
   }
-
+  
   /**
    * addDocumentsItem.
    *
@@ -88,7 +86,6 @@ public class InlineTemplate {
 
   /**
    * Complex element contains the details on the documents in the envelope..
-   * 
    * @return documents
    **/
   @Schema(description = "Complex element contains the details on the documents in the envelope.")
@@ -103,6 +100,7 @@ public class InlineTemplate {
     this.documents = documents;
   }
 
+
   /**
    * envelope.
    *
@@ -114,11 +112,7 @@ public class InlineTemplate {
   }
 
   /**
-   * A container used to send documents to recipients. The envelope carries
-   * information about the sender and timestamps to indicate the progress of the
-   * delivery procedure. It can contain collections of Documents, Tabs and
-   * Recipients..
-   * 
+   * A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients..
    * @return envelope
    **/
   @Schema(description = "A container used to send documents to recipients. The envelope carries information about the sender and timestamps to indicate the progress of the delivery procedure. It can contain collections of Documents, Tabs and Recipients.")
@@ -133,6 +127,7 @@ public class InlineTemplate {
     this.envelope = envelope;
   }
 
+
   /**
    * recipients.
    *
@@ -144,12 +139,10 @@ public class InlineTemplate {
   }
 
   /**
-   * An array of recipient objects that provides details about the recipients of
-   * the envelope..
-   * 
+   * An array of powerform recipients..
    * @return recipients
    **/
-  @Schema(description = "An array of recipient objects that provides details about the recipients of the envelope.")
+  @Schema(description = "An array of powerform recipients.")
   public Recipients getRecipients() {
     return recipients;
   }
@@ -160,6 +153,7 @@ public class InlineTemplate {
   public void setRecipients(Recipients recipients) {
     this.recipients = recipients;
   }
+
 
   /**
    * sequence.
@@ -173,7 +167,6 @@ public class InlineTemplate {
 
   /**
    * Specifies the order in which templates are overlaid..
-   * 
    * @return sequence
    **/
   @Schema(description = "Specifies the order in which templates are overlaid.")
@@ -187,6 +180,7 @@ public class InlineTemplate {
   public void setSequence(String sequence) {
     this.sequence = sequence;
   }
+
 
   /**
    * Compares objects.
@@ -217,6 +211,7 @@ public class InlineTemplate {
     return Objects.hash(customFields, documents, envelope, recipients, sequence);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -224,7 +219,7 @@ public class InlineTemplate {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineTemplate {\n");
-
+    
     sb.append("    customFields: ").append(toIndentedString(customFields)).append("\n");
     sb.append("    documents: ").append(toIndentedString(documents)).append("\n");
     sb.append("    envelope: ").append(toIndentedString(envelope)).append("\n");
@@ -246,3 +241,4 @@ public class InlineTemplate {
   }
 
 }
+

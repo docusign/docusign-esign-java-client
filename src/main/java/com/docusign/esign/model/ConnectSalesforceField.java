@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object is used to match a DocuSign field to a Salesforce field so that
- * Docusign can send information to your Salesforce account..
+ * This object is used to match a DocuSign field to a Salesforce field so that Docusign can send information to your Salesforce account..
  *
  */
 @Schema(description = "This object is used to match a DocuSign field to a Salesforce field so that Docusign can send information to your Salesforce account.")
@@ -40,6 +39,7 @@ public class ConnectSalesforceField {
   @JsonProperty("sfLockedValue")
   private String sfLockedValue = null;
 
+
   /**
    * dsAttribute.
    *
@@ -52,7 +52,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return dsAttribute
    **/
   @Schema(description = "")
@@ -67,6 +66,7 @@ public class ConnectSalesforceField {
     this.dsAttribute = dsAttribute;
   }
 
+
   /**
    * dsLink.
    *
@@ -79,7 +79,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return dsLink
    **/
   @Schema(description = "")
@@ -94,6 +93,7 @@ public class ConnectSalesforceField {
     this.dsLink = dsLink;
   }
 
+
   /**
    * dsNode.
    *
@@ -106,7 +106,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return dsNode
    **/
   @Schema(description = "")
@@ -121,6 +120,7 @@ public class ConnectSalesforceField {
     this.dsNode = dsNode;
   }
 
+
   /**
    * id.
    *
@@ -133,7 +133,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return id
    **/
   @Schema(description = "")
@@ -148,6 +147,7 @@ public class ConnectSalesforceField {
     this.id = id;
   }
 
+
   /**
    * sfField.
    *
@@ -160,7 +160,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return sfField
    **/
   @Schema(description = "")
@@ -175,6 +174,7 @@ public class ConnectSalesforceField {
     this.sfField = sfField;
   }
 
+
   /**
    * sfFieldName.
    *
@@ -187,7 +187,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return sfFieldName
    **/
   @Schema(description = "")
@@ -202,6 +201,7 @@ public class ConnectSalesforceField {
     this.sfFieldName = sfFieldName;
   }
 
+
   /**
    * sfFolder.
    *
@@ -214,7 +214,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return sfFolder
    **/
   @Schema(description = "")
@@ -229,6 +228,7 @@ public class ConnectSalesforceField {
     this.sfFolder = sfFolder;
   }
 
+
   /**
    * sfLockedValue.
    *
@@ -241,7 +241,6 @@ public class ConnectSalesforceField {
 
   /**
    * .
-   * 
    * @return sfLockedValue
    **/
   @Schema(description = "")
@@ -255,6 +254,7 @@ public class ConnectSalesforceField {
   public void setSfLockedValue(String sfLockedValue) {
     this.sfLockedValue = sfLockedValue;
   }
+
 
   /**
    * Compares objects.
@@ -288,6 +288,7 @@ public class ConnectSalesforceField {
     return Objects.hash(dsAttribute, dsLink, dsNode, id, sfField, sfFieldName, sfFolder, sfLockedValue);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -295,7 +296,7 @@ public class ConnectSalesforceField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectSalesforceField {\n");
-
+    
     sb.append("    dsAttribute: ").append(toIndentedString(dsAttribute)).append("\n");
     sb.append("    dsLink: ").append(toIndentedString(dsLink)).append("\n");
     sb.append("    dsNode: ").append(toIndentedString(dsNode)).append("\n");
@@ -320,3 +321,4 @@ public class ConnectSalesforceField {
   }
 
 }
+

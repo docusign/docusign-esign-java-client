@@ -27,6 +27,7 @@ public class ApiRequestLog {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * createdDateTime.
    *
@@ -39,7 +40,6 @@ public class ApiRequestLog {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -54,6 +54,7 @@ public class ApiRequestLog {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * description.
    *
@@ -66,7 +67,6 @@ public class ApiRequestLog {
 
   /**
    * .
-   * 
    * @return description
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class ApiRequestLog {
     this.description = description;
   }
 
+
   /**
    * requestLogId.
    *
@@ -93,7 +94,6 @@ public class ApiRequestLog {
 
   /**
    * .
-   * 
    * @return requestLogId
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class ApiRequestLog {
     this.requestLogId = requestLogId;
   }
 
+
   /**
    * status.
    *
@@ -119,10 +120,7 @@ public class ApiRequestLog {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -136,6 +134,7 @@ public class ApiRequestLog {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -165,6 +164,7 @@ public class ApiRequestLog {
     return Objects.hash(createdDateTime, description, requestLogId, status);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -172,7 +172,7 @@ public class ApiRequestLog {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApiRequestLog {\n");
-
+    
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    requestLogId: ").append(toIndentedString(requestLogId)).append("\n");
@@ -193,3 +193,4 @@ public class ApiRequestLog {
   }
 
 }
+

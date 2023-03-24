@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Information about the resource files that the brand uses for the email,
- * signing, sending, and captive (embedded) signing experiences..
+ * Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences..
  *
  */
 @Schema(description = "Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences.")
@@ -41,6 +40,7 @@ public class BrandResources {
   @JsonProperty("resourcesContentUri")
   private String resourcesContentUri = null;
 
+
   /**
    * createdByUserInfo.
    *
@@ -53,7 +53,6 @@ public class BrandResources {
 
   /**
    * The user ID of the user who created the brand resource..
-   * 
    * @return createdByUserInfo
    **/
   @Schema(description = "The user ID of the user who created the brand resource.")
@@ -68,6 +67,7 @@ public class BrandResources {
     this.createdByUserInfo = createdByUserInfo;
   }
 
+
   /**
    * createdDate.
    *
@@ -80,7 +80,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return createdDate
    **/
   @Schema(description = "")
@@ -95,6 +94,7 @@ public class BrandResources {
     this.createdDate = createdDate;
   }
 
+
   /**
    * dataNotSavedNotInMaster.
    *
@@ -104,7 +104,7 @@ public class BrandResources {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
     return this;
   }
-
+  
   /**
    * addDataNotSavedNotInMasterItem.
    *
@@ -120,7 +120,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return dataNotSavedNotInMaster
    **/
   @Schema(description = "")
@@ -135,6 +134,7 @@ public class BrandResources {
     this.dataNotSavedNotInMaster = dataNotSavedNotInMaster;
   }
 
+
   /**
    * modifiedByUserInfo.
    *
@@ -147,7 +147,6 @@ public class BrandResources {
 
   /**
    * Information about the user who last modified the brand resource..
-   * 
    * @return modifiedByUserInfo
    **/
   @Schema(description = "Information about the user who last modified the brand resource.")
@@ -162,6 +161,7 @@ public class BrandResources {
     this.modifiedByUserInfo = modifiedByUserInfo;
   }
 
+
   /**
    * modifiedDate.
    *
@@ -174,7 +174,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return modifiedDate
    **/
   @Schema(description = "")
@@ -189,6 +188,7 @@ public class BrandResources {
     this.modifiedDate = modifiedDate;
   }
 
+
   /**
    * modifiedTemplates.
    *
@@ -198,7 +198,7 @@ public class BrandResources {
     this.modifiedTemplates = modifiedTemplates;
     return this;
   }
-
+  
   /**
    * addModifiedTemplatesItem.
    *
@@ -214,7 +214,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return modifiedTemplates
    **/
   @Schema(description = "")
@@ -229,6 +228,7 @@ public class BrandResources {
     this.modifiedTemplates = modifiedTemplates;
   }
 
+
   /**
    * resourcesContentType.
    *
@@ -241,7 +241,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return resourcesContentType
    **/
   @Schema(description = "")
@@ -256,6 +255,7 @@ public class BrandResources {
     this.resourcesContentType = resourcesContentType;
   }
 
+
   /**
    * resourcesContentUri.
    *
@@ -268,7 +268,6 @@ public class BrandResources {
 
   /**
    * .
-   * 
    * @return resourcesContentUri
    **/
   @Schema(description = "")
@@ -282,6 +281,7 @@ public class BrandResources {
   public void setResourcesContentUri(String resourcesContentUri) {
     this.resourcesContentUri = resourcesContentUri;
   }
+
 
   /**
    * Compares objects.
@@ -312,9 +312,9 @@ public class BrandResources {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate,
-        modifiedTemplates, resourcesContentType, resourcesContentUri);
+    return Objects.hash(createdByUserInfo, createdDate, dataNotSavedNotInMaster, modifiedByUserInfo, modifiedDate, modifiedTemplates, resourcesContentType, resourcesContentUri);
   }
+
 
   /**
    * Converts the given object to string.
@@ -323,7 +323,7 @@ public class BrandResources {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandResources {\n");
-
+    
     sb.append("    createdByUserInfo: ").append(toIndentedString(createdByUserInfo)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    dataNotSavedNotInMaster: ").append(toIndentedString(dataNotSavedNotInMaster)).append("\n");
@@ -348,3 +348,4 @@ public class BrandResources {
   }
 
 }
+

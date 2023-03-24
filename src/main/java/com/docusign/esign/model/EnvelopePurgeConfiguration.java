@@ -9,10 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * Contains information about the current envelope purge configuration for an
- * account, which enables account administrators to purge documents from
- * completed and voided envelopes after a set number of days
- * (&#x60;retentionDays&#x60;). .
+ * Contains information about the current envelope purge configuration for an account, which enables account administrators to purge documents from completed and voided envelopes after a set number of days (&#x60;retentionDays&#x60;). .
  *
  */
 @Schema(description = "Contains information about the current envelope purge configuration for an account, which enables account administrators to purge documents from completed and voided envelopes after a set number of days (`retentionDays`). ")
@@ -30,6 +27,7 @@ public class EnvelopePurgeConfiguration {
   @JsonProperty("retentionDays")
   private String retentionDays = null;
 
+
   /**
    * purgeEnvelopes.
    *
@@ -42,7 +40,6 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
-   * 
    * @return purgeEnvelopes
    **/
   @Schema(description = "")
@@ -57,6 +54,7 @@ public class EnvelopePurgeConfiguration {
     this.purgeEnvelopes = purgeEnvelopes;
   }
 
+
   /**
    * redactPII.
    *
@@ -69,7 +67,6 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
-   * 
    * @return redactPII
    **/
   @Schema(description = "")
@@ -84,6 +81,7 @@ public class EnvelopePurgeConfiguration {
     this.redactPII = redactPII;
   }
 
+
   /**
    * removeTabsAndEnvelopeAttachments.
    *
@@ -96,7 +94,6 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
-   * 
    * @return removeTabsAndEnvelopeAttachments
    **/
   @Schema(description = "")
@@ -111,6 +108,7 @@ public class EnvelopePurgeConfiguration {
     this.removeTabsAndEnvelopeAttachments = removeTabsAndEnvelopeAttachments;
   }
 
+
   /**
    * retentionDays.
    *
@@ -123,7 +121,6 @@ public class EnvelopePurgeConfiguration {
 
   /**
    * .
-   * 
    * @return retentionDays
    **/
   @Schema(description = "")
@@ -137,6 +134,7 @@ public class EnvelopePurgeConfiguration {
   public void setRetentionDays(String retentionDays) {
     this.retentionDays = retentionDays;
   }
+
 
   /**
    * Compares objects.
@@ -154,9 +152,7 @@ public class EnvelopePurgeConfiguration {
     EnvelopePurgeConfiguration envelopePurgeConfiguration = (EnvelopePurgeConfiguration) o;
     return Objects.equals(this.purgeEnvelopes, envelopePurgeConfiguration.purgeEnvelopes) &&
         Objects.equals(this.redactPII, envelopePurgeConfiguration.redactPII) &&
-        Objects.equals(this.removeTabsAndEnvelopeAttachments,
-            envelopePurgeConfiguration.removeTabsAndEnvelopeAttachments)
-        &&
+        Objects.equals(this.removeTabsAndEnvelopeAttachments, envelopePurgeConfiguration.removeTabsAndEnvelopeAttachments) &&
         Objects.equals(this.retentionDays, envelopePurgeConfiguration.retentionDays);
   }
 
@@ -168,6 +164,7 @@ public class EnvelopePurgeConfiguration {
     return Objects.hash(purgeEnvelopes, redactPII, removeTabsAndEnvelopeAttachments, retentionDays);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -175,11 +172,10 @@ public class EnvelopePurgeConfiguration {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePurgeConfiguration {\n");
-
+    
     sb.append("    purgeEnvelopes: ").append(toIndentedString(purgeEnvelopes)).append("\n");
     sb.append("    redactPII: ").append(toIndentedString(redactPII)).append("\n");
-    sb.append("    removeTabsAndEnvelopeAttachments: ").append(toIndentedString(removeTabsAndEnvelopeAttachments))
-        .append("\n");
+    sb.append("    removeTabsAndEnvelopeAttachments: ").append(toIndentedString(removeTabsAndEnvelopeAttachments)).append("\n");
     sb.append("    retentionDays: ").append(toIndentedString(retentionDays)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -197,3 +193,4 @@ public class EnvelopePurgeConfiguration {
   }
 
 }
+

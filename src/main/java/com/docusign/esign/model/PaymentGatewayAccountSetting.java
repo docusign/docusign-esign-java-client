@@ -26,6 +26,7 @@ public class PaymentGatewayAccountSetting {
   @JsonProperty("merchantId")
   private String merchantId = null;
 
+
   /**
    * apiFields.
    *
@@ -38,7 +39,6 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   * 
    * @return apiFields
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class PaymentGatewayAccountSetting {
     this.apiFields = apiFields;
   }
 
+
   /**
    * authorizationCode.
    *
@@ -65,7 +66,6 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   * 
    * @return authorizationCode
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class PaymentGatewayAccountSetting {
     this.authorizationCode = authorizationCode;
   }
 
+
   /**
    * credentialStatus.
    *
@@ -92,7 +93,6 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   * 
    * @return credentialStatus
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class PaymentGatewayAccountSetting {
     this.credentialStatus = credentialStatus;
   }
 
+
   /**
    * merchantId.
    *
@@ -119,7 +120,6 @@ public class PaymentGatewayAccountSetting {
 
   /**
    * .
-   * 
    * @return merchantId
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class PaymentGatewayAccountSetting {
   public void setMerchantId(String merchantId) {
     this.merchantId = merchantId;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class PaymentGatewayAccountSetting {
     return Objects.hash(apiFields, authorizationCode, credentialStatus, merchantId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class PaymentGatewayAccountSetting {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentGatewayAccountSetting {\n");
-
+    
     sb.append("    apiFields: ").append(toIndentedString(apiFields)).append("\n");
     sb.append("    authorizationCode: ").append(toIndentedString(authorizationCode)).append("\n");
     sb.append("    credentialStatus: ").append(toIndentedString(credentialStatus)).append("\n");
@@ -190,3 +192,4 @@ public class PaymentGatewayAccountSetting {
   }
 
 }
+

@@ -81,6 +81,7 @@ public class AccountPasswordRules {
   @JsonProperty("questionsRequiredMetadata")
   private AccountPasswordQuestionsRequired questionsRequiredMetadata = null;
 
+
   /**
    * expirePassword.
    *
@@ -93,7 +94,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return expirePassword
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class AccountPasswordRules {
     this.expirePassword = expirePassword;
   }
 
+
   /**
    * expirePasswordDays.
    *
@@ -120,7 +121,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return expirePasswordDays
    **/
   @Schema(description = "")
@@ -135,6 +135,7 @@ public class AccountPasswordRules {
     this.expirePasswordDays = expirePasswordDays;
   }
 
+
   /**
    * expirePasswordDaysMetadata.
    *
@@ -146,9 +147,7 @@ public class AccountPasswordRules {
   }
 
   /**
-   * Metadata that indicates whether the `expirePasswordDays` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `expirePasswordDays` property is editable. .
    * @return expirePasswordDaysMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `expirePasswordDays` property is editable. ")
@@ -163,6 +162,7 @@ public class AccountPasswordRules {
     this.expirePasswordDaysMetadata = expirePasswordDaysMetadata;
   }
 
+
   /**
    * lockoutDurationMinutes.
    *
@@ -175,7 +175,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return lockoutDurationMinutes
    **/
   @Schema(description = "")
@@ -190,21 +189,19 @@ public class AccountPasswordRules {
     this.lockoutDurationMinutes = lockoutDurationMinutes;
   }
 
+
   /**
    * lockoutDurationMinutesMetadata.
    *
    * @return AccountPasswordRules
    **/
-  public AccountPasswordRules lockoutDurationMinutesMetadata(
-      AccountPasswordLockoutDurationMinutes lockoutDurationMinutesMetadata) {
+  public AccountPasswordRules lockoutDurationMinutesMetadata(AccountPasswordLockoutDurationMinutes lockoutDurationMinutesMetadata) {
     this.lockoutDurationMinutesMetadata = lockoutDurationMinutesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `lockoutDurationMinutes` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `lockoutDurationMinutes` property is editable. .
    * @return lockoutDurationMinutesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `lockoutDurationMinutes` property is editable. ")
@@ -219,6 +216,7 @@ public class AccountPasswordRules {
     this.lockoutDurationMinutesMetadata = lockoutDurationMinutesMetadata;
   }
 
+
   /**
    * lockoutDurationType.
    *
@@ -231,7 +229,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return lockoutDurationType
    **/
   @Schema(description = "")
@@ -246,21 +243,19 @@ public class AccountPasswordRules {
     this.lockoutDurationType = lockoutDurationType;
   }
 
+
   /**
    * lockoutDurationTypeMetadata.
    *
    * @return AccountPasswordRules
    **/
-  public AccountPasswordRules lockoutDurationTypeMetadata(
-      AccountPasswordLockoutDurationType lockoutDurationTypeMetadata) {
+  public AccountPasswordRules lockoutDurationTypeMetadata(AccountPasswordLockoutDurationType lockoutDurationTypeMetadata) {
     this.lockoutDurationTypeMetadata = lockoutDurationTypeMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `lockoutDurationType` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `lockoutDurationType` property is editable. .
    * @return lockoutDurationTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `lockoutDurationType` property is editable. ")
@@ -275,6 +270,7 @@ public class AccountPasswordRules {
     this.lockoutDurationTypeMetadata = lockoutDurationTypeMetadata;
   }
 
+
   /**
    * minimumPasswordAgeDays.
    *
@@ -287,7 +283,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return minimumPasswordAgeDays
    **/
   @Schema(description = "")
@@ -302,21 +297,19 @@ public class AccountPasswordRules {
     this.minimumPasswordAgeDays = minimumPasswordAgeDays;
   }
 
+
   /**
    * minimumPasswordAgeDaysMetadata.
    *
    * @return AccountPasswordRules
    **/
-  public AccountPasswordRules minimumPasswordAgeDaysMetadata(
-      AccountPasswordMinimumPasswordAgeDays minimumPasswordAgeDaysMetadata) {
+  public AccountPasswordRules minimumPasswordAgeDaysMetadata(AccountPasswordMinimumPasswordAgeDays minimumPasswordAgeDaysMetadata) {
     this.minimumPasswordAgeDaysMetadata = minimumPasswordAgeDaysMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `minimumPasswordAgeDays` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `minimumPasswordAgeDays` property is editable. .
    * @return minimumPasswordAgeDaysMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `minimumPasswordAgeDays` property is editable. ")
@@ -331,6 +324,7 @@ public class AccountPasswordRules {
     this.minimumPasswordAgeDaysMetadata = minimumPasswordAgeDaysMetadata;
   }
 
+
   /**
    * minimumPasswordLength.
    *
@@ -343,7 +337,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return minimumPasswordLength
    **/
   @Schema(description = "")
@@ -358,21 +351,19 @@ public class AccountPasswordRules {
     this.minimumPasswordLength = minimumPasswordLength;
   }
 
+
   /**
    * minimumPasswordLengthMetadata.
    *
    * @return AccountPasswordRules
    **/
-  public AccountPasswordRules minimumPasswordLengthMetadata(
-      AccountMinimumPasswordLength minimumPasswordLengthMetadata) {
+  public AccountPasswordRules minimumPasswordLengthMetadata(AccountMinimumPasswordLength minimumPasswordLengthMetadata) {
     this.minimumPasswordLengthMetadata = minimumPasswordLengthMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `minimumPasswordLength` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `minimumPasswordLength` property is editable. .
    * @return minimumPasswordLengthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `minimumPasswordLength` property is editable. ")
@@ -387,6 +378,7 @@ public class AccountPasswordRules {
     this.minimumPasswordLengthMetadata = minimumPasswordLengthMetadata;
   }
 
+
   /**
    * passwordIncludeDigit.
    *
@@ -399,7 +391,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordIncludeDigit
    **/
   @Schema(description = "")
@@ -414,6 +405,7 @@ public class AccountPasswordRules {
     this.passwordIncludeDigit = passwordIncludeDigit;
   }
 
+
   /**
    * passwordIncludeDigitOrSpecialCharacter.
    *
@@ -426,7 +418,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordIncludeDigitOrSpecialCharacter
    **/
   @Schema(description = "")
@@ -441,6 +432,7 @@ public class AccountPasswordRules {
     this.passwordIncludeDigitOrSpecialCharacter = passwordIncludeDigitOrSpecialCharacter;
   }
 
+
   /**
    * passwordIncludeLowerCase.
    *
@@ -453,7 +445,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordIncludeLowerCase
    **/
   @Schema(description = "")
@@ -468,6 +459,7 @@ public class AccountPasswordRules {
     this.passwordIncludeLowerCase = passwordIncludeLowerCase;
   }
 
+
   /**
    * passwordIncludeSpecialCharacter.
    *
@@ -480,7 +472,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordIncludeSpecialCharacter
    **/
   @Schema(description = "")
@@ -495,6 +486,7 @@ public class AccountPasswordRules {
     this.passwordIncludeSpecialCharacter = passwordIncludeSpecialCharacter;
   }
 
+
   /**
    * passwordIncludeUpperCase.
    *
@@ -507,7 +499,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordIncludeUpperCase
    **/
   @Schema(description = "")
@@ -522,6 +513,7 @@ public class AccountPasswordRules {
     this.passwordIncludeUpperCase = passwordIncludeUpperCase;
   }
 
+
   /**
    * passwordStrengthType.
    *
@@ -534,7 +526,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return passwordStrengthType
    **/
   @Schema(description = "")
@@ -549,6 +540,7 @@ public class AccountPasswordRules {
     this.passwordStrengthType = passwordStrengthType;
   }
 
+
   /**
    * passwordStrengthTypeMetadata.
    *
@@ -560,9 +552,7 @@ public class AccountPasswordRules {
   }
 
   /**
-   * Metadata that indicates whether the `passwordStrengthType` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `passwordStrengthType` property is editable. .
    * @return passwordStrengthTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `passwordStrengthType` property is editable. ")
@@ -577,6 +567,7 @@ public class AccountPasswordRules {
     this.passwordStrengthTypeMetadata = passwordStrengthTypeMetadata;
   }
 
+
   /**
    * questionsRequired.
    *
@@ -589,7 +580,6 @@ public class AccountPasswordRules {
 
   /**
    * .
-   * 
    * @return questionsRequired
    **/
   @Schema(description = "")
@@ -604,6 +594,7 @@ public class AccountPasswordRules {
     this.questionsRequired = questionsRequired;
   }
 
+
   /**
    * questionsRequiredMetadata.
    *
@@ -615,9 +606,7 @@ public class AccountPasswordRules {
   }
 
   /**
-   * Metadata that indicates whether the `questionsRequired` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `questionsRequired` property is editable. .
    * @return questionsRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `questionsRequired` property is editable. ")
@@ -631,6 +620,7 @@ public class AccountPasswordRules {
   public void setQuestionsRequiredMetadata(AccountPasswordQuestionsRequired questionsRequiredMetadata) {
     this.questionsRequiredMetadata = questionsRequiredMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -658,9 +648,7 @@ public class AccountPasswordRules {
         Objects.equals(this.minimumPasswordLength, accountPasswordRules.minimumPasswordLength) &&
         Objects.equals(this.minimumPasswordLengthMetadata, accountPasswordRules.minimumPasswordLengthMetadata) &&
         Objects.equals(this.passwordIncludeDigit, accountPasswordRules.passwordIncludeDigit) &&
-        Objects.equals(this.passwordIncludeDigitOrSpecialCharacter,
-            accountPasswordRules.passwordIncludeDigitOrSpecialCharacter)
-        &&
+        Objects.equals(this.passwordIncludeDigitOrSpecialCharacter, accountPasswordRules.passwordIncludeDigitOrSpecialCharacter) &&
         Objects.equals(this.passwordIncludeLowerCase, accountPasswordRules.passwordIncludeLowerCase) &&
         Objects.equals(this.passwordIncludeSpecialCharacter, accountPasswordRules.passwordIncludeSpecialCharacter) &&
         Objects.equals(this.passwordIncludeUpperCase, accountPasswordRules.passwordIncludeUpperCase) &&
@@ -675,13 +663,9 @@ public class AccountPasswordRules {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(expirePassword, expirePasswordDays, expirePasswordDaysMetadata, lockoutDurationMinutes,
-        lockoutDurationMinutesMetadata, lockoutDurationType, lockoutDurationTypeMetadata, minimumPasswordAgeDays,
-        minimumPasswordAgeDaysMetadata, minimumPasswordLength, minimumPasswordLengthMetadata, passwordIncludeDigit,
-        passwordIncludeDigitOrSpecialCharacter, passwordIncludeLowerCase, passwordIncludeSpecialCharacter,
-        passwordIncludeUpperCase, passwordStrengthType, passwordStrengthTypeMetadata, questionsRequired,
-        questionsRequiredMetadata);
+    return Objects.hash(expirePassword, expirePasswordDays, expirePasswordDaysMetadata, lockoutDurationMinutes, lockoutDurationMinutesMetadata, lockoutDurationType, lockoutDurationTypeMetadata, minimumPasswordAgeDays, minimumPasswordAgeDaysMetadata, minimumPasswordLength, minimumPasswordLengthMetadata, passwordIncludeDigit, passwordIncludeDigitOrSpecialCharacter, passwordIncludeLowerCase, passwordIncludeSpecialCharacter, passwordIncludeUpperCase, passwordStrengthType, passwordStrengthTypeMetadata, questionsRequired, questionsRequiredMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -690,27 +674,22 @@ public class AccountPasswordRules {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordRules {\n");
-
+    
     sb.append("    expirePassword: ").append(toIndentedString(expirePassword)).append("\n");
     sb.append("    expirePasswordDays: ").append(toIndentedString(expirePasswordDays)).append("\n");
     sb.append("    expirePasswordDaysMetadata: ").append(toIndentedString(expirePasswordDaysMetadata)).append("\n");
     sb.append("    lockoutDurationMinutes: ").append(toIndentedString(lockoutDurationMinutes)).append("\n");
-    sb.append("    lockoutDurationMinutesMetadata: ").append(toIndentedString(lockoutDurationMinutesMetadata))
-        .append("\n");
+    sb.append("    lockoutDurationMinutesMetadata: ").append(toIndentedString(lockoutDurationMinutesMetadata)).append("\n");
     sb.append("    lockoutDurationType: ").append(toIndentedString(lockoutDurationType)).append("\n");
     sb.append("    lockoutDurationTypeMetadata: ").append(toIndentedString(lockoutDurationTypeMetadata)).append("\n");
     sb.append("    minimumPasswordAgeDays: ").append(toIndentedString(minimumPasswordAgeDays)).append("\n");
-    sb.append("    minimumPasswordAgeDaysMetadata: ").append(toIndentedString(minimumPasswordAgeDaysMetadata))
-        .append("\n");
+    sb.append("    minimumPasswordAgeDaysMetadata: ").append(toIndentedString(minimumPasswordAgeDaysMetadata)).append("\n");
     sb.append("    minimumPasswordLength: ").append(toIndentedString(minimumPasswordLength)).append("\n");
-    sb.append("    minimumPasswordLengthMetadata: ").append(toIndentedString(minimumPasswordLengthMetadata))
-        .append("\n");
+    sb.append("    minimumPasswordLengthMetadata: ").append(toIndentedString(minimumPasswordLengthMetadata)).append("\n");
     sb.append("    passwordIncludeDigit: ").append(toIndentedString(passwordIncludeDigit)).append("\n");
-    sb.append("    passwordIncludeDigitOrSpecialCharacter: ")
-        .append(toIndentedString(passwordIncludeDigitOrSpecialCharacter)).append("\n");
+    sb.append("    passwordIncludeDigitOrSpecialCharacter: ").append(toIndentedString(passwordIncludeDigitOrSpecialCharacter)).append("\n");
     sb.append("    passwordIncludeLowerCase: ").append(toIndentedString(passwordIncludeLowerCase)).append("\n");
-    sb.append("    passwordIncludeSpecialCharacter: ").append(toIndentedString(passwordIncludeSpecialCharacter))
-        .append("\n");
+    sb.append("    passwordIncludeSpecialCharacter: ").append(toIndentedString(passwordIncludeSpecialCharacter)).append("\n");
     sb.append("    passwordIncludeUpperCase: ").append(toIndentedString(passwordIncludeUpperCase)).append("\n");
     sb.append("    passwordStrengthType: ").append(toIndentedString(passwordStrengthType)).append("\n");
     sb.append("    passwordStrengthTypeMetadata: ").append(toIndentedString(passwordStrengthTypeMetadata)).append("\n");
@@ -732,3 +711,4 @@ public class AccountPasswordRules {
   }
 
 }
+

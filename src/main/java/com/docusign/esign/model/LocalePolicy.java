@@ -144,6 +144,7 @@ public class LocalePolicy {
   @JsonProperty("timeZoneMetadata")
   private SettingsMetadata timeZoneMetadata = null;
 
+
   /**
    * addressFormat.
    *
@@ -156,7 +157,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return addressFormat
    **/
   @Schema(description = "")
@@ -171,6 +171,7 @@ public class LocalePolicy {
     this.addressFormat = addressFormat;
   }
 
+
   /**
    * addressFormatMetadata.
    *
@@ -183,7 +184,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return addressFormatMetadata
    **/
   @Schema(description = "")
@@ -198,6 +198,7 @@ public class LocalePolicy {
     this.addressFormatMetadata = addressFormatMetadata;
   }
 
+
   /**
    * allowRegion.
    *
@@ -210,7 +211,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return allowRegion
    **/
   @Schema(description = "")
@@ -225,6 +225,7 @@ public class LocalePolicy {
     this.allowRegion = allowRegion;
   }
 
+
   /**
    * calendarType.
    *
@@ -237,7 +238,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return calendarType
    **/
   @Schema(description = "")
@@ -252,6 +252,7 @@ public class LocalePolicy {
     this.calendarType = calendarType;
   }
 
+
   /**
    * calendarTypeMetadata.
    *
@@ -264,7 +265,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return calendarTypeMetadata
    **/
   @Schema(description = "")
@@ -279,6 +279,7 @@ public class LocalePolicy {
     this.calendarTypeMetadata = calendarTypeMetadata;
   }
 
+
   /**
    * cultureName.
    *
@@ -291,7 +292,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return cultureName
    **/
   @Schema(description = "")
@@ -306,6 +306,7 @@ public class LocalePolicy {
     this.cultureName = cultureName;
   }
 
+
   /**
    * cultureNameMetadata.
    *
@@ -318,7 +319,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return cultureNameMetadata
    **/
   @Schema(description = "")
@@ -333,6 +333,7 @@ public class LocalePolicy {
     this.cultureNameMetadata = cultureNameMetadata;
   }
 
+
   /**
    * currencyCode.
    *
@@ -345,7 +346,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return currencyCode
    **/
   @Schema(description = "")
@@ -360,6 +360,7 @@ public class LocalePolicy {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * currencyCodeMetadata.
    *
@@ -372,7 +373,6 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `currencyCode` property is editable..
-   * 
    * @return currencyCodeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `currencyCode` property is editable.")
@@ -387,6 +387,7 @@ public class LocalePolicy {
     this.currencyCodeMetadata = currencyCodeMetadata;
   }
 
+
   /**
    * currencyNegativeFormat.
    *
@@ -399,7 +400,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return currencyNegativeFormat
    **/
   @Schema(description = "")
@@ -414,6 +414,7 @@ public class LocalePolicy {
     this.currencyNegativeFormat = currencyNegativeFormat;
   }
 
+
   /**
    * currencyNegativeFormatMetadata.
    *
@@ -426,7 +427,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return currencyNegativeFormatMetadata
    **/
   @Schema(description = "")
@@ -441,6 +441,7 @@ public class LocalePolicy {
     this.currencyNegativeFormatMetadata = currencyNegativeFormatMetadata;
   }
 
+
   /**
    * currencyPositiveFormat.
    *
@@ -453,7 +454,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return currencyPositiveFormat
    **/
   @Schema(description = "")
@@ -468,6 +468,7 @@ public class LocalePolicy {
     this.currencyPositiveFormat = currencyPositiveFormat;
   }
 
+
   /**
    * currencyPositiveFormatMetadata.
    *
@@ -480,7 +481,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return currencyPositiveFormatMetadata
    **/
   @Schema(description = "")
@@ -495,6 +495,7 @@ public class LocalePolicy {
     this.currencyPositiveFormatMetadata = currencyPositiveFormatMetadata;
   }
 
+
   /**
    * customDateFormat.
    *
@@ -507,7 +508,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return customDateFormat
    **/
   @Schema(description = "")
@@ -522,6 +522,7 @@ public class LocalePolicy {
     this.customDateFormat = customDateFormat;
   }
 
+
   /**
    * customSignDateFormat.
    *
@@ -534,7 +535,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return customSignDateFormat
    **/
   @Schema(description = "")
@@ -549,6 +549,7 @@ public class LocalePolicy {
     this.customSignDateFormat = customSignDateFormat;
   }
 
+
   /**
    * customSignTimeFormat.
    *
@@ -561,7 +562,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return customSignTimeFormat
    **/
   @Schema(description = "")
@@ -576,6 +576,7 @@ public class LocalePolicy {
     this.customSignTimeFormat = customSignTimeFormat;
   }
 
+
   /**
    * customTimeFormat.
    *
@@ -588,7 +589,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return customTimeFormat
    **/
   @Schema(description = "")
@@ -603,6 +603,7 @@ public class LocalePolicy {
     this.customTimeFormat = customTimeFormat;
   }
 
+
   /**
    * dateFormat.
    *
@@ -615,7 +616,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return dateFormat
    **/
   @Schema(description = "")
@@ -630,6 +630,7 @@ public class LocalePolicy {
     this.dateFormat = dateFormat;
   }
 
+
   /**
    * dateFormatMetadata.
    *
@@ -642,7 +643,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return dateFormatMetadata
    **/
   @Schema(description = "")
@@ -657,6 +657,7 @@ public class LocalePolicy {
     this.dateFormatMetadata = dateFormatMetadata;
   }
 
+
   /**
    * effectiveAddressFormat.
    *
@@ -669,7 +670,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveAddressFormat
    **/
   @Schema(description = "")
@@ -684,6 +684,7 @@ public class LocalePolicy {
     this.effectiveAddressFormat = effectiveAddressFormat;
   }
 
+
   /**
    * effectiveCalendarType.
    *
@@ -696,7 +697,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCalendarType
    **/
   @Schema(description = "")
@@ -711,6 +711,7 @@ public class LocalePolicy {
     this.effectiveCalendarType = effectiveCalendarType;
   }
 
+
   /**
    * effectiveCurrencyCode.
    *
@@ -723,7 +724,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCurrencyCode
    **/
   @Schema(description = "")
@@ -738,6 +738,7 @@ public class LocalePolicy {
     this.effectiveCurrencyCode = effectiveCurrencyCode;
   }
 
+
   /**
    * effectiveCurrencyNegativeFormat.
    *
@@ -750,7 +751,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCurrencyNegativeFormat
    **/
   @Schema(description = "")
@@ -765,6 +765,7 @@ public class LocalePolicy {
     this.effectiveCurrencyNegativeFormat = effectiveCurrencyNegativeFormat;
   }
 
+
   /**
    * effectiveCurrencyPositiveFormat.
    *
@@ -777,7 +778,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCurrencyPositiveFormat
    **/
   @Schema(description = "")
@@ -792,6 +792,7 @@ public class LocalePolicy {
     this.effectiveCurrencyPositiveFormat = effectiveCurrencyPositiveFormat;
   }
 
+
   /**
    * effectiveCustomDateFormat.
    *
@@ -804,7 +805,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCustomDateFormat
    **/
   @Schema(description = "")
@@ -819,6 +819,7 @@ public class LocalePolicy {
     this.effectiveCustomDateFormat = effectiveCustomDateFormat;
   }
 
+
   /**
    * effectiveCustomTimeFormat.
    *
@@ -831,7 +832,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveCustomTimeFormat
    **/
   @Schema(description = "")
@@ -846,6 +846,7 @@ public class LocalePolicy {
     this.effectiveCustomTimeFormat = effectiveCustomTimeFormat;
   }
 
+
   /**
    * effectiveDateFormat.
    *
@@ -858,7 +859,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveDateFormat
    **/
   @Schema(description = "")
@@ -873,6 +873,7 @@ public class LocalePolicy {
     this.effectiveDateFormat = effectiveDateFormat;
   }
 
+
   /**
    * effectiveInitialFormat.
    *
@@ -885,7 +886,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveInitialFormat
    **/
   @Schema(description = "")
@@ -900,6 +900,7 @@ public class LocalePolicy {
     this.effectiveInitialFormat = effectiveInitialFormat;
   }
 
+
   /**
    * effectiveNameFormat.
    *
@@ -912,7 +913,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveNameFormat
    **/
   @Schema(description = "")
@@ -927,6 +927,7 @@ public class LocalePolicy {
     this.effectiveNameFormat = effectiveNameFormat;
   }
 
+
   /**
    * effectiveTimeFormat.
    *
@@ -939,7 +940,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveTimeFormat
    **/
   @Schema(description = "")
@@ -954,6 +954,7 @@ public class LocalePolicy {
     this.effectiveTimeFormat = effectiveTimeFormat;
   }
 
+
   /**
    * effectiveTimeZone.
    *
@@ -966,7 +967,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return effectiveTimeZone
    **/
   @Schema(description = "")
@@ -981,6 +981,7 @@ public class LocalePolicy {
     this.effectiveTimeZone = effectiveTimeZone;
   }
 
+
   /**
    * initialFormat.
    *
@@ -993,7 +994,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return initialFormat
    **/
   @Schema(description = "")
@@ -1008,6 +1008,7 @@ public class LocalePolicy {
     this.initialFormat = initialFormat;
   }
 
+
   /**
    * initialFormatMetadata.
    *
@@ -1020,7 +1021,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return initialFormatMetadata
    **/
   @Schema(description = "")
@@ -1035,6 +1035,7 @@ public class LocalePolicy {
     this.initialFormatMetadata = initialFormatMetadata;
   }
 
+
   /**
    * nameFormat.
    *
@@ -1047,7 +1048,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return nameFormat
    **/
   @Schema(description = "")
@@ -1062,6 +1062,7 @@ public class LocalePolicy {
     this.nameFormat = nameFormat;
   }
 
+
   /**
    * nameFormatMetadata.
    *
@@ -1074,7 +1075,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return nameFormatMetadata
    **/
   @Schema(description = "")
@@ -1089,6 +1089,7 @@ public class LocalePolicy {
     this.nameFormatMetadata = nameFormatMetadata;
   }
 
+
   /**
    * signDateFormat.
    *
@@ -1101,7 +1102,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return signDateFormat
    **/
   @Schema(description = "")
@@ -1116,6 +1116,7 @@ public class LocalePolicy {
     this.signDateFormat = signDateFormat;
   }
 
+
   /**
    * signDateFormatMetadata.
    *
@@ -1128,7 +1129,6 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `signDateFormat` property is editable. .
-   * 
    * @return signDateFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signDateFormat` property is editable. ")
@@ -1143,6 +1143,7 @@ public class LocalePolicy {
     this.signDateFormatMetadata = signDateFormatMetadata;
   }
 
+
   /**
    * signTimeFormat.
    *
@@ -1155,7 +1156,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return signTimeFormat
    **/
   @Schema(description = "")
@@ -1170,6 +1170,7 @@ public class LocalePolicy {
     this.signTimeFormat = signTimeFormat;
   }
 
+
   /**
    * signTimeFormatMetadata.
    *
@@ -1182,7 +1183,6 @@ public class LocalePolicy {
 
   /**
    * Metadata that indicates whether the `signTimeFormat` property is editable. .
-   * 
    * @return signTimeFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signTimeFormat` property is editable. ")
@@ -1197,6 +1197,7 @@ public class LocalePolicy {
     this.signTimeFormatMetadata = signTimeFormatMetadata;
   }
 
+
   /**
    * timeFormat.
    *
@@ -1209,7 +1210,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return timeFormat
    **/
   @Schema(description = "")
@@ -1224,6 +1224,7 @@ public class LocalePolicy {
     this.timeFormat = timeFormat;
   }
 
+
   /**
    * timeFormatMetadata.
    *
@@ -1236,7 +1237,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return timeFormatMetadata
    **/
   @Schema(description = "")
@@ -1251,6 +1251,7 @@ public class LocalePolicy {
     this.timeFormatMetadata = timeFormatMetadata;
   }
 
+
   /**
    * timeZone.
    *
@@ -1263,7 +1264,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return timeZone
    **/
   @Schema(description = "")
@@ -1278,6 +1278,7 @@ public class LocalePolicy {
     this.timeZone = timeZone;
   }
 
+
   /**
    * timeZoneMetadata.
    *
@@ -1290,7 +1291,6 @@ public class LocalePolicy {
 
   /**
    * .
-   * 
    * @return timeZoneMetadata
    **/
   @Schema(description = "")
@@ -1304,6 +1304,7 @@ public class LocalePolicy {
   public void setTimeZoneMetadata(SettingsMetadata timeZoneMetadata) {
     this.timeZoneMetadata = timeZoneMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -1369,16 +1370,9 @@ public class LocalePolicy {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addressFormat, addressFormatMetadata, allowRegion, calendarType, calendarTypeMetadata,
-        cultureName, cultureNameMetadata, currencyCode, currencyCodeMetadata, currencyNegativeFormat,
-        currencyNegativeFormatMetadata, currencyPositiveFormat, currencyPositiveFormatMetadata, customDateFormat,
-        customSignDateFormat, customSignTimeFormat, customTimeFormat, dateFormat, dateFormatMetadata,
-        effectiveAddressFormat, effectiveCalendarType, effectiveCurrencyCode, effectiveCurrencyNegativeFormat,
-        effectiveCurrencyPositiveFormat, effectiveCustomDateFormat, effectiveCustomTimeFormat, effectiveDateFormat,
-        effectiveInitialFormat, effectiveNameFormat, effectiveTimeFormat, effectiveTimeZone, initialFormat,
-        initialFormatMetadata, nameFormat, nameFormatMetadata, signDateFormat, signDateFormatMetadata, signTimeFormat,
-        signTimeFormatMetadata, timeFormat, timeFormatMetadata, timeZone, timeZoneMetadata);
+    return Objects.hash(addressFormat, addressFormatMetadata, allowRegion, calendarType, calendarTypeMetadata, cultureName, cultureNameMetadata, currencyCode, currencyCodeMetadata, currencyNegativeFormat, currencyNegativeFormatMetadata, currencyPositiveFormat, currencyPositiveFormatMetadata, customDateFormat, customSignDateFormat, customSignTimeFormat, customTimeFormat, dateFormat, dateFormatMetadata, effectiveAddressFormat, effectiveCalendarType, effectiveCurrencyCode, effectiveCurrencyNegativeFormat, effectiveCurrencyPositiveFormat, effectiveCustomDateFormat, effectiveCustomTimeFormat, effectiveDateFormat, effectiveInitialFormat, effectiveNameFormat, effectiveTimeFormat, effectiveTimeZone, initialFormat, initialFormatMetadata, nameFormat, nameFormatMetadata, signDateFormat, signDateFormatMetadata, signTimeFormat, signTimeFormatMetadata, timeFormat, timeFormatMetadata, timeZone, timeZoneMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1387,7 +1381,7 @@ public class LocalePolicy {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocalePolicy {\n");
-
+    
     sb.append("    addressFormat: ").append(toIndentedString(addressFormat)).append("\n");
     sb.append("    addressFormatMetadata: ").append(toIndentedString(addressFormatMetadata)).append("\n");
     sb.append("    allowRegion: ").append(toIndentedString(allowRegion)).append("\n");
@@ -1398,11 +1392,9 @@ public class LocalePolicy {
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
     sb.append("    currencyCodeMetadata: ").append(toIndentedString(currencyCodeMetadata)).append("\n");
     sb.append("    currencyNegativeFormat: ").append(toIndentedString(currencyNegativeFormat)).append("\n");
-    sb.append("    currencyNegativeFormatMetadata: ").append(toIndentedString(currencyNegativeFormatMetadata))
-        .append("\n");
+    sb.append("    currencyNegativeFormatMetadata: ").append(toIndentedString(currencyNegativeFormatMetadata)).append("\n");
     sb.append("    currencyPositiveFormat: ").append(toIndentedString(currencyPositiveFormat)).append("\n");
-    sb.append("    currencyPositiveFormatMetadata: ").append(toIndentedString(currencyPositiveFormatMetadata))
-        .append("\n");
+    sb.append("    currencyPositiveFormatMetadata: ").append(toIndentedString(currencyPositiveFormatMetadata)).append("\n");
     sb.append("    customDateFormat: ").append(toIndentedString(customDateFormat)).append("\n");
     sb.append("    customSignDateFormat: ").append(toIndentedString(customSignDateFormat)).append("\n");
     sb.append("    customSignTimeFormat: ").append(toIndentedString(customSignTimeFormat)).append("\n");
@@ -1412,10 +1404,8 @@ public class LocalePolicy {
     sb.append("    effectiveAddressFormat: ").append(toIndentedString(effectiveAddressFormat)).append("\n");
     sb.append("    effectiveCalendarType: ").append(toIndentedString(effectiveCalendarType)).append("\n");
     sb.append("    effectiveCurrencyCode: ").append(toIndentedString(effectiveCurrencyCode)).append("\n");
-    sb.append("    effectiveCurrencyNegativeFormat: ").append(toIndentedString(effectiveCurrencyNegativeFormat))
-        .append("\n");
-    sb.append("    effectiveCurrencyPositiveFormat: ").append(toIndentedString(effectiveCurrencyPositiveFormat))
-        .append("\n");
+    sb.append("    effectiveCurrencyNegativeFormat: ").append(toIndentedString(effectiveCurrencyNegativeFormat)).append("\n");
+    sb.append("    effectiveCurrencyPositiveFormat: ").append(toIndentedString(effectiveCurrencyPositiveFormat)).append("\n");
     sb.append("    effectiveCustomDateFormat: ").append(toIndentedString(effectiveCustomDateFormat)).append("\n");
     sb.append("    effectiveCustomTimeFormat: ").append(toIndentedString(effectiveCustomTimeFormat)).append("\n");
     sb.append("    effectiveDateFormat: ").append(toIndentedString(effectiveDateFormat)).append("\n");
@@ -1451,3 +1441,4 @@ public class LocalePolicy {
   }
 
 }
+

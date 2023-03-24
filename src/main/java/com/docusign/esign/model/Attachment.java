@@ -36,6 +36,7 @@ public class Attachment {
   @JsonProperty("remoteUrl")
   private String remoteUrl = null;
 
+
   /**
    * accessControl.
    *
@@ -48,7 +49,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return accessControl
    **/
   @Schema(description = "")
@@ -63,6 +63,7 @@ public class Attachment {
     this.accessControl = accessControl;
   }
 
+
   /**
    * attachmentId.
    *
@@ -75,7 +76,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return attachmentId
    **/
   @Schema(description = "")
@@ -90,6 +90,7 @@ public class Attachment {
     this.attachmentId = attachmentId;
   }
 
+
   /**
    * attachmentType.
    *
@@ -102,7 +103,6 @@ public class Attachment {
 
   /**
    * Specifies the type of the attachment for the recipient..
-   * 
    * @return attachmentType
    **/
   @Schema(description = "Specifies the type of the attachment for the recipient.")
@@ -117,6 +117,7 @@ public class Attachment {
     this.attachmentType = attachmentType;
   }
 
+
   /**
    * data.
    *
@@ -129,7 +130,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return data
    **/
   @Schema(description = "")
@@ -144,6 +144,7 @@ public class Attachment {
     this.data = data;
   }
 
+
   /**
    * label.
    *
@@ -156,7 +157,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return label
    **/
   @Schema(description = "")
@@ -171,6 +171,7 @@ public class Attachment {
     this.label = label;
   }
 
+
   /**
    * name.
    *
@@ -183,7 +184,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -198,6 +198,7 @@ public class Attachment {
     this.name = name;
   }
 
+
   /**
    * remoteUrl.
    *
@@ -210,7 +211,6 @@ public class Attachment {
 
   /**
    * .
-   * 
    * @return remoteUrl
    **/
   @Schema(description = "")
@@ -224,6 +224,7 @@ public class Attachment {
   public void setRemoteUrl(String remoteUrl) {
     this.remoteUrl = remoteUrl;
   }
+
 
   /**
    * Compares objects.
@@ -256,6 +257,7 @@ public class Attachment {
     return Objects.hash(accessControl, attachmentId, attachmentType, data, label, name, remoteUrl);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -263,7 +265,7 @@ public class Attachment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Attachment {\n");
-
+    
     sb.append("    accessControl: ").append(toIndentedString(accessControl)).append("\n");
     sb.append("    attachmentId: ").append(toIndentedString(attachmentId)).append("\n");
     sb.append("    attachmentType: ").append(toIndentedString(attachmentType)).append("\n");
@@ -287,3 +289,4 @@ public class Attachment {
   }
 
 }
+

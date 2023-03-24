@@ -23,6 +23,7 @@ public class ConsentDetails {
   @JsonProperty("signerConsentStatus")
   private String signerConsentStatus = null;
 
+
   /**
    * consentKey.
    *
@@ -35,7 +36,6 @@ public class ConsentDetails {
 
   /**
    * .
-   * 
    * @return consentKey
    **/
   @Schema(description = "")
@@ -50,6 +50,7 @@ public class ConsentDetails {
     this.consentKey = consentKey;
   }
 
+
   /**
    * deliveryMethod.
    *
@@ -62,7 +63,6 @@ public class ConsentDetails {
 
   /**
    * Reserved: For DocuSign use only..
-   * 
    * @return deliveryMethod
    **/
   @Schema(description = "Reserved: For DocuSign use only.")
@@ -77,6 +77,7 @@ public class ConsentDetails {
     this.deliveryMethod = deliveryMethod;
   }
 
+
   /**
    * signerConsentStatus.
    *
@@ -89,7 +90,6 @@ public class ConsentDetails {
 
   /**
    * .
-   * 
    * @return signerConsentStatus
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class ConsentDetails {
   public void setSignerConsentStatus(String signerConsentStatus) {
     this.signerConsentStatus = signerConsentStatus;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class ConsentDetails {
     return Objects.hash(consentKey, deliveryMethod, signerConsentStatus);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class ConsentDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConsentDetails {\n");
-
+    
     sb.append("    consentKey: ").append(toIndentedString(consentKey)).append("\n");
     sb.append("    deliveryMethod: ").append(toIndentedString(deliveryMethod)).append("\n");
     sb.append("    signerConsentStatus: ").append(toIndentedString(signerConsentStatus)).append("\n");
@@ -158,3 +160,4 @@ public class ConsentDetails {
   }
 
 }
+

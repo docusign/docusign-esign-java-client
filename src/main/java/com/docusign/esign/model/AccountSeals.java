@@ -18,6 +18,7 @@ public class AccountSeals {
   @JsonProperty("seals")
   private java.util.List<SealIdentifier> seals = null;
 
+
   /**
    * seals.
    *
@@ -27,7 +28,7 @@ public class AccountSeals {
     this.seals = seals;
     return this;
   }
-
+  
   /**
    * addSealsItem.
    *
@@ -43,7 +44,6 @@ public class AccountSeals {
 
   /**
    * .
-   * 
    * @return seals
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class AccountSeals {
   public void setSeals(java.util.List<SealIdentifier> seals) {
     this.seals = seals;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class AccountSeals {
     return Objects.hash(seals);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class AccountSeals {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSeals {\n");
-
+    
     sb.append("    seals: ").append(toIndentedString(seals)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class AccountSeals {
   }
 
 }
+

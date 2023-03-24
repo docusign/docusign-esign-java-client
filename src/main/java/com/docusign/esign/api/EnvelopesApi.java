@@ -4316,7 +4316,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    */ 
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode) throws ApiException {
@@ -4329,7 +4329,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
@@ -4345,7 +4345,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
@@ -5400,6 +5400,74 @@ public class EnvelopesApi {
     GenericType<DelayedRouting> localVarReturnType = new GenericType<DelayedRouting>() {};
     DelayedRouting localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<DelayedRouting>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Returns formfields for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return DocGenFormFieldResponse
+   * @throws ApiException if fails to make API call
+   */
+  public DocGenFormFieldResponse getEnvelopeDocGenFormFields(String accountId, String envelopeId) throws ApiException {
+    ApiResponse<DocGenFormFieldResponse> localVarResponse = getEnvelopeDocGenFormFieldsWithHttpInfo(accountId, envelopeId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns formfields for an envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return DocGenFormFieldResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<DocGenFormFieldResponse > getEnvelopeDocGenFormFieldsWithHttpInfo(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopeDocGenFormFields");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopeDocGenFormFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/docGenFormFields"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<DocGenFormFieldResponse> localVarReturnType = new GenericType<DocGenFormFieldResponse>() {};
+    DocGenFormFieldResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<DocGenFormFieldResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -10240,6 +10308,120 @@ public class EnvelopesApi {
     GenericType<DelayedRouting> localVarReturnType = new GenericType<DelayedRouting>() {};
     DelayedRouting localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<DelayedRouting>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+  /// <summary>
+  /// Updates formfields for an envelope 
+  /// </summary>
+
+ /**
+  * UpdateEnvelopeDocGenFormFieldsOptions Class.
+  *
+  **/
+  public class UpdateEnvelopeDocGenFormFieldsOptions
+  {
+  private String updateDocgenFormfieldsOnly = null;
+  
+ /**
+  * setUpdateDocgenFormfieldsOnly method.
+  */
+  public void setUpdateDocgenFormfieldsOnly(String updateDocgenFormfieldsOnly) {
+    this.updateDocgenFormfieldsOnly = updateDocgenFormfieldsOnly;
+  }
+
+ /**
+  * getUpdateDocgenFormfieldsOnly method.
+  *
+  * @return String
+  */
+  public String getUpdateDocgenFormfieldsOnly() {
+    return this.updateDocgenFormfieldsOnly;
+  }
+  }
+
+   /**
+   * Updates formfields for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param docGenFormFieldRequest  (optional)
+   * @return DocGenFormFieldResponse
+   */ 
+  public DocGenFormFieldResponse updateEnvelopeDocGenFormFields(String accountId, String envelopeId, DocGenFormFieldRequest docGenFormFieldRequest) throws ApiException {
+    return updateEnvelopeDocGenFormFields(accountId, envelopeId, docGenFormFieldRequest, null);
+  }
+
+  /**
+   * Updates formfields for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param docGenFormFieldRequest  (optional)
+   * @param options for modifying the method behavior.
+   * @return DocGenFormFieldResponse
+   * @throws ApiException if fails to make API call
+   */
+  public DocGenFormFieldResponse updateEnvelopeDocGenFormFields(String accountId, String envelopeId, DocGenFormFieldRequest docGenFormFieldRequest, EnvelopesApi.UpdateEnvelopeDocGenFormFieldsOptions options) throws ApiException {
+    ApiResponse<DocGenFormFieldResponse> localVarResponse = updateEnvelopeDocGenFormFieldsWithHttpInfo(accountId, envelopeId, docGenFormFieldRequest, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates formfields for an envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param docGenFormFieldRequest  (optional)
+   * @param options for modifying the method behavior.
+   * @return DocGenFormFieldResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<DocGenFormFieldResponse > updateEnvelopeDocGenFormFieldsWithHttpInfo(String accountId, String envelopeId, DocGenFormFieldRequest docGenFormFieldRequest, EnvelopesApi.UpdateEnvelopeDocGenFormFieldsOptions options) throws ApiException {
+    Object localVarPostBody = docGenFormFieldRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopeDocGenFormFields");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEnvelopeDocGenFormFields");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/docGenFormFields"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("update_docgen_formfields_only", options.updateDocgenFormfieldsOnly));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<DocGenFormFieldResponse> localVarReturnType = new GenericType<DocGenFormFieldResponse>() {};
+    DocGenFormFieldResponse localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<DocGenFormFieldResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**

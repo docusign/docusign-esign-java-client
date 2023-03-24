@@ -17,6 +17,7 @@ public class CreditCardTypes {
   @JsonProperty("cardTypes")
   private java.util.List<String> cardTypes = null;
 
+
   /**
    * cardTypes.
    *
@@ -26,7 +27,7 @@ public class CreditCardTypes {
     this.cardTypes = cardTypes;
     return this;
   }
-
+  
   /**
    * addCardTypesItem.
    *
@@ -42,7 +43,6 @@ public class CreditCardTypes {
 
   /**
    * An array containing supported credit card types..
-   * 
    * @return cardTypes
    **/
   @Schema(description = "An array containing supported credit card types.")
@@ -56,6 +56,7 @@ public class CreditCardTypes {
   public void setCardTypes(java.util.List<String> cardTypes) {
     this.cardTypes = cardTypes;
   }
+
 
   /**
    * Compares objects.
@@ -82,6 +83,7 @@ public class CreditCardTypes {
     return Objects.hash(cardTypes);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -89,7 +91,7 @@ public class CreditCardTypes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CreditCardTypes {\n");
-
+    
     sb.append("    cardTypes: ").append(toIndentedString(cardTypes)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -107,3 +109,4 @@ public class CreditCardTypes {
   }
 
 }
+

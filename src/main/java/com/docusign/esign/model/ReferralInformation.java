@@ -9,16 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A complex type that contains the following information for entering referral
- * and discount information. The following items are included in the referral
- * information (all string content): enableSupport, includedSeats,
- * saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount,
- * saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth,
- * referralCode, referrerName, advertisementId, publisherId, shopperId,
- * promoCode, groupMemberId, idType, and industry ###### Note:
- * saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount,
- * saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for
- * DoucSign use only..
+ * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry   ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only..
  *
  */
 @Schema(description = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry   ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.")
@@ -78,6 +69,7 @@ public class ReferralInformation {
   @JsonProperty("shopperId")
   private String shopperId = null;
 
+
   /**
    * advertisementId.
    *
@@ -89,17 +81,7 @@ public class ReferralInformation {
   }
 
   /**
-   * A complex type that contains the following information for entering referral
-   * and discount information. The following items are included in the referral
-   * information (all string content): enableSupport, includedSeats,
-   * saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount,
-   * saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth,
-   * referralCode, referrerName, advertisementId, publisherId, shopperId,
-   * promoCode, groupMemberId, idType, and industry. ###### Note:
-   * saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount,
-   * saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for
-   * DoucSign use only. .
-   * 
+   * A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  .
    * @return advertisementId
    **/
   @Schema(description = "A complex type that contains the following information for entering referral and discount information. The following items are included in the referral information (all string content): enableSupport, includedSeats, saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, saleDiscountSeatPriceOverride, planStartMonth, referralCode, referrerName, advertisementId, publisherId, shopperId, promoCode, groupMemberId, idType, and industry.  ###### Note: saleDiscountPercent, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPeriods, and saleDiscountSeatPriceOverride are reserved for DoucSign use only.  ")
@@ -114,6 +96,7 @@ public class ReferralInformation {
     this.advertisementId = advertisementId;
   }
 
+
   /**
    * enableSupport.
    *
@@ -125,9 +108,7 @@ public class ReferralInformation {
   }
 
   /**
-   * When set to **true**, then customer support is provided as part of the
-   * account plan..
-   * 
+   * When set to **true**, then customer support is provided as part of the account plan..
    * @return enableSupport
    **/
   @Schema(description = "When set to **true**, then customer support is provided as part of the account plan.")
@@ -142,6 +123,7 @@ public class ReferralInformation {
     this.enableSupport = enableSupport;
   }
 
+
   /**
    * externalOrgId.
    *
@@ -154,7 +136,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return externalOrgId
    **/
   @Schema(description = "")
@@ -169,6 +150,7 @@ public class ReferralInformation {
     this.externalOrgId = externalOrgId;
   }
 
+
   /**
    * groupMemberId.
    *
@@ -181,7 +163,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return groupMemberId
    **/
   @Schema(description = "")
@@ -196,6 +177,7 @@ public class ReferralInformation {
     this.groupMemberId = groupMemberId;
   }
 
+
   /**
    * idType.
    *
@@ -208,7 +190,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return idType
    **/
   @Schema(description = "")
@@ -223,6 +204,7 @@ public class ReferralInformation {
     this.idType = idType;
   }
 
+
   /**
    * includedSeats.
    *
@@ -235,7 +217,6 @@ public class ReferralInformation {
 
   /**
    * The number of seats (users) included..
-   * 
    * @return includedSeats
    **/
   @Schema(description = "The number of seats (users) included.")
@@ -250,6 +231,7 @@ public class ReferralInformation {
     this.includedSeats = includedSeats;
   }
 
+
   /**
    * industry.
    *
@@ -262,7 +244,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return industry
    **/
   @Schema(description = "")
@@ -277,6 +258,7 @@ public class ReferralInformation {
     this.industry = industry;
   }
 
+
   /**
    * planStartMonth.
    *
@@ -289,7 +271,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return planStartMonth
    **/
   @Schema(description = "")
@@ -304,6 +285,7 @@ public class ReferralInformation {
     this.planStartMonth = planStartMonth;
   }
 
+
   /**
    * promoCode.
    *
@@ -316,7 +298,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return promoCode
    **/
   @Schema(description = "")
@@ -331,6 +312,7 @@ public class ReferralInformation {
     this.promoCode = promoCode;
   }
 
+
   /**
    * publisherId.
    *
@@ -343,7 +325,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return publisherId
    **/
   @Schema(description = "")
@@ -358,6 +339,7 @@ public class ReferralInformation {
     this.publisherId = publisherId;
   }
 
+
   /**
    * referralCode.
    *
@@ -370,7 +352,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return referralCode
    **/
   @Schema(description = "")
@@ -385,6 +366,7 @@ public class ReferralInformation {
     this.referralCode = referralCode;
   }
 
+
   /**
    * referrerName.
    *
@@ -397,7 +379,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return referrerName
    **/
   @Schema(description = "")
@@ -412,6 +393,7 @@ public class ReferralInformation {
     this.referrerName = referrerName;
   }
 
+
   /**
    * saleDiscountAmount.
    *
@@ -424,7 +406,6 @@ public class ReferralInformation {
 
   /**
    * Reserved for DocuSign use only..
-   * 
    * @return saleDiscountAmount
    **/
   @Schema(description = "Reserved for DocuSign use only.")
@@ -439,6 +420,7 @@ public class ReferralInformation {
     this.saleDiscountAmount = saleDiscountAmount;
   }
 
+
   /**
    * saleDiscountFixedAmount.
    *
@@ -451,7 +433,6 @@ public class ReferralInformation {
 
   /**
    * Reserved for DocuSign use only..
-   * 
    * @return saleDiscountFixedAmount
    **/
   @Schema(description = "Reserved for DocuSign use only.")
@@ -466,6 +447,7 @@ public class ReferralInformation {
     this.saleDiscountFixedAmount = saleDiscountFixedAmount;
   }
 
+
   /**
    * saleDiscountPercent.
    *
@@ -478,7 +460,6 @@ public class ReferralInformation {
 
   /**
    * Reserved for DocuSign use only..
-   * 
    * @return saleDiscountPercent
    **/
   @Schema(description = "Reserved for DocuSign use only.")
@@ -493,6 +474,7 @@ public class ReferralInformation {
     this.saleDiscountPercent = saleDiscountPercent;
   }
 
+
   /**
    * saleDiscountPeriods.
    *
@@ -505,7 +487,6 @@ public class ReferralInformation {
 
   /**
    * Reserved for DocuSign use only..
-   * 
    * @return saleDiscountPeriods
    **/
   @Schema(description = "Reserved for DocuSign use only.")
@@ -520,6 +501,7 @@ public class ReferralInformation {
     this.saleDiscountPeriods = saleDiscountPeriods;
   }
 
+
   /**
    * saleDiscountSeatPriceOverride.
    *
@@ -532,7 +514,6 @@ public class ReferralInformation {
 
   /**
    * Reserved for DocuSign use only..
-   * 
    * @return saleDiscountSeatPriceOverride
    **/
   @Schema(description = "Reserved for DocuSign use only.")
@@ -547,6 +528,7 @@ public class ReferralInformation {
     this.saleDiscountSeatPriceOverride = saleDiscountSeatPriceOverride;
   }
 
+
   /**
    * shopperId.
    *
@@ -559,7 +541,6 @@ public class ReferralInformation {
 
   /**
    * .
-   * 
    * @return shopperId
    **/
   @Schema(description = "")
@@ -573,6 +554,7 @@ public class ReferralInformation {
   public void setShopperId(String shopperId) {
     this.shopperId = shopperId;
   }
+
 
   /**
    * Compares objects.
@@ -613,10 +595,9 @@ public class ReferralInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(advertisementId, enableSupport, externalOrgId, groupMemberId, idType, includedSeats, industry,
-        planStartMonth, promoCode, publisherId, referralCode, referrerName, saleDiscountAmount, saleDiscountFixedAmount,
-        saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride, shopperId);
+    return Objects.hash(advertisementId, enableSupport, externalOrgId, groupMemberId, idType, includedSeats, industry, planStartMonth, promoCode, publisherId, referralCode, referrerName, saleDiscountAmount, saleDiscountFixedAmount, saleDiscountPercent, saleDiscountPeriods, saleDiscountSeatPriceOverride, shopperId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -625,7 +606,7 @@ public class ReferralInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReferralInformation {\n");
-
+    
     sb.append("    advertisementId: ").append(toIndentedString(advertisementId)).append("\n");
     sb.append("    enableSupport: ").append(toIndentedString(enableSupport)).append("\n");
     sb.append("    externalOrgId: ").append(toIndentedString(externalOrgId)).append("\n");
@@ -642,8 +623,7 @@ public class ReferralInformation {
     sb.append("    saleDiscountFixedAmount: ").append(toIndentedString(saleDiscountFixedAmount)).append("\n");
     sb.append("    saleDiscountPercent: ").append(toIndentedString(saleDiscountPercent)).append("\n");
     sb.append("    saleDiscountPeriods: ").append(toIndentedString(saleDiscountPeriods)).append("\n");
-    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride))
-        .append("\n");
+    sb.append("    saleDiscountSeatPriceOverride: ").append(toIndentedString(saleDiscountSeatPriceOverride)).append("\n");
     sb.append("    shopperId: ").append(toIndentedString(shopperId)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -661,3 +641,4 @@ public class ReferralInformation {
   }
 
 }
+

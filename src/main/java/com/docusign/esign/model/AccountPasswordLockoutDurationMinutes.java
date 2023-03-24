@@ -20,6 +20,7 @@ public class AccountPasswordLockoutDurationMinutes {
   @JsonProperty("minimumMinutes")
   private String minimumMinutes = null;
 
+
   /**
    * maximumMinutes.
    *
@@ -32,7 +33,6 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
-   * 
    * @return maximumMinutes
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class AccountPasswordLockoutDurationMinutes {
     this.maximumMinutes = maximumMinutes;
   }
 
+
   /**
    * minimumMinutes.
    *
@@ -59,7 +60,6 @@ public class AccountPasswordLockoutDurationMinutes {
 
   /**
    * .
-   * 
    * @return minimumMinutes
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class AccountPasswordLockoutDurationMinutes {
   public void setMinimumMinutes(String minimumMinutes) {
     this.minimumMinutes = minimumMinutes;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class AccountPasswordLockoutDurationMinutes {
     return Objects.hash(maximumMinutes, minimumMinutes);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class AccountPasswordLockoutDurationMinutes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordLockoutDurationMinutes {\n");
-
+    
     sb.append("    maximumMinutes: ").append(toIndentedString(maximumMinutes)).append("\n");
     sb.append("    minimumMinutes: ").append(toIndentedString(minimumMinutes)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class AccountPasswordLockoutDurationMinutes {
   }
 
 }
+

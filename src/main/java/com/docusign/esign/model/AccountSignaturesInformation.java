@@ -18,6 +18,7 @@ public class AccountSignaturesInformation {
   @JsonProperty("accountSignatures")
   private java.util.List<AccountSignature> accountSignatures = null;
 
+
   /**
    * accountSignatures.
    *
@@ -27,7 +28,7 @@ public class AccountSignaturesInformation {
     this.accountSignatures = accountSignatures;
     return this;
   }
-
+  
   /**
    * addAccountSignaturesItem.
    *
@@ -43,7 +44,6 @@ public class AccountSignaturesInformation {
 
   /**
    * .
-   * 
    * @return accountSignatures
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class AccountSignaturesInformation {
   public void setAccountSignatures(java.util.List<AccountSignature> accountSignatures) {
     this.accountSignatures = accountSignatures;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class AccountSignaturesInformation {
     return Objects.hash(accountSignatures);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class AccountSignaturesInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSignaturesInformation {\n");
-
+    
     sb.append("    accountSignatures: ").append(toIndentedString(accountSignatures)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class AccountSignaturesInformation {
   }
 
 }
+

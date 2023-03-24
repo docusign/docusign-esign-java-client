@@ -53,6 +53,7 @@ public class BulkSendEnvelopesInfo {
   @JsonProperty("voided")
   private String voided = null;
 
+
   /**
    * authoritativeCopy.
    *
@@ -64,9 +65,7 @@ public class BulkSendEnvelopesInfo {
   }
 
   /**
-   * Specifies the Authoritative copy feature. If set to true the Authoritative
-   * copy feature is enabled..
-   * 
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
    * @return authoritativeCopy
    **/
   @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
@@ -81,6 +80,7 @@ public class BulkSendEnvelopesInfo {
     this.authoritativeCopy = authoritativeCopy;
   }
 
+
   /**
    * completed.
    *
@@ -93,7 +93,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return completed
    **/
   @Schema(description = "")
@@ -108,6 +107,7 @@ public class BulkSendEnvelopesInfo {
     this.completed = completed;
   }
 
+
   /**
    * correct.
    *
@@ -120,7 +120,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return correct
    **/
   @Schema(description = "")
@@ -135,6 +134,7 @@ public class BulkSendEnvelopesInfo {
     this.correct = correct;
   }
 
+
   /**
    * created.
    *
@@ -147,7 +147,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return created
    **/
   @Schema(description = "")
@@ -162,6 +161,7 @@ public class BulkSendEnvelopesInfo {
     this.created = created;
   }
 
+
   /**
    * declined.
    *
@@ -174,7 +174,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return declined
    **/
   @Schema(description = "")
@@ -189,6 +188,7 @@ public class BulkSendEnvelopesInfo {
     this.declined = declined;
   }
 
+
   /**
    * deleted.
    *
@@ -201,7 +201,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return deleted
    **/
   @Schema(description = "")
@@ -216,6 +215,7 @@ public class BulkSendEnvelopesInfo {
     this.deleted = deleted;
   }
 
+
   /**
    * delivered.
    *
@@ -228,7 +228,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return delivered
    **/
   @Schema(description = "")
@@ -243,6 +242,7 @@ public class BulkSendEnvelopesInfo {
     this.delivered = delivered;
   }
 
+
   /**
    * digitalSignaturesPending.
    *
@@ -255,7 +255,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return digitalSignaturesPending
    **/
   @Schema(description = "")
@@ -270,6 +269,7 @@ public class BulkSendEnvelopesInfo {
     this.digitalSignaturesPending = digitalSignaturesPending;
   }
 
+
   /**
    * sent.
    *
@@ -282,7 +282,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return sent
    **/
   @Schema(description = "")
@@ -297,6 +296,7 @@ public class BulkSendEnvelopesInfo {
     this.sent = sent;
   }
 
+
   /**
    * signed.
    *
@@ -309,7 +309,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return signed
    **/
   @Schema(description = "")
@@ -324,6 +323,7 @@ public class BulkSendEnvelopesInfo {
     this.signed = signed;
   }
 
+
   /**
    * timedOut.
    *
@@ -336,7 +336,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return timedOut
    **/
   @Schema(description = "")
@@ -351,6 +350,7 @@ public class BulkSendEnvelopesInfo {
     this.timedOut = timedOut;
   }
 
+
   /**
    * transferCompleted.
    *
@@ -363,7 +363,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return transferCompleted
    **/
   @Schema(description = "")
@@ -378,6 +377,7 @@ public class BulkSendEnvelopesInfo {
     this.transferCompleted = transferCompleted;
   }
 
+
   /**
    * voided.
    *
@@ -390,7 +390,6 @@ public class BulkSendEnvelopesInfo {
 
   /**
    * .
-   * 
    * @return voided
    **/
   @Schema(description = "")
@@ -404,6 +403,7 @@ public class BulkSendEnvelopesInfo {
   public void setVoided(String voided) {
     this.voided = voided;
   }
+
 
   /**
    * Compares objects.
@@ -439,9 +439,9 @@ public class BulkSendEnvelopesInfo {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(authoritativeCopy, completed, correct, created, declined, deleted, delivered,
-        digitalSignaturesPending, sent, signed, timedOut, transferCompleted, voided);
+    return Objects.hash(authoritativeCopy, completed, correct, created, declined, deleted, delivered, digitalSignaturesPending, sent, signed, timedOut, transferCompleted, voided);
   }
+
 
   /**
    * Converts the given object to string.
@@ -450,7 +450,7 @@ public class BulkSendEnvelopesInfo {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendEnvelopesInfo {\n");
-
+    
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    completed: ").append(toIndentedString(completed)).append("\n");
     sb.append("    correct: ").append(toIndentedString(correct)).append("\n");
@@ -480,3 +480,4 @@ public class BulkSendEnvelopesInfo {
   }
 
 }
+

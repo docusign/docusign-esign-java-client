@@ -18,6 +18,7 @@ public class TabMetadataList {
   @JsonProperty("tabs")
   private java.util.List<TabMetadata> tabs = null;
 
+
   /**
    * tabs.
    *
@@ -27,7 +28,7 @@ public class TabMetadataList {
     this.tabs = tabs;
     return this;
   }
-
+  
   /**
    * addTabsItem.
    *
@@ -43,7 +44,6 @@ public class TabMetadataList {
 
   /**
    * .
-   * 
    * @return tabs
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class TabMetadataList {
   public void setTabs(java.util.List<TabMetadata> tabs) {
     this.tabs = tabs;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class TabMetadataList {
     return Objects.hash(tabs);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class TabMetadataList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TabMetadataList {\n");
-
+    
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class TabMetadataList {
   }
 
 }
+

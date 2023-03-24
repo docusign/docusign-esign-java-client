@@ -18,24 +18,23 @@ public class AccountIdentityVerificationResponse {
   @JsonProperty("identityVerification")
   private java.util.List<AccountIdentityVerificationWorkflow> identityVerification = null;
 
+
   /**
    * identityVerification.
    *
    * @return AccountIdentityVerificationResponse
    **/
-  public AccountIdentityVerificationResponse identityVerification(
-      java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
+  public AccountIdentityVerificationResponse identityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
     return this;
   }
-
+  
   /**
    * addIdentityVerificationItem.
    *
    * @return AccountIdentityVerificationResponse
    **/
-  public AccountIdentityVerificationResponse addIdentityVerificationItem(
-      AccountIdentityVerificationWorkflow identityVerificationItem) {
+  public AccountIdentityVerificationResponse addIdentityVerificationItem(AccountIdentityVerificationWorkflow identityVerificationItem) {
     if (this.identityVerification == null) {
       this.identityVerification = new java.util.ArrayList<>();
     }
@@ -45,7 +44,6 @@ public class AccountIdentityVerificationResponse {
 
   /**
    * .
-   * 
    * @return identityVerification
    **/
   @Schema(description = "")
@@ -59,6 +57,7 @@ public class AccountIdentityVerificationResponse {
   public void setIdentityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
   }
+
 
   /**
    * Compares objects.
@@ -85,6 +84,7 @@ public class AccountIdentityVerificationResponse {
     return Objects.hash(identityVerification);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -92,7 +92,7 @@ public class AccountIdentityVerificationResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountIdentityVerificationResponse {\n");
-
+    
     sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -110,3 +110,4 @@ public class AccountIdentityVerificationResponse {
   }
 
 }
+

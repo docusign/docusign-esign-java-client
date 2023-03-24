@@ -30,6 +30,7 @@ public class SocialAccountInformation {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * email.
    *
@@ -42,7 +43,6 @@ public class SocialAccountInformation {
 
   /**
    * The users email address..
-   * 
    * @return email
    **/
   @Schema(description = "The users email address.")
@@ -57,6 +57,7 @@ public class SocialAccountInformation {
     this.email = email;
   }
 
+
   /**
    * errorDetails.
    *
@@ -68,12 +69,10 @@ public class SocialAccountInformation {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -84,6 +83,7 @@ public class SocialAccountInformation {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * provider.
@@ -97,7 +97,6 @@ public class SocialAccountInformation {
 
   /**
    * The social account provider (Facebook, Yahoo, etc.).
-   * 
    * @return provider
    **/
   @Schema(description = "The social account provider (Facebook, Yahoo, etc.)")
@@ -112,6 +111,7 @@ public class SocialAccountInformation {
     this.provider = provider;
   }
 
+
   /**
    * socialId.
    *
@@ -124,7 +124,6 @@ public class SocialAccountInformation {
 
   /**
    * The ID provided by the Socal Account..
-   * 
    * @return socialId
    **/
   @Schema(description = "The ID provided by the Socal Account.")
@@ -139,6 +138,7 @@ public class SocialAccountInformation {
     this.socialId = socialId;
   }
 
+
   /**
    * userName.
    *
@@ -151,7 +151,6 @@ public class SocialAccountInformation {
 
   /**
    * The full user name for the account..
-   * 
    * @return userName
    **/
   @Schema(description = "The full user name for the account.")
@@ -165,6 +164,7 @@ public class SocialAccountInformation {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -195,6 +195,7 @@ public class SocialAccountInformation {
     return Objects.hash(email, errorDetails, provider, socialId, userName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -202,7 +203,7 @@ public class SocialAccountInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SocialAccountInformation {\n");
-
+    
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
@@ -224,3 +225,4 @@ public class SocialAccountInformation {
   }
 
 }
+

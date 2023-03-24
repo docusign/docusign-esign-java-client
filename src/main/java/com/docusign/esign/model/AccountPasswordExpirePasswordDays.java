@@ -20,6 +20,7 @@ public class AccountPasswordExpirePasswordDays {
   @JsonProperty("minimumDays")
   private String minimumDays = null;
 
+
   /**
    * maximumDays.
    *
@@ -32,7 +33,6 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
-   * 
    * @return maximumDays
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class AccountPasswordExpirePasswordDays {
     this.maximumDays = maximumDays;
   }
 
+
   /**
    * minimumDays.
    *
@@ -59,7 +60,6 @@ public class AccountPasswordExpirePasswordDays {
 
   /**
    * .
-   * 
    * @return minimumDays
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class AccountPasswordExpirePasswordDays {
   public void setMinimumDays(String minimumDays) {
     this.minimumDays = minimumDays;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class AccountPasswordExpirePasswordDays {
     return Objects.hash(maximumDays, minimumDays);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class AccountPasswordExpirePasswordDays {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordExpirePasswordDays {\n");
-
+    
     sb.append("    maximumDays: ").append(toIndentedString(maximumDays)).append("\n");
     sb.append("    minimumDays: ").append(toIndentedString(minimumDays)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class AccountPasswordExpirePasswordDays {
   }
 
 }
+

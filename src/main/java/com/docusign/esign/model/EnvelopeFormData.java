@@ -39,6 +39,7 @@ public class EnvelopeFormData {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * emailSubject.
    *
@@ -50,10 +51,7 @@ public class EnvelopeFormData {
   }
 
   /**
-   * Specifies the subject of the email that is sent to all recipients. See
-   * [ML:Template Email Subject Merge Fields] for information about adding merge
-   * field information to the email subject..
-   * 
+   * Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject..
    * @return emailSubject
    **/
   @Schema(description = "Specifies the subject of the email that is sent to all recipients.  See [ML:Template Email Subject Merge Fields] for information about adding merge field information to the email subject.")
@@ -68,6 +66,7 @@ public class EnvelopeFormData {
     this.emailSubject = emailSubject;
   }
 
+
   /**
    * envelopeId.
    *
@@ -80,7 +79,6 @@ public class EnvelopeFormData {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -95,6 +93,7 @@ public class EnvelopeFormData {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * formData.
    *
@@ -104,7 +103,7 @@ public class EnvelopeFormData {
     this.formData = formData;
     return this;
   }
-
+  
   /**
    * addFormDataItem.
    *
@@ -120,7 +119,6 @@ public class EnvelopeFormData {
 
   /**
    * .
-   * 
    * @return formData
    **/
   @Schema(description = "")
@@ -135,6 +133,7 @@ public class EnvelopeFormData {
     this.formData = formData;
   }
 
+
   /**
    * prefillFormData.
    *
@@ -146,10 +145,7 @@ public class EnvelopeFormData {
   }
 
   /**
-   * An array of `formDataItem` objects for [prefill
-   * tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs).
-   * .
-   * 
+   * An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs). .
    * @return prefillFormData
    **/
   @Schema(description = "An array of `formDataItem` objects for [prefill tabs](/docs/esign-rest-api/reference/envelopes/envelopedocumenttabs/create/#definition__tabs_prefilltabs). ")
@@ -164,6 +160,7 @@ public class EnvelopeFormData {
     this.prefillFormData = prefillFormData;
   }
 
+
   /**
    * recipientFormData.
    *
@@ -173,7 +170,7 @@ public class EnvelopeFormData {
     this.recipientFormData = recipientFormData;
     return this;
   }
-
+  
   /**
    * addRecipientFormDataItem.
    *
@@ -189,7 +186,6 @@ public class EnvelopeFormData {
 
   /**
    * .
-   * 
    * @return recipientFormData
    **/
   @Schema(description = "")
@@ -204,6 +200,7 @@ public class EnvelopeFormData {
     this.recipientFormData = recipientFormData;
   }
 
+
   /**
    * sentDateTime.
    *
@@ -216,7 +213,6 @@ public class EnvelopeFormData {
 
   /**
    * The date and time the envelope was sent..
-   * 
    * @return sentDateTime
    **/
   @Schema(description = "The date and time the envelope was sent.")
@@ -231,6 +227,7 @@ public class EnvelopeFormData {
     this.sentDateTime = sentDateTime;
   }
 
+
   /**
    * status.
    *
@@ -242,10 +239,7 @@ public class EnvelopeFormData {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -259,6 +253,7 @@ public class EnvelopeFormData {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -291,6 +286,7 @@ public class EnvelopeFormData {
     return Objects.hash(emailSubject, envelopeId, formData, prefillFormData, recipientFormData, sentDateTime, status);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -298,7 +294,7 @@ public class EnvelopeFormData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeFormData {\n");
-
+    
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    formData: ").append(toIndentedString(formData)).append("\n");
@@ -322,3 +318,4 @@ public class EnvelopeFormData {
   }
 
 }
+

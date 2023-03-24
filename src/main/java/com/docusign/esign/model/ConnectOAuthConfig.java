@@ -29,6 +29,7 @@ public class ConnectOAuthConfig {
   @JsonProperty("scope")
   private String scope = null;
 
+
   /**
    * authorizationServerUrl.
    *
@@ -41,7 +42,6 @@ public class ConnectOAuthConfig {
 
   /**
    * .
-   * 
    * @return authorizationServerUrl
    **/
   @Schema(description = "")
@@ -56,6 +56,7 @@ public class ConnectOAuthConfig {
     this.authorizationServerUrl = authorizationServerUrl;
   }
 
+
   /**
    * clientId.
    *
@@ -68,7 +69,6 @@ public class ConnectOAuthConfig {
 
   /**
    * .
-   * 
    * @return clientId
    **/
   @Schema(description = "")
@@ -83,6 +83,7 @@ public class ConnectOAuthConfig {
     this.clientId = clientId;
   }
 
+
   /**
    * clientSecret.
    *
@@ -95,7 +96,6 @@ public class ConnectOAuthConfig {
 
   /**
    * .
-   * 
    * @return clientSecret
    **/
   @Schema(description = "")
@@ -110,6 +110,7 @@ public class ConnectOAuthConfig {
     this.clientSecret = clientSecret;
   }
 
+
   /**
    * customParameters.
    *
@@ -122,7 +123,6 @@ public class ConnectOAuthConfig {
 
   /**
    * .
-   * 
    * @return customParameters
    **/
   @Schema(description = "")
@@ -137,6 +137,7 @@ public class ConnectOAuthConfig {
     this.customParameters = customParameters;
   }
 
+
   /**
    * scope.
    *
@@ -149,7 +150,6 @@ public class ConnectOAuthConfig {
 
   /**
    * .
-   * 
    * @return scope
    **/
   @Schema(description = "")
@@ -163,6 +163,7 @@ public class ConnectOAuthConfig {
   public void setScope(String scope) {
     this.scope = scope;
   }
+
 
   /**
    * Compares objects.
@@ -193,6 +194,7 @@ public class ConnectOAuthConfig {
     return Objects.hash(authorizationServerUrl, clientId, clientSecret, customParameters, scope);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -200,7 +202,7 @@ public class ConnectOAuthConfig {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectOAuthConfig {\n");
-
+    
     sb.append("    authorizationServerUrl: ").append(toIndentedString(authorizationServerUrl)).append("\n");
     sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    clientSecret: ").append(toIndentedString(clientSecret)).append("\n");
@@ -222,3 +224,4 @@ public class ConnectOAuthConfig {
   }
 
 }
+

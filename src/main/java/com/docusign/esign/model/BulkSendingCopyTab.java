@@ -9,14 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A tab associated with the bulk send recipient. In a bulk send request, each
- * recipient tab must match a recipient tab on the envelope or template that you
- * want to send. To match up, the &#x60;tabLabel&#x60; for this tab and the
- * &#x60;tabLabel&#x60; for the corresponding tab on the envelope or template
- * must be the same. For example, if the envelope has a placeholder text tab
- * with the &#x60;tabLabel&#x60; &#x60;childName&#x60;, you must assign the same
- * &#x60;tabLabel&#x60; &#x60;childName&#x60; to the tab here that you are
- * populating with that information..
+ * A tab associated with the bulk send recipient. In a bulk send request, each recipient tab must match a recipient tab on the envelope or template that you want to send. To match up, the &#x60;tabLabel&#x60; for this tab and the &#x60;tabLabel&#x60; for the corresponding tab on the envelope or template must be the same.  For example, if the envelope has a placeholder text tab with the &#x60;tabLabel&#x60; &#x60;childName&#x60;, you must assign the same &#x60;tabLabel&#x60; &#x60;childName&#x60; to the tab here that you are populating with that information..
  *
  */
 @Schema(description = "A tab associated with the bulk send recipient. In a bulk send request, each recipient tab must match a recipient tab on the envelope or template that you want to send. To match up, the `tabLabel` for this tab and the `tabLabel` for the corresponding tab on the envelope or template must be the same.  For example, if the envelope has a placeholder text tab with the `tabLabel` `childName`, you must assign the same `tabLabel` `childName` to the tab here that you are populating with that information.")
@@ -27,6 +20,7 @@ public class BulkSendingCopyTab {
 
   @JsonProperty("tabLabel")
   private String tabLabel = null;
+
 
   /**
    * initialValue.
@@ -40,7 +34,6 @@ public class BulkSendingCopyTab {
 
   /**
    * The original value of the tab..
-   * 
    * @return initialValue
    **/
   @Schema(description = "The original value of the tab.")
@@ -55,6 +48,7 @@ public class BulkSendingCopyTab {
     this.initialValue = initialValue;
   }
 
+
   /**
    * tabLabel.
    *
@@ -67,7 +61,6 @@ public class BulkSendingCopyTab {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -81,6 +74,7 @@ public class BulkSendingCopyTab {
   public void setTabLabel(String tabLabel) {
     this.tabLabel = tabLabel;
   }
+
 
   /**
    * Compares objects.
@@ -108,6 +102,7 @@ public class BulkSendingCopyTab {
     return Objects.hash(initialValue, tabLabel);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -115,7 +110,7 @@ public class BulkSendingCopyTab {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingCopyTab {\n");
-
+    
     sb.append("    initialValue: ").append(toIndentedString(initialValue)).append("\n");
     sb.append("    tabLabel: ").append(toIndentedString(tabLabel)).append("\n");
     sb.append("}");
@@ -134,3 +129,4 @@ public class BulkSendingCopyTab {
   }
 
 }
+

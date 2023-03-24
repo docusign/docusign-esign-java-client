@@ -23,6 +23,7 @@ public class ExternalDocServiceErrorDetails {
   @JsonProperty("message")
   private String message = null;
 
+
   /**
    * authenticationUrl.
    *
@@ -35,7 +36,6 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * Reserved: TBD.
-   * 
    * @return authenticationUrl
    **/
   @Schema(description = "Reserved: TBD")
@@ -50,6 +50,7 @@ public class ExternalDocServiceErrorDetails {
     this.authenticationUrl = authenticationUrl;
   }
 
+
   /**
    * errorCode.
    *
@@ -62,7 +63,6 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * .
-   * 
    * @return errorCode
    **/
   @Schema(description = "")
@@ -77,6 +77,7 @@ public class ExternalDocServiceErrorDetails {
     this.errorCode = errorCode;
   }
 
+
   /**
    * message.
    *
@@ -89,7 +90,6 @@ public class ExternalDocServiceErrorDetails {
 
   /**
    * .
-   * 
    * @return message
    **/
   @Schema(description = "")
@@ -103,6 +103,7 @@ public class ExternalDocServiceErrorDetails {
   public void setMessage(String message) {
     this.message = message;
   }
+
 
   /**
    * Compares objects.
@@ -131,6 +132,7 @@ public class ExternalDocServiceErrorDetails {
     return Objects.hash(authenticationUrl, errorCode, message);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -138,7 +140,7 @@ public class ExternalDocServiceErrorDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocServiceErrorDetails {\n");
-
+    
     sb.append("    authenticationUrl: ").append(toIndentedString(authenticationUrl)).append("\n");
     sb.append("    errorCode: ").append(toIndentedString(errorCode)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
@@ -158,3 +160,4 @@ public class ExternalDocServiceErrorDetails {
   }
 
 }
+

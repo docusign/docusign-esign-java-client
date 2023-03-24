@@ -42,6 +42,7 @@ public class BulkEnvelope {
   @JsonProperty("transactionId")
   private String transactionId = null;
 
+
   /**
    * bulkRecipientRow.
    *
@@ -54,7 +55,6 @@ public class BulkEnvelope {
 
   /**
    * Reserved: TBD.
-   * 
    * @return bulkRecipientRow
    **/
   @Schema(description = "Reserved: TBD")
@@ -69,6 +69,7 @@ public class BulkEnvelope {
     this.bulkRecipientRow = bulkRecipientRow;
   }
 
+
   /**
    * bulkStatus.
    *
@@ -80,9 +81,7 @@ public class BulkEnvelope {
   }
 
   /**
-   * Indicates the status of the bulk send operation. Returned values can be: *
-   * queued * processing * sent * failed.
-   * 
+   * Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed.
    * @return bulkStatus
    **/
   @Schema(description = "Indicates the status of the bulk send operation. Returned values can be: * queued * processing * sent * failed")
@@ -97,6 +96,7 @@ public class BulkEnvelope {
     this.bulkStatus = bulkStatus;
   }
 
+
   /**
    * email.
    *
@@ -109,7 +109,6 @@ public class BulkEnvelope {
 
   /**
    * .
-   * 
    * @return email
    **/
   @Schema(description = "")
@@ -124,6 +123,7 @@ public class BulkEnvelope {
     this.email = email;
   }
 
+
   /**
    * envelopeId.
    *
@@ -136,7 +136,6 @@ public class BulkEnvelope {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -151,6 +150,7 @@ public class BulkEnvelope {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * envelopeUri.
    *
@@ -162,9 +162,7 @@ public class BulkEnvelope {
   }
 
   /**
-   * Contains a URI for an endpoint that you can use to retrieve the envelope or
-   * envelopes..
-   * 
+   * Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes..
    * @return envelopeUri
    **/
   @Schema(description = "Contains a URI for an endpoint that you can use to retrieve the envelope or envelopes.")
@@ -179,6 +177,7 @@ public class BulkEnvelope {
     this.envelopeUri = envelopeUri;
   }
 
+
   /**
    * errorDetails.
    *
@@ -190,12 +189,10 @@ public class BulkEnvelope {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -206,6 +203,7 @@ public class BulkEnvelope {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * name.
@@ -219,7 +217,6 @@ public class BulkEnvelope {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -234,6 +231,7 @@ public class BulkEnvelope {
     this.name = name;
   }
 
+
   /**
    * submittedDateTime.
    *
@@ -246,7 +244,6 @@ public class BulkEnvelope {
 
   /**
    * .
-   * 
    * @return submittedDateTime
    **/
   @Schema(description = "")
@@ -261,6 +258,7 @@ public class BulkEnvelope {
     this.submittedDateTime = submittedDateTime;
   }
 
+
   /**
    * transactionId.
    *
@@ -272,13 +270,7 @@ public class BulkEnvelope {
   }
 
   /**
-   * Used to identify an envelope. The id is a sender-generated value and is valid
-   * in the DocuSign system for 7 days. It is recommended that a transaction ID is
-   * used for offline signing to ensure that an envelope is not sent multiple
-   * times. The `transactionId` property can be used determine an envelope's
-   * status (i.e. was it created or not) in cases where the internet connection
-   * was lost before the envelope status was returned..
-   * 
+   *  Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned..
    * @return transactionId
    **/
   @Schema(description = " Used to identify an envelope. The id is a sender-generated value and is valid in the DocuSign system for 7 days. It is recommended that a transaction ID is used for offline signing to ensure that an envelope is not sent multiple times. The `transactionId` property can be used determine an envelope's status (i.e. was it created or not) in cases where the internet connection was lost before the envelope status was returned.")
@@ -292,6 +284,7 @@ public class BulkEnvelope {
   public void setTransactionId(String transactionId) {
     this.transactionId = transactionId;
   }
+
 
   /**
    * Compares objects.
@@ -323,9 +316,9 @@ public class BulkEnvelope {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bulkRecipientRow, bulkStatus, email, envelopeId, envelopeUri, errorDetails, name,
-        submittedDateTime, transactionId);
+    return Objects.hash(bulkRecipientRow, bulkStatus, email, envelopeId, envelopeUri, errorDetails, name, submittedDateTime, transactionId);
   }
+
 
   /**
    * Converts the given object to string.
@@ -334,7 +327,7 @@ public class BulkEnvelope {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkEnvelope {\n");
-
+    
     sb.append("    bulkRecipientRow: ").append(toIndentedString(bulkRecipientRow)).append("\n");
     sb.append("    bulkStatus: ").append(toIndentedString(bulkStatus)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
@@ -360,3 +353,4 @@ public class BulkEnvelope {
   }
 
 }
+

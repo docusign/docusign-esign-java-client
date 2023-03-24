@@ -13,12 +13,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab
- * is a payment item. See [Requesting Payments Along with
- * Signatures][paymentguide] in the DocuSign Support Center to learn more about
- * payments. [paymentguide]:
- * https://support.docusign.com/en/guides/requesting-payments-along-with-signatures
- * .
+ * When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
  *
  */
 @Schema(description = "When a formula tab has a `paymentDetails` property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
@@ -78,6 +73,7 @@ public class PaymentDetails {
   @JsonProperty("total")
   private Money total = null;
 
+
   /**
    * allowedPaymentMethods.
    *
@@ -87,7 +83,7 @@ public class PaymentDetails {
     this.allowedPaymentMethods = allowedPaymentMethods;
     return this;
   }
-
+  
   /**
    * addAllowedPaymentMethodsItem.
    *
@@ -103,7 +99,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return allowedPaymentMethods
    **/
   @Schema(description = "")
@@ -118,6 +113,7 @@ public class PaymentDetails {
     this.allowedPaymentMethods = allowedPaymentMethods;
   }
 
+
   /**
    * chargeId.
    *
@@ -130,7 +126,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return chargeId
    **/
   @Schema(description = "")
@@ -145,6 +140,7 @@ public class PaymentDetails {
     this.chargeId = chargeId;
   }
 
+
   /**
    * currencyCode.
    *
@@ -157,7 +153,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return currencyCode
    **/
   @Schema(description = "")
@@ -172,6 +167,7 @@ public class PaymentDetails {
     this.currencyCode = currencyCode;
   }
 
+
   /**
    * currencyCodeMetadata.
    *
@@ -184,7 +180,6 @@ public class PaymentDetails {
 
   /**
    * Metadata that indicates whether the `currencyCode` property is editable..
-   * 
    * @return currencyCodeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `currencyCode` property is editable.")
@@ -199,6 +194,7 @@ public class PaymentDetails {
     this.currencyCodeMetadata = currencyCodeMetadata;
   }
 
+
   /**
    * customerId.
    *
@@ -211,7 +207,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return customerId
    **/
   @Schema(description = "")
@@ -226,6 +221,7 @@ public class PaymentDetails {
     this.customerId = customerId;
   }
 
+
   /**
    * customMetadata.
    *
@@ -238,7 +234,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return customMetadata
    **/
   @Schema(description = "")
@@ -253,6 +248,7 @@ public class PaymentDetails {
     this.customMetadata = customMetadata;
   }
 
+
   /**
    * customMetadataRequired.
    *
@@ -265,7 +261,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return customMetadataRequired
    **/
   @Schema(description = "")
@@ -280,6 +275,7 @@ public class PaymentDetails {
     this.customMetadataRequired = customMetadataRequired;
   }
 
+
   /**
    * gatewayAccountId.
    *
@@ -292,7 +288,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return gatewayAccountId
    **/
   @Schema(description = "")
@@ -307,6 +302,7 @@ public class PaymentDetails {
     this.gatewayAccountId = gatewayAccountId;
   }
 
+
   /**
    * gatewayAccountIdMetadata.
    *
@@ -319,7 +315,6 @@ public class PaymentDetails {
 
   /**
    * Metadata that indicates whether the `gatewayAccountId` property is editable..
-   * 
    * @return gatewayAccountIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `gatewayAccountId` property is editable.")
@@ -334,6 +329,7 @@ public class PaymentDetails {
     this.gatewayAccountIdMetadata = gatewayAccountIdMetadata;
   }
 
+
   /**
    * gatewayDisplayName.
    *
@@ -346,7 +342,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return gatewayDisplayName
    **/
   @Schema(description = "")
@@ -361,6 +356,7 @@ public class PaymentDetails {
     this.gatewayDisplayName = gatewayDisplayName;
   }
 
+
   /**
    * gatewayName.
    *
@@ -373,7 +369,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return gatewayName
    **/
   @Schema(description = "")
@@ -388,6 +383,7 @@ public class PaymentDetails {
     this.gatewayName = gatewayName;
   }
 
+
   /**
    * lineItems.
    *
@@ -397,7 +393,7 @@ public class PaymentDetails {
     this.lineItems = lineItems;
     return this;
   }
-
+  
   /**
    * addLineItemsItem.
    *
@@ -413,7 +409,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return lineItems
    **/
   @Schema(description = "")
@@ -428,6 +423,7 @@ public class PaymentDetails {
     this.lineItems = lineItems;
   }
 
+
   /**
    * paymentOption.
    *
@@ -440,7 +436,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return paymentOption
    **/
   @Schema(description = "")
@@ -455,6 +450,7 @@ public class PaymentDetails {
     this.paymentOption = paymentOption;
   }
 
+
   /**
    * paymentSourceId.
    *
@@ -467,7 +463,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return paymentSourceId
    **/
   @Schema(description = "")
@@ -482,6 +477,7 @@ public class PaymentDetails {
     this.paymentSourceId = paymentSourceId;
   }
 
+
   /**
    * signerValues.
    *
@@ -494,7 +490,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return signerValues
    **/
   @Schema(description = "")
@@ -509,6 +504,7 @@ public class PaymentDetails {
     this.signerValues = signerValues;
   }
 
+
   /**
    * status.
    *
@@ -520,10 +516,7 @@ public class PaymentDetails {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -538,6 +531,7 @@ public class PaymentDetails {
     this.status = status;
   }
 
+
   /**
    * subGatewayName.
    *
@@ -550,7 +544,6 @@ public class PaymentDetails {
 
   /**
    * .
-   * 
    * @return subGatewayName
    **/
   @Schema(description = "")
@@ -565,6 +558,7 @@ public class PaymentDetails {
     this.subGatewayName = subGatewayName;
   }
 
+
   /**
    * total.
    *
@@ -576,11 +570,7 @@ public class PaymentDetails {
   }
 
   /**
-   * This read-only property is a currency-formatted string that represents the
-   * total of all the line items. The total is available only after the document
-   * is completed, which is when all recipients have paid and have completed all
-   * required fields. .
-   * 
+   * This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields. .
    * @return total
    **/
   @Schema(description = "This read-only property is a currency-formatted string that represents the total of all the line items. The total is available only after the document is completed, which is when all recipients have paid and have completed all required fields. ")
@@ -594,6 +584,7 @@ public class PaymentDetails {
   public void setTotal(Money total) {
     this.total = total;
   }
+
 
   /**
    * Compares objects.
@@ -634,10 +625,9 @@ public class PaymentDetails {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata,
-        customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems,
-        paymentOption, paymentSourceId, signerValues, status, subGatewayName, total);
+    return Objects.hash(allowedPaymentMethods, chargeId, currencyCode, currencyCodeMetadata, customerId, customMetadata, customMetadataRequired, gatewayAccountId, gatewayAccountIdMetadata, gatewayDisplayName, gatewayName, lineItems, paymentOption, paymentSourceId, signerValues, status, subGatewayName, total);
   }
+
 
   /**
    * Converts the given object to string.
@@ -646,7 +636,7 @@ public class PaymentDetails {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentDetails {\n");
-
+    
     sb.append("    allowedPaymentMethods: ").append(toIndentedString(allowedPaymentMethods)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    currencyCode: ").append(toIndentedString(currencyCode)).append("\n");
@@ -681,3 +671,4 @@ public class PaymentDetails {
   }
 
 }
+

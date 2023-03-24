@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This request object contains the information necessary to create a recipient
- * preview..
+ * This request object contains the information necessary to create a recipient preview..
  *
  */
 @Schema(description = "This request object contains the information necessary to create a recipient preview.")
@@ -50,6 +49,7 @@ public class RecipientPreviewRequest {
   @JsonProperty("xFrameOptionsAllowFromUrl")
   private String xFrameOptionsAllowFromUrl = null;
 
+
   /**
    * assertionId.
    *
@@ -62,7 +62,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return assertionId
    **/
   @Schema(description = "")
@@ -77,6 +76,7 @@ public class RecipientPreviewRequest {
     this.assertionId = assertionId;
   }
 
+
   /**
    * authenticationInstant.
    *
@@ -89,7 +89,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return authenticationInstant
    **/
   @Schema(description = "")
@@ -104,6 +103,7 @@ public class RecipientPreviewRequest {
     this.authenticationInstant = authenticationInstant;
   }
 
+
   /**
    * authenticationMethod.
    *
@@ -116,7 +116,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return authenticationMethod
    **/
   @Schema(description = "")
@@ -131,6 +130,7 @@ public class RecipientPreviewRequest {
     this.authenticationMethod = authenticationMethod;
   }
 
+
   /**
    * clientURLs.
    *
@@ -143,7 +143,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return clientURLs
    **/
   @Schema(description = "")
@@ -158,6 +157,7 @@ public class RecipientPreviewRequest {
     this.clientURLs = clientURLs;
   }
 
+
   /**
    * pingFrequency.
    *
@@ -170,7 +170,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return pingFrequency
    **/
   @Schema(description = "")
@@ -185,6 +184,7 @@ public class RecipientPreviewRequest {
     this.pingFrequency = pingFrequency;
   }
 
+
   /**
    * pingUrl.
    *
@@ -197,7 +197,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return pingUrl
    **/
   @Schema(description = "")
@@ -212,6 +211,7 @@ public class RecipientPreviewRequest {
     this.pingUrl = pingUrl;
   }
 
+
   /**
    * recipientId.
    *
@@ -223,9 +223,7 @@ public class RecipientPreviewRequest {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -240,6 +238,7 @@ public class RecipientPreviewRequest {
     this.recipientId = recipientId;
   }
 
+
   /**
    * returnUrl.
    *
@@ -252,7 +251,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return returnUrl
    **/
   @Schema(description = "")
@@ -267,6 +265,7 @@ public class RecipientPreviewRequest {
     this.returnUrl = returnUrl;
   }
 
+
   /**
    * securityDomain.
    *
@@ -279,7 +278,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return securityDomain
    **/
   @Schema(description = "")
@@ -294,6 +292,7 @@ public class RecipientPreviewRequest {
     this.securityDomain = securityDomain;
   }
 
+
   /**
    * xFrameOptions.
    *
@@ -306,7 +305,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return xFrameOptions
    **/
   @Schema(description = "")
@@ -321,6 +319,7 @@ public class RecipientPreviewRequest {
     this.xFrameOptions = xFrameOptions;
   }
 
+
   /**
    * xFrameOptionsAllowFromUrl.
    *
@@ -333,7 +332,6 @@ public class RecipientPreviewRequest {
 
   /**
    * .
-   * 
    * @return xFrameOptionsAllowFromUrl
    **/
   @Schema(description = "")
@@ -347,6 +345,7 @@ public class RecipientPreviewRequest {
   public void setXFrameOptionsAllowFromUrl(String xFrameOptionsAllowFromUrl) {
     this.xFrameOptionsAllowFromUrl = xFrameOptionsAllowFromUrl;
   }
+
 
   /**
    * Compares objects.
@@ -380,9 +379,9 @@ public class RecipientPreviewRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, pingFrequency, pingUrl,
-        recipientId, returnUrl, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
+
 
   /**
    * Converts the given object to string.
@@ -391,7 +390,7 @@ public class RecipientPreviewRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientPreviewRequest {\n");
-
+    
     sb.append("    assertionId: ").append(toIndentedString(assertionId)).append("\n");
     sb.append("    authenticationInstant: ").append(toIndentedString(authenticationInstant)).append("\n");
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
@@ -419,3 +418,4 @@ public class RecipientPreviewRequest {
   }
 
 }
+

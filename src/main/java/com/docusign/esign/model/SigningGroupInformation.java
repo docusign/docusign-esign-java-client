@@ -18,6 +18,7 @@ public class SigningGroupInformation {
   @JsonProperty("groups")
   private java.util.List<SigningGroup> groups = null;
 
+
   /**
    * groups.
    *
@@ -27,7 +28,7 @@ public class SigningGroupInformation {
     this.groups = groups;
     return this;
   }
-
+  
   /**
    * addGroupsItem.
    *
@@ -43,7 +44,6 @@ public class SigningGroupInformation {
 
   /**
    * A collection group objects containing information about the groups returned..
-   * 
    * @return groups
    **/
   @Schema(description = "A collection group objects containing information about the groups returned.")
@@ -57,6 +57,7 @@ public class SigningGroupInformation {
   public void setGroups(java.util.List<SigningGroup> groups) {
     this.groups = groups;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class SigningGroupInformation {
     return Objects.hash(groups);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class SigningGroupInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SigningGroupInformation {\n");
-
+    
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class SigningGroupInformation {
   }
 
 }
+

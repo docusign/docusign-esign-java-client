@@ -62,6 +62,7 @@ public class Contact {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+
   /**
    * cloudProvider.
    *
@@ -74,7 +75,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return cloudProvider
    **/
   @Schema(description = "")
@@ -89,6 +89,7 @@ public class Contact {
     this.cloudProvider = cloudProvider;
   }
 
+
   /**
    * cloudProviderContainerId.
    *
@@ -101,7 +102,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return cloudProviderContainerId
    **/
   @Schema(description = "")
@@ -116,6 +116,7 @@ public class Contact {
     this.cloudProviderContainerId = cloudProviderContainerId;
   }
 
+
   /**
    * contactId.
    *
@@ -128,7 +129,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return contactId
    **/
   @Schema(description = "")
@@ -143,6 +143,7 @@ public class Contact {
     this.contactId = contactId;
   }
 
+
   /**
    * contactPhoneNumbers.
    *
@@ -152,7 +153,7 @@ public class Contact {
     this.contactPhoneNumbers = contactPhoneNumbers;
     return this;
   }
-
+  
   /**
    * addContactPhoneNumbersItem.
    *
@@ -168,7 +169,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return contactPhoneNumbers
    **/
   @Schema(description = "")
@@ -183,6 +183,7 @@ public class Contact {
     this.contactPhoneNumbers = contactPhoneNumbers;
   }
 
+
   /**
    * contactUri.
    *
@@ -195,7 +196,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return contactUri
    **/
   @Schema(description = "")
@@ -210,6 +210,7 @@ public class Contact {
     this.contactUri = contactUri;
   }
 
+
   /**
    * emails.
    *
@@ -219,7 +220,7 @@ public class Contact {
     this.emails = emails;
     return this;
   }
-
+  
   /**
    * addEmailsItem.
    *
@@ -235,7 +236,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return emails
    **/
   @Schema(description = "")
@@ -250,6 +250,7 @@ public class Contact {
     this.emails = emails;
   }
 
+
   /**
    * errorDetails.
    *
@@ -261,12 +262,10 @@ public class Contact {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -277,6 +276,7 @@ public class Contact {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * isOwner.
@@ -290,7 +290,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return isOwner
    **/
   @Schema(description = "")
@@ -305,6 +304,7 @@ public class Contact {
     this.isOwner = isOwner;
   }
 
+
   /**
    * name.
    *
@@ -317,7 +317,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -332,6 +331,7 @@ public class Contact {
     this.name = name;
   }
 
+
   /**
    * notaryContactDetails.
    *
@@ -343,8 +343,7 @@ public class Contact {
   }
 
   /**
-   * Get notaryContactDetails.
-   * 
+   * .
    * @return notaryContactDetails
    **/
   @Schema(description = "")
@@ -359,6 +358,7 @@ public class Contact {
     this.notaryContactDetails = notaryContactDetails;
   }
 
+
   /**
    * organization.
    *
@@ -371,7 +371,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return organization
    **/
   @Schema(description = "")
@@ -386,6 +385,7 @@ public class Contact {
     this.organization = organization;
   }
 
+
   /**
    * roomContactType.
    *
@@ -398,7 +398,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return roomContactType
    **/
   @Schema(description = "")
@@ -413,6 +412,7 @@ public class Contact {
     this.roomContactType = roomContactType;
   }
 
+
   /**
    * shared.
    *
@@ -425,7 +425,6 @@ public class Contact {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -440,6 +439,7 @@ public class Contact {
     this.shared = shared;
   }
 
+
   /**
    * signingGroup.
    *
@@ -452,7 +452,6 @@ public class Contact {
 
   /**
    * .
-   * 
    * @return signingGroup
    **/
   @Schema(description = "")
@@ -467,6 +466,7 @@ public class Contact {
     this.signingGroup = signingGroup;
   }
 
+
   /**
    * signingGroupName.
    *
@@ -478,8 +478,7 @@ public class Contact {
   }
 
   /**
-   * The display name for the signing group. Maximum Length: 100 characters. .
-   * 
+   * The display name for the signing group.   Maximum Length: 100 characters. .
    * @return signingGroupName
    **/
   @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
@@ -493,6 +492,7 @@ public class Contact {
   public void setSigningGroupName(String signingGroupName) {
     this.signingGroupName = signingGroupName;
   }
+
 
   /**
    * Compares objects.
@@ -530,10 +530,9 @@ public class Contact {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails,
-        errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup,
-        signingGroupName);
+    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup, signingGroupName);
   }
+
 
   /**
    * Converts the given object to string.
@@ -542,7 +541,7 @@ public class Contact {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
-
+    
     sb.append("    cloudProvider: ").append(toIndentedString(cloudProvider)).append("\n");
     sb.append("    cloudProviderContainerId: ").append(toIndentedString(cloudProviderContainerId)).append("\n");
     sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");
@@ -574,3 +573,4 @@ public class Contact {
   }
 
 }
+

@@ -23,6 +23,7 @@ public class Ssn4InformationInput {
   @JsonProperty("ssn4")
   private String ssn4 = null;
 
+
   /**
    * displayLevelCode.
    *
@@ -34,9 +35,7 @@ public class Ssn4InformationInput {
   }
 
   /**
-   * Specifies the display level for the recipient. Valid values are: * ReadOnly *
-   * Editable * DoNotDisplay.
-   * 
+   * Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay.
    * @return displayLevelCode
    **/
   @Schema(description = "Specifies the display level for the recipient.  Valid values are:   * ReadOnly * Editable * DoNotDisplay")
@@ -51,6 +50,7 @@ public class Ssn4InformationInput {
     this.displayLevelCode = displayLevelCode;
   }
 
+
   /**
    * receiveInResponse.
    *
@@ -63,7 +63,6 @@ public class Ssn4InformationInput {
 
   /**
    * When set to **true**, the information needs to be returned in the response..
-   * 
    * @return receiveInResponse
    **/
   @Schema(description = "When set to **true**, the information needs to be returned in the response.")
@@ -78,6 +77,7 @@ public class Ssn4InformationInput {
     this.receiveInResponse = receiveInResponse;
   }
 
+
   /**
    * ssn4.
    *
@@ -90,7 +90,6 @@ public class Ssn4InformationInput {
 
   /**
    * The last four digits of the recipient's Social Security Number (SSN)..
-   * 
    * @return ssn4
    **/
   @Schema(description = "The last four digits of the recipient's Social Security Number (SSN).")
@@ -104,6 +103,7 @@ public class Ssn4InformationInput {
   public void setSsn4(String ssn4) {
     this.ssn4 = ssn4;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +132,7 @@ public class Ssn4InformationInput {
     return Objects.hash(displayLevelCode, receiveInResponse, ssn4);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +140,7 @@ public class Ssn4InformationInput {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Ssn4InformationInput {\n");
-
+    
     sb.append("    displayLevelCode: ").append(toIndentedString(displayLevelCode)).append("\n");
     sb.append("    receiveInResponse: ").append(toIndentedString(receiveInResponse)).append("\n");
     sb.append("    ssn4: ").append(toIndentedString(ssn4)).append("\n");
@@ -159,3 +160,4 @@ public class Ssn4InformationInput {
   }
 
 }
+

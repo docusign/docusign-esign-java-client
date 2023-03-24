@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * The request body for the [EnvelopeViews:
- * createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/)
- * method..
+ * The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method..
  *
  */
 @Schema(description = "The request body for the [EnvelopeViews: createSender](/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/) method.")
@@ -19,6 +17,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class ReturnUrlRequest {
   @JsonProperty("returnUrl")
   private String returnUrl = null;
+
 
   /**
    * returnUrl.
@@ -31,14 +30,7 @@ public class ReturnUrlRequest {
   }
 
   /**
-   * Identifies the return point after sending the envelope. DocuSign returns to
-   * the URL and includes an event parameter that can be used to redirect the
-   * recipient to another location. The possible event parameters returned are: *
-   * send (user sends the envelope) * save (user saves the envelope) * cancel
-   * (user cancels the sending transaction. No envelopeId is returned in this
-   * case.) * error (there is an error when performing the send) * sessionEnd (the
-   * sending session ends before the user completes another action)..
-   * 
+   * Identifies the return point after sending the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are:   * send (user sends the envelope) * save (user saves the envelope) * cancel (user cancels the sending transaction. No envelopeId is returned in this case.) * error (there is an error when performing the send) * sessionEnd (the sending session ends before the user completes another action)..
    * @return returnUrl
    **/
   @Schema(description = "Identifies the return point after sending the envelope. DocuSign returns to the URL and includes an event parameter that can be used to redirect the recipient to another location. The possible event parameters returned are:   * send (user sends the envelope) * save (user saves the envelope) * cancel (user cancels the sending transaction. No envelopeId is returned in this case.) * error (there is an error when performing the send) * sessionEnd (the sending session ends before the user completes another action).")
@@ -52,6 +44,7 @@ public class ReturnUrlRequest {
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
   }
+
 
   /**
    * Compares objects.
@@ -78,6 +71,7 @@ public class ReturnUrlRequest {
     return Objects.hash(returnUrl);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -85,7 +79,7 @@ public class ReturnUrlRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReturnUrlRequest {\n");
-
+    
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -103,3 +97,4 @@ public class ReturnUrlRequest {
   }
 
 }
+

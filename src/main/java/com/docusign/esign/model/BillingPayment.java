@@ -24,6 +24,7 @@ public class BillingPayment {
   @JsonProperty("paymentId")
   private String paymentId = null;
 
+
   /**
    * amount.
    *
@@ -36,7 +37,6 @@ public class BillingPayment {
 
   /**
    * Reserved: TBD.
-   * 
    * @return amount
    **/
   @Schema(description = "Reserved: TBD")
@@ -51,6 +51,7 @@ public class BillingPayment {
     this.amount = amount;
   }
 
+
   /**
    * invoiceId.
    *
@@ -63,7 +64,6 @@ public class BillingPayment {
 
   /**
    * Reserved: TBD.
-   * 
    * @return invoiceId
    **/
   @Schema(description = "Reserved: TBD")
@@ -78,6 +78,7 @@ public class BillingPayment {
     this.invoiceId = invoiceId;
   }
 
+
   /**
    * paymentId.
    *
@@ -90,7 +91,6 @@ public class BillingPayment {
 
   /**
    * .
-   * 
    * @return paymentId
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class BillingPayment {
   public void setPaymentId(String paymentId) {
     this.paymentId = paymentId;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +133,7 @@ public class BillingPayment {
     return Objects.hash(amount, invoiceId, paymentId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +141,7 @@ public class BillingPayment {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingPayment {\n");
-
+    
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    invoiceId: ").append(toIndentedString(invoiceId)).append("\n");
     sb.append("    paymentId: ").append(toIndentedString(paymentId)).append("\n");
@@ -159,3 +161,4 @@ public class BillingPayment {
   }
 
 }
+

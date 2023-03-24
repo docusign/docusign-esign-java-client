@@ -26,6 +26,7 @@ public class RecipientDomain {
   @JsonProperty("recipientDomainId")
   private String recipientDomainId = null;
 
+
   /**
    * active.
    *
@@ -38,7 +39,6 @@ public class RecipientDomain {
 
   /**
    * .
-   * 
    * @return active
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class RecipientDomain {
     this.active = active;
   }
 
+
   /**
    * domainCode.
    *
@@ -65,7 +66,6 @@ public class RecipientDomain {
 
   /**
    * .
-   * 
    * @return domainCode
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class RecipientDomain {
     this.domainCode = domainCode;
   }
 
+
   /**
    * domainName.
    *
@@ -92,7 +93,6 @@ public class RecipientDomain {
 
   /**
    * .
-   * 
    * @return domainName
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class RecipientDomain {
     this.domainName = domainName;
   }
 
+
   /**
    * recipientDomainId.
    *
@@ -119,7 +120,6 @@ public class RecipientDomain {
 
   /**
    * .
-   * 
    * @return recipientDomainId
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class RecipientDomain {
   public void setRecipientDomainId(String recipientDomainId) {
     this.recipientDomainId = recipientDomainId;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class RecipientDomain {
     return Objects.hash(active, domainCode, domainName, recipientDomainId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class RecipientDomain {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientDomain {\n");
-
+    
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("    domainCode: ").append(toIndentedString(domainCode)).append("\n");
     sb.append("    domainName: ").append(toIndentedString(domainName)).append("\n");
@@ -190,3 +192,4 @@ public class RecipientDomain {
   }
 
 }
+

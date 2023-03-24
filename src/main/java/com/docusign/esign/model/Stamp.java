@@ -64,6 +64,7 @@ public class Stamp {
   @JsonProperty("status")
   private String status = null;
 
+
   /**
    * adoptedDateTime.
    *
@@ -76,7 +77,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return adoptedDateTime
    **/
   @Schema(description = "")
@@ -91,6 +91,7 @@ public class Stamp {
     this.adoptedDateTime = adoptedDateTime;
   }
 
+
   /**
    * createdDateTime.
    *
@@ -103,7 +104,6 @@ public class Stamp {
 
   /**
    * Indicates the date and time the item was created..
-   * 
    * @return createdDateTime
    **/
   @Schema(description = "Indicates the date and time the item was created.")
@@ -118,6 +118,7 @@ public class Stamp {
     this.createdDateTime = createdDateTime;
   }
 
+
   /**
    * customField.
    *
@@ -130,7 +131,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return customField
    **/
   @Schema(description = "")
@@ -145,6 +145,7 @@ public class Stamp {
     this.customField = customField;
   }
 
+
   /**
    * dateStampProperties.
    *
@@ -156,14 +157,7 @@ public class Stamp {
   }
 
   /**
-   * Specifies the area in which a date stamp is placed. This parameter uses pixel
-   * positioning to draw a rectangle at the center of the stamp area. The stamp is
-   * superimposed on top of this central area. This property contains the
-   * following information about the central rectangle: - `DateAreaX`: The X axis
-   * position of the top-left corner. - `DateAreaY`: The Y axis position of the
-   * top-left corner. - `DateAreaWidth`: The width of the rectangle. -
-   * `DateAreaHeight`: The height of the rectangle..
-   * 
+   * Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle..
    * @return dateStampProperties
    **/
   @Schema(description = "Specifies the area in which a date stamp is placed. This parameter uses pixel positioning to draw a rectangle at the center of the stamp area. The stamp is superimposed on top of this central area.  This property contains the following information about the central rectangle:  - `DateAreaX`: The X axis position of the top-left corner. - `DateAreaY`: The Y axis position of the top-left corner. - `DateAreaWidth`: The width of the rectangle. - `DateAreaHeight`: The height of the rectangle.")
@@ -178,6 +172,7 @@ public class Stamp {
     this.dateStampProperties = dateStampProperties;
   }
 
+
   /**
    * disallowUserResizeStamp.
    *
@@ -190,7 +185,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return disallowUserResizeStamp
    **/
   @Schema(description = "")
@@ -205,6 +199,7 @@ public class Stamp {
     this.disallowUserResizeStamp = disallowUserResizeStamp;
   }
 
+
   /**
    * errorDetails.
    *
@@ -216,12 +211,10 @@ public class Stamp {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -232,6 +225,7 @@ public class Stamp {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * externalID.
@@ -245,7 +239,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return externalID
    **/
   @Schema(description = "")
@@ -260,6 +253,7 @@ public class Stamp {
     this.externalID = externalID;
   }
 
+
   /**
    * imageBase64.
    *
@@ -272,7 +266,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return imageBase64
    **/
   @Schema(description = "")
@@ -287,6 +280,7 @@ public class Stamp {
     this.imageBase64 = imageBase64;
   }
 
+
   /**
    * imageType.
    *
@@ -299,7 +293,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return imageType
    **/
   @Schema(description = "")
@@ -314,6 +307,7 @@ public class Stamp {
     this.imageType = imageType;
   }
 
+
   /**
    * lastModifiedDateTime.
    *
@@ -326,7 +320,6 @@ public class Stamp {
 
   /**
    * The date and time the item was last modified..
-   * 
    * @return lastModifiedDateTime
    **/
   @Schema(description = "The date and time the item was last modified.")
@@ -341,6 +334,7 @@ public class Stamp {
     this.lastModifiedDateTime = lastModifiedDateTime;
   }
 
+
   /**
    * phoneticName.
    *
@@ -353,7 +347,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return phoneticName
    **/
   @Schema(description = "")
@@ -368,6 +361,7 @@ public class Stamp {
     this.phoneticName = phoneticName;
   }
 
+
   /**
    * signatureName.
    *
@@ -380,7 +374,6 @@ public class Stamp {
 
   /**
    * Specifies the user signature name..
-   * 
    * @return signatureName
    **/
   @Schema(description = "Specifies the user signature name.")
@@ -395,6 +388,7 @@ public class Stamp {
     this.signatureName = signatureName;
   }
 
+
   /**
    * stampFormat.
    *
@@ -407,7 +401,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return stampFormat
    **/
   @Schema(description = "")
@@ -422,6 +415,7 @@ public class Stamp {
     this.stampFormat = stampFormat;
   }
 
+
   /**
    * stampImageUri.
    *
@@ -434,7 +428,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return stampImageUri
    **/
   @Schema(description = "")
@@ -449,6 +442,7 @@ public class Stamp {
     this.stampImageUri = stampImageUri;
   }
 
+
   /**
    * stampSizeMM.
    *
@@ -461,7 +455,6 @@ public class Stamp {
 
   /**
    * .
-   * 
    * @return stampSizeMM
    **/
   @Schema(description = "")
@@ -476,6 +469,7 @@ public class Stamp {
     this.stampSizeMM = stampSizeMM;
   }
 
+
   /**
    * status.
    *
@@ -487,10 +481,7 @@ public class Stamp {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -504,6 +495,7 @@ public class Stamp {
   public void setStatus(String status) {
     this.status = status;
   }
+
 
   /**
    * Compares objects.
@@ -542,10 +534,9 @@ public class Stamp {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp,
-        errorDetails, externalID, imageBase64, imageType, lastModifiedDateTime, phoneticName, signatureName,
-        stampFormat, stampImageUri, stampSizeMM, status);
+    return Objects.hash(adoptedDateTime, createdDateTime, customField, dateStampProperties, disallowUserResizeStamp, errorDetails, externalID, imageBase64, imageType, lastModifiedDateTime, phoneticName, signatureName, stampFormat, stampImageUri, stampSizeMM, status);
   }
+
 
   /**
    * Converts the given object to string.
@@ -554,7 +545,7 @@ public class Stamp {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Stamp {\n");
-
+    
     sb.append("    adoptedDateTime: ").append(toIndentedString(adoptedDateTime)).append("\n");
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
@@ -587,3 +578,4 @@ public class Stamp {
   }
 
 }
+

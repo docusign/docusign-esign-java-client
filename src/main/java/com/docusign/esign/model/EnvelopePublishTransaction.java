@@ -55,6 +55,7 @@ public class EnvelopePublishTransaction {
   @JsonProperty("submittedForPublishingEnvelopeCount")
   private String submittedForPublishingEnvelopeCount = null;
 
+
   /**
    * applyConnectSettings.
    *
@@ -67,7 +68,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return applyConnectSettings
    **/
   @Schema(description = "")
@@ -82,6 +82,7 @@ public class EnvelopePublishTransaction {
     this.applyConnectSettings = applyConnectSettings;
   }
 
+
   /**
    * envelopeCount.
    *
@@ -94,7 +95,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return envelopeCount
    **/
   @Schema(description = "")
@@ -109,24 +109,23 @@ public class EnvelopePublishTransaction {
     this.envelopeCount = envelopeCount;
   }
 
+
   /**
    * envelopeLevelErrorRollups.
    *
    * @return EnvelopePublishTransaction
    **/
-  public EnvelopePublishTransaction envelopeLevelErrorRollups(
-      java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
+  public EnvelopePublishTransaction envelopeLevelErrorRollups(java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
     this.envelopeLevelErrorRollups = envelopeLevelErrorRollups;
     return this;
   }
-
+  
   /**
    * addEnvelopeLevelErrorRollupsItem.
    *
    * @return EnvelopePublishTransaction
    **/
-  public EnvelopePublishTransaction addEnvelopeLevelErrorRollupsItem(
-      EnvelopePublishTransactionErrorRollup envelopeLevelErrorRollupsItem) {
+  public EnvelopePublishTransaction addEnvelopeLevelErrorRollupsItem(EnvelopePublishTransactionErrorRollup envelopeLevelErrorRollupsItem) {
     if (this.envelopeLevelErrorRollups == null) {
       this.envelopeLevelErrorRollups = new java.util.ArrayList<>();
     }
@@ -136,7 +135,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return envelopeLevelErrorRollups
    **/
   @Schema(description = "")
@@ -147,10 +145,10 @@ public class EnvelopePublishTransaction {
   /**
    * setEnvelopeLevelErrorRollups.
    **/
-  public void setEnvelopeLevelErrorRollups(
-      java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
+  public void setEnvelopeLevelErrorRollups(java.util.List<EnvelopePublishTransactionErrorRollup> envelopeLevelErrorRollups) {
     this.envelopeLevelErrorRollups = envelopeLevelErrorRollups;
   }
+
 
   /**
    * envelopePublishTransactionId.
@@ -164,7 +162,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return envelopePublishTransactionId
    **/
   @Schema(description = "")
@@ -179,6 +176,7 @@ public class EnvelopePublishTransaction {
     this.envelopePublishTransactionId = envelopePublishTransactionId;
   }
 
+
   /**
    * errorCount.
    *
@@ -191,7 +189,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return errorCount
    **/
   @Schema(description = "")
@@ -206,6 +203,7 @@ public class EnvelopePublishTransaction {
     this.errorCount = errorCount;
   }
 
+
   /**
    * fileLevelErrors.
    *
@@ -215,7 +213,7 @@ public class EnvelopePublishTransaction {
     this.fileLevelErrors = fileLevelErrors;
     return this;
   }
-
+  
   /**
    * addFileLevelErrorsItem.
    *
@@ -231,7 +229,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return fileLevelErrors
    **/
   @Schema(description = "")
@@ -246,6 +243,7 @@ public class EnvelopePublishTransaction {
     this.fileLevelErrors = fileLevelErrors;
   }
 
+
   /**
    * noActionRequiredEnvelopeCount.
    *
@@ -258,7 +256,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return noActionRequiredEnvelopeCount
    **/
   @Schema(description = "")
@@ -273,6 +270,7 @@ public class EnvelopePublishTransaction {
     this.noActionRequiredEnvelopeCount = noActionRequiredEnvelopeCount;
   }
 
+
   /**
    * processedEnvelopeCount.
    *
@@ -285,7 +283,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return processedEnvelopeCount
    **/
   @Schema(description = "")
@@ -300,6 +297,7 @@ public class EnvelopePublishTransaction {
     this.processedEnvelopeCount = processedEnvelopeCount;
   }
 
+
   /**
    * processingStatus.
    *
@@ -312,7 +310,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return processingStatus
    **/
   @Schema(description = "")
@@ -327,6 +324,7 @@ public class EnvelopePublishTransaction {
     this.processingStatus = processingStatus;
   }
 
+
   /**
    * resultsUri.
    *
@@ -339,7 +337,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return resultsUri
    **/
   @Schema(description = "")
@@ -354,6 +351,7 @@ public class EnvelopePublishTransaction {
     this.resultsUri = resultsUri;
   }
 
+
   /**
    * submissionDate.
    *
@@ -366,7 +364,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return submissionDate
    **/
   @Schema(description = "")
@@ -381,6 +378,7 @@ public class EnvelopePublishTransaction {
     this.submissionDate = submissionDate;
   }
 
+
   /**
    * submittedByUserInfo.
    *
@@ -392,8 +390,7 @@ public class EnvelopePublishTransaction {
   }
 
   /**
-   * Get submittedByUserInfo.
-   * 
+   * .
    * @return submittedByUserInfo
    **/
   @Schema(description = "")
@@ -408,6 +405,7 @@ public class EnvelopePublishTransaction {
     this.submittedByUserInfo = submittedByUserInfo;
   }
 
+
   /**
    * submittedForPublishingEnvelopeCount.
    *
@@ -420,7 +418,6 @@ public class EnvelopePublishTransaction {
 
   /**
    * .
-   * 
    * @return submittedForPublishingEnvelopeCount
    **/
   @Schema(description = "")
@@ -434,6 +431,7 @@ public class EnvelopePublishTransaction {
   public void setSubmittedForPublishingEnvelopeCount(String submittedForPublishingEnvelopeCount) {
     this.submittedForPublishingEnvelopeCount = submittedForPublishingEnvelopeCount;
   }
+
 
   /**
    * Compares objects.
@@ -461,8 +459,7 @@ public class EnvelopePublishTransaction {
         Objects.equals(this.resultsUri, envelopePublishTransaction.resultsUri) &&
         Objects.equals(this.submissionDate, envelopePublishTransaction.submissionDate) &&
         Objects.equals(this.submittedByUserInfo, envelopePublishTransaction.submittedByUserInfo) &&
-        Objects.equals(this.submittedForPublishingEnvelopeCount,
-            envelopePublishTransaction.submittedForPublishingEnvelopeCount);
+        Objects.equals(this.submittedForPublishingEnvelopeCount, envelopePublishTransaction.submittedForPublishingEnvelopeCount);
   }
 
   /**
@@ -470,10 +467,9 @@ public class EnvelopePublishTransaction {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyConnectSettings, envelopeCount, envelopeLevelErrorRollups, envelopePublishTransactionId,
-        errorCount, fileLevelErrors, noActionRequiredEnvelopeCount, processedEnvelopeCount, processingStatus,
-        resultsUri, submissionDate, submittedByUserInfo, submittedForPublishingEnvelopeCount);
+    return Objects.hash(applyConnectSettings, envelopeCount, envelopeLevelErrorRollups, envelopePublishTransactionId, errorCount, fileLevelErrors, noActionRequiredEnvelopeCount, processedEnvelopeCount, processingStatus, resultsUri, submissionDate, submittedByUserInfo, submittedForPublishingEnvelopeCount);
   }
+
 
   /**
    * Converts the given object to string.
@@ -482,22 +478,20 @@ public class EnvelopePublishTransaction {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopePublishTransaction {\n");
-
+    
     sb.append("    applyConnectSettings: ").append(toIndentedString(applyConnectSettings)).append("\n");
     sb.append("    envelopeCount: ").append(toIndentedString(envelopeCount)).append("\n");
     sb.append("    envelopeLevelErrorRollups: ").append(toIndentedString(envelopeLevelErrorRollups)).append("\n");
     sb.append("    envelopePublishTransactionId: ").append(toIndentedString(envelopePublishTransactionId)).append("\n");
     sb.append("    errorCount: ").append(toIndentedString(errorCount)).append("\n");
     sb.append("    fileLevelErrors: ").append(toIndentedString(fileLevelErrors)).append("\n");
-    sb.append("    noActionRequiredEnvelopeCount: ").append(toIndentedString(noActionRequiredEnvelopeCount))
-        .append("\n");
+    sb.append("    noActionRequiredEnvelopeCount: ").append(toIndentedString(noActionRequiredEnvelopeCount)).append("\n");
     sb.append("    processedEnvelopeCount: ").append(toIndentedString(processedEnvelopeCount)).append("\n");
     sb.append("    processingStatus: ").append(toIndentedString(processingStatus)).append("\n");
     sb.append("    resultsUri: ").append(toIndentedString(resultsUri)).append("\n");
     sb.append("    submissionDate: ").append(toIndentedString(submissionDate)).append("\n");
     sb.append("    submittedByUserInfo: ").append(toIndentedString(submittedByUserInfo)).append("\n");
-    sb.append("    submittedForPublishingEnvelopeCount: ").append(toIndentedString(submittedForPublishingEnvelopeCount))
-        .append("\n");
+    sb.append("    submittedForPublishingEnvelopeCount: ").append(toIndentedString(submittedForPublishingEnvelopeCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -514,3 +508,4 @@ public class EnvelopePublishTransaction {
   }
 
 }
+

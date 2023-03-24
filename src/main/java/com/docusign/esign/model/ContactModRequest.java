@@ -19,6 +19,7 @@ public class ContactModRequest {
   @JsonProperty("contactList")
   private java.util.List<Contact> contactList = null;
 
+
   /**
    * contactList.
    *
@@ -28,7 +29,7 @@ public class ContactModRequest {
     this.contactList = contactList;
     return this;
   }
-
+  
   /**
    * addContactListItem.
    *
@@ -44,7 +45,6 @@ public class ContactModRequest {
 
   /**
    * .
-   * 
    * @return contactList
    **/
   @Schema(description = "")
@@ -58,6 +58,7 @@ public class ContactModRequest {
   public void setContactList(java.util.List<Contact> contactList) {
     this.contactList = contactList;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class ContactModRequest {
     return Objects.hash(contactList);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class ContactModRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContactModRequest {\n");
-
+    
     sb.append("    contactList: ").append(toIndentedString(contactList)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class ContactModRequest {
   }
 
 }
+

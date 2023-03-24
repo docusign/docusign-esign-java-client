@@ -214,6 +214,9 @@ public class Numerical {
   @JsonProperty("numericalValue")
   private String numericalValue = null;
 
+  @JsonProperty("originalNumericalValue")
+  private String originalNumericalValue = null;
+
   @JsonProperty("originalValue")
   private String originalValue = null;
 
@@ -367,6 +370,7 @@ public class Numerical {
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
 
+
   /**
    * anchorAllowWhiteSpaceInCharacters.
    *
@@ -379,7 +383,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return anchorAllowWhiteSpaceInCharacters
    **/
   @Schema(description = "")
@@ -394,20 +397,19 @@ public class Numerical {
     this.anchorAllowWhiteSpaceInCharacters = anchorAllowWhiteSpaceInCharacters;
   }
 
+
   /**
    * anchorAllowWhiteSpaceInCharactersMetadata.
    *
    * @return Numerical
    **/
-  public Numerical anchorAllowWhiteSpaceInCharactersMetadata(
-      PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
+  public Numerical anchorAllowWhiteSpaceInCharactersMetadata(PropertyMetadata anchorAllowWhiteSpaceInCharactersMetadata) {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
     return this;
   }
 
   /**
-   * Get anchorAllowWhiteSpaceInCharactersMetadata.
-   * 
+   * .
    * @return anchorAllowWhiteSpaceInCharactersMetadata
    **/
   @Schema(description = "")
@@ -422,6 +424,7 @@ public class Numerical {
     this.anchorAllowWhiteSpaceInCharactersMetadata = anchorAllowWhiteSpaceInCharactersMetadata;
   }
 
+
   /**
    * anchorCaseSensitive.
    *
@@ -433,9 +436,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the anchor string does not consider case when matching
-   * strings in the document. The default value is **true**..
-   * 
+   * When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**..
    * @return anchorCaseSensitive
    **/
   @Schema(description = "When set to **true**, the anchor string does not consider case when matching strings in the document. The default value is **true**.")
@@ -450,6 +451,7 @@ public class Numerical {
     this.anchorCaseSensitive = anchorCaseSensitive;
   }
 
+
   /**
    * anchorCaseSensitiveMetadata.
    *
@@ -461,8 +463,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorCaseSensitiveMetadata.
-   * 
+   * .
    * @return anchorCaseSensitiveMetadata
    **/
   @Schema(description = "")
@@ -477,6 +478,7 @@ public class Numerical {
     this.anchorCaseSensitiveMetadata = anchorCaseSensitiveMetadata;
   }
 
+
   /**
    * anchorHorizontalAlignment.
    *
@@ -488,9 +490,7 @@ public class Numerical {
   }
 
   /**
-   * Specifies the alignment of anchor tabs with anchor strings. Possible values
-   * are **left** or **right**. The default value is **left**..
-   * 
+   * Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**..
    * @return anchorHorizontalAlignment
    **/
   @Schema(description = "Specifies the alignment of anchor tabs with anchor strings. Possible values are **left** or **right**. The default value is **left**.")
@@ -505,6 +505,7 @@ public class Numerical {
     this.anchorHorizontalAlignment = anchorHorizontalAlignment;
   }
 
+
   /**
    * anchorHorizontalAlignmentMetadata.
    *
@@ -516,8 +517,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorHorizontalAlignmentMetadata.
-   * 
+   * .
    * @return anchorHorizontalAlignmentMetadata
    **/
   @Schema(description = "")
@@ -532,6 +532,7 @@ public class Numerical {
     this.anchorHorizontalAlignmentMetadata = anchorHorizontalAlignmentMetadata;
   }
 
+
   /**
    * anchorIgnoreIfNotPresent.
    *
@@ -543,9 +544,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, this tab is ignored if anchorString is not found in the
-   * document..
-   * 
+   * When set to **true**, this tab is ignored if anchorString is not found in the document..
    * @return anchorIgnoreIfNotPresent
    **/
   @Schema(description = "When set to **true**, this tab is ignored if anchorString is not found in the document.")
@@ -560,6 +559,7 @@ public class Numerical {
     this.anchorIgnoreIfNotPresent = anchorIgnoreIfNotPresent;
   }
 
+
   /**
    * anchorIgnoreIfNotPresentMetadata.
    *
@@ -571,8 +571,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorIgnoreIfNotPresentMetadata.
-   * 
+   * .
    * @return anchorIgnoreIfNotPresentMetadata
    **/
   @Schema(description = "")
@@ -587,6 +586,7 @@ public class Numerical {
     this.anchorIgnoreIfNotPresentMetadata = anchorIgnoreIfNotPresentMetadata;
   }
 
+
   /**
    * anchorMatchWholeWord.
    *
@@ -598,10 +598,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the anchor string in this tab matches whole words only
-   * (strings embedded in other strings are ignored.) The default value is
-   * **true**..
-   * 
+   * When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**..
    * @return anchorMatchWholeWord
    **/
   @Schema(description = "When set to **true**, the anchor string in this tab matches whole words only (strings embedded in other strings are ignored.) The default value is **true**.")
@@ -616,6 +613,7 @@ public class Numerical {
     this.anchorMatchWholeWord = anchorMatchWholeWord;
   }
 
+
   /**
    * anchorMatchWholeWordMetadata.
    *
@@ -627,8 +625,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorMatchWholeWordMetadata.
-   * 
+   * .
    * @return anchorMatchWholeWordMetadata
    **/
   @Schema(description = "")
@@ -643,6 +640,7 @@ public class Numerical {
     this.anchorMatchWholeWordMetadata = anchorMatchWholeWordMetadata;
   }
 
+
   /**
    * anchorString.
    *
@@ -655,7 +653,6 @@ public class Numerical {
 
   /**
    * Anchor text information for a radio button..
-   * 
    * @return anchorString
    **/
   @Schema(description = "Anchor text information for a radio button.")
@@ -670,6 +667,7 @@ public class Numerical {
     this.anchorString = anchorString;
   }
 
+
   /**
    * anchorStringMetadata.
    *
@@ -681,8 +679,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorStringMetadata.
-   * 
+   * .
    * @return anchorStringMetadata
    **/
   @Schema(description = "")
@@ -697,6 +694,7 @@ public class Numerical {
     this.anchorStringMetadata = anchorStringMetadata;
   }
 
+
   /**
    * anchorTabProcessorVersion.
    *
@@ -709,7 +707,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return anchorTabProcessorVersion
    **/
   @Schema(description = "")
@@ -724,6 +721,7 @@ public class Numerical {
     this.anchorTabProcessorVersion = anchorTabProcessorVersion;
   }
 
+
   /**
    * anchorTabProcessorVersionMetadata.
    *
@@ -735,8 +733,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorTabProcessorVersionMetadata.
-   * 
+   * .
    * @return anchorTabProcessorVersionMetadata
    **/
   @Schema(description = "")
@@ -751,6 +748,7 @@ public class Numerical {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
   }
 
+
   /**
    * anchorUnits.
    *
@@ -762,9 +760,7 @@ public class Numerical {
   }
 
   /**
-   * Specifies units of the X and Y offset. Units could be pixels, millimeters,
-   * centimeters, or inches..
-   * 
+   * Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches..
    * @return anchorUnits
    **/
   @Schema(description = "Specifies units of the X and Y offset. Units could be pixels, millimeters, centimeters, or inches.")
@@ -779,6 +775,7 @@ public class Numerical {
     this.anchorUnits = anchorUnits;
   }
 
+
   /**
    * anchorUnitsMetadata.
    *
@@ -790,8 +787,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorUnitsMetadata.
-   * 
+   * .
    * @return anchorUnitsMetadata
    **/
   @Schema(description = "")
@@ -806,6 +802,7 @@ public class Numerical {
     this.anchorUnitsMetadata = anchorUnitsMetadata;
   }
 
+
   /**
    * anchorXOffset.
    *
@@ -817,9 +814,7 @@ public class Numerical {
   }
 
   /**
-   * Specifies the X axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorXOffset
    **/
   @Schema(description = "Specifies the X axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -834,6 +829,7 @@ public class Numerical {
     this.anchorXOffset = anchorXOffset;
   }
 
+
   /**
    * anchorXOffsetMetadata.
    *
@@ -845,8 +841,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorXOffsetMetadata.
-   * 
+   * .
    * @return anchorXOffsetMetadata
    **/
   @Schema(description = "")
@@ -861,6 +856,7 @@ public class Numerical {
     this.anchorXOffsetMetadata = anchorXOffsetMetadata;
   }
 
+
   /**
    * anchorYOffset.
    *
@@ -872,9 +868,7 @@ public class Numerical {
   }
 
   /**
-   * Specifies the Y axis location of the tab, in anchorUnits, relative to the
-   * anchorString..
-   * 
+   * Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString..
    * @return anchorYOffset
    **/
   @Schema(description = "Specifies the Y axis location of the tab, in anchorUnits, relative to the anchorString.")
@@ -889,6 +883,7 @@ public class Numerical {
     this.anchorYOffset = anchorYOffset;
   }
 
+
   /**
    * anchorYOffsetMetadata.
    *
@@ -900,8 +895,7 @@ public class Numerical {
   }
 
   /**
-   * Get anchorYOffsetMetadata.
-   * 
+   * .
    * @return anchorYOffsetMetadata
    **/
   @Schema(description = "")
@@ -916,6 +910,7 @@ public class Numerical {
     this.anchorYOffsetMetadata = anchorYOffsetMetadata;
   }
 
+
   /**
    * bold.
    *
@@ -928,7 +923,6 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is bold..
-   * 
    * @return bold
    **/
   @Schema(description = "When set to **true**, the information in the tab is bold.")
@@ -943,6 +937,7 @@ public class Numerical {
     this.bold = bold;
   }
 
+
   /**
    * boldMetadata.
    *
@@ -954,8 +949,7 @@ public class Numerical {
   }
 
   /**
-   * Get boldMetadata.
-   * 
+   * .
    * @return boldMetadata
    **/
   @Schema(description = "")
@@ -970,6 +964,7 @@ public class Numerical {
     this.boldMetadata = boldMetadata;
   }
 
+
   /**
    * caption.
    *
@@ -982,7 +977,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return caption
    **/
   @Schema(description = "")
@@ -997,6 +991,7 @@ public class Numerical {
     this.caption = caption;
   }
 
+
   /**
    * captionMetadata.
    *
@@ -1008,8 +1003,7 @@ public class Numerical {
   }
 
   /**
-   * Get captionMetadata.
-   * 
+   * .
    * @return captionMetadata
    **/
   @Schema(description = "")
@@ -1024,6 +1018,7 @@ public class Numerical {
     this.captionMetadata = captionMetadata;
   }
 
+
   /**
    * concealValueOnDocument.
    *
@@ -1035,13 +1030,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the field appears normally while the recipient is
-   * adding or modifying the information in the field, but the data is not visible
-   * (the characters are hidden by asterisks) to any other signer or the sender.
-   * When an envelope is completed the information is available to the sender
-   * through the Form Data link in the DocuSign Console. This setting applies only
-   * to text boxes and does not affect list boxes, radio buttons, or check boxes..
-   * 
+   * When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes..
    * @return concealValueOnDocument
    **/
   @Schema(description = "When set to **true**, the field appears normally while the recipient is adding or modifying the information in the field, but the data is not visible (the characters are hidden by asterisks) to any other signer or the sender.  When an envelope is completed the information is available to the sender through the Form Data link in the DocuSign Console.  This setting applies only to text boxes and does not affect list boxes, radio buttons, or check boxes.")
@@ -1056,6 +1045,7 @@ public class Numerical {
     this.concealValueOnDocument = concealValueOnDocument;
   }
 
+
   /**
    * concealValueOnDocumentMetadata.
    *
@@ -1067,8 +1057,7 @@ public class Numerical {
   }
 
   /**
-   * Get concealValueOnDocumentMetadata.
-   * 
+   * .
    * @return concealValueOnDocumentMetadata
    **/
   @Schema(description = "")
@@ -1083,6 +1072,7 @@ public class Numerical {
     this.concealValueOnDocumentMetadata = concealValueOnDocumentMetadata;
   }
 
+
   /**
    * conditionalParentLabel.
    *
@@ -1094,9 +1084,7 @@ public class Numerical {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls
-   * this tab's visibility..
-   * 
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
    **/
   @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
@@ -1111,6 +1099,7 @@ public class Numerical {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
   /**
    * conditionalParentLabelMetadata.
    *
@@ -1122,8 +1111,7 @@ public class Numerical {
   }
 
   /**
-   * Get conditionalParentLabelMetadata.
-   * 
+   * .
    * @return conditionalParentLabelMetadata
    **/
   @Schema(description = "")
@@ -1138,6 +1126,7 @@ public class Numerical {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
+
   /**
    * conditionalParentValue.
    *
@@ -1149,11 +1138,7 @@ public class Numerical {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the
-   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
-   * Signature, or Optional Initial use \"on\" as the value to show that the
-   * parent tab is active. .
-   * 
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
    **/
   @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
@@ -1168,6 +1153,7 @@ public class Numerical {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
   /**
    * conditionalParentValueMetadata.
    *
@@ -1179,8 +1165,7 @@ public class Numerical {
   }
 
   /**
-   * Get conditionalParentValueMetadata.
-   * 
+   * .
    * @return conditionalParentValueMetadata
    **/
   @Schema(description = "")
@@ -1195,6 +1180,7 @@ public class Numerical {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
+
   /**
    * customTabId.
    *
@@ -1206,10 +1192,7 @@ public class Numerical {
   }
 
   /**
-   * The DocuSign generated custom tab ID for the custom tab to be applied. This
-   * can only be used when adding new tabs for a recipient. When used, the new tab
-   * inherits all the custom tab properties..
-   * 
+   * The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties..
    * @return customTabId
    **/
   @Schema(description = "The DocuSign generated custom tab ID for the custom tab to be applied. This can only be used when adding new tabs for a recipient. When used, the new tab inherits all the custom tab properties.")
@@ -1224,6 +1207,7 @@ public class Numerical {
     this.customTabId = customTabId;
   }
 
+
   /**
    * customTabIdMetadata.
    *
@@ -1235,8 +1219,7 @@ public class Numerical {
   }
 
   /**
-   * Get customTabIdMetadata.
-   * 
+   * .
    * @return customTabIdMetadata
    **/
   @Schema(description = "")
@@ -1251,6 +1234,7 @@ public class Numerical {
     this.customTabIdMetadata = customTabIdMetadata;
   }
 
+
   /**
    * disableAutoSize.
    *
@@ -1262,11 +1246,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, disables the auto sizing of single line text boxes in
-   * the signing screen when the signer enters data. If disabled users will only
-   * be able enter as much data as the text box can hold. By default this is
-   * false. This property only affects single line text boxes..
-   * 
+   * When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes..
    * @return disableAutoSize
    **/
   @Schema(description = "When set to **true**, disables the auto sizing of single line text boxes in the signing screen when the signer enters data. If disabled users will only be able enter as much data as the text box can hold. By default this is false. This property only affects single line text boxes.")
@@ -1281,6 +1261,7 @@ public class Numerical {
     this.disableAutoSize = disableAutoSize;
   }
 
+
   /**
    * disableAutoSizeMetadata.
    *
@@ -1292,8 +1273,7 @@ public class Numerical {
   }
 
   /**
-   * Get disableAutoSizeMetadata.
-   * 
+   * .
    * @return disableAutoSizeMetadata
    **/
   @Schema(description = "")
@@ -1308,6 +1288,7 @@ public class Numerical {
     this.disableAutoSizeMetadata = disableAutoSizeMetadata;
   }
 
+
   /**
    * documentId.
    *
@@ -1319,9 +1300,7 @@ public class Numerical {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -1336,6 +1315,7 @@ public class Numerical {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdMetadata.
    *
@@ -1347,8 +1327,7 @@ public class Numerical {
   }
 
   /**
-   * Get documentIdMetadata.
-   * 
+   * .
    * @return documentIdMetadata
    **/
   @Schema(description = "")
@@ -1363,6 +1342,7 @@ public class Numerical {
     this.documentIdMetadata = documentIdMetadata;
   }
 
+
   /**
    * errorDetails.
    *
@@ -1374,11 +1354,10 @@ public class Numerical {
   }
 
   /**
-   * Get errorDetails.
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -1389,6 +1368,7 @@ public class Numerical {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * font.
@@ -1401,11 +1381,7 @@ public class Numerical {
   }
 
   /**
-   * The font to be used for the tab value. Supported Fonts: Arial, Arial,
-   * ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,
-   * LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho,
-   * Default..
-   * 
+   * The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default..
    * @return font
    **/
   @Schema(description = "The font to be used for the tab value. Supported Fonts: Arial, Arial, ArialNarrow, Calibri, CourierNew, Garamond, Georgia, Helvetica,   LucidaConsole, Tahoma, TimesNewRoman, Trebuchet, Verdana, MSGothic, MSMincho, Default.")
@@ -1420,6 +1396,7 @@ public class Numerical {
     this.font = font;
   }
 
+
   /**
    * fontColor.
    *
@@ -1431,10 +1408,7 @@ public class Numerical {
   }
 
   /**
-   * The font color used for the information in the tab. Possible values are:
-   * Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue,
-   * Purple, or White..
-   * 
+   * The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White..
    * @return fontColor
    **/
   @Schema(description = "The font color used for the information in the tab.  Possible values are: Black, BrightBlue, BrightRed, DarkGreen, DarkRed, Gold, Green, NavyBlue, Purple, or White.")
@@ -1449,6 +1423,7 @@ public class Numerical {
     this.fontColor = fontColor;
   }
 
+
   /**
    * fontColorMetadata.
    *
@@ -1460,8 +1435,7 @@ public class Numerical {
   }
 
   /**
-   * Get fontColorMetadata.
-   * 
+   * .
    * @return fontColorMetadata
    **/
   @Schema(description = "")
@@ -1476,6 +1450,7 @@ public class Numerical {
     this.fontColorMetadata = fontColorMetadata;
   }
 
+
   /**
    * fontMetadata.
    *
@@ -1487,8 +1462,7 @@ public class Numerical {
   }
 
   /**
-   * Get fontMetadata.
-   * 
+   * .
    * @return fontMetadata
    **/
   @Schema(description = "")
@@ -1503,6 +1477,7 @@ public class Numerical {
     this.fontMetadata = fontMetadata;
   }
 
+
   /**
    * fontSize.
    *
@@ -1514,10 +1489,7 @@ public class Numerical {
   }
 
   /**
-   * The font size used for the information in the tab. Possible values are:
-   * Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20,
-   * Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
-   * 
+   * The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72..
    * @return fontSize
    **/
   @Schema(description = "The font size used for the information in the tab.  Possible values are: Size7, Size8, Size9, Size10, Size11, Size12, Size14, Size16, Size18, Size20, Size22, Size24, Size26, Size28, Size36, Size48, or Size72.")
@@ -1532,6 +1504,7 @@ public class Numerical {
     this.fontSize = fontSize;
   }
 
+
   /**
    * fontSizeMetadata.
    *
@@ -1543,8 +1516,7 @@ public class Numerical {
   }
 
   /**
-   * Get fontSizeMetadata.
-   * 
+   * .
    * @return fontSizeMetadata
    **/
   @Schema(description = "")
@@ -1559,6 +1531,7 @@ public class Numerical {
     this.fontSizeMetadata = fontSizeMetadata;
   }
 
+
   /**
    * formOrder.
    *
@@ -1571,7 +1544,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return formOrder
    **/
   @Schema(description = "")
@@ -1586,6 +1558,7 @@ public class Numerical {
     this.formOrder = formOrder;
   }
 
+
   /**
    * formOrderMetadata.
    *
@@ -1597,8 +1570,7 @@ public class Numerical {
   }
 
   /**
-   * Get formOrderMetadata.
-   * 
+   * .
    * @return formOrderMetadata
    **/
   @Schema(description = "")
@@ -1613,6 +1585,7 @@ public class Numerical {
     this.formOrderMetadata = formOrderMetadata;
   }
 
+
   /**
    * formPageLabel.
    *
@@ -1625,7 +1598,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return formPageLabel
    **/
   @Schema(description = "")
@@ -1640,6 +1612,7 @@ public class Numerical {
     this.formPageLabel = formPageLabel;
   }
 
+
   /**
    * formPageLabelMetadata.
    *
@@ -1651,8 +1624,7 @@ public class Numerical {
   }
 
   /**
-   * Get formPageLabelMetadata.
-   * 
+   * .
    * @return formPageLabelMetadata
    **/
   @Schema(description = "")
@@ -1667,6 +1639,7 @@ public class Numerical {
     this.formPageLabelMetadata = formPageLabelMetadata;
   }
 
+
   /**
    * formPageNumber.
    *
@@ -1679,7 +1652,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return formPageNumber
    **/
   @Schema(description = "")
@@ -1694,6 +1666,7 @@ public class Numerical {
     this.formPageNumber = formPageNumber;
   }
 
+
   /**
    * formPageNumberMetadata.
    *
@@ -1705,8 +1678,7 @@ public class Numerical {
   }
 
   /**
-   * Get formPageNumberMetadata.
-   * 
+   * .
    * @return formPageNumberMetadata
    **/
   @Schema(description = "")
@@ -1721,6 +1693,7 @@ public class Numerical {
     this.formPageNumberMetadata = formPageNumberMetadata;
   }
 
+
   /**
    * height.
    *
@@ -1733,7 +1706,6 @@ public class Numerical {
 
   /**
    * Height of the tab in pixels..
-   * 
    * @return height
    **/
   @Schema(description = "Height of the tab in pixels.")
@@ -1748,6 +1720,7 @@ public class Numerical {
     this.height = height;
   }
 
+
   /**
    * heightMetadata.
    *
@@ -1759,8 +1732,7 @@ public class Numerical {
   }
 
   /**
-   * Get heightMetadata.
-   * 
+   * .
    * @return heightMetadata
    **/
   @Schema(description = "")
@@ -1775,6 +1747,7 @@ public class Numerical {
     this.heightMetadata = heightMetadata;
   }
 
+
   /**
    * italic.
    *
@@ -1787,7 +1760,6 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is italic..
-   * 
    * @return italic
    **/
   @Schema(description = "When set to **true**, the information in the tab is italic.")
@@ -1802,6 +1774,7 @@ public class Numerical {
     this.italic = italic;
   }
 
+
   /**
    * italicMetadata.
    *
@@ -1813,8 +1786,7 @@ public class Numerical {
   }
 
   /**
-   * Get italicMetadata.
-   * 
+   * .
    * @return italicMetadata
    **/
   @Schema(description = "")
@@ -1829,6 +1801,7 @@ public class Numerical {
     this.italicMetadata = italicMetadata;
   }
 
+
   /**
    * localePolicy.
    *
@@ -1840,8 +1813,7 @@ public class Numerical {
   }
 
   /**
-   * Get localePolicy.
-   * 
+   * .
    * @return localePolicy
    **/
   @Schema(description = "")
@@ -1856,6 +1828,7 @@ public class Numerical {
     this.localePolicy = localePolicy;
   }
 
+
   /**
    * locked.
    *
@@ -1868,7 +1841,6 @@ public class Numerical {
 
   /**
    * When set to **true**, the signer cannot change the data of the custom tab..
-   * 
    * @return locked
    **/
   @Schema(description = "When set to **true**, the signer cannot change the data of the custom tab.")
@@ -1883,6 +1855,7 @@ public class Numerical {
     this.locked = locked;
   }
 
+
   /**
    * lockedMetadata.
    *
@@ -1894,8 +1867,7 @@ public class Numerical {
   }
 
   /**
-   * Get lockedMetadata.
-   * 
+   * .
    * @return lockedMetadata
    **/
   @Schema(description = "")
@@ -1910,6 +1882,7 @@ public class Numerical {
     this.lockedMetadata = lockedMetadata;
   }
 
+
   /**
    * maxLength.
    *
@@ -1921,9 +1894,7 @@ public class Numerical {
   }
 
   /**
-   * An optional value that describes the maximum length of the property when the
-   * property is a string..
-   * 
+   * An optional value that describes the maximum length of the property when the property is a string..
    * @return maxLength
    **/
   @Schema(description = "An optional value that describes the maximum length of the property when the property is a string.")
@@ -1938,6 +1909,7 @@ public class Numerical {
     this.maxLength = maxLength;
   }
 
+
   /**
    * maxLengthMetadata.
    *
@@ -1949,8 +1921,7 @@ public class Numerical {
   }
 
   /**
-   * Get maxLengthMetadata.
-   * 
+   * .
    * @return maxLengthMetadata
    **/
   @Schema(description = "")
@@ -1965,6 +1936,7 @@ public class Numerical {
     this.maxLengthMetadata = maxLengthMetadata;
   }
 
+
   /**
    * maxNumericalValue.
    *
@@ -1977,7 +1949,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return maxNumericalValue
    **/
   @Schema(description = "")
@@ -1992,6 +1963,7 @@ public class Numerical {
     this.maxNumericalValue = maxNumericalValue;
   }
 
+
   /**
    * mergeField.
    *
@@ -2003,8 +1975,7 @@ public class Numerical {
   }
 
   /**
-   * Get mergeField.
-   * 
+   * .
    * @return mergeField
    **/
   @Schema(description = "")
@@ -2019,6 +1990,7 @@ public class Numerical {
     this.mergeField = mergeField;
   }
 
+
   /**
    * mergeFieldXml.
    *
@@ -2031,7 +2003,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return mergeFieldXml
    **/
   @Schema(description = "")
@@ -2046,6 +2017,7 @@ public class Numerical {
     this.mergeFieldXml = mergeFieldXml;
   }
 
+
   /**
    * minNumericalValue.
    *
@@ -2058,7 +2030,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return minNumericalValue
    **/
   @Schema(description = "")
@@ -2073,6 +2044,7 @@ public class Numerical {
     this.minNumericalValue = minNumericalValue;
   }
 
+
   /**
    * name.
    *
@@ -2085,7 +2057,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -2100,6 +2071,7 @@ public class Numerical {
     this.name = name;
   }
 
+
   /**
    * nameMetadata.
    *
@@ -2111,8 +2083,7 @@ public class Numerical {
   }
 
   /**
-   * Get nameMetadata.
-   * 
+   * .
    * @return nameMetadata
    **/
   @Schema(description = "")
@@ -2127,6 +2098,7 @@ public class Numerical {
     this.nameMetadata = nameMetadata;
   }
 
+
   /**
    * numericalValue.
    *
@@ -2139,7 +2111,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return numericalValue
    **/
   @Schema(description = "")
@@ -2154,6 +2125,34 @@ public class Numerical {
     this.numericalValue = numericalValue;
   }
 
+
+  /**
+   * originalNumericalValue.
+   *
+   * @return Numerical
+   **/
+  public Numerical originalNumericalValue(String originalNumericalValue) {
+    this.originalNumericalValue = originalNumericalValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return originalNumericalValue
+   **/
+  @Schema(description = "")
+  public String getOriginalNumericalValue() {
+    return originalNumericalValue;
+  }
+
+  /**
+   * setOriginalNumericalValue.
+   **/
+  public void setOriginalNumericalValue(String originalNumericalValue) {
+    this.originalNumericalValue = originalNumericalValue;
+  }
+
+
   /**
    * originalValue.
    *
@@ -2166,7 +2165,6 @@ public class Numerical {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -2181,6 +2179,7 @@ public class Numerical {
     this.originalValue = originalValue;
   }
 
+
   /**
    * originalValueMetadata.
    *
@@ -2192,8 +2191,7 @@ public class Numerical {
   }
 
   /**
-   * Get originalValueMetadata.
-   * 
+   * .
    * @return originalValueMetadata
    **/
   @Schema(description = "")
@@ -2208,6 +2206,7 @@ public class Numerical {
     this.originalValueMetadata = originalValueMetadata;
   }
 
+
   /**
    * pageNumber.
    *
@@ -2220,7 +2219,6 @@ public class Numerical {
 
   /**
    * Specifies the page number on which the tab is located..
-   * 
    * @return pageNumber
    **/
   @Schema(description = "Specifies the page number on which the tab is located.")
@@ -2235,6 +2233,7 @@ public class Numerical {
     this.pageNumber = pageNumber;
   }
 
+
   /**
    * pageNumberMetadata.
    *
@@ -2246,8 +2245,7 @@ public class Numerical {
   }
 
   /**
-   * Get pageNumberMetadata.
-   * 
+   * .
    * @return pageNumberMetadata
    **/
   @Schema(description = "")
@@ -2262,6 +2260,7 @@ public class Numerical {
     this.pageNumberMetadata = pageNumberMetadata;
   }
 
+
   /**
    * recipientId.
    *
@@ -2273,9 +2272,7 @@ public class Numerical {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -2290,6 +2287,7 @@ public class Numerical {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -2302,7 +2300,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -2317,6 +2314,7 @@ public class Numerical {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientIdGuidMetadata.
    *
@@ -2328,8 +2326,7 @@ public class Numerical {
   }
 
   /**
-   * Get recipientIdGuidMetadata.
-   * 
+   * .
    * @return recipientIdGuidMetadata
    **/
   @Schema(description = "")
@@ -2344,6 +2341,7 @@ public class Numerical {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
+
   /**
    * recipientIdMetadata.
    *
@@ -2355,8 +2353,7 @@ public class Numerical {
   }
 
   /**
-   * Get recipientIdMetadata.
-   * 
+   * .
    * @return recipientIdMetadata
    **/
   @Schema(description = "")
@@ -2371,6 +2368,7 @@ public class Numerical {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+
   /**
    * requireAll.
    *
@@ -2382,9 +2380,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this
-   * field to complete the envelope. .
-   * 
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
    **/
   @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
@@ -2399,6 +2395,7 @@ public class Numerical {
     this.requireAll = requireAll;
   }
 
+
   /**
    * requireAllMetadata.
    *
@@ -2410,8 +2407,7 @@ public class Numerical {
   }
 
   /**
-   * Get requireAllMetadata.
-   * 
+   * .
    * @return requireAllMetadata
    **/
   @Schema(description = "")
@@ -2426,6 +2422,7 @@ public class Numerical {
     this.requireAllMetadata = requireAllMetadata;
   }
 
+
   /**
    * required.
    *
@@ -2438,7 +2435,6 @@ public class Numerical {
 
   /**
    * When set to **true**, the signer is required to fill out this tab.
-   * 
    * @return required
    **/
   @Schema(description = "When set to **true**, the signer is required to fill out this tab")
@@ -2453,6 +2449,7 @@ public class Numerical {
     this.required = required;
   }
 
+
   /**
    * requiredMetadata.
    *
@@ -2464,8 +2461,7 @@ public class Numerical {
   }
 
   /**
-   * Get requiredMetadata.
-   * 
+   * .
    * @return requiredMetadata
    **/
   @Schema(description = "")
@@ -2480,6 +2476,7 @@ public class Numerical {
     this.requiredMetadata = requiredMetadata;
   }
 
+
   /**
    * requireInitialOnSharedChange.
    *
@@ -2491,9 +2488,7 @@ public class Numerical {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is
-   * required to initial when they modify a shared field..
-   * 
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
    **/
   @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
@@ -2508,6 +2503,7 @@ public class Numerical {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
   /**
    * requireInitialOnSharedChangeMetadata.
    *
@@ -2519,8 +2515,7 @@ public class Numerical {
   }
 
   /**
-   * Get requireInitialOnSharedChangeMetadata.
-   * 
+   * .
    * @return requireInitialOnSharedChangeMetadata
    **/
   @Schema(description = "")
@@ -2535,6 +2530,7 @@ public class Numerical {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
 
+
   /**
    * senderRequired.
    *
@@ -2546,11 +2542,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender must populate the tab before an envelope can
-   * be sent using the template. This value tab can only be changed by modifying
-   * (PUT) the template. Tabs with a `senderRequired` value of true cannot be
-   * deleted from an envelope..
-   * 
+   * When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope..
    * @return senderRequired
    **/
   @Schema(description = "When set to **true**, the sender must populate the tab before an envelope can be sent using the template.   This value tab can only be changed by modifying (PUT) the template.   Tabs with a `senderRequired` value of true cannot be deleted from an envelope.")
@@ -2565,6 +2557,7 @@ public class Numerical {
     this.senderRequired = senderRequired;
   }
 
+
   /**
    * senderRequiredMetadata.
    *
@@ -2576,8 +2569,7 @@ public class Numerical {
   }
 
   /**
-   * Get senderRequiredMetadata.
-   * 
+   * .
    * @return senderRequiredMetadata
    **/
   @Schema(description = "")
@@ -2592,6 +2584,7 @@ public class Numerical {
     this.senderRequiredMetadata = senderRequiredMetadata;
   }
 
+
   /**
    * shared.
    *
@@ -2604,7 +2597,6 @@ public class Numerical {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -2619,6 +2611,7 @@ public class Numerical {
     this.shared = shared;
   }
 
+
   /**
    * sharedMetadata.
    *
@@ -2630,8 +2623,7 @@ public class Numerical {
   }
 
   /**
-   * Get sharedMetadata.
-   * 
+   * .
    * @return sharedMetadata
    **/
   @Schema(description = "")
@@ -2646,6 +2638,7 @@ public class Numerical {
     this.sharedMetadata = sharedMetadata;
   }
 
+
   /**
    * shareToRecipients.
    *
@@ -2658,7 +2651,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return shareToRecipients
    **/
   @Schema(description = "")
@@ -2673,6 +2665,7 @@ public class Numerical {
     this.shareToRecipients = shareToRecipients;
   }
 
+
   /**
    * shareToRecipientsMetadata.
    *
@@ -2684,8 +2677,7 @@ public class Numerical {
   }
 
   /**
-   * Get shareToRecipientsMetadata.
-   * 
+   * .
    * @return shareToRecipientsMetadata
    **/
   @Schema(description = "")
@@ -2700,6 +2692,7 @@ public class Numerical {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
 
+
   /**
    * smartContractInformation.
    *
@@ -2711,8 +2704,7 @@ public class Numerical {
   }
 
   /**
-   * Get smartContractInformation.
-   * 
+   * .
    * @return smartContractInformation
    **/
   @Schema(description = "")
@@ -2727,6 +2719,7 @@ public class Numerical {
     this.smartContractInformation = smartContractInformation;
   }
 
+
   /**
    * source.
    *
@@ -2739,7 +2732,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return source
    **/
   @Schema(description = "")
@@ -2754,6 +2746,7 @@ public class Numerical {
     this.source = source;
   }
 
+
   /**
    * status.
    *
@@ -2765,10 +2758,7 @@ public class Numerical {
   }
 
   /**
-   * Indicates the envelope status. Valid values are: * sent - The envelope is
-   * sent to the recipients. * created - The envelope is saved as a draft and can
-   * be modified and sent later..
-   * 
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
   @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
@@ -2783,6 +2773,7 @@ public class Numerical {
     this.status = status;
   }
 
+
   /**
    * statusMetadata.
    *
@@ -2794,8 +2785,7 @@ public class Numerical {
   }
 
   /**
-   * Get statusMetadata.
-   * 
+   * .
    * @return statusMetadata
    **/
   @Schema(description = "")
@@ -2810,6 +2800,7 @@ public class Numerical {
     this.statusMetadata = statusMetadata;
   }
 
+
   /**
    * tabGroupLabels.
    *
@@ -2819,7 +2810,7 @@ public class Numerical {
     this.tabGroupLabels = tabGroupLabels;
     return this;
   }
-
+  
   /**
    * addTabGroupLabelsItem.
    *
@@ -2835,7 +2826,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return tabGroupLabels
    **/
   @Schema(description = "")
@@ -2850,6 +2840,7 @@ public class Numerical {
     this.tabGroupLabels = tabGroupLabels;
   }
 
+
   /**
    * tabGroupLabelsMetadata.
    *
@@ -2861,8 +2852,7 @@ public class Numerical {
   }
 
   /**
-   * Get tabGroupLabelsMetadata.
-   * 
+   * .
    * @return tabGroupLabelsMetadata
    **/
   @Schema(description = "")
@@ -2877,6 +2867,7 @@ public class Numerical {
     this.tabGroupLabelsMetadata = tabGroupLabelsMetadata;
   }
 
+
   /**
    * tabId.
    *
@@ -2888,9 +2879,7 @@ public class Numerical {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -2905,6 +2894,7 @@ public class Numerical {
     this.tabId = tabId;
   }
 
+
   /**
    * tabIdMetadata.
    *
@@ -2916,8 +2906,7 @@ public class Numerical {
   }
 
   /**
-   * Get tabIdMetadata.
-   * 
+   * .
    * @return tabIdMetadata
    **/
   @Schema(description = "")
@@ -2932,6 +2921,7 @@ public class Numerical {
     this.tabIdMetadata = tabIdMetadata;
   }
 
+
   /**
    * tabLabel.
    *
@@ -2944,7 +2934,6 @@ public class Numerical {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -2959,6 +2948,7 @@ public class Numerical {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * tabLabelMetadata.
    *
@@ -2970,8 +2960,7 @@ public class Numerical {
   }
 
   /**
-   * Get tabLabelMetadata.
-   * 
+   * .
    * @return tabLabelMetadata
    **/
   @Schema(description = "")
@@ -2986,6 +2975,7 @@ public class Numerical {
     this.tabLabelMetadata = tabLabelMetadata;
   }
 
+
   /**
    * tabOrder.
    *
@@ -2998,7 +2988,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return tabOrder
    **/
   @Schema(description = "")
@@ -3013,6 +3002,7 @@ public class Numerical {
     this.tabOrder = tabOrder;
   }
 
+
   /**
    * tabOrderMetadata.
    *
@@ -3024,8 +3014,7 @@ public class Numerical {
   }
 
   /**
-   * Get tabOrderMetadata.
-   * 
+   * .
    * @return tabOrderMetadata
    **/
   @Schema(description = "")
@@ -3040,6 +3029,7 @@ public class Numerical {
     this.tabOrderMetadata = tabOrderMetadata;
   }
 
+
   /**
    * tabType.
    *
@@ -3052,7 +3042,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -3067,6 +3056,7 @@ public class Numerical {
     this.tabType = tabType;
   }
 
+
   /**
    * tabTypeMetadata.
    *
@@ -3078,8 +3068,7 @@ public class Numerical {
   }
 
   /**
-   * Get tabTypeMetadata.
-   * 
+   * .
    * @return tabTypeMetadata
    **/
   @Schema(description = "")
@@ -3094,6 +3083,7 @@ public class Numerical {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
+
   /**
    * templateLocked.
    *
@@ -3105,9 +3095,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -3122,6 +3110,7 @@ public class Numerical {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateLockedMetadata.
    *
@@ -3133,8 +3122,7 @@ public class Numerical {
   }
 
   /**
-   * Get templateLockedMetadata.
-   * 
+   * .
    * @return templateLockedMetadata
    **/
   @Schema(description = "")
@@ -3149,6 +3137,7 @@ public class Numerical {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
+
   /**
    * templateRequired.
    *
@@ -3160,9 +3149,7 @@ public class Numerical {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -3177,6 +3164,7 @@ public class Numerical {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * templateRequiredMetadata.
    *
@@ -3188,8 +3176,7 @@ public class Numerical {
   }
 
   /**
-   * Get templateRequiredMetadata.
-   * 
+   * .
    * @return templateRequiredMetadata
    **/
   @Schema(description = "")
@@ -3204,6 +3191,7 @@ public class Numerical {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
+
   /**
    * tooltip.
    *
@@ -3216,7 +3204,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return tooltip
    **/
   @Schema(description = "")
@@ -3231,6 +3218,7 @@ public class Numerical {
     this.tooltip = tooltip;
   }
 
+
   /**
    * toolTipMetadata.
    *
@@ -3242,8 +3230,7 @@ public class Numerical {
   }
 
   /**
-   * Get toolTipMetadata.
-   * 
+   * .
    * @return toolTipMetadata
    **/
   @Schema(description = "")
@@ -3258,6 +3245,7 @@ public class Numerical {
     this.toolTipMetadata = toolTipMetadata;
   }
 
+
   /**
    * underline.
    *
@@ -3270,7 +3258,6 @@ public class Numerical {
 
   /**
    * When set to **true**, the information in the tab is underlined..
-   * 
    * @return underline
    **/
   @Schema(description = "When set to **true**, the information in the tab is underlined.")
@@ -3285,6 +3272,7 @@ public class Numerical {
     this.underline = underline;
   }
 
+
   /**
    * underlineMetadata.
    *
@@ -3296,8 +3284,7 @@ public class Numerical {
   }
 
   /**
-   * Get underlineMetadata.
-   * 
+   * .
    * @return underlineMetadata
    **/
   @Schema(description = "")
@@ -3312,6 +3299,7 @@ public class Numerical {
     this.underlineMetadata = underlineMetadata;
   }
 
+
   /**
    * validationType.
    *
@@ -3324,7 +3312,6 @@ public class Numerical {
 
   /**
    * .
-   * 
    * @return validationType
    **/
   @Schema(description = "")
@@ -3339,6 +3326,7 @@ public class Numerical {
     this.validationType = validationType;
   }
 
+
   /**
    * value.
    *
@@ -3351,7 +3339,6 @@ public class Numerical {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -3366,6 +3353,7 @@ public class Numerical {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -3377,8 +3365,7 @@ public class Numerical {
   }
 
   /**
-   * Get valueMetadata.
-   * 
+   * .
    * @return valueMetadata
    **/
   @Schema(description = "")
@@ -3393,6 +3380,7 @@ public class Numerical {
     this.valueMetadata = valueMetadata;
   }
 
+
   /**
    * width.
    *
@@ -3405,7 +3393,6 @@ public class Numerical {
 
   /**
    * Width of the tab in pixels..
-   * 
    * @return width
    **/
   @Schema(description = "Width of the tab in pixels.")
@@ -3420,6 +3407,7 @@ public class Numerical {
     this.width = width;
   }
 
+
   /**
    * widthMetadata.
    *
@@ -3431,8 +3419,7 @@ public class Numerical {
   }
 
   /**
-   * Get widthMetadata.
-   * 
+   * .
    * @return widthMetadata
    **/
   @Schema(description = "")
@@ -3447,6 +3434,7 @@ public class Numerical {
     this.widthMetadata = widthMetadata;
   }
 
+
   /**
    * xPosition.
    *
@@ -3458,9 +3446,7 @@ public class Numerical {
   }
 
   /**
-   * This indicates the horizontal offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return xPosition
    **/
   @Schema(description = "This indicates the horizontal offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3475,6 +3461,7 @@ public class Numerical {
     this.xPosition = xPosition;
   }
 
+
   /**
    * xPositionMetadata.
    *
@@ -3486,8 +3473,7 @@ public class Numerical {
   }
 
   /**
-   * Get xPositionMetadata.
-   * 
+   * .
    * @return xPositionMetadata
    **/
   @Schema(description = "")
@@ -3502,6 +3488,7 @@ public class Numerical {
     this.xPositionMetadata = xPositionMetadata;
   }
 
+
   /**
    * yPosition.
    *
@@ -3513,9 +3500,7 @@ public class Numerical {
   }
 
   /**
-   * This indicates the vertical offset of the object on the page. DocuSign uses
-   * 72 DPI when determining position..
-   * 
+   * This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position..
    * @return yPosition
    **/
   @Schema(description = "This indicates the vertical offset of the object on the page. DocuSign uses 72 DPI when determining position.")
@@ -3530,6 +3515,7 @@ public class Numerical {
     this.yPosition = yPosition;
   }
 
+
   /**
    * yPositionMetadata.
    *
@@ -3541,8 +3527,7 @@ public class Numerical {
   }
 
   /**
-   * Get yPositionMetadata.
-   * 
+   * .
    * @return yPositionMetadata
    **/
   @Schema(description = "")
@@ -3556,6 +3541,7 @@ public class Numerical {
   public void setYPositionMetadata(PropertyMetadata yPositionMetadata) {
     this.yPositionMetadata = yPositionMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -3572,9 +3558,7 @@ public class Numerical {
     }
     Numerical numerical = (Numerical) o;
     return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, numerical.anchorAllowWhiteSpaceInCharacters) &&
-        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata,
-            numerical.anchorAllowWhiteSpaceInCharactersMetadata)
-        &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, numerical.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, numerical.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, numerical.anchorCaseSensitiveMetadata) &&
         Objects.equals(this.anchorHorizontalAlignment, numerical.anchorHorizontalAlignment) &&
@@ -3638,6 +3622,7 @@ public class Numerical {
         Objects.equals(this.name, numerical.name) &&
         Objects.equals(this.nameMetadata, numerical.nameMetadata) &&
         Objects.equals(this.numericalValue, numerical.numericalValue) &&
+        Objects.equals(this.originalNumericalValue, numerical.originalNumericalValue) &&
         Objects.equals(this.originalValue, numerical.originalValue) &&
         Objects.equals(this.originalValueMetadata, numerical.originalValueMetadata) &&
         Objects.equals(this.pageNumber, numerical.pageNumber) &&
@@ -3696,27 +3681,9 @@ public class Numerical {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata,
-        anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata,
-        anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata,
-        anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits,
-        anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold,
-        boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata,
-        conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata,
-        customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata,
-        errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder,
-        formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height,
-        heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata,
-        maxNumericalValue, mergeField, mergeFieldXml, minNumericalValue, name, nameMetadata, numericalValue,
-        originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid,
-        recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata,
-        requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata,
-        shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status,
-        statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata,
-        tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired,
-        templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationType, value,
-        valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, maxNumericalValue, mergeField, mergeFieldXml, minNumericalValue, name, nameMetadata, numericalValue, originalNumericalValue, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationType, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -3725,26 +3692,21 @@ public class Numerical {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Numerical {\n");
-
-    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters))
-        .append("\n");
-    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ")
-        .append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
+    
+    sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
+    sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
     sb.append("    anchorCaseSensitiveMetadata: ").append(toIndentedString(anchorCaseSensitiveMetadata)).append("\n");
     sb.append("    anchorHorizontalAlignment: ").append(toIndentedString(anchorHorizontalAlignment)).append("\n");
-    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata))
-        .append("\n");
+    sb.append("    anchorHorizontalAlignmentMetadata: ").append(toIndentedString(anchorHorizontalAlignmentMetadata)).append("\n");
     sb.append("    anchorIgnoreIfNotPresent: ").append(toIndentedString(anchorIgnoreIfNotPresent)).append("\n");
-    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata))
-        .append("\n");
+    sb.append("    anchorIgnoreIfNotPresentMetadata: ").append(toIndentedString(anchorIgnoreIfNotPresentMetadata)).append("\n");
     sb.append("    anchorMatchWholeWord: ").append(toIndentedString(anchorMatchWholeWord)).append("\n");
     sb.append("    anchorMatchWholeWordMetadata: ").append(toIndentedString(anchorMatchWholeWordMetadata)).append("\n");
     sb.append("    anchorString: ").append(toIndentedString(anchorString)).append("\n");
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
-    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata))
-        .append("\n");
+    sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3756,14 +3718,11 @@ public class Numerical {
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
     sb.append("    concealValueOnDocument: ").append(toIndentedString(concealValueOnDocument)).append("\n");
-    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata))
-        .append("\n");
+    sb.append("    concealValueOnDocumentMetadata: ").append(toIndentedString(concealValueOnDocumentMetadata)).append("\n");
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3799,6 +3758,7 @@ public class Numerical {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    numericalValue: ").append(toIndentedString(numericalValue)).append("\n");
+    sb.append("    originalNumericalValue: ").append(toIndentedString(originalNumericalValue)).append("\n");
     sb.append("    originalValue: ").append(toIndentedString(originalValue)).append("\n");
     sb.append("    originalValueMetadata: ").append(toIndentedString(originalValueMetadata)).append("\n");
     sb.append("    pageNumber: ").append(toIndentedString(pageNumber)).append("\n");
@@ -3812,8 +3772,7 @@ public class Numerical {
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    requiredMetadata: ").append(toIndentedString(requiredMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ")
-        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    senderRequired: ").append(toIndentedString(senderRequired)).append("\n");
     sb.append("    senderRequiredMetadata: ").append(toIndentedString(senderRequiredMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
@@ -3867,3 +3826,4 @@ public class Numerical {
   }
 
 }
+

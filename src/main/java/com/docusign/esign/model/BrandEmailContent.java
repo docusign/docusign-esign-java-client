@@ -27,6 +27,7 @@ public class BrandEmailContent {
   @JsonProperty("linkText")
   private String linkText = null;
 
+
   /**
    * content.
    *
@@ -39,7 +40,6 @@ public class BrandEmailContent {
 
   /**
    * .
-   * 
    * @return content
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class BrandEmailContent {
     this.content = content;
   }
 
+
   /**
    * emailContentType.
    *
@@ -66,7 +67,6 @@ public class BrandEmailContent {
 
   /**
    * .
-   * 
    * @return emailContentType
    **/
   @Schema(description = "")
@@ -81,6 +81,7 @@ public class BrandEmailContent {
     this.emailContentType = emailContentType;
   }
 
+
   /**
    * emailToLink.
    *
@@ -93,7 +94,6 @@ public class BrandEmailContent {
 
   /**
    * .
-   * 
    * @return emailToLink
    **/
   @Schema(description = "")
@@ -108,6 +108,7 @@ public class BrandEmailContent {
     this.emailToLink = emailToLink;
   }
 
+
   /**
    * linkText.
    *
@@ -120,7 +121,6 @@ public class BrandEmailContent {
 
   /**
    * .
-   * 
    * @return linkText
    **/
   @Schema(description = "")
@@ -134,6 +134,7 @@ public class BrandEmailContent {
   public void setLinkText(String linkText) {
     this.linkText = linkText;
   }
+
 
   /**
    * Compares objects.
@@ -163,6 +164,7 @@ public class BrandEmailContent {
     return Objects.hash(content, emailContentType, emailToLink, linkText);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -170,7 +172,7 @@ public class BrandEmailContent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandEmailContent {\n");
-
+    
     sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    emailContentType: ").append(toIndentedString(emailContentType)).append("\n");
     sb.append("    emailToLink: ").append(toIndentedString(emailToLink)).append("\n");
@@ -191,3 +193,4 @@ public class BrandEmailContent {
   }
 
 }
+

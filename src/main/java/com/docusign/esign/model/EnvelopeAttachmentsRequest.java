@@ -18,6 +18,7 @@ public class EnvelopeAttachmentsRequest {
   @JsonProperty("attachments")
   private java.util.List<Attachment> attachments = null;
 
+
   /**
    * attachments.
    *
@@ -27,7 +28,7 @@ public class EnvelopeAttachmentsRequest {
     this.attachments = attachments;
     return this;
   }
-
+  
   /**
    * addAttachmentsItem.
    *
@@ -43,7 +44,6 @@ public class EnvelopeAttachmentsRequest {
 
   /**
    * .
-   * 
    * @return attachments
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class EnvelopeAttachmentsRequest {
   public void setAttachments(java.util.List<Attachment> attachments) {
     this.attachments = attachments;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class EnvelopeAttachmentsRequest {
     return Objects.hash(attachments);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class EnvelopeAttachmentsRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAttachmentsRequest {\n");
-
+    
     sb.append("    attachments: ").append(toIndentedString(attachments)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class EnvelopeAttachmentsRequest {
   }
 
 }
+

@@ -18,6 +18,7 @@ public class AccountPasswordStrengthType {
   @JsonProperty("options")
   private java.util.List<AccountPasswordStrengthTypeOption> options = null;
 
+
   /**
    * options.
    *
@@ -27,7 +28,7 @@ public class AccountPasswordStrengthType {
     this.options = options;
     return this;
   }
-
+  
   /**
    * addOptionsItem.
    *
@@ -43,7 +44,6 @@ public class AccountPasswordStrengthType {
 
   /**
    * .
-   * 
    * @return options
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class AccountPasswordStrengthType {
   public void setOptions(java.util.List<AccountPasswordStrengthTypeOption> options) {
     this.options = options;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class AccountPasswordStrengthType {
     return Objects.hash(options);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class AccountPasswordStrengthType {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordStrengthType {\n");
-
+    
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class AccountPasswordStrengthType {
   }
 
 }
+

@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object defines account permissions for users who are associated with the
- * account permission profile. .
+ * This object defines account permissions for users who are associated with the account permission profile. .
  *
  */
 @Schema(description = "This object defines account permissions for users who are associated with the account permission profile. ")
@@ -254,6 +253,7 @@ public class AccountRoleSettings {
   @JsonProperty("webFormsMetadata")
   private SettingsMetadata webFormsMetadata = null;
 
+
   /**
    * allowAccountManagement.
    *
@@ -266,7 +266,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowAccountManagement
    **/
   @Schema(description = "")
@@ -281,6 +280,7 @@ public class AccountRoleSettings {
     this.allowAccountManagement = allowAccountManagement;
   }
 
+
   /**
    * allowAccountManagementMetadata.
    *
@@ -292,9 +292,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowAccountManagement` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowAccountManagement` property is editable. .
    * @return allowAccountManagementMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAccountManagement` property is editable. ")
@@ -309,6 +307,7 @@ public class AccountRoleSettings {
     this.allowAccountManagementMetadata = allowAccountManagementMetadata;
   }
 
+
   /**
    * allowApiAccess.
    *
@@ -321,7 +320,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowApiAccess
    **/
   @Schema(description = "")
@@ -336,6 +334,7 @@ public class AccountRoleSettings {
     this.allowApiAccess = allowApiAccess;
   }
 
+
   /**
    * allowApiAccessMetadata.
    *
@@ -348,7 +347,6 @@ public class AccountRoleSettings {
 
   /**
    * Metadata that indicates whether the `allowApiAccess` property is editable. .
-   * 
    * @return allowApiAccessMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowApiAccess` property is editable. ")
@@ -363,6 +361,7 @@ public class AccountRoleSettings {
     this.allowApiAccessMetadata = allowApiAccessMetadata;
   }
 
+
   /**
    * allowApiAccessToAccount.
    *
@@ -375,7 +374,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowApiAccessToAccount
    **/
   @Schema(description = "")
@@ -390,6 +388,7 @@ public class AccountRoleSettings {
     this.allowApiAccessToAccount = allowApiAccessToAccount;
   }
 
+
   /**
    * allowApiAccessToAccountMetadata.
    *
@@ -401,9 +400,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowApiAccessToAccount` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowApiAccessToAccount` property is editable. .
    * @return allowApiAccessToAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowApiAccessToAccount` property is editable. ")
@@ -418,6 +415,7 @@ public class AccountRoleSettings {
     this.allowApiAccessToAccountMetadata = allowApiAccessToAccountMetadata;
   }
 
+
   /**
    * allowApiSendingOnBehalfOfOthers.
    *
@@ -430,7 +428,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowApiSendingOnBehalfOfOthers
    **/
   @Schema(description = "")
@@ -445,21 +442,19 @@ public class AccountRoleSettings {
     this.allowApiSendingOnBehalfOfOthers = allowApiSendingOnBehalfOfOthers;
   }
 
+
   /**
    * allowApiSendingOnBehalfOfOthersMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowApiSendingOnBehalfOfOthersMetadata(
-      SettingsMetadata allowApiSendingOnBehalfOfOthersMetadata) {
+  public AccountRoleSettings allowApiSendingOnBehalfOfOthersMetadata(SettingsMetadata allowApiSendingOnBehalfOfOthersMetadata) {
     this.allowApiSendingOnBehalfOfOthersMetadata = allowApiSendingOnBehalfOfOthersMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers` property is editable. .
    * @return allowApiSendingOnBehalfOfOthersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowApiSendingOnBehalfOfOthers` property is editable. ")
@@ -474,6 +469,7 @@ public class AccountRoleSettings {
     this.allowApiSendingOnBehalfOfOthersMetadata = allowApiSendingOnBehalfOfOthersMetadata;
   }
 
+
   /**
    * allowApiSequentialSigning.
    *
@@ -486,7 +482,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowApiSequentialSigning
    **/
   @Schema(description = "")
@@ -501,6 +496,7 @@ public class AccountRoleSettings {
     this.allowApiSequentialSigning = allowApiSequentialSigning;
   }
 
+
   /**
    * allowApiSequentialSigningMetadata.
    *
@@ -512,9 +508,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowApiSequentialSigning` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowApiSequentialSigning` property is editable. .
    * @return allowApiSequentialSigningMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowApiSequentialSigning` property is editable. ")
@@ -529,6 +523,7 @@ public class AccountRoleSettings {
     this.allowApiSequentialSigningMetadata = allowApiSequentialSigningMetadata;
   }
 
+
   /**
    * allowAutoTagging.
    *
@@ -541,7 +536,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowAutoTagging
    **/
   @Schema(description = "")
@@ -556,6 +550,7 @@ public class AccountRoleSettings {
     this.allowAutoTagging = allowAutoTagging;
   }
 
+
   /**
    * allowAutoTaggingMetadata.
    *
@@ -568,7 +563,6 @@ public class AccountRoleSettings {
 
   /**
    * Metadata that indicates whether the `allowAutoTagging` property is editable..
-   * 
    * @return allowAutoTaggingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAutoTagging` property is editable.")
@@ -583,6 +577,7 @@ public class AccountRoleSettings {
     this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
   }
 
+
   /**
    * allowBulkSending.
    *
@@ -595,7 +590,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowBulkSending
    **/
   @Schema(description = "")
@@ -610,6 +604,7 @@ public class AccountRoleSettings {
     this.allowBulkSending = allowBulkSending;
   }
 
+
   /**
    * allowBulkSendingMetadata.
    *
@@ -621,9 +616,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowBulkSending` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `allowBulkSending` property is editable. .
    * @return allowBulkSendingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowBulkSending` property is editable. ")
@@ -638,6 +631,7 @@ public class AccountRoleSettings {
     this.allowBulkSendingMetadata = allowBulkSendingMetadata;
   }
 
+
   /**
    * allowDocuSignDesktopClient.
    *
@@ -650,7 +644,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowDocuSignDesktopClient
    **/
   @Schema(description = "")
@@ -665,6 +658,7 @@ public class AccountRoleSettings {
     this.allowDocuSignDesktopClient = allowDocuSignDesktopClient;
   }
 
+
   /**
    * allowDocuSignDesktopClientMetadata.
    *
@@ -676,9 +670,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowDocuSignDesktopClient` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowDocuSignDesktopClient` property is editable. .
    * @return allowDocuSignDesktopClientMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowDocuSignDesktopClient` property is editable. ")
@@ -693,6 +685,7 @@ public class AccountRoleSettings {
     this.allowDocuSignDesktopClientMetadata = allowDocuSignDesktopClientMetadata;
   }
 
+
   /**
    * allowedAddressBookAccess.
    *
@@ -705,7 +698,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowedAddressBookAccess
    **/
   @Schema(description = "")
@@ -720,6 +712,7 @@ public class AccountRoleSettings {
     this.allowedAddressBookAccess = allowedAddressBookAccess;
   }
 
+
   /**
    * allowedAddressBookAccessMetadata.
    *
@@ -731,9 +724,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowedAddressBookAccess` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowedAddressBookAccess` property is editable. .
    * @return allowedAddressBookAccessMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowedAddressBookAccess` property is editable. ")
@@ -748,6 +739,7 @@ public class AccountRoleSettings {
     this.allowedAddressBookAccessMetadata = allowedAddressBookAccessMetadata;
   }
 
+
   /**
    * allowedClickwrapsAccess.
    *
@@ -760,7 +752,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowedClickwrapsAccess
    **/
   @Schema(description = "")
@@ -775,6 +766,7 @@ public class AccountRoleSettings {
     this.allowedClickwrapsAccess = allowedClickwrapsAccess;
   }
 
+
   /**
    * allowedClickwrapsAccessMetadata.
    *
@@ -787,7 +779,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowedClickwrapsAccessMetadata
    **/
   @Schema(description = "")
@@ -802,6 +793,7 @@ public class AccountRoleSettings {
     this.allowedClickwrapsAccessMetadata = allowedClickwrapsAccessMetadata;
   }
 
+
   /**
    * allowedTemplateAccess.
    *
@@ -814,7 +806,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowedTemplateAccess
    **/
   @Schema(description = "")
@@ -829,6 +820,7 @@ public class AccountRoleSettings {
     this.allowedTemplateAccess = allowedTemplateAccess;
   }
 
+
   /**
    * allowedTemplateAccessMetadata.
    *
@@ -840,9 +832,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowedTemplateAccess` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowedTemplateAccess` property is editable. .
    * @return allowedTemplateAccessMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowedTemplateAccess` property is editable. ")
@@ -857,6 +847,7 @@ public class AccountRoleSettings {
     this.allowedTemplateAccessMetadata = allowedTemplateAccessMetadata;
   }
 
+
   /**
    * allowedToBeEnvelopeTransferRecipient.
    *
@@ -869,7 +860,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowedToBeEnvelopeTransferRecipient
    **/
   @Schema(description = "")
@@ -884,21 +874,19 @@ public class AccountRoleSettings {
     this.allowedToBeEnvelopeTransferRecipient = allowedToBeEnvelopeTransferRecipient;
   }
 
+
   /**
    * allowedToBeEnvelopeTransferRecipientMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowedToBeEnvelopeTransferRecipientMetadata(
-      SettingsMetadata allowedToBeEnvelopeTransferRecipientMetadata) {
+  public AccountRoleSettings allowedToBeEnvelopeTransferRecipientMetadata(SettingsMetadata allowedToBeEnvelopeTransferRecipientMetadata) {
     this.allowedToBeEnvelopeTransferRecipientMetadata = allowedToBeEnvelopeTransferRecipientMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient` property is editable. .
    * @return allowedToBeEnvelopeTransferRecipientMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowedToBeEnvelopeTransferRecipient` property is editable. ")
@@ -909,10 +897,10 @@ public class AccountRoleSettings {
   /**
    * setAllowedToBeEnvelopeTransferRecipientMetadata.
    **/
-  public void setAllowedToBeEnvelopeTransferRecipientMetadata(
-      SettingsMetadata allowedToBeEnvelopeTransferRecipientMetadata) {
+  public void setAllowedToBeEnvelopeTransferRecipientMetadata(SettingsMetadata allowedToBeEnvelopeTransferRecipientMetadata) {
     this.allowedToBeEnvelopeTransferRecipientMetadata = allowedToBeEnvelopeTransferRecipientMetadata;
   }
+
 
   /**
    * allowEnvelopeSending.
@@ -926,7 +914,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowEnvelopeSending
    **/
   @Schema(description = "")
@@ -941,6 +928,7 @@ public class AccountRoleSettings {
     this.allowEnvelopeSending = allowEnvelopeSending;
   }
 
+
   /**
    * allowEnvelopeSendingMetadata.
    *
@@ -952,9 +940,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopeSending` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopeSending` property is editable. .
    * @return allowEnvelopeSendingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopeSending` property is editable. ")
@@ -969,6 +955,7 @@ public class AccountRoleSettings {
     this.allowEnvelopeSendingMetadata = allowEnvelopeSendingMetadata;
   }
 
+
   /**
    * allowESealRecipients.
    *
@@ -981,7 +968,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowESealRecipients
    **/
   @Schema(description = "")
@@ -996,6 +982,7 @@ public class AccountRoleSettings {
     this.allowESealRecipients = allowESealRecipients;
   }
 
+
   /**
    * allowESealRecipientsMetadata.
    *
@@ -1007,9 +994,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowESealRecipients` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `allowESealRecipients` property is editable..
    * @return allowESealRecipientsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowESealRecipients` property is editable.")
@@ -1024,20 +1009,19 @@ public class AccountRoleSettings {
     this.allowESealRecipientsMetadata = allowESealRecipientsMetadata;
   }
 
+
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelopes.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopes(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
+  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopes(String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes = allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopes
    **/
   @Schema(description = "")
@@ -1048,26 +1032,23 @@ public class AccountRoleSettings {
   /**
    * setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes.
    **/
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes(
-      String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopes(String allowPowerFormsAdminToAccessAllPowerFormEnvelopes) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes = allowPowerFormsAdminToAccessAllPowerFormEnvelopes;
   }
+
 
   /**
    * allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
+  public AccountRoleSettings allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the
-   * `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable..
-   * 
+   * Metadata that indicates whether the `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable..
    * @return allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowPowerFormsAdminToAccessAllPowerFormEnvelopes` property is editable.")
@@ -1078,10 +1059,10 @@ public class AccountRoleSettings {
   /**
    * setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata.
    **/
-  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(
-      SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
+  public void setAllowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata(SettingsMetadata allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) {
     this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata = allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata;
   }
+
 
   /**
    * allowSendersToSetRecipientEmailLanguage.
@@ -1095,7 +1076,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowSendersToSetRecipientEmailLanguage
    **/
   @Schema(description = "")
@@ -1110,21 +1090,19 @@ public class AccountRoleSettings {
     this.allowSendersToSetRecipientEmailLanguage = allowSendersToSetRecipientEmailLanguage;
   }
 
+
   /**
    * allowSendersToSetRecipientEmailLanguageMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowSendersToSetRecipientEmailLanguageMetadata(
-      SettingsMetadata allowSendersToSetRecipientEmailLanguageMetadata) {
+  public AccountRoleSettings allowSendersToSetRecipientEmailLanguageMetadata(SettingsMetadata allowSendersToSetRecipientEmailLanguageMetadata) {
     this.allowSendersToSetRecipientEmailLanguageMetadata = allowSendersToSetRecipientEmailLanguageMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage` property is editable. .
    * @return allowSendersToSetRecipientEmailLanguageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSendersToSetRecipientEmailLanguage` property is editable. ")
@@ -1135,10 +1113,10 @@ public class AccountRoleSettings {
   /**
    * setAllowSendersToSetRecipientEmailLanguageMetadata.
    **/
-  public void setAllowSendersToSetRecipientEmailLanguageMetadata(
-      SettingsMetadata allowSendersToSetRecipientEmailLanguageMetadata) {
+  public void setAllowSendersToSetRecipientEmailLanguageMetadata(SettingsMetadata allowSendersToSetRecipientEmailLanguageMetadata) {
     this.allowSendersToSetRecipientEmailLanguageMetadata = allowSendersToSetRecipientEmailLanguageMetadata;
   }
+
 
   /**
    * allowSignerAttachments.
@@ -1152,7 +1130,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowSignerAttachments
    **/
   @Schema(description = "")
@@ -1167,6 +1144,7 @@ public class AccountRoleSettings {
     this.allowSignerAttachments = allowSignerAttachments;
   }
 
+
   /**
    * allowSignerAttachmentsMetadata.
    *
@@ -1178,9 +1156,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowSignerAttachments` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSignerAttachments` property is editable. .
    * @return allowSignerAttachmentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSignerAttachments` property is editable. ")
@@ -1195,6 +1171,7 @@ public class AccountRoleSettings {
     this.allowSignerAttachmentsMetadata = allowSignerAttachmentsMetadata;
   }
 
+
   /**
    * allowSupplementalDocuments.
    *
@@ -1207,7 +1184,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowSupplementalDocuments
    **/
   @Schema(description = "")
@@ -1222,6 +1198,7 @@ public class AccountRoleSettings {
     this.allowSupplementalDocuments = allowSupplementalDocuments;
   }
 
+
   /**
    * allowSupplementalDocumentsMetadata.
    *
@@ -1233,9 +1210,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowSupplementalDocuments` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `allowSupplementalDocuments` property is editable..
    * @return allowSupplementalDocumentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSupplementalDocuments` property is editable.")
@@ -1250,6 +1225,7 @@ public class AccountRoleSettings {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
   }
 
+
   /**
    * allowTaggingInSendAndCorrect.
    *
@@ -1262,7 +1238,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowTaggingInSendAndCorrect
    **/
   @Schema(description = "")
@@ -1277,21 +1252,19 @@ public class AccountRoleSettings {
     this.allowTaggingInSendAndCorrect = allowTaggingInSendAndCorrect;
   }
 
+
   /**
    * allowTaggingInSendAndCorrectMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings allowTaggingInSendAndCorrectMetadata(
-      SettingsMetadata allowTaggingInSendAndCorrectMetadata) {
+  public AccountRoleSettings allowTaggingInSendAndCorrectMetadata(SettingsMetadata allowTaggingInSendAndCorrectMetadata) {
     this.allowTaggingInSendAndCorrectMetadata = allowTaggingInSendAndCorrectMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowTaggingInSendAndCorrect` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowTaggingInSendAndCorrect` property is editable. .
    * @return allowTaggingInSendAndCorrectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowTaggingInSendAndCorrect` property is editable. ")
@@ -1306,6 +1279,7 @@ public class AccountRoleSettings {
     this.allowTaggingInSendAndCorrectMetadata = allowTaggingInSendAndCorrectMetadata;
   }
 
+
   /**
    * allowVaulting.
    *
@@ -1318,7 +1292,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowVaulting
    **/
   @Schema(description = "")
@@ -1333,6 +1306,7 @@ public class AccountRoleSettings {
     this.allowVaulting = allowVaulting;
   }
 
+
   /**
    * allowVaultingMetadata.
    *
@@ -1345,7 +1319,6 @@ public class AccountRoleSettings {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return allowVaultingMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1360,6 +1333,7 @@ public class AccountRoleSettings {
     this.allowVaultingMetadata = allowVaultingMetadata;
   }
 
+
   /**
    * allowWetSigningOverride.
    *
@@ -1372,7 +1346,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return allowWetSigningOverride
    **/
   @Schema(description = "")
@@ -1387,6 +1360,7 @@ public class AccountRoleSettings {
     this.allowWetSigningOverride = allowWetSigningOverride;
   }
 
+
   /**
    * allowWetSigningOverrideMetadata.
    *
@@ -1398,9 +1372,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `allowWetSigningOverride` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowWetSigningOverride` property is editable. .
    * @return allowWetSigningOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowWetSigningOverride` property is editable. ")
@@ -1415,6 +1387,7 @@ public class AccountRoleSettings {
     this.allowWetSigningOverrideMetadata = allowWetSigningOverrideMetadata;
   }
 
+
   /**
    * canCreateWorkspaces.
    *
@@ -1427,7 +1400,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return canCreateWorkspaces
    **/
   @Schema(description = "")
@@ -1442,6 +1414,7 @@ public class AccountRoleSettings {
     this.canCreateWorkspaces = canCreateWorkspaces;
   }
 
+
   /**
    * canCreateWorkspacesMetadata.
    *
@@ -1454,7 +1427,6 @@ public class AccountRoleSettings {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return canCreateWorkspacesMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1469,6 +1441,7 @@ public class AccountRoleSettings {
     this.canCreateWorkspacesMetadata = canCreateWorkspacesMetadata;
   }
 
+
   /**
    * canSendEnvelopesViaSMS.
    *
@@ -1481,7 +1454,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return canSendEnvelopesViaSMS
    **/
   @Schema(description = "")
@@ -1496,6 +1468,7 @@ public class AccountRoleSettings {
     this.canSendEnvelopesViaSMS = canSendEnvelopesViaSMS;
   }
 
+
   /**
    * canSendEnvelopesViaSMSMetadata.
    *
@@ -1508,7 +1481,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return canSendEnvelopesViaSMSMetadata
    **/
   @Schema(description = "")
@@ -1523,6 +1495,7 @@ public class AccountRoleSettings {
     this.canSendEnvelopesViaSMSMetadata = canSendEnvelopesViaSMSMetadata;
   }
 
+
   /**
    * disableDocumentUpload.
    *
@@ -1535,7 +1508,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return disableDocumentUpload
    **/
   @Schema(description = "")
@@ -1550,6 +1522,7 @@ public class AccountRoleSettings {
     this.disableDocumentUpload = disableDocumentUpload;
   }
 
+
   /**
    * disableDocumentUploadMetadata.
    *
@@ -1561,9 +1534,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `disableDocumentUpload` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableDocumentUpload` property is editable. .
    * @return disableDocumentUploadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableDocumentUpload` property is editable. ")
@@ -1578,6 +1549,7 @@ public class AccountRoleSettings {
     this.disableDocumentUploadMetadata = disableDocumentUploadMetadata;
   }
 
+
   /**
    * disableOtherActions.
    *
@@ -1590,7 +1562,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return disableOtherActions
    **/
   @Schema(description = "")
@@ -1605,6 +1576,7 @@ public class AccountRoleSettings {
     this.disableOtherActions = disableOtherActions;
   }
 
+
   /**
    * disableOtherActionsMetadata.
    *
@@ -1616,9 +1588,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `disableOtherActions` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableOtherActions` property is editable. .
    * @return disableOtherActionsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableOtherActions` property is editable. ")
@@ -1633,6 +1603,7 @@ public class AccountRoleSettings {
     this.disableOtherActionsMetadata = disableOtherActionsMetadata;
   }
 
+
   /**
    * enableApiRequestLogging.
    *
@@ -1645,7 +1616,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return enableApiRequestLogging
    **/
   @Schema(description = "")
@@ -1660,6 +1630,7 @@ public class AccountRoleSettings {
     this.enableApiRequestLogging = enableApiRequestLogging;
   }
 
+
   /**
    * enableApiRequestLoggingMetadata.
    *
@@ -1671,9 +1642,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Metadata that indicates whether the `enableApiRequestLogging` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableApiRequestLogging` property is editable. .
    * @return enableApiRequestLoggingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableApiRequestLogging` property is editable. ")
@@ -1688,6 +1657,7 @@ public class AccountRoleSettings {
     this.enableApiRequestLoggingMetadata = enableApiRequestLoggingMetadata;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentType.
    *
@@ -1700,7 +1670,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return enableKeyTermsSuggestionsByDocumentType
    **/
   @Schema(description = "")
@@ -1715,20 +1684,19 @@ public class AccountRoleSettings {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentTypeMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings enableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public AccountRoleSettings enableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
     return this;
   }
 
   /**
-   * Get enableKeyTermsSuggestionsByDocumentTypeMetadata.
-   * 
+   * .
    * @return enableKeyTermsSuggestionsByDocumentTypeMetadata
    **/
   @Schema(description = "")
@@ -1739,10 +1707,10 @@ public class AccountRoleSettings {
   /**
    * setEnableKeyTermsSuggestionsByDocumentTypeMetadata.
    **/
-  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
   }
+
 
   /**
    * enableRecipientViewingNotifications.
@@ -1756,7 +1724,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return enableRecipientViewingNotifications
    **/
   @Schema(description = "")
@@ -1771,21 +1738,19 @@ public class AccountRoleSettings {
     this.enableRecipientViewingNotifications = enableRecipientViewingNotifications;
   }
 
+
   /**
    * enableRecipientViewingNotificationsMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings enableRecipientViewingNotificationsMetadata(
-      SettingsMetadata enableRecipientViewingNotificationsMetadata) {
+  public AccountRoleSettings enableRecipientViewingNotificationsMetadata(SettingsMetadata enableRecipientViewingNotificationsMetadata) {
     this.enableRecipientViewingNotificationsMetadata = enableRecipientViewingNotificationsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableRecipientViewingNotifications`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableRecipientViewingNotifications` property is editable. .
    * @return enableRecipientViewingNotificationsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableRecipientViewingNotifications` property is editable. ")
@@ -1796,10 +1761,10 @@ public class AccountRoleSettings {
   /**
    * setEnableRecipientViewingNotificationsMetadata.
    **/
-  public void setEnableRecipientViewingNotificationsMetadata(
-      SettingsMetadata enableRecipientViewingNotificationsMetadata) {
+  public void setEnableRecipientViewingNotificationsMetadata(SettingsMetadata enableRecipientViewingNotificationsMetadata) {
     this.enableRecipientViewingNotificationsMetadata = enableRecipientViewingNotificationsMetadata;
   }
+
 
   /**
    * enableSequentialSigningInterface.
@@ -1813,7 +1778,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return enableSequentialSigningInterface
    **/
   @Schema(description = "")
@@ -1828,21 +1792,19 @@ public class AccountRoleSettings {
     this.enableSequentialSigningInterface = enableSequentialSigningInterface;
   }
 
+
   /**
    * enableSequentialSigningInterfaceMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings enableSequentialSigningInterfaceMetadata(
-      SettingsMetadata enableSequentialSigningInterfaceMetadata) {
+  public AccountRoleSettings enableSequentialSigningInterfaceMetadata(SettingsMetadata enableSequentialSigningInterfaceMetadata) {
     this.enableSequentialSigningInterfaceMetadata = enableSequentialSigningInterfaceMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSequentialSigningInterface`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableSequentialSigningInterface` property is editable. .
    * @return enableSequentialSigningInterfaceMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSequentialSigningInterface` property is editable. ")
@@ -1857,6 +1819,7 @@ public class AccountRoleSettings {
     this.enableSequentialSigningInterfaceMetadata = enableSequentialSigningInterfaceMetadata;
   }
 
+
   /**
    * enableTransactionPointIntegration.
    *
@@ -1869,7 +1832,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return enableTransactionPointIntegration
    **/
   @Schema(description = "")
@@ -1884,20 +1846,19 @@ public class AccountRoleSettings {
     this.enableTransactionPointIntegration = enableTransactionPointIntegration;
   }
 
+
   /**
    * enableTransactionPointIntegrationMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings enableTransactionPointIntegrationMetadata(
-      SettingsMetadata enableTransactionPointIntegrationMetadata) {
+  public AccountRoleSettings enableTransactionPointIntegrationMetadata(SettingsMetadata enableTransactionPointIntegrationMetadata) {
     this.enableTransactionPointIntegrationMetadata = enableTransactionPointIntegrationMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return enableTransactionPointIntegrationMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -1912,6 +1873,7 @@ public class AccountRoleSettings {
     this.enableTransactionPointIntegrationMetadata = enableTransactionPointIntegrationMetadata;
   }
 
+
   /**
    * powerFormRole.
    *
@@ -1924,7 +1886,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return powerFormRole
    **/
   @Schema(description = "")
@@ -1939,6 +1900,7 @@ public class AccountRoleSettings {
     this.powerFormRole = powerFormRole;
   }
 
+
   /**
    * powerFormRoleMetadata.
    *
@@ -1951,7 +1913,6 @@ public class AccountRoleSettings {
 
   /**
    * Metadata that indicates whether the `powerFormRole` property is editable. .
-   * 
    * @return powerFormRoleMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `powerFormRole` property is editable. ")
@@ -1966,20 +1927,19 @@ public class AccountRoleSettings {
     this.powerFormRoleMetadata = powerFormRoleMetadata;
   }
 
+
   /**
    * receiveCompletedSelfSignedDocumentsAsEmailLinks.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings receiveCompletedSelfSignedDocumentsAsEmailLinks(
-      String receiveCompletedSelfSignedDocumentsAsEmailLinks) {
+  public AccountRoleSettings receiveCompletedSelfSignedDocumentsAsEmailLinks(String receiveCompletedSelfSignedDocumentsAsEmailLinks) {
     this.receiveCompletedSelfSignedDocumentsAsEmailLinks = receiveCompletedSelfSignedDocumentsAsEmailLinks;
     return this;
   }
 
   /**
    * .
-   * 
    * @return receiveCompletedSelfSignedDocumentsAsEmailLinks
    **/
   @Schema(description = "")
@@ -1990,26 +1950,23 @@ public class AccountRoleSettings {
   /**
    * setReceiveCompletedSelfSignedDocumentsAsEmailLinks.
    **/
-  public void setReceiveCompletedSelfSignedDocumentsAsEmailLinks(
-      String receiveCompletedSelfSignedDocumentsAsEmailLinks) {
+  public void setReceiveCompletedSelfSignedDocumentsAsEmailLinks(String receiveCompletedSelfSignedDocumentsAsEmailLinks) {
     this.receiveCompletedSelfSignedDocumentsAsEmailLinks = receiveCompletedSelfSignedDocumentsAsEmailLinks;
   }
+
 
   /**
    * receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata(
-      SettingsMetadata receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata) {
+  public AccountRoleSettings receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata(SettingsMetadata receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata) {
     this.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata = receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the
-   * `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable. .
-   * 
+   * Metadata that indicates whether the `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable. .
    * @return receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `receiveCompletedSelfSignedDocumentsAsEmailLinks` property is editable. ")
@@ -2020,10 +1977,10 @@ public class AccountRoleSettings {
   /**
    * setReceiveCompletedSelfSignedDocumentsAsEmailLinksMetadata.
    **/
-  public void setReceiveCompletedSelfSignedDocumentsAsEmailLinksMetadata(
-      SettingsMetadata receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata) {
+  public void setReceiveCompletedSelfSignedDocumentsAsEmailLinksMetadata(SettingsMetadata receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata) {
     this.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata = receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata;
   }
+
 
   /**
    * signingUiVersionMetadata.
@@ -2037,7 +1994,6 @@ public class AccountRoleSettings {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return signingUiVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2052,6 +2008,7 @@ public class AccountRoleSettings {
     this.signingUiVersionMetadata = signingUiVersionMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustAccept.
    *
@@ -2064,7 +2021,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustAccept
    **/
   @Schema(description = "")
@@ -2079,21 +2035,19 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustAccept = supplementalDocumentsMustAccept;
   }
 
+
   /**
    * supplementalDocumentsMustAcceptMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings supplementalDocumentsMustAcceptMetadata(
-      SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
+  public AccountRoleSettings supplementalDocumentsMustAcceptMetadata(SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustAccept`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. .
    * @return supplementalDocumentsMustAcceptMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. ")
@@ -2108,6 +2062,7 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustRead.
    *
@@ -2120,7 +2075,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustRead
    **/
   @Schema(description = "")
@@ -2135,21 +2089,19 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustRead = supplementalDocumentsMustRead;
   }
 
+
   /**
    * supplementalDocumentsMustReadMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings supplementalDocumentsMustReadMetadata(
-      SettingsMetadata supplementalDocumentsMustReadMetadata) {
+  public AccountRoleSettings supplementalDocumentsMustReadMetadata(SettingsMetadata supplementalDocumentsMustReadMetadata) {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustRead` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. .
    * @return supplementalDocumentsMustReadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. ")
@@ -2164,6 +2116,7 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustView.
    *
@@ -2176,7 +2129,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustView
    **/
   @Schema(description = "")
@@ -2191,21 +2143,19 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustView = supplementalDocumentsMustView;
   }
 
+
   /**
    * supplementalDocumentsMustViewMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings supplementalDocumentsMustViewMetadata(
-      SettingsMetadata supplementalDocumentsMustViewMetadata) {
+  public AccountRoleSettings supplementalDocumentsMustViewMetadata(SettingsMetadata supplementalDocumentsMustViewMetadata) {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustView` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. .
    * @return supplementalDocumentsMustViewMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. ")
@@ -2220,6 +2170,7 @@ public class AccountRoleSettings {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
   }
 
+
   /**
    * useNewDocuSignExperienceInterface.
    *
@@ -2232,7 +2183,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return useNewDocuSignExperienceInterface
    **/
   @Schema(description = "")
@@ -2247,20 +2197,19 @@ public class AccountRoleSettings {
     this.useNewDocuSignExperienceInterface = useNewDocuSignExperienceInterface;
   }
 
+
   /**
    * useNewDocuSignExperienceInterfaceMetadata.
    *
    * @return AccountRoleSettings
    **/
-  public AccountRoleSettings useNewDocuSignExperienceInterfaceMetadata(
-      SettingsMetadata useNewDocuSignExperienceInterfaceMetadata) {
+  public AccountRoleSettings useNewDocuSignExperienceInterfaceMetadata(SettingsMetadata useNewDocuSignExperienceInterfaceMetadata) {
     this.useNewDocuSignExperienceInterfaceMetadata = useNewDocuSignExperienceInterfaceMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return useNewDocuSignExperienceInterfaceMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2275,6 +2224,7 @@ public class AccountRoleSettings {
     this.useNewDocuSignExperienceInterfaceMetadata = useNewDocuSignExperienceInterfaceMetadata;
   }
 
+
   /**
    * useNewSendingInterface.
    *
@@ -2287,7 +2237,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return useNewSendingInterface
    **/
   @Schema(description = "")
@@ -2302,6 +2251,7 @@ public class AccountRoleSettings {
     this.useNewSendingInterface = useNewSendingInterface;
   }
 
+
   /**
    * useNewSendingInterfaceMetadata.
    *
@@ -2314,7 +2264,6 @@ public class AccountRoleSettings {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return useNewSendingInterfaceMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2329,6 +2278,7 @@ public class AccountRoleSettings {
     this.useNewSendingInterfaceMetadata = useNewSendingInterfaceMetadata;
   }
 
+
   /**
    * vaultingMode.
    *
@@ -2341,7 +2291,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return vaultingMode
    **/
   @Schema(description = "")
@@ -2356,6 +2305,7 @@ public class AccountRoleSettings {
     this.vaultingMode = vaultingMode;
   }
 
+
   /**
    * vaultingModeMetadata.
    *
@@ -2368,7 +2318,6 @@ public class AccountRoleSettings {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return vaultingModeMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -2383,6 +2332,7 @@ public class AccountRoleSettings {
     this.vaultingModeMetadata = vaultingModeMetadata;
   }
 
+
   /**
    * webForms.
    *
@@ -2395,7 +2345,6 @@ public class AccountRoleSettings {
 
   /**
    * .
-   * 
    * @return webForms
    **/
   @Schema(description = "")
@@ -2410,6 +2359,7 @@ public class AccountRoleSettings {
     this.webForms = webForms;
   }
 
+
   /**
    * webFormsMetadata.
    *
@@ -2421,8 +2371,7 @@ public class AccountRoleSettings {
   }
 
   /**
-   * Get webFormsMetadata.
-   * 
+   * .
    * @return webFormsMetadata
    **/
   @Schema(description = "")
@@ -2436,6 +2385,7 @@ public class AccountRoleSettings {
   public void setWebFormsMetadata(SettingsMetadata webFormsMetadata) {
     this.webFormsMetadata = webFormsMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -2458,9 +2408,7 @@ public class AccountRoleSettings {
         Objects.equals(this.allowApiAccessToAccount, accountRoleSettings.allowApiAccessToAccount) &&
         Objects.equals(this.allowApiAccessToAccountMetadata, accountRoleSettings.allowApiAccessToAccountMetadata) &&
         Objects.equals(this.allowApiSendingOnBehalfOfOthers, accountRoleSettings.allowApiSendingOnBehalfOfOthers) &&
-        Objects.equals(this.allowApiSendingOnBehalfOfOthersMetadata,
-            accountRoleSettings.allowApiSendingOnBehalfOfOthersMetadata)
-        &&
+        Objects.equals(this.allowApiSendingOnBehalfOfOthersMetadata, accountRoleSettings.allowApiSendingOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowApiSequentialSigning, accountRoleSettings.allowApiSequentialSigning) &&
         Objects.equals(this.allowApiSequentialSigningMetadata, accountRoleSettings.allowApiSequentialSigningMetadata) &&
         Objects.equals(this.allowAutoTagging, accountRoleSettings.allowAutoTagging) &&
@@ -2468,45 +2416,29 @@ public class AccountRoleSettings {
         Objects.equals(this.allowBulkSending, accountRoleSettings.allowBulkSending) &&
         Objects.equals(this.allowBulkSendingMetadata, accountRoleSettings.allowBulkSendingMetadata) &&
         Objects.equals(this.allowDocuSignDesktopClient, accountRoleSettings.allowDocuSignDesktopClient) &&
-        Objects.equals(this.allowDocuSignDesktopClientMetadata, accountRoleSettings.allowDocuSignDesktopClientMetadata)
-        &&
+        Objects.equals(this.allowDocuSignDesktopClientMetadata, accountRoleSettings.allowDocuSignDesktopClientMetadata) &&
         Objects.equals(this.allowedAddressBookAccess, accountRoleSettings.allowedAddressBookAccess) &&
         Objects.equals(this.allowedAddressBookAccessMetadata, accountRoleSettings.allowedAddressBookAccessMetadata) &&
         Objects.equals(this.allowedClickwrapsAccess, accountRoleSettings.allowedClickwrapsAccess) &&
         Objects.equals(this.allowedClickwrapsAccessMetadata, accountRoleSettings.allowedClickwrapsAccessMetadata) &&
         Objects.equals(this.allowedTemplateAccess, accountRoleSettings.allowedTemplateAccess) &&
         Objects.equals(this.allowedTemplateAccessMetadata, accountRoleSettings.allowedTemplateAccessMetadata) &&
-        Objects
-            .equals(this.allowedToBeEnvelopeTransferRecipient, accountRoleSettings.allowedToBeEnvelopeTransferRecipient)
-        &&
-        Objects.equals(this.allowedToBeEnvelopeTransferRecipientMetadata,
-            accountRoleSettings.allowedToBeEnvelopeTransferRecipientMetadata)
-        &&
+        Objects.equals(this.allowedToBeEnvelopeTransferRecipient, accountRoleSettings.allowedToBeEnvelopeTransferRecipient) &&
+        Objects.equals(this.allowedToBeEnvelopeTransferRecipientMetadata, accountRoleSettings.allowedToBeEnvelopeTransferRecipientMetadata) &&
         Objects.equals(this.allowEnvelopeSending, accountRoleSettings.allowEnvelopeSending) &&
         Objects.equals(this.allowEnvelopeSendingMetadata, accountRoleSettings.allowEnvelopeSendingMetadata) &&
         Objects.equals(this.allowESealRecipients, accountRoleSettings.allowESealRecipients) &&
         Objects.equals(this.allowESealRecipientsMetadata, accountRoleSettings.allowESealRecipientsMetadata) &&
-        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes,
-            accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopes)
-        &&
-        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata,
-            accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata)
-        &&
-        Objects.equals(
-            this.allowSendersToSetRecipientEmailLanguage, accountRoleSettings.allowSendersToSetRecipientEmailLanguage)
-        &&
-        Objects.equals(this.allowSendersToSetRecipientEmailLanguageMetadata,
-            accountRoleSettings.allowSendersToSetRecipientEmailLanguageMetadata)
-        &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopes, accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopes) &&
+        Objects.equals(this.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, accountRoleSettings.allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata) &&
+        Objects.equals(this.allowSendersToSetRecipientEmailLanguage, accountRoleSettings.allowSendersToSetRecipientEmailLanguage) &&
+        Objects.equals(this.allowSendersToSetRecipientEmailLanguageMetadata, accountRoleSettings.allowSendersToSetRecipientEmailLanguageMetadata) &&
         Objects.equals(this.allowSignerAttachments, accountRoleSettings.allowSignerAttachments) &&
         Objects.equals(this.allowSignerAttachmentsMetadata, accountRoleSettings.allowSignerAttachmentsMetadata) &&
         Objects.equals(this.allowSupplementalDocuments, accountRoleSettings.allowSupplementalDocuments) &&
-        Objects.equals(this.allowSupplementalDocumentsMetadata, accountRoleSettings.allowSupplementalDocumentsMetadata)
-        &&
+        Objects.equals(this.allowSupplementalDocumentsMetadata, accountRoleSettings.allowSupplementalDocumentsMetadata) &&
         Objects.equals(this.allowTaggingInSendAndCorrect, accountRoleSettings.allowTaggingInSendAndCorrect) &&
-        Objects.equals(this.allowTaggingInSendAndCorrectMetadata,
-            accountRoleSettings.allowTaggingInSendAndCorrectMetadata)
-        &&
+        Objects.equals(this.allowTaggingInSendAndCorrectMetadata, accountRoleSettings.allowTaggingInSendAndCorrectMetadata) &&
         Objects.equals(this.allowVaulting, accountRoleSettings.allowVaulting) &&
         Objects.equals(this.allowVaultingMetadata, accountRoleSettings.allowVaultingMetadata) &&
         Objects.equals(this.allowWetSigningOverride, accountRoleSettings.allowWetSigningOverride) &&
@@ -2521,51 +2453,27 @@ public class AccountRoleSettings {
         Objects.equals(this.disableOtherActionsMetadata, accountRoleSettings.disableOtherActionsMetadata) &&
         Objects.equals(this.enableApiRequestLogging, accountRoleSettings.enableApiRequestLogging) &&
         Objects.equals(this.enableApiRequestLoggingMetadata, accountRoleSettings.enableApiRequestLoggingMetadata) &&
-        Objects.equals(
-            this.enableKeyTermsSuggestionsByDocumentType, accountRoleSettings.enableKeyTermsSuggestionsByDocumentType)
-        &&
-        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata,
-            accountRoleSettings.enableKeyTermsSuggestionsByDocumentTypeMetadata)
-        &&
-        Objects
-            .equals(this.enableRecipientViewingNotifications, accountRoleSettings.enableRecipientViewingNotifications)
-        &&
-        Objects.equals(this.enableRecipientViewingNotificationsMetadata,
-            accountRoleSettings.enableRecipientViewingNotificationsMetadata)
-        &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType, accountRoleSettings.enableKeyTermsSuggestionsByDocumentType) &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata, accountRoleSettings.enableKeyTermsSuggestionsByDocumentTypeMetadata) &&
+        Objects.equals(this.enableRecipientViewingNotifications, accountRoleSettings.enableRecipientViewingNotifications) &&
+        Objects.equals(this.enableRecipientViewingNotificationsMetadata, accountRoleSettings.enableRecipientViewingNotificationsMetadata) &&
         Objects.equals(this.enableSequentialSigningInterface, accountRoleSettings.enableSequentialSigningInterface) &&
-        Objects.equals(this.enableSequentialSigningInterfaceMetadata,
-            accountRoleSettings.enableSequentialSigningInterfaceMetadata)
-        &&
+        Objects.equals(this.enableSequentialSigningInterfaceMetadata, accountRoleSettings.enableSequentialSigningInterfaceMetadata) &&
         Objects.equals(this.enableTransactionPointIntegration, accountRoleSettings.enableTransactionPointIntegration) &&
-        Objects.equals(this.enableTransactionPointIntegrationMetadata,
-            accountRoleSettings.enableTransactionPointIntegrationMetadata)
-        &&
+        Objects.equals(this.enableTransactionPointIntegrationMetadata, accountRoleSettings.enableTransactionPointIntegrationMetadata) &&
         Objects.equals(this.powerFormRole, accountRoleSettings.powerFormRole) &&
         Objects.equals(this.powerFormRoleMetadata, accountRoleSettings.powerFormRoleMetadata) &&
-        Objects.equals(this.receiveCompletedSelfSignedDocumentsAsEmailLinks,
-            accountRoleSettings.receiveCompletedSelfSignedDocumentsAsEmailLinks)
-        &&
-        Objects.equals(this.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata,
-            accountRoleSettings.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata)
-        &&
+        Objects.equals(this.receiveCompletedSelfSignedDocumentsAsEmailLinks, accountRoleSettings.receiveCompletedSelfSignedDocumentsAsEmailLinks) &&
+        Objects.equals(this.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, accountRoleSettings.receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata) &&
         Objects.equals(this.signingUiVersionMetadata, accountRoleSettings.signingUiVersionMetadata) &&
         Objects.equals(this.supplementalDocumentsMustAccept, accountRoleSettings.supplementalDocumentsMustAccept) &&
-        Objects.equals(this.supplementalDocumentsMustAcceptMetadata,
-            accountRoleSettings.supplementalDocumentsMustAcceptMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustAcceptMetadata, accountRoleSettings.supplementalDocumentsMustAcceptMetadata) &&
         Objects.equals(this.supplementalDocumentsMustRead, accountRoleSettings.supplementalDocumentsMustRead) &&
-        Objects.equals(this.supplementalDocumentsMustReadMetadata,
-            accountRoleSettings.supplementalDocumentsMustReadMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustReadMetadata, accountRoleSettings.supplementalDocumentsMustReadMetadata) &&
         Objects.equals(this.supplementalDocumentsMustView, accountRoleSettings.supplementalDocumentsMustView) &&
-        Objects.equals(this.supplementalDocumentsMustViewMetadata,
-            accountRoleSettings.supplementalDocumentsMustViewMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustViewMetadata, accountRoleSettings.supplementalDocumentsMustViewMetadata) &&
         Objects.equals(this.useNewDocuSignExperienceInterface, accountRoleSettings.useNewDocuSignExperienceInterface) &&
-        Objects.equals(this.useNewDocuSignExperienceInterfaceMetadata,
-            accountRoleSettings.useNewDocuSignExperienceInterfaceMetadata)
-        &&
+        Objects.equals(this.useNewDocuSignExperienceInterfaceMetadata, accountRoleSettings.useNewDocuSignExperienceInterfaceMetadata) &&
         Objects.equals(this.useNewSendingInterface, accountRoleSettings.useNewSendingInterface) &&
         Objects.equals(this.useNewSendingInterfaceMetadata, accountRoleSettings.useNewSendingInterfaceMetadata) &&
         Objects.equals(this.vaultingMode, accountRoleSettings.vaultingMode) &&
@@ -2579,33 +2487,9 @@ public class AccountRoleSettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata,
-        allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers,
-        allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata,
-        allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata,
-        allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess,
-        allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata,
-        allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient,
-        allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata,
-        allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes,
-        allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage,
-        allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata,
-        allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect,
-        allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride,
-        allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS,
-        canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions,
-        disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata,
-        enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata,
-        enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata,
-        enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration,
-        enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata,
-        receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata,
-        signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata,
-        supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView,
-        supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface,
-        useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode,
-        vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -2614,123 +2498,82 @@ public class AccountRoleSettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountRoleSettings {\n");
-
+    
     sb.append("    allowAccountManagement: ").append(toIndentedString(allowAccountManagement)).append("\n");
-    sb.append("    allowAccountManagementMetadata: ").append(toIndentedString(allowAccountManagementMetadata))
-        .append("\n");
+    sb.append("    allowAccountManagementMetadata: ").append(toIndentedString(allowAccountManagementMetadata)).append("\n");
     sb.append("    allowApiAccess: ").append(toIndentedString(allowApiAccess)).append("\n");
     sb.append("    allowApiAccessMetadata: ").append(toIndentedString(allowApiAccessMetadata)).append("\n");
     sb.append("    allowApiAccessToAccount: ").append(toIndentedString(allowApiAccessToAccount)).append("\n");
-    sb.append("    allowApiAccessToAccountMetadata: ").append(toIndentedString(allowApiAccessToAccountMetadata))
-        .append("\n");
-    sb.append("    allowApiSendingOnBehalfOfOthers: ").append(toIndentedString(allowApiSendingOnBehalfOfOthers))
-        .append("\n");
-    sb.append("    allowApiSendingOnBehalfOfOthersMetadata: ")
-        .append(toIndentedString(allowApiSendingOnBehalfOfOthersMetadata)).append("\n");
+    sb.append("    allowApiAccessToAccountMetadata: ").append(toIndentedString(allowApiAccessToAccountMetadata)).append("\n");
+    sb.append("    allowApiSendingOnBehalfOfOthers: ").append(toIndentedString(allowApiSendingOnBehalfOfOthers)).append("\n");
+    sb.append("    allowApiSendingOnBehalfOfOthersMetadata: ").append(toIndentedString(allowApiSendingOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowApiSequentialSigning: ").append(toIndentedString(allowApiSequentialSigning)).append("\n");
-    sb.append("    allowApiSequentialSigningMetadata: ").append(toIndentedString(allowApiSequentialSigningMetadata))
-        .append("\n");
+    sb.append("    allowApiSequentialSigningMetadata: ").append(toIndentedString(allowApiSequentialSigningMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
     sb.append("    allowAutoTaggingMetadata: ").append(toIndentedString(allowAutoTaggingMetadata)).append("\n");
     sb.append("    allowBulkSending: ").append(toIndentedString(allowBulkSending)).append("\n");
     sb.append("    allowBulkSendingMetadata: ").append(toIndentedString(allowBulkSendingMetadata)).append("\n");
     sb.append("    allowDocuSignDesktopClient: ").append(toIndentedString(allowDocuSignDesktopClient)).append("\n");
-    sb.append("    allowDocuSignDesktopClientMetadata: ").append(toIndentedString(allowDocuSignDesktopClientMetadata))
-        .append("\n");
+    sb.append("    allowDocuSignDesktopClientMetadata: ").append(toIndentedString(allowDocuSignDesktopClientMetadata)).append("\n");
     sb.append("    allowedAddressBookAccess: ").append(toIndentedString(allowedAddressBookAccess)).append("\n");
-    sb.append("    allowedAddressBookAccessMetadata: ").append(toIndentedString(allowedAddressBookAccessMetadata))
-        .append("\n");
+    sb.append("    allowedAddressBookAccessMetadata: ").append(toIndentedString(allowedAddressBookAccessMetadata)).append("\n");
     sb.append("    allowedClickwrapsAccess: ").append(toIndentedString(allowedClickwrapsAccess)).append("\n");
-    sb.append("    allowedClickwrapsAccessMetadata: ").append(toIndentedString(allowedClickwrapsAccessMetadata))
-        .append("\n");
+    sb.append("    allowedClickwrapsAccessMetadata: ").append(toIndentedString(allowedClickwrapsAccessMetadata)).append("\n");
     sb.append("    allowedTemplateAccess: ").append(toIndentedString(allowedTemplateAccess)).append("\n");
-    sb.append("    allowedTemplateAccessMetadata: ").append(toIndentedString(allowedTemplateAccessMetadata))
-        .append("\n");
-    sb.append("    allowedToBeEnvelopeTransferRecipient: ")
-        .append(toIndentedString(allowedToBeEnvelopeTransferRecipient)).append("\n");
-    sb.append("    allowedToBeEnvelopeTransferRecipientMetadata: ")
-        .append(toIndentedString(allowedToBeEnvelopeTransferRecipientMetadata)).append("\n");
+    sb.append("    allowedTemplateAccessMetadata: ").append(toIndentedString(allowedTemplateAccessMetadata)).append("\n");
+    sb.append("    allowedToBeEnvelopeTransferRecipient: ").append(toIndentedString(allowedToBeEnvelopeTransferRecipient)).append("\n");
+    sb.append("    allowedToBeEnvelopeTransferRecipientMetadata: ").append(toIndentedString(allowedToBeEnvelopeTransferRecipientMetadata)).append("\n");
     sb.append("    allowEnvelopeSending: ").append(toIndentedString(allowEnvelopeSending)).append("\n");
     sb.append("    allowEnvelopeSendingMetadata: ").append(toIndentedString(allowEnvelopeSendingMetadata)).append("\n");
     sb.append("    allowESealRecipients: ").append(toIndentedString(allowESealRecipients)).append("\n");
     sb.append("    allowESealRecipientsMetadata: ").append(toIndentedString(allowESealRecipientsMetadata)).append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopes: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopes)).append("\n");
-    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata: ")
-        .append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata)).append("\n");
-    sb.append("    allowSendersToSetRecipientEmailLanguage: ")
-        .append(toIndentedString(allowSendersToSetRecipientEmailLanguage)).append("\n");
-    sb.append("    allowSendersToSetRecipientEmailLanguageMetadata: ")
-        .append(toIndentedString(allowSendersToSetRecipientEmailLanguageMetadata)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopes: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopes)).append("\n");
+    sb.append("    allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata: ").append(toIndentedString(allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata)).append("\n");
+    sb.append("    allowSendersToSetRecipientEmailLanguage: ").append(toIndentedString(allowSendersToSetRecipientEmailLanguage)).append("\n");
+    sb.append("    allowSendersToSetRecipientEmailLanguageMetadata: ").append(toIndentedString(allowSendersToSetRecipientEmailLanguageMetadata)).append("\n");
     sb.append("    allowSignerAttachments: ").append(toIndentedString(allowSignerAttachments)).append("\n");
-    sb.append("    allowSignerAttachmentsMetadata: ").append(toIndentedString(allowSignerAttachmentsMetadata))
-        .append("\n");
+    sb.append("    allowSignerAttachmentsMetadata: ").append(toIndentedString(allowSignerAttachmentsMetadata)).append("\n");
     sb.append("    allowSupplementalDocuments: ").append(toIndentedString(allowSupplementalDocuments)).append("\n");
-    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata))
-        .append("\n");
+    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
     sb.append("    allowTaggingInSendAndCorrect: ").append(toIndentedString(allowTaggingInSendAndCorrect)).append("\n");
-    sb.append("    allowTaggingInSendAndCorrectMetadata: ")
-        .append(toIndentedString(allowTaggingInSendAndCorrectMetadata)).append("\n");
+    sb.append("    allowTaggingInSendAndCorrectMetadata: ").append(toIndentedString(allowTaggingInSendAndCorrectMetadata)).append("\n");
     sb.append("    allowVaulting: ").append(toIndentedString(allowVaulting)).append("\n");
     sb.append("    allowVaultingMetadata: ").append(toIndentedString(allowVaultingMetadata)).append("\n");
     sb.append("    allowWetSigningOverride: ").append(toIndentedString(allowWetSigningOverride)).append("\n");
-    sb.append("    allowWetSigningOverrideMetadata: ").append(toIndentedString(allowWetSigningOverrideMetadata))
-        .append("\n");
+    sb.append("    allowWetSigningOverrideMetadata: ").append(toIndentedString(allowWetSigningOverrideMetadata)).append("\n");
     sb.append("    canCreateWorkspaces: ").append(toIndentedString(canCreateWorkspaces)).append("\n");
     sb.append("    canCreateWorkspacesMetadata: ").append(toIndentedString(canCreateWorkspacesMetadata)).append("\n");
     sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
-    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata))
-        .append("\n");
+    sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
-    sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata))
-        .append("\n");
+    sb.append("    disableDocumentUploadMetadata: ").append(toIndentedString(disableDocumentUploadMetadata)).append("\n");
     sb.append("    disableOtherActions: ").append(toIndentedString(disableOtherActions)).append("\n");
     sb.append("    disableOtherActionsMetadata: ").append(toIndentedString(disableOtherActionsMetadata)).append("\n");
     sb.append("    enableApiRequestLogging: ").append(toIndentedString(enableApiRequestLogging)).append("\n");
-    sb.append("    enableApiRequestLoggingMetadata: ").append(toIndentedString(enableApiRequestLoggingMetadata))
-        .append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentType: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
-    sb.append("    enableRecipientViewingNotifications: ").append(toIndentedString(enableRecipientViewingNotifications))
-        .append("\n");
-    sb.append("    enableRecipientViewingNotificationsMetadata: ")
-        .append(toIndentedString(enableRecipientViewingNotificationsMetadata)).append("\n");
-    sb.append("    enableSequentialSigningInterface: ").append(toIndentedString(enableSequentialSigningInterface))
-        .append("\n");
-    sb.append("    enableSequentialSigningInterfaceMetadata: ")
-        .append(toIndentedString(enableSequentialSigningInterfaceMetadata)).append("\n");
-    sb.append("    enableTransactionPointIntegration: ").append(toIndentedString(enableTransactionPointIntegration))
-        .append("\n");
-    sb.append("    enableTransactionPointIntegrationMetadata: ")
-        .append(toIndentedString(enableTransactionPointIntegrationMetadata)).append("\n");
+    sb.append("    enableApiRequestLoggingMetadata: ").append(toIndentedString(enableApiRequestLoggingMetadata)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentType: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
+    sb.append("    enableRecipientViewingNotifications: ").append(toIndentedString(enableRecipientViewingNotifications)).append("\n");
+    sb.append("    enableRecipientViewingNotificationsMetadata: ").append(toIndentedString(enableRecipientViewingNotificationsMetadata)).append("\n");
+    sb.append("    enableSequentialSigningInterface: ").append(toIndentedString(enableSequentialSigningInterface)).append("\n");
+    sb.append("    enableSequentialSigningInterfaceMetadata: ").append(toIndentedString(enableSequentialSigningInterfaceMetadata)).append("\n");
+    sb.append("    enableTransactionPointIntegration: ").append(toIndentedString(enableTransactionPointIntegration)).append("\n");
+    sb.append("    enableTransactionPointIntegrationMetadata: ").append(toIndentedString(enableTransactionPointIntegrationMetadata)).append("\n");
     sb.append("    powerFormRole: ").append(toIndentedString(powerFormRole)).append("\n");
     sb.append("    powerFormRoleMetadata: ").append(toIndentedString(powerFormRoleMetadata)).append("\n");
-    sb.append("    receiveCompletedSelfSignedDocumentsAsEmailLinks: ")
-        .append(toIndentedString(receiveCompletedSelfSignedDocumentsAsEmailLinks)).append("\n");
-    sb.append("    receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata: ")
-        .append(toIndentedString(receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata)).append("\n");
+    sb.append("    receiveCompletedSelfSignedDocumentsAsEmailLinks: ").append(toIndentedString(receiveCompletedSelfSignedDocumentsAsEmailLinks)).append("\n");
+    sb.append("    receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata: ").append(toIndentedString(receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata)).append("\n");
     sb.append("    signingUiVersionMetadata: ").append(toIndentedString(signingUiVersionMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAcceptMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustReadMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustViewMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
-    sb.append("    useNewDocuSignExperienceInterface: ").append(toIndentedString(useNewDocuSignExperienceInterface))
-        .append("\n");
-    sb.append("    useNewDocuSignExperienceInterfaceMetadata: ")
-        .append(toIndentedString(useNewDocuSignExperienceInterfaceMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept)).append("\n");
+    sb.append("    supplementalDocumentsMustAcceptMetadata: ").append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead)).append("\n");
+    sb.append("    supplementalDocumentsMustReadMetadata: ").append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView)).append("\n");
+    sb.append("    supplementalDocumentsMustViewMetadata: ").append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
+    sb.append("    useNewDocuSignExperienceInterface: ").append(toIndentedString(useNewDocuSignExperienceInterface)).append("\n");
+    sb.append("    useNewDocuSignExperienceInterfaceMetadata: ").append(toIndentedString(useNewDocuSignExperienceInterfaceMetadata)).append("\n");
     sb.append("    useNewSendingInterface: ").append(toIndentedString(useNewSendingInterface)).append("\n");
-    sb.append("    useNewSendingInterfaceMetadata: ").append(toIndentedString(useNewSendingInterfaceMetadata))
-        .append("\n");
+    sb.append("    useNewSendingInterfaceMetadata: ").append(toIndentedString(useNewSendingInterfaceMetadata)).append("\n");
     sb.append("    vaultingMode: ").append(toIndentedString(vaultingMode)).append("\n");
     sb.append("    vaultingModeMetadata: ").append(toIndentedString(vaultingModeMetadata)).append("\n");
     sb.append("    webForms: ").append(toIndentedString(webForms)).append("\n");
@@ -2751,3 +2594,4 @@ public class AccountRoleSettings {
   }
 
 }
+

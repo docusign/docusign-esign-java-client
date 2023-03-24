@@ -24,6 +24,7 @@ public class RecipientIdentityInputOption {
   @JsonProperty("valueType")
   private String valueType = null;
 
+
   /**
    * name.
    *
@@ -36,7 +37,6 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class RecipientIdentityInputOption {
     this.name = name;
   }
 
+
   /**
    * phoneNumberList.
    *
@@ -60,7 +61,7 @@ public class RecipientIdentityInputOption {
     this.phoneNumberList = phoneNumberList;
     return this;
   }
-
+  
   /**
    * addPhoneNumberListItem.
    *
@@ -76,7 +77,6 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
-   * 
    * @return phoneNumberList
    **/
   @Schema(description = "")
@@ -91,6 +91,7 @@ public class RecipientIdentityInputOption {
     this.phoneNumberList = phoneNumberList;
   }
 
+
   /**
    * valueType.
    *
@@ -103,7 +104,6 @@ public class RecipientIdentityInputOption {
 
   /**
    * .
-   * 
    * @return valueType
    **/
   @Schema(description = "")
@@ -117,6 +117,7 @@ public class RecipientIdentityInputOption {
   public void setValueType(String valueType) {
     this.valueType = valueType;
   }
+
 
   /**
    * Compares objects.
@@ -145,6 +146,7 @@ public class RecipientIdentityInputOption {
     return Objects.hash(name, phoneNumberList, valueType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -152,7 +154,7 @@ public class RecipientIdentityInputOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityInputOption {\n");
-
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    phoneNumberList: ").append(toIndentedString(phoneNumberList)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
@@ -172,3 +174,4 @@ public class RecipientIdentityInputOption {
   }
 
 }
+

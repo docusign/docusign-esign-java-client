@@ -24,6 +24,7 @@ public class ConditionalRecipientRuleCondition {
   @JsonProperty("recipientLabel")
   private String recipientLabel = null;
 
+
   /**
    * filters.
    *
@@ -33,7 +34,7 @@ public class ConditionalRecipientRuleCondition {
     this.filters = filters;
     return this;
   }
-
+  
   /**
    * addFiltersItem.
    *
@@ -49,7 +50,6 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
-   * 
    * @return filters
    **/
   @Schema(description = "")
@@ -64,6 +64,7 @@ public class ConditionalRecipientRuleCondition {
     this.filters = filters;
   }
 
+
   /**
    * order.
    *
@@ -76,7 +77,6 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
-   * 
    * @return order
    **/
   @Schema(description = "")
@@ -91,6 +91,7 @@ public class ConditionalRecipientRuleCondition {
     this.order = order;
   }
 
+
   /**
    * recipientLabel.
    *
@@ -103,7 +104,6 @@ public class ConditionalRecipientRuleCondition {
 
   /**
    * .
-   * 
    * @return recipientLabel
    **/
   @Schema(description = "")
@@ -117,6 +117,7 @@ public class ConditionalRecipientRuleCondition {
   public void setRecipientLabel(String recipientLabel) {
     this.recipientLabel = recipientLabel;
   }
+
 
   /**
    * Compares objects.
@@ -145,6 +146,7 @@ public class ConditionalRecipientRuleCondition {
     return Objects.hash(filters, order, recipientLabel);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -152,7 +154,7 @@ public class ConditionalRecipientRuleCondition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRuleCondition {\n");
-
+    
     sb.append("    filters: ").append(toIndentedString(filters)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    recipientLabel: ").append(toIndentedString(recipientLabel)).append("\n");
@@ -172,3 +174,4 @@ public class ConditionalRecipientRuleCondition {
   }
 
 }
+

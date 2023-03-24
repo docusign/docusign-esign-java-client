@@ -51,6 +51,7 @@ public class DocumentHtmlDisplaySettings {
   @JsonProperty("tableStyle")
   private String tableStyle = null;
 
+
   /**
    * cellStyle.
    *
@@ -63,7 +64,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return cellStyle
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class DocumentHtmlDisplaySettings {
     this.cellStyle = cellStyle;
   }
 
+
   /**
    * collapsibleSettings.
    *
@@ -89,9 +90,7 @@ public class DocumentHtmlDisplaySettings {
   }
 
   /**
-   * This object defines the appearance and function of a collapsible section or
-   * item..
-   * 
+   * This object defines the appearance and function of a collapsible section or item..
    * @return collapsibleSettings
    **/
   @Schema(description = "This object defines the appearance and function of a collapsible section or item.")
@@ -106,6 +105,7 @@ public class DocumentHtmlDisplaySettings {
     this.collapsibleSettings = collapsibleSettings;
   }
 
+
   /**
    * display.
    *
@@ -118,7 +118,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return display
    **/
   @Schema(description = "")
@@ -133,6 +132,7 @@ public class DocumentHtmlDisplaySettings {
     this.display = display;
   }
 
+
   /**
    * displayLabel.
    *
@@ -145,7 +145,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return displayLabel
    **/
   @Schema(description = "")
@@ -160,6 +159,7 @@ public class DocumentHtmlDisplaySettings {
     this.displayLabel = displayLabel;
   }
 
+
   /**
    * displayOrder.
    *
@@ -172,7 +172,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return displayOrder
    **/
   @Schema(description = "")
@@ -187,6 +186,7 @@ public class DocumentHtmlDisplaySettings {
     this.displayOrder = displayOrder;
   }
 
+
   /**
    * displayPageNumber.
    *
@@ -199,7 +199,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return displayPageNumber
    **/
   @Schema(description = "")
@@ -214,6 +213,7 @@ public class DocumentHtmlDisplaySettings {
     this.displayPageNumber = displayPageNumber;
   }
 
+
   /**
    * hideLabelWhenOpened.
    *
@@ -226,7 +226,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return hideLabelWhenOpened
    **/
   @Schema(description = "")
@@ -241,6 +240,7 @@ public class DocumentHtmlDisplaySettings {
     this.hideLabelWhenOpened = hideLabelWhenOpened;
   }
 
+
   /**
    * inlineOuterStyle.
    *
@@ -253,7 +253,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return inlineOuterStyle
    **/
   @Schema(description = "")
@@ -268,6 +267,7 @@ public class DocumentHtmlDisplaySettings {
     this.inlineOuterStyle = inlineOuterStyle;
   }
 
+
   /**
    * labelWhenOpened.
    *
@@ -280,7 +280,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return labelWhenOpened
    **/
   @Schema(description = "")
@@ -295,6 +294,7 @@ public class DocumentHtmlDisplaySettings {
     this.labelWhenOpened = labelWhenOpened;
   }
 
+
   /**
    * preLabel.
    *
@@ -307,7 +307,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return preLabel
    **/
   @Schema(description = "")
@@ -322,6 +321,7 @@ public class DocumentHtmlDisplaySettings {
     this.preLabel = preLabel;
   }
 
+
   /**
    * scrollToTopWhenOpened.
    *
@@ -334,7 +334,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return scrollToTopWhenOpened
    **/
   @Schema(description = "")
@@ -349,6 +348,7 @@ public class DocumentHtmlDisplaySettings {
     this.scrollToTopWhenOpened = scrollToTopWhenOpened;
   }
 
+
   /**
    * tableStyle.
    *
@@ -361,7 +361,6 @@ public class DocumentHtmlDisplaySettings {
 
   /**
    * .
-   * 
    * @return tableStyle
    **/
   @Schema(description = "")
@@ -375,6 +374,7 @@ public class DocumentHtmlDisplaySettings {
   public void setTableStyle(String tableStyle) {
     this.tableStyle = tableStyle;
   }
+
 
   /**
    * Compares objects.
@@ -409,9 +409,9 @@ public class DocumentHtmlDisplaySettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber,
-        hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
+    return Objects.hash(cellStyle, collapsibleSettings, display, displayLabel, displayOrder, displayPageNumber, hideLabelWhenOpened, inlineOuterStyle, labelWhenOpened, preLabel, scrollToTopWhenOpened, tableStyle);
   }
+
 
   /**
    * Converts the given object to string.
@@ -420,7 +420,7 @@ public class DocumentHtmlDisplaySettings {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentHtmlDisplaySettings {\n");
-
+    
     sb.append("    cellStyle: ").append(toIndentedString(cellStyle)).append("\n");
     sb.append("    collapsibleSettings: ").append(toIndentedString(collapsibleSettings)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
@@ -449,3 +449,4 @@ public class DocumentHtmlDisplaySettings {
   }
 
 }
+

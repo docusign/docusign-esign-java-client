@@ -9,9 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This object contains details about a custom field for a bulk send copy. In a
- * bulk send request, each custom field in the bulk send list must match a
- * custom field in the envelope or template that you want to send..
+ * This object contains details about a custom field for a bulk send copy. In a bulk send request, each custom field in the bulk send list must match a custom field in the envelope or template that you want to send..
  *
  */
 @Schema(description = "This object contains details about a custom field for a bulk send copy. In a bulk send request, each custom field in the bulk send list must match a custom field in the envelope or template that you want to send.")
@@ -22,6 +20,7 @@ public class BulkSendingCopyCustomField {
 
   @JsonProperty("value")
   private String value = null;
+
 
   /**
    * name.
@@ -35,7 +34,6 @@ public class BulkSendingCopyCustomField {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -50,6 +48,7 @@ public class BulkSendingCopyCustomField {
     this.name = name;
   }
 
+
   /**
    * value.
    *
@@ -62,7 +61,6 @@ public class BulkSendingCopyCustomField {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -76,6 +74,7 @@ public class BulkSendingCopyCustomField {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -103,6 +102,7 @@ public class BulkSendingCopyCustomField {
     return Objects.hash(name, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -110,7 +110,7 @@ public class BulkSendingCopyCustomField {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendingCopyCustomField {\n");
-
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
@@ -129,3 +129,4 @@ public class BulkSendingCopyCustomField {
   }
 
 }
+

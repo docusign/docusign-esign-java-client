@@ -20,6 +20,7 @@ public class SignatureGroupDef {
   @JsonProperty("rights")
   private String rights = null;
 
+
   /**
    * groupId.
    *
@@ -32,7 +33,6 @@ public class SignatureGroupDef {
 
   /**
    * .
-   * 
    * @return groupId
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class SignatureGroupDef {
     this.groupId = groupId;
   }
 
+
   /**
    * rights.
    *
@@ -59,7 +60,6 @@ public class SignatureGroupDef {
 
   /**
    * .
-   * 
    * @return rights
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class SignatureGroupDef {
   public void setRights(String rights) {
     this.rights = rights;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class SignatureGroupDef {
     return Objects.hash(groupId, rights);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class SignatureGroupDef {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureGroupDef {\n");
-
+    
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    rights: ").append(toIndentedString(rights)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class SignatureGroupDef {
   }
 
 }
+

@@ -9,8 +9,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * A line item describes details about an individual line item in a payment
- * request. .
+ * A line item describes details about an individual line item in a payment request.  .
  *
  */
 @Schema(description = "A line item describes details about an individual line item in a payment request.  ")
@@ -28,6 +27,7 @@ public class PaymentLineItem {
   @JsonProperty("name")
   private String name = null;
 
+
   /**
    * amountReference.
    *
@@ -40,7 +40,6 @@ public class PaymentLineItem {
 
   /**
    * .
-   * 
    * @return amountReference
    **/
   @Schema(description = "")
@@ -55,6 +54,7 @@ public class PaymentLineItem {
     this.amountReference = amountReference;
   }
 
+
   /**
    * description.
    *
@@ -67,7 +67,6 @@ public class PaymentLineItem {
 
   /**
    * .
-   * 
    * @return description
    **/
   @Schema(description = "")
@@ -82,6 +81,7 @@ public class PaymentLineItem {
     this.description = description;
   }
 
+
   /**
    * itemCode.
    *
@@ -94,7 +94,6 @@ public class PaymentLineItem {
 
   /**
    * .
-   * 
    * @return itemCode
    **/
   @Schema(description = "")
@@ -109,6 +108,7 @@ public class PaymentLineItem {
     this.itemCode = itemCode;
   }
 
+
   /**
    * name.
    *
@@ -121,7 +121,6 @@ public class PaymentLineItem {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -135,6 +134,7 @@ public class PaymentLineItem {
   public void setName(String name) {
     this.name = name;
   }
+
 
   /**
    * Compares objects.
@@ -164,6 +164,7 @@ public class PaymentLineItem {
     return Objects.hash(amountReference, description, itemCode, name);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -171,7 +172,7 @@ public class PaymentLineItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaymentLineItem {\n");
-
+    
     sb.append("    amountReference: ").append(toIndentedString(amountReference)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    itemCode: ").append(toIndentedString(itemCode)).append("\n");
@@ -192,3 +193,4 @@ public class PaymentLineItem {
   }
 
 }
+

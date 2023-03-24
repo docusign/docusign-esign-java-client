@@ -11,11 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
- * This group tab is used to place radio buttons on a document. The
- * &#x60;radios&#x60; property contains a list of
- * [&#x60;radio&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/)
- * objects associated with the group. Only one radio button can be selected in a
- * group. .
+ * This group tab is used to place radio buttons on a document. The &#x60;radios&#x60; property contains a list of [&#x60;radio&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group. .
  *
  */
 @Schema(description = "This group tab is used to place radio buttons on a document. The `radios` property contains a list of [`radio`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group. ")
@@ -120,6 +116,7 @@ public class RadioGroup {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
+
   /**
    * conditionalParentLabel.
    *
@@ -131,9 +128,7 @@ public class RadioGroup {
   }
 
   /**
-   * For conditional fields this is the TabLabel of the parent tab that controls
-   * this tab's visibility..
-   * 
+   * For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility..
    * @return conditionalParentLabel
    **/
   @Schema(description = "For conditional fields this is the TabLabel of the parent tab that controls this tab's visibility.")
@@ -148,6 +143,7 @@ public class RadioGroup {
     this.conditionalParentLabel = conditionalParentLabel;
   }
 
+
   /**
    * conditionalParentLabelMetadata.
    *
@@ -159,9 +155,7 @@ public class RadioGroup {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentLabel` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentLabel` property is editable..
    * @return conditionalParentLabelMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentLabel` property is editable.")
@@ -176,6 +170,7 @@ public class RadioGroup {
     this.conditionalParentLabelMetadata = conditionalParentLabelMetadata;
   }
 
+
   /**
    * conditionalParentValue.
    *
@@ -187,11 +182,7 @@ public class RadioGroup {
   }
 
   /**
-   * For conditional fields, this is the value of the parent tab that controls the
-   * tab's visibility. If the parent tab is a Checkbox, Radio button, Optional
-   * Signature, or Optional Initial use \"on\" as the value to show that the
-   * parent tab is active. .
-   * 
+   * For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. .
    * @return conditionalParentValue
    **/
   @Schema(description = "For conditional fields, this is the value of the parent tab that controls the tab's visibility.  If the parent tab is a Checkbox, Radio button, Optional Signature, or Optional Initial use \"on\" as the value to show that the parent tab is active. ")
@@ -206,6 +197,7 @@ public class RadioGroup {
     this.conditionalParentValue = conditionalParentValue;
   }
 
+
   /**
    * conditionalParentValueMetadata.
    *
@@ -217,9 +209,7 @@ public class RadioGroup {
   }
 
   /**
-   * Metadata that indicates whether the `conditionalParentValue` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `conditionalParentValue` property is editable..
    * @return conditionalParentValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalParentValue` property is editable.")
@@ -234,6 +224,7 @@ public class RadioGroup {
     this.conditionalParentValueMetadata = conditionalParentValueMetadata;
   }
 
+
   /**
    * documentId.
    *
@@ -245,9 +236,7 @@ public class RadioGroup {
   }
 
   /**
-   * Specifies the document ID number that the tab is placed on. This must refer
-   * to an existing Document's ID attribute..
-   * 
+   * Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute..
    * @return documentId
    **/
   @Schema(description = "Specifies the document ID number that the tab is placed on. This must refer to an existing Document's ID attribute.")
@@ -262,6 +251,7 @@ public class RadioGroup {
     this.documentId = documentId;
   }
 
+
   /**
    * documentIdMetadata.
    *
@@ -274,7 +264,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `documentId` property is editable..
-   * 
    * @return documentIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentId` property is editable.")
@@ -289,6 +278,7 @@ public class RadioGroup {
     this.documentIdMetadata = documentIdMetadata;
   }
 
+
   /**
    * groupName.
    *
@@ -301,7 +291,6 @@ public class RadioGroup {
 
   /**
    * The name of the group..
-   * 
    * @return groupName
    **/
   @Schema(description = "The name of the group.")
@@ -316,6 +305,7 @@ public class RadioGroup {
     this.groupName = groupName;
   }
 
+
   /**
    * groupNameMetadata.
    *
@@ -328,7 +318,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `groupName` property is editable..
-   * 
    * @return groupNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `groupName` property is editable.")
@@ -343,6 +332,7 @@ public class RadioGroup {
     this.groupNameMetadata = groupNameMetadata;
   }
 
+
   /**
    * originalValue.
    *
@@ -355,7 +345,6 @@ public class RadioGroup {
 
   /**
    * The initial value of the tab when it was sent to the recipient. .
-   * 
    * @return originalValue
    **/
   @Schema(description = "The initial value of the tab when it was sent to the recipient. ")
@@ -370,6 +359,7 @@ public class RadioGroup {
     this.originalValue = originalValue;
   }
 
+
   /**
    * originalValueMetadata.
    *
@@ -382,7 +372,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `originalValue` property is editable..
-   * 
    * @return originalValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `originalValue` property is editable.")
@@ -397,6 +386,7 @@ public class RadioGroup {
     this.originalValueMetadata = originalValueMetadata;
   }
 
+
   /**
    * radios.
    *
@@ -406,7 +396,7 @@ public class RadioGroup {
     this.radios = radios;
     return this;
   }
-
+  
   /**
    * addRadiosItem.
    *
@@ -421,9 +411,7 @@ public class RadioGroup {
   }
 
   /**
-   * Specifies the locations and status for radio buttons that are grouped
-   * together..
-   * 
+   * Specifies the locations and status for radio buttons that are grouped together..
    * @return radios
    **/
   @Schema(description = "Specifies the locations and status for radio buttons that are grouped together.")
@@ -438,6 +426,7 @@ public class RadioGroup {
     this.radios = radios;
   }
 
+
   /**
    * recipientId.
    *
@@ -449,9 +438,7 @@ public class RadioGroup {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -466,6 +453,7 @@ public class RadioGroup {
     this.recipientId = recipientId;
   }
 
+
   /**
    * recipientIdGuid.
    *
@@ -478,7 +466,6 @@ public class RadioGroup {
 
   /**
    * .
-   * 
    * @return recipientIdGuid
    **/
   @Schema(description = "")
@@ -493,6 +480,7 @@ public class RadioGroup {
     this.recipientIdGuid = recipientIdGuid;
   }
 
+
   /**
    * recipientIdGuidMetadata.
    *
@@ -505,7 +493,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `recipientIdGuid` property is editable..
-   * 
    * @return recipientIdGuidMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientIdGuid` property is editable.")
@@ -520,6 +507,7 @@ public class RadioGroup {
     this.recipientIdGuidMetadata = recipientIdGuidMetadata;
   }
 
+
   /**
    * recipientIdMetadata.
    *
@@ -532,7 +520,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `recipientId` property is editable..
-   * 
    * @return recipientIdMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientId` property is editable.")
@@ -547,6 +534,7 @@ public class RadioGroup {
     this.recipientIdMetadata = recipientIdMetadata;
   }
 
+
   /**
    * requireAll.
    *
@@ -558,9 +546,7 @@ public class RadioGroup {
   }
 
   /**
-   * When set to **true** and shared is true, information must be entered in this
-   * field to complete the envelope. .
-   * 
+   * When set to **true** and shared is true, information must be entered in this field to complete the envelope. .
    * @return requireAll
    **/
   @Schema(description = "When set to **true** and shared is true, information must be entered in this field to complete the envelope. ")
@@ -575,6 +561,7 @@ public class RadioGroup {
     this.requireAll = requireAll;
   }
 
+
   /**
    * requireAllMetadata.
    *
@@ -587,7 +574,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `requireAll` property is editable..
-   * 
    * @return requireAllMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireAll` property is editable.")
@@ -602,6 +588,7 @@ public class RadioGroup {
     this.requireAllMetadata = requireAllMetadata;
   }
 
+
   /**
    * requireInitialOnSharedChange.
    *
@@ -613,9 +600,7 @@ public class RadioGroup {
   }
 
   /**
-   * Optional element for field markup. When set to **true**, the signer is
-   * required to initial when they modify a shared field..
-   * 
+   * Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field..
    * @return requireInitialOnSharedChange
    **/
   @Schema(description = "Optional element for field markup. When set to **true**, the signer is required to initial when they modify a shared field.")
@@ -630,6 +615,7 @@ public class RadioGroup {
     this.requireInitialOnSharedChange = requireInitialOnSharedChange;
   }
 
+
   /**
    * requireInitialOnSharedChangeMetadata.
    *
@@ -641,9 +627,7 @@ public class RadioGroup {
   }
 
   /**
-   * Metadata that indicates whether the `requireInitialOnSharedChange` property
-   * is editable..
-   * 
+   * Metadata that indicates whether the `requireInitialOnSharedChange` property is editable..
    * @return requireInitialOnSharedChangeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireInitialOnSharedChange` property is editable.")
@@ -658,6 +642,7 @@ public class RadioGroup {
     this.requireInitialOnSharedChangeMetadata = requireInitialOnSharedChangeMetadata;
   }
 
+
   /**
    * shared.
    *
@@ -670,7 +655,6 @@ public class RadioGroup {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -685,6 +669,7 @@ public class RadioGroup {
     this.shared = shared;
   }
 
+
   /**
    * sharedMetadata.
    *
@@ -697,7 +682,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `shared` property is editable..
-   * 
    * @return sharedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `shared` property is editable.")
@@ -712,6 +696,7 @@ public class RadioGroup {
     this.sharedMetadata = sharedMetadata;
   }
 
+
   /**
    * shareToRecipients.
    *
@@ -724,7 +709,6 @@ public class RadioGroup {
 
   /**
    * .
-   * 
    * @return shareToRecipients
    **/
   @Schema(description = "")
@@ -739,6 +723,7 @@ public class RadioGroup {
     this.shareToRecipients = shareToRecipients;
   }
 
+
   /**
    * shareToRecipientsMetadata.
    *
@@ -751,7 +736,6 @@ public class RadioGroup {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return shareToRecipientsMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -766,6 +750,7 @@ public class RadioGroup {
     this.shareToRecipientsMetadata = shareToRecipientsMetadata;
   }
 
+
   /**
    * tabType.
    *
@@ -778,7 +763,6 @@ public class RadioGroup {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -793,6 +777,7 @@ public class RadioGroup {
     this.tabType = tabType;
   }
 
+
   /**
    * tabTypeMetadata.
    *
@@ -805,7 +790,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `tabType` property is editable..
-   * 
    * @return tabTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tabType` property is editable.")
@@ -820,6 +804,7 @@ public class RadioGroup {
     this.tabTypeMetadata = tabTypeMetadata;
   }
 
+
   /**
    * templateLocked.
    *
@@ -831,9 +816,7 @@ public class RadioGroup {
   }
 
   /**
-   * When set to **true**, the sender cannot change any attributes of the
-   * recipient. Used only when working with template recipients. .
-   * 
+   * When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. .
    * @return templateLocked
    **/
   @Schema(description = "When set to **true**, the sender cannot change any attributes of the recipient. Used only when working with template recipients. ")
@@ -848,6 +831,7 @@ public class RadioGroup {
     this.templateLocked = templateLocked;
   }
 
+
   /**
    * templateLockedMetadata.
    *
@@ -860,7 +844,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `templateLocked` property is editable..
-   * 
    * @return templateLockedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateLocked` property is editable.")
@@ -875,6 +858,7 @@ public class RadioGroup {
     this.templateLockedMetadata = templateLockedMetadata;
   }
 
+
   /**
    * templateRequired.
    *
@@ -886,9 +870,7 @@ public class RadioGroup {
   }
 
   /**
-   * When set to **true**, the sender may not remove the recipient. Used only when
-   * working with template recipients..
-   * 
+   * When set to **true**, the sender may not remove the recipient. Used only when working with template recipients..
    * @return templateRequired
    **/
   @Schema(description = "When set to **true**, the sender may not remove the recipient. Used only when working with template recipients.")
@@ -903,6 +885,7 @@ public class RadioGroup {
     this.templateRequired = templateRequired;
   }
 
+
   /**
    * templateRequiredMetadata.
    *
@@ -915,7 +898,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `templateRequired` property is editable..
-   * 
    * @return templateRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `templateRequired` property is editable.")
@@ -930,6 +912,7 @@ public class RadioGroup {
     this.templateRequiredMetadata = templateRequiredMetadata;
   }
 
+
   /**
    * tooltip.
    *
@@ -942,7 +925,6 @@ public class RadioGroup {
 
   /**
    * .
-   * 
    * @return tooltip
    **/
   @Schema(description = "")
@@ -957,6 +939,7 @@ public class RadioGroup {
     this.tooltip = tooltip;
   }
 
+
   /**
    * tooltipMetadata.
    *
@@ -969,7 +952,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `tooltip` property is editable..
-   * 
    * @return tooltipMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `tooltip` property is editable.")
@@ -984,6 +966,7 @@ public class RadioGroup {
     this.tooltipMetadata = tooltipMetadata;
   }
 
+
   /**
    * value.
    *
@@ -996,7 +979,6 @@ public class RadioGroup {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -1011,6 +993,7 @@ public class RadioGroup {
     this.value = value;
   }
 
+
   /**
    * valueMetadata.
    *
@@ -1023,7 +1006,6 @@ public class RadioGroup {
 
   /**
    * Metadata that indicates whether the `value` property is editable..
-   * 
    * @return valueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `value` property is editable.")
@@ -1037,6 +1019,7 @@ public class RadioGroup {
   public void setValueMetadata(PropertyMetadata valueMetadata) {
     this.valueMetadata = valueMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -1092,14 +1075,9 @@ public class RadioGroup {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue,
-        conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, originalValue,
-        originalValueMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata,
-        requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared,
-        sharedMetadata, shareToRecipients, shareToRecipientsMetadata, tabType, tabTypeMetadata, templateLocked,
-        templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata, value,
-        valueMetadata);
+    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, originalValue, originalValueMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata, value, valueMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -1108,13 +1086,11 @@ public class RadioGroup {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RadioGroup {\n");
-
+    
     sb.append("    conditionalParentLabel: ").append(toIndentedString(conditionalParentLabel)).append("\n");
-    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata))
-        .append("\n");
+    sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
-    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata))
-        .append("\n");
+    sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
@@ -1129,8 +1105,7 @@ public class RadioGroup {
     sb.append("    requireAll: ").append(toIndentedString(requireAll)).append("\n");
     sb.append("    requireAllMetadata: ").append(toIndentedString(requireAllMetadata)).append("\n");
     sb.append("    requireInitialOnSharedChange: ").append(toIndentedString(requireInitialOnSharedChange)).append("\n");
-    sb.append("    requireInitialOnSharedChangeMetadata: ")
-        .append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
+    sb.append("    requireInitialOnSharedChangeMetadata: ").append(toIndentedString(requireInitialOnSharedChangeMetadata)).append("\n");
     sb.append("    shared: ").append(toIndentedString(shared)).append("\n");
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    shareToRecipients: ").append(toIndentedString(shareToRecipients)).append("\n");
@@ -1161,3 +1136,4 @@ public class RadioGroup {
   }
 
 }
+

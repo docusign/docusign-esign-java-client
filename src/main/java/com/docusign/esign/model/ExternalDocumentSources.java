@@ -46,6 +46,7 @@ public class ExternalDocumentSources {
   @JsonProperty("salesforceMetadata")
   private SettingsMetadata salesforceMetadata = null;
 
+
   /**
    * boxnetEnabled.
    *
@@ -58,7 +59,6 @@ public class ExternalDocumentSources {
 
   /**
    * .
-   * 
    * @return boxnetEnabled
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class ExternalDocumentSources {
     this.boxnetEnabled = boxnetEnabled;
   }
 
+
   /**
    * boxnetMetadata.
    *
@@ -85,7 +86,6 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `boxnetEnabled` property is editable..
-   * 
    * @return boxnetMetadata
    **/
   @Schema(description = "Metadata indicating whether the `boxnetEnabled` property is editable.")
@@ -100,6 +100,7 @@ public class ExternalDocumentSources {
     this.boxnetMetadata = boxnetMetadata;
   }
 
+
   /**
    * dropboxEnabled.
    *
@@ -112,7 +113,6 @@ public class ExternalDocumentSources {
 
   /**
    * .
-   * 
    * @return dropboxEnabled
    **/
   @Schema(description = "")
@@ -127,6 +127,7 @@ public class ExternalDocumentSources {
     this.dropboxEnabled = dropboxEnabled;
   }
 
+
   /**
    * dropboxMetadata.
    *
@@ -139,7 +140,6 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `dropboxEnabled` property is editable..
-   * 
    * @return dropboxMetadata
    **/
   @Schema(description = "Metadata indicating whether the `dropboxEnabled` property is editable.")
@@ -154,6 +154,7 @@ public class ExternalDocumentSources {
     this.dropboxMetadata = dropboxMetadata;
   }
 
+
   /**
    * googleDriveEnabled.
    *
@@ -166,7 +167,6 @@ public class ExternalDocumentSources {
 
   /**
    * .
-   * 
    * @return googleDriveEnabled
    **/
   @Schema(description = "")
@@ -181,6 +181,7 @@ public class ExternalDocumentSources {
     this.googleDriveEnabled = googleDriveEnabled;
   }
 
+
   /**
    * googleDriveMetadata.
    *
@@ -193,7 +194,6 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `googleDriveEnabled` property is editable..
-   * 
    * @return googleDriveMetadata
    **/
   @Schema(description = "Metadata indicating whether the `googleDriveEnabled` property is editable.")
@@ -208,6 +208,7 @@ public class ExternalDocumentSources {
     this.googleDriveMetadata = googleDriveMetadata;
   }
 
+
   /**
    * oneDriveEnabled.
    *
@@ -220,7 +221,6 @@ public class ExternalDocumentSources {
 
   /**
    * .
-   * 
    * @return oneDriveEnabled
    **/
   @Schema(description = "")
@@ -235,6 +235,7 @@ public class ExternalDocumentSources {
     this.oneDriveEnabled = oneDriveEnabled;
   }
 
+
   /**
    * oneDriveMetadata.
    *
@@ -247,7 +248,6 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `oneDriveEnabled` property is editable..
-   * 
    * @return oneDriveMetadata
    **/
   @Schema(description = "Metadata indicating whether the `oneDriveEnabled` property is editable.")
@@ -262,6 +262,7 @@ public class ExternalDocumentSources {
     this.oneDriveMetadata = oneDriveMetadata;
   }
 
+
   /**
    * salesforceEnabled.
    *
@@ -274,7 +275,6 @@ public class ExternalDocumentSources {
 
   /**
    * .
-   * 
    * @return salesforceEnabled
    **/
   @Schema(description = "")
@@ -289,6 +289,7 @@ public class ExternalDocumentSources {
     this.salesforceEnabled = salesforceEnabled;
   }
 
+
   /**
    * salesforceMetadata.
    *
@@ -301,7 +302,6 @@ public class ExternalDocumentSources {
 
   /**
    * Metadata indicating whether the `salesforceEnabled` property is editable..
-   * 
    * @return salesforceMetadata
    **/
   @Schema(description = "Metadata indicating whether the `salesforceEnabled` property is editable.")
@@ -315,6 +315,7 @@ public class ExternalDocumentSources {
   public void setSalesforceMetadata(SettingsMetadata salesforceMetadata) {
     this.salesforceMetadata = salesforceMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -347,9 +348,9 @@ public class ExternalDocumentSources {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(boxnetEnabled, boxnetMetadata, dropboxEnabled, dropboxMetadata, googleDriveEnabled,
-        googleDriveMetadata, oneDriveEnabled, oneDriveMetadata, salesforceEnabled, salesforceMetadata);
+    return Objects.hash(boxnetEnabled, boxnetMetadata, dropboxEnabled, dropboxMetadata, googleDriveEnabled, googleDriveMetadata, oneDriveEnabled, oneDriveMetadata, salesforceEnabled, salesforceMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -358,7 +359,7 @@ public class ExternalDocumentSources {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalDocumentSources {\n");
-
+    
     sb.append("    boxnetEnabled: ").append(toIndentedString(boxnetEnabled)).append("\n");
     sb.append("    boxnetMetadata: ").append(toIndentedString(boxnetMetadata)).append("\n");
     sb.append("    dropboxEnabled: ").append(toIndentedString(dropboxEnabled)).append("\n");
@@ -385,3 +386,4 @@ public class ExternalDocumentSources {
   }
 
 }
+

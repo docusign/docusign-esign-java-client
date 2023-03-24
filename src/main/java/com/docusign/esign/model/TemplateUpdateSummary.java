@@ -48,6 +48,7 @@ public class TemplateUpdateSummary {
   @JsonProperty("textCustomFieldUpdateResults")
   private java.util.List<TextCustomField> textCustomFieldUpdateResults = null;
 
+
   /**
    * bulkEnvelopeStatus.
    *
@@ -60,7 +61,6 @@ public class TemplateUpdateSummary {
 
   /**
    * An object that describes the status of the bulk send envelopes..
-   * 
    * @return bulkEnvelopeStatus
    **/
   @Schema(description = "An object that describes the status of the bulk send envelopes.")
@@ -75,6 +75,7 @@ public class TemplateUpdateSummary {
     this.bulkEnvelopeStatus = bulkEnvelopeStatus;
   }
 
+
   /**
    * envelopeId.
    *
@@ -87,7 +88,6 @@ public class TemplateUpdateSummary {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -102,6 +102,7 @@ public class TemplateUpdateSummary {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -113,12 +114,10 @@ public class TemplateUpdateSummary {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -130,17 +129,17 @@ public class TemplateUpdateSummary {
     this.errorDetails = errorDetails;
   }
 
+
   /**
    * listCustomFieldUpdateResults.
    *
    * @return TemplateUpdateSummary
    **/
-  public TemplateUpdateSummary listCustomFieldUpdateResults(
-      java.util.List<ListCustomField> listCustomFieldUpdateResults) {
+  public TemplateUpdateSummary listCustomFieldUpdateResults(java.util.List<ListCustomField> listCustomFieldUpdateResults) {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
     return this;
   }
-
+  
   /**
    * addListCustomFieldUpdateResultsItem.
    *
@@ -156,7 +155,6 @@ public class TemplateUpdateSummary {
 
   /**
    * .
-   * 
    * @return listCustomFieldUpdateResults
    **/
   @Schema(description = "")
@@ -171,6 +169,7 @@ public class TemplateUpdateSummary {
     this.listCustomFieldUpdateResults = listCustomFieldUpdateResults;
   }
 
+
   /**
    * lockInformation.
    *
@@ -183,7 +182,6 @@ public class TemplateUpdateSummary {
 
   /**
    * Provides lock information about an envelope that a user has locked..
-   * 
    * @return lockInformation
    **/
   @Schema(description = "Provides lock information about an envelope that a user has locked.")
@@ -198,6 +196,7 @@ public class TemplateUpdateSummary {
     this.lockInformation = lockInformation;
   }
 
+
   /**
    * purgeState.
    *
@@ -210,7 +209,6 @@ public class TemplateUpdateSummary {
 
   /**
    * .
-   * 
    * @return purgeState
    **/
   @Schema(description = "")
@@ -225,6 +223,7 @@ public class TemplateUpdateSummary {
     this.purgeState = purgeState;
   }
 
+
   /**
    * recipientUpdateResults.
    *
@@ -234,7 +233,7 @@ public class TemplateUpdateSummary {
     this.recipientUpdateResults = recipientUpdateResults;
     return this;
   }
-
+  
   /**
    * addRecipientUpdateResultsItem.
    *
@@ -250,7 +249,6 @@ public class TemplateUpdateSummary {
 
   /**
    * .
-   * 
    * @return recipientUpdateResults
    **/
   @Schema(description = "")
@@ -265,6 +263,7 @@ public class TemplateUpdateSummary {
     this.recipientUpdateResults = recipientUpdateResults;
   }
 
+
   /**
    * tabUpdateResults.
    *
@@ -277,7 +276,6 @@ public class TemplateUpdateSummary {
 
   /**
    * .
-   * 
    * @return tabUpdateResults
    **/
   @Schema(description = "")
@@ -292,17 +290,17 @@ public class TemplateUpdateSummary {
     this.tabUpdateResults = tabUpdateResults;
   }
 
+
   /**
    * textCustomFieldUpdateResults.
    *
    * @return TemplateUpdateSummary
    **/
-  public TemplateUpdateSummary textCustomFieldUpdateResults(
-      java.util.List<TextCustomField> textCustomFieldUpdateResults) {
+  public TemplateUpdateSummary textCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
     return this;
   }
-
+  
   /**
    * addTextCustomFieldUpdateResultsItem.
    *
@@ -318,7 +316,6 @@ public class TemplateUpdateSummary {
 
   /**
    * .
-   * 
    * @return textCustomFieldUpdateResults
    **/
   @Schema(description = "")
@@ -332,6 +329,7 @@ public class TemplateUpdateSummary {
   public void setTextCustomFieldUpdateResults(java.util.List<TextCustomField> textCustomFieldUpdateResults) {
     this.textCustomFieldUpdateResults = textCustomFieldUpdateResults;
   }
+
 
   /**
    * Compares objects.
@@ -363,9 +361,9 @@ public class TemplateUpdateSummary {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation,
-        purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
+    return Objects.hash(bulkEnvelopeStatus, envelopeId, errorDetails, listCustomFieldUpdateResults, lockInformation, purgeState, recipientUpdateResults, tabUpdateResults, textCustomFieldUpdateResults);
   }
+
 
   /**
    * Converts the given object to string.
@@ -374,7 +372,7 @@ public class TemplateUpdateSummary {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateUpdateSummary {\n");
-
+    
     sb.append("    bulkEnvelopeStatus: ").append(toIndentedString(bulkEnvelopeStatus)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
@@ -400,3 +398,4 @@ public class TemplateUpdateSummary {
   }
 
 }
+

@@ -20,6 +20,7 @@ public class FeatureAvailableMetadata {
   @JsonProperty("featureName")
   private String featureName = null;
 
+
   /**
    * availabilty.
    *
@@ -32,7 +33,6 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
-   * 
    * @return availabilty
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class FeatureAvailableMetadata {
     this.availabilty = availabilty;
   }
 
+
   /**
    * featureName.
    *
@@ -59,7 +60,6 @@ public class FeatureAvailableMetadata {
 
   /**
    * .
-   * 
    * @return featureName
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class FeatureAvailableMetadata {
   public void setFeatureName(String featureName) {
     this.featureName = featureName;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class FeatureAvailableMetadata {
     return Objects.hash(availabilty, featureName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class FeatureAvailableMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FeatureAvailableMetadata {\n");
-
+    
     sb.append("    availabilty: ").append(toIndentedString(availabilty)).append("\n");
     sb.append("    featureName: ").append(toIndentedString(featureName)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class FeatureAvailableMetadata {
   }
 
 }
+

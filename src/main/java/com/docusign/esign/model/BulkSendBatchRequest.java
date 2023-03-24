@@ -17,6 +17,7 @@ public class BulkSendBatchRequest {
   @JsonProperty("batchName")
   private String batchName = null;
 
+
   /**
    * batchName.
    *
@@ -29,7 +30,6 @@ public class BulkSendBatchRequest {
 
   /**
    * .
-   * 
    * @return batchName
    **/
   @Schema(description = "")
@@ -43,6 +43,7 @@ public class BulkSendBatchRequest {
   public void setBatchName(String batchName) {
     this.batchName = batchName;
   }
+
 
   /**
    * Compares objects.
@@ -69,6 +70,7 @@ public class BulkSendBatchRequest {
     return Objects.hash(batchName);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -76,7 +78,7 @@ public class BulkSendBatchRequest {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchRequest {\n");
-
+    
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -94,3 +96,4 @@ public class BulkSendBatchRequest {
   }
 
 }
+

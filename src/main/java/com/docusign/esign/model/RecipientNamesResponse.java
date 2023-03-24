@@ -24,6 +24,7 @@ public class RecipientNamesResponse {
   @JsonProperty("reservedRecipientEmail")
   private String reservedRecipientEmail = null;
 
+
   /**
    * multipleUsers.
    *
@@ -36,7 +37,6 @@ public class RecipientNamesResponse {
 
   /**
    * Indicates whether email address is used by more than one user..
-   * 
    * @return multipleUsers
    **/
   @Schema(description = "Indicates whether email address is used by more than one user.")
@@ -51,6 +51,7 @@ public class RecipientNamesResponse {
     this.multipleUsers = multipleUsers;
   }
 
+
   /**
    * recipientNames.
    *
@@ -60,7 +61,7 @@ public class RecipientNamesResponse {
     this.recipientNames = recipientNames;
     return this;
   }
-
+  
   /**
    * addRecipientNamesItem.
    *
@@ -76,7 +77,6 @@ public class RecipientNamesResponse {
 
   /**
    * .
-   * 
    * @return recipientNames
    **/
   @Schema(description = "")
@@ -91,6 +91,7 @@ public class RecipientNamesResponse {
     this.recipientNames = recipientNames;
   }
 
+
   /**
    * reservedRecipientEmail.
    *
@@ -103,7 +104,6 @@ public class RecipientNamesResponse {
 
   /**
    * .
-   * 
    * @return reservedRecipientEmail
    **/
   @Schema(description = "")
@@ -117,6 +117,7 @@ public class RecipientNamesResponse {
   public void setReservedRecipientEmail(String reservedRecipientEmail) {
     this.reservedRecipientEmail = reservedRecipientEmail;
   }
+
 
   /**
    * Compares objects.
@@ -145,6 +146,7 @@ public class RecipientNamesResponse {
     return Objects.hash(multipleUsers, recipientNames, reservedRecipientEmail);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -152,7 +154,7 @@ public class RecipientNamesResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientNamesResponse {\n");
-
+    
     sb.append("    multipleUsers: ").append(toIndentedString(multipleUsers)).append("\n");
     sb.append("    recipientNames: ").append(toIndentedString(recipientNames)).append("\n");
     sb.append("    reservedRecipientEmail: ").append(toIndentedString(reservedRecipientEmail)).append("\n");
@@ -172,3 +174,4 @@ public class RecipientNamesResponse {
   }
 
 }
+

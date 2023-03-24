@@ -20,6 +20,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
   @JsonProperty("minimumAge")
   private String minimumAge = null;
 
+
   /**
    * maximumAge.
    *
@@ -32,7 +33,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
 
   /**
    * .
-   * 
    * @return maximumAge
    **/
   @Schema(description = "")
@@ -47,6 +47,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
     this.maximumAge = maximumAge;
   }
 
+
   /**
    * minimumAge.
    *
@@ -59,7 +60,6 @@ public class AccountPasswordMinimumPasswordAgeDays {
 
   /**
    * .
-   * 
    * @return minimumAge
    **/
   @Schema(description = "")
@@ -73,6 +73,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
   public void setMinimumAge(String minimumAge) {
     this.minimumAge = minimumAge;
   }
+
 
   /**
    * Compares objects.
@@ -100,6 +101,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
     return Objects.hash(maximumAge, minimumAge);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -107,7 +109,7 @@ public class AccountPasswordMinimumPasswordAgeDays {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountPasswordMinimumPasswordAgeDays {\n");
-
+    
     sb.append("    maximumAge: ").append(toIndentedString(maximumAge)).append("\n");
     sb.append("    minimumAge: ").append(toIndentedString(minimumAge)).append("\n");
     sb.append("}");
@@ -126,3 +128,4 @@ public class AccountPasswordMinimumPasswordAgeDays {
   }
 
 }
+

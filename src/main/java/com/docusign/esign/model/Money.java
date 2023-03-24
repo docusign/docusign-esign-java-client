@@ -24,6 +24,7 @@ public class Money {
   @JsonProperty("displayAmount")
   private String displayAmount = null;
 
+
   /**
    * amountInBaseUnit.
    *
@@ -36,7 +37,6 @@ public class Money {
 
   /**
    * .
-   * 
    * @return amountInBaseUnit
    **/
   @Schema(description = "")
@@ -51,6 +51,7 @@ public class Money {
     this.amountInBaseUnit = amountInBaseUnit;
   }
 
+
   /**
    * currency.
    *
@@ -63,7 +64,6 @@ public class Money {
 
   /**
    * .
-   * 
    * @return currency
    **/
   @Schema(description = "")
@@ -78,6 +78,7 @@ public class Money {
     this.currency = currency;
   }
 
+
   /**
    * displayAmount.
    *
@@ -90,7 +91,6 @@ public class Money {
 
   /**
    * .
-   * 
    * @return displayAmount
    **/
   @Schema(description = "")
@@ -104,6 +104,7 @@ public class Money {
   public void setDisplayAmount(String displayAmount) {
     this.displayAmount = displayAmount;
   }
+
 
   /**
    * Compares objects.
@@ -132,6 +133,7 @@ public class Money {
     return Objects.hash(amountInBaseUnit, currency, displayAmount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -139,7 +141,7 @@ public class Money {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Money {\n");
-
+    
     sb.append("    amountInBaseUnit: ").append(toIndentedString(amountInBaseUnit)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    displayAmount: ").append(toIndentedString(displayAmount)).append("\n");
@@ -159,3 +161,4 @@ public class Money {
   }
 
 }
+

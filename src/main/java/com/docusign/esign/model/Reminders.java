@@ -24,6 +24,7 @@ public class Reminders {
   @JsonProperty("reminderFrequency")
   private String reminderFrequency = null;
 
+
   /**
    * reminderDelay.
    *
@@ -35,9 +36,7 @@ public class Reminders {
   }
 
   /**
-   * An interger that sets the number of days after the recipient receives the
-   * envelope that reminder emails are sent to the recipient..
-   * 
+   * An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient..
    * @return reminderDelay
    **/
   @Schema(description = "An interger that sets the number of days after the recipient receives the envelope that reminder emails are sent to the recipient.")
@@ -52,6 +51,7 @@ public class Reminders {
     this.reminderDelay = reminderDelay;
   }
 
+
   /**
    * reminderEnabled.
    *
@@ -63,11 +63,7 @@ public class Reminders {
   }
 
   /**
-   * When set to **true**, the envelope expires (is no longer available for
-   * signing) in the set number of days. If false, the account default setting is
-   * used. If the account does not have an expiration setting, the DocuSign
-   * default value of 120 days is used..
-   * 
+   * When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used..
    * @return reminderEnabled
    **/
   @Schema(description = "When set to **true**, the envelope expires (is no longer available for signing) in the set number of days. If false, the account default setting is used. If the account does not have an expiration setting, the DocuSign default value of 120 days is used.")
@@ -82,6 +78,7 @@ public class Reminders {
     this.reminderEnabled = reminderEnabled;
   }
 
+
   /**
    * reminderFrequency.
    *
@@ -94,7 +91,6 @@ public class Reminders {
 
   /**
    * An interger that sets the interval, in days, between reminder emails..
-   * 
    * @return reminderFrequency
    **/
   @Schema(description = "An interger that sets the interval, in days, between reminder emails.")
@@ -108,6 +104,7 @@ public class Reminders {
   public void setReminderFrequency(String reminderFrequency) {
     this.reminderFrequency = reminderFrequency;
   }
+
 
   /**
    * Compares objects.
@@ -136,6 +133,7 @@ public class Reminders {
     return Objects.hash(reminderDelay, reminderEnabled, reminderFrequency);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -143,7 +141,7 @@ public class Reminders {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reminders {\n");
-
+    
     sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
     sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
     sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
@@ -163,3 +161,4 @@ public class Reminders {
   }
 
 }
+

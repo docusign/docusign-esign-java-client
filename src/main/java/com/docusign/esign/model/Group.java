@@ -41,6 +41,7 @@ public class Group {
   @JsonProperty("usersCount")
   private String usersCount = null;
 
+
   /**
    * dsGroupId.
    *
@@ -53,7 +54,6 @@ public class Group {
 
   /**
    * .
-   * 
    * @return dsGroupId
    **/
   @Schema(description = "")
@@ -68,6 +68,7 @@ public class Group {
     this.dsGroupId = dsGroupId;
   }
 
+
   /**
    * errorDetails.
    *
@@ -79,12 +80,10 @@ public class Group {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -95,6 +94,7 @@ public class Group {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * groupId.
@@ -108,7 +108,6 @@ public class Group {
 
   /**
    * The DocuSign group ID for the group..
-   * 
    * @return groupId
    **/
   @Schema(description = "The DocuSign group ID for the group.")
@@ -123,6 +122,7 @@ public class Group {
     this.groupId = groupId;
   }
 
+
   /**
    * groupName.
    *
@@ -135,7 +135,6 @@ public class Group {
 
   /**
    * The name of the group..
-   * 
    * @return groupName
    **/
   @Schema(description = "The name of the group.")
@@ -150,6 +149,7 @@ public class Group {
     this.groupName = groupName;
   }
 
+
   /**
    * groupType.
    *
@@ -162,7 +162,6 @@ public class Group {
 
   /**
    * The group type..
-   * 
    * @return groupType
    **/
   @Schema(description = "The group type.")
@@ -177,6 +176,7 @@ public class Group {
     this.groupType = groupType;
   }
 
+
   /**
    * permissionProfileId.
    *
@@ -189,7 +189,6 @@ public class Group {
 
   /**
    * The ID of the permission profile associated with the group..
-   * 
    * @return permissionProfileId
    **/
   @Schema(description = "The ID of the permission profile associated with the group.")
@@ -204,6 +203,7 @@ public class Group {
     this.permissionProfileId = permissionProfileId;
   }
 
+
   /**
    * users.
    *
@@ -213,7 +213,7 @@ public class Group {
     this.users = users;
     return this;
   }
-
+  
   /**
    * addUsersItem.
    *
@@ -229,7 +229,6 @@ public class Group {
 
   /**
    * .
-   * 
    * @return users
    **/
   @Schema(description = "")
@@ -244,6 +243,7 @@ public class Group {
     this.users = users;
   }
 
+
   /**
    * usersCount.
    *
@@ -256,7 +256,6 @@ public class Group {
 
   /**
    * .
-   * 
    * @return usersCount
    **/
   @Schema(description = "")
@@ -270,6 +269,7 @@ public class Group {
   public void setUsersCount(String usersCount) {
     this.usersCount = usersCount;
   }
+
 
   /**
    * Compares objects.
@@ -303,6 +303,7 @@ public class Group {
     return Objects.hash(dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -310,7 +311,7 @@ public class Group {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
-
+    
     sb.append("    dsGroupId: ").append(toIndentedString(dsGroupId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
@@ -335,3 +336,4 @@ public class Group {
   }
 
 }
+

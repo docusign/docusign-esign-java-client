@@ -26,6 +26,7 @@ public class PolyLine {
   @JsonProperty("y2")
   private String y2 = null;
 
+
   /**
    * x1.
    *
@@ -38,7 +39,6 @@ public class PolyLine {
 
   /**
    * .
-   * 
    * @return x1
    **/
   @Schema(description = "")
@@ -53,6 +53,7 @@ public class PolyLine {
     this.x1 = x1;
   }
 
+
   /**
    * x2.
    *
@@ -65,7 +66,6 @@ public class PolyLine {
 
   /**
    * .
-   * 
    * @return x2
    **/
   @Schema(description = "")
@@ -80,6 +80,7 @@ public class PolyLine {
     this.x2 = x2;
   }
 
+
   /**
    * y1.
    *
@@ -92,7 +93,6 @@ public class PolyLine {
 
   /**
    * .
-   * 
    * @return y1
    **/
   @Schema(description = "")
@@ -107,6 +107,7 @@ public class PolyLine {
     this.y1 = y1;
   }
 
+
   /**
    * y2.
    *
@@ -119,7 +120,6 @@ public class PolyLine {
 
   /**
    * .
-   * 
    * @return y2
    **/
   @Schema(description = "")
@@ -133,6 +133,7 @@ public class PolyLine {
   public void setY2(String y2) {
     this.y2 = y2;
   }
+
 
   /**
    * Compares objects.
@@ -162,6 +163,7 @@ public class PolyLine {
     return Objects.hash(x1, x2, y1, y2);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -169,7 +171,7 @@ public class PolyLine {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PolyLine {\n");
-
+    
     sb.append("    x1: ").append(toIndentedString(x1)).append("\n");
     sb.append("    x2: ").append(toIndentedString(x2)).append("\n");
     sb.append("    y1: ").append(toIndentedString(y1)).append("\n");
@@ -190,3 +192,4 @@ public class PolyLine {
   }
 
 }
+

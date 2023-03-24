@@ -21,24 +21,23 @@ public class SignatureProviderRequiredOption {
   @JsonProperty("signerType")
   private String signerType = null;
 
+
   /**
    * requiredSignatureProviderOptionIds.
    *
    * @return SignatureProviderRequiredOption
    **/
-  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(
-      java.util.List<String> requiredSignatureProviderOptionIds) {
+  public SignatureProviderRequiredOption requiredSignatureProviderOptionIds(java.util.List<String> requiredSignatureProviderOptionIds) {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
     return this;
   }
-
+  
   /**
    * addRequiredSignatureProviderOptionIdsItem.
    *
    * @return SignatureProviderRequiredOption
    **/
-  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(
-      String requiredSignatureProviderOptionIdsItem) {
+  public SignatureProviderRequiredOption addRequiredSignatureProviderOptionIdsItem(String requiredSignatureProviderOptionIdsItem) {
     if (this.requiredSignatureProviderOptionIds == null) {
       this.requiredSignatureProviderOptionIds = new java.util.ArrayList<>();
     }
@@ -48,7 +47,6 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
-   * 
    * @return requiredSignatureProviderOptionIds
    **/
   @Schema(description = "")
@@ -63,6 +61,7 @@ public class SignatureProviderRequiredOption {
     this.requiredSignatureProviderOptionIds = requiredSignatureProviderOptionIds;
   }
 
+
   /**
    * signerType.
    *
@@ -75,7 +74,6 @@ public class SignatureProviderRequiredOption {
 
   /**
    * .
-   * 
    * @return signerType
    **/
   @Schema(description = "")
@@ -89,6 +87,7 @@ public class SignatureProviderRequiredOption {
   public void setSignerType(String signerType) {
     this.signerType = signerType;
   }
+
 
   /**
    * Compares objects.
@@ -104,8 +103,7 @@ public class SignatureProviderRequiredOption {
       return false;
     }
     SignatureProviderRequiredOption signatureProviderRequiredOption = (SignatureProviderRequiredOption) o;
-    return Objects.equals(this.requiredSignatureProviderOptionIds,
-        signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
+    return Objects.equals(this.requiredSignatureProviderOptionIds, signatureProviderRequiredOption.requiredSignatureProviderOptionIds) &&
         Objects.equals(this.signerType, signatureProviderRequiredOption.signerType);
   }
 
@@ -117,6 +115,7 @@ public class SignatureProviderRequiredOption {
     return Objects.hash(requiredSignatureProviderOptionIds, signerType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -124,9 +123,8 @@ public class SignatureProviderRequiredOption {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignatureProviderRequiredOption {\n");
-
-    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds))
-        .append("\n");
+    
+    sb.append("    requiredSignatureProviderOptionIds: ").append(toIndentedString(requiredSignatureProviderOptionIds)).append("\n");
     sb.append("    signerType: ").append(toIndentedString(signerType)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -144,3 +142,4 @@ public class SignatureProviderRequiredOption {
   }
 
 }
+

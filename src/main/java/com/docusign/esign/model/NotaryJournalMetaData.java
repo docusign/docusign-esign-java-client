@@ -27,6 +27,7 @@ public class NotaryJournalMetaData {
   @JsonProperty("signerIdType")
   private String signerIdType = null;
 
+
   /**
    * comment.
    *
@@ -39,7 +40,6 @@ public class NotaryJournalMetaData {
 
   /**
    * .
-   * 
    * @return comment
    **/
   @Schema(description = "")
@@ -54,6 +54,7 @@ public class NotaryJournalMetaData {
     this.comment = comment;
   }
 
+
   /**
    * credibleWitnesses.
    *
@@ -63,7 +64,7 @@ public class NotaryJournalMetaData {
     this.credibleWitnesses = credibleWitnesses;
     return this;
   }
-
+  
   /**
    * addCredibleWitnessesItem.
    *
@@ -79,7 +80,6 @@ public class NotaryJournalMetaData {
 
   /**
    * .
-   * 
    * @return credibleWitnesses
    **/
   @Schema(description = "")
@@ -94,6 +94,7 @@ public class NotaryJournalMetaData {
     this.credibleWitnesses = credibleWitnesses;
   }
 
+
   /**
    * signatureImage.
    *
@@ -106,7 +107,6 @@ public class NotaryJournalMetaData {
 
   /**
    * .
-   * 
    * @return signatureImage
    **/
   @Schema(description = "")
@@ -121,6 +121,7 @@ public class NotaryJournalMetaData {
     this.signatureImage = signatureImage;
   }
 
+
   /**
    * signerIdType.
    *
@@ -133,7 +134,6 @@ public class NotaryJournalMetaData {
 
   /**
    * .
-   * 
    * @return signerIdType
    **/
   @Schema(description = "")
@@ -147,6 +147,7 @@ public class NotaryJournalMetaData {
   public void setSignerIdType(String signerIdType) {
     this.signerIdType = signerIdType;
   }
+
 
   /**
    * Compares objects.
@@ -176,6 +177,7 @@ public class NotaryJournalMetaData {
     return Objects.hash(comment, credibleWitnesses, signatureImage, signerIdType);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -183,7 +185,7 @@ public class NotaryJournalMetaData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NotaryJournalMetaData {\n");
-
+    
     sb.append("    comment: ").append(toIndentedString(comment)).append("\n");
     sb.append("    credibleWitnesses: ").append(toIndentedString(credibleWitnesses)).append("\n");
     sb.append("    signatureImage: ").append(toIndentedString(signatureImage)).append("\n");
@@ -204,3 +206,4 @@ public class NotaryJournalMetaData {
   }
 
 }
+

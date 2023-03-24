@@ -193,6 +193,12 @@ public class AccountSettingsInformation {
   @JsonProperty("allowDocumentVisibilityMetadata")
   private SettingsMetadata allowDocumentVisibilityMetadata = null;
 
+  @JsonProperty("allowEditingEnvelopesOnBehalfOfOthers")
+  private String allowEditingEnvelopesOnBehalfOfOthers = null;
+
+  @JsonProperty("allowEditingEnvelopesOnBehalfOfOthersMetadata")
+  private SettingsMetadata allowEditingEnvelopesOnBehalfOfOthersMetadata = null;
+
   @JsonProperty("allowEHankoStamps")
   private String allowEHankoStamps = null;
 
@@ -880,6 +886,9 @@ public class AccountSettingsInformation {
   @JsonProperty("documentVisibilityMetadata")
   private SettingsMetadata documentVisibilityMetadata = null;
 
+  @JsonProperty("dss_EnableProvisioningPenConfiguration_RadminOption")
+  private String dssEnableProvisioningPenConfigurationRadminOption = null;
+
   @JsonProperty("dss_SIGN_28411_EnableLeavePagePrompt_RadminOption")
   private String dssSIGN28411EnableLeavePagePromptRadminOption = null;
 
@@ -1312,16 +1321,16 @@ public class AccountSettingsInformation {
   @JsonProperty("envelopeIntegrationEnabledMetadata")
   private SettingsMetadata envelopeIntegrationEnabledMetadata = null;
 
-  @JsonProperty("envelopeLimitsTotalDocumentSizeAllowedInMB")
+  @JsonProperty("EnvelopeLimitsTotalDocumentSizeAllowedInMB")
   private String envelopeLimitsTotalDocumentSizeAllowedInMB = null;
 
-  @JsonProperty("envelopeLimitsTotalDocumentSizeAllowedInMBEnabled")
+  @JsonProperty("EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled")
   private String envelopeLimitsTotalDocumentSizeAllowedInMBEnabled = null;
 
-  @JsonProperty("envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata")
+  @JsonProperty("EnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata")
   private SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata = null;
 
-  @JsonProperty("envelopeLimitsTotalDocumentSizeAllowedInMBMetadata")
+  @JsonProperty("EnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata")
   private SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBMetadata = null;
 
   @JsonProperty("envelopeSearchMode")
@@ -1477,6 +1486,9 @@ public class AccountSettingsInformation {
   @JsonProperty("inSessionSuppressEmailsMetadata")
   private SettingsMetadata inSessionSuppressEmailsMetadata = null;
 
+  @JsonProperty("isConnectDocumentFieldsEnabled")
+  private String isConnectDocumentFieldsEnabled = null;
+
   @JsonProperty("linkedExternalPrimaryAccounts")
   private java.util.List<LinkedExternalPrimaryAccount> linkedExternalPrimaryAccounts = null;
 
@@ -1515,6 +1527,9 @@ public class AccountSettingsInformation {
 
   @JsonProperty("optInMobileSigningV02Metadata")
   private SettingsMetadata optInMobileSigningV02Metadata = null;
+
+  @JsonProperty("optInUniversalSignatures")
+  private String optInUniversalSignatures = null;
 
   @JsonProperty("optOutAutoNavTextAndTabColorUpdates")
   private String optOutAutoNavTextAndTabColorUpdates = null;
@@ -2032,6 +2047,7 @@ public class AccountSettingsInformation {
   @JsonProperty("wurflMinAllowableScreenSizeMetadata")
   private SettingsMetadata wurflMinAllowableScreenSizeMetadata = null;
 
+
   /**
    * accessCodeFormat.
    *
@@ -2044,7 +2060,6 @@ public class AccountSettingsInformation {
 
   /**
    * Format of the string provided to a recipient in order to access an envelope..
-   * 
    * @return accessCodeFormat
    **/
   @Schema(description = "Format of the string provided to a recipient in order to access an envelope.")
@@ -2059,6 +2074,7 @@ public class AccountSettingsInformation {
     this.accessCodeFormat = accessCodeFormat;
   }
 
+
   /**
    * accountDateTimeFormat.
    *
@@ -2071,7 +2087,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return accountDateTimeFormat
    **/
   @Schema(description = "")
@@ -2086,6 +2101,7 @@ public class AccountSettingsInformation {
     this.accountDateTimeFormat = accountDateTimeFormat;
   }
 
+
   /**
    * accountDateTimeFormatMetadata.
    *
@@ -2097,9 +2113,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `accountDateTimeFormat` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `accountDateTimeFormat` property is editable..
    * @return accountDateTimeFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `accountDateTimeFormat` property is editable.")
@@ -2114,6 +2128,7 @@ public class AccountSettingsInformation {
     this.accountDateTimeFormatMetadata = accountDateTimeFormatMetadata;
   }
 
+
   /**
    * accountDefaultLanguage.
    *
@@ -2126,7 +2141,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return accountDefaultLanguage
    **/
   @Schema(description = "")
@@ -2141,6 +2155,7 @@ public class AccountSettingsInformation {
     this.accountDefaultLanguage = accountDefaultLanguage;
   }
 
+
   /**
    * accountDefaultLanguageMetadata.
    *
@@ -2153,7 +2168,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return accountDefaultLanguageMetadata
    **/
   @Schema(description = "")
@@ -2168,6 +2182,7 @@ public class AccountSettingsInformation {
     this.accountDefaultLanguageMetadata = accountDefaultLanguageMetadata;
   }
 
+
   /**
    * accountName.
    *
@@ -2180,7 +2195,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return accountName
    **/
   @Schema(description = "")
@@ -2195,6 +2209,7 @@ public class AccountSettingsInformation {
     this.accountName = accountName;
   }
 
+
   /**
    * accountNameMetadata.
    *
@@ -2207,7 +2222,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `accountName` property is editable..
-   * 
    * @return accountNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `accountName` property is editable.")
@@ -2222,6 +2236,7 @@ public class AccountSettingsInformation {
     this.accountNameMetadata = accountNameMetadata;
   }
 
+
   /**
    * accountNotification.
    *
@@ -2233,9 +2248,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * An object that specifies notifications (expirations and reminders) for the
-   * envelope..
-   * 
+   * An object that specifies notifications (expirations and reminders) for the envelope..
    * @return accountNotification
    **/
   @Schema(description = "An object that specifies notifications (expirations and reminders) for the envelope.")
@@ -2250,6 +2263,7 @@ public class AccountSettingsInformation {
     this.accountNotification = accountNotification;
   }
 
+
   /**
    * accountUISettings.
    *
@@ -2262,7 +2276,6 @@ public class AccountSettingsInformation {
 
   /**
    * An object that defines the settings to use in the UI..
-   * 
    * @return accountUISettings
    **/
   @Schema(description = "An object that defines the settings to use in the UI.")
@@ -2277,6 +2290,7 @@ public class AccountSettingsInformation {
     this.accountUISettings = accountUISettings;
   }
 
+
   /**
    * adoptSigConfig.
    *
@@ -2289,7 +2303,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return adoptSigConfig
    **/
   @Schema(description = "")
@@ -2304,6 +2317,7 @@ public class AccountSettingsInformation {
     this.adoptSigConfig = adoptSigConfig;
   }
 
+
   /**
    * adoptSigConfigMetadata.
    *
@@ -2316,7 +2330,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `adoptSigConfig` property is editable. .
-   * 
    * @return adoptSigConfigMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `adoptSigConfig` property is editable. ")
@@ -2331,6 +2344,7 @@ public class AccountSettingsInformation {
     this.adoptSigConfigMetadata = adoptSigConfigMetadata;
   }
 
+
   /**
    * advancedCorrect.
    *
@@ -2343,7 +2357,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return advancedCorrect
    **/
   @Schema(description = "")
@@ -2358,6 +2371,7 @@ public class AccountSettingsInformation {
     this.advancedCorrect = advancedCorrect;
   }
 
+
   /**
    * advancedCorrectMetadata.
    *
@@ -2370,7 +2384,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `advancedCorrect` property is editable. .
-   * 
    * @return advancedCorrectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `advancedCorrect` property is editable. ")
@@ -2385,6 +2398,7 @@ public class AccountSettingsInformation {
     this.advancedCorrectMetadata = advancedCorrectMetadata;
   }
 
+
   /**
    * allowAccessCodeFormat.
    *
@@ -2397,7 +2411,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAccessCodeFormat
    **/
   @Schema(description = "")
@@ -2412,6 +2425,7 @@ public class AccountSettingsInformation {
     this.allowAccessCodeFormat = allowAccessCodeFormat;
   }
 
+
   /**
    * allowAccessCodeFormatMetadata.
    *
@@ -2423,9 +2437,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowAccessCodeFormat` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowAccessCodeFormat` property is editable. .
    * @return allowAccessCodeFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAccessCodeFormat` property is editable. ")
@@ -2440,6 +2452,7 @@ public class AccountSettingsInformation {
     this.allowAccessCodeFormatMetadata = allowAccessCodeFormatMetadata;
   }
 
+
   /**
    * allowAccountManagementGranular.
    *
@@ -2452,7 +2465,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAccountManagementGranular
    **/
   @Schema(description = "")
@@ -2467,21 +2479,19 @@ public class AccountSettingsInformation {
     this.allowAccountManagementGranular = allowAccountManagementGranular;
   }
 
+
   /**
    * allowAccountManagementGranularMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowAccountManagementGranularMetadata(
-      SettingsMetadata allowAccountManagementGranularMetadata) {
+  public AccountSettingsInformation allowAccountManagementGranularMetadata(SettingsMetadata allowAccountManagementGranularMetadata) {
     this.allowAccountManagementGranularMetadata = allowAccountManagementGranularMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowAccountManagementGranular` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowAccountManagementGranular` property is editable. .
    * @return allowAccountManagementGranularMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAccountManagementGranular` property is editable. ")
@@ -2496,6 +2506,7 @@ public class AccountSettingsInformation {
     this.allowAccountManagementGranularMetadata = allowAccountManagementGranularMetadata;
   }
 
+
   /**
    * allowAccountMemberNameChange.
    *
@@ -2508,7 +2519,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAccountMemberNameChange
    **/
   @Schema(description = "")
@@ -2523,21 +2533,19 @@ public class AccountSettingsInformation {
     this.allowAccountMemberNameChange = allowAccountMemberNameChange;
   }
 
+
   /**
    * allowAccountMemberNameChangeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowAccountMemberNameChangeMetadata(
-      SettingsMetadata allowAccountMemberNameChangeMetadata) {
+  public AccountSettingsInformation allowAccountMemberNameChangeMetadata(SettingsMetadata allowAccountMemberNameChangeMetadata) {
     this.allowAccountMemberNameChangeMetadata = allowAccountMemberNameChangeMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowAccountMemberNameChange` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowAccountMemberNameChange` property is editable. .
    * @return allowAccountMemberNameChangeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAccountMemberNameChange` property is editable. ")
@@ -2552,20 +2560,19 @@ public class AccountSettingsInformation {
     this.allowAccountMemberNameChangeMetadata = allowAccountMemberNameChangeMetadata;
   }
 
+
   /**
    * allowAdvancedRecipientRoutingConditional.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowAdvancedRecipientRoutingConditional(
-      String allowAdvancedRecipientRoutingConditional) {
+  public AccountSettingsInformation allowAdvancedRecipientRoutingConditional(String allowAdvancedRecipientRoutingConditional) {
     this.allowAdvancedRecipientRoutingConditional = allowAdvancedRecipientRoutingConditional;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowAdvancedRecipientRoutingConditional
    **/
   @Schema(description = "")
@@ -2580,21 +2587,19 @@ public class AccountSettingsInformation {
     this.allowAdvancedRecipientRoutingConditional = allowAdvancedRecipientRoutingConditional;
   }
 
+
   /**
    * allowAdvancedRecipientRoutingConditionalMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowAdvancedRecipientRoutingConditionalMetadata(
-      SettingsMetadata allowAdvancedRecipientRoutingConditionalMetadata) {
+  public AccountSettingsInformation allowAdvancedRecipientRoutingConditionalMetadata(SettingsMetadata allowAdvancedRecipientRoutingConditionalMetadata) {
     this.allowAdvancedRecipientRoutingConditionalMetadata = allowAdvancedRecipientRoutingConditionalMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `
-   * allowAdvancedRecipientRoutingConditional` property is editable..
-   * 
+   * Metadata that indicates whether the ` allowAdvancedRecipientRoutingConditional` property is editable..
    * @return allowAdvancedRecipientRoutingConditionalMetadata
    **/
   @Schema(description = "Metadata that indicates whether the ` allowAdvancedRecipientRoutingConditional` property is editable.")
@@ -2605,10 +2610,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowAdvancedRecipientRoutingConditionalMetadata.
    **/
-  public void setAllowAdvancedRecipientRoutingConditionalMetadata(
-      SettingsMetadata allowAdvancedRecipientRoutingConditionalMetadata) {
+  public void setAllowAdvancedRecipientRoutingConditionalMetadata(SettingsMetadata allowAdvancedRecipientRoutingConditionalMetadata) {
     this.allowAdvancedRecipientRoutingConditionalMetadata = allowAdvancedRecipientRoutingConditionalMetadata;
   }
+
 
   /**
    * allowAgentNameEmailEdit.
@@ -2622,7 +2627,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAgentNameEmailEdit
    **/
   @Schema(description = "")
@@ -2637,6 +2641,7 @@ public class AccountSettingsInformation {
     this.allowAgentNameEmailEdit = allowAgentNameEmailEdit;
   }
 
+
   /**
    * allowAgentNameEmailEditMetadata.
    *
@@ -2648,9 +2653,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowAgentNameEmailEdit` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowAgentNameEmailEdit` property is editable. .
    * @return allowAgentNameEmailEditMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAgentNameEmailEdit` property is editable. ")
@@ -2665,6 +2668,7 @@ public class AccountSettingsInformation {
     this.allowAgentNameEmailEditMetadata = allowAgentNameEmailEditMetadata;
   }
 
+
   /**
    * allowAgreementActions.
    *
@@ -2677,7 +2681,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAgreementActions
    **/
   @Schema(description = "")
@@ -2692,6 +2695,7 @@ public class AccountSettingsInformation {
     this.allowAgreementActions = allowAgreementActions;
   }
 
+
   /**
    * allowAgreementActionsMetadata.
    *
@@ -2704,7 +2708,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata about the `allowAgreementActions` property..
-   * 
    * @return allowAgreementActionsMetadata
    **/
   @Schema(description = "Metadata about the `allowAgreementActions` property.")
@@ -2719,6 +2722,7 @@ public class AccountSettingsInformation {
     this.allowAgreementActionsMetadata = allowAgreementActionsMetadata;
   }
 
+
   /**
    * allowAgreementOrchestrationWorkflows.
    *
@@ -2731,7 +2735,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAgreementOrchestrationWorkflows
    **/
   @Schema(description = "")
@@ -2746,20 +2749,19 @@ public class AccountSettingsInformation {
     this.allowAgreementOrchestrationWorkflows = allowAgreementOrchestrationWorkflows;
   }
 
+
   /**
    * allowAgreementOrchestrationWorkflowsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowAgreementOrchestrationWorkflowsMetadata(
-      SettingsMetadata allowAgreementOrchestrationWorkflowsMetadata) {
+  public AccountSettingsInformation allowAgreementOrchestrationWorkflowsMetadata(SettingsMetadata allowAgreementOrchestrationWorkflowsMetadata) {
     this.allowAgreementOrchestrationWorkflowsMetadata = allowAgreementOrchestrationWorkflowsMetadata;
     return this;
   }
 
   /**
-   * Get allowAgreementOrchestrationWorkflowsMetadata.
-   * 
+   * .
    * @return allowAgreementOrchestrationWorkflowsMetadata
    **/
   @Schema(description = "")
@@ -2770,10 +2772,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowAgreementOrchestrationWorkflowsMetadata.
    **/
-  public void setAllowAgreementOrchestrationWorkflowsMetadata(
-      SettingsMetadata allowAgreementOrchestrationWorkflowsMetadata) {
+  public void setAllowAgreementOrchestrationWorkflowsMetadata(SettingsMetadata allowAgreementOrchestrationWorkflowsMetadata) {
     this.allowAgreementOrchestrationWorkflowsMetadata = allowAgreementOrchestrationWorkflowsMetadata;
   }
+
 
   /**
    * allowAutoNavSettings.
@@ -2787,7 +2789,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAutoNavSettings
    **/
   @Schema(description = "")
@@ -2802,6 +2803,7 @@ public class AccountSettingsInformation {
     this.allowAutoNavSettings = allowAutoNavSettings;
   }
 
+
   /**
    * allowAutoNavSettingsMetadata.
    *
@@ -2813,9 +2815,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowAutoNavSettings` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowAutoNavSettings` property is editable. .
    * @return allowAutoNavSettingsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAutoNavSettings` property is editable. ")
@@ -2830,6 +2830,7 @@ public class AccountSettingsInformation {
     this.allowAutoNavSettingsMetadata = allowAutoNavSettingsMetadata;
   }
 
+
   /**
    * allowAutoTagging.
    *
@@ -2842,7 +2843,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowAutoTagging
    **/
   @Schema(description = "")
@@ -2857,6 +2857,7 @@ public class AccountSettingsInformation {
     this.allowAutoTagging = allowAutoTagging;
   }
 
+
   /**
    * allowAutoTaggingMetadata.
    *
@@ -2869,7 +2870,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowAutoTagging` property is editable..
-   * 
    * @return allowAutoTaggingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowAutoTagging` property is editable.")
@@ -2884,6 +2884,7 @@ public class AccountSettingsInformation {
     this.allowAutoTaggingMetadata = allowAutoTaggingMetadata;
   }
 
+
   /**
    * allowBulkSend.
    *
@@ -2896,7 +2897,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowBulkSend
    **/
   @Schema(description = "")
@@ -2911,6 +2911,7 @@ public class AccountSettingsInformation {
     this.allowBulkSend = allowBulkSend;
   }
 
+
   /**
    * allowBulkSendMetadata.
    *
@@ -2923,7 +2924,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowBulkSend` property is editable. .
-   * 
    * @return allowBulkSendMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowBulkSend` property is editable. ")
@@ -2938,6 +2938,7 @@ public class AccountSettingsInformation {
     this.allowBulkSendMetadata = allowBulkSendMetadata;
   }
 
+
   /**
    * allowCDWithdraw.
    *
@@ -2950,7 +2951,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowCDWithdraw
    **/
   @Schema(description = "")
@@ -2965,6 +2965,7 @@ public class AccountSettingsInformation {
     this.allowCDWithdraw = allowCDWithdraw;
   }
 
+
   /**
    * allowCDWithdrawMetadata.
    *
@@ -2977,7 +2978,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowCDWithdraw` property is editable. .
-   * 
    * @return allowCDWithdrawMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowCDWithdraw` property is editable. ")
@@ -2992,6 +2992,7 @@ public class AccountSettingsInformation {
     this.allowCDWithdrawMetadata = allowCDWithdrawMetadata;
   }
 
+
   /**
    * allowConnectHttpListenerConfigs.
    *
@@ -3004,7 +3005,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowConnectHttpListenerConfigs
    **/
   @Schema(description = "")
@@ -3019,6 +3019,7 @@ public class AccountSettingsInformation {
     this.allowConnectHttpListenerConfigs = allowConnectHttpListenerConfigs;
   }
 
+
   /**
    * allowConnectOAuthUI.
    *
@@ -3031,7 +3032,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowConnectOAuthUI
    **/
   @Schema(description = "")
@@ -3046,6 +3046,7 @@ public class AccountSettingsInformation {
     this.allowConnectOAuthUI = allowConnectOAuthUI;
   }
 
+
   /**
    * allowConnectSendFinishLater.
    *
@@ -3058,7 +3059,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowConnectSendFinishLater
    **/
   @Schema(description = "")
@@ -3073,21 +3073,19 @@ public class AccountSettingsInformation {
     this.allowConnectSendFinishLater = allowConnectSendFinishLater;
   }
 
+
   /**
    * allowConnectSendFinishLaterMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowConnectSendFinishLaterMetadata(
-      SettingsMetadata allowConnectSendFinishLaterMetadata) {
+  public AccountSettingsInformation allowConnectSendFinishLaterMetadata(SettingsMetadata allowConnectSendFinishLaterMetadata) {
     this.allowConnectSendFinishLaterMetadata = allowConnectSendFinishLaterMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowConnectSendFinishLater` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowConnectSendFinishLater` property is editable. .
    * @return allowConnectSendFinishLaterMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowConnectSendFinishLater` property is editable. ")
@@ -3102,6 +3100,7 @@ public class AccountSettingsInformation {
     this.allowConnectSendFinishLaterMetadata = allowConnectSendFinishLaterMetadata;
   }
 
+
   /**
    * allowConnectUnifiedPayloadUI.
    *
@@ -3114,7 +3113,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowConnectUnifiedPayloadUI
    **/
   @Schema(description = "")
@@ -3129,6 +3127,7 @@ public class AccountSettingsInformation {
     this.allowConnectUnifiedPayloadUI = allowConnectUnifiedPayloadUI;
   }
 
+
   /**
    * allowConsumerDisclosureOverride.
    *
@@ -3141,7 +3140,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowConsumerDisclosureOverride
    **/
   @Schema(description = "")
@@ -3156,21 +3154,19 @@ public class AccountSettingsInformation {
     this.allowConsumerDisclosureOverride = allowConsumerDisclosureOverride;
   }
 
+
   /**
    * allowConsumerDisclosureOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowConsumerDisclosureOverrideMetadata(
-      SettingsMetadata allowConsumerDisclosureOverrideMetadata) {
+  public AccountSettingsInformation allowConsumerDisclosureOverrideMetadata(SettingsMetadata allowConsumerDisclosureOverrideMetadata) {
     this.allowConsumerDisclosureOverrideMetadata = allowConsumerDisclosureOverrideMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowConsumerDisclosureOverride`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowConsumerDisclosureOverride` property is editable. .
    * @return allowConsumerDisclosureOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowConsumerDisclosureOverride` property is editable. ")
@@ -3185,6 +3181,7 @@ public class AccountSettingsInformation {
     this.allowConsumerDisclosureOverrideMetadata = allowConsumerDisclosureOverrideMetadata;
   }
 
+
   /**
    * allowDataDownload.
    *
@@ -3197,7 +3194,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDataDownload
    **/
   @Schema(description = "")
@@ -3212,6 +3208,7 @@ public class AccountSettingsInformation {
     this.allowDataDownload = allowDataDownload;
   }
 
+
   /**
    * allowDataDownloadMetadata.
    *
@@ -3223,9 +3220,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowDataDownload` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `allowDataDownload` property is editable. .
    * @return allowDataDownloadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowDataDownload` property is editable. ")
@@ -3240,6 +3235,7 @@ public class AccountSettingsInformation {
     this.allowDataDownloadMetadata = allowDataDownloadMetadata;
   }
 
+
   /**
    * allowDelayedRouting.
    *
@@ -3251,10 +3247,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * \\\"true\\\" if the account has permission to use the delayed routing feature
-   * to insert delays before routing an envelope to a recipient, \\\"false\\\"
-   * otherwise..
-   * 
+   * \\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise..
    * @return allowDelayedRouting
    **/
   @Schema(description = "\\\"true\\\" if the account has permission to use the delayed routing feature to insert delays before routing an envelope to a recipient, \\\"false\\\" otherwise.")
@@ -3269,6 +3262,7 @@ public class AccountSettingsInformation {
     this.allowDelayedRouting = allowDelayedRouting;
   }
 
+
   /**
    * allowDelayedRoutingMetadata.
    *
@@ -3281,7 +3275,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDelayedRoutingMetadata
    **/
   @Schema(description = "")
@@ -3296,6 +3289,7 @@ public class AccountSettingsInformation {
     this.allowDelayedRoutingMetadata = allowDelayedRoutingMetadata;
   }
 
+
   /**
    * allowDelegatedSigning.
    *
@@ -3308,7 +3302,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDelegatedSigning
    **/
   @Schema(description = "")
@@ -3323,6 +3316,7 @@ public class AccountSettingsInformation {
     this.allowDelegatedSigning = allowDelegatedSigning;
   }
 
+
   /**
    * allowDelegatedSigningMetadata.
    *
@@ -3335,7 +3329,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDelegatedSigningMetadata
    **/
   @Schema(description = "")
@@ -3350,6 +3343,7 @@ public class AccountSettingsInformation {
     this.allowDelegatedSigningMetadata = allowDelegatedSigningMetadata;
   }
 
+
   /**
    * allowDocGenDocuments.
    *
@@ -3362,7 +3356,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDocGenDocuments
    **/
   @Schema(description = "")
@@ -3377,6 +3370,7 @@ public class AccountSettingsInformation {
     this.allowDocGenDocuments = allowDocGenDocuments;
   }
 
+
   /**
    * allowDocGenDocumentsMetadata.
    *
@@ -3388,8 +3382,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get allowDocGenDocumentsMetadata.
-   * 
+   * .
    * @return allowDocGenDocumentsMetadata
    **/
   @Schema(description = "")
@@ -3404,6 +3397,7 @@ public class AccountSettingsInformation {
     this.allowDocGenDocumentsMetadata = allowDocGenDocumentsMetadata;
   }
 
+
   /**
    * allowDocumentDisclosures.
    *
@@ -3416,7 +3410,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDocumentDisclosures
    **/
   @Schema(description = "")
@@ -3431,21 +3424,19 @@ public class AccountSettingsInformation {
     this.allowDocumentDisclosures = allowDocumentDisclosures;
   }
 
+
   /**
    * allowDocumentDisclosuresMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowDocumentDisclosuresMetadata(
-      SettingsMetadata allowDocumentDisclosuresMetadata) {
+  public AccountSettingsInformation allowDocumentDisclosuresMetadata(SettingsMetadata allowDocumentDisclosuresMetadata) {
     this.allowDocumentDisclosuresMetadata = allowDocumentDisclosuresMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowDocumentDisclosures` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowDocumentDisclosures` property is editable. .
    * @return allowDocumentDisclosuresMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowDocumentDisclosures` property is editable. ")
@@ -3460,6 +3451,7 @@ public class AccountSettingsInformation {
     this.allowDocumentDisclosuresMetadata = allowDocumentDisclosuresMetadata;
   }
 
+
   /**
    * allowDocumentsOnSignedEnvelopes.
    *
@@ -3472,7 +3464,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDocumentsOnSignedEnvelopes
    **/
   @Schema(description = "")
@@ -3487,21 +3478,19 @@ public class AccountSettingsInformation {
     this.allowDocumentsOnSignedEnvelopes = allowDocumentsOnSignedEnvelopes;
   }
 
+
   /**
    * allowDocumentsOnSignedEnvelopesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowDocumentsOnSignedEnvelopesMetadata(
-      SettingsMetadata allowDocumentsOnSignedEnvelopesMetadata) {
+  public AccountSettingsInformation allowDocumentsOnSignedEnvelopesMetadata(SettingsMetadata allowDocumentsOnSignedEnvelopesMetadata) {
     this.allowDocumentsOnSignedEnvelopesMetadata = allowDocumentsOnSignedEnvelopesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowDocumentsOnSignedEnvelopes`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowDocumentsOnSignedEnvelopes` property is editable. .
    * @return allowDocumentsOnSignedEnvelopesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowDocumentsOnSignedEnvelopes` property is editable. ")
@@ -3516,6 +3505,7 @@ public class AccountSettingsInformation {
     this.allowDocumentsOnSignedEnvelopesMetadata = allowDocumentsOnSignedEnvelopesMetadata;
   }
 
+
   /**
    * allowDocumentVisibility.
    *
@@ -3528,7 +3518,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowDocumentVisibility
    **/
   @Schema(description = "")
@@ -3543,6 +3532,7 @@ public class AccountSettingsInformation {
     this.allowDocumentVisibility = allowDocumentVisibility;
   }
 
+
   /**
    * allowDocumentVisibilityMetadata.
    *
@@ -3554,9 +3544,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowDocumentVisibility` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowDocumentVisibility` property is editable. .
    * @return allowDocumentVisibilityMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowDocumentVisibility` property is editable. ")
@@ -3571,6 +3559,61 @@ public class AccountSettingsInformation {
     this.allowDocumentVisibilityMetadata = allowDocumentVisibilityMetadata;
   }
 
+
+  /**
+   * allowEditingEnvelopesOnBehalfOfOthers.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation allowEditingEnvelopesOnBehalfOfOthers(String allowEditingEnvelopesOnBehalfOfOthers) {
+    this.allowEditingEnvelopesOnBehalfOfOthers = allowEditingEnvelopesOnBehalfOfOthers;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowEditingEnvelopesOnBehalfOfOthers
+   **/
+  @Schema(description = "")
+  public String getAllowEditingEnvelopesOnBehalfOfOthers() {
+    return allowEditingEnvelopesOnBehalfOfOthers;
+  }
+
+  /**
+   * setAllowEditingEnvelopesOnBehalfOfOthers.
+   **/
+  public void setAllowEditingEnvelopesOnBehalfOfOthers(String allowEditingEnvelopesOnBehalfOfOthers) {
+    this.allowEditingEnvelopesOnBehalfOfOthers = allowEditingEnvelopesOnBehalfOfOthers;
+  }
+
+
+  /**
+   * allowEditingEnvelopesOnBehalfOfOthersMetadata.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation allowEditingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowEditingEnvelopesOnBehalfOfOthersMetadata) {
+    this.allowEditingEnvelopesOnBehalfOfOthersMetadata = allowEditingEnvelopesOnBehalfOfOthersMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowEditingEnvelopesOnBehalfOfOthersMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowEditingEnvelopesOnBehalfOfOthersMetadata() {
+    return allowEditingEnvelopesOnBehalfOfOthersMetadata;
+  }
+
+  /**
+   * setAllowEditingEnvelopesOnBehalfOfOthersMetadata.
+   **/
+  public void setAllowEditingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowEditingEnvelopesOnBehalfOfOthersMetadata) {
+    this.allowEditingEnvelopesOnBehalfOfOthersMetadata = allowEditingEnvelopesOnBehalfOfOthersMetadata;
+  }
+
+
   /**
    * allowEHankoStamps.
    *
@@ -3583,7 +3626,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEHankoStamps
    **/
   @Schema(description = "")
@@ -3598,6 +3640,7 @@ public class AccountSettingsInformation {
     this.allowEHankoStamps = allowEHankoStamps;
   }
 
+
   /**
    * allowEHankoStampsMetadata.
    *
@@ -3609,9 +3652,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowEHankoStamps` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `allowEHankoStamps` property is editable. .
    * @return allowEHankoStampsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEHankoStamps` property is editable. ")
@@ -3626,6 +3667,7 @@ public class AccountSettingsInformation {
     this.allowEHankoStampsMetadata = allowEHankoStampsMetadata;
   }
 
+
   /**
    * allowENoteEOriginal.
    *
@@ -3638,7 +3680,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowENoteEOriginal
    **/
   @Schema(description = "")
@@ -3653,6 +3694,7 @@ public class AccountSettingsInformation {
     this.allowENoteEOriginal = allowENoteEOriginal;
   }
 
+
   /**
    * allowENoteEOriginalMetadata.
    *
@@ -3664,9 +3706,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowENoteEOriginal` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowENoteEOriginal` property is editable. .
    * @return allowENoteEOriginalMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowENoteEOriginal` property is editable. ")
@@ -3681,6 +3721,7 @@ public class AccountSettingsInformation {
     this.allowENoteEOriginalMetadata = allowENoteEOriginalMetadata;
   }
 
+
   /**
    * allowEnvelopeCorrect.
    *
@@ -3693,7 +3734,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopeCorrect
    **/
   @Schema(description = "")
@@ -3708,6 +3748,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCorrect = allowEnvelopeCorrect;
   }
 
+
   /**
    * allowEnvelopeCorrectMetadata.
    *
@@ -3719,9 +3760,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopeCorrect` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopeCorrect` property is editable. .
    * @return allowEnvelopeCorrectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopeCorrect` property is editable. ")
@@ -3736,6 +3775,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCorrectMetadata = allowEnvelopeCorrectMetadata;
   }
 
+
   /**
    * allowEnvelopeCustodyTransfer.
    *
@@ -3748,7 +3788,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopeCustodyTransfer
    **/
   @Schema(description = "")
@@ -3763,21 +3802,19 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCustodyTransfer = allowEnvelopeCustodyTransfer;
   }
 
+
   /**
    * allowEnvelopeCustodyTransferMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowEnvelopeCustodyTransferMetadata(
-      SettingsMetadata allowEnvelopeCustodyTransferMetadata) {
+  public AccountSettingsInformation allowEnvelopeCustodyTransferMetadata(SettingsMetadata allowEnvelopeCustodyTransferMetadata) {
     this.allowEnvelopeCustodyTransferMetadata = allowEnvelopeCustodyTransferMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopeCustodyTransfer` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopeCustodyTransfer` property is editable. .
    * @return allowEnvelopeCustodyTransferMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopeCustodyTransfer` property is editable. ")
@@ -3792,6 +3829,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCustodyTransferMetadata = allowEnvelopeCustodyTransferMetadata;
   }
 
+
   /**
    * allowEnvelopeCustomFields.
    *
@@ -3804,7 +3842,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopeCustomFields
    **/
   @Schema(description = "")
@@ -3819,21 +3856,19 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCustomFields = allowEnvelopeCustomFields;
   }
 
+
   /**
    * allowEnvelopeCustomFieldsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowEnvelopeCustomFieldsMetadata(
-      SettingsMetadata allowEnvelopeCustomFieldsMetadata) {
+  public AccountSettingsInformation allowEnvelopeCustomFieldsMetadata(SettingsMetadata allowEnvelopeCustomFieldsMetadata) {
     this.allowEnvelopeCustomFieldsMetadata = allowEnvelopeCustomFieldsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopeCustomFields` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopeCustomFields` property is editable. .
    * @return allowEnvelopeCustomFieldsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopeCustomFields` property is editable. ")
@@ -3848,6 +3883,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeCustomFieldsMetadata = allowEnvelopeCustomFieldsMetadata;
   }
 
+
   /**
    * allowEnvelopePublishReporting.
    *
@@ -3860,7 +3896,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopePublishReporting
    **/
   @Schema(description = "")
@@ -3875,21 +3910,19 @@ public class AccountSettingsInformation {
     this.allowEnvelopePublishReporting = allowEnvelopePublishReporting;
   }
 
+
   /**
    * allowEnvelopePublishReportingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowEnvelopePublishReportingMetadata(
-      SettingsMetadata allowEnvelopePublishReportingMetadata) {
+  public AccountSettingsInformation allowEnvelopePublishReportingMetadata(SettingsMetadata allowEnvelopePublishReportingMetadata) {
     this.allowEnvelopePublishReportingMetadata = allowEnvelopePublishReportingMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopePublishReporting` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopePublishReporting` property is editable. .
    * @return allowEnvelopePublishReportingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopePublishReporting` property is editable. ")
@@ -3904,6 +3937,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopePublishReportingMetadata = allowEnvelopePublishReportingMetadata;
   }
 
+
   /**
    * allowEnvelopeReporting.
    *
@@ -3916,7 +3950,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowEnvelopeReporting
    **/
   @Schema(description = "")
@@ -3931,6 +3964,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeReporting = allowEnvelopeReporting;
   }
 
+
   /**
    * allowEnvelopeReportingMetadata.
    *
@@ -3942,9 +3976,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowEnvelopeReporting` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowEnvelopeReporting` property is editable. .
    * @return allowEnvelopeReportingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowEnvelopeReporting` property is editable. ")
@@ -3959,6 +3991,7 @@ public class AccountSettingsInformation {
     this.allowEnvelopeReportingMetadata = allowEnvelopeReportingMetadata;
   }
 
+
   /**
    * allowExpression.
    *
@@ -3971,7 +4004,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowExpression
    **/
   @Schema(description = "")
@@ -3986,6 +4018,7 @@ public class AccountSettingsInformation {
     this.allowExpression = allowExpression;
   }
 
+
   /**
    * allowExpressionMetadata.
    *
@@ -3998,7 +4031,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowExpression` property is editable. .
-   * 
    * @return allowExpressionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowExpression` property is editable. ")
@@ -4013,6 +4045,7 @@ public class AccountSettingsInformation {
     this.allowExpressionMetadata = allowExpressionMetadata;
   }
 
+
   /**
    * allowExpressSignerCertificate.
    *
@@ -4025,7 +4058,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowExpressSignerCertificate
    **/
   @Schema(description = "")
@@ -4040,21 +4072,19 @@ public class AccountSettingsInformation {
     this.allowExpressSignerCertificate = allowExpressSignerCertificate;
   }
 
+
   /**
    * allowExpressSignerCertificateMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowExpressSignerCertificateMetadata(
-      SettingsMetadata allowExpressSignerCertificateMetadata) {
+  public AccountSettingsInformation allowExpressSignerCertificateMetadata(SettingsMetadata allowExpressSignerCertificateMetadata) {
     this.allowExpressSignerCertificateMetadata = allowExpressSignerCertificateMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowExpressSignerCertificate` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowExpressSignerCertificate` property is editable. .
    * @return allowExpressSignerCertificateMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowExpressSignerCertificate` property is editable. ")
@@ -4069,6 +4099,7 @@ public class AccountSettingsInformation {
     this.allowExpressSignerCertificateMetadata = allowExpressSignerCertificateMetadata;
   }
 
+
   /**
    * allowExtendedSendingResourceFile.
    *
@@ -4081,7 +4112,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowExtendedSendingResourceFile
    **/
   @Schema(description = "")
@@ -4096,21 +4126,19 @@ public class AccountSettingsInformation {
     this.allowExtendedSendingResourceFile = allowExtendedSendingResourceFile;
   }
 
+
   /**
    * allowExtendedSendingResourceFileMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowExtendedSendingResourceFileMetadata(
-      SettingsMetadata allowExtendedSendingResourceFileMetadata) {
+  public AccountSettingsInformation allowExtendedSendingResourceFileMetadata(SettingsMetadata allowExtendedSendingResourceFileMetadata) {
     this.allowExtendedSendingResourceFileMetadata = allowExtendedSendingResourceFileMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowExtendedSendingResourceFile`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowExtendedSendingResourceFile` property is editable. .
    * @return allowExtendedSendingResourceFileMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowExtendedSendingResourceFile` property is editable. ")
@@ -4125,6 +4153,7 @@ public class AccountSettingsInformation {
     this.allowExtendedSendingResourceFileMetadata = allowExtendedSendingResourceFileMetadata;
   }
 
+
   /**
    * allowExternalLinkedAccounts.
    *
@@ -4137,7 +4166,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowExternalLinkedAccounts
    **/
   @Schema(description = "")
@@ -4152,20 +4180,19 @@ public class AccountSettingsInformation {
     this.allowExternalLinkedAccounts = allowExternalLinkedAccounts;
   }
 
+
   /**
    * allowExternalLinkedAccountsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowExternalLinkedAccountsMetadata(
-      SettingsMetadata allowExternalLinkedAccountsMetadata) {
+  public AccountSettingsInformation allowExternalLinkedAccountsMetadata(SettingsMetadata allowExternalLinkedAccountsMetadata) {
     this.allowExternalLinkedAccountsMetadata = allowExternalLinkedAccountsMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowExternalLinkedAccountsMetadata
    **/
   @Schema(description = "")
@@ -4180,6 +4207,7 @@ public class AccountSettingsInformation {
     this.allowExternalLinkedAccountsMetadata = allowExternalLinkedAccountsMetadata;
   }
 
+
   /**
    * allowExternalSignaturePad.
    *
@@ -4192,7 +4220,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowExternalSignaturePad
    **/
   @Schema(description = "")
@@ -4207,21 +4234,19 @@ public class AccountSettingsInformation {
     this.allowExternalSignaturePad = allowExternalSignaturePad;
   }
 
+
   /**
    * allowExternalSignaturePadMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowExternalSignaturePadMetadata(
-      SettingsMetadata allowExternalSignaturePadMetadata) {
+  public AccountSettingsInformation allowExternalSignaturePadMetadata(SettingsMetadata allowExternalSignaturePadMetadata) {
     this.allowExternalSignaturePadMetadata = allowExternalSignaturePadMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowExternalSignaturePad` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowExternalSignaturePad` property is editable. .
    * @return allowExternalSignaturePadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowExternalSignaturePad` property is editable. ")
@@ -4236,6 +4261,7 @@ public class AccountSettingsInformation {
     this.allowExternalSignaturePadMetadata = allowExternalSignaturePadMetadata;
   }
 
+
   /**
    * allowIDVForEUQualifiedSignatures.
    *
@@ -4248,7 +4274,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVForEUQualifiedSignatures
    **/
   @Schema(description = "")
@@ -4263,20 +4288,19 @@ public class AccountSettingsInformation {
     this.allowIDVForEUQualifiedSignatures = allowIDVForEUQualifiedSignatures;
   }
 
+
   /**
    * allowIDVForEUQualifiedSignaturesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowIDVForEUQualifiedSignaturesMetadata(
-      SettingsMetadata allowIDVForEUQualifiedSignaturesMetadata) {
+  public AccountSettingsInformation allowIDVForEUQualifiedSignaturesMetadata(SettingsMetadata allowIDVForEUQualifiedSignaturesMetadata) {
     this.allowIDVForEUQualifiedSignaturesMetadata = allowIDVForEUQualifiedSignaturesMetadata;
     return this;
   }
 
   /**
-   * Get allowIDVForEUQualifiedSignaturesMetadata.
-   * 
+   * .
    * @return allowIDVForEUQualifiedSignaturesMetadata
    **/
   @Schema(description = "")
@@ -4291,6 +4315,7 @@ public class AccountSettingsInformation {
     this.allowIDVForEUQualifiedSignaturesMetadata = allowIDVForEUQualifiedSignaturesMetadata;
   }
 
+
   /**
    * allowIDVLevel1.
    *
@@ -4303,7 +4328,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVLevel1
    **/
   @Schema(description = "")
@@ -4318,6 +4342,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel1 = allowIDVLevel1;
   }
 
+
   /**
    * allowIDVLevel1Metadata.
    *
@@ -4330,7 +4355,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowIDVLevel1` property is editable..
-   * 
    * @return allowIDVLevel1Metadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowIDVLevel1` property is editable.")
@@ -4345,6 +4369,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel1Metadata = allowIDVLevel1Metadata;
   }
 
+
   /**
    * allowIDVLevel2.
    *
@@ -4357,7 +4382,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVLevel2
    **/
   @Schema(description = "")
@@ -4372,6 +4396,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel2 = allowIDVLevel2;
   }
 
+
   /**
    * allowIDVLevel2Metadata.
    *
@@ -4384,7 +4409,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVLevel2Metadata
    **/
   @Schema(description = "")
@@ -4399,6 +4423,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel2Metadata = allowIDVLevel2Metadata;
   }
 
+
   /**
    * allowIDVLevel3.
    *
@@ -4411,7 +4436,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVLevel3
    **/
   @Schema(description = "")
@@ -4426,6 +4450,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel3 = allowIDVLevel3;
   }
 
+
   /**
    * allowIDVLevel3Metadata.
    *
@@ -4438,7 +4463,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVLevel3Metadata
    **/
   @Schema(description = "")
@@ -4453,6 +4477,7 @@ public class AccountSettingsInformation {
     this.allowIDVLevel3Metadata = allowIDVLevel3Metadata;
   }
 
+
   /**
    * allowIDVPlatform.
    *
@@ -4465,7 +4490,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowIDVPlatform
    **/
   @Schema(description = "")
@@ -4480,6 +4504,7 @@ public class AccountSettingsInformation {
     this.allowIDVPlatform = allowIDVPlatform;
   }
 
+
   /**
    * allowIDVPlatformMetadata.
    *
@@ -4492,7 +4517,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowIDVPlatform` property is editable..
-   * 
    * @return allowIDVPlatformMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowIDVPlatform` property is editable.")
@@ -4507,6 +4531,7 @@ public class AccountSettingsInformation {
     this.allowIDVPlatformMetadata = allowIDVPlatformMetadata;
   }
 
+
   /**
    * allowInPerson.
    *
@@ -4519,7 +4544,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowInPerson
    **/
   @Schema(description = "")
@@ -4534,6 +4558,7 @@ public class AccountSettingsInformation {
     this.allowInPerson = allowInPerson;
   }
 
+
   /**
    * allowInPersonElectronicNotary.
    *
@@ -4545,9 +4570,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Account Level Flag that determines the availability to perform In Person
-   * Electronic Notarial (IPEN) actions.
-   * 
+   * Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions.
    * @return allowInPersonElectronicNotary
    **/
   @Schema(description = "Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions")
@@ -4562,23 +4585,22 @@ public class AccountSettingsInformation {
     this.allowInPersonElectronicNotary = allowInPersonElectronicNotary;
   }
 
+
   /**
    * allowInPersonElectronicNotaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowInPersonElectronicNotaryMetadata(
-      SettingsMetadata allowInPersonElectronicNotaryMetadata) {
+  public AccountSettingsInformation allowInPersonElectronicNotaryMetadata(SettingsMetadata allowInPersonElectronicNotaryMetadata) {
     this.allowInPersonElectronicNotaryMetadata = allowInPersonElectronicNotaryMetadata;
     return this;
   }
 
   /**
-   * MetaData for the allowInPersonElectronicNotary flag.
-   * 
+   * MetaData for the Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions.
    * @return allowInPersonElectronicNotaryMetadata
    **/
-  @Schema(description = "MetaData for the allowInPersonElectronicNotary flag")
+  @Schema(description = "MetaData for the Account Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions")
   public SettingsMetadata getAllowInPersonElectronicNotaryMetadata() {
     return allowInPersonElectronicNotaryMetadata;
   }
@@ -4589,6 +4611,7 @@ public class AccountSettingsInformation {
   public void setAllowInPersonElectronicNotaryMetadata(SettingsMetadata allowInPersonElectronicNotaryMetadata) {
     this.allowInPersonElectronicNotaryMetadata = allowInPersonElectronicNotaryMetadata;
   }
+
 
   /**
    * allowInPersonMetadata.
@@ -4602,7 +4625,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowInPerson` property is editable. .
-   * 
    * @return allowInPersonMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowInPerson` property is editable. ")
@@ -4617,6 +4639,7 @@ public class AccountSettingsInformation {
     this.allowInPersonMetadata = allowInPersonMetadata;
   }
 
+
   /**
    * allowManagedStamps.
    *
@@ -4629,7 +4652,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowManagedStamps
    **/
   @Schema(description = "")
@@ -4644,6 +4666,7 @@ public class AccountSettingsInformation {
     this.allowManagedStamps = allowManagedStamps;
   }
 
+
   /**
    * allowManagedStampsMetadata.
    *
@@ -4655,9 +4678,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowManagedStamps` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowManagedStamps` property is editable. .
    * @return allowManagedStampsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowManagedStamps` property is editable. ")
@@ -4672,20 +4693,19 @@ public class AccountSettingsInformation {
     this.allowManagedStampsMetadata = allowManagedStampsMetadata;
   }
 
+
   /**
    * allowManagingEnvelopesOnBehalfOfOthers.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowManagingEnvelopesOnBehalfOfOthers(
-      String allowManagingEnvelopesOnBehalfOfOthers) {
+  public AccountSettingsInformation allowManagingEnvelopesOnBehalfOfOthers(String allowManagingEnvelopesOnBehalfOfOthers) {
     this.allowManagingEnvelopesOnBehalfOfOthers = allowManagingEnvelopesOnBehalfOfOthers;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowManagingEnvelopesOnBehalfOfOthers
    **/
   @Schema(description = "")
@@ -4700,20 +4720,19 @@ public class AccountSettingsInformation {
     this.allowManagingEnvelopesOnBehalfOfOthers = allowManagingEnvelopesOnBehalfOfOthers;
   }
 
+
   /**
    * allowManagingEnvelopesOnBehalfOfOthersMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowManagingEnvelopesOnBehalfOfOthersMetadata(
-      SettingsMetadata allowManagingEnvelopesOnBehalfOfOthersMetadata) {
+  public AccountSettingsInformation allowManagingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowManagingEnvelopesOnBehalfOfOthersMetadata) {
     this.allowManagingEnvelopesOnBehalfOfOthersMetadata = allowManagingEnvelopesOnBehalfOfOthersMetadata;
     return this;
   }
 
   /**
-   * Get allowManagingEnvelopesOnBehalfOfOthersMetadata.
-   * 
+   * .
    * @return allowManagingEnvelopesOnBehalfOfOthersMetadata
    **/
   @Schema(description = "")
@@ -4724,10 +4743,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowManagingEnvelopesOnBehalfOfOthersMetadata.
    **/
-  public void setAllowManagingEnvelopesOnBehalfOfOthersMetadata(
-      SettingsMetadata allowManagingEnvelopesOnBehalfOfOthersMetadata) {
+  public void setAllowManagingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowManagingEnvelopesOnBehalfOfOthersMetadata) {
     this.allowManagingEnvelopesOnBehalfOfOthersMetadata = allowManagingEnvelopesOnBehalfOfOthersMetadata;
   }
+
 
   /**
    * allowMarkup.
@@ -4740,9 +4759,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * When set to **true**, Document Markup is enabled for envelope. Account must
-   * have Document Markup enabled to use this.
-   * 
+   * When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this.
    * @return allowMarkup
    **/
   @Schema(description = "When set to **true**, Document Markup is enabled for envelope. Account must have Document Markup enabled to use this")
@@ -4757,6 +4774,7 @@ public class AccountSettingsInformation {
     this.allowMarkup = allowMarkup;
   }
 
+
   /**
    * allowMarkupMetadata.
    *
@@ -4769,7 +4787,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowMarkup` property is editable. .
-   * 
    * @return allowMarkupMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowMarkup` property is editable. ")
@@ -4784,6 +4801,7 @@ public class AccountSettingsInformation {
     this.allowMarkupMetadata = allowMarkupMetadata;
   }
 
+
   /**
    * allowMemberTimeZone.
    *
@@ -4796,7 +4814,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowMemberTimeZone
    **/
   @Schema(description = "")
@@ -4811,6 +4828,7 @@ public class AccountSettingsInformation {
     this.allowMemberTimeZone = allowMemberTimeZone;
   }
 
+
   /**
    * allowMemberTimeZoneMetadata.
    *
@@ -4822,9 +4840,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowMemberTimeZone` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowMemberTimeZone` property is editable. .
    * @return allowMemberTimeZoneMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowMemberTimeZone` property is editable. ")
@@ -4839,6 +4855,7 @@ public class AccountSettingsInformation {
     this.allowMemberTimeZoneMetadata = allowMemberTimeZoneMetadata;
   }
 
+
   /**
    * allowMergeFields.
    *
@@ -4851,7 +4868,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowMergeFields
    **/
   @Schema(description = "")
@@ -4866,6 +4882,7 @@ public class AccountSettingsInformation {
     this.allowMergeFields = allowMergeFields;
   }
 
+
   /**
    * allowMergeFieldsMetadata.
    *
@@ -4877,9 +4894,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowMergeFields` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `allowMergeFields` property is editable. .
    * @return allowMergeFieldsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowMergeFields` property is editable. ")
@@ -4894,6 +4909,7 @@ public class AccountSettingsInformation {
     this.allowMergeFieldsMetadata = allowMergeFieldsMetadata;
   }
 
+
   /**
    * allowMultipleBrandProfiles.
    *
@@ -4906,7 +4922,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowMultipleBrandProfiles
    **/
   @Schema(description = "")
@@ -4921,21 +4936,19 @@ public class AccountSettingsInformation {
     this.allowMultipleBrandProfiles = allowMultipleBrandProfiles;
   }
 
+
   /**
    * allowMultipleBrandProfilesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowMultipleBrandProfilesMetadata(
-      SettingsMetadata allowMultipleBrandProfilesMetadata) {
+  public AccountSettingsInformation allowMultipleBrandProfilesMetadata(SettingsMetadata allowMultipleBrandProfilesMetadata) {
     this.allowMultipleBrandProfilesMetadata = allowMultipleBrandProfilesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowMultipleBrandProfiles` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowMultipleBrandProfiles` property is editable. .
    * @return allowMultipleBrandProfilesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowMultipleBrandProfiles` property is editable. ")
@@ -4950,6 +4963,7 @@ public class AccountSettingsInformation {
     this.allowMultipleBrandProfilesMetadata = allowMultipleBrandProfilesMetadata;
   }
 
+
   /**
    * allowMultipleSignerAttachments.
    *
@@ -4962,7 +4976,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowMultipleSignerAttachments
    **/
   @Schema(description = "")
@@ -4977,21 +4990,19 @@ public class AccountSettingsInformation {
     this.allowMultipleSignerAttachments = allowMultipleSignerAttachments;
   }
 
+
   /**
    * allowMultipleSignerAttachmentsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowMultipleSignerAttachmentsMetadata(
-      SettingsMetadata allowMultipleSignerAttachmentsMetadata) {
+  public AccountSettingsInformation allowMultipleSignerAttachmentsMetadata(SettingsMetadata allowMultipleSignerAttachmentsMetadata) {
     this.allowMultipleSignerAttachmentsMetadata = allowMultipleSignerAttachmentsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowMultipleSignerAttachments` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowMultipleSignerAttachments` property is editable. .
    * @return allowMultipleSignerAttachmentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowMultipleSignerAttachments` property is editable. ")
@@ -5006,6 +5017,7 @@ public class AccountSettingsInformation {
     this.allowMultipleSignerAttachmentsMetadata = allowMultipleSignerAttachmentsMetadata;
   }
 
+
   /**
    * allowNonUSPhoneAuth.
    *
@@ -5018,7 +5030,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowNonUSPhoneAuth
    **/
   @Schema(description = "")
@@ -5033,6 +5044,7 @@ public class AccountSettingsInformation {
     this.allowNonUSPhoneAuth = allowNonUSPhoneAuth;
   }
 
+
   /**
    * allowNonUSPhoneAuthMetadata.
    *
@@ -5044,9 +5056,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowNonUSPhoneAuth` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowNonUSPhoneAuth` property is editable. .
    * @return allowNonUSPhoneAuthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowNonUSPhoneAuth` property is editable. ")
@@ -5061,6 +5071,7 @@ public class AccountSettingsInformation {
     this.allowNonUSPhoneAuthMetadata = allowNonUSPhoneAuthMetadata;
   }
 
+
   /**
    * allowOcrOfEnvelopeDocuments.
    *
@@ -5073,7 +5084,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOcrOfEnvelopeDocuments
    **/
   @Schema(description = "")
@@ -5088,20 +5098,19 @@ public class AccountSettingsInformation {
     this.allowOcrOfEnvelopeDocuments = allowOcrOfEnvelopeDocuments;
   }
 
+
   /**
    * allowOcrOfEnvelopeDocumentsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOcrOfEnvelopeDocumentsMetadata(
-      SettingsMetadata allowOcrOfEnvelopeDocumentsMetadata) {
+  public AccountSettingsInformation allowOcrOfEnvelopeDocumentsMetadata(SettingsMetadata allowOcrOfEnvelopeDocumentsMetadata) {
     this.allowOcrOfEnvelopeDocumentsMetadata = allowOcrOfEnvelopeDocumentsMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOcrOfEnvelopeDocumentsMetadata
    **/
   @Schema(description = "")
@@ -5116,6 +5125,7 @@ public class AccountSettingsInformation {
     this.allowOcrOfEnvelopeDocumentsMetadata = allowOcrOfEnvelopeDocumentsMetadata;
   }
 
+
   /**
    * allowOfflineSigning.
    *
@@ -5128,7 +5138,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOfflineSigning
    **/
   @Schema(description = "")
@@ -5143,6 +5152,7 @@ public class AccountSettingsInformation {
     this.allowOfflineSigning = allowOfflineSigning;
   }
 
+
   /**
    * allowOfflineSigningMetadata.
    *
@@ -5154,9 +5164,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowOfflineSigning` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowOfflineSigning` property is editable. .
    * @return allowOfflineSigningMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowOfflineSigning` property is editable. ")
@@ -5171,6 +5179,7 @@ public class AccountSettingsInformation {
     this.allowOfflineSigningMetadata = allowOfflineSigningMetadata;
   }
 
+
   /**
    * allowOpenTrustSignerCertificate.
    *
@@ -5183,7 +5192,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOpenTrustSignerCertificate
    **/
   @Schema(description = "")
@@ -5198,21 +5206,19 @@ public class AccountSettingsInformation {
     this.allowOpenTrustSignerCertificate = allowOpenTrustSignerCertificate;
   }
 
+
   /**
    * allowOpenTrustSignerCertificateMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOpenTrustSignerCertificateMetadata(
-      SettingsMetadata allowOpenTrustSignerCertificateMetadata) {
+  public AccountSettingsInformation allowOpenTrustSignerCertificateMetadata(SettingsMetadata allowOpenTrustSignerCertificateMetadata) {
     this.allowOpenTrustSignerCertificateMetadata = allowOpenTrustSignerCertificateMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowOpenTrustSignerCertificate`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowOpenTrustSignerCertificate` property is editable. .
    * @return allowOpenTrustSignerCertificateMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowOpenTrustSignerCertificate` property is editable. ")
@@ -5227,6 +5233,7 @@ public class AccountSettingsInformation {
     this.allowOpenTrustSignerCertificateMetadata = allowOpenTrustSignerCertificateMetadata;
   }
 
+
   /**
    * allowOrganizationDocusignMonitor.
    *
@@ -5239,7 +5246,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOrganizationDocusignMonitor
    **/
   @Schema(description = "")
@@ -5254,20 +5260,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationDocusignMonitor = allowOrganizationDocusignMonitor;
   }
 
+
   /**
    * allowOrganizationDocusignMonitorMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationDocusignMonitorMetadata(
-      SettingsMetadata allowOrganizationDocusignMonitorMetadata) {
+  public AccountSettingsInformation allowOrganizationDocusignMonitorMetadata(SettingsMetadata allowOrganizationDocusignMonitorMetadata) {
     this.allowOrganizationDocusignMonitorMetadata = allowOrganizationDocusignMonitorMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOrganizationDocusignMonitorMetadata
    **/
   @Schema(description = "")
@@ -5282,20 +5287,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationDocusignMonitorMetadata = allowOrganizationDocusignMonitorMetadata;
   }
 
+
   /**
    * allowOrganizationDomainUserManagement.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationDomainUserManagement(
-      String allowOrganizationDomainUserManagement) {
+  public AccountSettingsInformation allowOrganizationDomainUserManagement(String allowOrganizationDomainUserManagement) {
     this.allowOrganizationDomainUserManagement = allowOrganizationDomainUserManagement;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOrganizationDomainUserManagement
    **/
   @Schema(description = "")
@@ -5310,20 +5314,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationDomainUserManagement = allowOrganizationDomainUserManagement;
   }
 
+
   /**
    * allowOrganizationDomainUserManagementMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationDomainUserManagementMetadata(
-      SettingsMetadata allowOrganizationDomainUserManagementMetadata) {
+  public AccountSettingsInformation allowOrganizationDomainUserManagementMetadata(SettingsMetadata allowOrganizationDomainUserManagementMetadata) {
     this.allowOrganizationDomainUserManagementMetadata = allowOrganizationDomainUserManagementMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOrganizationDomainUserManagementMetadata
    **/
   @Schema(description = "")
@@ -5334,10 +5337,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowOrganizationDomainUserManagementMetadata.
    **/
-  public void setAllowOrganizationDomainUserManagementMetadata(
-      SettingsMetadata allowOrganizationDomainUserManagementMetadata) {
+  public void setAllowOrganizationDomainUserManagementMetadata(SettingsMetadata allowOrganizationDomainUserManagementMetadata) {
     this.allowOrganizationDomainUserManagementMetadata = allowOrganizationDomainUserManagementMetadata;
   }
+
 
   /**
    * allowOrganizations.
@@ -5351,7 +5354,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOrganizations
    **/
   @Schema(description = "")
@@ -5366,6 +5368,7 @@ public class AccountSettingsInformation {
     this.allowOrganizations = allowOrganizations;
   }
 
+
   /**
    * allowOrganizationsMetadata.
    *
@@ -5377,9 +5380,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowOrganizations` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowOrganizations` property is editable. .
    * @return allowOrganizationsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowOrganizations` property is editable. ")
@@ -5394,6 +5395,7 @@ public class AccountSettingsInformation {
     this.allowOrganizationsMetadata = allowOrganizationsMetadata;
   }
 
+
   /**
    * allowOrganizationSsoManagement.
    *
@@ -5406,7 +5408,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOrganizationSsoManagement
    **/
   @Schema(description = "")
@@ -5421,20 +5422,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationSsoManagement = allowOrganizationSsoManagement;
   }
 
+
   /**
    * allowOrganizationSsoManagementMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationSsoManagementMetadata(
-      SettingsMetadata allowOrganizationSsoManagementMetadata) {
+  public AccountSettingsInformation allowOrganizationSsoManagementMetadata(SettingsMetadata allowOrganizationSsoManagementMetadata) {
     this.allowOrganizationSsoManagementMetadata = allowOrganizationSsoManagementMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOrganizationSsoManagementMetadata
    **/
   @Schema(description = "")
@@ -5449,21 +5449,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationSsoManagementMetadata = allowOrganizationSsoManagementMetadata;
   }
 
+
   /**
    * allowOrganizationToUseInPersonElectronicNotary.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationToUseInPersonElectronicNotary(
-      String allowOrganizationToUseInPersonElectronicNotary) {
+  public AccountSettingsInformation allowOrganizationToUseInPersonElectronicNotary(String allowOrganizationToUseInPersonElectronicNotary) {
     this.allowOrganizationToUseInPersonElectronicNotary = allowOrganizationToUseInPersonElectronicNotary;
     return this;
   }
 
   /**
-   * Organization Level Flag that determines the availability to perform In Person
-   * Electronic Notarial (IPEN) actions.
-   * 
+   * Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions.
    * @return allowOrganizationToUseInPersonElectronicNotary
    **/
   @Schema(description = "Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions")
@@ -5478,23 +5476,22 @@ public class AccountSettingsInformation {
     this.allowOrganizationToUseInPersonElectronicNotary = allowOrganizationToUseInPersonElectronicNotary;
   }
 
+
   /**
    * allowOrganizationToUseInPersonElectronicNotaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationToUseInPersonElectronicNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseInPersonElectronicNotaryMetadata) {
+  public AccountSettingsInformation allowOrganizationToUseInPersonElectronicNotaryMetadata(SettingsMetadata allowOrganizationToUseInPersonElectronicNotaryMetadata) {
     this.allowOrganizationToUseInPersonElectronicNotaryMetadata = allowOrganizationToUseInPersonElectronicNotaryMetadata;
     return this;
   }
 
   /**
-   * MetaData for the allowOrganizationToUseInPersonElectronicNotary flag.
-   * 
+   * MetaData for the Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions.
    * @return allowOrganizationToUseInPersonElectronicNotaryMetadata
    **/
-  @Schema(description = "MetaData for the allowOrganizationToUseInPersonElectronicNotary flag")
+  @Schema(description = "MetaData for the Organization Level Flag that determines the availability to perform In Person Electronic Notarial (IPEN) actions")
   public SettingsMetadata getAllowOrganizationToUseInPersonElectronicNotaryMetadata() {
     return allowOrganizationToUseInPersonElectronicNotaryMetadata;
   }
@@ -5502,10 +5499,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowOrganizationToUseInPersonElectronicNotaryMetadata.
    **/
-  public void setAllowOrganizationToUseInPersonElectronicNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseInPersonElectronicNotaryMetadata) {
+  public void setAllowOrganizationToUseInPersonElectronicNotaryMetadata(SettingsMetadata allowOrganizationToUseInPersonElectronicNotaryMetadata) {
     this.allowOrganizationToUseInPersonElectronicNotaryMetadata = allowOrganizationToUseInPersonElectronicNotaryMetadata;
   }
+
 
   /**
    * allowOrganizationToUseRemoteNotary.
@@ -5519,7 +5516,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowOrganizationToUseRemoteNotary
    **/
   @Schema(description = "")
@@ -5534,20 +5530,19 @@ public class AccountSettingsInformation {
     this.allowOrganizationToUseRemoteNotary = allowOrganizationToUseRemoteNotary;
   }
 
+
   /**
    * allowOrganizationToUseRemoteNotaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationToUseRemoteNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseRemoteNotaryMetadata) {
+  public AccountSettingsInformation allowOrganizationToUseRemoteNotaryMetadata(SettingsMetadata allowOrganizationToUseRemoteNotaryMetadata) {
     this.allowOrganizationToUseRemoteNotaryMetadata = allowOrganizationToUseRemoteNotaryMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowOrganizationToUseRemoteNotaryMetadata
    **/
   @Schema(description = "")
@@ -5558,26 +5553,23 @@ public class AccountSettingsInformation {
   /**
    * setAllowOrganizationToUseRemoteNotaryMetadata.
    **/
-  public void setAllowOrganizationToUseRemoteNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseRemoteNotaryMetadata) {
+  public void setAllowOrganizationToUseRemoteNotaryMetadata(SettingsMetadata allowOrganizationToUseRemoteNotaryMetadata) {
     this.allowOrganizationToUseRemoteNotaryMetadata = allowOrganizationToUseRemoteNotaryMetadata;
   }
+
 
   /**
    * allowOrganizationToUseThirdPartyElectronicNotary.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationToUseThirdPartyElectronicNotary(
-      String allowOrganizationToUseThirdPartyElectronicNotary) {
+  public AccountSettingsInformation allowOrganizationToUseThirdPartyElectronicNotary(String allowOrganizationToUseThirdPartyElectronicNotary) {
     this.allowOrganizationToUseThirdPartyElectronicNotary = allowOrganizationToUseThirdPartyElectronicNotary;
     return this;
   }
 
   /**
-   * Org level flag that determines the abailability to perform Third Party Notary
-   * (3PN) actions..
-   * 
+   * Org level flag that determines the abailability to perform Third Party Notary (3PN) actions..
    * @return allowOrganizationToUseThirdPartyElectronicNotary
    **/
   @Schema(description = "Org level flag that determines the abailability to perform Third Party Notary (3PN) actions.")
@@ -5588,25 +5580,23 @@ public class AccountSettingsInformation {
   /**
    * setAllowOrganizationToUseThirdPartyElectronicNotary.
    **/
-  public void setAllowOrganizationToUseThirdPartyElectronicNotary(
-      String allowOrganizationToUseThirdPartyElectronicNotary) {
+  public void setAllowOrganizationToUseThirdPartyElectronicNotary(String allowOrganizationToUseThirdPartyElectronicNotary) {
     this.allowOrganizationToUseThirdPartyElectronicNotary = allowOrganizationToUseThirdPartyElectronicNotary;
   }
+
 
   /**
    * allowOrganizationToUseThirdPartyElectronicNotaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowOrganizationToUseThirdPartyElectronicNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseThirdPartyElectronicNotaryMetadata) {
+  public AccountSettingsInformation allowOrganizationToUseThirdPartyElectronicNotaryMetadata(SettingsMetadata allowOrganizationToUseThirdPartyElectronicNotaryMetadata) {
     this.allowOrganizationToUseThirdPartyElectronicNotaryMetadata = allowOrganizationToUseThirdPartyElectronicNotaryMetadata;
     return this;
   }
 
   /**
-   * Get allowOrganizationToUseThirdPartyElectronicNotaryMetadata.
-   * 
+   * .
    * @return allowOrganizationToUseThirdPartyElectronicNotaryMetadata
    **/
   @Schema(description = "")
@@ -5617,10 +5607,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowOrganizationToUseThirdPartyElectronicNotaryMetadata.
    **/
-  public void setAllowOrganizationToUseThirdPartyElectronicNotaryMetadata(
-      SettingsMetadata allowOrganizationToUseThirdPartyElectronicNotaryMetadata) {
+  public void setAllowOrganizationToUseThirdPartyElectronicNotaryMetadata(SettingsMetadata allowOrganizationToUseThirdPartyElectronicNotaryMetadata) {
     this.allowOrganizationToUseThirdPartyElectronicNotaryMetadata = allowOrganizationToUseThirdPartyElectronicNotaryMetadata;
   }
+
 
   /**
    * allowParticipantRecipientType.
@@ -5634,7 +5624,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowParticipantRecipientType
    **/
   @Schema(description = "")
@@ -5649,20 +5638,19 @@ public class AccountSettingsInformation {
     this.allowParticipantRecipientType = allowParticipantRecipientType;
   }
 
+
   /**
    * allowParticipantRecipientTypeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowParticipantRecipientTypeMetadata(
-      SettingsMetadata allowParticipantRecipientTypeMetadata) {
+  public AccountSettingsInformation allowParticipantRecipientTypeMetadata(SettingsMetadata allowParticipantRecipientTypeMetadata) {
     this.allowParticipantRecipientTypeMetadata = allowParticipantRecipientTypeMetadata;
     return this;
   }
 
   /**
-   * Get allowParticipantRecipientTypeMetadata.
-   * 
+   * .
    * @return allowParticipantRecipientTypeMetadata
    **/
   @Schema(description = "")
@@ -5677,6 +5665,7 @@ public class AccountSettingsInformation {
     this.allowParticipantRecipientTypeMetadata = allowParticipantRecipientTypeMetadata;
   }
 
+
   /**
    * allowPaymentProcessing.
    *
@@ -5689,7 +5678,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowPaymentProcessing
    **/
   @Schema(description = "")
@@ -5704,6 +5692,7 @@ public class AccountSettingsInformation {
     this.allowPaymentProcessing = allowPaymentProcessing;
   }
 
+
   /**
    * allowPaymentProcessingMetadata.
    *
@@ -5715,9 +5704,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowPaymentProcessing` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowPaymentProcessing` property is editable. .
    * @return allowPaymentProcessingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowPaymentProcessing` property is editable. ")
@@ -5732,6 +5719,7 @@ public class AccountSettingsInformation {
     this.allowPaymentProcessingMetadata = allowPaymentProcessingMetadata;
   }
 
+
   /**
    * allowPerformanceAnalytics.
    *
@@ -5744,7 +5732,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowPerformanceAnalytics
    **/
   @Schema(description = "")
@@ -5759,20 +5746,19 @@ public class AccountSettingsInformation {
     this.allowPerformanceAnalytics = allowPerformanceAnalytics;
   }
 
+
   /**
    * allowPerformanceAnalyticsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowPerformanceAnalyticsMetadata(
-      SettingsMetadata allowPerformanceAnalyticsMetadata) {
+  public AccountSettingsInformation allowPerformanceAnalyticsMetadata(SettingsMetadata allowPerformanceAnalyticsMetadata) {
     this.allowPerformanceAnalyticsMetadata = allowPerformanceAnalyticsMetadata;
     return this;
   }
 
   /**
-   * Get allowPerformanceAnalyticsMetadata.
-   * 
+   * .
    * @return allowPerformanceAnalyticsMetadata
    **/
   @Schema(description = "")
@@ -5787,6 +5773,7 @@ public class AccountSettingsInformation {
     this.allowPerformanceAnalyticsMetadata = allowPerformanceAnalyticsMetadata;
   }
 
+
   /**
    * allowPhoneAuthentication.
    *
@@ -5799,7 +5786,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowPhoneAuthentication
    **/
   @Schema(description = "")
@@ -5814,21 +5800,19 @@ public class AccountSettingsInformation {
     this.allowPhoneAuthentication = allowPhoneAuthentication;
   }
 
+
   /**
    * allowPhoneAuthenticationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowPhoneAuthenticationMetadata(
-      SettingsMetadata allowPhoneAuthenticationMetadata) {
+  public AccountSettingsInformation allowPhoneAuthenticationMetadata(SettingsMetadata allowPhoneAuthenticationMetadata) {
     this.allowPhoneAuthenticationMetadata = allowPhoneAuthenticationMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowPhoneAuthentication` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowPhoneAuthentication` property is editable. .
    * @return allowPhoneAuthenticationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowPhoneAuthentication` property is editable. ")
@@ -5843,6 +5827,7 @@ public class AccountSettingsInformation {
     this.allowPhoneAuthenticationMetadata = allowPhoneAuthenticationMetadata;
   }
 
+
   /**
    * allowPhoneAuthOverride.
    *
@@ -5855,7 +5840,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowPhoneAuthOverride
    **/
   @Schema(description = "")
@@ -5870,6 +5854,7 @@ public class AccountSettingsInformation {
     this.allowPhoneAuthOverride = allowPhoneAuthOverride;
   }
 
+
   /**
    * allowPhoneAuthOverrideMetadata.
    *
@@ -5881,9 +5866,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowPhoneAuthOverride` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowPhoneAuthOverride` property is editable. .
    * @return allowPhoneAuthOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowPhoneAuthOverride` property is editable. ")
@@ -5898,6 +5881,7 @@ public class AccountSettingsInformation {
     this.allowPhoneAuthOverrideMetadata = allowPhoneAuthOverrideMetadata;
   }
 
+
   /**
    * allowPrivateSigningGroups.
    *
@@ -5910,7 +5894,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowPrivateSigningGroups
    **/
   @Schema(description = "")
@@ -5925,21 +5908,19 @@ public class AccountSettingsInformation {
     this.allowPrivateSigningGroups = allowPrivateSigningGroups;
   }
 
+
   /**
    * allowPrivateSigningGroupsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowPrivateSigningGroupsMetadata(
-      SettingsMetadata allowPrivateSigningGroupsMetadata) {
+  public AccountSettingsInformation allowPrivateSigningGroupsMetadata(SettingsMetadata allowPrivateSigningGroupsMetadata) {
     this.allowPrivateSigningGroupsMetadata = allowPrivateSigningGroupsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowPrivateSigningGroups` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowPrivateSigningGroups` property is editable. .
    * @return allowPrivateSigningGroupsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowPrivateSigningGroups` property is editable. ")
@@ -5954,6 +5935,7 @@ public class AccountSettingsInformation {
     this.allowPrivateSigningGroupsMetadata = allowPrivateSigningGroupsMetadata;
   }
 
+
   /**
    * allowRecipientConnect.
    *
@@ -5966,7 +5948,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowRecipientConnect
    **/
   @Schema(description = "")
@@ -5981,6 +5962,7 @@ public class AccountSettingsInformation {
     this.allowRecipientConnect = allowRecipientConnect;
   }
 
+
   /**
    * allowRecipientConnectMetadata.
    *
@@ -5993,7 +5975,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowRecipientConnectMetadata
    **/
   @Schema(description = "")
@@ -6008,6 +5989,7 @@ public class AccountSettingsInformation {
     this.allowRecipientConnectMetadata = allowRecipientConnectMetadata;
   }
 
+
   /**
    * allowReminders.
    *
@@ -6020,7 +6002,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowReminders
    **/
   @Schema(description = "")
@@ -6035,6 +6016,7 @@ public class AccountSettingsInformation {
     this.allowReminders = allowReminders;
   }
 
+
   /**
    * allowRemindersMetadata.
    *
@@ -6047,7 +6029,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowReminders` property is editable. .
-   * 
    * @return allowRemindersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowReminders` property is editable. ")
@@ -6062,6 +6043,7 @@ public class AccountSettingsInformation {
     this.allowRemindersMetadata = allowRemindersMetadata;
   }
 
+
   /**
    * allowRemoteNotary.
    *
@@ -6074,7 +6056,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowRemoteNotary
    **/
   @Schema(description = "")
@@ -6089,6 +6070,7 @@ public class AccountSettingsInformation {
     this.allowRemoteNotary = allowRemoteNotary;
   }
 
+
   /**
    * allowRemoteNotaryMetadata.
    *
@@ -6101,7 +6083,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowRemoteNotaryMetadata
    **/
   @Schema(description = "")
@@ -6116,6 +6097,7 @@ public class AccountSettingsInformation {
     this.allowRemoteNotaryMetadata = allowRemoteNotaryMetadata;
   }
 
+
   /**
    * allowResourceFileBranding.
    *
@@ -6128,7 +6110,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowResourceFileBranding
    **/
   @Schema(description = "")
@@ -6143,21 +6124,19 @@ public class AccountSettingsInformation {
     this.allowResourceFileBranding = allowResourceFileBranding;
   }
 
+
   /**
    * allowResourceFileBrandingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowResourceFileBrandingMetadata(
-      SettingsMetadata allowResourceFileBrandingMetadata) {
+  public AccountSettingsInformation allowResourceFileBrandingMetadata(SettingsMetadata allowResourceFileBrandingMetadata) {
     this.allowResourceFileBrandingMetadata = allowResourceFileBrandingMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowResourceFileBranding` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowResourceFileBranding` property is editable. .
    * @return allowResourceFileBrandingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowResourceFileBranding` property is editable. ")
@@ -6172,6 +6151,7 @@ public class AccountSettingsInformation {
     this.allowResourceFileBrandingMetadata = allowResourceFileBrandingMetadata;
   }
 
+
   /**
    * allowSafeBioPharmaSignerCertificate.
    *
@@ -6184,7 +6164,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSafeBioPharmaSignerCertificate
    **/
   @Schema(description = "")
@@ -6199,21 +6178,19 @@ public class AccountSettingsInformation {
     this.allowSafeBioPharmaSignerCertificate = allowSafeBioPharmaSignerCertificate;
   }
 
+
   /**
    * allowSafeBioPharmaSignerCertificateMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSafeBioPharmaSignerCertificateMetadata(
-      SettingsMetadata allowSafeBioPharmaSignerCertificateMetadata) {
+  public AccountSettingsInformation allowSafeBioPharmaSignerCertificateMetadata(SettingsMetadata allowSafeBioPharmaSignerCertificateMetadata) {
     this.allowSafeBioPharmaSignerCertificateMetadata = allowSafeBioPharmaSignerCertificateMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSafeBioPharmaSignerCertificate`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `allowSafeBioPharmaSignerCertificate` property is editable. .
    * @return allowSafeBioPharmaSignerCertificateMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSafeBioPharmaSignerCertificate` property is editable. ")
@@ -6224,10 +6201,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowSafeBioPharmaSignerCertificateMetadata.
    **/
-  public void setAllowSafeBioPharmaSignerCertificateMetadata(
-      SettingsMetadata allowSafeBioPharmaSignerCertificateMetadata) {
+  public void setAllowSafeBioPharmaSignerCertificateMetadata(SettingsMetadata allowSafeBioPharmaSignerCertificateMetadata) {
     this.allowSafeBioPharmaSignerCertificateMetadata = allowSafeBioPharmaSignerCertificateMetadata;
   }
+
 
   /**
    * allowScheduledSending.
@@ -6240,10 +6217,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * \\\"true\\\" if the account has permission to use the scheduled sending
-   * feature to send envelopes at a specified datetime in the future,
-   * \\\"false\\\" otherwise..
-   * 
+   * \\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise..
    * @return allowScheduledSending
    **/
   @Schema(description = "\\\"true\\\" if the account has permission to use the scheduled sending feature to send envelopes at a specified datetime in the future, \\\"false\\\" otherwise.")
@@ -6258,6 +6232,7 @@ public class AccountSettingsInformation {
     this.allowScheduledSending = allowScheduledSending;
   }
 
+
   /**
    * allowScheduledSendingMetadata.
    *
@@ -6270,7 +6245,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowScheduledSendingMetadata
    **/
   @Schema(description = "")
@@ -6285,6 +6259,7 @@ public class AccountSettingsInformation {
     this.allowScheduledSendingMetadata = allowScheduledSendingMetadata;
   }
 
+
   /**
    * allowSecurityAppliance.
    *
@@ -6297,7 +6272,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSecurityAppliance
    **/
   @Schema(description = "")
@@ -6312,6 +6286,7 @@ public class AccountSettingsInformation {
     this.allowSecurityAppliance = allowSecurityAppliance;
   }
 
+
   /**
    * allowSecurityApplianceMetadata.
    *
@@ -6323,9 +6298,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSecurityAppliance` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSecurityAppliance` property is editable. .
    * @return allowSecurityApplianceMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSecurityAppliance` property is editable. ")
@@ -6340,20 +6313,19 @@ public class AccountSettingsInformation {
     this.allowSecurityApplianceMetadata = allowSecurityApplianceMetadata;
   }
 
+
   /**
    * allowSendingEnvelopesOnBehalfOfOthers.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSendingEnvelopesOnBehalfOfOthers(
-      String allowSendingEnvelopesOnBehalfOfOthers) {
+  public AccountSettingsInformation allowSendingEnvelopesOnBehalfOfOthers(String allowSendingEnvelopesOnBehalfOfOthers) {
     this.allowSendingEnvelopesOnBehalfOfOthers = allowSendingEnvelopesOnBehalfOfOthers;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowSendingEnvelopesOnBehalfOfOthers
    **/
   @Schema(description = "")
@@ -6368,20 +6340,19 @@ public class AccountSettingsInformation {
     this.allowSendingEnvelopesOnBehalfOfOthers = allowSendingEnvelopesOnBehalfOfOthers;
   }
 
+
   /**
    * allowSendingEnvelopesOnBehalfOfOthersMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSendingEnvelopesOnBehalfOfOthersMetadata(
-      SettingsMetadata allowSendingEnvelopesOnBehalfOfOthersMetadata) {
+  public AccountSettingsInformation allowSendingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowSendingEnvelopesOnBehalfOfOthersMetadata) {
     this.allowSendingEnvelopesOnBehalfOfOthersMetadata = allowSendingEnvelopesOnBehalfOfOthersMetadata;
     return this;
   }
 
   /**
-   * Get allowSendingEnvelopesOnBehalfOfOthersMetadata.
-   * 
+   * .
    * @return allowSendingEnvelopesOnBehalfOfOthersMetadata
    **/
   @Schema(description = "")
@@ -6392,10 +6363,10 @@ public class AccountSettingsInformation {
   /**
    * setAllowSendingEnvelopesOnBehalfOfOthersMetadata.
    **/
-  public void setAllowSendingEnvelopesOnBehalfOfOthersMetadata(
-      SettingsMetadata allowSendingEnvelopesOnBehalfOfOthersMetadata) {
+  public void setAllowSendingEnvelopesOnBehalfOfOthersMetadata(SettingsMetadata allowSendingEnvelopesOnBehalfOfOthersMetadata) {
     this.allowSendingEnvelopesOnBehalfOfOthersMetadata = allowSendingEnvelopesOnBehalfOfOthersMetadata;
   }
+
 
   /**
    * allowSendToCertifiedDelivery.
@@ -6409,7 +6380,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSendToCertifiedDelivery
    **/
   @Schema(description = "")
@@ -6424,21 +6394,19 @@ public class AccountSettingsInformation {
     this.allowSendToCertifiedDelivery = allowSendToCertifiedDelivery;
   }
 
+
   /**
    * allowSendToCertifiedDeliveryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSendToCertifiedDeliveryMetadata(
-      SettingsMetadata allowSendToCertifiedDeliveryMetadata) {
+  public AccountSettingsInformation allowSendToCertifiedDeliveryMetadata(SettingsMetadata allowSendToCertifiedDeliveryMetadata) {
     this.allowSendToCertifiedDeliveryMetadata = allowSendToCertifiedDeliveryMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSendToCertifiedDelivery` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowSendToCertifiedDelivery` property is editable. .
    * @return allowSendToCertifiedDeliveryMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSendToCertifiedDelivery` property is editable. ")
@@ -6453,6 +6421,7 @@ public class AccountSettingsInformation {
     this.allowSendToCertifiedDeliveryMetadata = allowSendToCertifiedDeliveryMetadata;
   }
 
+
   /**
    * allowSendToIntermediary.
    *
@@ -6465,7 +6434,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSendToIntermediary
    **/
   @Schema(description = "")
@@ -6480,6 +6448,7 @@ public class AccountSettingsInformation {
     this.allowSendToIntermediary = allowSendToIntermediary;
   }
 
+
   /**
    * allowSendToIntermediaryMetadata.
    *
@@ -6491,9 +6460,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSendToIntermediary` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSendToIntermediary` property is editable. .
    * @return allowSendToIntermediaryMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSendToIntermediary` property is editable. ")
@@ -6508,6 +6475,7 @@ public class AccountSettingsInformation {
     this.allowSendToIntermediaryMetadata = allowSendToIntermediaryMetadata;
   }
 
+
   /**
    * allowServerTemplates.
    *
@@ -6520,7 +6488,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowServerTemplates
    **/
   @Schema(description = "")
@@ -6535,6 +6502,7 @@ public class AccountSettingsInformation {
     this.allowServerTemplates = allowServerTemplates;
   }
 
+
   /**
    * allowServerTemplatesMetadata.
    *
@@ -6546,9 +6514,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowServerTemplates` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowServerTemplates` property is editable. .
    * @return allowServerTemplatesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowServerTemplates` property is editable. ")
@@ -6563,6 +6529,7 @@ public class AccountSettingsInformation {
     this.allowServerTemplatesMetadata = allowServerTemplatesMetadata;
   }
 
+
   /**
    * allowSetEmbeddedRecipientStartURL.
    *
@@ -6575,7 +6542,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSetEmbeddedRecipientStartURL
    **/
   @Schema(description = "")
@@ -6590,20 +6556,19 @@ public class AccountSettingsInformation {
     this.allowSetEmbeddedRecipientStartURL = allowSetEmbeddedRecipientStartURL;
   }
 
+
   /**
    * allowSetEmbeddedRecipientStartURLMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSetEmbeddedRecipientStartURLMetadata(
-      SettingsMetadata allowSetEmbeddedRecipientStartURLMetadata) {
+  public AccountSettingsInformation allowSetEmbeddedRecipientStartURLMetadata(SettingsMetadata allowSetEmbeddedRecipientStartURLMetadata) {
     this.allowSetEmbeddedRecipientStartURLMetadata = allowSetEmbeddedRecipientStartURLMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowSetEmbeddedRecipientStartURLMetadata
    **/
   @Schema(description = "")
@@ -6618,6 +6583,7 @@ public class AccountSettingsInformation {
     this.allowSetEmbeddedRecipientStartURLMetadata = allowSetEmbeddedRecipientStartURLMetadata;
   }
 
+
   /**
    * allowSharedTabs.
    *
@@ -6630,7 +6596,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSharedTabs
    **/
   @Schema(description = "")
@@ -6645,6 +6610,7 @@ public class AccountSettingsInformation {
     this.allowSharedTabs = allowSharedTabs;
   }
 
+
   /**
    * allowSharedTabsMetadata.
    *
@@ -6657,7 +6623,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `allowSharedTabs` property is editable. .
-   * 
    * @return allowSharedTabsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSharedTabs` property is editable. ")
@@ -6672,6 +6637,7 @@ public class AccountSettingsInformation {
     this.allowSharedTabsMetadata = allowSharedTabsMetadata;
   }
 
+
   /**
    * allowSignatureStamps.
    *
@@ -6684,7 +6650,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignatureStamps
    **/
   @Schema(description = "")
@@ -6699,6 +6664,7 @@ public class AccountSettingsInformation {
     this.allowSignatureStamps = allowSignatureStamps;
   }
 
+
   /**
    * allowSignatureStampsMetadata.
    *
@@ -6710,9 +6676,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSignatureStamps` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSignatureStamps` property is editable. .
    * @return allowSignatureStampsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSignatureStamps` property is editable. ")
@@ -6727,6 +6691,7 @@ public class AccountSettingsInformation {
     this.allowSignatureStampsMetadata = allowSignatureStampsMetadata;
   }
 
+
   /**
    * allowSignDocumentFromHomePage.
    *
@@ -6739,7 +6704,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignDocumentFromHomePage
    **/
   @Schema(description = "")
@@ -6754,21 +6718,19 @@ public class AccountSettingsInformation {
     this.allowSignDocumentFromHomePage = allowSignDocumentFromHomePage;
   }
 
+
   /**
    * allowSignDocumentFromHomePageMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSignDocumentFromHomePageMetadata(
-      SettingsMetadata allowSignDocumentFromHomePageMetadata) {
+  public AccountSettingsInformation allowSignDocumentFromHomePageMetadata(SettingsMetadata allowSignDocumentFromHomePageMetadata) {
     this.allowSignDocumentFromHomePageMetadata = allowSignDocumentFromHomePageMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSignDocumentFromHomePage` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `allowSignDocumentFromHomePage` property is editable. .
    * @return allowSignDocumentFromHomePageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSignDocumentFromHomePage` property is editable. ")
@@ -6783,6 +6745,7 @@ public class AccountSettingsInformation {
     this.allowSignDocumentFromHomePageMetadata = allowSignDocumentFromHomePageMetadata;
   }
 
+
   /**
    * allowSignerReassign.
    *
@@ -6795,7 +6758,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignerReassign
    **/
   @Schema(description = "")
@@ -6810,6 +6772,7 @@ public class AccountSettingsInformation {
     this.allowSignerReassign = allowSignerReassign;
   }
 
+
   /**
    * allowSignerReassignMetadata.
    *
@@ -6821,9 +6784,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSignerReassign` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSignerReassign` property is editable. .
    * @return allowSignerReassignMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSignerReassign` property is editable. ")
@@ -6838,6 +6799,7 @@ public class AccountSettingsInformation {
     this.allowSignerReassignMetadata = allowSignerReassignMetadata;
   }
 
+
   /**
    * allowSignerReassignOverride.
    *
@@ -6850,7 +6812,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignerReassignOverride
    **/
   @Schema(description = "")
@@ -6865,21 +6826,19 @@ public class AccountSettingsInformation {
     this.allowSignerReassignOverride = allowSignerReassignOverride;
   }
 
+
   /**
    * allowSignerReassignOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSignerReassignOverrideMetadata(
-      SettingsMetadata allowSignerReassignOverrideMetadata) {
+  public AccountSettingsInformation allowSignerReassignOverrideMetadata(SettingsMetadata allowSignerReassignOverrideMetadata) {
     this.allowSignerReassignOverrideMetadata = allowSignerReassignOverrideMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSignerReassignOverride` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSignerReassignOverride` property is editable. .
    * @return allowSignerReassignOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSignerReassignOverride` property is editable. ")
@@ -6894,6 +6853,7 @@ public class AccountSettingsInformation {
     this.allowSignerReassignOverrideMetadata = allowSignerReassignOverrideMetadata;
   }
 
+
   /**
    * allowSigningExtensions.
    *
@@ -6906,7 +6866,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSigningExtensions
    **/
   @Schema(description = "")
@@ -6921,6 +6880,7 @@ public class AccountSettingsInformation {
     this.allowSigningExtensions = allowSigningExtensions;
   }
 
+
   /**
    * allowSigningExtensionsMetadata.
    *
@@ -6932,9 +6892,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSigningExtensions` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSigningExtensions` property is editable. .
    * @return allowSigningExtensionsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSigningExtensions` property is editable. ")
@@ -6949,6 +6907,7 @@ public class AccountSettingsInformation {
     this.allowSigningExtensionsMetadata = allowSigningExtensionsMetadata;
   }
 
+
   /**
    * allowSigningGroups.
    *
@@ -6961,7 +6920,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSigningGroups
    **/
   @Schema(description = "")
@@ -6976,6 +6934,7 @@ public class AccountSettingsInformation {
     this.allowSigningGroups = allowSigningGroups;
   }
 
+
   /**
    * allowSigningGroupsMetadata.
    *
@@ -6987,9 +6946,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `allowSigningGroups` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSigningGroups` property is editable. .
    * @return allowSigningGroupsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSigningGroups` property is editable. ")
@@ -7004,6 +6961,7 @@ public class AccountSettingsInformation {
     this.allowSigningGroupsMetadata = allowSigningGroupsMetadata;
   }
 
+
   /**
    * allowSigningInsights.
    *
@@ -7016,7 +6974,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSigningInsights
    **/
   @Schema(description = "")
@@ -7031,6 +6988,7 @@ public class AccountSettingsInformation {
     this.allowSigningInsights = allowSigningInsights;
   }
 
+
   /**
    * allowSigningInsightsMetadata.
    *
@@ -7043,7 +7001,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSigningInsightsMetadata
    **/
   @Schema(description = "")
@@ -7058,6 +7015,7 @@ public class AccountSettingsInformation {
     this.allowSigningInsightsMetadata = allowSigningInsightsMetadata;
   }
 
+
   /**
    * allowSigningRadioDeselect.
    *
@@ -7070,7 +7028,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSigningRadioDeselect
    **/
   @Schema(description = "")
@@ -7085,21 +7042,19 @@ public class AccountSettingsInformation {
     this.allowSigningRadioDeselect = allowSigningRadioDeselect;
   }
 
+
   /**
    * allowSigningRadioDeselectMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSigningRadioDeselectMetadata(
-      SettingsMetadata allowSigningRadioDeselectMetadata) {
+  public AccountSettingsInformation allowSigningRadioDeselectMetadata(SettingsMetadata allowSigningRadioDeselectMetadata) {
     this.allowSigningRadioDeselectMetadata = allowSigningRadioDeselectMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSigningRadioDeselect` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `allowSigningRadioDeselect` property is editable. .
    * @return allowSigningRadioDeselectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSigningRadioDeselect` property is editable. ")
@@ -7114,6 +7069,7 @@ public class AccountSettingsInformation {
     this.allowSigningRadioDeselectMetadata = allowSigningRadioDeselectMetadata;
   }
 
+
   /**
    * allowSignNow.
    *
@@ -7126,7 +7082,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignNow
    **/
   @Schema(description = "")
@@ -7141,6 +7096,7 @@ public class AccountSettingsInformation {
     this.allowSignNow = allowSignNow;
   }
 
+
   /**
    * allowSignNowMetadata.
    *
@@ -7153,7 +7109,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSignNowMetadata
    **/
   @Schema(description = "")
@@ -7168,6 +7123,7 @@ public class AccountSettingsInformation {
     this.allowSignNowMetadata = allowSignNowMetadata;
   }
 
+
   /**
    * allowSMSDelivery.
    *
@@ -7180,7 +7136,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSMSDelivery
    **/
   @Schema(description = "")
@@ -7195,6 +7150,7 @@ public class AccountSettingsInformation {
     this.allowSMSDelivery = allowSMSDelivery;
   }
 
+
   /**
    * allowSMSDeliveryMetadata.
    *
@@ -7207,7 +7163,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSMSDeliveryMetadata
    **/
   @Schema(description = "")
@@ -7222,6 +7177,7 @@ public class AccountSettingsInformation {
     this.allowSMSDeliveryMetadata = allowSMSDeliveryMetadata;
   }
 
+
   /**
    * allowSocialIdLogin.
    *
@@ -7234,7 +7190,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSocialIdLogin
    **/
   @Schema(description = "")
@@ -7249,6 +7204,7 @@ public class AccountSettingsInformation {
     this.allowSocialIdLogin = allowSocialIdLogin;
   }
 
+
   /**
    * allowSocialIdLoginMetadata.
    *
@@ -7261,7 +7217,6 @@ public class AccountSettingsInformation {
 
   /**
    * Deprecated..
-   * 
    * @return allowSocialIdLoginMetadata
    **/
   @Schema(description = "Deprecated.")
@@ -7276,6 +7231,7 @@ public class AccountSettingsInformation {
     this.allowSocialIdLoginMetadata = allowSocialIdLoginMetadata;
   }
 
+
   /**
    * allowSupplementalDocuments.
    *
@@ -7288,7 +7244,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowSupplementalDocuments
    **/
   @Schema(description = "")
@@ -7303,21 +7258,19 @@ public class AccountSettingsInformation {
     this.allowSupplementalDocuments = allowSupplementalDocuments;
   }
 
+
   /**
    * allowSupplementalDocumentsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowSupplementalDocumentsMetadata(
-      SettingsMetadata allowSupplementalDocumentsMetadata) {
+  public AccountSettingsInformation allowSupplementalDocumentsMetadata(SettingsMetadata allowSupplementalDocumentsMetadata) {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `allowSupplementalDocuments` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `allowSupplementalDocuments` property is editable..
    * @return allowSupplementalDocumentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `allowSupplementalDocuments` property is editable.")
@@ -7332,6 +7285,7 @@ public class AccountSettingsInformation {
     this.allowSupplementalDocumentsMetadata = allowSupplementalDocumentsMetadata;
   }
 
+
   /**
    * allowThirdPartyElectronicNotary.
    *
@@ -7343,9 +7297,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Account level flag that determines the availability to perform Third Party
-   * Notary (3PN) actions..
-   * 
+   * Account level flag that determines the availability to perform Third Party Notary (3PN) actions..
    * @return allowThirdPartyElectronicNotary
    **/
   @Schema(description = "Account level flag that determines the availability to perform Third Party Notary (3PN) actions.")
@@ -7360,20 +7312,19 @@ public class AccountSettingsInformation {
     this.allowThirdPartyElectronicNotary = allowThirdPartyElectronicNotary;
   }
 
+
   /**
    * allowThirdPartyElectronicNotaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowThirdPartyElectronicNotaryMetadata(
-      SettingsMetadata allowThirdPartyElectronicNotaryMetadata) {
+  public AccountSettingsInformation allowThirdPartyElectronicNotaryMetadata(SettingsMetadata allowThirdPartyElectronicNotaryMetadata) {
     this.allowThirdPartyElectronicNotaryMetadata = allowThirdPartyElectronicNotaryMetadata;
     return this;
   }
 
   /**
-   * Get allowThirdPartyElectronicNotaryMetadata.
-   * 
+   * .
    * @return allowThirdPartyElectronicNotaryMetadata
    **/
   @Schema(description = "")
@@ -7388,6 +7339,7 @@ public class AccountSettingsInformation {
     this.allowThirdPartyElectronicNotaryMetadata = allowThirdPartyElectronicNotaryMetadata;
   }
 
+
   /**
    * allowTransactionsWorkspace.
    *
@@ -7400,7 +7352,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowTransactionsWorkspace
    **/
   @Schema(description = "")
@@ -7415,20 +7366,19 @@ public class AccountSettingsInformation {
     this.allowTransactionsWorkspace = allowTransactionsWorkspace;
   }
 
+
   /**
    * allowTransactionsWorkspaceMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowTransactionsWorkspaceMetadata(
-      SettingsMetadata allowTransactionsWorkspaceMetadata) {
+  public AccountSettingsInformation allowTransactionsWorkspaceMetadata(SettingsMetadata allowTransactionsWorkspaceMetadata) {
     this.allowTransactionsWorkspaceMetadata = allowTransactionsWorkspaceMetadata;
     return this;
   }
 
   /**
-   * Get allowTransactionsWorkspaceMetadata.
-   * 
+   * .
    * @return allowTransactionsWorkspaceMetadata
    **/
   @Schema(description = "")
@@ -7443,6 +7393,7 @@ public class AccountSettingsInformation {
     this.allowTransactionsWorkspaceMetadata = allowTransactionsWorkspaceMetadata;
   }
 
+
   /**
    * allowUsersToAccessDirectory.
    *
@@ -7455,7 +7406,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowUsersToAccessDirectory
    **/
   @Schema(description = "")
@@ -7470,20 +7420,19 @@ public class AccountSettingsInformation {
     this.allowUsersToAccessDirectory = allowUsersToAccessDirectory;
   }
 
+
   /**
    * allowUsersToAccessDirectoryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation allowUsersToAccessDirectoryMetadata(
-      SettingsMetadata allowUsersToAccessDirectoryMetadata) {
+  public AccountSettingsInformation allowUsersToAccessDirectoryMetadata(SettingsMetadata allowUsersToAccessDirectoryMetadata) {
     this.allowUsersToAccessDirectoryMetadata = allowUsersToAccessDirectoryMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return allowUsersToAccessDirectoryMetadata
    **/
   @Schema(description = "")
@@ -7498,6 +7447,7 @@ public class AccountSettingsInformation {
     this.allowUsersToAccessDirectoryMetadata = allowUsersToAccessDirectoryMetadata;
   }
 
+
   /**
    * allowValueInsights.
    *
@@ -7510,7 +7460,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowValueInsights
    **/
   @Schema(description = "")
@@ -7525,6 +7474,7 @@ public class AccountSettingsInformation {
     this.allowValueInsights = allowValueInsights;
   }
 
+
   /**
    * allowValueInsightsMetadata.
    *
@@ -7537,7 +7487,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowValueInsightsMetadata
    **/
   @Schema(description = "")
@@ -7552,6 +7501,7 @@ public class AccountSettingsInformation {
     this.allowValueInsightsMetadata = allowValueInsightsMetadata;
   }
 
+
   /**
    * allowWebForms.
    *
@@ -7564,7 +7514,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowWebForms
    **/
   @Schema(description = "")
@@ -7579,6 +7528,7 @@ public class AccountSettingsInformation {
     this.allowWebForms = allowWebForms;
   }
 
+
   /**
    * allowWebFormsMetadata.
    *
@@ -7590,8 +7540,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get allowWebFormsMetadata.
-   * 
+   * .
    * @return allowWebFormsMetadata
    **/
   @Schema(description = "")
@@ -7606,6 +7555,7 @@ public class AccountSettingsInformation {
     this.allowWebFormsMetadata = allowWebFormsMetadata;
   }
 
+
   /**
    * allowWhatsAppDelivery.
    *
@@ -7618,7 +7568,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return allowWhatsAppDelivery
    **/
   @Schema(description = "")
@@ -7633,6 +7582,7 @@ public class AccountSettingsInformation {
     this.allowWhatsAppDelivery = allowWhatsAppDelivery;
   }
 
+
   /**
    * allowWhatsAppDeliveryMetadata.
    *
@@ -7644,8 +7594,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get allowWhatsAppDeliveryMetadata.
-   * 
+   * .
    * @return allowWhatsAppDeliveryMetadata
    **/
   @Schema(description = "")
@@ -7660,6 +7609,7 @@ public class AccountSettingsInformation {
     this.allowWhatsAppDeliveryMetadata = allowWhatsAppDeliveryMetadata;
   }
 
+
   /**
    * anchorPopulationScope.
    *
@@ -7672,7 +7622,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return anchorPopulationScope
    **/
   @Schema(description = "")
@@ -7687,6 +7636,7 @@ public class AccountSettingsInformation {
     this.anchorPopulationScope = anchorPopulationScope;
   }
 
+
   /**
    * anchorPopulationScopeMetadata.
    *
@@ -7698,9 +7648,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `anchorPopulationScope` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `anchorPopulationScope` property is editable. .
    * @return anchorPopulationScopeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `anchorPopulationScope` property is editable. ")
@@ -7715,6 +7663,7 @@ public class AccountSettingsInformation {
     this.anchorPopulationScopeMetadata = anchorPopulationScopeMetadata;
   }
 
+
   /**
    * anchorTagVersionedPlacementEnabled.
    *
@@ -7727,7 +7676,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return anchorTagVersionedPlacementEnabled
    **/
   @Schema(description = "")
@@ -7742,20 +7690,19 @@ public class AccountSettingsInformation {
     this.anchorTagVersionedPlacementEnabled = anchorTagVersionedPlacementEnabled;
   }
 
+
   /**
    * anchorTagVersionedPlacementMetadataEnabled.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation anchorTagVersionedPlacementMetadataEnabled(
-      SettingsMetadata anchorTagVersionedPlacementMetadataEnabled) {
+  public AccountSettingsInformation anchorTagVersionedPlacementMetadataEnabled(SettingsMetadata anchorTagVersionedPlacementMetadataEnabled) {
     this.anchorTagVersionedPlacementMetadataEnabled = anchorTagVersionedPlacementMetadataEnabled;
     return this;
   }
 
   /**
    * .
-   * 
    * @return anchorTagVersionedPlacementMetadataEnabled
    **/
   @Schema(description = "")
@@ -7766,10 +7713,10 @@ public class AccountSettingsInformation {
   /**
    * setAnchorTagVersionedPlacementMetadataEnabled.
    **/
-  public void setAnchorTagVersionedPlacementMetadataEnabled(
-      SettingsMetadata anchorTagVersionedPlacementMetadataEnabled) {
+  public void setAnchorTagVersionedPlacementMetadataEnabled(SettingsMetadata anchorTagVersionedPlacementMetadataEnabled) {
     this.anchorTagVersionedPlacementMetadataEnabled = anchorTagVersionedPlacementMetadataEnabled;
   }
+
 
   /**
    * attachCompletedEnvelope.
@@ -7783,7 +7730,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return attachCompletedEnvelope
    **/
   @Schema(description = "")
@@ -7798,6 +7744,7 @@ public class AccountSettingsInformation {
     this.attachCompletedEnvelope = attachCompletedEnvelope;
   }
 
+
   /**
    * attachCompletedEnvelopeMetadata.
    *
@@ -7809,9 +7756,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `attachCompletedEnvelope` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `attachCompletedEnvelope` property is editable..
    * @return attachCompletedEnvelopeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `attachCompletedEnvelope` property is editable.")
@@ -7826,6 +7771,7 @@ public class AccountSettingsInformation {
     this.attachCompletedEnvelopeMetadata = attachCompletedEnvelopeMetadata;
   }
 
+
   /**
    * authenticationCheck.
    *
@@ -7838,7 +7784,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return authenticationCheck
    **/
   @Schema(description = "")
@@ -7853,6 +7798,7 @@ public class AccountSettingsInformation {
     this.authenticationCheck = authenticationCheck;
   }
 
+
   /**
    * authenticationCheckMetadata.
    *
@@ -7864,9 +7810,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `authenticationCheck` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `authenticationCheck` property is editable. .
    * @return authenticationCheckMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `authenticationCheck` property is editable. ")
@@ -7881,6 +7825,7 @@ public class AccountSettingsInformation {
     this.authenticationCheckMetadata = authenticationCheckMetadata;
   }
 
+
   /**
    * autoNavRule.
    *
@@ -7893,7 +7838,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return autoNavRule
    **/
   @Schema(description = "")
@@ -7908,6 +7852,7 @@ public class AccountSettingsInformation {
     this.autoNavRule = autoNavRule;
   }
 
+
   /**
    * autoNavRuleMetadata.
    *
@@ -7920,7 +7865,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `autoNavRule` property is editable. .
-   * 
    * @return autoNavRuleMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `autoNavRule` property is editable. ")
@@ -7935,6 +7879,7 @@ public class AccountSettingsInformation {
     this.autoNavRuleMetadata = autoNavRuleMetadata;
   }
 
+
   /**
    * autoProvisionSignerAccount.
    *
@@ -7947,7 +7892,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return autoProvisionSignerAccount
    **/
   @Schema(description = "")
@@ -7962,21 +7906,19 @@ public class AccountSettingsInformation {
     this.autoProvisionSignerAccount = autoProvisionSignerAccount;
   }
 
+
   /**
    * autoProvisionSignerAccountMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation autoProvisionSignerAccountMetadata(
-      SettingsMetadata autoProvisionSignerAccountMetadata) {
+  public AccountSettingsInformation autoProvisionSignerAccountMetadata(SettingsMetadata autoProvisionSignerAccountMetadata) {
     this.autoProvisionSignerAccountMetadata = autoProvisionSignerAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `autoProvisionSignerAccount` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `autoProvisionSignerAccount` property is editable. .
    * @return autoProvisionSignerAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `autoProvisionSignerAccount` property is editable. ")
@@ -7991,6 +7933,7 @@ public class AccountSettingsInformation {
     this.autoProvisionSignerAccountMetadata = autoProvisionSignerAccountMetadata;
   }
 
+
   /**
    * bccEmailArchive.
    *
@@ -8003,7 +7946,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return bccEmailArchive
    **/
   @Schema(description = "")
@@ -8018,6 +7960,7 @@ public class AccountSettingsInformation {
     this.bccEmailArchive = bccEmailArchive;
   }
 
+
   /**
    * bccEmailArchiveMetadata.
    *
@@ -8030,7 +7973,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `bccEmailArchive` property is editable. .
-   * 
    * @return bccEmailArchiveMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bccEmailArchive` property is editable. ")
@@ -8045,6 +7987,7 @@ public class AccountSettingsInformation {
     this.bccEmailArchiveMetadata = bccEmailArchiveMetadata;
   }
 
+
   /**
    * betaSwitchConfiguration.
    *
@@ -8057,7 +8000,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return betaSwitchConfiguration
    **/
   @Schema(description = "")
@@ -8072,6 +8014,7 @@ public class AccountSettingsInformation {
     this.betaSwitchConfiguration = betaSwitchConfiguration;
   }
 
+
   /**
    * betaSwitchConfigurationMetadata.
    *
@@ -8084,7 +8027,6 @@ public class AccountSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return betaSwitchConfigurationMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -8099,6 +8041,7 @@ public class AccountSettingsInformation {
     this.betaSwitchConfigurationMetadata = betaSwitchConfigurationMetadata;
   }
 
+
   /**
    * billingAddress.
    *
@@ -8111,7 +8054,6 @@ public class AccountSettingsInformation {
 
   /**
    * The billing address for the account..
-   * 
    * @return billingAddress
    **/
   @Schema(description = "The billing address for the account.")
@@ -8126,6 +8068,7 @@ public class AccountSettingsInformation {
     this.billingAddress = billingAddress;
   }
 
+
   /**
    * billingAddressMetadata.
    *
@@ -8138,7 +8081,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `billingAddress` property is editable. .
-   * 
    * @return billingAddressMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `billingAddress` property is editable. ")
@@ -8153,6 +8095,7 @@ public class AccountSettingsInformation {
     this.billingAddressMetadata = billingAddressMetadata;
   }
 
+
   /**
    * bulkSend.
    *
@@ -8165,7 +8108,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return bulkSend
    **/
   @Schema(description = "")
@@ -8180,6 +8122,7 @@ public class AccountSettingsInformation {
     this.bulkSend = bulkSend;
   }
 
+
   /**
    * bulkSendActionResendLimit.
    *
@@ -8192,7 +8135,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return bulkSendActionResendLimit
    **/
   @Schema(description = "")
@@ -8207,6 +8149,7 @@ public class AccountSettingsInformation {
     this.bulkSendActionResendLimit = bulkSendActionResendLimit;
   }
 
+
   /**
    * bulkSendMaxCopiesInBatch.
    *
@@ -8219,7 +8162,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return bulkSendMaxCopiesInBatch
    **/
   @Schema(description = "")
@@ -8234,6 +8176,7 @@ public class AccountSettingsInformation {
     this.bulkSendMaxCopiesInBatch = bulkSendMaxCopiesInBatch;
   }
 
+
   /**
    * bulkSendMaxUnprocessedEnvelopesCount.
    *
@@ -8246,7 +8189,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return bulkSendMaxUnprocessedEnvelopesCount
    **/
   @Schema(description = "")
@@ -8261,6 +8203,7 @@ public class AccountSettingsInformation {
     this.bulkSendMaxUnprocessedEnvelopesCount = bulkSendMaxUnprocessedEnvelopesCount;
   }
 
+
   /**
    * bulkSendMetadata.
    *
@@ -8273,7 +8216,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `bulkSend` property is editable. .
-   * 
    * @return bulkSendMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `bulkSend` property is editable. ")
@@ -8288,6 +8230,7 @@ public class AccountSettingsInformation {
     this.bulkSendMetadata = bulkSendMetadata;
   }
 
+
   /**
    * canSelfBrandSend.
    *
@@ -8300,7 +8243,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSelfBrandSend
    **/
   @Schema(description = "")
@@ -8315,6 +8257,7 @@ public class AccountSettingsInformation {
     this.canSelfBrandSend = canSelfBrandSend;
   }
 
+
   /**
    * canSelfBrandSendMetadata.
    *
@@ -8326,9 +8269,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `canSelfBrandSend` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `canSelfBrandSend` property is editable. .
    * @return canSelfBrandSendMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `canSelfBrandSend` property is editable. ")
@@ -8343,6 +8284,7 @@ public class AccountSettingsInformation {
     this.canSelfBrandSendMetadata = canSelfBrandSendMetadata;
   }
 
+
   /**
    * canSelfBrandSign.
    *
@@ -8355,7 +8297,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return canSelfBrandSign
    **/
   @Schema(description = "")
@@ -8370,6 +8311,7 @@ public class AccountSettingsInformation {
     this.canSelfBrandSign = canSelfBrandSign;
   }
 
+
   /**
    * canSelfBrandSignMetadata.
    *
@@ -8381,9 +8323,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `canSelfBrandSign` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `canSelfBrandSign` property is editable. .
    * @return canSelfBrandSignMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `canSelfBrandSign` property is editable. ")
@@ -8398,6 +8338,7 @@ public class AccountSettingsInformation {
     this.canSelfBrandSignMetadata = canSelfBrandSignMetadata;
   }
 
+
   /**
    * canUseSalesforceOAuth.
    *
@@ -8410,7 +8351,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return canUseSalesforceOAuth
    **/
   @Schema(description = "")
@@ -8425,6 +8365,7 @@ public class AccountSettingsInformation {
     this.canUseSalesforceOAuth = canUseSalesforceOAuth;
   }
 
+
   /**
    * canUseSalesforceOAuthMetadata.
    *
@@ -8437,7 +8378,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return canUseSalesforceOAuthMetadata
    **/
   @Schema(description = "")
@@ -8452,6 +8392,7 @@ public class AccountSettingsInformation {
     this.canUseSalesforceOAuthMetadata = canUseSalesforceOAuthMetadata;
   }
 
+
   /**
    * captureVoiceRecording.
    *
@@ -8464,7 +8405,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return captureVoiceRecording
    **/
   @Schema(description = "")
@@ -8479,6 +8419,7 @@ public class AccountSettingsInformation {
     this.captureVoiceRecording = captureVoiceRecording;
   }
 
+
   /**
    * captureVoiceRecordingMetadata.
    *
@@ -8491,7 +8432,6 @@ public class AccountSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return captureVoiceRecordingMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -8506,6 +8446,7 @@ public class AccountSettingsInformation {
     this.captureVoiceRecordingMetadata = captureVoiceRecordingMetadata;
   }
 
+
   /**
    * cfr21SimplifiedSigningEnabled.
    *
@@ -8518,7 +8459,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return cfr21SimplifiedSigningEnabled
    **/
   @Schema(description = "")
@@ -8533,20 +8473,19 @@ public class AccountSettingsInformation {
     this.cfr21SimplifiedSigningEnabled = cfr21SimplifiedSigningEnabled;
   }
 
+
   /**
    * cfr21SimplifiedSigningEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation cfr21SimplifiedSigningEnabledMetadata(
-      SettingsMetadata cfr21SimplifiedSigningEnabledMetadata) {
+  public AccountSettingsInformation cfr21SimplifiedSigningEnabledMetadata(SettingsMetadata cfr21SimplifiedSigningEnabledMetadata) {
     this.cfr21SimplifiedSigningEnabledMetadata = cfr21SimplifiedSigningEnabledMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return cfr21SimplifiedSigningEnabledMetadata
    **/
   @Schema(description = "")
@@ -8561,6 +8500,7 @@ public class AccountSettingsInformation {
     this.cfr21SimplifiedSigningEnabledMetadata = cfr21SimplifiedSigningEnabledMetadata;
   }
 
+
   /**
    * cfrUseWideImage.
    *
@@ -8573,7 +8513,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return cfrUseWideImage
    **/
   @Schema(description = "")
@@ -8588,6 +8527,7 @@ public class AccountSettingsInformation {
     this.cfrUseWideImage = cfrUseWideImage;
   }
 
+
   /**
    * cfrUseWideImageMetadata.
    *
@@ -8600,7 +8540,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `cfrUseWideImage` property is editable. .
-   * 
    * @return cfrUseWideImageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `cfrUseWideImage` property is editable. ")
@@ -8615,6 +8554,7 @@ public class AccountSettingsInformation {
     this.cfrUseWideImageMetadata = cfrUseWideImageMetadata;
   }
 
+
   /**
    * checkForMultipleAdminsOnAccount.
    *
@@ -8627,7 +8567,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return checkForMultipleAdminsOnAccount
    **/
   @Schema(description = "")
@@ -8642,21 +8581,19 @@ public class AccountSettingsInformation {
     this.checkForMultipleAdminsOnAccount = checkForMultipleAdminsOnAccount;
   }
 
+
   /**
    * checkForMultipleAdminsOnAccountMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation checkForMultipleAdminsOnAccountMetadata(
-      SettingsMetadata checkForMultipleAdminsOnAccountMetadata) {
+  public AccountSettingsInformation checkForMultipleAdminsOnAccountMetadata(SettingsMetadata checkForMultipleAdminsOnAccountMetadata) {
     this.checkForMultipleAdminsOnAccountMetadata = checkForMultipleAdminsOnAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `checkForMultipleAdminsOnAccount`
-   * property is editable..
-   * 
+   * Metadata that indicates whether the `checkForMultipleAdminsOnAccount` property is editable..
    * @return checkForMultipleAdminsOnAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `checkForMultipleAdminsOnAccount` property is editable.")
@@ -8671,6 +8608,7 @@ public class AccountSettingsInformation {
     this.checkForMultipleAdminsOnAccountMetadata = checkForMultipleAdminsOnAccountMetadata;
   }
 
+
   /**
    * chromeSignatureEnabled.
    *
@@ -8683,7 +8621,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return chromeSignatureEnabled
    **/
   @Schema(description = "")
@@ -8698,6 +8635,7 @@ public class AccountSettingsInformation {
     this.chromeSignatureEnabled = chromeSignatureEnabled;
   }
 
+
   /**
    * chromeSignatureEnabledMetadata.
    *
@@ -8709,9 +8647,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `chromeSignatureEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `chromeSignatureEnabled` property is editable. .
    * @return chromeSignatureEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `chromeSignatureEnabled` property is editable. ")
@@ -8726,6 +8662,7 @@ public class AccountSettingsInformation {
     this.chromeSignatureEnabledMetadata = chromeSignatureEnabledMetadata;
   }
 
+
   /**
    * commentEmailShowMessageText.
    *
@@ -8738,7 +8675,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return commentEmailShowMessageText
    **/
   @Schema(description = "")
@@ -8753,21 +8689,19 @@ public class AccountSettingsInformation {
     this.commentEmailShowMessageText = commentEmailShowMessageText;
   }
 
+
   /**
    * commentEmailShowMessageTextMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation commentEmailShowMessageTextMetadata(
-      SettingsMetadata commentEmailShowMessageTextMetadata) {
+  public AccountSettingsInformation commentEmailShowMessageTextMetadata(SettingsMetadata commentEmailShowMessageTextMetadata) {
     this.commentEmailShowMessageTextMetadata = commentEmailShowMessageTextMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `commentEmailShowMessageText` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `commentEmailShowMessageText` property is editable. .
    * @return commentEmailShowMessageTextMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `commentEmailShowMessageText` property is editable. ")
@@ -8782,6 +8716,7 @@ public class AccountSettingsInformation {
     this.commentEmailShowMessageTextMetadata = commentEmailShowMessageTextMetadata;
   }
 
+
   /**
    * commentsAllowEnvelopeOverride.
    *
@@ -8794,7 +8729,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return commentsAllowEnvelopeOverride
    **/
   @Schema(description = "")
@@ -8809,21 +8743,19 @@ public class AccountSettingsInformation {
     this.commentsAllowEnvelopeOverride = commentsAllowEnvelopeOverride;
   }
 
+
   /**
    * commentsAllowEnvelopeOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation commentsAllowEnvelopeOverrideMetadata(
-      SettingsMetadata commentsAllowEnvelopeOverrideMetadata) {
+  public AccountSettingsInformation commentsAllowEnvelopeOverrideMetadata(SettingsMetadata commentsAllowEnvelopeOverrideMetadata) {
     this.commentsAllowEnvelopeOverrideMetadata = commentsAllowEnvelopeOverrideMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `commentsAllowEnvelopeOverride` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `commentsAllowEnvelopeOverride` property is editable. .
    * @return commentsAllowEnvelopeOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `commentsAllowEnvelopeOverride` property is editable. ")
@@ -8838,6 +8770,7 @@ public class AccountSettingsInformation {
     this.commentsAllowEnvelopeOverrideMetadata = commentsAllowEnvelopeOverrideMetadata;
   }
 
+
   /**
    * conditionalFieldsEnabled.
    *
@@ -8850,7 +8783,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return conditionalFieldsEnabled
    **/
   @Schema(description = "")
@@ -8865,21 +8797,19 @@ public class AccountSettingsInformation {
     this.conditionalFieldsEnabled = conditionalFieldsEnabled;
   }
 
+
   /**
    * conditionalFieldsEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation conditionalFieldsEnabledMetadata(
-      SettingsMetadata conditionalFieldsEnabledMetadata) {
+  public AccountSettingsInformation conditionalFieldsEnabledMetadata(SettingsMetadata conditionalFieldsEnabledMetadata) {
     this.conditionalFieldsEnabledMetadata = conditionalFieldsEnabledMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `conditionalFieldsEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `conditionalFieldsEnabled` property is editable. .
    * @return conditionalFieldsEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `conditionalFieldsEnabled` property is editable. ")
@@ -8894,6 +8824,7 @@ public class AccountSettingsInformation {
     this.conditionalFieldsEnabledMetadata = conditionalFieldsEnabledMetadata;
   }
 
+
   /**
    * consumerDisclosureFrequency.
    *
@@ -8906,7 +8837,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return consumerDisclosureFrequency
    **/
   @Schema(description = "")
@@ -8921,21 +8851,19 @@ public class AccountSettingsInformation {
     this.consumerDisclosureFrequency = consumerDisclosureFrequency;
   }
 
+
   /**
    * consumerDisclosureFrequencyMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation consumerDisclosureFrequencyMetadata(
-      SettingsMetadata consumerDisclosureFrequencyMetadata) {
+  public AccountSettingsInformation consumerDisclosureFrequencyMetadata(SettingsMetadata consumerDisclosureFrequencyMetadata) {
     this.consumerDisclosureFrequencyMetadata = consumerDisclosureFrequencyMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `consumerDisclosureFrequency` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `consumerDisclosureFrequency` property is editable. .
    * @return consumerDisclosureFrequencyMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `consumerDisclosureFrequency` property is editable. ")
@@ -8950,6 +8878,7 @@ public class AccountSettingsInformation {
     this.consumerDisclosureFrequencyMetadata = consumerDisclosureFrequencyMetadata;
   }
 
+
   /**
    * convertPdfFields.
    *
@@ -8962,7 +8891,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return convertPdfFields
    **/
   @Schema(description = "")
@@ -8977,6 +8905,7 @@ public class AccountSettingsInformation {
     this.convertPdfFields = convertPdfFields;
   }
 
+
   /**
    * convertPdfFieldsMetadata.
    *
@@ -8988,9 +8917,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `convertPdfFields` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `convertPdfFields` property is editable. .
    * @return convertPdfFieldsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `convertPdfFields` property is editable. ")
@@ -9005,6 +8932,7 @@ public class AccountSettingsInformation {
     this.convertPdfFieldsMetadata = convertPdfFieldsMetadata;
   }
 
+
   /**
    * dataPopulationScope.
    *
@@ -9017,7 +8945,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return dataPopulationScope
    **/
   @Schema(description = "")
@@ -9032,6 +8959,7 @@ public class AccountSettingsInformation {
     this.dataPopulationScope = dataPopulationScope;
   }
 
+
   /**
    * dataPopulationScopeMetadata.
    *
@@ -9043,9 +8971,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `dataPopulationScope` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `dataPopulationScope` property is editable. .
    * @return dataPopulationScopeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `dataPopulationScope` property is editable. ")
@@ -9060,6 +8986,7 @@ public class AccountSettingsInformation {
     this.dataPopulationScopeMetadata = dataPopulationScopeMetadata;
   }
 
+
   /**
    * disableAutoTemplateMatching.
    *
@@ -9072,7 +8999,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableAutoTemplateMatching
    **/
   @Schema(description = "")
@@ -9087,20 +9013,19 @@ public class AccountSettingsInformation {
     this.disableAutoTemplateMatching = disableAutoTemplateMatching;
   }
 
+
   /**
    * disableAutoTemplateMatchingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation disableAutoTemplateMatchingMetadata(
-      SettingsMetadata disableAutoTemplateMatchingMetadata) {
+  public AccountSettingsInformation disableAutoTemplateMatchingMetadata(SettingsMetadata disableAutoTemplateMatchingMetadata) {
     this.disableAutoTemplateMatchingMetadata = disableAutoTemplateMatchingMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return disableAutoTemplateMatchingMetadata
    **/
   @Schema(description = "")
@@ -9115,6 +9040,7 @@ public class AccountSettingsInformation {
     this.disableAutoTemplateMatchingMetadata = disableAutoTemplateMatchingMetadata;
   }
 
+
   /**
    * disableMobileApp.
    *
@@ -9127,7 +9053,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableMobileApp
    **/
   @Schema(description = "")
@@ -9142,6 +9067,7 @@ public class AccountSettingsInformation {
     this.disableMobileApp = disableMobileApp;
   }
 
+
   /**
    * disableMobileAppMetadata.
    *
@@ -9153,9 +9079,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableMobileApp` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `disableMobileApp` property is editable. .
    * @return disableMobileAppMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableMobileApp` property is editable. ")
@@ -9170,6 +9094,7 @@ public class AccountSettingsInformation {
     this.disableMobileAppMetadata = disableMobileAppMetadata;
   }
 
+
   /**
    * disableMobilePushNotifications.
    *
@@ -9182,7 +9107,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableMobilePushNotifications
    **/
   @Schema(description = "")
@@ -9197,21 +9121,19 @@ public class AccountSettingsInformation {
     this.disableMobilePushNotifications = disableMobilePushNotifications;
   }
 
+
   /**
    * disableMobilePushNotificationsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation disableMobilePushNotificationsMetadata(
-      SettingsMetadata disableMobilePushNotificationsMetadata) {
+  public AccountSettingsInformation disableMobilePushNotificationsMetadata(SettingsMetadata disableMobilePushNotificationsMetadata) {
     this.disableMobilePushNotificationsMetadata = disableMobilePushNotificationsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `disableMobilePushNotifications` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `disableMobilePushNotifications` property is editable. .
    * @return disableMobilePushNotificationsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableMobilePushNotifications` property is editable. ")
@@ -9226,6 +9148,7 @@ public class AccountSettingsInformation {
     this.disableMobilePushNotificationsMetadata = disableMobilePushNotificationsMetadata;
   }
 
+
   /**
    * disableMobileSending.
    *
@@ -9238,7 +9161,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableMobileSending
    **/
   @Schema(description = "")
@@ -9253,6 +9175,7 @@ public class AccountSettingsInformation {
     this.disableMobileSending = disableMobileSending;
   }
 
+
   /**
    * disableMobileSendingMetadata.
    *
@@ -9264,9 +9187,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableMobileSending` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableMobileSending` property is editable. .
    * @return disableMobileSendingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableMobileSending` property is editable. ")
@@ -9281,6 +9202,7 @@ public class AccountSettingsInformation {
     this.disableMobileSendingMetadata = disableMobileSendingMetadata;
   }
 
+
   /**
    * disableMultipleSessions.
    *
@@ -9293,7 +9215,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableMultipleSessions
    **/
   @Schema(description = "")
@@ -9308,6 +9229,7 @@ public class AccountSettingsInformation {
     this.disableMultipleSessions = disableMultipleSessions;
   }
 
+
   /**
    * disableMultipleSessionsMetadata.
    *
@@ -9319,9 +9241,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableMultipleSessions` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableMultipleSessions` property is editable. .
    * @return disableMultipleSessionsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableMultipleSessions` property is editable. ")
@@ -9336,20 +9256,19 @@ public class AccountSettingsInformation {
     this.disableMultipleSessionsMetadata = disableMultipleSessionsMetadata;
   }
 
+
   /**
    * disablePurgeNotificationsForSenderMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation disablePurgeNotificationsForSenderMetadata(
-      SettingsMetadata disablePurgeNotificationsForSenderMetadata) {
+  public AccountSettingsInformation disablePurgeNotificationsForSenderMetadata(SettingsMetadata disablePurgeNotificationsForSenderMetadata) {
     this.disablePurgeNotificationsForSenderMetadata = disablePurgeNotificationsForSenderMetadata;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return disablePurgeNotificationsForSenderMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -9360,10 +9279,10 @@ public class AccountSettingsInformation {
   /**
    * setDisablePurgeNotificationsForSenderMetadata.
    **/
-  public void setDisablePurgeNotificationsForSenderMetadata(
-      SettingsMetadata disablePurgeNotificationsForSenderMetadata) {
+  public void setDisablePurgeNotificationsForSenderMetadata(SettingsMetadata disablePurgeNotificationsForSenderMetadata) {
     this.disablePurgeNotificationsForSenderMetadata = disablePurgeNotificationsForSenderMetadata;
   }
+
 
   /**
    * disableSignerCertView.
@@ -9377,7 +9296,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableSignerCertView
    **/
   @Schema(description = "")
@@ -9392,6 +9310,7 @@ public class AccountSettingsInformation {
     this.disableSignerCertView = disableSignerCertView;
   }
 
+
   /**
    * disableSignerCertViewMetadata.
    *
@@ -9403,9 +9322,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableSignerCertView` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableSignerCertView` property is editable. .
    * @return disableSignerCertViewMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableSignerCertView` property is editable. ")
@@ -9420,6 +9337,7 @@ public class AccountSettingsInformation {
     this.disableSignerCertViewMetadata = disableSignerCertViewMetadata;
   }
 
+
   /**
    * disableSignerHistoryView.
    *
@@ -9432,7 +9350,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableSignerHistoryView
    **/
   @Schema(description = "")
@@ -9447,21 +9364,19 @@ public class AccountSettingsInformation {
     this.disableSignerHistoryView = disableSignerHistoryView;
   }
 
+
   /**
    * disableSignerHistoryViewMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation disableSignerHistoryViewMetadata(
-      SettingsMetadata disableSignerHistoryViewMetadata) {
+  public AccountSettingsInformation disableSignerHistoryViewMetadata(SettingsMetadata disableSignerHistoryViewMetadata) {
     this.disableSignerHistoryViewMetadata = disableSignerHistoryViewMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `disableSignerHistoryView` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableSignerHistoryView` property is editable. .
    * @return disableSignerHistoryViewMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableSignerHistoryView` property is editable. ")
@@ -9476,6 +9391,7 @@ public class AccountSettingsInformation {
     this.disableSignerHistoryViewMetadata = disableSignerHistoryViewMetadata;
   }
 
+
   /**
    * disableStyleSignature.
    *
@@ -9488,7 +9404,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableStyleSignature
    **/
   @Schema(description = "")
@@ -9503,6 +9418,7 @@ public class AccountSettingsInformation {
     this.disableStyleSignature = disableStyleSignature;
   }
 
+
   /**
    * disableStyleSignatureMetadata.
    *
@@ -9514,9 +9430,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableStyleSignature` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableStyleSignature` property is editable. .
    * @return disableStyleSignatureMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableStyleSignature` property is editable. ")
@@ -9531,6 +9445,7 @@ public class AccountSettingsInformation {
     this.disableStyleSignatureMetadata = disableStyleSignatureMetadata;
   }
 
+
   /**
    * disableUploadSignature.
    *
@@ -9543,7 +9458,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableUploadSignature
    **/
   @Schema(description = "")
@@ -9558,6 +9472,7 @@ public class AccountSettingsInformation {
     this.disableUploadSignature = disableUploadSignature;
   }
 
+
   /**
    * disableUploadSignatureMetadata.
    *
@@ -9569,9 +9484,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableUploadSignature` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableUploadSignature` property is editable. .
    * @return disableUploadSignatureMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableUploadSignature` property is editable. ")
@@ -9586,6 +9499,7 @@ public class AccountSettingsInformation {
     this.disableUploadSignatureMetadata = disableUploadSignatureMetadata;
   }
 
+
   /**
    * disableUserSharing.
    *
@@ -9598,7 +9512,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return disableUserSharing
    **/
   @Schema(description = "")
@@ -9613,6 +9526,7 @@ public class AccountSettingsInformation {
     this.disableUserSharing = disableUserSharing;
   }
 
+
   /**
    * disableUserSharingMetadata.
    *
@@ -9624,9 +9538,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `disableUserSharing` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `disableUserSharing` property is editable. .
    * @return disableUserSharingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `disableUserSharing` property is editable. ")
@@ -9641,6 +9553,7 @@ public class AccountSettingsInformation {
     this.disableUserSharingMetadata = disableUserSharingMetadata;
   }
 
+
   /**
    * displayBetaSwitch.
    *
@@ -9653,7 +9566,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return displayBetaSwitch
    **/
   @Schema(description = "")
@@ -9668,6 +9580,7 @@ public class AccountSettingsInformation {
     this.displayBetaSwitch = displayBetaSwitch;
   }
 
+
   /**
    * displayBetaSwitchMetadata.
    *
@@ -9679,9 +9592,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `displayBetaSwitch` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `displayBetaSwitch` property is editable. .
    * @return displayBetaSwitchMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `displayBetaSwitch` property is editable. ")
@@ -9696,6 +9607,7 @@ public class AccountSettingsInformation {
     this.displayBetaSwitchMetadata = displayBetaSwitchMetadata;
   }
 
+
   /**
    * documentConversionRestrictions.
    *
@@ -9708,7 +9620,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return documentConversionRestrictions
    **/
   @Schema(description = "")
@@ -9723,21 +9634,19 @@ public class AccountSettingsInformation {
     this.documentConversionRestrictions = documentConversionRestrictions;
   }
 
+
   /**
    * documentConversionRestrictionsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation documentConversionRestrictionsMetadata(
-      SettingsMetadata documentConversionRestrictionsMetadata) {
+  public AccountSettingsInformation documentConversionRestrictionsMetadata(SettingsMetadata documentConversionRestrictionsMetadata) {
     this.documentConversionRestrictionsMetadata = documentConversionRestrictionsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `documentConversionRestrictions` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `documentConversionRestrictions` property is editable. .
    * @return documentConversionRestrictionsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentConversionRestrictions` property is editable. ")
@@ -9752,6 +9661,7 @@ public class AccountSettingsInformation {
     this.documentConversionRestrictionsMetadata = documentConversionRestrictionsMetadata;
   }
 
+
   /**
    * documentRetention.
    *
@@ -9764,7 +9674,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return documentRetention
    **/
   @Schema(description = "")
@@ -9779,6 +9688,7 @@ public class AccountSettingsInformation {
     this.documentRetention = documentRetention;
   }
 
+
   /**
    * documentRetentionMetadata.
    *
@@ -9790,9 +9700,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `documentRetention` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `documentRetention` property is editable. .
    * @return documentRetentionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentRetention` property is editable. ")
@@ -9807,6 +9715,7 @@ public class AccountSettingsInformation {
     this.documentRetentionMetadata = documentRetentionMetadata;
   }
 
+
   /**
    * documentRetentionPurgeTabs.
    *
@@ -9819,7 +9728,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return documentRetentionPurgeTabs
    **/
   @Schema(description = "")
@@ -9834,6 +9742,7 @@ public class AccountSettingsInformation {
     this.documentRetentionPurgeTabs = documentRetentionPurgeTabs;
   }
 
+
   /**
    * documentVisibility.
    *
@@ -9846,7 +9755,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return documentVisibility
    **/
   @Schema(description = "")
@@ -9861,6 +9769,7 @@ public class AccountSettingsInformation {
     this.documentVisibility = documentVisibility;
   }
 
+
   /**
    * documentVisibilityMetadata.
    *
@@ -9872,9 +9781,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `documentVisibility` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `documentVisibility` property is editable. .
    * @return documentVisibilityMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `documentVisibility` property is editable. ")
@@ -9889,20 +9796,46 @@ public class AccountSettingsInformation {
     this.documentVisibilityMetadata = documentVisibilityMetadata;
   }
 
+
+  /**
+   * dssEnableProvisioningPenConfigurationRadminOption.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation dssEnableProvisioningPenConfigurationRadminOption(String dssEnableProvisioningPenConfigurationRadminOption) {
+    this.dssEnableProvisioningPenConfigurationRadminOption = dssEnableProvisioningPenConfigurationRadminOption;
+    return this;
+  }
+
+  /**
+   * .
+   * @return dssEnableProvisioningPenConfigurationRadminOption
+   **/
+  @Schema(description = "")
+  public String getDssEnableProvisioningPenConfigurationRadminOption() {
+    return dssEnableProvisioningPenConfigurationRadminOption;
+  }
+
+  /**
+   * setDssEnableProvisioningPenConfigurationRadminOption.
+   **/
+  public void setDssEnableProvisioningPenConfigurationRadminOption(String dssEnableProvisioningPenConfigurationRadminOption) {
+    this.dssEnableProvisioningPenConfigurationRadminOption = dssEnableProvisioningPenConfigurationRadminOption;
+  }
+
+
   /**
    * dssSIGN28411EnableLeavePagePromptRadminOption.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation dssSIGN28411EnableLeavePagePromptRadminOption(
-      String dssSIGN28411EnableLeavePagePromptRadminOption) {
+  public AccountSettingsInformation dssSIGN28411EnableLeavePagePromptRadminOption(String dssSIGN28411EnableLeavePagePromptRadminOption) {
     this.dssSIGN28411EnableLeavePagePromptRadminOption = dssSIGN28411EnableLeavePagePromptRadminOption;
     return this;
   }
 
   /**
    * .
-   * 
    * @return dssSIGN28411EnableLeavePagePromptRadminOption
    **/
   @Schema(description = "")
@@ -9917,6 +9850,7 @@ public class AccountSettingsInformation {
     this.dssSIGN28411EnableLeavePagePromptRadminOption = dssSIGN28411EnableLeavePagePromptRadminOption;
   }
 
+
   /**
    * dssSIGN29182SlideUpBarRadminOption.
    *
@@ -9929,7 +9863,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return dssSIGN29182SlideUpBarRadminOption
    **/
   @Schema(description = "")
@@ -9944,6 +9877,7 @@ public class AccountSettingsInformation {
     this.dssSIGN29182SlideUpBarRadminOption = dssSIGN29182SlideUpBarRadminOption;
   }
 
+
   /**
    * emailTemplateVersion.
    *
@@ -9956,7 +9890,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return emailTemplateVersion
    **/
   @Schema(description = "")
@@ -9971,6 +9904,7 @@ public class AccountSettingsInformation {
     this.emailTemplateVersion = emailTemplateVersion;
   }
 
+
   /**
    * emailTemplateVersionMetadata.
    *
@@ -9982,9 +9916,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `emailTemplateVersion` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `emailTemplateVersion` property is editable. .
    * @return emailTemplateVersionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `emailTemplateVersion` property is editable. ")
@@ -9999,6 +9931,7 @@ public class AccountSettingsInformation {
     this.emailTemplateVersionMetadata = emailTemplateVersionMetadata;
   }
 
+
   /**
    * enableAccessCodeGenerator.
    *
@@ -10011,7 +9944,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAccessCodeGenerator
    **/
   @Schema(description = "")
@@ -10026,21 +9958,19 @@ public class AccountSettingsInformation {
     this.enableAccessCodeGenerator = enableAccessCodeGenerator;
   }
 
+
   /**
    * enableAccessCodeGeneratorMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableAccessCodeGeneratorMetadata(
-      SettingsMetadata enableAccessCodeGeneratorMetadata) {
+  public AccountSettingsInformation enableAccessCodeGeneratorMetadata(SettingsMetadata enableAccessCodeGeneratorMetadata) {
     this.enableAccessCodeGeneratorMetadata = enableAccessCodeGeneratorMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableAccessCodeGenerator` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableAccessCodeGenerator` property is editable. .
    * @return enableAccessCodeGeneratorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableAccessCodeGenerator` property is editable. ")
@@ -10055,6 +9985,7 @@ public class AccountSettingsInformation {
     this.enableAccessCodeGeneratorMetadata = enableAccessCodeGeneratorMetadata;
   }
 
+
   /**
    * enableAdmHealthcare.
    *
@@ -10067,7 +9998,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAdmHealthcare
    **/
   @Schema(description = "")
@@ -10082,6 +10012,7 @@ public class AccountSettingsInformation {
     this.enableAdmHealthcare = enableAdmHealthcare;
   }
 
+
   /**
    * enableAdmHealthcareMetadata.
    *
@@ -10093,8 +10024,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get enableAdmHealthcareMetadata.
-   * 
+   * .
    * @return enableAdmHealthcareMetadata
    **/
   @Schema(description = "")
@@ -10109,6 +10039,7 @@ public class AccountSettingsInformation {
     this.enableAdmHealthcareMetadata = enableAdmHealthcareMetadata;
   }
 
+
   /**
    * enableAdvancedPayments.
    *
@@ -10121,7 +10052,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAdvancedPayments
    **/
   @Schema(description = "")
@@ -10136,6 +10066,7 @@ public class AccountSettingsInformation {
     this.enableAdvancedPayments = enableAdvancedPayments;
   }
 
+
   /**
    * enableAdvancedPaymentsMetadata.
    *
@@ -10147,9 +10078,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableAdvancedPayments` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableAdvancedPayments` property is editable. .
    * @return enableAdvancedPaymentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableAdvancedPayments` property is editable. ")
@@ -10164,6 +10093,7 @@ public class AccountSettingsInformation {
     this.enableAdvancedPaymentsMetadata = enableAdvancedPaymentsMetadata;
   }
 
+
   /**
    * enableAdvancedPowerForms.
    *
@@ -10176,7 +10106,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAdvancedPowerForms
    **/
   @Schema(description = "")
@@ -10191,21 +10120,19 @@ public class AccountSettingsInformation {
     this.enableAdvancedPowerForms = enableAdvancedPowerForms;
   }
 
+
   /**
    * enableAdvancedPowerFormsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableAdvancedPowerFormsMetadata(
-      SettingsMetadata enableAdvancedPowerFormsMetadata) {
+  public AccountSettingsInformation enableAdvancedPowerFormsMetadata(SettingsMetadata enableAdvancedPowerFormsMetadata) {
     this.enableAdvancedPowerFormsMetadata = enableAdvancedPowerFormsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableAdvancedPowerForms` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableAdvancedPowerForms` property is editable. .
    * @return enableAdvancedPowerFormsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableAdvancedPowerForms` property is editable. ")
@@ -10220,6 +10147,7 @@ public class AccountSettingsInformation {
     this.enableAdvancedPowerFormsMetadata = enableAdvancedPowerFormsMetadata;
   }
 
+
   /**
    * enableAgreementActionsForCLM.
    *
@@ -10232,7 +10160,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAgreementActionsForCLM
    **/
   @Schema(description = "")
@@ -10247,20 +10174,19 @@ public class AccountSettingsInformation {
     this.enableAgreementActionsForCLM = enableAgreementActionsForCLM;
   }
 
+
   /**
    * enableAgreementActionsForCLMMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableAgreementActionsForCLMMetadata(
-      SettingsMetadata enableAgreementActionsForCLMMetadata) {
+  public AccountSettingsInformation enableAgreementActionsForCLMMetadata(SettingsMetadata enableAgreementActionsForCLMMetadata) {
     this.enableAgreementActionsForCLMMetadata = enableAgreementActionsForCLMMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableAgreementActionsForCLMMetadata
    **/
   @Schema(description = "")
@@ -10275,6 +10201,7 @@ public class AccountSettingsInformation {
     this.enableAgreementActionsForCLMMetadata = enableAgreementActionsForCLMMetadata;
   }
 
+
   /**
    * enableAgreementActionsForESign.
    *
@@ -10287,7 +10214,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAgreementActionsForESign
    **/
   @Schema(description = "")
@@ -10302,20 +10228,19 @@ public class AccountSettingsInformation {
     this.enableAgreementActionsForESign = enableAgreementActionsForESign;
   }
 
+
   /**
    * enableAgreementActionsForESignMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableAgreementActionsForESignMetadata(
-      SettingsMetadata enableAgreementActionsForESignMetadata) {
+  public AccountSettingsInformation enableAgreementActionsForESignMetadata(SettingsMetadata enableAgreementActionsForESignMetadata) {
     this.enableAgreementActionsForESignMetadata = enableAgreementActionsForESignMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableAgreementActionsForESignMetadata
    **/
   @Schema(description = "")
@@ -10330,6 +10255,7 @@ public class AccountSettingsInformation {
     this.enableAgreementActionsForESignMetadata = enableAgreementActionsForESignMetadata;
   }
 
+
   /**
    * enableAutoNav.
    *
@@ -10342,7 +10268,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableAutoNav
    **/
   @Schema(description = "")
@@ -10357,6 +10282,7 @@ public class AccountSettingsInformation {
     this.enableAutoNav = enableAutoNav;
   }
 
+
   /**
    * enableAutoNavMetadata.
    *
@@ -10369,7 +10295,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enableAutoNav` property is editable. .
-   * 
    * @return enableAutoNavMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableAutoNav` property is editable. ")
@@ -10384,6 +10309,7 @@ public class AccountSettingsInformation {
     this.enableAutoNavMetadata = enableAutoNavMetadata;
   }
 
+
   /**
    * enableBccDummyLink.
    *
@@ -10396,7 +10322,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableBccDummyLink
    **/
   @Schema(description = "")
@@ -10411,6 +10336,7 @@ public class AccountSettingsInformation {
     this.enableBccDummyLink = enableBccDummyLink;
   }
 
+
   /**
    * enableBccDummyLinkMetadata.
    *
@@ -10423,7 +10349,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableBccDummyLinkMetadata
    **/
   @Schema(description = "")
@@ -10438,6 +10363,7 @@ public class AccountSettingsInformation {
     this.enableBccDummyLinkMetadata = enableBccDummyLinkMetadata;
   }
 
+
   /**
    * enableCalculatedFields.
    *
@@ -10450,7 +10376,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableCalculatedFields
    **/
   @Schema(description = "")
@@ -10465,6 +10390,7 @@ public class AccountSettingsInformation {
     this.enableCalculatedFields = enableCalculatedFields;
   }
 
+
   /**
    * enableCalculatedFieldsMetadata.
    *
@@ -10476,9 +10402,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableCalculatedFields` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableCalculatedFields` property is editable. .
    * @return enableCalculatedFieldsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableCalculatedFields` property is editable. ")
@@ -10493,6 +10417,7 @@ public class AccountSettingsInformation {
     this.enableCalculatedFieldsMetadata = enableCalculatedFieldsMetadata;
   }
 
+
   /**
    * enableClickPlus.
    *
@@ -10505,7 +10430,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickPlus
    **/
   @Schema(description = "")
@@ -10520,6 +10444,7 @@ public class AccountSettingsInformation {
     this.enableClickPlus = enableClickPlus;
   }
 
+
   /**
    * enableClickPlusConditionalContent.
    *
@@ -10532,7 +10457,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickPlusConditionalContent
    **/
   @Schema(description = "")
@@ -10547,20 +10471,19 @@ public class AccountSettingsInformation {
     this.enableClickPlusConditionalContent = enableClickPlusConditionalContent;
   }
 
+
   /**
    * enableClickPlusConditionalContentMetaData.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableClickPlusConditionalContentMetaData(
-      SettingsMetadata enableClickPlusConditionalContentMetaData) {
+  public AccountSettingsInformation enableClickPlusConditionalContentMetaData(SettingsMetadata enableClickPlusConditionalContentMetaData) {
     this.enableClickPlusConditionalContentMetaData = enableClickPlusConditionalContentMetaData;
     return this;
   }
 
   /**
-   * Get enableClickPlusConditionalContentMetaData.
-   * 
+   * .
    * @return enableClickPlusConditionalContentMetaData
    **/
   @Schema(description = "")
@@ -10575,6 +10498,7 @@ public class AccountSettingsInformation {
     this.enableClickPlusConditionalContentMetaData = enableClickPlusConditionalContentMetaData;
   }
 
+
   /**
    * enableClickPlusCustomFields.
    *
@@ -10587,7 +10511,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickPlusCustomFields
    **/
   @Schema(description = "")
@@ -10602,20 +10525,19 @@ public class AccountSettingsInformation {
     this.enableClickPlusCustomFields = enableClickPlusCustomFields;
   }
 
+
   /**
    * enableClickPlusCustomFieldsMetaData.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableClickPlusCustomFieldsMetaData(
-      SettingsMetadata enableClickPlusCustomFieldsMetaData) {
+  public AccountSettingsInformation enableClickPlusCustomFieldsMetaData(SettingsMetadata enableClickPlusCustomFieldsMetaData) {
     this.enableClickPlusCustomFieldsMetaData = enableClickPlusCustomFieldsMetaData;
     return this;
   }
 
   /**
-   * Get enableClickPlusCustomFieldsMetaData.
-   * 
+   * .
    * @return enableClickPlusCustomFieldsMetaData
    **/
   @Schema(description = "")
@@ -10630,6 +10552,7 @@ public class AccountSettingsInformation {
     this.enableClickPlusCustomFieldsMetaData = enableClickPlusCustomFieldsMetaData;
   }
 
+
   /**
    * enableClickPlusCustomStyle.
    *
@@ -10642,7 +10565,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickPlusCustomStyle
    **/
   @Schema(description = "")
@@ -10657,20 +10579,19 @@ public class AccountSettingsInformation {
     this.enableClickPlusCustomStyle = enableClickPlusCustomStyle;
   }
 
+
   /**
    * enableClickPlusCustomStyleMetaData.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableClickPlusCustomStyleMetaData(
-      SettingsMetadata enableClickPlusCustomStyleMetaData) {
+  public AccountSettingsInformation enableClickPlusCustomStyleMetaData(SettingsMetadata enableClickPlusCustomStyleMetaData) {
     this.enableClickPlusCustomStyleMetaData = enableClickPlusCustomStyleMetaData;
     return this;
   }
 
   /**
-   * Get enableClickPlusCustomStyleMetaData.
-   * 
+   * .
    * @return enableClickPlusCustomStyleMetaData
    **/
   @Schema(description = "")
@@ -10685,6 +10606,7 @@ public class AccountSettingsInformation {
     this.enableClickPlusCustomStyleMetaData = enableClickPlusCustomStyleMetaData;
   }
 
+
   /**
    * enableClickPlusDynamicContent.
    *
@@ -10697,7 +10619,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickPlusDynamicContent
    **/
   @Schema(description = "")
@@ -10712,20 +10633,19 @@ public class AccountSettingsInformation {
     this.enableClickPlusDynamicContent = enableClickPlusDynamicContent;
   }
 
+
   /**
    * enableClickPlusDynamicContentMetaData.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableClickPlusDynamicContentMetaData(
-      SettingsMetadata enableClickPlusDynamicContentMetaData) {
+  public AccountSettingsInformation enableClickPlusDynamicContentMetaData(SettingsMetadata enableClickPlusDynamicContentMetaData) {
     this.enableClickPlusDynamicContentMetaData = enableClickPlusDynamicContentMetaData;
     return this;
   }
 
   /**
-   * Get enableClickPlusDynamicContentMetaData.
-   * 
+   * .
    * @return enableClickPlusDynamicContentMetaData
    **/
   @Schema(description = "")
@@ -10740,6 +10660,7 @@ public class AccountSettingsInformation {
     this.enableClickPlusDynamicContentMetaData = enableClickPlusDynamicContentMetaData;
   }
 
+
   /**
    * enableClickPlusMetaData.
    *
@@ -10751,8 +10672,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get enableClickPlusMetaData.
-   * 
+   * .
    * @return enableClickPlusMetaData
    **/
   @Schema(description = "")
@@ -10767,6 +10687,7 @@ public class AccountSettingsInformation {
     this.enableClickPlusMetaData = enableClickPlusMetaData;
   }
 
+
   /**
    * enableClickwraps.
    *
@@ -10779,7 +10700,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableClickwraps
    **/
   @Schema(description = "")
@@ -10794,6 +10714,7 @@ public class AccountSettingsInformation {
     this.enableClickwraps = enableClickwraps;
   }
 
+
   /**
    * enableClickwrapsMetadata.
    *
@@ -10805,9 +10726,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableClickwraps` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `enableClickwraps` property is editable. .
    * @return enableClickwrapsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableClickwraps` property is editable. ")
@@ -10822,6 +10741,7 @@ public class AccountSettingsInformation {
     this.enableClickwrapsMetadata = enableClickwrapsMetadata;
   }
 
+
   /**
    * enableCombinedPDFDownloadForSBS.
    *
@@ -10834,7 +10754,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableCombinedPDFDownloadForSBS
    **/
   @Schema(description = "")
@@ -10849,20 +10768,19 @@ public class AccountSettingsInformation {
     this.enableCombinedPDFDownloadForSBS = enableCombinedPDFDownloadForSBS;
   }
 
+
   /**
    * enableCommentsHistoryDownloadInSigning.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableCommentsHistoryDownloadInSigning(
-      String enableCommentsHistoryDownloadInSigning) {
+  public AccountSettingsInformation enableCommentsHistoryDownloadInSigning(String enableCommentsHistoryDownloadInSigning) {
     this.enableCommentsHistoryDownloadInSigning = enableCommentsHistoryDownloadInSigning;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableCommentsHistoryDownloadInSigning
    **/
   @Schema(description = "")
@@ -10877,20 +10795,19 @@ public class AccountSettingsInformation {
     this.enableCommentsHistoryDownloadInSigning = enableCommentsHistoryDownloadInSigning;
   }
 
+
   /**
    * enableCommentsHistoryDownloadInSigningMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableCommentsHistoryDownloadInSigningMetadata(
-      SettingsMetadata enableCommentsHistoryDownloadInSigningMetadata) {
+  public AccountSettingsInformation enableCommentsHistoryDownloadInSigningMetadata(SettingsMetadata enableCommentsHistoryDownloadInSigningMetadata) {
     this.enableCommentsHistoryDownloadInSigningMetadata = enableCommentsHistoryDownloadInSigningMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableCommentsHistoryDownloadInSigningMetadata
    **/
   @Schema(description = "")
@@ -10901,10 +10818,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableCommentsHistoryDownloadInSigningMetadata.
    **/
-  public void setEnableCommentsHistoryDownloadInSigningMetadata(
-      SettingsMetadata enableCommentsHistoryDownloadInSigningMetadata) {
+  public void setEnableCommentsHistoryDownloadInSigningMetadata(SettingsMetadata enableCommentsHistoryDownloadInSigningMetadata) {
     this.enableCommentsHistoryDownloadInSigningMetadata = enableCommentsHistoryDownloadInSigningMetadata;
   }
+
 
   /**
    * enableContactSuggestions.
@@ -10918,7 +10835,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableContactSuggestions
    **/
   @Schema(description = "")
@@ -10933,20 +10849,19 @@ public class AccountSettingsInformation {
     this.enableContactSuggestions = enableContactSuggestions;
   }
 
+
   /**
    * enableContactSuggestionsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableContactSuggestionsMetadata(
-      SettingsMetadata enableContactSuggestionsMetadata) {
+  public AccountSettingsInformation enableContactSuggestionsMetadata(SettingsMetadata enableContactSuggestionsMetadata) {
     this.enableContactSuggestionsMetadata = enableContactSuggestionsMetadata;
     return this;
   }
 
   /**
-   * Get enableContactSuggestionsMetadata.
-   * 
+   * .
    * @return enableContactSuggestionsMetadata
    **/
   @Schema(description = "")
@@ -10961,20 +10876,19 @@ public class AccountSettingsInformation {
     this.enableContactSuggestionsMetadata = enableContactSuggestionsMetadata;
   }
 
+
   /**
    * enableCustomerSatisfactionMetricTracking.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableCustomerSatisfactionMetricTracking(
-      String enableCustomerSatisfactionMetricTracking) {
+  public AccountSettingsInformation enableCustomerSatisfactionMetricTracking(String enableCustomerSatisfactionMetricTracking) {
     this.enableCustomerSatisfactionMetricTracking = enableCustomerSatisfactionMetricTracking;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableCustomerSatisfactionMetricTracking
    **/
   @Schema(description = "")
@@ -10989,21 +10903,19 @@ public class AccountSettingsInformation {
     this.enableCustomerSatisfactionMetricTracking = enableCustomerSatisfactionMetricTracking;
   }
 
+
   /**
    * enableCustomerSatisfactionMetricTrackingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableCustomerSatisfactionMetricTrackingMetadata(
-      SettingsMetadata enableCustomerSatisfactionMetricTrackingMetadata) {
+  public AccountSettingsInformation enableCustomerSatisfactionMetricTrackingMetadata(SettingsMetadata enableCustomerSatisfactionMetricTrackingMetadata) {
     this.enableCustomerSatisfactionMetricTrackingMetadata = enableCustomerSatisfactionMetricTrackingMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the
-   * `enableCustomerSatisfactionMetricTracking` property is editable. .
-   * 
+   * Metadata that indicates whether the `enableCustomerSatisfactionMetricTracking` property is editable. .
    * @return enableCustomerSatisfactionMetricTrackingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableCustomerSatisfactionMetricTracking` property is editable. ")
@@ -11014,10 +10926,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableCustomerSatisfactionMetricTrackingMetadata.
    **/
-  public void setEnableCustomerSatisfactionMetricTrackingMetadata(
-      SettingsMetadata enableCustomerSatisfactionMetricTrackingMetadata) {
+  public void setEnableCustomerSatisfactionMetricTrackingMetadata(SettingsMetadata enableCustomerSatisfactionMetricTrackingMetadata) {
     this.enableCustomerSatisfactionMetricTrackingMetadata = enableCustomerSatisfactionMetricTrackingMetadata;
   }
+
 
   /**
    * enableDSPro.
@@ -11031,7 +10943,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableDSPro
    **/
   @Schema(description = "")
@@ -11046,6 +10957,7 @@ public class AccountSettingsInformation {
     this.enableDSPro = enableDSPro;
   }
 
+
   /**
    * enableDSProMetadata.
    *
@@ -11058,7 +10970,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enableDSPro` property is editable. .
-   * 
    * @return enableDSProMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableDSPro` property is editable. ")
@@ -11073,20 +10984,19 @@ public class AccountSettingsInformation {
     this.enableDSProMetadata = enableDSProMetadata;
   }
 
+
   /**
    * enableEnforceTlsEmailsSettingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableEnforceTlsEmailsSettingMetadata(
-      SettingsMetadata enableEnforceTlsEmailsSettingMetadata) {
+  public AccountSettingsInformation enableEnforceTlsEmailsSettingMetadata(SettingsMetadata enableEnforceTlsEmailsSettingMetadata) {
     this.enableEnforceTlsEmailsSettingMetadata = enableEnforceTlsEmailsSettingMetadata;
     return this;
   }
 
   /**
-   * Get enableEnforceTlsEmailsSettingMetadata.
-   * 
+   * .
    * @return enableEnforceTlsEmailsSettingMetadata
    **/
   @Schema(description = "")
@@ -11101,6 +11011,7 @@ public class AccountSettingsInformation {
     this.enableEnforceTlsEmailsSettingMetadata = enableEnforceTlsEmailsSettingMetadata;
   }
 
+
   /**
    * enableEnvelopeStampingByAccountAdmin.
    *
@@ -11113,7 +11024,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableEnvelopeStampingByAccountAdmin
    **/
   @Schema(description = "")
@@ -11128,21 +11038,19 @@ public class AccountSettingsInformation {
     this.enableEnvelopeStampingByAccountAdmin = enableEnvelopeStampingByAccountAdmin;
   }
 
+
   /**
    * enableEnvelopeStampingByAccountAdminMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableEnvelopeStampingByAccountAdminMetadata(
-      SettingsMetadata enableEnvelopeStampingByAccountAdminMetadata) {
+  public AccountSettingsInformation enableEnvelopeStampingByAccountAdminMetadata(SettingsMetadata enableEnvelopeStampingByAccountAdminMetadata) {
     this.enableEnvelopeStampingByAccountAdminMetadata = enableEnvelopeStampingByAccountAdminMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableEnvelopeStampingByAccountAdmin`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableEnvelopeStampingByAccountAdmin` property is editable. .
    * @return enableEnvelopeStampingByAccountAdminMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableEnvelopeStampingByAccountAdmin` property is editable. ")
@@ -11153,10 +11061,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableEnvelopeStampingByAccountAdminMetadata.
    **/
-  public void setEnableEnvelopeStampingByAccountAdminMetadata(
-      SettingsMetadata enableEnvelopeStampingByAccountAdminMetadata) {
+  public void setEnableEnvelopeStampingByAccountAdminMetadata(SettingsMetadata enableEnvelopeStampingByAccountAdminMetadata) {
     this.enableEnvelopeStampingByAccountAdminMetadata = enableEnvelopeStampingByAccountAdminMetadata;
   }
+
 
   /**
    * enableEnvelopeStampingByDSAdmin.
@@ -11170,7 +11078,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableEnvelopeStampingByDSAdmin
    **/
   @Schema(description = "")
@@ -11185,21 +11092,19 @@ public class AccountSettingsInformation {
     this.enableEnvelopeStampingByDSAdmin = enableEnvelopeStampingByDSAdmin;
   }
 
+
   /**
    * enableEnvelopeStampingByDSAdminMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableEnvelopeStampingByDSAdminMetadata(
-      SettingsMetadata enableEnvelopeStampingByDSAdminMetadata) {
+  public AccountSettingsInformation enableEnvelopeStampingByDSAdminMetadata(SettingsMetadata enableEnvelopeStampingByDSAdminMetadata) {
     this.enableEnvelopeStampingByDSAdminMetadata = enableEnvelopeStampingByDSAdminMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableEnvelopeStampingByDSAdmin`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableEnvelopeStampingByDSAdmin` property is editable. .
    * @return enableEnvelopeStampingByDSAdminMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableEnvelopeStampingByDSAdmin` property is editable. ")
@@ -11214,6 +11119,7 @@ public class AccountSettingsInformation {
     this.enableEnvelopeStampingByDSAdminMetadata = enableEnvelopeStampingByDSAdminMetadata;
   }
 
+
   /**
    * enableESignAPIHourlyLimitManagement.
    *
@@ -11226,7 +11132,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableESignAPIHourlyLimitManagement
    **/
   @Schema(description = "")
@@ -11241,20 +11146,19 @@ public class AccountSettingsInformation {
     this.enableESignAPIHourlyLimitManagement = enableESignAPIHourlyLimitManagement;
   }
 
+
   /**
    * enableESignAPIHourlyLimitManagementMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableESignAPIHourlyLimitManagementMetadata(
-      SettingsMetadata enableESignAPIHourlyLimitManagementMetadata) {
+  public AccountSettingsInformation enableESignAPIHourlyLimitManagementMetadata(SettingsMetadata enableESignAPIHourlyLimitManagementMetadata) {
     this.enableESignAPIHourlyLimitManagementMetadata = enableESignAPIHourlyLimitManagementMetadata;
     return this;
   }
 
   /**
-   * Get enableESignAPIHourlyLimitManagementMetadata.
-   * 
+   * .
    * @return enableESignAPIHourlyLimitManagementMetadata
    **/
   @Schema(description = "")
@@ -11265,10 +11169,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableESignAPIHourlyLimitManagementMetadata.
    **/
-  public void setEnableESignAPIHourlyLimitManagementMetadata(
-      SettingsMetadata enableESignAPIHourlyLimitManagementMetadata) {
+  public void setEnableESignAPIHourlyLimitManagementMetadata(SettingsMetadata enableESignAPIHourlyLimitManagementMetadata) {
     this.enableESignAPIHourlyLimitManagementMetadata = enableESignAPIHourlyLimitManagementMetadata;
   }
+
 
   /**
    * enableEsignCommunities.
@@ -11282,7 +11186,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableEsignCommunities
    **/
   @Schema(description = "")
@@ -11297,6 +11200,7 @@ public class AccountSettingsInformation {
     this.enableEsignCommunities = enableEsignCommunities;
   }
 
+
   /**
    * enableEsignCommunitiesMetadata.
    *
@@ -11309,7 +11213,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableEsignCommunitiesMetadata
    **/
   @Schema(description = "")
@@ -11324,20 +11227,19 @@ public class AccountSettingsInformation {
     this.enableEsignCommunitiesMetadata = enableEsignCommunitiesMetadata;
   }
 
+
   /**
    * enableIDFxAccountlessSMSAuthForPart11.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableIDFxAccountlessSMSAuthForPart11(
-      String enableIDFxAccountlessSMSAuthForPart11) {
+  public AccountSettingsInformation enableIDFxAccountlessSMSAuthForPart11(String enableIDFxAccountlessSMSAuthForPart11) {
     this.enableIDFxAccountlessSMSAuthForPart11 = enableIDFxAccountlessSMSAuthForPart11;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableIDFxAccountlessSMSAuthForPart11
    **/
   @Schema(description = "")
@@ -11352,20 +11254,19 @@ public class AccountSettingsInformation {
     this.enableIDFxAccountlessSMSAuthForPart11 = enableIDFxAccountlessSMSAuthForPart11;
   }
 
+
   /**
    * enableIDFxAccountlessSMSAuthForPart11Metadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableIDFxAccountlessSMSAuthForPart11Metadata(
-      SettingsMetadata enableIDFxAccountlessSMSAuthForPart11Metadata) {
+  public AccountSettingsInformation enableIDFxAccountlessSMSAuthForPart11Metadata(SettingsMetadata enableIDFxAccountlessSMSAuthForPart11Metadata) {
     this.enableIDFxAccountlessSMSAuthForPart11Metadata = enableIDFxAccountlessSMSAuthForPart11Metadata;
     return this;
   }
 
   /**
-   * Get enableIDFxAccountlessSMSAuthForPart11Metadata.
-   * 
+   * .
    * @return enableIDFxAccountlessSMSAuthForPart11Metadata
    **/
   @Schema(description = "")
@@ -11376,10 +11277,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableIDFxAccountlessSMSAuthForPart11Metadata.
    **/
-  public void setEnableIDFxAccountlessSMSAuthForPart11Metadata(
-      SettingsMetadata enableIDFxAccountlessSMSAuthForPart11Metadata) {
+  public void setEnableIDFxAccountlessSMSAuthForPart11Metadata(SettingsMetadata enableIDFxAccountlessSMSAuthForPart11Metadata) {
     this.enableIDFxAccountlessSMSAuthForPart11Metadata = enableIDFxAccountlessSMSAuthForPart11Metadata;
   }
+
 
   /**
    * enableIDFxIntuitKBA.
@@ -11393,7 +11294,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableIDFxIntuitKBA
    **/
   @Schema(description = "")
@@ -11408,6 +11308,7 @@ public class AccountSettingsInformation {
     this.enableIDFxIntuitKBA = enableIDFxIntuitKBA;
   }
 
+
   /**
    * enableIDFxIntuitKBAMetadata.
    *
@@ -11420,7 +11321,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableIDFxIntuitKBAMetadata
    **/
   @Schema(description = "")
@@ -11435,6 +11335,7 @@ public class AccountSettingsInformation {
     this.enableIDFxIntuitKBAMetadata = enableIDFxIntuitKBAMetadata;
   }
 
+
   /**
    * enableIDFxPhoneAuthentication.
    *
@@ -11447,7 +11348,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableIDFxPhoneAuthentication
    **/
   @Schema(description = "")
@@ -11462,20 +11362,19 @@ public class AccountSettingsInformation {
     this.enableIDFxPhoneAuthentication = enableIDFxPhoneAuthentication;
   }
 
+
   /**
    * enableIDFxPhoneAuthenticationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableIDFxPhoneAuthenticationMetadata(
-      SettingsMetadata enableIDFxPhoneAuthenticationMetadata) {
+  public AccountSettingsInformation enableIDFxPhoneAuthenticationMetadata(SettingsMetadata enableIDFxPhoneAuthenticationMetadata) {
     this.enableIDFxPhoneAuthenticationMetadata = enableIDFxPhoneAuthenticationMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableIDFxPhoneAuthenticationMetadata
    **/
   @Schema(description = "")
@@ -11490,20 +11389,19 @@ public class AccountSettingsInformation {
     this.enableIDFxPhoneAuthenticationMetadata = enableIDFxPhoneAuthenticationMetadata;
   }
 
+
   /**
    * enableIdfxPhoneAuthSignatureAuthStatus.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableIdfxPhoneAuthSignatureAuthStatus(
-      String enableIdfxPhoneAuthSignatureAuthStatus) {
+  public AccountSettingsInformation enableIdfxPhoneAuthSignatureAuthStatus(String enableIdfxPhoneAuthSignatureAuthStatus) {
     this.enableIdfxPhoneAuthSignatureAuthStatus = enableIdfxPhoneAuthSignatureAuthStatus;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableIdfxPhoneAuthSignatureAuthStatus
    **/
   @Schema(description = "")
@@ -11518,20 +11416,19 @@ public class AccountSettingsInformation {
     this.enableIdfxPhoneAuthSignatureAuthStatus = enableIdfxPhoneAuthSignatureAuthStatus;
   }
 
+
   /**
    * enableIdfxPhoneAuthSignatureAuthStatusMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableIdfxPhoneAuthSignatureAuthStatusMetadata(
-      SettingsMetadata enableIdfxPhoneAuthSignatureAuthStatusMetadata) {
+  public AccountSettingsInformation enableIdfxPhoneAuthSignatureAuthStatusMetadata(SettingsMetadata enableIdfxPhoneAuthSignatureAuthStatusMetadata) {
     this.enableIdfxPhoneAuthSignatureAuthStatusMetadata = enableIdfxPhoneAuthSignatureAuthStatusMetadata;
     return this;
   }
 
   /**
-   * Get enableIdfxPhoneAuthSignatureAuthStatusMetadata.
-   * 
+   * .
    * @return enableIdfxPhoneAuthSignatureAuthStatusMetadata
    **/
   @Schema(description = "")
@@ -11542,10 +11439,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableIdfxPhoneAuthSignatureAuthStatusMetadata.
    **/
-  public void setEnableIdfxPhoneAuthSignatureAuthStatusMetadata(
-      SettingsMetadata enableIdfxPhoneAuthSignatureAuthStatusMetadata) {
+  public void setEnableIdfxPhoneAuthSignatureAuthStatusMetadata(SettingsMetadata enableIdfxPhoneAuthSignatureAuthStatusMetadata) {
     this.enableIdfxPhoneAuthSignatureAuthStatusMetadata = enableIdfxPhoneAuthSignatureAuthStatusMetadata;
   }
+
 
   /**
    * enableInBrowserEditor.
@@ -11559,7 +11456,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableInBrowserEditor
    **/
   @Schema(description = "")
@@ -11574,6 +11470,7 @@ public class AccountSettingsInformation {
     this.enableInBrowserEditor = enableInBrowserEditor;
   }
 
+
   /**
    * enableInBrowserEditorMetadata.
    *
@@ -11586,7 +11483,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableInBrowserEditorMetadata
    **/
   @Schema(description = "")
@@ -11601,20 +11497,19 @@ public class AccountSettingsInformation {
     this.enableInBrowserEditorMetadata = enableInBrowserEditorMetadata;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentType.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableKeyTermsSuggestionsByDocumentType(
-      String enableKeyTermsSuggestionsByDocumentType) {
+  public AccountSettingsInformation enableKeyTermsSuggestionsByDocumentType(String enableKeyTermsSuggestionsByDocumentType) {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableKeyTermsSuggestionsByDocumentType
    **/
   @Schema(description = "")
@@ -11629,20 +11524,19 @@ public class AccountSettingsInformation {
     this.enableKeyTermsSuggestionsByDocumentType = enableKeyTermsSuggestionsByDocumentType;
   }
 
+
   /**
    * enableKeyTermsSuggestionsByDocumentTypeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public AccountSettingsInformation enableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
     return this;
   }
 
   /**
-   * Get enableKeyTermsSuggestionsByDocumentTypeMetadata.
-   * 
+   * .
    * @return enableKeyTermsSuggestionsByDocumentTypeMetadata
    **/
   @Schema(description = "")
@@ -11653,25 +11547,23 @@ public class AccountSettingsInformation {
   /**
    * setEnableKeyTermsSuggestionsByDocumentTypeMetadata.
    **/
-  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(
-      SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
+  public void setEnableKeyTermsSuggestionsByDocumentTypeMetadata(SettingsMetadata enableKeyTermsSuggestionsByDocumentTypeMetadata) {
     this.enableKeyTermsSuggestionsByDocumentTypeMetadata = enableKeyTermsSuggestionsByDocumentTypeMetadata;
   }
+
 
   /**
    * enableParticipantRecipientSettingMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableParticipantRecipientSettingMetadata(
-      SettingsMetadata enableParticipantRecipientSettingMetadata) {
+  public AccountSettingsInformation enableParticipantRecipientSettingMetadata(SettingsMetadata enableParticipantRecipientSettingMetadata) {
     this.enableParticipantRecipientSettingMetadata = enableParticipantRecipientSettingMetadata;
     return this;
   }
 
   /**
-   * Get enableParticipantRecipientSettingMetadata.
-   * 
+   * .
    * @return enableParticipantRecipientSettingMetadata
    **/
   @Schema(description = "")
@@ -11686,6 +11578,7 @@ public class AccountSettingsInformation {
     this.enableParticipantRecipientSettingMetadata = enableParticipantRecipientSettingMetadata;
   }
 
+
   /**
    * enablePaymentProcessing.
    *
@@ -11698,7 +11591,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enablePaymentProcessing
    **/
   @Schema(description = "")
@@ -11713,6 +11605,7 @@ public class AccountSettingsInformation {
     this.enablePaymentProcessing = enablePaymentProcessing;
   }
 
+
   /**
    * enablePaymentProcessingMetadata.
    *
@@ -11724,9 +11617,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enablePaymentProcessing` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enablePaymentProcessing` property is editable. .
    * @return enablePaymentProcessingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enablePaymentProcessing` property is editable. ")
@@ -11741,6 +11632,7 @@ public class AccountSettingsInformation {
     this.enablePaymentProcessingMetadata = enablePaymentProcessingMetadata;
   }
 
+
   /**
    * enablePDFAConversion.
    *
@@ -11753,7 +11645,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enablePDFAConversion
    **/
   @Schema(description = "")
@@ -11768,6 +11659,7 @@ public class AccountSettingsInformation {
     this.enablePDFAConversion = enablePDFAConversion;
   }
 
+
   /**
    * enablePDFAConversionMetadata.
    *
@@ -11780,7 +11672,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enablePDFAConversionMetadata
    **/
   @Schema(description = "")
@@ -11795,6 +11686,7 @@ public class AccountSettingsInformation {
     this.enablePDFAConversionMetadata = enablePDFAConversionMetadata;
   }
 
+
   /**
    * enablePowerForm.
    *
@@ -11807,7 +11699,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enablePowerForm
    **/
   @Schema(description = "")
@@ -11822,6 +11713,7 @@ public class AccountSettingsInformation {
     this.enablePowerForm = enablePowerForm;
   }
 
+
   /**
    * enablePowerFormDirect.
    *
@@ -11834,7 +11726,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enablePowerFormDirect
    **/
   @Schema(description = "")
@@ -11849,6 +11740,7 @@ public class AccountSettingsInformation {
     this.enablePowerFormDirect = enablePowerFormDirect;
   }
 
+
   /**
    * enablePowerFormDirectMetadata.
    *
@@ -11860,9 +11752,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enablePowerFormDirect` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enablePowerFormDirect` property is editable. .
    * @return enablePowerFormDirectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enablePowerFormDirect` property is editable. ")
@@ -11877,6 +11767,7 @@ public class AccountSettingsInformation {
     this.enablePowerFormDirectMetadata = enablePowerFormDirectMetadata;
   }
 
+
   /**
    * enablePowerFormMetadata.
    *
@@ -11889,7 +11780,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enablePowerForm` property is editable. .
-   * 
    * @return enablePowerFormMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enablePowerForm` property is editable. ")
@@ -11904,6 +11794,7 @@ public class AccountSettingsInformation {
     this.enablePowerFormMetadata = enablePowerFormMetadata;
   }
 
+
   /**
    * enableRecipientDomainValidation.
    *
@@ -11916,7 +11807,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableRecipientDomainValidation
    **/
   @Schema(description = "")
@@ -11931,21 +11821,19 @@ public class AccountSettingsInformation {
     this.enableRecipientDomainValidation = enableRecipientDomainValidation;
   }
 
+
   /**
    * enableRecipientDomainValidationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableRecipientDomainValidationMetadata(
-      SettingsMetadata enableRecipientDomainValidationMetadata) {
+  public AccountSettingsInformation enableRecipientDomainValidationMetadata(SettingsMetadata enableRecipientDomainValidationMetadata) {
     this.enableRecipientDomainValidationMetadata = enableRecipientDomainValidationMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableRecipientDomainValidation`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableRecipientDomainValidation` property is editable. .
    * @return enableRecipientDomainValidationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableRecipientDomainValidation` property is editable. ")
@@ -11960,6 +11848,7 @@ public class AccountSettingsInformation {
     this.enableRecipientDomainValidationMetadata = enableRecipientDomainValidationMetadata;
   }
 
+
   /**
    * enableRecipientMayProvidePhoneNumber.
    *
@@ -11972,7 +11861,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableRecipientMayProvidePhoneNumber
    **/
   @Schema(description = "")
@@ -11987,20 +11875,19 @@ public class AccountSettingsInformation {
     this.enableRecipientMayProvidePhoneNumber = enableRecipientMayProvidePhoneNumber;
   }
 
+
   /**
    * enableRecipientMayProvidePhoneNumberMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableRecipientMayProvidePhoneNumberMetadata(
-      SettingsMetadata enableRecipientMayProvidePhoneNumberMetadata) {
+  public AccountSettingsInformation enableRecipientMayProvidePhoneNumberMetadata(SettingsMetadata enableRecipientMayProvidePhoneNumberMetadata) {
     this.enableRecipientMayProvidePhoneNumberMetadata = enableRecipientMayProvidePhoneNumberMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableRecipientMayProvidePhoneNumberMetadata
    **/
   @Schema(description = "")
@@ -12011,10 +11898,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableRecipientMayProvidePhoneNumberMetadata.
    **/
-  public void setEnableRecipientMayProvidePhoneNumberMetadata(
-      SettingsMetadata enableRecipientMayProvidePhoneNumberMetadata) {
+  public void setEnableRecipientMayProvidePhoneNumberMetadata(SettingsMetadata enableRecipientMayProvidePhoneNumberMetadata) {
     this.enableRecipientMayProvidePhoneNumberMetadata = enableRecipientMayProvidePhoneNumberMetadata;
   }
+
 
   /**
    * enableReportLinks.
@@ -12028,7 +11915,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableReportLinks
    **/
   @Schema(description = "")
@@ -12043,6 +11929,7 @@ public class AccountSettingsInformation {
     this.enableReportLinks = enableReportLinks;
   }
 
+
   /**
    * enableReportLinksMetadata.
    *
@@ -12054,9 +11941,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableReportLinks` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `enableReportLinks` property is editable. .
    * @return enableReportLinksMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableReportLinks` property is editable. ")
@@ -12071,6 +11956,7 @@ public class AccountSettingsInformation {
     this.enableReportLinksMetadata = enableReportLinksMetadata;
   }
 
+
   /**
    * enableRequireSignOnPaper.
    *
@@ -12083,7 +11969,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableRequireSignOnPaper
    **/
   @Schema(description = "")
@@ -12098,21 +11983,19 @@ public class AccountSettingsInformation {
     this.enableRequireSignOnPaper = enableRequireSignOnPaper;
   }
 
+
   /**
    * enableRequireSignOnPaperMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableRequireSignOnPaperMetadata(
-      SettingsMetadata enableRequireSignOnPaperMetadata) {
+  public AccountSettingsInformation enableRequireSignOnPaperMetadata(SettingsMetadata enableRequireSignOnPaperMetadata) {
     this.enableRequireSignOnPaperMetadata = enableRequireSignOnPaperMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableRequireSignOnPaper` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableRequireSignOnPaper` property is editable. .
    * @return enableRequireSignOnPaperMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableRequireSignOnPaper` property is editable. ")
@@ -12127,6 +12010,7 @@ public class AccountSettingsInformation {
     this.enableRequireSignOnPaperMetadata = enableRequireSignOnPaperMetadata;
   }
 
+
   /**
    * enableReservedDomain.
    *
@@ -12139,7 +12023,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableReservedDomain
    **/
   @Schema(description = "")
@@ -12154,6 +12037,7 @@ public class AccountSettingsInformation {
     this.enableReservedDomain = enableReservedDomain;
   }
 
+
   /**
    * enableReservedDomainMetadata.
    *
@@ -12165,9 +12049,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableReservedDomain` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableReservedDomain` property is editable. .
    * @return enableReservedDomainMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableReservedDomain` property is editable. ")
@@ -12182,6 +12064,7 @@ public class AccountSettingsInformation {
     this.enableReservedDomainMetadata = enableReservedDomainMetadata;
   }
 
+
   /**
    * enableResponsiveSigning.
    *
@@ -12194,7 +12077,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableResponsiveSigning
    **/
   @Schema(description = "")
@@ -12209,6 +12091,7 @@ public class AccountSettingsInformation {
     this.enableResponsiveSigning = enableResponsiveSigning;
   }
 
+
   /**
    * enableResponsiveSigningMetadata.
    *
@@ -12220,9 +12103,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableResponsiveSigning` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableResponsiveSigning` property is editable. .
    * @return enableResponsiveSigningMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableResponsiveSigning` property is editable. ")
@@ -12237,6 +12118,7 @@ public class AccountSettingsInformation {
     this.enableResponsiveSigningMetadata = enableResponsiveSigningMetadata;
   }
 
+
   /**
    * enableScheduledRelease.
    *
@@ -12249,7 +12131,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableScheduledRelease
    **/
   @Schema(description = "")
@@ -12264,6 +12145,7 @@ public class AccountSettingsInformation {
     this.enableScheduledRelease = enableScheduledRelease;
   }
 
+
   /**
    * enableScheduledReleaseMetadata.
    *
@@ -12275,9 +12157,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableScheduledRelease` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableScheduledRelease` property is editable. .
    * @return enableScheduledReleaseMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableScheduledRelease` property is editable. ")
@@ -12292,6 +12172,7 @@ public class AccountSettingsInformation {
     this.enableScheduledReleaseMetadata = enableScheduledReleaseMetadata;
   }
 
+
   /**
    * enableSearch.
    *
@@ -12304,7 +12185,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSearch
    **/
   @Schema(description = "")
@@ -12319,6 +12199,7 @@ public class AccountSettingsInformation {
     this.enableSearch = enableSearch;
   }
 
+
   /**
    * enableSearchMetadata.
    *
@@ -12331,7 +12212,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSearchMetadata
    **/
   @Schema(description = "")
@@ -12346,6 +12226,7 @@ public class AccountSettingsInformation {
     this.enableSearchMetadata = enableSearchMetadata;
   }
 
+
   /**
    * enableSearchSiteSpecificApi.
    *
@@ -12358,7 +12239,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSearchSiteSpecificApi
    **/
   @Schema(description = "")
@@ -12373,20 +12253,19 @@ public class AccountSettingsInformation {
     this.enableSearchSiteSpecificApi = enableSearchSiteSpecificApi;
   }
 
+
   /**
    * enableSearchSiteSpecificApiMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSearchSiteSpecificApiMetadata(
-      SettingsMetadata enableSearchSiteSpecificApiMetadata) {
+  public AccountSettingsInformation enableSearchSiteSpecificApiMetadata(SettingsMetadata enableSearchSiteSpecificApiMetadata) {
     this.enableSearchSiteSpecificApiMetadata = enableSearchSiteSpecificApiMetadata;
     return this;
   }
 
   /**
-   * Get enableSearchSiteSpecificApiMetadata.
-   * 
+   * .
    * @return enableSearchSiteSpecificApiMetadata
    **/
   @Schema(description = "")
@@ -12401,6 +12280,7 @@ public class AccountSettingsInformation {
     this.enableSearchSiteSpecificApiMetadata = enableSearchSiteSpecificApiMetadata;
   }
 
+
   /**
    * enableSearchUI.
    *
@@ -12413,7 +12293,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSearchUI
    **/
   @Schema(description = "")
@@ -12428,6 +12307,7 @@ public class AccountSettingsInformation {
     this.enableSearchUI = enableSearchUI;
   }
 
+
   /**
    * enableSearchUIMetadata.
    *
@@ -12440,7 +12320,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSearchUIMetadata
    **/
   @Schema(description = "")
@@ -12455,6 +12334,7 @@ public class AccountSettingsInformation {
     this.enableSearchUIMetadata = enableSearchUIMetadata;
   }
 
+
   /**
    * enableSendingTagsFontSettings.
    *
@@ -12467,7 +12347,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSendingTagsFontSettings
    **/
   @Schema(description = "")
@@ -12482,21 +12361,19 @@ public class AccountSettingsInformation {
     this.enableSendingTagsFontSettings = enableSendingTagsFontSettings;
   }
 
+
   /**
    * enableSendingTagsFontSettingsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSendingTagsFontSettingsMetadata(
-      SettingsMetadata enableSendingTagsFontSettingsMetadata) {
+  public AccountSettingsInformation enableSendingTagsFontSettingsMetadata(SettingsMetadata enableSendingTagsFontSettingsMetadata) {
     this.enableSendingTagsFontSettingsMetadata = enableSendingTagsFontSettingsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSendingTagsFontSettings` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `enableSendingTagsFontSettings` property is editable. .
    * @return enableSendingTagsFontSettingsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSendingTagsFontSettings` property is editable. ")
@@ -12511,6 +12388,7 @@ public class AccountSettingsInformation {
     this.enableSendingTagsFontSettingsMetadata = enableSendingTagsFontSettingsMetadata;
   }
 
+
   /**
    * enableSendToAgent.
    *
@@ -12523,7 +12401,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSendToAgent
    **/
   @Schema(description = "")
@@ -12538,6 +12415,7 @@ public class AccountSettingsInformation {
     this.enableSendToAgent = enableSendToAgent;
   }
 
+
   /**
    * enableSendToAgentMetadata.
    *
@@ -12549,9 +12427,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSendToAgent` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `enableSendToAgent` property is editable. .
    * @return enableSendToAgentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSendToAgent` property is editable. ")
@@ -12566,6 +12442,7 @@ public class AccountSettingsInformation {
     this.enableSendToAgentMetadata = enableSendToAgentMetadata;
   }
 
+
   /**
    * enableSendToIntermediary.
    *
@@ -12578,7 +12455,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSendToIntermediary
    **/
   @Schema(description = "")
@@ -12593,21 +12469,19 @@ public class AccountSettingsInformation {
     this.enableSendToIntermediary = enableSendToIntermediary;
   }
 
+
   /**
    * enableSendToIntermediaryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSendToIntermediaryMetadata(
-      SettingsMetadata enableSendToIntermediaryMetadata) {
+  public AccountSettingsInformation enableSendToIntermediaryMetadata(SettingsMetadata enableSendToIntermediaryMetadata) {
     this.enableSendToIntermediaryMetadata = enableSendToIntermediaryMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSendToIntermediary` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSendToIntermediary` property is editable. .
    * @return enableSendToIntermediaryMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSendToIntermediary` property is editable. ")
@@ -12622,6 +12496,7 @@ public class AccountSettingsInformation {
     this.enableSendToIntermediaryMetadata = enableSendToIntermediaryMetadata;
   }
 
+
   /**
    * enableSendToManage.
    *
@@ -12634,7 +12509,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSendToManage
    **/
   @Schema(description = "")
@@ -12649,6 +12523,7 @@ public class AccountSettingsInformation {
     this.enableSendToManage = enableSendToManage;
   }
 
+
   /**
    * enableSendToManageMetadata.
    *
@@ -12660,9 +12535,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSendToManage` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSendToManage` property is editable. .
    * @return enableSendToManageMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSendToManage` property is editable. ")
@@ -12677,6 +12550,7 @@ public class AccountSettingsInformation {
     this.enableSendToManageMetadata = enableSendToManageMetadata;
   }
 
+
   /**
    * enableSequentialSigningAPI.
    *
@@ -12689,7 +12563,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSequentialSigningAPI
    **/
   @Schema(description = "")
@@ -12704,21 +12577,19 @@ public class AccountSettingsInformation {
     this.enableSequentialSigningAPI = enableSequentialSigningAPI;
   }
 
+
   /**
    * enableSequentialSigningAPIMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSequentialSigningAPIMetadata(
-      SettingsMetadata enableSequentialSigningAPIMetadata) {
+  public AccountSettingsInformation enableSequentialSigningAPIMetadata(SettingsMetadata enableSequentialSigningAPIMetadata) {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSequentialSigningAPI` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. .
    * @return enableSequentialSigningAPIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSequentialSigningAPI` property is editable. ")
@@ -12733,6 +12604,7 @@ public class AccountSettingsInformation {
     this.enableSequentialSigningAPIMetadata = enableSequentialSigningAPIMetadata;
   }
 
+
   /**
    * enableSequentialSigningUI.
    *
@@ -12745,7 +12617,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSequentialSigningUI
    **/
   @Schema(description = "")
@@ -12760,21 +12631,19 @@ public class AccountSettingsInformation {
     this.enableSequentialSigningUI = enableSequentialSigningUI;
   }
 
+
   /**
    * enableSequentialSigningUIMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSequentialSigningUIMetadata(
-      SettingsMetadata enableSequentialSigningUIMetadata) {
+  public AccountSettingsInformation enableSequentialSigningUIMetadata(SettingsMetadata enableSequentialSigningUIMetadata) {
     this.enableSequentialSigningUIMetadata = enableSequentialSigningUIMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSequentialSigningUI` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSequentialSigningUI` property is editable. .
    * @return enableSequentialSigningUIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSequentialSigningUI` property is editable. ")
@@ -12789,6 +12658,7 @@ public class AccountSettingsInformation {
     this.enableSequentialSigningUIMetadata = enableSequentialSigningUIMetadata;
   }
 
+
   /**
    * enableSignerAttachments.
    *
@@ -12801,7 +12671,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignerAttachments
    **/
   @Schema(description = "")
@@ -12816,6 +12685,7 @@ public class AccountSettingsInformation {
     this.enableSignerAttachments = enableSignerAttachments;
   }
 
+
   /**
    * enableSignerAttachmentsMetadata.
    *
@@ -12827,9 +12697,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSignerAttachments` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSignerAttachments` property is editable. .
    * @return enableSignerAttachmentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignerAttachments` property is editable. ")
@@ -12844,6 +12712,7 @@ public class AccountSettingsInformation {
     this.enableSignerAttachmentsMetadata = enableSignerAttachmentsMetadata;
   }
 
+
   /**
    * enableSigningExtensionComments.
    *
@@ -12856,7 +12725,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSigningExtensionComments
    **/
   @Schema(description = "")
@@ -12871,21 +12739,19 @@ public class AccountSettingsInformation {
     this.enableSigningExtensionComments = enableSigningExtensionComments;
   }
 
+
   /**
    * enableSigningExtensionCommentsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSigningExtensionCommentsMetadata(
-      SettingsMetadata enableSigningExtensionCommentsMetadata) {
+  public AccountSettingsInformation enableSigningExtensionCommentsMetadata(SettingsMetadata enableSigningExtensionCommentsMetadata) {
     this.enableSigningExtensionCommentsMetadata = enableSigningExtensionCommentsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSigningExtensionComments` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `enableSigningExtensionComments` property is editable. .
    * @return enableSigningExtensionCommentsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSigningExtensionComments` property is editable. ")
@@ -12900,6 +12766,7 @@ public class AccountSettingsInformation {
     this.enableSigningExtensionCommentsMetadata = enableSigningExtensionCommentsMetadata;
   }
 
+
   /**
    * enableSigningExtensionConversations.
    *
@@ -12912,7 +12779,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSigningExtensionConversations
    **/
   @Schema(description = "")
@@ -12927,21 +12793,19 @@ public class AccountSettingsInformation {
     this.enableSigningExtensionConversations = enableSigningExtensionConversations;
   }
 
+
   /**
    * enableSigningExtensionConversationsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSigningExtensionConversationsMetadata(
-      SettingsMetadata enableSigningExtensionConversationsMetadata) {
+  public AccountSettingsInformation enableSigningExtensionConversationsMetadata(SettingsMetadata enableSigningExtensionConversationsMetadata) {
     this.enableSigningExtensionConversationsMetadata = enableSigningExtensionConversationsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSigningExtensionConversations`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableSigningExtensionConversations` property is editable. .
    * @return enableSigningExtensionConversationsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSigningExtensionConversations` property is editable. ")
@@ -12952,10 +12816,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableSigningExtensionConversationsMetadata.
    **/
-  public void setEnableSigningExtensionConversationsMetadata(
-      SettingsMetadata enableSigningExtensionConversationsMetadata) {
+  public void setEnableSigningExtensionConversationsMetadata(SettingsMetadata enableSigningExtensionConversationsMetadata) {
     this.enableSigningExtensionConversationsMetadata = enableSigningExtensionConversationsMetadata;
   }
+
 
   /**
    * enableSigningOrderSettingsForAccount.
@@ -12969,7 +12833,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSigningOrderSettingsForAccount
    **/
   @Schema(description = "")
@@ -12984,21 +12847,19 @@ public class AccountSettingsInformation {
     this.enableSigningOrderSettingsForAccount = enableSigningOrderSettingsForAccount;
   }
 
+
   /**
    * enableSigningOrderSettingsForAccountMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSigningOrderSettingsForAccountMetadata(
-      SettingsMetadata enableSigningOrderSettingsForAccountMetadata) {
+  public AccountSettingsInformation enableSigningOrderSettingsForAccountMetadata(SettingsMetadata enableSigningOrderSettingsForAccountMetadata) {
     this.enableSigningOrderSettingsForAccountMetadata = enableSigningOrderSettingsForAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSigningOrderSettingsForAccount`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `enableSigningOrderSettingsForAccount` property is editable. .
    * @return enableSigningOrderSettingsForAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSigningOrderSettingsForAccount` property is editable. ")
@@ -13009,10 +12870,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableSigningOrderSettingsForAccountMetadata.
    **/
-  public void setEnableSigningOrderSettingsForAccountMetadata(
-      SettingsMetadata enableSigningOrderSettingsForAccountMetadata) {
+  public void setEnableSigningOrderSettingsForAccountMetadata(SettingsMetadata enableSigningOrderSettingsForAccountMetadata) {
     this.enableSigningOrderSettingsForAccountMetadata = enableSigningOrderSettingsForAccountMetadata;
   }
+
 
   /**
    * enableSignOnPaper.
@@ -13026,7 +12887,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignOnPaper
    **/
   @Schema(description = "")
@@ -13041,6 +12901,7 @@ public class AccountSettingsInformation {
     this.enableSignOnPaper = enableSignOnPaper;
   }
 
+
   /**
    * enableSignOnPaperMetadata.
    *
@@ -13052,9 +12913,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSignOnPaper` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `enableSignOnPaper` property is editable. .
    * @return enableSignOnPaperMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignOnPaper` property is editable. ")
@@ -13069,6 +12928,7 @@ public class AccountSettingsInformation {
     this.enableSignOnPaperMetadata = enableSignOnPaperMetadata;
   }
 
+
   /**
    * enableSignOnPaperOverride.
    *
@@ -13081,7 +12941,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignOnPaperOverride
    **/
   @Schema(description = "")
@@ -13096,21 +12955,19 @@ public class AccountSettingsInformation {
     this.enableSignOnPaperOverride = enableSignOnPaperOverride;
   }
 
+
   /**
    * enableSignOnPaperOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSignOnPaperOverrideMetadata(
-      SettingsMetadata enableSignOnPaperOverrideMetadata) {
+  public AccountSettingsInformation enableSignOnPaperOverrideMetadata(SettingsMetadata enableSignOnPaperOverrideMetadata) {
     this.enableSignOnPaperOverrideMetadata = enableSignOnPaperOverrideMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enableSignOnPaperOverride` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. .
    * @return enableSignOnPaperOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignOnPaperOverride` property is editable. ")
@@ -13125,6 +12982,7 @@ public class AccountSettingsInformation {
     this.enableSignOnPaperOverrideMetadata = enableSignOnPaperOverrideMetadata;
   }
 
+
   /**
    * enableSignWithNotary.
    *
@@ -13137,7 +12995,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSignWithNotary
    **/
   @Schema(description = "")
@@ -13152,6 +13009,7 @@ public class AccountSettingsInformation {
     this.enableSignWithNotary = enableSignWithNotary;
   }
 
+
   /**
    * enableSignWithNotaryMetadata.
    *
@@ -13163,9 +13021,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSignWithNotary` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSignWithNotary` property is editable. .
    * @return enableSignWithNotaryMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSignWithNotary` property is editable. ")
@@ -13180,6 +13036,7 @@ public class AccountSettingsInformation {
     this.enableSignWithNotaryMetadata = enableSignWithNotaryMetadata;
   }
 
+
   /**
    * enableSmartContracts.
    *
@@ -13192,7 +13049,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSmartContracts
    **/
   @Schema(description = "")
@@ -13207,6 +13063,7 @@ public class AccountSettingsInformation {
     this.enableSmartContracts = enableSmartContracts;
   }
 
+
   /**
    * enableSmartContractsMetadata.
    *
@@ -13218,9 +13075,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSmartContracts` property is
-   * editable..
-   * 
+   * Metadata that indicates whether the `enableSmartContracts` property is editable..
    * @return enableSmartContractsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSmartContracts` property is editable.")
@@ -13235,6 +13090,7 @@ public class AccountSettingsInformation {
     this.enableSmartContractsMetadata = enableSmartContractsMetadata;
   }
 
+
   /**
    * enableSMSAuthentication.
    *
@@ -13247,7 +13103,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSMSAuthentication
    **/
   @Schema(description = "")
@@ -13262,6 +13117,7 @@ public class AccountSettingsInformation {
     this.enableSMSAuthentication = enableSMSAuthentication;
   }
 
+
   /**
    * enableSMSAuthenticationMetadata.
    *
@@ -13273,9 +13129,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableSMSAuthentication` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableSMSAuthentication` property is editable. .
    * @return enableSMSAuthenticationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableSMSAuthentication` property is editable. ")
@@ -13290,20 +13144,19 @@ public class AccountSettingsInformation {
     this.enableSMSAuthenticationMetadata = enableSMSAuthenticationMetadata;
   }
 
+
   /**
    * enableSMSDeliveryAdditionalNotification.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSMSDeliveryAdditionalNotification(
-      String enableSMSDeliveryAdditionalNotification) {
+  public AccountSettingsInformation enableSMSDeliveryAdditionalNotification(String enableSMSDeliveryAdditionalNotification) {
     this.enableSMSDeliveryAdditionalNotification = enableSMSDeliveryAdditionalNotification;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableSMSDeliveryAdditionalNotification
    **/
   @Schema(description = "")
@@ -13318,20 +13171,19 @@ public class AccountSettingsInformation {
     this.enableSMSDeliveryAdditionalNotification = enableSMSDeliveryAdditionalNotification;
   }
 
+
   /**
    * enableSMSDeliveryAdditionalNotificationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enableSMSDeliveryAdditionalNotificationMetadata(
-      SettingsMetadata enableSMSDeliveryAdditionalNotificationMetadata) {
+  public AccountSettingsInformation enableSMSDeliveryAdditionalNotificationMetadata(SettingsMetadata enableSMSDeliveryAdditionalNotificationMetadata) {
     this.enableSMSDeliveryAdditionalNotificationMetadata = enableSMSDeliveryAdditionalNotificationMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return enableSMSDeliveryAdditionalNotificationMetadata
    **/
   @Schema(description = "")
@@ -13342,10 +13194,10 @@ public class AccountSettingsInformation {
   /**
    * setEnableSMSDeliveryAdditionalNotificationMetadata.
    **/
-  public void setEnableSMSDeliveryAdditionalNotificationMetadata(
-      SettingsMetadata enableSMSDeliveryAdditionalNotificationMetadata) {
+  public void setEnableSMSDeliveryAdditionalNotificationMetadata(SettingsMetadata enableSMSDeliveryAdditionalNotificationMetadata) {
     this.enableSMSDeliveryAdditionalNotificationMetadata = enableSMSDeliveryAdditionalNotificationMetadata;
   }
+
 
   /**
    * enableSMSDeliveryPrimary.
@@ -13359,7 +13211,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSMSDeliveryPrimary
    **/
   @Schema(description = "")
@@ -13374,6 +13225,7 @@ public class AccountSettingsInformation {
     this.enableSMSDeliveryPrimary = enableSMSDeliveryPrimary;
   }
 
+
   /**
    * enableSocialIdLogin.
    *
@@ -13386,7 +13238,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableSocialIdLogin
    **/
   @Schema(description = "")
@@ -13401,6 +13252,7 @@ public class AccountSettingsInformation {
     this.enableSocialIdLogin = enableSocialIdLogin;
   }
 
+
   /**
    * enableSocialIdLoginMetadata.
    *
@@ -13413,7 +13265,6 @@ public class AccountSettingsInformation {
 
   /**
    * Deprecated..
-   * 
    * @return enableSocialIdLoginMetadata
    **/
   @Schema(description = "Deprecated.")
@@ -13428,6 +13279,7 @@ public class AccountSettingsInformation {
     this.enableSocialIdLoginMetadata = enableSocialIdLoginMetadata;
   }
 
+
   /**
    * enableStrikeThrough.
    *
@@ -13440,7 +13292,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableStrikeThrough
    **/
   @Schema(description = "")
@@ -13455,6 +13306,7 @@ public class AccountSettingsInformation {
     this.enableStrikeThrough = enableStrikeThrough;
   }
 
+
   /**
    * enableStrikeThroughMetadata.
    *
@@ -13466,9 +13318,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableStrikeThrough` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `enableStrikeThrough` property is editable. .
    * @return enableStrikeThroughMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableStrikeThrough` property is editable. ")
@@ -13483,6 +13333,7 @@ public class AccountSettingsInformation {
     this.enableStrikeThroughMetadata = enableStrikeThroughMetadata;
   }
 
+
   /**
    * enableTransactionPoint.
    *
@@ -13495,7 +13346,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableTransactionPoint
    **/
   @Schema(description = "")
@@ -13510,6 +13360,7 @@ public class AccountSettingsInformation {
     this.enableTransactionPoint = enableTransactionPoint;
   }
 
+
   /**
    * enableTransactionPointMetadata.
    *
@@ -13522,7 +13373,6 @@ public class AccountSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return enableTransactionPointMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -13537,6 +13387,7 @@ public class AccountSettingsInformation {
     this.enableTransactionPointMetadata = enableTransactionPointMetadata;
   }
 
+
   /**
    * enableVaulting.
    *
@@ -13549,7 +13400,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableVaulting
    **/
   @Schema(description = "")
@@ -13564,6 +13414,7 @@ public class AccountSettingsInformation {
     this.enableVaulting = enableVaulting;
   }
 
+
   /**
    * enableVaultingMetadata.
    *
@@ -13576,7 +13427,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `enableVaulting` property is editable. .
-   * 
    * @return enableVaultingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableVaulting` property is editable. ")
@@ -13591,6 +13441,7 @@ public class AccountSettingsInformation {
     this.enableVaultingMetadata = enableVaultingMetadata;
   }
 
+
   /**
    * enableWitnessing.
    *
@@ -13603,7 +13454,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enableWitnessing
    **/
   @Schema(description = "")
@@ -13618,6 +13468,7 @@ public class AccountSettingsInformation {
     this.enableWitnessing = enableWitnessing;
   }
 
+
   /**
    * enableWitnessingMetadata.
    *
@@ -13629,9 +13480,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `enableWitnessing` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `enableWitnessing` property is editable. .
    * @return enableWitnessingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enableWitnessing` property is editable. ")
@@ -13646,6 +13495,7 @@ public class AccountSettingsInformation {
     this.enableWitnessingMetadata = enableWitnessingMetadata;
   }
 
+
   /**
    * enforceTemplateNameUniqueness.
    *
@@ -13658,7 +13508,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enforceTemplateNameUniqueness
    **/
   @Schema(description = "")
@@ -13673,21 +13522,19 @@ public class AccountSettingsInformation {
     this.enforceTemplateNameUniqueness = enforceTemplateNameUniqueness;
   }
 
+
   /**
    * enforceTemplateNameUniquenessMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation enforceTemplateNameUniquenessMetadata(
-      SettingsMetadata enforceTemplateNameUniquenessMetadata) {
+  public AccountSettingsInformation enforceTemplateNameUniquenessMetadata(SettingsMetadata enforceTemplateNameUniquenessMetadata) {
     this.enforceTemplateNameUniquenessMetadata = enforceTemplateNameUniquenessMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `enforceTemplateNameUniqueness` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `enforceTemplateNameUniqueness` property is editable. .
    * @return enforceTemplateNameUniquenessMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `enforceTemplateNameUniqueness` property is editable. ")
@@ -13702,6 +13549,7 @@ public class AccountSettingsInformation {
     this.enforceTemplateNameUniquenessMetadata = enforceTemplateNameUniquenessMetadata;
   }
 
+
   /**
    * enforceTlsEmails.
    *
@@ -13714,7 +13562,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return enforceTlsEmails
    **/
   @Schema(description = "")
@@ -13729,6 +13576,7 @@ public class AccountSettingsInformation {
     this.enforceTlsEmails = enforceTlsEmails;
   }
 
+
   /**
    * enforceTlsEmailsMetadata.
    *
@@ -13740,8 +13588,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get enforceTlsEmailsMetadata.
-   * 
+   * .
    * @return enforceTlsEmailsMetadata
    **/
   @Schema(description = "")
@@ -13756,6 +13603,7 @@ public class AccountSettingsInformation {
     this.enforceTlsEmailsMetadata = enforceTlsEmailsMetadata;
   }
 
+
   /**
    * envelopeIntegrationAllowed.
    *
@@ -13768,7 +13616,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return envelopeIntegrationAllowed
    **/
   @Schema(description = "")
@@ -13783,21 +13630,19 @@ public class AccountSettingsInformation {
     this.envelopeIntegrationAllowed = envelopeIntegrationAllowed;
   }
 
+
   /**
    * envelopeIntegrationAllowedMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeIntegrationAllowedMetadata(
-      SettingsMetadata envelopeIntegrationAllowedMetadata) {
+  public AccountSettingsInformation envelopeIntegrationAllowedMetadata(SettingsMetadata envelopeIntegrationAllowedMetadata) {
     this.envelopeIntegrationAllowedMetadata = envelopeIntegrationAllowedMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `envelopeIntegrationAllowed` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `envelopeIntegrationAllowed` property is editable. .
    * @return envelopeIntegrationAllowedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `envelopeIntegrationAllowed` property is editable. ")
@@ -13812,6 +13657,7 @@ public class AccountSettingsInformation {
     this.envelopeIntegrationAllowedMetadata = envelopeIntegrationAllowedMetadata;
   }
 
+
   /**
    * envelopeIntegrationEnabled.
    *
@@ -13824,7 +13670,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return envelopeIntegrationEnabled
    **/
   @Schema(description = "")
@@ -13839,21 +13684,19 @@ public class AccountSettingsInformation {
     this.envelopeIntegrationEnabled = envelopeIntegrationEnabled;
   }
 
+
   /**
    * envelopeIntegrationEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeIntegrationEnabledMetadata(
-      SettingsMetadata envelopeIntegrationEnabledMetadata) {
+  public AccountSettingsInformation envelopeIntegrationEnabledMetadata(SettingsMetadata envelopeIntegrationEnabledMetadata) {
     this.envelopeIntegrationEnabledMetadata = envelopeIntegrationEnabledMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `envelopeIntegrationEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `envelopeIntegrationEnabled` property is editable. .
    * @return envelopeIntegrationEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `envelopeIntegrationEnabled` property is editable. ")
@@ -13868,20 +13711,19 @@ public class AccountSettingsInformation {
     this.envelopeIntegrationEnabledMetadata = envelopeIntegrationEnabledMetadata;
   }
 
+
   /**
    * envelopeLimitsTotalDocumentSizeAllowedInMB.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMB(
-      String envelopeLimitsTotalDocumentSizeAllowedInMB) {
+  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMB(String envelopeLimitsTotalDocumentSizeAllowedInMB) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMB = envelopeLimitsTotalDocumentSizeAllowedInMB;
     return this;
   }
 
   /**
    * .
-   * 
    * @return envelopeLimitsTotalDocumentSizeAllowedInMB
    **/
   @Schema(description = "")
@@ -13896,20 +13738,19 @@ public class AccountSettingsInformation {
     this.envelopeLimitsTotalDocumentSizeAllowedInMB = envelopeLimitsTotalDocumentSizeAllowedInMB;
   }
 
+
   /**
    * envelopeLimitsTotalDocumentSizeAllowedInMBEnabled.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBEnabled(
-      String envelopeLimitsTotalDocumentSizeAllowedInMBEnabled) {
+  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBEnabled(String envelopeLimitsTotalDocumentSizeAllowedInMBEnabled) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled = envelopeLimitsTotalDocumentSizeAllowedInMBEnabled;
     return this;
   }
 
   /**
    * .
-   * 
    * @return envelopeLimitsTotalDocumentSizeAllowedInMBEnabled
    **/
   @Schema(description = "")
@@ -13920,25 +13761,23 @@ public class AccountSettingsInformation {
   /**
    * setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled.
    **/
-  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled(
-      String envelopeLimitsTotalDocumentSizeAllowedInMBEnabled) {
+  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabled(String envelopeLimitsTotalDocumentSizeAllowedInMBEnabled) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled = envelopeLimitsTotalDocumentSizeAllowedInMBEnabled;
   }
+
 
   /**
    * envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata(
-      SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata) {
+  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata(SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata = envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata;
     return this;
   }
 
   /**
-   * Get envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata.
-   * 
+   * .
    * @return envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata
    **/
   @Schema(description = "")
@@ -13949,25 +13788,23 @@ public class AccountSettingsInformation {
   /**
    * setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata.
    **/
-  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata(
-      SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata) {
+  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata(SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata = envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata;
   }
+
 
   /**
    * envelopeLimitsTotalDocumentSizeAllowedInMBMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBMetadata(
-      SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBMetadata) {
+  public AccountSettingsInformation envelopeLimitsTotalDocumentSizeAllowedInMBMetadata(SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBMetadata) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata = envelopeLimitsTotalDocumentSizeAllowedInMBMetadata;
     return this;
   }
 
   /**
-   * Get envelopeLimitsTotalDocumentSizeAllowedInMBMetadata.
-   * 
+   * .
    * @return envelopeLimitsTotalDocumentSizeAllowedInMBMetadata
    **/
   @Schema(description = "")
@@ -13978,10 +13815,10 @@ public class AccountSettingsInformation {
   /**
    * setEnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata.
    **/
-  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata(
-      SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBMetadata) {
+  public void setEnvelopeLimitsTotalDocumentSizeAllowedInMBMetadata(SettingsMetadata envelopeLimitsTotalDocumentSizeAllowedInMBMetadata) {
     this.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata = envelopeLimitsTotalDocumentSizeAllowedInMBMetadata;
   }
+
 
   /**
    * envelopeSearchMode.
@@ -13995,7 +13832,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return envelopeSearchMode
    **/
   @Schema(description = "")
@@ -14010,6 +13846,7 @@ public class AccountSettingsInformation {
     this.envelopeSearchMode = envelopeSearchMode;
   }
 
+
   /**
    * envelopeSearchModeMetadata.
    *
@@ -14021,8 +13858,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get envelopeSearchModeMetadata.
-   * 
+   * .
    * @return envelopeSearchModeMetadata
    **/
   @Schema(description = "")
@@ -14037,6 +13873,7 @@ public class AccountSettingsInformation {
     this.envelopeSearchModeMetadata = envelopeSearchModeMetadata;
   }
 
+
   /**
    * envelopeStampingDefaultValue.
    *
@@ -14049,7 +13886,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return envelopeStampingDefaultValue
    **/
   @Schema(description = "")
@@ -14064,21 +13900,19 @@ public class AccountSettingsInformation {
     this.envelopeStampingDefaultValue = envelopeStampingDefaultValue;
   }
 
+
   /**
    * envelopeStampingDefaultValueMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation envelopeStampingDefaultValueMetadata(
-      SettingsMetadata envelopeStampingDefaultValueMetadata) {
+  public AccountSettingsInformation envelopeStampingDefaultValueMetadata(SettingsMetadata envelopeStampingDefaultValueMetadata) {
     this.envelopeStampingDefaultValueMetadata = envelopeStampingDefaultValueMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `envelopeStampingDefaultValue` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `envelopeStampingDefaultValue` property is editable. .
    * @return envelopeStampingDefaultValueMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `envelopeStampingDefaultValue` property is editable. ")
@@ -14093,6 +13927,7 @@ public class AccountSettingsInformation {
     this.envelopeStampingDefaultValueMetadata = envelopeStampingDefaultValueMetadata;
   }
 
+
   /**
    * exitPrompt.
    *
@@ -14105,7 +13940,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return exitPrompt
    **/
   @Schema(description = "")
@@ -14120,6 +13954,7 @@ public class AccountSettingsInformation {
     this.exitPrompt = exitPrompt;
   }
 
+
   /**
    * exitPromptMetadata.
    *
@@ -14132,7 +13967,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return exitPromptMetadata
    **/
   @Schema(description = "")
@@ -14147,6 +13981,7 @@ public class AccountSettingsInformation {
     this.exitPromptMetadata = exitPromptMetadata;
   }
 
+
   /**
    * expressSend.
    *
@@ -14159,7 +13994,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return expressSend
    **/
   @Schema(description = "")
@@ -14174,6 +14008,7 @@ public class AccountSettingsInformation {
     this.expressSend = expressSend;
   }
 
+
   /**
    * expressSendAllowTabs.
    *
@@ -14186,7 +14021,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return expressSendAllowTabs
    **/
   @Schema(description = "")
@@ -14201,6 +14035,7 @@ public class AccountSettingsInformation {
     this.expressSendAllowTabs = expressSendAllowTabs;
   }
 
+
   /**
    * expressSendAllowTabsMetadata.
    *
@@ -14212,9 +14047,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `expressSendAllowTabs` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `expressSendAllowTabs` property is editable. .
    * @return expressSendAllowTabsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `expressSendAllowTabs` property is editable. ")
@@ -14229,6 +14062,7 @@ public class AccountSettingsInformation {
     this.expressSendAllowTabsMetadata = expressSendAllowTabsMetadata;
   }
 
+
   /**
    * expressSendMetadata.
    *
@@ -14241,7 +14075,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `expressSend` property is editable. .
-   * 
    * @return expressSendMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `expressSend` property is editable. ")
@@ -14256,6 +14089,7 @@ public class AccountSettingsInformation {
     this.expressSendMetadata = expressSendMetadata;
   }
 
+
   /**
    * externalDocumentSources.
    *
@@ -14268,7 +14102,6 @@ public class AccountSettingsInformation {
 
   /**
    * A list of external document sources such as DropBox and OneDrive..
-   * 
    * @return externalDocumentSources
    **/
   @Schema(description = "A list of external document sources such as DropBox and OneDrive.")
@@ -14283,6 +14116,7 @@ public class AccountSettingsInformation {
     this.externalDocumentSources = externalDocumentSources;
   }
 
+
   /**
    * externalSignaturePadType.
    *
@@ -14295,7 +14129,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return externalSignaturePadType
    **/
   @Schema(description = "")
@@ -14310,21 +14143,19 @@ public class AccountSettingsInformation {
     this.externalSignaturePadType = externalSignaturePadType;
   }
 
+
   /**
    * externalSignaturePadTypeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation externalSignaturePadTypeMetadata(
-      SettingsMetadata externalSignaturePadTypeMetadata) {
+  public AccountSettingsInformation externalSignaturePadTypeMetadata(SettingsMetadata externalSignaturePadTypeMetadata) {
     this.externalSignaturePadTypeMetadata = externalSignaturePadTypeMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `externalSignaturePadType` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `externalSignaturePadType` property is editable. .
    * @return externalSignaturePadTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `externalSignaturePadType` property is editable. ")
@@ -14339,6 +14170,7 @@ public class AccountSettingsInformation {
     this.externalSignaturePadTypeMetadata = externalSignaturePadTypeMetadata;
   }
 
+
   /**
    * faxOutEnabled.
    *
@@ -14351,7 +14183,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return faxOutEnabled
    **/
   @Schema(description = "")
@@ -14366,6 +14197,7 @@ public class AccountSettingsInformation {
     this.faxOutEnabled = faxOutEnabled;
   }
 
+
   /**
    * faxOutEnabledMetadata.
    *
@@ -14378,7 +14210,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `faxOutEnabled` property is editable. .
-   * 
    * @return faxOutEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `faxOutEnabled` property is editable. ")
@@ -14393,6 +14224,7 @@ public class AccountSettingsInformation {
     this.faxOutEnabledMetadata = faxOutEnabledMetadata;
   }
 
+
   /**
    * finishReminder.
    *
@@ -14405,7 +14237,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return finishReminder
    **/
   @Schema(description = "")
@@ -14420,6 +14251,7 @@ public class AccountSettingsInformation {
     this.finishReminder = finishReminder;
   }
 
+
   /**
    * finishReminderMetadata.
    *
@@ -14432,7 +14264,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return finishReminderMetadata
    **/
   @Schema(description = "")
@@ -14447,6 +14278,7 @@ public class AccountSettingsInformation {
     this.finishReminderMetadata = finishReminderMetadata;
   }
 
+
   /**
    * guidedFormsHtmlAllowed.
    *
@@ -14459,7 +14291,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return guidedFormsHtmlAllowed
    **/
   @Schema(description = "")
@@ -14474,6 +14305,7 @@ public class AccountSettingsInformation {
     this.guidedFormsHtmlAllowed = guidedFormsHtmlAllowed;
   }
 
+
   /**
    * guidedFormsHtmlAllowedMetadata.
    *
@@ -14486,7 +14318,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return guidedFormsHtmlAllowedMetadata
    **/
   @Schema(description = "")
@@ -14501,6 +14332,7 @@ public class AccountSettingsInformation {
     this.guidedFormsHtmlAllowedMetadata = guidedFormsHtmlAllowedMetadata;
   }
 
+
   /**
    * guidedFormsHtmlConversionPolicy.
    *
@@ -14513,7 +14345,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return guidedFormsHtmlConversionPolicy
    **/
   @Schema(description = "")
@@ -14528,20 +14359,19 @@ public class AccountSettingsInformation {
     this.guidedFormsHtmlConversionPolicy = guidedFormsHtmlConversionPolicy;
   }
 
+
   /**
    * guidedFormsHtmlConversionPolicyMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation guidedFormsHtmlConversionPolicyMetadata(
-      SettingsMetadata guidedFormsHtmlConversionPolicyMetadata) {
+  public AccountSettingsInformation guidedFormsHtmlConversionPolicyMetadata(SettingsMetadata guidedFormsHtmlConversionPolicyMetadata) {
     this.guidedFormsHtmlConversionPolicyMetadata = guidedFormsHtmlConversionPolicyMetadata;
     return this;
   }
 
   /**
-   * Get guidedFormsHtmlConversionPolicyMetadata.
-   * 
+   * .
    * @return guidedFormsHtmlConversionPolicyMetadata
    **/
   @Schema(description = "")
@@ -14556,6 +14386,7 @@ public class AccountSettingsInformation {
     this.guidedFormsHtmlConversionPolicyMetadata = guidedFormsHtmlConversionPolicyMetadata;
   }
 
+
   /**
    * hasRecipientConnectClaimedDomain.
    *
@@ -14568,7 +14399,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return hasRecipientConnectClaimedDomain
    **/
   @Schema(description = "")
@@ -14583,6 +14413,7 @@ public class AccountSettingsInformation {
     this.hasRecipientConnectClaimedDomain = hasRecipientConnectClaimedDomain;
   }
 
+
   /**
    * hideAccountAddressInCoC.
    *
@@ -14595,7 +14426,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return hideAccountAddressInCoC
    **/
   @Schema(description = "")
@@ -14610,6 +14440,7 @@ public class AccountSettingsInformation {
     this.hideAccountAddressInCoC = hideAccountAddressInCoC;
   }
 
+
   /**
    * hideAccountAddressInCoCMetadata.
    *
@@ -14621,9 +14452,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `hideAccountAddressInCoC` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `hideAccountAddressInCoC` property is editable. .
    * @return hideAccountAddressInCoCMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `hideAccountAddressInCoC` property is editable. ")
@@ -14638,6 +14467,7 @@ public class AccountSettingsInformation {
     this.hideAccountAddressInCoCMetadata = hideAccountAddressInCoCMetadata;
   }
 
+
   /**
    * hidePricing.
    *
@@ -14650,7 +14480,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return hidePricing
    **/
   @Schema(description = "")
@@ -14665,6 +14494,7 @@ public class AccountSettingsInformation {
     this.hidePricing = hidePricing;
   }
 
+
   /**
    * hidePricingMetadata.
    *
@@ -14677,7 +14507,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `hidePricing` property is editable. .
-   * 
    * @return hidePricingMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `hidePricing` property is editable. ")
@@ -14692,6 +14521,7 @@ public class AccountSettingsInformation {
     this.hidePricingMetadata = hidePricingMetadata;
   }
 
+
   /**
    * idCheckConfigurations.
    *
@@ -14701,7 +14531,7 @@ public class AccountSettingsInformation {
     this.idCheckConfigurations = idCheckConfigurations;
     return this;
   }
-
+  
   /**
    * addIdCheckConfigurationsItem.
    *
@@ -14717,7 +14547,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idCheckConfigurations
    **/
   @Schema(description = "")
@@ -14732,6 +14561,7 @@ public class AccountSettingsInformation {
     this.idCheckConfigurations = idCheckConfigurations;
   }
 
+
   /**
    * idCheckExpire.
    *
@@ -14744,7 +14574,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idCheckExpire
    **/
   @Schema(description = "")
@@ -14759,6 +14588,7 @@ public class AccountSettingsInformation {
     this.idCheckExpire = idCheckExpire;
   }
 
+
   /**
    * idCheckExpireDays.
    *
@@ -14771,7 +14601,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idCheckExpireDays
    **/
   @Schema(description = "")
@@ -14786,6 +14615,7 @@ public class AccountSettingsInformation {
     this.idCheckExpireDays = idCheckExpireDays;
   }
 
+
   /**
    * idCheckExpireDaysMetadata.
    *
@@ -14797,9 +14627,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `idCheckExpireDays` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `idCheckExpireDays` property is editable. .
    * @return idCheckExpireDaysMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckExpireDays` property is editable. ")
@@ -14814,6 +14642,7 @@ public class AccountSettingsInformation {
     this.idCheckExpireDaysMetadata = idCheckExpireDaysMetadata;
   }
 
+
   /**
    * idCheckExpireMetadata.
    *
@@ -14826,7 +14655,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `idCheckExpire` property is editable. .
-   * 
    * @return idCheckExpireMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckExpire` property is editable. ")
@@ -14841,6 +14669,7 @@ public class AccountSettingsInformation {
     this.idCheckExpireMetadata = idCheckExpireMetadata;
   }
 
+
   /**
    * idCheckExpireMinutes.
    *
@@ -14853,7 +14682,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idCheckExpireMinutes
    **/
   @Schema(description = "")
@@ -14868,6 +14696,7 @@ public class AccountSettingsInformation {
     this.idCheckExpireMinutes = idCheckExpireMinutes;
   }
 
+
   /**
    * idCheckExpireMinutesMetadata.
    *
@@ -14879,9 +14708,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `idCheckExpireMinutes` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `idCheckExpireMinutes` property is editable. .
    * @return idCheckExpireMinutesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckExpireMinutes` property is editable. ")
@@ -14896,6 +14723,7 @@ public class AccountSettingsInformation {
     this.idCheckExpireMinutesMetadata = idCheckExpireMinutesMetadata;
   }
 
+
   /**
    * idCheckRequired.
    *
@@ -14908,7 +14736,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idCheckRequired
    **/
   @Schema(description = "")
@@ -14923,6 +14750,7 @@ public class AccountSettingsInformation {
     this.idCheckRequired = idCheckRequired;
   }
 
+
   /**
    * idCheckRequiredMetadata.
    *
@@ -14935,7 +14763,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `idCheckRequired` property is editable. .
-   * 
    * @return idCheckRequiredMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `idCheckRequired` property is editable. ")
@@ -14950,24 +14777,23 @@ public class AccountSettingsInformation {
     this.idCheckRequiredMetadata = idCheckRequiredMetadata;
   }
 
+
   /**
    * identityVerification.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation identityVerification(
-      java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
+  public AccountSettingsInformation identityVerification(java.util.List<AccountIdentityVerificationWorkflow> identityVerification) {
     this.identityVerification = identityVerification;
     return this;
   }
-
+  
   /**
    * addIdentityVerificationItem.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation addIdentityVerificationItem(
-      AccountIdentityVerificationWorkflow identityVerificationItem) {
+  public AccountSettingsInformation addIdentityVerificationItem(AccountIdentityVerificationWorkflow identityVerificationItem) {
     if (this.identityVerification == null) {
       this.identityVerification = new java.util.ArrayList<>();
     }
@@ -14977,7 +14803,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return identityVerification
    **/
   @Schema(description = "")
@@ -14992,6 +14817,7 @@ public class AccountSettingsInformation {
     this.identityVerification = identityVerification;
   }
 
+
   /**
    * identityVerificationMetadata.
    *
@@ -15003,9 +14829,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `identityVerification` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `identityVerification` property is editable. .
    * @return identityVerificationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `identityVerification` property is editable. ")
@@ -15020,6 +14844,7 @@ public class AccountSettingsInformation {
     this.identityVerificationMetadata = identityVerificationMetadata;
   }
 
+
   /**
    * idfxKBAAuthenticationOverride.
    *
@@ -15032,7 +14857,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idfxKBAAuthenticationOverride
    **/
   @Schema(description = "")
@@ -15047,20 +14871,19 @@ public class AccountSettingsInformation {
     this.idfxKBAAuthenticationOverride = idfxKBAAuthenticationOverride;
   }
 
+
   /**
    * idfxKBAAuthenticationOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation idfxKBAAuthenticationOverrideMetadata(
-      SettingsMetadata idfxKBAAuthenticationOverrideMetadata) {
+  public AccountSettingsInformation idfxKBAAuthenticationOverrideMetadata(SettingsMetadata idfxKBAAuthenticationOverrideMetadata) {
     this.idfxKBAAuthenticationOverrideMetadata = idfxKBAAuthenticationOverrideMetadata;
     return this;
   }
 
   /**
-   * Get idfxKBAAuthenticationOverrideMetadata.
-   * 
+   * .
    * @return idfxKBAAuthenticationOverrideMetadata
    **/
   @Schema(description = "")
@@ -15075,6 +14898,7 @@ public class AccountSettingsInformation {
     this.idfxKBAAuthenticationOverrideMetadata = idfxKBAAuthenticationOverrideMetadata;
   }
 
+
   /**
    * idfxPhoneAuthenticationOverride.
    *
@@ -15087,7 +14911,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return idfxPhoneAuthenticationOverride
    **/
   @Schema(description = "")
@@ -15102,20 +14925,19 @@ public class AccountSettingsInformation {
     this.idfxPhoneAuthenticationOverride = idfxPhoneAuthenticationOverride;
   }
 
+
   /**
    * idfxPhoneAuthenticationOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation idfxPhoneAuthenticationOverrideMetadata(
-      SettingsMetadata idfxPhoneAuthenticationOverrideMetadata) {
+  public AccountSettingsInformation idfxPhoneAuthenticationOverrideMetadata(SettingsMetadata idfxPhoneAuthenticationOverrideMetadata) {
     this.idfxPhoneAuthenticationOverrideMetadata = idfxPhoneAuthenticationOverrideMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return idfxPhoneAuthenticationOverrideMetadata
    **/
   @Schema(description = "")
@@ -15130,6 +14952,7 @@ public class AccountSettingsInformation {
     this.idfxPhoneAuthenticationOverrideMetadata = idfxPhoneAuthenticationOverrideMetadata;
   }
 
+
   /**
    * ignoreErrorIfAnchorTabNotFound.
    *
@@ -15142,7 +14965,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return ignoreErrorIfAnchorTabNotFound
    **/
   @Schema(description = "")
@@ -15157,20 +14979,19 @@ public class AccountSettingsInformation {
     this.ignoreErrorIfAnchorTabNotFound = ignoreErrorIfAnchorTabNotFound;
   }
 
+
   /**
    * ignoreErrorIfAnchorTabNotFoundMetadataEnabled.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation ignoreErrorIfAnchorTabNotFoundMetadataEnabled(
-      SettingsMetadata ignoreErrorIfAnchorTabNotFoundMetadataEnabled) {
+  public AccountSettingsInformation ignoreErrorIfAnchorTabNotFoundMetadataEnabled(SettingsMetadata ignoreErrorIfAnchorTabNotFoundMetadataEnabled) {
     this.ignoreErrorIfAnchorTabNotFoundMetadataEnabled = ignoreErrorIfAnchorTabNotFoundMetadataEnabled;
     return this;
   }
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return ignoreErrorIfAnchorTabNotFoundMetadataEnabled
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -15181,10 +15002,10 @@ public class AccountSettingsInformation {
   /**
    * setIgnoreErrorIfAnchorTabNotFoundMetadataEnabled.
    **/
-  public void setIgnoreErrorIfAnchorTabNotFoundMetadataEnabled(
-      SettingsMetadata ignoreErrorIfAnchorTabNotFoundMetadataEnabled) {
+  public void setIgnoreErrorIfAnchorTabNotFoundMetadataEnabled(SettingsMetadata ignoreErrorIfAnchorTabNotFoundMetadataEnabled) {
     this.ignoreErrorIfAnchorTabNotFoundMetadataEnabled = ignoreErrorIfAnchorTabNotFoundMetadataEnabled;
   }
+
 
   /**
    * inPersonIDCheckQuestion.
@@ -15198,7 +15019,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return inPersonIDCheckQuestion
    **/
   @Schema(description = "")
@@ -15213,6 +15033,7 @@ public class AccountSettingsInformation {
     this.inPersonIDCheckQuestion = inPersonIDCheckQuestion;
   }
 
+
   /**
    * inPersonIDCheckQuestionMetadata.
    *
@@ -15224,9 +15045,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `inPersonIDCheckQuestion` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `inPersonIDCheckQuestion` property is editable. .
    * @return inPersonIDCheckQuestionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `inPersonIDCheckQuestion` property is editable. ")
@@ -15241,6 +15060,7 @@ public class AccountSettingsInformation {
     this.inPersonIDCheckQuestionMetadata = inPersonIDCheckQuestionMetadata;
   }
 
+
   /**
    * inPersonSigningEnabled.
    *
@@ -15253,7 +15073,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return inPersonSigningEnabled
    **/
   @Schema(description = "")
@@ -15268,6 +15087,7 @@ public class AccountSettingsInformation {
     this.inPersonSigningEnabled = inPersonSigningEnabled;
   }
 
+
   /**
    * inPersonSigningEnabledMetadata.
    *
@@ -15279,9 +15099,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `inPersonSigningEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `inPersonSigningEnabled` property is editable. .
    * @return inPersonSigningEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `inPersonSigningEnabled` property is editable. ")
@@ -15296,6 +15114,7 @@ public class AccountSettingsInformation {
     this.inPersonSigningEnabledMetadata = inPersonSigningEnabledMetadata;
   }
 
+
   /**
    * inSessionEnabled.
    *
@@ -15308,7 +15127,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return inSessionEnabled
    **/
   @Schema(description = "")
@@ -15323,6 +15141,7 @@ public class AccountSettingsInformation {
     this.inSessionEnabled = inSessionEnabled;
   }
 
+
   /**
    * inSessionEnabledMetadata.
    *
@@ -15334,9 +15153,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `inSessionEnabled` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `inSessionEnabled` property is editable. .
    * @return inSessionEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `inSessionEnabled` property is editable. ")
@@ -15351,6 +15168,7 @@ public class AccountSettingsInformation {
     this.inSessionEnabledMetadata = inSessionEnabledMetadata;
   }
 
+
   /**
    * inSessionSuppressEmails.
    *
@@ -15363,7 +15181,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return inSessionSuppressEmails
    **/
   @Schema(description = "")
@@ -15378,6 +15195,7 @@ public class AccountSettingsInformation {
     this.inSessionSuppressEmails = inSessionSuppressEmails;
   }
 
+
   /**
    * inSessionSuppressEmailsMetadata.
    *
@@ -15389,9 +15207,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `inSessionSuppressEmails` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `inSessionSuppressEmails` property is editable. .
    * @return inSessionSuppressEmailsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `inSessionSuppressEmails` property is editable. ")
@@ -15406,24 +15222,50 @@ public class AccountSettingsInformation {
     this.inSessionSuppressEmailsMetadata = inSessionSuppressEmailsMetadata;
   }
 
+
+  /**
+   * isConnectDocumentFieldsEnabled.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation isConnectDocumentFieldsEnabled(String isConnectDocumentFieldsEnabled) {
+    this.isConnectDocumentFieldsEnabled = isConnectDocumentFieldsEnabled;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isConnectDocumentFieldsEnabled
+   **/
+  @Schema(description = "")
+  public String getIsConnectDocumentFieldsEnabled() {
+    return isConnectDocumentFieldsEnabled;
+  }
+
+  /**
+   * setIsConnectDocumentFieldsEnabled.
+   **/
+  public void setIsConnectDocumentFieldsEnabled(String isConnectDocumentFieldsEnabled) {
+    this.isConnectDocumentFieldsEnabled = isConnectDocumentFieldsEnabled;
+  }
+
+
   /**
    * linkedExternalPrimaryAccounts.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation linkedExternalPrimaryAccounts(
-      java.util.List<LinkedExternalPrimaryAccount> linkedExternalPrimaryAccounts) {
+  public AccountSettingsInformation linkedExternalPrimaryAccounts(java.util.List<LinkedExternalPrimaryAccount> linkedExternalPrimaryAccounts) {
     this.linkedExternalPrimaryAccounts = linkedExternalPrimaryAccounts;
     return this;
   }
-
+  
   /**
    * addLinkedExternalPrimaryAccountsItem.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation addLinkedExternalPrimaryAccountsItem(
-      LinkedExternalPrimaryAccount linkedExternalPrimaryAccountsItem) {
+  public AccountSettingsInformation addLinkedExternalPrimaryAccountsItem(LinkedExternalPrimaryAccount linkedExternalPrimaryAccountsItem) {
     if (this.linkedExternalPrimaryAccounts == null) {
       this.linkedExternalPrimaryAccounts = new java.util.ArrayList<>();
     }
@@ -15433,7 +15275,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return linkedExternalPrimaryAccounts
    **/
   @Schema(description = "")
@@ -15444,10 +15285,10 @@ public class AccountSettingsInformation {
   /**
    * setLinkedExternalPrimaryAccounts.
    **/
-  public void setLinkedExternalPrimaryAccounts(
-      java.util.List<LinkedExternalPrimaryAccount> linkedExternalPrimaryAccounts) {
+  public void setLinkedExternalPrimaryAccounts(java.util.List<LinkedExternalPrimaryAccount> linkedExternalPrimaryAccounts) {
     this.linkedExternalPrimaryAccounts = linkedExternalPrimaryAccounts;
   }
+
 
   /**
    * maximumSigningGroups.
@@ -15461,7 +15302,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return maximumSigningGroups
    **/
   @Schema(description = "")
@@ -15476,6 +15316,7 @@ public class AccountSettingsInformation {
     this.maximumSigningGroups = maximumSigningGroups;
   }
 
+
   /**
    * maximumSigningGroupsMetadata.
    *
@@ -15487,9 +15328,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `maximumSigningGroups` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `maximumSigningGroups` property is editable. .
    * @return maximumSigningGroupsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `maximumSigningGroups` property is editable. ")
@@ -15504,6 +15343,7 @@ public class AccountSettingsInformation {
     this.maximumSigningGroupsMetadata = maximumSigningGroupsMetadata;
   }
 
+
   /**
    * maximumUsersPerSigningGroup.
    *
@@ -15516,7 +15356,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return maximumUsersPerSigningGroup
    **/
   @Schema(description = "")
@@ -15531,21 +15370,19 @@ public class AccountSettingsInformation {
     this.maximumUsersPerSigningGroup = maximumUsersPerSigningGroup;
   }
 
+
   /**
    * maximumUsersPerSigningGroupMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation maximumUsersPerSigningGroupMetadata(
-      SettingsMetadata maximumUsersPerSigningGroupMetadata) {
+  public AccountSettingsInformation maximumUsersPerSigningGroupMetadata(SettingsMetadata maximumUsersPerSigningGroupMetadata) {
     this.maximumUsersPerSigningGroupMetadata = maximumUsersPerSigningGroupMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `maximumUsersPerSigningGroup` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `maximumUsersPerSigningGroup` property is editable. .
    * @return maximumUsersPerSigningGroupMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `maximumUsersPerSigningGroup` property is editable. ")
@@ -15560,6 +15397,7 @@ public class AccountSettingsInformation {
     this.maximumUsersPerSigningGroupMetadata = maximumUsersPerSigningGroupMetadata;
   }
 
+
   /**
    * maxNumberOfCustomStamps.
    *
@@ -15572,7 +15410,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return maxNumberOfCustomStamps
    **/
   @Schema(description = "")
@@ -15587,6 +15424,7 @@ public class AccountSettingsInformation {
     this.maxNumberOfCustomStamps = maxNumberOfCustomStamps;
   }
 
+
   /**
    * mergeMixedModeResults.
    *
@@ -15599,7 +15437,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return mergeMixedModeResults
    **/
   @Schema(description = "")
@@ -15614,6 +15451,7 @@ public class AccountSettingsInformation {
     this.mergeMixedModeResults = mergeMixedModeResults;
   }
 
+
   /**
    * mergeMixedModeResultsMetadata.
    *
@@ -15625,8 +15463,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get mergeMixedModeResultsMetadata.
-   * 
+   * .
    * @return mergeMixedModeResultsMetadata
    **/
   @Schema(description = "")
@@ -15641,6 +15478,7 @@ public class AccountSettingsInformation {
     this.mergeMixedModeResultsMetadata = mergeMixedModeResultsMetadata;
   }
 
+
   /**
    * mobileSessionTimeout.
    *
@@ -15653,7 +15491,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return mobileSessionTimeout
    **/
   @Schema(description = "")
@@ -15668,6 +15505,7 @@ public class AccountSettingsInformation {
     this.mobileSessionTimeout = mobileSessionTimeout;
   }
 
+
   /**
    * mobileSessionTimeoutMetadata.
    *
@@ -15679,9 +15517,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `mobileSessionTimeout` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `mobileSessionTimeout` property is editable. .
    * @return mobileSessionTimeoutMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `mobileSessionTimeout` property is editable. ")
@@ -15696,6 +15532,7 @@ public class AccountSettingsInformation {
     this.mobileSessionTimeoutMetadata = mobileSessionTimeoutMetadata;
   }
 
+
   /**
    * numberOfActiveCustomStamps.
    *
@@ -15708,7 +15545,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return numberOfActiveCustomStamps
    **/
   @Schema(description = "")
@@ -15723,6 +15559,7 @@ public class AccountSettingsInformation {
     this.numberOfActiveCustomStamps = numberOfActiveCustomStamps;
   }
 
+
   /**
    * optInMobileSigningV02.
    *
@@ -15735,7 +15572,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return optInMobileSigningV02
    **/
   @Schema(description = "")
@@ -15750,6 +15586,7 @@ public class AccountSettingsInformation {
     this.optInMobileSigningV02 = optInMobileSigningV02;
   }
 
+
   /**
    * optInMobileSigningV02Metadata.
    *
@@ -15761,9 +15598,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `optInMobileSigningV02` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `optInMobileSigningV02` property is editable. .
    * @return optInMobileSigningV02Metadata
    **/
   @Schema(description = "Metadata that indicates whether the `optInMobileSigningV02` property is editable. ")
@@ -15778,6 +15613,34 @@ public class AccountSettingsInformation {
     this.optInMobileSigningV02Metadata = optInMobileSigningV02Metadata;
   }
 
+
+  /**
+   * optInUniversalSignatures.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation optInUniversalSignatures(String optInUniversalSignatures) {
+    this.optInUniversalSignatures = optInUniversalSignatures;
+    return this;
+  }
+
+  /**
+   * .
+   * @return optInUniversalSignatures
+   **/
+  @Schema(description = "")
+  public String getOptInUniversalSignatures() {
+    return optInUniversalSignatures;
+  }
+
+  /**
+   * setOptInUniversalSignatures.
+   **/
+  public void setOptInUniversalSignatures(String optInUniversalSignatures) {
+    this.optInUniversalSignatures = optInUniversalSignatures;
+  }
+
+
   /**
    * optOutAutoNavTextAndTabColorUpdates.
    *
@@ -15790,7 +15653,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return optOutAutoNavTextAndTabColorUpdates
    **/
   @Schema(description = "")
@@ -15805,21 +15667,19 @@ public class AccountSettingsInformation {
     this.optOutAutoNavTextAndTabColorUpdates = optOutAutoNavTextAndTabColorUpdates;
   }
 
+
   /**
    * optOutAutoNavTextAndTabColorUpdatesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation optOutAutoNavTextAndTabColorUpdatesMetadata(
-      SettingsMetadata optOutAutoNavTextAndTabColorUpdatesMetadata) {
+  public AccountSettingsInformation optOutAutoNavTextAndTabColorUpdatesMetadata(SettingsMetadata optOutAutoNavTextAndTabColorUpdatesMetadata) {
     this.optOutAutoNavTextAndTabColorUpdatesMetadata = optOutAutoNavTextAndTabColorUpdatesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `optOutAutoNavTextAndTabColorUpdates`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `optOutAutoNavTextAndTabColorUpdates` property is editable. .
    * @return optOutAutoNavTextAndTabColorUpdatesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `optOutAutoNavTextAndTabColorUpdates` property is editable. ")
@@ -15830,10 +15690,10 @@ public class AccountSettingsInformation {
   /**
    * setOptOutAutoNavTextAndTabColorUpdatesMetadata.
    **/
-  public void setOptOutAutoNavTextAndTabColorUpdatesMetadata(
-      SettingsMetadata optOutAutoNavTextAndTabColorUpdatesMetadata) {
+  public void setOptOutAutoNavTextAndTabColorUpdatesMetadata(SettingsMetadata optOutAutoNavTextAndTabColorUpdatesMetadata) {
     this.optOutAutoNavTextAndTabColorUpdatesMetadata = optOutAutoNavTextAndTabColorUpdatesMetadata;
   }
+
 
   /**
    * optOutNewPlatformSeal.
@@ -15847,7 +15707,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return optOutNewPlatformSeal
    **/
   @Schema(description = "")
@@ -15862,21 +15721,19 @@ public class AccountSettingsInformation {
     this.optOutNewPlatformSeal = optOutNewPlatformSeal;
   }
 
+
   /**
    * optOutNewPlatformSealPlatformMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation optOutNewPlatformSealPlatformMetadata(
-      SettingsMetadata optOutNewPlatformSealPlatformMetadata) {
+  public AccountSettingsInformation optOutNewPlatformSealPlatformMetadata(SettingsMetadata optOutNewPlatformSealPlatformMetadata) {
     this.optOutNewPlatformSealPlatformMetadata = optOutNewPlatformSealPlatformMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `optOutNewPlatformSealPlatform` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `optOutNewPlatformSealPlatform` property is editable. .
    * @return optOutNewPlatformSealPlatformMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `optOutNewPlatformSealPlatform` property is editable. ")
@@ -15891,6 +15748,7 @@ public class AccountSettingsInformation {
     this.optOutNewPlatformSealPlatformMetadata = optOutNewPlatformSealPlatformMetadata;
   }
 
+
   /**
    * pdfMaxChunkedUploadPartSize.
    *
@@ -15903,7 +15761,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return pdfMaxChunkedUploadPartSize
    **/
   @Schema(description = "")
@@ -15918,20 +15775,19 @@ public class AccountSettingsInformation {
     this.pdfMaxChunkedUploadPartSize = pdfMaxChunkedUploadPartSize;
   }
 
+
   /**
    * pdfMaxChunkedUploadPartSizeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation pdfMaxChunkedUploadPartSizeMetadata(
-      SettingsMetadata pdfMaxChunkedUploadPartSizeMetadata) {
+  public AccountSettingsInformation pdfMaxChunkedUploadPartSizeMetadata(SettingsMetadata pdfMaxChunkedUploadPartSizeMetadata) {
     this.pdfMaxChunkedUploadPartSizeMetadata = pdfMaxChunkedUploadPartSizeMetadata;
     return this;
   }
 
   /**
-   * Get pdfMaxChunkedUploadPartSizeMetadata.
-   * 
+   * .
    * @return pdfMaxChunkedUploadPartSizeMetadata
    **/
   @Schema(description = "")
@@ -15946,6 +15802,7 @@ public class AccountSettingsInformation {
     this.pdfMaxChunkedUploadPartSizeMetadata = pdfMaxChunkedUploadPartSizeMetadata;
   }
 
+
   /**
    * pdfMaxChunkedUploadTotalSize.
    *
@@ -15958,7 +15815,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return pdfMaxChunkedUploadTotalSize
    **/
   @Schema(description = "")
@@ -15973,20 +15829,19 @@ public class AccountSettingsInformation {
     this.pdfMaxChunkedUploadTotalSize = pdfMaxChunkedUploadTotalSize;
   }
 
+
   /**
    * pdfMaxChunkedUploadTotalSizeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation pdfMaxChunkedUploadTotalSizeMetadata(
-      SettingsMetadata pdfMaxChunkedUploadTotalSizeMetadata) {
+  public AccountSettingsInformation pdfMaxChunkedUploadTotalSizeMetadata(SettingsMetadata pdfMaxChunkedUploadTotalSizeMetadata) {
     this.pdfMaxChunkedUploadTotalSizeMetadata = pdfMaxChunkedUploadTotalSizeMetadata;
     return this;
   }
 
   /**
-   * Get pdfMaxChunkedUploadTotalSizeMetadata.
-   * 
+   * .
    * @return pdfMaxChunkedUploadTotalSizeMetadata
    **/
   @Schema(description = "")
@@ -16001,6 +15856,7 @@ public class AccountSettingsInformation {
     this.pdfMaxChunkedUploadTotalSizeMetadata = pdfMaxChunkedUploadTotalSizeMetadata;
   }
 
+
   /**
    * pdfMaxIndividualUploadSize.
    *
@@ -16013,7 +15869,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return pdfMaxIndividualUploadSize
    **/
   @Schema(description = "")
@@ -16028,20 +15883,19 @@ public class AccountSettingsInformation {
     this.pdfMaxIndividualUploadSize = pdfMaxIndividualUploadSize;
   }
 
+
   /**
    * pdfMaxIndividualUploadSizeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation pdfMaxIndividualUploadSizeMetadata(
-      SettingsMetadata pdfMaxIndividualUploadSizeMetadata) {
+  public AccountSettingsInformation pdfMaxIndividualUploadSizeMetadata(SettingsMetadata pdfMaxIndividualUploadSizeMetadata) {
     this.pdfMaxIndividualUploadSizeMetadata = pdfMaxIndividualUploadSizeMetadata;
     return this;
   }
 
   /**
-   * Get pdfMaxIndividualUploadSizeMetadata.
-   * 
+   * .
    * @return pdfMaxIndividualUploadSizeMetadata
    **/
   @Schema(description = "")
@@ -16056,20 +15910,19 @@ public class AccountSettingsInformation {
     this.pdfMaxIndividualUploadSizeMetadata = pdfMaxIndividualUploadSizeMetadata;
   }
 
+
   /**
    * phoneAuthRecipientMayProvidePhoneNumber.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation phoneAuthRecipientMayProvidePhoneNumber(
-      String phoneAuthRecipientMayProvidePhoneNumber) {
+  public AccountSettingsInformation phoneAuthRecipientMayProvidePhoneNumber(String phoneAuthRecipientMayProvidePhoneNumber) {
     this.phoneAuthRecipientMayProvidePhoneNumber = phoneAuthRecipientMayProvidePhoneNumber;
     return this;
   }
 
   /**
    * .
-   * 
    * @return phoneAuthRecipientMayProvidePhoneNumber
    **/
   @Schema(description = "")
@@ -16084,21 +15937,19 @@ public class AccountSettingsInformation {
     this.phoneAuthRecipientMayProvidePhoneNumber = phoneAuthRecipientMayProvidePhoneNumber;
   }
 
+
   /**
    * phoneAuthRecipientMayProvidePhoneNumberMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation phoneAuthRecipientMayProvidePhoneNumberMetadata(
-      SettingsMetadata phoneAuthRecipientMayProvidePhoneNumberMetadata) {
+  public AccountSettingsInformation phoneAuthRecipientMayProvidePhoneNumberMetadata(SettingsMetadata phoneAuthRecipientMayProvidePhoneNumberMetadata) {
     this.phoneAuthRecipientMayProvidePhoneNumberMetadata = phoneAuthRecipientMayProvidePhoneNumberMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `phoneAuthRecipientMayProvidePhoneNumber`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `phoneAuthRecipientMayProvidePhoneNumber` property is editable. .
    * @return phoneAuthRecipientMayProvidePhoneNumberMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `phoneAuthRecipientMayProvidePhoneNumber` property is editable. ")
@@ -16109,10 +15960,10 @@ public class AccountSettingsInformation {
   /**
    * setPhoneAuthRecipientMayProvidePhoneNumberMetadata.
    **/
-  public void setPhoneAuthRecipientMayProvidePhoneNumberMetadata(
-      SettingsMetadata phoneAuthRecipientMayProvidePhoneNumberMetadata) {
+  public void setPhoneAuthRecipientMayProvidePhoneNumberMetadata(SettingsMetadata phoneAuthRecipientMayProvidePhoneNumberMetadata) {
     this.phoneAuthRecipientMayProvidePhoneNumberMetadata = phoneAuthRecipientMayProvidePhoneNumberMetadata;
   }
+
 
   /**
    * pkiSignDownloadedPDFDocs.
@@ -16126,7 +15977,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return pkiSignDownloadedPDFDocs
    **/
   @Schema(description = "")
@@ -16141,21 +15991,19 @@ public class AccountSettingsInformation {
     this.pkiSignDownloadedPDFDocs = pkiSignDownloadedPDFDocs;
   }
 
+
   /**
    * pkiSignDownloadedPDFDocsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation pkiSignDownloadedPDFDocsMetadata(
-      SettingsMetadata pkiSignDownloadedPDFDocsMetadata) {
+  public AccountSettingsInformation pkiSignDownloadedPDFDocsMetadata(SettingsMetadata pkiSignDownloadedPDFDocsMetadata) {
     this.pkiSignDownloadedPDFDocsMetadata = pkiSignDownloadedPDFDocsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `pkiSignDownloadedPDFDocs` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `pkiSignDownloadedPDFDocs` property is editable. .
    * @return pkiSignDownloadedPDFDocsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `pkiSignDownloadedPDFDocs` property is editable. ")
@@ -16170,6 +16018,7 @@ public class AccountSettingsInformation {
     this.pkiSignDownloadedPDFDocsMetadata = pkiSignDownloadedPDFDocsMetadata;
   }
 
+
   /**
    * readOnlyMode.
    *
@@ -16182,7 +16031,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return readOnlyMode
    **/
   @Schema(description = "")
@@ -16197,6 +16045,7 @@ public class AccountSettingsInformation {
     this.readOnlyMode = readOnlyMode;
   }
 
+
   /**
    * readOnlyModeMetadata.
    *
@@ -16209,7 +16058,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return readOnlyModeMetadata
    **/
   @Schema(description = "")
@@ -16224,6 +16072,7 @@ public class AccountSettingsInformation {
     this.readOnlyModeMetadata = readOnlyModeMetadata;
   }
 
+
   /**
    * recipientsCanSignOffline.
    *
@@ -16236,7 +16085,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return recipientsCanSignOffline
    **/
   @Schema(description = "")
@@ -16251,21 +16099,19 @@ public class AccountSettingsInformation {
     this.recipientsCanSignOffline = recipientsCanSignOffline;
   }
 
+
   /**
    * recipientsCanSignOfflineMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation recipientsCanSignOfflineMetadata(
-      SettingsMetadata recipientsCanSignOfflineMetadata) {
+  public AccountSettingsInformation recipientsCanSignOfflineMetadata(SettingsMetadata recipientsCanSignOfflineMetadata) {
     this.recipientsCanSignOfflineMetadata = recipientsCanSignOfflineMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `recipientsCanSignOffline` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `recipientsCanSignOffline` property is editable. .
    * @return recipientsCanSignOfflineMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientsCanSignOffline` property is editable. ")
@@ -16280,20 +16126,19 @@ public class AccountSettingsInformation {
     this.recipientsCanSignOfflineMetadata = recipientsCanSignOfflineMetadata;
   }
 
+
   /**
    * recipientSigningAutoNavigationControl.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation recipientSigningAutoNavigationControl(
-      String recipientSigningAutoNavigationControl) {
+  public AccountSettingsInformation recipientSigningAutoNavigationControl(String recipientSigningAutoNavigationControl) {
     this.recipientSigningAutoNavigationControl = recipientSigningAutoNavigationControl;
     return this;
   }
 
   /**
    * .
-   * 
    * @return recipientSigningAutoNavigationControl
    **/
   @Schema(description = "")
@@ -16308,21 +16153,19 @@ public class AccountSettingsInformation {
     this.recipientSigningAutoNavigationControl = recipientSigningAutoNavigationControl;
   }
 
+
   /**
    * recipientSigningAutoNavigationControlMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation recipientSigningAutoNavigationControlMetadata(
-      SettingsMetadata recipientSigningAutoNavigationControlMetadata) {
+  public AccountSettingsInformation recipientSigningAutoNavigationControlMetadata(SettingsMetadata recipientSigningAutoNavigationControlMetadata) {
     this.recipientSigningAutoNavigationControlMetadata = recipientSigningAutoNavigationControlMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `recipientSigningAutoNavigationControl`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `recipientSigningAutoNavigationControl` property is editable. .
    * @return recipientSigningAutoNavigationControlMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `recipientSigningAutoNavigationControl` property is editable. ")
@@ -16333,10 +16176,10 @@ public class AccountSettingsInformation {
   /**
    * setRecipientSigningAutoNavigationControlMetadata.
    **/
-  public void setRecipientSigningAutoNavigationControlMetadata(
-      SettingsMetadata recipientSigningAutoNavigationControlMetadata) {
+  public void setRecipientSigningAutoNavigationControlMetadata(SettingsMetadata recipientSigningAutoNavigationControlMetadata) {
     this.recipientSigningAutoNavigationControlMetadata = recipientSigningAutoNavigationControlMetadata;
   }
+
 
   /**
    * require21CFRpt11Compliance.
@@ -16350,7 +16193,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return require21CFRpt11Compliance
    **/
   @Schema(description = "")
@@ -16365,21 +16207,19 @@ public class AccountSettingsInformation {
     this.require21CFRpt11Compliance = require21CFRpt11Compliance;
   }
 
+
   /**
    * require21CFRpt11ComplianceMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation require21CFRpt11ComplianceMetadata(
-      SettingsMetadata require21CFRpt11ComplianceMetadata) {
+  public AccountSettingsInformation require21CFRpt11ComplianceMetadata(SettingsMetadata require21CFRpt11ComplianceMetadata) {
     this.require21CFRpt11ComplianceMetadata = require21CFRpt11ComplianceMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `require21CFRpt11Compliance` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `require21CFRpt11Compliance` property is editable. .
    * @return require21CFRpt11ComplianceMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `require21CFRpt11Compliance` property is editable. ")
@@ -16394,6 +16234,7 @@ public class AccountSettingsInformation {
     this.require21CFRpt11ComplianceMetadata = require21CFRpt11ComplianceMetadata;
   }
 
+
   /**
    * requireDeclineReason.
    *
@@ -16406,7 +16247,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return requireDeclineReason
    **/
   @Schema(description = "")
@@ -16421,6 +16261,7 @@ public class AccountSettingsInformation {
     this.requireDeclineReason = requireDeclineReason;
   }
 
+
   /**
    * requireDeclineReasonMetadata.
    *
@@ -16432,9 +16273,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `requireDeclineReason` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `requireDeclineReason` property is editable. .
    * @return requireDeclineReasonMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireDeclineReason` property is editable. ")
@@ -16449,6 +16288,7 @@ public class AccountSettingsInformation {
     this.requireDeclineReasonMetadata = requireDeclineReasonMetadata;
   }
 
+
   /**
    * requireExternalUserManagement.
    *
@@ -16461,7 +16301,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return requireExternalUserManagement
    **/
   @Schema(description = "")
@@ -16476,21 +16315,19 @@ public class AccountSettingsInformation {
     this.requireExternalUserManagement = requireExternalUserManagement;
   }
 
+
   /**
    * requireExternalUserManagementMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation requireExternalUserManagementMetadata(
-      SettingsMetadata requireExternalUserManagementMetadata) {
+  public AccountSettingsInformation requireExternalUserManagementMetadata(SettingsMetadata requireExternalUserManagementMetadata) {
     this.requireExternalUserManagementMetadata = requireExternalUserManagementMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `requireExternalUserManagement` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `requireExternalUserManagement` property is editable. .
    * @return requireExternalUserManagementMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireExternalUserManagement` property is editable. ")
@@ -16505,6 +16342,7 @@ public class AccountSettingsInformation {
     this.requireExternalUserManagementMetadata = requireExternalUserManagementMetadata;
   }
 
+
   /**
    * requireSignerCertificateType.
    *
@@ -16517,7 +16355,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return requireSignerCertificateType
    **/
   @Schema(description = "")
@@ -16532,21 +16369,19 @@ public class AccountSettingsInformation {
     this.requireSignerCertificateType = requireSignerCertificateType;
   }
 
+
   /**
    * requireSignerCertificateTypeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation requireSignerCertificateTypeMetadata(
-      SettingsMetadata requireSignerCertificateTypeMetadata) {
+  public AccountSettingsInformation requireSignerCertificateTypeMetadata(SettingsMetadata requireSignerCertificateTypeMetadata) {
     this.requireSignerCertificateTypeMetadata = requireSignerCertificateTypeMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `requireSignerCertificateType` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `requireSignerCertificateType` property is editable. .
    * @return requireSignerCertificateTypeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `requireSignerCertificateType` property is editable. ")
@@ -16561,6 +16396,7 @@ public class AccountSettingsInformation {
     this.requireSignerCertificateTypeMetadata = requireSignerCertificateTypeMetadata;
   }
 
+
   /**
    * rsaVeridAccountName.
    *
@@ -16573,7 +16409,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return rsaVeridAccountName
    **/
   @Schema(description = "")
@@ -16588,6 +16423,7 @@ public class AccountSettingsInformation {
     this.rsaVeridAccountName = rsaVeridAccountName;
   }
 
+
   /**
    * rsaVeridPassword.
    *
@@ -16600,7 +16436,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return rsaVeridPassword
    **/
   @Schema(description = "")
@@ -16615,6 +16450,7 @@ public class AccountSettingsInformation {
     this.rsaVeridPassword = rsaVeridPassword;
   }
 
+
   /**
    * rsaVeridRuleset.
    *
@@ -16627,7 +16463,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return rsaVeridRuleset
    **/
   @Schema(description = "")
@@ -16642,6 +16477,7 @@ public class AccountSettingsInformation {
     this.rsaVeridRuleset = rsaVeridRuleset;
   }
 
+
   /**
    * rsaVeridUserId.
    *
@@ -16654,7 +16490,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return rsaVeridUserId
    **/
   @Schema(description = "")
@@ -16669,6 +16504,7 @@ public class AccountSettingsInformation {
     this.rsaVeridUserId = rsaVeridUserId;
   }
 
+
   /**
    * sbsTransactionLevel.
    *
@@ -16681,7 +16517,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sbsTransactionLevel
    **/
   @Schema(description = "")
@@ -16696,6 +16531,7 @@ public class AccountSettingsInformation {
     this.sbsTransactionLevel = sbsTransactionLevel;
   }
 
+
   /**
    * selfSignedRecipientEmailDocument.
    *
@@ -16708,7 +16544,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return selfSignedRecipientEmailDocument
    **/
   @Schema(description = "")
@@ -16723,21 +16558,19 @@ public class AccountSettingsInformation {
     this.selfSignedRecipientEmailDocument = selfSignedRecipientEmailDocument;
   }
 
+
   /**
    * selfSignedRecipientEmailDocumentMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation selfSignedRecipientEmailDocumentMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
+  public AccountSettingsInformation selfSignedRecipientEmailDocumentMetadata(SettingsMetadata selfSignedRecipientEmailDocumentMetadata) {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `selfSignedRecipientEmailDocument`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. .
    * @return selfSignedRecipientEmailDocumentMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `selfSignedRecipientEmailDocument` property is editable. ")
@@ -16752,20 +16585,19 @@ public class AccountSettingsInformation {
     this.selfSignedRecipientEmailDocumentMetadata = selfSignedRecipientEmailDocumentMetadata;
   }
 
+
   /**
    * selfSignedRecipientEmailDocumentUserOverride.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation selfSignedRecipientEmailDocumentUserOverride(
-      String selfSignedRecipientEmailDocumentUserOverride) {
+  public AccountSettingsInformation selfSignedRecipientEmailDocumentUserOverride(String selfSignedRecipientEmailDocumentUserOverride) {
     this.selfSignedRecipientEmailDocumentUserOverride = selfSignedRecipientEmailDocumentUserOverride;
     return this;
   }
 
   /**
    * .
-   * 
    * @return selfSignedRecipientEmailDocumentUserOverride
    **/
   @Schema(description = "")
@@ -16780,21 +16612,19 @@ public class AccountSettingsInformation {
     this.selfSignedRecipientEmailDocumentUserOverride = selfSignedRecipientEmailDocumentUserOverride;
   }
 
+
   /**
    * selfSignedRecipientEmailDocumentUserOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation selfSignedRecipientEmailDocumentUserOverrideMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentUserOverrideMetadata) {
+  public AccountSettingsInformation selfSignedRecipientEmailDocumentUserOverrideMetadata(SettingsMetadata selfSignedRecipientEmailDocumentUserOverrideMetadata) {
     this.selfSignedRecipientEmailDocumentUserOverrideMetadata = selfSignedRecipientEmailDocumentUserOverrideMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the
-   * `selfSignedRecipientEmailDocumentUserOverride` property is editable. .
-   * 
+   * Metadata that indicates whether the `selfSignedRecipientEmailDocumentUserOverride` property is editable. .
    * @return selfSignedRecipientEmailDocumentUserOverrideMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `selfSignedRecipientEmailDocumentUserOverride` property is editable. ")
@@ -16805,10 +16635,10 @@ public class AccountSettingsInformation {
   /**
    * setSelfSignedRecipientEmailDocumentUserOverrideMetadata.
    **/
-  public void setSelfSignedRecipientEmailDocumentUserOverrideMetadata(
-      SettingsMetadata selfSignedRecipientEmailDocumentUserOverrideMetadata) {
+  public void setSelfSignedRecipientEmailDocumentUserOverrideMetadata(SettingsMetadata selfSignedRecipientEmailDocumentUserOverrideMetadata) {
     this.selfSignedRecipientEmailDocumentUserOverrideMetadata = selfSignedRecipientEmailDocumentUserOverrideMetadata;
   }
+
 
   /**
    * senderCanSignInEachLocation.
@@ -16822,7 +16652,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return senderCanSignInEachLocation
    **/
   @Schema(description = "")
@@ -16837,21 +16666,19 @@ public class AccountSettingsInformation {
     this.senderCanSignInEachLocation = senderCanSignInEachLocation;
   }
 
+
   /**
    * senderCanSignInEachLocationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation senderCanSignInEachLocationMetadata(
-      SettingsMetadata senderCanSignInEachLocationMetadata) {
+  public AccountSettingsInformation senderCanSignInEachLocationMetadata(SettingsMetadata senderCanSignInEachLocationMetadata) {
     this.senderCanSignInEachLocationMetadata = senderCanSignInEachLocationMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `senderCanSignInEachLocation` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `senderCanSignInEachLocation` property is editable. .
    * @return senderCanSignInEachLocationMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderCanSignInEachLocation` property is editable. ")
@@ -16866,6 +16693,7 @@ public class AccountSettingsInformation {
     this.senderCanSignInEachLocationMetadata = senderCanSignInEachLocationMetadata;
   }
 
+
   /**
    * senderMustAuthenticateSigning.
    *
@@ -16878,7 +16706,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return senderMustAuthenticateSigning
    **/
   @Schema(description = "")
@@ -16893,21 +16720,19 @@ public class AccountSettingsInformation {
     this.senderMustAuthenticateSigning = senderMustAuthenticateSigning;
   }
 
+
   /**
    * senderMustAuthenticateSigningMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation senderMustAuthenticateSigningMetadata(
-      SettingsMetadata senderMustAuthenticateSigningMetadata) {
+  public AccountSettingsInformation senderMustAuthenticateSigningMetadata(SettingsMetadata senderMustAuthenticateSigningMetadata) {
     this.senderMustAuthenticateSigningMetadata = senderMustAuthenticateSigningMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `senderMustAuthenticateSigning` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `senderMustAuthenticateSigning` property is editable. .
    * @return senderMustAuthenticateSigningMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `senderMustAuthenticateSigning` property is editable. ")
@@ -16922,6 +16747,7 @@ public class AccountSettingsInformation {
     this.senderMustAuthenticateSigningMetadata = senderMustAuthenticateSigningMetadata;
   }
 
+
   /**
    * sendingTagsFontColor.
    *
@@ -16934,7 +16760,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sendingTagsFontColor
    **/
   @Schema(description = "")
@@ -16949,6 +16774,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontColor = sendingTagsFontColor;
   }
 
+
   /**
    * sendingTagsFontColorMetadata.
    *
@@ -16960,9 +16786,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `sendingTagsFontColor` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `sendingTagsFontColor` property is editable. .
    * @return sendingTagsFontColorMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sendingTagsFontColor` property is editable. ")
@@ -16977,6 +16801,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontColorMetadata = sendingTagsFontColorMetadata;
   }
 
+
   /**
    * sendingTagsFontName.
    *
@@ -16989,7 +16814,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sendingTagsFontName
    **/
   @Schema(description = "")
@@ -17004,6 +16828,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontName = sendingTagsFontName;
   }
 
+
   /**
    * sendingTagsFontNameMetadata.
    *
@@ -17015,9 +16840,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `sendingTagsFontName` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `sendingTagsFontName` property is editable. .
    * @return sendingTagsFontNameMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sendingTagsFontName` property is editable. ")
@@ -17032,6 +16855,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontNameMetadata = sendingTagsFontNameMetadata;
   }
 
+
   /**
    * sendingTagsFontSize.
    *
@@ -17044,7 +16868,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sendingTagsFontSize
    **/
   @Schema(description = "")
@@ -17059,6 +16882,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontSize = sendingTagsFontSize;
   }
 
+
   /**
    * sendingTagsFontSizeMetadata.
    *
@@ -17070,9 +16894,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `sendingTagsFontSize` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `sendingTagsFontSize` property is editable. .
    * @return sendingTagsFontSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sendingTagsFontSize` property is editable. ")
@@ -17087,6 +16909,7 @@ public class AccountSettingsInformation {
     this.sendingTagsFontSizeMetadata = sendingTagsFontSizeMetadata;
   }
 
+
   /**
    * sendLockoutRecipientNotification.
    *
@@ -17099,7 +16922,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sendLockoutRecipientNotification
    **/
   @Schema(description = "")
@@ -17114,20 +16936,19 @@ public class AccountSettingsInformation {
     this.sendLockoutRecipientNotification = sendLockoutRecipientNotification;
   }
 
+
   /**
    * sendLockoutRecipientNotificationMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation sendLockoutRecipientNotificationMetadata(
-      SettingsMetadata sendLockoutRecipientNotificationMetadata) {
+  public AccountSettingsInformation sendLockoutRecipientNotificationMetadata(SettingsMetadata sendLockoutRecipientNotificationMetadata) {
     this.sendLockoutRecipientNotificationMetadata = sendLockoutRecipientNotificationMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return sendLockoutRecipientNotificationMetadata
    **/
   @Schema(description = "")
@@ -17142,6 +16963,7 @@ public class AccountSettingsInformation {
     this.sendLockoutRecipientNotificationMetadata = sendLockoutRecipientNotificationMetadata;
   }
 
+
   /**
    * sendToCertifiedDeliveryEnabled.
    *
@@ -17154,7 +16976,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sendToCertifiedDeliveryEnabled
    **/
   @Schema(description = "")
@@ -17169,21 +16990,19 @@ public class AccountSettingsInformation {
     this.sendToCertifiedDeliveryEnabled = sendToCertifiedDeliveryEnabled;
   }
 
+
   /**
    * sendToCertifiedDeliveryEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation sendToCertifiedDeliveryEnabledMetadata(
-      SettingsMetadata sendToCertifiedDeliveryEnabledMetadata) {
+  public AccountSettingsInformation sendToCertifiedDeliveryEnabledMetadata(SettingsMetadata sendToCertifiedDeliveryEnabledMetadata) {
     this.sendToCertifiedDeliveryEnabledMetadata = sendToCertifiedDeliveryEnabledMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `sendToCertifiedDeliveryEnabled` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `sendToCertifiedDeliveryEnabled` property is editable. .
    * @return sendToCertifiedDeliveryEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sendToCertifiedDeliveryEnabled` property is editable. ")
@@ -17198,6 +17017,7 @@ public class AccountSettingsInformation {
     this.sendToCertifiedDeliveryEnabledMetadata = sendToCertifiedDeliveryEnabledMetadata;
   }
 
+
   /**
    * sessionTimeout.
    *
@@ -17210,7 +17030,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sessionTimeout
    **/
   @Schema(description = "")
@@ -17225,6 +17044,7 @@ public class AccountSettingsInformation {
     this.sessionTimeout = sessionTimeout;
   }
 
+
   /**
    * sessionTimeoutMetadata.
    *
@@ -17237,7 +17057,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `sessionTimeout` property is editable. .
-   * 
    * @return sessionTimeoutMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sessionTimeout` property is editable. ")
@@ -17252,6 +17071,7 @@ public class AccountSettingsInformation {
     this.sessionTimeoutMetadata = sessionTimeoutMetadata;
   }
 
+
   /**
    * setRecipEmailLang.
    *
@@ -17264,7 +17084,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return setRecipEmailLang
    **/
   @Schema(description = "")
@@ -17279,6 +17098,7 @@ public class AccountSettingsInformation {
     this.setRecipEmailLang = setRecipEmailLang;
   }
 
+
   /**
    * setRecipEmailLangMetadata.
    *
@@ -17290,9 +17110,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `setRecipEmailLang` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `setRecipEmailLang` property is editable. .
    * @return setRecipEmailLangMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `setRecipEmailLang` property is editable. ")
@@ -17307,6 +17125,7 @@ public class AccountSettingsInformation {
     this.setRecipEmailLangMetadata = setRecipEmailLangMetadata;
   }
 
+
   /**
    * setRecipSignLang.
    *
@@ -17319,7 +17138,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return setRecipSignLang
    **/
   @Schema(description = "")
@@ -17334,6 +17152,7 @@ public class AccountSettingsInformation {
     this.setRecipSignLang = setRecipSignLang;
   }
 
+
   /**
    * setRecipSignLangMetadata.
    *
@@ -17345,9 +17164,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `setRecipSignLang` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `setRecipSignLang` property is editable. .
    * @return setRecipSignLangMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `setRecipSignLang` property is editable. ")
@@ -17362,6 +17179,7 @@ public class AccountSettingsInformation {
     this.setRecipSignLangMetadata = setRecipSignLangMetadata;
   }
 
+
   /**
    * sharedTemplateFolders.
    *
@@ -17374,7 +17192,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return sharedTemplateFolders
    **/
   @Schema(description = "")
@@ -17389,6 +17206,7 @@ public class AccountSettingsInformation {
     this.sharedTemplateFolders = sharedTemplateFolders;
   }
 
+
   /**
    * sharedTemplateFoldersMetadata.
    *
@@ -17400,9 +17218,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `sharedTemplateFolders` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `sharedTemplateFolders` property is editable. .
    * @return sharedTemplateFoldersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `sharedTemplateFolders` property is editable. ")
@@ -17417,6 +17233,7 @@ public class AccountSettingsInformation {
     this.sharedTemplateFoldersMetadata = sharedTemplateFoldersMetadata;
   }
 
+
   /**
    * showCompleteDialogInEmbeddedSession.
    *
@@ -17429,7 +17246,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return showCompleteDialogInEmbeddedSession
    **/
   @Schema(description = "")
@@ -17444,21 +17260,19 @@ public class AccountSettingsInformation {
     this.showCompleteDialogInEmbeddedSession = showCompleteDialogInEmbeddedSession;
   }
 
+
   /**
    * showCompleteDialogInEmbeddedSessionMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation showCompleteDialogInEmbeddedSessionMetadata(
-      SettingsMetadata showCompleteDialogInEmbeddedSessionMetadata) {
+  public AccountSettingsInformation showCompleteDialogInEmbeddedSessionMetadata(SettingsMetadata showCompleteDialogInEmbeddedSessionMetadata) {
     this.showCompleteDialogInEmbeddedSessionMetadata = showCompleteDialogInEmbeddedSessionMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `showCompleteDialogInEmbeddedSession`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `showCompleteDialogInEmbeddedSession` property is editable. .
    * @return showCompleteDialogInEmbeddedSessionMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `showCompleteDialogInEmbeddedSession` property is editable. ")
@@ -17469,10 +17283,10 @@ public class AccountSettingsInformation {
   /**
    * setShowCompleteDialogInEmbeddedSessionMetadata.
    **/
-  public void setShowCompleteDialogInEmbeddedSessionMetadata(
-      SettingsMetadata showCompleteDialogInEmbeddedSessionMetadata) {
+  public void setShowCompleteDialogInEmbeddedSessionMetadata(SettingsMetadata showCompleteDialogInEmbeddedSessionMetadata) {
     this.showCompleteDialogInEmbeddedSessionMetadata = showCompleteDialogInEmbeddedSessionMetadata;
   }
+
 
   /**
    * showConditionalRoutingOnSend.
@@ -17486,7 +17300,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return showConditionalRoutingOnSend
    **/
   @Schema(description = "")
@@ -17501,20 +17314,19 @@ public class AccountSettingsInformation {
     this.showConditionalRoutingOnSend = showConditionalRoutingOnSend;
   }
 
+
   /**
    * showConditionalRoutingOnSendMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation showConditionalRoutingOnSendMetadata(
-      SettingsMetadata showConditionalRoutingOnSendMetadata) {
+  public AccountSettingsInformation showConditionalRoutingOnSendMetadata(SettingsMetadata showConditionalRoutingOnSendMetadata) {
     this.showConditionalRoutingOnSendMetadata = showConditionalRoutingOnSendMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return showConditionalRoutingOnSendMetadata
    **/
   @Schema(description = "")
@@ -17529,6 +17341,7 @@ public class AccountSettingsInformation {
     this.showConditionalRoutingOnSendMetadata = showConditionalRoutingOnSendMetadata;
   }
 
+
   /**
    * showInitialConditionalFields.
    *
@@ -17541,7 +17354,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return showInitialConditionalFields
    **/
   @Schema(description = "")
@@ -17556,21 +17368,19 @@ public class AccountSettingsInformation {
     this.showInitialConditionalFields = showInitialConditionalFields;
   }
 
+
   /**
    * showInitialConditionalFieldsMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation showInitialConditionalFieldsMetadata(
-      SettingsMetadata showInitialConditionalFieldsMetadata) {
+  public AccountSettingsInformation showInitialConditionalFieldsMetadata(SettingsMetadata showInitialConditionalFieldsMetadata) {
     this.showInitialConditionalFieldsMetadata = showInitialConditionalFieldsMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `showInitialConditionalFields` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `showInitialConditionalFields` property is editable. .
    * @return showInitialConditionalFieldsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `showInitialConditionalFields` property is editable. ")
@@ -17585,6 +17395,7 @@ public class AccountSettingsInformation {
     this.showInitialConditionalFieldsMetadata = showInitialConditionalFieldsMetadata;
   }
 
+
   /**
    * showLocalizedWatermarks.
    *
@@ -17597,7 +17408,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return showLocalizedWatermarks
    **/
   @Schema(description = "")
@@ -17612,6 +17422,7 @@ public class AccountSettingsInformation {
     this.showLocalizedWatermarks = showLocalizedWatermarks;
   }
 
+
   /**
    * showLocalizedWatermarksMetadata.
    *
@@ -17623,9 +17434,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `showLocalizedWatermarks` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `showLocalizedWatermarks` property is editable. .
    * @return showLocalizedWatermarksMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `showLocalizedWatermarks` property is editable. ")
@@ -17640,20 +17449,19 @@ public class AccountSettingsInformation {
     this.showLocalizedWatermarksMetadata = showLocalizedWatermarksMetadata;
   }
 
+
   /**
    * showMaskedFieldsWhenDownloadingDocumentAsSender.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation showMaskedFieldsWhenDownloadingDocumentAsSender(
-      String showMaskedFieldsWhenDownloadingDocumentAsSender) {
+  public AccountSettingsInformation showMaskedFieldsWhenDownloadingDocumentAsSender(String showMaskedFieldsWhenDownloadingDocumentAsSender) {
     this.showMaskedFieldsWhenDownloadingDocumentAsSender = showMaskedFieldsWhenDownloadingDocumentAsSender;
     return this;
   }
 
   /**
    * .
-   * 
    * @return showMaskedFieldsWhenDownloadingDocumentAsSender
    **/
   @Schema(description = "")
@@ -17664,25 +17472,23 @@ public class AccountSettingsInformation {
   /**
    * setShowMaskedFieldsWhenDownloadingDocumentAsSender.
    **/
-  public void setShowMaskedFieldsWhenDownloadingDocumentAsSender(
-      String showMaskedFieldsWhenDownloadingDocumentAsSender) {
+  public void setShowMaskedFieldsWhenDownloadingDocumentAsSender(String showMaskedFieldsWhenDownloadingDocumentAsSender) {
     this.showMaskedFieldsWhenDownloadingDocumentAsSender = showMaskedFieldsWhenDownloadingDocumentAsSender;
   }
+
 
   /**
    * showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata(
-      SettingsMetadata showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata) {
+  public AccountSettingsInformation showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata(SettingsMetadata showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata) {
     this.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata = showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata
    **/
   @Schema(description = "")
@@ -17693,10 +17499,10 @@ public class AccountSettingsInformation {
   /**
    * setShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata.
    **/
-  public void setShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata(
-      SettingsMetadata showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata) {
+  public void setShowMaskedFieldsWhenDownloadingDocumentAsSenderMetadata(SettingsMetadata showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata) {
     this.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata = showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata;
   }
+
 
   /**
    * showTutorials.
@@ -17710,7 +17516,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return showTutorials
    **/
   @Schema(description = "")
@@ -17725,6 +17530,7 @@ public class AccountSettingsInformation {
     this.showTutorials = showTutorials;
   }
 
+
   /**
    * showTutorialsMetadata.
    *
@@ -17737,7 +17543,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `showTutorials` property is editable. .
-   * 
    * @return showTutorialsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `showTutorials` property is editable. ")
@@ -17752,6 +17557,7 @@ public class AccountSettingsInformation {
     this.showTutorialsMetadata = showTutorialsMetadata;
   }
 
+
   /**
    * signatureProviders.
    *
@@ -17761,7 +17567,7 @@ public class AccountSettingsInformation {
     this.signatureProviders = signatureProviders;
     return this;
   }
-
+  
   /**
    * addSignatureProvidersItem.
    *
@@ -17777,7 +17583,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signatureProviders
    **/
   @Schema(description = "")
@@ -17792,6 +17597,7 @@ public class AccountSettingsInformation {
     this.signatureProviders = signatureProviders;
   }
 
+
   /**
    * signatureProvidersMetadata.
    *
@@ -17803,9 +17609,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signatureProviders` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signatureProviders` property is editable. .
    * @return signatureProvidersMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signatureProviders` property is editable. ")
@@ -17820,6 +17624,7 @@ public class AccountSettingsInformation {
     this.signatureProvidersMetadata = signatureProvidersMetadata;
   }
 
+
   /**
    * signDateFormat.
    *
@@ -17832,7 +17637,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signDateFormat
    **/
   @Schema(description = "")
@@ -17847,6 +17651,7 @@ public class AccountSettingsInformation {
     this.signDateFormat = signDateFormat;
   }
 
+
   /**
    * signDateFormatMetadata.
    *
@@ -17859,7 +17664,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `signDateFormat` property is editable. .
-   * 
    * @return signDateFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signDateFormat` property is editable. ")
@@ -17874,6 +17678,7 @@ public class AccountSettingsInformation {
     this.signDateFormatMetadata = signDateFormatMetadata;
   }
 
+
   /**
    * signDateTimeAccountLanguageOverride.
    *
@@ -17886,7 +17691,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signDateTimeAccountLanguageOverride
    **/
   @Schema(description = "")
@@ -17901,20 +17705,19 @@ public class AccountSettingsInformation {
     this.signDateTimeAccountLanguageOverride = signDateTimeAccountLanguageOverride;
   }
 
+
   /**
    * signDateTimeAccountLanguageOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signDateTimeAccountLanguageOverrideMetadata(
-      SettingsMetadata signDateTimeAccountLanguageOverrideMetadata) {
+  public AccountSettingsInformation signDateTimeAccountLanguageOverrideMetadata(SettingsMetadata signDateTimeAccountLanguageOverrideMetadata) {
     this.signDateTimeAccountLanguageOverrideMetadata = signDateTimeAccountLanguageOverrideMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return signDateTimeAccountLanguageOverrideMetadata
    **/
   @Schema(description = "")
@@ -17925,10 +17728,10 @@ public class AccountSettingsInformation {
   /**
    * setSignDateTimeAccountLanguageOverrideMetadata.
    **/
-  public void setSignDateTimeAccountLanguageOverrideMetadata(
-      SettingsMetadata signDateTimeAccountLanguageOverrideMetadata) {
+  public void setSignDateTimeAccountLanguageOverrideMetadata(SettingsMetadata signDateTimeAccountLanguageOverrideMetadata) {
     this.signDateTimeAccountLanguageOverrideMetadata = signDateTimeAccountLanguageOverrideMetadata;
   }
+
 
   /**
    * signDateTimeAccountTimezoneOverride.
@@ -17942,7 +17745,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signDateTimeAccountTimezoneOverride
    **/
   @Schema(description = "")
@@ -17957,20 +17759,19 @@ public class AccountSettingsInformation {
     this.signDateTimeAccountTimezoneOverride = signDateTimeAccountTimezoneOverride;
   }
 
+
   /**
    * signDateTimeAccountTimezoneOverrideMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signDateTimeAccountTimezoneOverrideMetadata(
-      SettingsMetadata signDateTimeAccountTimezoneOverrideMetadata) {
+  public AccountSettingsInformation signDateTimeAccountTimezoneOverrideMetadata(SettingsMetadata signDateTimeAccountTimezoneOverrideMetadata) {
     this.signDateTimeAccountTimezoneOverrideMetadata = signDateTimeAccountTimezoneOverrideMetadata;
     return this;
   }
 
   /**
    * .
-   * 
    * @return signDateTimeAccountTimezoneOverrideMetadata
    **/
   @Schema(description = "")
@@ -17981,10 +17782,10 @@ public class AccountSettingsInformation {
   /**
    * setSignDateTimeAccountTimezoneOverrideMetadata.
    **/
-  public void setSignDateTimeAccountTimezoneOverrideMetadata(
-      SettingsMetadata signDateTimeAccountTimezoneOverrideMetadata) {
+  public void setSignDateTimeAccountTimezoneOverrideMetadata(SettingsMetadata signDateTimeAccountTimezoneOverrideMetadata) {
     this.signDateTimeAccountTimezoneOverrideMetadata = signDateTimeAccountTimezoneOverrideMetadata;
   }
+
 
   /**
    * signerAttachCertificateToEnvelopePDF.
@@ -17998,7 +17799,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerAttachCertificateToEnvelopePDF
    **/
   @Schema(description = "")
@@ -18013,21 +17813,19 @@ public class AccountSettingsInformation {
     this.signerAttachCertificateToEnvelopePDF = signerAttachCertificateToEnvelopePDF;
   }
 
+
   /**
    * signerAttachCertificateToEnvelopePDFMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signerAttachCertificateToEnvelopePDFMetadata(
-      SettingsMetadata signerAttachCertificateToEnvelopePDFMetadata) {
+  public AccountSettingsInformation signerAttachCertificateToEnvelopePDFMetadata(SettingsMetadata signerAttachCertificateToEnvelopePDFMetadata) {
     this.signerAttachCertificateToEnvelopePDFMetadata = signerAttachCertificateToEnvelopePDFMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `signerAttachCertificateToEnvelopePDF`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `signerAttachCertificateToEnvelopePDF` property is editable. .
    * @return signerAttachCertificateToEnvelopePDFMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerAttachCertificateToEnvelopePDF` property is editable. ")
@@ -18038,10 +17836,10 @@ public class AccountSettingsInformation {
   /**
    * setSignerAttachCertificateToEnvelopePDFMetadata.
    **/
-  public void setSignerAttachCertificateToEnvelopePDFMetadata(
-      SettingsMetadata signerAttachCertificateToEnvelopePDFMetadata) {
+  public void setSignerAttachCertificateToEnvelopePDFMetadata(SettingsMetadata signerAttachCertificateToEnvelopePDFMetadata) {
     this.signerAttachCertificateToEnvelopePDFMetadata = signerAttachCertificateToEnvelopePDFMetadata;
   }
+
 
   /**
    * signerAttachConcat.
@@ -18055,7 +17853,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerAttachConcat
    **/
   @Schema(description = "")
@@ -18070,6 +17867,7 @@ public class AccountSettingsInformation {
     this.signerAttachConcat = signerAttachConcat;
   }
 
+
   /**
    * signerAttachConcatMetadata.
    *
@@ -18081,9 +17879,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerAttachConcat` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerAttachConcat` property is editable. .
    * @return signerAttachConcatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerAttachConcat` property is editable. ")
@@ -18098,6 +17894,7 @@ public class AccountSettingsInformation {
     this.signerAttachConcatMetadata = signerAttachConcatMetadata;
   }
 
+
   /**
    * signerCanCreateAccount.
    *
@@ -18110,7 +17907,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerCanCreateAccount
    **/
   @Schema(description = "")
@@ -18125,6 +17921,7 @@ public class AccountSettingsInformation {
     this.signerCanCreateAccount = signerCanCreateAccount;
   }
 
+
   /**
    * signerCanCreateAccountMetadata.
    *
@@ -18136,9 +17933,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerCanCreateAccount` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerCanCreateAccount` property is editable. .
    * @return signerCanCreateAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerCanCreateAccount` property is editable. ")
@@ -18153,6 +17948,7 @@ public class AccountSettingsInformation {
     this.signerCanCreateAccountMetadata = signerCanCreateAccountMetadata;
   }
 
+
   /**
    * signerCanSignOnMobile.
    *
@@ -18165,7 +17961,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerCanSignOnMobile
    **/
   @Schema(description = "")
@@ -18180,6 +17975,7 @@ public class AccountSettingsInformation {
     this.signerCanSignOnMobile = signerCanSignOnMobile;
   }
 
+
   /**
    * signerCanSignOnMobileMetadata.
    *
@@ -18191,9 +17987,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerCanSignOnMobile` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerCanSignOnMobile` property is editable. .
    * @return signerCanSignOnMobileMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerCanSignOnMobile` property is editable. ")
@@ -18208,20 +18002,19 @@ public class AccountSettingsInformation {
     this.signerCanSignOnMobileMetadata = signerCanSignOnMobileMetadata;
   }
 
+
   /**
    * signerInSessionUseEnvelopeCompleteEmail.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signerInSessionUseEnvelopeCompleteEmail(
-      String signerInSessionUseEnvelopeCompleteEmail) {
+  public AccountSettingsInformation signerInSessionUseEnvelopeCompleteEmail(String signerInSessionUseEnvelopeCompleteEmail) {
     this.signerInSessionUseEnvelopeCompleteEmail = signerInSessionUseEnvelopeCompleteEmail;
     return this;
   }
 
   /**
    * .
-   * 
    * @return signerInSessionUseEnvelopeCompleteEmail
    **/
   @Schema(description = "")
@@ -18236,21 +18029,19 @@ public class AccountSettingsInformation {
     this.signerInSessionUseEnvelopeCompleteEmail = signerInSessionUseEnvelopeCompleteEmail;
   }
 
+
   /**
    * signerInSessionUseEnvelopeCompleteEmailMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signerInSessionUseEnvelopeCompleteEmailMetadata(
-      SettingsMetadata signerInSessionUseEnvelopeCompleteEmailMetadata) {
+  public AccountSettingsInformation signerInSessionUseEnvelopeCompleteEmailMetadata(SettingsMetadata signerInSessionUseEnvelopeCompleteEmailMetadata) {
     this.signerInSessionUseEnvelopeCompleteEmailMetadata = signerInSessionUseEnvelopeCompleteEmailMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `signerInSessionUseEnvelopeCompleteEmail`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `signerInSessionUseEnvelopeCompleteEmail` property is editable. .
    * @return signerInSessionUseEnvelopeCompleteEmailMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerInSessionUseEnvelopeCompleteEmail` property is editable. ")
@@ -18261,10 +18052,10 @@ public class AccountSettingsInformation {
   /**
    * setSignerInSessionUseEnvelopeCompleteEmailMetadata.
    **/
-  public void setSignerInSessionUseEnvelopeCompleteEmailMetadata(
-      SettingsMetadata signerInSessionUseEnvelopeCompleteEmailMetadata) {
+  public void setSignerInSessionUseEnvelopeCompleteEmailMetadata(SettingsMetadata signerInSessionUseEnvelopeCompleteEmailMetadata) {
     this.signerInSessionUseEnvelopeCompleteEmailMetadata = signerInSessionUseEnvelopeCompleteEmailMetadata;
   }
+
 
   /**
    * signerLoginRequirements.
@@ -18278,7 +18069,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerLoginRequirements
    **/
   @Schema(description = "")
@@ -18293,6 +18083,7 @@ public class AccountSettingsInformation {
     this.signerLoginRequirements = signerLoginRequirements;
   }
 
+
   /**
    * signerLoginRequirementsMetadata.
    *
@@ -18304,9 +18095,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerLoginRequirements` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerLoginRequirements` property is editable. .
    * @return signerLoginRequirementsMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerLoginRequirements` property is editable. ")
@@ -18321,6 +18110,7 @@ public class AccountSettingsInformation {
     this.signerLoginRequirementsMetadata = signerLoginRequirementsMetadata;
   }
 
+
   /**
    * signerMustHaveAccount.
    *
@@ -18333,7 +18123,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerMustHaveAccount
    **/
   @Schema(description = "")
@@ -18348,6 +18137,7 @@ public class AccountSettingsInformation {
     this.signerMustHaveAccount = signerMustHaveAccount;
   }
 
+
   /**
    * signerMustHaveAccountMetadata.
    *
@@ -18359,9 +18149,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerMustHaveAccount` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerMustHaveAccount` property is editable. .
    * @return signerMustHaveAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerMustHaveAccount` property is editable. ")
@@ -18376,6 +18164,7 @@ public class AccountSettingsInformation {
     this.signerMustHaveAccountMetadata = signerMustHaveAccountMetadata;
   }
 
+
   /**
    * signerMustLoginToSign.
    *
@@ -18388,7 +18177,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerMustLoginToSign
    **/
   @Schema(description = "")
@@ -18403,6 +18191,7 @@ public class AccountSettingsInformation {
     this.signerMustLoginToSign = signerMustLoginToSign;
   }
 
+
   /**
    * signerMustLoginToSignMetadata.
    *
@@ -18414,9 +18203,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signerMustLoginToSign` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signerMustLoginToSign` property is editable. .
    * @return signerMustLoginToSignMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerMustLoginToSign` property is editable. ")
@@ -18431,6 +18218,7 @@ public class AccountSettingsInformation {
     this.signerMustLoginToSignMetadata = signerMustLoginToSignMetadata;
   }
 
+
   /**
    * signerShowSecureFieldInitialValues.
    *
@@ -18443,7 +18231,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signerShowSecureFieldInitialValues
    **/
   @Schema(description = "")
@@ -18458,21 +18245,19 @@ public class AccountSettingsInformation {
     this.signerShowSecureFieldInitialValues = signerShowSecureFieldInitialValues;
   }
 
+
   /**
    * signerShowSecureFieldInitialValuesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation signerShowSecureFieldInitialValuesMetadata(
-      SettingsMetadata signerShowSecureFieldInitialValuesMetadata) {
+  public AccountSettingsInformation signerShowSecureFieldInitialValuesMetadata(SettingsMetadata signerShowSecureFieldInitialValuesMetadata) {
     this.signerShowSecureFieldInitialValuesMetadata = signerShowSecureFieldInitialValuesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `signerShowSecureFieldInitialValues`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `signerShowSecureFieldInitialValues` property is editable. .
    * @return signerShowSecureFieldInitialValuesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signerShowSecureFieldInitialValues` property is editable. ")
@@ -18483,10 +18268,10 @@ public class AccountSettingsInformation {
   /**
    * setSignerShowSecureFieldInitialValuesMetadata.
    **/
-  public void setSignerShowSecureFieldInitialValuesMetadata(
-      SettingsMetadata signerShowSecureFieldInitialValuesMetadata) {
+  public void setSignerShowSecureFieldInitialValuesMetadata(SettingsMetadata signerShowSecureFieldInitialValuesMetadata) {
     this.signerShowSecureFieldInitialValuesMetadata = signerShowSecureFieldInitialValuesMetadata;
   }
+
 
   /**
    * signingSessionTimeout.
@@ -18500,7 +18285,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signingSessionTimeout
    **/
   @Schema(description = "")
@@ -18515,6 +18299,7 @@ public class AccountSettingsInformation {
     this.signingSessionTimeout = signingSessionTimeout;
   }
 
+
   /**
    * signingSessionTimeoutMetadata.
    *
@@ -18526,9 +18311,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signingSessionTimeout` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `signingSessionTimeout` property is editable. .
    * @return signingSessionTimeoutMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signingSessionTimeout` property is editable. ")
@@ -18543,6 +18326,7 @@ public class AccountSettingsInformation {
     this.signingSessionTimeoutMetadata = signingSessionTimeoutMetadata;
   }
 
+
   /**
    * signingUiVersion.
    *
@@ -18555,7 +18339,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signingUiVersion
    **/
   @Schema(description = "")
@@ -18570,6 +18353,7 @@ public class AccountSettingsInformation {
     this.signingUiVersion = signingUiVersion;
   }
 
+
   /**
    * signingUiVersionMetadata.
    *
@@ -18582,7 +18366,6 @@ public class AccountSettingsInformation {
 
   /**
    * Reserved for DocuSign..
-   * 
    * @return signingUiVersionMetadata
    **/
   @Schema(description = "Reserved for DocuSign.")
@@ -18597,6 +18380,7 @@ public class AccountSettingsInformation {
     this.signingUiVersionMetadata = signingUiVersionMetadata;
   }
 
+
   /**
    * signTimeFormat.
    *
@@ -18609,7 +18393,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signTimeFormat
    **/
   @Schema(description = "")
@@ -18624,6 +18407,7 @@ public class AccountSettingsInformation {
     this.signTimeFormat = signTimeFormat;
   }
 
+
   /**
    * signTimeFormatMetadata.
    *
@@ -18636,7 +18420,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `signTimeFormat` property is editable. .
-   * 
    * @return signTimeFormatMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signTimeFormat` property is editable. ")
@@ -18651,6 +18434,7 @@ public class AccountSettingsInformation {
     this.signTimeFormatMetadata = signTimeFormatMetadata;
   }
 
+
   /**
    * signTimeShowAmPm.
    *
@@ -18663,7 +18447,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return signTimeShowAmPm
    **/
   @Schema(description = "")
@@ -18678,6 +18461,7 @@ public class AccountSettingsInformation {
     this.signTimeShowAmPm = signTimeShowAmPm;
   }
 
+
   /**
    * signTimeShowAmPmMetadata.
    *
@@ -18689,9 +18473,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `signTimeShowAmPm` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `signTimeShowAmPm` property is editable. .
    * @return signTimeShowAmPmMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `signTimeShowAmPm` property is editable. ")
@@ -18706,6 +18488,7 @@ public class AccountSettingsInformation {
     this.signTimeShowAmPmMetadata = signTimeShowAmPmMetadata;
   }
 
+
   /**
    * simplifiedSendingEnabled.
    *
@@ -18718,7 +18501,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return simplifiedSendingEnabled
    **/
   @Schema(description = "")
@@ -18733,21 +18515,19 @@ public class AccountSettingsInformation {
     this.simplifiedSendingEnabled = simplifiedSendingEnabled;
   }
 
+
   /**
    * simplifiedSendingEnabledMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation simplifiedSendingEnabledMetadata(
-      SettingsMetadata simplifiedSendingEnabledMetadata) {
+  public AccountSettingsInformation simplifiedSendingEnabledMetadata(SettingsMetadata simplifiedSendingEnabledMetadata) {
     this.simplifiedSendingEnabledMetadata = simplifiedSendingEnabledMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `simplifiedSendingEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `simplifiedSendingEnabled` property is editable. .
    * @return simplifiedSendingEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `simplifiedSendingEnabled` property is editable. ")
@@ -18762,6 +18542,7 @@ public class AccountSettingsInformation {
     this.simplifiedSendingEnabledMetadata = simplifiedSendingEnabledMetadata;
   }
 
+
   /**
    * singleSignOnEnabled.
    *
@@ -18774,7 +18555,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return singleSignOnEnabled
    **/
   @Schema(description = "")
@@ -18789,6 +18569,7 @@ public class AccountSettingsInformation {
     this.singleSignOnEnabled = singleSignOnEnabled;
   }
 
+
   /**
    * singleSignOnEnabledMetadata.
    *
@@ -18800,9 +18581,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `singleSignOnEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `singleSignOnEnabled` property is editable. .
    * @return singleSignOnEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `singleSignOnEnabled` property is editable. ")
@@ -18817,6 +18596,7 @@ public class AccountSettingsInformation {
     this.singleSignOnEnabledMetadata = singleSignOnEnabledMetadata;
   }
 
+
   /**
    * skipAuthCompletedEnvelopes.
    *
@@ -18829,7 +18609,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return skipAuthCompletedEnvelopes
    **/
   @Schema(description = "")
@@ -18844,21 +18623,19 @@ public class AccountSettingsInformation {
     this.skipAuthCompletedEnvelopes = skipAuthCompletedEnvelopes;
   }
 
+
   /**
    * skipAuthCompletedEnvelopesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation skipAuthCompletedEnvelopesMetadata(
-      SettingsMetadata skipAuthCompletedEnvelopesMetadata) {
+  public AccountSettingsInformation skipAuthCompletedEnvelopesMetadata(SettingsMetadata skipAuthCompletedEnvelopesMetadata) {
     this.skipAuthCompletedEnvelopesMetadata = skipAuthCompletedEnvelopesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `skipAuthCompletedEnvelopes` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `skipAuthCompletedEnvelopes` property is editable. .
    * @return skipAuthCompletedEnvelopesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `skipAuthCompletedEnvelopes` property is editable. ")
@@ -18873,6 +18650,7 @@ public class AccountSettingsInformation {
     this.skipAuthCompletedEnvelopesMetadata = skipAuthCompletedEnvelopesMetadata;
   }
 
+
   /**
    * socialIdRecipAuth.
    *
@@ -18885,7 +18663,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return socialIdRecipAuth
    **/
   @Schema(description = "")
@@ -18900,6 +18677,7 @@ public class AccountSettingsInformation {
     this.socialIdRecipAuth = socialIdRecipAuth;
   }
 
+
   /**
    * socialIdRecipAuthMetadata.
    *
@@ -18911,9 +18689,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `socialIdRecipAuth` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `socialIdRecipAuth` property is editable. .
    * @return socialIdRecipAuthMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `socialIdRecipAuth` property is editable. ")
@@ -18928,6 +18704,7 @@ public class AccountSettingsInformation {
     this.socialIdRecipAuthMetadata = socialIdRecipAuthMetadata;
   }
 
+
   /**
    * specifyDocumentVisibility.
    *
@@ -18940,7 +18717,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return specifyDocumentVisibility
    **/
   @Schema(description = "")
@@ -18955,21 +18731,19 @@ public class AccountSettingsInformation {
     this.specifyDocumentVisibility = specifyDocumentVisibility;
   }
 
+
   /**
    * specifyDocumentVisibilityMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation specifyDocumentVisibilityMetadata(
-      SettingsMetadata specifyDocumentVisibilityMetadata) {
+  public AccountSettingsInformation specifyDocumentVisibilityMetadata(SettingsMetadata specifyDocumentVisibilityMetadata) {
     this.specifyDocumentVisibilityMetadata = specifyDocumentVisibilityMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `specifyDocumentVisibility` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `specifyDocumentVisibility` property is editable. .
    * @return specifyDocumentVisibilityMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `specifyDocumentVisibility` property is editable. ")
@@ -18984,6 +18758,7 @@ public class AccountSettingsInformation {
     this.specifyDocumentVisibilityMetadata = specifyDocumentVisibilityMetadata;
   }
 
+
   /**
    * startInAdvancedCorrect.
    *
@@ -18996,7 +18771,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return startInAdvancedCorrect
    **/
   @Schema(description = "")
@@ -19011,6 +18785,7 @@ public class AccountSettingsInformation {
     this.startInAdvancedCorrect = startInAdvancedCorrect;
   }
 
+
   /**
    * startInAdvancedCorrectMetadata.
    *
@@ -19022,9 +18797,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `startInAdvancedCorrect` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `startInAdvancedCorrect` property is editable. .
    * @return startInAdvancedCorrectMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `startInAdvancedCorrect` property is editable. ")
@@ -19039,6 +18812,7 @@ public class AccountSettingsInformation {
     this.startInAdvancedCorrectMetadata = startInAdvancedCorrectMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustAccept.
    *
@@ -19051,7 +18825,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustAccept
    **/
   @Schema(description = "")
@@ -19066,21 +18839,19 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustAccept = supplementalDocumentsMustAccept;
   }
 
+
   /**
    * supplementalDocumentsMustAcceptMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation supplementalDocumentsMustAcceptMetadata(
-      SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
+  public AccountSettingsInformation supplementalDocumentsMustAcceptMetadata(SettingsMetadata supplementalDocumentsMustAcceptMetadata) {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustAccept`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. .
    * @return supplementalDocumentsMustAcceptMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustAccept` property is editable. ")
@@ -19095,6 +18866,7 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustAcceptMetadata = supplementalDocumentsMustAcceptMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustRead.
    *
@@ -19107,7 +18879,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustRead
    **/
   @Schema(description = "")
@@ -19122,21 +18893,19 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustRead = supplementalDocumentsMustRead;
   }
 
+
   /**
    * supplementalDocumentsMustReadMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation supplementalDocumentsMustReadMetadata(
-      SettingsMetadata supplementalDocumentsMustReadMetadata) {
+  public AccountSettingsInformation supplementalDocumentsMustReadMetadata(SettingsMetadata supplementalDocumentsMustReadMetadata) {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustRead` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. .
    * @return supplementalDocumentsMustReadMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustRead` property is editable. ")
@@ -19151,6 +18920,7 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustReadMetadata = supplementalDocumentsMustReadMetadata;
   }
 
+
   /**
    * supplementalDocumentsMustView.
    *
@@ -19163,7 +18933,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return supplementalDocumentsMustView
    **/
   @Schema(description = "")
@@ -19178,21 +18947,19 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustView = supplementalDocumentsMustView;
   }
 
+
   /**
    * supplementalDocumentsMustViewMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation supplementalDocumentsMustViewMetadata(
-      SettingsMetadata supplementalDocumentsMustViewMetadata) {
+  public AccountSettingsInformation supplementalDocumentsMustViewMetadata(SettingsMetadata supplementalDocumentsMustViewMetadata) {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `supplementalDocumentsMustView` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. .
    * @return supplementalDocumentsMustViewMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `supplementalDocumentsMustView` property is editable. ")
@@ -19207,6 +18974,7 @@ public class AccountSettingsInformation {
     this.supplementalDocumentsMustViewMetadata = supplementalDocumentsMustViewMetadata;
   }
 
+
   /**
    * suppressCertificateEnforcement.
    *
@@ -19219,7 +18987,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return suppressCertificateEnforcement
    **/
   @Schema(description = "")
@@ -19234,21 +19001,19 @@ public class AccountSettingsInformation {
     this.suppressCertificateEnforcement = suppressCertificateEnforcement;
   }
 
+
   /**
    * suppressCertificateEnforcementMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation suppressCertificateEnforcementMetadata(
-      SettingsMetadata suppressCertificateEnforcementMetadata) {
+  public AccountSettingsInformation suppressCertificateEnforcementMetadata(SettingsMetadata suppressCertificateEnforcementMetadata) {
     this.suppressCertificateEnforcementMetadata = suppressCertificateEnforcementMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `suppressCertificateEnforcement` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `suppressCertificateEnforcement` property is editable. .
    * @return suppressCertificateEnforcementMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `suppressCertificateEnforcement` property is editable. ")
@@ -19263,6 +19028,7 @@ public class AccountSettingsInformation {
     this.suppressCertificateEnforcementMetadata = suppressCertificateEnforcementMetadata;
   }
 
+
   /**
    * tabAccountSettings.
    *
@@ -19275,7 +19041,6 @@ public class AccountSettingsInformation {
 
   /**
    * Account-wide tab settings..
-   * 
    * @return tabAccountSettings
    **/
   @Schema(description = "Account-wide tab settings.")
@@ -19290,6 +19055,7 @@ public class AccountSettingsInformation {
     this.tabAccountSettings = tabAccountSettings;
   }
 
+
   /**
    * timezoneOffsetAPI.
    *
@@ -19302,7 +19068,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneOffsetAPI
    **/
   @Schema(description = "")
@@ -19317,6 +19082,7 @@ public class AccountSettingsInformation {
     this.timezoneOffsetAPI = timezoneOffsetAPI;
   }
 
+
   /**
    * timezoneOffsetAPIMetadata.
    *
@@ -19328,9 +19094,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `timezoneOffsetAPI` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `timezoneOffsetAPI` property is editable. .
    * @return timezoneOffsetAPIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `timezoneOffsetAPI` property is editable. ")
@@ -19345,6 +19109,7 @@ public class AccountSettingsInformation {
     this.timezoneOffsetAPIMetadata = timezoneOffsetAPIMetadata;
   }
 
+
   /**
    * timezoneOffsetUI.
    *
@@ -19357,7 +19122,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return timezoneOffsetUI
    **/
   @Schema(description = "")
@@ -19372,6 +19136,7 @@ public class AccountSettingsInformation {
     this.timezoneOffsetUI = timezoneOffsetUI;
   }
 
+
   /**
    * timezoneOffsetUIMetadata.
    *
@@ -19383,9 +19148,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `timezoneOffsetUI` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `timezoneOffsetUI` property is editable. .
    * @return timezoneOffsetUIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `timezoneOffsetUI` property is editable. ")
@@ -19400,6 +19163,7 @@ public class AccountSettingsInformation {
     this.timezoneOffsetUIMetadata = timezoneOffsetUIMetadata;
   }
 
+
   /**
    * universalSignatureOptIn.
    *
@@ -19412,7 +19176,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return universalSignatureOptIn
    **/
   @Schema(description = "")
@@ -19427,6 +19190,7 @@ public class AccountSettingsInformation {
     this.universalSignatureOptIn = universalSignatureOptIn;
   }
 
+
   /**
    * useAccountLevelEmail.
    *
@@ -19439,7 +19203,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useAccountLevelEmail
    **/
   @Schema(description = "")
@@ -19454,6 +19217,7 @@ public class AccountSettingsInformation {
     this.useAccountLevelEmail = useAccountLevelEmail;
   }
 
+
   /**
    * useAccountLevelEmailMetadata.
    *
@@ -19465,9 +19229,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `useAccountLevelEmail` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `useAccountLevelEmail` property is editable. .
    * @return useAccountLevelEmailMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useAccountLevelEmail` property is editable. ")
@@ -19482,6 +19244,7 @@ public class AccountSettingsInformation {
     this.useAccountLevelEmailMetadata = useAccountLevelEmailMetadata;
   }
 
+
   /**
    * useConsumerDisclosure.
    *
@@ -19494,7 +19257,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useConsumerDisclosure
    **/
   @Schema(description = "")
@@ -19509,6 +19271,7 @@ public class AccountSettingsInformation {
     this.useConsumerDisclosure = useConsumerDisclosure;
   }
 
+
   /**
    * useConsumerDisclosureMetadata.
    *
@@ -19520,9 +19283,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `useConsumerDisclosure` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `useConsumerDisclosure` property is editable. .
    * @return useConsumerDisclosureMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useConsumerDisclosure` property is editable. ")
@@ -19537,6 +19298,7 @@ public class AccountSettingsInformation {
     this.useConsumerDisclosureMetadata = useConsumerDisclosureMetadata;
   }
 
+
   /**
    * useConsumerDisclosureWithinAccount.
    *
@@ -19549,7 +19311,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useConsumerDisclosureWithinAccount
    **/
   @Schema(description = "")
@@ -19564,21 +19325,19 @@ public class AccountSettingsInformation {
     this.useConsumerDisclosureWithinAccount = useConsumerDisclosureWithinAccount;
   }
 
+
   /**
    * useConsumerDisclosureWithinAccountMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation useConsumerDisclosureWithinAccountMetadata(
-      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public AccountSettingsInformation useConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. .
    * @return useConsumerDisclosureWithinAccountMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useConsumerDisclosureWithinAccount` property is editable. ")
@@ -19589,10 +19348,10 @@ public class AccountSettingsInformation {
   /**
    * setUseConsumerDisclosureWithinAccountMetadata.
    **/
-  public void setUseConsumerDisclosureWithinAccountMetadata(
-      SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
+  public void setUseConsumerDisclosureWithinAccountMetadata(SettingsMetadata useConsumerDisclosureWithinAccountMetadata) {
     this.useConsumerDisclosureWithinAccountMetadata = useConsumerDisclosureWithinAccountMetadata;
   }
+
 
   /**
    * useDerivedKeys.
@@ -19606,7 +19365,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useDerivedKeys
    **/
   @Schema(description = "")
@@ -19621,6 +19379,7 @@ public class AccountSettingsInformation {
     this.useDerivedKeys = useDerivedKeys;
   }
 
+
   /**
    * useDerivedKeysMetadata.
    *
@@ -19633,7 +19392,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `useDerivedKeys` property is editable. .
-   * 
    * @return useDerivedKeysMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useDerivedKeys` property is editable. ")
@@ -19648,6 +19406,7 @@ public class AccountSettingsInformation {
     this.useDerivedKeysMetadata = useDerivedKeysMetadata;
   }
 
+
   /**
    * useDocuSignExpressSignerCertificate.
    *
@@ -19660,7 +19419,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useDocuSignExpressSignerCertificate
    **/
   @Schema(description = "")
@@ -19675,21 +19433,19 @@ public class AccountSettingsInformation {
     this.useDocuSignExpressSignerCertificate = useDocuSignExpressSignerCertificate;
   }
 
+
   /**
    * useDocuSignExpressSignerCertificateMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation useDocuSignExpressSignerCertificateMetadata(
-      SettingsMetadata useDocuSignExpressSignerCertificateMetadata) {
+  public AccountSettingsInformation useDocuSignExpressSignerCertificateMetadata(SettingsMetadata useDocuSignExpressSignerCertificateMetadata) {
     this.useDocuSignExpressSignerCertificateMetadata = useDocuSignExpressSignerCertificateMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useDocuSignExpressSignerCertificate`
-   * property is editable. .
-   * 
+   * Metadata that indicates whether the `useDocuSignExpressSignerCertificate` property is editable. .
    * @return useDocuSignExpressSignerCertificateMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useDocuSignExpressSignerCertificate` property is editable. ")
@@ -19700,10 +19456,10 @@ public class AccountSettingsInformation {
   /**
    * setUseDocuSignExpressSignerCertificateMetadata.
    **/
-  public void setUseDocuSignExpressSignerCertificateMetadata(
-      SettingsMetadata useDocuSignExpressSignerCertificateMetadata) {
+  public void setUseDocuSignExpressSignerCertificateMetadata(SettingsMetadata useDocuSignExpressSignerCertificateMetadata) {
     this.useDocuSignExpressSignerCertificateMetadata = useDocuSignExpressSignerCertificateMetadata;
   }
+
 
   /**
    * useEnvelopeSearchMixedMode.
@@ -19717,7 +19473,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useEnvelopeSearchMixedMode
    **/
   @Schema(description = "")
@@ -19732,20 +19487,19 @@ public class AccountSettingsInformation {
     this.useEnvelopeSearchMixedMode = useEnvelopeSearchMixedMode;
   }
 
+
   /**
    * useEnvelopeSearchMixedModeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation useEnvelopeSearchMixedModeMetadata(
-      SettingsMetadata useEnvelopeSearchMixedModeMetadata) {
+  public AccountSettingsInformation useEnvelopeSearchMixedModeMetadata(SettingsMetadata useEnvelopeSearchMixedModeMetadata) {
     this.useEnvelopeSearchMixedModeMetadata = useEnvelopeSearchMixedModeMetadata;
     return this;
   }
 
   /**
-   * Get useEnvelopeSearchMixedModeMetadata.
-   * 
+   * .
    * @return useEnvelopeSearchMixedModeMetadata
    **/
   @Schema(description = "")
@@ -19760,6 +19514,7 @@ public class AccountSettingsInformation {
     this.useEnvelopeSearchMixedModeMetadata = useEnvelopeSearchMixedModeMetadata;
   }
 
+
   /**
    * useMultiAppGroupsData.
    *
@@ -19772,7 +19527,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useMultiAppGroupsData
    **/
   @Schema(description = "")
@@ -19787,6 +19541,7 @@ public class AccountSettingsInformation {
     this.useMultiAppGroupsData = useMultiAppGroupsData;
   }
 
+
   /**
    * useMultiAppGroupsDataMetadata.
    *
@@ -19799,7 +19554,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useMultiAppGroupsDataMetadata
    **/
   @Schema(description = "")
@@ -19814,6 +19568,7 @@ public class AccountSettingsInformation {
     this.useMultiAppGroupsDataMetadata = useMultiAppGroupsDataMetadata;
   }
 
+
   /**
    * useNewBlobForPdf.
    *
@@ -19826,7 +19581,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useNewBlobForPdf
    **/
   @Schema(description = "")
@@ -19841,6 +19595,7 @@ public class AccountSettingsInformation {
     this.useNewBlobForPdf = useNewBlobForPdf;
   }
 
+
   /**
    * useNewBlobForPdfMetadata.
    *
@@ -19852,9 +19607,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `useNewBlobForPdf` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `useNewBlobForPdf` property is editable. .
    * @return useNewBlobForPdfMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useNewBlobForPdf` property is editable. ")
@@ -19869,6 +19622,7 @@ public class AccountSettingsInformation {
     this.useNewBlobForPdfMetadata = useNewBlobForPdfMetadata;
   }
 
+
   /**
    * useNewEnvelopeSearch.
    *
@@ -19881,7 +19635,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useNewEnvelopeSearch
    **/
   @Schema(description = "")
@@ -19896,6 +19649,7 @@ public class AccountSettingsInformation {
     this.useNewEnvelopeSearch = useNewEnvelopeSearch;
   }
 
+
   /**
    * useNewEnvelopeSearchMetadata.
    *
@@ -19907,8 +19661,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Get useNewEnvelopeSearchMetadata.
-   * 
+   * .
    * @return useNewEnvelopeSearchMetadata
    **/
   @Schema(description = "")
@@ -19923,6 +19676,7 @@ public class AccountSettingsInformation {
     this.useNewEnvelopeSearchMetadata = useNewEnvelopeSearchMetadata;
   }
 
+
   /**
    * useSAFESignerCertificates.
    *
@@ -19935,7 +19689,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useSAFESignerCertificates
    **/
   @Schema(description = "")
@@ -19950,21 +19703,19 @@ public class AccountSettingsInformation {
     this.useSAFESignerCertificates = useSAFESignerCertificates;
   }
 
+
   /**
    * useSAFESignerCertificatesMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation useSAFESignerCertificatesMetadata(
-      SettingsMetadata useSAFESignerCertificatesMetadata) {
+  public AccountSettingsInformation useSAFESignerCertificatesMetadata(SettingsMetadata useSAFESignerCertificatesMetadata) {
     this.useSAFESignerCertificatesMetadata = useSAFESignerCertificatesMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useSAFESignerCertificates` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `useSAFESignerCertificates` property is editable. .
    * @return useSAFESignerCertificatesMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useSAFESignerCertificates` property is editable. ")
@@ -19979,6 +19730,7 @@ public class AccountSettingsInformation {
     this.useSAFESignerCertificatesMetadata = useSAFESignerCertificatesMetadata;
   }
 
+
   /**
    * usesAPI.
    *
@@ -19991,7 +19743,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return usesAPI
    **/
   @Schema(description = "")
@@ -20006,6 +19757,7 @@ public class AccountSettingsInformation {
     this.usesAPI = usesAPI;
   }
 
+
   /**
    * usesAPIMetadata.
    *
@@ -20018,7 +19770,6 @@ public class AccountSettingsInformation {
 
   /**
    * Metadata that indicates whether the `usesAPI` property is editable. .
-   * 
    * @return usesAPIMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `usesAPI` property is editable. ")
@@ -20033,6 +19784,7 @@ public class AccountSettingsInformation {
     this.usesAPIMetadata = usesAPIMetadata;
   }
 
+
   /**
    * useSignatureProviderPlatform.
    *
@@ -20045,7 +19797,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useSignatureProviderPlatform
    **/
   @Schema(description = "")
@@ -20060,21 +19811,19 @@ public class AccountSettingsInformation {
     this.useSignatureProviderPlatform = useSignatureProviderPlatform;
   }
 
+
   /**
    * useSignatureProviderPlatformMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation useSignatureProviderPlatformMetadata(
-      SettingsMetadata useSignatureProviderPlatformMetadata) {
+  public AccountSettingsInformation useSignatureProviderPlatformMetadata(SettingsMetadata useSignatureProviderPlatformMetadata) {
     this.useSignatureProviderPlatformMetadata = useSignatureProviderPlatformMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `useSignatureProviderPlatform` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `useSignatureProviderPlatform` property is editable. .
    * @return useSignatureProviderPlatformMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `useSignatureProviderPlatform` property is editable. ")
@@ -20089,6 +19838,7 @@ public class AccountSettingsInformation {
     this.useSignatureProviderPlatformMetadata = useSignatureProviderPlatformMetadata;
   }
 
+
   /**
    * useSmartContractsV1.
    *
@@ -20101,7 +19851,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return useSmartContractsV1
    **/
   @Schema(description = "")
@@ -20116,6 +19865,7 @@ public class AccountSettingsInformation {
     this.useSmartContractsV1 = useSmartContractsV1;
   }
 
+
   /**
    * validationsAllowed.
    *
@@ -20128,7 +19878,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return validationsAllowed
    **/
   @Schema(description = "")
@@ -20143,6 +19892,7 @@ public class AccountSettingsInformation {
     this.validationsAllowed = validationsAllowed;
   }
 
+
   /**
    * validationsAllowedMetadata.
    *
@@ -20154,9 +19904,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `validationsAllowed` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `validationsAllowed` property is editable. .
    * @return validationsAllowedMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationsAllowed` property is editable. ")
@@ -20171,6 +19919,7 @@ public class AccountSettingsInformation {
     this.validationsAllowedMetadata = validationsAllowedMetadata;
   }
 
+
   /**
    * validationsBrand.
    *
@@ -20183,7 +19932,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return validationsBrand
    **/
   @Schema(description = "")
@@ -20198,6 +19946,7 @@ public class AccountSettingsInformation {
     this.validationsBrand = validationsBrand;
   }
 
+
   /**
    * validationsBrandMetadata.
    *
@@ -20209,9 +19958,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `validationsBrand` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `validationsBrand` property is editable. .
    * @return validationsBrandMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationsBrand` property is editable. ")
@@ -20226,6 +19973,7 @@ public class AccountSettingsInformation {
     this.validationsBrandMetadata = validationsBrandMetadata;
   }
 
+
   /**
    * validationsCadence.
    *
@@ -20238,7 +19986,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return validationsCadence
    **/
   @Schema(description = "")
@@ -20253,6 +20000,7 @@ public class AccountSettingsInformation {
     this.validationsCadence = validationsCadence;
   }
 
+
   /**
    * validationsCadenceMetadata.
    *
@@ -20264,9 +20012,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `validationsCadence` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `validationsCadence` property is editable. .
    * @return validationsCadenceMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationsCadence` property is editable. ")
@@ -20281,6 +20027,7 @@ public class AccountSettingsInformation {
     this.validationsCadenceMetadata = validationsCadenceMetadata;
   }
 
+
   /**
    * validationsEnabled.
    *
@@ -20293,7 +20040,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return validationsEnabled
    **/
   @Schema(description = "")
@@ -20308,6 +20054,7 @@ public class AccountSettingsInformation {
     this.validationsEnabled = validationsEnabled;
   }
 
+
   /**
    * validationsEnabledMetadata.
    *
@@ -20319,9 +20066,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `validationsEnabled` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `validationsEnabled` property is editable. .
    * @return validationsEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationsEnabled` property is editable. ")
@@ -20336,6 +20081,7 @@ public class AccountSettingsInformation {
     this.validationsEnabledMetadata = validationsEnabledMetadata;
   }
 
+
   /**
    * validationsReport.
    *
@@ -20348,7 +20094,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return validationsReport
    **/
   @Schema(description = "")
@@ -20363,6 +20108,7 @@ public class AccountSettingsInformation {
     this.validationsReport = validationsReport;
   }
 
+
   /**
    * validationsReportMetadata.
    *
@@ -20374,9 +20120,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `validationsReport` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `validationsReport` property is editable. .
    * @return validationsReportMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `validationsReport` property is editable. ")
@@ -20391,6 +20135,7 @@ public class AccountSettingsInformation {
     this.validationsReportMetadata = validationsReportMetadata;
   }
 
+
   /**
    * waterMarkEnabled.
    *
@@ -20403,7 +20148,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return waterMarkEnabled
    **/
   @Schema(description = "")
@@ -20418,6 +20162,7 @@ public class AccountSettingsInformation {
     this.waterMarkEnabled = waterMarkEnabled;
   }
 
+
   /**
    * waterMarkEnabledMetadata.
    *
@@ -20429,9 +20174,7 @@ public class AccountSettingsInformation {
   }
 
   /**
-   * Metadata that indicates whether the `waterMarkEnabled` property is editable.
-   * .
-   * 
+   * Metadata that indicates whether the `waterMarkEnabled` property is editable. .
    * @return waterMarkEnabledMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `waterMarkEnabled` property is editable. ")
@@ -20446,6 +20189,7 @@ public class AccountSettingsInformation {
     this.waterMarkEnabledMetadata = waterMarkEnabledMetadata;
   }
 
+
   /**
    * writeReminderToEnvelopeHistory.
    *
@@ -20458,7 +20202,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return writeReminderToEnvelopeHistory
    **/
   @Schema(description = "")
@@ -20473,21 +20216,19 @@ public class AccountSettingsInformation {
     this.writeReminderToEnvelopeHistory = writeReminderToEnvelopeHistory;
   }
 
+
   /**
    * writeReminderToEnvelopeHistoryMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation writeReminderToEnvelopeHistoryMetadata(
-      SettingsMetadata writeReminderToEnvelopeHistoryMetadata) {
+  public AccountSettingsInformation writeReminderToEnvelopeHistoryMetadata(SettingsMetadata writeReminderToEnvelopeHistoryMetadata) {
     this.writeReminderToEnvelopeHistoryMetadata = writeReminderToEnvelopeHistoryMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `writeReminderToEnvelopeHistory` property
-   * is editable. .
-   * 
+   * Metadata that indicates whether the `writeReminderToEnvelopeHistory` property is editable. .
    * @return writeReminderToEnvelopeHistoryMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `writeReminderToEnvelopeHistory` property is editable. ")
@@ -20502,6 +20243,7 @@ public class AccountSettingsInformation {
     this.writeReminderToEnvelopeHistoryMetadata = writeReminderToEnvelopeHistoryMetadata;
   }
 
+
   /**
    * wurflMinAllowableScreenSize.
    *
@@ -20514,7 +20256,6 @@ public class AccountSettingsInformation {
 
   /**
    * .
-   * 
    * @return wurflMinAllowableScreenSize
    **/
   @Schema(description = "")
@@ -20529,21 +20270,19 @@ public class AccountSettingsInformation {
     this.wurflMinAllowableScreenSize = wurflMinAllowableScreenSize;
   }
 
+
   /**
    * wurflMinAllowableScreenSizeMetadata.
    *
    * @return AccountSettingsInformation
    **/
-  public AccountSettingsInformation wurflMinAllowableScreenSizeMetadata(
-      SettingsMetadata wurflMinAllowableScreenSizeMetadata) {
+  public AccountSettingsInformation wurflMinAllowableScreenSizeMetadata(SettingsMetadata wurflMinAllowableScreenSizeMetadata) {
     this.wurflMinAllowableScreenSizeMetadata = wurflMinAllowableScreenSizeMetadata;
     return this;
   }
 
   /**
-   * Metadata that indicates whether the `wurflMinAllowableScreenSize` property is
-   * editable. .
-   * 
+   * Metadata that indicates whether the `wurflMinAllowableScreenSize` property is editable. .
    * @return wurflMinAllowableScreenSizeMetadata
    **/
   @Schema(description = "Metadata that indicates whether the `wurflMinAllowableScreenSize` property is editable. ")
@@ -20557,6 +20296,7 @@ public class AccountSettingsInformation {
   public void setWurflMinAllowableScreenSizeMetadata(SettingsMetadata wurflMinAllowableScreenSizeMetadata) {
     this.wurflMinAllowableScreenSizeMetadata = wurflMinAllowableScreenSizeMetadata;
   }
+
 
   /**
    * Compares objects.
@@ -20576,8 +20316,7 @@ public class AccountSettingsInformation {
         Objects.equals(this.accountDateTimeFormat, accountSettingsInformation.accountDateTimeFormat) &&
         Objects.equals(this.accountDateTimeFormatMetadata, accountSettingsInformation.accountDateTimeFormatMetadata) &&
         Objects.equals(this.accountDefaultLanguage, accountSettingsInformation.accountDefaultLanguage) &&
-        Objects.equals(this.accountDefaultLanguageMetadata, accountSettingsInformation.accountDefaultLanguageMetadata)
-        &&
+        Objects.equals(this.accountDefaultLanguageMetadata, accountSettingsInformation.accountDefaultLanguageMetadata) &&
         Objects.equals(this.accountName, accountSettingsInformation.accountName) &&
         Objects.equals(this.accountNameMetadata, accountSettingsInformation.accountNameMetadata) &&
         Objects.equals(this.accountNotification, accountSettingsInformation.accountNotification) &&
@@ -20588,32 +20327,18 @@ public class AccountSettingsInformation {
         Objects.equals(this.advancedCorrectMetadata, accountSettingsInformation.advancedCorrectMetadata) &&
         Objects.equals(this.allowAccessCodeFormat, accountSettingsInformation.allowAccessCodeFormat) &&
         Objects.equals(this.allowAccessCodeFormatMetadata, accountSettingsInformation.allowAccessCodeFormatMetadata) &&
-        Objects.equals(this.allowAccountManagementGranular, accountSettingsInformation.allowAccountManagementGranular)
-        &&
-        Objects.equals(this.allowAccountManagementGranularMetadata,
-            accountSettingsInformation.allowAccountManagementGranularMetadata)
-        &&
+        Objects.equals(this.allowAccountManagementGranular, accountSettingsInformation.allowAccountManagementGranular) &&
+        Objects.equals(this.allowAccountManagementGranularMetadata, accountSettingsInformation.allowAccountManagementGranularMetadata) &&
         Objects.equals(this.allowAccountMemberNameChange, accountSettingsInformation.allowAccountMemberNameChange) &&
-        Objects.equals(
-            this.allowAccountMemberNameChangeMetadata, accountSettingsInformation.allowAccountMemberNameChangeMetadata)
-        &&
-        Objects.equals(this.allowAdvancedRecipientRoutingConditional,
-            accountSettingsInformation.allowAdvancedRecipientRoutingConditional)
-        &&
-        Objects.equals(this.allowAdvancedRecipientRoutingConditionalMetadata,
-            accountSettingsInformation.allowAdvancedRecipientRoutingConditionalMetadata)
-        &&
+        Objects.equals(this.allowAccountMemberNameChangeMetadata, accountSettingsInformation.allowAccountMemberNameChangeMetadata) &&
+        Objects.equals(this.allowAdvancedRecipientRoutingConditional, accountSettingsInformation.allowAdvancedRecipientRoutingConditional) &&
+        Objects.equals(this.allowAdvancedRecipientRoutingConditionalMetadata, accountSettingsInformation.allowAdvancedRecipientRoutingConditionalMetadata) &&
         Objects.equals(this.allowAgentNameEmailEdit, accountSettingsInformation.allowAgentNameEmailEdit) &&
-        Objects.equals(this.allowAgentNameEmailEditMetadata, accountSettingsInformation.allowAgentNameEmailEditMetadata)
-        &&
+        Objects.equals(this.allowAgentNameEmailEditMetadata, accountSettingsInformation.allowAgentNameEmailEditMetadata) &&
         Objects.equals(this.allowAgreementActions, accountSettingsInformation.allowAgreementActions) &&
         Objects.equals(this.allowAgreementActionsMetadata, accountSettingsInformation.allowAgreementActionsMetadata) &&
-        Objects.equals(
-            this.allowAgreementOrchestrationWorkflows, accountSettingsInformation.allowAgreementOrchestrationWorkflows)
-        &&
-        Objects.equals(this.allowAgreementOrchestrationWorkflowsMetadata,
-            accountSettingsInformation.allowAgreementOrchestrationWorkflowsMetadata)
-        &&
+        Objects.equals(this.allowAgreementOrchestrationWorkflows, accountSettingsInformation.allowAgreementOrchestrationWorkflows) &&
+        Objects.equals(this.allowAgreementOrchestrationWorkflowsMetadata, accountSettingsInformation.allowAgreementOrchestrationWorkflowsMetadata) &&
         Objects.equals(this.allowAutoNavSettings, accountSettingsInformation.allowAutoNavSettings) &&
         Objects.equals(this.allowAutoNavSettingsMetadata, accountSettingsInformation.allowAutoNavSettingsMetadata) &&
         Objects.equals(this.allowAutoTagging, accountSettingsInformation.allowAutoTagging) &&
@@ -20622,19 +20347,13 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowBulkSendMetadata, accountSettingsInformation.allowBulkSendMetadata) &&
         Objects.equals(this.allowCDWithdraw, accountSettingsInformation.allowCDWithdraw) &&
         Objects.equals(this.allowCDWithdrawMetadata, accountSettingsInformation.allowCDWithdrawMetadata) &&
-        Objects.equals(this.allowConnectHttpListenerConfigs, accountSettingsInformation.allowConnectHttpListenerConfigs)
-        &&
+        Objects.equals(this.allowConnectHttpListenerConfigs, accountSettingsInformation.allowConnectHttpListenerConfigs) &&
         Objects.equals(this.allowConnectOAuthUI, accountSettingsInformation.allowConnectOAuthUI) &&
         Objects.equals(this.allowConnectSendFinishLater, accountSettingsInformation.allowConnectSendFinishLater) &&
-        Objects.equals(this.allowConnectSendFinishLaterMetadata,
-            accountSettingsInformation.allowConnectSendFinishLaterMetadata)
-        &&
+        Objects.equals(this.allowConnectSendFinishLaterMetadata, accountSettingsInformation.allowConnectSendFinishLaterMetadata) &&
         Objects.equals(this.allowConnectUnifiedPayloadUI, accountSettingsInformation.allowConnectUnifiedPayloadUI) &&
-        Objects.equals(this.allowConsumerDisclosureOverride, accountSettingsInformation.allowConsumerDisclosureOverride)
-        &&
-        Objects.equals(this.allowConsumerDisclosureOverrideMetadata,
-            accountSettingsInformation.allowConsumerDisclosureOverrideMetadata)
-        &&
+        Objects.equals(this.allowConsumerDisclosureOverride, accountSettingsInformation.allowConsumerDisclosureOverride) &&
+        Objects.equals(this.allowConsumerDisclosureOverrideMetadata, accountSettingsInformation.allowConsumerDisclosureOverrideMetadata) &&
         Objects.equals(this.allowDataDownload, accountSettingsInformation.allowDataDownload) &&
         Objects.equals(this.allowDataDownloadMetadata, accountSettingsInformation.allowDataDownloadMetadata) &&
         Objects.equals(this.allowDelayedRouting, accountSettingsInformation.allowDelayedRouting) &&
@@ -20644,17 +20363,13 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowDocGenDocuments, accountSettingsInformation.allowDocGenDocuments) &&
         Objects.equals(this.allowDocGenDocumentsMetadata, accountSettingsInformation.allowDocGenDocumentsMetadata) &&
         Objects.equals(this.allowDocumentDisclosures, accountSettingsInformation.allowDocumentDisclosures) &&
-        Objects.equals(this.allowDocumentDisclosuresMetadata,
-            accountSettingsInformation.allowDocumentDisclosuresMetadata)
-        &&
-        Objects.equals(this.allowDocumentsOnSignedEnvelopes, accountSettingsInformation.allowDocumentsOnSignedEnvelopes)
-        &&
-        Objects.equals(this.allowDocumentsOnSignedEnvelopesMetadata,
-            accountSettingsInformation.allowDocumentsOnSignedEnvelopesMetadata)
-        &&
+        Objects.equals(this.allowDocumentDisclosuresMetadata, accountSettingsInformation.allowDocumentDisclosuresMetadata) &&
+        Objects.equals(this.allowDocumentsOnSignedEnvelopes, accountSettingsInformation.allowDocumentsOnSignedEnvelopes) &&
+        Objects.equals(this.allowDocumentsOnSignedEnvelopesMetadata, accountSettingsInformation.allowDocumentsOnSignedEnvelopesMetadata) &&
         Objects.equals(this.allowDocumentVisibility, accountSettingsInformation.allowDocumentVisibility) &&
-        Objects.equals(this.allowDocumentVisibilityMetadata, accountSettingsInformation.allowDocumentVisibilityMetadata)
-        &&
+        Objects.equals(this.allowDocumentVisibilityMetadata, accountSettingsInformation.allowDocumentVisibilityMetadata) &&
+        Objects.equals(this.allowEditingEnvelopesOnBehalfOfOthers, accountSettingsInformation.allowEditingEnvelopesOnBehalfOfOthers) &&
+        Objects.equals(this.allowEditingEnvelopesOnBehalfOfOthersMetadata, accountSettingsInformation.allowEditingEnvelopesOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowEHankoStamps, accountSettingsInformation.allowEHankoStamps) &&
         Objects.equals(this.allowEHankoStampsMetadata, accountSettingsInformation.allowEHankoStampsMetadata) &&
         Objects.equals(this.allowENoteEOriginal, accountSettingsInformation.allowENoteEOriginal) &&
@@ -20662,46 +20377,25 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowEnvelopeCorrect, accountSettingsInformation.allowEnvelopeCorrect) &&
         Objects.equals(this.allowEnvelopeCorrectMetadata, accountSettingsInformation.allowEnvelopeCorrectMetadata) &&
         Objects.equals(this.allowEnvelopeCustodyTransfer, accountSettingsInformation.allowEnvelopeCustodyTransfer) &&
-        Objects.equals(this.allowEnvelopeCustodyTransferMetadata,
-            accountSettingsInformation.allowEnvelopeCustodyTransferMetadata)
-        &&
+        Objects.equals(this.allowEnvelopeCustodyTransferMetadata, accountSettingsInformation.allowEnvelopeCustodyTransferMetadata) &&
         Objects.equals(this.allowEnvelopeCustomFields, accountSettingsInformation.allowEnvelopeCustomFields) &&
-        Objects.equals(this.allowEnvelopeCustomFieldsMetadata,
-            accountSettingsInformation.allowEnvelopeCustomFieldsMetadata)
-        &&
+        Objects.equals(this.allowEnvelopeCustomFieldsMetadata, accountSettingsInformation.allowEnvelopeCustomFieldsMetadata) &&
         Objects.equals(this.allowEnvelopePublishReporting, accountSettingsInformation.allowEnvelopePublishReporting) &&
-        Objects.equals(this.allowEnvelopePublishReportingMetadata,
-            accountSettingsInformation.allowEnvelopePublishReportingMetadata)
-        &&
+        Objects.equals(this.allowEnvelopePublishReportingMetadata, accountSettingsInformation.allowEnvelopePublishReportingMetadata) &&
         Objects.equals(this.allowEnvelopeReporting, accountSettingsInformation.allowEnvelopeReporting) &&
-        Objects.equals(this.allowEnvelopeReportingMetadata, accountSettingsInformation.allowEnvelopeReportingMetadata)
-        &&
+        Objects.equals(this.allowEnvelopeReportingMetadata, accountSettingsInformation.allowEnvelopeReportingMetadata) &&
         Objects.equals(this.allowExpression, accountSettingsInformation.allowExpression) &&
         Objects.equals(this.allowExpressionMetadata, accountSettingsInformation.allowExpressionMetadata) &&
         Objects.equals(this.allowExpressSignerCertificate, accountSettingsInformation.allowExpressSignerCertificate) &&
-        Objects.equals(this.allowExpressSignerCertificateMetadata,
-            accountSettingsInformation.allowExpressSignerCertificateMetadata)
-        &&
-        Objects
-            .equals(this.allowExtendedSendingResourceFile, accountSettingsInformation.allowExtendedSendingResourceFile)
-        &&
-        Objects.equals(this.allowExtendedSendingResourceFileMetadata,
-            accountSettingsInformation.allowExtendedSendingResourceFileMetadata)
-        &&
+        Objects.equals(this.allowExpressSignerCertificateMetadata, accountSettingsInformation.allowExpressSignerCertificateMetadata) &&
+        Objects.equals(this.allowExtendedSendingResourceFile, accountSettingsInformation.allowExtendedSendingResourceFile) &&
+        Objects.equals(this.allowExtendedSendingResourceFileMetadata, accountSettingsInformation.allowExtendedSendingResourceFileMetadata) &&
         Objects.equals(this.allowExternalLinkedAccounts, accountSettingsInformation.allowExternalLinkedAccounts) &&
-        Objects.equals(this.allowExternalLinkedAccountsMetadata,
-            accountSettingsInformation.allowExternalLinkedAccountsMetadata)
-        &&
+        Objects.equals(this.allowExternalLinkedAccountsMetadata, accountSettingsInformation.allowExternalLinkedAccountsMetadata) &&
         Objects.equals(this.allowExternalSignaturePad, accountSettingsInformation.allowExternalSignaturePad) &&
-        Objects.equals(this.allowExternalSignaturePadMetadata,
-            accountSettingsInformation.allowExternalSignaturePadMetadata)
-        &&
-        Objects
-            .equals(this.allowIDVForEUQualifiedSignatures, accountSettingsInformation.allowIDVForEUQualifiedSignatures)
-        &&
-        Objects.equals(this.allowIDVForEUQualifiedSignaturesMetadata,
-            accountSettingsInformation.allowIDVForEUQualifiedSignaturesMetadata)
-        &&
+        Objects.equals(this.allowExternalSignaturePadMetadata, accountSettingsInformation.allowExternalSignaturePadMetadata) &&
+        Objects.equals(this.allowIDVForEUQualifiedSignatures, accountSettingsInformation.allowIDVForEUQualifiedSignatures) &&
+        Objects.equals(this.allowIDVForEUQualifiedSignaturesMetadata, accountSettingsInformation.allowIDVForEUQualifiedSignaturesMetadata) &&
         Objects.equals(this.allowIDVLevel1, accountSettingsInformation.allowIDVLevel1) &&
         Objects.equals(this.allowIDVLevel1Metadata, accountSettingsInformation.allowIDVLevel1Metadata) &&
         Objects.equals(this.allowIDVLevel2, accountSettingsInformation.allowIDVLevel2) &&
@@ -20712,18 +20406,12 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowIDVPlatformMetadata, accountSettingsInformation.allowIDVPlatformMetadata) &&
         Objects.equals(this.allowInPerson, accountSettingsInformation.allowInPerson) &&
         Objects.equals(this.allowInPersonElectronicNotary, accountSettingsInformation.allowInPersonElectronicNotary) &&
-        Objects.equals(this.allowInPersonElectronicNotaryMetadata,
-            accountSettingsInformation.allowInPersonElectronicNotaryMetadata)
-        &&
+        Objects.equals(this.allowInPersonElectronicNotaryMetadata, accountSettingsInformation.allowInPersonElectronicNotaryMetadata) &&
         Objects.equals(this.allowInPersonMetadata, accountSettingsInformation.allowInPersonMetadata) &&
         Objects.equals(this.allowManagedStamps, accountSettingsInformation.allowManagedStamps) &&
         Objects.equals(this.allowManagedStampsMetadata, accountSettingsInformation.allowManagedStampsMetadata) &&
-        Objects.equals(this.allowManagingEnvelopesOnBehalfOfOthers,
-            accountSettingsInformation.allowManagingEnvelopesOnBehalfOfOthers)
-        &&
-        Objects.equals(this.allowManagingEnvelopesOnBehalfOfOthersMetadata,
-            accountSettingsInformation.allowManagingEnvelopesOnBehalfOfOthersMetadata)
-        &&
+        Objects.equals(this.allowManagingEnvelopesOnBehalfOfOthers, accountSettingsInformation.allowManagingEnvelopesOnBehalfOfOthers) &&
+        Objects.equals(this.allowManagingEnvelopesOnBehalfOfOthersMetadata, accountSettingsInformation.allowManagingEnvelopesOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowMarkup, accountSettingsInformation.allowMarkup) &&
         Objects.equals(this.allowMarkupMetadata, accountSettingsInformation.allowMarkupMetadata) &&
         Objects.equals(this.allowMemberTimeZone, accountSettingsInformation.allowMemberTimeZone) &&
@@ -20731,86 +20419,43 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowMergeFields, accountSettingsInformation.allowMergeFields) &&
         Objects.equals(this.allowMergeFieldsMetadata, accountSettingsInformation.allowMergeFieldsMetadata) &&
         Objects.equals(this.allowMultipleBrandProfiles, accountSettingsInformation.allowMultipleBrandProfiles) &&
-        Objects.equals(this.allowMultipleBrandProfilesMetadata,
-            accountSettingsInformation.allowMultipleBrandProfilesMetadata)
-        &&
-        Objects.equals(this.allowMultipleSignerAttachments, accountSettingsInformation.allowMultipleSignerAttachments)
-        &&
-        Objects.equals(this.allowMultipleSignerAttachmentsMetadata,
-            accountSettingsInformation.allowMultipleSignerAttachmentsMetadata)
-        &&
+        Objects.equals(this.allowMultipleBrandProfilesMetadata, accountSettingsInformation.allowMultipleBrandProfilesMetadata) &&
+        Objects.equals(this.allowMultipleSignerAttachments, accountSettingsInformation.allowMultipleSignerAttachments) &&
+        Objects.equals(this.allowMultipleSignerAttachmentsMetadata, accountSettingsInformation.allowMultipleSignerAttachmentsMetadata) &&
         Objects.equals(this.allowNonUSPhoneAuth, accountSettingsInformation.allowNonUSPhoneAuth) &&
         Objects.equals(this.allowNonUSPhoneAuthMetadata, accountSettingsInformation.allowNonUSPhoneAuthMetadata) &&
         Objects.equals(this.allowOcrOfEnvelopeDocuments, accountSettingsInformation.allowOcrOfEnvelopeDocuments) &&
-        Objects.equals(this.allowOcrOfEnvelopeDocumentsMetadata,
-            accountSettingsInformation.allowOcrOfEnvelopeDocumentsMetadata)
-        &&
+        Objects.equals(this.allowOcrOfEnvelopeDocumentsMetadata, accountSettingsInformation.allowOcrOfEnvelopeDocumentsMetadata) &&
         Objects.equals(this.allowOfflineSigning, accountSettingsInformation.allowOfflineSigning) &&
         Objects.equals(this.allowOfflineSigningMetadata, accountSettingsInformation.allowOfflineSigningMetadata) &&
-        Objects.equals(this.allowOpenTrustSignerCertificate, accountSettingsInformation.allowOpenTrustSignerCertificate)
-        &&
-        Objects.equals(this.allowOpenTrustSignerCertificateMetadata,
-            accountSettingsInformation.allowOpenTrustSignerCertificateMetadata)
-        &&
-        Objects
-            .equals(this.allowOrganizationDocusignMonitor, accountSettingsInformation.allowOrganizationDocusignMonitor)
-        &&
-        Objects.equals(this.allowOrganizationDocusignMonitorMetadata,
-            accountSettingsInformation.allowOrganizationDocusignMonitorMetadata)
-        &&
-        Objects.equals(this.allowOrganizationDomainUserManagement,
-            accountSettingsInformation.allowOrganizationDomainUserManagement)
-        &&
-        Objects.equals(this.allowOrganizationDomainUserManagementMetadata,
-            accountSettingsInformation.allowOrganizationDomainUserManagementMetadata)
-        &&
+        Objects.equals(this.allowOpenTrustSignerCertificate, accountSettingsInformation.allowOpenTrustSignerCertificate) &&
+        Objects.equals(this.allowOpenTrustSignerCertificateMetadata, accountSettingsInformation.allowOpenTrustSignerCertificateMetadata) &&
+        Objects.equals(this.allowOrganizationDocusignMonitor, accountSettingsInformation.allowOrganizationDocusignMonitor) &&
+        Objects.equals(this.allowOrganizationDocusignMonitorMetadata, accountSettingsInformation.allowOrganizationDocusignMonitorMetadata) &&
+        Objects.equals(this.allowOrganizationDomainUserManagement, accountSettingsInformation.allowOrganizationDomainUserManagement) &&
+        Objects.equals(this.allowOrganizationDomainUserManagementMetadata, accountSettingsInformation.allowOrganizationDomainUserManagementMetadata) &&
         Objects.equals(this.allowOrganizations, accountSettingsInformation.allowOrganizations) &&
         Objects.equals(this.allowOrganizationsMetadata, accountSettingsInformation.allowOrganizationsMetadata) &&
-        Objects.equals(this.allowOrganizationSsoManagement, accountSettingsInformation.allowOrganizationSsoManagement)
-        &&
-        Objects.equals(this.allowOrganizationSsoManagementMetadata,
-            accountSettingsInformation.allowOrganizationSsoManagementMetadata)
-        &&
-        Objects.equals(this.allowOrganizationToUseInPersonElectronicNotary,
-            accountSettingsInformation.allowOrganizationToUseInPersonElectronicNotary)
-        &&
-        Objects.equals(this.allowOrganizationToUseInPersonElectronicNotaryMetadata,
-            accountSettingsInformation.allowOrganizationToUseInPersonElectronicNotaryMetadata)
-        &&
-        Objects.equals(this.allowOrganizationToUseRemoteNotary,
-            accountSettingsInformation.allowOrganizationToUseRemoteNotary)
-        &&
-        Objects.equals(this.allowOrganizationToUseRemoteNotaryMetadata,
-            accountSettingsInformation.allowOrganizationToUseRemoteNotaryMetadata)
-        &&
-        Objects.equals(this.allowOrganizationToUseThirdPartyElectronicNotary,
-            accountSettingsInformation.allowOrganizationToUseThirdPartyElectronicNotary)
-        &&
-        Objects.equals(this.allowOrganizationToUseThirdPartyElectronicNotaryMetadata,
-            accountSettingsInformation.allowOrganizationToUseThirdPartyElectronicNotaryMetadata)
-        &&
+        Objects.equals(this.allowOrganizationSsoManagement, accountSettingsInformation.allowOrganizationSsoManagement) &&
+        Objects.equals(this.allowOrganizationSsoManagementMetadata, accountSettingsInformation.allowOrganizationSsoManagementMetadata) &&
+        Objects.equals(this.allowOrganizationToUseInPersonElectronicNotary, accountSettingsInformation.allowOrganizationToUseInPersonElectronicNotary) &&
+        Objects.equals(this.allowOrganizationToUseInPersonElectronicNotaryMetadata, accountSettingsInformation.allowOrganizationToUseInPersonElectronicNotaryMetadata) &&
+        Objects.equals(this.allowOrganizationToUseRemoteNotary, accountSettingsInformation.allowOrganizationToUseRemoteNotary) &&
+        Objects.equals(this.allowOrganizationToUseRemoteNotaryMetadata, accountSettingsInformation.allowOrganizationToUseRemoteNotaryMetadata) &&
+        Objects.equals(this.allowOrganizationToUseThirdPartyElectronicNotary, accountSettingsInformation.allowOrganizationToUseThirdPartyElectronicNotary) &&
+        Objects.equals(this.allowOrganizationToUseThirdPartyElectronicNotaryMetadata, accountSettingsInformation.allowOrganizationToUseThirdPartyElectronicNotaryMetadata) &&
         Objects.equals(this.allowParticipantRecipientType, accountSettingsInformation.allowParticipantRecipientType) &&
-        Objects.equals(this.allowParticipantRecipientTypeMetadata,
-            accountSettingsInformation.allowParticipantRecipientTypeMetadata)
-        &&
+        Objects.equals(this.allowParticipantRecipientTypeMetadata, accountSettingsInformation.allowParticipantRecipientTypeMetadata) &&
         Objects.equals(this.allowPaymentProcessing, accountSettingsInformation.allowPaymentProcessing) &&
-        Objects.equals(this.allowPaymentProcessingMetadata, accountSettingsInformation.allowPaymentProcessingMetadata)
-        &&
+        Objects.equals(this.allowPaymentProcessingMetadata, accountSettingsInformation.allowPaymentProcessingMetadata) &&
         Objects.equals(this.allowPerformanceAnalytics, accountSettingsInformation.allowPerformanceAnalytics) &&
-        Objects.equals(this.allowPerformanceAnalyticsMetadata,
-            accountSettingsInformation.allowPerformanceAnalyticsMetadata)
-        &&
+        Objects.equals(this.allowPerformanceAnalyticsMetadata, accountSettingsInformation.allowPerformanceAnalyticsMetadata) &&
         Objects.equals(this.allowPhoneAuthentication, accountSettingsInformation.allowPhoneAuthentication) &&
-        Objects.equals(this.allowPhoneAuthenticationMetadata,
-            accountSettingsInformation.allowPhoneAuthenticationMetadata)
-        &&
+        Objects.equals(this.allowPhoneAuthenticationMetadata, accountSettingsInformation.allowPhoneAuthenticationMetadata) &&
         Objects.equals(this.allowPhoneAuthOverride, accountSettingsInformation.allowPhoneAuthOverride) &&
-        Objects.equals(this.allowPhoneAuthOverrideMetadata, accountSettingsInformation.allowPhoneAuthOverrideMetadata)
-        &&
+        Objects.equals(this.allowPhoneAuthOverrideMetadata, accountSettingsInformation.allowPhoneAuthOverrideMetadata) &&
         Objects.equals(this.allowPrivateSigningGroups, accountSettingsInformation.allowPrivateSigningGroups) &&
-        Objects.equals(this.allowPrivateSigningGroupsMetadata,
-            accountSettingsInformation.allowPrivateSigningGroupsMetadata)
-        &&
+        Objects.equals(this.allowPrivateSigningGroupsMetadata, accountSettingsInformation.allowPrivateSigningGroupsMetadata) &&
         Objects.equals(this.allowRecipientConnect, accountSettingsInformation.allowRecipientConnect) &&
         Objects.equals(this.allowRecipientConnectMetadata, accountSettingsInformation.allowRecipientConnectMetadata) &&
         Objects.equals(this.allowReminders, accountSettingsInformation.allowReminders) &&
@@ -20818,66 +20463,41 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowRemoteNotary, accountSettingsInformation.allowRemoteNotary) &&
         Objects.equals(this.allowRemoteNotaryMetadata, accountSettingsInformation.allowRemoteNotaryMetadata) &&
         Objects.equals(this.allowResourceFileBranding, accountSettingsInformation.allowResourceFileBranding) &&
-        Objects.equals(this.allowResourceFileBrandingMetadata,
-            accountSettingsInformation.allowResourceFileBrandingMetadata)
-        &&
-        Objects.equals(this.allowSafeBioPharmaSignerCertificate,
-            accountSettingsInformation.allowSafeBioPharmaSignerCertificate)
-        &&
-        Objects.equals(this.allowSafeBioPharmaSignerCertificateMetadata,
-            accountSettingsInformation.allowSafeBioPharmaSignerCertificateMetadata)
-        &&
+        Objects.equals(this.allowResourceFileBrandingMetadata, accountSettingsInformation.allowResourceFileBrandingMetadata) &&
+        Objects.equals(this.allowSafeBioPharmaSignerCertificate, accountSettingsInformation.allowSafeBioPharmaSignerCertificate) &&
+        Objects.equals(this.allowSafeBioPharmaSignerCertificateMetadata, accountSettingsInformation.allowSafeBioPharmaSignerCertificateMetadata) &&
         Objects.equals(this.allowScheduledSending, accountSettingsInformation.allowScheduledSending) &&
         Objects.equals(this.allowScheduledSendingMetadata, accountSettingsInformation.allowScheduledSendingMetadata) &&
         Objects.equals(this.allowSecurityAppliance, accountSettingsInformation.allowSecurityAppliance) &&
-        Objects.equals(this.allowSecurityApplianceMetadata, accountSettingsInformation.allowSecurityApplianceMetadata)
-        &&
-        Objects.equals(this.allowSendingEnvelopesOnBehalfOfOthers,
-            accountSettingsInformation.allowSendingEnvelopesOnBehalfOfOthers)
-        &&
-        Objects.equals(this.allowSendingEnvelopesOnBehalfOfOthersMetadata,
-            accountSettingsInformation.allowSendingEnvelopesOnBehalfOfOthersMetadata)
-        &&
+        Objects.equals(this.allowSecurityApplianceMetadata, accountSettingsInformation.allowSecurityApplianceMetadata) &&
+        Objects.equals(this.allowSendingEnvelopesOnBehalfOfOthers, accountSettingsInformation.allowSendingEnvelopesOnBehalfOfOthers) &&
+        Objects.equals(this.allowSendingEnvelopesOnBehalfOfOthersMetadata, accountSettingsInformation.allowSendingEnvelopesOnBehalfOfOthersMetadata) &&
         Objects.equals(this.allowSendToCertifiedDelivery, accountSettingsInformation.allowSendToCertifiedDelivery) &&
-        Objects.equals(this.allowSendToCertifiedDeliveryMetadata,
-            accountSettingsInformation.allowSendToCertifiedDeliveryMetadata)
-        &&
+        Objects.equals(this.allowSendToCertifiedDeliveryMetadata, accountSettingsInformation.allowSendToCertifiedDeliveryMetadata) &&
         Objects.equals(this.allowSendToIntermediary, accountSettingsInformation.allowSendToIntermediary) &&
-        Objects.equals(this.allowSendToIntermediaryMetadata, accountSettingsInformation.allowSendToIntermediaryMetadata)
-        &&
+        Objects.equals(this.allowSendToIntermediaryMetadata, accountSettingsInformation.allowSendToIntermediaryMetadata) &&
         Objects.equals(this.allowServerTemplates, accountSettingsInformation.allowServerTemplates) &&
         Objects.equals(this.allowServerTemplatesMetadata, accountSettingsInformation.allowServerTemplatesMetadata) &&
-        Objects.equals(this.allowSetEmbeddedRecipientStartURL,
-            accountSettingsInformation.allowSetEmbeddedRecipientStartURL)
-        &&
-        Objects.equals(this.allowSetEmbeddedRecipientStartURLMetadata,
-            accountSettingsInformation.allowSetEmbeddedRecipientStartURLMetadata)
-        &&
+        Objects.equals(this.allowSetEmbeddedRecipientStartURL, accountSettingsInformation.allowSetEmbeddedRecipientStartURL) &&
+        Objects.equals(this.allowSetEmbeddedRecipientStartURLMetadata, accountSettingsInformation.allowSetEmbeddedRecipientStartURLMetadata) &&
         Objects.equals(this.allowSharedTabs, accountSettingsInformation.allowSharedTabs) &&
         Objects.equals(this.allowSharedTabsMetadata, accountSettingsInformation.allowSharedTabsMetadata) &&
         Objects.equals(this.allowSignatureStamps, accountSettingsInformation.allowSignatureStamps) &&
         Objects.equals(this.allowSignatureStampsMetadata, accountSettingsInformation.allowSignatureStampsMetadata) &&
         Objects.equals(this.allowSignDocumentFromHomePage, accountSettingsInformation.allowSignDocumentFromHomePage) &&
-        Objects.equals(this.allowSignDocumentFromHomePageMetadata,
-            accountSettingsInformation.allowSignDocumentFromHomePageMetadata)
-        &&
+        Objects.equals(this.allowSignDocumentFromHomePageMetadata, accountSettingsInformation.allowSignDocumentFromHomePageMetadata) &&
         Objects.equals(this.allowSignerReassign, accountSettingsInformation.allowSignerReassign) &&
         Objects.equals(this.allowSignerReassignMetadata, accountSettingsInformation.allowSignerReassignMetadata) &&
         Objects.equals(this.allowSignerReassignOverride, accountSettingsInformation.allowSignerReassignOverride) &&
-        Objects.equals(this.allowSignerReassignOverrideMetadata,
-            accountSettingsInformation.allowSignerReassignOverrideMetadata)
-        &&
+        Objects.equals(this.allowSignerReassignOverrideMetadata, accountSettingsInformation.allowSignerReassignOverrideMetadata) &&
         Objects.equals(this.allowSigningExtensions, accountSettingsInformation.allowSigningExtensions) &&
-        Objects.equals(this.allowSigningExtensionsMetadata, accountSettingsInformation.allowSigningExtensionsMetadata)
-        &&
+        Objects.equals(this.allowSigningExtensionsMetadata, accountSettingsInformation.allowSigningExtensionsMetadata) &&
         Objects.equals(this.allowSigningGroups, accountSettingsInformation.allowSigningGroups) &&
         Objects.equals(this.allowSigningGroupsMetadata, accountSettingsInformation.allowSigningGroupsMetadata) &&
         Objects.equals(this.allowSigningInsights, accountSettingsInformation.allowSigningInsights) &&
         Objects.equals(this.allowSigningInsightsMetadata, accountSettingsInformation.allowSigningInsightsMetadata) &&
         Objects.equals(this.allowSigningRadioDeselect, accountSettingsInformation.allowSigningRadioDeselect) &&
-        Objects.equals(this.allowSigningRadioDeselectMetadata,
-            accountSettingsInformation.allowSigningRadioDeselectMetadata)
-        &&
+        Objects.equals(this.allowSigningRadioDeselectMetadata, accountSettingsInformation.allowSigningRadioDeselectMetadata) &&
         Objects.equals(this.allowSignNow, accountSettingsInformation.allowSignNow) &&
         Objects.equals(this.allowSignNowMetadata, accountSettingsInformation.allowSignNowMetadata) &&
         Objects.equals(this.allowSMSDelivery, accountSettingsInformation.allowSMSDelivery) &&
@@ -20885,22 +20505,13 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowSocialIdLogin, accountSettingsInformation.allowSocialIdLogin) &&
         Objects.equals(this.allowSocialIdLoginMetadata, accountSettingsInformation.allowSocialIdLoginMetadata) &&
         Objects.equals(this.allowSupplementalDocuments, accountSettingsInformation.allowSupplementalDocuments) &&
-        Objects.equals(this.allowSupplementalDocumentsMetadata,
-            accountSettingsInformation.allowSupplementalDocumentsMetadata)
-        &&
-        Objects.equals(this.allowThirdPartyElectronicNotary, accountSettingsInformation.allowThirdPartyElectronicNotary)
-        &&
-        Objects.equals(this.allowThirdPartyElectronicNotaryMetadata,
-            accountSettingsInformation.allowThirdPartyElectronicNotaryMetadata)
-        &&
+        Objects.equals(this.allowSupplementalDocumentsMetadata, accountSettingsInformation.allowSupplementalDocumentsMetadata) &&
+        Objects.equals(this.allowThirdPartyElectronicNotary, accountSettingsInformation.allowThirdPartyElectronicNotary) &&
+        Objects.equals(this.allowThirdPartyElectronicNotaryMetadata, accountSettingsInformation.allowThirdPartyElectronicNotaryMetadata) &&
         Objects.equals(this.allowTransactionsWorkspace, accountSettingsInformation.allowTransactionsWorkspace) &&
-        Objects.equals(this.allowTransactionsWorkspaceMetadata,
-            accountSettingsInformation.allowTransactionsWorkspaceMetadata)
-        &&
+        Objects.equals(this.allowTransactionsWorkspaceMetadata, accountSettingsInformation.allowTransactionsWorkspaceMetadata) &&
         Objects.equals(this.allowUsersToAccessDirectory, accountSettingsInformation.allowUsersToAccessDirectory) &&
-        Objects.equals(this.allowUsersToAccessDirectoryMetadata,
-            accountSettingsInformation.allowUsersToAccessDirectoryMetadata)
-        &&
+        Objects.equals(this.allowUsersToAccessDirectoryMetadata, accountSettingsInformation.allowUsersToAccessDirectoryMetadata) &&
         Objects.equals(this.allowValueInsights, accountSettingsInformation.allowValueInsights) &&
         Objects.equals(this.allowValueInsightsMetadata, accountSettingsInformation.allowValueInsightsMetadata) &&
         Objects.equals(this.allowWebForms, accountSettingsInformation.allowWebForms) &&
@@ -20909,36 +20520,26 @@ public class AccountSettingsInformation {
         Objects.equals(this.allowWhatsAppDeliveryMetadata, accountSettingsInformation.allowWhatsAppDeliveryMetadata) &&
         Objects.equals(this.anchorPopulationScope, accountSettingsInformation.anchorPopulationScope) &&
         Objects.equals(this.anchorPopulationScopeMetadata, accountSettingsInformation.anchorPopulationScopeMetadata) &&
-        Objects.equals(this.anchorTagVersionedPlacementEnabled,
-            accountSettingsInformation.anchorTagVersionedPlacementEnabled)
-        &&
-        Objects.equals(this.anchorTagVersionedPlacementMetadataEnabled,
-            accountSettingsInformation.anchorTagVersionedPlacementMetadataEnabled)
-        &&
+        Objects.equals(this.anchorTagVersionedPlacementEnabled, accountSettingsInformation.anchorTagVersionedPlacementEnabled) &&
+        Objects.equals(this.anchorTagVersionedPlacementMetadataEnabled, accountSettingsInformation.anchorTagVersionedPlacementMetadataEnabled) &&
         Objects.equals(this.attachCompletedEnvelope, accountSettingsInformation.attachCompletedEnvelope) &&
-        Objects.equals(this.attachCompletedEnvelopeMetadata, accountSettingsInformation.attachCompletedEnvelopeMetadata)
-        &&
+        Objects.equals(this.attachCompletedEnvelopeMetadata, accountSettingsInformation.attachCompletedEnvelopeMetadata) &&
         Objects.equals(this.authenticationCheck, accountSettingsInformation.authenticationCheck) &&
         Objects.equals(this.authenticationCheckMetadata, accountSettingsInformation.authenticationCheckMetadata) &&
         Objects.equals(this.autoNavRule, accountSettingsInformation.autoNavRule) &&
         Objects.equals(this.autoNavRuleMetadata, accountSettingsInformation.autoNavRuleMetadata) &&
         Objects.equals(this.autoProvisionSignerAccount, accountSettingsInformation.autoProvisionSignerAccount) &&
-        Objects.equals(this.autoProvisionSignerAccountMetadata,
-            accountSettingsInformation.autoProvisionSignerAccountMetadata)
-        &&
+        Objects.equals(this.autoProvisionSignerAccountMetadata, accountSettingsInformation.autoProvisionSignerAccountMetadata) &&
         Objects.equals(this.bccEmailArchive, accountSettingsInformation.bccEmailArchive) &&
         Objects.equals(this.bccEmailArchiveMetadata, accountSettingsInformation.bccEmailArchiveMetadata) &&
         Objects.equals(this.betaSwitchConfiguration, accountSettingsInformation.betaSwitchConfiguration) &&
-        Objects.equals(this.betaSwitchConfigurationMetadata, accountSettingsInformation.betaSwitchConfigurationMetadata)
-        &&
+        Objects.equals(this.betaSwitchConfigurationMetadata, accountSettingsInformation.betaSwitchConfigurationMetadata) &&
         Objects.equals(this.billingAddress, accountSettingsInformation.billingAddress) &&
         Objects.equals(this.billingAddressMetadata, accountSettingsInformation.billingAddressMetadata) &&
         Objects.equals(this.bulkSend, accountSettingsInformation.bulkSend) &&
         Objects.equals(this.bulkSendActionResendLimit, accountSettingsInformation.bulkSendActionResendLimit) &&
         Objects.equals(this.bulkSendMaxCopiesInBatch, accountSettingsInformation.bulkSendMaxCopiesInBatch) &&
-        Objects.equals(this.bulkSendMaxUnprocessedEnvelopesCount,
-            accountSettingsInformation.bulkSendMaxUnprocessedEnvelopesCount)
-        &&
+        Objects.equals(this.bulkSendMaxUnprocessedEnvelopesCount, accountSettingsInformation.bulkSendMaxUnprocessedEnvelopesCount) &&
         Objects.equals(this.bulkSendMetadata, accountSettingsInformation.bulkSendMetadata) &&
         Objects.equals(this.canSelfBrandSend, accountSettingsInformation.canSelfBrandSend) &&
         Objects.equals(this.canSelfBrandSendMetadata, accountSettingsInformation.canSelfBrandSendMetadata) &&
@@ -20949,359 +20550,208 @@ public class AccountSettingsInformation {
         Objects.equals(this.captureVoiceRecording, accountSettingsInformation.captureVoiceRecording) &&
         Objects.equals(this.captureVoiceRecordingMetadata, accountSettingsInformation.captureVoiceRecordingMetadata) &&
         Objects.equals(this.cfr21SimplifiedSigningEnabled, accountSettingsInformation.cfr21SimplifiedSigningEnabled) &&
-        Objects.equals(this.cfr21SimplifiedSigningEnabledMetadata,
-            accountSettingsInformation.cfr21SimplifiedSigningEnabledMetadata)
-        &&
+        Objects.equals(this.cfr21SimplifiedSigningEnabledMetadata, accountSettingsInformation.cfr21SimplifiedSigningEnabledMetadata) &&
         Objects.equals(this.cfrUseWideImage, accountSettingsInformation.cfrUseWideImage) &&
         Objects.equals(this.cfrUseWideImageMetadata, accountSettingsInformation.cfrUseWideImageMetadata) &&
-        Objects.equals(this.checkForMultipleAdminsOnAccount, accountSettingsInformation.checkForMultipleAdminsOnAccount)
-        &&
-        Objects.equals(this.checkForMultipleAdminsOnAccountMetadata,
-            accountSettingsInformation.checkForMultipleAdminsOnAccountMetadata)
-        &&
+        Objects.equals(this.checkForMultipleAdminsOnAccount, accountSettingsInformation.checkForMultipleAdminsOnAccount) &&
+        Objects.equals(this.checkForMultipleAdminsOnAccountMetadata, accountSettingsInformation.checkForMultipleAdminsOnAccountMetadata) &&
         Objects.equals(this.chromeSignatureEnabled, accountSettingsInformation.chromeSignatureEnabled) &&
-        Objects.equals(this.chromeSignatureEnabledMetadata, accountSettingsInformation.chromeSignatureEnabledMetadata)
-        &&
+        Objects.equals(this.chromeSignatureEnabledMetadata, accountSettingsInformation.chromeSignatureEnabledMetadata) &&
         Objects.equals(this.commentEmailShowMessageText, accountSettingsInformation.commentEmailShowMessageText) &&
-        Objects.equals(this.commentEmailShowMessageTextMetadata,
-            accountSettingsInformation.commentEmailShowMessageTextMetadata)
-        &&
+        Objects.equals(this.commentEmailShowMessageTextMetadata, accountSettingsInformation.commentEmailShowMessageTextMetadata) &&
         Objects.equals(this.commentsAllowEnvelopeOverride, accountSettingsInformation.commentsAllowEnvelopeOverride) &&
-        Objects.equals(this.commentsAllowEnvelopeOverrideMetadata,
-            accountSettingsInformation.commentsAllowEnvelopeOverrideMetadata)
-        &&
+        Objects.equals(this.commentsAllowEnvelopeOverrideMetadata, accountSettingsInformation.commentsAllowEnvelopeOverrideMetadata) &&
         Objects.equals(this.conditionalFieldsEnabled, accountSettingsInformation.conditionalFieldsEnabled) &&
-        Objects.equals(this.conditionalFieldsEnabledMetadata,
-            accountSettingsInformation.conditionalFieldsEnabledMetadata)
-        &&
+        Objects.equals(this.conditionalFieldsEnabledMetadata, accountSettingsInformation.conditionalFieldsEnabledMetadata) &&
         Objects.equals(this.consumerDisclosureFrequency, accountSettingsInformation.consumerDisclosureFrequency) &&
-        Objects.equals(this.consumerDisclosureFrequencyMetadata,
-            accountSettingsInformation.consumerDisclosureFrequencyMetadata)
-        &&
+        Objects.equals(this.consumerDisclosureFrequencyMetadata, accountSettingsInformation.consumerDisclosureFrequencyMetadata) &&
         Objects.equals(this.convertPdfFields, accountSettingsInformation.convertPdfFields) &&
         Objects.equals(this.convertPdfFieldsMetadata, accountSettingsInformation.convertPdfFieldsMetadata) &&
         Objects.equals(this.dataPopulationScope, accountSettingsInformation.dataPopulationScope) &&
         Objects.equals(this.dataPopulationScopeMetadata, accountSettingsInformation.dataPopulationScopeMetadata) &&
         Objects.equals(this.disableAutoTemplateMatching, accountSettingsInformation.disableAutoTemplateMatching) &&
-        Objects.equals(this.disableAutoTemplateMatchingMetadata,
-            accountSettingsInformation.disableAutoTemplateMatchingMetadata)
-        &&
+        Objects.equals(this.disableAutoTemplateMatchingMetadata, accountSettingsInformation.disableAutoTemplateMatchingMetadata) &&
         Objects.equals(this.disableMobileApp, accountSettingsInformation.disableMobileApp) &&
         Objects.equals(this.disableMobileAppMetadata, accountSettingsInformation.disableMobileAppMetadata) &&
-        Objects.equals(this.disableMobilePushNotifications, accountSettingsInformation.disableMobilePushNotifications)
-        &&
-        Objects.equals(this.disableMobilePushNotificationsMetadata,
-            accountSettingsInformation.disableMobilePushNotificationsMetadata)
-        &&
+        Objects.equals(this.disableMobilePushNotifications, accountSettingsInformation.disableMobilePushNotifications) &&
+        Objects.equals(this.disableMobilePushNotificationsMetadata, accountSettingsInformation.disableMobilePushNotificationsMetadata) &&
         Objects.equals(this.disableMobileSending, accountSettingsInformation.disableMobileSending) &&
         Objects.equals(this.disableMobileSendingMetadata, accountSettingsInformation.disableMobileSendingMetadata) &&
         Objects.equals(this.disableMultipleSessions, accountSettingsInformation.disableMultipleSessions) &&
-        Objects.equals(this.disableMultipleSessionsMetadata, accountSettingsInformation.disableMultipleSessionsMetadata)
-        &&
-        Objects.equals(this.disablePurgeNotificationsForSenderMetadata,
-            accountSettingsInformation.disablePurgeNotificationsForSenderMetadata)
-        &&
+        Objects.equals(this.disableMultipleSessionsMetadata, accountSettingsInformation.disableMultipleSessionsMetadata) &&
+        Objects.equals(this.disablePurgeNotificationsForSenderMetadata, accountSettingsInformation.disablePurgeNotificationsForSenderMetadata) &&
         Objects.equals(this.disableSignerCertView, accountSettingsInformation.disableSignerCertView) &&
         Objects.equals(this.disableSignerCertViewMetadata, accountSettingsInformation.disableSignerCertViewMetadata) &&
         Objects.equals(this.disableSignerHistoryView, accountSettingsInformation.disableSignerHistoryView) &&
-        Objects.equals(this.disableSignerHistoryViewMetadata,
-            accountSettingsInformation.disableSignerHistoryViewMetadata)
-        &&
+        Objects.equals(this.disableSignerHistoryViewMetadata, accountSettingsInformation.disableSignerHistoryViewMetadata) &&
         Objects.equals(this.disableStyleSignature, accountSettingsInformation.disableStyleSignature) &&
         Objects.equals(this.disableStyleSignatureMetadata, accountSettingsInformation.disableStyleSignatureMetadata) &&
         Objects.equals(this.disableUploadSignature, accountSettingsInformation.disableUploadSignature) &&
-        Objects.equals(this.disableUploadSignatureMetadata, accountSettingsInformation.disableUploadSignatureMetadata)
-        &&
+        Objects.equals(this.disableUploadSignatureMetadata, accountSettingsInformation.disableUploadSignatureMetadata) &&
         Objects.equals(this.disableUserSharing, accountSettingsInformation.disableUserSharing) &&
         Objects.equals(this.disableUserSharingMetadata, accountSettingsInformation.disableUserSharingMetadata) &&
         Objects.equals(this.displayBetaSwitch, accountSettingsInformation.displayBetaSwitch) &&
         Objects.equals(this.displayBetaSwitchMetadata, accountSettingsInformation.displayBetaSwitchMetadata) &&
-        Objects.equals(this.documentConversionRestrictions, accountSettingsInformation.documentConversionRestrictions)
-        &&
-        Objects.equals(this.documentConversionRestrictionsMetadata,
-            accountSettingsInformation.documentConversionRestrictionsMetadata)
-        &&
+        Objects.equals(this.documentConversionRestrictions, accountSettingsInformation.documentConversionRestrictions) &&
+        Objects.equals(this.documentConversionRestrictionsMetadata, accountSettingsInformation.documentConversionRestrictionsMetadata) &&
         Objects.equals(this.documentRetention, accountSettingsInformation.documentRetention) &&
         Objects.equals(this.documentRetentionMetadata, accountSettingsInformation.documentRetentionMetadata) &&
         Objects.equals(this.documentRetentionPurgeTabs, accountSettingsInformation.documentRetentionPurgeTabs) &&
         Objects.equals(this.documentVisibility, accountSettingsInformation.documentVisibility) &&
         Objects.equals(this.documentVisibilityMetadata, accountSettingsInformation.documentVisibilityMetadata) &&
-        Objects.equals(this.dssSIGN28411EnableLeavePagePromptRadminOption,
-            accountSettingsInformation.dssSIGN28411EnableLeavePagePromptRadminOption)
-        &&
-        Objects.equals(this.dssSIGN29182SlideUpBarRadminOption,
-            accountSettingsInformation.dssSIGN29182SlideUpBarRadminOption)
-        &&
+        Objects.equals(this.dssEnableProvisioningPenConfigurationRadminOption, accountSettingsInformation.dssEnableProvisioningPenConfigurationRadminOption) &&
+        Objects.equals(this.dssSIGN28411EnableLeavePagePromptRadminOption, accountSettingsInformation.dssSIGN28411EnableLeavePagePromptRadminOption) &&
+        Objects.equals(this.dssSIGN29182SlideUpBarRadminOption, accountSettingsInformation.dssSIGN29182SlideUpBarRadminOption) &&
         Objects.equals(this.emailTemplateVersion, accountSettingsInformation.emailTemplateVersion) &&
         Objects.equals(this.emailTemplateVersionMetadata, accountSettingsInformation.emailTemplateVersionMetadata) &&
         Objects.equals(this.enableAccessCodeGenerator, accountSettingsInformation.enableAccessCodeGenerator) &&
-        Objects.equals(this.enableAccessCodeGeneratorMetadata,
-            accountSettingsInformation.enableAccessCodeGeneratorMetadata)
-        &&
+        Objects.equals(this.enableAccessCodeGeneratorMetadata, accountSettingsInformation.enableAccessCodeGeneratorMetadata) &&
         Objects.equals(this.enableAdmHealthcare, accountSettingsInformation.enableAdmHealthcare) &&
         Objects.equals(this.enableAdmHealthcareMetadata, accountSettingsInformation.enableAdmHealthcareMetadata) &&
         Objects.equals(this.enableAdvancedPayments, accountSettingsInformation.enableAdvancedPayments) &&
-        Objects.equals(this.enableAdvancedPaymentsMetadata, accountSettingsInformation.enableAdvancedPaymentsMetadata)
-        &&
+        Objects.equals(this.enableAdvancedPaymentsMetadata, accountSettingsInformation.enableAdvancedPaymentsMetadata) &&
         Objects.equals(this.enableAdvancedPowerForms, accountSettingsInformation.enableAdvancedPowerForms) &&
-        Objects.equals(this.enableAdvancedPowerFormsMetadata,
-            accountSettingsInformation.enableAdvancedPowerFormsMetadata)
-        &&
+        Objects.equals(this.enableAdvancedPowerFormsMetadata, accountSettingsInformation.enableAdvancedPowerFormsMetadata) &&
         Objects.equals(this.enableAgreementActionsForCLM, accountSettingsInformation.enableAgreementActionsForCLM) &&
-        Objects.equals(this.enableAgreementActionsForCLMMetadata,
-            accountSettingsInformation.enableAgreementActionsForCLMMetadata)
-        &&
-        Objects.equals(this.enableAgreementActionsForESign, accountSettingsInformation.enableAgreementActionsForESign)
-        &&
-        Objects.equals(this.enableAgreementActionsForESignMetadata,
-            accountSettingsInformation.enableAgreementActionsForESignMetadata)
-        &&
+        Objects.equals(this.enableAgreementActionsForCLMMetadata, accountSettingsInformation.enableAgreementActionsForCLMMetadata) &&
+        Objects.equals(this.enableAgreementActionsForESign, accountSettingsInformation.enableAgreementActionsForESign) &&
+        Objects.equals(this.enableAgreementActionsForESignMetadata, accountSettingsInformation.enableAgreementActionsForESignMetadata) &&
         Objects.equals(this.enableAutoNav, accountSettingsInformation.enableAutoNav) &&
         Objects.equals(this.enableAutoNavMetadata, accountSettingsInformation.enableAutoNavMetadata) &&
         Objects.equals(this.enableBccDummyLink, accountSettingsInformation.enableBccDummyLink) &&
         Objects.equals(this.enableBccDummyLinkMetadata, accountSettingsInformation.enableBccDummyLinkMetadata) &&
         Objects.equals(this.enableCalculatedFields, accountSettingsInformation.enableCalculatedFields) &&
-        Objects.equals(this.enableCalculatedFieldsMetadata, accountSettingsInformation.enableCalculatedFieldsMetadata)
-        &&
+        Objects.equals(this.enableCalculatedFieldsMetadata, accountSettingsInformation.enableCalculatedFieldsMetadata) &&
         Objects.equals(this.enableClickPlus, accountSettingsInformation.enableClickPlus) &&
-        Objects.equals(this.enableClickPlusConditionalContent,
-            accountSettingsInformation.enableClickPlusConditionalContent)
-        &&
-        Objects.equals(this.enableClickPlusConditionalContentMetaData,
-            accountSettingsInformation.enableClickPlusConditionalContentMetaData)
-        &&
+        Objects.equals(this.enableClickPlusConditionalContent, accountSettingsInformation.enableClickPlusConditionalContent) &&
+        Objects.equals(this.enableClickPlusConditionalContentMetaData, accountSettingsInformation.enableClickPlusConditionalContentMetaData) &&
         Objects.equals(this.enableClickPlusCustomFields, accountSettingsInformation.enableClickPlusCustomFields) &&
-        Objects.equals(this.enableClickPlusCustomFieldsMetaData,
-            accountSettingsInformation.enableClickPlusCustomFieldsMetaData)
-        &&
+        Objects.equals(this.enableClickPlusCustomFieldsMetaData, accountSettingsInformation.enableClickPlusCustomFieldsMetaData) &&
         Objects.equals(this.enableClickPlusCustomStyle, accountSettingsInformation.enableClickPlusCustomStyle) &&
-        Objects.equals(this.enableClickPlusCustomStyleMetaData,
-            accountSettingsInformation.enableClickPlusCustomStyleMetaData)
-        &&
+        Objects.equals(this.enableClickPlusCustomStyleMetaData, accountSettingsInformation.enableClickPlusCustomStyleMetaData) &&
         Objects.equals(this.enableClickPlusDynamicContent, accountSettingsInformation.enableClickPlusDynamicContent) &&
-        Objects.equals(this.enableClickPlusDynamicContentMetaData,
-            accountSettingsInformation.enableClickPlusDynamicContentMetaData)
-        &&
+        Objects.equals(this.enableClickPlusDynamicContentMetaData, accountSettingsInformation.enableClickPlusDynamicContentMetaData) &&
         Objects.equals(this.enableClickPlusMetaData, accountSettingsInformation.enableClickPlusMetaData) &&
         Objects.equals(this.enableClickwraps, accountSettingsInformation.enableClickwraps) &&
         Objects.equals(this.enableClickwrapsMetadata, accountSettingsInformation.enableClickwrapsMetadata) &&
-        Objects.equals(this.enableCombinedPDFDownloadForSBS, accountSettingsInformation.enableCombinedPDFDownloadForSBS)
-        &&
-        Objects.equals(this.enableCommentsHistoryDownloadInSigning,
-            accountSettingsInformation.enableCommentsHistoryDownloadInSigning)
-        &&
-        Objects.equals(this.enableCommentsHistoryDownloadInSigningMetadata,
-            accountSettingsInformation.enableCommentsHistoryDownloadInSigningMetadata)
-        &&
+        Objects.equals(this.enableCombinedPDFDownloadForSBS, accountSettingsInformation.enableCombinedPDFDownloadForSBS) &&
+        Objects.equals(this.enableCommentsHistoryDownloadInSigning, accountSettingsInformation.enableCommentsHistoryDownloadInSigning) &&
+        Objects.equals(this.enableCommentsHistoryDownloadInSigningMetadata, accountSettingsInformation.enableCommentsHistoryDownloadInSigningMetadata) &&
         Objects.equals(this.enableContactSuggestions, accountSettingsInformation.enableContactSuggestions) &&
-        Objects
-            .equals(this.enableContactSuggestionsMetadata, accountSettingsInformation.enableContactSuggestionsMetadata)
-        &&
-        Objects.equals(this.enableCustomerSatisfactionMetricTracking,
-            accountSettingsInformation.enableCustomerSatisfactionMetricTracking)
-        &&
-        Objects.equals(this.enableCustomerSatisfactionMetricTrackingMetadata,
-            accountSettingsInformation.enableCustomerSatisfactionMetricTrackingMetadata)
-        &&
+        Objects.equals(this.enableContactSuggestionsMetadata, accountSettingsInformation.enableContactSuggestionsMetadata) &&
+        Objects.equals(this.enableCustomerSatisfactionMetricTracking, accountSettingsInformation.enableCustomerSatisfactionMetricTracking) &&
+        Objects.equals(this.enableCustomerSatisfactionMetricTrackingMetadata, accountSettingsInformation.enableCustomerSatisfactionMetricTrackingMetadata) &&
         Objects.equals(this.enableDSPro, accountSettingsInformation.enableDSPro) &&
         Objects.equals(this.enableDSProMetadata, accountSettingsInformation.enableDSProMetadata) &&
-        Objects.equals(this.enableEnforceTlsEmailsSettingMetadata,
-            accountSettingsInformation.enableEnforceTlsEmailsSettingMetadata)
-        &&
-        Objects.equals(
-            this.enableEnvelopeStampingByAccountAdmin, accountSettingsInformation.enableEnvelopeStampingByAccountAdmin)
-        &&
-        Objects.equals(this.enableEnvelopeStampingByAccountAdminMetadata,
-            accountSettingsInformation.enableEnvelopeStampingByAccountAdminMetadata)
-        &&
-        Objects.equals(this.enableEnvelopeStampingByDSAdmin, accountSettingsInformation.enableEnvelopeStampingByDSAdmin)
-        &&
-        Objects.equals(this.enableEnvelopeStampingByDSAdminMetadata,
-            accountSettingsInformation.enableEnvelopeStampingByDSAdminMetadata)
-        &&
-        Objects.equals(this.enableESignAPIHourlyLimitManagement,
-            accountSettingsInformation.enableESignAPIHourlyLimitManagement)
-        &&
-        Objects.equals(this.enableESignAPIHourlyLimitManagementMetadata,
-            accountSettingsInformation.enableESignAPIHourlyLimitManagementMetadata)
-        &&
+        Objects.equals(this.enableEnforceTlsEmailsSettingMetadata, accountSettingsInformation.enableEnforceTlsEmailsSettingMetadata) &&
+        Objects.equals(this.enableEnvelopeStampingByAccountAdmin, accountSettingsInformation.enableEnvelopeStampingByAccountAdmin) &&
+        Objects.equals(this.enableEnvelopeStampingByAccountAdminMetadata, accountSettingsInformation.enableEnvelopeStampingByAccountAdminMetadata) &&
+        Objects.equals(this.enableEnvelopeStampingByDSAdmin, accountSettingsInformation.enableEnvelopeStampingByDSAdmin) &&
+        Objects.equals(this.enableEnvelopeStampingByDSAdminMetadata, accountSettingsInformation.enableEnvelopeStampingByDSAdminMetadata) &&
+        Objects.equals(this.enableESignAPIHourlyLimitManagement, accountSettingsInformation.enableESignAPIHourlyLimitManagement) &&
+        Objects.equals(this.enableESignAPIHourlyLimitManagementMetadata, accountSettingsInformation.enableESignAPIHourlyLimitManagementMetadata) &&
         Objects.equals(this.enableEsignCommunities, accountSettingsInformation.enableEsignCommunities) &&
-        Objects.equals(this.enableEsignCommunitiesMetadata, accountSettingsInformation.enableEsignCommunitiesMetadata)
-        &&
-        Objects.equals(this.enableIDFxAccountlessSMSAuthForPart11,
-            accountSettingsInformation.enableIDFxAccountlessSMSAuthForPart11)
-        &&
-        Objects.equals(this.enableIDFxAccountlessSMSAuthForPart11Metadata,
-            accountSettingsInformation.enableIDFxAccountlessSMSAuthForPart11Metadata)
-        &&
+        Objects.equals(this.enableEsignCommunitiesMetadata, accountSettingsInformation.enableEsignCommunitiesMetadata) &&
+        Objects.equals(this.enableIDFxAccountlessSMSAuthForPart11, accountSettingsInformation.enableIDFxAccountlessSMSAuthForPart11) &&
+        Objects.equals(this.enableIDFxAccountlessSMSAuthForPart11Metadata, accountSettingsInformation.enableIDFxAccountlessSMSAuthForPart11Metadata) &&
         Objects.equals(this.enableIDFxIntuitKBA, accountSettingsInformation.enableIDFxIntuitKBA) &&
         Objects.equals(this.enableIDFxIntuitKBAMetadata, accountSettingsInformation.enableIDFxIntuitKBAMetadata) &&
         Objects.equals(this.enableIDFxPhoneAuthentication, accountSettingsInformation.enableIDFxPhoneAuthentication) &&
-        Objects.equals(this.enableIDFxPhoneAuthenticationMetadata,
-            accountSettingsInformation.enableIDFxPhoneAuthenticationMetadata)
-        &&
-        Objects.equals(this.enableIdfxPhoneAuthSignatureAuthStatus,
-            accountSettingsInformation.enableIdfxPhoneAuthSignatureAuthStatus)
-        &&
-        Objects.equals(this.enableIdfxPhoneAuthSignatureAuthStatusMetadata,
-            accountSettingsInformation.enableIdfxPhoneAuthSignatureAuthStatusMetadata)
-        &&
+        Objects.equals(this.enableIDFxPhoneAuthenticationMetadata, accountSettingsInformation.enableIDFxPhoneAuthenticationMetadata) &&
+        Objects.equals(this.enableIdfxPhoneAuthSignatureAuthStatus, accountSettingsInformation.enableIdfxPhoneAuthSignatureAuthStatus) &&
+        Objects.equals(this.enableIdfxPhoneAuthSignatureAuthStatusMetadata, accountSettingsInformation.enableIdfxPhoneAuthSignatureAuthStatusMetadata) &&
         Objects.equals(this.enableInBrowserEditor, accountSettingsInformation.enableInBrowserEditor) &&
         Objects.equals(this.enableInBrowserEditorMetadata, accountSettingsInformation.enableInBrowserEditorMetadata) &&
-        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType,
-            accountSettingsInformation.enableKeyTermsSuggestionsByDocumentType)
-        &&
-        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata,
-            accountSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata)
-        &&
-        Objects.equals(this.enableParticipantRecipientSettingMetadata,
-            accountSettingsInformation.enableParticipantRecipientSettingMetadata)
-        &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentType, accountSettingsInformation.enableKeyTermsSuggestionsByDocumentType) &&
+        Objects.equals(this.enableKeyTermsSuggestionsByDocumentTypeMetadata, accountSettingsInformation.enableKeyTermsSuggestionsByDocumentTypeMetadata) &&
+        Objects.equals(this.enableParticipantRecipientSettingMetadata, accountSettingsInformation.enableParticipantRecipientSettingMetadata) &&
         Objects.equals(this.enablePaymentProcessing, accountSettingsInformation.enablePaymentProcessing) &&
-        Objects.equals(this.enablePaymentProcessingMetadata, accountSettingsInformation.enablePaymentProcessingMetadata)
-        &&
+        Objects.equals(this.enablePaymentProcessingMetadata, accountSettingsInformation.enablePaymentProcessingMetadata) &&
         Objects.equals(this.enablePDFAConversion, accountSettingsInformation.enablePDFAConversion) &&
         Objects.equals(this.enablePDFAConversionMetadata, accountSettingsInformation.enablePDFAConversionMetadata) &&
         Objects.equals(this.enablePowerForm, accountSettingsInformation.enablePowerForm) &&
         Objects.equals(this.enablePowerFormDirect, accountSettingsInformation.enablePowerFormDirect) &&
         Objects.equals(this.enablePowerFormDirectMetadata, accountSettingsInformation.enablePowerFormDirectMetadata) &&
         Objects.equals(this.enablePowerFormMetadata, accountSettingsInformation.enablePowerFormMetadata) &&
-        Objects.equals(this.enableRecipientDomainValidation, accountSettingsInformation.enableRecipientDomainValidation)
-        &&
-        Objects.equals(this.enableRecipientDomainValidationMetadata,
-            accountSettingsInformation.enableRecipientDomainValidationMetadata)
-        &&
-        Objects.equals(
-            this.enableRecipientMayProvidePhoneNumber, accountSettingsInformation.enableRecipientMayProvidePhoneNumber)
-        &&
-        Objects.equals(this.enableRecipientMayProvidePhoneNumberMetadata,
-            accountSettingsInformation.enableRecipientMayProvidePhoneNumberMetadata)
-        &&
+        Objects.equals(this.enableRecipientDomainValidation, accountSettingsInformation.enableRecipientDomainValidation) &&
+        Objects.equals(this.enableRecipientDomainValidationMetadata, accountSettingsInformation.enableRecipientDomainValidationMetadata) &&
+        Objects.equals(this.enableRecipientMayProvidePhoneNumber, accountSettingsInformation.enableRecipientMayProvidePhoneNumber) &&
+        Objects.equals(this.enableRecipientMayProvidePhoneNumberMetadata, accountSettingsInformation.enableRecipientMayProvidePhoneNumberMetadata) &&
         Objects.equals(this.enableReportLinks, accountSettingsInformation.enableReportLinks) &&
         Objects.equals(this.enableReportLinksMetadata, accountSettingsInformation.enableReportLinksMetadata) &&
         Objects.equals(this.enableRequireSignOnPaper, accountSettingsInformation.enableRequireSignOnPaper) &&
-        Objects.equals(this.enableRequireSignOnPaperMetadata,
-            accountSettingsInformation.enableRequireSignOnPaperMetadata)
-        &&
+        Objects.equals(this.enableRequireSignOnPaperMetadata, accountSettingsInformation.enableRequireSignOnPaperMetadata) &&
         Objects.equals(this.enableReservedDomain, accountSettingsInformation.enableReservedDomain) &&
         Objects.equals(this.enableReservedDomainMetadata, accountSettingsInformation.enableReservedDomainMetadata) &&
         Objects.equals(this.enableResponsiveSigning, accountSettingsInformation.enableResponsiveSigning) &&
-        Objects.equals(this.enableResponsiveSigningMetadata, accountSettingsInformation.enableResponsiveSigningMetadata)
-        &&
+        Objects.equals(this.enableResponsiveSigningMetadata, accountSettingsInformation.enableResponsiveSigningMetadata) &&
         Objects.equals(this.enableScheduledRelease, accountSettingsInformation.enableScheduledRelease) &&
-        Objects.equals(this.enableScheduledReleaseMetadata, accountSettingsInformation.enableScheduledReleaseMetadata)
-        &&
+        Objects.equals(this.enableScheduledReleaseMetadata, accountSettingsInformation.enableScheduledReleaseMetadata) &&
         Objects.equals(this.enableSearch, accountSettingsInformation.enableSearch) &&
         Objects.equals(this.enableSearchMetadata, accountSettingsInformation.enableSearchMetadata) &&
         Objects.equals(this.enableSearchSiteSpecificApi, accountSettingsInformation.enableSearchSiteSpecificApi) &&
-        Objects.equals(this.enableSearchSiteSpecificApiMetadata,
-            accountSettingsInformation.enableSearchSiteSpecificApiMetadata)
-        &&
+        Objects.equals(this.enableSearchSiteSpecificApiMetadata, accountSettingsInformation.enableSearchSiteSpecificApiMetadata) &&
         Objects.equals(this.enableSearchUI, accountSettingsInformation.enableSearchUI) &&
         Objects.equals(this.enableSearchUIMetadata, accountSettingsInformation.enableSearchUIMetadata) &&
         Objects.equals(this.enableSendingTagsFontSettings, accountSettingsInformation.enableSendingTagsFontSettings) &&
-        Objects.equals(this.enableSendingTagsFontSettingsMetadata,
-            accountSettingsInformation.enableSendingTagsFontSettingsMetadata)
-        &&
+        Objects.equals(this.enableSendingTagsFontSettingsMetadata, accountSettingsInformation.enableSendingTagsFontSettingsMetadata) &&
         Objects.equals(this.enableSendToAgent, accountSettingsInformation.enableSendToAgent) &&
         Objects.equals(this.enableSendToAgentMetadata, accountSettingsInformation.enableSendToAgentMetadata) &&
         Objects.equals(this.enableSendToIntermediary, accountSettingsInformation.enableSendToIntermediary) &&
-        Objects.equals(this.enableSendToIntermediaryMetadata,
-            accountSettingsInformation.enableSendToIntermediaryMetadata)
-        &&
+        Objects.equals(this.enableSendToIntermediaryMetadata, accountSettingsInformation.enableSendToIntermediaryMetadata) &&
         Objects.equals(this.enableSendToManage, accountSettingsInformation.enableSendToManage) &&
         Objects.equals(this.enableSendToManageMetadata, accountSettingsInformation.enableSendToManageMetadata) &&
         Objects.equals(this.enableSequentialSigningAPI, accountSettingsInformation.enableSequentialSigningAPI) &&
-        Objects.equals(this.enableSequentialSigningAPIMetadata,
-            accountSettingsInformation.enableSequentialSigningAPIMetadata)
-        &&
+        Objects.equals(this.enableSequentialSigningAPIMetadata, accountSettingsInformation.enableSequentialSigningAPIMetadata) &&
         Objects.equals(this.enableSequentialSigningUI, accountSettingsInformation.enableSequentialSigningUI) &&
-        Objects.equals(this.enableSequentialSigningUIMetadata,
-            accountSettingsInformation.enableSequentialSigningUIMetadata)
-        &&
+        Objects.equals(this.enableSequentialSigningUIMetadata, accountSettingsInformation.enableSequentialSigningUIMetadata) &&
         Objects.equals(this.enableSignerAttachments, accountSettingsInformation.enableSignerAttachments) &&
-        Objects.equals(this.enableSignerAttachmentsMetadata, accountSettingsInformation.enableSignerAttachmentsMetadata)
-        &&
-        Objects.equals(this.enableSigningExtensionComments, accountSettingsInformation.enableSigningExtensionComments)
-        &&
-        Objects.equals(this.enableSigningExtensionCommentsMetadata,
-            accountSettingsInformation.enableSigningExtensionCommentsMetadata)
-        &&
-        Objects.equals(this.enableSigningExtensionConversations,
-            accountSettingsInformation.enableSigningExtensionConversations)
-        &&
-        Objects.equals(this.enableSigningExtensionConversationsMetadata,
-            accountSettingsInformation.enableSigningExtensionConversationsMetadata)
-        &&
-        Objects.equals(
-            this.enableSigningOrderSettingsForAccount, accountSettingsInformation.enableSigningOrderSettingsForAccount)
-        &&
-        Objects.equals(this.enableSigningOrderSettingsForAccountMetadata,
-            accountSettingsInformation.enableSigningOrderSettingsForAccountMetadata)
-        &&
+        Objects.equals(this.enableSignerAttachmentsMetadata, accountSettingsInformation.enableSignerAttachmentsMetadata) &&
+        Objects.equals(this.enableSigningExtensionComments, accountSettingsInformation.enableSigningExtensionComments) &&
+        Objects.equals(this.enableSigningExtensionCommentsMetadata, accountSettingsInformation.enableSigningExtensionCommentsMetadata) &&
+        Objects.equals(this.enableSigningExtensionConversations, accountSettingsInformation.enableSigningExtensionConversations) &&
+        Objects.equals(this.enableSigningExtensionConversationsMetadata, accountSettingsInformation.enableSigningExtensionConversationsMetadata) &&
+        Objects.equals(this.enableSigningOrderSettingsForAccount, accountSettingsInformation.enableSigningOrderSettingsForAccount) &&
+        Objects.equals(this.enableSigningOrderSettingsForAccountMetadata, accountSettingsInformation.enableSigningOrderSettingsForAccountMetadata) &&
         Objects.equals(this.enableSignOnPaper, accountSettingsInformation.enableSignOnPaper) &&
         Objects.equals(this.enableSignOnPaperMetadata, accountSettingsInformation.enableSignOnPaperMetadata) &&
         Objects.equals(this.enableSignOnPaperOverride, accountSettingsInformation.enableSignOnPaperOverride) &&
-        Objects.equals(this.enableSignOnPaperOverrideMetadata,
-            accountSettingsInformation.enableSignOnPaperOverrideMetadata)
-        &&
+        Objects.equals(this.enableSignOnPaperOverrideMetadata, accountSettingsInformation.enableSignOnPaperOverrideMetadata) &&
         Objects.equals(this.enableSignWithNotary, accountSettingsInformation.enableSignWithNotary) &&
         Objects.equals(this.enableSignWithNotaryMetadata, accountSettingsInformation.enableSignWithNotaryMetadata) &&
         Objects.equals(this.enableSmartContracts, accountSettingsInformation.enableSmartContracts) &&
         Objects.equals(this.enableSmartContractsMetadata, accountSettingsInformation.enableSmartContractsMetadata) &&
         Objects.equals(this.enableSMSAuthentication, accountSettingsInformation.enableSMSAuthentication) &&
-        Objects.equals(this.enableSMSAuthenticationMetadata, accountSettingsInformation.enableSMSAuthenticationMetadata)
-        &&
-        Objects.equals(this.enableSMSDeliveryAdditionalNotification,
-            accountSettingsInformation.enableSMSDeliveryAdditionalNotification)
-        &&
-        Objects.equals(this.enableSMSDeliveryAdditionalNotificationMetadata,
-            accountSettingsInformation.enableSMSDeliveryAdditionalNotificationMetadata)
-        &&
+        Objects.equals(this.enableSMSAuthenticationMetadata, accountSettingsInformation.enableSMSAuthenticationMetadata) &&
+        Objects.equals(this.enableSMSDeliveryAdditionalNotification, accountSettingsInformation.enableSMSDeliveryAdditionalNotification) &&
+        Objects.equals(this.enableSMSDeliveryAdditionalNotificationMetadata, accountSettingsInformation.enableSMSDeliveryAdditionalNotificationMetadata) &&
         Objects.equals(this.enableSMSDeliveryPrimary, accountSettingsInformation.enableSMSDeliveryPrimary) &&
         Objects.equals(this.enableSocialIdLogin, accountSettingsInformation.enableSocialIdLogin) &&
         Objects.equals(this.enableSocialIdLoginMetadata, accountSettingsInformation.enableSocialIdLoginMetadata) &&
         Objects.equals(this.enableStrikeThrough, accountSettingsInformation.enableStrikeThrough) &&
         Objects.equals(this.enableStrikeThroughMetadata, accountSettingsInformation.enableStrikeThroughMetadata) &&
         Objects.equals(this.enableTransactionPoint, accountSettingsInformation.enableTransactionPoint) &&
-        Objects.equals(this.enableTransactionPointMetadata, accountSettingsInformation.enableTransactionPointMetadata)
-        &&
+        Objects.equals(this.enableTransactionPointMetadata, accountSettingsInformation.enableTransactionPointMetadata) &&
         Objects.equals(this.enableVaulting, accountSettingsInformation.enableVaulting) &&
         Objects.equals(this.enableVaultingMetadata, accountSettingsInformation.enableVaultingMetadata) &&
         Objects.equals(this.enableWitnessing, accountSettingsInformation.enableWitnessing) &&
         Objects.equals(this.enableWitnessingMetadata, accountSettingsInformation.enableWitnessingMetadata) &&
         Objects.equals(this.enforceTemplateNameUniqueness, accountSettingsInformation.enforceTemplateNameUniqueness) &&
-        Objects.equals(this.enforceTemplateNameUniquenessMetadata,
-            accountSettingsInformation.enforceTemplateNameUniquenessMetadata)
-        &&
+        Objects.equals(this.enforceTemplateNameUniquenessMetadata, accountSettingsInformation.enforceTemplateNameUniquenessMetadata) &&
         Objects.equals(this.enforceTlsEmails, accountSettingsInformation.enforceTlsEmails) &&
         Objects.equals(this.enforceTlsEmailsMetadata, accountSettingsInformation.enforceTlsEmailsMetadata) &&
         Objects.equals(this.envelopeIntegrationAllowed, accountSettingsInformation.envelopeIntegrationAllowed) &&
-        Objects.equals(this.envelopeIntegrationAllowedMetadata,
-            accountSettingsInformation.envelopeIntegrationAllowedMetadata)
-        &&
+        Objects.equals(this.envelopeIntegrationAllowedMetadata, accountSettingsInformation.envelopeIntegrationAllowedMetadata) &&
         Objects.equals(this.envelopeIntegrationEnabled, accountSettingsInformation.envelopeIntegrationEnabled) &&
-        Objects.equals(this.envelopeIntegrationEnabledMetadata,
-            accountSettingsInformation.envelopeIntegrationEnabledMetadata)
-        &&
-        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMB,
-            accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMB)
-        &&
-        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled,
-            accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled)
-        &&
-        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata,
-            accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata)
-        &&
-        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata,
-            accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata)
-        &&
+        Objects.equals(this.envelopeIntegrationEnabledMetadata, accountSettingsInformation.envelopeIntegrationEnabledMetadata) &&
+        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMB, accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMB) &&
+        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled, accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBEnabled) &&
+        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata, accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata) &&
+        Objects.equals(this.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata, accountSettingsInformation.envelopeLimitsTotalDocumentSizeAllowedInMBMetadata) &&
         Objects.equals(this.envelopeSearchMode, accountSettingsInformation.envelopeSearchMode) &&
         Objects.equals(this.envelopeSearchModeMetadata, accountSettingsInformation.envelopeSearchModeMetadata) &&
         Objects.equals(this.envelopeStampingDefaultValue, accountSettingsInformation.envelopeStampingDefaultValue) &&
-        Objects.equals(this.envelopeStampingDefaultValueMetadata,
-            accountSettingsInformation.envelopeStampingDefaultValueMetadata)
-        &&
+        Objects.equals(this.envelopeStampingDefaultValueMetadata, accountSettingsInformation.envelopeStampingDefaultValueMetadata) &&
         Objects.equals(this.exitPrompt, accountSettingsInformation.exitPrompt) &&
         Objects.equals(this.exitPromptMetadata, accountSettingsInformation.exitPromptMetadata) &&
         Objects.equals(this.expressSend, accountSettingsInformation.expressSend) &&
@@ -21310,27 +20760,18 @@ public class AccountSettingsInformation {
         Objects.equals(this.expressSendMetadata, accountSettingsInformation.expressSendMetadata) &&
         Objects.equals(this.externalDocumentSources, accountSettingsInformation.externalDocumentSources) &&
         Objects.equals(this.externalSignaturePadType, accountSettingsInformation.externalSignaturePadType) &&
-        Objects.equals(this.externalSignaturePadTypeMetadata,
-            accountSettingsInformation.externalSignaturePadTypeMetadata)
-        &&
+        Objects.equals(this.externalSignaturePadTypeMetadata, accountSettingsInformation.externalSignaturePadTypeMetadata) &&
         Objects.equals(this.faxOutEnabled, accountSettingsInformation.faxOutEnabled) &&
         Objects.equals(this.faxOutEnabledMetadata, accountSettingsInformation.faxOutEnabledMetadata) &&
         Objects.equals(this.finishReminder, accountSettingsInformation.finishReminder) &&
         Objects.equals(this.finishReminderMetadata, accountSettingsInformation.finishReminderMetadata) &&
         Objects.equals(this.guidedFormsHtmlAllowed, accountSettingsInformation.guidedFormsHtmlAllowed) &&
-        Objects.equals(this.guidedFormsHtmlAllowedMetadata, accountSettingsInformation.guidedFormsHtmlAllowedMetadata)
-        &&
-        Objects.equals(this.guidedFormsHtmlConversionPolicy, accountSettingsInformation.guidedFormsHtmlConversionPolicy)
-        &&
-        Objects.equals(this.guidedFormsHtmlConversionPolicyMetadata,
-            accountSettingsInformation.guidedFormsHtmlConversionPolicyMetadata)
-        &&
-        Objects.equals(this.hasRecipientConnectClaimedDomain,
-            accountSettingsInformation.hasRecipientConnectClaimedDomain)
-        &&
+        Objects.equals(this.guidedFormsHtmlAllowedMetadata, accountSettingsInformation.guidedFormsHtmlAllowedMetadata) &&
+        Objects.equals(this.guidedFormsHtmlConversionPolicy, accountSettingsInformation.guidedFormsHtmlConversionPolicy) &&
+        Objects.equals(this.guidedFormsHtmlConversionPolicyMetadata, accountSettingsInformation.guidedFormsHtmlConversionPolicyMetadata) &&
+        Objects.equals(this.hasRecipientConnectClaimedDomain, accountSettingsInformation.hasRecipientConnectClaimedDomain) &&
         Objects.equals(this.hideAccountAddressInCoC, accountSettingsInformation.hideAccountAddressInCoC) &&
-        Objects.equals(this.hideAccountAddressInCoCMetadata, accountSettingsInformation.hideAccountAddressInCoCMetadata)
-        &&
+        Objects.equals(this.hideAccountAddressInCoCMetadata, accountSettingsInformation.hideAccountAddressInCoCMetadata) &&
         Objects.equals(this.hidePricing, accountSettingsInformation.hidePricing) &&
         Objects.equals(this.hidePricingMetadata, accountSettingsInformation.hidePricingMetadata) &&
         Objects.equals(this.idCheckConfigurations, accountSettingsInformation.idCheckConfigurations) &&
@@ -21345,37 +20786,25 @@ public class AccountSettingsInformation {
         Objects.equals(this.identityVerification, accountSettingsInformation.identityVerification) &&
         Objects.equals(this.identityVerificationMetadata, accountSettingsInformation.identityVerificationMetadata) &&
         Objects.equals(this.idfxKBAAuthenticationOverride, accountSettingsInformation.idfxKBAAuthenticationOverride) &&
-        Objects.equals(this.idfxKBAAuthenticationOverrideMetadata,
-            accountSettingsInformation.idfxKBAAuthenticationOverrideMetadata)
-        &&
-        Objects.equals(this.idfxPhoneAuthenticationOverride, accountSettingsInformation.idfxPhoneAuthenticationOverride)
-        &&
-        Objects.equals(this.idfxPhoneAuthenticationOverrideMetadata,
-            accountSettingsInformation.idfxPhoneAuthenticationOverrideMetadata)
-        &&
-        Objects.equals(this.ignoreErrorIfAnchorTabNotFound, accountSettingsInformation.ignoreErrorIfAnchorTabNotFound)
-        &&
-        Objects.equals(this.ignoreErrorIfAnchorTabNotFoundMetadataEnabled,
-            accountSettingsInformation.ignoreErrorIfAnchorTabNotFoundMetadataEnabled)
-        &&
+        Objects.equals(this.idfxKBAAuthenticationOverrideMetadata, accountSettingsInformation.idfxKBAAuthenticationOverrideMetadata) &&
+        Objects.equals(this.idfxPhoneAuthenticationOverride, accountSettingsInformation.idfxPhoneAuthenticationOverride) &&
+        Objects.equals(this.idfxPhoneAuthenticationOverrideMetadata, accountSettingsInformation.idfxPhoneAuthenticationOverrideMetadata) &&
+        Objects.equals(this.ignoreErrorIfAnchorTabNotFound, accountSettingsInformation.ignoreErrorIfAnchorTabNotFound) &&
+        Objects.equals(this.ignoreErrorIfAnchorTabNotFoundMetadataEnabled, accountSettingsInformation.ignoreErrorIfAnchorTabNotFoundMetadataEnabled) &&
         Objects.equals(this.inPersonIDCheckQuestion, accountSettingsInformation.inPersonIDCheckQuestion) &&
-        Objects.equals(this.inPersonIDCheckQuestionMetadata, accountSettingsInformation.inPersonIDCheckQuestionMetadata)
-        &&
+        Objects.equals(this.inPersonIDCheckQuestionMetadata, accountSettingsInformation.inPersonIDCheckQuestionMetadata) &&
         Objects.equals(this.inPersonSigningEnabled, accountSettingsInformation.inPersonSigningEnabled) &&
-        Objects.equals(this.inPersonSigningEnabledMetadata, accountSettingsInformation.inPersonSigningEnabledMetadata)
-        &&
+        Objects.equals(this.inPersonSigningEnabledMetadata, accountSettingsInformation.inPersonSigningEnabledMetadata) &&
         Objects.equals(this.inSessionEnabled, accountSettingsInformation.inSessionEnabled) &&
         Objects.equals(this.inSessionEnabledMetadata, accountSettingsInformation.inSessionEnabledMetadata) &&
         Objects.equals(this.inSessionSuppressEmails, accountSettingsInformation.inSessionSuppressEmails) &&
-        Objects.equals(this.inSessionSuppressEmailsMetadata, accountSettingsInformation.inSessionSuppressEmailsMetadata)
-        &&
+        Objects.equals(this.inSessionSuppressEmailsMetadata, accountSettingsInformation.inSessionSuppressEmailsMetadata) &&
+        Objects.equals(this.isConnectDocumentFieldsEnabled, accountSettingsInformation.isConnectDocumentFieldsEnabled) &&
         Objects.equals(this.linkedExternalPrimaryAccounts, accountSettingsInformation.linkedExternalPrimaryAccounts) &&
         Objects.equals(this.maximumSigningGroups, accountSettingsInformation.maximumSigningGroups) &&
         Objects.equals(this.maximumSigningGroupsMetadata, accountSettingsInformation.maximumSigningGroupsMetadata) &&
         Objects.equals(this.maximumUsersPerSigningGroup, accountSettingsInformation.maximumUsersPerSigningGroup) &&
-        Objects.equals(this.maximumUsersPerSigningGroupMetadata,
-            accountSettingsInformation.maximumUsersPerSigningGroupMetadata)
-        &&
+        Objects.equals(this.maximumUsersPerSigningGroupMetadata, accountSettingsInformation.maximumUsersPerSigningGroupMetadata) &&
         Objects.equals(this.maxNumberOfCustomStamps, accountSettingsInformation.maxNumberOfCustomStamps) &&
         Objects.equals(this.mergeMixedModeResults, accountSettingsInformation.mergeMixedModeResults) &&
         Objects.equals(this.mergeMixedModeResultsMetadata, accountSettingsInformation.mergeMixedModeResultsMetadata) &&
@@ -21384,106 +20813,58 @@ public class AccountSettingsInformation {
         Objects.equals(this.numberOfActiveCustomStamps, accountSettingsInformation.numberOfActiveCustomStamps) &&
         Objects.equals(this.optInMobileSigningV02, accountSettingsInformation.optInMobileSigningV02) &&
         Objects.equals(this.optInMobileSigningV02Metadata, accountSettingsInformation.optInMobileSigningV02Metadata) &&
-        Objects.equals(this.optOutAutoNavTextAndTabColorUpdates,
-            accountSettingsInformation.optOutAutoNavTextAndTabColorUpdates)
-        &&
-        Objects.equals(this.optOutAutoNavTextAndTabColorUpdatesMetadata,
-            accountSettingsInformation.optOutAutoNavTextAndTabColorUpdatesMetadata)
-        &&
+        Objects.equals(this.optInUniversalSignatures, accountSettingsInformation.optInUniversalSignatures) &&
+        Objects.equals(this.optOutAutoNavTextAndTabColorUpdates, accountSettingsInformation.optOutAutoNavTextAndTabColorUpdates) &&
+        Objects.equals(this.optOutAutoNavTextAndTabColorUpdatesMetadata, accountSettingsInformation.optOutAutoNavTextAndTabColorUpdatesMetadata) &&
         Objects.equals(this.optOutNewPlatformSeal, accountSettingsInformation.optOutNewPlatformSeal) &&
-        Objects.equals(this.optOutNewPlatformSealPlatformMetadata,
-            accountSettingsInformation.optOutNewPlatformSealPlatformMetadata)
-        &&
+        Objects.equals(this.optOutNewPlatformSealPlatformMetadata, accountSettingsInformation.optOutNewPlatformSealPlatformMetadata) &&
         Objects.equals(this.pdfMaxChunkedUploadPartSize, accountSettingsInformation.pdfMaxChunkedUploadPartSize) &&
-        Objects.equals(this.pdfMaxChunkedUploadPartSizeMetadata,
-            accountSettingsInformation.pdfMaxChunkedUploadPartSizeMetadata)
-        &&
+        Objects.equals(this.pdfMaxChunkedUploadPartSizeMetadata, accountSettingsInformation.pdfMaxChunkedUploadPartSizeMetadata) &&
         Objects.equals(this.pdfMaxChunkedUploadTotalSize, accountSettingsInformation.pdfMaxChunkedUploadTotalSize) &&
-        Objects.equals(this.pdfMaxChunkedUploadTotalSizeMetadata,
-            accountSettingsInformation.pdfMaxChunkedUploadTotalSizeMetadata)
-        &&
+        Objects.equals(this.pdfMaxChunkedUploadTotalSizeMetadata, accountSettingsInformation.pdfMaxChunkedUploadTotalSizeMetadata) &&
         Objects.equals(this.pdfMaxIndividualUploadSize, accountSettingsInformation.pdfMaxIndividualUploadSize) &&
-        Objects.equals(this.pdfMaxIndividualUploadSizeMetadata,
-            accountSettingsInformation.pdfMaxIndividualUploadSizeMetadata)
-        &&
-        Objects.equals(this.phoneAuthRecipientMayProvidePhoneNumber,
-            accountSettingsInformation.phoneAuthRecipientMayProvidePhoneNumber)
-        &&
-        Objects.equals(this.phoneAuthRecipientMayProvidePhoneNumberMetadata,
-            accountSettingsInformation.phoneAuthRecipientMayProvidePhoneNumberMetadata)
-        &&
+        Objects.equals(this.pdfMaxIndividualUploadSizeMetadata, accountSettingsInformation.pdfMaxIndividualUploadSizeMetadata) &&
+        Objects.equals(this.phoneAuthRecipientMayProvidePhoneNumber, accountSettingsInformation.phoneAuthRecipientMayProvidePhoneNumber) &&
+        Objects.equals(this.phoneAuthRecipientMayProvidePhoneNumberMetadata, accountSettingsInformation.phoneAuthRecipientMayProvidePhoneNumberMetadata) &&
         Objects.equals(this.pkiSignDownloadedPDFDocs, accountSettingsInformation.pkiSignDownloadedPDFDocs) &&
-        Objects.equals(this.pkiSignDownloadedPDFDocsMetadata,
-            accountSettingsInformation.pkiSignDownloadedPDFDocsMetadata)
-        &&
+        Objects.equals(this.pkiSignDownloadedPDFDocsMetadata, accountSettingsInformation.pkiSignDownloadedPDFDocsMetadata) &&
         Objects.equals(this.readOnlyMode, accountSettingsInformation.readOnlyMode) &&
         Objects.equals(this.readOnlyModeMetadata, accountSettingsInformation.readOnlyModeMetadata) &&
         Objects.equals(this.recipientsCanSignOffline, accountSettingsInformation.recipientsCanSignOffline) &&
-        Objects
-            .equals(this.recipientsCanSignOfflineMetadata, accountSettingsInformation.recipientsCanSignOfflineMetadata)
-        &&
-        Objects.equals(this.recipientSigningAutoNavigationControl,
-            accountSettingsInformation.recipientSigningAutoNavigationControl)
-        &&
-        Objects.equals(this.recipientSigningAutoNavigationControlMetadata,
-            accountSettingsInformation.recipientSigningAutoNavigationControlMetadata)
-        &&
+        Objects.equals(this.recipientsCanSignOfflineMetadata, accountSettingsInformation.recipientsCanSignOfflineMetadata) &&
+        Objects.equals(this.recipientSigningAutoNavigationControl, accountSettingsInformation.recipientSigningAutoNavigationControl) &&
+        Objects.equals(this.recipientSigningAutoNavigationControlMetadata, accountSettingsInformation.recipientSigningAutoNavigationControlMetadata) &&
         Objects.equals(this.require21CFRpt11Compliance, accountSettingsInformation.require21CFRpt11Compliance) &&
-        Objects.equals(this.require21CFRpt11ComplianceMetadata,
-            accountSettingsInformation.require21CFRpt11ComplianceMetadata)
-        &&
+        Objects.equals(this.require21CFRpt11ComplianceMetadata, accountSettingsInformation.require21CFRpt11ComplianceMetadata) &&
         Objects.equals(this.requireDeclineReason, accountSettingsInformation.requireDeclineReason) &&
         Objects.equals(this.requireDeclineReasonMetadata, accountSettingsInformation.requireDeclineReasonMetadata) &&
         Objects.equals(this.requireExternalUserManagement, accountSettingsInformation.requireExternalUserManagement) &&
-        Objects.equals(this.requireExternalUserManagementMetadata,
-            accountSettingsInformation.requireExternalUserManagementMetadata)
-        &&
+        Objects.equals(this.requireExternalUserManagementMetadata, accountSettingsInformation.requireExternalUserManagementMetadata) &&
         Objects.equals(this.requireSignerCertificateType, accountSettingsInformation.requireSignerCertificateType) &&
-        Objects.equals(this.requireSignerCertificateTypeMetadata,
-            accountSettingsInformation.requireSignerCertificateTypeMetadata)
-        &&
+        Objects.equals(this.requireSignerCertificateTypeMetadata, accountSettingsInformation.requireSignerCertificateTypeMetadata) &&
         Objects.equals(this.rsaVeridAccountName, accountSettingsInformation.rsaVeridAccountName) &&
         Objects.equals(this.rsaVeridPassword, accountSettingsInformation.rsaVeridPassword) &&
         Objects.equals(this.rsaVeridRuleset, accountSettingsInformation.rsaVeridRuleset) &&
         Objects.equals(this.rsaVeridUserId, accountSettingsInformation.rsaVeridUserId) &&
         Objects.equals(this.sbsTransactionLevel, accountSettingsInformation.sbsTransactionLevel) &&
-        Objects
-            .equals(this.selfSignedRecipientEmailDocument, accountSettingsInformation.selfSignedRecipientEmailDocument)
-        &&
-        Objects.equals(this.selfSignedRecipientEmailDocumentMetadata,
-            accountSettingsInformation.selfSignedRecipientEmailDocumentMetadata)
-        &&
-        Objects.equals(this.selfSignedRecipientEmailDocumentUserOverride,
-            accountSettingsInformation.selfSignedRecipientEmailDocumentUserOverride)
-        &&
-        Objects.equals(this.selfSignedRecipientEmailDocumentUserOverrideMetadata,
-            accountSettingsInformation.selfSignedRecipientEmailDocumentUserOverrideMetadata)
-        &&
+        Objects.equals(this.selfSignedRecipientEmailDocument, accountSettingsInformation.selfSignedRecipientEmailDocument) &&
+        Objects.equals(this.selfSignedRecipientEmailDocumentMetadata, accountSettingsInformation.selfSignedRecipientEmailDocumentMetadata) &&
+        Objects.equals(this.selfSignedRecipientEmailDocumentUserOverride, accountSettingsInformation.selfSignedRecipientEmailDocumentUserOverride) &&
+        Objects.equals(this.selfSignedRecipientEmailDocumentUserOverrideMetadata, accountSettingsInformation.selfSignedRecipientEmailDocumentUserOverrideMetadata) &&
         Objects.equals(this.senderCanSignInEachLocation, accountSettingsInformation.senderCanSignInEachLocation) &&
-        Objects.equals(this.senderCanSignInEachLocationMetadata,
-            accountSettingsInformation.senderCanSignInEachLocationMetadata)
-        &&
+        Objects.equals(this.senderCanSignInEachLocationMetadata, accountSettingsInformation.senderCanSignInEachLocationMetadata) &&
         Objects.equals(this.senderMustAuthenticateSigning, accountSettingsInformation.senderMustAuthenticateSigning) &&
-        Objects.equals(this.senderMustAuthenticateSigningMetadata,
-            accountSettingsInformation.senderMustAuthenticateSigningMetadata)
-        &&
+        Objects.equals(this.senderMustAuthenticateSigningMetadata, accountSettingsInformation.senderMustAuthenticateSigningMetadata) &&
         Objects.equals(this.sendingTagsFontColor, accountSettingsInformation.sendingTagsFontColor) &&
         Objects.equals(this.sendingTagsFontColorMetadata, accountSettingsInformation.sendingTagsFontColorMetadata) &&
         Objects.equals(this.sendingTagsFontName, accountSettingsInformation.sendingTagsFontName) &&
         Objects.equals(this.sendingTagsFontNameMetadata, accountSettingsInformation.sendingTagsFontNameMetadata) &&
         Objects.equals(this.sendingTagsFontSize, accountSettingsInformation.sendingTagsFontSize) &&
         Objects.equals(this.sendingTagsFontSizeMetadata, accountSettingsInformation.sendingTagsFontSizeMetadata) &&
-        Objects
-            .equals(this.sendLockoutRecipientNotification, accountSettingsInformation.sendLockoutRecipientNotification)
-        &&
-        Objects.equals(this.sendLockoutRecipientNotificationMetadata,
-            accountSettingsInformation.sendLockoutRecipientNotificationMetadata)
-        &&
-        Objects.equals(this.sendToCertifiedDeliveryEnabled, accountSettingsInformation.sendToCertifiedDeliveryEnabled)
-        &&
-        Objects.equals(this.sendToCertifiedDeliveryEnabledMetadata,
-            accountSettingsInformation.sendToCertifiedDeliveryEnabledMetadata)
-        &&
+        Objects.equals(this.sendLockoutRecipientNotification, accountSettingsInformation.sendLockoutRecipientNotification) &&
+        Objects.equals(this.sendLockoutRecipientNotificationMetadata, accountSettingsInformation.sendLockoutRecipientNotificationMetadata) &&
+        Objects.equals(this.sendToCertifiedDeliveryEnabled, accountSettingsInformation.sendToCertifiedDeliveryEnabled) &&
+        Objects.equals(this.sendToCertifiedDeliveryEnabledMetadata, accountSettingsInformation.sendToCertifiedDeliveryEnabledMetadata) &&
         Objects.equals(this.sessionTimeout, accountSettingsInformation.sessionTimeout) &&
         Objects.equals(this.sessionTimeoutMetadata, accountSettingsInformation.sessionTimeoutMetadata) &&
         Objects.equals(this.setRecipEmailLang, accountSettingsInformation.setRecipEmailLang) &&
@@ -21492,79 +20873,44 @@ public class AccountSettingsInformation {
         Objects.equals(this.setRecipSignLangMetadata, accountSettingsInformation.setRecipSignLangMetadata) &&
         Objects.equals(this.sharedTemplateFolders, accountSettingsInformation.sharedTemplateFolders) &&
         Objects.equals(this.sharedTemplateFoldersMetadata, accountSettingsInformation.sharedTemplateFoldersMetadata) &&
-        Objects.equals(this.showCompleteDialogInEmbeddedSession,
-            accountSettingsInformation.showCompleteDialogInEmbeddedSession)
-        &&
-        Objects.equals(this.showCompleteDialogInEmbeddedSessionMetadata,
-            accountSettingsInformation.showCompleteDialogInEmbeddedSessionMetadata)
-        &&
+        Objects.equals(this.showCompleteDialogInEmbeddedSession, accountSettingsInformation.showCompleteDialogInEmbeddedSession) &&
+        Objects.equals(this.showCompleteDialogInEmbeddedSessionMetadata, accountSettingsInformation.showCompleteDialogInEmbeddedSessionMetadata) &&
         Objects.equals(this.showConditionalRoutingOnSend, accountSettingsInformation.showConditionalRoutingOnSend) &&
-        Objects.equals(this.showConditionalRoutingOnSendMetadata,
-            accountSettingsInformation.showConditionalRoutingOnSendMetadata)
-        &&
+        Objects.equals(this.showConditionalRoutingOnSendMetadata, accountSettingsInformation.showConditionalRoutingOnSendMetadata) &&
         Objects.equals(this.showInitialConditionalFields, accountSettingsInformation.showInitialConditionalFields) &&
-        Objects.equals(this.showInitialConditionalFieldsMetadata,
-            accountSettingsInformation.showInitialConditionalFieldsMetadata)
-        &&
+        Objects.equals(this.showInitialConditionalFieldsMetadata, accountSettingsInformation.showInitialConditionalFieldsMetadata) &&
         Objects.equals(this.showLocalizedWatermarks, accountSettingsInformation.showLocalizedWatermarks) &&
-        Objects.equals(this.showLocalizedWatermarksMetadata, accountSettingsInformation.showLocalizedWatermarksMetadata)
-        &&
-        Objects.equals(this.showMaskedFieldsWhenDownloadingDocumentAsSender,
-            accountSettingsInformation.showMaskedFieldsWhenDownloadingDocumentAsSender)
-        &&
-        Objects.equals(this.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata,
-            accountSettingsInformation.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata)
-        &&
+        Objects.equals(this.showLocalizedWatermarksMetadata, accountSettingsInformation.showLocalizedWatermarksMetadata) &&
+        Objects.equals(this.showMaskedFieldsWhenDownloadingDocumentAsSender, accountSettingsInformation.showMaskedFieldsWhenDownloadingDocumentAsSender) &&
+        Objects.equals(this.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata, accountSettingsInformation.showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata) &&
         Objects.equals(this.showTutorials, accountSettingsInformation.showTutorials) &&
         Objects.equals(this.showTutorialsMetadata, accountSettingsInformation.showTutorialsMetadata) &&
         Objects.equals(this.signatureProviders, accountSettingsInformation.signatureProviders) &&
         Objects.equals(this.signatureProvidersMetadata, accountSettingsInformation.signatureProvidersMetadata) &&
         Objects.equals(this.signDateFormat, accountSettingsInformation.signDateFormat) &&
         Objects.equals(this.signDateFormatMetadata, accountSettingsInformation.signDateFormatMetadata) &&
-        Objects.equals(this.signDateTimeAccountLanguageOverride,
-            accountSettingsInformation.signDateTimeAccountLanguageOverride)
-        &&
-        Objects.equals(this.signDateTimeAccountLanguageOverrideMetadata,
-            accountSettingsInformation.signDateTimeAccountLanguageOverrideMetadata)
-        &&
-        Objects.equals(this.signDateTimeAccountTimezoneOverride,
-            accountSettingsInformation.signDateTimeAccountTimezoneOverride)
-        &&
-        Objects.equals(this.signDateTimeAccountTimezoneOverrideMetadata,
-            accountSettingsInformation.signDateTimeAccountTimezoneOverrideMetadata)
-        &&
-        Objects.equals(
-            this.signerAttachCertificateToEnvelopePDF, accountSettingsInformation.signerAttachCertificateToEnvelopePDF)
-        &&
-        Objects.equals(this.signerAttachCertificateToEnvelopePDFMetadata,
-            accountSettingsInformation.signerAttachCertificateToEnvelopePDFMetadata)
-        &&
+        Objects.equals(this.signDateTimeAccountLanguageOverride, accountSettingsInformation.signDateTimeAccountLanguageOverride) &&
+        Objects.equals(this.signDateTimeAccountLanguageOverrideMetadata, accountSettingsInformation.signDateTimeAccountLanguageOverrideMetadata) &&
+        Objects.equals(this.signDateTimeAccountTimezoneOverride, accountSettingsInformation.signDateTimeAccountTimezoneOverride) &&
+        Objects.equals(this.signDateTimeAccountTimezoneOverrideMetadata, accountSettingsInformation.signDateTimeAccountTimezoneOverrideMetadata) &&
+        Objects.equals(this.signerAttachCertificateToEnvelopePDF, accountSettingsInformation.signerAttachCertificateToEnvelopePDF) &&
+        Objects.equals(this.signerAttachCertificateToEnvelopePDFMetadata, accountSettingsInformation.signerAttachCertificateToEnvelopePDFMetadata) &&
         Objects.equals(this.signerAttachConcat, accountSettingsInformation.signerAttachConcat) &&
         Objects.equals(this.signerAttachConcatMetadata, accountSettingsInformation.signerAttachConcatMetadata) &&
         Objects.equals(this.signerCanCreateAccount, accountSettingsInformation.signerCanCreateAccount) &&
-        Objects.equals(this.signerCanCreateAccountMetadata, accountSettingsInformation.signerCanCreateAccountMetadata)
-        &&
+        Objects.equals(this.signerCanCreateAccountMetadata, accountSettingsInformation.signerCanCreateAccountMetadata) &&
         Objects.equals(this.signerCanSignOnMobile, accountSettingsInformation.signerCanSignOnMobile) &&
         Objects.equals(this.signerCanSignOnMobileMetadata, accountSettingsInformation.signerCanSignOnMobileMetadata) &&
-        Objects.equals(this.signerInSessionUseEnvelopeCompleteEmail,
-            accountSettingsInformation.signerInSessionUseEnvelopeCompleteEmail)
-        &&
-        Objects.equals(this.signerInSessionUseEnvelopeCompleteEmailMetadata,
-            accountSettingsInformation.signerInSessionUseEnvelopeCompleteEmailMetadata)
-        &&
+        Objects.equals(this.signerInSessionUseEnvelopeCompleteEmail, accountSettingsInformation.signerInSessionUseEnvelopeCompleteEmail) &&
+        Objects.equals(this.signerInSessionUseEnvelopeCompleteEmailMetadata, accountSettingsInformation.signerInSessionUseEnvelopeCompleteEmailMetadata) &&
         Objects.equals(this.signerLoginRequirements, accountSettingsInformation.signerLoginRequirements) &&
-        Objects.equals(this.signerLoginRequirementsMetadata, accountSettingsInformation.signerLoginRequirementsMetadata)
-        &&
+        Objects.equals(this.signerLoginRequirementsMetadata, accountSettingsInformation.signerLoginRequirementsMetadata) &&
         Objects.equals(this.signerMustHaveAccount, accountSettingsInformation.signerMustHaveAccount) &&
         Objects.equals(this.signerMustHaveAccountMetadata, accountSettingsInformation.signerMustHaveAccountMetadata) &&
         Objects.equals(this.signerMustLoginToSign, accountSettingsInformation.signerMustLoginToSign) &&
         Objects.equals(this.signerMustLoginToSignMetadata, accountSettingsInformation.signerMustLoginToSignMetadata) &&
-        Objects.equals(this.signerShowSecureFieldInitialValues,
-            accountSettingsInformation.signerShowSecureFieldInitialValues)
-        &&
-        Objects.equals(this.signerShowSecureFieldInitialValuesMetadata,
-            accountSettingsInformation.signerShowSecureFieldInitialValuesMetadata)
-        &&
+        Objects.equals(this.signerShowSecureFieldInitialValues, accountSettingsInformation.signerShowSecureFieldInitialValues) &&
+        Objects.equals(this.signerShowSecureFieldInitialValuesMetadata, accountSettingsInformation.signerShowSecureFieldInitialValuesMetadata) &&
         Objects.equals(this.signingSessionTimeout, accountSettingsInformation.signingSessionTimeout) &&
         Objects.equals(this.signingSessionTimeoutMetadata, accountSettingsInformation.signingSessionTimeoutMetadata) &&
         Objects.equals(this.signingUiVersion, accountSettingsInformation.signingUiVersion) &&
@@ -21574,42 +20920,25 @@ public class AccountSettingsInformation {
         Objects.equals(this.signTimeShowAmPm, accountSettingsInformation.signTimeShowAmPm) &&
         Objects.equals(this.signTimeShowAmPmMetadata, accountSettingsInformation.signTimeShowAmPmMetadata) &&
         Objects.equals(this.simplifiedSendingEnabled, accountSettingsInformation.simplifiedSendingEnabled) &&
-        Objects.equals(this.simplifiedSendingEnabledMetadata,
-            accountSettingsInformation.simplifiedSendingEnabledMetadata)
-        &&
+        Objects.equals(this.simplifiedSendingEnabledMetadata, accountSettingsInformation.simplifiedSendingEnabledMetadata) &&
         Objects.equals(this.singleSignOnEnabled, accountSettingsInformation.singleSignOnEnabled) &&
         Objects.equals(this.singleSignOnEnabledMetadata, accountSettingsInformation.singleSignOnEnabledMetadata) &&
         Objects.equals(this.skipAuthCompletedEnvelopes, accountSettingsInformation.skipAuthCompletedEnvelopes) &&
-        Objects.equals(this.skipAuthCompletedEnvelopesMetadata,
-            accountSettingsInformation.skipAuthCompletedEnvelopesMetadata)
-        &&
+        Objects.equals(this.skipAuthCompletedEnvelopesMetadata, accountSettingsInformation.skipAuthCompletedEnvelopesMetadata) &&
         Objects.equals(this.socialIdRecipAuth, accountSettingsInformation.socialIdRecipAuth) &&
         Objects.equals(this.socialIdRecipAuthMetadata, accountSettingsInformation.socialIdRecipAuthMetadata) &&
         Objects.equals(this.specifyDocumentVisibility, accountSettingsInformation.specifyDocumentVisibility) &&
-        Objects.equals(this.specifyDocumentVisibilityMetadata,
-            accountSettingsInformation.specifyDocumentVisibilityMetadata)
-        &&
+        Objects.equals(this.specifyDocumentVisibilityMetadata, accountSettingsInformation.specifyDocumentVisibilityMetadata) &&
         Objects.equals(this.startInAdvancedCorrect, accountSettingsInformation.startInAdvancedCorrect) &&
-        Objects.equals(this.startInAdvancedCorrectMetadata, accountSettingsInformation.startInAdvancedCorrectMetadata)
-        &&
-        Objects.equals(this.supplementalDocumentsMustAccept, accountSettingsInformation.supplementalDocumentsMustAccept)
-        &&
-        Objects.equals(this.supplementalDocumentsMustAcceptMetadata,
-            accountSettingsInformation.supplementalDocumentsMustAcceptMetadata)
-        &&
+        Objects.equals(this.startInAdvancedCorrectMetadata, accountSettingsInformation.startInAdvancedCorrectMetadata) &&
+        Objects.equals(this.supplementalDocumentsMustAccept, accountSettingsInformation.supplementalDocumentsMustAccept) &&
+        Objects.equals(this.supplementalDocumentsMustAcceptMetadata, accountSettingsInformation.supplementalDocumentsMustAcceptMetadata) &&
         Objects.equals(this.supplementalDocumentsMustRead, accountSettingsInformation.supplementalDocumentsMustRead) &&
-        Objects.equals(this.supplementalDocumentsMustReadMetadata,
-            accountSettingsInformation.supplementalDocumentsMustReadMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustReadMetadata, accountSettingsInformation.supplementalDocumentsMustReadMetadata) &&
         Objects.equals(this.supplementalDocumentsMustView, accountSettingsInformation.supplementalDocumentsMustView) &&
-        Objects.equals(this.supplementalDocumentsMustViewMetadata,
-            accountSettingsInformation.supplementalDocumentsMustViewMetadata)
-        &&
-        Objects.equals(this.suppressCertificateEnforcement, accountSettingsInformation.suppressCertificateEnforcement)
-        &&
-        Objects.equals(this.suppressCertificateEnforcementMetadata,
-            accountSettingsInformation.suppressCertificateEnforcementMetadata)
-        &&
+        Objects.equals(this.supplementalDocumentsMustViewMetadata, accountSettingsInformation.supplementalDocumentsMustViewMetadata) &&
+        Objects.equals(this.suppressCertificateEnforcement, accountSettingsInformation.suppressCertificateEnforcement) &&
+        Objects.equals(this.suppressCertificateEnforcementMetadata, accountSettingsInformation.suppressCertificateEnforcementMetadata) &&
         Objects.equals(this.tabAccountSettings, accountSettingsInformation.tabAccountSettings) &&
         Objects.equals(this.timezoneOffsetAPI, accountSettingsInformation.timezoneOffsetAPI) &&
         Objects.equals(this.timezoneOffsetAPIMetadata, accountSettingsInformation.timezoneOffsetAPIMetadata) &&
@@ -21620,24 +20949,14 @@ public class AccountSettingsInformation {
         Objects.equals(this.useAccountLevelEmailMetadata, accountSettingsInformation.useAccountLevelEmailMetadata) &&
         Objects.equals(this.useConsumerDisclosure, accountSettingsInformation.useConsumerDisclosure) &&
         Objects.equals(this.useConsumerDisclosureMetadata, accountSettingsInformation.useConsumerDisclosureMetadata) &&
-        Objects.equals(this.useConsumerDisclosureWithinAccount,
-            accountSettingsInformation.useConsumerDisclosureWithinAccount)
-        &&
-        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata,
-            accountSettingsInformation.useConsumerDisclosureWithinAccountMetadata)
-        &&
+        Objects.equals(this.useConsumerDisclosureWithinAccount, accountSettingsInformation.useConsumerDisclosureWithinAccount) &&
+        Objects.equals(this.useConsumerDisclosureWithinAccountMetadata, accountSettingsInformation.useConsumerDisclosureWithinAccountMetadata) &&
         Objects.equals(this.useDerivedKeys, accountSettingsInformation.useDerivedKeys) &&
         Objects.equals(this.useDerivedKeysMetadata, accountSettingsInformation.useDerivedKeysMetadata) &&
-        Objects.equals(this.useDocuSignExpressSignerCertificate,
-            accountSettingsInformation.useDocuSignExpressSignerCertificate)
-        &&
-        Objects.equals(this.useDocuSignExpressSignerCertificateMetadata,
-            accountSettingsInformation.useDocuSignExpressSignerCertificateMetadata)
-        &&
+        Objects.equals(this.useDocuSignExpressSignerCertificate, accountSettingsInformation.useDocuSignExpressSignerCertificate) &&
+        Objects.equals(this.useDocuSignExpressSignerCertificateMetadata, accountSettingsInformation.useDocuSignExpressSignerCertificateMetadata) &&
         Objects.equals(this.useEnvelopeSearchMixedMode, accountSettingsInformation.useEnvelopeSearchMixedMode) &&
-        Objects.equals(this.useEnvelopeSearchMixedModeMetadata,
-            accountSettingsInformation.useEnvelopeSearchMixedModeMetadata)
-        &&
+        Objects.equals(this.useEnvelopeSearchMixedModeMetadata, accountSettingsInformation.useEnvelopeSearchMixedModeMetadata) &&
         Objects.equals(this.useMultiAppGroupsData, accountSettingsInformation.useMultiAppGroupsData) &&
         Objects.equals(this.useMultiAppGroupsDataMetadata, accountSettingsInformation.useMultiAppGroupsDataMetadata) &&
         Objects.equals(this.useNewBlobForPdf, accountSettingsInformation.useNewBlobForPdf) &&
@@ -21645,15 +20964,11 @@ public class AccountSettingsInformation {
         Objects.equals(this.useNewEnvelopeSearch, accountSettingsInformation.useNewEnvelopeSearch) &&
         Objects.equals(this.useNewEnvelopeSearchMetadata, accountSettingsInformation.useNewEnvelopeSearchMetadata) &&
         Objects.equals(this.useSAFESignerCertificates, accountSettingsInformation.useSAFESignerCertificates) &&
-        Objects.equals(this.useSAFESignerCertificatesMetadata,
-            accountSettingsInformation.useSAFESignerCertificatesMetadata)
-        &&
+        Objects.equals(this.useSAFESignerCertificatesMetadata, accountSettingsInformation.useSAFESignerCertificatesMetadata) &&
         Objects.equals(this.usesAPI, accountSettingsInformation.usesAPI) &&
         Objects.equals(this.usesAPIMetadata, accountSettingsInformation.usesAPIMetadata) &&
         Objects.equals(this.useSignatureProviderPlatform, accountSettingsInformation.useSignatureProviderPlatform) &&
-        Objects.equals(this.useSignatureProviderPlatformMetadata,
-            accountSettingsInformation.useSignatureProviderPlatformMetadata)
-        &&
+        Objects.equals(this.useSignatureProviderPlatformMetadata, accountSettingsInformation.useSignatureProviderPlatformMetadata) &&
         Objects.equals(this.useSmartContractsV1, accountSettingsInformation.useSmartContractsV1) &&
         Objects.equals(this.validationsAllowed, accountSettingsInformation.validationsAllowed) &&
         Objects.equals(this.validationsAllowedMetadata, accountSettingsInformation.validationsAllowedMetadata) &&
@@ -21667,14 +20982,10 @@ public class AccountSettingsInformation {
         Objects.equals(this.validationsReportMetadata, accountSettingsInformation.validationsReportMetadata) &&
         Objects.equals(this.waterMarkEnabled, accountSettingsInformation.waterMarkEnabled) &&
         Objects.equals(this.waterMarkEnabledMetadata, accountSettingsInformation.waterMarkEnabledMetadata) &&
-        Objects.equals(this.writeReminderToEnvelopeHistory, accountSettingsInformation.writeReminderToEnvelopeHistory)
-        &&
-        Objects.equals(this.writeReminderToEnvelopeHistoryMetadata,
-            accountSettingsInformation.writeReminderToEnvelopeHistoryMetadata)
-        &&
+        Objects.equals(this.writeReminderToEnvelopeHistory, accountSettingsInformation.writeReminderToEnvelopeHistory) &&
+        Objects.equals(this.writeReminderToEnvelopeHistoryMetadata, accountSettingsInformation.writeReminderToEnvelopeHistoryMetadata) &&
         Objects.equals(this.wurflMinAllowableScreenSize, accountSettingsInformation.wurflMinAllowableScreenSize) &&
-        Objects.equals(this.wurflMinAllowableScreenSizeMetadata,
-            accountSettingsInformation.wurflMinAllowableScreenSizeMetadata);
+        Objects.equals(this.wurflMinAllowableScreenSizeMetadata, accountSettingsInformation.wurflMinAllowableScreenSizeMetadata);
   }
 
   /**
@@ -21682,208 +20993,9 @@ public class AccountSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeFormat, accountDateTimeFormat, accountDateTimeFormatMetadata, accountDefaultLanguage,
-        accountDefaultLanguageMetadata, accountName, accountNameMetadata, accountNotification, accountUISettings,
-        adoptSigConfig, adoptSigConfigMetadata, advancedCorrect, advancedCorrectMetadata, allowAccessCodeFormat,
-        allowAccessCodeFormatMetadata, allowAccountManagementGranular, allowAccountManagementGranularMetadata,
-        allowAccountMemberNameChange, allowAccountMemberNameChangeMetadata, allowAdvancedRecipientRoutingConditional,
-        allowAdvancedRecipientRoutingConditionalMetadata, allowAgentNameEmailEdit, allowAgentNameEmailEditMetadata,
-        allowAgreementActions, allowAgreementActionsMetadata, allowAgreementOrchestrationWorkflows,
-        allowAgreementOrchestrationWorkflowsMetadata, allowAutoNavSettings, allowAutoNavSettingsMetadata,
-        allowAutoTagging, allowAutoTaggingMetadata, allowBulkSend, allowBulkSendMetadata, allowCDWithdraw,
-        allowCDWithdrawMetadata, allowConnectHttpListenerConfigs, allowConnectOAuthUI, allowConnectSendFinishLater,
-        allowConnectSendFinishLaterMetadata, allowConnectUnifiedPayloadUI, allowConsumerDisclosureOverride,
-        allowConsumerDisclosureOverrideMetadata, allowDataDownload, allowDataDownloadMetadata, allowDelayedRouting,
-        allowDelayedRoutingMetadata, allowDelegatedSigning, allowDelegatedSigningMetadata, allowDocGenDocuments,
-        allowDocGenDocumentsMetadata, allowDocumentDisclosures, allowDocumentDisclosuresMetadata,
-        allowDocumentsOnSignedEnvelopes, allowDocumentsOnSignedEnvelopesMetadata, allowDocumentVisibility,
-        allowDocumentVisibilityMetadata, allowEHankoStamps, allowEHankoStampsMetadata, allowENoteEOriginal,
-        allowENoteEOriginalMetadata, allowEnvelopeCorrect, allowEnvelopeCorrectMetadata, allowEnvelopeCustodyTransfer,
-        allowEnvelopeCustodyTransferMetadata, allowEnvelopeCustomFields, allowEnvelopeCustomFieldsMetadata,
-        allowEnvelopePublishReporting, allowEnvelopePublishReportingMetadata, allowEnvelopeReporting,
-        allowEnvelopeReportingMetadata, allowExpression, allowExpressionMetadata, allowExpressSignerCertificate,
-        allowExpressSignerCertificateMetadata, allowExtendedSendingResourceFile,
-        allowExtendedSendingResourceFileMetadata, allowExternalLinkedAccounts, allowExternalLinkedAccountsMetadata,
-        allowExternalSignaturePad, allowExternalSignaturePadMetadata, allowIDVForEUQualifiedSignatures,
-        allowIDVForEUQualifiedSignaturesMetadata, allowIDVLevel1, allowIDVLevel1Metadata, allowIDVLevel2,
-        allowIDVLevel2Metadata, allowIDVLevel3, allowIDVLevel3Metadata, allowIDVPlatform, allowIDVPlatformMetadata,
-        allowInPerson, allowInPersonElectronicNotary, allowInPersonElectronicNotaryMetadata, allowInPersonMetadata,
-        allowManagedStamps, allowManagedStampsMetadata, allowManagingEnvelopesOnBehalfOfOthers,
-        allowManagingEnvelopesOnBehalfOfOthersMetadata, allowMarkup, allowMarkupMetadata, allowMemberTimeZone,
-        allowMemberTimeZoneMetadata, allowMergeFields, allowMergeFieldsMetadata, allowMultipleBrandProfiles,
-        allowMultipleBrandProfilesMetadata, allowMultipleSignerAttachments, allowMultipleSignerAttachmentsMetadata,
-        allowNonUSPhoneAuth, allowNonUSPhoneAuthMetadata, allowOcrOfEnvelopeDocuments,
-        allowOcrOfEnvelopeDocumentsMetadata, allowOfflineSigning, allowOfflineSigningMetadata,
-        allowOpenTrustSignerCertificate, allowOpenTrustSignerCertificateMetadata, allowOrganizationDocusignMonitor,
-        allowOrganizationDocusignMonitorMetadata, allowOrganizationDomainUserManagement,
-        allowOrganizationDomainUserManagementMetadata, allowOrganizations, allowOrganizationsMetadata,
-        allowOrganizationSsoManagement, allowOrganizationSsoManagementMetadata,
-        allowOrganizationToUseInPersonElectronicNotary, allowOrganizationToUseInPersonElectronicNotaryMetadata,
-        allowOrganizationToUseRemoteNotary, allowOrganizationToUseRemoteNotaryMetadata,
-        allowOrganizationToUseThirdPartyElectronicNotary, allowOrganizationToUseThirdPartyElectronicNotaryMetadata,
-        allowParticipantRecipientType, allowParticipantRecipientTypeMetadata, allowPaymentProcessing,
-        allowPaymentProcessingMetadata, allowPerformanceAnalytics, allowPerformanceAnalyticsMetadata,
-        allowPhoneAuthentication, allowPhoneAuthenticationMetadata, allowPhoneAuthOverride,
-        allowPhoneAuthOverrideMetadata, allowPrivateSigningGroups, allowPrivateSigningGroupsMetadata,
-        allowRecipientConnect, allowRecipientConnectMetadata, allowReminders, allowRemindersMetadata, allowRemoteNotary,
-        allowRemoteNotaryMetadata, allowResourceFileBranding, allowResourceFileBrandingMetadata,
-        allowSafeBioPharmaSignerCertificate, allowSafeBioPharmaSignerCertificateMetadata, allowScheduledSending,
-        allowScheduledSendingMetadata, allowSecurityAppliance, allowSecurityApplianceMetadata,
-        allowSendingEnvelopesOnBehalfOfOthers, allowSendingEnvelopesOnBehalfOfOthersMetadata,
-        allowSendToCertifiedDelivery, allowSendToCertifiedDeliveryMetadata, allowSendToIntermediary,
-        allowSendToIntermediaryMetadata, allowServerTemplates, allowServerTemplatesMetadata,
-        allowSetEmbeddedRecipientStartURL, allowSetEmbeddedRecipientStartURLMetadata, allowSharedTabs,
-        allowSharedTabsMetadata, allowSignatureStamps, allowSignatureStampsMetadata, allowSignDocumentFromHomePage,
-        allowSignDocumentFromHomePageMetadata, allowSignerReassign, allowSignerReassignMetadata,
-        allowSignerReassignOverride, allowSignerReassignOverrideMetadata, allowSigningExtensions,
-        allowSigningExtensionsMetadata, allowSigningGroups, allowSigningGroupsMetadata, allowSigningInsights,
-        allowSigningInsightsMetadata, allowSigningRadioDeselect, allowSigningRadioDeselectMetadata, allowSignNow,
-        allowSignNowMetadata, allowSMSDelivery, allowSMSDeliveryMetadata, allowSocialIdLogin,
-        allowSocialIdLoginMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata,
-        allowThirdPartyElectronicNotary, allowThirdPartyElectronicNotaryMetadata, allowTransactionsWorkspace,
-        allowTransactionsWorkspaceMetadata, allowUsersToAccessDirectory, allowUsersToAccessDirectoryMetadata,
-        allowValueInsights, allowValueInsightsMetadata, allowWebForms, allowWebFormsMetadata, allowWhatsAppDelivery,
-        allowWhatsAppDeliveryMetadata, anchorPopulationScope, anchorPopulationScopeMetadata,
-        anchorTagVersionedPlacementEnabled, anchorTagVersionedPlacementMetadataEnabled, attachCompletedEnvelope,
-        attachCompletedEnvelopeMetadata, authenticationCheck, authenticationCheckMetadata, autoNavRule,
-        autoNavRuleMetadata, autoProvisionSignerAccount, autoProvisionSignerAccountMetadata, bccEmailArchive,
-        bccEmailArchiveMetadata, betaSwitchConfiguration, betaSwitchConfigurationMetadata, billingAddress,
-        billingAddressMetadata, bulkSend, bulkSendActionResendLimit, bulkSendMaxCopiesInBatch,
-        bulkSendMaxUnprocessedEnvelopesCount, bulkSendMetadata, canSelfBrandSend, canSelfBrandSendMetadata,
-        canSelfBrandSign, canSelfBrandSignMetadata, canUseSalesforceOAuth, canUseSalesforceOAuthMetadata,
-        captureVoiceRecording, captureVoiceRecordingMetadata, cfr21SimplifiedSigningEnabled,
-        cfr21SimplifiedSigningEnabledMetadata, cfrUseWideImage, cfrUseWideImageMetadata,
-        checkForMultipleAdminsOnAccount, checkForMultipleAdminsOnAccountMetadata, chromeSignatureEnabled,
-        chromeSignatureEnabledMetadata, commentEmailShowMessageText, commentEmailShowMessageTextMetadata,
-        commentsAllowEnvelopeOverride, commentsAllowEnvelopeOverrideMetadata, conditionalFieldsEnabled,
-        conditionalFieldsEnabledMetadata, consumerDisclosureFrequency, consumerDisclosureFrequencyMetadata,
-        convertPdfFields, convertPdfFieldsMetadata, dataPopulationScope, dataPopulationScopeMetadata,
-        disableAutoTemplateMatching, disableAutoTemplateMatchingMetadata, disableMobileApp, disableMobileAppMetadata,
-        disableMobilePushNotifications, disableMobilePushNotificationsMetadata, disableMobileSending,
-        disableMobileSendingMetadata, disableMultipleSessions, disableMultipleSessionsMetadata,
-        disablePurgeNotificationsForSenderMetadata, disableSignerCertView, disableSignerCertViewMetadata,
-        disableSignerHistoryView, disableSignerHistoryViewMetadata, disableStyleSignature,
-        disableStyleSignatureMetadata, disableUploadSignature, disableUploadSignatureMetadata, disableUserSharing,
-        disableUserSharingMetadata, displayBetaSwitch, displayBetaSwitchMetadata, documentConversionRestrictions,
-        documentConversionRestrictionsMetadata, documentRetention, documentRetentionMetadata,
-        documentRetentionPurgeTabs, documentVisibility, documentVisibilityMetadata,
-        dssSIGN28411EnableLeavePagePromptRadminOption, dssSIGN29182SlideUpBarRadminOption, emailTemplateVersion,
-        emailTemplateVersionMetadata, enableAccessCodeGenerator, enableAccessCodeGeneratorMetadata, enableAdmHealthcare,
-        enableAdmHealthcareMetadata, enableAdvancedPayments, enableAdvancedPaymentsMetadata, enableAdvancedPowerForms,
-        enableAdvancedPowerFormsMetadata, enableAgreementActionsForCLM, enableAgreementActionsForCLMMetadata,
-        enableAgreementActionsForESign, enableAgreementActionsForESignMetadata, enableAutoNav, enableAutoNavMetadata,
-        enableBccDummyLink, enableBccDummyLinkMetadata, enableCalculatedFields, enableCalculatedFieldsMetadata,
-        enableClickPlus, enableClickPlusConditionalContent, enableClickPlusConditionalContentMetaData,
-        enableClickPlusCustomFields, enableClickPlusCustomFieldsMetaData, enableClickPlusCustomStyle,
-        enableClickPlusCustomStyleMetaData, enableClickPlusDynamicContent, enableClickPlusDynamicContentMetaData,
-        enableClickPlusMetaData, enableClickwraps, enableClickwrapsMetadata, enableCombinedPDFDownloadForSBS,
-        enableCommentsHistoryDownloadInSigning, enableCommentsHistoryDownloadInSigningMetadata,
-        enableContactSuggestions, enableContactSuggestionsMetadata, enableCustomerSatisfactionMetricTracking,
-        enableCustomerSatisfactionMetricTrackingMetadata, enableDSPro, enableDSProMetadata,
-        enableEnforceTlsEmailsSettingMetadata, enableEnvelopeStampingByAccountAdmin,
-        enableEnvelopeStampingByAccountAdminMetadata, enableEnvelopeStampingByDSAdmin,
-        enableEnvelopeStampingByDSAdminMetadata, enableESignAPIHourlyLimitManagement,
-        enableESignAPIHourlyLimitManagementMetadata, enableEsignCommunities, enableEsignCommunitiesMetadata,
-        enableIDFxAccountlessSMSAuthForPart11, enableIDFxAccountlessSMSAuthForPart11Metadata, enableIDFxIntuitKBA,
-        enableIDFxIntuitKBAMetadata, enableIDFxPhoneAuthentication, enableIDFxPhoneAuthenticationMetadata,
-        enableIdfxPhoneAuthSignatureAuthStatus, enableIdfxPhoneAuthSignatureAuthStatusMetadata, enableInBrowserEditor,
-        enableInBrowserEditorMetadata, enableKeyTermsSuggestionsByDocumentType,
-        enableKeyTermsSuggestionsByDocumentTypeMetadata, enableParticipantRecipientSettingMetadata,
-        enablePaymentProcessing, enablePaymentProcessingMetadata, enablePDFAConversion, enablePDFAConversionMetadata,
-        enablePowerForm, enablePowerFormDirect, enablePowerFormDirectMetadata, enablePowerFormMetadata,
-        enableRecipientDomainValidation, enableRecipientDomainValidationMetadata, enableRecipientMayProvidePhoneNumber,
-        enableRecipientMayProvidePhoneNumberMetadata, enableReportLinks, enableReportLinksMetadata,
-        enableRequireSignOnPaper, enableRequireSignOnPaperMetadata, enableReservedDomain, enableReservedDomainMetadata,
-        enableResponsiveSigning, enableResponsiveSigningMetadata, enableScheduledRelease,
-        enableScheduledReleaseMetadata, enableSearch, enableSearchMetadata, enableSearchSiteSpecificApi,
-        enableSearchSiteSpecificApiMetadata, enableSearchUI, enableSearchUIMetadata, enableSendingTagsFontSettings,
-        enableSendingTagsFontSettingsMetadata, enableSendToAgent, enableSendToAgentMetadata, enableSendToIntermediary,
-        enableSendToIntermediaryMetadata, enableSendToManage, enableSendToManageMetadata, enableSequentialSigningAPI,
-        enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata,
-        enableSignerAttachments, enableSignerAttachmentsMetadata, enableSigningExtensionComments,
-        enableSigningExtensionCommentsMetadata, enableSigningExtensionConversations,
-        enableSigningExtensionConversationsMetadata, enableSigningOrderSettingsForAccount,
-        enableSigningOrderSettingsForAccountMetadata, enableSignOnPaper, enableSignOnPaperMetadata,
-        enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableSignWithNotary,
-        enableSignWithNotaryMetadata, enableSmartContracts, enableSmartContractsMetadata, enableSMSAuthentication,
-        enableSMSAuthenticationMetadata, enableSMSDeliveryAdditionalNotification,
-        enableSMSDeliveryAdditionalNotificationMetadata, enableSMSDeliveryPrimary, enableSocialIdLogin,
-        enableSocialIdLoginMetadata, enableStrikeThrough, enableStrikeThroughMetadata, enableTransactionPoint,
-        enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, enableWitnessing,
-        enableWitnessingMetadata, enforceTemplateNameUniqueness, enforceTemplateNameUniquenessMetadata,
-        enforceTlsEmails, enforceTlsEmailsMetadata, envelopeIntegrationAllowed, envelopeIntegrationAllowedMetadata,
-        envelopeIntegrationEnabled, envelopeIntegrationEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMB,
-        envelopeLimitsTotalDocumentSizeAllowedInMBEnabled, envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata,
-        envelopeLimitsTotalDocumentSizeAllowedInMBMetadata, envelopeSearchMode, envelopeSearchModeMetadata,
-        envelopeStampingDefaultValue, envelopeStampingDefaultValueMetadata, exitPrompt, exitPromptMetadata, expressSend,
-        expressSendAllowTabs, expressSendAllowTabsMetadata, expressSendMetadata, externalDocumentSources,
-        externalSignaturePadType, externalSignaturePadTypeMetadata, faxOutEnabled, faxOutEnabledMetadata,
-        finishReminder, finishReminderMetadata, guidedFormsHtmlAllowed, guidedFormsHtmlAllowedMetadata,
-        guidedFormsHtmlConversionPolicy, guidedFormsHtmlConversionPolicyMetadata, hasRecipientConnectClaimedDomain,
-        hideAccountAddressInCoC, hideAccountAddressInCoCMetadata, hidePricing, hidePricingMetadata,
-        idCheckConfigurations, idCheckExpire, idCheckExpireDays, idCheckExpireDaysMetadata, idCheckExpireMetadata,
-        idCheckExpireMinutes, idCheckExpireMinutesMetadata, idCheckRequired, idCheckRequiredMetadata,
-        identityVerification, identityVerificationMetadata, idfxKBAAuthenticationOverride,
-        idfxKBAAuthenticationOverrideMetadata, idfxPhoneAuthenticationOverride, idfxPhoneAuthenticationOverrideMetadata,
-        ignoreErrorIfAnchorTabNotFound, ignoreErrorIfAnchorTabNotFoundMetadataEnabled, inPersonIDCheckQuestion,
-        inPersonIDCheckQuestionMetadata, inPersonSigningEnabled, inPersonSigningEnabledMetadata, inSessionEnabled,
-        inSessionEnabledMetadata, inSessionSuppressEmails, inSessionSuppressEmailsMetadata,
-        linkedExternalPrimaryAccounts, maximumSigningGroups, maximumSigningGroupsMetadata, maximumUsersPerSigningGroup,
-        maximumUsersPerSigningGroupMetadata, maxNumberOfCustomStamps, mergeMixedModeResults,
-        mergeMixedModeResultsMetadata, mobileSessionTimeout, mobileSessionTimeoutMetadata, numberOfActiveCustomStamps,
-        optInMobileSigningV02, optInMobileSigningV02Metadata, optOutAutoNavTextAndTabColorUpdates,
-        optOutAutoNavTextAndTabColorUpdatesMetadata, optOutNewPlatformSeal, optOutNewPlatformSealPlatformMetadata,
-        pdfMaxChunkedUploadPartSize, pdfMaxChunkedUploadPartSizeMetadata, pdfMaxChunkedUploadTotalSize,
-        pdfMaxChunkedUploadTotalSizeMetadata, pdfMaxIndividualUploadSize, pdfMaxIndividualUploadSizeMetadata,
-        phoneAuthRecipientMayProvidePhoneNumber, phoneAuthRecipientMayProvidePhoneNumberMetadata,
-        pkiSignDownloadedPDFDocs, pkiSignDownloadedPDFDocsMetadata, readOnlyMode, readOnlyModeMetadata,
-        recipientsCanSignOffline, recipientsCanSignOfflineMetadata, recipientSigningAutoNavigationControl,
-        recipientSigningAutoNavigationControlMetadata, require21CFRpt11Compliance, require21CFRpt11ComplianceMetadata,
-        requireDeclineReason, requireDeclineReasonMetadata, requireExternalUserManagement,
-        requireExternalUserManagementMetadata, requireSignerCertificateType, requireSignerCertificateTypeMetadata,
-        rsaVeridAccountName, rsaVeridPassword, rsaVeridRuleset, rsaVeridUserId, sbsTransactionLevel,
-        selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata,
-        selfSignedRecipientEmailDocumentUserOverride, selfSignedRecipientEmailDocumentUserOverrideMetadata,
-        senderCanSignInEachLocation, senderCanSignInEachLocationMetadata, senderMustAuthenticateSigning,
-        senderMustAuthenticateSigningMetadata, sendingTagsFontColor, sendingTagsFontColorMetadata, sendingTagsFontName,
-        sendingTagsFontNameMetadata, sendingTagsFontSize, sendingTagsFontSizeMetadata, sendLockoutRecipientNotification,
-        sendLockoutRecipientNotificationMetadata, sendToCertifiedDeliveryEnabled,
-        sendToCertifiedDeliveryEnabledMetadata, sessionTimeout, sessionTimeoutMetadata, setRecipEmailLang,
-        setRecipEmailLangMetadata, setRecipSignLang, setRecipSignLangMetadata, sharedTemplateFolders,
-        sharedTemplateFoldersMetadata, showCompleteDialogInEmbeddedSession, showCompleteDialogInEmbeddedSessionMetadata,
-        showConditionalRoutingOnSend, showConditionalRoutingOnSendMetadata, showInitialConditionalFields,
-        showInitialConditionalFieldsMetadata, showLocalizedWatermarks, showLocalizedWatermarksMetadata,
-        showMaskedFieldsWhenDownloadingDocumentAsSender, showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata,
-        showTutorials, showTutorialsMetadata, signatureProviders, signatureProvidersMetadata, signDateFormat,
-        signDateFormatMetadata, signDateTimeAccountLanguageOverride, signDateTimeAccountLanguageOverrideMetadata,
-        signDateTimeAccountTimezoneOverride, signDateTimeAccountTimezoneOverrideMetadata,
-        signerAttachCertificateToEnvelopePDF, signerAttachCertificateToEnvelopePDFMetadata, signerAttachConcat,
-        signerAttachConcatMetadata, signerCanCreateAccount, signerCanCreateAccountMetadata, signerCanSignOnMobile,
-        signerCanSignOnMobileMetadata, signerInSessionUseEnvelopeCompleteEmail,
-        signerInSessionUseEnvelopeCompleteEmailMetadata, signerLoginRequirements, signerLoginRequirementsMetadata,
-        signerMustHaveAccount, signerMustHaveAccountMetadata, signerMustLoginToSign, signerMustLoginToSignMetadata,
-        signerShowSecureFieldInitialValues, signerShowSecureFieldInitialValuesMetadata, signingSessionTimeout,
-        signingSessionTimeoutMetadata, signingUiVersion, signingUiVersionMetadata, signTimeFormat,
-        signTimeFormatMetadata, signTimeShowAmPm, signTimeShowAmPmMetadata, simplifiedSendingEnabled,
-        simplifiedSendingEnabledMetadata, singleSignOnEnabled, singleSignOnEnabledMetadata, skipAuthCompletedEnvelopes,
-        skipAuthCompletedEnvelopesMetadata, socialIdRecipAuth, socialIdRecipAuthMetadata, specifyDocumentVisibility,
-        specifyDocumentVisibilityMetadata, startInAdvancedCorrect, startInAdvancedCorrectMetadata,
-        supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead,
-        supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata,
-        suppressCertificateEnforcement, suppressCertificateEnforcementMetadata, tabAccountSettings, timezoneOffsetAPI,
-        timezoneOffsetAPIMetadata, timezoneOffsetUI, timezoneOffsetUIMetadata, universalSignatureOptIn,
-        useAccountLevelEmail, useAccountLevelEmailMetadata, useConsumerDisclosure, useConsumerDisclosureMetadata,
-        useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, useDerivedKeys,
-        useDerivedKeysMetadata, useDocuSignExpressSignerCertificate, useDocuSignExpressSignerCertificateMetadata,
-        useEnvelopeSearchMixedMode, useEnvelopeSearchMixedModeMetadata, useMultiAppGroupsData,
-        useMultiAppGroupsDataMetadata, useNewBlobForPdf, useNewBlobForPdfMetadata, useNewEnvelopeSearch,
-        useNewEnvelopeSearchMetadata, useSAFESignerCertificates, useSAFESignerCertificatesMetadata, usesAPI,
-        usesAPIMetadata, useSignatureProviderPlatform, useSignatureProviderPlatformMetadata, useSmartContractsV1,
-        validationsAllowed, validationsAllowedMetadata, validationsBrand, validationsBrandMetadata, validationsCadence,
-        validationsCadenceMetadata, validationsEnabled, validationsEnabledMetadata, validationsReport,
-        validationsReportMetadata, waterMarkEnabled, waterMarkEnabledMetadata, writeReminderToEnvelopeHistory,
-        writeReminderToEnvelopeHistoryMetadata, wurflMinAllowableScreenSize, wurflMinAllowableScreenSizeMetadata);
+    return Objects.hash(accessCodeFormat, accountDateTimeFormat, accountDateTimeFormatMetadata, accountDefaultLanguage, accountDefaultLanguageMetadata, accountName, accountNameMetadata, accountNotification, accountUISettings, adoptSigConfig, adoptSigConfigMetadata, advancedCorrect, advancedCorrectMetadata, allowAccessCodeFormat, allowAccessCodeFormatMetadata, allowAccountManagementGranular, allowAccountManagementGranularMetadata, allowAccountMemberNameChange, allowAccountMemberNameChangeMetadata, allowAdvancedRecipientRoutingConditional, allowAdvancedRecipientRoutingConditionalMetadata, allowAgentNameEmailEdit, allowAgentNameEmailEditMetadata, allowAgreementActions, allowAgreementActionsMetadata, allowAgreementOrchestrationWorkflows, allowAgreementOrchestrationWorkflowsMetadata, allowAutoNavSettings, allowAutoNavSettingsMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSend, allowBulkSendMetadata, allowCDWithdraw, allowCDWithdrawMetadata, allowConnectHttpListenerConfigs, allowConnectOAuthUI, allowConnectSendFinishLater, allowConnectSendFinishLaterMetadata, allowConnectUnifiedPayloadUI, allowConsumerDisclosureOverride, allowConsumerDisclosureOverrideMetadata, allowDataDownload, allowDataDownloadMetadata, allowDelayedRouting, allowDelayedRoutingMetadata, allowDelegatedSigning, allowDelegatedSigningMetadata, allowDocGenDocuments, allowDocGenDocumentsMetadata, allowDocumentDisclosures, allowDocumentDisclosuresMetadata, allowDocumentsOnSignedEnvelopes, allowDocumentsOnSignedEnvelopesMetadata, allowDocumentVisibility, allowDocumentVisibilityMetadata, allowEditingEnvelopesOnBehalfOfOthers, allowEditingEnvelopesOnBehalfOfOthersMetadata, allowEHankoStamps, allowEHankoStampsMetadata, allowENoteEOriginal, allowENoteEOriginalMetadata, allowEnvelopeCorrect, allowEnvelopeCorrectMetadata, allowEnvelopeCustodyTransfer, allowEnvelopeCustodyTransferMetadata, allowEnvelopeCustomFields, allowEnvelopeCustomFieldsMetadata, allowEnvelopePublishReporting, allowEnvelopePublishReportingMetadata, allowEnvelopeReporting, allowEnvelopeReportingMetadata, allowExpression, allowExpressionMetadata, allowExpressSignerCertificate, allowExpressSignerCertificateMetadata, allowExtendedSendingResourceFile, allowExtendedSendingResourceFileMetadata, allowExternalLinkedAccounts, allowExternalLinkedAccountsMetadata, allowExternalSignaturePad, allowExternalSignaturePadMetadata, allowIDVForEUQualifiedSignatures, allowIDVForEUQualifiedSignaturesMetadata, allowIDVLevel1, allowIDVLevel1Metadata, allowIDVLevel2, allowIDVLevel2Metadata, allowIDVLevel3, allowIDVLevel3Metadata, allowIDVPlatform, allowIDVPlatformMetadata, allowInPerson, allowInPersonElectronicNotary, allowInPersonElectronicNotaryMetadata, allowInPersonMetadata, allowManagedStamps, allowManagedStampsMetadata, allowManagingEnvelopesOnBehalfOfOthers, allowManagingEnvelopesOnBehalfOfOthersMetadata, allowMarkup, allowMarkupMetadata, allowMemberTimeZone, allowMemberTimeZoneMetadata, allowMergeFields, allowMergeFieldsMetadata, allowMultipleBrandProfiles, allowMultipleBrandProfilesMetadata, allowMultipleSignerAttachments, allowMultipleSignerAttachmentsMetadata, allowNonUSPhoneAuth, allowNonUSPhoneAuthMetadata, allowOcrOfEnvelopeDocuments, allowOcrOfEnvelopeDocumentsMetadata, allowOfflineSigning, allowOfflineSigningMetadata, allowOpenTrustSignerCertificate, allowOpenTrustSignerCertificateMetadata, allowOrganizationDocusignMonitor, allowOrganizationDocusignMonitorMetadata, allowOrganizationDomainUserManagement, allowOrganizationDomainUserManagementMetadata, allowOrganizations, allowOrganizationsMetadata, allowOrganizationSsoManagement, allowOrganizationSsoManagementMetadata, allowOrganizationToUseInPersonElectronicNotary, allowOrganizationToUseInPersonElectronicNotaryMetadata, allowOrganizationToUseRemoteNotary, allowOrganizationToUseRemoteNotaryMetadata, allowOrganizationToUseThirdPartyElectronicNotary, allowOrganizationToUseThirdPartyElectronicNotaryMetadata, allowParticipantRecipientType, allowParticipantRecipientTypeMetadata, allowPaymentProcessing, allowPaymentProcessingMetadata, allowPerformanceAnalytics, allowPerformanceAnalyticsMetadata, allowPhoneAuthentication, allowPhoneAuthenticationMetadata, allowPhoneAuthOverride, allowPhoneAuthOverrideMetadata, allowPrivateSigningGroups, allowPrivateSigningGroupsMetadata, allowRecipientConnect, allowRecipientConnectMetadata, allowReminders, allowRemindersMetadata, allowRemoteNotary, allowRemoteNotaryMetadata, allowResourceFileBranding, allowResourceFileBrandingMetadata, allowSafeBioPharmaSignerCertificate, allowSafeBioPharmaSignerCertificateMetadata, allowScheduledSending, allowScheduledSendingMetadata, allowSecurityAppliance, allowSecurityApplianceMetadata, allowSendingEnvelopesOnBehalfOfOthers, allowSendingEnvelopesOnBehalfOfOthersMetadata, allowSendToCertifiedDelivery, allowSendToCertifiedDeliveryMetadata, allowSendToIntermediary, allowSendToIntermediaryMetadata, allowServerTemplates, allowServerTemplatesMetadata, allowSetEmbeddedRecipientStartURL, allowSetEmbeddedRecipientStartURLMetadata, allowSharedTabs, allowSharedTabsMetadata, allowSignatureStamps, allowSignatureStampsMetadata, allowSignDocumentFromHomePage, allowSignDocumentFromHomePageMetadata, allowSignerReassign, allowSignerReassignMetadata, allowSignerReassignOverride, allowSignerReassignOverrideMetadata, allowSigningExtensions, allowSigningExtensionsMetadata, allowSigningGroups, allowSigningGroupsMetadata, allowSigningInsights, allowSigningInsightsMetadata, allowSigningRadioDeselect, allowSigningRadioDeselectMetadata, allowSignNow, allowSignNowMetadata, allowSMSDelivery, allowSMSDeliveryMetadata, allowSocialIdLogin, allowSocialIdLoginMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowThirdPartyElectronicNotary, allowThirdPartyElectronicNotaryMetadata, allowTransactionsWorkspace, allowTransactionsWorkspaceMetadata, allowUsersToAccessDirectory, allowUsersToAccessDirectoryMetadata, allowValueInsights, allowValueInsightsMetadata, allowWebForms, allowWebFormsMetadata, allowWhatsAppDelivery, allowWhatsAppDeliveryMetadata, anchorPopulationScope, anchorPopulationScopeMetadata, anchorTagVersionedPlacementEnabled, anchorTagVersionedPlacementMetadataEnabled, attachCompletedEnvelope, attachCompletedEnvelopeMetadata, authenticationCheck, authenticationCheckMetadata, autoNavRule, autoNavRuleMetadata, autoProvisionSignerAccount, autoProvisionSignerAccountMetadata, bccEmailArchive, bccEmailArchiveMetadata, betaSwitchConfiguration, betaSwitchConfigurationMetadata, billingAddress, billingAddressMetadata, bulkSend, bulkSendActionResendLimit, bulkSendMaxCopiesInBatch, bulkSendMaxUnprocessedEnvelopesCount, bulkSendMetadata, canSelfBrandSend, canSelfBrandSendMetadata, canSelfBrandSign, canSelfBrandSignMetadata, canUseSalesforceOAuth, canUseSalesforceOAuthMetadata, captureVoiceRecording, captureVoiceRecordingMetadata, cfr21SimplifiedSigningEnabled, cfr21SimplifiedSigningEnabledMetadata, cfrUseWideImage, cfrUseWideImageMetadata, checkForMultipleAdminsOnAccount, checkForMultipleAdminsOnAccountMetadata, chromeSignatureEnabled, chromeSignatureEnabledMetadata, commentEmailShowMessageText, commentEmailShowMessageTextMetadata, commentsAllowEnvelopeOverride, commentsAllowEnvelopeOverrideMetadata, conditionalFieldsEnabled, conditionalFieldsEnabledMetadata, consumerDisclosureFrequency, consumerDisclosureFrequencyMetadata, convertPdfFields, convertPdfFieldsMetadata, dataPopulationScope, dataPopulationScopeMetadata, disableAutoTemplateMatching, disableAutoTemplateMatchingMetadata, disableMobileApp, disableMobileAppMetadata, disableMobilePushNotifications, disableMobilePushNotificationsMetadata, disableMobileSending, disableMobileSendingMetadata, disableMultipleSessions, disableMultipleSessionsMetadata, disablePurgeNotificationsForSenderMetadata, disableSignerCertView, disableSignerCertViewMetadata, disableSignerHistoryView, disableSignerHistoryViewMetadata, disableStyleSignature, disableStyleSignatureMetadata, disableUploadSignature, disableUploadSignatureMetadata, disableUserSharing, disableUserSharingMetadata, displayBetaSwitch, displayBetaSwitchMetadata, documentConversionRestrictions, documentConversionRestrictionsMetadata, documentRetention, documentRetentionMetadata, documentRetentionPurgeTabs, documentVisibility, documentVisibilityMetadata, dssEnableProvisioningPenConfigurationRadminOption, dssSIGN28411EnableLeavePagePromptRadminOption, dssSIGN29182SlideUpBarRadminOption, emailTemplateVersion, emailTemplateVersionMetadata, enableAccessCodeGenerator, enableAccessCodeGeneratorMetadata, enableAdmHealthcare, enableAdmHealthcareMetadata, enableAdvancedPayments, enableAdvancedPaymentsMetadata, enableAdvancedPowerForms, enableAdvancedPowerFormsMetadata, enableAgreementActionsForCLM, enableAgreementActionsForCLMMetadata, enableAgreementActionsForESign, enableAgreementActionsForESignMetadata, enableAutoNav, enableAutoNavMetadata, enableBccDummyLink, enableBccDummyLinkMetadata, enableCalculatedFields, enableCalculatedFieldsMetadata, enableClickPlus, enableClickPlusConditionalContent, enableClickPlusConditionalContentMetaData, enableClickPlusCustomFields, enableClickPlusCustomFieldsMetaData, enableClickPlusCustomStyle, enableClickPlusCustomStyleMetaData, enableClickPlusDynamicContent, enableClickPlusDynamicContentMetaData, enableClickPlusMetaData, enableClickwraps, enableClickwrapsMetadata, enableCombinedPDFDownloadForSBS, enableCommentsHistoryDownloadInSigning, enableCommentsHistoryDownloadInSigningMetadata, enableContactSuggestions, enableContactSuggestionsMetadata, enableCustomerSatisfactionMetricTracking, enableCustomerSatisfactionMetricTrackingMetadata, enableDSPro, enableDSProMetadata, enableEnforceTlsEmailsSettingMetadata, enableEnvelopeStampingByAccountAdmin, enableEnvelopeStampingByAccountAdminMetadata, enableEnvelopeStampingByDSAdmin, enableEnvelopeStampingByDSAdminMetadata, enableESignAPIHourlyLimitManagement, enableESignAPIHourlyLimitManagementMetadata, enableEsignCommunities, enableEsignCommunitiesMetadata, enableIDFxAccountlessSMSAuthForPart11, enableIDFxAccountlessSMSAuthForPart11Metadata, enableIDFxIntuitKBA, enableIDFxIntuitKBAMetadata, enableIDFxPhoneAuthentication, enableIDFxPhoneAuthenticationMetadata, enableIdfxPhoneAuthSignatureAuthStatus, enableIdfxPhoneAuthSignatureAuthStatusMetadata, enableInBrowserEditor, enableInBrowserEditorMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableParticipantRecipientSettingMetadata, enablePaymentProcessing, enablePaymentProcessingMetadata, enablePDFAConversion, enablePDFAConversionMetadata, enablePowerForm, enablePowerFormDirect, enablePowerFormDirectMetadata, enablePowerFormMetadata, enableRecipientDomainValidation, enableRecipientDomainValidationMetadata, enableRecipientMayProvidePhoneNumber, enableRecipientMayProvidePhoneNumberMetadata, enableReportLinks, enableReportLinksMetadata, enableRequireSignOnPaper, enableRequireSignOnPaperMetadata, enableReservedDomain, enableReservedDomainMetadata, enableResponsiveSigning, enableResponsiveSigningMetadata, enableScheduledRelease, enableScheduledReleaseMetadata, enableSearch, enableSearchMetadata, enableSearchSiteSpecificApi, enableSearchSiteSpecificApiMetadata, enableSearchUI, enableSearchUIMetadata, enableSendingTagsFontSettings, enableSendingTagsFontSettingsMetadata, enableSendToAgent, enableSendToAgentMetadata, enableSendToIntermediary, enableSendToIntermediaryMetadata, enableSendToManage, enableSendToManageMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSigningExtensionComments, enableSigningExtensionCommentsMetadata, enableSigningExtensionConversations, enableSigningExtensionConversationsMetadata, enableSigningOrderSettingsForAccount, enableSigningOrderSettingsForAccountMetadata, enableSignOnPaper, enableSignOnPaperMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableSignWithNotary, enableSignWithNotaryMetadata, enableSmartContracts, enableSmartContractsMetadata, enableSMSAuthentication, enableSMSAuthenticationMetadata, enableSMSDeliveryAdditionalNotification, enableSMSDeliveryAdditionalNotificationMetadata, enableSMSDeliveryPrimary, enableSocialIdLogin, enableSocialIdLoginMetadata, enableStrikeThrough, enableStrikeThroughMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, enableWitnessing, enableWitnessingMetadata, enforceTemplateNameUniqueness, enforceTemplateNameUniquenessMetadata, enforceTlsEmails, enforceTlsEmailsMetadata, envelopeIntegrationAllowed, envelopeIntegrationAllowedMetadata, envelopeIntegrationEnabled, envelopeIntegrationEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMB, envelopeLimitsTotalDocumentSizeAllowedInMBEnabled, envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMBMetadata, envelopeSearchMode, envelopeSearchModeMetadata, envelopeStampingDefaultValue, envelopeStampingDefaultValueMetadata, exitPrompt, exitPromptMetadata, expressSend, expressSendAllowTabs, expressSendAllowTabsMetadata, expressSendMetadata, externalDocumentSources, externalSignaturePadType, externalSignaturePadTypeMetadata, faxOutEnabled, faxOutEnabledMetadata, finishReminder, finishReminderMetadata, guidedFormsHtmlAllowed, guidedFormsHtmlAllowedMetadata, guidedFormsHtmlConversionPolicy, guidedFormsHtmlConversionPolicyMetadata, hasRecipientConnectClaimedDomain, hideAccountAddressInCoC, hideAccountAddressInCoCMetadata, hidePricing, hidePricingMetadata, idCheckConfigurations, idCheckExpire, idCheckExpireDays, idCheckExpireDaysMetadata, idCheckExpireMetadata, idCheckExpireMinutes, idCheckExpireMinutesMetadata, idCheckRequired, idCheckRequiredMetadata, identityVerification, identityVerificationMetadata, idfxKBAAuthenticationOverride, idfxKBAAuthenticationOverrideMetadata, idfxPhoneAuthenticationOverride, idfxPhoneAuthenticationOverrideMetadata, ignoreErrorIfAnchorTabNotFound, ignoreErrorIfAnchorTabNotFoundMetadataEnabled, inPersonIDCheckQuestion, inPersonIDCheckQuestionMetadata, inPersonSigningEnabled, inPersonSigningEnabledMetadata, inSessionEnabled, inSessionEnabledMetadata, inSessionSuppressEmails, inSessionSuppressEmailsMetadata, isConnectDocumentFieldsEnabled, linkedExternalPrimaryAccounts, maximumSigningGroups, maximumSigningGroupsMetadata, maximumUsersPerSigningGroup, maximumUsersPerSigningGroupMetadata, maxNumberOfCustomStamps, mergeMixedModeResults, mergeMixedModeResultsMetadata, mobileSessionTimeout, mobileSessionTimeoutMetadata, numberOfActiveCustomStamps, optInMobileSigningV02, optInMobileSigningV02Metadata, optInUniversalSignatures, optOutAutoNavTextAndTabColorUpdates, optOutAutoNavTextAndTabColorUpdatesMetadata, optOutNewPlatformSeal, optOutNewPlatformSealPlatformMetadata, pdfMaxChunkedUploadPartSize, pdfMaxChunkedUploadPartSizeMetadata, pdfMaxChunkedUploadTotalSize, pdfMaxChunkedUploadTotalSizeMetadata, pdfMaxIndividualUploadSize, pdfMaxIndividualUploadSizeMetadata, phoneAuthRecipientMayProvidePhoneNumber, phoneAuthRecipientMayProvidePhoneNumberMetadata, pkiSignDownloadedPDFDocs, pkiSignDownloadedPDFDocsMetadata, readOnlyMode, readOnlyModeMetadata, recipientsCanSignOffline, recipientsCanSignOfflineMetadata, recipientSigningAutoNavigationControl, recipientSigningAutoNavigationControlMetadata, require21CFRpt11Compliance, require21CFRpt11ComplianceMetadata, requireDeclineReason, requireDeclineReasonMetadata, requireExternalUserManagement, requireExternalUserManagementMetadata, requireSignerCertificateType, requireSignerCertificateTypeMetadata, rsaVeridAccountName, rsaVeridPassword, rsaVeridRuleset, rsaVeridUserId, sbsTransactionLevel, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, selfSignedRecipientEmailDocumentUserOverride, selfSignedRecipientEmailDocumentUserOverrideMetadata, senderCanSignInEachLocation, senderCanSignInEachLocationMetadata, senderMustAuthenticateSigning, senderMustAuthenticateSigningMetadata, sendingTagsFontColor, sendingTagsFontColorMetadata, sendingTagsFontName, sendingTagsFontNameMetadata, sendingTagsFontSize, sendingTagsFontSizeMetadata, sendLockoutRecipientNotification, sendLockoutRecipientNotificationMetadata, sendToCertifiedDeliveryEnabled, sendToCertifiedDeliveryEnabledMetadata, sessionTimeout, sessionTimeoutMetadata, setRecipEmailLang, setRecipEmailLangMetadata, setRecipSignLang, setRecipSignLangMetadata, sharedTemplateFolders, sharedTemplateFoldersMetadata, showCompleteDialogInEmbeddedSession, showCompleteDialogInEmbeddedSessionMetadata, showConditionalRoutingOnSend, showConditionalRoutingOnSendMetadata, showInitialConditionalFields, showInitialConditionalFieldsMetadata, showLocalizedWatermarks, showLocalizedWatermarksMetadata, showMaskedFieldsWhenDownloadingDocumentAsSender, showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata, showTutorials, showTutorialsMetadata, signatureProviders, signatureProvidersMetadata, signDateFormat, signDateFormatMetadata, signDateTimeAccountLanguageOverride, signDateTimeAccountLanguageOverrideMetadata, signDateTimeAccountTimezoneOverride, signDateTimeAccountTimezoneOverrideMetadata, signerAttachCertificateToEnvelopePDF, signerAttachCertificateToEnvelopePDFMetadata, signerAttachConcat, signerAttachConcatMetadata, signerCanCreateAccount, signerCanCreateAccountMetadata, signerCanSignOnMobile, signerCanSignOnMobileMetadata, signerInSessionUseEnvelopeCompleteEmail, signerInSessionUseEnvelopeCompleteEmailMetadata, signerLoginRequirements, signerLoginRequirementsMetadata, signerMustHaveAccount, signerMustHaveAccountMetadata, signerMustLoginToSign, signerMustLoginToSignMetadata, signerShowSecureFieldInitialValues, signerShowSecureFieldInitialValuesMetadata, signingSessionTimeout, signingSessionTimeoutMetadata, signingUiVersion, signingUiVersionMetadata, signTimeFormat, signTimeFormatMetadata, signTimeShowAmPm, signTimeShowAmPmMetadata, simplifiedSendingEnabled, simplifiedSendingEnabledMetadata, singleSignOnEnabled, singleSignOnEnabledMetadata, skipAuthCompletedEnvelopes, skipAuthCompletedEnvelopesMetadata, socialIdRecipAuth, socialIdRecipAuthMetadata, specifyDocumentVisibility, specifyDocumentVisibilityMetadata, startInAdvancedCorrect, startInAdvancedCorrectMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, suppressCertificateEnforcement, suppressCertificateEnforcementMetadata, tabAccountSettings, timezoneOffsetAPI, timezoneOffsetAPIMetadata, timezoneOffsetUI, timezoneOffsetUIMetadata, universalSignatureOptIn, useAccountLevelEmail, useAccountLevelEmailMetadata, useConsumerDisclosure, useConsumerDisclosureMetadata, useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, useDerivedKeys, useDerivedKeysMetadata, useDocuSignExpressSignerCertificate, useDocuSignExpressSignerCertificateMetadata, useEnvelopeSearchMixedMode, useEnvelopeSearchMixedModeMetadata, useMultiAppGroupsData, useMultiAppGroupsDataMetadata, useNewBlobForPdf, useNewBlobForPdfMetadata, useNewEnvelopeSearch, useNewEnvelopeSearchMetadata, useSAFESignerCertificates, useSAFESignerCertificatesMetadata, usesAPI, usesAPIMetadata, useSignatureProviderPlatform, useSignatureProviderPlatformMetadata, useSmartContractsV1, validationsAllowed, validationsAllowedMetadata, validationsBrand, validationsBrandMetadata, validationsCadence, validationsCadenceMetadata, validationsEnabled, validationsEnabledMetadata, validationsReport, validationsReportMetadata, waterMarkEnabled, waterMarkEnabledMetadata, writeReminderToEnvelopeHistory, writeReminderToEnvelopeHistoryMetadata, wurflMinAllowableScreenSize, wurflMinAllowableScreenSizeMetadata);
   }
+
 
   /**
    * Converts the given object to string.
@@ -21892,14 +21004,12 @@ public class AccountSettingsInformation {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountSettingsInformation {\n");
-
+    
     sb.append("    accessCodeFormat: ").append(toIndentedString(accessCodeFormat)).append("\n");
     sb.append("    accountDateTimeFormat: ").append(toIndentedString(accountDateTimeFormat)).append("\n");
-    sb.append("    accountDateTimeFormatMetadata: ").append(toIndentedString(accountDateTimeFormatMetadata))
-        .append("\n");
+    sb.append("    accountDateTimeFormatMetadata: ").append(toIndentedString(accountDateTimeFormatMetadata)).append("\n");
     sb.append("    accountDefaultLanguage: ").append(toIndentedString(accountDefaultLanguage)).append("\n");
-    sb.append("    accountDefaultLanguageMetadata: ").append(toIndentedString(accountDefaultLanguageMetadata))
-        .append("\n");
+    sb.append("    accountDefaultLanguageMetadata: ").append(toIndentedString(accountDefaultLanguageMetadata)).append("\n");
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    accountNameMetadata: ").append(toIndentedString(accountNameMetadata)).append("\n");
     sb.append("    accountNotification: ").append(toIndentedString(accountNotification)).append("\n");
@@ -21909,29 +21019,19 @@ public class AccountSettingsInformation {
     sb.append("    advancedCorrect: ").append(toIndentedString(advancedCorrect)).append("\n");
     sb.append("    advancedCorrectMetadata: ").append(toIndentedString(advancedCorrectMetadata)).append("\n");
     sb.append("    allowAccessCodeFormat: ").append(toIndentedString(allowAccessCodeFormat)).append("\n");
-    sb.append("    allowAccessCodeFormatMetadata: ").append(toIndentedString(allowAccessCodeFormatMetadata))
-        .append("\n");
-    sb.append("    allowAccountManagementGranular: ").append(toIndentedString(allowAccountManagementGranular))
-        .append("\n");
-    sb.append("    allowAccountManagementGranularMetadata: ")
-        .append(toIndentedString(allowAccountManagementGranularMetadata)).append("\n");
+    sb.append("    allowAccessCodeFormatMetadata: ").append(toIndentedString(allowAccessCodeFormatMetadata)).append("\n");
+    sb.append("    allowAccountManagementGranular: ").append(toIndentedString(allowAccountManagementGranular)).append("\n");
+    sb.append("    allowAccountManagementGranularMetadata: ").append(toIndentedString(allowAccountManagementGranularMetadata)).append("\n");
     sb.append("    allowAccountMemberNameChange: ").append(toIndentedString(allowAccountMemberNameChange)).append("\n");
-    sb.append("    allowAccountMemberNameChangeMetadata: ")
-        .append(toIndentedString(allowAccountMemberNameChangeMetadata)).append("\n");
-    sb.append("    allowAdvancedRecipientRoutingConditional: ")
-        .append(toIndentedString(allowAdvancedRecipientRoutingConditional)).append("\n");
-    sb.append("    allowAdvancedRecipientRoutingConditionalMetadata: ")
-        .append(toIndentedString(allowAdvancedRecipientRoutingConditionalMetadata)).append("\n");
+    sb.append("    allowAccountMemberNameChangeMetadata: ").append(toIndentedString(allowAccountMemberNameChangeMetadata)).append("\n");
+    sb.append("    allowAdvancedRecipientRoutingConditional: ").append(toIndentedString(allowAdvancedRecipientRoutingConditional)).append("\n");
+    sb.append("    allowAdvancedRecipientRoutingConditionalMetadata: ").append(toIndentedString(allowAdvancedRecipientRoutingConditionalMetadata)).append("\n");
     sb.append("    allowAgentNameEmailEdit: ").append(toIndentedString(allowAgentNameEmailEdit)).append("\n");
-    sb.append("    allowAgentNameEmailEditMetadata: ").append(toIndentedString(allowAgentNameEmailEditMetadata))
-        .append("\n");
+    sb.append("    allowAgentNameEmailEditMetadata: ").append(toIndentedString(allowAgentNameEmailEditMetadata)).append("\n");
     sb.append("    allowAgreementActions: ").append(toIndentedString(allowAgreementActions)).append("\n");
-    sb.append("    allowAgreementActionsMetadata: ").append(toIndentedString(allowAgreementActionsMetadata))
-        .append("\n");
-    sb.append("    allowAgreementOrchestrationWorkflows: ")
-        .append(toIndentedString(allowAgreementOrchestrationWorkflows)).append("\n");
-    sb.append("    allowAgreementOrchestrationWorkflowsMetadata: ")
-        .append(toIndentedString(allowAgreementOrchestrationWorkflowsMetadata)).append("\n");
+    sb.append("    allowAgreementActionsMetadata: ").append(toIndentedString(allowAgreementActionsMetadata)).append("\n");
+    sb.append("    allowAgreementOrchestrationWorkflows: ").append(toIndentedString(allowAgreementOrchestrationWorkflows)).append("\n");
+    sb.append("    allowAgreementOrchestrationWorkflowsMetadata: ").append(toIndentedString(allowAgreementOrchestrationWorkflowsMetadata)).append("\n");
     sb.append("    allowAutoNavSettings: ").append(toIndentedString(allowAutoNavSettings)).append("\n");
     sb.append("    allowAutoNavSettingsMetadata: ").append(toIndentedString(allowAutoNavSettingsMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
@@ -21940,36 +21040,29 @@ public class AccountSettingsInformation {
     sb.append("    allowBulkSendMetadata: ").append(toIndentedString(allowBulkSendMetadata)).append("\n");
     sb.append("    allowCDWithdraw: ").append(toIndentedString(allowCDWithdraw)).append("\n");
     sb.append("    allowCDWithdrawMetadata: ").append(toIndentedString(allowCDWithdrawMetadata)).append("\n");
-    sb.append("    allowConnectHttpListenerConfigs: ").append(toIndentedString(allowConnectHttpListenerConfigs))
-        .append("\n");
+    sb.append("    allowConnectHttpListenerConfigs: ").append(toIndentedString(allowConnectHttpListenerConfigs)).append("\n");
     sb.append("    allowConnectOAuthUI: ").append(toIndentedString(allowConnectOAuthUI)).append("\n");
     sb.append("    allowConnectSendFinishLater: ").append(toIndentedString(allowConnectSendFinishLater)).append("\n");
-    sb.append("    allowConnectSendFinishLaterMetadata: ").append(toIndentedString(allowConnectSendFinishLaterMetadata))
-        .append("\n");
+    sb.append("    allowConnectSendFinishLaterMetadata: ").append(toIndentedString(allowConnectSendFinishLaterMetadata)).append("\n");
     sb.append("    allowConnectUnifiedPayloadUI: ").append(toIndentedString(allowConnectUnifiedPayloadUI)).append("\n");
-    sb.append("    allowConsumerDisclosureOverride: ").append(toIndentedString(allowConsumerDisclosureOverride))
-        .append("\n");
-    sb.append("    allowConsumerDisclosureOverrideMetadata: ")
-        .append(toIndentedString(allowConsumerDisclosureOverrideMetadata)).append("\n");
+    sb.append("    allowConsumerDisclosureOverride: ").append(toIndentedString(allowConsumerDisclosureOverride)).append("\n");
+    sb.append("    allowConsumerDisclosureOverrideMetadata: ").append(toIndentedString(allowConsumerDisclosureOverrideMetadata)).append("\n");
     sb.append("    allowDataDownload: ").append(toIndentedString(allowDataDownload)).append("\n");
     sb.append("    allowDataDownloadMetadata: ").append(toIndentedString(allowDataDownloadMetadata)).append("\n");
     sb.append("    allowDelayedRouting: ").append(toIndentedString(allowDelayedRouting)).append("\n");
     sb.append("    allowDelayedRoutingMetadata: ").append(toIndentedString(allowDelayedRoutingMetadata)).append("\n");
     sb.append("    allowDelegatedSigning: ").append(toIndentedString(allowDelegatedSigning)).append("\n");
-    sb.append("    allowDelegatedSigningMetadata: ").append(toIndentedString(allowDelegatedSigningMetadata))
-        .append("\n");
+    sb.append("    allowDelegatedSigningMetadata: ").append(toIndentedString(allowDelegatedSigningMetadata)).append("\n");
     sb.append("    allowDocGenDocuments: ").append(toIndentedString(allowDocGenDocuments)).append("\n");
     sb.append("    allowDocGenDocumentsMetadata: ").append(toIndentedString(allowDocGenDocumentsMetadata)).append("\n");
     sb.append("    allowDocumentDisclosures: ").append(toIndentedString(allowDocumentDisclosures)).append("\n");
-    sb.append("    allowDocumentDisclosuresMetadata: ").append(toIndentedString(allowDocumentDisclosuresMetadata))
-        .append("\n");
-    sb.append("    allowDocumentsOnSignedEnvelopes: ").append(toIndentedString(allowDocumentsOnSignedEnvelopes))
-        .append("\n");
-    sb.append("    allowDocumentsOnSignedEnvelopesMetadata: ")
-        .append(toIndentedString(allowDocumentsOnSignedEnvelopesMetadata)).append("\n");
+    sb.append("    allowDocumentDisclosuresMetadata: ").append(toIndentedString(allowDocumentDisclosuresMetadata)).append("\n");
+    sb.append("    allowDocumentsOnSignedEnvelopes: ").append(toIndentedString(allowDocumentsOnSignedEnvelopes)).append("\n");
+    sb.append("    allowDocumentsOnSignedEnvelopesMetadata: ").append(toIndentedString(allowDocumentsOnSignedEnvelopesMetadata)).append("\n");
     sb.append("    allowDocumentVisibility: ").append(toIndentedString(allowDocumentVisibility)).append("\n");
-    sb.append("    allowDocumentVisibilityMetadata: ").append(toIndentedString(allowDocumentVisibilityMetadata))
-        .append("\n");
+    sb.append("    allowDocumentVisibilityMetadata: ").append(toIndentedString(allowDocumentVisibilityMetadata)).append("\n");
+    sb.append("    allowEditingEnvelopesOnBehalfOfOthers: ").append(toIndentedString(allowEditingEnvelopesOnBehalfOfOthers)).append("\n");
+    sb.append("    allowEditingEnvelopesOnBehalfOfOthersMetadata: ").append(toIndentedString(allowEditingEnvelopesOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowEHankoStamps: ").append(toIndentedString(allowEHankoStamps)).append("\n");
     sb.append("    allowEHankoStampsMetadata: ").append(toIndentedString(allowEHankoStampsMetadata)).append("\n");
     sb.append("    allowENoteEOriginal: ").append(toIndentedString(allowENoteEOriginal)).append("\n");
@@ -21977,38 +21070,25 @@ public class AccountSettingsInformation {
     sb.append("    allowEnvelopeCorrect: ").append(toIndentedString(allowEnvelopeCorrect)).append("\n");
     sb.append("    allowEnvelopeCorrectMetadata: ").append(toIndentedString(allowEnvelopeCorrectMetadata)).append("\n");
     sb.append("    allowEnvelopeCustodyTransfer: ").append(toIndentedString(allowEnvelopeCustodyTransfer)).append("\n");
-    sb.append("    allowEnvelopeCustodyTransferMetadata: ")
-        .append(toIndentedString(allowEnvelopeCustodyTransferMetadata)).append("\n");
+    sb.append("    allowEnvelopeCustodyTransferMetadata: ").append(toIndentedString(allowEnvelopeCustodyTransferMetadata)).append("\n");
     sb.append("    allowEnvelopeCustomFields: ").append(toIndentedString(allowEnvelopeCustomFields)).append("\n");
-    sb.append("    allowEnvelopeCustomFieldsMetadata: ").append(toIndentedString(allowEnvelopeCustomFieldsMetadata))
-        .append("\n");
-    sb.append("    allowEnvelopePublishReporting: ").append(toIndentedString(allowEnvelopePublishReporting))
-        .append("\n");
-    sb.append("    allowEnvelopePublishReportingMetadata: ")
-        .append(toIndentedString(allowEnvelopePublishReportingMetadata)).append("\n");
+    sb.append("    allowEnvelopeCustomFieldsMetadata: ").append(toIndentedString(allowEnvelopeCustomFieldsMetadata)).append("\n");
+    sb.append("    allowEnvelopePublishReporting: ").append(toIndentedString(allowEnvelopePublishReporting)).append("\n");
+    sb.append("    allowEnvelopePublishReportingMetadata: ").append(toIndentedString(allowEnvelopePublishReportingMetadata)).append("\n");
     sb.append("    allowEnvelopeReporting: ").append(toIndentedString(allowEnvelopeReporting)).append("\n");
-    sb.append("    allowEnvelopeReportingMetadata: ").append(toIndentedString(allowEnvelopeReportingMetadata))
-        .append("\n");
+    sb.append("    allowEnvelopeReportingMetadata: ").append(toIndentedString(allowEnvelopeReportingMetadata)).append("\n");
     sb.append("    allowExpression: ").append(toIndentedString(allowExpression)).append("\n");
     sb.append("    allowExpressionMetadata: ").append(toIndentedString(allowExpressionMetadata)).append("\n");
-    sb.append("    allowExpressSignerCertificate: ").append(toIndentedString(allowExpressSignerCertificate))
-        .append("\n");
-    sb.append("    allowExpressSignerCertificateMetadata: ")
-        .append(toIndentedString(allowExpressSignerCertificateMetadata)).append("\n");
-    sb.append("    allowExtendedSendingResourceFile: ").append(toIndentedString(allowExtendedSendingResourceFile))
-        .append("\n");
-    sb.append("    allowExtendedSendingResourceFileMetadata: ")
-        .append(toIndentedString(allowExtendedSendingResourceFileMetadata)).append("\n");
+    sb.append("    allowExpressSignerCertificate: ").append(toIndentedString(allowExpressSignerCertificate)).append("\n");
+    sb.append("    allowExpressSignerCertificateMetadata: ").append(toIndentedString(allowExpressSignerCertificateMetadata)).append("\n");
+    sb.append("    allowExtendedSendingResourceFile: ").append(toIndentedString(allowExtendedSendingResourceFile)).append("\n");
+    sb.append("    allowExtendedSendingResourceFileMetadata: ").append(toIndentedString(allowExtendedSendingResourceFileMetadata)).append("\n");
     sb.append("    allowExternalLinkedAccounts: ").append(toIndentedString(allowExternalLinkedAccounts)).append("\n");
-    sb.append("    allowExternalLinkedAccountsMetadata: ").append(toIndentedString(allowExternalLinkedAccountsMetadata))
-        .append("\n");
+    sb.append("    allowExternalLinkedAccountsMetadata: ").append(toIndentedString(allowExternalLinkedAccountsMetadata)).append("\n");
     sb.append("    allowExternalSignaturePad: ").append(toIndentedString(allowExternalSignaturePad)).append("\n");
-    sb.append("    allowExternalSignaturePadMetadata: ").append(toIndentedString(allowExternalSignaturePadMetadata))
-        .append("\n");
-    sb.append("    allowIDVForEUQualifiedSignatures: ").append(toIndentedString(allowIDVForEUQualifiedSignatures))
-        .append("\n");
-    sb.append("    allowIDVForEUQualifiedSignaturesMetadata: ")
-        .append(toIndentedString(allowIDVForEUQualifiedSignaturesMetadata)).append("\n");
+    sb.append("    allowExternalSignaturePadMetadata: ").append(toIndentedString(allowExternalSignaturePadMetadata)).append("\n");
+    sb.append("    allowIDVForEUQualifiedSignatures: ").append(toIndentedString(allowIDVForEUQualifiedSignatures)).append("\n");
+    sb.append("    allowIDVForEUQualifiedSignaturesMetadata: ").append(toIndentedString(allowIDVForEUQualifiedSignaturesMetadata)).append("\n");
     sb.append("    allowIDVLevel1: ").append(toIndentedString(allowIDVLevel1)).append("\n");
     sb.append("    allowIDVLevel1Metadata: ").append(toIndentedString(allowIDVLevel1Metadata)).append("\n");
     sb.append("    allowIDVLevel2: ").append(toIndentedString(allowIDVLevel2)).append("\n");
@@ -22018,17 +21098,13 @@ public class AccountSettingsInformation {
     sb.append("    allowIDVPlatform: ").append(toIndentedString(allowIDVPlatform)).append("\n");
     sb.append("    allowIDVPlatformMetadata: ").append(toIndentedString(allowIDVPlatformMetadata)).append("\n");
     sb.append("    allowInPerson: ").append(toIndentedString(allowInPerson)).append("\n");
-    sb.append("    allowInPersonElectronicNotary: ").append(toIndentedString(allowInPersonElectronicNotary))
-        .append("\n");
-    sb.append("    allowInPersonElectronicNotaryMetadata: ")
-        .append(toIndentedString(allowInPersonElectronicNotaryMetadata)).append("\n");
+    sb.append("    allowInPersonElectronicNotary: ").append(toIndentedString(allowInPersonElectronicNotary)).append("\n");
+    sb.append("    allowInPersonElectronicNotaryMetadata: ").append(toIndentedString(allowInPersonElectronicNotaryMetadata)).append("\n");
     sb.append("    allowInPersonMetadata: ").append(toIndentedString(allowInPersonMetadata)).append("\n");
     sb.append("    allowManagedStamps: ").append(toIndentedString(allowManagedStamps)).append("\n");
     sb.append("    allowManagedStampsMetadata: ").append(toIndentedString(allowManagedStampsMetadata)).append("\n");
-    sb.append("    allowManagingEnvelopesOnBehalfOfOthers: ")
-        .append(toIndentedString(allowManagingEnvelopesOnBehalfOfOthers)).append("\n");
-    sb.append("    allowManagingEnvelopesOnBehalfOfOthersMetadata: ")
-        .append(toIndentedString(allowManagingEnvelopesOnBehalfOfOthersMetadata)).append("\n");
+    sb.append("    allowManagingEnvelopesOnBehalfOfOthers: ").append(toIndentedString(allowManagingEnvelopesOnBehalfOfOthers)).append("\n");
+    sb.append("    allowManagingEnvelopesOnBehalfOfOthersMetadata: ").append(toIndentedString(allowManagingEnvelopesOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowMarkup: ").append(toIndentedString(allowMarkup)).append("\n");
     sb.append("    allowMarkupMetadata: ").append(toIndentedString(allowMarkupMetadata)).append("\n");
     sb.append("    allowMemberTimeZone: ").append(toIndentedString(allowMemberTimeZone)).append("\n");
@@ -22036,127 +21112,85 @@ public class AccountSettingsInformation {
     sb.append("    allowMergeFields: ").append(toIndentedString(allowMergeFields)).append("\n");
     sb.append("    allowMergeFieldsMetadata: ").append(toIndentedString(allowMergeFieldsMetadata)).append("\n");
     sb.append("    allowMultipleBrandProfiles: ").append(toIndentedString(allowMultipleBrandProfiles)).append("\n");
-    sb.append("    allowMultipleBrandProfilesMetadata: ").append(toIndentedString(allowMultipleBrandProfilesMetadata))
-        .append("\n");
-    sb.append("    allowMultipleSignerAttachments: ").append(toIndentedString(allowMultipleSignerAttachments))
-        .append("\n");
-    sb.append("    allowMultipleSignerAttachmentsMetadata: ")
-        .append(toIndentedString(allowMultipleSignerAttachmentsMetadata)).append("\n");
+    sb.append("    allowMultipleBrandProfilesMetadata: ").append(toIndentedString(allowMultipleBrandProfilesMetadata)).append("\n");
+    sb.append("    allowMultipleSignerAttachments: ").append(toIndentedString(allowMultipleSignerAttachments)).append("\n");
+    sb.append("    allowMultipleSignerAttachmentsMetadata: ").append(toIndentedString(allowMultipleSignerAttachmentsMetadata)).append("\n");
     sb.append("    allowNonUSPhoneAuth: ").append(toIndentedString(allowNonUSPhoneAuth)).append("\n");
     sb.append("    allowNonUSPhoneAuthMetadata: ").append(toIndentedString(allowNonUSPhoneAuthMetadata)).append("\n");
     sb.append("    allowOcrOfEnvelopeDocuments: ").append(toIndentedString(allowOcrOfEnvelopeDocuments)).append("\n");
-    sb.append("    allowOcrOfEnvelopeDocumentsMetadata: ").append(toIndentedString(allowOcrOfEnvelopeDocumentsMetadata))
-        .append("\n");
+    sb.append("    allowOcrOfEnvelopeDocumentsMetadata: ").append(toIndentedString(allowOcrOfEnvelopeDocumentsMetadata)).append("\n");
     sb.append("    allowOfflineSigning: ").append(toIndentedString(allowOfflineSigning)).append("\n");
     sb.append("    allowOfflineSigningMetadata: ").append(toIndentedString(allowOfflineSigningMetadata)).append("\n");
-    sb.append("    allowOpenTrustSignerCertificate: ").append(toIndentedString(allowOpenTrustSignerCertificate))
-        .append("\n");
-    sb.append("    allowOpenTrustSignerCertificateMetadata: ")
-        .append(toIndentedString(allowOpenTrustSignerCertificateMetadata)).append("\n");
-    sb.append("    allowOrganizationDocusignMonitor: ").append(toIndentedString(allowOrganizationDocusignMonitor))
-        .append("\n");
-    sb.append("    allowOrganizationDocusignMonitorMetadata: ")
-        .append(toIndentedString(allowOrganizationDocusignMonitorMetadata)).append("\n");
-    sb.append("    allowOrganizationDomainUserManagement: ")
-        .append(toIndentedString(allowOrganizationDomainUserManagement)).append("\n");
-    sb.append("    allowOrganizationDomainUserManagementMetadata: ")
-        .append(toIndentedString(allowOrganizationDomainUserManagementMetadata)).append("\n");
+    sb.append("    allowOpenTrustSignerCertificate: ").append(toIndentedString(allowOpenTrustSignerCertificate)).append("\n");
+    sb.append("    allowOpenTrustSignerCertificateMetadata: ").append(toIndentedString(allowOpenTrustSignerCertificateMetadata)).append("\n");
+    sb.append("    allowOrganizationDocusignMonitor: ").append(toIndentedString(allowOrganizationDocusignMonitor)).append("\n");
+    sb.append("    allowOrganizationDocusignMonitorMetadata: ").append(toIndentedString(allowOrganizationDocusignMonitorMetadata)).append("\n");
+    sb.append("    allowOrganizationDomainUserManagement: ").append(toIndentedString(allowOrganizationDomainUserManagement)).append("\n");
+    sb.append("    allowOrganizationDomainUserManagementMetadata: ").append(toIndentedString(allowOrganizationDomainUserManagementMetadata)).append("\n");
     sb.append("    allowOrganizations: ").append(toIndentedString(allowOrganizations)).append("\n");
     sb.append("    allowOrganizationsMetadata: ").append(toIndentedString(allowOrganizationsMetadata)).append("\n");
-    sb.append("    allowOrganizationSsoManagement: ").append(toIndentedString(allowOrganizationSsoManagement))
-        .append("\n");
-    sb.append("    allowOrganizationSsoManagementMetadata: ")
-        .append(toIndentedString(allowOrganizationSsoManagementMetadata)).append("\n");
-    sb.append("    allowOrganizationToUseInPersonElectronicNotary: ")
-        .append(toIndentedString(allowOrganizationToUseInPersonElectronicNotary)).append("\n");
-    sb.append("    allowOrganizationToUseInPersonElectronicNotaryMetadata: ")
-        .append(toIndentedString(allowOrganizationToUseInPersonElectronicNotaryMetadata)).append("\n");
-    sb.append("    allowOrganizationToUseRemoteNotary: ").append(toIndentedString(allowOrganizationToUseRemoteNotary))
-        .append("\n");
-    sb.append("    allowOrganizationToUseRemoteNotaryMetadata: ")
-        .append(toIndentedString(allowOrganizationToUseRemoteNotaryMetadata)).append("\n");
-    sb.append("    allowOrganizationToUseThirdPartyElectronicNotary: ")
-        .append(toIndentedString(allowOrganizationToUseThirdPartyElectronicNotary)).append("\n");
-    sb.append("    allowOrganizationToUseThirdPartyElectronicNotaryMetadata: ")
-        .append(toIndentedString(allowOrganizationToUseThirdPartyElectronicNotaryMetadata)).append("\n");
-    sb.append("    allowParticipantRecipientType: ").append(toIndentedString(allowParticipantRecipientType))
-        .append("\n");
-    sb.append("    allowParticipantRecipientTypeMetadata: ")
-        .append(toIndentedString(allowParticipantRecipientTypeMetadata)).append("\n");
+    sb.append("    allowOrganizationSsoManagement: ").append(toIndentedString(allowOrganizationSsoManagement)).append("\n");
+    sb.append("    allowOrganizationSsoManagementMetadata: ").append(toIndentedString(allowOrganizationSsoManagementMetadata)).append("\n");
+    sb.append("    allowOrganizationToUseInPersonElectronicNotary: ").append(toIndentedString(allowOrganizationToUseInPersonElectronicNotary)).append("\n");
+    sb.append("    allowOrganizationToUseInPersonElectronicNotaryMetadata: ").append(toIndentedString(allowOrganizationToUseInPersonElectronicNotaryMetadata)).append("\n");
+    sb.append("    allowOrganizationToUseRemoteNotary: ").append(toIndentedString(allowOrganizationToUseRemoteNotary)).append("\n");
+    sb.append("    allowOrganizationToUseRemoteNotaryMetadata: ").append(toIndentedString(allowOrganizationToUseRemoteNotaryMetadata)).append("\n");
+    sb.append("    allowOrganizationToUseThirdPartyElectronicNotary: ").append(toIndentedString(allowOrganizationToUseThirdPartyElectronicNotary)).append("\n");
+    sb.append("    allowOrganizationToUseThirdPartyElectronicNotaryMetadata: ").append(toIndentedString(allowOrganizationToUseThirdPartyElectronicNotaryMetadata)).append("\n");
+    sb.append("    allowParticipantRecipientType: ").append(toIndentedString(allowParticipantRecipientType)).append("\n");
+    sb.append("    allowParticipantRecipientTypeMetadata: ").append(toIndentedString(allowParticipantRecipientTypeMetadata)).append("\n");
     sb.append("    allowPaymentProcessing: ").append(toIndentedString(allowPaymentProcessing)).append("\n");
-    sb.append("    allowPaymentProcessingMetadata: ").append(toIndentedString(allowPaymentProcessingMetadata))
-        .append("\n");
+    sb.append("    allowPaymentProcessingMetadata: ").append(toIndentedString(allowPaymentProcessingMetadata)).append("\n");
     sb.append("    allowPerformanceAnalytics: ").append(toIndentedString(allowPerformanceAnalytics)).append("\n");
-    sb.append("    allowPerformanceAnalyticsMetadata: ").append(toIndentedString(allowPerformanceAnalyticsMetadata))
-        .append("\n");
+    sb.append("    allowPerformanceAnalyticsMetadata: ").append(toIndentedString(allowPerformanceAnalyticsMetadata)).append("\n");
     sb.append("    allowPhoneAuthentication: ").append(toIndentedString(allowPhoneAuthentication)).append("\n");
-    sb.append("    allowPhoneAuthenticationMetadata: ").append(toIndentedString(allowPhoneAuthenticationMetadata))
-        .append("\n");
+    sb.append("    allowPhoneAuthenticationMetadata: ").append(toIndentedString(allowPhoneAuthenticationMetadata)).append("\n");
     sb.append("    allowPhoneAuthOverride: ").append(toIndentedString(allowPhoneAuthOverride)).append("\n");
-    sb.append("    allowPhoneAuthOverrideMetadata: ").append(toIndentedString(allowPhoneAuthOverrideMetadata))
-        .append("\n");
+    sb.append("    allowPhoneAuthOverrideMetadata: ").append(toIndentedString(allowPhoneAuthOverrideMetadata)).append("\n");
     sb.append("    allowPrivateSigningGroups: ").append(toIndentedString(allowPrivateSigningGroups)).append("\n");
-    sb.append("    allowPrivateSigningGroupsMetadata: ").append(toIndentedString(allowPrivateSigningGroupsMetadata))
-        .append("\n");
+    sb.append("    allowPrivateSigningGroupsMetadata: ").append(toIndentedString(allowPrivateSigningGroupsMetadata)).append("\n");
     sb.append("    allowRecipientConnect: ").append(toIndentedString(allowRecipientConnect)).append("\n");
-    sb.append("    allowRecipientConnectMetadata: ").append(toIndentedString(allowRecipientConnectMetadata))
-        .append("\n");
+    sb.append("    allowRecipientConnectMetadata: ").append(toIndentedString(allowRecipientConnectMetadata)).append("\n");
     sb.append("    allowReminders: ").append(toIndentedString(allowReminders)).append("\n");
     sb.append("    allowRemindersMetadata: ").append(toIndentedString(allowRemindersMetadata)).append("\n");
     sb.append("    allowRemoteNotary: ").append(toIndentedString(allowRemoteNotary)).append("\n");
     sb.append("    allowRemoteNotaryMetadata: ").append(toIndentedString(allowRemoteNotaryMetadata)).append("\n");
     sb.append("    allowResourceFileBranding: ").append(toIndentedString(allowResourceFileBranding)).append("\n");
-    sb.append("    allowResourceFileBrandingMetadata: ").append(toIndentedString(allowResourceFileBrandingMetadata))
-        .append("\n");
-    sb.append("    allowSafeBioPharmaSignerCertificate: ").append(toIndentedString(allowSafeBioPharmaSignerCertificate))
-        .append("\n");
-    sb.append("    allowSafeBioPharmaSignerCertificateMetadata: ")
-        .append(toIndentedString(allowSafeBioPharmaSignerCertificateMetadata)).append("\n");
+    sb.append("    allowResourceFileBrandingMetadata: ").append(toIndentedString(allowResourceFileBrandingMetadata)).append("\n");
+    sb.append("    allowSafeBioPharmaSignerCertificate: ").append(toIndentedString(allowSafeBioPharmaSignerCertificate)).append("\n");
+    sb.append("    allowSafeBioPharmaSignerCertificateMetadata: ").append(toIndentedString(allowSafeBioPharmaSignerCertificateMetadata)).append("\n");
     sb.append("    allowScheduledSending: ").append(toIndentedString(allowScheduledSending)).append("\n");
-    sb.append("    allowScheduledSendingMetadata: ").append(toIndentedString(allowScheduledSendingMetadata))
-        .append("\n");
+    sb.append("    allowScheduledSendingMetadata: ").append(toIndentedString(allowScheduledSendingMetadata)).append("\n");
     sb.append("    allowSecurityAppliance: ").append(toIndentedString(allowSecurityAppliance)).append("\n");
-    sb.append("    allowSecurityApplianceMetadata: ").append(toIndentedString(allowSecurityApplianceMetadata))
-        .append("\n");
-    sb.append("    allowSendingEnvelopesOnBehalfOfOthers: ")
-        .append(toIndentedString(allowSendingEnvelopesOnBehalfOfOthers)).append("\n");
-    sb.append("    allowSendingEnvelopesOnBehalfOfOthersMetadata: ")
-        .append(toIndentedString(allowSendingEnvelopesOnBehalfOfOthersMetadata)).append("\n");
+    sb.append("    allowSecurityApplianceMetadata: ").append(toIndentedString(allowSecurityApplianceMetadata)).append("\n");
+    sb.append("    allowSendingEnvelopesOnBehalfOfOthers: ").append(toIndentedString(allowSendingEnvelopesOnBehalfOfOthers)).append("\n");
+    sb.append("    allowSendingEnvelopesOnBehalfOfOthersMetadata: ").append(toIndentedString(allowSendingEnvelopesOnBehalfOfOthersMetadata)).append("\n");
     sb.append("    allowSendToCertifiedDelivery: ").append(toIndentedString(allowSendToCertifiedDelivery)).append("\n");
-    sb.append("    allowSendToCertifiedDeliveryMetadata: ")
-        .append(toIndentedString(allowSendToCertifiedDeliveryMetadata)).append("\n");
+    sb.append("    allowSendToCertifiedDeliveryMetadata: ").append(toIndentedString(allowSendToCertifiedDeliveryMetadata)).append("\n");
     sb.append("    allowSendToIntermediary: ").append(toIndentedString(allowSendToIntermediary)).append("\n");
-    sb.append("    allowSendToIntermediaryMetadata: ").append(toIndentedString(allowSendToIntermediaryMetadata))
-        .append("\n");
+    sb.append("    allowSendToIntermediaryMetadata: ").append(toIndentedString(allowSendToIntermediaryMetadata)).append("\n");
     sb.append("    allowServerTemplates: ").append(toIndentedString(allowServerTemplates)).append("\n");
     sb.append("    allowServerTemplatesMetadata: ").append(toIndentedString(allowServerTemplatesMetadata)).append("\n");
-    sb.append("    allowSetEmbeddedRecipientStartURL: ").append(toIndentedString(allowSetEmbeddedRecipientStartURL))
-        .append("\n");
-    sb.append("    allowSetEmbeddedRecipientStartURLMetadata: ")
-        .append(toIndentedString(allowSetEmbeddedRecipientStartURLMetadata)).append("\n");
+    sb.append("    allowSetEmbeddedRecipientStartURL: ").append(toIndentedString(allowSetEmbeddedRecipientStartURL)).append("\n");
+    sb.append("    allowSetEmbeddedRecipientStartURLMetadata: ").append(toIndentedString(allowSetEmbeddedRecipientStartURLMetadata)).append("\n");
     sb.append("    allowSharedTabs: ").append(toIndentedString(allowSharedTabs)).append("\n");
     sb.append("    allowSharedTabsMetadata: ").append(toIndentedString(allowSharedTabsMetadata)).append("\n");
     sb.append("    allowSignatureStamps: ").append(toIndentedString(allowSignatureStamps)).append("\n");
     sb.append("    allowSignatureStampsMetadata: ").append(toIndentedString(allowSignatureStampsMetadata)).append("\n");
-    sb.append("    allowSignDocumentFromHomePage: ").append(toIndentedString(allowSignDocumentFromHomePage))
-        .append("\n");
-    sb.append("    allowSignDocumentFromHomePageMetadata: ")
-        .append(toIndentedString(allowSignDocumentFromHomePageMetadata)).append("\n");
+    sb.append("    allowSignDocumentFromHomePage: ").append(toIndentedString(allowSignDocumentFromHomePage)).append("\n");
+    sb.append("    allowSignDocumentFromHomePageMetadata: ").append(toIndentedString(allowSignDocumentFromHomePageMetadata)).append("\n");
     sb.append("    allowSignerReassign: ").append(toIndentedString(allowSignerReassign)).append("\n");
     sb.append("    allowSignerReassignMetadata: ").append(toIndentedString(allowSignerReassignMetadata)).append("\n");
     sb.append("    allowSignerReassignOverride: ").append(toIndentedString(allowSignerReassignOverride)).append("\n");
-    sb.append("    allowSignerReassignOverrideMetadata: ").append(toIndentedString(allowSignerReassignOverrideMetadata))
-        .append("\n");
+    sb.append("    allowSignerReassignOverrideMetadata: ").append(toIndentedString(allowSignerReassignOverrideMetadata)).append("\n");
     sb.append("    allowSigningExtensions: ").append(toIndentedString(allowSigningExtensions)).append("\n");
-    sb.append("    allowSigningExtensionsMetadata: ").append(toIndentedString(allowSigningExtensionsMetadata))
-        .append("\n");
+    sb.append("    allowSigningExtensionsMetadata: ").append(toIndentedString(allowSigningExtensionsMetadata)).append("\n");
     sb.append("    allowSigningGroups: ").append(toIndentedString(allowSigningGroups)).append("\n");
     sb.append("    allowSigningGroupsMetadata: ").append(toIndentedString(allowSigningGroupsMetadata)).append("\n");
     sb.append("    allowSigningInsights: ").append(toIndentedString(allowSigningInsights)).append("\n");
     sb.append("    allowSigningInsightsMetadata: ").append(toIndentedString(allowSigningInsightsMetadata)).append("\n");
     sb.append("    allowSigningRadioDeselect: ").append(toIndentedString(allowSigningRadioDeselect)).append("\n");
-    sb.append("    allowSigningRadioDeselectMetadata: ").append(toIndentedString(allowSigningRadioDeselectMetadata))
-        .append("\n");
+    sb.append("    allowSigningRadioDeselectMetadata: ").append(toIndentedString(allowSigningRadioDeselectMetadata)).append("\n");
     sb.append("    allowSignNow: ").append(toIndentedString(allowSignNow)).append("\n");
     sb.append("    allowSignNowMetadata: ").append(toIndentedString(allowSignNowMetadata)).append("\n");
     sb.append("    allowSMSDelivery: ").append(toIndentedString(allowSMSDelivery)).append("\n");
@@ -22164,363 +21198,253 @@ public class AccountSettingsInformation {
     sb.append("    allowSocialIdLogin: ").append(toIndentedString(allowSocialIdLogin)).append("\n");
     sb.append("    allowSocialIdLoginMetadata: ").append(toIndentedString(allowSocialIdLoginMetadata)).append("\n");
     sb.append("    allowSupplementalDocuments: ").append(toIndentedString(allowSupplementalDocuments)).append("\n");
-    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata))
-        .append("\n");
-    sb.append("    allowThirdPartyElectronicNotary: ").append(toIndentedString(allowThirdPartyElectronicNotary))
-        .append("\n");
-    sb.append("    allowThirdPartyElectronicNotaryMetadata: ")
-        .append(toIndentedString(allowThirdPartyElectronicNotaryMetadata)).append("\n");
+    sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
+    sb.append("    allowThirdPartyElectronicNotary: ").append(toIndentedString(allowThirdPartyElectronicNotary)).append("\n");
+    sb.append("    allowThirdPartyElectronicNotaryMetadata: ").append(toIndentedString(allowThirdPartyElectronicNotaryMetadata)).append("\n");
     sb.append("    allowTransactionsWorkspace: ").append(toIndentedString(allowTransactionsWorkspace)).append("\n");
-    sb.append("    allowTransactionsWorkspaceMetadata: ").append(toIndentedString(allowTransactionsWorkspaceMetadata))
-        .append("\n");
+    sb.append("    allowTransactionsWorkspaceMetadata: ").append(toIndentedString(allowTransactionsWorkspaceMetadata)).append("\n");
     sb.append("    allowUsersToAccessDirectory: ").append(toIndentedString(allowUsersToAccessDirectory)).append("\n");
-    sb.append("    allowUsersToAccessDirectoryMetadata: ").append(toIndentedString(allowUsersToAccessDirectoryMetadata))
-        .append("\n");
+    sb.append("    allowUsersToAccessDirectoryMetadata: ").append(toIndentedString(allowUsersToAccessDirectoryMetadata)).append("\n");
     sb.append("    allowValueInsights: ").append(toIndentedString(allowValueInsights)).append("\n");
     sb.append("    allowValueInsightsMetadata: ").append(toIndentedString(allowValueInsightsMetadata)).append("\n");
     sb.append("    allowWebForms: ").append(toIndentedString(allowWebForms)).append("\n");
     sb.append("    allowWebFormsMetadata: ").append(toIndentedString(allowWebFormsMetadata)).append("\n");
     sb.append("    allowWhatsAppDelivery: ").append(toIndentedString(allowWhatsAppDelivery)).append("\n");
-    sb.append("    allowWhatsAppDeliveryMetadata: ").append(toIndentedString(allowWhatsAppDeliveryMetadata))
-        .append("\n");
+    sb.append("    allowWhatsAppDeliveryMetadata: ").append(toIndentedString(allowWhatsAppDeliveryMetadata)).append("\n");
     sb.append("    anchorPopulationScope: ").append(toIndentedString(anchorPopulationScope)).append("\n");
-    sb.append("    anchorPopulationScopeMetadata: ").append(toIndentedString(anchorPopulationScopeMetadata))
-        .append("\n");
-    sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled))
-        .append("\n");
-    sb.append("    anchorTagVersionedPlacementMetadataEnabled: ")
-        .append(toIndentedString(anchorTagVersionedPlacementMetadataEnabled)).append("\n");
+    sb.append("    anchorPopulationScopeMetadata: ").append(toIndentedString(anchorPopulationScopeMetadata)).append("\n");
+    sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled)).append("\n");
+    sb.append("    anchorTagVersionedPlacementMetadataEnabled: ").append(toIndentedString(anchorTagVersionedPlacementMetadataEnabled)).append("\n");
     sb.append("    attachCompletedEnvelope: ").append(toIndentedString(attachCompletedEnvelope)).append("\n");
-    sb.append("    attachCompletedEnvelopeMetadata: ").append(toIndentedString(attachCompletedEnvelopeMetadata))
-        .append("\n");
+    sb.append("    attachCompletedEnvelopeMetadata: ").append(toIndentedString(attachCompletedEnvelopeMetadata)).append("\n");
     sb.append("    authenticationCheck: ").append(toIndentedString(authenticationCheck)).append("\n");
     sb.append("    authenticationCheckMetadata: ").append(toIndentedString(authenticationCheckMetadata)).append("\n");
     sb.append("    autoNavRule: ").append(toIndentedString(autoNavRule)).append("\n");
     sb.append("    autoNavRuleMetadata: ").append(toIndentedString(autoNavRuleMetadata)).append("\n");
     sb.append("    autoProvisionSignerAccount: ").append(toIndentedString(autoProvisionSignerAccount)).append("\n");
-    sb.append("    autoProvisionSignerAccountMetadata: ").append(toIndentedString(autoProvisionSignerAccountMetadata))
-        .append("\n");
+    sb.append("    autoProvisionSignerAccountMetadata: ").append(toIndentedString(autoProvisionSignerAccountMetadata)).append("\n");
     sb.append("    bccEmailArchive: ").append(toIndentedString(bccEmailArchive)).append("\n");
     sb.append("    bccEmailArchiveMetadata: ").append(toIndentedString(bccEmailArchiveMetadata)).append("\n");
     sb.append("    betaSwitchConfiguration: ").append(toIndentedString(betaSwitchConfiguration)).append("\n");
-    sb.append("    betaSwitchConfigurationMetadata: ").append(toIndentedString(betaSwitchConfigurationMetadata))
-        .append("\n");
+    sb.append("    betaSwitchConfigurationMetadata: ").append(toIndentedString(betaSwitchConfigurationMetadata)).append("\n");
     sb.append("    billingAddress: ").append(toIndentedString(billingAddress)).append("\n");
     sb.append("    billingAddressMetadata: ").append(toIndentedString(billingAddressMetadata)).append("\n");
     sb.append("    bulkSend: ").append(toIndentedString(bulkSend)).append("\n");
     sb.append("    bulkSendActionResendLimit: ").append(toIndentedString(bulkSendActionResendLimit)).append("\n");
     sb.append("    bulkSendMaxCopiesInBatch: ").append(toIndentedString(bulkSendMaxCopiesInBatch)).append("\n");
-    sb.append("    bulkSendMaxUnprocessedEnvelopesCount: ")
-        .append(toIndentedString(bulkSendMaxUnprocessedEnvelopesCount)).append("\n");
+    sb.append("    bulkSendMaxUnprocessedEnvelopesCount: ").append(toIndentedString(bulkSendMaxUnprocessedEnvelopesCount)).append("\n");
     sb.append("    bulkSendMetadata: ").append(toIndentedString(bulkSendMetadata)).append("\n");
     sb.append("    canSelfBrandSend: ").append(toIndentedString(canSelfBrandSend)).append("\n");
     sb.append("    canSelfBrandSendMetadata: ").append(toIndentedString(canSelfBrandSendMetadata)).append("\n");
     sb.append("    canSelfBrandSign: ").append(toIndentedString(canSelfBrandSign)).append("\n");
     sb.append("    canSelfBrandSignMetadata: ").append(toIndentedString(canSelfBrandSignMetadata)).append("\n");
     sb.append("    canUseSalesforceOAuth: ").append(toIndentedString(canUseSalesforceOAuth)).append("\n");
-    sb.append("    canUseSalesforceOAuthMetadata: ").append(toIndentedString(canUseSalesforceOAuthMetadata))
-        .append("\n");
+    sb.append("    canUseSalesforceOAuthMetadata: ").append(toIndentedString(canUseSalesforceOAuthMetadata)).append("\n");
     sb.append("    captureVoiceRecording: ").append(toIndentedString(captureVoiceRecording)).append("\n");
-    sb.append("    captureVoiceRecordingMetadata: ").append(toIndentedString(captureVoiceRecordingMetadata))
-        .append("\n");
-    sb.append("    cfr21SimplifiedSigningEnabled: ").append(toIndentedString(cfr21SimplifiedSigningEnabled))
-        .append("\n");
-    sb.append("    cfr21SimplifiedSigningEnabledMetadata: ")
-        .append(toIndentedString(cfr21SimplifiedSigningEnabledMetadata)).append("\n");
+    sb.append("    captureVoiceRecordingMetadata: ").append(toIndentedString(captureVoiceRecordingMetadata)).append("\n");
+    sb.append("    cfr21SimplifiedSigningEnabled: ").append(toIndentedString(cfr21SimplifiedSigningEnabled)).append("\n");
+    sb.append("    cfr21SimplifiedSigningEnabledMetadata: ").append(toIndentedString(cfr21SimplifiedSigningEnabledMetadata)).append("\n");
     sb.append("    cfrUseWideImage: ").append(toIndentedString(cfrUseWideImage)).append("\n");
     sb.append("    cfrUseWideImageMetadata: ").append(toIndentedString(cfrUseWideImageMetadata)).append("\n");
-    sb.append("    checkForMultipleAdminsOnAccount: ").append(toIndentedString(checkForMultipleAdminsOnAccount))
-        .append("\n");
-    sb.append("    checkForMultipleAdminsOnAccountMetadata: ")
-        .append(toIndentedString(checkForMultipleAdminsOnAccountMetadata)).append("\n");
+    sb.append("    checkForMultipleAdminsOnAccount: ").append(toIndentedString(checkForMultipleAdminsOnAccount)).append("\n");
+    sb.append("    checkForMultipleAdminsOnAccountMetadata: ").append(toIndentedString(checkForMultipleAdminsOnAccountMetadata)).append("\n");
     sb.append("    chromeSignatureEnabled: ").append(toIndentedString(chromeSignatureEnabled)).append("\n");
-    sb.append("    chromeSignatureEnabledMetadata: ").append(toIndentedString(chromeSignatureEnabledMetadata))
-        .append("\n");
+    sb.append("    chromeSignatureEnabledMetadata: ").append(toIndentedString(chromeSignatureEnabledMetadata)).append("\n");
     sb.append("    commentEmailShowMessageText: ").append(toIndentedString(commentEmailShowMessageText)).append("\n");
-    sb.append("    commentEmailShowMessageTextMetadata: ").append(toIndentedString(commentEmailShowMessageTextMetadata))
-        .append("\n");
-    sb.append("    commentsAllowEnvelopeOverride: ").append(toIndentedString(commentsAllowEnvelopeOverride))
-        .append("\n");
-    sb.append("    commentsAllowEnvelopeOverrideMetadata: ")
-        .append(toIndentedString(commentsAllowEnvelopeOverrideMetadata)).append("\n");
+    sb.append("    commentEmailShowMessageTextMetadata: ").append(toIndentedString(commentEmailShowMessageTextMetadata)).append("\n");
+    sb.append("    commentsAllowEnvelopeOverride: ").append(toIndentedString(commentsAllowEnvelopeOverride)).append("\n");
+    sb.append("    commentsAllowEnvelopeOverrideMetadata: ").append(toIndentedString(commentsAllowEnvelopeOverrideMetadata)).append("\n");
     sb.append("    conditionalFieldsEnabled: ").append(toIndentedString(conditionalFieldsEnabled)).append("\n");
-    sb.append("    conditionalFieldsEnabledMetadata: ").append(toIndentedString(conditionalFieldsEnabledMetadata))
-        .append("\n");
+    sb.append("    conditionalFieldsEnabledMetadata: ").append(toIndentedString(conditionalFieldsEnabledMetadata)).append("\n");
     sb.append("    consumerDisclosureFrequency: ").append(toIndentedString(consumerDisclosureFrequency)).append("\n");
-    sb.append("    consumerDisclosureFrequencyMetadata: ").append(toIndentedString(consumerDisclosureFrequencyMetadata))
-        .append("\n");
+    sb.append("    consumerDisclosureFrequencyMetadata: ").append(toIndentedString(consumerDisclosureFrequencyMetadata)).append("\n");
     sb.append("    convertPdfFields: ").append(toIndentedString(convertPdfFields)).append("\n");
     sb.append("    convertPdfFieldsMetadata: ").append(toIndentedString(convertPdfFieldsMetadata)).append("\n");
     sb.append("    dataPopulationScope: ").append(toIndentedString(dataPopulationScope)).append("\n");
     sb.append("    dataPopulationScopeMetadata: ").append(toIndentedString(dataPopulationScopeMetadata)).append("\n");
     sb.append("    disableAutoTemplateMatching: ").append(toIndentedString(disableAutoTemplateMatching)).append("\n");
-    sb.append("    disableAutoTemplateMatchingMetadata: ").append(toIndentedString(disableAutoTemplateMatchingMetadata))
-        .append("\n");
+    sb.append("    disableAutoTemplateMatchingMetadata: ").append(toIndentedString(disableAutoTemplateMatchingMetadata)).append("\n");
     sb.append("    disableMobileApp: ").append(toIndentedString(disableMobileApp)).append("\n");
     sb.append("    disableMobileAppMetadata: ").append(toIndentedString(disableMobileAppMetadata)).append("\n");
-    sb.append("    disableMobilePushNotifications: ").append(toIndentedString(disableMobilePushNotifications))
-        .append("\n");
-    sb.append("    disableMobilePushNotificationsMetadata: ")
-        .append(toIndentedString(disableMobilePushNotificationsMetadata)).append("\n");
+    sb.append("    disableMobilePushNotifications: ").append(toIndentedString(disableMobilePushNotifications)).append("\n");
+    sb.append("    disableMobilePushNotificationsMetadata: ").append(toIndentedString(disableMobilePushNotificationsMetadata)).append("\n");
     sb.append("    disableMobileSending: ").append(toIndentedString(disableMobileSending)).append("\n");
     sb.append("    disableMobileSendingMetadata: ").append(toIndentedString(disableMobileSendingMetadata)).append("\n");
     sb.append("    disableMultipleSessions: ").append(toIndentedString(disableMultipleSessions)).append("\n");
-    sb.append("    disableMultipleSessionsMetadata: ").append(toIndentedString(disableMultipleSessionsMetadata))
-        .append("\n");
-    sb.append("    disablePurgeNotificationsForSenderMetadata: ")
-        .append(toIndentedString(disablePurgeNotificationsForSenderMetadata)).append("\n");
+    sb.append("    disableMultipleSessionsMetadata: ").append(toIndentedString(disableMultipleSessionsMetadata)).append("\n");
+    sb.append("    disablePurgeNotificationsForSenderMetadata: ").append(toIndentedString(disablePurgeNotificationsForSenderMetadata)).append("\n");
     sb.append("    disableSignerCertView: ").append(toIndentedString(disableSignerCertView)).append("\n");
-    sb.append("    disableSignerCertViewMetadata: ").append(toIndentedString(disableSignerCertViewMetadata))
-        .append("\n");
+    sb.append("    disableSignerCertViewMetadata: ").append(toIndentedString(disableSignerCertViewMetadata)).append("\n");
     sb.append("    disableSignerHistoryView: ").append(toIndentedString(disableSignerHistoryView)).append("\n");
-    sb.append("    disableSignerHistoryViewMetadata: ").append(toIndentedString(disableSignerHistoryViewMetadata))
-        .append("\n");
+    sb.append("    disableSignerHistoryViewMetadata: ").append(toIndentedString(disableSignerHistoryViewMetadata)).append("\n");
     sb.append("    disableStyleSignature: ").append(toIndentedString(disableStyleSignature)).append("\n");
-    sb.append("    disableStyleSignatureMetadata: ").append(toIndentedString(disableStyleSignatureMetadata))
-        .append("\n");
+    sb.append("    disableStyleSignatureMetadata: ").append(toIndentedString(disableStyleSignatureMetadata)).append("\n");
     sb.append("    disableUploadSignature: ").append(toIndentedString(disableUploadSignature)).append("\n");
-    sb.append("    disableUploadSignatureMetadata: ").append(toIndentedString(disableUploadSignatureMetadata))
-        .append("\n");
+    sb.append("    disableUploadSignatureMetadata: ").append(toIndentedString(disableUploadSignatureMetadata)).append("\n");
     sb.append("    disableUserSharing: ").append(toIndentedString(disableUserSharing)).append("\n");
     sb.append("    disableUserSharingMetadata: ").append(toIndentedString(disableUserSharingMetadata)).append("\n");
     sb.append("    displayBetaSwitch: ").append(toIndentedString(displayBetaSwitch)).append("\n");
     sb.append("    displayBetaSwitchMetadata: ").append(toIndentedString(displayBetaSwitchMetadata)).append("\n");
-    sb.append("    documentConversionRestrictions: ").append(toIndentedString(documentConversionRestrictions))
-        .append("\n");
-    sb.append("    documentConversionRestrictionsMetadata: ")
-        .append(toIndentedString(documentConversionRestrictionsMetadata)).append("\n");
+    sb.append("    documentConversionRestrictions: ").append(toIndentedString(documentConversionRestrictions)).append("\n");
+    sb.append("    documentConversionRestrictionsMetadata: ").append(toIndentedString(documentConversionRestrictionsMetadata)).append("\n");
     sb.append("    documentRetention: ").append(toIndentedString(documentRetention)).append("\n");
     sb.append("    documentRetentionMetadata: ").append(toIndentedString(documentRetentionMetadata)).append("\n");
     sb.append("    documentRetentionPurgeTabs: ").append(toIndentedString(documentRetentionPurgeTabs)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    documentVisibilityMetadata: ").append(toIndentedString(documentVisibilityMetadata)).append("\n");
-    sb.append("    dssSIGN28411EnableLeavePagePromptRadminOption: ")
-        .append(toIndentedString(dssSIGN28411EnableLeavePagePromptRadminOption)).append("\n");
-    sb.append("    dssSIGN29182SlideUpBarRadminOption: ").append(toIndentedString(dssSIGN29182SlideUpBarRadminOption))
-        .append("\n");
+    sb.append("    dssEnableProvisioningPenConfigurationRadminOption: ").append(toIndentedString(dssEnableProvisioningPenConfigurationRadminOption)).append("\n");
+    sb.append("    dssSIGN28411EnableLeavePagePromptRadminOption: ").append(toIndentedString(dssSIGN28411EnableLeavePagePromptRadminOption)).append("\n");
+    sb.append("    dssSIGN29182SlideUpBarRadminOption: ").append(toIndentedString(dssSIGN29182SlideUpBarRadminOption)).append("\n");
     sb.append("    emailTemplateVersion: ").append(toIndentedString(emailTemplateVersion)).append("\n");
     sb.append("    emailTemplateVersionMetadata: ").append(toIndentedString(emailTemplateVersionMetadata)).append("\n");
     sb.append("    enableAccessCodeGenerator: ").append(toIndentedString(enableAccessCodeGenerator)).append("\n");
-    sb.append("    enableAccessCodeGeneratorMetadata: ").append(toIndentedString(enableAccessCodeGeneratorMetadata))
-        .append("\n");
+    sb.append("    enableAccessCodeGeneratorMetadata: ").append(toIndentedString(enableAccessCodeGeneratorMetadata)).append("\n");
     sb.append("    enableAdmHealthcare: ").append(toIndentedString(enableAdmHealthcare)).append("\n");
     sb.append("    enableAdmHealthcareMetadata: ").append(toIndentedString(enableAdmHealthcareMetadata)).append("\n");
     sb.append("    enableAdvancedPayments: ").append(toIndentedString(enableAdvancedPayments)).append("\n");
-    sb.append("    enableAdvancedPaymentsMetadata: ").append(toIndentedString(enableAdvancedPaymentsMetadata))
-        .append("\n");
+    sb.append("    enableAdvancedPaymentsMetadata: ").append(toIndentedString(enableAdvancedPaymentsMetadata)).append("\n");
     sb.append("    enableAdvancedPowerForms: ").append(toIndentedString(enableAdvancedPowerForms)).append("\n");
-    sb.append("    enableAdvancedPowerFormsMetadata: ").append(toIndentedString(enableAdvancedPowerFormsMetadata))
-        .append("\n");
+    sb.append("    enableAdvancedPowerFormsMetadata: ").append(toIndentedString(enableAdvancedPowerFormsMetadata)).append("\n");
     sb.append("    enableAgreementActionsForCLM: ").append(toIndentedString(enableAgreementActionsForCLM)).append("\n");
-    sb.append("    enableAgreementActionsForCLMMetadata: ")
-        .append(toIndentedString(enableAgreementActionsForCLMMetadata)).append("\n");
-    sb.append("    enableAgreementActionsForESign: ").append(toIndentedString(enableAgreementActionsForESign))
-        .append("\n");
-    sb.append("    enableAgreementActionsForESignMetadata: ")
-        .append(toIndentedString(enableAgreementActionsForESignMetadata)).append("\n");
+    sb.append("    enableAgreementActionsForCLMMetadata: ").append(toIndentedString(enableAgreementActionsForCLMMetadata)).append("\n");
+    sb.append("    enableAgreementActionsForESign: ").append(toIndentedString(enableAgreementActionsForESign)).append("\n");
+    sb.append("    enableAgreementActionsForESignMetadata: ").append(toIndentedString(enableAgreementActionsForESignMetadata)).append("\n");
     sb.append("    enableAutoNav: ").append(toIndentedString(enableAutoNav)).append("\n");
     sb.append("    enableAutoNavMetadata: ").append(toIndentedString(enableAutoNavMetadata)).append("\n");
     sb.append("    enableBccDummyLink: ").append(toIndentedString(enableBccDummyLink)).append("\n");
     sb.append("    enableBccDummyLinkMetadata: ").append(toIndentedString(enableBccDummyLinkMetadata)).append("\n");
     sb.append("    enableCalculatedFields: ").append(toIndentedString(enableCalculatedFields)).append("\n");
-    sb.append("    enableCalculatedFieldsMetadata: ").append(toIndentedString(enableCalculatedFieldsMetadata))
-        .append("\n");
+    sb.append("    enableCalculatedFieldsMetadata: ").append(toIndentedString(enableCalculatedFieldsMetadata)).append("\n");
     sb.append("    enableClickPlus: ").append(toIndentedString(enableClickPlus)).append("\n");
-    sb.append("    enableClickPlusConditionalContent: ").append(toIndentedString(enableClickPlusConditionalContent))
-        .append("\n");
-    sb.append("    enableClickPlusConditionalContentMetaData: ")
-        .append(toIndentedString(enableClickPlusConditionalContentMetaData)).append("\n");
+    sb.append("    enableClickPlusConditionalContent: ").append(toIndentedString(enableClickPlusConditionalContent)).append("\n");
+    sb.append("    enableClickPlusConditionalContentMetaData: ").append(toIndentedString(enableClickPlusConditionalContentMetaData)).append("\n");
     sb.append("    enableClickPlusCustomFields: ").append(toIndentedString(enableClickPlusCustomFields)).append("\n");
-    sb.append("    enableClickPlusCustomFieldsMetaData: ").append(toIndentedString(enableClickPlusCustomFieldsMetaData))
-        .append("\n");
+    sb.append("    enableClickPlusCustomFieldsMetaData: ").append(toIndentedString(enableClickPlusCustomFieldsMetaData)).append("\n");
     sb.append("    enableClickPlusCustomStyle: ").append(toIndentedString(enableClickPlusCustomStyle)).append("\n");
-    sb.append("    enableClickPlusCustomStyleMetaData: ").append(toIndentedString(enableClickPlusCustomStyleMetaData))
-        .append("\n");
-    sb.append("    enableClickPlusDynamicContent: ").append(toIndentedString(enableClickPlusDynamicContent))
-        .append("\n");
-    sb.append("    enableClickPlusDynamicContentMetaData: ")
-        .append(toIndentedString(enableClickPlusDynamicContentMetaData)).append("\n");
+    sb.append("    enableClickPlusCustomStyleMetaData: ").append(toIndentedString(enableClickPlusCustomStyleMetaData)).append("\n");
+    sb.append("    enableClickPlusDynamicContent: ").append(toIndentedString(enableClickPlusDynamicContent)).append("\n");
+    sb.append("    enableClickPlusDynamicContentMetaData: ").append(toIndentedString(enableClickPlusDynamicContentMetaData)).append("\n");
     sb.append("    enableClickPlusMetaData: ").append(toIndentedString(enableClickPlusMetaData)).append("\n");
     sb.append("    enableClickwraps: ").append(toIndentedString(enableClickwraps)).append("\n");
     sb.append("    enableClickwrapsMetadata: ").append(toIndentedString(enableClickwrapsMetadata)).append("\n");
-    sb.append("    enableCombinedPDFDownloadForSBS: ").append(toIndentedString(enableCombinedPDFDownloadForSBS))
-        .append("\n");
-    sb.append("    enableCommentsHistoryDownloadInSigning: ")
-        .append(toIndentedString(enableCommentsHistoryDownloadInSigning)).append("\n");
-    sb.append("    enableCommentsHistoryDownloadInSigningMetadata: ")
-        .append(toIndentedString(enableCommentsHistoryDownloadInSigningMetadata)).append("\n");
+    sb.append("    enableCombinedPDFDownloadForSBS: ").append(toIndentedString(enableCombinedPDFDownloadForSBS)).append("\n");
+    sb.append("    enableCommentsHistoryDownloadInSigning: ").append(toIndentedString(enableCommentsHistoryDownloadInSigning)).append("\n");
+    sb.append("    enableCommentsHistoryDownloadInSigningMetadata: ").append(toIndentedString(enableCommentsHistoryDownloadInSigningMetadata)).append("\n");
     sb.append("    enableContactSuggestions: ").append(toIndentedString(enableContactSuggestions)).append("\n");
-    sb.append("    enableContactSuggestionsMetadata: ").append(toIndentedString(enableContactSuggestionsMetadata))
-        .append("\n");
-    sb.append("    enableCustomerSatisfactionMetricTracking: ")
-        .append(toIndentedString(enableCustomerSatisfactionMetricTracking)).append("\n");
-    sb.append("    enableCustomerSatisfactionMetricTrackingMetadata: ")
-        .append(toIndentedString(enableCustomerSatisfactionMetricTrackingMetadata)).append("\n");
+    sb.append("    enableContactSuggestionsMetadata: ").append(toIndentedString(enableContactSuggestionsMetadata)).append("\n");
+    sb.append("    enableCustomerSatisfactionMetricTracking: ").append(toIndentedString(enableCustomerSatisfactionMetricTracking)).append("\n");
+    sb.append("    enableCustomerSatisfactionMetricTrackingMetadata: ").append(toIndentedString(enableCustomerSatisfactionMetricTrackingMetadata)).append("\n");
     sb.append("    enableDSPro: ").append(toIndentedString(enableDSPro)).append("\n");
     sb.append("    enableDSProMetadata: ").append(toIndentedString(enableDSProMetadata)).append("\n");
-    sb.append("    enableEnforceTlsEmailsSettingMetadata: ")
-        .append(toIndentedString(enableEnforceTlsEmailsSettingMetadata)).append("\n");
-    sb.append("    enableEnvelopeStampingByAccountAdmin: ")
-        .append(toIndentedString(enableEnvelopeStampingByAccountAdmin)).append("\n");
-    sb.append("    enableEnvelopeStampingByAccountAdminMetadata: ")
-        .append(toIndentedString(enableEnvelopeStampingByAccountAdminMetadata)).append("\n");
-    sb.append("    enableEnvelopeStampingByDSAdmin: ").append(toIndentedString(enableEnvelopeStampingByDSAdmin))
-        .append("\n");
-    sb.append("    enableEnvelopeStampingByDSAdminMetadata: ")
-        .append(toIndentedString(enableEnvelopeStampingByDSAdminMetadata)).append("\n");
-    sb.append("    enableESignAPIHourlyLimitManagement: ").append(toIndentedString(enableESignAPIHourlyLimitManagement))
-        .append("\n");
-    sb.append("    enableESignAPIHourlyLimitManagementMetadata: ")
-        .append(toIndentedString(enableESignAPIHourlyLimitManagementMetadata)).append("\n");
+    sb.append("    enableEnforceTlsEmailsSettingMetadata: ").append(toIndentedString(enableEnforceTlsEmailsSettingMetadata)).append("\n");
+    sb.append("    enableEnvelopeStampingByAccountAdmin: ").append(toIndentedString(enableEnvelopeStampingByAccountAdmin)).append("\n");
+    sb.append("    enableEnvelopeStampingByAccountAdminMetadata: ").append(toIndentedString(enableEnvelopeStampingByAccountAdminMetadata)).append("\n");
+    sb.append("    enableEnvelopeStampingByDSAdmin: ").append(toIndentedString(enableEnvelopeStampingByDSAdmin)).append("\n");
+    sb.append("    enableEnvelopeStampingByDSAdminMetadata: ").append(toIndentedString(enableEnvelopeStampingByDSAdminMetadata)).append("\n");
+    sb.append("    enableESignAPIHourlyLimitManagement: ").append(toIndentedString(enableESignAPIHourlyLimitManagement)).append("\n");
+    sb.append("    enableESignAPIHourlyLimitManagementMetadata: ").append(toIndentedString(enableESignAPIHourlyLimitManagementMetadata)).append("\n");
     sb.append("    enableEsignCommunities: ").append(toIndentedString(enableEsignCommunities)).append("\n");
-    sb.append("    enableEsignCommunitiesMetadata: ").append(toIndentedString(enableEsignCommunitiesMetadata))
-        .append("\n");
-    sb.append("    enableIDFxAccountlessSMSAuthForPart11: ")
-        .append(toIndentedString(enableIDFxAccountlessSMSAuthForPart11)).append("\n");
-    sb.append("    enableIDFxAccountlessSMSAuthForPart11Metadata: ")
-        .append(toIndentedString(enableIDFxAccountlessSMSAuthForPart11Metadata)).append("\n");
+    sb.append("    enableEsignCommunitiesMetadata: ").append(toIndentedString(enableEsignCommunitiesMetadata)).append("\n");
+    sb.append("    enableIDFxAccountlessSMSAuthForPart11: ").append(toIndentedString(enableIDFxAccountlessSMSAuthForPart11)).append("\n");
+    sb.append("    enableIDFxAccountlessSMSAuthForPart11Metadata: ").append(toIndentedString(enableIDFxAccountlessSMSAuthForPart11Metadata)).append("\n");
     sb.append("    enableIDFxIntuitKBA: ").append(toIndentedString(enableIDFxIntuitKBA)).append("\n");
     sb.append("    enableIDFxIntuitKBAMetadata: ").append(toIndentedString(enableIDFxIntuitKBAMetadata)).append("\n");
-    sb.append("    enableIDFxPhoneAuthentication: ").append(toIndentedString(enableIDFxPhoneAuthentication))
-        .append("\n");
-    sb.append("    enableIDFxPhoneAuthenticationMetadata: ")
-        .append(toIndentedString(enableIDFxPhoneAuthenticationMetadata)).append("\n");
-    sb.append("    enableIdfxPhoneAuthSignatureAuthStatus: ")
-        .append(toIndentedString(enableIdfxPhoneAuthSignatureAuthStatus)).append("\n");
-    sb.append("    enableIdfxPhoneAuthSignatureAuthStatusMetadata: ")
-        .append(toIndentedString(enableIdfxPhoneAuthSignatureAuthStatusMetadata)).append("\n");
+    sb.append("    enableIDFxPhoneAuthentication: ").append(toIndentedString(enableIDFxPhoneAuthentication)).append("\n");
+    sb.append("    enableIDFxPhoneAuthenticationMetadata: ").append(toIndentedString(enableIDFxPhoneAuthenticationMetadata)).append("\n");
+    sb.append("    enableIdfxPhoneAuthSignatureAuthStatus: ").append(toIndentedString(enableIdfxPhoneAuthSignatureAuthStatus)).append("\n");
+    sb.append("    enableIdfxPhoneAuthSignatureAuthStatusMetadata: ").append(toIndentedString(enableIdfxPhoneAuthSignatureAuthStatusMetadata)).append("\n");
     sb.append("    enableInBrowserEditor: ").append(toIndentedString(enableInBrowserEditor)).append("\n");
-    sb.append("    enableInBrowserEditorMetadata: ").append(toIndentedString(enableInBrowserEditorMetadata))
-        .append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentType: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
-    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ")
-        .append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
-    sb.append("    enableParticipantRecipientSettingMetadata: ")
-        .append(toIndentedString(enableParticipantRecipientSettingMetadata)).append("\n");
+    sb.append("    enableInBrowserEditorMetadata: ").append(toIndentedString(enableInBrowserEditorMetadata)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentType: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentType)).append("\n");
+    sb.append("    enableKeyTermsSuggestionsByDocumentTypeMetadata: ").append(toIndentedString(enableKeyTermsSuggestionsByDocumentTypeMetadata)).append("\n");
+    sb.append("    enableParticipantRecipientSettingMetadata: ").append(toIndentedString(enableParticipantRecipientSettingMetadata)).append("\n");
     sb.append("    enablePaymentProcessing: ").append(toIndentedString(enablePaymentProcessing)).append("\n");
-    sb.append("    enablePaymentProcessingMetadata: ").append(toIndentedString(enablePaymentProcessingMetadata))
-        .append("\n");
+    sb.append("    enablePaymentProcessingMetadata: ").append(toIndentedString(enablePaymentProcessingMetadata)).append("\n");
     sb.append("    enablePDFAConversion: ").append(toIndentedString(enablePDFAConversion)).append("\n");
     sb.append("    enablePDFAConversionMetadata: ").append(toIndentedString(enablePDFAConversionMetadata)).append("\n");
     sb.append("    enablePowerForm: ").append(toIndentedString(enablePowerForm)).append("\n");
     sb.append("    enablePowerFormDirect: ").append(toIndentedString(enablePowerFormDirect)).append("\n");
-    sb.append("    enablePowerFormDirectMetadata: ").append(toIndentedString(enablePowerFormDirectMetadata))
-        .append("\n");
+    sb.append("    enablePowerFormDirectMetadata: ").append(toIndentedString(enablePowerFormDirectMetadata)).append("\n");
     sb.append("    enablePowerFormMetadata: ").append(toIndentedString(enablePowerFormMetadata)).append("\n");
-    sb.append("    enableRecipientDomainValidation: ").append(toIndentedString(enableRecipientDomainValidation))
-        .append("\n");
-    sb.append("    enableRecipientDomainValidationMetadata: ")
-        .append(toIndentedString(enableRecipientDomainValidationMetadata)).append("\n");
-    sb.append("    enableRecipientMayProvidePhoneNumber: ")
-        .append(toIndentedString(enableRecipientMayProvidePhoneNumber)).append("\n");
-    sb.append("    enableRecipientMayProvidePhoneNumberMetadata: ")
-        .append(toIndentedString(enableRecipientMayProvidePhoneNumberMetadata)).append("\n");
+    sb.append("    enableRecipientDomainValidation: ").append(toIndentedString(enableRecipientDomainValidation)).append("\n");
+    sb.append("    enableRecipientDomainValidationMetadata: ").append(toIndentedString(enableRecipientDomainValidationMetadata)).append("\n");
+    sb.append("    enableRecipientMayProvidePhoneNumber: ").append(toIndentedString(enableRecipientMayProvidePhoneNumber)).append("\n");
+    sb.append("    enableRecipientMayProvidePhoneNumberMetadata: ").append(toIndentedString(enableRecipientMayProvidePhoneNumberMetadata)).append("\n");
     sb.append("    enableReportLinks: ").append(toIndentedString(enableReportLinks)).append("\n");
     sb.append("    enableReportLinksMetadata: ").append(toIndentedString(enableReportLinksMetadata)).append("\n");
     sb.append("    enableRequireSignOnPaper: ").append(toIndentedString(enableRequireSignOnPaper)).append("\n");
-    sb.append("    enableRequireSignOnPaperMetadata: ").append(toIndentedString(enableRequireSignOnPaperMetadata))
-        .append("\n");
+    sb.append("    enableRequireSignOnPaperMetadata: ").append(toIndentedString(enableRequireSignOnPaperMetadata)).append("\n");
     sb.append("    enableReservedDomain: ").append(toIndentedString(enableReservedDomain)).append("\n");
     sb.append("    enableReservedDomainMetadata: ").append(toIndentedString(enableReservedDomainMetadata)).append("\n");
     sb.append("    enableResponsiveSigning: ").append(toIndentedString(enableResponsiveSigning)).append("\n");
-    sb.append("    enableResponsiveSigningMetadata: ").append(toIndentedString(enableResponsiveSigningMetadata))
-        .append("\n");
+    sb.append("    enableResponsiveSigningMetadata: ").append(toIndentedString(enableResponsiveSigningMetadata)).append("\n");
     sb.append("    enableScheduledRelease: ").append(toIndentedString(enableScheduledRelease)).append("\n");
-    sb.append("    enableScheduledReleaseMetadata: ").append(toIndentedString(enableScheduledReleaseMetadata))
-        .append("\n");
+    sb.append("    enableScheduledReleaseMetadata: ").append(toIndentedString(enableScheduledReleaseMetadata)).append("\n");
     sb.append("    enableSearch: ").append(toIndentedString(enableSearch)).append("\n");
     sb.append("    enableSearchMetadata: ").append(toIndentedString(enableSearchMetadata)).append("\n");
     sb.append("    enableSearchSiteSpecificApi: ").append(toIndentedString(enableSearchSiteSpecificApi)).append("\n");
-    sb.append("    enableSearchSiteSpecificApiMetadata: ").append(toIndentedString(enableSearchSiteSpecificApiMetadata))
-        .append("\n");
+    sb.append("    enableSearchSiteSpecificApiMetadata: ").append(toIndentedString(enableSearchSiteSpecificApiMetadata)).append("\n");
     sb.append("    enableSearchUI: ").append(toIndentedString(enableSearchUI)).append("\n");
     sb.append("    enableSearchUIMetadata: ").append(toIndentedString(enableSearchUIMetadata)).append("\n");
-    sb.append("    enableSendingTagsFontSettings: ").append(toIndentedString(enableSendingTagsFontSettings))
-        .append("\n");
-    sb.append("    enableSendingTagsFontSettingsMetadata: ")
-        .append(toIndentedString(enableSendingTagsFontSettingsMetadata)).append("\n");
+    sb.append("    enableSendingTagsFontSettings: ").append(toIndentedString(enableSendingTagsFontSettings)).append("\n");
+    sb.append("    enableSendingTagsFontSettingsMetadata: ").append(toIndentedString(enableSendingTagsFontSettingsMetadata)).append("\n");
     sb.append("    enableSendToAgent: ").append(toIndentedString(enableSendToAgent)).append("\n");
     sb.append("    enableSendToAgentMetadata: ").append(toIndentedString(enableSendToAgentMetadata)).append("\n");
     sb.append("    enableSendToIntermediary: ").append(toIndentedString(enableSendToIntermediary)).append("\n");
-    sb.append("    enableSendToIntermediaryMetadata: ").append(toIndentedString(enableSendToIntermediaryMetadata))
-        .append("\n");
+    sb.append("    enableSendToIntermediaryMetadata: ").append(toIndentedString(enableSendToIntermediaryMetadata)).append("\n");
     sb.append("    enableSendToManage: ").append(toIndentedString(enableSendToManage)).append("\n");
     sb.append("    enableSendToManageMetadata: ").append(toIndentedString(enableSendToManageMetadata)).append("\n");
     sb.append("    enableSequentialSigningAPI: ").append(toIndentedString(enableSequentialSigningAPI)).append("\n");
-    sb.append("    enableSequentialSigningAPIMetadata: ").append(toIndentedString(enableSequentialSigningAPIMetadata))
-        .append("\n");
+    sb.append("    enableSequentialSigningAPIMetadata: ").append(toIndentedString(enableSequentialSigningAPIMetadata)).append("\n");
     sb.append("    enableSequentialSigningUI: ").append(toIndentedString(enableSequentialSigningUI)).append("\n");
-    sb.append("    enableSequentialSigningUIMetadata: ").append(toIndentedString(enableSequentialSigningUIMetadata))
-        .append("\n");
+    sb.append("    enableSequentialSigningUIMetadata: ").append(toIndentedString(enableSequentialSigningUIMetadata)).append("\n");
     sb.append("    enableSignerAttachments: ").append(toIndentedString(enableSignerAttachments)).append("\n");
-    sb.append("    enableSignerAttachmentsMetadata: ").append(toIndentedString(enableSignerAttachmentsMetadata))
-        .append("\n");
-    sb.append("    enableSigningExtensionComments: ").append(toIndentedString(enableSigningExtensionComments))
-        .append("\n");
-    sb.append("    enableSigningExtensionCommentsMetadata: ")
-        .append(toIndentedString(enableSigningExtensionCommentsMetadata)).append("\n");
-    sb.append("    enableSigningExtensionConversations: ").append(toIndentedString(enableSigningExtensionConversations))
-        .append("\n");
-    sb.append("    enableSigningExtensionConversationsMetadata: ")
-        .append(toIndentedString(enableSigningExtensionConversationsMetadata)).append("\n");
-    sb.append("    enableSigningOrderSettingsForAccount: ")
-        .append(toIndentedString(enableSigningOrderSettingsForAccount)).append("\n");
-    sb.append("    enableSigningOrderSettingsForAccountMetadata: ")
-        .append(toIndentedString(enableSigningOrderSettingsForAccountMetadata)).append("\n");
+    sb.append("    enableSignerAttachmentsMetadata: ").append(toIndentedString(enableSignerAttachmentsMetadata)).append("\n");
+    sb.append("    enableSigningExtensionComments: ").append(toIndentedString(enableSigningExtensionComments)).append("\n");
+    sb.append("    enableSigningExtensionCommentsMetadata: ").append(toIndentedString(enableSigningExtensionCommentsMetadata)).append("\n");
+    sb.append("    enableSigningExtensionConversations: ").append(toIndentedString(enableSigningExtensionConversations)).append("\n");
+    sb.append("    enableSigningExtensionConversationsMetadata: ").append(toIndentedString(enableSigningExtensionConversationsMetadata)).append("\n");
+    sb.append("    enableSigningOrderSettingsForAccount: ").append(toIndentedString(enableSigningOrderSettingsForAccount)).append("\n");
+    sb.append("    enableSigningOrderSettingsForAccountMetadata: ").append(toIndentedString(enableSigningOrderSettingsForAccountMetadata)).append("\n");
     sb.append("    enableSignOnPaper: ").append(toIndentedString(enableSignOnPaper)).append("\n");
     sb.append("    enableSignOnPaperMetadata: ").append(toIndentedString(enableSignOnPaperMetadata)).append("\n");
     sb.append("    enableSignOnPaperOverride: ").append(toIndentedString(enableSignOnPaperOverride)).append("\n");
-    sb.append("    enableSignOnPaperOverrideMetadata: ").append(toIndentedString(enableSignOnPaperOverrideMetadata))
-        .append("\n");
+    sb.append("    enableSignOnPaperOverrideMetadata: ").append(toIndentedString(enableSignOnPaperOverrideMetadata)).append("\n");
     sb.append("    enableSignWithNotary: ").append(toIndentedString(enableSignWithNotary)).append("\n");
     sb.append("    enableSignWithNotaryMetadata: ").append(toIndentedString(enableSignWithNotaryMetadata)).append("\n");
     sb.append("    enableSmartContracts: ").append(toIndentedString(enableSmartContracts)).append("\n");
     sb.append("    enableSmartContractsMetadata: ").append(toIndentedString(enableSmartContractsMetadata)).append("\n");
     sb.append("    enableSMSAuthentication: ").append(toIndentedString(enableSMSAuthentication)).append("\n");
-    sb.append("    enableSMSAuthenticationMetadata: ").append(toIndentedString(enableSMSAuthenticationMetadata))
-        .append("\n");
-    sb.append("    enableSMSDeliveryAdditionalNotification: ")
-        .append(toIndentedString(enableSMSDeliveryAdditionalNotification)).append("\n");
-    sb.append("    enableSMSDeliveryAdditionalNotificationMetadata: ")
-        .append(toIndentedString(enableSMSDeliveryAdditionalNotificationMetadata)).append("\n");
+    sb.append("    enableSMSAuthenticationMetadata: ").append(toIndentedString(enableSMSAuthenticationMetadata)).append("\n");
+    sb.append("    enableSMSDeliveryAdditionalNotification: ").append(toIndentedString(enableSMSDeliveryAdditionalNotification)).append("\n");
+    sb.append("    enableSMSDeliveryAdditionalNotificationMetadata: ").append(toIndentedString(enableSMSDeliveryAdditionalNotificationMetadata)).append("\n");
     sb.append("    enableSMSDeliveryPrimary: ").append(toIndentedString(enableSMSDeliveryPrimary)).append("\n");
     sb.append("    enableSocialIdLogin: ").append(toIndentedString(enableSocialIdLogin)).append("\n");
     sb.append("    enableSocialIdLoginMetadata: ").append(toIndentedString(enableSocialIdLoginMetadata)).append("\n");
     sb.append("    enableStrikeThrough: ").append(toIndentedString(enableStrikeThrough)).append("\n");
     sb.append("    enableStrikeThroughMetadata: ").append(toIndentedString(enableStrikeThroughMetadata)).append("\n");
     sb.append("    enableTransactionPoint: ").append(toIndentedString(enableTransactionPoint)).append("\n");
-    sb.append("    enableTransactionPointMetadata: ").append(toIndentedString(enableTransactionPointMetadata))
-        .append("\n");
+    sb.append("    enableTransactionPointMetadata: ").append(toIndentedString(enableTransactionPointMetadata)).append("\n");
     sb.append("    enableVaulting: ").append(toIndentedString(enableVaulting)).append("\n");
     sb.append("    enableVaultingMetadata: ").append(toIndentedString(enableVaultingMetadata)).append("\n");
     sb.append("    enableWitnessing: ").append(toIndentedString(enableWitnessing)).append("\n");
     sb.append("    enableWitnessingMetadata: ").append(toIndentedString(enableWitnessingMetadata)).append("\n");
-    sb.append("    enforceTemplateNameUniqueness: ").append(toIndentedString(enforceTemplateNameUniqueness))
-        .append("\n");
-    sb.append("    enforceTemplateNameUniquenessMetadata: ")
-        .append(toIndentedString(enforceTemplateNameUniquenessMetadata)).append("\n");
+    sb.append("    enforceTemplateNameUniqueness: ").append(toIndentedString(enforceTemplateNameUniqueness)).append("\n");
+    sb.append("    enforceTemplateNameUniquenessMetadata: ").append(toIndentedString(enforceTemplateNameUniquenessMetadata)).append("\n");
     sb.append("    enforceTlsEmails: ").append(toIndentedString(enforceTlsEmails)).append("\n");
     sb.append("    enforceTlsEmailsMetadata: ").append(toIndentedString(enforceTlsEmailsMetadata)).append("\n");
     sb.append("    envelopeIntegrationAllowed: ").append(toIndentedString(envelopeIntegrationAllowed)).append("\n");
-    sb.append("    envelopeIntegrationAllowedMetadata: ").append(toIndentedString(envelopeIntegrationAllowedMetadata))
-        .append("\n");
+    sb.append("    envelopeIntegrationAllowedMetadata: ").append(toIndentedString(envelopeIntegrationAllowedMetadata)).append("\n");
     sb.append("    envelopeIntegrationEnabled: ").append(toIndentedString(envelopeIntegrationEnabled)).append("\n");
-    sb.append("    envelopeIntegrationEnabledMetadata: ").append(toIndentedString(envelopeIntegrationEnabledMetadata))
-        .append("\n");
-    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMB: ")
-        .append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMB)).append("\n");
-    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBEnabled: ")
-        .append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBEnabled)).append("\n");
-    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata: ")
-        .append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata)).append("\n");
-    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBMetadata: ")
-        .append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBMetadata)).append("\n");
+    sb.append("    envelopeIntegrationEnabledMetadata: ").append(toIndentedString(envelopeIntegrationEnabledMetadata)).append("\n");
+    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMB: ").append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMB)).append("\n");
+    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBEnabled: ").append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBEnabled)).append("\n");
+    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata: ").append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata)).append("\n");
+    sb.append("    envelopeLimitsTotalDocumentSizeAllowedInMBMetadata: ").append(toIndentedString(envelopeLimitsTotalDocumentSizeAllowedInMBMetadata)).append("\n");
     sb.append("    envelopeSearchMode: ").append(toIndentedString(envelopeSearchMode)).append("\n");
     sb.append("    envelopeSearchModeMetadata: ").append(toIndentedString(envelopeSearchModeMetadata)).append("\n");
     sb.append("    envelopeStampingDefaultValue: ").append(toIndentedString(envelopeStampingDefaultValue)).append("\n");
-    sb.append("    envelopeStampingDefaultValueMetadata: ")
-        .append(toIndentedString(envelopeStampingDefaultValueMetadata)).append("\n");
+    sb.append("    envelopeStampingDefaultValueMetadata: ").append(toIndentedString(envelopeStampingDefaultValueMetadata)).append("\n");
     sb.append("    exitPrompt: ").append(toIndentedString(exitPrompt)).append("\n");
     sb.append("    exitPromptMetadata: ").append(toIndentedString(exitPromptMetadata)).append("\n");
     sb.append("    expressSend: ").append(toIndentedString(expressSend)).append("\n");
@@ -22529,24 +21453,18 @@ public class AccountSettingsInformation {
     sb.append("    expressSendMetadata: ").append(toIndentedString(expressSendMetadata)).append("\n");
     sb.append("    externalDocumentSources: ").append(toIndentedString(externalDocumentSources)).append("\n");
     sb.append("    externalSignaturePadType: ").append(toIndentedString(externalSignaturePadType)).append("\n");
-    sb.append("    externalSignaturePadTypeMetadata: ").append(toIndentedString(externalSignaturePadTypeMetadata))
-        .append("\n");
+    sb.append("    externalSignaturePadTypeMetadata: ").append(toIndentedString(externalSignaturePadTypeMetadata)).append("\n");
     sb.append("    faxOutEnabled: ").append(toIndentedString(faxOutEnabled)).append("\n");
     sb.append("    faxOutEnabledMetadata: ").append(toIndentedString(faxOutEnabledMetadata)).append("\n");
     sb.append("    finishReminder: ").append(toIndentedString(finishReminder)).append("\n");
     sb.append("    finishReminderMetadata: ").append(toIndentedString(finishReminderMetadata)).append("\n");
     sb.append("    guidedFormsHtmlAllowed: ").append(toIndentedString(guidedFormsHtmlAllowed)).append("\n");
-    sb.append("    guidedFormsHtmlAllowedMetadata: ").append(toIndentedString(guidedFormsHtmlAllowedMetadata))
-        .append("\n");
-    sb.append("    guidedFormsHtmlConversionPolicy: ").append(toIndentedString(guidedFormsHtmlConversionPolicy))
-        .append("\n");
-    sb.append("    guidedFormsHtmlConversionPolicyMetadata: ")
-        .append(toIndentedString(guidedFormsHtmlConversionPolicyMetadata)).append("\n");
-    sb.append("    hasRecipientConnectClaimedDomain: ").append(toIndentedString(hasRecipientConnectClaimedDomain))
-        .append("\n");
+    sb.append("    guidedFormsHtmlAllowedMetadata: ").append(toIndentedString(guidedFormsHtmlAllowedMetadata)).append("\n");
+    sb.append("    guidedFormsHtmlConversionPolicy: ").append(toIndentedString(guidedFormsHtmlConversionPolicy)).append("\n");
+    sb.append("    guidedFormsHtmlConversionPolicyMetadata: ").append(toIndentedString(guidedFormsHtmlConversionPolicyMetadata)).append("\n");
+    sb.append("    hasRecipientConnectClaimedDomain: ").append(toIndentedString(hasRecipientConnectClaimedDomain)).append("\n");
     sb.append("    hideAccountAddressInCoC: ").append(toIndentedString(hideAccountAddressInCoC)).append("\n");
-    sb.append("    hideAccountAddressInCoCMetadata: ").append(toIndentedString(hideAccountAddressInCoCMetadata))
-        .append("\n");
+    sb.append("    hideAccountAddressInCoCMetadata: ").append(toIndentedString(hideAccountAddressInCoCMetadata)).append("\n");
     sb.append("    hidePricing: ").append(toIndentedString(hidePricing)).append("\n");
     sb.append("    hidePricingMetadata: ").append(toIndentedString(hidePricingMetadata)).append("\n");
     sb.append("    idCheckConfigurations: ").append(toIndentedString(idCheckConfigurations)).append("\n");
@@ -22560,124 +21478,86 @@ public class AccountSettingsInformation {
     sb.append("    idCheckRequiredMetadata: ").append(toIndentedString(idCheckRequiredMetadata)).append("\n");
     sb.append("    identityVerification: ").append(toIndentedString(identityVerification)).append("\n");
     sb.append("    identityVerificationMetadata: ").append(toIndentedString(identityVerificationMetadata)).append("\n");
-    sb.append("    idfxKBAAuthenticationOverride: ").append(toIndentedString(idfxKBAAuthenticationOverride))
-        .append("\n");
-    sb.append("    idfxKBAAuthenticationOverrideMetadata: ")
-        .append(toIndentedString(idfxKBAAuthenticationOverrideMetadata)).append("\n");
-    sb.append("    idfxPhoneAuthenticationOverride: ").append(toIndentedString(idfxPhoneAuthenticationOverride))
-        .append("\n");
-    sb.append("    idfxPhoneAuthenticationOverrideMetadata: ")
-        .append(toIndentedString(idfxPhoneAuthenticationOverrideMetadata)).append("\n");
-    sb.append("    ignoreErrorIfAnchorTabNotFound: ").append(toIndentedString(ignoreErrorIfAnchorTabNotFound))
-        .append("\n");
-    sb.append("    ignoreErrorIfAnchorTabNotFoundMetadataEnabled: ")
-        .append(toIndentedString(ignoreErrorIfAnchorTabNotFoundMetadataEnabled)).append("\n");
+    sb.append("    idfxKBAAuthenticationOverride: ").append(toIndentedString(idfxKBAAuthenticationOverride)).append("\n");
+    sb.append("    idfxKBAAuthenticationOverrideMetadata: ").append(toIndentedString(idfxKBAAuthenticationOverrideMetadata)).append("\n");
+    sb.append("    idfxPhoneAuthenticationOverride: ").append(toIndentedString(idfxPhoneAuthenticationOverride)).append("\n");
+    sb.append("    idfxPhoneAuthenticationOverrideMetadata: ").append(toIndentedString(idfxPhoneAuthenticationOverrideMetadata)).append("\n");
+    sb.append("    ignoreErrorIfAnchorTabNotFound: ").append(toIndentedString(ignoreErrorIfAnchorTabNotFound)).append("\n");
+    sb.append("    ignoreErrorIfAnchorTabNotFoundMetadataEnabled: ").append(toIndentedString(ignoreErrorIfAnchorTabNotFoundMetadataEnabled)).append("\n");
     sb.append("    inPersonIDCheckQuestion: ").append(toIndentedString(inPersonIDCheckQuestion)).append("\n");
-    sb.append("    inPersonIDCheckQuestionMetadata: ").append(toIndentedString(inPersonIDCheckQuestionMetadata))
-        .append("\n");
+    sb.append("    inPersonIDCheckQuestionMetadata: ").append(toIndentedString(inPersonIDCheckQuestionMetadata)).append("\n");
     sb.append("    inPersonSigningEnabled: ").append(toIndentedString(inPersonSigningEnabled)).append("\n");
-    sb.append("    inPersonSigningEnabledMetadata: ").append(toIndentedString(inPersonSigningEnabledMetadata))
-        .append("\n");
+    sb.append("    inPersonSigningEnabledMetadata: ").append(toIndentedString(inPersonSigningEnabledMetadata)).append("\n");
     sb.append("    inSessionEnabled: ").append(toIndentedString(inSessionEnabled)).append("\n");
     sb.append("    inSessionEnabledMetadata: ").append(toIndentedString(inSessionEnabledMetadata)).append("\n");
     sb.append("    inSessionSuppressEmails: ").append(toIndentedString(inSessionSuppressEmails)).append("\n");
-    sb.append("    inSessionSuppressEmailsMetadata: ").append(toIndentedString(inSessionSuppressEmailsMetadata))
-        .append("\n");
-    sb.append("    linkedExternalPrimaryAccounts: ").append(toIndentedString(linkedExternalPrimaryAccounts))
-        .append("\n");
+    sb.append("    inSessionSuppressEmailsMetadata: ").append(toIndentedString(inSessionSuppressEmailsMetadata)).append("\n");
+    sb.append("    isConnectDocumentFieldsEnabled: ").append(toIndentedString(isConnectDocumentFieldsEnabled)).append("\n");
+    sb.append("    linkedExternalPrimaryAccounts: ").append(toIndentedString(linkedExternalPrimaryAccounts)).append("\n");
     sb.append("    maximumSigningGroups: ").append(toIndentedString(maximumSigningGroups)).append("\n");
     sb.append("    maximumSigningGroupsMetadata: ").append(toIndentedString(maximumSigningGroupsMetadata)).append("\n");
     sb.append("    maximumUsersPerSigningGroup: ").append(toIndentedString(maximumUsersPerSigningGroup)).append("\n");
-    sb.append("    maximumUsersPerSigningGroupMetadata: ").append(toIndentedString(maximumUsersPerSigningGroupMetadata))
-        .append("\n");
+    sb.append("    maximumUsersPerSigningGroupMetadata: ").append(toIndentedString(maximumUsersPerSigningGroupMetadata)).append("\n");
     sb.append("    maxNumberOfCustomStamps: ").append(toIndentedString(maxNumberOfCustomStamps)).append("\n");
     sb.append("    mergeMixedModeResults: ").append(toIndentedString(mergeMixedModeResults)).append("\n");
-    sb.append("    mergeMixedModeResultsMetadata: ").append(toIndentedString(mergeMixedModeResultsMetadata))
-        .append("\n");
+    sb.append("    mergeMixedModeResultsMetadata: ").append(toIndentedString(mergeMixedModeResultsMetadata)).append("\n");
     sb.append("    mobileSessionTimeout: ").append(toIndentedString(mobileSessionTimeout)).append("\n");
     sb.append("    mobileSessionTimeoutMetadata: ").append(toIndentedString(mobileSessionTimeoutMetadata)).append("\n");
     sb.append("    numberOfActiveCustomStamps: ").append(toIndentedString(numberOfActiveCustomStamps)).append("\n");
     sb.append("    optInMobileSigningV02: ").append(toIndentedString(optInMobileSigningV02)).append("\n");
-    sb.append("    optInMobileSigningV02Metadata: ").append(toIndentedString(optInMobileSigningV02Metadata))
-        .append("\n");
-    sb.append("    optOutAutoNavTextAndTabColorUpdates: ").append(toIndentedString(optOutAutoNavTextAndTabColorUpdates))
-        .append("\n");
-    sb.append("    optOutAutoNavTextAndTabColorUpdatesMetadata: ")
-        .append(toIndentedString(optOutAutoNavTextAndTabColorUpdatesMetadata)).append("\n");
+    sb.append("    optInMobileSigningV02Metadata: ").append(toIndentedString(optInMobileSigningV02Metadata)).append("\n");
+    sb.append("    optInUniversalSignatures: ").append(toIndentedString(optInUniversalSignatures)).append("\n");
+    sb.append("    optOutAutoNavTextAndTabColorUpdates: ").append(toIndentedString(optOutAutoNavTextAndTabColorUpdates)).append("\n");
+    sb.append("    optOutAutoNavTextAndTabColorUpdatesMetadata: ").append(toIndentedString(optOutAutoNavTextAndTabColorUpdatesMetadata)).append("\n");
     sb.append("    optOutNewPlatformSeal: ").append(toIndentedString(optOutNewPlatformSeal)).append("\n");
-    sb.append("    optOutNewPlatformSealPlatformMetadata: ")
-        .append(toIndentedString(optOutNewPlatformSealPlatformMetadata)).append("\n");
+    sb.append("    optOutNewPlatformSealPlatformMetadata: ").append(toIndentedString(optOutNewPlatformSealPlatformMetadata)).append("\n");
     sb.append("    pdfMaxChunkedUploadPartSize: ").append(toIndentedString(pdfMaxChunkedUploadPartSize)).append("\n");
-    sb.append("    pdfMaxChunkedUploadPartSizeMetadata: ").append(toIndentedString(pdfMaxChunkedUploadPartSizeMetadata))
-        .append("\n");
+    sb.append("    pdfMaxChunkedUploadPartSizeMetadata: ").append(toIndentedString(pdfMaxChunkedUploadPartSizeMetadata)).append("\n");
     sb.append("    pdfMaxChunkedUploadTotalSize: ").append(toIndentedString(pdfMaxChunkedUploadTotalSize)).append("\n");
-    sb.append("    pdfMaxChunkedUploadTotalSizeMetadata: ")
-        .append(toIndentedString(pdfMaxChunkedUploadTotalSizeMetadata)).append("\n");
+    sb.append("    pdfMaxChunkedUploadTotalSizeMetadata: ").append(toIndentedString(pdfMaxChunkedUploadTotalSizeMetadata)).append("\n");
     sb.append("    pdfMaxIndividualUploadSize: ").append(toIndentedString(pdfMaxIndividualUploadSize)).append("\n");
-    sb.append("    pdfMaxIndividualUploadSizeMetadata: ").append(toIndentedString(pdfMaxIndividualUploadSizeMetadata))
-        .append("\n");
-    sb.append("    phoneAuthRecipientMayProvidePhoneNumber: ")
-        .append(toIndentedString(phoneAuthRecipientMayProvidePhoneNumber)).append("\n");
-    sb.append("    phoneAuthRecipientMayProvidePhoneNumberMetadata: ")
-        .append(toIndentedString(phoneAuthRecipientMayProvidePhoneNumberMetadata)).append("\n");
+    sb.append("    pdfMaxIndividualUploadSizeMetadata: ").append(toIndentedString(pdfMaxIndividualUploadSizeMetadata)).append("\n");
+    sb.append("    phoneAuthRecipientMayProvidePhoneNumber: ").append(toIndentedString(phoneAuthRecipientMayProvidePhoneNumber)).append("\n");
+    sb.append("    phoneAuthRecipientMayProvidePhoneNumberMetadata: ").append(toIndentedString(phoneAuthRecipientMayProvidePhoneNumberMetadata)).append("\n");
     sb.append("    pkiSignDownloadedPDFDocs: ").append(toIndentedString(pkiSignDownloadedPDFDocs)).append("\n");
-    sb.append("    pkiSignDownloadedPDFDocsMetadata: ").append(toIndentedString(pkiSignDownloadedPDFDocsMetadata))
-        .append("\n");
+    sb.append("    pkiSignDownloadedPDFDocsMetadata: ").append(toIndentedString(pkiSignDownloadedPDFDocsMetadata)).append("\n");
     sb.append("    readOnlyMode: ").append(toIndentedString(readOnlyMode)).append("\n");
     sb.append("    readOnlyModeMetadata: ").append(toIndentedString(readOnlyModeMetadata)).append("\n");
     sb.append("    recipientsCanSignOffline: ").append(toIndentedString(recipientsCanSignOffline)).append("\n");
-    sb.append("    recipientsCanSignOfflineMetadata: ").append(toIndentedString(recipientsCanSignOfflineMetadata))
-        .append("\n");
-    sb.append("    recipientSigningAutoNavigationControl: ")
-        .append(toIndentedString(recipientSigningAutoNavigationControl)).append("\n");
-    sb.append("    recipientSigningAutoNavigationControlMetadata: ")
-        .append(toIndentedString(recipientSigningAutoNavigationControlMetadata)).append("\n");
+    sb.append("    recipientsCanSignOfflineMetadata: ").append(toIndentedString(recipientsCanSignOfflineMetadata)).append("\n");
+    sb.append("    recipientSigningAutoNavigationControl: ").append(toIndentedString(recipientSigningAutoNavigationControl)).append("\n");
+    sb.append("    recipientSigningAutoNavigationControlMetadata: ").append(toIndentedString(recipientSigningAutoNavigationControlMetadata)).append("\n");
     sb.append("    require21CFRpt11Compliance: ").append(toIndentedString(require21CFRpt11Compliance)).append("\n");
-    sb.append("    require21CFRpt11ComplianceMetadata: ").append(toIndentedString(require21CFRpt11ComplianceMetadata))
-        .append("\n");
+    sb.append("    require21CFRpt11ComplianceMetadata: ").append(toIndentedString(require21CFRpt11ComplianceMetadata)).append("\n");
     sb.append("    requireDeclineReason: ").append(toIndentedString(requireDeclineReason)).append("\n");
     sb.append("    requireDeclineReasonMetadata: ").append(toIndentedString(requireDeclineReasonMetadata)).append("\n");
-    sb.append("    requireExternalUserManagement: ").append(toIndentedString(requireExternalUserManagement))
-        .append("\n");
-    sb.append("    requireExternalUserManagementMetadata: ")
-        .append(toIndentedString(requireExternalUserManagementMetadata)).append("\n");
+    sb.append("    requireExternalUserManagement: ").append(toIndentedString(requireExternalUserManagement)).append("\n");
+    sb.append("    requireExternalUserManagementMetadata: ").append(toIndentedString(requireExternalUserManagementMetadata)).append("\n");
     sb.append("    requireSignerCertificateType: ").append(toIndentedString(requireSignerCertificateType)).append("\n");
-    sb.append("    requireSignerCertificateTypeMetadata: ")
-        .append(toIndentedString(requireSignerCertificateTypeMetadata)).append("\n");
+    sb.append("    requireSignerCertificateTypeMetadata: ").append(toIndentedString(requireSignerCertificateTypeMetadata)).append("\n");
     sb.append("    rsaVeridAccountName: ").append(toIndentedString(rsaVeridAccountName)).append("\n");
     sb.append("    rsaVeridPassword: ").append(toIndentedString(rsaVeridPassword)).append("\n");
     sb.append("    rsaVeridRuleset: ").append(toIndentedString(rsaVeridRuleset)).append("\n");
     sb.append("    rsaVeridUserId: ").append(toIndentedString(rsaVeridUserId)).append("\n");
     sb.append("    sbsTransactionLevel: ").append(toIndentedString(sbsTransactionLevel)).append("\n");
-    sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument))
-        .append("\n");
-    sb.append("    selfSignedRecipientEmailDocumentMetadata: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");
-    sb.append("    selfSignedRecipientEmailDocumentUserOverride: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocumentUserOverride)).append("\n");
-    sb.append("    selfSignedRecipientEmailDocumentUserOverrideMetadata: ")
-        .append(toIndentedString(selfSignedRecipientEmailDocumentUserOverrideMetadata)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocumentMetadata: ").append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocumentUserOverride: ").append(toIndentedString(selfSignedRecipientEmailDocumentUserOverride)).append("\n");
+    sb.append("    selfSignedRecipientEmailDocumentUserOverrideMetadata: ").append(toIndentedString(selfSignedRecipientEmailDocumentUserOverrideMetadata)).append("\n");
     sb.append("    senderCanSignInEachLocation: ").append(toIndentedString(senderCanSignInEachLocation)).append("\n");
-    sb.append("    senderCanSignInEachLocationMetadata: ").append(toIndentedString(senderCanSignInEachLocationMetadata))
-        .append("\n");
-    sb.append("    senderMustAuthenticateSigning: ").append(toIndentedString(senderMustAuthenticateSigning))
-        .append("\n");
-    sb.append("    senderMustAuthenticateSigningMetadata: ")
-        .append(toIndentedString(senderMustAuthenticateSigningMetadata)).append("\n");
+    sb.append("    senderCanSignInEachLocationMetadata: ").append(toIndentedString(senderCanSignInEachLocationMetadata)).append("\n");
+    sb.append("    senderMustAuthenticateSigning: ").append(toIndentedString(senderMustAuthenticateSigning)).append("\n");
+    sb.append("    senderMustAuthenticateSigningMetadata: ").append(toIndentedString(senderMustAuthenticateSigningMetadata)).append("\n");
     sb.append("    sendingTagsFontColor: ").append(toIndentedString(sendingTagsFontColor)).append("\n");
     sb.append("    sendingTagsFontColorMetadata: ").append(toIndentedString(sendingTagsFontColorMetadata)).append("\n");
     sb.append("    sendingTagsFontName: ").append(toIndentedString(sendingTagsFontName)).append("\n");
     sb.append("    sendingTagsFontNameMetadata: ").append(toIndentedString(sendingTagsFontNameMetadata)).append("\n");
     sb.append("    sendingTagsFontSize: ").append(toIndentedString(sendingTagsFontSize)).append("\n");
     sb.append("    sendingTagsFontSizeMetadata: ").append(toIndentedString(sendingTagsFontSizeMetadata)).append("\n");
-    sb.append("    sendLockoutRecipientNotification: ").append(toIndentedString(sendLockoutRecipientNotification))
-        .append("\n");
-    sb.append("    sendLockoutRecipientNotificationMetadata: ")
-        .append(toIndentedString(sendLockoutRecipientNotificationMetadata)).append("\n");
-    sb.append("    sendToCertifiedDeliveryEnabled: ").append(toIndentedString(sendToCertifiedDeliveryEnabled))
-        .append("\n");
-    sb.append("    sendToCertifiedDeliveryEnabledMetadata: ")
-        .append(toIndentedString(sendToCertifiedDeliveryEnabledMetadata)).append("\n");
+    sb.append("    sendLockoutRecipientNotification: ").append(toIndentedString(sendLockoutRecipientNotification)).append("\n");
+    sb.append("    sendLockoutRecipientNotificationMetadata: ").append(toIndentedString(sendLockoutRecipientNotificationMetadata)).append("\n");
+    sb.append("    sendToCertifiedDeliveryEnabled: ").append(toIndentedString(sendToCertifiedDeliveryEnabled)).append("\n");
+    sb.append("    sendToCertifiedDeliveryEnabledMetadata: ").append(toIndentedString(sendToCertifiedDeliveryEnabledMetadata)).append("\n");
     sb.append("    sessionTimeout: ").append(toIndentedString(sessionTimeout)).append("\n");
     sb.append("    sessionTimeoutMetadata: ").append(toIndentedString(sessionTimeoutMetadata)).append("\n");
     sb.append("    setRecipEmailLang: ").append(toIndentedString(setRecipEmailLang)).append("\n");
@@ -22685,71 +21565,47 @@ public class AccountSettingsInformation {
     sb.append("    setRecipSignLang: ").append(toIndentedString(setRecipSignLang)).append("\n");
     sb.append("    setRecipSignLangMetadata: ").append(toIndentedString(setRecipSignLangMetadata)).append("\n");
     sb.append("    sharedTemplateFolders: ").append(toIndentedString(sharedTemplateFolders)).append("\n");
-    sb.append("    sharedTemplateFoldersMetadata: ").append(toIndentedString(sharedTemplateFoldersMetadata))
-        .append("\n");
-    sb.append("    showCompleteDialogInEmbeddedSession: ").append(toIndentedString(showCompleteDialogInEmbeddedSession))
-        .append("\n");
-    sb.append("    showCompleteDialogInEmbeddedSessionMetadata: ")
-        .append(toIndentedString(showCompleteDialogInEmbeddedSessionMetadata)).append("\n");
+    sb.append("    sharedTemplateFoldersMetadata: ").append(toIndentedString(sharedTemplateFoldersMetadata)).append("\n");
+    sb.append("    showCompleteDialogInEmbeddedSession: ").append(toIndentedString(showCompleteDialogInEmbeddedSession)).append("\n");
+    sb.append("    showCompleteDialogInEmbeddedSessionMetadata: ").append(toIndentedString(showCompleteDialogInEmbeddedSessionMetadata)).append("\n");
     sb.append("    showConditionalRoutingOnSend: ").append(toIndentedString(showConditionalRoutingOnSend)).append("\n");
-    sb.append("    showConditionalRoutingOnSendMetadata: ")
-        .append(toIndentedString(showConditionalRoutingOnSendMetadata)).append("\n");
+    sb.append("    showConditionalRoutingOnSendMetadata: ").append(toIndentedString(showConditionalRoutingOnSendMetadata)).append("\n");
     sb.append("    showInitialConditionalFields: ").append(toIndentedString(showInitialConditionalFields)).append("\n");
-    sb.append("    showInitialConditionalFieldsMetadata: ")
-        .append(toIndentedString(showInitialConditionalFieldsMetadata)).append("\n");
+    sb.append("    showInitialConditionalFieldsMetadata: ").append(toIndentedString(showInitialConditionalFieldsMetadata)).append("\n");
     sb.append("    showLocalizedWatermarks: ").append(toIndentedString(showLocalizedWatermarks)).append("\n");
-    sb.append("    showLocalizedWatermarksMetadata: ").append(toIndentedString(showLocalizedWatermarksMetadata))
-        .append("\n");
-    sb.append("    showMaskedFieldsWhenDownloadingDocumentAsSender: ")
-        .append(toIndentedString(showMaskedFieldsWhenDownloadingDocumentAsSender)).append("\n");
-    sb.append("    showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata: ")
-        .append(toIndentedString(showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata)).append("\n");
+    sb.append("    showLocalizedWatermarksMetadata: ").append(toIndentedString(showLocalizedWatermarksMetadata)).append("\n");
+    sb.append("    showMaskedFieldsWhenDownloadingDocumentAsSender: ").append(toIndentedString(showMaskedFieldsWhenDownloadingDocumentAsSender)).append("\n");
+    sb.append("    showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata: ").append(toIndentedString(showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata)).append("\n");
     sb.append("    showTutorials: ").append(toIndentedString(showTutorials)).append("\n");
     sb.append("    showTutorialsMetadata: ").append(toIndentedString(showTutorialsMetadata)).append("\n");
     sb.append("    signatureProviders: ").append(toIndentedString(signatureProviders)).append("\n");
     sb.append("    signatureProvidersMetadata: ").append(toIndentedString(signatureProvidersMetadata)).append("\n");
     sb.append("    signDateFormat: ").append(toIndentedString(signDateFormat)).append("\n");
     sb.append("    signDateFormatMetadata: ").append(toIndentedString(signDateFormatMetadata)).append("\n");
-    sb.append("    signDateTimeAccountLanguageOverride: ").append(toIndentedString(signDateTimeAccountLanguageOverride))
-        .append("\n");
-    sb.append("    signDateTimeAccountLanguageOverrideMetadata: ")
-        .append(toIndentedString(signDateTimeAccountLanguageOverrideMetadata)).append("\n");
-    sb.append("    signDateTimeAccountTimezoneOverride: ").append(toIndentedString(signDateTimeAccountTimezoneOverride))
-        .append("\n");
-    sb.append("    signDateTimeAccountTimezoneOverrideMetadata: ")
-        .append(toIndentedString(signDateTimeAccountTimezoneOverrideMetadata)).append("\n");
-    sb.append("    signerAttachCertificateToEnvelopePDF: ")
-        .append(toIndentedString(signerAttachCertificateToEnvelopePDF)).append("\n");
-    sb.append("    signerAttachCertificateToEnvelopePDFMetadata: ")
-        .append(toIndentedString(signerAttachCertificateToEnvelopePDFMetadata)).append("\n");
+    sb.append("    signDateTimeAccountLanguageOverride: ").append(toIndentedString(signDateTimeAccountLanguageOverride)).append("\n");
+    sb.append("    signDateTimeAccountLanguageOverrideMetadata: ").append(toIndentedString(signDateTimeAccountLanguageOverrideMetadata)).append("\n");
+    sb.append("    signDateTimeAccountTimezoneOverride: ").append(toIndentedString(signDateTimeAccountTimezoneOverride)).append("\n");
+    sb.append("    signDateTimeAccountTimezoneOverrideMetadata: ").append(toIndentedString(signDateTimeAccountTimezoneOverrideMetadata)).append("\n");
+    sb.append("    signerAttachCertificateToEnvelopePDF: ").append(toIndentedString(signerAttachCertificateToEnvelopePDF)).append("\n");
+    sb.append("    signerAttachCertificateToEnvelopePDFMetadata: ").append(toIndentedString(signerAttachCertificateToEnvelopePDFMetadata)).append("\n");
     sb.append("    signerAttachConcat: ").append(toIndentedString(signerAttachConcat)).append("\n");
     sb.append("    signerAttachConcatMetadata: ").append(toIndentedString(signerAttachConcatMetadata)).append("\n");
     sb.append("    signerCanCreateAccount: ").append(toIndentedString(signerCanCreateAccount)).append("\n");
-    sb.append("    signerCanCreateAccountMetadata: ").append(toIndentedString(signerCanCreateAccountMetadata))
-        .append("\n");
+    sb.append("    signerCanCreateAccountMetadata: ").append(toIndentedString(signerCanCreateAccountMetadata)).append("\n");
     sb.append("    signerCanSignOnMobile: ").append(toIndentedString(signerCanSignOnMobile)).append("\n");
-    sb.append("    signerCanSignOnMobileMetadata: ").append(toIndentedString(signerCanSignOnMobileMetadata))
-        .append("\n");
-    sb.append("    signerInSessionUseEnvelopeCompleteEmail: ")
-        .append(toIndentedString(signerInSessionUseEnvelopeCompleteEmail)).append("\n");
-    sb.append("    signerInSessionUseEnvelopeCompleteEmailMetadata: ")
-        .append(toIndentedString(signerInSessionUseEnvelopeCompleteEmailMetadata)).append("\n");
+    sb.append("    signerCanSignOnMobileMetadata: ").append(toIndentedString(signerCanSignOnMobileMetadata)).append("\n");
+    sb.append("    signerInSessionUseEnvelopeCompleteEmail: ").append(toIndentedString(signerInSessionUseEnvelopeCompleteEmail)).append("\n");
+    sb.append("    signerInSessionUseEnvelopeCompleteEmailMetadata: ").append(toIndentedString(signerInSessionUseEnvelopeCompleteEmailMetadata)).append("\n");
     sb.append("    signerLoginRequirements: ").append(toIndentedString(signerLoginRequirements)).append("\n");
-    sb.append("    signerLoginRequirementsMetadata: ").append(toIndentedString(signerLoginRequirementsMetadata))
-        .append("\n");
+    sb.append("    signerLoginRequirementsMetadata: ").append(toIndentedString(signerLoginRequirementsMetadata)).append("\n");
     sb.append("    signerMustHaveAccount: ").append(toIndentedString(signerMustHaveAccount)).append("\n");
-    sb.append("    signerMustHaveAccountMetadata: ").append(toIndentedString(signerMustHaveAccountMetadata))
-        .append("\n");
+    sb.append("    signerMustHaveAccountMetadata: ").append(toIndentedString(signerMustHaveAccountMetadata)).append("\n");
     sb.append("    signerMustLoginToSign: ").append(toIndentedString(signerMustLoginToSign)).append("\n");
-    sb.append("    signerMustLoginToSignMetadata: ").append(toIndentedString(signerMustLoginToSignMetadata))
-        .append("\n");
-    sb.append("    signerShowSecureFieldInitialValues: ").append(toIndentedString(signerShowSecureFieldInitialValues))
-        .append("\n");
-    sb.append("    signerShowSecureFieldInitialValuesMetadata: ")
-        .append(toIndentedString(signerShowSecureFieldInitialValuesMetadata)).append("\n");
+    sb.append("    signerMustLoginToSignMetadata: ").append(toIndentedString(signerMustLoginToSignMetadata)).append("\n");
+    sb.append("    signerShowSecureFieldInitialValues: ").append(toIndentedString(signerShowSecureFieldInitialValues)).append("\n");
+    sb.append("    signerShowSecureFieldInitialValuesMetadata: ").append(toIndentedString(signerShowSecureFieldInitialValuesMetadata)).append("\n");
     sb.append("    signingSessionTimeout: ").append(toIndentedString(signingSessionTimeout)).append("\n");
-    sb.append("    signingSessionTimeoutMetadata: ").append(toIndentedString(signingSessionTimeoutMetadata))
-        .append("\n");
+    sb.append("    signingSessionTimeoutMetadata: ").append(toIndentedString(signingSessionTimeoutMetadata)).append("\n");
     sb.append("    signingUiVersion: ").append(toIndentedString(signingUiVersion)).append("\n");
     sb.append("    signingUiVersionMetadata: ").append(toIndentedString(signingUiVersionMetadata)).append("\n");
     sb.append("    signTimeFormat: ").append(toIndentedString(signTimeFormat)).append("\n");
@@ -22757,37 +21613,25 @@ public class AccountSettingsInformation {
     sb.append("    signTimeShowAmPm: ").append(toIndentedString(signTimeShowAmPm)).append("\n");
     sb.append("    signTimeShowAmPmMetadata: ").append(toIndentedString(signTimeShowAmPmMetadata)).append("\n");
     sb.append("    simplifiedSendingEnabled: ").append(toIndentedString(simplifiedSendingEnabled)).append("\n");
-    sb.append("    simplifiedSendingEnabledMetadata: ").append(toIndentedString(simplifiedSendingEnabledMetadata))
-        .append("\n");
+    sb.append("    simplifiedSendingEnabledMetadata: ").append(toIndentedString(simplifiedSendingEnabledMetadata)).append("\n");
     sb.append("    singleSignOnEnabled: ").append(toIndentedString(singleSignOnEnabled)).append("\n");
     sb.append("    singleSignOnEnabledMetadata: ").append(toIndentedString(singleSignOnEnabledMetadata)).append("\n");
     sb.append("    skipAuthCompletedEnvelopes: ").append(toIndentedString(skipAuthCompletedEnvelopes)).append("\n");
-    sb.append("    skipAuthCompletedEnvelopesMetadata: ").append(toIndentedString(skipAuthCompletedEnvelopesMetadata))
-        .append("\n");
+    sb.append("    skipAuthCompletedEnvelopesMetadata: ").append(toIndentedString(skipAuthCompletedEnvelopesMetadata)).append("\n");
     sb.append("    socialIdRecipAuth: ").append(toIndentedString(socialIdRecipAuth)).append("\n");
     sb.append("    socialIdRecipAuthMetadata: ").append(toIndentedString(socialIdRecipAuthMetadata)).append("\n");
     sb.append("    specifyDocumentVisibility: ").append(toIndentedString(specifyDocumentVisibility)).append("\n");
-    sb.append("    specifyDocumentVisibilityMetadata: ").append(toIndentedString(specifyDocumentVisibilityMetadata))
-        .append("\n");
+    sb.append("    specifyDocumentVisibilityMetadata: ").append(toIndentedString(specifyDocumentVisibilityMetadata)).append("\n");
     sb.append("    startInAdvancedCorrect: ").append(toIndentedString(startInAdvancedCorrect)).append("\n");
-    sb.append("    startInAdvancedCorrectMetadata: ").append(toIndentedString(startInAdvancedCorrectMetadata))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustAcceptMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustReadMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
-    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView))
-        .append("\n");
-    sb.append("    supplementalDocumentsMustViewMetadata: ")
-        .append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
-    sb.append("    suppressCertificateEnforcement: ").append(toIndentedString(suppressCertificateEnforcement))
-        .append("\n");
-    sb.append("    suppressCertificateEnforcementMetadata: ")
-        .append(toIndentedString(suppressCertificateEnforcementMetadata)).append("\n");
+    sb.append("    startInAdvancedCorrectMetadata: ").append(toIndentedString(startInAdvancedCorrectMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustAccept: ").append(toIndentedString(supplementalDocumentsMustAccept)).append("\n");
+    sb.append("    supplementalDocumentsMustAcceptMetadata: ").append(toIndentedString(supplementalDocumentsMustAcceptMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustRead: ").append(toIndentedString(supplementalDocumentsMustRead)).append("\n");
+    sb.append("    supplementalDocumentsMustReadMetadata: ").append(toIndentedString(supplementalDocumentsMustReadMetadata)).append("\n");
+    sb.append("    supplementalDocumentsMustView: ").append(toIndentedString(supplementalDocumentsMustView)).append("\n");
+    sb.append("    supplementalDocumentsMustViewMetadata: ").append(toIndentedString(supplementalDocumentsMustViewMetadata)).append("\n");
+    sb.append("    suppressCertificateEnforcement: ").append(toIndentedString(suppressCertificateEnforcement)).append("\n");
+    sb.append("    suppressCertificateEnforcementMetadata: ").append(toIndentedString(suppressCertificateEnforcementMetadata)).append("\n");
     sb.append("    tabAccountSettings: ").append(toIndentedString(tabAccountSettings)).append("\n");
     sb.append("    timezoneOffsetAPI: ").append(toIndentedString(timezoneOffsetAPI)).append("\n");
     sb.append("    timezoneOffsetAPIMetadata: ").append(toIndentedString(timezoneOffsetAPIMetadata)).append("\n");
@@ -22797,36 +21641,27 @@ public class AccountSettingsInformation {
     sb.append("    useAccountLevelEmail: ").append(toIndentedString(useAccountLevelEmail)).append("\n");
     sb.append("    useAccountLevelEmailMetadata: ").append(toIndentedString(useAccountLevelEmailMetadata)).append("\n");
     sb.append("    useConsumerDisclosure: ").append(toIndentedString(useConsumerDisclosure)).append("\n");
-    sb.append("    useConsumerDisclosureMetadata: ").append(toIndentedString(useConsumerDisclosureMetadata))
-        .append("\n");
-    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount))
-        .append("\n");
-    sb.append("    useConsumerDisclosureWithinAccountMetadata: ")
-        .append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
+    sb.append("    useConsumerDisclosureMetadata: ").append(toIndentedString(useConsumerDisclosureMetadata)).append("\n");
+    sb.append("    useConsumerDisclosureWithinAccount: ").append(toIndentedString(useConsumerDisclosureWithinAccount)).append("\n");
+    sb.append("    useConsumerDisclosureWithinAccountMetadata: ").append(toIndentedString(useConsumerDisclosureWithinAccountMetadata)).append("\n");
     sb.append("    useDerivedKeys: ").append(toIndentedString(useDerivedKeys)).append("\n");
     sb.append("    useDerivedKeysMetadata: ").append(toIndentedString(useDerivedKeysMetadata)).append("\n");
-    sb.append("    useDocuSignExpressSignerCertificate: ").append(toIndentedString(useDocuSignExpressSignerCertificate))
-        .append("\n");
-    sb.append("    useDocuSignExpressSignerCertificateMetadata: ")
-        .append(toIndentedString(useDocuSignExpressSignerCertificateMetadata)).append("\n");
+    sb.append("    useDocuSignExpressSignerCertificate: ").append(toIndentedString(useDocuSignExpressSignerCertificate)).append("\n");
+    sb.append("    useDocuSignExpressSignerCertificateMetadata: ").append(toIndentedString(useDocuSignExpressSignerCertificateMetadata)).append("\n");
     sb.append("    useEnvelopeSearchMixedMode: ").append(toIndentedString(useEnvelopeSearchMixedMode)).append("\n");
-    sb.append("    useEnvelopeSearchMixedModeMetadata: ").append(toIndentedString(useEnvelopeSearchMixedModeMetadata))
-        .append("\n");
+    sb.append("    useEnvelopeSearchMixedModeMetadata: ").append(toIndentedString(useEnvelopeSearchMixedModeMetadata)).append("\n");
     sb.append("    useMultiAppGroupsData: ").append(toIndentedString(useMultiAppGroupsData)).append("\n");
-    sb.append("    useMultiAppGroupsDataMetadata: ").append(toIndentedString(useMultiAppGroupsDataMetadata))
-        .append("\n");
+    sb.append("    useMultiAppGroupsDataMetadata: ").append(toIndentedString(useMultiAppGroupsDataMetadata)).append("\n");
     sb.append("    useNewBlobForPdf: ").append(toIndentedString(useNewBlobForPdf)).append("\n");
     sb.append("    useNewBlobForPdfMetadata: ").append(toIndentedString(useNewBlobForPdfMetadata)).append("\n");
     sb.append("    useNewEnvelopeSearch: ").append(toIndentedString(useNewEnvelopeSearch)).append("\n");
     sb.append("    useNewEnvelopeSearchMetadata: ").append(toIndentedString(useNewEnvelopeSearchMetadata)).append("\n");
     sb.append("    useSAFESignerCertificates: ").append(toIndentedString(useSAFESignerCertificates)).append("\n");
-    sb.append("    useSAFESignerCertificatesMetadata: ").append(toIndentedString(useSAFESignerCertificatesMetadata))
-        .append("\n");
+    sb.append("    useSAFESignerCertificatesMetadata: ").append(toIndentedString(useSAFESignerCertificatesMetadata)).append("\n");
     sb.append("    usesAPI: ").append(toIndentedString(usesAPI)).append("\n");
     sb.append("    usesAPIMetadata: ").append(toIndentedString(usesAPIMetadata)).append("\n");
     sb.append("    useSignatureProviderPlatform: ").append(toIndentedString(useSignatureProviderPlatform)).append("\n");
-    sb.append("    useSignatureProviderPlatformMetadata: ")
-        .append(toIndentedString(useSignatureProviderPlatformMetadata)).append("\n");
+    sb.append("    useSignatureProviderPlatformMetadata: ").append(toIndentedString(useSignatureProviderPlatformMetadata)).append("\n");
     sb.append("    useSmartContractsV1: ").append(toIndentedString(useSmartContractsV1)).append("\n");
     sb.append("    validationsAllowed: ").append(toIndentedString(validationsAllowed)).append("\n");
     sb.append("    validationsAllowedMetadata: ").append(toIndentedString(validationsAllowedMetadata)).append("\n");
@@ -22840,13 +21675,10 @@ public class AccountSettingsInformation {
     sb.append("    validationsReportMetadata: ").append(toIndentedString(validationsReportMetadata)).append("\n");
     sb.append("    waterMarkEnabled: ").append(toIndentedString(waterMarkEnabled)).append("\n");
     sb.append("    waterMarkEnabledMetadata: ").append(toIndentedString(waterMarkEnabledMetadata)).append("\n");
-    sb.append("    writeReminderToEnvelopeHistory: ").append(toIndentedString(writeReminderToEnvelopeHistory))
-        .append("\n");
-    sb.append("    writeReminderToEnvelopeHistoryMetadata: ")
-        .append(toIndentedString(writeReminderToEnvelopeHistoryMetadata)).append("\n");
+    sb.append("    writeReminderToEnvelopeHistory: ").append(toIndentedString(writeReminderToEnvelopeHistory)).append("\n");
+    sb.append("    writeReminderToEnvelopeHistoryMetadata: ").append(toIndentedString(writeReminderToEnvelopeHistoryMetadata)).append("\n");
     sb.append("    wurflMinAllowableScreenSize: ").append(toIndentedString(wurflMinAllowableScreenSize)).append("\n");
-    sb.append("    wurflMinAllowableScreenSizeMetadata: ").append(toIndentedString(wurflMinAllowableScreenSizeMetadata))
-        .append("\n");
+    sb.append("    wurflMinAllowableScreenSizeMetadata: ").append(toIndentedString(wurflMinAllowableScreenSizeMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -22863,3 +21695,4 @@ public class AccountSettingsInformation {
   }
 
 }
+

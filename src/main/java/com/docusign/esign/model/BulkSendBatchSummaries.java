@@ -52,6 +52,7 @@ public class BulkSendBatchSummaries {
   @JsonProperty("totalSetSize")
   private String totalSetSize = null;
 
+
   /**
    * batchSizeLimit.
    *
@@ -64,7 +65,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return batchSizeLimit
    **/
   @Schema(description = "")
@@ -79,6 +79,7 @@ public class BulkSendBatchSummaries {
     this.batchSizeLimit = batchSizeLimit;
   }
 
+
   /**
    * bulkBatchSummaries.
    *
@@ -88,7 +89,7 @@ public class BulkSendBatchSummaries {
     this.bulkBatchSummaries = bulkBatchSummaries;
     return this;
   }
-
+  
   /**
    * addBulkBatchSummariesItem.
    *
@@ -104,7 +105,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return bulkBatchSummaries
    **/
   @Schema(description = "")
@@ -119,6 +119,7 @@ public class BulkSendBatchSummaries {
     this.bulkBatchSummaries = bulkBatchSummaries;
   }
 
+
   /**
    * bulkProcessQueueLimit.
    *
@@ -131,7 +132,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return bulkProcessQueueLimit
    **/
   @Schema(description = "")
@@ -146,6 +146,7 @@ public class BulkSendBatchSummaries {
     this.bulkProcessQueueLimit = bulkProcessQueueLimit;
   }
 
+
   /**
    * bulkProcessTotalQueued.
    *
@@ -158,7 +159,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return bulkProcessTotalQueued
    **/
   @Schema(description = "")
@@ -173,6 +173,7 @@ public class BulkSendBatchSummaries {
     this.bulkProcessTotalQueued = bulkProcessTotalQueued;
   }
 
+
   /**
    * endPosition.
    *
@@ -185,7 +186,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * The last position in the result set. .
-   * 
    * @return endPosition
    **/
   @Schema(description = "The last position in the result set. ")
@@ -200,6 +200,7 @@ public class BulkSendBatchSummaries {
     this.endPosition = endPosition;
   }
 
+
   /**
    * nextUri.
    *
@@ -211,9 +212,7 @@ public class BulkSendBatchSummaries {
   }
 
   /**
-   * The URI to the next chunk of records based on the search request. If the
-   * endPosition is the entire results of the search, this is null. .
-   * 
+   * The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. .
    * @return nextUri
    **/
   @Schema(description = "The URI to the next chunk of records based on the search request. If the endPosition is the entire results of the search, this is null. ")
@@ -228,6 +227,7 @@ public class BulkSendBatchSummaries {
     this.nextUri = nextUri;
   }
 
+
   /**
    * previousUri.
    *
@@ -240,7 +240,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * The postal code for the billing address..
-   * 
    * @return previousUri
    **/
   @Schema(description = "The postal code for the billing address.")
@@ -255,6 +254,7 @@ public class BulkSendBatchSummaries {
     this.previousUri = previousUri;
   }
 
+
   /**
    * queueLimit.
    *
@@ -267,7 +267,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return queueLimit
    **/
   @Schema(description = "")
@@ -282,6 +281,7 @@ public class BulkSendBatchSummaries {
     this.queueLimit = queueLimit;
   }
 
+
   /**
    * resultSetSize.
    *
@@ -294,7 +294,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * The number of results returned in this response. .
-   * 
    * @return resultSetSize
    **/
   @Schema(description = "The number of results returned in this response. ")
@@ -309,6 +308,7 @@ public class BulkSendBatchSummaries {
     this.resultSetSize = resultSetSize;
   }
 
+
   /**
    * startPosition.
    *
@@ -321,7 +321,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * Starting position of the current result set..
-   * 
    * @return startPosition
    **/
   @Schema(description = "Starting position of the current result set.")
@@ -336,6 +335,7 @@ public class BulkSendBatchSummaries {
     this.startPosition = startPosition;
   }
 
+
   /**
    * totalQueued.
    *
@@ -348,7 +348,6 @@ public class BulkSendBatchSummaries {
 
   /**
    * .
-   * 
    * @return totalQueued
    **/
   @Schema(description = "")
@@ -363,6 +362,7 @@ public class BulkSendBatchSummaries {
     this.totalQueued = totalQueued;
   }
 
+
   /**
    * totalSetSize.
    *
@@ -374,10 +374,7 @@ public class BulkSendBatchSummaries {
   }
 
   /**
-   * The total number of items available in the result set. This will always be
-   * greater than or equal to the value of the property returning the results in
-   * the in the response..
-   * 
+   * The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response..
    * @return totalSetSize
    **/
   @Schema(description = "The total number of items available in the result set. This will always be greater than or equal to the value of the property returning the results in the in the response.")
@@ -391,6 +388,7 @@ public class BulkSendBatchSummaries {
   public void setTotalSetSize(String totalSetSize) {
     this.totalSetSize = totalSetSize;
   }
+
 
   /**
    * Compares objects.
@@ -425,9 +423,9 @@ public class BulkSendBatchSummaries {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchSizeLimit, bulkBatchSummaries, bulkProcessQueueLimit, bulkProcessTotalQueued, endPosition,
-        nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
+    return Objects.hash(batchSizeLimit, bulkBatchSummaries, bulkProcessQueueLimit, bulkProcessTotalQueued, endPosition, nextUri, previousUri, queueLimit, resultSetSize, startPosition, totalQueued, totalSetSize);
   }
+
 
   /**
    * Converts the given object to string.
@@ -436,7 +434,7 @@ public class BulkSendBatchSummaries {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchSummaries {\n");
-
+    
     sb.append("    batchSizeLimit: ").append(toIndentedString(batchSizeLimit)).append("\n");
     sb.append("    bulkBatchSummaries: ").append(toIndentedString(bulkBatchSummaries)).append("\n");
     sb.append("    bulkProcessQueueLimit: ").append(toIndentedString(bulkProcessQueueLimit)).append("\n");
@@ -465,3 +463,4 @@ public class BulkSendBatchSummaries {
   }
 
 }
+

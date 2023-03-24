@@ -51,6 +51,7 @@ public class FolderSharedItem {
   @JsonProperty("user")
   private UserInfo user = null;
 
+
   /**
    * errorDetails.
    *
@@ -62,12 +63,10 @@ public class FolderSharedItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -78,6 +77,7 @@ public class FolderSharedItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * folderId.
@@ -91,7 +91,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return folderId
    **/
   @Schema(description = "")
@@ -106,6 +105,7 @@ public class FolderSharedItem {
     this.folderId = folderId;
   }
 
+
   /**
    * name.
    *
@@ -118,7 +118,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return name
    **/
   @Schema(description = "")
@@ -133,6 +132,7 @@ public class FolderSharedItem {
     this.name = name;
   }
 
+
   /**
    * owner.
    *
@@ -145,7 +145,6 @@ public class FolderSharedItem {
 
   /**
    * Information about the user who owns the folder..
-   * 
    * @return owner
    **/
   @Schema(description = "Information about the user who owns the folder.")
@@ -160,6 +159,7 @@ public class FolderSharedItem {
     this.owner = owner;
   }
 
+
   /**
    * parentFolderId.
    *
@@ -172,7 +172,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return parentFolderId
    **/
   @Schema(description = "")
@@ -187,6 +186,7 @@ public class FolderSharedItem {
     this.parentFolderId = parentFolderId;
   }
 
+
   /**
    * parentFolderUri.
    *
@@ -199,7 +199,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return parentFolderUri
    **/
   @Schema(description = "")
@@ -214,6 +213,7 @@ public class FolderSharedItem {
     this.parentFolderUri = parentFolderUri;
   }
 
+
   /**
    * shared.
    *
@@ -226,7 +226,6 @@ public class FolderSharedItem {
 
   /**
    * When set to **true**, this custom tab is shared..
-   * 
    * @return shared
    **/
   @Schema(description = "When set to **true**, this custom tab is shared.")
@@ -241,6 +240,7 @@ public class FolderSharedItem {
     this.shared = shared;
   }
 
+
   /**
    * sharedGroups.
    *
@@ -250,7 +250,7 @@ public class FolderSharedItem {
     this.sharedGroups = sharedGroups;
     return this;
   }
-
+  
   /**
    * addSharedGroupsItem.
    *
@@ -266,7 +266,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return sharedGroups
    **/
   @Schema(description = "")
@@ -281,6 +280,7 @@ public class FolderSharedItem {
     this.sharedGroups = sharedGroups;
   }
 
+
   /**
    * sharedUsers.
    *
@@ -290,7 +290,7 @@ public class FolderSharedItem {
     this.sharedUsers = sharedUsers;
     return this;
   }
-
+  
   /**
    * addSharedUsersItem.
    *
@@ -306,7 +306,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return sharedUsers
    **/
   @Schema(description = "")
@@ -321,6 +320,7 @@ public class FolderSharedItem {
     this.sharedUsers = sharedUsers;
   }
 
+
   /**
    * uri.
    *
@@ -333,7 +333,6 @@ public class FolderSharedItem {
 
   /**
    * .
-   * 
    * @return uri
    **/
   @Schema(description = "")
@@ -348,6 +347,7 @@ public class FolderSharedItem {
     this.uri = uri;
   }
 
+
   /**
    * user.
    *
@@ -360,7 +360,6 @@ public class FolderSharedItem {
 
   /**
    * Information about the user associated with the folder..
-   * 
    * @return user
    **/
   @Schema(description = "Information about the user associated with the folder.")
@@ -374,6 +373,7 @@ public class FolderSharedItem {
   public void setUser(UserInfo user) {
     this.user = user;
   }
+
 
   /**
    * Compares objects.
@@ -407,9 +407,9 @@ public class FolderSharedItem {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups,
-        sharedUsers, uri, user);
+    return Objects.hash(errorDetails, folderId, name, owner, parentFolderId, parentFolderUri, shared, sharedGroups, sharedUsers, uri, user);
   }
+
 
   /**
    * Converts the given object to string.
@@ -418,7 +418,7 @@ public class FolderSharedItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FolderSharedItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    folderId: ").append(toIndentedString(folderId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -446,3 +446,4 @@ public class FolderSharedItem {
   }
 
 }
+

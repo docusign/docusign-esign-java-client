@@ -19,6 +19,7 @@ public class BillingChargeResponse {
   @JsonProperty("billingChargeItems")
   private java.util.List<BillingCharge> billingChargeItems = null;
 
+
   /**
    * billingChargeItems.
    *
@@ -28,7 +29,7 @@ public class BillingChargeResponse {
     this.billingChargeItems = billingChargeItems;
     return this;
   }
-
+  
   /**
    * addBillingChargeItemsItem.
    *
@@ -44,7 +45,6 @@ public class BillingChargeResponse {
 
   /**
    * Reserved: TBD.
-   * 
    * @return billingChargeItems
    **/
   @Schema(description = "Reserved: TBD")
@@ -58,6 +58,7 @@ public class BillingChargeResponse {
   public void setBillingChargeItems(java.util.List<BillingCharge> billingChargeItems) {
     this.billingChargeItems = billingChargeItems;
   }
+
 
   /**
    * Compares objects.
@@ -84,6 +85,7 @@ public class BillingChargeResponse {
     return Objects.hash(billingChargeItems);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -91,7 +93,7 @@ public class BillingChargeResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BillingChargeResponse {\n");
-
+    
     sb.append("    billingChargeItems: ").append(toIndentedString(billingChargeItems)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -109,3 +111,4 @@ public class BillingChargeResponse {
   }
 
 }
+

@@ -70,6 +70,7 @@ public class ConnectLog {
   @JsonProperty("userName")
   private String userName = null;
 
+
   /**
    * accountId.
    *
@@ -82,7 +83,6 @@ public class ConnectLog {
 
   /**
    * The account ID associated with the envelope..
-   * 
    * @return accountId
    **/
   @Schema(description = "The account ID associated with the envelope.")
@@ -97,6 +97,7 @@ public class ConnectLog {
     this.accountId = accountId;
   }
 
+
   /**
    * configUrl.
    *
@@ -109,7 +110,6 @@ public class ConnectLog {
 
   /**
    * The web address of the listener or Retrieving Service end point for Connect..
-   * 
    * @return configUrl
    **/
   @Schema(description = "The web address of the listener or Retrieving Service end point for Connect.")
@@ -124,6 +124,7 @@ public class ConnectLog {
     this.configUrl = configUrl;
   }
 
+
   /**
    * connectDebugLog.
    *
@@ -133,7 +134,7 @@ public class ConnectLog {
     this.connectDebugLog = connectDebugLog;
     return this;
   }
-
+  
   /**
    * addConnectDebugLogItem.
    *
@@ -148,10 +149,7 @@ public class ConnectLog {
   }
 
   /**
-   * A complex element containing information about the Connect configuration,
-   * error details, date/time, description and payload. This is only included in
-   * the response if the query additional_info=true is used..
-   * 
+   * A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used..
    * @return connectDebugLog
    **/
   @Schema(description = "A complex element containing information about the Connect configuration, error details, date/time, description and payload.  This is only included in the response if the query additional_info=true is used.")
@@ -166,6 +164,7 @@ public class ConnectLog {
     this.connectDebugLog = connectDebugLog;
   }
 
+
   /**
    * connectId.
    *
@@ -177,10 +176,7 @@ public class ConnectLog {
   }
 
   /**
-   * The identifier for the Connect configuration that failed. If an account has
-   * multiple Connect configurations, this value is used to look up the Connect
-   * configuration for the failed post..
-   * 
+   * The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post..
    * @return connectId
    **/
   @Schema(description = "The identifier for the Connect configuration that failed. If an account has multiple Connect configurations, this value is used to look up the Connect configuration for the failed post.")
@@ -195,6 +191,7 @@ public class ConnectLog {
     this.connectId = connectId;
   }
 
+
   /**
    * created.
    *
@@ -207,7 +204,6 @@ public class ConnectLog {
 
   /**
    * The date and time the entry was created..
-   * 
    * @return created
    **/
   @Schema(description = "The date and time the entry was created.")
@@ -222,6 +218,7 @@ public class ConnectLog {
     this.created = created;
   }
 
+
   /**
    * email.
    *
@@ -234,7 +231,6 @@ public class ConnectLog {
 
   /**
    * The email that sent the envelope..
-   * 
    * @return email
    **/
   @Schema(description = "The email that sent the envelope.")
@@ -249,6 +245,7 @@ public class ConnectLog {
     this.email = email;
   }
 
+
   /**
    * envelopeId.
    *
@@ -261,7 +258,6 @@ public class ConnectLog {
 
   /**
    * The envelope ID of the envelope status that failed to post..
-   * 
    * @return envelopeId
    **/
   @Schema(description = "The envelope ID of the envelope status that failed to post.")
@@ -276,6 +272,7 @@ public class ConnectLog {
     this.envelopeId = envelopeId;
   }
 
+
   /**
    * error.
    *
@@ -288,7 +285,6 @@ public class ConnectLog {
 
   /**
    * The error that caused the Connect post to fail..
-   * 
    * @return error
    **/
   @Schema(description = "The error that caused the Connect post to fail.")
@@ -303,6 +299,7 @@ public class ConnectLog {
     this.error = error;
   }
 
+
   /**
    * failureId.
    *
@@ -315,7 +312,6 @@ public class ConnectLog {
 
   /**
    * The failure log ID for the failure..
-   * 
    * @return failureId
    **/
   @Schema(description = "The failure log ID for the failure.")
@@ -330,6 +326,7 @@ public class ConnectLog {
     this.failureId = failureId;
   }
 
+
   /**
    * failureUri.
    *
@@ -342,7 +339,6 @@ public class ConnectLog {
 
   /**
    * The URI for the failure..
-   * 
    * @return failureUri
    **/
   @Schema(description = "The URI for the failure.")
@@ -357,6 +353,7 @@ public class ConnectLog {
     this.failureUri = failureUri;
   }
 
+
   /**
    * lastTry.
    *
@@ -369,7 +366,6 @@ public class ConnectLog {
 
   /**
    * The date and time the last attempt to post..
-   * 
    * @return lastTry
    **/
   @Schema(description = "The date and time the last attempt to post.")
@@ -384,6 +380,7 @@ public class ConnectLog {
     this.lastTry = lastTry;
   }
 
+
   /**
    * logId.
    *
@@ -396,7 +393,6 @@ public class ConnectLog {
 
   /**
    * The Connect log ID for the entry..
-   * 
    * @return logId
    **/
   @Schema(description = "The Connect log ID for the entry.")
@@ -411,6 +407,7 @@ public class ConnectLog {
     this.logId = logId;
   }
 
+
   /**
    * logUri.
    *
@@ -423,7 +420,6 @@ public class ConnectLog {
 
   /**
    * The URI for the log item..
-   * 
    * @return logUri
    **/
   @Schema(description = "The URI for the log item.")
@@ -438,6 +434,7 @@ public class ConnectLog {
     this.logUri = logUri;
   }
 
+
   /**
    * retryCount.
    *
@@ -450,7 +447,6 @@ public class ConnectLog {
 
   /**
    * The number of times the Connect post has been retried..
-   * 
    * @return retryCount
    **/
   @Schema(description = "The number of times the Connect post has been retried.")
@@ -465,6 +461,7 @@ public class ConnectLog {
     this.retryCount = retryCount;
   }
 
+
   /**
    * retryUri.
    *
@@ -477,7 +474,6 @@ public class ConnectLog {
 
   /**
    * The UEI to retry to publish the Connect failure..
-   * 
    * @return retryUri
    **/
   @Schema(description = "The UEI to retry to publish the Connect failure.")
@@ -492,6 +488,7 @@ public class ConnectLog {
     this.retryUri = retryUri;
   }
 
+
   /**
    * status.
    *
@@ -503,10 +500,7 @@ public class ConnectLog {
   }
 
   /**
-   * The new envelope status for the failed Connect post. The possible values are:
-   * Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined,
-   * TimedOut, Template, or Processing..
-   * 
+   * The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing..
    * @return status
    **/
   @Schema(description = "The new envelope status for the failed Connect post. The possible values are: Any, Voided, Created, Deleted, Sent, Delivered, Signed, Completed, Declined, TimedOut, Template, or Processing.")
@@ -521,6 +515,7 @@ public class ConnectLog {
     this.status = status;
   }
 
+
   /**
    * subject.
    *
@@ -533,7 +528,6 @@ public class ConnectLog {
 
   /**
    * The envelope subject..
-   * 
    * @return subject
    **/
   @Schema(description = "The envelope subject.")
@@ -548,6 +542,7 @@ public class ConnectLog {
     this.subject = subject;
   }
 
+
   /**
    * userName.
    *
@@ -560,7 +555,6 @@ public class ConnectLog {
 
   /**
    * The name of the envelope sender..
-   * 
    * @return userName
    **/
   @Schema(description = "The name of the envelope sender.")
@@ -574,6 +568,7 @@ public class ConnectLog {
   public void setUserName(String userName) {
     this.userName = userName;
   }
+
 
   /**
    * Compares objects.
@@ -614,9 +609,9 @@ public class ConnectLog {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, configUrl, connectDebugLog, connectId, created, email, envelopeId, error, failureId,
-        failureUri, lastTry, logId, logUri, retryCount, retryUri, status, subject, userName);
+    return Objects.hash(accountId, configUrl, connectDebugLog, connectId, created, email, envelopeId, error, failureId, failureUri, lastTry, logId, logUri, retryCount, retryUri, status, subject, userName);
   }
+
 
   /**
    * Converts the given object to string.
@@ -625,7 +620,7 @@ public class ConnectLog {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectLog {\n");
-
+    
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
     sb.append("    configUrl: ").append(toIndentedString(configUrl)).append("\n");
     sb.append("    connectDebugLog: ").append(toIndentedString(connectDebugLog)).append("\n");
@@ -660,3 +655,4 @@ public class ConnectLog {
   }
 
 }
+

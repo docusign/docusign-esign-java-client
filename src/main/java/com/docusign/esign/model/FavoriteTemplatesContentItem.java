@@ -24,6 +24,7 @@ public class FavoriteTemplatesContentItem {
   @JsonProperty("templateId")
   private String templateId = null;
 
+
   /**
    * errorDetails.
    *
@@ -35,12 +36,10 @@ public class FavoriteTemplatesContentItem {
   }
 
   /**
-   * This object describes errors that occur. It is only valid for responses and
-   * ignored in requests..
-   * 
+   * Array or errors..
    * @return errorDetails
    **/
-  @Schema(description = "This object describes errors that occur. It is only valid for responses and ignored in requests.")
+  @Schema(description = "Array or errors.")
   public ErrorDetails getErrorDetails() {
     return errorDetails;
   }
@@ -51,6 +50,7 @@ public class FavoriteTemplatesContentItem {
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
   }
+
 
   /**
    * favoritedDate.
@@ -64,7 +64,6 @@ public class FavoriteTemplatesContentItem {
 
   /**
    * .
-   * 
    * @return favoritedDate
    **/
   @Schema(description = "")
@@ -79,6 +78,7 @@ public class FavoriteTemplatesContentItem {
     this.favoritedDate = favoritedDate;
   }
 
+
   /**
    * templateId.
    *
@@ -90,9 +90,7 @@ public class FavoriteTemplatesContentItem {
   }
 
   /**
-   * The unique identifier of the template. If this is not provided, DocuSign will
-   * generate a value. .
-   * 
+   * The unique identifier of the template. If this is not provided, DocuSign will generate a value. .
    * @return templateId
    **/
   @Schema(description = "The unique identifier of the template. If this is not provided, DocuSign will generate a value. ")
@@ -106,6 +104,7 @@ public class FavoriteTemplatesContentItem {
   public void setTemplateId(String templateId) {
     this.templateId = templateId;
   }
+
 
   /**
    * Compares objects.
@@ -134,6 +133,7 @@ public class FavoriteTemplatesContentItem {
     return Objects.hash(errorDetails, favoritedDate, templateId);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -141,7 +141,7 @@ public class FavoriteTemplatesContentItem {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FavoriteTemplatesContentItem {\n");
-
+    
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    favoritedDate: ").append(toIndentedString(favoritedDate)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
@@ -161,3 +161,4 @@ public class FavoriteTemplatesContentItem {
   }
 
 }
+

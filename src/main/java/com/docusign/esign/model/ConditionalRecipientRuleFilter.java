@@ -35,6 +35,7 @@ public class ConditionalRecipientRuleFilter {
   @JsonProperty("value")
   private String value = null;
 
+
   /**
    * operator.
    *
@@ -47,7 +48,6 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
-   * 
    * @return operator
    **/
   @Schema(description = "")
@@ -62,6 +62,7 @@ public class ConditionalRecipientRuleFilter {
     this.operator = operator;
   }
 
+
   /**
    * recipientId.
    *
@@ -73,9 +74,7 @@ public class ConditionalRecipientRuleFilter {
   }
 
   /**
-   * Unique for the recipient. It is used by the tab element to indicate which
-   * recipient is to sign the Document..
-   * 
+   * Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document..
    * @return recipientId
    **/
   @Schema(description = "Unique for the recipient. It is used by the tab element to indicate which recipient is to sign the Document.")
@@ -90,6 +89,7 @@ public class ConditionalRecipientRuleFilter {
     this.recipientId = recipientId;
   }
 
+
   /**
    * scope.
    *
@@ -102,7 +102,6 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
-   * 
    * @return scope
    **/
   @Schema(description = "")
@@ -117,6 +116,7 @@ public class ConditionalRecipientRuleFilter {
     this.scope = scope;
   }
 
+
   /**
    * tabId.
    *
@@ -128,9 +128,7 @@ public class ConditionalRecipientRuleFilter {
   }
 
   /**
-   * The unique identifier for the tab. The tabid can be retrieved with the
-   * [ML:GET call]. .
-   * 
+   * The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     .
    * @return tabId
    **/
   @Schema(description = "The unique identifier for the tab. The tabid can be retrieved with the [ML:GET call].     ")
@@ -145,6 +143,7 @@ public class ConditionalRecipientRuleFilter {
     this.tabId = tabId;
   }
 
+
   /**
    * tabLabel.
    *
@@ -157,7 +156,6 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * The label string associated with the tab..
-   * 
    * @return tabLabel
    **/
   @Schema(description = "The label string associated with the tab.")
@@ -172,6 +170,7 @@ public class ConditionalRecipientRuleFilter {
     this.tabLabel = tabLabel;
   }
 
+
   /**
    * tabType.
    *
@@ -184,7 +183,6 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * .
-   * 
    * @return tabType
    **/
   @Schema(description = "")
@@ -199,6 +197,7 @@ public class ConditionalRecipientRuleFilter {
     this.tabType = tabType;
   }
 
+
   /**
    * value.
    *
@@ -211,7 +210,6 @@ public class ConditionalRecipientRuleFilter {
 
   /**
    * Specifies the value of the tab. .
-   * 
    * @return value
    **/
   @Schema(description = "Specifies the value of the tab. ")
@@ -225,6 +223,7 @@ public class ConditionalRecipientRuleFilter {
   public void setValue(String value) {
     this.value = value;
   }
+
 
   /**
    * Compares objects.
@@ -257,6 +256,7 @@ public class ConditionalRecipientRuleFilter {
     return Objects.hash(operator, recipientId, scope, tabId, tabLabel, tabType, value);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -264,7 +264,7 @@ public class ConditionalRecipientRuleFilter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConditionalRecipientRuleFilter {\n");
-
+    
     sb.append("    operator: ").append(toIndentedString(operator)).append("\n");
     sb.append("    recipientId: ").append(toIndentedString(recipientId)).append("\n");
     sb.append("    scope: ").append(toIndentedString(scope)).append("\n");
@@ -288,3 +288,4 @@ public class ConditionalRecipientRuleFilter {
   }
 
 }
+

@@ -18,6 +18,7 @@ public class DocumentTemplateList {
   @JsonProperty("documentTemplates")
   private java.util.List<DocumentTemplate> documentTemplates = null;
 
+
   /**
    * documentTemplates.
    *
@@ -27,7 +28,7 @@ public class DocumentTemplateList {
     this.documentTemplates = documentTemplates;
     return this;
   }
-
+  
   /**
    * addDocumentTemplatesItem.
    *
@@ -43,7 +44,6 @@ public class DocumentTemplateList {
 
   /**
    * .
-   * 
    * @return documentTemplates
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class DocumentTemplateList {
   public void setDocumentTemplates(java.util.List<DocumentTemplate> documentTemplates) {
     this.documentTemplates = documentTemplates;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class DocumentTemplateList {
     return Objects.hash(documentTemplates);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class DocumentTemplateList {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocumentTemplateList {\n");
-
+    
     sb.append("    documentTemplates: ").append(toIndentedString(documentTemplates)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class DocumentTemplateList {
   }
 
 }
+

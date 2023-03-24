@@ -18,6 +18,7 @@ public class EnvelopeAuditEvent {
   @JsonProperty("eventFields")
   private java.util.List<NameValue> eventFields = null;
 
+
   /**
    * eventFields.
    *
@@ -27,7 +28,7 @@ public class EnvelopeAuditEvent {
     this.eventFields = eventFields;
     return this;
   }
-
+  
   /**
    * addEventFieldsItem.
    *
@@ -43,7 +44,6 @@ public class EnvelopeAuditEvent {
 
   /**
    * .
-   * 
    * @return eventFields
    **/
   @Schema(description = "")
@@ -57,6 +57,7 @@ public class EnvelopeAuditEvent {
   public void setEventFields(java.util.List<NameValue> eventFields) {
     this.eventFields = eventFields;
   }
+
 
   /**
    * Compares objects.
@@ -83,6 +84,7 @@ public class EnvelopeAuditEvent {
     return Objects.hash(eventFields);
   }
 
+
   /**
    * Converts the given object to string.
    */
@@ -90,7 +92,7 @@ public class EnvelopeAuditEvent {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class EnvelopeAuditEvent {\n");
-
+    
     sb.append("    eventFields: ").append(toIndentedString(eventFields)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -108,3 +110,4 @@ public class EnvelopeAuditEvent {
   }
 
 }
+
