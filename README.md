@@ -68,7 +68,7 @@ The DocuSign eSignature Java Client SDK is licensed under the [MIT License](http
 *   [DocuSign For Developers on LinkedIn](https://www.linkedin.com/showcase/docusign-for-developers/)
 *   [DocuSign For Developers on YouTube](https://www.youtube.com/channel/UCJSJ2kMs_qeQotmw4-lX2NQ)
 
-[travis-image]: https://img.shields.io/travis/docusign/docusign-java-client.svg?style=flat
-[travis-url]: https://travis-ci.org/docusign/docusign-java-client
+[travis-image]: https://api.travis-ci.com/docusign/docusign-esign-java-client.svg?branch=master
+[travis-url]: https://app.travis-ci.com/github/docusign/docusign-esign-java-client
 [maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-esign-java.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
