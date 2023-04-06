@@ -528,6 +528,146 @@ public class AccountsApi {
   }
 
   /**
+   * Creates the user authorization.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationCreateRequest  (optional)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorization createUserAuthorization(String accountId, String userId, UserAuthorizationCreateRequest userAuthorizationCreateRequest) throws ApiException {
+    ApiResponse<UserAuthorization> localVarResponse = createUserAuthorizationWithHttpInfo(accountId, userId, userAuthorizationCreateRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates the user authorization
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationCreateRequest  (optional)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorization > createUserAuthorizationWithHttpInfo(String accountId, String userId, UserAuthorizationCreateRequest userAuthorizationCreateRequest) throws ApiException {
+    Object localVarPostBody = userAuthorizationCreateRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createUserAuthorization");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling createUserAuthorization");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorization"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorization> localVarReturnType = new GenericType<UserAuthorization>() {};
+    UserAuthorization localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorization>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Creates ot updates user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationsRequest  (optional)
+   * @return UserAuthorizationsResponse
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorizationsResponse createUserAuthorizations(String accountId, String userId, UserAuthorizationsRequest userAuthorizationsRequest) throws ApiException {
+    ApiResponse<UserAuthorizationsResponse> localVarResponse = createUserAuthorizationsWithHttpInfo(accountId, userId, userAuthorizationsRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates ot updates user authorizations
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationsRequest  (optional)
+   * @return UserAuthorizationsResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorizationsResponse > createUserAuthorizationsWithHttpInfo(String accountId, String userId, UserAuthorizationsRequest userAuthorizationsRequest) throws ApiException {
+    Object localVarPostBody = userAuthorizationsRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createUserAuthorizations");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling createUserAuthorizations");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorizations"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorizationsResponse> localVarReturnType = new GenericType<UserAuthorizationsResponse>() {};
+    UserAuthorizationsResponse localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorizationsResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Deletes the specified account..
    * This closes the specified account. You must be an account admin to close your account. Once closed, an account must be reopened by DocuSign.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1262,6 +1402,148 @@ public class AccountsApi {
   }
 
   /**
+   * Deletes the user authorization.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteUserAuthorization(String accountId, String userId, String authorizationId) throws ApiException {
+    deleteUserAuthorizationWithHttpInfo(accountId, userId, authorizationId);
+  }
+
+  /**
+   * Deletes the user authorization
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteUserAuthorizationWithHttpInfo(String accountId, String userId, String authorizationId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteUserAuthorization");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteUserAuthorization");
+    }
+    
+    // verify the required parameter 'authorizationId' is set
+    if (authorizationId == null) {
+      throw new ApiException(400, "Missing the required parameter 'authorizationId' when calling deleteUserAuthorization");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+      .replaceAll("\\{" + "authorizationId" + "\\}", apiClient.escapeString(authorizationId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
+   * Creates ot updates user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationsDeleteRequest  (optional)
+   * @return UserAuthorizationsDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorizationsDeleteResponse deleteUserAuthorizations(String accountId, String userId, UserAuthorizationsDeleteRequest userAuthorizationsDeleteRequest) throws ApiException {
+    ApiResponse<UserAuthorizationsDeleteResponse> localVarResponse = deleteUserAuthorizationsWithHttpInfo(accountId, userId, userAuthorizationsDeleteRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates ot updates user authorizations
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param userAuthorizationsDeleteRequest  (optional)
+   * @return UserAuthorizationsDeleteResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorizationsDeleteResponse > deleteUserAuthorizationsWithHttpInfo(String accountId, String userId, UserAuthorizationsDeleteRequest userAuthorizationsDeleteRequest) throws ApiException {
+    Object localVarPostBody = userAuthorizationsDeleteRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteUserAuthorizations");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling deleteUserAuthorizations");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorizations"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorizationsDeleteResponse> localVarReturnType = new GenericType<UserAuthorizationsDeleteResponse>() {};
+    UserAuthorizationsDeleteResponse localVarResponse = apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorizationsDeleteResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Get the list of identity verification options for an account.
    * This method returns a list of Identity Verification workflows that are available to an account.  **Note:** To use this method, you must either be an account administrator or a sender.  ### Related topics  - [How to require ID Verification (IDV) for a recipient](/docs/esign-rest-api/how-to/id-verification/)  
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1809,6 +2091,212 @@ public class AccountsApi {
     GenericType<TabAccountSettings> localVarReturnType = new GenericType<TabAccountSettings>() {};
     TabAccountSettings localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<TabAccountSettings>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+  /// <summary>
+  /// Returns the agent user authorizations 
+  /// </summary>
+
+ /**
+  * GetAgentUserAuthorizationsOptions Class.
+  *
+  **/
+  public class GetAgentUserAuthorizationsOptions
+  {
+  private String activeOnly = null;
+  private String count = null;
+  private String emailSubstring = null;
+  private String permissions = null;
+  private String startPosition = null;
+  private String userNameSubstring = null;
+  
+ /**
+  * setActiveOnly method.
+  */
+  public void setActiveOnly(String activeOnly) {
+    this.activeOnly = activeOnly;
+  }
+
+ /**
+  * getActiveOnly method.
+  *
+  * @return String
+  */
+  public String getActiveOnly() {
+    return this.activeOnly;
+  }
+  
+ /**
+  * setCount method.
+  */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
+  public String getCount() {
+    return this.count;
+  }
+  
+ /**
+  * setEmailSubstring method.
+  */
+  public void setEmailSubstring(String emailSubstring) {
+    this.emailSubstring = emailSubstring;
+  }
+
+ /**
+  * getEmailSubstring method.
+  *
+  * @return String
+  */
+  public String getEmailSubstring() {
+    return this.emailSubstring;
+  }
+  
+ /**
+  * setPermissions method.
+  */
+  public void setPermissions(String permissions) {
+    this.permissions = permissions;
+  }
+
+ /**
+  * getPermissions method.
+  *
+  * @return String
+  */
+  public String getPermissions() {
+    return this.permissions;
+  }
+  
+ /**
+  * setStartPosition method.
+  */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  
+ /**
+  * setUserNameSubstring method.
+  */
+  public void setUserNameSubstring(String userNameSubstring) {
+    this.userNameSubstring = userNameSubstring;
+  }
+
+ /**
+  * getUserNameSubstring method.
+  *
+  * @return String
+  */
+  public String getUserNameSubstring() {
+    return this.userNameSubstring;
+  }
+  }
+
+   /**
+   * Returns the agent user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @return UserAuthorizations
+   */ 
+  public UserAuthorizations getAgentUserAuthorizations(String accountId, String userId) throws ApiException {
+    return getAgentUserAuthorizations(accountId, userId, null);
+  }
+
+  /**
+   * Returns the agent user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param options for modifying the method behavior.
+   * @return UserAuthorizations
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorizations getAgentUserAuthorizations(String accountId, String userId, AccountsApi.GetAgentUserAuthorizationsOptions options) throws ApiException {
+    ApiResponse<UserAuthorizations> localVarResponse = getAgentUserAuthorizationsWithHttpInfo(accountId, userId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns the agent user authorizations
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param options for modifying the method behavior.
+   * @return UserAuthorizations
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorizations > getAgentUserAuthorizationsWithHttpInfo(String accountId, String userId, AccountsApi.GetAgentUserAuthorizationsOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getAgentUserAuthorizations");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling getAgentUserAuthorizations");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorizations/agent"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("active_only", options.activeOnly));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("permissions", options.permissions));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorizations> localVarReturnType = new GenericType<UserAuthorizations>() {};
+    UserAuthorizations localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorizations>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -3078,6 +3566,212 @@ public class AccountsApi {
     PermissionProfile localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<PermissionProfile>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
+  /// <summary>
+  /// Returns the principal user authorizations 
+  /// </summary>
+
+ /**
+  * GetPrincipalUserAuthorizationsOptions Class.
+  *
+  **/
+  public class GetPrincipalUserAuthorizationsOptions
+  {
+  private String activeOnly = null;
+  private String count = null;
+  private String emailSubstring = null;
+  private String permissions = null;
+  private String startPosition = null;
+  private String userNameSubstring = null;
+  
+ /**
+  * setActiveOnly method.
+  */
+  public void setActiveOnly(String activeOnly) {
+    this.activeOnly = activeOnly;
+  }
+
+ /**
+  * getActiveOnly method.
+  *
+  * @return String
+  */
+  public String getActiveOnly() {
+    return this.activeOnly;
+  }
+  
+ /**
+  * setCount method.
+  */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
+  public String getCount() {
+    return this.count;
+  }
+  
+ /**
+  * setEmailSubstring method.
+  */
+  public void setEmailSubstring(String emailSubstring) {
+    this.emailSubstring = emailSubstring;
+  }
+
+ /**
+  * getEmailSubstring method.
+  *
+  * @return String
+  */
+  public String getEmailSubstring() {
+    return this.emailSubstring;
+  }
+  
+ /**
+  * setPermissions method.
+  */
+  public void setPermissions(String permissions) {
+    this.permissions = permissions;
+  }
+
+ /**
+  * getPermissions method.
+  *
+  * @return String
+  */
+  public String getPermissions() {
+    return this.permissions;
+  }
+  
+ /**
+  * setStartPosition method.
+  */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  
+ /**
+  * setUserNameSubstring method.
+  */
+  public void setUserNameSubstring(String userNameSubstring) {
+    this.userNameSubstring = userNameSubstring;
+  }
+
+ /**
+  * getUserNameSubstring method.
+  *
+  * @return String
+  */
+  public String getUserNameSubstring() {
+    return this.userNameSubstring;
+  }
+  }
+
+   /**
+   * Returns the principal user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @return UserAuthorizations
+   */ 
+  public UserAuthorizations getPrincipalUserAuthorizations(String accountId, String userId) throws ApiException {
+    return getPrincipalUserAuthorizations(accountId, userId, null);
+  }
+
+  /**
+   * Returns the principal user authorizations.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param options for modifying the method behavior.
+   * @return UserAuthorizations
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorizations getPrincipalUserAuthorizations(String accountId, String userId, AccountsApi.GetPrincipalUserAuthorizationsOptions options) throws ApiException {
+    ApiResponse<UserAuthorizations> localVarResponse = getPrincipalUserAuthorizationsWithHttpInfo(accountId, userId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns the principal user authorizations
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param options for modifying the method behavior.
+   * @return UserAuthorizations
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorizations > getPrincipalUserAuthorizationsWithHttpInfo(String accountId, String userId, AccountsApi.GetPrincipalUserAuthorizationsOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getPrincipalUserAuthorizations");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling getPrincipalUserAuthorizations");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorizations"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("active_only", options.activeOnly));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("permissions", options.permissions));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorizations> localVarReturnType = new GenericType<UserAuthorizations>() {};
+    UserAuthorizations localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorizations>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Retrieves the account provisioning information for the account..
@@ -3189,6 +3883,82 @@ public class AccountsApi {
     GenericType<SupportedLanguages> localVarReturnType = new GenericType<SupportedLanguages>() {};
     SupportedLanguages localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<SupportedLanguages>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Returns the user authorization for a given authorization id.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorization getUserAuthorization(String accountId, String userId, String authorizationId) throws ApiException {
+    ApiResponse<UserAuthorization> localVarResponse = getUserAuthorizationWithHttpInfo(accountId, userId, authorizationId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns the user authorization for a given authorization id
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorization > getUserAuthorizationWithHttpInfo(String accountId, String userId, String authorizationId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getUserAuthorization");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling getUserAuthorization");
+    }
+    
+    // verify the required parameter 'authorizationId' is set
+    if (authorizationId == null) {
+      throw new ApiException(400, "Missing the required parameter 'authorizationId' when calling getUserAuthorization");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+      .replaceAll("\\{" + "authorizationId" + "\\}", apiClient.escapeString(authorizationId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorization> localVarReturnType = new GenericType<UserAuthorization>() {};
+    UserAuthorization localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorization>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -5657,6 +6427,84 @@ public class AccountsApi {
     GenericType<AccountSharedAccess> localVarReturnType = new GenericType<AccountSharedAccess>() {};
     AccountSharedAccess localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<AccountSharedAccess>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Updates the user authorization.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @param userAuthorizationUpdateRequest  (optional)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public UserAuthorization updateUserAuthorization(String accountId, String userId, String authorizationId, UserAuthorizationUpdateRequest userAuthorizationUpdateRequest) throws ApiException {
+    ApiResponse<UserAuthorization> localVarResponse = updateUserAuthorizationWithHttpInfo(accountId, userId, authorizationId, userAuthorizationUpdateRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates the user authorization
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
+   * @param authorizationId  (required)
+   * @param userAuthorizationUpdateRequest  (optional)
+   * @return UserAuthorization
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserAuthorization > updateUserAuthorizationWithHttpInfo(String accountId, String userId, String authorizationId, UserAuthorizationUpdateRequest userAuthorizationUpdateRequest) throws ApiException {
+    Object localVarPostBody = userAuthorizationUpdateRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateUserAuthorization");
+    }
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling updateUserAuthorization");
+    }
+    
+    // verify the required parameter 'authorizationId' is set
+    if (authorizationId == null) {
+      throw new ApiException(400, "Missing the required parameter 'authorizationId' when calling updateUserAuthorization");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/users/{userId}/authorization/{authorizationId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "userId" + "\\}", apiClient.escapeString(userId.toString()))
+      .replaceAll("\\{" + "authorizationId" + "\\}", apiClient.escapeString(authorizationId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserAuthorization> localVarReturnType = new GenericType<UserAuthorization>() {};
+    UserAuthorization localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserAuthorization>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
