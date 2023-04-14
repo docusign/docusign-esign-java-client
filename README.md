@@ -34,19 +34,17 @@ This SDK is provided as open source, which enables you to customize its function
 
 ## Dependencies
 This client has the following external dependencies:
-* io.swagger.core.v3:swagger-annotations:jar:2.2.8
-* org.glassfish.jersey.core:jersey-client:jar:3.0.9
-* org.glassfish.jersey.media:jersey-media-multipart:jar:3.0.9
-* org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.9
-* org.glassfish.jersey.inject:jersey-hk2:jar:3.0.9
-* com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:jar:2.14.2
-* apache.oltu.oauth2:org.apache.oltu.oauth2.client:jar:1.0.2
-* com.auth0:java-jwt:jar:3.4.1
-* org.bouncycastle:bcprov-jdk15on:jar:1.69
-* com.fasterxml.jackson.dataformat:jackson-dataformat-csv:jar:2.14.2
-* com.fasterxml.jackson.dataformat:jackson-datatype-jsr310:jar:2.14.2
-* com.brsanthu:migbase64:jar:2.2
-* jakarta.ws.rs:jakarta.ws.rs-api:jar:3.1.0
+*   io.swagger:swagger-annotations:jar:1.5.17
+*   org.glassfish.jersey.core:jersey-client:jar:2.29.1
+*   org.glassfish.jersey.media:jersey-media-multipart:jar:2.29.1
+*   org.glassfish.jersey.media:jersey-media-json-jackson:2.29.1
+*   com.fasterxml.jackson.core:jackson-core:jar:2.12.1
+*   com.fasterxml.jackson.core:jackson-annotations:jar:2.12.1
+*   com.fasterxml.jackson.core:jackson-databind:2.12.1
+*   junit:junit:jar:4.13.1
+*   com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
+*   com.auth0:java-jwt:3.4.1
+*   org.bouncycastle:bcprov-jdk15on:1.60
 
 ## Code examples
 You can find on our GitHub a self-executing package of code examples for the eSignature Java SDK, called a [Launcher](https://github.com/docusign/code-examples-java/blob/master/README.md), that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from [Quickstart](https://developers.docusign.com/docs/esign-rest-api/quickstart/). These examples can use either the [Authorization Code Grant](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-code-grant) or [JSON Web Token (JWT)](https://developers.docusign.com/esign-rest-api/guides/authentication/oauth2-jsonwebtoken) authentication workflows.
