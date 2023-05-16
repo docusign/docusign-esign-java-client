@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * One of the selectable radio buttons in the &#x60;radios&#x60; property of a [&#x60;radioGroup&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab. .

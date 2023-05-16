@@ -20,7 +20,7 @@ jdk:
   - oraclejdk12
   - oraclejdk13
 
-script: mvn clean test
+script: mvn -X clean test
 
 after_failure: "cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/SdkUnitTests.txt && cat /home/travis/build/docusign/docusign-java-client/target/surefire-reports/TEST-SdkUnitTests.xml"
 

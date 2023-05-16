@@ -9,7 +9,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * An object that defines the options that are available to non-administrators in the UI..
@@ -20,6 +19,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class AccountUISettings {
   @JsonProperty("adminMessage")
   private AdminMessage adminMessage = null;
+
+  @JsonProperty("allowUsersToEditSharedAccess")
+  private String allowUsersToEditSharedAccess = null;
+
+  @JsonProperty("allowUsersToEditSharedAccessMetadata")
+  private SettingsMetadata allowUsersToEditSharedAccessMetadata = null;
 
   @JsonProperty("askAnAdmin")
   private AskAnAdmin askAnAdmin = null;
@@ -133,6 +138,60 @@ public class AccountUISettings {
    **/
   public void setAdminMessage(AdminMessage adminMessage) {
     this.adminMessage = adminMessage;
+  }
+
+
+  /**
+   * allowUsersToEditSharedAccess.
+   *
+   * @return AccountUISettings
+   **/
+  public AccountUISettings allowUsersToEditSharedAccess(String allowUsersToEditSharedAccess) {
+    this.allowUsersToEditSharedAccess = allowUsersToEditSharedAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowUsersToEditSharedAccess
+   **/
+  @Schema(description = "")
+  public String getAllowUsersToEditSharedAccess() {
+    return allowUsersToEditSharedAccess;
+  }
+
+  /**
+   * setAllowUsersToEditSharedAccess.
+   **/
+  public void setAllowUsersToEditSharedAccess(String allowUsersToEditSharedAccess) {
+    this.allowUsersToEditSharedAccess = allowUsersToEditSharedAccess;
+  }
+
+
+  /**
+   * allowUsersToEditSharedAccessMetadata.
+   *
+   * @return AccountUISettings
+   **/
+  public AccountUISettings allowUsersToEditSharedAccessMetadata(SettingsMetadata allowUsersToEditSharedAccessMetadata) {
+    this.allowUsersToEditSharedAccessMetadata = allowUsersToEditSharedAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowUsersToEditSharedAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowUsersToEditSharedAccessMetadata() {
+    return allowUsersToEditSharedAccessMetadata;
+  }
+
+  /**
+   * setAllowUsersToEditSharedAccessMetadata.
+   **/
+  public void setAllowUsersToEditSharedAccessMetadata(SettingsMetadata allowUsersToEditSharedAccessMetadata) {
+    this.allowUsersToEditSharedAccessMetadata = allowUsersToEditSharedAccessMetadata;
   }
 
 
@@ -934,6 +993,8 @@ public class AccountUISettings {
     }
     AccountUISettings accountUISettings = (AccountUISettings) o;
     return Objects.equals(this.adminMessage, accountUISettings.adminMessage) &&
+        Objects.equals(this.allowUsersToEditSharedAccess, accountUISettings.allowUsersToEditSharedAccess) &&
+        Objects.equals(this.allowUsersToEditSharedAccessMetadata, accountUISettings.allowUsersToEditSharedAccessMetadata) &&
         Objects.equals(this.askAnAdmin, accountUISettings.askAnAdmin) &&
         Objects.equals(this.clickwrapSchemaVersion, accountUISettings.clickwrapSchemaVersion) &&
         Objects.equals(this.clickwrapSchemaVersionMetadata, accountUISettings.clickwrapSchemaVersionMetadata) &&
@@ -970,7 +1031,7 @@ public class AccountUISettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, askAnAdmin, clickwrapSchemaVersion, clickwrapSchemaVersionMetadata, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacySendflowLink, enableLegacySendflowLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, allowUsersToEditSharedAccess, allowUsersToEditSharedAccessMetadata, askAnAdmin, clickwrapSchemaVersion, clickwrapSchemaVersionMetadata, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableLegacySendflowLink, enableLegacySendflowLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -983,6 +1044,8 @@ public class AccountUISettings {
     sb.append("class AccountUISettings {\n");
     
     sb.append("    adminMessage: ").append(toIndentedString(adminMessage)).append("\n");
+    sb.append("    allowUsersToEditSharedAccess: ").append(toIndentedString(allowUsersToEditSharedAccess)).append("\n");
+    sb.append("    allowUsersToEditSharedAccessMetadata: ").append(toIndentedString(allowUsersToEditSharedAccessMetadata)).append("\n");
     sb.append("    askAnAdmin: ").append(toIndentedString(askAnAdmin)).append("\n");
     sb.append("    clickwrapSchemaVersion: ").append(toIndentedString(clickwrapSchemaVersion)).append("\n");
     sb.append("    clickwrapSchemaVersionMetadata: ").append(toIndentedString(clickwrapSchemaVersionMetadata)).append("\n");

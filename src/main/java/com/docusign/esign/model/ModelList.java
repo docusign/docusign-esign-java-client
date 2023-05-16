@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This tab offers a list of options to choose from. The &#x60;listItems&#x60; property contains a list of [&#x60;listItem&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/create/) objects to specify the selectable options. .

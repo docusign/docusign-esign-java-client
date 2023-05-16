@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Summary status of a single batch..
@@ -15,6 +14,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Schema(description = "Summary status of a single batch.")
 
 public class BulkSendBatchSummary {
+  @JsonProperty("action")
+  private String action = null;
+
+  @JsonProperty("actionStatus")
+  private String actionStatus = null;
+
   @JsonProperty("batchId")
   private String batchId = null;
 
@@ -38,6 +43,60 @@ public class BulkSendBatchSummary {
 
   @JsonProperty("submittedDate")
   private String submittedDate = null;
+
+
+  /**
+   * action.
+   *
+   * @return BulkSendBatchSummary
+   **/
+  public BulkSendBatchSummary action(String action) {
+    this.action = action;
+    return this;
+  }
+
+  /**
+   * .
+   * @return action
+   **/
+  @Schema(description = "")
+  public String getAction() {
+    return action;
+  }
+
+  /**
+   * setAction.
+   **/
+  public void setAction(String action) {
+    this.action = action;
+  }
+
+
+  /**
+   * actionStatus.
+   *
+   * @return BulkSendBatchSummary
+   **/
+  public BulkSendBatchSummary actionStatus(String actionStatus) {
+    this.actionStatus = actionStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return actionStatus
+   **/
+  @Schema(description = "")
+  public String getActionStatus() {
+    return actionStatus;
+  }
+
+  /**
+   * setActionStatus.
+   **/
+  public void setActionStatus(String actionStatus) {
+    this.actionStatus = actionStatus;
+  }
 
 
   /**
@@ -270,7 +329,9 @@ public class BulkSendBatchSummary {
       return false;
     }
     BulkSendBatchSummary bulkSendBatchSummary = (BulkSendBatchSummary) o;
-    return Objects.equals(this.batchId, bulkSendBatchSummary.batchId) &&
+    return Objects.equals(this.action, bulkSendBatchSummary.action) &&
+        Objects.equals(this.actionStatus, bulkSendBatchSummary.actionStatus) &&
+        Objects.equals(this.batchId, bulkSendBatchSummary.batchId) &&
         Objects.equals(this.batchName, bulkSendBatchSummary.batchName) &&
         Objects.equals(this.batchSize, bulkSendBatchSummary.batchSize) &&
         Objects.equals(this.batchUri, bulkSendBatchSummary.batchUri) &&
@@ -285,7 +346,7 @@ public class BulkSendBatchSummary {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(batchId, batchName, batchSize, batchUri, failed, queued, sent, submittedDate);
+    return Objects.hash(action, actionStatus, batchId, batchName, batchSize, batchUri, failed, queued, sent, submittedDate);
   }
 
 
@@ -297,6 +358,8 @@ public class BulkSendBatchSummary {
     StringBuilder sb = new StringBuilder();
     sb.append("class BulkSendBatchSummary {\n");
     
+    sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    actionStatus: ").append(toIndentedString(actionStatus)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    batchName: ").append(toIndentedString(batchName)).append("\n");
     sb.append("    batchSize: ").append(toIndentedString(batchSize)).append("\n");

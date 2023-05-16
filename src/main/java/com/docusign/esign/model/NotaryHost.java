@@ -20,7 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * This object is used only when &#x60;inPersonSigningType&#x60; in the &#x60;inPersonSigner&#x60; object is &#x60;notary&#x60;.  It describes information about the notary host. The following information is required when using the eNotary in-person signing flow:  * &#x60;name&#x60;: Specifies the notary&#39;s full legal name. * &#x60;email&#x60;: Specifies the notary&#39;s email address. * &#x60;recipientId&#x60;: A unique ID number for the notary signing host. .

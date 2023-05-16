@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * DelayedRouting.
@@ -103,10 +102,10 @@ public class DelayedRouting {
   }
 
   /**
-   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
+   * \\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients..
    * @return status
    **/
-  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
+  @Schema(description = "\\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
   public String getStatus() {
     return status;
   }
