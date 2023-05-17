@@ -12,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Properties that configure the settings for a user. Some elements of this object have a &#x60;metadata&#x60; property, which includes the following: - &#x60;rights&#x60;: The calling users permissions to edit this setting (can be &#x60;editable&#x60; or &#x60;read_only&#x60;) - &#x60;uiHint&#x60;: Internally used to build UIs (can be &#x60;available&#x60; or &#x60;hidden&#x60;) - &#x60;options&#x60;: The values supported for this setting (not all settings have this element).

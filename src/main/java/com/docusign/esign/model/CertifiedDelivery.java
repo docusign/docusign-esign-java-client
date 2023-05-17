@@ -23,7 +23,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * Contains information about a certified delivery recipient. Certified delivery recipients must receive the completed documents for the envelope to be completed. However, they don&#39;t need to sign, initial, date or add information to any of the documents..
