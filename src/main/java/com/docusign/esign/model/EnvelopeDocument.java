@@ -75,6 +75,9 @@ public class EnvelopeDocument {
   @JsonProperty("includeInDownloadMetadata")
   private PropertyMetadata includeInDownloadMetadata = null;
 
+  @JsonProperty("isAceGenDocument")
+  private String isAceGenDocument = null;
+
   @JsonProperty("isDocGenDocument")
   private String isDocGenDocument = null;
 
@@ -664,6 +667,33 @@ public class EnvelopeDocument {
 
 
   /**
+   * isAceGenDocument.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument isAceGenDocument(String isAceGenDocument) {
+    this.isAceGenDocument = isAceGenDocument;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isAceGenDocument
+   **/
+  @Schema(description = "")
+  public String getIsAceGenDocument() {
+    return isAceGenDocument;
+  }
+
+  /**
+   * setIsAceGenDocument.
+   **/
+  public void setIsAceGenDocument(String isAceGenDocument) {
+    this.isAceGenDocument = isAceGenDocument;
+  }
+
+
+  /**
    * isDocGenDocument.
    *
    * @return EnvelopeDocument
@@ -1032,6 +1062,7 @@ public class EnvelopeDocument {
         Objects.equals(this.errorDetails, envelopeDocument.errorDetails) &&
         Objects.equals(this.includeInDownload, envelopeDocument.includeInDownload) &&
         Objects.equals(this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata) &&
+        Objects.equals(this.isAceGenDocument, envelopeDocument.isAceGenDocument) &&
         Objects.equals(this.isDocGenDocument, envelopeDocument.isDocGenDocument) &&
         Objects.equals(this.name, envelopeDocument.name) &&
         Objects.equals(this.nameMetadata, envelopeDocument.nameMetadata) &&
@@ -1051,7 +1082,7 @@ public class EnvelopeDocument {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -1081,6 +1112,7 @@ public class EnvelopeDocument {
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
     sb.append("    includeInDownloadMetadata: ").append(toIndentedString(includeInDownloadMetadata)).append("\n");
+    sb.append("    isAceGenDocument: ").append(toIndentedString(isAceGenDocument)).append("\n");
     sb.append("    isDocGenDocument: ").append(toIndentedString(isDocGenDocument)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");

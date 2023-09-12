@@ -32,6 +32,12 @@ public class UserSettingsInformation {
   @JsonProperty("allowAutoTagging")
   private String allowAutoTagging = null;
 
+  @JsonProperty("allowedOrchestrationAccess")
+  private String allowedOrchestrationAccess = null;
+
+  @JsonProperty("allowedOrchestrationAccessMetadata")
+  private SettingsMetadata allowedOrchestrationAccessMetadata = null;
+
   @JsonProperty("allowEnvelopeTransferTo")
   private String allowEnvelopeTransferTo = null;
 
@@ -68,6 +74,12 @@ public class UserSettingsInformation {
   @JsonProperty("allowSupplementalDocumentsMetadata")
   private SettingsMetadata allowSupplementalDocumentsMetadata = null;
 
+  @JsonProperty("allowTransactions")
+  private String allowTransactions = null;
+
+  @JsonProperty("allowTransactionsMetadata")
+  private SettingsMetadata allowTransactionsMetadata = null;
+
   @JsonProperty("anchorTagVersionedPlacementEnabled")
   private String anchorTagVersionedPlacementEnabled = null;
 
@@ -94,6 +106,24 @@ public class UserSettingsInformation {
 
   @JsonProperty("canChargeAccountMetadata")
   private SettingsMetadata canChargeAccountMetadata = null;
+
+  @JsonProperty("canCreateTransaction")
+  private String canCreateTransaction = null;
+
+  @JsonProperty("canCreateTransactionMetadata")
+  private SettingsMetadata canCreateTransactionMetadata = null;
+
+  @JsonProperty("canDeleteDocumentsInTransaction")
+  private String canDeleteDocumentsInTransaction = null;
+
+  @JsonProperty("canDeleteDocumentsInTransactionMetadata")
+  private SettingsMetadata canDeleteDocumentsInTransactionMetadata = null;
+
+  @JsonProperty("canDeleteTransaction")
+  private String canDeleteTransaction = null;
+
+  @JsonProperty("canDeleteTransactionMetadata")
+  private SettingsMetadata canDeleteTransactionMetadata = null;
 
   @JsonProperty("canEditSharedAddressbook")
   private String canEditSharedAddressbook = null;
@@ -505,6 +535,60 @@ public class UserSettingsInformation {
 
 
   /**
+   * allowedOrchestrationAccess.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowedOrchestrationAccess(String allowedOrchestrationAccess) {
+    this.allowedOrchestrationAccess = allowedOrchestrationAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedOrchestrationAccess
+   **/
+  @Schema(description = "")
+  public String getAllowedOrchestrationAccess() {
+    return allowedOrchestrationAccess;
+  }
+
+  /**
+   * setAllowedOrchestrationAccess.
+   **/
+  public void setAllowedOrchestrationAccess(String allowedOrchestrationAccess) {
+    this.allowedOrchestrationAccess = allowedOrchestrationAccess;
+  }
+
+
+  /**
+   * allowedOrchestrationAccessMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowedOrchestrationAccessMetadata(SettingsMetadata allowedOrchestrationAccessMetadata) {
+    this.allowedOrchestrationAccessMetadata = allowedOrchestrationAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedOrchestrationAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowedOrchestrationAccessMetadata() {
+    return allowedOrchestrationAccessMetadata;
+  }
+
+  /**
+   * setAllowedOrchestrationAccessMetadata.
+   **/
+  public void setAllowedOrchestrationAccessMetadata(SettingsMetadata allowedOrchestrationAccessMetadata) {
+    this.allowedOrchestrationAccessMetadata = allowedOrchestrationAccessMetadata;
+  }
+
+
+  /**
    * allowEnvelopeTransferTo.
    *
    * @return UserSettingsInformation
@@ -829,6 +913,60 @@ public class UserSettingsInformation {
 
 
   /**
+   * allowTransactions.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowTransactions(String allowTransactions) {
+    this.allowTransactions = allowTransactions;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowTransactions
+   **/
+  @Schema(description = "")
+  public String getAllowTransactions() {
+    return allowTransactions;
+  }
+
+  /**
+   * setAllowTransactions.
+   **/
+  public void setAllowTransactions(String allowTransactions) {
+    this.allowTransactions = allowTransactions;
+  }
+
+
+  /**
+   * allowTransactionsMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowTransactionsMetadata(SettingsMetadata allowTransactionsMetadata) {
+    this.allowTransactionsMetadata = allowTransactionsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowTransactionsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowTransactionsMetadata() {
+    return allowTransactionsMetadata;
+  }
+
+  /**
+   * setAllowTransactionsMetadata.
+   **/
+  public void setAllowTransactionsMetadata(SettingsMetadata allowTransactionsMetadata) {
+    this.allowTransactionsMetadata = allowTransactionsMetadata;
+  }
+
+
+  /**
    * anchorTagVersionedPlacementEnabled.
    *
    * @return UserSettingsInformation
@@ -1068,6 +1206,168 @@ public class UserSettingsInformation {
    **/
   public void setCanChargeAccountMetadata(SettingsMetadata canChargeAccountMetadata) {
     this.canChargeAccountMetadata = canChargeAccountMetadata;
+  }
+
+
+  /**
+   * canCreateTransaction.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canCreateTransaction(String canCreateTransaction) {
+    this.canCreateTransaction = canCreateTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canCreateTransaction
+   **/
+  @Schema(description = "")
+  public String getCanCreateTransaction() {
+    return canCreateTransaction;
+  }
+
+  /**
+   * setCanCreateTransaction.
+   **/
+  public void setCanCreateTransaction(String canCreateTransaction) {
+    this.canCreateTransaction = canCreateTransaction;
+  }
+
+
+  /**
+   * canCreateTransactionMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canCreateTransactionMetadata(SettingsMetadata canCreateTransactionMetadata) {
+    this.canCreateTransactionMetadata = canCreateTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canCreateTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanCreateTransactionMetadata() {
+    return canCreateTransactionMetadata;
+  }
+
+  /**
+   * setCanCreateTransactionMetadata.
+   **/
+  public void setCanCreateTransactionMetadata(SettingsMetadata canCreateTransactionMetadata) {
+    this.canCreateTransactionMetadata = canCreateTransactionMetadata;
+  }
+
+
+  /**
+   * canDeleteDocumentsInTransaction.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canDeleteDocumentsInTransaction(String canDeleteDocumentsInTransaction) {
+    this.canDeleteDocumentsInTransaction = canDeleteDocumentsInTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteDocumentsInTransaction
+   **/
+  @Schema(description = "")
+  public String getCanDeleteDocumentsInTransaction() {
+    return canDeleteDocumentsInTransaction;
+  }
+
+  /**
+   * setCanDeleteDocumentsInTransaction.
+   **/
+  public void setCanDeleteDocumentsInTransaction(String canDeleteDocumentsInTransaction) {
+    this.canDeleteDocumentsInTransaction = canDeleteDocumentsInTransaction;
+  }
+
+
+  /**
+   * canDeleteDocumentsInTransactionMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canDeleteDocumentsInTransactionMetadata(SettingsMetadata canDeleteDocumentsInTransactionMetadata) {
+    this.canDeleteDocumentsInTransactionMetadata = canDeleteDocumentsInTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteDocumentsInTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanDeleteDocumentsInTransactionMetadata() {
+    return canDeleteDocumentsInTransactionMetadata;
+  }
+
+  /**
+   * setCanDeleteDocumentsInTransactionMetadata.
+   **/
+  public void setCanDeleteDocumentsInTransactionMetadata(SettingsMetadata canDeleteDocumentsInTransactionMetadata) {
+    this.canDeleteDocumentsInTransactionMetadata = canDeleteDocumentsInTransactionMetadata;
+  }
+
+
+  /**
+   * canDeleteTransaction.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canDeleteTransaction(String canDeleteTransaction) {
+    this.canDeleteTransaction = canDeleteTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteTransaction
+   **/
+  @Schema(description = "")
+  public String getCanDeleteTransaction() {
+    return canDeleteTransaction;
+  }
+
+  /**
+   * setCanDeleteTransaction.
+   **/
+  public void setCanDeleteTransaction(String canDeleteTransaction) {
+    this.canDeleteTransaction = canDeleteTransaction;
+  }
+
+
+  /**
+   * canDeleteTransactionMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canDeleteTransactionMetadata(SettingsMetadata canDeleteTransactionMetadata) {
+    this.canDeleteTransactionMetadata = canDeleteTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanDeleteTransactionMetadata() {
+    return canDeleteTransactionMetadata;
+  }
+
+  /**
+   * setCanDeleteTransactionMetadata.
+   **/
+  public void setCanDeleteTransactionMetadata(SettingsMetadata canDeleteTransactionMetadata) {
+    this.canDeleteTransactionMetadata = canDeleteTransactionMetadata;
   }
 
 
@@ -3802,6 +4102,8 @@ public class UserSettingsInformation {
         Objects.equals(this.adminOnly, userSettingsInformation.adminOnly) &&
         Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata) &&
         Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging) &&
+        Objects.equals(this.allowedOrchestrationAccess, userSettingsInformation.allowedOrchestrationAccess) &&
+        Objects.equals(this.allowedOrchestrationAccessMetadata, userSettingsInformation.allowedOrchestrationAccessMetadata) &&
         Objects.equals(this.allowEnvelopeTransferTo, userSettingsInformation.allowEnvelopeTransferTo) &&
         Objects.equals(this.allowEnvelopeTransferToMetadata, userSettingsInformation.allowEnvelopeTransferToMetadata) &&
         Objects.equals(this.allowEsealRecipients, userSettingsInformation.allowEsealRecipients) &&
@@ -3814,6 +4116,8 @@ public class UserSettingsInformation {
         Objects.equals(this.allowSendOnBehalfOfMetadata, userSettingsInformation.allowSendOnBehalfOfMetadata) &&
         Objects.equals(this.allowSupplementalDocuments, userSettingsInformation.allowSupplementalDocuments) &&
         Objects.equals(this.allowSupplementalDocumentsMetadata, userSettingsInformation.allowSupplementalDocumentsMetadata) &&
+        Objects.equals(this.allowTransactions, userSettingsInformation.allowTransactions) &&
+        Objects.equals(this.allowTransactionsMetadata, userSettingsInformation.allowTransactionsMetadata) &&
         Objects.equals(this.anchorTagVersionedPlacementEnabled, userSettingsInformation.anchorTagVersionedPlacementEnabled) &&
         Objects.equals(this.apiAccountWideAccess, userSettingsInformation.apiAccountWideAccess) &&
         Objects.equals(this.apiAccountWideAccessMetadata, userSettingsInformation.apiAccountWideAccessMetadata) &&
@@ -3823,6 +4127,12 @@ public class UserSettingsInformation {
         Objects.equals(this.bulkSendMetadata, userSettingsInformation.bulkSendMetadata) &&
         Objects.equals(this.canChargeAccount, userSettingsInformation.canChargeAccount) &&
         Objects.equals(this.canChargeAccountMetadata, userSettingsInformation.canChargeAccountMetadata) &&
+        Objects.equals(this.canCreateTransaction, userSettingsInformation.canCreateTransaction) &&
+        Objects.equals(this.canCreateTransactionMetadata, userSettingsInformation.canCreateTransactionMetadata) &&
+        Objects.equals(this.canDeleteDocumentsInTransaction, userSettingsInformation.canDeleteDocumentsInTransaction) &&
+        Objects.equals(this.canDeleteDocumentsInTransactionMetadata, userSettingsInformation.canDeleteDocumentsInTransactionMetadata) &&
+        Objects.equals(this.canDeleteTransaction, userSettingsInformation.canDeleteTransaction) &&
+        Objects.equals(this.canDeleteTransactionMetadata, userSettingsInformation.canDeleteTransactionMetadata) &&
         Objects.equals(this.canEditSharedAddressbook, userSettingsInformation.canEditSharedAddressbook) &&
         Objects.equals(this.canEditSharedAddressbookMetadata, userSettingsInformation.canEditSharedAddressbookMetadata) &&
         Objects.equals(this.canLockEnvelopes, userSettingsInformation.canLockEnvelopes) &&
@@ -3930,7 +4240,7 @@ public class UserSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -3946,6 +4256,8 @@ public class UserSettingsInformation {
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
+    sb.append("    allowedOrchestrationAccess: ").append(toIndentedString(allowedOrchestrationAccess)).append("\n");
+    sb.append("    allowedOrchestrationAccessMetadata: ").append(toIndentedString(allowedOrchestrationAccessMetadata)).append("\n");
     sb.append("    allowEnvelopeTransferTo: ").append(toIndentedString(allowEnvelopeTransferTo)).append("\n");
     sb.append("    allowEnvelopeTransferToMetadata: ").append(toIndentedString(allowEnvelopeTransferToMetadata)).append("\n");
     sb.append("    allowEsealRecipients: ").append(toIndentedString(allowEsealRecipients)).append("\n");
@@ -3958,6 +4270,8 @@ public class UserSettingsInformation {
     sb.append("    allowSendOnBehalfOfMetadata: ").append(toIndentedString(allowSendOnBehalfOfMetadata)).append("\n");
     sb.append("    allowSupplementalDocuments: ").append(toIndentedString(allowSupplementalDocuments)).append("\n");
     sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
+    sb.append("    allowTransactions: ").append(toIndentedString(allowTransactions)).append("\n");
+    sb.append("    allowTransactionsMetadata: ").append(toIndentedString(allowTransactionsMetadata)).append("\n");
     sb.append("    anchorTagVersionedPlacementEnabled: ").append(toIndentedString(anchorTagVersionedPlacementEnabled)).append("\n");
     sb.append("    apiAccountWideAccess: ").append(toIndentedString(apiAccountWideAccess)).append("\n");
     sb.append("    apiAccountWideAccessMetadata: ").append(toIndentedString(apiAccountWideAccessMetadata)).append("\n");
@@ -3967,6 +4281,12 @@ public class UserSettingsInformation {
     sb.append("    bulkSendMetadata: ").append(toIndentedString(bulkSendMetadata)).append("\n");
     sb.append("    canChargeAccount: ").append(toIndentedString(canChargeAccount)).append("\n");
     sb.append("    canChargeAccountMetadata: ").append(toIndentedString(canChargeAccountMetadata)).append("\n");
+    sb.append("    canCreateTransaction: ").append(toIndentedString(canCreateTransaction)).append("\n");
+    sb.append("    canCreateTransactionMetadata: ").append(toIndentedString(canCreateTransactionMetadata)).append("\n");
+    sb.append("    canDeleteDocumentsInTransaction: ").append(toIndentedString(canDeleteDocumentsInTransaction)).append("\n");
+    sb.append("    canDeleteDocumentsInTransactionMetadata: ").append(toIndentedString(canDeleteDocumentsInTransactionMetadata)).append("\n");
+    sb.append("    canDeleteTransaction: ").append(toIndentedString(canDeleteTransaction)).append("\n");
+    sb.append("    canDeleteTransactionMetadata: ").append(toIndentedString(canDeleteTransactionMetadata)).append("\n");
     sb.append("    canEditSharedAddressbook: ").append(toIndentedString(canEditSharedAddressbook)).append("\n");
     sb.append("    canEditSharedAddressbookMetadata: ").append(toIndentedString(canEditSharedAddressbookMetadata)).append("\n");
     sb.append("    canLockEnvelopes: ").append(toIndentedString(canLockEnvelopes)).append("\n");

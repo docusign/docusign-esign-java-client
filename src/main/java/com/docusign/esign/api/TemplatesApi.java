@@ -1765,6 +1765,7 @@ public class TemplatesApi {
   public class GetDocumentOptions
   {
   private String encrypt = null;
+  private String fileType = null;
   private String showChanges = null;
   
  /**
@@ -1781,6 +1782,22 @@ public class TemplatesApi {
   */
   public String getEncrypt() {
     return this.encrypt;
+  }
+  
+ /**
+  * setFileType method.
+  */
+  public void setFileType(String fileType) {
+    this.fileType = fileType;
+  }
+
+ /**
+  * getFileType method.
+  *
+  * @return String
+  */
+  public String getFileType() {
+    return this.fileType;
   }
   
  /**
@@ -1869,6 +1886,8 @@ public class TemplatesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("encrypt", options.encrypt));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("file_type", options.fileType));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("show_changes", options.showChanges));
     }

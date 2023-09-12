@@ -207,6 +207,9 @@ public class EnvelopeTemplate {
   @JsonProperty("is21CFRPart11")
   private String is21CFRPart11 = null;
 
+  @JsonProperty("isAceGenTemplate")
+  private String isAceGenTemplate = null;
+
   @JsonProperty("isDocGenTemplate")
   private String isDocGenTemplate = null;
 
@@ -2020,6 +2023,33 @@ public class EnvelopeTemplate {
 
 
   /**
+   * isAceGenTemplate.
+   *
+   * @return EnvelopeTemplate
+   **/
+  public EnvelopeTemplate isAceGenTemplate(String isAceGenTemplate) {
+    this.isAceGenTemplate = isAceGenTemplate;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isAceGenTemplate
+   **/
+  @Schema(description = "")
+  public String getIsAceGenTemplate() {
+    return isAceGenTemplate;
+  }
+
+  /**
+   * setIsAceGenTemplate.
+   **/
+  public void setIsAceGenTemplate(String isAceGenTemplate) {
+    this.isAceGenTemplate = isAceGenTemplate;
+  }
+
+
+  /**
    * isDocGenTemplate.
    *
    * @return EnvelopeTemplate
@@ -3240,6 +3270,7 @@ public class EnvelopeTemplate {
         Objects.equals(this.holder, envelopeTemplate.holder) &&
         Objects.equals(this.initialSentDateTime, envelopeTemplate.initialSentDateTime) &&
         Objects.equals(this.is21CFRPart11, envelopeTemplate.is21CFRPart11) &&
+        Objects.equals(this.isAceGenTemplate, envelopeTemplate.isAceGenTemplate) &&
         Objects.equals(this.isDocGenTemplate, envelopeTemplate.isDocGenTemplate) &&
         Objects.equals(this.isDynamicEnvelope, envelopeTemplate.isDynamicEnvelope) &&
         Objects.equals(this.isSignatureProviderEnvelope, envelopeTemplate.isSignatureProviderEnvelope) &&
@@ -3289,7 +3320,7 @@ public class EnvelopeTemplate {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDocGenTemplate, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, allowComments, allowMarkup, allowReassign, allowViewHistory, anySigner, asynchronous, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoMatch, autoMatchSpecifiedByUser, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, copyRecipientData, created, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, description, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, favoritedByMe, folderId, folderIds, folderName, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isAceGenTemplate, isDocGenTemplate, isDynamicEnvelope, isSignatureProviderEnvelope, lastModified, lastModifiedBy, lastModifiedDateTime, lastUsed, location, lockInformation, messageLock, name, newPassword, notification, notificationUri, owner, pageCount, password, passwordProtected, powerForm, powerForms, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, sender, sentDateTime, shared, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templatesUri, transactionId, uri, useDisclosure, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -3361,6 +3392,7 @@ public class EnvelopeTemplate {
     sb.append("    holder: ").append(toIndentedString(holder)).append("\n");
     sb.append("    initialSentDateTime: ").append(toIndentedString(initialSentDateTime)).append("\n");
     sb.append("    is21CFRPart11: ").append(toIndentedString(is21CFRPart11)).append("\n");
+    sb.append("    isAceGenTemplate: ").append(toIndentedString(isAceGenTemplate)).append("\n");
     sb.append("    isDocGenTemplate: ").append(toIndentedString(isDocGenTemplate)).append("\n");
     sb.append("    isDynamicEnvelope: ").append(toIndentedString(isDynamicEnvelope)).append("\n");
     sb.append("    isSignatureProviderEnvelope: ").append(toIndentedString(isSignatureProviderEnvelope)).append("\n");

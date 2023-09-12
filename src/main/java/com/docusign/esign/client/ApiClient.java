@@ -96,7 +96,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("/SDK/4.3.0/Java/");
+    setUserAgent("/SDK/4.4.0/Java/");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();

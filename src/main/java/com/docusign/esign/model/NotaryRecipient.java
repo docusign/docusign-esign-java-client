@@ -212,6 +212,9 @@ public class NotaryRecipient {
   @JsonProperty("notarySourceType")
   private String notarySourceType = null;
 
+  @JsonProperty("notaryThirdPartyPartner")
+  private String notaryThirdPartyPartner = null;
+
   @JsonProperty("notaryType")
   private String notaryType = null;
 
@@ -2027,6 +2030,33 @@ public class NotaryRecipient {
 
 
   /**
+   * notaryThirdPartyPartner.
+   *
+   * @return NotaryRecipient
+   **/
+  public NotaryRecipient notaryThirdPartyPartner(String notaryThirdPartyPartner) {
+    this.notaryThirdPartyPartner = notaryThirdPartyPartner;
+    return this;
+  }
+
+  /**
+   * .
+   * @return notaryThirdPartyPartner
+   **/
+  @Schema(description = "")
+  public String getNotaryThirdPartyPartner() {
+    return notaryThirdPartyPartner;
+  }
+
+  /**
+   * setNotaryThirdPartyPartner.
+   **/
+  public void setNotaryThirdPartyPartner(String notaryThirdPartyPartner) {
+    this.notaryThirdPartyPartner = notaryThirdPartyPartner;
+  }
+
+
+  /**
    * notaryType.
    *
    * @return NotaryRecipient
@@ -3325,6 +3355,7 @@ public class NotaryRecipient {
         Objects.equals(this.notarySignerEmailSent, notaryRecipient.notarySignerEmailSent) &&
         Objects.equals(this.notarySigners, notaryRecipient.notarySigners) &&
         Objects.equals(this.notarySourceType, notaryRecipient.notarySourceType) &&
+        Objects.equals(this.notaryThirdPartyPartner, notaryRecipient.notaryThirdPartyPartner) &&
         Objects.equals(this.notaryType, notaryRecipient.notaryType) &&
         Objects.equals(this.note, notaryRecipient.note) &&
         Objects.equals(this.noteMetadata, notaryRecipient.noteMetadata) &&
@@ -3375,7 +3406,7 @@ public class NotaryRecipient {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notarySourceType, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notarySourceType, notaryThirdPartyPartner, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -3446,6 +3477,7 @@ public class NotaryRecipient {
     sb.append("    notarySignerEmailSent: ").append(toIndentedString(notarySignerEmailSent)).append("\n");
     sb.append("    notarySigners: ").append(toIndentedString(notarySigners)).append("\n");
     sb.append("    notarySourceType: ").append(toIndentedString(notarySourceType)).append("\n");
+    sb.append("    notaryThirdPartyPartner: ").append(toIndentedString(notaryThirdPartyPartner)).append("\n");
     sb.append("    notaryType: ").append(toIndentedString(notaryType)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");

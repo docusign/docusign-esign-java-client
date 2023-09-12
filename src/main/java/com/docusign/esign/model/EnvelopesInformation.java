@@ -26,6 +26,9 @@ public class EnvelopesInformation {
   @JsonProperty("envelopes")
   private java.util.List<Envelope> envelopes = null;
 
+  @JsonProperty("envelopeSearchSource")
+  private String envelopeSearchSource = null;
+
   @JsonProperty("envelopeTransactionStatuses")
   private java.util.List<EnvelopeTransactionStatus> envelopeTransactionStatuses = null;
 
@@ -142,6 +145,33 @@ public class EnvelopesInformation {
    **/
   public void setEnvelopes(java.util.List<Envelope> envelopes) {
     this.envelopes = envelopes;
+  }
+
+
+  /**
+   * envelopeSearchSource.
+   *
+   * @return EnvelopesInformation
+   **/
+  public EnvelopesInformation envelopeSearchSource(String envelopeSearchSource) {
+    this.envelopeSearchSource = envelopeSearchSource;
+    return this;
+  }
+
+  /**
+   * .
+   * @return envelopeSearchSource
+   **/
+  @Schema(description = "")
+  public String getEnvelopeSearchSource() {
+    return envelopeSearchSource;
+  }
+
+  /**
+   * setEnvelopeSearchSource.
+   **/
+  public void setEnvelopeSearchSource(String envelopeSearchSource) {
+    this.envelopeSearchSource = envelopeSearchSource;
   }
 
 
@@ -404,6 +434,7 @@ public class EnvelopesInformation {
     return Objects.equals(this.continuationToken, envelopesInformation.continuationToken) &&
         Objects.equals(this.endPosition, envelopesInformation.endPosition) &&
         Objects.equals(this.envelopes, envelopesInformation.envelopes) &&
+        Objects.equals(this.envelopeSearchSource, envelopesInformation.envelopeSearchSource) &&
         Objects.equals(this.envelopeTransactionStatuses, envelopesInformation.envelopeTransactionStatuses) &&
         Objects.equals(this.folders, envelopesInformation.folders) &&
         Objects.equals(this.lastQueriedDateTime, envelopesInformation.lastQueriedDateTime) &&
@@ -419,7 +450,7 @@ public class EnvelopesInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(continuationToken, endPosition, envelopes, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(continuationToken, endPosition, envelopes, envelopeSearchSource, envelopeTransactionStatuses, folders, lastQueriedDateTime, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
   }
 
 
@@ -434,6 +465,7 @@ public class EnvelopesInformation {
     sb.append("    continuationToken: ").append(toIndentedString(continuationToken)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    envelopes: ").append(toIndentedString(envelopes)).append("\n");
+    sb.append("    envelopeSearchSource: ").append(toIndentedString(envelopeSearchSource)).append("\n");
     sb.append("    envelopeTransactionStatuses: ").append(toIndentedString(envelopeTransactionStatuses)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    lastQueriedDateTime: ").append(toIndentedString(lastQueriedDateTime)).append("\n");
