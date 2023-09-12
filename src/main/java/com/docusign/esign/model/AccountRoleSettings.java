@@ -75,6 +75,12 @@ public class AccountRoleSettings {
   @JsonProperty("allowedClickwrapsAccessMetadata")
   private SettingsMetadata allowedClickwrapsAccessMetadata = null;
 
+  @JsonProperty("allowedOrchestrationAccess")
+  private String allowedOrchestrationAccess = null;
+
+  @JsonProperty("allowedOrchestrationAccessMetadata")
+  private SettingsMetadata allowedOrchestrationAccessMetadata = null;
+
   @JsonProperty("allowedTemplateAccess")
   private String allowedTemplateAccess = null;
 
@@ -129,6 +135,12 @@ public class AccountRoleSettings {
   @JsonProperty("allowTaggingInSendAndCorrectMetadata")
   private SettingsMetadata allowTaggingInSendAndCorrectMetadata = null;
 
+  @JsonProperty("allowTransactions")
+  private String allowTransactions = null;
+
+  @JsonProperty("allowTransactionsMetadata")
+  private SettingsMetadata allowTransactionsMetadata = null;
+
   @JsonProperty("allowVaulting")
   private String allowVaulting = null;
 
@@ -141,11 +153,29 @@ public class AccountRoleSettings {
   @JsonProperty("allowWetSigningOverrideMetadata")
   private SettingsMetadata allowWetSigningOverrideMetadata = null;
 
+  @JsonProperty("canCreateTransaction")
+  private String canCreateTransaction = null;
+
+  @JsonProperty("canCreateTransactionMetadata")
+  private SettingsMetadata canCreateTransactionMetadata = null;
+
   @JsonProperty("canCreateWorkspaces")
   private String canCreateWorkspaces = null;
 
   @JsonProperty("canCreateWorkspacesMetadata")
   private SettingsMetadata canCreateWorkspacesMetadata = null;
+
+  @JsonProperty("canDeleteDocumentsInTransaction")
+  private String canDeleteDocumentsInTransaction = null;
+
+  @JsonProperty("canDeleteDocumentsInTransactionMetadata")
+  private SettingsMetadata canDeleteDocumentsInTransactionMetadata = null;
+
+  @JsonProperty("canDeleteTransaction")
+  private String canDeleteTransaction = null;
+
+  @JsonProperty("canDeleteTransactionMetadata")
+  private SettingsMetadata canDeleteTransactionMetadata = null;
 
   @JsonProperty("canSendEnvelopesViaSMS")
   private String canSendEnvelopesViaSMS = null;
@@ -794,6 +824,60 @@ public class AccountRoleSettings {
 
 
   /**
+   * allowedOrchestrationAccess.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowedOrchestrationAccess(String allowedOrchestrationAccess) {
+    this.allowedOrchestrationAccess = allowedOrchestrationAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedOrchestrationAccess
+   **/
+  @Schema(description = "")
+  public String getAllowedOrchestrationAccess() {
+    return allowedOrchestrationAccess;
+  }
+
+  /**
+   * setAllowedOrchestrationAccess.
+   **/
+  public void setAllowedOrchestrationAccess(String allowedOrchestrationAccess) {
+    this.allowedOrchestrationAccess = allowedOrchestrationAccess;
+  }
+
+
+  /**
+   * allowedOrchestrationAccessMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowedOrchestrationAccessMetadata(SettingsMetadata allowedOrchestrationAccessMetadata) {
+    this.allowedOrchestrationAccessMetadata = allowedOrchestrationAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedOrchestrationAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowedOrchestrationAccessMetadata() {
+    return allowedOrchestrationAccessMetadata;
+  }
+
+  /**
+   * setAllowedOrchestrationAccessMetadata.
+   **/
+  public void setAllowedOrchestrationAccessMetadata(SettingsMetadata allowedOrchestrationAccessMetadata) {
+    this.allowedOrchestrationAccessMetadata = allowedOrchestrationAccessMetadata;
+  }
+
+
+  /**
    * allowedTemplateAccess.
    *
    * @return AccountRoleSettings
@@ -1280,6 +1364,60 @@ public class AccountRoleSettings {
 
 
   /**
+   * allowTransactions.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowTransactions(String allowTransactions) {
+    this.allowTransactions = allowTransactions;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowTransactions
+   **/
+  @Schema(description = "")
+  public String getAllowTransactions() {
+    return allowTransactions;
+  }
+
+  /**
+   * setAllowTransactions.
+   **/
+  public void setAllowTransactions(String allowTransactions) {
+    this.allowTransactions = allowTransactions;
+  }
+
+
+  /**
+   * allowTransactionsMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowTransactionsMetadata(SettingsMetadata allowTransactionsMetadata) {
+    this.allowTransactionsMetadata = allowTransactionsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowTransactionsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowTransactionsMetadata() {
+    return allowTransactionsMetadata;
+  }
+
+  /**
+   * setAllowTransactionsMetadata.
+   **/
+  public void setAllowTransactionsMetadata(SettingsMetadata allowTransactionsMetadata) {
+    this.allowTransactionsMetadata = allowTransactionsMetadata;
+  }
+
+
+  /**
    * allowVaulting.
    *
    * @return AccountRoleSettings
@@ -1388,6 +1526,60 @@ public class AccountRoleSettings {
 
 
   /**
+   * canCreateTransaction.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canCreateTransaction(String canCreateTransaction) {
+    this.canCreateTransaction = canCreateTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canCreateTransaction
+   **/
+  @Schema(description = "")
+  public String getCanCreateTransaction() {
+    return canCreateTransaction;
+  }
+
+  /**
+   * setCanCreateTransaction.
+   **/
+  public void setCanCreateTransaction(String canCreateTransaction) {
+    this.canCreateTransaction = canCreateTransaction;
+  }
+
+
+  /**
+   * canCreateTransactionMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canCreateTransactionMetadata(SettingsMetadata canCreateTransactionMetadata) {
+    this.canCreateTransactionMetadata = canCreateTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canCreateTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanCreateTransactionMetadata() {
+    return canCreateTransactionMetadata;
+  }
+
+  /**
+   * setCanCreateTransactionMetadata.
+   **/
+  public void setCanCreateTransactionMetadata(SettingsMetadata canCreateTransactionMetadata) {
+    this.canCreateTransactionMetadata = canCreateTransactionMetadata;
+  }
+
+
+  /**
    * canCreateWorkspaces.
    *
    * @return AccountRoleSettings
@@ -1438,6 +1630,114 @@ public class AccountRoleSettings {
    **/
   public void setCanCreateWorkspacesMetadata(SettingsMetadata canCreateWorkspacesMetadata) {
     this.canCreateWorkspacesMetadata = canCreateWorkspacesMetadata;
+  }
+
+
+  /**
+   * canDeleteDocumentsInTransaction.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canDeleteDocumentsInTransaction(String canDeleteDocumentsInTransaction) {
+    this.canDeleteDocumentsInTransaction = canDeleteDocumentsInTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteDocumentsInTransaction
+   **/
+  @Schema(description = "")
+  public String getCanDeleteDocumentsInTransaction() {
+    return canDeleteDocumentsInTransaction;
+  }
+
+  /**
+   * setCanDeleteDocumentsInTransaction.
+   **/
+  public void setCanDeleteDocumentsInTransaction(String canDeleteDocumentsInTransaction) {
+    this.canDeleteDocumentsInTransaction = canDeleteDocumentsInTransaction;
+  }
+
+
+  /**
+   * canDeleteDocumentsInTransactionMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canDeleteDocumentsInTransactionMetadata(SettingsMetadata canDeleteDocumentsInTransactionMetadata) {
+    this.canDeleteDocumentsInTransactionMetadata = canDeleteDocumentsInTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteDocumentsInTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanDeleteDocumentsInTransactionMetadata() {
+    return canDeleteDocumentsInTransactionMetadata;
+  }
+
+  /**
+   * setCanDeleteDocumentsInTransactionMetadata.
+   **/
+  public void setCanDeleteDocumentsInTransactionMetadata(SettingsMetadata canDeleteDocumentsInTransactionMetadata) {
+    this.canDeleteDocumentsInTransactionMetadata = canDeleteDocumentsInTransactionMetadata;
+  }
+
+
+  /**
+   * canDeleteTransaction.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canDeleteTransaction(String canDeleteTransaction) {
+    this.canDeleteTransaction = canDeleteTransaction;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteTransaction
+   **/
+  @Schema(description = "")
+  public String getCanDeleteTransaction() {
+    return canDeleteTransaction;
+  }
+
+  /**
+   * setCanDeleteTransaction.
+   **/
+  public void setCanDeleteTransaction(String canDeleteTransaction) {
+    this.canDeleteTransaction = canDeleteTransaction;
+  }
+
+
+  /**
+   * canDeleteTransactionMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canDeleteTransactionMetadata(SettingsMetadata canDeleteTransactionMetadata) {
+    this.canDeleteTransactionMetadata = canDeleteTransactionMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canDeleteTransactionMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanDeleteTransactionMetadata() {
+    return canDeleteTransactionMetadata;
+  }
+
+  /**
+   * setCanDeleteTransactionMetadata.
+   **/
+  public void setCanDeleteTransactionMetadata(SettingsMetadata canDeleteTransactionMetadata) {
+    this.canDeleteTransactionMetadata = canDeleteTransactionMetadata;
   }
 
 
@@ -2420,6 +2720,8 @@ public class AccountRoleSettings {
         Objects.equals(this.allowedAddressBookAccessMetadata, accountRoleSettings.allowedAddressBookAccessMetadata) &&
         Objects.equals(this.allowedClickwrapsAccess, accountRoleSettings.allowedClickwrapsAccess) &&
         Objects.equals(this.allowedClickwrapsAccessMetadata, accountRoleSettings.allowedClickwrapsAccessMetadata) &&
+        Objects.equals(this.allowedOrchestrationAccess, accountRoleSettings.allowedOrchestrationAccess) &&
+        Objects.equals(this.allowedOrchestrationAccessMetadata, accountRoleSettings.allowedOrchestrationAccessMetadata) &&
         Objects.equals(this.allowedTemplateAccess, accountRoleSettings.allowedTemplateAccess) &&
         Objects.equals(this.allowedTemplateAccessMetadata, accountRoleSettings.allowedTemplateAccessMetadata) &&
         Objects.equals(this.allowedToBeEnvelopeTransferRecipient, accountRoleSettings.allowedToBeEnvelopeTransferRecipient) &&
@@ -2438,12 +2740,20 @@ public class AccountRoleSettings {
         Objects.equals(this.allowSupplementalDocumentsMetadata, accountRoleSettings.allowSupplementalDocumentsMetadata) &&
         Objects.equals(this.allowTaggingInSendAndCorrect, accountRoleSettings.allowTaggingInSendAndCorrect) &&
         Objects.equals(this.allowTaggingInSendAndCorrectMetadata, accountRoleSettings.allowTaggingInSendAndCorrectMetadata) &&
+        Objects.equals(this.allowTransactions, accountRoleSettings.allowTransactions) &&
+        Objects.equals(this.allowTransactionsMetadata, accountRoleSettings.allowTransactionsMetadata) &&
         Objects.equals(this.allowVaulting, accountRoleSettings.allowVaulting) &&
         Objects.equals(this.allowVaultingMetadata, accountRoleSettings.allowVaultingMetadata) &&
         Objects.equals(this.allowWetSigningOverride, accountRoleSettings.allowWetSigningOverride) &&
         Objects.equals(this.allowWetSigningOverrideMetadata, accountRoleSettings.allowWetSigningOverrideMetadata) &&
+        Objects.equals(this.canCreateTransaction, accountRoleSettings.canCreateTransaction) &&
+        Objects.equals(this.canCreateTransactionMetadata, accountRoleSettings.canCreateTransactionMetadata) &&
         Objects.equals(this.canCreateWorkspaces, accountRoleSettings.canCreateWorkspaces) &&
         Objects.equals(this.canCreateWorkspacesMetadata, accountRoleSettings.canCreateWorkspacesMetadata) &&
+        Objects.equals(this.canDeleteDocumentsInTransaction, accountRoleSettings.canDeleteDocumentsInTransaction) &&
+        Objects.equals(this.canDeleteDocumentsInTransactionMetadata, accountRoleSettings.canDeleteDocumentsInTransactionMetadata) &&
+        Objects.equals(this.canDeleteTransaction, accountRoleSettings.canDeleteTransaction) &&
+        Objects.equals(this.canDeleteTransactionMetadata, accountRoleSettings.canDeleteTransactionMetadata) &&
         Objects.equals(this.canSendEnvelopesViaSMS, accountRoleSettings.canSendEnvelopesViaSMS) &&
         Objects.equals(this.canSendEnvelopesViaSMSMetadata, accountRoleSettings.canSendEnvelopesViaSMSMetadata) &&
         Objects.equals(this.disableDocumentUpload, accountRoleSettings.disableDocumentUpload) &&
@@ -2486,7 +2796,7 @@ public class AccountRoleSettings {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowTransactions, allowTransactionsMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateTransaction, canCreateTransactionMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -2518,6 +2828,8 @@ public class AccountRoleSettings {
     sb.append("    allowedAddressBookAccessMetadata: ").append(toIndentedString(allowedAddressBookAccessMetadata)).append("\n");
     sb.append("    allowedClickwrapsAccess: ").append(toIndentedString(allowedClickwrapsAccess)).append("\n");
     sb.append("    allowedClickwrapsAccessMetadata: ").append(toIndentedString(allowedClickwrapsAccessMetadata)).append("\n");
+    sb.append("    allowedOrchestrationAccess: ").append(toIndentedString(allowedOrchestrationAccess)).append("\n");
+    sb.append("    allowedOrchestrationAccessMetadata: ").append(toIndentedString(allowedOrchestrationAccessMetadata)).append("\n");
     sb.append("    allowedTemplateAccess: ").append(toIndentedString(allowedTemplateAccess)).append("\n");
     sb.append("    allowedTemplateAccessMetadata: ").append(toIndentedString(allowedTemplateAccessMetadata)).append("\n");
     sb.append("    allowedToBeEnvelopeTransferRecipient: ").append(toIndentedString(allowedToBeEnvelopeTransferRecipient)).append("\n");
@@ -2536,12 +2848,20 @@ public class AccountRoleSettings {
     sb.append("    allowSupplementalDocumentsMetadata: ").append(toIndentedString(allowSupplementalDocumentsMetadata)).append("\n");
     sb.append("    allowTaggingInSendAndCorrect: ").append(toIndentedString(allowTaggingInSendAndCorrect)).append("\n");
     sb.append("    allowTaggingInSendAndCorrectMetadata: ").append(toIndentedString(allowTaggingInSendAndCorrectMetadata)).append("\n");
+    sb.append("    allowTransactions: ").append(toIndentedString(allowTransactions)).append("\n");
+    sb.append("    allowTransactionsMetadata: ").append(toIndentedString(allowTransactionsMetadata)).append("\n");
     sb.append("    allowVaulting: ").append(toIndentedString(allowVaulting)).append("\n");
     sb.append("    allowVaultingMetadata: ").append(toIndentedString(allowVaultingMetadata)).append("\n");
     sb.append("    allowWetSigningOverride: ").append(toIndentedString(allowWetSigningOverride)).append("\n");
     sb.append("    allowWetSigningOverrideMetadata: ").append(toIndentedString(allowWetSigningOverrideMetadata)).append("\n");
+    sb.append("    canCreateTransaction: ").append(toIndentedString(canCreateTransaction)).append("\n");
+    sb.append("    canCreateTransactionMetadata: ").append(toIndentedString(canCreateTransactionMetadata)).append("\n");
     sb.append("    canCreateWorkspaces: ").append(toIndentedString(canCreateWorkspaces)).append("\n");
     sb.append("    canCreateWorkspacesMetadata: ").append(toIndentedString(canCreateWorkspacesMetadata)).append("\n");
+    sb.append("    canDeleteDocumentsInTransaction: ").append(toIndentedString(canDeleteDocumentsInTransaction)).append("\n");
+    sb.append("    canDeleteDocumentsInTransactionMetadata: ").append(toIndentedString(canDeleteDocumentsInTransactionMetadata)).append("\n");
+    sb.append("    canDeleteTransaction: ").append(toIndentedString(canDeleteTransaction)).append("\n");
+    sb.append("    canDeleteTransactionMetadata: ").append(toIndentedString(canDeleteTransactionMetadata)).append("\n");
     sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
     sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");

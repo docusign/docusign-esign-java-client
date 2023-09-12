@@ -26,6 +26,12 @@ public class AccountIdentityVerificationWorkflow {
   @JsonProperty("inputOptions")
   private java.util.List<AccountIdentityInputOption> inputOptions = null;
 
+  @JsonProperty("isDisabled")
+  private String isDisabled = null;
+
+  @JsonProperty("ownerType")
+  private String ownerType = null;
+
   @JsonProperty("signatureProvider")
   private AccountSignatureProvider signatureProvider = null;
 
@@ -133,6 +139,60 @@ public class AccountIdentityVerificationWorkflow {
    **/
   public void setInputOptions(java.util.List<AccountIdentityInputOption> inputOptions) {
     this.inputOptions = inputOptions;
+  }
+
+
+  /**
+   * isDisabled.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
+  public AccountIdentityVerificationWorkflow isDisabled(String isDisabled) {
+    this.isDisabled = isDisabled;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isDisabled
+   **/
+  @Schema(description = "")
+  public String getIsDisabled() {
+    return isDisabled;
+  }
+
+  /**
+   * setIsDisabled.
+   **/
+  public void setIsDisabled(String isDisabled) {
+    this.isDisabled = isDisabled;
+  }
+
+
+  /**
+   * ownerType.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
+  public AccountIdentityVerificationWorkflow ownerType(String ownerType) {
+    this.ownerType = ownerType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return ownerType
+   **/
+  @Schema(description = "")
+  public String getOwnerType() {
+    return ownerType;
+  }
+
+  /**
+   * setOwnerType.
+   **/
+  public void setOwnerType(String ownerType) {
+    this.ownerType = ownerType;
   }
 
 
@@ -301,6 +361,8 @@ public class AccountIdentityVerificationWorkflow {
     return Objects.equals(this.defaultDescription, accountIdentityVerificationWorkflow.defaultDescription) &&
         Objects.equals(this.defaultName, accountIdentityVerificationWorkflow.defaultName) &&
         Objects.equals(this.inputOptions, accountIdentityVerificationWorkflow.inputOptions) &&
+        Objects.equals(this.isDisabled, accountIdentityVerificationWorkflow.isDisabled) &&
+        Objects.equals(this.ownerType, accountIdentityVerificationWorkflow.ownerType) &&
         Objects.equals(this.signatureProvider, accountIdentityVerificationWorkflow.signatureProvider) &&
         Objects.equals(this.steps, accountIdentityVerificationWorkflow.steps) &&
         Objects.equals(this.workflowId, accountIdentityVerificationWorkflow.workflowId) &&
@@ -313,7 +375,7 @@ public class AccountIdentityVerificationWorkflow {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultDescription, defaultName, inputOptions, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
+    return Objects.hash(defaultDescription, defaultName, inputOptions, isDisabled, ownerType, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
   }
 
 
@@ -328,6 +390,8 @@ public class AccountIdentityVerificationWorkflow {
     sb.append("    defaultDescription: ").append(toIndentedString(defaultDescription)).append("\n");
     sb.append("    defaultName: ").append(toIndentedString(defaultName)).append("\n");
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
+    sb.append("    isDisabled: ").append(toIndentedString(isDisabled)).append("\n");
+    sb.append("    ownerType: ").append(toIndentedString(ownerType)).append("\n");
     sb.append("    signatureProvider: ").append(toIndentedString(signatureProvider)).append("\n");
     sb.append("    steps: ").append(toIndentedString(steps)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");

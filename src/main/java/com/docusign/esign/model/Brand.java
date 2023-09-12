@@ -44,6 +44,9 @@ public class Brand {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("isOrganizationBrand")
+  private String isOrganizationBrand = null;
+
   @JsonProperty("isOverridingCompanyName")
   private Boolean isOverridingCompanyName = null;
 
@@ -61,6 +64,9 @@ public class Brand {
 
   @JsonProperty("logos")
   private BrandLogos logos = null;
+
+  @JsonProperty("organizationBrandLogo")
+  private String organizationBrandLogo = null;
 
   @JsonProperty("resources")
   private BrandResourceUrls resources = null;
@@ -322,6 +328,33 @@ public class Brand {
 
 
   /**
+   * isOrganizationBrand.
+   *
+   * @return Brand
+   **/
+  public Brand isOrganizationBrand(String isOrganizationBrand) {
+    this.isOrganizationBrand = isOrganizationBrand;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isOrganizationBrand
+   **/
+  @Schema(description = "")
+  public String getIsOrganizationBrand() {
+    return isOrganizationBrand;
+  }
+
+  /**
+   * setIsOrganizationBrand.
+   **/
+  public void setIsOrganizationBrand(String isOrganizationBrand) {
+    this.isOrganizationBrand = isOrganizationBrand;
+  }
+
+
+  /**
    * isOverridingCompanyName.
    *
    * @return Brand
@@ -510,6 +543,33 @@ public class Brand {
 
 
   /**
+   * organizationBrandLogo.
+   *
+   * @return Brand
+   **/
+  public Brand organizationBrandLogo(String organizationBrandLogo) {
+    this.organizationBrandLogo = organizationBrandLogo;
+    return this;
+  }
+
+  /**
+   * .
+   * @return organizationBrandLogo
+   **/
+  @Schema(description = "")
+  public String getOrganizationBrandLogo() {
+    return organizationBrandLogo;
+  }
+
+  /**
+   * setOrganizationBrandLogo.
+   **/
+  public void setOrganizationBrandLogo(String organizationBrandLogo) {
+    this.organizationBrandLogo = organizationBrandLogo;
+  }
+
+
+  /**
    * resources.
    *
    * @return Brand
@@ -558,12 +618,14 @@ public class Brand {
         Objects.equals(this.defaultBrandLanguage, brand.defaultBrandLanguage) &&
         Objects.equals(this.emailContent, brand.emailContent) &&
         Objects.equals(this.errorDetails, brand.errorDetails) &&
+        Objects.equals(this.isOrganizationBrand, brand.isOrganizationBrand) &&
         Objects.equals(this.isOverridingCompanyName, brand.isOverridingCompanyName) &&
         Objects.equals(this.isSendingDefault, brand.isSendingDefault) &&
         Objects.equals(this.isSigningDefault, brand.isSigningDefault) &&
         Objects.equals(this.landingPages, brand.landingPages) &&
         Objects.equals(this.links, brand.links) &&
         Objects.equals(this.logos, brand.logos) &&
+        Objects.equals(this.organizationBrandLogo, brand.organizationBrandLogo) &&
         Objects.equals(this.resources, brand.resources);
   }
 
@@ -572,7 +634,7 @@ public class Brand {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, resources);
+    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOrganizationBrand, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, organizationBrandLogo, resources);
   }
 
 
@@ -592,12 +654,14 @@ public class Brand {
     sb.append("    defaultBrandLanguage: ").append(toIndentedString(defaultBrandLanguage)).append("\n");
     sb.append("    emailContent: ").append(toIndentedString(emailContent)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    isOrganizationBrand: ").append(toIndentedString(isOrganizationBrand)).append("\n");
     sb.append("    isOverridingCompanyName: ").append(toIndentedString(isOverridingCompanyName)).append("\n");
     sb.append("    isSendingDefault: ").append(toIndentedString(isSendingDefault)).append("\n");
     sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
     sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
+    sb.append("    organizationBrandLogo: ").append(toIndentedString(organizationBrandLogo)).append("\n");
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();
