@@ -25,6 +25,9 @@ public class Document {
   @JsonProperty("assignTabsToRecipientId")
   private String assignTabsToRecipientId = null;
 
+  @JsonProperty("authoritativeCopy")
+  private Boolean authoritativeCopy = null;
+
   @JsonProperty("display")
   private String display = null;
 
@@ -152,6 +155,33 @@ public class Document {
    **/
   public void setAssignTabsToRecipientId(String assignTabsToRecipientId) {
     this.assignTabsToRecipientId = assignTabsToRecipientId;
+  }
+
+
+  /**
+   * authoritativeCopy.
+   *
+   * @return Document
+   **/
+  public Document authoritativeCopy(Boolean authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
+    return this;
+  }
+
+  /**
+   * Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled..
+   * @return authoritativeCopy
+   **/
+  @Schema(description = "Specifies the Authoritative copy feature. If set to true the Authoritative copy feature is enabled.")
+  public Boolean isAuthoritativeCopy() {
+    return authoritativeCopy;
+  }
+
+  /**
+   * setAuthoritativeCopy.
+   **/
+  public void setAuthoritativeCopy(Boolean authoritativeCopy) {
+    this.authoritativeCopy = authoritativeCopy;
   }
 
 
@@ -885,6 +915,7 @@ public class Document {
     Document document = (Document) o;
     return Objects.equals(this.applyAnchorTabs, document.applyAnchorTabs) &&
         Objects.equals(this.assignTabsToRecipientId, document.assignTabsToRecipientId) &&
+        Objects.equals(this.authoritativeCopy, document.authoritativeCopy) &&
         Objects.equals(this.display, document.display) &&
         Objects.equals(this.docGenFormFields, document.docGenFormFields) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
@@ -917,7 +948,7 @@ public class Document {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, authoritativeCopy, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -931,6 +962,7 @@ public class Document {
     
     sb.append("    applyAnchorTabs: ").append(toIndentedString(applyAnchorTabs)).append("\n");
     sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
+    sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
     sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
