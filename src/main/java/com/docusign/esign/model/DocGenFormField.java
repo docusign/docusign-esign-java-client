@@ -2,6 +2,8 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.DocGenFormFieldOption;
+import com.docusign.esign.model.DocGenFormFieldValidation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -13,11 +15,20 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 
 public class DocGenFormField {
+  @JsonProperty("description")
+  private String description = null;
+
   @JsonProperty("label")
   private String label = null;
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("options")
+  private java.util.List<DocGenFormFieldOption> options = null;
+
+  @JsonProperty("predefinedValidation")
+  private String predefinedValidation = null;
 
   @JsonProperty("required")
   private String required = null;
@@ -25,8 +36,38 @@ public class DocGenFormField {
   @JsonProperty("type")
   private String type = null;
 
+  @JsonProperty("validation")
+  private DocGenFormFieldValidation validation = null;
+
   @JsonProperty("value")
   private String value = null;
+
+
+  /**
+   * description.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * .
+   * @return description
+   **/
+  @Schema(description = "")
+  public String getDescription() {
+    return description;
+  }
+
+  /**
+   * setDescription.
+   **/
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
 
   /**
@@ -80,6 +121,73 @@ public class DocGenFormField {
    **/
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  /**
+   * options.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField options(java.util.List<DocGenFormFieldOption> options) {
+    this.options = options;
+    return this;
+  }
+  
+  /**
+   * addOptionsItem.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField addOptionsItem(DocGenFormFieldOption optionsItem) {
+    if (this.options == null) {
+      this.options = new java.util.ArrayList<>();
+    }
+    this.options.add(optionsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return options
+   **/
+  @Schema(description = "")
+  public java.util.List<DocGenFormFieldOption> getOptions() {
+    return options;
+  }
+
+  /**
+   * setOptions.
+   **/
+  public void setOptions(java.util.List<DocGenFormFieldOption> options) {
+    this.options = options;
+  }
+
+
+  /**
+   * predefinedValidation.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField predefinedValidation(String predefinedValidation) {
+    this.predefinedValidation = predefinedValidation;
+    return this;
+  }
+
+  /**
+   * .
+   * @return predefinedValidation
+   **/
+  @Schema(description = "")
+  public String getPredefinedValidation() {
+    return predefinedValidation;
+  }
+
+  /**
+   * setPredefinedValidation.
+   **/
+  public void setPredefinedValidation(String predefinedValidation) {
+    this.predefinedValidation = predefinedValidation;
   }
 
 
@@ -138,6 +246,33 @@ public class DocGenFormField {
 
 
   /**
+   * validation.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField validation(DocGenFormFieldValidation validation) {
+    this.validation = validation;
+    return this;
+  }
+
+  /**
+   * .
+   * @return validation
+   **/
+  @Schema(description = "")
+  public DocGenFormFieldValidation getValidation() {
+    return validation;
+  }
+
+  /**
+   * setValidation.
+   **/
+  public void setValidation(DocGenFormFieldValidation validation) {
+    this.validation = validation;
+  }
+
+
+  /**
    * value.
    *
    * @return DocGenFormField
@@ -178,10 +313,14 @@ public class DocGenFormField {
       return false;
     }
     DocGenFormField docGenFormField = (DocGenFormField) o;
-    return Objects.equals(this.label, docGenFormField.label) &&
+    return Objects.equals(this.description, docGenFormField.description) &&
+        Objects.equals(this.label, docGenFormField.label) &&
         Objects.equals(this.name, docGenFormField.name) &&
+        Objects.equals(this.options, docGenFormField.options) &&
+        Objects.equals(this.predefinedValidation, docGenFormField.predefinedValidation) &&
         Objects.equals(this.required, docGenFormField.required) &&
         Objects.equals(this.type, docGenFormField.type) &&
+        Objects.equals(this.validation, docGenFormField.validation) &&
         Objects.equals(this.value, docGenFormField.value);
   }
 
@@ -190,7 +329,7 @@ public class DocGenFormField {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(label, name, required, type, value);
+    return Objects.hash(description, label, name, options, predefinedValidation, required, type, validation, value);
   }
 
 
@@ -202,10 +341,14 @@ public class DocGenFormField {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormField {\n");
     
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("    predefinedValidation: ").append(toIndentedString(predefinedValidation)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    validation: ").append(toIndentedString(validation)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

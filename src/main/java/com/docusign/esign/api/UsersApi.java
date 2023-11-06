@@ -2505,10 +2505,11 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @param imageBytes Image content. (required)
    * @return UserSignature
    */ 
-  public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType) throws ApiException {
-    return updateSignatureImage(accountId, userId, signatureId, imageType, null);
+  public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType, byte[] imageBytes) throws ApiException {
+    return updateSignatureImage(accountId, userId, signatureId, imageType, imageBytes, null);
   }
 
   /**
@@ -2518,12 +2519,13 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @param imageBytes Image content. (required)
    * @param options for modifying the method behavior.
    * @return UserSignature
    * @throws ApiException if fails to make API call
    */
-  public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType, UsersApi.UpdateSignatureImageOptions options) throws ApiException {
-    ApiResponse<UserSignature> localVarResponse = updateSignatureImageWithHttpInfo(accountId, userId, signatureId, imageType, options);
+  public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType, byte[] imageBytes, UsersApi.UpdateSignatureImageOptions options) throws ApiException {
+    ApiResponse<UserSignature> localVarResponse = updateSignatureImageWithHttpInfo(accountId, userId, signatureId, imageType, imageBytes, options);
     return localVarResponse.getData();
   }
 
@@ -2534,12 +2536,13 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
+   * @param imageBytes Image content. (required)
    * @param options for modifying the method behavior.
    * @return UserSignature
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<UserSignature > updateSignatureImageWithHttpInfo(String accountId, String userId, String signatureId, String imageType, UsersApi.UpdateSignatureImageOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
+  public ApiResponse<UserSignature > updateSignatureImageWithHttpInfo(String accountId, String userId, String signatureId, String imageType, byte[] imageBytes, UsersApi.UpdateSignatureImageOptions options) throws ApiException {
+    Object localVarPostBody = imageBytes;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -2559,6 +2562,11 @@ public class UsersApi {
     // verify the required parameter 'imageType' is set
     if (imageType == null) {
       throw new ApiException(400, "Missing the required parameter 'imageType' when calling updateSignatureImage");
+    }
+    
+    // verify the required parameter 'imageBytes' is set
+    if (imageBytes == null) {
+      throw new ApiException(400, "Missing the required parameter 'imageBytes' when calling updateSignatureImage");
     }
     
     // create path and map variables
