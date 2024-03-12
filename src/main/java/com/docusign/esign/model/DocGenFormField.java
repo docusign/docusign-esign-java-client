@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.DocGenFormFieldOption;
+import com.docusign.esign.model.DocGenFormFieldRowValue;
 import com.docusign.esign.model.DocGenFormFieldValidation;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -32,6 +33,9 @@ public class DocGenFormField {
 
   @JsonProperty("required")
   private String required = null;
+
+  @JsonProperty("rowValues")
+  private java.util.List<DocGenFormFieldRowValue> rowValues = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -219,6 +223,46 @@ public class DocGenFormField {
 
 
   /**
+   * rowValues.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField rowValues(java.util.List<DocGenFormFieldRowValue> rowValues) {
+    this.rowValues = rowValues;
+    return this;
+  }
+  
+  /**
+   * addRowValuesItem.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField addRowValuesItem(DocGenFormFieldRowValue rowValuesItem) {
+    if (this.rowValues == null) {
+      this.rowValues = new java.util.ArrayList<>();
+    }
+    this.rowValues.add(rowValuesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return rowValues
+   **/
+  @Schema(description = "")
+  public java.util.List<DocGenFormFieldRowValue> getRowValues() {
+    return rowValues;
+  }
+
+  /**
+   * setRowValues.
+   **/
+  public void setRowValues(java.util.List<DocGenFormFieldRowValue> rowValues) {
+    this.rowValues = rowValues;
+  }
+
+
+  /**
    * type.
    *
    * @return DocGenFormField
@@ -319,6 +363,7 @@ public class DocGenFormField {
         Objects.equals(this.options, docGenFormField.options) &&
         Objects.equals(this.predefinedValidation, docGenFormField.predefinedValidation) &&
         Objects.equals(this.required, docGenFormField.required) &&
+        Objects.equals(this.rowValues, docGenFormField.rowValues) &&
         Objects.equals(this.type, docGenFormField.type) &&
         Objects.equals(this.validation, docGenFormField.validation) &&
         Objects.equals(this.value, docGenFormField.value);
@@ -329,7 +374,7 @@ public class DocGenFormField {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(description, label, name, options, predefinedValidation, required, type, validation, value);
+    return Objects.hash(description, label, name, options, predefinedValidation, required, rowValues, type, validation, value);
   }
 
 
@@ -347,6 +392,7 @@ public class DocGenFormField {
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    predefinedValidation: ").append(toIndentedString(predefinedValidation)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
+    sb.append("    rowValues: ").append(toIndentedString(rowValues)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    validation: ").append(toIndentedString(validation)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");

@@ -66,7 +66,7 @@ public class ApiClient {
   /** stage base path. */
   public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/restapi";
 
-  private String basePath = PRODUCTION_REST_BASEPATH;
+  private String basePath = DEMO_REST_BASEPATH;
   private String oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
   protected boolean debugging = false;
   protected int connectionTimeout = 0;
@@ -96,7 +96,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("/SDK/4.5.0/Java/");
+    setUserAgent("Swagger-Codegen/v2.1/4.6.0-RC1/Java/" + javaVersion);
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -630,10 +630,10 @@ public class ApiClient {
 
   private void deriveOAuthBasePathFromRestBasePath() {
     if (this.basePath == null) { // this case should not happen but just in case
-      this.oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
-    } else if (this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo")) {
       this.oAuthBasePath = OAuth.DEMO_OAUTH_BASEPATH;
-    } else if (this.basePath.startsWith("https://stage") || this.basePath.startsWith("http://stage")) {
+    } else if (this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo") || this.basePath.startsWith("https://apps-d") || this.basePath.startsWith("http://apps-d")) {
+      this.oAuthBasePath = OAuth.DEMO_OAUTH_BASEPATH;
+    } else if (this.basePath.startsWith("https://stage") || this.basePath.startsWith("http://stage") || this.basePath.startsWith("https://apps-s") || this.basePath.startsWith("http://apps-s")) {
       this.oAuthBasePath = OAuth.STAGE_OAUTH_BASEPATH;
     } else {
       this.oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;

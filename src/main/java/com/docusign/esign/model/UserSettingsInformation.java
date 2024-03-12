@@ -29,6 +29,12 @@ public class UserSettingsInformation {
   @JsonProperty("adminOnlyMetadata")
   private SettingsMetadata adminOnlyMetadata = null;
 
+  @JsonProperty("allowAccessToAllAccountAgreements")
+  private String allowAccessToAllAccountAgreements = null;
+
+  @JsonProperty("allowAccessToAllAccountAgreementsMetadata")
+  private SettingsMetadata allowAccessToAllAccountAgreementsMetadata = null;
+
   @JsonProperty("allowAutoTagging")
   private String allowAutoTagging = null;
 
@@ -504,6 +510,60 @@ public class UserSettingsInformation {
    **/
   public void setAdminOnlyMetadata(SettingsMetadata adminOnlyMetadata) {
     this.adminOnlyMetadata = adminOnlyMetadata;
+  }
+
+
+  /**
+   * allowAccessToAllAccountAgreements.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowAccessToAllAccountAgreements(String allowAccessToAllAccountAgreements) {
+    this.allowAccessToAllAccountAgreements = allowAccessToAllAccountAgreements;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowAccessToAllAccountAgreements
+   **/
+  @Schema(description = "")
+  public String getAllowAccessToAllAccountAgreements() {
+    return allowAccessToAllAccountAgreements;
+  }
+
+  /**
+   * setAllowAccessToAllAccountAgreements.
+   **/
+  public void setAllowAccessToAllAccountAgreements(String allowAccessToAllAccountAgreements) {
+    this.allowAccessToAllAccountAgreements = allowAccessToAllAccountAgreements;
+  }
+
+
+  /**
+   * allowAccessToAllAccountAgreementsMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowAccessToAllAccountAgreementsMetadata(SettingsMetadata allowAccessToAllAccountAgreementsMetadata) {
+    this.allowAccessToAllAccountAgreementsMetadata = allowAccessToAllAccountAgreementsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowAccessToAllAccountAgreementsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowAccessToAllAccountAgreementsMetadata() {
+    return allowAccessToAllAccountAgreementsMetadata;
+  }
+
+  /**
+   * setAllowAccessToAllAccountAgreementsMetadata.
+   **/
+  public void setAllowAccessToAllAccountAgreementsMetadata(SettingsMetadata allowAccessToAllAccountAgreementsMetadata) {
+    this.allowAccessToAllAccountAgreementsMetadata = allowAccessToAllAccountAgreementsMetadata;
   }
 
 
@@ -4101,6 +4161,8 @@ public class UserSettingsInformation {
     return Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
         Objects.equals(this.adminOnly, userSettingsInformation.adminOnly) &&
         Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata) &&
+        Objects.equals(this.allowAccessToAllAccountAgreements, userSettingsInformation.allowAccessToAllAccountAgreements) &&
+        Objects.equals(this.allowAccessToAllAccountAgreementsMetadata, userSettingsInformation.allowAccessToAllAccountAgreementsMetadata) &&
         Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging) &&
         Objects.equals(this.allowedOrchestrationAccess, userSettingsInformation.allowedOrchestrationAccess) &&
         Objects.equals(this.allowedOrchestrationAccessMetadata, userSettingsInformation.allowedOrchestrationAccessMetadata) &&
@@ -4240,7 +4302,7 @@ public class UserSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -4255,6 +4317,8 @@ public class UserSettingsInformation {
     sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
+    sb.append("    allowAccessToAllAccountAgreements: ").append(toIndentedString(allowAccessToAllAccountAgreements)).append("\n");
+    sb.append("    allowAccessToAllAccountAgreementsMetadata: ").append(toIndentedString(allowAccessToAllAccountAgreementsMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
     sb.append("    allowedOrchestrationAccess: ").append(toIndentedString(allowedOrchestrationAccess)).append("\n");
     sb.append("    allowedOrchestrationAccessMetadata: ").append(toIndentedString(allowedOrchestrationAccessMetadata)).append("\n");

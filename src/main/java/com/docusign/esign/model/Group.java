@@ -16,6 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Schema(description = "This object contains information about a group.")
 
 public class Group {
+  @JsonProperty("accessType")
+  private String accessType = null;
+
   @JsonProperty("dsGroupId")
   private String dsGroupId = null;
 
@@ -39,6 +42,33 @@ public class Group {
 
   @JsonProperty("usersCount")
   private String usersCount = null;
+
+
+  /**
+   * accessType.
+   *
+   * @return Group
+   **/
+  public Group accessType(String accessType) {
+    this.accessType = accessType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accessType
+   **/
+  @Schema(description = "")
+  public String getAccessType() {
+    return accessType;
+  }
+
+  /**
+   * setAccessType.
+   **/
+  public void setAccessType(String accessType) {
+    this.accessType = accessType;
+  }
 
 
   /**
@@ -284,7 +314,8 @@ public class Group {
       return false;
     }
     Group group = (Group) o;
-    return Objects.equals(this.dsGroupId, group.dsGroupId) &&
+    return Objects.equals(this.accessType, group.accessType) &&
+        Objects.equals(this.dsGroupId, group.dsGroupId) &&
         Objects.equals(this.errorDetails, group.errorDetails) &&
         Objects.equals(this.groupId, group.groupId) &&
         Objects.equals(this.groupName, group.groupName) &&
@@ -299,7 +330,7 @@ public class Group {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
+    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
   }
 
 
@@ -311,6 +342,7 @@ public class Group {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
+    sb.append("    accessType: ").append(toIndentedString(accessType)).append("\n");
     sb.append("    dsGroupId: ").append(toIndentedString(dsGroupId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
