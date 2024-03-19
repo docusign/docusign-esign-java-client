@@ -2505,7 +2505,7 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
-   * @param imageBytes Image content. (required)
+   * @param imageBytes Updated image content. (required)
    * @return UserSignature
    */ 
   public UserSignature updateSignatureImage(String accountId, String userId, String signatureId, String imageType, byte[] imageBytes) throws ApiException {
@@ -2519,7 +2519,7 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
-   * @param imageBytes Image content. (required)
+   * @param imageBytes Updated image content. (required)
    * @param options for modifying the method behavior.
    * @return UserSignature
    * @throws ApiException if fails to make API call
@@ -2536,7 +2536,7 @@ public class UsersApi {
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
    * @param signatureId The ID of the signature being accessed. (required)
    * @param imageType One of **signature_image** or **initials_image**. (required)
-   * @param imageBytes Image content. (required)
+   * @param imageBytes Updated image content. (required)
    * @param options for modifying the method behavior.
    * @return UserSignature
    * @throws ApiException if fails to make API call
