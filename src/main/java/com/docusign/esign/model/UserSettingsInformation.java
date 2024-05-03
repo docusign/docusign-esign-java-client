@@ -20,6 +20,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @Schema(description = "Properties that configure the settings for a user. Some elements of this object have a `metadata` property, which includes the following: - `rights`: The calling users permissions to edit this setting (can be `editable` or `read_only`) - `uiHint`: Internally used to build UIs (can be `available` or `hidden`) - `options`: The values supported for this setting (not all settings have this element)")
 
 public class UserSettingsInformation {
+  @JsonProperty("accountAgreementsAccessType")
+  private String accountAgreementsAccessType = null;
+
+  @JsonProperty("accountAgreementsAccessTypeMetadata")
+  private SettingsMetadata accountAgreementsAccessTypeMetadata = null;
+
   @JsonProperty("accountManagementGranular")
   private UserAccountManagementGranularInformation accountManagementGranular = null;
 
@@ -107,6 +113,12 @@ public class UserSettingsInformation {
   @JsonProperty("bulkSendMetadata")
   private SettingsMetadata bulkSendMetadata = null;
 
+  @JsonProperty("canBulkUploadAgreements")
+  private String canBulkUploadAgreements = null;
+
+  @JsonProperty("canBulkUploadAgreementsMetadata")
+  private SettingsMetadata canBulkUploadAgreementsMetadata = null;
+
   @JsonProperty("canChargeAccount")
   private String canChargeAccount = null;
 
@@ -148,6 +160,12 @@ public class UserSettingsInformation {
 
   @JsonProperty("canManageAccountMetadata")
   private SettingsMetadata canManageAccountMetadata = null;
+
+  @JsonProperty("canManageAgreementParties")
+  private String canManageAgreementParties = null;
+
+  @JsonProperty("canManageAgreementPartiesMetadata")
+  private SettingsMetadata canManageAgreementPartiesMetadata = null;
 
   @JsonProperty("canManageDistributor")
   private String canManageDistributor = null;
@@ -430,6 +448,60 @@ public class UserSettingsInformation {
 
   @JsonProperty("webFormsMetadata")
   private SettingsMetadata webFormsMetadata = null;
+
+
+  /**
+   * accountAgreementsAccessType.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation accountAgreementsAccessType(String accountAgreementsAccessType) {
+    this.accountAgreementsAccessType = accountAgreementsAccessType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accountAgreementsAccessType
+   **/
+  @Schema(description = "")
+  public String getAccountAgreementsAccessType() {
+    return accountAgreementsAccessType;
+  }
+
+  /**
+   * setAccountAgreementsAccessType.
+   **/
+  public void setAccountAgreementsAccessType(String accountAgreementsAccessType) {
+    this.accountAgreementsAccessType = accountAgreementsAccessType;
+  }
+
+
+  /**
+   * accountAgreementsAccessTypeMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation accountAgreementsAccessTypeMetadata(SettingsMetadata accountAgreementsAccessTypeMetadata) {
+    this.accountAgreementsAccessTypeMetadata = accountAgreementsAccessTypeMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accountAgreementsAccessTypeMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAccountAgreementsAccessTypeMetadata() {
+    return accountAgreementsAccessTypeMetadata;
+  }
+
+  /**
+   * setAccountAgreementsAccessTypeMetadata.
+   **/
+  public void setAccountAgreementsAccessTypeMetadata(SettingsMetadata accountAgreementsAccessTypeMetadata) {
+    this.accountAgreementsAccessTypeMetadata = accountAgreementsAccessTypeMetadata;
+  }
 
 
   /**
@@ -1216,6 +1288,60 @@ public class UserSettingsInformation {
 
 
   /**
+   * canBulkUploadAgreements.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canBulkUploadAgreements(String canBulkUploadAgreements) {
+    this.canBulkUploadAgreements = canBulkUploadAgreements;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canBulkUploadAgreements
+   **/
+  @Schema(description = "")
+  public String getCanBulkUploadAgreements() {
+    return canBulkUploadAgreements;
+  }
+
+  /**
+   * setCanBulkUploadAgreements.
+   **/
+  public void setCanBulkUploadAgreements(String canBulkUploadAgreements) {
+    this.canBulkUploadAgreements = canBulkUploadAgreements;
+  }
+
+
+  /**
+   * canBulkUploadAgreementsMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canBulkUploadAgreementsMetadata(SettingsMetadata canBulkUploadAgreementsMetadata) {
+    this.canBulkUploadAgreementsMetadata = canBulkUploadAgreementsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canBulkUploadAgreementsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanBulkUploadAgreementsMetadata() {
+    return canBulkUploadAgreementsMetadata;
+  }
+
+  /**
+   * setCanBulkUploadAgreementsMetadata.
+   **/
+  public void setCanBulkUploadAgreementsMetadata(SettingsMetadata canBulkUploadAgreementsMetadata) {
+    this.canBulkUploadAgreementsMetadata = canBulkUploadAgreementsMetadata;
+  }
+
+
+  /**
    * canChargeAccount.
    *
    * @return UserSettingsInformation
@@ -1590,6 +1716,60 @@ public class UserSettingsInformation {
    **/
   public void setCanManageAccountMetadata(SettingsMetadata canManageAccountMetadata) {
     this.canManageAccountMetadata = canManageAccountMetadata;
+  }
+
+
+  /**
+   * canManageAgreementParties.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canManageAgreementParties(String canManageAgreementParties) {
+    this.canManageAgreementParties = canManageAgreementParties;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementParties
+   **/
+  @Schema(description = "")
+  public String getCanManageAgreementParties() {
+    return canManageAgreementParties;
+  }
+
+  /**
+   * setCanManageAgreementParties.
+   **/
+  public void setCanManageAgreementParties(String canManageAgreementParties) {
+    this.canManageAgreementParties = canManageAgreementParties;
+  }
+
+
+  /**
+   * canManageAgreementPartiesMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation canManageAgreementPartiesMetadata(SettingsMetadata canManageAgreementPartiesMetadata) {
+    this.canManageAgreementPartiesMetadata = canManageAgreementPartiesMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementPartiesMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanManageAgreementPartiesMetadata() {
+    return canManageAgreementPartiesMetadata;
+  }
+
+  /**
+   * setCanManageAgreementPartiesMetadata.
+   **/
+  public void setCanManageAgreementPartiesMetadata(SettingsMetadata canManageAgreementPartiesMetadata) {
+    this.canManageAgreementPartiesMetadata = canManageAgreementPartiesMetadata;
   }
 
 
@@ -4158,7 +4338,9 @@ public class UserSettingsInformation {
       return false;
     }
     UserSettingsInformation userSettingsInformation = (UserSettingsInformation) o;
-    return Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
+    return Objects.equals(this.accountAgreementsAccessType, userSettingsInformation.accountAgreementsAccessType) &&
+        Objects.equals(this.accountAgreementsAccessTypeMetadata, userSettingsInformation.accountAgreementsAccessTypeMetadata) &&
+        Objects.equals(this.accountManagementGranular, userSettingsInformation.accountManagementGranular) &&
         Objects.equals(this.adminOnly, userSettingsInformation.adminOnly) &&
         Objects.equals(this.adminOnlyMetadata, userSettingsInformation.adminOnlyMetadata) &&
         Objects.equals(this.allowAccessToAllAccountAgreements, userSettingsInformation.allowAccessToAllAccountAgreements) &&
@@ -4187,6 +4369,8 @@ public class UserSettingsInformation {
         Objects.equals(this.apiCanExportACMetadata, userSettingsInformation.apiCanExportACMetadata) &&
         Objects.equals(this.bulkSend, userSettingsInformation.bulkSend) &&
         Objects.equals(this.bulkSendMetadata, userSettingsInformation.bulkSendMetadata) &&
+        Objects.equals(this.canBulkUploadAgreements, userSettingsInformation.canBulkUploadAgreements) &&
+        Objects.equals(this.canBulkUploadAgreementsMetadata, userSettingsInformation.canBulkUploadAgreementsMetadata) &&
         Objects.equals(this.canChargeAccount, userSettingsInformation.canChargeAccount) &&
         Objects.equals(this.canChargeAccountMetadata, userSettingsInformation.canChargeAccountMetadata) &&
         Objects.equals(this.canCreateTransaction, userSettingsInformation.canCreateTransaction) &&
@@ -4201,6 +4385,8 @@ public class UserSettingsInformation {
         Objects.equals(this.canLockEnvelopesMetadata, userSettingsInformation.canLockEnvelopesMetadata) &&
         Objects.equals(this.canManageAccount, userSettingsInformation.canManageAccount) &&
         Objects.equals(this.canManageAccountMetadata, userSettingsInformation.canManageAccountMetadata) &&
+        Objects.equals(this.canManageAgreementParties, userSettingsInformation.canManageAgreementParties) &&
+        Objects.equals(this.canManageAgreementPartiesMetadata, userSettingsInformation.canManageAgreementPartiesMetadata) &&
         Objects.equals(this.canManageDistributor, userSettingsInformation.canManageDistributor) &&
         Objects.equals(this.canManageDistributorMetadata, userSettingsInformation.canManageDistributorMetadata) &&
         Objects.equals(this.canManageTemplates, userSettingsInformation.canManageTemplates) &&
@@ -4302,7 +4488,7 @@ public class UserSettingsInformation {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageAgreementParties, canManageAgreementPartiesMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -4314,6 +4500,8 @@ public class UserSettingsInformation {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserSettingsInformation {\n");
     
+    sb.append("    accountAgreementsAccessType: ").append(toIndentedString(accountAgreementsAccessType)).append("\n");
+    sb.append("    accountAgreementsAccessTypeMetadata: ").append(toIndentedString(accountAgreementsAccessTypeMetadata)).append("\n");
     sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    adminOnly: ").append(toIndentedString(adminOnly)).append("\n");
     sb.append("    adminOnlyMetadata: ").append(toIndentedString(adminOnlyMetadata)).append("\n");
@@ -4343,6 +4531,8 @@ public class UserSettingsInformation {
     sb.append("    apiCanExportACMetadata: ").append(toIndentedString(apiCanExportACMetadata)).append("\n");
     sb.append("    bulkSend: ").append(toIndentedString(bulkSend)).append("\n");
     sb.append("    bulkSendMetadata: ").append(toIndentedString(bulkSendMetadata)).append("\n");
+    sb.append("    canBulkUploadAgreements: ").append(toIndentedString(canBulkUploadAgreements)).append("\n");
+    sb.append("    canBulkUploadAgreementsMetadata: ").append(toIndentedString(canBulkUploadAgreementsMetadata)).append("\n");
     sb.append("    canChargeAccount: ").append(toIndentedString(canChargeAccount)).append("\n");
     sb.append("    canChargeAccountMetadata: ").append(toIndentedString(canChargeAccountMetadata)).append("\n");
     sb.append("    canCreateTransaction: ").append(toIndentedString(canCreateTransaction)).append("\n");
@@ -4357,6 +4547,8 @@ public class UserSettingsInformation {
     sb.append("    canLockEnvelopesMetadata: ").append(toIndentedString(canLockEnvelopesMetadata)).append("\n");
     sb.append("    canManageAccount: ").append(toIndentedString(canManageAccount)).append("\n");
     sb.append("    canManageAccountMetadata: ").append(toIndentedString(canManageAccountMetadata)).append("\n");
+    sb.append("    canManageAgreementParties: ").append(toIndentedString(canManageAgreementParties)).append("\n");
+    sb.append("    canManageAgreementPartiesMetadata: ").append(toIndentedString(canManageAgreementPartiesMetadata)).append("\n");
     sb.append("    canManageDistributor: ").append(toIndentedString(canManageDistributor)).append("\n");
     sb.append("    canManageDistributorMetadata: ").append(toIndentedString(canManageDistributorMetadata)).append("\n");
     sb.append("    canManageTemplates: ").append(toIndentedString(canManageTemplates)).append("\n");

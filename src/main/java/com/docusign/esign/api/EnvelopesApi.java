@@ -794,12 +794,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ViewUrl createEditView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    ApiResponse<ViewUrl> localVarResponse = createEditViewWithHttpInfo(accountId, envelopeId, returnUrlRequest);
+  public ViewUrl createEditView(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    ApiResponse<ViewUrl> localVarResponse = createEditViewWithHttpInfo(accountId, envelopeId, envelopeViewRequest);
     return localVarResponse.getData();
   }
 
@@ -808,12 +808,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the edit view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign editing view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ViewUrl > createEditViewWithHttpInfo(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    Object localVarPostBody = returnUrlRequest;
+  public ApiResponse<ViewUrl > createEditViewWithHttpInfo(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    Object localVarPostBody = envelopeViewRequest;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -1849,39 +1849,74 @@ public class EnvelopesApi {
     IdEvidenceViewLink localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<IdEvidenceViewLink>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
+  /// <summary>
+  /// Returns a resource token to get access to the identity events stored in the proof service related to this recipient. Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
+  /// </summary>
 
-  /**
+ /**
+  * CreateRecipientProofFileResourceTokenOptions Class.
+  *
+  **/
+  public class CreateRecipientProofFileResourceTokenOptions
+  {
+  private String tokenScopes = null;
+  
+ /**
+  * setTokenScopes method.
+  */
+  public void setTokenScopes(String tokenScopes) {
+    this.tokenScopes = tokenScopes;
+  }
+
+ /**
+  * getTokenScopes method.
+  *
+  * @return String
+  */
+  public String getTokenScopes() {
+    return this.tokenScopes;
+  }
+  }
+
+   /**
    * Returns a resource token to get access to the identity events stored in the proof service related to this recipient..
    * Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
-   * @param tokenScopes  (required)
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
    * @return IdEvidenceResourceToken
+   */ 
+  public IdEvidenceResourceToken createRecipientProofFileResourceToken(String accountId, String envelopeId, String recipientId) throws ApiException {
+    return createRecipientProofFileResourceToken(accountId, envelopeId, recipientId, null);
+  }
+
+  /**
+   * Returns a resource token to get access to the identity events stored in the proof service related to this recipient..
+   * Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
+   * @return IdEvidenceResourceToken
    * @throws ApiException if fails to make API call
    */
-  public IdEvidenceResourceToken createRecipientProofFileResourceToken(String tokenScopes, String accountId, String envelopeId, String recipientId) throws ApiException {
-    ApiResponse<IdEvidenceResourceToken> localVarResponse = createRecipientProofFileResourceTokenWithHttpInfo(tokenScopes, accountId, envelopeId, recipientId);
+  public IdEvidenceResourceToken createRecipientProofFileResourceToken(String accountId, String envelopeId, String recipientId, EnvelopesApi.CreateRecipientProofFileResourceTokenOptions options) throws ApiException {
+    ApiResponse<IdEvidenceResourceToken> localVarResponse = createRecipientProofFileResourceTokenWithHttpInfo(accountId, envelopeId, recipientId, options);
     return localVarResponse.getData();
   }
 
   /**
    * Returns a resource token to get access to the identity events stored in the proof service related to this recipient.
    * Creates a resource token for a sender. This token allows a sender to return identification data for a recipient using the [ID Evidence API](/docs/idevidence-api/).
-   * @param tokenScopes  (required)
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return IdEvidenceResourceToken
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<IdEvidenceResourceToken > createRecipientProofFileResourceTokenWithHttpInfo(String tokenScopes, String accountId, String envelopeId, String recipientId) throws ApiException {
+  public ApiResponse<IdEvidenceResourceToken > createRecipientProofFileResourceTokenWithHttpInfo(String accountId, String envelopeId, String recipientId, EnvelopesApi.CreateRecipientProofFileResourceTokenOptions options) throws ApiException {
     Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'tokenScopes' is set
-    if (tokenScopes == null) {
-      throw new ApiException(400, "Missing the required parameter 'tokenScopes' when calling createRecipientProofFileResourceToken");
-    }
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -1900,7 +1935,6 @@ public class EnvelopesApi {
     
     // create path and map variables
     String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/recipients/{recipientId}/identity_proof_token"
-      .replaceAll("\\{" + "token_scopes" + "\\}", apiClient.escapeString(tokenScopes.toString()))
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
       .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
       .replaceAll("\\{" + "recipientId" + "\\}", apiClient.escapeString(recipientId.toString()));
@@ -1911,7 +1945,9 @@ public class EnvelopesApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("token_scopes", options.tokenScopes));
+    }
 
     
 
@@ -2079,12 +2115,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the sender view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign sending view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ViewUrl createSenderView(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    ApiResponse<ViewUrl> localVarResponse = createSenderViewWithHttpInfo(accountId, envelopeId, returnUrlRequest);
+  public ViewUrl createSenderView(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    ApiResponse<ViewUrl> localVarResponse = createSenderViewWithHttpInfo(accountId, envelopeId, envelopeViewRequest);
     return localVarResponse.getData();
   }
 
@@ -2093,12 +2129,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the sender view of the DocuSign UI in your applications. This is a one-time use login token that allows the user to be placed into the DocuSign sending view.   Upon sending completion, the user is returned to the return URL provided by the API application.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ViewUrl > createSenderViewWithHttpInfo(String accountId, String envelopeId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    Object localVarPostBody = returnUrlRequest;
+  public ApiResponse<ViewUrl > createSenderViewWithHttpInfo(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    Object localVarPostBody = envelopeViewRequest;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {

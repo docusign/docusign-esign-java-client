@@ -207,12 +207,12 @@ public class TemplatesApi {
    * This method returns a URL for starting an edit view of a template that uses the DocuSign Template UI.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param templateViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ViewUrl createEditView(String accountId, String templateId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    ApiResponse<ViewUrl> localVarResponse = createEditViewWithHttpInfo(accountId, templateId, returnUrlRequest);
+  public ViewUrl createEditView(String accountId, String templateId, TemplateViewRequest templateViewRequest) throws ApiException {
+    ApiResponse<ViewUrl> localVarResponse = createEditViewWithHttpInfo(accountId, templateId, templateViewRequest);
     return localVarResponse.getData();
   }
 
@@ -221,12 +221,12 @@ public class TemplatesApi {
    * This method returns a URL for starting an edit view of a template that uses the DocuSign Template UI.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param templateId The ID of the template being accessed. (required)
-   * @param returnUrlRequest  (optional)
+   * @param templateViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ViewUrl > createEditViewWithHttpInfo(String accountId, String templateId, ReturnUrlRequest returnUrlRequest) throws ApiException {
-    Object localVarPostBody = returnUrlRequest;
+  public ApiResponse<ViewUrl > createEditViewWithHttpInfo(String accountId, String templateId, TemplateViewRequest templateViewRequest) throws ApiException {
+    Object localVarPostBody = templateViewRequest;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {

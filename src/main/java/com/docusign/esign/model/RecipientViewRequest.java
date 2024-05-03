@@ -30,6 +30,9 @@ public class RecipientViewRequest {
   @JsonProperty("clientUserId")
   private String clientUserId = null;
 
+  @JsonProperty("displayFormat")
+  private String displayFormat = null;
+
   @JsonProperty("email")
   private String email = null;
 
@@ -199,6 +202,33 @@ public class RecipientViewRequest {
    **/
   public void setClientUserId(String clientUserId) {
     this.clientUserId = clientUserId;
+  }
+
+
+  /**
+   * displayFormat.
+   *
+   * @return RecipientViewRequest
+   **/
+  public RecipientViewRequest displayFormat(String displayFormat) {
+    this.displayFormat = displayFormat;
+    return this;
+  }
+
+  /**
+   * .
+   * @return displayFormat
+   **/
+  @Schema(description = "")
+  public String getDisplayFormat() {
+    return displayFormat;
+  }
+
+  /**
+   * setDisplayFormat.
+   **/
+  public void setDisplayFormat(String displayFormat) {
+    this.displayFormat = displayFormat;
   }
 
 
@@ -571,6 +601,7 @@ public class RecipientViewRequest {
         Objects.equals(this.authenticationMethod, recipientViewRequest.authenticationMethod) &&
         Objects.equals(this.clientURLs, recipientViewRequest.clientURLs) &&
         Objects.equals(this.clientUserId, recipientViewRequest.clientUserId) &&
+        Objects.equals(this.displayFormat, recipientViewRequest.displayFormat) &&
         Objects.equals(this.email, recipientViewRequest.email) &&
         Objects.equals(this.frameAncestors, recipientViewRequest.frameAncestors) &&
         Objects.equals(this.messageOrigins, recipientViewRequest.messageOrigins) &&
@@ -590,7 +621,7 @@ public class RecipientViewRequest {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
+    return Objects.hash(assertionId, authenticationInstant, authenticationMethod, clientURLs, clientUserId, displayFormat, email, frameAncestors, messageOrigins, pingFrequency, pingUrl, recipientId, returnUrl, securityDomain, userId, userName, xFrameOptions, xFrameOptionsAllowFromUrl);
   }
 
 
@@ -607,6 +638,7 @@ public class RecipientViewRequest {
     sb.append("    authenticationMethod: ").append(toIndentedString(authenticationMethod)).append("\n");
     sb.append("    clientURLs: ").append(toIndentedString(clientURLs)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
+    sb.append("    displayFormat: ").append(toIndentedString(displayFormat)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    frameAncestors: ").append(toIndentedString(frameAncestors)).append("\n");
     sb.append("    messageOrigins: ").append(toIndentedString(messageOrigins)).append("\n");
