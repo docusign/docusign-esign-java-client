@@ -34,6 +34,9 @@ public class Group {
   @JsonProperty("groupType")
   private String groupType = null;
 
+  @JsonProperty("lastModifiedOn")
+  private String lastModifiedOn = null;
+
   @JsonProperty("permissionProfileId")
   private String permissionProfileId = null;
 
@@ -207,6 +210,33 @@ public class Group {
 
 
   /**
+   * lastModifiedOn.
+   *
+   * @return Group
+   **/
+  public Group lastModifiedOn(String lastModifiedOn) {
+    this.lastModifiedOn = lastModifiedOn;
+    return this;
+  }
+
+  /**
+   * .
+   * @return lastModifiedOn
+   **/
+  @Schema(description = "")
+  public String getLastModifiedOn() {
+    return lastModifiedOn;
+  }
+
+  /**
+   * setLastModifiedOn.
+   **/
+  public void setLastModifiedOn(String lastModifiedOn) {
+    this.lastModifiedOn = lastModifiedOn;
+  }
+
+
+  /**
    * permissionProfileId.
    *
    * @return Group
@@ -320,6 +350,7 @@ public class Group {
         Objects.equals(this.groupId, group.groupId) &&
         Objects.equals(this.groupName, group.groupName) &&
         Objects.equals(this.groupType, group.groupType) &&
+        Objects.equals(this.lastModifiedOn, group.lastModifiedOn) &&
         Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
         Objects.equals(this.users, group.users) &&
         Objects.equals(this.usersCount, group.usersCount);
@@ -330,7 +361,7 @@ public class Group {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, permissionProfileId, users, usersCount);
+    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, lastModifiedOn, permissionProfileId, users, usersCount);
   }
 
 
@@ -348,6 +379,7 @@ public class Group {
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
+    sb.append("    lastModifiedOn: ").append(toIndentedString(lastModifiedOn)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("    usersCount: ").append(toIndentedString(usersCount)).append("\n");

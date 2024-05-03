@@ -1,6 +1,11 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v5.0.0-RC1] - eSignature API v2.1-24.1.01.00 - 2024-05-02
+### Changed
+- Added support for version v2.1-24.1.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
 ## [v4.6.0] - eSignature API v2.1-23.4.02.00 - 2024-04-30
 ### BREAKING CHANGES
 - Modified the default basePath to `DEMO_REST_BASEPATH`.
