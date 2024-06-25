@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about the result of an event..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about the result of an event.")
 
-public class EventResult {
+public class EventResult implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("eventTimestamp")
   private String eventTimestamp = null;
 

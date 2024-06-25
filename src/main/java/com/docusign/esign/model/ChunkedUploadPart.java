@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * An object that contains information about the chunked upload part..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "An object that contains information about the chunked upload part.")
 
-public class ChunkedUploadPart {
+public class ChunkedUploadPart implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("sequence")
   private String sequence = null;
 

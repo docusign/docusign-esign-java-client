@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a billing charge..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a billing charge.")
 
-public class BillingCharge {
+public class BillingCharge implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("allowedQuantity")
   private String allowedQuantity = null;
 

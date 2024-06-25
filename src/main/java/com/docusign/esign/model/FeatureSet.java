@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object provides details about a feature set, or add-on product that is associated with an account. It is reserved for DocuSign internal use only.")
 
-public class FeatureSet {
+public class FeatureSet implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("currencyFeatureSetPrices")
   private java.util.List<CurrencyFeatureSetPrice> currencyFeatureSetPrices = null;
 

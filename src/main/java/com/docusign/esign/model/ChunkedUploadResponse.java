@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This response object is returned after you upload a chunked upload..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This response object is returned after you upload a chunked upload.")
 
-public class ChunkedUploadResponse {
+public class ChunkedUploadResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("checksum")
   private String checksum = null;
 

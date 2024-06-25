@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This request object contains information about a specific brand..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This request object contains information about a specific brand.")
 
-public class BrandRequest {
+public class BrandRequest implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("brandId")
   private String brandId = null;
 

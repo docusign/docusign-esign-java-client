@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * BulkEnvelope.
  *
  */
 
-public class BulkEnvelope {
+public class BulkEnvelope implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("bulkRecipientRow")
   private String bulkRecipientRow = null;
 

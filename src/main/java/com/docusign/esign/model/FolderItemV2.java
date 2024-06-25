@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about folder item results..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about folder item results.")
 
-public class FolderItemV2 {
+public class FolderItemV2 implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("completedDateTime")
   private String completedDateTime = null;
 

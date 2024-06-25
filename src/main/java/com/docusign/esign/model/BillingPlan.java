@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a billing plan..
@@ -17,7 +18,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a billing plan.")
 
-public class BillingPlan {
+public class BillingPlan implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("appStoreProducts")
   private java.util.List<AppStoreProduct> appStoreProducts = null;
 

@@ -1,6 +1,17 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v5.1.0] - eSignature API v2.1-24.1.01.00 - 2024-06-25
+# Changed
+
+- **Model classes are now serializable.**
+- **Resolved an issue** where setting a default SSL socket for the entire JVM caused unintended side effects.
+- **Fixed a memory leak** related to the class loader.
+- **Addressed dependency vulnerabilities** in the following libraries:
+  - `bcprov-jdk18on` updated to version 1.78.1
+  - `com.fasterxml.jackson.core` updated to version 2.17.1
+  - `org.json` updated to version 20240303
+  - `jersey` updated to version 3.1.6
 ## [v5.0.0] - eSignature API v2.1-24.1.01.00 - 2024-05-22
 ## Endpoint-Specific Changes
 

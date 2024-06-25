@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  *  This object describes an envelope..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = " This object describes an envelope.")
 
-public class EnvelopeSummary {
+public class EnvelopeSummary implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("bulkEnvelopeStatus")
   private BulkEnvelopeStatus bulkEnvelopeStatus = null;
 

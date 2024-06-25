@@ -96,7 +96,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/v2.1/5.0.0/Java/" + javaVersion);
+    setUserAgent("Swagger-Codegen/v2.1/5.1.0/Java/" + javaVersion);
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -1656,7 +1656,6 @@ public class ApiClient {
 	    } catch (final Exception ex) {
 	      System.err.println("failed to initialize SSL context");
 	    }
-	    HttpsURLConnection.setDefaultSSLSocketFactory(sslContext.getSocketFactory());
     }
 
     clientConfig.connectorProvider(new ConnectorProvider() {

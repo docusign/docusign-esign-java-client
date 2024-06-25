@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Defines a billing invoice response object..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Defines a billing invoice response object.")
 
-public class BillingInvoicesResponse {
+public class BillingInvoicesResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("billingInvoices")
   private java.util.List<BillingInvoice> billingInvoices = null;
 

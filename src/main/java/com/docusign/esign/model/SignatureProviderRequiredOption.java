@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains additional information that a specific signature provider requires..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains additional information that a specific signature provider requires.")
 
-public class SignatureProviderRequiredOption {
+public class SignatureProviderRequiredOption implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("requiredSignatureProviderOptionIds")
   private java.util.List<String> requiredSignatureProviderOptionIds = null;
 

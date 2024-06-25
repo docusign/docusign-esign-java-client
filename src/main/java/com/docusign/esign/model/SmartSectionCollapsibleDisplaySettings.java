@@ -6,13 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * SmartSectionCollapsibleDisplaySettings.
  *
  */
 
-public class SmartSectionCollapsibleDisplaySettings {
+public class SmartSectionCollapsibleDisplaySettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("arrowClosed")
   private String arrowClosed = null;
 

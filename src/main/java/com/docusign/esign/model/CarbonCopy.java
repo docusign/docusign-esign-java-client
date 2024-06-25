@@ -24,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a carbon copy recipient. Carbon copy recipients get a copy of the envelope but don&#39;t need to sign, initial, date or add information to any of the documents. .
@@ -31,7 +32,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a carbon copy recipient. Carbon copy recipients get a copy of the envelope but don't need to sign, initial, date or add information to any of the documents. ")
 
-public class CarbonCopy {
+public class CarbonCopy implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessCode")
   private String accessCode = null;
 

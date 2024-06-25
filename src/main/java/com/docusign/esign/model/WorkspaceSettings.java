@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object provides information about the settings for the workspace..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object provides information about the settings for the workspace.")
 
-public class WorkspaceSettings {
+public class WorkspaceSettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("commentsAllowed")
   private String commentsAllowed = null;
 

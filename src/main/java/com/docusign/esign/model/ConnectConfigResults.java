@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object contains the results of a ConnectConfigurations::GET method..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object contains the results of a ConnectConfigurations::GET method.")
 
-public class ConnectConfigResults {
+public class ConnectConfigResults implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("configurations")
   private java.util.List<ConnectCustomConfiguration> configurations = null;
 

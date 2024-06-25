@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object contains information about a file or folder in cloud storage..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object contains information about a file or folder in cloud storage.")
 
-public class ExternalFile {
+public class ExternalFile implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("date")
   private String date = null;
 

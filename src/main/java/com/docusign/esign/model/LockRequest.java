@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This request object contains information about the lock that you want to create or update..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This request object contains information about the lock that you want to create or update.")
 
-public class LockRequest {
+public class LockRequest implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("lockDurationInSeconds")
   private String lockDurationInSeconds = null;
 

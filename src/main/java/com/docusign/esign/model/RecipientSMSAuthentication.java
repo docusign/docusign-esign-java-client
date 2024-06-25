@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains the element senderProvidedNumbers which is an Array  of phone numbers the recipient can use for SMS text authentication.")
 
-public class RecipientSMSAuthentication {
+public class RecipientSMSAuthentication implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("senderProvidedNumbers")
   private java.util.List<String> senderProvidedNumbers = null;
 

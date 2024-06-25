@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object is used to match a DocuSign field to a Salesforce field so that Docusign can send information to your Salesforce account..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object is used to match a DocuSign field to a Salesforce field so that Docusign can send information to your Salesforce account.")
 
-public class ConnectSalesforceField {
+public class ConnectSalesforceField implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("dsAttribute")
   private String dsAttribute = null;
 

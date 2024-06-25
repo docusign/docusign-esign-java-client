@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * PaymentProcessorInformation.
  *
  */
 
-public class PaymentProcessorInformation {
+public class PaymentProcessorInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("address")
   private AddressInformation address = null;
 

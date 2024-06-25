@@ -28,6 +28,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A complex type containing information about a signer recipient. A signer is a recipient who must take action on a document, such as sign, initial, date, or add data to form fields on a document..
@@ -35,7 +36,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A complex type containing information about a signer recipient. A signer is a recipient who must take action on a document, such as sign, initial, date, or add data to form fields on a document.")
 
-public class Signer {
+public class Signer implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessCode")
   private String accessCode = null;
 

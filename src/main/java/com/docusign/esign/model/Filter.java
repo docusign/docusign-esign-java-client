@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Use this object to create a filtered view of the items in a folder..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Use this object to create a filtered view of the items in a folder.")
 
-public class Filter {
+public class Filter implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("actionRequired")
   private String actionRequired = null;
 

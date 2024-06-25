@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a preview billing plan..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a preview billing plan.")
 
-public class BillingPlanPreview {
+public class BillingPlanPreview implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("currencyCode")
   private String currencyCode = null;
 

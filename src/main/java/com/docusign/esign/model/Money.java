@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Describes information about the &#x60;total&#x60; of a payment. .
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Describes information about the `total` of a payment. ")
 
-public class Money {
+public class Money implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("amountInBaseUnit")
   private String amountInBaseUnit = null;
 

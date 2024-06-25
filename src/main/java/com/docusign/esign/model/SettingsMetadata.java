@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Metadata that indicates whether a property is editable and describes setting-specific options..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Metadata that indicates whether a property is editable and describes setting-specific options.")
 
-public class SettingsMetadata {
+public class SettingsMetadata implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("is21CFRPart11")
   private String is21CFRPart11 = null;
 

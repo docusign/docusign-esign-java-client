@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * An object that defines the options that are available to non-administrators in the UI..
@@ -16,7 +17,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "An object that defines the options that are available to non-administrators in the UI.")
 
-public class AccountUISettings {
+public class AccountUISettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("adminMessage")
   private AdminMessage adminMessage = null;
 

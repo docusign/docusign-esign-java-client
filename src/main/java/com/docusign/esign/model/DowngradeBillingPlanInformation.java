@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * DowngradeBillingPlanInformation.
  *
  */
 
-public class DowngradeBillingPlanInformation {
+public class DowngradeBillingPlanInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("downgradeEventType")
   private String downgradeEventType = null;
 

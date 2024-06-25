@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * UserAuthorizations.
  *
  */
 
-public class UserAuthorizations {
+public class UserAuthorizations implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("authorizations")
   private java.util.List<UserAuthorization> authorizations = null;
 

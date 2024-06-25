@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about a link that a brand uses..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about a link that a brand uses.")
 
-public class BrandLink {
+public class BrandLink implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("linkText")
   private String linkText = null;
 

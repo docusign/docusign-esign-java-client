@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This response object contains information about the contacts associated with an account..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This response object contains information about the contacts associated with an account.")
 
-public class ContactGetResponse {
+public class ContactGetResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("contacts")
   private java.util.List<Contact> contacts = null;
 

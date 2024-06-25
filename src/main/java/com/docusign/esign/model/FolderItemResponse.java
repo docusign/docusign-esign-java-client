@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Results from a folder item request..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Results from a folder item request.")
 
-public class FolderItemResponse {
+public class FolderItemResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("endPosition")
   private String endPosition = null;
 

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Describes an additional notification method..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Describes an additional notification method.")
 
-public class RecipientAdditionalNotification {
+public class RecipientAdditionalNotification implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("phoneNumber")
   private RecipientPhoneNumber phoneNumber = null;
 

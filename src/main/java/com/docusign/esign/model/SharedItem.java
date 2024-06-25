@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about the shared item..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about the shared item.")
 
-public class SharedItem {
+public class SharedItem implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 

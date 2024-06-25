@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * The object contains the response to a bulk send request..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "The object contains the response to a bulk send request.")
 
-public class BulkSendResponse {
+public class BulkSendResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("batchId")
   private String batchId = null;
 

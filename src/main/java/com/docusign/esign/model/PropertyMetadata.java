@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Metadata about a property..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Metadata about a property.")
 
-public class PropertyMetadata {
+public class PropertyMetadata implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("options")
   private java.util.List<String> options = null;
 

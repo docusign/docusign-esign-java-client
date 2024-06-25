@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * The &#x60;connectCustomConfiguration&#x60; object describes how Connect is configured for your account..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "The `connectCustomConfiguration` object describes how Connect is configured for your account.")
 
-public class ConnectCustomConfiguration {
+public class ConnectCustomConfiguration implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("allowEnvelopePublish")
   private String allowEnvelopePublish = null;
 

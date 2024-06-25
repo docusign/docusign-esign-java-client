@@ -6,13 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * AccountPasswordMinimumPasswordAgeDays.
  *
  */
 
-public class AccountPasswordMinimumPasswordAgeDays {
+public class AccountPasswordMinimumPasswordAgeDays implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("maximumAge")
   private String maximumAge = null;
 

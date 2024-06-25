@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A complex element that has up to four Question/Answer pairs for forgotten password information..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A complex element that has up to four Question/Answer pairs for forgotten password information.")
 
-public class ForgottenPasswordInformation {
+public class ForgottenPasswordInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("forgottenPasswordAnswer1")
   private String forgottenPasswordAnswer1 = null;
 

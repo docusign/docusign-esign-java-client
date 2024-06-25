@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about the resource files that the brand uses for the email, signing, sending, and captive (embedded) signing experiences.")
 
-public class BrandResources {
+public class BrandResources implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("createdByUserInfo")
   private UserInfo createdByUserInfo = null;
 

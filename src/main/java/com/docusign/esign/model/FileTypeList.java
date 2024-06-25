@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * FileTypeList.
  *
  */
 
-public class FileTypeList {
+public class FileTypeList implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("fileTypes")
   private java.util.List<FileType> fileTypes = null;
 

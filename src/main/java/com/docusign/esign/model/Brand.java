@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope..
@@ -19,7 +20,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about a brand that is associated with an account. A brand applies custom styles and text to an envelope.")
 
-public class Brand {
+public class Brand implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("brandCompany")
   private String brandCompany = null;
 

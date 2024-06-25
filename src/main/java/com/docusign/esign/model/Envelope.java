@@ -19,13 +19,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Envelope.
  *
  */
 
-public class Envelope {
+public class Envelope implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessControlListBase64")
   private String accessControlListBase64 = null;
 

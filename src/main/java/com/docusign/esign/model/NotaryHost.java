@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object is used only when &#x60;inPersonSigningType&#x60; in the &#x60;inPersonSigner&#x60; object is &#x60;notary&#x60;.  It describes information about the notary host. The following information is required when using the eNotary in-person signing flow:  * &#x60;name&#x60;: Specifies the notary&#39;s full legal name. * &#x60;email&#x60;: Specifies the notary&#39;s email address. * &#x60;recipientId&#x60;: A unique ID number for the notary signing host. .
@@ -27,7 +28,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object is used only when `inPersonSigningType` in the `inPersonSigner` object is `notary`.  It describes information about the notary host. The following information is required when using the eNotary in-person signing flow:  * `name`: Specifies the notary's full legal name. * `email`: Specifies the notary's email address. * `recipientId`: A unique ID number for the notary signing host. ")
 
-public class NotaryHost {
+public class NotaryHost implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessCode")
   private String accessCode = null;
 

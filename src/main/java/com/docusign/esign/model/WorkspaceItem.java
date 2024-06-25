@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call..
@@ -16,7 +17,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A workspaceItem (file type only) representing the file. This property is only returned in response to file specific GET call.")
 
-public class WorkspaceItem {
+public class WorkspaceItem implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("callerAuthorization")
   private WorkspaceUserAuthorization callerAuthorization = null;
 

@@ -24,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about an in-person recipient. This is a DocuSign user, acting as a Signing Host, who is in the same physical location as the signer. To learn about the fields used for the eNotary feature, see the [recipients resource][resource].  [resource]: /docs/esign-rest-api/reference/envelopes/enveloperecipients/#in-person-signer-recipient .
@@ -31,7 +32,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about an in-person recipient. This is a DocuSign user, acting as a Signing Host, who is in the same physical location as the signer. To learn about the fields used for the eNotary feature, see the [recipients resource][resource].  [resource]: /docs/esign-rest-api/reference/envelopes/enveloperecipients/#in-person-signer-recipient ")
 
-public class InPersonSigner {
+public class InPersonSigner implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessCode")
   private String accessCode = null;
 

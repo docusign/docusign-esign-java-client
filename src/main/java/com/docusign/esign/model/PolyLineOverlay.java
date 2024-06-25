@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This tab enables users to strike through the text of a document. The tab is implemented as a line represented as a pair of x and y coordinates..
@@ -19,7 +20,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This tab enables users to strike through the text of a document. The tab is implemented as a line represented as a pair of x and y coordinates.")
 
-public class PolyLineOverlay {
+public class PolyLineOverlay implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

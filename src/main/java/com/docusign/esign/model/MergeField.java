@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information for transfering values between Salesforce data fields and DocuSign Tabs..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information for transfering values between Salesforce data fields and DocuSign Tabs.")
 
-public class MergeField {
+public class MergeField implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("allowSenderToEdit")
   private String allowSenderToEdit = null;
 

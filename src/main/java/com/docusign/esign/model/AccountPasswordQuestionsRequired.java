@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about the number of password questions required (0 to 4) to confirm a user&#39;s identity when a user needs to reset their password..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about the number of password questions required (0 to 4) to confirm a user's identity when a user needs to reset their password.")
 
-public class AccountPasswordQuestionsRequired {
+public class AccountPasswordQuestionsRequired implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("maximumQuestions")
   private String maximumQuestions = null;
 
