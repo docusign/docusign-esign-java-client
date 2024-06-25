@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object contains details about a custom field for a bulk send copy. In a bulk send request, each custom field in the bulk send list must match a custom field in the envelope or template that you want to send..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object contains details about a custom field for a bulk send copy. In a bulk send request, each custom field in the bulk send list must match a custom field in the envelope or template that you want to send.")
 
-public class BulkSendingCopyCustomField {
+public class BulkSendingCopyCustomField implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("name")
   private String name = null;
 

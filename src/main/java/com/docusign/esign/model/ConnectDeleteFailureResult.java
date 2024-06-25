@@ -2,13 +2,16 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import java.io.Serializable;
 
 /**
  * ConnectDeleteFailureResult.
  *
  */
 
-public class ConnectDeleteFailureResult {
+public class ConnectDeleteFailureResult implements Serializable {
+  private static final long serialVersionUID = 1L;
+
 
   /**
    * Compares objects.

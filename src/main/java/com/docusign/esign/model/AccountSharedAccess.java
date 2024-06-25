@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains shared access information..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains shared access information.")
 
-public class AccountSharedAccess {
+public class AccountSharedAccess implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accountId")
   private String accountId = null;
 

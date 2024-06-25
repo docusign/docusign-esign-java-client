@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * DocumentHtmlDefinitionOriginals.
  *
  */
 
-public class DocumentHtmlDefinitionOriginals {
+public class DocumentHtmlDefinitionOriginals implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("htmlDefinitions")
   private java.util.List<DocumentHtmlDefinitionOriginal> htmlDefinitions = null;
 

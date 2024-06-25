@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object configures a recipient&#39;s read/write access to a document..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object configures a recipient's read/write access to a document.")
 
-public class DocumentVisibility {
+public class DocumentVisibility implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("documentId")
   private String documentId = null;
 

@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * When a formula tab has a &#x60;paymentDetails&#x60; property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
@@ -17,7 +18,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "When a formula tab has a `paymentDetails` property, the formula tab is a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
 
-public class PaymentDetails {
+public class PaymentDetails implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("allowedPaymentMethods")
   private java.util.List<String> allowedPaymentMethods = null;
 

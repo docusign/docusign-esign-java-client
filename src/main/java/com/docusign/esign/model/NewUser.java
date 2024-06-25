@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Object representing a new user..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Object representing a new user.")
 
-public class NewUser {
+public class NewUser implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("apiPassword")
   private String apiPassword = null;
 

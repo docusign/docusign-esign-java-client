@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object provides details about a custom field..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object provides details about a custom field.")
 
-public class CustomField {
+public class CustomField implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("customFieldType")
   private String customFieldType = null;
 

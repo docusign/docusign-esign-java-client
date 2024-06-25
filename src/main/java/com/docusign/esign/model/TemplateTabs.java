@@ -45,13 +45,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
+import java.io.Serializable;
 
 /**
  * TemplateTabs.
  *
  */
 
-public class TemplateTabs {
+public class TemplateTabs implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("approveTabs")
   private java.util.List<Approve> approveTabs = null;
 

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * The value of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The &#x60;formula&#x60; property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a &#x60;paymentDetails&#x60; property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures .
@@ -19,7 +20,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "The value of a formula tab is calculated from the values of other number or date tabs in the document. When the recipient completes the underlying fields, the formula tab calculates and displays the result.  The `formula` property of the tab contains the references to the underlying tabs. See [Calculated Fields][calculatedfields] in the DocuSign Support Center to learn more about formulas.  If a formula tab contains a `paymentDetails` property, the tab is considered a payment item. See [Requesting Payments Along with Signatures][paymentguide] in the DocuSign Support Center to learn more about payments.  [calculatedfields]: https://support.docusign.com/en/guides/ndse-user-guide-calculated-fields [paymentguide]:     https://support.docusign.com/en/guides/requesting-payments-along-with-signatures ")
 
-public class FormulaTab {
+public class FormulaTab implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

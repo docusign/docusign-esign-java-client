@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Holds information about connected payment accounts..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Holds information about connected payment accounts.")
 
-public class PaymentGatewayAccountsInfo {
+public class PaymentGatewayAccountsInfo implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("paymentGatewayAccounts")
   private java.util.List<PaymentGatewayAccount> paymentGatewayAccounts = null;
 

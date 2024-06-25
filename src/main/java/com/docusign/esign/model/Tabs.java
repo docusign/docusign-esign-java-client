@@ -45,6 +45,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
+import java.io.Serializable;
 
 /**
  * Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients..
@@ -52,7 +53,9 @@ import java.time.LocalDate;
  */
 @Schema(description = "Tabs indicate to recipients where they should sign, initial, or enter data on a document. They are represented graphically as symbols on documents at the time of signing. Tabs can also display data to the recipients.")
 
-public class Tabs {
+public class Tabs implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("approveTabs")
   private java.util.List<Approve> approveTabs = null;
 

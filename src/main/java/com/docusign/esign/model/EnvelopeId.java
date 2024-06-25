@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A tab that displays the envelope ID. Recipients cannot enter or change the information in this tab. .
@@ -18,7 +19,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A tab that displays the envelope ID. Recipients cannot enter or change the information in this tab. ")
 
-public class EnvelopeId {
+public class EnvelopeId implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

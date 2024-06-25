@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Information about a specific step in an Identity Verification workflow..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Information about a specific step in an Identity Verification workflow.")
 
-public class AccountIdentityVerificationStep {
+public class AccountIdentityVerificationStep implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("name")
   private String name = null;
 

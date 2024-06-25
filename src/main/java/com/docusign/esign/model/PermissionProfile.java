@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object defines the account permissions for a profile that you can apply to a group of users..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object defines the account permissions for a profile that you can apply to a group of users.")
 
-public class PermissionProfile {
+public class PermissionProfile implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("modifiedByUsername")
   private String modifiedByUsername = null;
 

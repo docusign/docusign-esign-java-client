@@ -6,13 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * AccountPasswordExpirePasswordDays.
  *
  */
 
-public class AccountPasswordExpirePasswordDays {
+public class AccountPasswordExpirePasswordDays implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("maximumDays")
   private String maximumDays = null;
 

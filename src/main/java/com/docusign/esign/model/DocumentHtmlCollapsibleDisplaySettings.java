@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Display settings for collapsible section..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Display settings for collapsible section.")
 
-public class DocumentHtmlCollapsibleDisplaySettings {
+public class DocumentHtmlCollapsibleDisplaySettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("arrowClosed")
   private String arrowClosed = null;
 

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This request object contains the information necessary to create a recipient preview..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This request object contains the information necessary to create a recipient preview.")
 
-public class RecipientPreviewRequest {
+public class RecipientPreviewRequest implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("assertionId")
   private String assertionId = null;
 

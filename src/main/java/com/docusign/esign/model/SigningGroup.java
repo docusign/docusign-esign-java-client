@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains details about a signing group. Signing groups enable you to send an envelope to a predefined group of recipients and have any one member of the group sign your documents. When you send an envelope to a signing group, anyone in the group can open it and sign it with their own signature.")
 
-public class SigningGroup {
+public class SigningGroup implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("created")
   private String created = null;
 

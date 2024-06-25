@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This group tab is used to place radio buttons on a document. The &#x60;radios&#x60; property contains a list of [&#x60;radio&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group. .
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This group tab is used to place radio buttons on a document. The `radios` property contains a list of [`radio`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) objects  associated with the group. Only one radio button can be selected in a group. ")
 
-public class RadioGroup {
+public class RadioGroup implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("conditionalParentLabel")
   private String conditionalParentLabel = null;
 

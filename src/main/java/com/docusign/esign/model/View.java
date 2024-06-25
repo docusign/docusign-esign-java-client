@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This tab is used with the Approve tab to handle supplemental documents..
@@ -18,7 +19,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This tab is used with the Approve tab to handle supplemental documents.")
 
-public class View {
+public class View implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

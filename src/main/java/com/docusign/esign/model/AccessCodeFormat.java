@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Object specifying the format of the string provided to a recipient in order to access an envelope..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Object specifying the format of the string provided to a recipient in order to access an envelope.")
 
-public class AccessCodeFormat {
+public class AccessCodeFormat implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("formatRequired")
   private String formatRequired = null;
 

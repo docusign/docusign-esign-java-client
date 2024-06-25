@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A single bulk send error report..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A single bulk send error report.")
 
-public class BulkSendErrorStatus {
+public class BulkSendErrorStatus implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("created")
   private String created = null;
 

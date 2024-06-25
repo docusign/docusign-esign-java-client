@@ -6,13 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * EnvelopeViewDocumentSettings.
  *
  */
 
-public class EnvelopeViewDocumentSettings {
+public class EnvelopeViewDocumentSettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("showEditDocuments")
   private String showEditDocuments = null;
 

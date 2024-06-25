@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A name-value pair that describes an item and provides a value for the item..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A name-value pair that describes an item and provides a value for the item.")
 
-public class NameValue {
+public class NameValue implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 

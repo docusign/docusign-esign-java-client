@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a certified delivery recipient. Certified delivery recipients must receive the completed documents for the envelope to be completed. However, they don&#39;t need to sign, initial, date or add information to any of the documents..
@@ -30,7 +31,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a certified delivery recipient. Certified delivery recipients must receive the completed documents for the envelope to be completed. However, they don't need to sign, initial, date or add information to any of the documents.")
 
-public class CertifiedDelivery {
+public class CertifiedDelivery implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accessCode")
   private String accessCode = null;
 

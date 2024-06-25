@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * For which envelope events should your webhook be called?.
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "For which envelope events should your webhook be called?")
 
-public class EnvelopeEvent {
+public class EnvelopeEvent implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("envelopeEventStatusCode")
   private String envelopeEventStatusCode = null;
 

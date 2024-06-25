@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * One of the selectable radio buttons in the &#x60;radios&#x60; property of a [&#x60;radioGroup&#x60;](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab. .
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "One of the selectable radio buttons in the `radios` property of a [`radioGroup`](/docs/esign-rest-api/reference/envelopes/enveloperecipienttabs/) tab. ")
 
-public class Radio {
+public class Radio implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

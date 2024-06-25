@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A notary jurisdiction..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A notary jurisdiction.")
 
-public class NotaryJurisdiction {
+public class NotaryJurisdiction implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("commissionExpiration")
   private String commissionExpiration = null;
 

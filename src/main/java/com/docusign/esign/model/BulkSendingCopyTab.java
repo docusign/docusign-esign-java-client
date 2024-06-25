@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A tab associated with the bulk send recipient. In a bulk send request, each recipient tab must match a recipient tab on the envelope or template that you want to send. To match up, the &#x60;tabLabel&#x60; for this tab and the &#x60;tabLabel&#x60; for the corresponding tab on the envelope or template must be the same.  For example, if the envelope has a placeholder text tab with the &#x60;tabLabel&#x60; &#x60;childName&#x60;, you must assign the same &#x60;tabLabel&#x60; &#x60;childName&#x60; to the tab here that you are populating with that information..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A tab associated with the bulk send recipient. In a bulk send request, each recipient tab must match a recipient tab on the envelope or template that you want to send. To match up, the `tabLabel` for this tab and the `tabLabel` for the corresponding tab on the envelope or template must be the same.  For example, if the envelope has a placeholder text tab with the `tabLabel` `childName`, you must assign the same `tabLabel` `childName` to the tab here that you are populating with that information.")
 
-public class BulkSendingCopyTab {
+public class BulkSendingCopyTab implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("initialValue")
   private String initialValue = null;
 

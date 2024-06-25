@@ -6,13 +6,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * AccountIdentityInputOption.
  *
  */
 
-public class AccountIdentityInputOption {
+public class AccountIdentityInputOption implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("isRequired")
   private Boolean isRequired = null;
 

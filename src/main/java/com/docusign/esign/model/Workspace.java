@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Provides properties that describe a workspace..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Provides properties that describe a workspace.")
 
-public class Workspace {
+public class Workspace implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("billableAccountId")
   private String billableAccountId = null;
 

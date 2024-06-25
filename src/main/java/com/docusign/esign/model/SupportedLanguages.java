@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A list of supported languages..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A list of supported languages.")
 
-public class SupportedLanguages {
+public class SupportedLanguages implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("languages")
   private java.util.List<NameValue> languages = null;
 

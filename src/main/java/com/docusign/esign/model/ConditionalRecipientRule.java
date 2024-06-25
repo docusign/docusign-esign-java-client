@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A rule that defines a set of recipients and the conditions under which they will be used for the envelope..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A rule that defines a set of recipients and the conditions under which they will be used for the envelope.")
 
-public class ConditionalRecipientRule {
+public class ConditionalRecipientRule implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("conditions")
   private java.util.List<ConditionalRecipientRuleCondition> conditions = null;
 

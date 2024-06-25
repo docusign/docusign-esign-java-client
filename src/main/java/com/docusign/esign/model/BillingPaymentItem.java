@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Defines a billing payment request object..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Defines a billing payment request object.")
 
-public class BillingPaymentItem {
+public class BillingPaymentItem implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("amount")
   private String amount = null;
 

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * These properties define how a Smart Section displays. A Smart Section is a type of display section..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "These properties define how a Smart Section displays. A Smart Section is a type of display section.")
 
-public class SmartSectionDisplaySettings {
+public class SmartSectionDisplaySettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("cellStyle")
   private String cellStyle = null;
 

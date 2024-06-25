@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A line item describes details about an individual line item in a payment request.  .
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A line item describes details about an individual line item in a payment request.  ")
 
-public class PaymentLineItem {
+public class PaymentLineItem implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("amountReference")
   private String amountReference = null;
 

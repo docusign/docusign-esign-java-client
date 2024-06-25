@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * LinkedExternalPrimaryAccount.
  *
  */
 
-public class LinkedExternalPrimaryAccount {
+public class LinkedExternalPrimaryAccount implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("accountName")
   private String accountName = null;
 

@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * UserAuthorizationsDeleteResponse.
  *
  */
 
-public class UserAuthorizationsDeleteResponse {
+public class UserAuthorizationsDeleteResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("results")
   private java.util.List<UserAuthorizationIdWithStatus> results = null;
 

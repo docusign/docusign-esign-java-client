@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object describes errors that occur. It is only valid for responses, and ignored in requests..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object describes errors that occur. It is only valid for responses, and ignored in requests.")
 
-public class ErrorDetails {
+public class ErrorDetails implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("errorCode")
   private String errorCode = null;
 

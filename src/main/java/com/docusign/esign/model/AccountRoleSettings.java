@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object defines account permissions for users who are associated with the account permission profile. .
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object defines account permissions for users who are associated with the account permission profile. ")
 
-public class AccountRoleSettings {
+public class AccountRoleSettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("allowAccountManagement")
   private String allowAccountManagement = null;
 

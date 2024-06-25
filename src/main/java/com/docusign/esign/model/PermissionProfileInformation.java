@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains details about the permission profiles associated with an account..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains details about the permission profiles associated with an account.")
 
-public class PermissionProfileInformation {
+public class PermissionProfileInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("permissionProfiles")
   private java.util.List<PermissionProfile> permissionProfiles = null;
 

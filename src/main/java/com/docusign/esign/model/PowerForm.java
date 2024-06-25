@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains details about a PowerForm..
@@ -16,7 +17,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains details about a PowerForm.")
 
-public class PowerForm {
+public class PowerForm implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("createdBy")
   private String createdBy = null;
 

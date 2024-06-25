@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Object representing a summary of data for new users..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Object representing a summary of data for new users.")
 
-public class NewUsersSummary {
+public class NewUsersSummary implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("newUsers")
   private java.util.List<NewUser> newUsers = null;
 

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Result set for the Envelopes: listStatusChanges method.
@@ -16,7 +17,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Result set for the Envelopes: listStatusChanges method")
 
-public class EnvelopesInformation {
+public class EnvelopesInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("continuationToken")
   private String continuationToken = null;
 

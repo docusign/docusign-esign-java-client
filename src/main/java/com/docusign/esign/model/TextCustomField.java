@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object represents a free text custom field where envelope creators and senders can enter custom data..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object represents a free text custom field where envelope creators and senders can enter custom data.")
 
-public class TextCustomField {
+public class TextCustomField implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("configurationType")
   private String configurationType = null;
 

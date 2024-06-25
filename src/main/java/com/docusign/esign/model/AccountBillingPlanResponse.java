@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Defines an account billing plan response object..
@@ -23,7 +24,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Defines an account billing plan response object.")
 
-public class AccountBillingPlanResponse {
+public class AccountBillingPlanResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("billingAddress")
   private AccountAddress billingAddress = null;
 

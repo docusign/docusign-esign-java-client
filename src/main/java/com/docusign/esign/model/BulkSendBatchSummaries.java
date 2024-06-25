@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A list of bulk send batch summaries. .
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A list of bulk send batch summaries. ")
 
-public class BulkSendBatchSummaries {
+public class BulkSendBatchSummaries implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("batchSizeLimit")
   private String batchSizeLimit = null;
 

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains details about the default notification settings for the envelope notifications that senders and signers receive..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains details about the default notification settings for the envelope notifications that senders and signers receive.")
 
-public class NotificationDefaultSettings {
+public class NotificationDefaultSettings implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("senderEmailNotifications")
   private SenderEmailNotifications senderEmailNotifications = null;
 

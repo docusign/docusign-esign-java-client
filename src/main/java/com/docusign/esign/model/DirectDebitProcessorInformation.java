@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about a bank that processes a customer&#39;s direct debit payments..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about a bank that processes a customer's direct debit payments.")
 
-public class DirectDebitProcessorInformation {
+public class DirectDebitProcessorInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("bankBranchCode")
   private String bankBranchCode = null;
 

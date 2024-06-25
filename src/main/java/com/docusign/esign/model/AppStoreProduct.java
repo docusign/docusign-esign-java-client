@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains information about an APP store product..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains information about an APP store product.")
 
-public class AppStoreProduct {
+public class AppStoreProduct implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("marketPlace")
   private String marketPlace = null;
 

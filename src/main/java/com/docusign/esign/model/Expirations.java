@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A complex element that specifies the expiration settings for the envelope..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A complex element that specifies the expiration settings for the envelope.")
 
-public class Expirations {
+public class Expirations implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("expireAfter")
   private String expireAfter = null;
 

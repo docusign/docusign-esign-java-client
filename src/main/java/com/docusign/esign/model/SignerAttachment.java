@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A tab that allows the recipient to attach supporting documents to an envelope. .
@@ -17,7 +18,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A tab that allows the recipient to attach supporting documents to an envelope. ")
 
-public class SignerAttachment {
+public class SignerAttachment implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
 

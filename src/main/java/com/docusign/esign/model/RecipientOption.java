@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Describes a recipient who is a member of a conditional group..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Describes a recipient who is a member of a conditional group.")
 
-public class RecipientOption {
+public class RecipientOption implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("email")
   private String email = null;
 

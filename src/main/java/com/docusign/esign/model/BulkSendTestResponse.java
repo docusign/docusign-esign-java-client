@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object contains the results of a bulk send test..
@@ -13,7 +14,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object contains the results of a bulk send test.")
 
-public class BulkSendTestResponse {
+public class BulkSendTestResponse implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("canBeSent")
   private Boolean canBeSent = null;
 

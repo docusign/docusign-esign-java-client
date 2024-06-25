@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * Contains details about the password rules for a user..
@@ -14,7 +15,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "Contains details about the password rules for a user.")
 
-public class UserPasswordRules {
+public class UserPasswordRules implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("passwordRules")
   private AccountPasswordRules passwordRules = null;
 

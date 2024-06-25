@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * DocGenFormFieldRowValue.
  *
  */
 
-public class DocGenFormFieldRowValue {
+public class DocGenFormFieldRowValue implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("docGenFormFieldList")
   private java.util.List<DocGenFormField> docGenFormFieldList = null;
 

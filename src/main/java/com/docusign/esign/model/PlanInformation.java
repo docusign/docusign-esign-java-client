@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * An object used to identify the features and attributes of the account being created..
@@ -16,7 +17,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "An object used to identify the features and attributes of the account being created.")
 
-public class PlanInformation {
+public class PlanInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("addOns")
   private java.util.List<AddOn> addOns = null;
 

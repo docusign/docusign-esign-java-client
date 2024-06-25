@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * This object contains details about a billing plan..
@@ -20,7 +21,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "This object contains details about a billing plan.")
 
-public class BillingPlanInformation {
+public class BillingPlanInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("appStoreReceipt")
   private AppStoreReceipt appStoreReceipt = null;
 

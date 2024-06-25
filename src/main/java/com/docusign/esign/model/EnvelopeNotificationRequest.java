@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * A complex element that specifies the notification settings for the envelope..
@@ -15,7 +16,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 @Schema(description = "A complex element that specifies the notification settings for the envelope.")
 
-public class EnvelopeNotificationRequest {
+public class EnvelopeNotificationRequest implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("expirations")
   private Expirations expirations = null;
 

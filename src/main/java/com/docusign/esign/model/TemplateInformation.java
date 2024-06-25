@@ -7,13 +7,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.Serializable;
 
 /**
  * TemplateInformation.
  *
  */
 
-public class TemplateInformation {
+public class TemplateInformation implements Serializable {
+  private static final long serialVersionUID = 1L;
+
   @JsonProperty("templates")
   private java.util.List<TemplateSummary> templates = null;
 
