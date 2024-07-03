@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.BulkSendingCopyDocGenFormFieldRowValue;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -18,6 +19,9 @@ public class BulksendingCopyDocGenFormField implements Serializable {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("rowValues")
+  private java.util.List<BulkSendingCopyDocGenFormFieldRowValue> rowValues = null;
 
   @JsonProperty("value")
   private String value = null;
@@ -47,6 +51,46 @@ public class BulksendingCopyDocGenFormField implements Serializable {
    **/
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  /**
+   * rowValues.
+   *
+   * @return BulksendingCopyDocGenFormField
+   **/
+  public BulksendingCopyDocGenFormField rowValues(java.util.List<BulkSendingCopyDocGenFormFieldRowValue> rowValues) {
+    this.rowValues = rowValues;
+    return this;
+  }
+  
+  /**
+   * addRowValuesItem.
+   *
+   * @return BulksendingCopyDocGenFormField
+   **/
+  public BulksendingCopyDocGenFormField addRowValuesItem(BulkSendingCopyDocGenFormFieldRowValue rowValuesItem) {
+    if (this.rowValues == null) {
+      this.rowValues = new java.util.ArrayList<>();
+    }
+    this.rowValues.add(rowValuesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return rowValues
+   **/
+  @Schema(description = "")
+  public java.util.List<BulkSendingCopyDocGenFormFieldRowValue> getRowValues() {
+    return rowValues;
+  }
+
+  /**
+   * setRowValues.
+   **/
+  public void setRowValues(java.util.List<BulkSendingCopyDocGenFormFieldRowValue> rowValues) {
+    this.rowValues = rowValues;
   }
 
 
@@ -92,6 +136,7 @@ public class BulksendingCopyDocGenFormField implements Serializable {
     }
     BulksendingCopyDocGenFormField bulksendingCopyDocGenFormField = (BulksendingCopyDocGenFormField) o;
     return Objects.equals(this.name, bulksendingCopyDocGenFormField.name) &&
+        Objects.equals(this.rowValues, bulksendingCopyDocGenFormField.rowValues) &&
         Objects.equals(this.value, bulksendingCopyDocGenFormField.value);
   }
 
@@ -100,7 +145,7 @@ public class BulksendingCopyDocGenFormField implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(name, value);
+    return Objects.hash(name, rowValues, value);
   }
 
 
@@ -113,6 +158,7 @@ public class BulksendingCopyDocGenFormField implements Serializable {
     sb.append("class BulksendingCopyDocGenFormField {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    rowValues: ").append(toIndentedString(rowValues)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

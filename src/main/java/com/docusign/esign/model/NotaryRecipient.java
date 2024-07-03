@@ -71,6 +71,9 @@ public class NotaryRecipient implements Serializable {
   @JsonProperty("bulkSendV2Recipient")
   private String bulkSendV2Recipient = null;
 
+  @JsonProperty("canNotaryCorrectEnvelope")
+  private String canNotaryCorrectEnvelope = null;
+
   @JsonProperty("canSignOffline")
   private String canSignOffline = null;
 
@@ -655,6 +658,33 @@ public class NotaryRecipient implements Serializable {
    **/
   public void setBulkSendV2Recipient(String bulkSendV2Recipient) {
     this.bulkSendV2Recipient = bulkSendV2Recipient;
+  }
+
+
+  /**
+   * canNotaryCorrectEnvelope.
+   *
+   * @return NotaryRecipient
+   **/
+  public NotaryRecipient canNotaryCorrectEnvelope(String canNotaryCorrectEnvelope) {
+    this.canNotaryCorrectEnvelope = canNotaryCorrectEnvelope;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canNotaryCorrectEnvelope
+   **/
+  @Schema(description = "")
+  public String getCanNotaryCorrectEnvelope() {
+    return canNotaryCorrectEnvelope;
+  }
+
+  /**
+   * setCanNotaryCorrectEnvelope.
+   **/
+  public void setCanNotaryCorrectEnvelope(String canNotaryCorrectEnvelope) {
+    this.canNotaryCorrectEnvelope = canNotaryCorrectEnvelope;
   }
 
 
@@ -3310,6 +3340,7 @@ public class NotaryRecipient implements Serializable {
         Objects.equals(this.autoRespondedReason, notaryRecipient.autoRespondedReason) &&
         Objects.equals(this.bulkRecipientsUri, notaryRecipient.bulkRecipientsUri) &&
         Objects.equals(this.bulkSendV2Recipient, notaryRecipient.bulkSendV2Recipient) &&
+        Objects.equals(this.canNotaryCorrectEnvelope, notaryRecipient.canNotaryCorrectEnvelope) &&
         Objects.equals(this.canSignOffline, notaryRecipient.canSignOffline) &&
         Objects.equals(this.clientUserId, notaryRecipient.clientUserId) &&
         Objects.equals(this.completedCount, notaryRecipient.completedCount) &&
@@ -3409,7 +3440,7 @@ public class NotaryRecipient implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notarySourceType, notaryThirdPartyPartner, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canNotaryCorrectEnvelope, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, liveOakStartURL, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, notarySigners, notarySourceType, notaryThirdPartyPartner, notaryType, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
   }
 
 
@@ -3432,6 +3463,7 @@ public class NotaryRecipient implements Serializable {
     sb.append("    autoRespondedReason: ").append(toIndentedString(autoRespondedReason)).append("\n");
     sb.append("    bulkRecipientsUri: ").append(toIndentedString(bulkRecipientsUri)).append("\n");
     sb.append("    bulkSendV2Recipient: ").append(toIndentedString(bulkSendV2Recipient)).append("\n");
+    sb.append("    canNotaryCorrectEnvelope: ").append(toIndentedString(canNotaryCorrectEnvelope)).append("\n");
     sb.append("    canSignOffline: ").append(toIndentedString(canSignOffline)).append("\n");
     sb.append("    clientUserId: ").append(toIndentedString(clientUserId)).append("\n");
     sb.append("    completedCount: ").append(toIndentedString(completedCount)).append("\n");

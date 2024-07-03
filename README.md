@@ -57,7 +57,7 @@ This client SDK is provided as open source, which enables you to customize its f
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>5.1.0</version>
+      <version>6.0.0-RC1</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
@@ -116,5 +116,5 @@ The Docusign eSignature Java Client SDK is licensed under the [MIT License](http
 
 [travis-image]: https://api.travis-ci.com/docusign/docusign-esign-java-client.svg?branch=master
 [travis-url]: https://app.travis-ci.com/github/docusign/docusign-esign-java-client
-[maven-image]: https://img.shields.io/maven-central/v/com.docusign/docusign-esign-java.svg?style=flat
+[maven-image]: https://img.shields.io/maven-central/v/com.docusign/.svg?style=flat
 [maven-url]: https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.docusign%22
