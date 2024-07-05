@@ -59,6 +59,12 @@ public class TabAccountSettings implements Serializable {
   @JsonProperty("drawTabsMetadata")
   private SettingsMetadata drawTabsMetadata = null;
 
+  @JsonProperty("enableTabAgreementDetails")
+  private String enableTabAgreementDetails = null;
+
+  @JsonProperty("enableTabAgreementDetailsMetadata")
+  private SettingsMetadata enableTabAgreementDetailsMetadata = null;
+
   @JsonProperty("firstLastEmailTabsEnabled")
   private String firstLastEmailTabsEnabled = null;
 
@@ -525,6 +531,60 @@ public class TabAccountSettings implements Serializable {
    **/
   public void setDrawTabsMetadata(SettingsMetadata drawTabsMetadata) {
     this.drawTabsMetadata = drawTabsMetadata;
+  }
+
+
+  /**
+   * enableTabAgreementDetails.
+   *
+   * @return TabAccountSettings
+   **/
+  public TabAccountSettings enableTabAgreementDetails(String enableTabAgreementDetails) {
+    this.enableTabAgreementDetails = enableTabAgreementDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return enableTabAgreementDetails
+   **/
+  @Schema(description = "")
+  public String getEnableTabAgreementDetails() {
+    return enableTabAgreementDetails;
+  }
+
+  /**
+   * setEnableTabAgreementDetails.
+   **/
+  public void setEnableTabAgreementDetails(String enableTabAgreementDetails) {
+    this.enableTabAgreementDetails = enableTabAgreementDetails;
+  }
+
+
+  /**
+   * enableTabAgreementDetailsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
+  public TabAccountSettings enableTabAgreementDetailsMetadata(SettingsMetadata enableTabAgreementDetailsMetadata) {
+    this.enableTabAgreementDetailsMetadata = enableTabAgreementDetailsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return enableTabAgreementDetailsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getEnableTabAgreementDetailsMetadata() {
+    return enableTabAgreementDetailsMetadata;
+  }
+
+  /**
+   * setEnableTabAgreementDetailsMetadata.
+   **/
+  public void setEnableTabAgreementDetailsMetadata(SettingsMetadata enableTabAgreementDetailsMetadata) {
+    this.enableTabAgreementDetailsMetadata = enableTabAgreementDetailsMetadata;
   }
 
 
@@ -1366,6 +1426,8 @@ public class TabAccountSettings implements Serializable {
         Objects.equals(this.dataFieldSizeMetadata, tabAccountSettings.dataFieldSizeMetadata) &&
         Objects.equals(this.drawTabsEnabled, tabAccountSettings.drawTabsEnabled) &&
         Objects.equals(this.drawTabsMetadata, tabAccountSettings.drawTabsMetadata) &&
+        Objects.equals(this.enableTabAgreementDetails, tabAccountSettings.enableTabAgreementDetails) &&
+        Objects.equals(this.enableTabAgreementDetailsMetadata, tabAccountSettings.enableTabAgreementDetailsMetadata) &&
         Objects.equals(this.firstLastEmailTabsEnabled, tabAccountSettings.firstLastEmailTabsEnabled) &&
         Objects.equals(this.firstLastEmailTabsMetadata, tabAccountSettings.firstLastEmailTabsMetadata) &&
         Objects.equals(this.listTabsEnabled, tabAccountSettings.listTabsEnabled) &&
@@ -1403,7 +1465,7 @@ public class TabAccountSettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, numericalTabsEnabled, numericalTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, enableTabAgreementDetails, enableTabAgreementDetailsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, numericalTabsEnabled, numericalTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
   }
 
 
@@ -1429,6 +1491,8 @@ public class TabAccountSettings implements Serializable {
     sb.append("    dataFieldSizeMetadata: ").append(toIndentedString(dataFieldSizeMetadata)).append("\n");
     sb.append("    drawTabsEnabled: ").append(toIndentedString(drawTabsEnabled)).append("\n");
     sb.append("    drawTabsMetadata: ").append(toIndentedString(drawTabsMetadata)).append("\n");
+    sb.append("    enableTabAgreementDetails: ").append(toIndentedString(enableTabAgreementDetails)).append("\n");
+    sb.append("    enableTabAgreementDetailsMetadata: ").append(toIndentedString(enableTabAgreementDetailsMetadata)).append("\n");
     sb.append("    firstLastEmailTabsEnabled: ").append(toIndentedString(firstLastEmailTabsEnabled)).append("\n");
     sb.append("    firstLastEmailTabsMetadata: ").append(toIndentedString(firstLastEmailTabsMetadata)).append("\n");
     sb.append("    listTabsEnabled: ").append(toIndentedString(listTabsEnabled)).append("\n");

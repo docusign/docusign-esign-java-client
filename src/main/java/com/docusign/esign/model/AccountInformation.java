@@ -95,6 +95,9 @@ public class AccountInformation implements Serializable {
   @JsonProperty("forgottenPasswordQuestionsCount")
   private String forgottenPasswordQuestionsCount = null;
 
+  @JsonProperty("freeEnvelopeSendsRemainingForAdvancedDocGen")
+  private Integer freeEnvelopeSendsRemainingForAdvancedDocGen = null;
+
   @JsonProperty("isDowngrade")
   private String isDowngrade = null;
 
@@ -824,6 +827,33 @@ public class AccountInformation implements Serializable {
 
 
   /**
+   * freeEnvelopeSendsRemainingForAdvancedDocGen.
+   *
+   * @return AccountInformation
+   **/
+  public AccountInformation freeEnvelopeSendsRemainingForAdvancedDocGen(Integer freeEnvelopeSendsRemainingForAdvancedDocGen) {
+    this.freeEnvelopeSendsRemainingForAdvancedDocGen = freeEnvelopeSendsRemainingForAdvancedDocGen;
+    return this;
+  }
+
+  /**
+   * .
+   * @return freeEnvelopeSendsRemainingForAdvancedDocGen
+   **/
+  @Schema(description = "")
+  public Integer getFreeEnvelopeSendsRemainingForAdvancedDocGen() {
+    return freeEnvelopeSendsRemainingForAdvancedDocGen;
+  }
+
+  /**
+   * setFreeEnvelopeSendsRemainingForAdvancedDocGen.
+   **/
+  public void setFreeEnvelopeSendsRemainingForAdvancedDocGen(Integer freeEnvelopeSendsRemainingForAdvancedDocGen) {
+    this.freeEnvelopeSendsRemainingForAdvancedDocGen = freeEnvelopeSendsRemainingForAdvancedDocGen;
+  }
+
+
+  /**
    * isDowngrade.
    *
    * @return AccountInformation
@@ -1226,6 +1256,7 @@ public class AccountInformation implements Serializable {
         Objects.equals(this.envelopeUnitPrice, accountInformation.envelopeUnitPrice) &&
         Objects.equals(this.externalAccountId, accountInformation.externalAccountId) &&
         Objects.equals(this.forgottenPasswordQuestionsCount, accountInformation.forgottenPasswordQuestionsCount) &&
+        Objects.equals(this.freeEnvelopeSendsRemainingForAdvancedDocGen, accountInformation.freeEnvelopeSendsRemainingForAdvancedDocGen) &&
         Objects.equals(this.isDowngrade, accountInformation.isDowngrade) &&
         Objects.equals(this.paymentMethod, accountInformation.paymentMethod) &&
         Objects.equals(this.planClassification, accountInformation.planClassification) &&
@@ -1246,7 +1277,7 @@ public class AccountInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, freeEnvelopeSendsRemainingForAdvancedDocGen, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
 
 
@@ -1283,6 +1314,7 @@ public class AccountInformation implements Serializable {
     sb.append("    envelopeUnitPrice: ").append(toIndentedString(envelopeUnitPrice)).append("\n");
     sb.append("    externalAccountId: ").append(toIndentedString(externalAccountId)).append("\n");
     sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
+    sb.append("    freeEnvelopeSendsRemainingForAdvancedDocGen: ").append(toIndentedString(freeEnvelopeSendsRemainingForAdvancedDocGen)).append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");

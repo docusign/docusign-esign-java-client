@@ -420,12 +420,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the envelope correction view of the DocuSign UI in your applications.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param correctViewRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ViewUrl createCorrectView(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
-    ApiResponse<ViewUrl> localVarResponse = createCorrectViewWithHttpInfo(accountId, envelopeId, correctViewRequest);
+  public ViewUrl createCorrectView(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    ApiResponse<ViewUrl> localVarResponse = createCorrectViewWithHttpInfo(accountId, envelopeId, envelopeViewRequest);
     return localVarResponse.getData();
   }
 
@@ -434,12 +434,12 @@ public class EnvelopesApi {
    * Returns a URL that allows you to embed the envelope correction view of the DocuSign UI in your applications.  Important: iFrames should not be used for embedded operations on mobile devices due to screen space issues. For iOS devices DocuSign recommends using a WebView. 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
-   * @param correctViewRequest  (optional)
+   * @param envelopeViewRequest  (optional)
    * @return ViewUrl
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<ViewUrl > createCorrectViewWithHttpInfo(String accountId, String envelopeId, CorrectViewRequest correctViewRequest) throws ApiException {
-    Object localVarPostBody = correctViewRequest;
+  public ApiResponse<ViewUrl > createCorrectViewWithHttpInfo(String accountId, String envelopeId, EnvelopeViewRequest envelopeViewRequest) throws ApiException {
+    Object localVarPostBody = envelopeViewRequest;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
@@ -5247,6 +5247,7 @@ public class EnvelopesApi {
   {
   private String advancedUpdate = null;
   private String include = null;
+  private String includeAnchorTabLocations = null;
   
  /**
   * setAdvancedUpdate method.
@@ -5278,6 +5279,22 @@ public class EnvelopesApi {
   */
   public String getInclude() {
     return this.include;
+  }
+  
+ /**
+  * setIncludeAnchorTabLocations method.
+  */
+  public void setIncludeAnchorTabLocations(String includeAnchorTabLocations) {
+    this.includeAnchorTabLocations = includeAnchorTabLocations;
+  }
+
+ /**
+  * getIncludeAnchorTabLocations method.
+  *
+  * @return String
+  */
+  public String getIncludeAnchorTabLocations() {
+    return this.includeAnchorTabLocations;
   }
   }
 
@@ -5343,6 +5360,8 @@ public class EnvelopesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("advanced_update", options.advancedUpdate));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
     }
 
     
@@ -9530,6 +9549,7 @@ public class EnvelopesApi {
   public class UpdateOptions
   {
   private String advancedUpdate = null;
+  private String recycleOnVoid = null;
   private String resendEnvelope = null;
   
  /**
@@ -9546,6 +9566,22 @@ public class EnvelopesApi {
   */
   public String getAdvancedUpdate() {
     return this.advancedUpdate;
+  }
+  
+ /**
+  * setRecycleOnVoid method.
+  */
+  public void setRecycleOnVoid(String recycleOnVoid) {
+    this.recycleOnVoid = recycleOnVoid;
+  }
+
+ /**
+  * getRecycleOnVoid method.
+  *
+  * @return String
+  */
+  public String getRecycleOnVoid() {
+    return this.recycleOnVoid;
   }
   
  /**
@@ -9628,6 +9664,8 @@ public class EnvelopesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("advanced_update", options.advancedUpdate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("recycle_on_void", options.recycleOnVoid));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("resend_envelope", options.resendEnvelope));
     }

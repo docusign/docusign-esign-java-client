@@ -858,6 +858,12 @@ public class AccountSettingsInformation implements Serializable {
   @JsonProperty("dataPopulationScopeMetadata")
   private SettingsMetadata dataPopulationScopeMetadata = null;
 
+  @JsonProperty("defaultSigningResponsiveView")
+  private String defaultSigningResponsiveView = null;
+
+  @JsonProperty("defaultSigningResponsiveViewMetadata")
+  private SettingsMetadata defaultSigningResponsiveViewMetadata = null;
+
   @JsonProperty("defaultToAdvancedEnvelopesFilterForm")
   private String defaultToAdvancedEnvelopesFilterForm = null;
 
@@ -972,6 +978,9 @@ public class AccountSettingsInformation implements Serializable {
   @JsonProperty("dss_EnableSignatureTypeCustomTagRadmin_RadminOption")
   private String dssEnableSignatureTypeCustomTagRadminRadminOption = null;
 
+  @JsonProperty("dss_SCOREFDN_196_Rebrand_DocuSignIsNotAVerb")
+  private String dssSCOREFDN196RebrandDocuSignIsNotAVerb = null;
+
   @JsonProperty("dss_SIGN_28411_EnableLeavePagePrompt_RadminOption")
   private String dssSIGN28411EnableLeavePagePromptRadminOption = null;
 
@@ -995,6 +1004,12 @@ public class AccountSettingsInformation implements Serializable {
 
   @JsonProperty("enableAccountWideSearchMetadata")
   private SettingsMetadata enableAccountWideSearchMetadata = null;
+
+  @JsonProperty("enableAdditionalAdvancedWebFormsFeatures")
+  private String enableAdditionalAdvancedWebFormsFeatures = null;
+
+  @JsonProperty("enableAdditionalAdvancedWebFormsFeaturesMetadata")
+  private SettingsMetadata enableAdditionalAdvancedWebFormsFeaturesMetadata = null;
 
   @JsonProperty("enableAdmHealthcare")
   private String enableAdmHealthcare = null;
@@ -1328,12 +1343,6 @@ public class AccountSettingsInformation implements Serializable {
 
   @JsonProperty("enableResponsiveSigningMetadata")
   private SettingsMetadata enableResponsiveSigningMetadata = null;
-
-  @JsonProperty("enableSaveAsEnvelopeCustomFieldInWebForms")
-  private String enableSaveAsEnvelopeCustomFieldInWebForms = null;
-
-  @JsonProperty("enableSaveAsEnvelopeCustomFieldInWebFormsMetadata")
-  private SettingsMetadata enableSaveAsEnvelopeCustomFieldInWebFormsMetadata = null;
 
   @JsonProperty("enableScheduledRelease")
   private String enableScheduledRelease = null;
@@ -9755,6 +9764,60 @@ public class AccountSettingsInformation implements Serializable {
 
 
   /**
+   * defaultSigningResponsiveView.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation defaultSigningResponsiveView(String defaultSigningResponsiveView) {
+    this.defaultSigningResponsiveView = defaultSigningResponsiveView;
+    return this;
+  }
+
+  /**
+   * .
+   * @return defaultSigningResponsiveView
+   **/
+  @Schema(description = "")
+  public String getDefaultSigningResponsiveView() {
+    return defaultSigningResponsiveView;
+  }
+
+  /**
+   * setDefaultSigningResponsiveView.
+   **/
+  public void setDefaultSigningResponsiveView(String defaultSigningResponsiveView) {
+    this.defaultSigningResponsiveView = defaultSigningResponsiveView;
+  }
+
+
+  /**
+   * defaultSigningResponsiveViewMetadata.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation defaultSigningResponsiveViewMetadata(SettingsMetadata defaultSigningResponsiveViewMetadata) {
+    this.defaultSigningResponsiveViewMetadata = defaultSigningResponsiveViewMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return defaultSigningResponsiveViewMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getDefaultSigningResponsiveViewMetadata() {
+    return defaultSigningResponsiveViewMetadata;
+  }
+
+  /**
+   * setDefaultSigningResponsiveViewMetadata.
+   **/
+  public void setDefaultSigningResponsiveViewMetadata(SettingsMetadata defaultSigningResponsiveViewMetadata) {
+    this.defaultSigningResponsiveViewMetadata = defaultSigningResponsiveViewMetadata;
+  }
+
+
+  /**
    * defaultToAdvancedEnvelopesFilterForm.
    *
    * @return AccountSettingsInformation
@@ -10781,6 +10844,33 @@ public class AccountSettingsInformation implements Serializable {
 
 
   /**
+   * dssSCOREFDN196RebrandDocuSignIsNotAVerb.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation dssSCOREFDN196RebrandDocuSignIsNotAVerb(String dssSCOREFDN196RebrandDocuSignIsNotAVerb) {
+    this.dssSCOREFDN196RebrandDocuSignIsNotAVerb = dssSCOREFDN196RebrandDocuSignIsNotAVerb;
+    return this;
+  }
+
+  /**
+   * .
+   * @return dssSCOREFDN196RebrandDocuSignIsNotAVerb
+   **/
+  @Schema(description = "")
+  public String getDssSCOREFDN196RebrandDocuSignIsNotAVerb() {
+    return dssSCOREFDN196RebrandDocuSignIsNotAVerb;
+  }
+
+  /**
+   * setDssSCOREFDN196RebrandDocuSignIsNotAVerb.
+   **/
+  public void setDssSCOREFDN196RebrandDocuSignIsNotAVerb(String dssSCOREFDN196RebrandDocuSignIsNotAVerb) {
+    this.dssSCOREFDN196RebrandDocuSignIsNotAVerb = dssSCOREFDN196RebrandDocuSignIsNotAVerb;
+  }
+
+
+  /**
    * dssSIGN28411EnableLeavePagePromptRadminOption.
    *
    * @return AccountSettingsInformation
@@ -10993,6 +11083,60 @@ public class AccountSettingsInformation implements Serializable {
    **/
   public void setEnableAccountWideSearchMetadata(SettingsMetadata enableAccountWideSearchMetadata) {
     this.enableAccountWideSearchMetadata = enableAccountWideSearchMetadata;
+  }
+
+
+  /**
+   * enableAdditionalAdvancedWebFormsFeatures.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation enableAdditionalAdvancedWebFormsFeatures(String enableAdditionalAdvancedWebFormsFeatures) {
+    this.enableAdditionalAdvancedWebFormsFeatures = enableAdditionalAdvancedWebFormsFeatures;
+    return this;
+  }
+
+  /**
+   * .
+   * @return enableAdditionalAdvancedWebFormsFeatures
+   **/
+  @Schema(description = "")
+  public String getEnableAdditionalAdvancedWebFormsFeatures() {
+    return enableAdditionalAdvancedWebFormsFeatures;
+  }
+
+  /**
+   * setEnableAdditionalAdvancedWebFormsFeatures.
+   **/
+  public void setEnableAdditionalAdvancedWebFormsFeatures(String enableAdditionalAdvancedWebFormsFeatures) {
+    this.enableAdditionalAdvancedWebFormsFeatures = enableAdditionalAdvancedWebFormsFeatures;
+  }
+
+
+  /**
+   * enableAdditionalAdvancedWebFormsFeaturesMetadata.
+   *
+   * @return AccountSettingsInformation
+   **/
+  public AccountSettingsInformation enableAdditionalAdvancedWebFormsFeaturesMetadata(SettingsMetadata enableAdditionalAdvancedWebFormsFeaturesMetadata) {
+    this.enableAdditionalAdvancedWebFormsFeaturesMetadata = enableAdditionalAdvancedWebFormsFeaturesMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return enableAdditionalAdvancedWebFormsFeaturesMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getEnableAdditionalAdvancedWebFormsFeaturesMetadata() {
+    return enableAdditionalAdvancedWebFormsFeaturesMetadata;
+  }
+
+  /**
+   * setEnableAdditionalAdvancedWebFormsFeaturesMetadata.
+   **/
+  public void setEnableAdditionalAdvancedWebFormsFeaturesMetadata(SettingsMetadata enableAdditionalAdvancedWebFormsFeaturesMetadata) {
+    this.enableAdditionalAdvancedWebFormsFeaturesMetadata = enableAdditionalAdvancedWebFormsFeaturesMetadata;
   }
 
 
@@ -13990,60 +14134,6 @@ public class AccountSettingsInformation implements Serializable {
    **/
   public void setEnableResponsiveSigningMetadata(SettingsMetadata enableResponsiveSigningMetadata) {
     this.enableResponsiveSigningMetadata = enableResponsiveSigningMetadata;
-  }
-
-
-  /**
-   * enableSaveAsEnvelopeCustomFieldInWebForms.
-   *
-   * @return AccountSettingsInformation
-   **/
-  public AccountSettingsInformation enableSaveAsEnvelopeCustomFieldInWebForms(String enableSaveAsEnvelopeCustomFieldInWebForms) {
-    this.enableSaveAsEnvelopeCustomFieldInWebForms = enableSaveAsEnvelopeCustomFieldInWebForms;
-    return this;
-  }
-
-  /**
-   * .
-   * @return enableSaveAsEnvelopeCustomFieldInWebForms
-   **/
-  @Schema(description = "")
-  public String getEnableSaveAsEnvelopeCustomFieldInWebForms() {
-    return enableSaveAsEnvelopeCustomFieldInWebForms;
-  }
-
-  /**
-   * setEnableSaveAsEnvelopeCustomFieldInWebForms.
-   **/
-  public void setEnableSaveAsEnvelopeCustomFieldInWebForms(String enableSaveAsEnvelopeCustomFieldInWebForms) {
-    this.enableSaveAsEnvelopeCustomFieldInWebForms = enableSaveAsEnvelopeCustomFieldInWebForms;
-  }
-
-
-  /**
-   * enableSaveAsEnvelopeCustomFieldInWebFormsMetadata.
-   *
-   * @return AccountSettingsInformation
-   **/
-  public AccountSettingsInformation enableSaveAsEnvelopeCustomFieldInWebFormsMetadata(SettingsMetadata enableSaveAsEnvelopeCustomFieldInWebFormsMetadata) {
-    this.enableSaveAsEnvelopeCustomFieldInWebFormsMetadata = enableSaveAsEnvelopeCustomFieldInWebFormsMetadata;
-    return this;
-  }
-
-  /**
-   * .
-   * @return enableSaveAsEnvelopeCustomFieldInWebFormsMetadata
-   **/
-  @Schema(description = "")
-  public SettingsMetadata getEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata() {
-    return enableSaveAsEnvelopeCustomFieldInWebFormsMetadata;
-  }
-
-  /**
-   * setEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata.
-   **/
-  public void setEnableSaveAsEnvelopeCustomFieldInWebFormsMetadata(SettingsMetadata enableSaveAsEnvelopeCustomFieldInWebFormsMetadata) {
-    this.enableSaveAsEnvelopeCustomFieldInWebFormsMetadata = enableSaveAsEnvelopeCustomFieldInWebFormsMetadata;
   }
 
 
@@ -22841,6 +22931,8 @@ public class AccountSettingsInformation implements Serializable {
         Objects.equals(this.convertPdfFieldsMetadata, accountSettingsInformation.convertPdfFieldsMetadata) &&
         Objects.equals(this.dataPopulationScope, accountSettingsInformation.dataPopulationScope) &&
         Objects.equals(this.dataPopulationScopeMetadata, accountSettingsInformation.dataPopulationScopeMetadata) &&
+        Objects.equals(this.defaultSigningResponsiveView, accountSettingsInformation.defaultSigningResponsiveView) &&
+        Objects.equals(this.defaultSigningResponsiveViewMetadata, accountSettingsInformation.defaultSigningResponsiveViewMetadata) &&
         Objects.equals(this.defaultToAdvancedEnvelopesFilterForm, accountSettingsInformation.defaultToAdvancedEnvelopesFilterForm) &&
         Objects.equals(this.defaultToAdvancedEnvelopesFilterFormMetadata, accountSettingsInformation.defaultToAdvancedEnvelopesFilterFormMetadata) &&
         Objects.equals(this.disableAutoTemplateMatching, accountSettingsInformation.disableAutoTemplateMatching) &&
@@ -22879,6 +22971,7 @@ public class AccountSettingsInformation implements Serializable {
         Objects.equals(this.draftEnvelopeRetentionMetadata, accountSettingsInformation.draftEnvelopeRetentionMetadata) &&
         Objects.equals(this.dssEnableProvisioningPenConfigurationRadminOption, accountSettingsInformation.dssEnableProvisioningPenConfigurationRadminOption) &&
         Objects.equals(this.dssEnableSignatureTypeCustomTagRadminRadminOption, accountSettingsInformation.dssEnableSignatureTypeCustomTagRadminRadminOption) &&
+        Objects.equals(this.dssSCOREFDN196RebrandDocuSignIsNotAVerb, accountSettingsInformation.dssSCOREFDN196RebrandDocuSignIsNotAVerb) &&
         Objects.equals(this.dssSIGN28411EnableLeavePagePromptRadminOption, accountSettingsInformation.dssSIGN28411EnableLeavePagePromptRadminOption) &&
         Objects.equals(this.dssSIGN29182SlideUpBarRadminOption, accountSettingsInformation.dssSIGN29182SlideUpBarRadminOption) &&
         Objects.equals(this.emailTemplateVersion, accountSettingsInformation.emailTemplateVersion) &&
@@ -22887,6 +22980,8 @@ public class AccountSettingsInformation implements Serializable {
         Objects.equals(this.enableAccessCodeGeneratorMetadata, accountSettingsInformation.enableAccessCodeGeneratorMetadata) &&
         Objects.equals(this.enableAccountWideSearch, accountSettingsInformation.enableAccountWideSearch) &&
         Objects.equals(this.enableAccountWideSearchMetadata, accountSettingsInformation.enableAccountWideSearchMetadata) &&
+        Objects.equals(this.enableAdditionalAdvancedWebFormsFeatures, accountSettingsInformation.enableAdditionalAdvancedWebFormsFeatures) &&
+        Objects.equals(this.enableAdditionalAdvancedWebFormsFeaturesMetadata, accountSettingsInformation.enableAdditionalAdvancedWebFormsFeaturesMetadata) &&
         Objects.equals(this.enableAdmHealthcare, accountSettingsInformation.enableAdmHealthcare) &&
         Objects.equals(this.enableAdmHealthcareMetadata, accountSettingsInformation.enableAdmHealthcareMetadata) &&
         Objects.equals(this.enableAdvancedEnvelopesSearch, accountSettingsInformation.enableAdvancedEnvelopesSearch) &&
@@ -22998,8 +23093,6 @@ public class AccountSettingsInformation implements Serializable {
         Objects.equals(this.enableReservedDomainMetadata, accountSettingsInformation.enableReservedDomainMetadata) &&
         Objects.equals(this.enableResponsiveSigning, accountSettingsInformation.enableResponsiveSigning) &&
         Objects.equals(this.enableResponsiveSigningMetadata, accountSettingsInformation.enableResponsiveSigningMetadata) &&
-        Objects.equals(this.enableSaveAsEnvelopeCustomFieldInWebForms, accountSettingsInformation.enableSaveAsEnvelopeCustomFieldInWebForms) &&
-        Objects.equals(this.enableSaveAsEnvelopeCustomFieldInWebFormsMetadata, accountSettingsInformation.enableSaveAsEnvelopeCustomFieldInWebFormsMetadata) &&
         Objects.equals(this.enableScheduledRelease, accountSettingsInformation.enableScheduledRelease) &&
         Objects.equals(this.enableScheduledReleaseMetadata, accountSettingsInformation.enableScheduledReleaseMetadata) &&
         Objects.equals(this.enableSearchServiceAzureUri, accountSettingsInformation.enableSearchServiceAzureUri) &&
@@ -23320,7 +23413,7 @@ public class AccountSettingsInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCodeFormat, accountDateTimeFormat, accountDateTimeFormatMetadata, accountDefaultLanguage, accountDefaultLanguageMetadata, accountName, accountNameMetadata, accountNotification, accountUISettings, adoptSigConfig, adoptSigConfigMetadata, advancedCorrect, advancedCorrectMetadata, advancedSearchEnableTabField, advancedSearchEnableTabFieldMetadata, advancedSearchEnableTemplateIdField, advancedSearchEnableTemplateIdFieldMetadata, advancedSearchEnableTemplateNameField, advancedSearchEnableTemplateNameFieldMetadata, allowAccessCodeFormat, allowAccessCodeFormatMetadata, allowAccountManagementGranular, allowAccountManagementGranularMetadata, allowAccountMemberNameChange, allowAccountMemberNameChangeMetadata, allowACE, allowACEMetadata, allowAdvancedRecipientRoutingConditional, allowAdvancedRecipientRoutingConditionalMetadata, allowAgentNameEmailEdit, allowAgentNameEmailEditMetadata, allowAgreementActions, allowAgreementActionsMetadata, allowAgreementOrchestrations, allowAgreementOrchestrationsMetadata, allowAutoNavSettings, allowAutoNavSettingsMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSend, allowBulkSendMetadata, allowCDWithdraw, allowCDWithdrawMetadata, allowConnectEnvelopeRemovedEvent, allowConnectHttpListenerConfigs, allowConnectIdentityVerificationUI, allowConnectOAuthUI, allowConnectSendFinishLater, allowConnectSendFinishLaterMetadata, allowConnectUnifiedPayloadUI, allowConsumerDisclosureOverride, allowConsumerDisclosureOverrideMetadata, allowDataDownload, allowDataDownloadMetadata, allowDelayedRouting, allowDelayedRoutingMetadata, allowDelegatedSigning, allowDelegatedSigningMetadata, allowDocGenDocuments, allowDocGenDocumentsMetadata, allowDocumentDisclosures, allowDocumentDisclosuresMetadata, allowDocumentsOnSignedEnvelopes, allowDocumentsOnSignedEnvelopesMetadata, allowDocumentVisibility, allowDocumentVisibilityMetadata, allowEditingEnvelopesOnBehalfOfOthers, allowEditingEnvelopesOnBehalfOfOthersMetadata, allowEHankoStamps, allowEHankoStampsMetadata, allowENoteEOriginal, allowENoteEOriginalMetadata, allowEnvelopeCorrect, allowEnvelopeCorrectMetadata, allowEnvelopeCustodyTransfer, allowEnvelopeCustodyTransferMetadata, allowEnvelopeCustomFields, allowEnvelopeCustomFieldsMetadata, allowEnvelopePublishReporting, allowEnvelopePublishReportingMetadata, allowEnvelopeReporting, allowEnvelopeReportingMetadata, allowExpression, allowExpressionMetadata, allowExpressSignerCertificate, allowExpressSignerCertificateMetadata, allowExtendedSendingResourceFile, allowExtendedSendingResourceFileMetadata, allowExternalLinkedAccounts, allowExternalLinkedAccountsMetadata, allowExternalSignaturePad, allowExternalSignaturePadMetadata, allowIDVForEUQualifiedSignatures, allowIDVForEUQualifiedSignaturesMetadata, allowIDVLevel1, allowIDVLevel1Metadata, allowIDVLevel1Trial, allowIDVLevel1TrialMetadata, allowIDVLevel2, allowIDVLevel2Metadata, allowIDVLevel3, allowIDVLevel3Metadata, allowIDVPlatform, allowIDVPlatformMetadata, allowInPerson, allowInPersonElectronicNotary, allowInPersonElectronicNotaryMetadata, allowInPersonMetadata, allowManagedStamps, allowManagedStampsMetadata, allowManagingEnvelopesOnBehalfOfOthers, allowManagingEnvelopesOnBehalfOfOthersMetadata, allowMarkup, allowMarkupMetadata, allowMemberTimeZone, allowMemberTimeZoneMetadata, allowMergeFields, allowMergeFieldsMetadata, allowMultipleBrandProfiles, allowMultipleBrandProfilesMetadata, allowMultipleSignerAttachments, allowMultipleSignerAttachmentsMetadata, allowNonUSPhoneAuth, allowNonUSPhoneAuthMetadata, allowOcrOfEnvelopeDocuments, allowOcrOfEnvelopeDocumentsMetadata, allowOfflineSigning, allowOfflineSigningMetadata, allowOpenTrustSignerCertificate, allowOpenTrustSignerCertificateMetadata, allowOrganizationBranding, allowOrganizationBrandingMetadata, allowOrganizationDocusignMonitor, allowOrganizationDocusignMonitorFree, allowOrganizationDocusignMonitorFreeMetadata, allowOrganizationDocusignMonitorMetadata, allowOrganizationDomainUserManagement, allowOrganizationDomainUserManagementMetadata, allowOrganizations, allowOrganizationsMetadata, allowOrganizationSsoManagement, allowOrganizationSsoManagementMetadata, allowOrganizationToUseInPersonElectronicNotary, allowOrganizationToUseInPersonElectronicNotaryMetadata, allowOrganizationToUseRemoteNotary, allowOrganizationToUseRemoteNotaryMetadata, allowOrganizationToUseThirdPartyElectronicNotary, allowOrganizationToUseThirdPartyElectronicNotaryMetadata, allowParticipantRecipientType, allowParticipantRecipientTypeMetadata, allowPaymentProcessing, allowPaymentProcessingMetadata, allowPendingDestinationUrlEdition, allowPendingDestinationUrlEditionMetadata, allowPerformanceAnalytics, allowPerformanceAnalyticsMetadata, allowPhoneAuthentication, allowPhoneAuthenticationMetadata, allowPhoneAuthOverride, allowPhoneAuthOverrideMetadata, allowPrivateSigningGroups, allowPrivateSigningGroupsMetadata, allowRecipientConnect, allowRecipientConnectMetadata, allowReminders, allowRemindersMetadata, allowRemoteNotary, allowRemoteNotaryMetadata, allowResourceFileBranding, allowResourceFileBrandingMetadata, allowSafeBioPharmaSignerCertificate, allowSafeBioPharmaSignerCertificateMetadata, allowScheduledSending, allowScheduledSendingMetadata, allowSecurityAppliance, allowSecurityApplianceMetadata, allowSendingEnvelopesOnBehalfOfOthers, allowSendingEnvelopesOnBehalfOfOthersMetadata, allowSendToCertifiedDelivery, allowSendToCertifiedDeliveryMetadata, allowSendToIntermediary, allowSendToIntermediaryMetadata, allowServerTemplates, allowServerTemplatesMetadata, allowSetEmbeddedRecipientStartURL, allowSetEmbeddedRecipientStartURLMetadata, allowSharedTabs, allowSharedTabsMetadata, allowSignatureStamps, allowSignatureStampsMetadata, allowSignDocumentFromHomePage, allowSignDocumentFromHomePageMetadata, allowSignerReassign, allowSignerReassignMetadata, allowSignerReassignOverride, allowSignerReassignOverrideMetadata, allowSigningExtensions, allowSigningExtensionsMetadata, allowSigningGroups, allowSigningGroupsMetadata, allowSigningInsights, allowSigningInsightsMetadata, allowSigningRadioDeselect, allowSigningRadioDeselectMetadata, allowSignNow, allowSignNowMetadata, allowSMSDelivery, allowSMSDeliveryMetadata, allowSocialIdLogin, allowSocialIdLoginMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowThirdPartyElectronicNotary, allowThirdPartyElectronicNotaryMetadata, allowTransactionsWorkspace, allowTransactionsWorkspaceMetadata, allowTransactionsWorkspaceOriginal, allowTransactionsWorkspaceOriginalMetadata, allowUsersToAccessDirectory, allowUsersToAccessDirectoryMetadata, allowValueInsights, allowValueInsightsMetadata, allowWebForms, allowWebFormsMetadata, allowWhatsAppDelivery, allowWhatsAppDeliveryMetadata, anchorPopulationScope, anchorPopulationScopeMetadata, anchorTagVersionedPlacementEnabled, anchorTagVersionedPlacementMetadataEnabled, attachCompletedEnvelope, attachCompletedEnvelopeMetadata, authenticationCheck, authenticationCheckMetadata, autoNavRule, autoNavRuleMetadata, autoProvisionSignerAccount, autoProvisionSignerAccountMetadata, bccEmailArchive, bccEmailArchiveMetadata, betaSwitchConfiguration, betaSwitchConfigurationMetadata, billingAddress, billingAddressMetadata, bulkSend, bulkSendActionResendLimit, bulkSendMaxCopiesInBatch, bulkSendMaxUnprocessedEnvelopesCount, bulkSendMetadata, canSelfBrandSend, canSelfBrandSendMetadata, canSelfBrandSign, canSelfBrandSignMetadata, canUseSalesforceOAuth, canUseSalesforceOAuthMetadata, captureVoiceRecording, captureVoiceRecordingMetadata, cfr21SimplifiedSigningEnabled, cfr21SimplifiedSigningEnabledMetadata, cfrUseWideImage, cfrUseWideImageMetadata, checkForMultipleAdminsOnAccount, checkForMultipleAdminsOnAccountMetadata, chromeSignatureEnabled, chromeSignatureEnabledMetadata, commentEmailShowMessageText, commentEmailShowMessageTextMetadata, commentsAllowEnvelopeOverride, commentsAllowEnvelopeOverrideMetadata, conditionalFieldsEnabled, conditionalFieldsEnabledMetadata, consumerDisclosureFrequency, consumerDisclosureFrequencyMetadata, convertPdfFields, convertPdfFieldsMetadata, dataPopulationScope, dataPopulationScopeMetadata, defaultToAdvancedEnvelopesFilterForm, defaultToAdvancedEnvelopesFilterFormMetadata, disableAutoTemplateMatching, disableAutoTemplateMatchingMetadata, disableBulkSendRecipientLimit, disableBulkSendRecipientLimitMetaData, disableMobileApp, disableMobileAppMetadata, disableMobilePushNotifications, disableMobilePushNotificationsMetadata, disableMobileSending, disableMobileSendingMetadata, disableMultipleSessions, disableMultipleSessionsMetadata, disablePurgeNotificationsForSenderMetadata, disableSignerCertView, disableSignerCertViewMetadata, disableSignerHistoryView, disableSignerHistoryViewMetadata, disableStyleSignature, disableStyleSignatureMetadata, disableUploadSignature, disableUploadSignatureMetadata, disableUserSharing, disableUserSharingMetadata, displayBetaSwitch, displayBetaSwitchMetadata, documentConversionRestrictions, documentConversionRestrictionsMetadata, documentRetention, documentRetentionMetadata, documentRetentionPurgeTabs, documentVisibility, documentVisibilityMetadata, draftEnvelopeRetention, draftEnvelopeRetentionMetadata, dssEnableProvisioningPenConfigurationRadminOption, dssEnableSignatureTypeCustomTagRadminRadminOption, dssSIGN28411EnableLeavePagePromptRadminOption, dssSIGN29182SlideUpBarRadminOption, emailTemplateVersion, emailTemplateVersionMetadata, enableAccessCodeGenerator, enableAccessCodeGeneratorMetadata, enableAccountWideSearch, enableAccountWideSearchMetadata, enableAdmHealthcare, enableAdmHealthcareMetadata, enableAdvancedEnvelopesSearch, enableAdvancedEnvelopesSearchMetadata, enableAdvancedPayments, enableAdvancedPaymentsMetadata, enableAdvancedPowerForms, enableAdvancedPowerFormsMetadata, enableAdvancedSearch, enableAdvancedSearchMetadata, enableAgreementActionsForCLM, enableAgreementActionsForCLMMetadata, enableAgreementActionsForESign, enableAgreementActionsForESignMetadata, enableAutoNav, enableAutoNavMetadata, enableBccDummyLink, enableBccDummyLinkMetadata, enableCalculatedFields, enableCalculatedFieldsMetadata, enableClickPlus, enableClickPlusConditionalContent, enableClickPlusConditionalContentMetaData, enableClickPlusCustomFields, enableClickPlusCustomFieldsMetaData, enableClickPlusCustomStyle, enableClickPlusCustomStyleMetaData, enableClickPlusDynamicContent, enableClickPlusDynamicContentMetaData, enableClickPlusMetaData, enableClickwraps, enableClickwrapsMetadata, enableCombinedPDFDownloadForSBS, enableCommentsHistoryDownloadInSigning, enableCommentsHistoryDownloadInSigningMetadata, enableContactSuggestions, enableContactSuggestionsMetadata, enableContentSearch, enableContentSearchMetadata, enableCustomerSatisfactionMetricTracking, enableCustomerSatisfactionMetricTrackingMetadata, enableDataVerificationExtensions, enableDataVerificationExtensionsMetadata, enableDSigEUAdvancedPens, enableDSigEUAdvancedPensMetadata, enableDSigExpressPens, enableDSigExpressPensMetadata, enableDSigIDCheckForAESPens, enableDSigIDCheckForAESPensMetadata, enableDSigIDCheckInPersonForQESPens, enableDSigIDCheckInPersonForQESPensMetadata, enableDSigIDCheckRemoteForQESPens, enableDSigIDCheckRemoteForQESPensMetadata, enableDSigIDVerificationPens, enableDSigIDVerificationPensMetadata, enableDSigIDVerificationPremierPens, enableDSigIDVerificationPremierPensMetadata, enableDSPro, enableDSProMetadata, enableEnforceTlsEmailsSettingMetadata, enableEnvelopeStampingByAccountAdmin, enableEnvelopeStampingByAccountAdminMetadata, enableEnvelopeStampingByDSAdmin, enableEnvelopeStampingByDSAdminMetadata, enableESignAPIHourlyLimitManagement, enableESignAPIHourlyLimitManagementMetadata, enableEsignCommunities, enableEsignCommunitiesMetadata, enableIDFxAccountlessSMSAuthForPart11, enableIDFxAccountlessSMSAuthForPart11Metadata, enableIDFxIntuitKBA, enableIDFxIntuitKBAMetadata, enableIDFxPhoneAuthentication, enableIDFxPhoneAuthenticationMetadata, enableIdfxPhoneAuthSignatureAuthStatus, enableIdfxPhoneAuthSignatureAuthStatusMetadata, enableInboxBrowseViewsPoweredByElasticSearch, enableInboxBrowseViewsPoweredByElasticSearchMetadata, enableInboxRelevanceSort, enableInboxRelevanceSortMetadata, enableInBrowserEditor, enableInBrowserEditorMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableLargeFileSupport, enableLargeFileSupportMetadata, enableMultiUserRepositoryFeatures, enableMultiUserRepositoryFeaturesMetadata, enableParticipantRecipientSettingMetadata, enablePaymentProcessing, enablePaymentProcessingMetadata, enablePDFAConversion, enablePDFAConversionMetadata, enablePowerForm, enablePowerFormDirect, enablePowerFormDirectMetadata, enablePowerFormMetadata, enablePremiumDataVerificationExtensions, enablePremiumDataVerificationExtensionsMetadata, enableRecipientDomainValidation, enableRecipientDomainValidationMetadata, enableRecipientMayProvidePhoneNumber, enableRecipientMayProvidePhoneNumberMetadata, enableReportLinks, enableReportLinksMetadata, enableRequireSignOnPaper, enableRequireSignOnPaperMetadata, enableReservedDomain, enableReservedDomainMetadata, enableResponsiveSigning, enableResponsiveSigningMetadata, enableSaveAsEnvelopeCustomFieldInWebForms, enableSaveAsEnvelopeCustomFieldInWebFormsMetadata, enableScheduledRelease, enableScheduledReleaseMetadata, enableSearchServiceAzureUri, enableSearchServiceAzureUriMetadata, enableSearchSiteSpecificApi, enableSearchSiteSpecificApiMetadata, enableSendingTagsFontSettings, enableSendingTagsFontSettingsMetadata, enableSendToAgent, enableSendToAgentMetadata, enableSendToIntermediary, enableSendToIntermediaryMetadata, enableSendToManage, enableSendToManageMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSigningExtensionComments, enableSigningExtensionCommentsMetadata, enableSigningExtensionConversations, enableSigningExtensionConversationsMetadata, enableSigningOrderSettingsForAccount, enableSigningOrderSettingsForAccountMetadata, enableSignOnPaper, enableSignOnPaperMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableSignWithNotary, enableSignWithNotaryMetadata, enableSmartContracts, enableSmartContractsMetadata, enableSMSAuthentication, enableSMSAuthenticationMetadata, enableSMSDeliveryAdditionalNotification, enableSMSDeliveryAdditionalNotificationMetadata, enableSMSDeliveryPrimary, enableSocialIdLogin, enableSocialIdLoginMetadata, enableStrikeThrough, enableStrikeThroughMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableUnifiedRepository, enableUnifiedRepositoryMetadata, enableVaulting, enableVaultingMetadata, enableWebFormsRuntimeAPIs, enableWebFormsRuntimeAPIsMetadata, enableWebFormsSeparateUserPermissions, enableWebFormsSeparateUserPermissionsMetadata, enableWitnessing, enableWitnessingMetadata, enforceTemplateNameUniqueness, enforceTemplateNameUniquenessMetadata, enforceTlsEmails, enforceTlsEmailsMetadata, envelopeIntegrationAllowed, envelopeIntegrationAllowedMetadata, envelopeIntegrationEnabled, envelopeIntegrationEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMB, envelopeLimitsTotalDocumentSizeAllowedInMBEnabled, envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMBMetadata, envelopeSearchMode, envelopeSearchModeMetadata, envelopeStampingDefaultValue, envelopeStampingDefaultValueMetadata, exitPrompt, exitPromptMetadata, expressSend, expressSendAllowTabs, expressSendAllowTabsMetadata, expressSendMetadata, externalDocumentSources, externalSignaturePadType, externalSignaturePadTypeMetadata, faxOutEnabled, faxOutEnabledMetadata, finishReminder, finishReminderMetadata, forbidAddingUserStamps, forbidAddingUserStampsMetadata, guidedFormsHtmlAllowed, guidedFormsHtmlAllowedMetadata, guidedFormsHtmlConversionPolicy, guidedFormsHtmlConversionPolicyMetadata, hasRecipientConnectClaimedDomain, hideAccountAddressInCoC, hideAccountAddressInCoCMetadata, hidePricing, hidePricingMetadata, idCheckConfigurations, idCheckExpire, idCheckExpireDays, idCheckExpireDaysMetadata, idCheckExpireMetadata, idCheckExpireMinutes, idCheckExpireMinutesMetadata, idCheckRequired, idCheckRequiredMetadata, identityVerification, identityVerificationMetadata, idfxKBAAuthenticationOverride, idfxKBAAuthenticationOverrideMetadata, idfxPhoneAuthenticationOverride, idfxPhoneAuthenticationOverrideMetadata, ignoreErrorIfAnchorTabNotFound, ignoreErrorIfAnchorTabNotFoundMetadataEnabled, inPersonIDCheckQuestion, inPersonIDCheckQuestionMetadata, inPersonSigningEnabled, inPersonSigningEnabledMetadata, inSessionEnabled, inSessionEnabledMetadata, inSessionSuppressEmails, inSessionSuppressEmailsMetadata, isConnectDocumentFieldsEnabled, isvOemEmbed, isvOemEmbedMetaData, linkedExternalPrimaryAccounts, maximumSigningGroups, maximumSigningGroupsMetadata, maximumUsersPerSigningGroup, maximumUsersPerSigningGroupMetadata, maxNumberOfCustomStamps, mergeMixedModeResults, mergeMixedModeResultsMetadata, mobileSessionTimeout, mobileSessionTimeoutMetadata, numberOfActiveCustomStamps, optInMobileSigningV02, optInMobileSigningV02Metadata, optInUniversalSignatures, optOutAutoNavTextAndTabColorUpdates, optOutAutoNavTextAndTabColorUpdatesMetadata, optOutNewPlatformSeal, optOutNewPlatformSealPlatformMetadata, pdfMaxChunkedUploadPartSize, pdfMaxChunkedUploadPartSizeMetadata, pdfMaxChunkedUploadTotalSize, pdfMaxChunkedUploadTotalSizeMetadata, pdfMaxIndividualUploadSize, pdfMaxIndividualUploadSizeMetadata, phoneAuthRecipientMayProvidePhoneNumber, phoneAuthRecipientMayProvidePhoneNumberMetadata, pkiSignDownloadedPDFDocs, pkiSignDownloadedPDFDocsMetadata, readOnlyMode, readOnlyModeMetadata, recipientsCanSignOffline, recipientsCanSignOfflineMetadata, recipientSigningAutoNavigationControl, recipientSigningAutoNavigationControlMetadata, require21CFRpt11Compliance, require21CFRpt11ComplianceMetadata, requireDeclineReason, requireDeclineReasonMetadata, requireExternalUserManagement, requireExternalUserManagementMetadata, requireSignerCertificateType, requireSignerCertificateTypeMetadata, rsaVeridAccountName, rsaVeridPassword, rsaVeridRuleset, rsaVeridUserId, sbsTransactionLevel, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, selfSignedRecipientEmailDocumentUserOverride, selfSignedRecipientEmailDocumentUserOverrideMetadata, senderCanSignInEachLocation, senderCanSignInEachLocationMetadata, senderMustAuthenticateSigning, senderMustAuthenticateSigningMetadata, sendingTagsFontColor, sendingTagsFontColorMetadata, sendingTagsFontName, sendingTagsFontNameMetadata, sendingTagsFontSize, sendingTagsFontSizeMetadata, sendLockoutRecipientNotification, sendLockoutRecipientNotificationMetadata, sendToCertifiedDeliveryEnabled, sendToCertifiedDeliveryEnabledMetadata, sessionTimeout, sessionTimeoutMetadata, setRecipEmailLang, setRecipEmailLangMetadata, setRecipSignLang, setRecipSignLangMetadata, sharedTemplateFolders, sharedTemplateFoldersMetadata, showCompleteDialogInEmbeddedSession, showCompleteDialogInEmbeddedSessionMetadata, showConditionalRoutingOnSend, showConditionalRoutingOnSendMetadata, showInitialConditionalFields, showInitialConditionalFieldsMetadata, showLocalizedWatermarks, showLocalizedWatermarksMetadata, showMaskedFieldsWhenDownloadingDocumentAsSender, showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata, showTutorials, showTutorialsMetadata, signatureProviders, signatureProvidersMetadata, signDateFormat, signDateFormatMetadata, signDateTimeAccountLanguageOverride, signDateTimeAccountLanguageOverrideMetadata, signDateTimeAccountTimezoneOverride, signDateTimeAccountTimezoneOverrideMetadata, signerAttachCertificateToEnvelopePDF, signerAttachCertificateToEnvelopePDFMetadata, signerAttachConcat, signerAttachConcatMetadata, signerCanCreateAccount, signerCanCreateAccountMetadata, signerCanSignOnMobile, signerCanSignOnMobileMetadata, signerInSessionUseEnvelopeCompleteEmail, signerInSessionUseEnvelopeCompleteEmailMetadata, signerLoginRequirements, signerLoginRequirementsMetadata, signerMustHaveAccount, signerMustHaveAccountMetadata, signerMustLoginToSign, signerMustLoginToSignMetadata, signerShowSecureFieldInitialValues, signerShowSecureFieldInitialValuesMetadata, signingSessionTimeout, signingSessionTimeoutMetadata, signingUiVersion, signingUiVersionMetadata, signTimeFormat, signTimeFormatMetadata, signTimeShowAmPm, signTimeShowAmPmMetadata, simplifiedSendingEnabled, simplifiedSendingEnabledMetadata, singleSignOnEnabled, singleSignOnEnabledMetadata, skipAuthCompletedEnvelopes, skipAuthCompletedEnvelopesMetadata, socialIdRecipAuth, socialIdRecipAuthMetadata, specifyDocumentVisibility, specifyDocumentVisibilityMetadata, startInAdvancedCorrect, startInAdvancedCorrectMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, suppressCertificateEnforcement, suppressCertificateEnforcementMetadata, tabAccountSettings, timezoneOffsetAPI, timezoneOffsetAPIMetadata, timezoneOffsetUI, timezoneOffsetUIMetadata, universalSignatureOptIn, useAccountLevelEmail, useAccountLevelEmailMetadata, useConsumerDisclosure, useConsumerDisclosureMetadata, useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, useDerivedKeys, useDerivedKeysMetadata, useDocuSignExpressSignerCertificate, useDocuSignExpressSignerCertificateMetadata, useEnvelopeSearchMixedMode, useEnvelopeSearchMixedModeMetadata, useMultiAppGroupsData, useMultiAppGroupsDataMetadata, useNewBlobForPdf, useNewBlobForPdfMetadata, useNewEnvelopeSearch, useNewEnvelopeSearchMetadata, useNewEnvelopeSearchOnlyWhenSearchingAfterDate, useNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata, useNewEnvelopeSearchOnlyWithSearchTerm, useNewEnvelopeSearchOnlyWithSearchTermMetadata, useSAFESignerCertificates, useSAFESignerCertificatesMetadata, usesAPI, usesAPIMetadata, useSignatureProviderPlatform, useSignatureProviderPlatformMetadata, useSmartContractsV1, validationsAllowed, validationsAllowedMetadata, validationsBrand, validationsBrandMetadata, validationsCadence, validationsCadenceMetadata, validationsEnabled, validationsEnabledMetadata, validationsReport, validationsReportMetadata, waterMarkEnabled, waterMarkEnabledMetadata, writeReminderToEnvelopeHistory, writeReminderToEnvelopeHistoryMetadata, wurflMinAllowableScreenSize, wurflMinAllowableScreenSizeMetadata);
+    return Objects.hash(accessCodeFormat, accountDateTimeFormat, accountDateTimeFormatMetadata, accountDefaultLanguage, accountDefaultLanguageMetadata, accountName, accountNameMetadata, accountNotification, accountUISettings, adoptSigConfig, adoptSigConfigMetadata, advancedCorrect, advancedCorrectMetadata, advancedSearchEnableTabField, advancedSearchEnableTabFieldMetadata, advancedSearchEnableTemplateIdField, advancedSearchEnableTemplateIdFieldMetadata, advancedSearchEnableTemplateNameField, advancedSearchEnableTemplateNameFieldMetadata, allowAccessCodeFormat, allowAccessCodeFormatMetadata, allowAccountManagementGranular, allowAccountManagementGranularMetadata, allowAccountMemberNameChange, allowAccountMemberNameChangeMetadata, allowACE, allowACEMetadata, allowAdvancedRecipientRoutingConditional, allowAdvancedRecipientRoutingConditionalMetadata, allowAgentNameEmailEdit, allowAgentNameEmailEditMetadata, allowAgreementActions, allowAgreementActionsMetadata, allowAgreementOrchestrations, allowAgreementOrchestrationsMetadata, allowAutoNavSettings, allowAutoNavSettingsMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSend, allowBulkSendMetadata, allowCDWithdraw, allowCDWithdrawMetadata, allowConnectEnvelopeRemovedEvent, allowConnectHttpListenerConfigs, allowConnectIdentityVerificationUI, allowConnectOAuthUI, allowConnectSendFinishLater, allowConnectSendFinishLaterMetadata, allowConnectUnifiedPayloadUI, allowConsumerDisclosureOverride, allowConsumerDisclosureOverrideMetadata, allowDataDownload, allowDataDownloadMetadata, allowDelayedRouting, allowDelayedRoutingMetadata, allowDelegatedSigning, allowDelegatedSigningMetadata, allowDocGenDocuments, allowDocGenDocumentsMetadata, allowDocumentDisclosures, allowDocumentDisclosuresMetadata, allowDocumentsOnSignedEnvelopes, allowDocumentsOnSignedEnvelopesMetadata, allowDocumentVisibility, allowDocumentVisibilityMetadata, allowEditingEnvelopesOnBehalfOfOthers, allowEditingEnvelopesOnBehalfOfOthersMetadata, allowEHankoStamps, allowEHankoStampsMetadata, allowENoteEOriginal, allowENoteEOriginalMetadata, allowEnvelopeCorrect, allowEnvelopeCorrectMetadata, allowEnvelopeCustodyTransfer, allowEnvelopeCustodyTransferMetadata, allowEnvelopeCustomFields, allowEnvelopeCustomFieldsMetadata, allowEnvelopePublishReporting, allowEnvelopePublishReportingMetadata, allowEnvelopeReporting, allowEnvelopeReportingMetadata, allowExpression, allowExpressionMetadata, allowExpressSignerCertificate, allowExpressSignerCertificateMetadata, allowExtendedSendingResourceFile, allowExtendedSendingResourceFileMetadata, allowExternalLinkedAccounts, allowExternalLinkedAccountsMetadata, allowExternalSignaturePad, allowExternalSignaturePadMetadata, allowIDVForEUQualifiedSignatures, allowIDVForEUQualifiedSignaturesMetadata, allowIDVLevel1, allowIDVLevel1Metadata, allowIDVLevel1Trial, allowIDVLevel1TrialMetadata, allowIDVLevel2, allowIDVLevel2Metadata, allowIDVLevel3, allowIDVLevel3Metadata, allowIDVPlatform, allowIDVPlatformMetadata, allowInPerson, allowInPersonElectronicNotary, allowInPersonElectronicNotaryMetadata, allowInPersonMetadata, allowManagedStamps, allowManagedStampsMetadata, allowManagingEnvelopesOnBehalfOfOthers, allowManagingEnvelopesOnBehalfOfOthersMetadata, allowMarkup, allowMarkupMetadata, allowMemberTimeZone, allowMemberTimeZoneMetadata, allowMergeFields, allowMergeFieldsMetadata, allowMultipleBrandProfiles, allowMultipleBrandProfilesMetadata, allowMultipleSignerAttachments, allowMultipleSignerAttachmentsMetadata, allowNonUSPhoneAuth, allowNonUSPhoneAuthMetadata, allowOcrOfEnvelopeDocuments, allowOcrOfEnvelopeDocumentsMetadata, allowOfflineSigning, allowOfflineSigningMetadata, allowOpenTrustSignerCertificate, allowOpenTrustSignerCertificateMetadata, allowOrganizationBranding, allowOrganizationBrandingMetadata, allowOrganizationDocusignMonitor, allowOrganizationDocusignMonitorFree, allowOrganizationDocusignMonitorFreeMetadata, allowOrganizationDocusignMonitorMetadata, allowOrganizationDomainUserManagement, allowOrganizationDomainUserManagementMetadata, allowOrganizations, allowOrganizationsMetadata, allowOrganizationSsoManagement, allowOrganizationSsoManagementMetadata, allowOrganizationToUseInPersonElectronicNotary, allowOrganizationToUseInPersonElectronicNotaryMetadata, allowOrganizationToUseRemoteNotary, allowOrganizationToUseRemoteNotaryMetadata, allowOrganizationToUseThirdPartyElectronicNotary, allowOrganizationToUseThirdPartyElectronicNotaryMetadata, allowParticipantRecipientType, allowParticipantRecipientTypeMetadata, allowPaymentProcessing, allowPaymentProcessingMetadata, allowPendingDestinationUrlEdition, allowPendingDestinationUrlEditionMetadata, allowPerformanceAnalytics, allowPerformanceAnalyticsMetadata, allowPhoneAuthentication, allowPhoneAuthenticationMetadata, allowPhoneAuthOverride, allowPhoneAuthOverrideMetadata, allowPrivateSigningGroups, allowPrivateSigningGroupsMetadata, allowRecipientConnect, allowRecipientConnectMetadata, allowReminders, allowRemindersMetadata, allowRemoteNotary, allowRemoteNotaryMetadata, allowResourceFileBranding, allowResourceFileBrandingMetadata, allowSafeBioPharmaSignerCertificate, allowSafeBioPharmaSignerCertificateMetadata, allowScheduledSending, allowScheduledSendingMetadata, allowSecurityAppliance, allowSecurityApplianceMetadata, allowSendingEnvelopesOnBehalfOfOthers, allowSendingEnvelopesOnBehalfOfOthersMetadata, allowSendToCertifiedDelivery, allowSendToCertifiedDeliveryMetadata, allowSendToIntermediary, allowSendToIntermediaryMetadata, allowServerTemplates, allowServerTemplatesMetadata, allowSetEmbeddedRecipientStartURL, allowSetEmbeddedRecipientStartURLMetadata, allowSharedTabs, allowSharedTabsMetadata, allowSignatureStamps, allowSignatureStampsMetadata, allowSignDocumentFromHomePage, allowSignDocumentFromHomePageMetadata, allowSignerReassign, allowSignerReassignMetadata, allowSignerReassignOverride, allowSignerReassignOverrideMetadata, allowSigningExtensions, allowSigningExtensionsMetadata, allowSigningGroups, allowSigningGroupsMetadata, allowSigningInsights, allowSigningInsightsMetadata, allowSigningRadioDeselect, allowSigningRadioDeselectMetadata, allowSignNow, allowSignNowMetadata, allowSMSDelivery, allowSMSDeliveryMetadata, allowSocialIdLogin, allowSocialIdLoginMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowThirdPartyElectronicNotary, allowThirdPartyElectronicNotaryMetadata, allowTransactionsWorkspace, allowTransactionsWorkspaceMetadata, allowTransactionsWorkspaceOriginal, allowTransactionsWorkspaceOriginalMetadata, allowUsersToAccessDirectory, allowUsersToAccessDirectoryMetadata, allowValueInsights, allowValueInsightsMetadata, allowWebForms, allowWebFormsMetadata, allowWhatsAppDelivery, allowWhatsAppDeliveryMetadata, anchorPopulationScope, anchorPopulationScopeMetadata, anchorTagVersionedPlacementEnabled, anchorTagVersionedPlacementMetadataEnabled, attachCompletedEnvelope, attachCompletedEnvelopeMetadata, authenticationCheck, authenticationCheckMetadata, autoNavRule, autoNavRuleMetadata, autoProvisionSignerAccount, autoProvisionSignerAccountMetadata, bccEmailArchive, bccEmailArchiveMetadata, betaSwitchConfiguration, betaSwitchConfigurationMetadata, billingAddress, billingAddressMetadata, bulkSend, bulkSendActionResendLimit, bulkSendMaxCopiesInBatch, bulkSendMaxUnprocessedEnvelopesCount, bulkSendMetadata, canSelfBrandSend, canSelfBrandSendMetadata, canSelfBrandSign, canSelfBrandSignMetadata, canUseSalesforceOAuth, canUseSalesforceOAuthMetadata, captureVoiceRecording, captureVoiceRecordingMetadata, cfr21SimplifiedSigningEnabled, cfr21SimplifiedSigningEnabledMetadata, cfrUseWideImage, cfrUseWideImageMetadata, checkForMultipleAdminsOnAccount, checkForMultipleAdminsOnAccountMetadata, chromeSignatureEnabled, chromeSignatureEnabledMetadata, commentEmailShowMessageText, commentEmailShowMessageTextMetadata, commentsAllowEnvelopeOverride, commentsAllowEnvelopeOverrideMetadata, conditionalFieldsEnabled, conditionalFieldsEnabledMetadata, consumerDisclosureFrequency, consumerDisclosureFrequencyMetadata, convertPdfFields, convertPdfFieldsMetadata, dataPopulationScope, dataPopulationScopeMetadata, defaultSigningResponsiveView, defaultSigningResponsiveViewMetadata, defaultToAdvancedEnvelopesFilterForm, defaultToAdvancedEnvelopesFilterFormMetadata, disableAutoTemplateMatching, disableAutoTemplateMatchingMetadata, disableBulkSendRecipientLimit, disableBulkSendRecipientLimitMetaData, disableMobileApp, disableMobileAppMetadata, disableMobilePushNotifications, disableMobilePushNotificationsMetadata, disableMobileSending, disableMobileSendingMetadata, disableMultipleSessions, disableMultipleSessionsMetadata, disablePurgeNotificationsForSenderMetadata, disableSignerCertView, disableSignerCertViewMetadata, disableSignerHistoryView, disableSignerHistoryViewMetadata, disableStyleSignature, disableStyleSignatureMetadata, disableUploadSignature, disableUploadSignatureMetadata, disableUserSharing, disableUserSharingMetadata, displayBetaSwitch, displayBetaSwitchMetadata, documentConversionRestrictions, documentConversionRestrictionsMetadata, documentRetention, documentRetentionMetadata, documentRetentionPurgeTabs, documentVisibility, documentVisibilityMetadata, draftEnvelopeRetention, draftEnvelopeRetentionMetadata, dssEnableProvisioningPenConfigurationRadminOption, dssEnableSignatureTypeCustomTagRadminRadminOption, dssSCOREFDN196RebrandDocuSignIsNotAVerb, dssSIGN28411EnableLeavePagePromptRadminOption, dssSIGN29182SlideUpBarRadminOption, emailTemplateVersion, emailTemplateVersionMetadata, enableAccessCodeGenerator, enableAccessCodeGeneratorMetadata, enableAccountWideSearch, enableAccountWideSearchMetadata, enableAdditionalAdvancedWebFormsFeatures, enableAdditionalAdvancedWebFormsFeaturesMetadata, enableAdmHealthcare, enableAdmHealthcareMetadata, enableAdvancedEnvelopesSearch, enableAdvancedEnvelopesSearchMetadata, enableAdvancedPayments, enableAdvancedPaymentsMetadata, enableAdvancedPowerForms, enableAdvancedPowerFormsMetadata, enableAdvancedSearch, enableAdvancedSearchMetadata, enableAgreementActionsForCLM, enableAgreementActionsForCLMMetadata, enableAgreementActionsForESign, enableAgreementActionsForESignMetadata, enableAutoNav, enableAutoNavMetadata, enableBccDummyLink, enableBccDummyLinkMetadata, enableCalculatedFields, enableCalculatedFieldsMetadata, enableClickPlus, enableClickPlusConditionalContent, enableClickPlusConditionalContentMetaData, enableClickPlusCustomFields, enableClickPlusCustomFieldsMetaData, enableClickPlusCustomStyle, enableClickPlusCustomStyleMetaData, enableClickPlusDynamicContent, enableClickPlusDynamicContentMetaData, enableClickPlusMetaData, enableClickwraps, enableClickwrapsMetadata, enableCombinedPDFDownloadForSBS, enableCommentsHistoryDownloadInSigning, enableCommentsHistoryDownloadInSigningMetadata, enableContactSuggestions, enableContactSuggestionsMetadata, enableContentSearch, enableContentSearchMetadata, enableCustomerSatisfactionMetricTracking, enableCustomerSatisfactionMetricTrackingMetadata, enableDataVerificationExtensions, enableDataVerificationExtensionsMetadata, enableDSigEUAdvancedPens, enableDSigEUAdvancedPensMetadata, enableDSigExpressPens, enableDSigExpressPensMetadata, enableDSigIDCheckForAESPens, enableDSigIDCheckForAESPensMetadata, enableDSigIDCheckInPersonForQESPens, enableDSigIDCheckInPersonForQESPensMetadata, enableDSigIDCheckRemoteForQESPens, enableDSigIDCheckRemoteForQESPensMetadata, enableDSigIDVerificationPens, enableDSigIDVerificationPensMetadata, enableDSigIDVerificationPremierPens, enableDSigIDVerificationPremierPensMetadata, enableDSPro, enableDSProMetadata, enableEnforceTlsEmailsSettingMetadata, enableEnvelopeStampingByAccountAdmin, enableEnvelopeStampingByAccountAdminMetadata, enableEnvelopeStampingByDSAdmin, enableEnvelopeStampingByDSAdminMetadata, enableESignAPIHourlyLimitManagement, enableESignAPIHourlyLimitManagementMetadata, enableEsignCommunities, enableEsignCommunitiesMetadata, enableIDFxAccountlessSMSAuthForPart11, enableIDFxAccountlessSMSAuthForPart11Metadata, enableIDFxIntuitKBA, enableIDFxIntuitKBAMetadata, enableIDFxPhoneAuthentication, enableIDFxPhoneAuthenticationMetadata, enableIdfxPhoneAuthSignatureAuthStatus, enableIdfxPhoneAuthSignatureAuthStatusMetadata, enableInboxBrowseViewsPoweredByElasticSearch, enableInboxBrowseViewsPoweredByElasticSearchMetadata, enableInboxRelevanceSort, enableInboxRelevanceSortMetadata, enableInBrowserEditor, enableInBrowserEditorMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableLargeFileSupport, enableLargeFileSupportMetadata, enableMultiUserRepositoryFeatures, enableMultiUserRepositoryFeaturesMetadata, enableParticipantRecipientSettingMetadata, enablePaymentProcessing, enablePaymentProcessingMetadata, enablePDFAConversion, enablePDFAConversionMetadata, enablePowerForm, enablePowerFormDirect, enablePowerFormDirectMetadata, enablePowerFormMetadata, enablePremiumDataVerificationExtensions, enablePremiumDataVerificationExtensionsMetadata, enableRecipientDomainValidation, enableRecipientDomainValidationMetadata, enableRecipientMayProvidePhoneNumber, enableRecipientMayProvidePhoneNumberMetadata, enableReportLinks, enableReportLinksMetadata, enableRequireSignOnPaper, enableRequireSignOnPaperMetadata, enableReservedDomain, enableReservedDomainMetadata, enableResponsiveSigning, enableResponsiveSigningMetadata, enableScheduledRelease, enableScheduledReleaseMetadata, enableSearchServiceAzureUri, enableSearchServiceAzureUriMetadata, enableSearchSiteSpecificApi, enableSearchSiteSpecificApiMetadata, enableSendingTagsFontSettings, enableSendingTagsFontSettingsMetadata, enableSendToAgent, enableSendToAgentMetadata, enableSendToIntermediary, enableSendToIntermediaryMetadata, enableSendToManage, enableSendToManageMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSigningExtensionComments, enableSigningExtensionCommentsMetadata, enableSigningExtensionConversations, enableSigningExtensionConversationsMetadata, enableSigningOrderSettingsForAccount, enableSigningOrderSettingsForAccountMetadata, enableSignOnPaper, enableSignOnPaperMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableSignWithNotary, enableSignWithNotaryMetadata, enableSmartContracts, enableSmartContractsMetadata, enableSMSAuthentication, enableSMSAuthenticationMetadata, enableSMSDeliveryAdditionalNotification, enableSMSDeliveryAdditionalNotificationMetadata, enableSMSDeliveryPrimary, enableSocialIdLogin, enableSocialIdLoginMetadata, enableStrikeThrough, enableStrikeThroughMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableUnifiedRepository, enableUnifiedRepositoryMetadata, enableVaulting, enableVaultingMetadata, enableWebFormsRuntimeAPIs, enableWebFormsRuntimeAPIsMetadata, enableWebFormsSeparateUserPermissions, enableWebFormsSeparateUserPermissionsMetadata, enableWitnessing, enableWitnessingMetadata, enforceTemplateNameUniqueness, enforceTemplateNameUniquenessMetadata, enforceTlsEmails, enforceTlsEmailsMetadata, envelopeIntegrationAllowed, envelopeIntegrationAllowedMetadata, envelopeIntegrationEnabled, envelopeIntegrationEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMB, envelopeLimitsTotalDocumentSizeAllowedInMBEnabled, envelopeLimitsTotalDocumentSizeAllowedInMBEnabledMetadata, envelopeLimitsTotalDocumentSizeAllowedInMBMetadata, envelopeSearchMode, envelopeSearchModeMetadata, envelopeStampingDefaultValue, envelopeStampingDefaultValueMetadata, exitPrompt, exitPromptMetadata, expressSend, expressSendAllowTabs, expressSendAllowTabsMetadata, expressSendMetadata, externalDocumentSources, externalSignaturePadType, externalSignaturePadTypeMetadata, faxOutEnabled, faxOutEnabledMetadata, finishReminder, finishReminderMetadata, forbidAddingUserStamps, forbidAddingUserStampsMetadata, guidedFormsHtmlAllowed, guidedFormsHtmlAllowedMetadata, guidedFormsHtmlConversionPolicy, guidedFormsHtmlConversionPolicyMetadata, hasRecipientConnectClaimedDomain, hideAccountAddressInCoC, hideAccountAddressInCoCMetadata, hidePricing, hidePricingMetadata, idCheckConfigurations, idCheckExpire, idCheckExpireDays, idCheckExpireDaysMetadata, idCheckExpireMetadata, idCheckExpireMinutes, idCheckExpireMinutesMetadata, idCheckRequired, idCheckRequiredMetadata, identityVerification, identityVerificationMetadata, idfxKBAAuthenticationOverride, idfxKBAAuthenticationOverrideMetadata, idfxPhoneAuthenticationOverride, idfxPhoneAuthenticationOverrideMetadata, ignoreErrorIfAnchorTabNotFound, ignoreErrorIfAnchorTabNotFoundMetadataEnabled, inPersonIDCheckQuestion, inPersonIDCheckQuestionMetadata, inPersonSigningEnabled, inPersonSigningEnabledMetadata, inSessionEnabled, inSessionEnabledMetadata, inSessionSuppressEmails, inSessionSuppressEmailsMetadata, isConnectDocumentFieldsEnabled, isvOemEmbed, isvOemEmbedMetaData, linkedExternalPrimaryAccounts, maximumSigningGroups, maximumSigningGroupsMetadata, maximumUsersPerSigningGroup, maximumUsersPerSigningGroupMetadata, maxNumberOfCustomStamps, mergeMixedModeResults, mergeMixedModeResultsMetadata, mobileSessionTimeout, mobileSessionTimeoutMetadata, numberOfActiveCustomStamps, optInMobileSigningV02, optInMobileSigningV02Metadata, optInUniversalSignatures, optOutAutoNavTextAndTabColorUpdates, optOutAutoNavTextAndTabColorUpdatesMetadata, optOutNewPlatformSeal, optOutNewPlatformSealPlatformMetadata, pdfMaxChunkedUploadPartSize, pdfMaxChunkedUploadPartSizeMetadata, pdfMaxChunkedUploadTotalSize, pdfMaxChunkedUploadTotalSizeMetadata, pdfMaxIndividualUploadSize, pdfMaxIndividualUploadSizeMetadata, phoneAuthRecipientMayProvidePhoneNumber, phoneAuthRecipientMayProvidePhoneNumberMetadata, pkiSignDownloadedPDFDocs, pkiSignDownloadedPDFDocsMetadata, readOnlyMode, readOnlyModeMetadata, recipientsCanSignOffline, recipientsCanSignOfflineMetadata, recipientSigningAutoNavigationControl, recipientSigningAutoNavigationControlMetadata, require21CFRpt11Compliance, require21CFRpt11ComplianceMetadata, requireDeclineReason, requireDeclineReasonMetadata, requireExternalUserManagement, requireExternalUserManagementMetadata, requireSignerCertificateType, requireSignerCertificateTypeMetadata, rsaVeridAccountName, rsaVeridPassword, rsaVeridRuleset, rsaVeridUserId, sbsTransactionLevel, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, selfSignedRecipientEmailDocumentUserOverride, selfSignedRecipientEmailDocumentUserOverrideMetadata, senderCanSignInEachLocation, senderCanSignInEachLocationMetadata, senderMustAuthenticateSigning, senderMustAuthenticateSigningMetadata, sendingTagsFontColor, sendingTagsFontColorMetadata, sendingTagsFontName, sendingTagsFontNameMetadata, sendingTagsFontSize, sendingTagsFontSizeMetadata, sendLockoutRecipientNotification, sendLockoutRecipientNotificationMetadata, sendToCertifiedDeliveryEnabled, sendToCertifiedDeliveryEnabledMetadata, sessionTimeout, sessionTimeoutMetadata, setRecipEmailLang, setRecipEmailLangMetadata, setRecipSignLang, setRecipSignLangMetadata, sharedTemplateFolders, sharedTemplateFoldersMetadata, showCompleteDialogInEmbeddedSession, showCompleteDialogInEmbeddedSessionMetadata, showConditionalRoutingOnSend, showConditionalRoutingOnSendMetadata, showInitialConditionalFields, showInitialConditionalFieldsMetadata, showLocalizedWatermarks, showLocalizedWatermarksMetadata, showMaskedFieldsWhenDownloadingDocumentAsSender, showMaskedFieldsWhenDownloadingDocumentAsSenderMetadata, showTutorials, showTutorialsMetadata, signatureProviders, signatureProvidersMetadata, signDateFormat, signDateFormatMetadata, signDateTimeAccountLanguageOverride, signDateTimeAccountLanguageOverrideMetadata, signDateTimeAccountTimezoneOverride, signDateTimeAccountTimezoneOverrideMetadata, signerAttachCertificateToEnvelopePDF, signerAttachCertificateToEnvelopePDFMetadata, signerAttachConcat, signerAttachConcatMetadata, signerCanCreateAccount, signerCanCreateAccountMetadata, signerCanSignOnMobile, signerCanSignOnMobileMetadata, signerInSessionUseEnvelopeCompleteEmail, signerInSessionUseEnvelopeCompleteEmailMetadata, signerLoginRequirements, signerLoginRequirementsMetadata, signerMustHaveAccount, signerMustHaveAccountMetadata, signerMustLoginToSign, signerMustLoginToSignMetadata, signerShowSecureFieldInitialValues, signerShowSecureFieldInitialValuesMetadata, signingSessionTimeout, signingSessionTimeoutMetadata, signingUiVersion, signingUiVersionMetadata, signTimeFormat, signTimeFormatMetadata, signTimeShowAmPm, signTimeShowAmPmMetadata, simplifiedSendingEnabled, simplifiedSendingEnabledMetadata, singleSignOnEnabled, singleSignOnEnabledMetadata, skipAuthCompletedEnvelopes, skipAuthCompletedEnvelopesMetadata, socialIdRecipAuth, socialIdRecipAuthMetadata, specifyDocumentVisibility, specifyDocumentVisibilityMetadata, startInAdvancedCorrect, startInAdvancedCorrectMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, suppressCertificateEnforcement, suppressCertificateEnforcementMetadata, tabAccountSettings, timezoneOffsetAPI, timezoneOffsetAPIMetadata, timezoneOffsetUI, timezoneOffsetUIMetadata, universalSignatureOptIn, useAccountLevelEmail, useAccountLevelEmailMetadata, useConsumerDisclosure, useConsumerDisclosureMetadata, useConsumerDisclosureWithinAccount, useConsumerDisclosureWithinAccountMetadata, useDerivedKeys, useDerivedKeysMetadata, useDocuSignExpressSignerCertificate, useDocuSignExpressSignerCertificateMetadata, useEnvelopeSearchMixedMode, useEnvelopeSearchMixedModeMetadata, useMultiAppGroupsData, useMultiAppGroupsDataMetadata, useNewBlobForPdf, useNewBlobForPdfMetadata, useNewEnvelopeSearch, useNewEnvelopeSearchMetadata, useNewEnvelopeSearchOnlyWhenSearchingAfterDate, useNewEnvelopeSearchOnlyWhenSearchingAfterDateMetadata, useNewEnvelopeSearchOnlyWithSearchTerm, useNewEnvelopeSearchOnlyWithSearchTermMetadata, useSAFESignerCertificates, useSAFESignerCertificatesMetadata, usesAPI, usesAPIMetadata, useSignatureProviderPlatform, useSignatureProviderPlatformMetadata, useSmartContractsV1, validationsAllowed, validationsAllowedMetadata, validationsBrand, validationsBrandMetadata, validationsCadence, validationsCadenceMetadata, validationsEnabled, validationsEnabledMetadata, validationsReport, validationsReportMetadata, waterMarkEnabled, waterMarkEnabledMetadata, writeReminderToEnvelopeHistory, writeReminderToEnvelopeHistoryMetadata, wurflMinAllowableScreenSize, wurflMinAllowableScreenSizeMetadata);
   }
 
 
@@ -23609,6 +23702,8 @@ public class AccountSettingsInformation implements Serializable {
     sb.append("    convertPdfFieldsMetadata: ").append(toIndentedString(convertPdfFieldsMetadata)).append("\n");
     sb.append("    dataPopulationScope: ").append(toIndentedString(dataPopulationScope)).append("\n");
     sb.append("    dataPopulationScopeMetadata: ").append(toIndentedString(dataPopulationScopeMetadata)).append("\n");
+    sb.append("    defaultSigningResponsiveView: ").append(toIndentedString(defaultSigningResponsiveView)).append("\n");
+    sb.append("    defaultSigningResponsiveViewMetadata: ").append(toIndentedString(defaultSigningResponsiveViewMetadata)).append("\n");
     sb.append("    defaultToAdvancedEnvelopesFilterForm: ").append(toIndentedString(defaultToAdvancedEnvelopesFilterForm)).append("\n");
     sb.append("    defaultToAdvancedEnvelopesFilterFormMetadata: ").append(toIndentedString(defaultToAdvancedEnvelopesFilterFormMetadata)).append("\n");
     sb.append("    disableAutoTemplateMatching: ").append(toIndentedString(disableAutoTemplateMatching)).append("\n");
@@ -23647,6 +23742,7 @@ public class AccountSettingsInformation implements Serializable {
     sb.append("    draftEnvelopeRetentionMetadata: ").append(toIndentedString(draftEnvelopeRetentionMetadata)).append("\n");
     sb.append("    dssEnableProvisioningPenConfigurationRadminOption: ").append(toIndentedString(dssEnableProvisioningPenConfigurationRadminOption)).append("\n");
     sb.append("    dssEnableSignatureTypeCustomTagRadminRadminOption: ").append(toIndentedString(dssEnableSignatureTypeCustomTagRadminRadminOption)).append("\n");
+    sb.append("    dssSCOREFDN196RebrandDocuSignIsNotAVerb: ").append(toIndentedString(dssSCOREFDN196RebrandDocuSignIsNotAVerb)).append("\n");
     sb.append("    dssSIGN28411EnableLeavePagePromptRadminOption: ").append(toIndentedString(dssSIGN28411EnableLeavePagePromptRadminOption)).append("\n");
     sb.append("    dssSIGN29182SlideUpBarRadminOption: ").append(toIndentedString(dssSIGN29182SlideUpBarRadminOption)).append("\n");
     sb.append("    emailTemplateVersion: ").append(toIndentedString(emailTemplateVersion)).append("\n");
@@ -23655,6 +23751,8 @@ public class AccountSettingsInformation implements Serializable {
     sb.append("    enableAccessCodeGeneratorMetadata: ").append(toIndentedString(enableAccessCodeGeneratorMetadata)).append("\n");
     sb.append("    enableAccountWideSearch: ").append(toIndentedString(enableAccountWideSearch)).append("\n");
     sb.append("    enableAccountWideSearchMetadata: ").append(toIndentedString(enableAccountWideSearchMetadata)).append("\n");
+    sb.append("    enableAdditionalAdvancedWebFormsFeatures: ").append(toIndentedString(enableAdditionalAdvancedWebFormsFeatures)).append("\n");
+    sb.append("    enableAdditionalAdvancedWebFormsFeaturesMetadata: ").append(toIndentedString(enableAdditionalAdvancedWebFormsFeaturesMetadata)).append("\n");
     sb.append("    enableAdmHealthcare: ").append(toIndentedString(enableAdmHealthcare)).append("\n");
     sb.append("    enableAdmHealthcareMetadata: ").append(toIndentedString(enableAdmHealthcareMetadata)).append("\n");
     sb.append("    enableAdvancedEnvelopesSearch: ").append(toIndentedString(enableAdvancedEnvelopesSearch)).append("\n");
@@ -23766,8 +23864,6 @@ public class AccountSettingsInformation implements Serializable {
     sb.append("    enableReservedDomainMetadata: ").append(toIndentedString(enableReservedDomainMetadata)).append("\n");
     sb.append("    enableResponsiveSigning: ").append(toIndentedString(enableResponsiveSigning)).append("\n");
     sb.append("    enableResponsiveSigningMetadata: ").append(toIndentedString(enableResponsiveSigningMetadata)).append("\n");
-    sb.append("    enableSaveAsEnvelopeCustomFieldInWebForms: ").append(toIndentedString(enableSaveAsEnvelopeCustomFieldInWebForms)).append("\n");
-    sb.append("    enableSaveAsEnvelopeCustomFieldInWebFormsMetadata: ").append(toIndentedString(enableSaveAsEnvelopeCustomFieldInWebFormsMetadata)).append("\n");
     sb.append("    enableScheduledRelease: ").append(toIndentedString(enableScheduledRelease)).append("\n");
     sb.append("    enableScheduledReleaseMetadata: ").append(toIndentedString(enableScheduledReleaseMetadata)).append("\n");
     sb.append("    enableSearchServiceAzureUri: ").append(toIndentedString(enableSearchServiceAzureUri)).append("\n");
