@@ -57,7 +57,7 @@ This client SDK is provided as open source, which enables you to customize its f
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>6.0.0-RC1</version>
+      <version>6.0.0-RC2</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
@@ -71,7 +71,6 @@ This client has the following external dependencies:
 *   org.glassfish.jersey.media:jersey-media-json-jackson:3.1.6
 *   org.glassfish.jersey.inject:jersey-hk2:3.1.6
 *   com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.14.2
-*   org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2
 *   com.auth0:java-jwt:3.4.1
 *   org.bouncycastle:bcprov-jdk18on:1.78.1
 *   com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.14.2

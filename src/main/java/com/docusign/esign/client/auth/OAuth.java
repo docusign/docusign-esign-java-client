@@ -1,26 +1,23 @@
 package com.docusign.esign.client.auth;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.text.DateFormat;
+import java.util.*;
 
-import jakarta.ws.rs.client.ClientBuilder;
+import com.docusign.esign.client.RFC3339DateFormat;
+
+import jakarta.ws.rs.client.*;
+import jakarta.ws.rs.core.Form;
+import jakarta.ws.rs.core.GenericType;
+import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import com.docusign.esign.client.ApiException;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.apache.oltu.oauth2.client.OAuthClient;
-import org.apache.oltu.oauth2.client.URLConnectionClient;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
-import org.apache.oltu.oauth2.client.response.OAuthJSONAccessTokenResponse;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
-import org.apache.oltu.oauth2.common.message.types.GrantType;
-import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
 
 import com.docusign.esign.client.Pair;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.ws.rs.client.Client;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -57,32 +54,38 @@ public class OAuth implements Authentication {
 	/** JWT grant type. */
 	public final static String GRANT_TYPE_JWT = "urn:ietf:params:oauth:grant-type:jwt-bearer";
 
+    // Client ID and secret for oauth
+    private String clientId = null;
+    private String clientSecret = null;
+
+    // auth, token and redirect urls
+    private String authorizationUrl = null;
+    private String tokenUrl = null;
+    private String redirectURI = null;
+
+    // scopes and grant type
+    private String scope = null;
+    private OAuthFlow grantType = null;
+
     private volatile String accessToken;
+    private volatile String refreshToken;
+    private volatile String authCode;
+    private volatile String jwtAssertion;
+
     private Long expirationTimeMillis;
-    private OAuthClient oauthClient;
-    private TokenRequestBuilder tokenRequestBuilder;
-    private AuthenticationRequestBuilder authenticationRequestBuilder;
     private AccessTokenListener accessTokenListener;
 
-   /**
+    private Client httpClient;
+
+
+    /**
     * OAuth constructor.
     *
     */
-    public OAuth() {
-        this(null, null, null);
-    }
+    public OAuth() { }
 
-   /**
-    * OAuth constructor.
-    * 
-    * @param client The client to use
-    * @param tokenRequestBuilder The request builder
-    * @param authenticationRequestBuilder The auth request builder
-    */
-    public OAuth(Client client, TokenRequestBuilder tokenRequestBuilder, AuthenticationRequestBuilder authenticationRequestBuilder) {
-        this.oauthClient = new OAuthClient(new URLConnectionClient());
-        this.tokenRequestBuilder = tokenRequestBuilder;
-        this.authenticationRequestBuilder = authenticationRequestBuilder;
+    public OAuth(Client httpClient) {
+        this.httpClient = httpClient;
     }
 
    /**
@@ -95,26 +98,11 @@ public class OAuth implements Authentication {
     * @param scopes The scopes to use
     */
     public OAuth(Client client, OAuthFlow flow, String authorizationUrl, String tokenUrl, String scopes) {
-        this(client, OAuthClientRequest.tokenLocation(tokenUrl).setScope(scopes), OAuthClientRequest.authorizationLocation(authorizationUrl).setScope(scopes));
-
-        switch (flow) {
-        case accessCode:
-            tokenRequestBuilder.setGrantType(GrantType.AUTHORIZATION_CODE);
-            authenticationRequestBuilder.setResponseType(OAuth.CODE);
-            break;
-        case implicit:
-            tokenRequestBuilder.setGrantType(GrantType.IMPLICIT);
-            authenticationRequestBuilder.setResponseType(OAuth.TOKEN);
-            break;
-        case password:
-            tokenRequestBuilder.setGrantType(GrantType.PASSWORD);
-            break;
-        case application:
-            tokenRequestBuilder.setGrantType(GrantType.CLIENT_CREDENTIALS);
-            break;
-        default:
-            break;
-        }
+        this.httpClient = client;
+        setScope(scopes);
+        setGrantType(flow);
+        setAuthorizationUrl(authorizationUrl);
+        setTokenUrl(tokenUrl);
     }
 
    /**
@@ -155,34 +143,161 @@ public class OAuth implements Authentication {
     *
     */
     public synchronized void updateAccessToken() throws ApiException {
-        OAuthJSONAccessTokenResponse accessTokenResponse;
+        OAuthToken oauthToken = null;
         try {
-            accessTokenResponse = oauthClient.accessToken(tokenRequestBuilder.buildBodyMessage());
+            switch (getGrantType()) {
+                case accessCode: // Authorization Grant
+                    oauthToken = generateAccessToken();
+                    break;
+                case jwt: // JWT Grant
+                    oauthToken = requestJWTUserToken();
+                    break;
+                default: // Implicit Grant - token will already be set by consuming app using setAccessToken()
+                    break;
+            }
         } catch (Exception e) {
             throw new ApiException(e.getMessage());
         }
-        if (accessTokenResponse != null)
+        if (oauthToken != null)
         {
-            // FIXME: This does not work in case of non HTTP 200 :-( oauthClient needs to return the plain HTTP resonse
-            if (accessTokenResponse.getResponseCode() != Response.Status.OK.getStatusCode())
-            {
-                throw new ApiException("Error while requesting an access token, received HTTP code: " + accessTokenResponse.getResponseCode());
-            }
-
-            if (accessTokenResponse.getAccessToken() == null) {
+            if (oauthToken.getAccessToken() == null) {
                 throw new ApiException("Error while requesting an access token. No 'access_token' found.");
             }
-            if (accessTokenResponse.getExpiresIn() == null) {
+            if (oauthToken.getExpiresIn() == null) {
                 throw new ApiException("Error while requesting an access token. No 'expires_in' found.");
             }
 
-            setAccessToken(accessTokenResponse.getAccessToken(), accessTokenResponse.getExpiresIn());
+            setAccessToken(oauthToken.getAccessToken(), Long.valueOf(oauthToken.getExpiresIn()));
             if (this.accessTokenListener != null) {
-                this.accessTokenListener.notify((BasicOAuthToken)accessTokenResponse.getOAuthToken());
+                this.accessTokenListener.notify(oauthToken);
             }
         } else {
             // in case of HTTP error codes accessTokenResponse is null, thus no check of accessTokenResponse.getResponseCode() possible :-(
             throw new ApiException("Error while requesting an access token. No accessTokenResponse object recieved, maybe a non HTTP 200 received?");
+        }
+    }
+
+
+    /**
+     * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
+     * @return OAuth.OAuthToken object.
+     * @throws IllegalArgumentException if one of the arguments is invalid
+     * @throws ApiException if there is an error while exchanging the JWT with an access token
+     * @throws IOException if there is an issue with either the public or private file
+     */
+    public OAuth.OAuthToken requestJWTUserToken() throws IllegalArgumentException, ApiException, IOException {
+        java.util.Map<String, Object> form = new java.util.HashMap<>();
+        form.put("assertion", getJwtAssertion());
+        form.put("grant_type", OAuth.GRANT_TYPE_JWT);
+
+        WebTarget target = httpClient.target(getTokenUrl());
+        Invocation.Builder invocationBuilder = target.request();
+        invocationBuilder = invocationBuilder
+                .header("Cache-Control", "no-store")
+                .header("Pragma", "no-cache");
+
+        Entity<?> entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
+
+        Response response = null;
+
+        try {
+            response = invocationBuilder.post(entity);
+
+            if (response.getStatusInfo().getFamily() != Response.Status.Family.SUCCESSFUL) {
+                String message = "error";
+                String respBody = null;
+                if (response.hasEntity()) {
+                    try {
+                        respBody = String.valueOf(response.readEntity(String.class));
+                        message = "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'";
+                    } catch (RuntimeException e) {
+                        // e.printStackTrace();
+                    }
+                }
+                throw new ApiException(
+                        response.getStatusInfo().getStatusCode(),
+                        message,
+                        buildResponseHeaders(response),
+                        respBody);
+            }
+
+            GenericType<OAuthToken> returnType = new GenericType<OAuth.OAuthToken>() {};
+            OAuth.OAuthToken oAuthToken =  deserialize(response, returnType);
+            if (oAuthToken.getAccessToken() == null || "".equals(oAuthToken.getAccessToken()) || oAuthToken.getExpiresIn() <= 0) {
+                throw new ApiException("Error while requesting an access token: " + response.toString());
+            }
+            return oAuthToken;
+        } finally {
+            try {
+                if (response != null) {
+                    response.close();
+                }
+            } catch (Exception e) {
+                // it's not critical, since the response object is local in method invokeAPI; that's fine, just continue
+            }
+        }
+    }
+
+    /**
+     * Helper method to configure the OAuth accessCode/implicit flow parameters.
+     *
+     * @return OAuth.OAuthToken object.
+     * @throws ApiException if the HTTP call status is different than 2xx.
+     * @throws IOException  if there is a problem while parsing the reponse object.
+     * @see OAuth.OAuthToken
+     */
+    public OAuth.OAuthToken generateAccessToken() throws ApiException, IOException {
+        String clientId = getClientId();
+        String clientSecret = getClientSecret();
+        String code = getAuthCode();
+        String clientStr = (clientId == null ? "" : clientId) + ":" + (clientSecret == null ? "" : clientSecret);
+        java.util.Map<String, Object> form = new java.util.HashMap<>();
+        form.put("code", code);
+        form.put("grant_type", "authorization_code");
+
+        WebTarget target = httpClient.target(getTokenUrl());
+
+        Invocation.Builder invocationBuilder = target.request();
+        invocationBuilder = invocationBuilder
+                .header("Authorization", "Basic " + Base64.getEncoder().encodeToString(clientStr.getBytes(StandardCharsets.UTF_8)))
+                .header("Cache-Control", "no-store")
+                .header("Pragma", "no-cache");
+
+        Entity<?> entity = serialize(null, form, MediaType.APPLICATION_FORM_URLENCODED);
+
+        Response response = null;
+
+        try {
+            response = invocationBuilder.post(entity);
+
+            if (response.getStatusInfo().getFamily() != Response.Status.Family.SUCCESSFUL) {
+                String message = "error";
+                String respBody = null;
+                if (response.hasEntity()) {
+                    try {
+                        respBody = String.valueOf(response.readEntity(String.class));
+                        message = "Error while requesting server, received a non successful HTTP code " + response.getStatusInfo().getStatusCode() + " with response Body: '" + respBody + "'";
+                    } catch (RuntimeException e) {
+                        // e.printStackTrace();
+                    }
+                }
+                throw new ApiException(
+                        response.getStatusInfo().getStatusCode(),
+                        message,
+                        buildResponseHeaders(response),
+                        respBody);
+            }
+
+            GenericType<OAuth.OAuthToken> returnType = new GenericType<OAuth.OAuthToken>() {};
+            return deserialize(response, returnType);
+        } finally {
+            try {
+                if (response != null) {
+                    response.close();
+                }
+            } catch (Exception e) {
+                // it's not critical, since the response object is local in method invokeAPI; that's fine, just continue
+            }
         }
     }
 
@@ -204,37 +319,175 @@ public class OAuth implements Authentication {
         return accessToken;
     }
 
+    public Long getExpirationTimeMillis() {
+        return expirationTimeMillis;
+    }
+
+    public void setExpirationTimeMillis(Long expirationTimeMillis) {
+        this.expirationTimeMillis = expirationTimeMillis;
+    }
+
     public synchronized void setAccessToken(String accessToken, Long expiresIn) {
         this.accessToken = accessToken;
         this.expirationTimeMillis = System.currentTimeMillis() + expiresIn * MILLIS_PER_SECOND;
     }
 
-    public TokenRequestBuilder getTokenRequestBuilder() {
-        return tokenRequestBuilder;
+    public String getClientId() {
+        return clientId;
     }
 
-    public void setTokenRequestBuilder(TokenRequestBuilder tokenRequestBuilder) {
-        this.tokenRequestBuilder = tokenRequestBuilder;
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
-    public AuthenticationRequestBuilder getAuthenticationRequestBuilder() {
-        return authenticationRequestBuilder;
+    public String getClientSecret() {
+        return clientSecret;
     }
 
-    public void setAuthenticationRequestBuilder(AuthenticationRequestBuilder authenticationRequestBuilder) {
-        this.authenticationRequestBuilder = authenticationRequestBuilder;
+    public void setClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
     }
 
-    public OAuthClient getOauthClient() {
-        return oauthClient;
+    public String getAuthorizationUrl() {
+        return authorizationUrl;
     }
 
-    public void setOauthClient(OAuthClient oauthClient) {
-        this.oauthClient = oauthClient;
+    public void setAuthorizationUrl(String authorizationUrl) {
+        this.authorizationUrl = authorizationUrl;
     }
 
-    public void setOauthClient(Client client) {
-        this.oauthClient = new OAuthClient(new URLConnectionClient());
+    public String getTokenUrl() {
+        return tokenUrl;
+    }
+
+    public void setTokenUrl(String tokenUrl) {
+        this.tokenUrl = tokenUrl;
+    }
+
+    public String getRedirectURI() {
+        return redirectURI;
+    }
+
+    public void setRedirectURI(String redirectURI) {
+        this.redirectURI = redirectURI;
+    }
+
+    public String getScope() {
+        return scope;
+    }
+
+    public void setScope(String scope) {
+        this.scope = scope;
+    }
+
+    public OAuthFlow getGrantType() {
+        return grantType;
+    }
+
+    public void setGrantType(OAuthFlow grantType) {
+        this.grantType = grantType;
+    }
+
+    public String getJwtAssertion() {
+        return jwtAssertion;
+    }
+
+    public void setJwtAssertion(String jwtAssertion) {
+        this.jwtAssertion = jwtAssertion;
+    }
+
+    public String getAuthCode() {
+        return authCode;
+    }
+
+    public void setAuthCode(String authCode) {
+        this.authCode = authCode;
+    }
+
+
+    protected Map<String, List<String>> buildResponseHeaders(Response response) {
+        Map<String, List<String>> responseHeaders = new HashMap<String, List<String>>();
+        for (Map.Entry<String, List<Object>> entry: response.getHeaders().entrySet()) {
+            List<Object> values = entry.getValue();
+            List<String> headers = new ArrayList<String>();
+            for (Object o : values) {
+                headers.add(String.valueOf(o));
+            }
+            responseHeaders.put(entry.getKey(), headers);
+        }
+        return responseHeaders;
+    }
+
+    /**
+     * Serialize the given Java object into string entity according the given
+     * Content-Type (only JSON is supported for now).
+     * @param obj Object
+     * @param formParams Form parameters
+     * @param contentType Context type
+     * @return Entity
+     * @throws ApiException API exception
+     */
+    public Entity<?> serialize(Object obj, Map<String, Object> formParams, String contentType) throws ApiException {
+        Entity<?> entity;
+        if (contentType.startsWith("application/x-www-form-urlencoded")) {
+            Form form = new Form();
+            for (Map.Entry<String, Object> param: formParams.entrySet()) {
+                form.param(param.getKey(), parameterToString(param.getValue()));
+            }
+            entity = Entity.entity(form, MediaType.APPLICATION_FORM_URLENCODED_TYPE);
+        } else {
+            // We let jersey handle the serialization
+            entity = Entity.entity(obj, contentType);
+        }
+        return entity;
+    }
+
+    /**
+     * Format the given parameter object into string.
+     * @param param Object
+     * @return Object in string format
+     */
+    public String parameterToString(Object param) {
+        if (param == null) {
+            return "";
+        } else if (param instanceof Date) {
+            DateFormat dateFormat = new RFC3339DateFormat();
+            return dateFormat.format((Date) param);
+        } else if (param instanceof Collection) {
+            StringBuilder b = new StringBuilder();
+            for(Object o : (Collection)param) {
+                if(b.length() > 0) {
+                    b.append(',');
+                }
+                b.append(String.valueOf(o));
+            }
+            return b.toString();
+        } else {
+            return String.valueOf(param);
+        }
+    }
+
+    /**
+     * Deserialize response body to Java object according to the Content-Type.
+     * @param <T> Type
+     * @param response Response
+     * @param returnType Return type
+     * @return Deserialize object
+     * @throws ApiException API exception
+     */
+    @SuppressWarnings("unchecked")
+    public <T> T deserialize(Response response, GenericType<T> returnType) throws ApiException {
+        if (response == null || returnType == null) {
+            return null;
+        }
+
+        String contentType = null;
+        List<Object> contentTypes = response.getHeaders().get("Content-Type");
+        if (contentTypes != null && !contentTypes.isEmpty()) {
+            contentType = String.valueOf(contentTypes.get(0));
+        }
+
+        return response.readEntity(returnType);
     }
 
     /**
@@ -259,6 +512,9 @@ public class OAuth implements Authentication {
 
         @JsonProperty("expires_in")
         private Long expiresIn = 0L;
+
+        @JsonProperty("scope")
+        private String scope = null;
 
         public OAuthToken accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -334,6 +590,20 @@ public class OAuth implements Authentication {
 
         public void setExpiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
+        }
+
+        /**
+         * Get scope.
+         *
+         * @return scope
+         **/
+        @Schema(example = "null", description = "")
+        public String getScope() {
+            return scope;
+        }
+
+        public void setScope(String scope) {
+            this.scope = scope;
         }
 
         @Override
