@@ -1,7 +1,7 @@
 package com.docusign.esign.client.auth;
 
-import org.apache.oltu.oauth2.common.token.BasicOAuthToken;
+import com.docusign.esign.client.auth.OAuth.OAuthToken;
 
 public interface AccessTokenListener {
-  void notify(BasicOAuthToken token);
+  void notify(OAuthToken token);
 }

@@ -5,7 +5,7 @@
     <artifactId>docusign-esign-java</artifactId>
     <packaging>jar</packaging>
     <name>docusign-esign-java</name>
-    <version>6.0.0-RC1</version>
+    <version>6.0.0-RC2</version>
     <url>https://developers.docusign.com</url>
     <description>The official DocuSign eSignature JAVA client is based on version 2.1 of the DocuSign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
 
@@ -230,7 +230,7 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>9.2.0</version>
+                <version>10.0.2</version>
                 <configuration>
                     <failBuildOnCVSS>8</failBuildOnCVSS>
                 </configuration>
@@ -356,11 +356,6 @@
             <artifactId>jackson-jakarta-rs-base</artifactId>
             <version>${jackson-version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.oltu.oauth2</groupId>
-            <artifactId>org.apache.oltu.oauth2.client</artifactId>
-            <version>${oltu-version}</version>
-        </dependency>
         <!-- JWT signing and verifying -->
         <dependency>
             <groupId>com.auth0</groupId>
@@ -429,6 +424,5 @@
             <jersey-version>3.1.6</jersey-version>
         <jackson-version>2.14.2</jackson-version>
         <junit-version>4.13.1</junit-version>
-        <oltu-version>1.0.2</oltu-version>
     </properties>
 </project>

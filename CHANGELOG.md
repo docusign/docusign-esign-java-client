@@ -1,6 +1,11 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.0.0-RC2] - eSignature API v2.1-24.2.00.00 - 2024-07-12
+### Changed
+- Deprecation of OLTU library: The OLTU library for handling OAuth is no longer used.
+- Upgradation of OWASP for vulnerability check of dependencies.
+- Updated the SDK release version.
 ## [v6.0.0-RC1] - eSignature API v2.1-24.2.00.00 - 2024-06-28
 ### Changed
 - Added support for version v2.1-24.2.00.00 of the DocuSign ESignature API.

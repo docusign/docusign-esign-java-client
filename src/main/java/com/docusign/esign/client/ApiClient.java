@@ -9,10 +9,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
-import com.migcomponents.migbase64.Base64;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.AuthenticationRequestBuilder;
-import org.apache.oltu.oauth2.client.request.OAuthClientRequest.TokenRequestBuilder;
-import org.apache.oltu.oauth2.common.exception.OAuthSystemException;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
 import org.glassfish.jersey.client.HttpUrlConnectorProvider;
@@ -34,6 +30,7 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -84,6 +81,8 @@ public class ApiClient {
   protected DateFormat dateFormat;
   private SSLContext sslContext = null;
 
+  private final String HTTPS = "https://";
+
  /**
   * ApiClient constructor.
   *
@@ -96,11 +95,11 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/v2.1/6.0.0-RC1/Java/" + javaVersion);
+    setUserAgent("Swagger-Codegen/v2.1/6.0.0-RC2/Java/" + javaVersion);
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
-    authentications.put("docusignAccessCode", new OAuth());
+    authentications.put("docusignAccessCode", new OAuth(httpClient));
 
     // Derive the OAuth base path from the Rest API base url
     this.deriveOAuthBasePathFromRestBasePath();
@@ -138,7 +137,7 @@ public class ApiClient {
     for(String authName : authNames) {
       Authentication auth;
       if ("docusignAccessCode".equals(authName)) {
-        auth = new OAuth(httpClient, OAuthFlow.accessCode, oAuthBasePath + "/oauth/auth", oAuthBasePath + "/oauth/token", "all");
+        auth = new OAuth(httpClient, OAuthFlow.accessCode, HTTPS + oAuthBasePath + "/oauth/auth", HTTPS + oAuthBasePath + "/oauth/token", "all");
       } else if ("docusignApiKey".equals(authName)) {
         auth = new ApiKeyAuth("header", "docusignApiKey");
       } else {
@@ -166,9 +165,11 @@ public class ApiClient {
    */
   public ApiClient(String oAuthBasePath, String authName, String clientId, String secret) {
      this(oAuthBasePath, authName);
-     this.getTokenEndPoint()
-            .setClientId(clientId)
-            .setClientSecret(secret);
+      Authentication auth = authentications.get(authName);
+      if (auth instanceof OAuth) {
+          ((OAuth) auth).setClientId(clientId);
+          ((OAuth) auth).setClientSecret(secret);
+      }
   }
 
   /**
@@ -378,7 +379,7 @@ public class ApiClient {
         return;
       }
     }
-    OAuth oAuth = new OAuth(null, null, null);
+    OAuth oAuth = new OAuth();
     oAuth.setAccessToken(accessToken, expiresIn);
     addAuthorization("docusignAccessCode", oAuth);
   }
@@ -524,35 +525,6 @@ public class ApiClient {
   }
 
   /**
-   * Helper method to configure the token endpoint of the first oauth found in the authentications (there should be only one).
-   * @return
-   */
-  public TokenRequestBuilder getTokenEndPoint() {
-    for(Authentication auth : getAuthentications().values()) {
-      if (auth instanceof OAuth) {
-        OAuth oauth = (OAuth) auth;
-        return oauth.getTokenRequestBuilder();
-      }
-    }
-    return null;
-  }
-
-
-  /**
-    * Helper method to configure authorization endpoint of the first oauth found in the authentications (there should be only one).
-    * @return
-    */
-  public AuthenticationRequestBuilder getAuthorizationEndPoint() {
-    for(Authentication auth : authentications.values()) {
-     if (auth instanceof OAuth) {
-        OAuth oauth = (OAuth) auth;
-        return oauth.getAuthenticationRequestBuilder();
-      }
-    }
-    return null;
-  }
-
-  /**
    * Helper method to configure the OAuth accessCode/implicit flow parameters.
    * @param clientId OAuth2 client ID
    * @param clientSecret OAuth2 client secret
@@ -562,20 +534,22 @@ public class ApiClient {
     for(Authentication auth : authentications.values()) {
       if (auth instanceof OAuth) {
         OAuth oauth = (OAuth) auth;
-        oauth.getTokenRequestBuilder()
-              .setClientId(clientId)
-              .setClientSecret(clientSecret)
-              .setRedirectURI(redirectURI);
-        oauth.getAuthenticationRequestBuilder()
-              .setClientId(clientId)
-              .setRedirectURI(redirectURI);
+        ((OAuth) auth).setClientId(clientId);
+        ((OAuth) auth).setClientSecret(clientSecret);
+        ((OAuth) auth).setRedirectURI(redirectURI);
         return;
       }
     }
   }
 
-  public String getAuthorizationUri() throws OAuthSystemException {
-  	return getAuthorizationEndPoint().buildQueryMessage().getLocationUri();
+  public String getAuthorizationUri() {
+    for(Authentication auth : authentications.values()) {
+        if (auth instanceof OAuth) {
+            OAuth oauth = (OAuth) auth;
+            return oauth.getAuthorizationUrl();
+        }
+    }
+    return null;
   }
 
   /**
@@ -677,7 +651,7 @@ public class ApiClient {
       
       Invocation.Builder invocationBuilder = target.request();
       invocationBuilder = invocationBuilder
-              .header("Authorization", "Basic " + Base64.encodeToString(clientStr.getBytes("UTF-8"), false))
+              .header("Authorization", "Basic " + Base64.getEncoder().encodeToString(clientStr.getBytes(StandardCharsets.UTF_8)))
               .header("Cache-Control", "no-store")
               .header("Pragma", "no-cache");
 
