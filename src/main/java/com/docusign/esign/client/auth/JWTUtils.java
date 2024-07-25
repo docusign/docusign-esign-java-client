@@ -34,10 +34,10 @@ public class JWTUtils {
    * Helper method to create a JWT token for the JWT flow.
    *
    * @param rsaPrivateKey the byte contents of the RSA private key
-   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   * @param oAuthBasePath Docusign OAuth base path (account-d.docusign.com for the developer sandbox
    *     and account.docusign.com for the production platform)
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
+   * @param userId Docusign user Id to be impersonated (This is a UUID)
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
    * @param scopes space-separated string that represents the list of scopes to grant to the OAuth
    *     token.
@@ -88,10 +88,10 @@ public class JWTUtils {
    *
    * @param publicKeyFilename the filename of the RSA public key
    * @param privateKeyFilename the filename of the RSA private key
-   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   * @param oAuthBasePath Docusign OAuth base path (account-d.docusign.com for the developer sandbox
    *     and account.docusign.com for the production platform)
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
+   * @param userId Docusign user Id to be impersonated (This is a UUID)
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
    * @return a fresh JWT token
    * @throws JWTCreationException if not able to create a JWT token from the input parameters
@@ -113,10 +113,10 @@ public class JWTUtils {
    *
    * @param publicKeyFilename the filename of the RSA public key
    * @param privateKeyFilename the filename of the RSA private key
-   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   * @param oAuthBasePath Docusign OAuth base path (account-d.docusign.com for the developer sandbox
    *     and account.docusign.com for the production platform)
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
+   * @param userId Docusign user Id to be impersonated (This is a UUID)
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
    * @param scopes space-separated string that represents the list of scopes to grant to the OAuth
    *    token.

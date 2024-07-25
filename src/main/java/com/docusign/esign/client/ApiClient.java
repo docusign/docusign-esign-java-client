@@ -95,7 +95,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/v2.1/6.0.0-RC2/Java/" + javaVersion);
+    setUserAgent("Swagger-Codegen/v2.1/6.0.0/Java/" + javaVersion);
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -633,7 +633,7 @@ public class ApiClient {
    *
    * @param clientId OAuth2 client ID: Identifies the client making the request.
    * Client applications may be scoped to a limited set of system access.
-   * @param clientSecret the secret key you generated when you set up the integration in DocuSign Admin console.
+   * @param clientSecret the secret key you generated when you set up the integration in Docusign Admin console.
    * @param code The authorization code that you received from the <i>getAuthorizationUri</i> callback.
    * @return OAuth.OAuthToken object.
    * @throws ApiException if the HTTP call status is different than 2xx.
@@ -782,13 +782,13 @@ public class ApiClient {
   }
 
   /**
-   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from Docusign.
    * @param publicKeyFilename the filename of the RSA public key
    * @param privateKeyFilename the filename of the RSA private key
-   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   * @param oAuthBasePath Docusign OAuth base path (account-d.docusign.com for the developer sandbox
  			and account.docusign.com for the production platform)
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
+   * @param userId Docusign user Id to be impersonated (This is a UUID)
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
    * @throws ApiException if there is an error while exchanging the JWT with an access token
    * @throws IOException if there is an issue with either the public or private file
@@ -852,9 +852,9 @@ public class ApiClient {
   }
 
   /**
-   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign.
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
-   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from Docusign.
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
+   * @param userId Docusign user Id to be impersonated (This is a UUID)
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
    * @param rsaPrivateKey the byte contents of the RSA private key
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
@@ -926,8 +926,8 @@ public class ApiClient {
 
   /**
    * <b>RESERVED FOR PARTNERS</b> Request JWT Application Token.
-   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
-   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from Docusign
+   * @param clientId Docusign OAuth Client Id (AKA Integrator Key)
    * @param scopes the list of requested scopes. Values include {@link OAuth#Scope_SIGNATURE}, {@link OAuth#Scope_EXTENDED}, {@link OAuth#Scope_IMPERSONATION}. You can also pass any advanced scope.
    * @param rsaPrivateKey the byte contents of the RSA private key
    * @param expiresIn number of seconds remaining before the JWT assertion is considered as invalid
@@ -1423,7 +1423,7 @@ public class ApiClient {
       }	
     }
 
-    // Add DocuSign Tracking Header
+    // Add Docusign Tracking Header
     invocationBuilder = invocationBuilder.header("X-DocuSign-SDK", "Java");
 
     if (body == null && formParams.isEmpty()) {
