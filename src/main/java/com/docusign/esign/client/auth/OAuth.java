@@ -493,7 +493,7 @@ public class OAuth implements Authentication {
     /**
      *
      * OAuthToken model with the following properties.
-     * <br><b>accessToken</b>: the token you will use in the Authorization header of calls to the DocuSign API.
+     * <br><b>accessToken</b>: the token you will use in the Authorization header of calls to the Docusign API.
      * <br><b>tokenType</b>: this is the type of the accessToken. It is usually "Bearer".
      * <br><b>refreshToken</b>: a token you can use to get a new accessToken without requiring user interaction.
      * <br><b>expiresIn</b>: the number of seconds before the accessToken expires.
@@ -746,8 +746,8 @@ public class OAuth implements Authentication {
     /**
      *
      * Organization model with the below properties.
-     * <br><b>organizationId</b>: the organization ID GUID if DocuSign Org Admin is enabled.
-     * <br><b>links</b>: this is list of organization direct links associated with the DocuSign account.
+     * <br><b>organizationId</b>: the organization ID GUID if Docusign Org Admin is enabled.
+     * <br><b>links</b>: this is list of organization direct links associated with the Docusign account.
      *
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
@@ -848,8 +848,8 @@ public class OAuth implements Authentication {
      * <br><b>isDefault</b>: whether this is the default account, when the user has access to multiple accounts.
      * <br><b>accountName</b>: the human-readable name of the account.
      * <br><b>baseUri</b>: the base URI associated with this account.
-     * It also tells which DocuSign data center the account is hosted on.
-     * <br><b>organization</b>: If DocuSign Org Admin is enabled on this account,
+     * It also tells which Docusign data center the account is hosted on.
+     * <br><b>organization</b>: If Docusign Org Admin is enabled on this account,
      * this property contains the organization information.
      *
      */
@@ -1015,7 +1015,7 @@ public class OAuth implements Authentication {
      *
      * UserInfo model with the below properties.
      * <br><b>sub</b>: the user ID GUID.
-     * <br><b>accounts</b>: this is list of DocuSign accounts associated with the current user.
+     * <br><b>accounts</b>: this is list of Docusign accounts associated with the current user.
      * <br><b>name</b>: the user's full name.
      * <br><b>givenName</b>: the user's given name.
      * <br><b>familyName</b>: the user's family name.
