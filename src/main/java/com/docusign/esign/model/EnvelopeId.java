@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
@@ -106,6 +108,9 @@ public class EnvelopeId implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -120,6 +125,9 @@ public class EnvelopeId implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -214,6 +222,9 @@ public class EnvelopeId implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -267,6 +278,9 @@ public class EnvelopeId implements Serializable {
 
   @JsonProperty("underlineMetadata")
   private PropertyMetadata underlineMetadata = null;
+
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
 
   @JsonProperty("width")
   private String width = null;
@@ -1044,6 +1058,33 @@ public class EnvelopeId implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return EnvelopeId
+   **/
+  public EnvelopeId connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return EnvelopeId
@@ -1175,6 +1216,33 @@ public class EnvelopeId implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return EnvelopeId
+   **/
+  public EnvelopeId extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2016,6 +2084,33 @@ public class EnvelopeId implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return EnvelopeId
+   **/
+  public EnvelopeId tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return EnvelopeId
@@ -2515,6 +2610,33 @@ public class EnvelopeId implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return EnvelopeId
+   **/
+  public EnvelopeId warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return EnvelopeId
@@ -2718,11 +2840,13 @@ public class EnvelopeId implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, envelopeId.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, envelopeId.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, envelopeId.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, envelopeId.connectedObjectDetails) &&
         Objects.equals(this.customTabId, envelopeId.customTabId) &&
         Objects.equals(this.customTabIdMetadata, envelopeId.customTabIdMetadata) &&
         Objects.equals(this.documentId, envelopeId.documentId) &&
         Objects.equals(this.documentIdMetadata, envelopeId.documentIdMetadata) &&
         Objects.equals(this.errorDetails, envelopeId.errorDetails) &&
+        Objects.equals(this.extensionData, envelopeId.extensionData) &&
         Objects.equals(this.font, envelopeId.font) &&
         Objects.equals(this.fontColor, envelopeId.fontColor) &&
         Objects.equals(this.fontColorMetadata, envelopeId.fontColorMetadata) &&
@@ -2754,6 +2878,7 @@ public class EnvelopeId implements Serializable {
         Objects.equals(this.source, envelopeId.source) &&
         Objects.equals(this.status, envelopeId.status) &&
         Objects.equals(this.statusMetadata, envelopeId.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, envelopeId.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, envelopeId.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, envelopeId.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, envelopeId.tabId) &&
@@ -2772,6 +2897,7 @@ public class EnvelopeId implements Serializable {
         Objects.equals(this.toolTipMetadata, envelopeId.toolTipMetadata) &&
         Objects.equals(this.underline, envelopeId.underline) &&
         Objects.equals(this.underlineMetadata, envelopeId.underlineMetadata) &&
+        Objects.equals(this.warningDetails, envelopeId.warningDetails) &&
         Objects.equals(this.width, envelopeId.width) &&
         Objects.equals(this.widthMetadata, envelopeId.widthMetadata) &&
         Objects.equals(this.xPosition, envelopeId.xPosition) &&
@@ -2785,7 +2911,7 @@ public class EnvelopeId implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2825,11 +2951,13 @@ public class EnvelopeId implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -2861,6 +2989,7 @@ public class EnvelopeId implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2879,6 +3008,7 @@ public class EnvelopeId implements Serializable {
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

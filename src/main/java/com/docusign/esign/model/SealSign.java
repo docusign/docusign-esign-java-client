@@ -79,6 +79,9 @@ public class SealSign implements Serializable {
   @JsonProperty("designatorIdGuid")
   private String designatorIdGuid = null;
 
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = null;
 
@@ -204,6 +207,9 @@ public class SealSign implements Serializable {
 
   @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("webFormRecipientViewId")
+  private String webFormRecipientViewId = null;
 
 
   /**
@@ -648,6 +654,33 @@ public class SealSign implements Serializable {
    **/
   public void setDesignatorIdGuid(String designatorIdGuid) {
     this.designatorIdGuid = designatorIdGuid;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return SealSign
+   **/
+  public SealSign documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
   }
 
 
@@ -1851,6 +1884,33 @@ public class SealSign implements Serializable {
 
 
   /**
+   * webFormRecipientViewId.
+   *
+   * @return SealSign
+   **/
+  public SealSign webFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webFormRecipientViewId
+   **/
+  @Schema(description = "")
+  public String getWebFormRecipientViewId() {
+    return webFormRecipientViewId;
+  }
+
+  /**
+   * setWebFormRecipientViewId.
+   **/
+  public void setWebFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -1880,6 +1940,7 @@ public class SealSign implements Serializable {
         Objects.equals(this.deliveryMethodMetadata, sealSign.deliveryMethodMetadata) &&
         Objects.equals(this.designatorId, sealSign.designatorId) &&
         Objects.equals(this.designatorIdGuid, sealSign.designatorIdGuid) &&
+        Objects.equals(this.documentTemplateId, sealSign.documentTemplateId) &&
         Objects.equals(this.documentVisibility, sealSign.documentVisibility) &&
         Objects.equals(this.emailNotification, sealSign.emailNotification) &&
         Objects.equals(this.embeddedRecipientStartURL, sealSign.embeddedRecipientStartURL) &&
@@ -1921,7 +1982,8 @@ public class SealSign implements Serializable {
         Objects.equals(this.templateLocked, sealSign.templateLocked) &&
         Objects.equals(this.templateRequired, sealSign.templateRequired) &&
         Objects.equals(this.totalTabCount, sealSign.totalTabCount) &&
-        Objects.equals(this.userId, sealSign.userId);
+        Objects.equals(this.userId, sealSign.userId) &&
+        Objects.equals(this.webFormRecipientViewId, sealSign.webFormRecipientViewId);
   }
 
   /**
@@ -1929,7 +1991,7 @@ public class SealSign implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -1957,6 +2019,7 @@ public class SealSign implements Serializable {
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
     sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    emailNotification: ").append(toIndentedString(emailNotification)).append("\n");
     sb.append("    embeddedRecipientStartURL: ").append(toIndentedString(embeddedRecipientStartURL)).append("\n");
@@ -1999,6 +2062,7 @@ public class SealSign implements Serializable {
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    webFormRecipientViewId: ").append(toIndentedString(webFormRecipientViewId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

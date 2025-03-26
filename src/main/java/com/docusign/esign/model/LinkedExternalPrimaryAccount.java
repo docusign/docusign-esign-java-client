@@ -26,11 +26,23 @@ public class LinkedExternalPrimaryAccount implements Serializable {
   @JsonProperty("email")
   private String email = null;
 
+  @JsonProperty("exemptMembersOfSameAccountFromAuth")
+  private String exemptMembersOfSameAccountFromAuth = null;
+
   @JsonProperty("linkId")
   private String linkId = null;
 
   @JsonProperty("pdfFieldHandlingOption")
   private String pdfFieldHandlingOption = null;
+
+  @JsonProperty("pdfFieldHandlingPrefillTabPermission")
+  private String pdfFieldHandlingPrefillTabPermission = null;
+
+  @JsonProperty("pdfFieldHandlingStandardInputTabPermission")
+  private String pdfFieldHandlingStandardInputTabPermission = null;
+
+  @JsonProperty("pdfFieldHandlingStandardTabPermission")
+  private String pdfFieldHandlingStandardTabPermission = null;
 
   @JsonProperty("recipientAuthRequirements")
   private ExternalPrimaryAccountRecipientAuthRequirements recipientAuthRequirements = null;
@@ -124,6 +136,33 @@ public class LinkedExternalPrimaryAccount implements Serializable {
 
 
   /**
+   * exemptMembersOfSameAccountFromAuth.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount exemptMembersOfSameAccountFromAuth(String exemptMembersOfSameAccountFromAuth) {
+    this.exemptMembersOfSameAccountFromAuth = exemptMembersOfSameAccountFromAuth;
+    return this;
+  }
+
+  /**
+   * .
+   * @return exemptMembersOfSameAccountFromAuth
+   **/
+  @Schema(description = "")
+  public String getExemptMembersOfSameAccountFromAuth() {
+    return exemptMembersOfSameAccountFromAuth;
+  }
+
+  /**
+   * setExemptMembersOfSameAccountFromAuth.
+   **/
+  public void setExemptMembersOfSameAccountFromAuth(String exemptMembersOfSameAccountFromAuth) {
+    this.exemptMembersOfSameAccountFromAuth = exemptMembersOfSameAccountFromAuth;
+  }
+
+
+  /**
    * linkId.
    *
    * @return LinkedExternalPrimaryAccount
@@ -174,6 +213,87 @@ public class LinkedExternalPrimaryAccount implements Serializable {
    **/
   public void setPdfFieldHandlingOption(String pdfFieldHandlingOption) {
     this.pdfFieldHandlingOption = pdfFieldHandlingOption;
+  }
+
+
+  /**
+   * pdfFieldHandlingPrefillTabPermission.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount pdfFieldHandlingPrefillTabPermission(String pdfFieldHandlingPrefillTabPermission) {
+    this.pdfFieldHandlingPrefillTabPermission = pdfFieldHandlingPrefillTabPermission;
+    return this;
+  }
+
+  /**
+   * .
+   * @return pdfFieldHandlingPrefillTabPermission
+   **/
+  @Schema(description = "")
+  public String getPdfFieldHandlingPrefillTabPermission() {
+    return pdfFieldHandlingPrefillTabPermission;
+  }
+
+  /**
+   * setPdfFieldHandlingPrefillTabPermission.
+   **/
+  public void setPdfFieldHandlingPrefillTabPermission(String pdfFieldHandlingPrefillTabPermission) {
+    this.pdfFieldHandlingPrefillTabPermission = pdfFieldHandlingPrefillTabPermission;
+  }
+
+
+  /**
+   * pdfFieldHandlingStandardInputTabPermission.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount pdfFieldHandlingStandardInputTabPermission(String pdfFieldHandlingStandardInputTabPermission) {
+    this.pdfFieldHandlingStandardInputTabPermission = pdfFieldHandlingStandardInputTabPermission;
+    return this;
+  }
+
+  /**
+   * .
+   * @return pdfFieldHandlingStandardInputTabPermission
+   **/
+  @Schema(description = "")
+  public String getPdfFieldHandlingStandardInputTabPermission() {
+    return pdfFieldHandlingStandardInputTabPermission;
+  }
+
+  /**
+   * setPdfFieldHandlingStandardInputTabPermission.
+   **/
+  public void setPdfFieldHandlingStandardInputTabPermission(String pdfFieldHandlingStandardInputTabPermission) {
+    this.pdfFieldHandlingStandardInputTabPermission = pdfFieldHandlingStandardInputTabPermission;
+  }
+
+
+  /**
+   * pdfFieldHandlingStandardTabPermission.
+   *
+   * @return LinkedExternalPrimaryAccount
+   **/
+  public LinkedExternalPrimaryAccount pdfFieldHandlingStandardTabPermission(String pdfFieldHandlingStandardTabPermission) {
+    this.pdfFieldHandlingStandardTabPermission = pdfFieldHandlingStandardTabPermission;
+    return this;
+  }
+
+  /**
+   * .
+   * @return pdfFieldHandlingStandardTabPermission
+   **/
+  @Schema(description = "")
+  public String getPdfFieldHandlingStandardTabPermission() {
+    return pdfFieldHandlingStandardTabPermission;
+  }
+
+  /**
+   * setPdfFieldHandlingStandardTabPermission.
+   **/
+  public void setPdfFieldHandlingStandardTabPermission(String pdfFieldHandlingStandardTabPermission) {
+    this.pdfFieldHandlingStandardTabPermission = pdfFieldHandlingStandardTabPermission;
   }
 
 
@@ -275,8 +395,12 @@ public class LinkedExternalPrimaryAccount implements Serializable {
     return Objects.equals(this.accountName, linkedExternalPrimaryAccount.accountName) &&
         Objects.equals(this.configurationId, linkedExternalPrimaryAccount.configurationId) &&
         Objects.equals(this.email, linkedExternalPrimaryAccount.email) &&
+        Objects.equals(this.exemptMembersOfSameAccountFromAuth, linkedExternalPrimaryAccount.exemptMembersOfSameAccountFromAuth) &&
         Objects.equals(this.linkId, linkedExternalPrimaryAccount.linkId) &&
         Objects.equals(this.pdfFieldHandlingOption, linkedExternalPrimaryAccount.pdfFieldHandlingOption) &&
+        Objects.equals(this.pdfFieldHandlingPrefillTabPermission, linkedExternalPrimaryAccount.pdfFieldHandlingPrefillTabPermission) &&
+        Objects.equals(this.pdfFieldHandlingStandardInputTabPermission, linkedExternalPrimaryAccount.pdfFieldHandlingStandardInputTabPermission) &&
+        Objects.equals(this.pdfFieldHandlingStandardTabPermission, linkedExternalPrimaryAccount.pdfFieldHandlingStandardTabPermission) &&
         Objects.equals(this.recipientAuthRequirements, linkedExternalPrimaryAccount.recipientAuthRequirements) &&
         Objects.equals(this.status, linkedExternalPrimaryAccount.status) &&
         Objects.equals(this.userId, linkedExternalPrimaryAccount.userId);
@@ -287,7 +411,7 @@ public class LinkedExternalPrimaryAccount implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountName, configurationId, email, linkId, pdfFieldHandlingOption, recipientAuthRequirements, status, userId);
+    return Objects.hash(accountName, configurationId, email, exemptMembersOfSameAccountFromAuth, linkId, pdfFieldHandlingOption, pdfFieldHandlingPrefillTabPermission, pdfFieldHandlingStandardInputTabPermission, pdfFieldHandlingStandardTabPermission, recipientAuthRequirements, status, userId);
   }
 
 
@@ -302,8 +426,12 @@ public class LinkedExternalPrimaryAccount implements Serializable {
     sb.append("    accountName: ").append(toIndentedString(accountName)).append("\n");
     sb.append("    configurationId: ").append(toIndentedString(configurationId)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    exemptMembersOfSameAccountFromAuth: ").append(toIndentedString(exemptMembersOfSameAccountFromAuth)).append("\n");
     sb.append("    linkId: ").append(toIndentedString(linkId)).append("\n");
     sb.append("    pdfFieldHandlingOption: ").append(toIndentedString(pdfFieldHandlingOption)).append("\n");
+    sb.append("    pdfFieldHandlingPrefillTabPermission: ").append(toIndentedString(pdfFieldHandlingPrefillTabPermission)).append("\n");
+    sb.append("    pdfFieldHandlingStandardInputTabPermission: ").append(toIndentedString(pdfFieldHandlingStandardInputTabPermission)).append("\n");
+    sb.append("    pdfFieldHandlingStandardTabPermission: ").append(toIndentedString(pdfFieldHandlingStandardTabPermission)).append("\n");
     sb.append("    recipientAuthRequirements: ").append(toIndentedString(recipientAuthRequirements)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");

@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -98,6 +100,9 @@ public class TabGroup implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -112,6 +117,9 @@ public class TabGroup implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("formOrder")
   private String formOrder = null;
@@ -197,6 +205,9 @@ public class TabGroup implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -250,6 +261,9 @@ public class TabGroup implements Serializable {
 
   @JsonProperty("validationMessageMetadata")
   private PropertyMetadata validationMessageMetadata = null;
+
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
 
   @JsonProperty("width")
   private String width = null;
@@ -973,6 +987,33 @@ public class TabGroup implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return TabGroup
+   **/
+  public TabGroup connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return TabGroup
@@ -1104,6 +1145,33 @@ public class TabGroup implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return TabGroup
+   **/
+  public TabGroup extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -1864,6 +1932,33 @@ public class TabGroup implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return TabGroup
+   **/
+  public TabGroup tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return TabGroup
@@ -2363,6 +2458,33 @@ public class TabGroup implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return TabGroup
+   **/
+  public TabGroup warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return TabGroup
@@ -2564,11 +2686,13 @@ public class TabGroup implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, tabGroup.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, tabGroup.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, tabGroup.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, tabGroup.connectedObjectDetails) &&
         Objects.equals(this.customTabId, tabGroup.customTabId) &&
         Objects.equals(this.customTabIdMetadata, tabGroup.customTabIdMetadata) &&
         Objects.equals(this.documentId, tabGroup.documentId) &&
         Objects.equals(this.documentIdMetadata, tabGroup.documentIdMetadata) &&
         Objects.equals(this.errorDetails, tabGroup.errorDetails) &&
+        Objects.equals(this.extensionData, tabGroup.extensionData) &&
         Objects.equals(this.formOrder, tabGroup.formOrder) &&
         Objects.equals(this.formOrderMetadata, tabGroup.formOrderMetadata) &&
         Objects.equals(this.formPageLabel, tabGroup.formPageLabel) &&
@@ -2597,6 +2721,7 @@ public class TabGroup implements Serializable {
         Objects.equals(this.source, tabGroup.source) &&
         Objects.equals(this.status, tabGroup.status) &&
         Objects.equals(this.statusMetadata, tabGroup.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, tabGroup.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, tabGroup.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, tabGroup.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, tabGroup.tabId) &&
@@ -2615,6 +2740,7 @@ public class TabGroup implements Serializable {
         Objects.equals(this.toolTipMetadata, tabGroup.toolTipMetadata) &&
         Objects.equals(this.validationMessage, tabGroup.validationMessage) &&
         Objects.equals(this.validationMessageMetadata, tabGroup.validationMessageMetadata) &&
+        Objects.equals(this.warningDetails, tabGroup.warningDetails) &&
         Objects.equals(this.width, tabGroup.width) &&
         Objects.equals(this.widthMetadata, tabGroup.widthMetadata) &&
         Objects.equals(this.xPosition, tabGroup.xPosition) &&
@@ -2628,7 +2754,7 @@ public class TabGroup implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed, maximumAllowedMetadata, mergeField, mergeFieldXml, minimumRequired, minimumRequiredMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage, validationMessageMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, groupLabel, groupLabelMetadata, groupRule, groupRuleMetadata, height, heightMetadata, maximumAllowed, maximumAllowedMetadata, mergeField, mergeFieldXml, minimumRequired, minimumRequiredMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabScope, tabScopeMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, validationMessage, validationMessageMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2666,11 +2792,13 @@ public class TabGroup implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
@@ -2699,6 +2827,7 @@ public class TabGroup implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2717,6 +2846,7 @@ public class TabGroup implements Serializable {
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    validationMessage: ").append(toIndentedString(validationMessage)).append("\n");
     sb.append("    validationMessageMetadata: ").append(toIndentedString(validationMessageMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

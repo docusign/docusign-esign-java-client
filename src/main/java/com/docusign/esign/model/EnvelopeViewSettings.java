@@ -51,6 +51,9 @@ public class EnvelopeViewSettings implements Serializable {
   @JsonProperty("showHeaderActions")
   private String showHeaderActions = null;
 
+  @JsonProperty("showSignNow")
+  private String showSignNow = null;
+
   @JsonProperty("startingScreen")
   private String startingScreen = null;
 
@@ -332,6 +335,33 @@ public class EnvelopeViewSettings implements Serializable {
 
 
   /**
+   * showSignNow.
+   *
+   * @return EnvelopeViewSettings
+   **/
+  public EnvelopeViewSettings showSignNow(String showSignNow) {
+    this.showSignNow = showSignNow;
+    return this;
+  }
+
+  /**
+   * .
+   * @return showSignNow
+   **/
+  @Schema(description = "")
+  public String getShowSignNow() {
+    return showSignNow;
+  }
+
+  /**
+   * setShowSignNow.
+   **/
+  public void setShowSignNow(String showSignNow) {
+    this.showSignNow = showSignNow;
+  }
+
+
+  /**
    * startingScreen.
    *
    * @return EnvelopeViewSettings
@@ -436,6 +466,7 @@ public class EnvelopeViewSettings implements Serializable {
         Objects.equals(this.showBackButton, envelopeViewSettings.showBackButton) &&
         Objects.equals(this.showDiscardAction, envelopeViewSettings.showDiscardAction) &&
         Objects.equals(this.showHeaderActions, envelopeViewSettings.showHeaderActions) &&
+        Objects.equals(this.showSignNow, envelopeViewSettings.showSignNow) &&
         Objects.equals(this.startingScreen, envelopeViewSettings.startingScreen) &&
         Objects.equals(this.taggerSettings, envelopeViewSettings.taggerSettings) &&
         Objects.equals(this.templateSettings, envelopeViewSettings.templateSettings);
@@ -446,7 +477,7 @@ public class EnvelopeViewSettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(backButtonAction, documentSettings, envelopeCustomFieldSettings, lockToken, recipientSettings, sendButtonAction, showAdvancedOptions, showBackButton, showDiscardAction, showHeaderActions, startingScreen, taggerSettings, templateSettings);
+    return Objects.hash(backButtonAction, documentSettings, envelopeCustomFieldSettings, lockToken, recipientSettings, sendButtonAction, showAdvancedOptions, showBackButton, showDiscardAction, showHeaderActions, showSignNow, startingScreen, taggerSettings, templateSettings);
   }
 
 
@@ -468,6 +499,7 @@ public class EnvelopeViewSettings implements Serializable {
     sb.append("    showBackButton: ").append(toIndentedString(showBackButton)).append("\n");
     sb.append("    showDiscardAction: ").append(toIndentedString(showDiscardAction)).append("\n");
     sb.append("    showHeaderActions: ").append(toIndentedString(showHeaderActions)).append("\n");
+    sb.append("    showSignNow: ").append(toIndentedString(showSignNow)).append("\n");
     sb.append("    startingScreen: ").append(toIndentedString(startingScreen)).append("\n");
     sb.append("    taggerSettings: ").append(toIndentedString(taggerSettings)).append("\n");
     sb.append("    templateSettings: ").append(toIndentedString(templateSettings)).append("\n");

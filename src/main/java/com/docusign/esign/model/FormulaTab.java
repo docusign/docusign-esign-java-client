@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PaymentDetails;
@@ -113,6 +115,9 @@ public class FormulaTab implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -133,6 +138,9 @@ public class FormulaTab implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -308,6 +316,9 @@ public class FormulaTab implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -379,6 +390,9 @@ public class FormulaTab implements Serializable {
 
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
+
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
 
   @JsonProperty("width")
   private String width = null;
@@ -1210,6 +1224,33 @@ public class FormulaTab implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return FormulaTab
@@ -1395,6 +1436,33 @@ public class FormulaTab implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2965,6 +3033,33 @@ public class FormulaTab implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return FormulaTab
@@ -3626,6 +3721,33 @@ public class FormulaTab implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return FormulaTab
@@ -3831,6 +3953,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, formulaTab.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, formulaTab.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, formulaTab.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, formulaTab.connectedObjectDetails) &&
         Objects.equals(this.customTabId, formulaTab.customTabId) &&
         Objects.equals(this.customTabIdMetadata, formulaTab.customTabIdMetadata) &&
         Objects.equals(this.disableAutoSize, formulaTab.disableAutoSize) &&
@@ -3838,6 +3961,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.documentId, formulaTab.documentId) &&
         Objects.equals(this.documentIdMetadata, formulaTab.documentIdMetadata) &&
         Objects.equals(this.errorDetails, formulaTab.errorDetails) &&
+        Objects.equals(this.extensionData, formulaTab.extensionData) &&
         Objects.equals(this.font, formulaTab.font) &&
         Objects.equals(this.fontColor, formulaTab.fontColor) &&
         Objects.equals(this.fontColorMetadata, formulaTab.fontColorMetadata) &&
@@ -3896,6 +4020,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.source, formulaTab.source) &&
         Objects.equals(this.status, formulaTab.status) &&
         Objects.equals(this.statusMetadata, formulaTab.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, formulaTab.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, formulaTab.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, formulaTab.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, formulaTab.tabId) &&
@@ -3920,6 +4045,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.validationPatternMetadata, formulaTab.validationPatternMetadata) &&
         Objects.equals(this.value, formulaTab.value) &&
         Objects.equals(this.valueMetadata, formulaTab.valueMetadata) &&
+        Objects.equals(this.warningDetails, formulaTab.warningDetails) &&
         Objects.equals(this.width, formulaTab.width) &&
         Objects.equals(this.widthMetadata, formulaTab.widthMetadata) &&
         Objects.equals(this.xPosition, formulaTab.xPosition) &&
@@ -3933,7 +4059,7 @@ public class FormulaTab implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3975,6 +4101,7 @@ public class FormulaTab implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3982,6 +4109,7 @@ public class FormulaTab implements Serializable {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -4040,6 +4168,7 @@ public class FormulaTab implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -4064,6 +4193,7 @@ public class FormulaTab implements Serializable {
     sb.append("    validationPatternMetadata: ").append(toIndentedString(validationPatternMetadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

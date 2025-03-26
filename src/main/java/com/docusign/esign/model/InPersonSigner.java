@@ -95,6 +95,9 @@ public class InPersonSigner implements Serializable {
   @JsonProperty("designatorIdGuid")
   private String designatorIdGuid = null;
 
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = null;
 
@@ -316,6 +319,9 @@ public class InPersonSigner implements Serializable {
 
   @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("webFormRecipientViewId")
+  private String webFormRecipientViewId = null;
 
 
   /**
@@ -868,6 +874,33 @@ public class InPersonSigner implements Serializable {
    **/
   public void setDesignatorIdGuid(String designatorIdGuid) {
     this.designatorIdGuid = designatorIdGuid;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return InPersonSigner
+   **/
+  public InPersonSigner documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
   }
 
 
@@ -2961,6 +2994,33 @@ public class InPersonSigner implements Serializable {
 
 
   /**
+   * webFormRecipientViewId.
+   *
+   * @return InPersonSigner
+   **/
+  public InPersonSigner webFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webFormRecipientViewId
+   **/
+  @Schema(description = "")
+  public String getWebFormRecipientViewId() {
+    return webFormRecipientViewId;
+  }
+
+  /**
+   * setWebFormRecipientViewId.
+   **/
+  public void setWebFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -2994,6 +3054,7 @@ public class InPersonSigner implements Serializable {
         Objects.equals(this.deliveryMethodMetadata, inPersonSigner.deliveryMethodMetadata) &&
         Objects.equals(this.designatorId, inPersonSigner.designatorId) &&
         Objects.equals(this.designatorIdGuid, inPersonSigner.designatorIdGuid) &&
+        Objects.equals(this.documentTemplateId, inPersonSigner.documentTemplateId) &&
         Objects.equals(this.documentVisibility, inPersonSigner.documentVisibility) &&
         Objects.equals(this.email, inPersonSigner.email) &&
         Objects.equals(this.emailMetadata, inPersonSigner.emailMetadata) &&
@@ -3067,7 +3128,8 @@ public class InPersonSigner implements Serializable {
         Objects.equals(this.templateLocked, inPersonSigner.templateLocked) &&
         Objects.equals(this.templateRequired, inPersonSigner.templateRequired) &&
         Objects.equals(this.totalTabCount, inPersonSigner.totalTabCount) &&
-        Objects.equals(this.userId, inPersonSigner.userId);
+        Objects.equals(this.userId, inPersonSigner.userId) &&
+        Objects.equals(this.webFormRecipientViewId, inPersonSigner.webFormRecipientViewId);
   }
 
   /**
@@ -3075,7 +3137,7 @@ public class InPersonSigner implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, hostEmail, hostEmailMetadata, hostName, hostNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, inPersonSigningType, inPersonSigningTypeMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryHost, notaryId, note, noteMetadata, offlineAttributes, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signerEmail, signerEmailMetadata, signerFirstName, signerFirstNameMetadata, signerLastName, signerLastNameMetadata, signerName, signerNameMetadata, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -3107,6 +3169,7 @@ public class InPersonSigner implements Serializable {
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
     sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
@@ -3181,6 +3244,7 @@ public class InPersonSigner implements Serializable {
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    webFormRecipientViewId: ").append(toIndentedString(webFormRecipientViewId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

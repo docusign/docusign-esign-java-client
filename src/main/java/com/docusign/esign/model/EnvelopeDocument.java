@@ -69,8 +69,17 @@ public class EnvelopeDocument implements Serializable {
   @JsonProperty("documentIdGuid")
   private String documentIdGuid = null;
 
+  @JsonProperty("documentTemplateAgreementTypeId")
+  private String documentTemplateAgreementTypeId = null;
+
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("hasDigitalSignature")
+  private String hasDigitalSignature = null;
 
   @JsonProperty("includeInDownload")
   private String includeInDownload = null;
@@ -83,6 +92,12 @@ public class EnvelopeDocument implements Serializable {
 
   @JsonProperty("isDocGenDocument")
   private String isDocGenDocument = null;
+
+  @JsonProperty("isExternallyAvailable")
+  private String isExternallyAvailable = null;
+
+  @JsonProperty("isFlattened")
+  private String isFlattened = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -589,6 +604,60 @@ public class EnvelopeDocument implements Serializable {
 
 
   /**
+   * documentTemplateAgreementTypeId.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument documentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
+    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateAgreementTypeId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateAgreementTypeId() {
+    return documentTemplateAgreementTypeId;
+  }
+
+  /**
+   * setDocumentTemplateAgreementTypeId.
+   **/
+  public void setDocumentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
+    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+  }
+
+
+  /**
    * errorDetails.
    *
    * @return EnvelopeDocument
@@ -612,6 +681,33 @@ public class EnvelopeDocument implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * hasDigitalSignature.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument hasDigitalSignature(String hasDigitalSignature) {
+    this.hasDigitalSignature = hasDigitalSignature;
+    return this;
+  }
+
+  /**
+   * .
+   * @return hasDigitalSignature
+   **/
+  @Schema(description = "")
+  public String getHasDigitalSignature() {
+    return hasDigitalSignature;
+  }
+
+  /**
+   * setHasDigitalSignature.
+   **/
+  public void setHasDigitalSignature(String hasDigitalSignature) {
+    this.hasDigitalSignature = hasDigitalSignature;
   }
 
 
@@ -720,6 +816,60 @@ public class EnvelopeDocument implements Serializable {
    **/
   public void setIsDocGenDocument(String isDocGenDocument) {
     this.isDocGenDocument = isDocGenDocument;
+  }
+
+
+  /**
+   * isExternallyAvailable.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument isExternallyAvailable(String isExternallyAvailable) {
+    this.isExternallyAvailable = isExternallyAvailable;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isExternallyAvailable
+   **/
+  @Schema(description = "")
+  public String getIsExternallyAvailable() {
+    return isExternallyAvailable;
+  }
+
+  /**
+   * setIsExternallyAvailable.
+   **/
+  public void setIsExternallyAvailable(String isExternallyAvailable) {
+    this.isExternallyAvailable = isExternallyAvailable;
+  }
+
+
+  /**
+   * isFlattened.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument isFlattened(String isFlattened) {
+    this.isFlattened = isFlattened;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isFlattened
+   **/
+  @Schema(description = "")
+  public String getIsFlattened() {
+    return isFlattened;
+  }
+
+  /**
+   * setIsFlattened.
+   **/
+  public void setIsFlattened(String isFlattened) {
+    this.isFlattened = isFlattened;
   }
 
 
@@ -1062,11 +1212,16 @@ public class EnvelopeDocument implements Serializable {
         Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
         Objects.equals(this.documentId, envelopeDocument.documentId) &&
         Objects.equals(this.documentIdGuid, envelopeDocument.documentIdGuid) &&
+        Objects.equals(this.documentTemplateAgreementTypeId, envelopeDocument.documentTemplateAgreementTypeId) &&
+        Objects.equals(this.documentTemplateId, envelopeDocument.documentTemplateId) &&
         Objects.equals(this.errorDetails, envelopeDocument.errorDetails) &&
+        Objects.equals(this.hasDigitalSignature, envelopeDocument.hasDigitalSignature) &&
         Objects.equals(this.includeInDownload, envelopeDocument.includeInDownload) &&
         Objects.equals(this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata) &&
         Objects.equals(this.isAceGenDocument, envelopeDocument.isAceGenDocument) &&
         Objects.equals(this.isDocGenDocument, envelopeDocument.isDocGenDocument) &&
+        Objects.equals(this.isExternallyAvailable, envelopeDocument.isExternallyAvailable) &&
+        Objects.equals(this.isFlattened, envelopeDocument.isFlattened) &&
         Objects.equals(this.name, envelopeDocument.name) &&
         Objects.equals(this.nameMetadata, envelopeDocument.nameMetadata) &&
         Objects.equals(this.order, envelopeDocument.order) &&
@@ -1085,7 +1240,7 @@ public class EnvelopeDocument implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, errorDetails, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, documentTemplateAgreementTypeId, documentTemplateId, errorDetails, hasDigitalSignature, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, isExternallyAvailable, isFlattened, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -1112,11 +1267,16 @@ public class EnvelopeDocument implements Serializable {
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");
+    sb.append("    documentTemplateAgreementTypeId: ").append(toIndentedString(documentTemplateAgreementTypeId)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    hasDigitalSignature: ").append(toIndentedString(hasDigitalSignature)).append("\n");
     sb.append("    includeInDownload: ").append(toIndentedString(includeInDownload)).append("\n");
     sb.append("    includeInDownloadMetadata: ").append(toIndentedString(includeInDownloadMetadata)).append("\n");
     sb.append("    isAceGenDocument: ").append(toIndentedString(isAceGenDocument)).append("\n");
     sb.append("    isDocGenDocument: ").append(toIndentedString(isDocGenDocument)).append("\n");
+    sb.append("    isExternallyAvailable: ").append(toIndentedString(isExternallyAvailable)).append("\n");
+    sb.append("    isFlattened: ").append(toIndentedString(isFlattened)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    nameMetadata: ").append(toIndentedString(nameMetadata)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");

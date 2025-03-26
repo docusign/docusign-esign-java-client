@@ -37,6 +37,9 @@ public class Group implements Serializable {
   @JsonProperty("groupType")
   private String groupType = null;
 
+  @JsonProperty("isManagedByScim")
+  private String isManagedByScim = null;
+
   @JsonProperty("lastModifiedOn")
   private String lastModifiedOn = null;
 
@@ -213,6 +216,33 @@ public class Group implements Serializable {
 
 
   /**
+   * isManagedByScim.
+   *
+   * @return Group
+   **/
+  public Group isManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isManagedByScim
+   **/
+  @Schema(description = "")
+  public String getIsManagedByScim() {
+    return isManagedByScim;
+  }
+
+  /**
+   * setIsManagedByScim.
+   **/
+  public void setIsManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+  }
+
+
+  /**
    * lastModifiedOn.
    *
    * @return Group
@@ -353,6 +383,7 @@ public class Group implements Serializable {
         Objects.equals(this.groupId, group.groupId) &&
         Objects.equals(this.groupName, group.groupName) &&
         Objects.equals(this.groupType, group.groupType) &&
+        Objects.equals(this.isManagedByScim, group.isManagedByScim) &&
         Objects.equals(this.lastModifiedOn, group.lastModifiedOn) &&
         Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
         Objects.equals(this.users, group.users) &&
@@ -364,7 +395,7 @@ public class Group implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, lastModifiedOn, permissionProfileId, users, usersCount);
+    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, isManagedByScim, lastModifiedOn, permissionProfileId, users, usersCount);
   }
 
 
@@ -382,6 +413,7 @@ public class Group implements Serializable {
     sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
     sb.append("    groupName: ").append(toIndentedString(groupName)).append("\n");
     sb.append("    groupType: ").append(toIndentedString(groupType)).append("\n");
+    sb.append("    isManagedByScim: ").append(toIndentedString(isManagedByScim)).append("\n");
     sb.append("    lastModifiedOn: ").append(toIndentedString(lastModifiedOn)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");

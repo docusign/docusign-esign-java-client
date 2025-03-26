@@ -47,8 +47,6 @@ public class OAuth implements Authentication {
 	public final static String PRODUCTION_OAUTH_BASEPATH = "account.docusign.com";
 	/** sandbox/demo base path. */
 	public final static String DEMO_OAUTH_BASEPATH = "account-d.docusign.com";
-	/** stage base path. */
-	public final static String STAGE_OAUTH_BASEPATH = "account-s.docusign.com";
 
 	// OAuth grant types
 	/** JWT grant type. */

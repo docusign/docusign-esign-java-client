@@ -23,6 +23,9 @@ public class RecipientIdentityInputOption implements Serializable {
   @JsonProperty("phoneNumberList")
   private java.util.List<RecipientIdentityPhoneNumber> phoneNumberList = null;
 
+  @JsonProperty("stringValue")
+  private String stringValue = null;
+
   @JsonProperty("valueType")
   private String valueType = null;
 
@@ -95,6 +98,33 @@ public class RecipientIdentityInputOption implements Serializable {
 
 
   /**
+   * stringValue.
+   *
+   * @return RecipientIdentityInputOption
+   **/
+  public RecipientIdentityInputOption stringValue(String stringValue) {
+    this.stringValue = stringValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return stringValue
+   **/
+  @Schema(description = "")
+  public String getStringValue() {
+    return stringValue;
+  }
+
+  /**
+   * setStringValue.
+   **/
+  public void setStringValue(String stringValue) {
+    this.stringValue = stringValue;
+  }
+
+
+  /**
    * valueType.
    *
    * @return RecipientIdentityInputOption
@@ -137,6 +167,7 @@ public class RecipientIdentityInputOption implements Serializable {
     RecipientIdentityInputOption recipientIdentityInputOption = (RecipientIdentityInputOption) o;
     return Objects.equals(this.name, recipientIdentityInputOption.name) &&
         Objects.equals(this.phoneNumberList, recipientIdentityInputOption.phoneNumberList) &&
+        Objects.equals(this.stringValue, recipientIdentityInputOption.stringValue) &&
         Objects.equals(this.valueType, recipientIdentityInputOption.valueType);
   }
 
@@ -145,7 +176,7 @@ public class RecipientIdentityInputOption implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(name, phoneNumberList, valueType);
+    return Objects.hash(name, phoneNumberList, stringValue, valueType);
   }
 
 
@@ -159,6 +190,7 @@ public class RecipientIdentityInputOption implements Serializable {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    phoneNumberList: ").append(toIndentedString(phoneNumberList)).append("\n");
+    sb.append("    stringValue: ").append(toIndentedString(stringValue)).append("\n");
     sb.append("    valueType: ").append(toIndentedString(valueType)).append("\n");
     sb.append("}");
     return sb.toString();

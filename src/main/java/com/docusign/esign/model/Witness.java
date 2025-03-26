@@ -120,6 +120,9 @@ public class Witness implements Serializable {
   @JsonProperty("designatorIdGuid")
   private String designatorIdGuid = null;
 
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = null;
 
@@ -332,6 +335,9 @@ public class Witness implements Serializable {
 
   @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("webFormRecipientViewId")
+  private String webFormRecipientViewId = null;
 
   @JsonProperty("witnessFor")
   private String witnessFor = null;
@@ -1118,6 +1124,33 @@ public class Witness implements Serializable {
    **/
   public void setDesignatorIdGuid(String designatorIdGuid) {
     this.designatorIdGuid = designatorIdGuid;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return Witness
+   **/
+  public Witness documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
   }
 
 
@@ -3130,6 +3163,33 @@ public class Witness implements Serializable {
 
 
   /**
+   * webFormRecipientViewId.
+   *
+   * @return Witness
+   **/
+  public Witness webFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webFormRecipientViewId
+   **/
+  @Schema(description = "")
+  public String getWebFormRecipientViewId() {
+    return webFormRecipientViewId;
+  }
+
+  /**
+   * setWebFormRecipientViewId.
+   **/
+  public void setWebFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+  }
+
+
+  /**
    * witnessFor.
    *
    * @return Witness
@@ -3224,6 +3284,7 @@ public class Witness implements Serializable {
         Objects.equals(this.deliveryMethodMetadata, witness.deliveryMethodMetadata) &&
         Objects.equals(this.designatorId, witness.designatorId) &&
         Objects.equals(this.designatorIdGuid, witness.designatorIdGuid) &&
+        Objects.equals(this.documentTemplateId, witness.documentTemplateId) &&
         Objects.equals(this.documentVisibility, witness.documentVisibility) &&
         Objects.equals(this.email, witness.email) &&
         Objects.equals(this.emailMetadata, witness.emailMetadata) &&
@@ -3295,6 +3356,7 @@ public class Witness implements Serializable {
         Objects.equals(this.templateRequired, witness.templateRequired) &&
         Objects.equals(this.totalTabCount, witness.totalTabCount) &&
         Objects.equals(this.userId, witness.userId) &&
+        Objects.equals(this.webFormRecipientViewId, witness.webFormRecipientViewId) &&
         Objects.equals(this.witnessFor, witness.witnessFor) &&
         Objects.equals(this.witnessForGuid, witness.witnessForGuid);
   }
@@ -3304,7 +3366,7 @@ public class Witness implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId, witnessFor, witnessForGuid);
   }
 
 
@@ -3343,6 +3405,7 @@ public class Witness implements Serializable {
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
     sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
@@ -3414,6 +3477,7 @@ public class Witness implements Serializable {
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    webFormRecipientViewId: ").append(toIndentedString(webFormRecipientViewId)).append("\n");
     sb.append("    witnessFor: ").append(toIndentedString(witnessFor)).append("\n");
     sb.append("    witnessForGuid: ").append(toIndentedString(witnessForGuid)).append("\n");
     sb.append("}");
