@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
@@ -21,6 +23,12 @@ import java.io.Serializable;
 
 public class LastName implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("agreementAttribute")
+  private String agreementAttribute = null;
+
+  @JsonProperty("agreementAttributeLocked")
+  private String agreementAttributeLocked = null;
 
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -106,6 +114,9 @@ public class LastName implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -120,6 +131,9 @@ public class LastName implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -214,6 +228,9 @@ public class LastName implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -274,6 +291,9 @@ public class LastName implements Serializable {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -291,6 +311,60 @@ public class LastName implements Serializable {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+
+  /**
+   * agreementAttribute.
+   *
+   * @return LastName
+   **/
+  public LastName agreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttribute
+   **/
+  @Schema(description = "")
+  public String getAgreementAttribute() {
+    return agreementAttribute;
+  }
+
+  /**
+   * setAgreementAttribute.
+   **/
+  public void setAgreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+  }
+
+
+  /**
+   * agreementAttributeLocked.
+   *
+   * @return LastName
+   **/
+  public LastName agreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttributeLocked
+   **/
+  @Schema(description = "")
+  public String getAgreementAttributeLocked() {
+    return agreementAttributeLocked;
+  }
+
+  /**
+   * setAgreementAttributeLocked.
+   **/
+  public void setAgreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+  }
 
 
   /**
@@ -1050,6 +1124,33 @@ public class LastName implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return LastName
+   **/
+  public LastName connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return LastName
@@ -1181,6 +1282,33 @@ public class LastName implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return LastName
+   **/
+  public LastName extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2022,6 +2150,33 @@ public class LastName implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return LastName
+   **/
+  public LastName tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return LastName
@@ -2575,6 +2730,33 @@ public class LastName implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return LastName
+   **/
+  public LastName warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return LastName
@@ -2750,7 +2932,9 @@ public class LastName implements Serializable {
       return false;
     }
     LastName lastName = (LastName) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, lastName.anchorAllowWhiteSpaceInCharacters) &&
+    return Objects.equals(this.agreementAttribute, lastName.agreementAttribute) &&
+        Objects.equals(this.agreementAttributeLocked, lastName.agreementAttributeLocked) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharacters, lastName.anchorAllowWhiteSpaceInCharacters) &&
         Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, lastName.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, lastName.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, lastName.anchorCaseSensitiveMetadata) &&
@@ -2778,11 +2962,13 @@ public class LastName implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, lastName.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, lastName.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, lastName.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, lastName.connectedObjectDetails) &&
         Objects.equals(this.customTabId, lastName.customTabId) &&
         Objects.equals(this.customTabIdMetadata, lastName.customTabIdMetadata) &&
         Objects.equals(this.documentId, lastName.documentId) &&
         Objects.equals(this.documentIdMetadata, lastName.documentIdMetadata) &&
         Objects.equals(this.errorDetails, lastName.errorDetails) &&
+        Objects.equals(this.extensionData, lastName.extensionData) &&
         Objects.equals(this.font, lastName.font) &&
         Objects.equals(this.fontColor, lastName.fontColor) &&
         Objects.equals(this.fontColorMetadata, lastName.fontColorMetadata) &&
@@ -2814,6 +3000,7 @@ public class LastName implements Serializable {
         Objects.equals(this.source, lastName.source) &&
         Objects.equals(this.status, lastName.status) &&
         Objects.equals(this.statusMetadata, lastName.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, lastName.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, lastName.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, lastName.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, lastName.tabId) &&
@@ -2834,6 +3021,7 @@ public class LastName implements Serializable {
         Objects.equals(this.underlineMetadata, lastName.underlineMetadata) &&
         Objects.equals(this.value, lastName.value) &&
         Objects.equals(this.valueMetadata, lastName.valueMetadata) &&
+        Objects.equals(this.warningDetails, lastName.warningDetails) &&
         Objects.equals(this.width, lastName.width) &&
         Objects.equals(this.widthMetadata, lastName.widthMetadata) &&
         Objects.equals(this.xPosition, lastName.xPosition) &&
@@ -2847,7 +3035,7 @@ public class LastName implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2859,6 +3047,8 @@ public class LastName implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class LastName {\n");
     
+    sb.append("    agreementAttribute: ").append(toIndentedString(agreementAttribute)).append("\n");
+    sb.append("    agreementAttributeLocked: ").append(toIndentedString(agreementAttributeLocked)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
@@ -2887,11 +3077,13 @@ public class LastName implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -2923,6 +3115,7 @@ public class LastName implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2943,6 +3136,7 @@ public class LastName implements Serializable {
     sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

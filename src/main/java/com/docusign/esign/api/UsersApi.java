@@ -70,6 +70,7 @@ public class UsersApi {
   private String email = null;
   private String emailSubstring = null;
   private String groupId = null;
+  private String includeLicense = null;
   private String includeUsersettingsForCsv = null;
   private String loginStatus = null;
   private String notGroupId = null;
@@ -187,6 +188,22 @@ public class UsersApi {
   */
   public String getGroupId() {
     return this.groupId;
+  }
+  
+ /**
+  * setIncludeLicense method.
+  */
+  public void setIncludeLicense(String includeLicense) {
+    this.includeLicense = includeLicense;
+  }
+
+ /**
+  * getIncludeLicense method.
+  *
+  * @return String
+  */
+  public String getIncludeLicense() {
+    return this.includeLicense;
   }
   
  /**
@@ -349,6 +366,8 @@ public class UsersApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("email_substring", options.emailSubstring));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("group_id", options.groupId));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_license", options.includeLicense));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_usersettings_for_csv", options.includeUsersettingsForCsv));
     }if (options != null) {
@@ -1163,6 +1182,7 @@ public class UsersApi {
   {
   private String additionalInfo = null;
   private String email = null;
+  private String includeLicense = null;
   
  /**
   * setAdditionalInfo method.
@@ -1194,6 +1214,22 @@ public class UsersApi {
   */
   public String getEmail() {
     return this.email;
+  }
+  
+ /**
+  * setIncludeLicense method.
+  */
+  public void setIncludeLicense(String includeLicense) {
+    this.includeLicense = includeLicense;
+  }
+
+ /**
+  * getIncludeLicense method.
+  *
+  * @return String
+  */
+  public String getIncludeLicense() {
+    return this.includeLicense;
   }
   }
 
@@ -1259,6 +1295,8 @@ public class UsersApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("additional_info", options.additionalInfo));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_license", options.includeLicense));
     }
 
     

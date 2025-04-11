@@ -42,6 +42,9 @@ public class ExternalFolder implements Serializable {
   @JsonProperty("resultSetSize")
   private String resultSetSize = null;
 
+  @JsonProperty("skyDriveSkipToken")
+  private String skyDriveSkipToken = null;
+
   @JsonProperty("startPosition")
   private String startPosition = null;
 
@@ -279,6 +282,33 @@ public class ExternalFolder implements Serializable {
 
 
   /**
+   * skyDriveSkipToken.
+   *
+   * @return ExternalFolder
+   **/
+  public ExternalFolder skyDriveSkipToken(String skyDriveSkipToken) {
+    this.skyDriveSkipToken = skyDriveSkipToken;
+    return this;
+  }
+
+  /**
+   * .
+   * @return skyDriveSkipToken
+   **/
+  @Schema(description = "")
+  public String getSkyDriveSkipToken() {
+    return skyDriveSkipToken;
+  }
+
+  /**
+   * setSkyDriveSkipToken.
+   **/
+  public void setSkyDriveSkipToken(String skyDriveSkipToken) {
+    this.skyDriveSkipToken = skyDriveSkipToken;
+  }
+
+
+  /**
    * startPosition.
    *
    * @return ExternalFolder
@@ -354,6 +384,7 @@ public class ExternalFolder implements Serializable {
         Objects.equals(this.nextUri, externalFolder.nextUri) &&
         Objects.equals(this.previousUri, externalFolder.previousUri) &&
         Objects.equals(this.resultSetSize, externalFolder.resultSetSize) &&
+        Objects.equals(this.skyDriveSkipToken, externalFolder.skyDriveSkipToken) &&
         Objects.equals(this.startPosition, externalFolder.startPosition) &&
         Objects.equals(this.totalSetSize, externalFolder.totalSetSize);
   }
@@ -363,7 +394,7 @@ public class ExternalFolder implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, startPosition, totalSetSize);
+    return Objects.hash(endPosition, errorDetails, id, items, name, nextUri, previousUri, resultSetSize, skyDriveSkipToken, startPosition, totalSetSize);
   }
 
 
@@ -383,6 +414,7 @@ public class ExternalFolder implements Serializable {
     sb.append("    nextUri: ").append(toIndentedString(nextUri)).append("\n");
     sb.append("    previousUri: ").append(toIndentedString(previousUri)).append("\n");
     sb.append("    resultSetSize: ").append(toIndentedString(resultSetSize)).append("\n");
+    sb.append("    skyDriveSkipToken: ").append(toIndentedString(skyDriveSkipToken)).append("\n");
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
     sb.append("    totalSetSize: ").append(toIndentedString(totalSetSize)).append("\n");
     sb.append("}");

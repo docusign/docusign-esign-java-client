@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.PropertyMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -91,8 +93,14 @@ public class Radio implements Serializable {
   @JsonProperty("captionMetadata")
   private PropertyMetadata captionMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -150,6 +158,9 @@ public class Radio implements Serializable {
 
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
+
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
 
   @JsonProperty("tabId")
   private String tabId = null;
@@ -837,6 +848,33 @@ public class Radio implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return Radio
+   **/
+  public Radio connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * errorDetails.
    *
    * @return Radio
@@ -860,6 +898,33 @@ public class Radio implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return Radio
+   **/
+  public Radio extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -1377,6 +1442,33 @@ public class Radio implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return Radio
+   **/
+  public Radio tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabId.
    *
    * @return Radio
@@ -1738,7 +1830,9 @@ public class Radio implements Serializable {
         Objects.equals(this.boldMetadata, radio.boldMetadata) &&
         Objects.equals(this.caption, radio.caption) &&
         Objects.equals(this.captionMetadata, radio.captionMetadata) &&
+        Objects.equals(this.connectedObjectDetails, radio.connectedObjectDetails) &&
         Objects.equals(this.errorDetails, radio.errorDetails) &&
+        Objects.equals(this.extensionData, radio.extensionData) &&
         Objects.equals(this.font, radio.font) &&
         Objects.equals(this.fontColor, radio.fontColor) &&
         Objects.equals(this.fontColorMetadata, radio.fontColorMetadata) &&
@@ -1758,6 +1852,7 @@ public class Radio implements Serializable {
         Objects.equals(this.selectedMetadata, radio.selectedMetadata) &&
         Objects.equals(this.status, radio.status) &&
         Objects.equals(this.statusMetadata, radio.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, radio.tabFullyQualifiedPath) &&
         Objects.equals(this.tabId, radio.tabId) &&
         Objects.equals(this.tabIdMetadata, radio.tabIdMetadata) &&
         Objects.equals(this.tabOrder, radio.tabOrder) &&
@@ -1777,7 +1872,7 @@ public class Radio implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, mergeFieldXml, pageNumber, pageNumberMetadata, required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, connectedObjectDetails, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, italic, italicMetadata, locked, lockedMetadata, mergeFieldXml, pageNumber, pageNumberMetadata, required, requiredMetadata, selected, selectedMetadata, status, statusMetadata, tabFullyQualifiedPath, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, underline, underlineMetadata, value, valueMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -1813,7 +1908,9 @@ public class Radio implements Serializable {
     sb.append("    boldMetadata: ").append(toIndentedString(boldMetadata)).append("\n");
     sb.append("    caption: ").append(toIndentedString(caption)).append("\n");
     sb.append("    captionMetadata: ").append(toIndentedString(captionMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -1833,6 +1930,7 @@ public class Radio implements Serializable {
     sb.append("    selectedMetadata: ").append(toIndentedString(selectedMetadata)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
     sb.append("    tabIdMetadata: ").append(toIndentedString(tabIdMetadata)).append("\n");
     sb.append("    tabOrder: ").append(toIndentedString(tabOrder)).append("\n");

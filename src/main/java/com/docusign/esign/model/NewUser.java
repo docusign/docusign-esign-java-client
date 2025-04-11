@@ -30,6 +30,12 @@ public class NewUser implements Serializable {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
+  @JsonProperty("licenseStatus")
+  private String licenseStatus = null;
+
+  @JsonProperty("licenseType")
+  private String licenseType = null;
+
   @JsonProperty("membershipId")
   private String membershipId = null;
 
@@ -157,6 +163,60 @@ public class NewUser implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * licenseStatus.
+   *
+   * @return NewUser
+   **/
+  public NewUser licenseStatus(String licenseStatus) {
+    this.licenseStatus = licenseStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return licenseStatus
+   **/
+  @Schema(description = "")
+  public String getLicenseStatus() {
+    return licenseStatus;
+  }
+
+  /**
+   * setLicenseStatus.
+   **/
+  public void setLicenseStatus(String licenseStatus) {
+    this.licenseStatus = licenseStatus;
+  }
+
+
+  /**
+   * licenseType.
+   *
+   * @return NewUser
+   **/
+  public NewUser licenseType(String licenseType) {
+    this.licenseType = licenseType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return licenseType
+   **/
+  @Schema(description = "")
+  public String getLicenseType() {
+    return licenseType;
+  }
+
+  /**
+   * setLicenseType.
+   **/
+  public void setLicenseType(String licenseType) {
+    this.licenseType = licenseType;
   }
 
 
@@ -367,6 +427,8 @@ public class NewUser implements Serializable {
         Objects.equals(this.createdDateTime, newUser.createdDateTime) &&
         Objects.equals(this.email, newUser.email) &&
         Objects.equals(this.errorDetails, newUser.errorDetails) &&
+        Objects.equals(this.licenseStatus, newUser.licenseStatus) &&
+        Objects.equals(this.licenseType, newUser.licenseType) &&
         Objects.equals(this.membershipId, newUser.membershipId) &&
         Objects.equals(this.permissionProfileId, newUser.permissionProfileId) &&
         Objects.equals(this.permissionProfileName, newUser.permissionProfileName) &&
@@ -381,7 +443,7 @@ public class NewUser implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
+    return Objects.hash(apiPassword, createdDateTime, email, errorDetails, licenseStatus, licenseType, membershipId, permissionProfileId, permissionProfileName, uri, userId, userName, userStatus);
   }
 
 
@@ -397,6 +459,8 @@ public class NewUser implements Serializable {
     sb.append("    createdDateTime: ").append(toIndentedString(createdDateTime)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    licenseStatus: ").append(toIndentedString(licenseStatus)).append("\n");
+    sb.append("    licenseType: ").append(toIndentedString(licenseType)).append("\n");
     sb.append("    membershipId: ").append(toIndentedString(membershipId)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
     sb.append("    permissionProfileName: ").append(toIndentedString(permissionProfileName)).append("\n");

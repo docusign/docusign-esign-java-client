@@ -87,6 +87,9 @@ public class Editor implements Serializable {
   @JsonProperty("designatorIdGuid")
   private String designatorIdGuid = null;
 
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("documentVisibility")
   private java.util.List<DocumentVisibility> documentVisibility = null;
 
@@ -251,6 +254,9 @@ public class Editor implements Serializable {
 
   @JsonProperty("userId")
   private String userId = null;
+
+  @JsonProperty("webFormRecipientViewId")
+  private String webFormRecipientViewId = null;
 
 
   /**
@@ -775,6 +781,33 @@ public class Editor implements Serializable {
    **/
   public void setDesignatorIdGuid(String designatorIdGuid) {
     this.designatorIdGuid = designatorIdGuid;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return Editor
+   **/
+  public Editor documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
   }
 
 
@@ -2329,6 +2362,33 @@ public class Editor implements Serializable {
 
 
   /**
+   * webFormRecipientViewId.
+   *
+   * @return Editor
+   **/
+  public Editor webFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return webFormRecipientViewId
+   **/
+  @Schema(description = "")
+  public String getWebFormRecipientViewId() {
+    return webFormRecipientViewId;
+  }
+
+  /**
+   * setWebFormRecipientViewId.
+   **/
+  public void setWebFormRecipientViewId(String webFormRecipientViewId) {
+    this.webFormRecipientViewId = webFormRecipientViewId;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -2360,6 +2420,7 @@ public class Editor implements Serializable {
         Objects.equals(this.deliveryMethodMetadata, editor.deliveryMethodMetadata) &&
         Objects.equals(this.designatorId, editor.designatorId) &&
         Objects.equals(this.designatorIdGuid, editor.designatorIdGuid) &&
+        Objects.equals(this.documentTemplateId, editor.documentTemplateId) &&
         Objects.equals(this.documentVisibility, editor.documentVisibility) &&
         Objects.equals(this.email, editor.email) &&
         Objects.equals(this.emailMetadata, editor.emailMetadata) &&
@@ -2414,7 +2475,8 @@ public class Editor implements Serializable {
         Objects.equals(this.templateLocked, editor.templateLocked) &&
         Objects.equals(this.templateRequired, editor.templateRequired) &&
         Objects.equals(this.totalTabCount, editor.totalTabCount) &&
-        Objects.equals(this.userId, editor.userId);
+        Objects.equals(this.userId, editor.userId) &&
+        Objects.equals(this.webFormRecipientViewId, editor.webFormRecipientViewId);
   }
 
   /**
@@ -2422,7 +2484,7 @@ public class Editor implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -2452,6 +2514,7 @@ public class Editor implements Serializable {
     sb.append("    deliveryMethodMetadata: ").append(toIndentedString(deliveryMethodMetadata)).append("\n");
     sb.append("    designatorId: ").append(toIndentedString(designatorId)).append("\n");
     sb.append("    designatorIdGuid: ").append(toIndentedString(designatorIdGuid)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    documentVisibility: ").append(toIndentedString(documentVisibility)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    emailMetadata: ").append(toIndentedString(emailMetadata)).append("\n");
@@ -2507,6 +2570,7 @@ public class Editor implements Serializable {
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    totalTabCount: ").append(toIndentedString(totalTabCount)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
+    sb.append("    webFormRecipientViewId: ").append(toIndentedString(webFormRecipientViewId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -78,6 +78,12 @@ public class UserInformation implements Serializable {
   @JsonProperty("isAlternateAdmin")
   private String isAlternateAdmin = null;
 
+  @JsonProperty("isManagedByScim")
+  private String isManagedByScim = null;
+
+  @JsonProperty("isMembershipManagedByScim")
+  private String isMembershipManagedByScim = null;
+
   @JsonProperty("isNAREnabled")
   private String isNAREnabled = null;
 
@@ -89,6 +95,12 @@ public class UserInformation implements Serializable {
 
   @JsonProperty("lastName")
   private String lastName = null;
+
+  @JsonProperty("licenseStatus")
+  private String licenseStatus = null;
+
+  @JsonProperty("licenseType")
+  private String licenseType = null;
 
   @JsonProperty("loginStatus")
   private String loginStatus = null;
@@ -683,6 +695,60 @@ public class UserInformation implements Serializable {
 
 
   /**
+   * isManagedByScim.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation isManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isManagedByScim
+   **/
+  @Schema(description = "")
+  public String getIsManagedByScim() {
+    return isManagedByScim;
+  }
+
+  /**
+   * setIsManagedByScim.
+   **/
+  public void setIsManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+  }
+
+
+  /**
+   * isMembershipManagedByScim.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation isMembershipManagedByScim(String isMembershipManagedByScim) {
+    this.isMembershipManagedByScim = isMembershipManagedByScim;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isMembershipManagedByScim
+   **/
+  @Schema(description = "")
+  public String getIsMembershipManagedByScim() {
+    return isMembershipManagedByScim;
+  }
+
+  /**
+   * setIsMembershipManagedByScim.
+   **/
+  public void setIsMembershipManagedByScim(String isMembershipManagedByScim) {
+    this.isMembershipManagedByScim = isMembershipManagedByScim;
+  }
+
+
+  /**
    * isNAREnabled.
    *
    * @return UserInformation
@@ -787,6 +853,60 @@ public class UserInformation implements Serializable {
    **/
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+
+  /**
+   * licenseStatus.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation licenseStatus(String licenseStatus) {
+    this.licenseStatus = licenseStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return licenseStatus
+   **/
+  @Schema(description = "")
+  public String getLicenseStatus() {
+    return licenseStatus;
+  }
+
+  /**
+   * setLicenseStatus.
+   **/
+  public void setLicenseStatus(String licenseStatus) {
+    this.licenseStatus = licenseStatus;
+  }
+
+
+  /**
+   * licenseType.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation licenseType(String licenseType) {
+    this.licenseType = licenseType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return licenseType
+   **/
+  @Schema(description = "")
+  public String getLicenseType() {
+    return licenseType;
+  }
+
+  /**
+   * setLicenseType.
+   **/
+  public void setLicenseType(String licenseType) {
+    this.licenseType = licenseType;
   }
 
 
@@ -1416,10 +1536,14 @@ public class UserInformation implements Serializable {
         Objects.equals(this.initialsImageUri, userInformation.initialsImageUri) &&
         Objects.equals(this.isAdmin, userInformation.isAdmin) &&
         Objects.equals(this.isAlternateAdmin, userInformation.isAlternateAdmin) &&
+        Objects.equals(this.isManagedByScim, userInformation.isManagedByScim) &&
+        Objects.equals(this.isMembershipManagedByScim, userInformation.isMembershipManagedByScim) &&
         Objects.equals(this.isNAREnabled, userInformation.isNAREnabled) &&
         Objects.equals(this.jobTitle, userInformation.jobTitle) &&
         Objects.equals(this.lastLogin, userInformation.lastLogin) &&
         Objects.equals(this.lastName, userInformation.lastName) &&
+        Objects.equals(this.licenseStatus, userInformation.licenseStatus) &&
+        Objects.equals(this.licenseType, userInformation.licenseType) &&
         Objects.equals(this.loginStatus, userInformation.loginStatus) &&
         Objects.equals(this.middleName, userInformation.middleName) &&
         Objects.equals(this.password, userInformation.password) &&
@@ -1449,7 +1573,7 @@ public class UserInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isNAREnabled, jobTitle, lastLogin, lastName, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isManagedByScim, isMembershipManagedByScim, isNAREnabled, jobTitle, lastLogin, lastName, licenseStatus, licenseType, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
@@ -1479,10 +1603,14 @@ public class UserInformation implements Serializable {
     sb.append("    initialsImageUri: ").append(toIndentedString(initialsImageUri)).append("\n");
     sb.append("    isAdmin: ").append(toIndentedString(isAdmin)).append("\n");
     sb.append("    isAlternateAdmin: ").append(toIndentedString(isAlternateAdmin)).append("\n");
+    sb.append("    isManagedByScim: ").append(toIndentedString(isManagedByScim)).append("\n");
+    sb.append("    isMembershipManagedByScim: ").append(toIndentedString(isMembershipManagedByScim)).append("\n");
     sb.append("    isNAREnabled: ").append(toIndentedString(isNAREnabled)).append("\n");
     sb.append("    jobTitle: ").append(toIndentedString(jobTitle)).append("\n");
     sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
+    sb.append("    licenseStatus: ").append(toIndentedString(licenseStatus)).append("\n");
+    sb.append("    licenseType: ").append(toIndentedString(licenseType)).append("\n");
     sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
     sb.append("    middleName: ").append(toIndentedString(middleName)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");

@@ -60,8 +60,6 @@ public class ApiClient {
   public final static String PRODUCTION_REST_BASEPATH = "https://www.docusign.net/restapi";
   /** sandbox/demo base path. */
   public final static String DEMO_REST_BASEPATH = "https://demo.docusign.net/restapi";
-  /** stage base path. */
-  public final static String STAGE_REST_BASEPATH = "https://stage.docusign.net/restapi";
 
   private String basePath = DEMO_REST_BASEPATH;
   private String oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
@@ -95,7 +93,7 @@ public class ApiClient {
     String javaVersion = System.getProperty("java.version");
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/v2.1/6.0.0/Java/" + javaVersion);
+    setUserAgent("Swagger-Codegen/v2.1/6.1.0-RC1/Java/" + javaVersion);
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -607,8 +605,6 @@ public class ApiClient {
       this.oAuthBasePath = OAuth.DEMO_OAUTH_BASEPATH;
     } else if (this.basePath.startsWith("https://demo") || this.basePath.startsWith("http://demo") || this.basePath.startsWith("https://apps-d") || this.basePath.startsWith("http://apps-d")) {
       this.oAuthBasePath = OAuth.DEMO_OAUTH_BASEPATH;
-    } else if (this.basePath.startsWith("https://stage") || this.basePath.startsWith("http://stage") || this.basePath.startsWith("https://apps-s") || this.basePath.startsWith("http://apps-s")) {
-      this.oAuthBasePath = OAuth.STAGE_OAUTH_BASEPATH;
     } else {
       this.oAuthBasePath = OAuth.PRODUCTION_OAUTH_BASEPATH;
     }
@@ -619,7 +615,7 @@ public class ApiClient {
   }
 
   /**
-   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_OAUTH_BASEPATH}, {@link OAuth#DEMO_OAUTH_BASEPATH} and custom (e.g. "account-s.docusign.com").
+   * Sets the OAuth base path. Values include {@link OAuth#PRODUCTION_OAUTH_BASEPATH}, {@link OAuth#DEMO_OAUTH_BASEPATH} and custom.
    * @param oAuthBasePath the new value for the OAuth base path
    * @return this instance of the ApiClient updated with the new OAuth base path
    */
