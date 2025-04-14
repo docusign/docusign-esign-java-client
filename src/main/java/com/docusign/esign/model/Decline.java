@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
@@ -21,6 +23,12 @@ import java.io.Serializable;
 
 public class Decline implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("agreementAttribute")
+  private String agreementAttribute = null;
+
+  @JsonProperty("agreementAttributeLocked")
+  private String agreementAttributeLocked = null;
 
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -112,6 +120,9 @@ public class Decline implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -132,6 +143,9 @@ public class Decline implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -220,6 +234,9 @@ public class Decline implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -274,6 +291,9 @@ public class Decline implements Serializable {
   @JsonProperty("underlineMetadata")
   private PropertyMetadata underlineMetadata = null;
 
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -291,6 +311,60 @@ public class Decline implements Serializable {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+
+  /**
+   * agreementAttribute.
+   *
+   * @return Decline
+   **/
+  public Decline agreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttribute
+   **/
+  @Schema(description = "")
+  public String getAgreementAttribute() {
+    return agreementAttribute;
+  }
+
+  /**
+   * setAgreementAttribute.
+   **/
+  public void setAgreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+  }
+
+
+  /**
+   * agreementAttributeLocked.
+   *
+   * @return Decline
+   **/
+  public Decline agreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttributeLocked
+   **/
+  @Schema(description = "")
+  public String getAgreementAttributeLocked() {
+    return agreementAttributeLocked;
+  }
+
+  /**
+   * setAgreementAttributeLocked.
+   **/
+  public void setAgreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+  }
 
 
   /**
@@ -1104,6 +1178,33 @@ public class Decline implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return Decline
+   **/
+  public Decline connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return Decline
@@ -1289,6 +1390,33 @@ public class Decline implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return Decline
+   **/
+  public Decline extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2076,6 +2204,33 @@ public class Decline implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return Decline
+   **/
+  public Decline tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return Decline
@@ -2575,6 +2730,33 @@ public class Decline implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return Decline
+   **/
+  public Decline warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return Decline
@@ -2750,7 +2932,9 @@ public class Decline implements Serializable {
       return false;
     }
     Decline decline = (Decline) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, decline.anchorAllowWhiteSpaceInCharacters) &&
+    return Objects.equals(this.agreementAttribute, decline.agreementAttribute) &&
+        Objects.equals(this.agreementAttributeLocked, decline.agreementAttributeLocked) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharacters, decline.anchorAllowWhiteSpaceInCharacters) &&
         Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, decline.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, decline.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, decline.anchorCaseSensitiveMetadata) &&
@@ -2780,6 +2964,7 @@ public class Decline implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, decline.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, decline.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, decline.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, decline.connectedObjectDetails) &&
         Objects.equals(this.customTabId, decline.customTabId) &&
         Objects.equals(this.customTabIdMetadata, decline.customTabIdMetadata) &&
         Objects.equals(this.declineReason, decline.declineReason) &&
@@ -2787,6 +2972,7 @@ public class Decline implements Serializable {
         Objects.equals(this.documentId, decline.documentId) &&
         Objects.equals(this.documentIdMetadata, decline.documentIdMetadata) &&
         Objects.equals(this.errorDetails, decline.errorDetails) &&
+        Objects.equals(this.extensionData, decline.extensionData) &&
         Objects.equals(this.font, decline.font) &&
         Objects.equals(this.fontColor, decline.fontColor) &&
         Objects.equals(this.fontColorMetadata, decline.fontColorMetadata) &&
@@ -2816,6 +3002,7 @@ public class Decline implements Serializable {
         Objects.equals(this.source, decline.source) &&
         Objects.equals(this.status, decline.status) &&
         Objects.equals(this.statusMetadata, decline.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, decline.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, decline.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, decline.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, decline.tabId) &&
@@ -2834,6 +3021,7 @@ public class Decline implements Serializable {
         Objects.equals(this.toolTipMetadata, decline.toolTipMetadata) &&
         Objects.equals(this.underline, decline.underline) &&
         Objects.equals(this.underlineMetadata, decline.underlineMetadata) &&
+        Objects.equals(this.warningDetails, decline.warningDetails) &&
         Objects.equals(this.width, decline.width) &&
         Objects.equals(this.widthMetadata, decline.widthMetadata) &&
         Objects.equals(this.xPosition, decline.xPosition) &&
@@ -2847,7 +3035,7 @@ public class Decline implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, declineReason, declineReasonMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, buttonText, buttonTextMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, declineReason, declineReasonMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2859,6 +3047,8 @@ public class Decline implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Decline {\n");
     
+    sb.append("    agreementAttribute: ").append(toIndentedString(agreementAttribute)).append("\n");
+    sb.append("    agreementAttributeLocked: ").append(toIndentedString(agreementAttributeLocked)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
@@ -2889,6 +3079,7 @@ public class Decline implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    declineReason: ").append(toIndentedString(declineReason)).append("\n");
@@ -2896,6 +3087,7 @@ public class Decline implements Serializable {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -2925,6 +3117,7 @@ public class Decline implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2943,6 +3136,7 @@ public class Decline implements Serializable {
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");
     sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
@@ -21,6 +23,12 @@ import java.io.Serializable;
 
 public class CommissionCounty implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("agreementAttribute")
+  private String agreementAttribute = null;
+
+  @JsonProperty("agreementAttributeLocked")
+  private String agreementAttributeLocked = null;
 
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -112,6 +120,9 @@ public class CommissionCounty implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -132,6 +143,9 @@ public class CommissionCounty implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("font")
   private String font = null;
@@ -250,6 +264,9 @@ public class CommissionCounty implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -310,6 +327,9 @@ public class CommissionCounty implements Serializable {
   @JsonProperty("valueMetadata")
   private PropertyMetadata valueMetadata = null;
 
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -327,6 +347,60 @@ public class CommissionCounty implements Serializable {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+
+  /**
+   * agreementAttribute.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty agreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttribute
+   **/
+  @Schema(description = "")
+  public String getAgreementAttribute() {
+    return agreementAttribute;
+  }
+
+  /**
+   * setAgreementAttribute.
+   **/
+  public void setAgreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+  }
+
+
+  /**
+   * agreementAttributeLocked.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty agreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttributeLocked
+   **/
+  @Schema(description = "")
+  public String getAgreementAttributeLocked() {
+    return agreementAttributeLocked;
+  }
+
+  /**
+   * setAgreementAttributeLocked.
+   **/
+  public void setAgreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+  }
 
 
   /**
@@ -1140,6 +1214,33 @@ public class CommissionCounty implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return CommissionCounty
@@ -1325,6 +1426,33 @@ public class CommissionCounty implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2382,6 +2510,33 @@ public class CommissionCounty implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return CommissionCounty
@@ -2935,6 +3090,33 @@ public class CommissionCounty implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return CommissionCounty
+   **/
+  public CommissionCounty warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return CommissionCounty
@@ -3110,7 +3292,9 @@ public class CommissionCounty implements Serializable {
       return false;
     }
     CommissionCounty commissionCounty = (CommissionCounty) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, commissionCounty.anchorAllowWhiteSpaceInCharacters) &&
+    return Objects.equals(this.agreementAttribute, commissionCounty.agreementAttribute) &&
+        Objects.equals(this.agreementAttributeLocked, commissionCounty.agreementAttributeLocked) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharacters, commissionCounty.anchorAllowWhiteSpaceInCharacters) &&
         Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, commissionCounty.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, commissionCounty.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, commissionCounty.anchorCaseSensitiveMetadata) &&
@@ -3140,6 +3324,7 @@ public class CommissionCounty implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, commissionCounty.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, commissionCounty.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, commissionCounty.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, commissionCounty.connectedObjectDetails) &&
         Objects.equals(this.customTabId, commissionCounty.customTabId) &&
         Objects.equals(this.customTabIdMetadata, commissionCounty.customTabIdMetadata) &&
         Objects.equals(this.disableAutoSize, commissionCounty.disableAutoSize) &&
@@ -3147,6 +3332,7 @@ public class CommissionCounty implements Serializable {
         Objects.equals(this.documentId, commissionCounty.documentId) &&
         Objects.equals(this.documentIdMetadata, commissionCounty.documentIdMetadata) &&
         Objects.equals(this.errorDetails, commissionCounty.errorDetails) &&
+        Objects.equals(this.extensionData, commissionCounty.extensionData) &&
         Objects.equals(this.font, commissionCounty.font) &&
         Objects.equals(this.fontColor, commissionCounty.fontColor) &&
         Objects.equals(this.fontColorMetadata, commissionCounty.fontColorMetadata) &&
@@ -3186,6 +3372,7 @@ public class CommissionCounty implements Serializable {
         Objects.equals(this.source, commissionCounty.source) &&
         Objects.equals(this.status, commissionCounty.status) &&
         Objects.equals(this.statusMetadata, commissionCounty.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, commissionCounty.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, commissionCounty.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, commissionCounty.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, commissionCounty.tabId) &&
@@ -3206,6 +3393,7 @@ public class CommissionCounty implements Serializable {
         Objects.equals(this.underlineMetadata, commissionCounty.underlineMetadata) &&
         Objects.equals(this.value, commissionCounty.value) &&
         Objects.equals(this.valueMetadata, commissionCounty.valueMetadata) &&
+        Objects.equals(this.warningDetails, commissionCounty.warningDetails) &&
         Objects.equals(this.width, commissionCounty.width) &&
         Objects.equals(this.widthMetadata, commissionCounty.widthMetadata) &&
         Objects.equals(this.xPosition, commissionCounty.xPosition) &&
@@ -3219,7 +3407,7 @@ public class CommissionCounty implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3231,6 +3419,8 @@ public class CommissionCounty implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class CommissionCounty {\n");
     
+    sb.append("    agreementAttribute: ").append(toIndentedString(agreementAttribute)).append("\n");
+    sb.append("    agreementAttributeLocked: ").append(toIndentedString(agreementAttributeLocked)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
@@ -3261,6 +3451,7 @@ public class CommissionCounty implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    disableAutoSize: ").append(toIndentedString(disableAutoSize)).append("\n");
@@ -3268,6 +3459,7 @@ public class CommissionCounty implements Serializable {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");
     sb.append("    fontColorMetadata: ").append(toIndentedString(fontColorMetadata)).append("\n");
@@ -3307,6 +3499,7 @@ public class CommissionCounty implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -3327,6 +3520,7 @@ public class CommissionCounty implements Serializable {
     sb.append("    underlineMetadata: ").append(toIndentedString(underlineMetadata)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("    valueMetadata: ").append(toIndentedString(valueMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

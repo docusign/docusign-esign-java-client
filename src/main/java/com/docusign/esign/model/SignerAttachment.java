@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -20,6 +22,12 @@ import java.io.Serializable;
 
 public class SignerAttachment implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("agreementAttribute")
+  private String agreementAttribute = null;
+
+  @JsonProperty("agreementAttributeLocked")
+  private String agreementAttributeLocked = null;
 
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -99,6 +107,9 @@ public class SignerAttachment implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -113,6 +124,9 @@ public class SignerAttachment implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("formOrder")
   private String formOrder = null;
@@ -195,6 +209,9 @@ public class SignerAttachment implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -243,6 +260,9 @@ public class SignerAttachment implements Serializable {
   @JsonProperty("toolTipMetadata")
   private PropertyMetadata toolTipMetadata = null;
 
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -260,6 +280,60 @@ public class SignerAttachment implements Serializable {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+
+  /**
+   * agreementAttribute.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment agreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttribute
+   **/
+  @Schema(description = "")
+  public String getAgreementAttribute() {
+    return agreementAttribute;
+  }
+
+  /**
+   * setAgreementAttribute.
+   **/
+  public void setAgreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+  }
+
+
+  /**
+   * agreementAttributeLocked.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment agreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttributeLocked
+   **/
+  @Schema(description = "")
+  public String getAgreementAttributeLocked() {
+    return agreementAttributeLocked;
+  }
+
+  /**
+   * setAgreementAttributeLocked.
+   **/
+  public void setAgreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+  }
 
 
   /**
@@ -965,6 +1039,33 @@ public class SignerAttachment implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return SignerAttachment
@@ -1096,6 +1197,33 @@ public class SignerAttachment implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -1829,6 +1957,33 @@ public class SignerAttachment implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return SignerAttachment
@@ -2274,6 +2429,33 @@ public class SignerAttachment implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return SignerAttachment
+   **/
+  public SignerAttachment warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return SignerAttachment
@@ -2449,7 +2631,9 @@ public class SignerAttachment implements Serializable {
       return false;
     }
     SignerAttachment signerAttachment = (SignerAttachment) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, signerAttachment.anchorAllowWhiteSpaceInCharacters) &&
+    return Objects.equals(this.agreementAttribute, signerAttachment.agreementAttribute) &&
+        Objects.equals(this.agreementAttributeLocked, signerAttachment.agreementAttributeLocked) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharacters, signerAttachment.anchorAllowWhiteSpaceInCharacters) &&
         Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, signerAttachment.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, signerAttachment.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, signerAttachment.anchorCaseSensitiveMetadata) &&
@@ -2475,11 +2659,13 @@ public class SignerAttachment implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, signerAttachment.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, signerAttachment.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, signerAttachment.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, signerAttachment.connectedObjectDetails) &&
         Objects.equals(this.customTabId, signerAttachment.customTabId) &&
         Objects.equals(this.customTabIdMetadata, signerAttachment.customTabIdMetadata) &&
         Objects.equals(this.documentId, signerAttachment.documentId) &&
         Objects.equals(this.documentIdMetadata, signerAttachment.documentIdMetadata) &&
         Objects.equals(this.errorDetails, signerAttachment.errorDetails) &&
+        Objects.equals(this.extensionData, signerAttachment.extensionData) &&
         Objects.equals(this.formOrder, signerAttachment.formOrder) &&
         Objects.equals(this.formOrderMetadata, signerAttachment.formOrderMetadata) &&
         Objects.equals(this.formPageLabel, signerAttachment.formPageLabel) &&
@@ -2507,6 +2693,7 @@ public class SignerAttachment implements Serializable {
         Objects.equals(this.source, signerAttachment.source) &&
         Objects.equals(this.status, signerAttachment.status) &&
         Objects.equals(this.statusMetadata, signerAttachment.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, signerAttachment.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, signerAttachment.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, signerAttachment.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, signerAttachment.tabId) &&
@@ -2523,6 +2710,7 @@ public class SignerAttachment implements Serializable {
         Objects.equals(this.templateRequiredMetadata, signerAttachment.templateRequiredMetadata) &&
         Objects.equals(this.tooltip, signerAttachment.tooltip) &&
         Objects.equals(this.toolTipMetadata, signerAttachment.toolTipMetadata) &&
+        Objects.equals(this.warningDetails, signerAttachment.warningDetails) &&
         Objects.equals(this.width, signerAttachment.width) &&
         Objects.equals(this.widthMetadata, signerAttachment.widthMetadata) &&
         Objects.equals(this.xPosition, signerAttachment.xPosition) &&
@@ -2536,7 +2724,7 @@ public class SignerAttachment implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2548,6 +2736,8 @@ public class SignerAttachment implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class SignerAttachment {\n");
     
+    sb.append("    agreementAttribute: ").append(toIndentedString(agreementAttribute)).append("\n");
+    sb.append("    agreementAttributeLocked: ").append(toIndentedString(agreementAttributeLocked)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
@@ -2574,11 +2764,13 @@ public class SignerAttachment implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
@@ -2606,6 +2798,7 @@ public class SignerAttachment implements Serializable {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2622,6 +2815,7 @@ public class SignerAttachment implements Serializable {
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

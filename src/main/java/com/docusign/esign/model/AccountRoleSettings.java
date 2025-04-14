@@ -78,6 +78,12 @@ public class AccountRoleSettings implements Serializable {
   @JsonProperty("allowedClickwrapsAccessMetadata")
   private SettingsMetadata allowedClickwrapsAccessMetadata = null;
 
+  @JsonProperty("allowedDocumentTemplateLibraryAccess")
+  private String allowedDocumentTemplateLibraryAccess = null;
+
+  @JsonProperty("allowedDocumentTemplateLibraryAccessMetadata")
+  private SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata = null;
+
   @JsonProperty("allowedOrchestrationAccess")
   private String allowedOrchestrationAccess = null;
 
@@ -823,6 +829,60 @@ public class AccountRoleSettings implements Serializable {
    **/
   public void setAllowedClickwrapsAccessMetadata(SettingsMetadata allowedClickwrapsAccessMetadata) {
     this.allowedClickwrapsAccessMetadata = allowedClickwrapsAccessMetadata;
+  }
+
+
+  /**
+   * allowedDocumentTemplateLibraryAccess.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowedDocumentTemplateLibraryAccess(String allowedDocumentTemplateLibraryAccess) {
+    this.allowedDocumentTemplateLibraryAccess = allowedDocumentTemplateLibraryAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedDocumentTemplateLibraryAccess
+   **/
+  @Schema(description = "")
+  public String getAllowedDocumentTemplateLibraryAccess() {
+    return allowedDocumentTemplateLibraryAccess;
+  }
+
+  /**
+   * setAllowedDocumentTemplateLibraryAccess.
+   **/
+  public void setAllowedDocumentTemplateLibraryAccess(String allowedDocumentTemplateLibraryAccess) {
+    this.allowedDocumentTemplateLibraryAccess = allowedDocumentTemplateLibraryAccess;
+  }
+
+
+  /**
+   * allowedDocumentTemplateLibraryAccessMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings allowedDocumentTemplateLibraryAccessMetadata(SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata) {
+    this.allowedDocumentTemplateLibraryAccessMetadata = allowedDocumentTemplateLibraryAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedDocumentTemplateLibraryAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowedDocumentTemplateLibraryAccessMetadata() {
+    return allowedDocumentTemplateLibraryAccessMetadata;
+  }
+
+  /**
+   * setAllowedDocumentTemplateLibraryAccessMetadata.
+   **/
+  public void setAllowedDocumentTemplateLibraryAccessMetadata(SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata) {
+    this.allowedDocumentTemplateLibraryAccessMetadata = allowedDocumentTemplateLibraryAccessMetadata;
   }
 
 
@@ -2723,6 +2783,8 @@ public class AccountRoleSettings implements Serializable {
         Objects.equals(this.allowedAddressBookAccessMetadata, accountRoleSettings.allowedAddressBookAccessMetadata) &&
         Objects.equals(this.allowedClickwrapsAccess, accountRoleSettings.allowedClickwrapsAccess) &&
         Objects.equals(this.allowedClickwrapsAccessMetadata, accountRoleSettings.allowedClickwrapsAccessMetadata) &&
+        Objects.equals(this.allowedDocumentTemplateLibraryAccess, accountRoleSettings.allowedDocumentTemplateLibraryAccess) &&
+        Objects.equals(this.allowedDocumentTemplateLibraryAccessMetadata, accountRoleSettings.allowedDocumentTemplateLibraryAccessMetadata) &&
         Objects.equals(this.allowedOrchestrationAccess, accountRoleSettings.allowedOrchestrationAccess) &&
         Objects.equals(this.allowedOrchestrationAccessMetadata, accountRoleSettings.allowedOrchestrationAccessMetadata) &&
         Objects.equals(this.allowedTemplateAccess, accountRoleSettings.allowedTemplateAccess) &&
@@ -2799,7 +2861,7 @@ public class AccountRoleSettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowTransactions, allowTransactionsMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateTransaction, canCreateTransactionMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowTransactions, allowTransactionsMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateTransaction, canCreateTransactionMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -2831,6 +2893,8 @@ public class AccountRoleSettings implements Serializable {
     sb.append("    allowedAddressBookAccessMetadata: ").append(toIndentedString(allowedAddressBookAccessMetadata)).append("\n");
     sb.append("    allowedClickwrapsAccess: ").append(toIndentedString(allowedClickwrapsAccess)).append("\n");
     sb.append("    allowedClickwrapsAccessMetadata: ").append(toIndentedString(allowedClickwrapsAccessMetadata)).append("\n");
+    sb.append("    allowedDocumentTemplateLibraryAccess: ").append(toIndentedString(allowedDocumentTemplateLibraryAccess)).append("\n");
+    sb.append("    allowedDocumentTemplateLibraryAccessMetadata: ").append(toIndentedString(allowedDocumentTemplateLibraryAccessMetadata)).append("\n");
     sb.append("    allowedOrchestrationAccess: ").append(toIndentedString(allowedOrchestrationAccess)).append("\n");
     sb.append("    allowedOrchestrationAccessMetadata: ").append(toIndentedString(allowedOrchestrationAccessMetadata)).append("\n");
     sb.append("    allowedTemplateAccess: ").append(toIndentedString(allowedTemplateAccess)).append("\n");

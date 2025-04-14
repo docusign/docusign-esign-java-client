@@ -46,6 +46,12 @@ public class Document implements Serializable {
   @JsonProperty("documentId")
   private String documentId = null;
 
+  @JsonProperty("documentTemplateAgreementTypeId")
+  private String documentTemplateAgreementTypeId = null;
+
+  @JsonProperty("documentTemplateId")
+  private String documentTemplateId = null;
+
   @JsonProperty("encryptedWithKeyManager")
   private String encryptedWithKeyManager = null;
 
@@ -346,6 +352,60 @@ public class Document implements Serializable {
    **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
+  }
+
+
+  /**
+   * documentTemplateAgreementTypeId.
+   *
+   * @return Document
+   **/
+  public Document documentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
+    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateAgreementTypeId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateAgreementTypeId() {
+    return documentTemplateAgreementTypeId;
+  }
+
+  /**
+   * setDocumentTemplateAgreementTypeId.
+   **/
+  public void setDocumentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
+    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
+  }
+
+
+  /**
+   * documentTemplateId.
+   *
+   * @return Document
+   **/
+  public Document documentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
+    return this;
+  }
+
+  /**
+   * .
+   * @return documentTemplateId
+   **/
+  @Schema(description = "")
+  public String getDocumentTemplateId() {
+    return documentTemplateId;
+  }
+
+  /**
+   * setDocumentTemplateId.
+   **/
+  public void setDocumentTemplateId(String documentTemplateId) {
+    this.documentTemplateId = documentTemplateId;
   }
 
 
@@ -924,6 +984,8 @@ public class Document implements Serializable {
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
         Objects.equals(this.documentId, document.documentId) &&
+        Objects.equals(this.documentTemplateAgreementTypeId, document.documentTemplateAgreementTypeId) &&
+        Objects.equals(this.documentTemplateId, document.documentTemplateId) &&
         Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
         Objects.equals(this.fileFormatHint, document.fileFormatHint) &&
@@ -951,7 +1013,7 @@ public class Document implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, authoritativeCopy, display, docGenFormFields, documentBase64, documentFields, documentId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, authoritativeCopy, display, docGenFormFields, documentBase64, documentFields, documentId, documentTemplateAgreementTypeId, documentTemplateId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -971,6 +1033,8 @@ public class Document implements Serializable {
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
+    sb.append("    documentTemplateAgreementTypeId: ").append(toIndentedString(documentTemplateAgreementTypeId)).append("\n");
+    sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");
     sb.append("    fileFormatHint: ").append(toIndentedString(fileFormatHint)).append("\n");

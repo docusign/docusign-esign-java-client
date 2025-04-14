@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.DocGenFormFieldOption;
 import com.docusign.esign.model.DocGenFormFieldRowValue;
 import com.docusign.esign.model.DocGenFormFieldValidation;
@@ -19,8 +20,14 @@ import java.io.Serializable;
 public class DocGenFormField implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("description")
   private String description = null;
+
+  @JsonProperty("fullyQualifiedPath")
+  private String fullyQualifiedPath = null;
 
   @JsonProperty("label")
   private String label = null;
@@ -30,6 +37,9 @@ public class DocGenFormField implements Serializable {
 
   @JsonProperty("options")
   private java.util.List<DocGenFormFieldOption> options = null;
+
+  @JsonProperty("order")
+  private String order = null;
 
   @JsonProperty("predefinedValidation")
   private String predefinedValidation = null;
@@ -48,6 +58,33 @@ public class DocGenFormField implements Serializable {
 
   @JsonProperty("value")
   private String value = null;
+
+
+  /**
+   * connectedObjectDetails.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
 
 
   /**
@@ -74,6 +111,33 @@ public class DocGenFormField implements Serializable {
    **/
   public void setDescription(String description) {
     this.description = description;
+  }
+
+
+  /**
+   * fullyQualifiedPath.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField fullyQualifiedPath(String fullyQualifiedPath) {
+    this.fullyQualifiedPath = fullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return fullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getFullyQualifiedPath() {
+    return fullyQualifiedPath;
+  }
+
+  /**
+   * setFullyQualifiedPath.
+   **/
+  public void setFullyQualifiedPath(String fullyQualifiedPath) {
+    this.fullyQualifiedPath = fullyQualifiedPath;
   }
 
 
@@ -168,6 +232,33 @@ public class DocGenFormField implements Serializable {
    **/
   public void setOptions(java.util.List<DocGenFormFieldOption> options) {
     this.options = options;
+  }
+
+
+  /**
+   * order.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField order(String order) {
+    this.order = order;
+    return this;
+  }
+
+  /**
+   * .
+   * @return order
+   **/
+  @Schema(description = "")
+  public String getOrder() {
+    return order;
+  }
+
+  /**
+   * setOrder.
+   **/
+  public void setOrder(String order) {
+    this.order = order;
   }
 
 
@@ -360,10 +451,13 @@ public class DocGenFormField implements Serializable {
       return false;
     }
     DocGenFormField docGenFormField = (DocGenFormField) o;
-    return Objects.equals(this.description, docGenFormField.description) &&
+    return Objects.equals(this.connectedObjectDetails, docGenFormField.connectedObjectDetails) &&
+        Objects.equals(this.description, docGenFormField.description) &&
+        Objects.equals(this.fullyQualifiedPath, docGenFormField.fullyQualifiedPath) &&
         Objects.equals(this.label, docGenFormField.label) &&
         Objects.equals(this.name, docGenFormField.name) &&
         Objects.equals(this.options, docGenFormField.options) &&
+        Objects.equals(this.order, docGenFormField.order) &&
         Objects.equals(this.predefinedValidation, docGenFormField.predefinedValidation) &&
         Objects.equals(this.required, docGenFormField.required) &&
         Objects.equals(this.rowValues, docGenFormField.rowValues) &&
@@ -377,7 +471,7 @@ public class DocGenFormField implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(description, label, name, options, predefinedValidation, required, rowValues, type, validation, value);
+    return Objects.hash(connectedObjectDetails, description, fullyQualifiedPath, label, name, options, order, predefinedValidation, required, rowValues, type, validation, value);
   }
 
 
@@ -389,10 +483,13 @@ public class DocGenFormField implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormField {\n");
     
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    fullyQualifiedPath: ").append(toIndentedString(fullyQualifiedPath)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
+    sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    predefinedValidation: ").append(toIndentedString(predefinedValidation)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    rowValues: ").append(toIndentedString(rowValues)).append("\n");

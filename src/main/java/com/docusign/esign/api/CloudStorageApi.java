@@ -69,6 +69,7 @@ public class CloudStorageApi {
   private String order = null;
   private String orderBy = null;
   private String searchText = null;
+  private String skyDriveSkipToken = null;
   private String startPosition = null;
   
  /**
@@ -165,6 +166,22 @@ public class CloudStorageApi {
   */
   public String getSearchText() {
     return this.searchText;
+  }
+  
+ /**
+  * setSkyDriveSkipToken method.
+  */
+  public void setSkyDriveSkipToken(String skyDriveSkipToken) {
+    this.skyDriveSkipToken = skyDriveSkipToken;
+  }
+
+ /**
+  * getSkyDriveSkipToken method.
+  *
+  * @return String
+  */
+  public String getSkyDriveSkipToken() {
+    return this.skyDriveSkipToken;
   }
   
  /**
@@ -272,6 +289,8 @@ public class CloudStorageApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("sky_drive_skip_token", options.skyDriveSkipToken));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }

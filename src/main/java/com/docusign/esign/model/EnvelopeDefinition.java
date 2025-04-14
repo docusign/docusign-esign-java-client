@@ -194,6 +194,9 @@ public class EnvelopeDefinition implements Serializable {
   @JsonProperty("hasComments")
   private String hasComments = null;
 
+  @JsonProperty("hasDocumentTemplateLibrary")
+  private String hasDocumentTemplateLibrary = null;
+
   @JsonProperty("hasFormDataChanged")
   private String hasFormDataChanged = null;
 
@@ -1832,6 +1835,33 @@ public class EnvelopeDefinition implements Serializable {
 
 
   /**
+   * hasDocumentTemplateLibrary.
+   *
+   * @return EnvelopeDefinition
+   **/
+  public EnvelopeDefinition hasDocumentTemplateLibrary(String hasDocumentTemplateLibrary) {
+    this.hasDocumentTemplateLibrary = hasDocumentTemplateLibrary;
+    return this;
+  }
+
+  /**
+   * .
+   * @return hasDocumentTemplateLibrary
+   **/
+  @Schema(description = "")
+  public String getHasDocumentTemplateLibrary() {
+    return hasDocumentTemplateLibrary;
+  }
+
+  /**
+   * setHasDocumentTemplateLibrary.
+   **/
+  public void setHasDocumentTemplateLibrary(String hasDocumentTemplateLibrary) {
+    this.hasDocumentTemplateLibrary = hasDocumentTemplateLibrary;
+  }
+
+
+  /**
    * hasFormDataChanged.
    *
    * @return EnvelopeDefinition
@@ -2937,6 +2967,7 @@ public class EnvelopeDefinition implements Serializable {
         Objects.equals(this.externalEnvelopeId, envelopeDefinition.externalEnvelopeId) &&
         Objects.equals(this.folders, envelopeDefinition.folders) &&
         Objects.equals(this.hasComments, envelopeDefinition.hasComments) &&
+        Objects.equals(this.hasDocumentTemplateLibrary, envelopeDefinition.hasDocumentTemplateLibrary) &&
         Objects.equals(this.hasFormDataChanged, envelopeDefinition.hasFormDataChanged) &&
         Objects.equals(this.hasWavFile, envelopeDefinition.hasWavFile) &&
         Objects.equals(this.holder, envelopeDefinition.holder) &&
@@ -2982,7 +3013,7 @@ public class EnvelopeDefinition implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, uSigState, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasDocumentTemplateLibrary, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, uSigState, voidedDateTime, voidedReason, workflow);
   }
 
 
@@ -3047,6 +3078,7 @@ public class EnvelopeDefinition implements Serializable {
     sb.append("    externalEnvelopeId: ").append(toIndentedString(externalEnvelopeId)).append("\n");
     sb.append("    folders: ").append(toIndentedString(folders)).append("\n");
     sb.append("    hasComments: ").append(toIndentedString(hasComments)).append("\n");
+    sb.append("    hasDocumentTemplateLibrary: ").append(toIndentedString(hasDocumentTemplateLibrary)).append("\n");
     sb.append("    hasFormDataChanged: ").append(toIndentedString(hasFormDataChanged)).append("\n");
     sb.append("    hasWavFile: ").append(toIndentedString(hasWavFile)).append("\n");
     sb.append("    holder: ").append(toIndentedString(holder)).append("\n");

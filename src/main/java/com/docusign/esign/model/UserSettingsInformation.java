@@ -47,6 +47,12 @@ public class UserSettingsInformation implements Serializable {
   @JsonProperty("allowAutoTagging")
   private String allowAutoTagging = null;
 
+  @JsonProperty("allowedDocumentTemplateLibraryAccess")
+  private String allowedDocumentTemplateLibraryAccess = null;
+
+  @JsonProperty("allowedDocumentTemplateLibraryAccessMetadata")
+  private SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata = null;
+
   @JsonProperty("allowedOrchestrationAccess")
   private String allowedOrchestrationAccess = null;
 
@@ -280,6 +286,18 @@ public class UserSettingsInformation implements Serializable {
 
   @JsonProperty("expressSendOnly")
   private String expressSendOnly = null;
+
+  @JsonProperty("isManagedByScim")
+  private String isManagedByScim = null;
+
+  @JsonProperty("isManagedByScimMetadata")
+  private SettingsMetadata isManagedByScimMetadata = null;
+
+  @JsonProperty("isMembershipManagedByScim")
+  private String isMembershipManagedByScim = null;
+
+  @JsonProperty("isMembershipManagedByScimMetadata")
+  private SettingsMetadata isMembershipManagedByScimMetadata = null;
 
   @JsonProperty("locale")
   private String locale = null;
@@ -666,6 +684,60 @@ public class UserSettingsInformation implements Serializable {
    **/
   public void setAllowAutoTagging(String allowAutoTagging) {
     this.allowAutoTagging = allowAutoTagging;
+  }
+
+
+  /**
+   * allowedDocumentTemplateLibraryAccess.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowedDocumentTemplateLibraryAccess(String allowedDocumentTemplateLibraryAccess) {
+    this.allowedDocumentTemplateLibraryAccess = allowedDocumentTemplateLibraryAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedDocumentTemplateLibraryAccess
+   **/
+  @Schema(description = "")
+  public String getAllowedDocumentTemplateLibraryAccess() {
+    return allowedDocumentTemplateLibraryAccess;
+  }
+
+  /**
+   * setAllowedDocumentTemplateLibraryAccess.
+   **/
+  public void setAllowedDocumentTemplateLibraryAccess(String allowedDocumentTemplateLibraryAccess) {
+    this.allowedDocumentTemplateLibraryAccess = allowedDocumentTemplateLibraryAccess;
+  }
+
+
+  /**
+   * allowedDocumentTemplateLibraryAccessMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation allowedDocumentTemplateLibraryAccessMetadata(SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata) {
+    this.allowedDocumentTemplateLibraryAccessMetadata = allowedDocumentTemplateLibraryAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return allowedDocumentTemplateLibraryAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAllowedDocumentTemplateLibraryAccessMetadata() {
+    return allowedDocumentTemplateLibraryAccessMetadata;
+  }
+
+  /**
+   * setAllowedDocumentTemplateLibraryAccessMetadata.
+   **/
+  public void setAllowedDocumentTemplateLibraryAccessMetadata(SettingsMetadata allowedDocumentTemplateLibraryAccessMetadata) {
+    this.allowedDocumentTemplateLibraryAccessMetadata = allowedDocumentTemplateLibraryAccessMetadata;
   }
 
 
@@ -2776,6 +2848,114 @@ public class UserSettingsInformation implements Serializable {
 
 
   /**
+   * isManagedByScim.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isManagedByScim
+   **/
+  @Schema(description = "")
+  public String getIsManagedByScim() {
+    return isManagedByScim;
+  }
+
+  /**
+   * setIsManagedByScim.
+   **/
+  public void setIsManagedByScim(String isManagedByScim) {
+    this.isManagedByScim = isManagedByScim;
+  }
+
+
+  /**
+   * isManagedByScimMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isManagedByScimMetadata(SettingsMetadata isManagedByScimMetadata) {
+    this.isManagedByScimMetadata = isManagedByScimMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isManagedByScimMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getIsManagedByScimMetadata() {
+    return isManagedByScimMetadata;
+  }
+
+  /**
+   * setIsManagedByScimMetadata.
+   **/
+  public void setIsManagedByScimMetadata(SettingsMetadata isManagedByScimMetadata) {
+    this.isManagedByScimMetadata = isManagedByScimMetadata;
+  }
+
+
+  /**
+   * isMembershipManagedByScim.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isMembershipManagedByScim(String isMembershipManagedByScim) {
+    this.isMembershipManagedByScim = isMembershipManagedByScim;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isMembershipManagedByScim
+   **/
+  @Schema(description = "")
+  public String getIsMembershipManagedByScim() {
+    return isMembershipManagedByScim;
+  }
+
+  /**
+   * setIsMembershipManagedByScim.
+   **/
+  public void setIsMembershipManagedByScim(String isMembershipManagedByScim) {
+    this.isMembershipManagedByScim = isMembershipManagedByScim;
+  }
+
+
+  /**
+   * isMembershipManagedByScimMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isMembershipManagedByScimMetadata(SettingsMetadata isMembershipManagedByScimMetadata) {
+    this.isMembershipManagedByScimMetadata = isMembershipManagedByScimMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isMembershipManagedByScimMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getIsMembershipManagedByScimMetadata() {
+    return isMembershipManagedByScimMetadata;
+  }
+
+  /**
+   * setIsMembershipManagedByScimMetadata.
+   **/
+  public void setIsMembershipManagedByScimMetadata(SettingsMetadata isMembershipManagedByScimMetadata) {
+    this.isMembershipManagedByScimMetadata = isMembershipManagedByScimMetadata;
+  }
+
+
+  /**
    * locale.
    *
    * @return UserSettingsInformation
@@ -4349,6 +4529,8 @@ public class UserSettingsInformation implements Serializable {
         Objects.equals(this.allowAccessToAllAccountAgreements, userSettingsInformation.allowAccessToAllAccountAgreements) &&
         Objects.equals(this.allowAccessToAllAccountAgreementsMetadata, userSettingsInformation.allowAccessToAllAccountAgreementsMetadata) &&
         Objects.equals(this.allowAutoTagging, userSettingsInformation.allowAutoTagging) &&
+        Objects.equals(this.allowedDocumentTemplateLibraryAccess, userSettingsInformation.allowedDocumentTemplateLibraryAccess) &&
+        Objects.equals(this.allowedDocumentTemplateLibraryAccessMetadata, userSettingsInformation.allowedDocumentTemplateLibraryAccessMetadata) &&
         Objects.equals(this.allowedOrchestrationAccess, userSettingsInformation.allowedOrchestrationAccess) &&
         Objects.equals(this.allowedOrchestrationAccessMetadata, userSettingsInformation.allowedOrchestrationAccessMetadata) &&
         Objects.equals(this.allowEnvelopeTransferTo, userSettingsInformation.allowEnvelopeTransferTo) &&
@@ -4427,6 +4609,10 @@ public class UserSettingsInformation implements Serializable {
         Objects.equals(this.enableVaulting, userSettingsInformation.enableVaulting) &&
         Objects.equals(this.enableVaultingMetadata, userSettingsInformation.enableVaultingMetadata) &&
         Objects.equals(this.expressSendOnly, userSettingsInformation.expressSendOnly) &&
+        Objects.equals(this.isManagedByScim, userSettingsInformation.isManagedByScim) &&
+        Objects.equals(this.isManagedByScimMetadata, userSettingsInformation.isManagedByScimMetadata) &&
+        Objects.equals(this.isMembershipManagedByScim, userSettingsInformation.isMembershipManagedByScim) &&
+        Objects.equals(this.isMembershipManagedByScimMetadata, userSettingsInformation.isMembershipManagedByScimMetadata) &&
         Objects.equals(this.locale, userSettingsInformation.locale) &&
         Objects.equals(this.localeMetadata, userSettingsInformation.localeMetadata) &&
         Objects.equals(this.localePolicy, userSettingsInformation.localePolicy) &&
@@ -4491,7 +4677,7 @@ public class UserSettingsInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageAgreementParties, canManageAgreementPartiesMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageAgreementParties, canManageAgreementPartiesMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, isManagedByScim, isManagedByScimMetadata, isMembershipManagedByScim, isMembershipManagedByScimMetadata, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -4511,6 +4697,8 @@ public class UserSettingsInformation implements Serializable {
     sb.append("    allowAccessToAllAccountAgreements: ").append(toIndentedString(allowAccessToAllAccountAgreements)).append("\n");
     sb.append("    allowAccessToAllAccountAgreementsMetadata: ").append(toIndentedString(allowAccessToAllAccountAgreementsMetadata)).append("\n");
     sb.append("    allowAutoTagging: ").append(toIndentedString(allowAutoTagging)).append("\n");
+    sb.append("    allowedDocumentTemplateLibraryAccess: ").append(toIndentedString(allowedDocumentTemplateLibraryAccess)).append("\n");
+    sb.append("    allowedDocumentTemplateLibraryAccessMetadata: ").append(toIndentedString(allowedDocumentTemplateLibraryAccessMetadata)).append("\n");
     sb.append("    allowedOrchestrationAccess: ").append(toIndentedString(allowedOrchestrationAccess)).append("\n");
     sb.append("    allowedOrchestrationAccessMetadata: ").append(toIndentedString(allowedOrchestrationAccessMetadata)).append("\n");
     sb.append("    allowEnvelopeTransferTo: ").append(toIndentedString(allowEnvelopeTransferTo)).append("\n");
@@ -4589,6 +4777,10 @@ public class UserSettingsInformation implements Serializable {
     sb.append("    enableVaulting: ").append(toIndentedString(enableVaulting)).append("\n");
     sb.append("    enableVaultingMetadata: ").append(toIndentedString(enableVaultingMetadata)).append("\n");
     sb.append("    expressSendOnly: ").append(toIndentedString(expressSendOnly)).append("\n");
+    sb.append("    isManagedByScim: ").append(toIndentedString(isManagedByScim)).append("\n");
+    sb.append("    isManagedByScimMetadata: ").append(toIndentedString(isManagedByScimMetadata)).append("\n");
+    sb.append("    isMembershipManagedByScim: ").append(toIndentedString(isMembershipManagedByScim)).append("\n");
+    sb.append("    isMembershipManagedByScimMetadata: ").append(toIndentedString(isMembershipManagedByScimMetadata)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    localeMetadata: ").append(toIndentedString(localeMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");

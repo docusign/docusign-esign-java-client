@@ -570,12 +570,30 @@ public class PowerFormsApi {
   **/
   public class ListPowerFormsOptions
   {
+  private String count = null;
   private String fromDate = null;
   private String order = null;
   private String orderBy = null;
   private String searchFields = null;
   private String searchText = null;
+  private String startPosition = null;
   private String toDate = null;
+  
+ /**
+  * setCount method.
+  */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
+  public String getCount() {
+    return this.count;
+  }
   
  /**
   * setFromDate method.
@@ -658,6 +676,22 @@ public class PowerFormsApi {
   }
   
  /**
+  * setStartPosition method.
+  */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  
+ /**
   * setToDate method.
   */
   public void setToDate(String toDate) {
@@ -724,6 +758,8 @@ public class PowerFormsApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
@@ -733,6 +769,8 @@ public class PowerFormsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("search_fields", options.searchFields));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
     }

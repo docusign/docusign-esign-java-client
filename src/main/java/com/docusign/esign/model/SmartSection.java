@@ -2,7 +2,9 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.MergeField;
 import com.docusign.esign.model.PropertyMetadata;
 import com.docusign.esign.model.SmartContractInformation;
@@ -21,6 +23,12 @@ import java.io.Serializable;
 
 public class SmartSection implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("agreementAttribute")
+  private String agreementAttribute = null;
+
+  @JsonProperty("agreementAttributeLocked")
+  private String agreementAttributeLocked = null;
 
   @JsonProperty("anchorAllowWhiteSpaceInCharacters")
   private String anchorAllowWhiteSpaceInCharacters = null;
@@ -103,6 +111,9 @@ public class SmartSection implements Serializable {
   @JsonProperty("conditionalParentValueMetadata")
   private PropertyMetadata conditionalParentValueMetadata = null;
 
+  @JsonProperty("connectedObjectDetails")
+  private ConnectedObjectDetails connectedObjectDetails = null;
+
   @JsonProperty("customTabId")
   private String customTabId = null;
 
@@ -126,6 +137,9 @@ public class SmartSection implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extensionData")
+  private ExtensionData extensionData = null;
 
   @JsonProperty("formOrder")
   private String formOrder = null;
@@ -217,6 +231,9 @@ public class SmartSection implements Serializable {
   @JsonProperty("statusMetadata")
   private PropertyMetadata statusMetadata = null;
 
+  @JsonProperty("tabFullyQualifiedPath")
+  private String tabFullyQualifiedPath = null;
+
   @JsonProperty("tabGroupLabels")
   private java.util.List<String> tabGroupLabels = null;
 
@@ -262,6 +279,9 @@ public class SmartSection implements Serializable {
   @JsonProperty("toolTipMetadata")
   private PropertyMetadata toolTipMetadata = null;
 
+  @JsonProperty("warningDetails")
+  private ErrorDetails warningDetails = null;
+
   @JsonProperty("width")
   private String width = null;
 
@@ -279,6 +299,60 @@ public class SmartSection implements Serializable {
 
   @JsonProperty("yPositionMetadata")
   private PropertyMetadata yPositionMetadata = null;
+
+
+  /**
+   * agreementAttribute.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection agreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttribute
+   **/
+  @Schema(description = "")
+  public String getAgreementAttribute() {
+    return agreementAttribute;
+  }
+
+  /**
+   * setAgreementAttribute.
+   **/
+  public void setAgreementAttribute(String agreementAttribute) {
+    this.agreementAttribute = agreementAttribute;
+  }
+
+
+  /**
+   * agreementAttributeLocked.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection agreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementAttributeLocked
+   **/
+  @Schema(description = "")
+  public String getAgreementAttributeLocked() {
+    return agreementAttributeLocked;
+  }
+
+  /**
+   * setAgreementAttributeLocked.
+   **/
+  public void setAgreementAttributeLocked(String agreementAttributeLocked) {
+    this.agreementAttributeLocked = agreementAttributeLocked;
+  }
 
 
   /**
@@ -1011,6 +1085,33 @@ public class SmartSection implements Serializable {
 
 
   /**
+   * connectedObjectDetails.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection connectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return connectedObjectDetails
+   **/
+  @Schema(description = "")
+  public ConnectedObjectDetails getConnectedObjectDetails() {
+    return connectedObjectDetails;
+  }
+
+  /**
+   * setConnectedObjectDetails.
+   **/
+  public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
+    this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
    * customTabId.
    *
    * @return SmartSection
@@ -1223,6 +1324,33 @@ public class SmartSection implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extensionData.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection extensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extensionData
+   **/
+  @Schema(description = "")
+  public ExtensionData getExtensionData() {
+    return extensionData;
+  }
+
+  /**
+   * setExtensionData.
+   **/
+  public void setExtensionData(ExtensionData extensionData) {
+    this.extensionData = extensionData;
   }
 
 
@@ -2037,6 +2165,33 @@ public class SmartSection implements Serializable {
 
 
   /**
+   * tabFullyQualifiedPath.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection tabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+    return this;
+  }
+
+  /**
+   * .
+   * @return tabFullyQualifiedPath
+   **/
+  @Schema(description = "")
+  public String getTabFullyQualifiedPath() {
+    return tabFullyQualifiedPath;
+  }
+
+  /**
+   * setTabFullyQualifiedPath.
+   **/
+  public void setTabFullyQualifiedPath(String tabFullyQualifiedPath) {
+    this.tabFullyQualifiedPath = tabFullyQualifiedPath;
+  }
+
+
+  /**
    * tabGroupLabels.
    *
    * @return SmartSection
@@ -2455,6 +2610,33 @@ public class SmartSection implements Serializable {
 
 
   /**
+   * warningDetails.
+   *
+   * @return SmartSection
+   **/
+  public SmartSection warningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+    return this;
+  }
+
+  /**
+   * .
+   * @return warningDetails
+   **/
+  @Schema(description = "")
+  public ErrorDetails getWarningDetails() {
+    return warningDetails;
+  }
+
+  /**
+   * setWarningDetails.
+   **/
+  public void setWarningDetails(ErrorDetails warningDetails) {
+    this.warningDetails = warningDetails;
+  }
+
+
+  /**
    * width.
    *
    * @return SmartSection
@@ -2630,7 +2812,9 @@ public class SmartSection implements Serializable {
       return false;
     }
     SmartSection smartSection = (SmartSection) o;
-    return Objects.equals(this.anchorAllowWhiteSpaceInCharacters, smartSection.anchorAllowWhiteSpaceInCharacters) &&
+    return Objects.equals(this.agreementAttribute, smartSection.agreementAttribute) &&
+        Objects.equals(this.agreementAttributeLocked, smartSection.agreementAttributeLocked) &&
+        Objects.equals(this.anchorAllowWhiteSpaceInCharacters, smartSection.anchorAllowWhiteSpaceInCharacters) &&
         Objects.equals(this.anchorAllowWhiteSpaceInCharactersMetadata, smartSection.anchorAllowWhiteSpaceInCharactersMetadata) &&
         Objects.equals(this.anchorCaseSensitive, smartSection.anchorCaseSensitive) &&
         Objects.equals(this.anchorCaseSensitiveMetadata, smartSection.anchorCaseSensitiveMetadata) &&
@@ -2657,6 +2841,7 @@ public class SmartSection implements Serializable {
         Objects.equals(this.conditionalParentLabelMetadata, smartSection.conditionalParentLabelMetadata) &&
         Objects.equals(this.conditionalParentValue, smartSection.conditionalParentValue) &&
         Objects.equals(this.conditionalParentValueMetadata, smartSection.conditionalParentValueMetadata) &&
+        Objects.equals(this.connectedObjectDetails, smartSection.connectedObjectDetails) &&
         Objects.equals(this.customTabId, smartSection.customTabId) &&
         Objects.equals(this.customTabIdMetadata, smartSection.customTabIdMetadata) &&
         Objects.equals(this.displaySettings, smartSection.displaySettings) &&
@@ -2665,6 +2850,7 @@ public class SmartSection implements Serializable {
         Objects.equals(this.endAnchor, smartSection.endAnchor) &&
         Objects.equals(this.endPosition, smartSection.endPosition) &&
         Objects.equals(this.errorDetails, smartSection.errorDetails) &&
+        Objects.equals(this.extensionData, smartSection.extensionData) &&
         Objects.equals(this.formOrder, smartSection.formOrder) &&
         Objects.equals(this.formOrderMetadata, smartSection.formOrderMetadata) &&
         Objects.equals(this.formPageLabel, smartSection.formPageLabel) &&
@@ -2695,6 +2881,7 @@ public class SmartSection implements Serializable {
         Objects.equals(this.startPosition, smartSection.startPosition) &&
         Objects.equals(this.status, smartSection.status) &&
         Objects.equals(this.statusMetadata, smartSection.statusMetadata) &&
+        Objects.equals(this.tabFullyQualifiedPath, smartSection.tabFullyQualifiedPath) &&
         Objects.equals(this.tabGroupLabels, smartSection.tabGroupLabels) &&
         Objects.equals(this.tabGroupLabelsMetadata, smartSection.tabGroupLabelsMetadata) &&
         Objects.equals(this.tabId, smartSection.tabId) &&
@@ -2710,6 +2897,7 @@ public class SmartSection implements Serializable {
         Objects.equals(this.templateRequiredMetadata, smartSection.templateRequiredMetadata) &&
         Objects.equals(this.tooltip, smartSection.tooltip) &&
         Objects.equals(this.toolTipMetadata, smartSection.toolTipMetadata) &&
+        Objects.equals(this.warningDetails, smartSection.warningDetails) &&
         Objects.equals(this.width, smartSection.width) &&
         Objects.equals(this.widthMetadata, smartSection.widthMetadata) &&
         Objects.equals(this.xPosition, smartSection.xPosition) &&
@@ -2723,7 +2911,7 @@ public class SmartSection implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, caseSensitive, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, customTabId, customTabIdMetadata, displaySettings, documentId, documentIdMetadata, endAnchor, endPosition, errorDetails, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, removeEndAnchor, removeStartAnchor, shared, sharedMetadata, smartContractInformation, source, startAnchor, startPosition, status, statusMetadata, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, caseSensitive, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, displaySettings, documentId, documentIdMetadata, endAnchor, endPosition, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, overlayType, overlayTypeMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, removeEndAnchor, removeStartAnchor, shared, sharedMetadata, smartContractInformation, source, startAnchor, startPosition, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2735,6 +2923,8 @@ public class SmartSection implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class SmartSection {\n");
     
+    sb.append("    agreementAttribute: ").append(toIndentedString(agreementAttribute)).append("\n");
+    sb.append("    agreementAttributeLocked: ").append(toIndentedString(agreementAttributeLocked)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharacters: ").append(toIndentedString(anchorAllowWhiteSpaceInCharacters)).append("\n");
     sb.append("    anchorAllowWhiteSpaceInCharactersMetadata: ").append(toIndentedString(anchorAllowWhiteSpaceInCharactersMetadata)).append("\n");
     sb.append("    anchorCaseSensitive: ").append(toIndentedString(anchorCaseSensitive)).append("\n");
@@ -2762,6 +2952,7 @@ public class SmartSection implements Serializable {
     sb.append("    conditionalParentLabelMetadata: ").append(toIndentedString(conditionalParentLabelMetadata)).append("\n");
     sb.append("    conditionalParentValue: ").append(toIndentedString(conditionalParentValue)).append("\n");
     sb.append("    conditionalParentValueMetadata: ").append(toIndentedString(conditionalParentValueMetadata)).append("\n");
+    sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
     sb.append("    customTabId: ").append(toIndentedString(customTabId)).append("\n");
     sb.append("    customTabIdMetadata: ").append(toIndentedString(customTabIdMetadata)).append("\n");
     sb.append("    displaySettings: ").append(toIndentedString(displaySettings)).append("\n");
@@ -2770,6 +2961,7 @@ public class SmartSection implements Serializable {
     sb.append("    endAnchor: ").append(toIndentedString(endAnchor)).append("\n");
     sb.append("    endPosition: ").append(toIndentedString(endPosition)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    formOrder: ").append(toIndentedString(formOrder)).append("\n");
     sb.append("    formOrderMetadata: ").append(toIndentedString(formOrderMetadata)).append("\n");
     sb.append("    formPageLabel: ").append(toIndentedString(formPageLabel)).append("\n");
@@ -2800,6 +2992,7 @@ public class SmartSection implements Serializable {
     sb.append("    startPosition: ").append(toIndentedString(startPosition)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusMetadata: ").append(toIndentedString(statusMetadata)).append("\n");
+    sb.append("    tabFullyQualifiedPath: ").append(toIndentedString(tabFullyQualifiedPath)).append("\n");
     sb.append("    tabGroupLabels: ").append(toIndentedString(tabGroupLabels)).append("\n");
     sb.append("    tabGroupLabelsMetadata: ").append(toIndentedString(tabGroupLabelsMetadata)).append("\n");
     sb.append("    tabId: ").append(toIndentedString(tabId)).append("\n");
@@ -2815,6 +3008,7 @@ public class SmartSection implements Serializable {
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
+    sb.append("    warningDetails: ").append(toIndentedString(warningDetails)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    widthMetadata: ").append(toIndentedString(widthMetadata)).append("\n");
     sb.append("    xPosition: ").append(toIndentedString(xPosition)).append("\n");

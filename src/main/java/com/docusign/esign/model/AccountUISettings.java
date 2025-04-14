@@ -38,6 +38,12 @@ public class AccountUISettings implements Serializable {
   @JsonProperty("clickwrapSchemaVersionMetadata")
   private SettingsMetadata clickwrapSchemaVersionMetadata = null;
 
+  @JsonProperty("disableWebAppAccess")
+  private String disableWebAppAccess = null;
+
+  @JsonProperty("disableWebAppAccessMetadata")
+  private SettingsMetadata disableWebAppAccessMetadata = null;
+
   @JsonProperty("enableAdminMessage")
   private String enableAdminMessage = null;
 
@@ -282,6 +288,60 @@ public class AccountUISettings implements Serializable {
    **/
   public void setClickwrapSchemaVersionMetadata(SettingsMetadata clickwrapSchemaVersionMetadata) {
     this.clickwrapSchemaVersionMetadata = clickwrapSchemaVersionMetadata;
+  }
+
+
+  /**
+   * disableWebAppAccess.
+   *
+   * @return AccountUISettings
+   **/
+  public AccountUISettings disableWebAppAccess(String disableWebAppAccess) {
+    this.disableWebAppAccess = disableWebAppAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return disableWebAppAccess
+   **/
+  @Schema(description = "")
+  public String getDisableWebAppAccess() {
+    return disableWebAppAccess;
+  }
+
+  /**
+   * setDisableWebAppAccess.
+   **/
+  public void setDisableWebAppAccess(String disableWebAppAccess) {
+    this.disableWebAppAccess = disableWebAppAccess;
+  }
+
+
+  /**
+   * disableWebAppAccessMetadata.
+   *
+   * @return AccountUISettings
+   **/
+  public AccountUISettings disableWebAppAccessMetadata(SettingsMetadata disableWebAppAccessMetadata) {
+    this.disableWebAppAccessMetadata = disableWebAppAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return disableWebAppAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getDisableWebAppAccessMetadata() {
+    return disableWebAppAccessMetadata;
+  }
+
+  /**
+   * setDisableWebAppAccessMetadata.
+   **/
+  public void setDisableWebAppAccessMetadata(SettingsMetadata disableWebAppAccessMetadata) {
+    this.disableWebAppAccessMetadata = disableWebAppAccessMetadata;
   }
 
 
@@ -1061,6 +1121,8 @@ public class AccountUISettings implements Serializable {
         Objects.equals(this.askAnAdmin, accountUISettings.askAnAdmin) &&
         Objects.equals(this.clickwrapSchemaVersion, accountUISettings.clickwrapSchemaVersion) &&
         Objects.equals(this.clickwrapSchemaVersionMetadata, accountUISettings.clickwrapSchemaVersionMetadata) &&
+        Objects.equals(this.disableWebAppAccess, accountUISettings.disableWebAppAccess) &&
+        Objects.equals(this.disableWebAppAccessMetadata, accountUISettings.disableWebAppAccessMetadata) &&
         Objects.equals(this.enableAdminMessage, accountUISettings.enableAdminMessage) &&
         Objects.equals(this.enableAdminMessageMetadata, accountUISettings.enableAdminMessageMetadata) &&
         Objects.equals(this.enableEasySignCanUseMultiTemplateApply, accountUISettings.enableEasySignCanUseMultiTemplateApply) &&
@@ -1096,7 +1158,7 @@ public class AccountUISettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(adminMessage, allowUsersToEditSharedAccess, allowUsersToEditSharedAccessMetadata, askAnAdmin, clickwrapSchemaVersion, clickwrapSchemaVersionMetadata, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableEnvelopeTypes, enableEnvelopeTypesMetadata, enableLegacySendflowLink, enableLegacySendflowLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
+    return Objects.hash(adminMessage, allowUsersToEditSharedAccess, allowUsersToEditSharedAccessMetadata, askAnAdmin, clickwrapSchemaVersion, clickwrapSchemaVersionMetadata, disableWebAppAccess, disableWebAppAccessMetadata, enableAdminMessage, enableAdminMessageMetadata, enableEasySignCanUseMultiTemplateApply, enableEasySignCanUseMultiTemplateApplyMetadata, enableEasySignTemplateUpload, enableEasySignTemplateUploadMetadata, enableEnvelopeCopyWithData, enableEnvelopeCopyWithDataMetadata, enableEnvelopeTypes, enableEnvelopeTypesMetadata, enableLegacySendflowLink, enableLegacySendflowLinkMetadata, hasExternalLinkedAccounts, hasExternalLinkedAccountsMetadata, hideSendAnEnvelope, hideSendAnEnvelopeMetadata, hideUseATemplate, hideUseATemplateInPrepare, hideUseATemplateInPrepareMetadata, hideUseATemplateMetadata, orderBasedRecipientIdGeneration, orderBasedRecipientIdGenerationMetadata, removeEnvelopeForwarding, removeEnvelopeForwardingMetadata, shouldRedactAccessCode, shouldRedactAccessCodeMetadata, uploadNewImageToSignOrInitial, uploadNewImageToSignOrInitialMetadata);
   }
 
 
@@ -1114,6 +1176,8 @@ public class AccountUISettings implements Serializable {
     sb.append("    askAnAdmin: ").append(toIndentedString(askAnAdmin)).append("\n");
     sb.append("    clickwrapSchemaVersion: ").append(toIndentedString(clickwrapSchemaVersion)).append("\n");
     sb.append("    clickwrapSchemaVersionMetadata: ").append(toIndentedString(clickwrapSchemaVersionMetadata)).append("\n");
+    sb.append("    disableWebAppAccess: ").append(toIndentedString(disableWebAppAccess)).append("\n");
+    sb.append("    disableWebAppAccessMetadata: ").append(toIndentedString(disableWebAppAccessMetadata)).append("\n");
     sb.append("    enableAdminMessage: ").append(toIndentedString(enableAdminMessage)).append("\n");
     sb.append("    enableAdminMessageMetadata: ").append(toIndentedString(enableAdminMessageMetadata)).append("\n");
     sb.append("    enableEasySignCanUseMultiTemplateApply: ").append(toIndentedString(enableEasySignCanUseMultiTemplateApply)).append("\n");

@@ -4860,4 +4860,128 @@ public class TemplatesApi {
     Tabs localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<Tabs>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
+
+  /**
+   * Update template autoMatch setting..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateAutoMatchList  (optional)
+   * @return TemplateAutoMatchList
+   * @throws ApiException if fails to make API call
+   */
+  public TemplateAutoMatchList updateTemplates(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesWithHttpInfo(accountId, templateAutoMatchList);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Update template autoMatch setting.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateAutoMatchList  (optional)
+   * @return TemplateAutoMatchList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TemplateAutoMatchList > updateTemplatesWithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    Object localVarPostBody = templateAutoMatchList;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplates");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<TemplateAutoMatchList> localVarReturnType = new GenericType<TemplateAutoMatchList>() {};
+    TemplateAutoMatchList localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TemplateAutoMatchList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Update template autoMatch setting..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateAutoMatchList  (optional)
+   * @return TemplateAutoMatchList
+   * @throws ApiException if fails to make API call
+   */
+  public TemplateAutoMatchList updateTemplatesAutoMatch(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesAutoMatchWithHttpInfo(accountId, templateAutoMatchList);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Update template autoMatch setting.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateAutoMatchList  (optional)
+   * @return TemplateAutoMatchList
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TemplateAutoMatchList > updateTemplatesAutoMatchWithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    Object localVarPostBody = templateAutoMatchList;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplatesAutoMatch");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/auto_match"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<TemplateAutoMatchList> localVarReturnType = new GenericType<TemplateAutoMatchList>() {};
+    TemplateAutoMatchList localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TemplateAutoMatchList>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 }
