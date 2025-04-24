@@ -57,7 +57,7 @@ This client SDK is provided as open source, which enables you to customize its f
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>6.1.0-RC1</version>
+      <version>6.1.0</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
