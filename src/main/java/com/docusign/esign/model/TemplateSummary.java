@@ -31,9 +31,6 @@ public class TemplateSummary implements Serializable {
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
 
-  @JsonProperty("hasDocumentTemplateLibrary")
-  private String hasDocumentTemplateLibrary = null;
-
   @JsonProperty("name")
   private String name = null;
 
@@ -152,33 +149,6 @@ public class TemplateSummary implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
-  }
-
-
-  /**
-   * hasDocumentTemplateLibrary.
-   *
-   * @return TemplateSummary
-   **/
-  public TemplateSummary hasDocumentTemplateLibrary(String hasDocumentTemplateLibrary) {
-    this.hasDocumentTemplateLibrary = hasDocumentTemplateLibrary;
-    return this;
-  }
-
-  /**
-   * .
-   * @return hasDocumentTemplateLibrary
-   **/
-  @Schema(description = "")
-  public String getHasDocumentTemplateLibrary() {
-    return hasDocumentTemplateLibrary;
-  }
-
-  /**
-   * setHasDocumentTemplateLibrary.
-   **/
-  public void setHasDocumentTemplateLibrary(String hasDocumentTemplateLibrary) {
-    this.hasDocumentTemplateLibrary = hasDocumentTemplateLibrary;
   }
 
 
@@ -308,7 +278,6 @@ public class TemplateSummary implements Serializable {
         Objects.equals(this.documentId, templateSummary.documentId) &&
         Objects.equals(this.documentName, templateSummary.documentName) &&
         Objects.equals(this.errorDetails, templateSummary.errorDetails) &&
-        Objects.equals(this.hasDocumentTemplateLibrary, templateSummary.hasDocumentTemplateLibrary) &&
         Objects.equals(this.name, templateSummary.name) &&
         Objects.equals(this.templateId, templateSummary.templateId) &&
         Objects.equals(this.templateMatch, templateSummary.templateMatch) &&
@@ -320,7 +289,7 @@ public class TemplateSummary implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applied, documentId, documentName, errorDetails, hasDocumentTemplateLibrary, name, templateId, templateMatch, uri);
+    return Objects.hash(applied, documentId, documentName, errorDetails, name, templateId, templateMatch, uri);
   }
 
 
@@ -336,7 +305,6 @@ public class TemplateSummary implements Serializable {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentName: ").append(toIndentedString(documentName)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
-    sb.append("    hasDocumentTemplateLibrary: ").append(toIndentedString(hasDocumentTemplateLibrary)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    templateMatch: ").append(toIndentedString(templateMatch)).append("\n");

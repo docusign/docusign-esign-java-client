@@ -34,6 +34,9 @@ public class Document implements Serializable {
   @JsonProperty("display")
   private String display = null;
 
+  @JsonProperty("docGenDocumentStatus")
+  private String docGenDocumentStatus = null;
+
   @JsonProperty("docGenFormFields")
   private java.util.List<DocGenFormField> docGenFormFields = null;
 
@@ -45,9 +48,6 @@ public class Document implements Serializable {
 
   @JsonProperty("documentId")
   private String documentId = null;
-
-  @JsonProperty("documentTemplateAgreementTypeId")
-  private String documentTemplateAgreementTypeId = null;
 
   @JsonProperty("documentTemplateId")
   private String documentTemplateId = null;
@@ -222,6 +222,33 @@ public class Document implements Serializable {
 
 
   /**
+   * docGenDocumentStatus.
+   *
+   * @return Document
+   **/
+  public Document docGenDocumentStatus(String docGenDocumentStatus) {
+    this.docGenDocumentStatus = docGenDocumentStatus;
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenDocumentStatus
+   **/
+  @Schema(description = "")
+  public String getDocGenDocumentStatus() {
+    return docGenDocumentStatus;
+  }
+
+  /**
+   * setDocGenDocumentStatus.
+   **/
+  public void setDocGenDocumentStatus(String docGenDocumentStatus) {
+    this.docGenDocumentStatus = docGenDocumentStatus;
+  }
+
+
+  /**
    * docGenFormFields.
    *
    * @return Document
@@ -352,33 +379,6 @@ public class Document implements Serializable {
    **/
   public void setDocumentId(String documentId) {
     this.documentId = documentId;
-  }
-
-
-  /**
-   * documentTemplateAgreementTypeId.
-   *
-   * @return Document
-   **/
-  public Document documentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
-    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
-    return this;
-  }
-
-  /**
-   * .
-   * @return documentTemplateAgreementTypeId
-   **/
-  @Schema(description = "")
-  public String getDocumentTemplateAgreementTypeId() {
-    return documentTemplateAgreementTypeId;
-  }
-
-  /**
-   * setDocumentTemplateAgreementTypeId.
-   **/
-  public void setDocumentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
-    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
   }
 
 
@@ -980,11 +980,11 @@ public class Document implements Serializable {
         Objects.equals(this.assignTabsToRecipientId, document.assignTabsToRecipientId) &&
         Objects.equals(this.authoritativeCopy, document.authoritativeCopy) &&
         Objects.equals(this.display, document.display) &&
+        Objects.equals(this.docGenDocumentStatus, document.docGenDocumentStatus) &&
         Objects.equals(this.docGenFormFields, document.docGenFormFields) &&
         Objects.equals(this.documentBase64, document.documentBase64) &&
         Objects.equals(this.documentFields, document.documentFields) &&
         Objects.equals(this.documentId, document.documentId) &&
-        Objects.equals(this.documentTemplateAgreementTypeId, document.documentTemplateAgreementTypeId) &&
         Objects.equals(this.documentTemplateId, document.documentTemplateId) &&
         Objects.equals(this.encryptedWithKeyManager, document.encryptedWithKeyManager) &&
         Objects.equals(this.fileExtension, document.fileExtension) &&
@@ -1013,7 +1013,7 @@ public class Document implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, authoritativeCopy, display, docGenFormFields, documentBase64, documentFields, documentId, documentTemplateAgreementTypeId, documentTemplateId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
+    return Objects.hash(applyAnchorTabs, assignTabsToRecipientId, authoritativeCopy, display, docGenDocumentStatus, docGenFormFields, documentBase64, documentFields, documentId, documentTemplateId, encryptedWithKeyManager, fileExtension, fileFormatHint, htmlDefinition, includeInDownload, isDocGenDocument, matchBoxes, name, order, pages, password, pdfFormFieldOption, remoteUrl, signerMustAcknowledge, signerMustAcknowledgeUseAccountDefault, tabs, templateLocked, templateRequired, transformPdfFields, uri);
   }
 
 
@@ -1029,11 +1029,11 @@ public class Document implements Serializable {
     sb.append("    assignTabsToRecipientId: ").append(toIndentedString(assignTabsToRecipientId)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    docGenDocumentStatus: ").append(toIndentedString(docGenDocumentStatus)).append("\n");
     sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    documentBase64: ").append(toIndentedString(documentBase64)).append("\n");
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
-    sb.append("    documentTemplateAgreementTypeId: ").append(toIndentedString(documentTemplateAgreementTypeId)).append("\n");
     sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    encryptedWithKeyManager: ").append(toIndentedString(encryptedWithKeyManager)).append("\n");
     sb.append("    fileExtension: ").append(toIndentedString(fileExtension)).append("\n");

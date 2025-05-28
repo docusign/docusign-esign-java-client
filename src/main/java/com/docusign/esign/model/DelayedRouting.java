@@ -105,10 +105,10 @@ public class DelayedRouting implements Serializable {
   }
 
   /**
-   * \\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients..
+   * Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later..
    * @return status
    **/
-  @Schema(description = "\\\"pending\\\" if the current workflow step has not been reached and the delay has not yet started. \\\"started\\\" if the delay is in progress. \\\"completed\\\" if the delay has elapsed and the envelope has been sent to the current workflow step's recipients.")
+  @Schema(description = "Indicates the envelope status. Valid values are:  * sent - The envelope is sent to the recipients.  * created - The envelope is saved as a draft and can be modified and sent later.")
   public String getStatus() {
     return status;
   }

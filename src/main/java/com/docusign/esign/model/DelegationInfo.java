@@ -16,16 +16,16 @@ import java.io.Serializable;
 public class DelegationInfo implements Serializable {
   private static final long serialVersionUID = 1L;
 
-  @JsonProperty("Email")
+  @JsonProperty("email")
   private String email = null;
 
-  @JsonProperty("Name")
+  @JsonProperty("name")
   private String name = null;
 
-  @JsonProperty("UserAuthorizationId")
+  @JsonProperty("userAuthorizationId")
   private String userAuthorizationId = null;
 
-  @JsonProperty("UserId")
+  @JsonProperty("userId")
   private String userId = null;
 
 

@@ -101,6 +101,9 @@ public class AccountInformation implements Serializable {
   @JsonProperty("isDowngrade")
   private String isDowngrade = null;
 
+  @JsonProperty("isFreeToTrialEligible")
+  private String isFreeToTrialEligible = null;
+
   @JsonProperty("paymentMethod")
   private String paymentMethod = null;
 
@@ -881,6 +884,33 @@ public class AccountInformation implements Serializable {
 
 
   /**
+   * isFreeToTrialEligible.
+   *
+   * @return AccountInformation
+   **/
+  public AccountInformation isFreeToTrialEligible(String isFreeToTrialEligible) {
+    this.isFreeToTrialEligible = isFreeToTrialEligible;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isFreeToTrialEligible
+   **/
+  @Schema(description = "")
+  public String getIsFreeToTrialEligible() {
+    return isFreeToTrialEligible;
+  }
+
+  /**
+   * setIsFreeToTrialEligible.
+   **/
+  public void setIsFreeToTrialEligible(String isFreeToTrialEligible) {
+    this.isFreeToTrialEligible = isFreeToTrialEligible;
+  }
+
+
+  /**
    * paymentMethod.
    *
    * @return AccountInformation
@@ -1258,6 +1288,7 @@ public class AccountInformation implements Serializable {
         Objects.equals(this.forgottenPasswordQuestionsCount, accountInformation.forgottenPasswordQuestionsCount) &&
         Objects.equals(this.freeEnvelopeSendsRemainingForAdvancedDocGen, accountInformation.freeEnvelopeSendsRemainingForAdvancedDocGen) &&
         Objects.equals(this.isDowngrade, accountInformation.isDowngrade) &&
+        Objects.equals(this.isFreeToTrialEligible, accountInformation.isFreeToTrialEligible) &&
         Objects.equals(this.paymentMethod, accountInformation.paymentMethod) &&
         Objects.equals(this.planClassification, accountInformation.planClassification) &&
         Objects.equals(this.planEndDate, accountInformation.planEndDate) &&
@@ -1277,7 +1308,7 @@ public class AccountInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, freeEnvelopeSendsRemainingForAdvancedDocGen, isDowngrade, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
+    return Objects.hash(accountIdGuid, accountName, accountSettings, allowTransactionRooms, billingPeriodDaysRemaining, billingPeriodEndDate, billingPeriodEnvelopesAllowed, billingPeriodEnvelopesSent, billingPeriodStartDate, billingProfile, brands, canUpgrade, connectPermission, createdDate, currencyCode, currentPlanId, displayApplianceStartUrl, displayApplianceUrl, distributorCode, docuSignLandingUrl, dssValues, envelopeSendingBlocked, envelopeUnitPrice, externalAccountId, forgottenPasswordQuestionsCount, freeEnvelopeSendsRemainingForAdvancedDocGen, isDowngrade, isFreeToTrialEligible, paymentMethod, planClassification, planEndDate, planName, planStartDate, recipientDomains, seatsAllowed, seatsInUse, status21CFRPart11, suspensionDate, suspensionStatus, useDisplayAppliance);
   }
 
 
@@ -1316,6 +1347,7 @@ public class AccountInformation implements Serializable {
     sb.append("    forgottenPasswordQuestionsCount: ").append(toIndentedString(forgottenPasswordQuestionsCount)).append("\n");
     sb.append("    freeEnvelopeSendsRemainingForAdvancedDocGen: ").append(toIndentedString(freeEnvelopeSendsRemainingForAdvancedDocGen)).append("\n");
     sb.append("    isDowngrade: ").append(toIndentedString(isDowngrade)).append("\n");
+    sb.append("    isFreeToTrialEligible: ").append(toIndentedString(isFreeToTrialEligible)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
     sb.append("    planClassification: ").append(toIndentedString(planClassification)).append("\n");
     sb.append("    planEndDate: ").append(toIndentedString(planEndDate)).append("\n");

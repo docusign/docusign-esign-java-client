@@ -2970,7 +2970,24 @@ public class TemplatesApi {
   **/
   public class ListDocumentsOptions
   {
+  private String includeAgreementType = null;
   private String includeTabs = null;
+  
+ /**
+  * setIncludeAgreementType method.
+  */
+  public void setIncludeAgreementType(String includeAgreementType) {
+    this.includeAgreementType = includeAgreementType;
+  }
+
+ /**
+  * getIncludeAgreementType method.
+  *
+  * @return String
+  */
+  public String getIncludeAgreementType() {
+    return this.includeAgreementType;
+  }
   
  /**
   * setIncludeTabs method.
@@ -3048,6 +3065,8 @@ public class TemplatesApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_agreement_type", options.includeAgreementType));
+    }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_tabs", options.includeTabs));
     }
 

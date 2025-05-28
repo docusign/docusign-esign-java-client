@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.BrandEmailContent;
+import com.docusign.esign.model.BrandLink;
 import com.docusign.esign.model.BrandLogos;
 import com.docusign.esign.model.BrandResourceUrls;
 import com.docusign.esign.model.ErrorDetails;
@@ -62,7 +63,7 @@ public class Brand implements Serializable {
   private java.util.List<NameValue> landingPages = null;
 
   @JsonProperty("links")
-  private String links = null;
+  private java.util.List<BrandLink> links = null;
 
   @JsonProperty("logos")
   private BrandLogos logos = null;
@@ -482,8 +483,21 @@ public class Brand implements Serializable {
    *
    * @return Brand
    **/
-  public Brand links(String links) {
+  public Brand links(java.util.List<BrandLink> links) {
     this.links = links;
+    return this;
+  }
+  
+  /**
+   * addLinksItem.
+   *
+   * @return Brand
+   **/
+  public Brand addLinksItem(BrandLink linksItem) {
+    if (this.links == null) {
+      this.links = new java.util.ArrayList<>();
+    }
+    this.links.add(linksItem);
     return this;
   }
 
@@ -492,14 +506,14 @@ public class Brand implements Serializable {
    * @return links
    **/
   @Schema(description = "")
-  public String getLinks() {
+  public java.util.List<BrandLink> getLinks() {
     return links;
   }
 
   /**
    * setLinks.
    **/
-  public void setLinks(String links) {
+  public void setLinks(java.util.List<BrandLink> links) {
     this.links = links;
   }
 
