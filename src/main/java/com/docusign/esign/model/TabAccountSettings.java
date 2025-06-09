@@ -155,6 +155,12 @@ public class TabAccountSettings implements Serializable {
   @JsonProperty("textTabsMetadata")
   private SettingsMetadata textTabsMetadata = null;
 
+  @JsonProperty("uriTabsEnabled")
+  private String uriTabsEnabled = null;
+
+  @JsonProperty("uriTabsMetadata")
+  private SettingsMetadata uriTabsMetadata = null;
+
 
   /**
    * allowTabOrder.
@@ -1399,6 +1405,60 @@ public class TabAccountSettings implements Serializable {
 
 
   /**
+   * uriTabsEnabled.
+   *
+   * @return TabAccountSettings
+   **/
+  public TabAccountSettings uriTabsEnabled(String uriTabsEnabled) {
+    this.uriTabsEnabled = uriTabsEnabled;
+    return this;
+  }
+
+  /**
+   * .
+   * @return uriTabsEnabled
+   **/
+  @Schema(description = "")
+  public String getUriTabsEnabled() {
+    return uriTabsEnabled;
+  }
+
+  /**
+   * setUriTabsEnabled.
+   **/
+  public void setUriTabsEnabled(String uriTabsEnabled) {
+    this.uriTabsEnabled = uriTabsEnabled;
+  }
+
+
+  /**
+   * uriTabsMetadata.
+   *
+   * @return TabAccountSettings
+   **/
+  public TabAccountSettings uriTabsMetadata(SettingsMetadata uriTabsMetadata) {
+    this.uriTabsMetadata = uriTabsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return uriTabsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getUriTabsMetadata() {
+    return uriTabsMetadata;
+  }
+
+  /**
+   * setUriTabsMetadata.
+   **/
+  public void setUriTabsMetadata(SettingsMetadata uriTabsMetadata) {
+    this.uriTabsMetadata = uriTabsMetadata;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -1457,7 +1517,9 @@ public class TabAccountSettings implements Serializable {
         Objects.equals(this.tabTextFormattingEnabled, tabAccountSettings.tabTextFormattingEnabled) &&
         Objects.equals(this.tabTextFormattingMetadata, tabAccountSettings.tabTextFormattingMetadata) &&
         Objects.equals(this.textTabsEnabled, tabAccountSettings.textTabsEnabled) &&
-        Objects.equals(this.textTabsMetadata, tabAccountSettings.textTabsMetadata);
+        Objects.equals(this.textTabsMetadata, tabAccountSettings.textTabsMetadata) &&
+        Objects.equals(this.uriTabsEnabled, tabAccountSettings.uriTabsEnabled) &&
+        Objects.equals(this.uriTabsMetadata, tabAccountSettings.uriTabsMetadata);
   }
 
   /**
@@ -1465,7 +1527,7 @@ public class TabAccountSettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, enableTabAgreementDetails, enableTabAgreementDetailsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, numericalTabsEnabled, numericalTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata);
+    return Objects.hash(allowTabOrder, allowTabOrderMetadata, approveDeclineTabsEnabled, approveDeclineTabsMetadata, calculatedFieldsEnabled, calculatedFieldsMetadata, checkboxTabsEnabled, checkBoxTabsMetadata, dataFieldRegexEnabled, dataFieldRegexMetadata, dataFieldSizeEnabled, dataFieldSizeMetadata, drawTabsEnabled, drawTabsMetadata, enableTabAgreementDetails, enableTabAgreementDetailsMetadata, firstLastEmailTabsEnabled, firstLastEmailTabsMetadata, listTabsEnabled, listTabsMetadata, noteTabsEnabled, noteTabsMetadata, numericalTabsEnabled, numericalTabsMetadata, prefillTabsEnabled, prefillTabsMetadata, radioTabsEnabled, radioTabsMetadata, savingCustomTabsEnabled, savingCustomTabsMetadata, senderToChangeTabAssignmentsEnabled, senderToChangeTabAssignmentsMetadata, sharedCustomTabsEnabled, sharedCustomTabsMetadata, tabDataLabelEnabled, tabDataLabelMetadata, tabLocationEnabled, tabLocationMetadata, tabLockingEnabled, tabLockingMetadata, tabScaleEnabled, tabScaleMetadata, tabTextFormattingEnabled, tabTextFormattingMetadata, textTabsEnabled, textTabsMetadata, uriTabsEnabled, uriTabsMetadata);
   }
 
 
@@ -1523,6 +1585,8 @@ public class TabAccountSettings implements Serializable {
     sb.append("    tabTextFormattingMetadata: ").append(toIndentedString(tabTextFormattingMetadata)).append("\n");
     sb.append("    textTabsEnabled: ").append(toIndentedString(textTabsEnabled)).append("\n");
     sb.append("    textTabsMetadata: ").append(toIndentedString(textTabsMetadata)).append("\n");
+    sb.append("    uriTabsEnabled: ").append(toIndentedString(uriTabsEnabled)).append("\n");
+    sb.append("    uriTabsMetadata: ").append(toIndentedString(uriTabsMetadata)).append("\n");
     sb.append("}");
     return sb.toString();
   }

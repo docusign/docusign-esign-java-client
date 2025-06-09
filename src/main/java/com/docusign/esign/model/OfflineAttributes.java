@@ -9,10 +9,10 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 
 /**
- * DocuSign internal use, but it is needed for swagger tools (go lang, Elixir/OTP) to generate client library. .
+ * Reserved for DocuSign use..
  *
  */
-@Schema(description = "DocuSign internal use, but it is needed for swagger tools (go lang, Elixir/OTP) to generate client library. ")
+@Schema(description = "Reserved for DocuSign use.")
 
 public class OfflineAttributes implements Serializable {
   private static final long serialVersionUID = 1L;

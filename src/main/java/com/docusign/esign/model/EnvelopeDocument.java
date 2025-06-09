@@ -27,6 +27,12 @@ public class EnvelopeDocument implements Serializable {
   @JsonProperty("addedRecipientIds")
   private java.util.List<String> addedRecipientIds = null;
 
+  @JsonProperty("agreementType")
+  private String agreementType = null;
+
+  @JsonProperty("agreementTypeSource")
+  private String agreementTypeSource = null;
+
   @JsonProperty("attachmentTabId")
   private String attachmentTabId = null;
 
@@ -68,9 +74,6 @@ public class EnvelopeDocument implements Serializable {
 
   @JsonProperty("documentIdGuid")
   private String documentIdGuid = null;
-
-  @JsonProperty("documentTemplateAgreementTypeId")
-  private String documentTemplateAgreementTypeId = null;
 
   @JsonProperty("documentTemplateId")
   private String documentTemplateId = null;
@@ -170,6 +173,60 @@ public class EnvelopeDocument implements Serializable {
    **/
   public void setAddedRecipientIds(java.util.List<String> addedRecipientIds) {
     this.addedRecipientIds = addedRecipientIds;
+  }
+
+
+  /**
+   * agreementType.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument agreementType(String agreementType) {
+    this.agreementType = agreementType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementType
+   **/
+  @Schema(description = "")
+  public String getAgreementType() {
+    return agreementType;
+  }
+
+  /**
+   * setAgreementType.
+   **/
+  public void setAgreementType(String agreementType) {
+    this.agreementType = agreementType;
+  }
+
+
+  /**
+   * agreementTypeSource.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument agreementTypeSource(String agreementTypeSource) {
+    this.agreementTypeSource = agreementTypeSource;
+    return this;
+  }
+
+  /**
+   * .
+   * @return agreementTypeSource
+   **/
+  @Schema(description = "")
+  public String getAgreementTypeSource() {
+    return agreementTypeSource;
+  }
+
+  /**
+   * setAgreementTypeSource.
+   **/
+  public void setAgreementTypeSource(String agreementTypeSource) {
+    this.agreementTypeSource = agreementTypeSource;
   }
 
 
@@ -600,33 +657,6 @@ public class EnvelopeDocument implements Serializable {
    **/
   public void setDocumentIdGuid(String documentIdGuid) {
     this.documentIdGuid = documentIdGuid;
-  }
-
-
-  /**
-   * documentTemplateAgreementTypeId.
-   *
-   * @return EnvelopeDocument
-   **/
-  public EnvelopeDocument documentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
-    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
-    return this;
-  }
-
-  /**
-   * .
-   * @return documentTemplateAgreementTypeId
-   **/
-  @Schema(description = "")
-  public String getDocumentTemplateAgreementTypeId() {
-    return documentTemplateAgreementTypeId;
-  }
-
-  /**
-   * setDocumentTemplateAgreementTypeId.
-   **/
-  public void setDocumentTemplateAgreementTypeId(String documentTemplateAgreementTypeId) {
-    this.documentTemplateAgreementTypeId = documentTemplateAgreementTypeId;
   }
 
 
@@ -1198,6 +1228,8 @@ public class EnvelopeDocument implements Serializable {
     }
     EnvelopeDocument envelopeDocument = (EnvelopeDocument) o;
     return Objects.equals(this.addedRecipientIds, envelopeDocument.addedRecipientIds) &&
+        Objects.equals(this.agreementType, envelopeDocument.agreementType) &&
+        Objects.equals(this.agreementTypeSource, envelopeDocument.agreementTypeSource) &&
         Objects.equals(this.attachmentTabId, envelopeDocument.attachmentTabId) &&
         Objects.equals(this.authoritativeCopy, envelopeDocument.authoritativeCopy) &&
         Objects.equals(this.authoritativeCopyMetadata, envelopeDocument.authoritativeCopyMetadata) &&
@@ -1212,7 +1244,6 @@ public class EnvelopeDocument implements Serializable {
         Objects.equals(this.documentFields, envelopeDocument.documentFields) &&
         Objects.equals(this.documentId, envelopeDocument.documentId) &&
         Objects.equals(this.documentIdGuid, envelopeDocument.documentIdGuid) &&
-        Objects.equals(this.documentTemplateAgreementTypeId, envelopeDocument.documentTemplateAgreementTypeId) &&
         Objects.equals(this.documentTemplateId, envelopeDocument.documentTemplateId) &&
         Objects.equals(this.errorDetails, envelopeDocument.errorDetails) &&
         Objects.equals(this.hasDigitalSignature, envelopeDocument.hasDigitalSignature) &&
@@ -1240,7 +1271,7 @@ public class EnvelopeDocument implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, documentTemplateAgreementTypeId, documentTemplateId, errorDetails, hasDigitalSignature, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, isExternallyAvailable, isFlattened, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, agreementType, agreementTypeSource, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, documentTemplateId, errorDetails, hasDigitalSignature, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, isExternallyAvailable, isFlattened, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -1253,6 +1284,8 @@ public class EnvelopeDocument implements Serializable {
     sb.append("class EnvelopeDocument {\n");
     
     sb.append("    addedRecipientIds: ").append(toIndentedString(addedRecipientIds)).append("\n");
+    sb.append("    agreementType: ").append(toIndentedString(agreementType)).append("\n");
+    sb.append("    agreementTypeSource: ").append(toIndentedString(agreementTypeSource)).append("\n");
     sb.append("    attachmentTabId: ").append(toIndentedString(attachmentTabId)).append("\n");
     sb.append("    authoritativeCopy: ").append(toIndentedString(authoritativeCopy)).append("\n");
     sb.append("    authoritativeCopyMetadata: ").append(toIndentedString(authoritativeCopyMetadata)).append("\n");
@@ -1267,7 +1300,6 @@ public class EnvelopeDocument implements Serializable {
     sb.append("    documentFields: ").append(toIndentedString(documentFields)).append("\n");
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdGuid: ").append(toIndentedString(documentIdGuid)).append("\n");
-    sb.append("    documentTemplateAgreementTypeId: ").append(toIndentedString(documentTemplateAgreementTypeId)).append("\n");
     sb.append("    documentTemplateId: ").append(toIndentedString(documentTemplateId)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    hasDigitalSignature: ").append(toIndentedString(hasDigitalSignature)).append("\n");

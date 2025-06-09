@@ -38,13 +38,16 @@ public class Group implements Serializable {
   private String groupType = null;
 
   @JsonProperty("isManagedByScim")
-  private String isManagedByScim = null;
+  private Boolean isManagedByScim = null;
 
   @JsonProperty("lastModifiedOn")
   private String lastModifiedOn = null;
 
   @JsonProperty("permissionProfileId")
   private String permissionProfileId = null;
+
+  @JsonProperty("userGroupType")
+  private String userGroupType = null;
 
   @JsonProperty("users")
   private java.util.List<UserInfo> users = null;
@@ -220,7 +223,7 @@ public class Group implements Serializable {
    *
    * @return Group
    **/
-  public Group isManagedByScim(String isManagedByScim) {
+  public Group isManagedByScim(Boolean isManagedByScim) {
     this.isManagedByScim = isManagedByScim;
     return this;
   }
@@ -230,14 +233,14 @@ public class Group implements Serializable {
    * @return isManagedByScim
    **/
   @Schema(description = "")
-  public String getIsManagedByScim() {
+  public Boolean isIsManagedByScim() {
     return isManagedByScim;
   }
 
   /**
    * setIsManagedByScim.
    **/
-  public void setIsManagedByScim(String isManagedByScim) {
+  public void setIsManagedByScim(Boolean isManagedByScim) {
     this.isManagedByScim = isManagedByScim;
   }
 
@@ -293,6 +296,33 @@ public class Group implements Serializable {
    **/
   public void setPermissionProfileId(String permissionProfileId) {
     this.permissionProfileId = permissionProfileId;
+  }
+
+
+  /**
+   * userGroupType.
+   *
+   * @return Group
+   **/
+  public Group userGroupType(String userGroupType) {
+    this.userGroupType = userGroupType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return userGroupType
+   **/
+  @Schema(description = "")
+  public String getUserGroupType() {
+    return userGroupType;
+  }
+
+  /**
+   * setUserGroupType.
+   **/
+  public void setUserGroupType(String userGroupType) {
+    this.userGroupType = userGroupType;
   }
 
 
@@ -386,6 +416,7 @@ public class Group implements Serializable {
         Objects.equals(this.isManagedByScim, group.isManagedByScim) &&
         Objects.equals(this.lastModifiedOn, group.lastModifiedOn) &&
         Objects.equals(this.permissionProfileId, group.permissionProfileId) &&
+        Objects.equals(this.userGroupType, group.userGroupType) &&
         Objects.equals(this.users, group.users) &&
         Objects.equals(this.usersCount, group.usersCount);
   }
@@ -395,7 +426,7 @@ public class Group implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, isManagedByScim, lastModifiedOn, permissionProfileId, users, usersCount);
+    return Objects.hash(accessType, dsGroupId, errorDetails, groupId, groupName, groupType, isManagedByScim, lastModifiedOn, permissionProfileId, userGroupType, users, usersCount);
   }
 
 
@@ -416,6 +447,7 @@ public class Group implements Serializable {
     sb.append("    isManagedByScim: ").append(toIndentedString(isManagedByScim)).append("\n");
     sb.append("    lastModifiedOn: ").append(toIndentedString(lastModifiedOn)).append("\n");
     sb.append("    permissionProfileId: ").append(toIndentedString(permissionProfileId)).append("\n");
+    sb.append("    userGroupType: ").append(toIndentedString(userGroupType)).append("\n");
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("    usersCount: ").append(toIndentedString(usersCount)).append("\n");
     sb.append("}");

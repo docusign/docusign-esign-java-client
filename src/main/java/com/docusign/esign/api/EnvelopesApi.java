@@ -4356,7 +4356,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @return ConsumerDisclosure
    */ 
   public ConsumerDisclosure getConsumerDisclosure(String accountId, String envelopeId, String recipientId, String langCode) throws ApiException {
@@ -4369,7 +4369,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
@@ -4385,7 +4385,7 @@ public class EnvelopesApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
    * @param recipientId The ID of the recipient being accessed. (required)
-   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
+   * @param langCode The simple type enumeration the language used in the response. The supported languages, with the language value shown in parenthesis, are:Arabic (ar), Armenian (hy), Bulgarian (bg), Czech (cs), Chinese Simplified (zh_CN), Chinese Traditional (zh_TW), Croatian (hr), Danish (da), Dutch (nl), English US (en), English UK (en_GB), Estonian (et), Farsi (fa), Finnish (fi), French (fr), French Canada (fr_CA), German (de), Greek (el), Hebrew (he), Hindi (hi), Hungarian (hu), Bahasa Indonesia (id), Italian (it), Japanese (ja), Korean (ko), Latvian (lv), Lithuanian (lt), Bahasa Melayu (ms), Norwegian (no), Polish (pl), Portuguese (pt), Portuguese Brazil (pt_BR), Romanian (ro), Russian (ru), Serbian (sr), Slovak (sk), Slovenian (sl), Spanish (es),Spanish Latin America (es_MX), Swedish (sv), Thai (th), Turkish (tr), Ukrainian (uk) and Vietnamese (vi). Additionally, the value can be set to ï¿½browserï¿½ to automatically detect the browser language being used by the viewer and display the disclosure in that language. (required)
    * @param options for modifying the method behavior.
    * @return ConsumerDisclosure
    * @throws ApiException if fails to make API call
@@ -7347,17 +7347,57 @@ public class EnvelopesApi {
     WorkflowStep localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<WorkflowStep>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
+  /// <summary>
+  /// Gets the envelope audit events for an envelope. Gets the envelope audit events for the specified envelope.
+  /// </summary>
+
+ /**
+  * ListAuditEventsOptions Class.
+  *
+  **/
+  public class ListAuditEventsOptions
+  {
+  private String locale = null;
+  
+ /**
+  * setLocale method.
+  */
+  public void setLocale(String locale) {
+    this.locale = locale;
+  }
+
+ /**
+  * getLocale method.
+  *
+  * @return String
+  */
+  public String getLocale() {
+    return this.locale;
+  }
+  }
+
+   /**
+   * Gets the envelope audit events for an envelope..
+   * Gets the envelope audit events for the specified envelope.
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopeAuditEventResponse
+   */ 
+  public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
+    return listAuditEvents(accountId, envelopeId, null);
+  }
 
   /**
    * Gets the envelope audit events for an envelope..
    * Gets the envelope audit events for the specified envelope.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return EnvelopeAuditEventResponse
    * @throws ApiException if fails to make API call
    */
-  public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId) throws ApiException {
-    ApiResponse<EnvelopeAuditEventResponse> localVarResponse = listAuditEventsWithHttpInfo(accountId, envelopeId);
+  public EnvelopeAuditEventResponse listAuditEvents(String accountId, String envelopeId, EnvelopesApi.ListAuditEventsOptions options) throws ApiException {
+    ApiResponse<EnvelopeAuditEventResponse> localVarResponse = listAuditEventsWithHttpInfo(accountId, envelopeId, options);
     return localVarResponse.getData();
   }
 
@@ -7366,10 +7406,11 @@ public class EnvelopesApi {
    * Gets the envelope audit events for the specified envelope.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param options for modifying the method behavior.
    * @return EnvelopeAuditEventResponse
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<EnvelopeAuditEventResponse > listAuditEventsWithHttpInfo(String accountId, String envelopeId) throws ApiException {
+  public ApiResponse<EnvelopeAuditEventResponse > listAuditEventsWithHttpInfo(String accountId, String envelopeId, EnvelopesApi.ListAuditEventsOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -7393,7 +7434,9 @@ public class EnvelopesApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
-    
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("locale", options.locale));
+    }
 
     
 
@@ -7570,6 +7613,7 @@ public class EnvelopesApi {
   public class ListDocumentsOptions
   {
   private String documentsByUserid = null;
+  private String includeAgreementType = null;
   private String includeDocgenFormfields = null;
   private String includeDocumentSize = null;
   private String includeMetadata = null;
@@ -7591,6 +7635,22 @@ public class EnvelopesApi {
   */
   public String getDocumentsByUserid() {
     return this.documentsByUserid;
+  }
+  
+ /**
+  * setIncludeAgreementType method.
+  */
+  public void setIncludeAgreementType(String includeAgreementType) {
+    this.includeAgreementType = includeAgreementType;
+  }
+
+ /**
+  * getIncludeAgreementType method.
+  *
+  * @return String
+  */
+  public String getIncludeAgreementType() {
+    return this.includeAgreementType;
   }
   
  /**
@@ -7750,6 +7810,8 @@ public class EnvelopesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("documents_by_userid", options.documentsByUserid));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_agreement_type", options.includeAgreementType));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_docgen_formfields", options.includeDocgenFormfields));
     }if (options != null) {

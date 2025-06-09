@@ -12,6 +12,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.SocialAuthentication;
@@ -132,6 +133,9 @@ public class SealSign implements Serializable {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("proofFile")
+  private RecipientProofFile proofFile = null;
 
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = null;
@@ -1157,6 +1161,33 @@ public class SealSign implements Serializable {
 
 
   /**
+   * proofFile.
+   *
+   * @return SealSign
+   **/
+  public SealSign proofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+    return this;
+  }
+
+  /**
+   * .
+   * @return proofFile
+   **/
+  @Schema(description = "")
+  public RecipientProofFile getProofFile() {
+    return proofFile;
+  }
+
+  /**
+   * setProofFile.
+   **/
+  public void setProofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+  }
+
+
+  /**
    * recipientAttachments.
    *
    * @return SealSign
@@ -1958,6 +1989,7 @@ public class SealSign implements Serializable {
         Objects.equals(this.note, sealSign.note) &&
         Objects.equals(this.noteMetadata, sealSign.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, sealSign.phoneAuthentication) &&
+        Objects.equals(this.proofFile, sealSign.proofFile) &&
         Objects.equals(this.recipientAttachments, sealSign.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, sealSign.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, sealSign.recipientFeatureMetadata) &&
@@ -1991,7 +2023,7 @@ public class SealSign implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -2037,6 +2069,7 @@ public class SealSign implements Serializable {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");

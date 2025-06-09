@@ -12,6 +12,7 @@ import com.docusign.esign.model.RecipientAttachment;
 import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientIdentityVerification;
 import com.docusign.esign.model.RecipientPhoneAuthentication;
+import com.docusign.esign.model.RecipientProofFile;
 import com.docusign.esign.model.RecipientSMSAuthentication;
 import com.docusign.esign.model.SocialAuthentication;
 import com.docusign.esign.model.Tabs;
@@ -144,6 +145,9 @@ public class NotaryHost implements Serializable {
 
   @JsonProperty("phoneAuthentication")
   private RecipientPhoneAuthentication phoneAuthentication = null;
+
+  @JsonProperty("proofFile")
+  private RecipientProofFile proofFile = null;
 
   @JsonProperty("recipientAttachments")
   private java.util.List<RecipientAttachment> recipientAttachments = null;
@@ -1286,6 +1290,33 @@ public class NotaryHost implements Serializable {
 
 
   /**
+   * proofFile.
+   *
+   * @return NotaryHost
+   **/
+  public NotaryHost proofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+    return this;
+  }
+
+  /**
+   * .
+   * @return proofFile
+   **/
+  @Schema(description = "")
+  public RecipientProofFile getProofFile() {
+    return proofFile;
+  }
+
+  /**
+   * setProofFile.
+   **/
+  public void setProofFile(RecipientProofFile proofFile) {
+    this.proofFile = proofFile;
+  }
+
+
+  /**
    * recipientAttachments.
    *
    * @return NotaryHost
@@ -2172,6 +2203,7 @@ public class NotaryHost implements Serializable {
         Objects.equals(this.note, notaryHost.note) &&
         Objects.equals(this.noteMetadata, notaryHost.noteMetadata) &&
         Objects.equals(this.phoneAuthentication, notaryHost.phoneAuthentication) &&
+        Objects.equals(this.proofFile, notaryHost.proofFile) &&
         Objects.equals(this.recipientAttachments, notaryHost.recipientAttachments) &&
         Objects.equals(this.recipientAuthenticationStatus, notaryHost.recipientAuthenticationStatus) &&
         Objects.equals(this.recipientFeatureMetadata, notaryHost.recipientFeatureMetadata) &&
@@ -2208,7 +2240,7 @@ public class NotaryHost implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, embeddedRecipientStartURL, errorDetails, faxNumber, faxNumberMetadata, hostRecipientId, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -2258,6 +2290,7 @@ public class NotaryHost implements Serializable {
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    noteMetadata: ").append(toIndentedString(noteMetadata)).append("\n");
     sb.append("    phoneAuthentication: ").append(toIndentedString(phoneAuthentication)).append("\n");
+    sb.append("    proofFile: ").append(toIndentedString(proofFile)).append("\n");
     sb.append("    recipientAttachments: ").append(toIndentedString(recipientAttachments)).append("\n");
     sb.append("    recipientAuthenticationStatus: ").append(toIndentedString(recipientAuthenticationStatus)).append("\n");
     sb.append("    recipientFeatureMetadata: ").append(toIndentedString(recipientFeatureMetadata)).append("\n");
