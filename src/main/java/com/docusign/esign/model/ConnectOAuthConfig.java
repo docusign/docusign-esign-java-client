@@ -26,7 +26,7 @@ public class ConnectOAuthConfig implements Serializable {
   private String clientSecret = null;
 
   @JsonProperty("customParameters")
-  private String customParameters = null;
+  private java.util.Map<String, String> customParameters = null;
 
   @JsonProperty("scope")
   private String scope = null;
@@ -118,8 +118,21 @@ public class ConnectOAuthConfig implements Serializable {
    *
    * @return ConnectOAuthConfig
    **/
-  public ConnectOAuthConfig customParameters(String customParameters) {
+  public ConnectOAuthConfig customParameters(java.util.Map<String, String> customParameters) {
     this.customParameters = customParameters;
+    return this;
+  }
+
+  /**
+   * putCustomParametersItem.
+   *
+   * @return ConnectOAuthConfig
+   **/
+  public ConnectOAuthConfig putCustomParametersItem(String key, String customParametersItem) {
+    if (this.customParameters == null) {
+      this.customParameters = new java.util.HashMap<>();
+    }
+    this.customParameters.put(key, customParametersItem);
     return this;
   }
 
@@ -128,14 +141,14 @@ public class ConnectOAuthConfig implements Serializable {
    * @return customParameters
    **/
   @Schema(description = "")
-  public String getCustomParameters() {
+  public java.util.Map<String, String> getCustomParameters() {
     return customParameters;
   }
 
   /**
    * setCustomParameters.
    **/
-  public void setCustomParameters(String customParameters) {
+  public void setCustomParameters(java.util.Map<String, String> customParameters) {
     this.customParameters = customParameters;
   }
 

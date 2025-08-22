@@ -100,6 +100,9 @@ public class ConnectCustomConfiguration implements Serializable {
   @JsonProperty("password")
   private String password = null;
 
+  @JsonProperty("pausePublish")
+  private String pausePublish = null;
+
   @JsonProperty("recipientEvents")
   private java.util.List<String> recipientEvents = null;
 
@@ -918,6 +921,33 @@ public class ConnectCustomConfiguration implements Serializable {
 
 
   /**
+   * pausePublish.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration pausePublish(String pausePublish) {
+    this.pausePublish = pausePublish;
+    return this;
+  }
+
+  /**
+   * .
+   * @return pausePublish
+   **/
+  @Schema(description = "")
+  public String getPausePublish() {
+    return pausePublish;
+  }
+
+  /**
+   * setPausePublish.
+   **/
+  public void setPausePublish(String pausePublish) {
+    this.pausePublish = pausePublish;
+  }
+
+
+  /**
    * recipientEvents.
    *
    * @return ConnectCustomConfiguration
@@ -1442,6 +1472,7 @@ public class ConnectCustomConfiguration implements Serializable {
         Objects.equals(this.integratorManaged, connectCustomConfiguration.integratorManaged) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
         Objects.equals(this.password, connectCustomConfiguration.password) &&
+        Objects.equals(this.pausePublish, connectCustomConfiguration.pausePublish) &&
         Objects.equals(this.recipientEvents, connectCustomConfiguration.recipientEvents) &&
         Objects.equals(this.requireMutualTls, connectCustomConfiguration.requireMutualTls) &&
         Objects.equals(this.requiresAcknowledgement, connectCustomConfiguration.requiresAcknowledgement) &&
@@ -1465,7 +1496,7 @@ public class ConnectCustomConfiguration implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, password, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, password, pausePublish, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1504,6 +1535,7 @@ public class ConnectCustomConfiguration implements Serializable {
     sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    pausePublish: ").append(toIndentedString(pausePublish)).append("\n");
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");
     sb.append("    requireMutualTls: ").append(toIndentedString(requireMutualTls)).append("\n");
     sb.append("    requiresAcknowledgement: ").append(toIndentedString(requiresAcknowledgement)).append("\n");
