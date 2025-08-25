@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.TemplateViewSettings;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -18,6 +19,9 @@ public class TemplateViewRequest implements Serializable {
 
   @JsonProperty("returnUrl")
   private String returnUrl = null;
+
+  @JsonProperty("settings")
+  private TemplateViewSettings settings = null;
 
   @JsonProperty("viewAccess")
   private String viewAccess = null;
@@ -47,6 +51,33 @@ public class TemplateViewRequest implements Serializable {
    **/
   public void setReturnUrl(String returnUrl) {
     this.returnUrl = returnUrl;
+  }
+
+
+  /**
+   * settings.
+   *
+   * @return TemplateViewRequest
+   **/
+  public TemplateViewRequest settings(TemplateViewSettings settings) {
+    this.settings = settings;
+    return this;
+  }
+
+  /**
+   * .
+   * @return settings
+   **/
+  @Schema(description = "")
+  public TemplateViewSettings getSettings() {
+    return settings;
+  }
+
+  /**
+   * setSettings.
+   **/
+  public void setSettings(TemplateViewSettings settings) {
+    this.settings = settings;
   }
 
 
@@ -92,6 +123,7 @@ public class TemplateViewRequest implements Serializable {
     }
     TemplateViewRequest templateViewRequest = (TemplateViewRequest) o;
     return Objects.equals(this.returnUrl, templateViewRequest.returnUrl) &&
+        Objects.equals(this.settings, templateViewRequest.settings) &&
         Objects.equals(this.viewAccess, templateViewRequest.viewAccess);
   }
 
@@ -100,7 +132,7 @@ public class TemplateViewRequest implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(returnUrl, viewAccess);
+    return Objects.hash(returnUrl, settings, viewAccess);
   }
 
 
@@ -113,6 +145,7 @@ public class TemplateViewRequest implements Serializable {
     sb.append("class TemplateViewRequest {\n");
     
     sb.append("    returnUrl: ").append(toIndentedString(returnUrl)).append("\n");
+    sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
     sb.append("    viewAccess: ").append(toIndentedString(viewAccess)).append("\n");
     sb.append("}");
     return sb.toString();
