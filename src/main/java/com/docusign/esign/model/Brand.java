@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.BrandEmailContent;
 import com.docusign.esign.model.BrandLink;
+import com.docusign.esign.model.BrandLogoIds;
 import com.docusign.esign.model.BrandLogos;
 import com.docusign.esign.model.BrandResourceUrls;
 import com.docusign.esign.model.ErrorDetails;
@@ -64,6 +65,9 @@ public class Brand implements Serializable {
 
   @JsonProperty("links")
   private java.util.List<BrandLink> links = null;
+
+  @JsonProperty("logoIds")
+  private BrandLogoIds logoIds = null;
 
   @JsonProperty("logos")
   private BrandLogos logos = null;
@@ -519,6 +523,33 @@ public class Brand implements Serializable {
 
 
   /**
+   * logoIds.
+   *
+   * @return Brand
+   **/
+  public Brand logoIds(BrandLogoIds logoIds) {
+    this.logoIds = logoIds;
+    return this;
+  }
+
+  /**
+   * .
+   * @return logoIds
+   **/
+  @Schema(description = "")
+  public BrandLogoIds getLogoIds() {
+    return logoIds;
+  }
+
+  /**
+   * setLogoIds.
+   **/
+  public void setLogoIds(BrandLogoIds logoIds) {
+    this.logoIds = logoIds;
+  }
+
+
+  /**
    * logos.
    *
    * @return Brand
@@ -627,6 +658,7 @@ public class Brand implements Serializable {
         Objects.equals(this.isSigningDefault, brand.isSigningDefault) &&
         Objects.equals(this.landingPages, brand.landingPages) &&
         Objects.equals(this.links, brand.links) &&
+        Objects.equals(this.logoIds, brand.logoIds) &&
         Objects.equals(this.logos, brand.logos) &&
         Objects.equals(this.organizationBrandLogo, brand.organizationBrandLogo) &&
         Objects.equals(this.resources, brand.resources);
@@ -637,7 +669,7 @@ public class Brand implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOrganizationBrand, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logos, organizationBrandLogo, resources);
+    return Objects.hash(brandCompany, brandId, brandLanguages, brandName, colors, defaultBrandLanguage, emailContent, errorDetails, isOrganizationBrand, isOverridingCompanyName, isSendingDefault, isSigningDefault, landingPages, links, logoIds, logos, organizationBrandLogo, resources);
   }
 
 
@@ -663,6 +695,7 @@ public class Brand implements Serializable {
     sb.append("    isSigningDefault: ").append(toIndentedString(isSigningDefault)).append("\n");
     sb.append("    landingPages: ").append(toIndentedString(landingPages)).append("\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    logoIds: ").append(toIndentedString(logoIds)).append("\n");
     sb.append("    logos: ").append(toIndentedString(logos)).append("\n");
     sb.append("    organizationBrandLogo: ").append(toIndentedString(organizationBrandLogo)).append("\n");
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
