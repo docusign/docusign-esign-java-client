@@ -1,11 +1,16 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [v6.4.0] - eSignature API v2.1-25.2.02.00 - 2025-08-11
+## [v6.5.0] - eSignature API v2.1-25.3.01.00 - 2025-09-29
+### Changed
+- Added support for version v2.1-25.3.01.00 of the Docusign ESignature API.
+- Updated the SDK release version.
+
+## [v6.4.0] - eSignature API v2.1-25.2.02.00 - 2025-08-29
 ### Changed
 - Added support for version v2.1-25.2.02.00 of the DocuSign ESignature API.
 - Updated the SDK release version.
-
+- Fixed type for `customParameters` property under `connectOAuthConfig`.
 ## [v6.3.0] - eSignature API v2.1-25.2.01.00 - 2025-07-08
 ### Changed
 - Added support for version v2.1-25.2.01.00 of the DocuSign ESignature API.

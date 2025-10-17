@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ConnectEventData;
+import com.docusign.esign.model.ConnectOAuthConfig;
 import com.docusign.esign.model.ConnectSalesforceObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -45,6 +46,9 @@ public class ConnectCustomConfiguration implements Serializable {
 
   @JsonProperty("enableLog")
   private String enableLog = null;
+
+  @JsonProperty("enableOAuthPerConfiguration")
+  private String enableOAuthPerConfiguration = null;
 
   @JsonProperty("envelopeEvents")
   private java.util.List<String> envelopeEvents = null;
@@ -96,6 +100,9 @@ public class ConnectCustomConfiguration implements Serializable {
 
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("oAuthConfiguration")
+  private ConnectOAuthConfig oAuthConfiguration = null;
 
   @JsonProperty("password")
   private String password = null;
@@ -392,6 +399,33 @@ public class ConnectCustomConfiguration implements Serializable {
    **/
   public void setEnableLog(String enableLog) {
     this.enableLog = enableLog;
+  }
+
+
+  /**
+   * enableOAuthPerConfiguration.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration enableOAuthPerConfiguration(String enableOAuthPerConfiguration) {
+    this.enableOAuthPerConfiguration = enableOAuthPerConfiguration;
+    return this;
+  }
+
+  /**
+   * .
+   * @return enableOAuthPerConfiguration
+   **/
+  @Schema(description = "")
+  public String getEnableOAuthPerConfiguration() {
+    return enableOAuthPerConfiguration;
+  }
+
+  /**
+   * setEnableOAuthPerConfiguration.
+   **/
+  public void setEnableOAuthPerConfiguration(String enableOAuthPerConfiguration) {
+    this.enableOAuthPerConfiguration = enableOAuthPerConfiguration;
   }
 
 
@@ -890,6 +924,33 @@ public class ConnectCustomConfiguration implements Serializable {
    **/
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  /**
+   * oAuthConfiguration.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration oAuthConfiguration(ConnectOAuthConfig oAuthConfiguration) {
+    this.oAuthConfiguration = oAuthConfiguration;
+    return this;
+  }
+
+  /**
+   * .
+   * @return oAuthConfiguration
+   **/
+  @Schema(description = "")
+  public ConnectOAuthConfig getOAuthConfiguration() {
+    return oAuthConfiguration;
+  }
+
+  /**
+   * setOAuthConfiguration.
+   **/
+  public void setOAuthConfiguration(ConnectOAuthConfig oAuthConfiguration) {
+    this.oAuthConfiguration = oAuthConfiguration;
   }
 
 
@@ -1454,6 +1515,7 @@ public class ConnectCustomConfiguration implements Serializable {
         Objects.equals(this.deliveryMode, connectCustomConfiguration.deliveryMode) &&
         Objects.equals(this.disabledBy, connectCustomConfiguration.disabledBy) &&
         Objects.equals(this.enableLog, connectCustomConfiguration.enableLog) &&
+        Objects.equals(this.enableOAuthPerConfiguration, connectCustomConfiguration.enableOAuthPerConfiguration) &&
         Objects.equals(this.envelopeEvents, connectCustomConfiguration.envelopeEvents) &&
         Objects.equals(this.eventData, connectCustomConfiguration.eventData) &&
         Objects.equals(this.events, connectCustomConfiguration.events) &&
@@ -1471,6 +1533,7 @@ public class ConnectCustomConfiguration implements Serializable {
         Objects.equals(this.includeTimeZoneInformation, connectCustomConfiguration.includeTimeZoneInformation) &&
         Objects.equals(this.integratorManaged, connectCustomConfiguration.integratorManaged) &&
         Objects.equals(this.name, connectCustomConfiguration.name) &&
+        Objects.equals(this.oAuthConfiguration, connectCustomConfiguration.oAuthConfiguration) &&
         Objects.equals(this.password, connectCustomConfiguration.password) &&
         Objects.equals(this.pausePublish, connectCustomConfiguration.pausePublish) &&
         Objects.equals(this.recipientEvents, connectCustomConfiguration.recipientEvents) &&
@@ -1496,7 +1559,7 @@ public class ConnectCustomConfiguration implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, password, pausePublish, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, enableOAuthPerConfiguration, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, oAuthConfiguration, password, pausePublish, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1517,6 +1580,7 @@ public class ConnectCustomConfiguration implements Serializable {
     sb.append("    deliveryMode: ").append(toIndentedString(deliveryMode)).append("\n");
     sb.append("    disabledBy: ").append(toIndentedString(disabledBy)).append("\n");
     sb.append("    enableLog: ").append(toIndentedString(enableLog)).append("\n");
+    sb.append("    enableOAuthPerConfiguration: ").append(toIndentedString(enableOAuthPerConfiguration)).append("\n");
     sb.append("    envelopeEvents: ").append(toIndentedString(envelopeEvents)).append("\n");
     sb.append("    eventData: ").append(toIndentedString(eventData)).append("\n");
     sb.append("    events: ").append(toIndentedString(events)).append("\n");
@@ -1534,6 +1598,7 @@ public class ConnectCustomConfiguration implements Serializable {
     sb.append("    includeTimeZoneInformation: ").append(toIndentedString(includeTimeZoneInformation)).append("\n");
     sb.append("    integratorManaged: ").append(toIndentedString(integratorManaged)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    oAuthConfiguration: ").append(toIndentedString(oAuthConfiguration)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    pausePublish: ").append(toIndentedString(pausePublish)).append("\n");
     sb.append("    recipientEvents: ").append(toIndentedString(recipientEvents)).append("\n");

@@ -20,11 +20,17 @@ public class AccountSignatureProviderOption implements Serializable {
   @JsonProperty("signatureProviderOptionDisplayName")
   private String signatureProviderOptionDisplayName = null;
 
+  @JsonProperty("signatureProviderOptionHintOverrideValue")
+  private String signatureProviderOptionHintOverrideValue = null;
+
   @JsonProperty("signatureProviderOptionId")
   private String signatureProviderOptionId = null;
 
   @JsonProperty("signatureProviderOptionName")
   private String signatureProviderOptionName = null;
+
+  @JsonProperty("signatureProviderOptionRegexValidationPattern")
+  private String signatureProviderOptionRegexValidationPattern = null;
 
 
   /**
@@ -51,6 +57,33 @@ public class AccountSignatureProviderOption implements Serializable {
    **/
   public void setSignatureProviderOptionDisplayName(String signatureProviderOptionDisplayName) {
     this.signatureProviderOptionDisplayName = signatureProviderOptionDisplayName;
+  }
+
+
+  /**
+   * signatureProviderOptionHintOverrideValue.
+   *
+   * @return AccountSignatureProviderOption
+   **/
+  public AccountSignatureProviderOption signatureProviderOptionHintOverrideValue(String signatureProviderOptionHintOverrideValue) {
+    this.signatureProviderOptionHintOverrideValue = signatureProviderOptionHintOverrideValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signatureProviderOptionHintOverrideValue
+   **/
+  @Schema(description = "")
+  public String getSignatureProviderOptionHintOverrideValue() {
+    return signatureProviderOptionHintOverrideValue;
+  }
+
+  /**
+   * setSignatureProviderOptionHintOverrideValue.
+   **/
+  public void setSignatureProviderOptionHintOverrideValue(String signatureProviderOptionHintOverrideValue) {
+    this.signatureProviderOptionHintOverrideValue = signatureProviderOptionHintOverrideValue;
   }
 
 
@@ -109,6 +142,33 @@ public class AccountSignatureProviderOption implements Serializable {
 
 
   /**
+   * signatureProviderOptionRegexValidationPattern.
+   *
+   * @return AccountSignatureProviderOption
+   **/
+  public AccountSignatureProviderOption signatureProviderOptionRegexValidationPattern(String signatureProviderOptionRegexValidationPattern) {
+    this.signatureProviderOptionRegexValidationPattern = signatureProviderOptionRegexValidationPattern;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signatureProviderOptionRegexValidationPattern
+   **/
+  @Schema(description = "")
+  public String getSignatureProviderOptionRegexValidationPattern() {
+    return signatureProviderOptionRegexValidationPattern;
+  }
+
+  /**
+   * setSignatureProviderOptionRegexValidationPattern.
+   **/
+  public void setSignatureProviderOptionRegexValidationPattern(String signatureProviderOptionRegexValidationPattern) {
+    this.signatureProviderOptionRegexValidationPattern = signatureProviderOptionRegexValidationPattern;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -123,8 +183,10 @@ public class AccountSignatureProviderOption implements Serializable {
     }
     AccountSignatureProviderOption accountSignatureProviderOption = (AccountSignatureProviderOption) o;
     return Objects.equals(this.signatureProviderOptionDisplayName, accountSignatureProviderOption.signatureProviderOptionDisplayName) &&
+        Objects.equals(this.signatureProviderOptionHintOverrideValue, accountSignatureProviderOption.signatureProviderOptionHintOverrideValue) &&
         Objects.equals(this.signatureProviderOptionId, accountSignatureProviderOption.signatureProviderOptionId) &&
-        Objects.equals(this.signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName);
+        Objects.equals(this.signatureProviderOptionName, accountSignatureProviderOption.signatureProviderOptionName) &&
+        Objects.equals(this.signatureProviderOptionRegexValidationPattern, accountSignatureProviderOption.signatureProviderOptionRegexValidationPattern);
   }
 
   /**
@@ -132,7 +194,7 @@ public class AccountSignatureProviderOption implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(signatureProviderOptionDisplayName, signatureProviderOptionId, signatureProviderOptionName);
+    return Objects.hash(signatureProviderOptionDisplayName, signatureProviderOptionHintOverrideValue, signatureProviderOptionId, signatureProviderOptionName, signatureProviderOptionRegexValidationPattern);
   }
 
 
@@ -145,8 +207,10 @@ public class AccountSignatureProviderOption implements Serializable {
     sb.append("class AccountSignatureProviderOption {\n");
     
     sb.append("    signatureProviderOptionDisplayName: ").append(toIndentedString(signatureProviderOptionDisplayName)).append("\n");
+    sb.append("    signatureProviderOptionHintOverrideValue: ").append(toIndentedString(signatureProviderOptionHintOverrideValue)).append("\n");
     sb.append("    signatureProviderOptionId: ").append(toIndentedString(signatureProviderOptionId)).append("\n");
     sb.append("    signatureProviderOptionName: ").append(toIndentedString(signatureProviderOptionName)).append("\n");
+    sb.append("    signatureProviderOptionRegexValidationPattern: ").append(toIndentedString(signatureProviderOptionRegexValidationPattern)).append("\n");
     sb.append("}");
     return sb.toString();
   }
