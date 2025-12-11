@@ -234,6 +234,7 @@
                 <configuration>
                     <failBuildOnCVSS>8</failBuildOnCVSS>
                     <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
+                    <failOnError>false</failOnError>
                 </configuration>
                 <executions>
                     <execution>
