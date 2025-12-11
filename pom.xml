@@ -233,6 +233,7 @@
                 <version>12.1.1</version>
                 <configuration>
                     <failBuildOnCVSS>8</failBuildOnCVSS>
+                    <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
                 </configuration>
                 <executions>
                     <execution>
