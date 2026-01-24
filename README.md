@@ -76,7 +76,6 @@ This client has the following external dependencies:
 *   com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.14.2
 *   com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2
 *   com.fasterxml.jackson.core:jackson-core:2.17.1
-*   org.json:json:20240303
 
 
 <a id="apiReference"></a>
