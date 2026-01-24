@@ -392,21 +392,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.brsanthu</groupId>
-            <artifactId>migbase64</artifactId>
-            <version>2.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>3.1.0</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.brsanthu</groupId>
-            <artifactId>migbase64</artifactId>
-            <version>2.2</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
