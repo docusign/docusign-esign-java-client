@@ -36,8 +36,6 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import org.glassfish.jersey.logging.LoggingFeature;
 import java.security.SecureRandom;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.security.NoSuchAlgorithmException;
 import java.text.DateFormat;
 import java.util.*;
@@ -243,12 +241,42 @@ public class ApiClient {
   /**
    * Sets the basepath.
    * 
+   * @param basePath The base path for API requests (must use HTTPS)
    * @return ApiClient
+   * @throws IllegalArgumentException if the basePath does not use HTTPS
    */
   public ApiClient setBasePath(String basePath) {
+    validateHttpsUrl(basePath, "basePath");
     this.basePath = basePath;
     this.deriveOAuthBasePathFromRestBasePath();
     return this;
+  }
+
+  /**
+   * Validates that a URL uses HTTPS protocol.
+   * 
+   * @param url The URL to validate
+   * @param paramName The parameter name for error messages
+   * @throws IllegalArgumentException if the URL does not use HTTPS
+   */
+  private void validateHttpsUrl(String url, String paramName) {
+    if (url == null || url.isEmpty()) {
+      return; // Allow null/empty to be handled elsewhere
+    }
+    String lowercaseUrl = url.toLowerCase();
+    if (lowercaseUrl.startsWith("http://")) {
+      throw new IllegalArgumentException(
+        "Security violation: " + paramName + " must use HTTPS. " +
+        "HTTP connections are not allowed as they transmit data in plaintext. " +
+        "Received: " + url
+      );
+    }
+    if (!lowercaseUrl.startsWith("https://")) {
+      throw new IllegalArgumentException(
+        "Security violation: " + paramName + " must use HTTPS protocol. " +
+        "Received: " + url
+      );
+    }
   }
 
   /**
@@ -1584,6 +1612,9 @@ public class ApiClient {
 
   /**
    * Build the Client used to make HTTP requests.
+   * Uses secure defaults: system default TrustManager for SSL certificate validation,
+   * standard hostname verification, and per-connection proxy authentication.
+   * 
    * @param debugging Debug setting
    * @return Client
    */
@@ -1618,19 +1649,31 @@ public class ApiClient {
         System.err.println(nsae.getMessage());
     }
 
-    // Setup the SSLContext object to use for HTTPS connections to the API
+    // Setup the SSLContext using system default TrustManager for proper certificate validation
+    // This ensures certificates are validated against the system's trusted CA store
     if (sslContext == null) {
-	    try {
-	    	sslContext = SSLContext.getInstance("TLSv1.2");
-	    	sslContext.init(null, new TrustManager[] { new SecureTrustManager() }, new SecureRandom());
-	    } catch (final Exception ex) {
-	      System.err.println("failed to initialize SSL context");
-	    }
+        try {
+            sslContext = SSLContext.getInstance("TLSv1.2");
+            // Use null TrustManager array to use the system default TrustManager
+            // This properly validates server certificates against the JVM's cacerts
+            sslContext.init(null, null, new SecureRandom());
+        } catch (final Exception ex) {
+            System.err.println("failed to initialize SSL context: " + ex.getMessage());
+            // Fall back to the system default SSLContext
+            try {
+                sslContext = SSLContext.getDefault();
+            } catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException("Failed to initialize secure SSL context", e);
+            }
+        }
     }
 
-    clientConfig.connectorProvider(new ConnectorProvider() {
-      Proxy p = null;
+    // Cache proxy configuration to avoid repeated lookups
+    final Proxy configuredProxy = buildProxy();
+    final String proxyUser = getProxyUser();
+    final String proxyPassword = getProxyPassword();
 
+    clientConfig.connectorProvider(new ConnectorProvider() {
       /*
        * Returns whether the host is part of the list of hosts that should be accessed without going through the proxy
        */
@@ -1665,75 +1708,40 @@ public class ApiClient {
 
       @Override
       public Connector getConnector(Client client, jakarta.ws.rs.core.Configuration configuration) {
-        HttpUrlConnectorProvider customConnProv =  new HttpUrlConnectorProvider();
+        HttpUrlConnectorProvider customConnProv = new HttpUrlConnectorProvider();
         customConnProv.connectionFactory(new HttpUrlConnectorProvider.ConnectionFactory() {
             @Override
             public HttpURLConnection getConnection(java.net.URL url) throws IOException {
                 if (url == null) {
-                  return null;
+                    return null;
                 }
-        
+
+                // Enforce HTTPS-only connections
+                if (!"https".equalsIgnoreCase(url.getProtocol())) {
+                    throw new IOException(
+                        "Security violation: Only HTTPS connections are allowed. " +
+                        "Attempted to connect using: " + url.getProtocol()
+                    );
+                }
+
+                Proxy proxyToUse = configuredProxy;
                 if (isNonProxyHost(url.getHost(), System.getProperty("http.nonProxyHosts"))) {
-                  HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(Proxy.NO_PROXY);
-                  connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                  return connection;
+                    proxyToUse = Proxy.NO_PROXY;
                 }
-        
-                // set up the proxy/no-proxy settings
-                if (p == null) {
-                  if (System.getProperty("https.proxyHost") != null) {
-                    // set up the proxy host and port
-                          final String host = System.getProperty("https.proxyHost");
-                          final Integer port = Integer.getInteger("https.proxyPort");
-                          if (host != null && port != null) {
-                        p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-                          }
-                    // set up optional proxy authentication credentials
-                    final String user = System.getProperty("https.proxyUser");
-                      final String password = System.getProperty("https.proxyPassword");
-                      if (user != null && password != null) {
-                        Authenticator.setDefault(new Authenticator() {
-                          @Override
-                          protected PasswordAuthentication getPasswordAuthentication() {
-                              if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-                                return new PasswordAuthentication(user, password.toCharArray());
-                              }
-                              return null;
-                          }
-                      });
-                      }
-                  } else if (System.getProperty("http.proxyHost") != null) {
-                    // set up the proxy host and port
-                          final String host = System.getProperty("http.proxyHost");
-                          final Integer port = Integer.getInteger("http.proxyPort");
-                          if (host != null && port != null) {
-                        p = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
-                          }
-                    // set up optional proxy authentication credentials
-                    final String user = System.getProperty("http.proxyUser");
-                      final String password = System.getProperty("http.proxyPassword");
-                      if (user != null && password != null) {
-                        Authenticator.setDefault(new Authenticator() {
-                          @Override
-                          protected PasswordAuthentication getPasswordAuthentication() {
-                              if (getRequestorType() == RequestorType.PROXY && getRequestingHost().equalsIgnoreCase(host) && port == getRequestingPort()) {
-                                return new PasswordAuthentication(user, password.toCharArray());
-                              }
-                              return null;
-                          }
-                      });
-                      }
-                  }
-                  // no-proxy fallback if the proxy settings are misconfigured in the system properties
-                  if (p == null) {
-                    p = Proxy.NO_PROXY;
-                  }
-                }
-        
-                HostnameVerifier allHostsValid = new InsecureHostnameVerifier();
-                HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(p);
+
+                HttpsURLConnection connection = (HttpsURLConnection) url.openConnection(proxyToUse);
                 connection.setSSLSocketFactory(sslContext.getSocketFactory());
-                connection.setHostnameVerifier(allHostsValid);
+                // Use default hostname verifier - do NOT override with insecure verifier
+                // The default verifier properly validates that the certificate matches the hostname
+
+                // Configure proxy authentication per-connection instead of globally
+                // This prevents credential leakage to other parts of the application
+                if (proxyToUse != Proxy.NO_PROXY && proxyUser != null && proxyPassword != null) {
+                    String credentials = proxyUser + ":" + proxyPassword;
+                    String encoded = Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
+                    connection.setRequestProperty("Proxy-Authorization", "Basic " + encoded);
+                }
+
                 return connection;
             }
         });
@@ -1746,43 +1754,58 @@ public class ApiClient {
               withConfig(clientConfig).build();
   }
 
+  /**
+   * Build proxy configuration from system properties.
+   * @return Configured Proxy or Proxy.NO_PROXY if not configured
+   */
+  private Proxy buildProxy() {
+    String host = System.getProperty("https.proxyHost");
+    Integer port = Integer.getInteger("https.proxyPort");
+    
+    if (host == null) {
+        host = System.getProperty("http.proxyHost");
+        port = Integer.getInteger("http.proxyPort");
+    }
+    
+    if (host != null && port != null) {
+        return new Proxy(Proxy.Type.HTTP, new InetSocketAddress(host, port));
+    }
+    return Proxy.NO_PROXY;
+  }
+
+  /**
+   * Get proxy username from system properties.
+   * @return Proxy username or null if not configured
+   */
+  private String getProxyUser() {
+    String user = System.getProperty("https.proxyUser");
+    if (user == null) {
+        user = System.getProperty("http.proxyUser");
+    }
+    return user;
+  }
+
+  /**
+   * Get proxy password from system properties.
+   * @return Proxy password or null if not configured
+   */
+  private String getProxyPassword() {
+    String password = System.getProperty("https.proxyPassword");
+    if (password == null) {
+        password = System.getProperty("http.proxyPassword");
+    }
+    return password;
+  }
+
   protected void performAdditionalClientConfiguration(ClientConfig clientConfig) {
     // No-op extension point
   }
+
+  // SECURITY: Removed InsecureHostnameVerifier class that bypassed hostname verification
+  // The default HostnameVerifier properly validates that certificates match hostnames
   
-  class InsecureHostnameVerifier implements HostnameVerifier {
-    @Override
-    public boolean verify(String hostname, SSLSession session) {
-        return true;
-    }
-  }
-
-  class SecureTrustManager implements X509TrustManager {
-
-      @Override
-      public void checkClientTrusted(X509Certificate[] arg0, String arg1)
-              throws CertificateException {
-      }
-
-      @Override
-      public void checkServerTrusted(X509Certificate[] arg0, String arg1)
-              throws CertificateException {
-      }
-
-      @Override
-      public X509Certificate[] getAcceptedIssuers() {
-          return new X509Certificate[0];
-      }
-
-      public boolean isClientTrusted(X509Certificate[] arg0) {
-          return true;
-      }
-
-      public boolean isServerTrusted(X509Certificate[] arg0) {
-          return true;
-      }
-
-  }
+  // SECURITY: Removed SecureTrustManager class (misleadingly named) that trusted ALL certificates
+  // Now using system default TrustManager which properly validates certificates against cacerts
 
   protected Map<String, List<String>> buildResponseHeaders(Response response) {
     Map<String, List<String>> responseHeaders = new HashMap<String, List<String>>();
