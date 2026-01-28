@@ -10,6 +10,7 @@ import com.docusign.esign.model.ErrorDetails;
 import com.docusign.esign.model.InPersonSigner;
 import com.docusign.esign.model.Intermediary;
 import com.docusign.esign.model.NotaryRecipient;
+import com.docusign.esign.model.NotaryWitness;
 import com.docusign.esign.model.Participant;
 import com.docusign.esign.model.SealSign;
 import com.docusign.esign.model.Signer;
@@ -55,6 +56,9 @@ public class Recipients implements Serializable {
 
   @JsonProperty("notaries")
   private java.util.List<NotaryRecipient> notaries = null;
+
+  @JsonProperty("notaryWitnesses")
+  private java.util.List<NotaryWitness> notaryWitnesses = null;
 
   @JsonProperty("participants")
   private java.util.List<Participant> participants = null;
@@ -407,6 +411,46 @@ public class Recipients implements Serializable {
 
 
   /**
+   * notaryWitnesses.
+   *
+   * @return Recipients
+   **/
+  public Recipients notaryWitnesses(java.util.List<NotaryWitness> notaryWitnesses) {
+    this.notaryWitnesses = notaryWitnesses;
+    return this;
+  }
+  
+  /**
+   * addNotaryWitnessesItem.
+   *
+   * @return Recipients
+   **/
+  public Recipients addNotaryWitnessesItem(NotaryWitness notaryWitnessesItem) {
+    if (this.notaryWitnesses == null) {
+      this.notaryWitnesses = new java.util.ArrayList<>();
+    }
+    this.notaryWitnesses.add(notaryWitnessesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return notaryWitnesses
+   **/
+  @Schema(description = "")
+  public java.util.List<NotaryWitness> getNotaryWitnesses() {
+    return notaryWitnesses;
+  }
+
+  /**
+   * setNotaryWitnesses.
+   **/
+  public void setNotaryWitnesses(java.util.List<NotaryWitness> notaryWitnesses) {
+    this.notaryWitnesses = notaryWitnesses;
+  }
+
+
+  /**
    * participants.
    *
    * @return Recipients
@@ -616,6 +660,7 @@ public class Recipients implements Serializable {
         Objects.equals(this.inPersonSigners, recipients.inPersonSigners) &&
         Objects.equals(this.intermediaries, recipients.intermediaries) &&
         Objects.equals(this.notaries, recipients.notaries) &&
+        Objects.equals(this.notaryWitnesses, recipients.notaryWitnesses) &&
         Objects.equals(this.participants, recipients.participants) &&
         Objects.equals(this.recipientCount, recipients.recipientCount) &&
         Objects.equals(this.seals, recipients.seals) &&
@@ -628,7 +673,7 @@ public class Recipients implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, participants, recipientCount, seals, signers, witnesses);
+    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, notaryWitnesses, participants, recipientCount, seals, signers, witnesses);
   }
 
 
@@ -649,6 +694,7 @@ public class Recipients implements Serializable {
     sb.append("    inPersonSigners: ").append(toIndentedString(inPersonSigners)).append("\n");
     sb.append("    intermediaries: ").append(toIndentedString(intermediaries)).append("\n");
     sb.append("    notaries: ").append(toIndentedString(notaries)).append("\n");
+    sb.append("    notaryWitnesses: ").append(toIndentedString(notaryWitnesses)).append("\n");
     sb.append("    participants: ").append(toIndentedString(participants)).append("\n");
     sb.append("    recipientCount: ").append(toIndentedString(recipientCount)).append("\n");
     sb.append("    seals: ").append(toIndentedString(seals)).append("\n");

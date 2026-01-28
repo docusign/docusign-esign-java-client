@@ -17,6 +17,9 @@ import java.io.Serializable;
 public class Reminders implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("maximumReminderCount")
+  private String maximumReminderCount = null;
+
   @JsonProperty("reminderDelay")
   private String reminderDelay = null;
 
@@ -25,6 +28,33 @@ public class Reminders implements Serializable {
 
   @JsonProperty("reminderFrequency")
   private String reminderFrequency = null;
+
+
+  /**
+   * maximumReminderCount.
+   *
+   * @return Reminders
+   **/
+  public Reminders maximumReminderCount(String maximumReminderCount) {
+    this.maximumReminderCount = maximumReminderCount;
+    return this;
+  }
+
+  /**
+   * .
+   * @return maximumReminderCount
+   **/
+  @Schema(description = "")
+  public String getMaximumReminderCount() {
+    return maximumReminderCount;
+  }
+
+  /**
+   * setMaximumReminderCount.
+   **/
+  public void setMaximumReminderCount(String maximumReminderCount) {
+    this.maximumReminderCount = maximumReminderCount;
+  }
 
 
   /**
@@ -122,7 +152,8 @@ public class Reminders implements Serializable {
       return false;
     }
     Reminders reminders = (Reminders) o;
-    return Objects.equals(this.reminderDelay, reminders.reminderDelay) &&
+    return Objects.equals(this.maximumReminderCount, reminders.maximumReminderCount) &&
+        Objects.equals(this.reminderDelay, reminders.reminderDelay) &&
         Objects.equals(this.reminderEnabled, reminders.reminderEnabled) &&
         Objects.equals(this.reminderFrequency, reminders.reminderFrequency);
   }
@@ -132,7 +163,7 @@ public class Reminders implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(reminderDelay, reminderEnabled, reminderFrequency);
+    return Objects.hash(maximumReminderCount, reminderDelay, reminderEnabled, reminderFrequency);
   }
 
 
@@ -144,6 +175,7 @@ public class Reminders implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Reminders {\n");
     
+    sb.append("    maximumReminderCount: ").append(toIndentedString(maximumReminderCount)).append("\n");
     sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
     sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
     sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");

@@ -1,7 +1,12 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
-## [v6.5.0] - eSignature API v2.1-25.3.01.00 - 2025-09-29
+## [v6.6.0] - eSignature API v2.1-25.4.01.00 - 2026-01-27
+### Changed
+- Added support for version v2.1-25.4.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+## [v6.5.0] - eSignature API v2.1-25.3.01.00 - 2025-12-11
 ### Changed
 - Added support for version v2.1-25.3.01.00 of the Docusign ESignature API.
 - Updated the SDK release version.

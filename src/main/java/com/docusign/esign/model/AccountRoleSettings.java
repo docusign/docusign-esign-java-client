@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.AccountManagementGranular;
 import com.docusign.esign.model.SettingsMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -17,6 +18,15 @@ import java.io.Serializable;
 
 public class AccountRoleSettings implements Serializable {
   private static final long serialVersionUID = 1L;
+
+  @JsonProperty("accountAgreementsAccessType")
+  private String accountAgreementsAccessType = null;
+
+  @JsonProperty("accountAgreementsAccessTypeMetadata")
+  private SettingsMetadata accountAgreementsAccessTypeMetadata = null;
+
+  @JsonProperty("accountManagementGranular")
+  private AccountManagementGranular accountManagementGranular = null;
 
   @JsonProperty("allowAccountManagement")
   private String allowAccountManagement = null;
@@ -162,6 +172,12 @@ public class AccountRoleSettings implements Serializable {
   @JsonProperty("allowWetSigningOverrideMetadata")
   private SettingsMetadata allowWetSigningOverrideMetadata = null;
 
+  @JsonProperty("canBulkUploadAgreements")
+  private String canBulkUploadAgreements = null;
+
+  @JsonProperty("canBulkUploadAgreementsMetadata")
+  private SettingsMetadata canBulkUploadAgreementsMetadata = null;
+
   @JsonProperty("canCreateTransaction")
   private String canCreateTransaction = null;
 
@@ -185,6 +201,18 @@ public class AccountRoleSettings implements Serializable {
 
   @JsonProperty("canDeleteTransactionMetadata")
   private SettingsMetadata canDeleteTransactionMetadata = null;
+
+  @JsonProperty("canManageAgreementDeskRequest")
+  private String canManageAgreementDeskRequest = null;
+
+  @JsonProperty("canManageAgreementDeskRequestMetadata")
+  private SettingsMetadata canManageAgreementDeskRequestMetadata = null;
+
+  @JsonProperty("canManageAgreementDeskRequestSetting")
+  private String canManageAgreementDeskRequestSetting = null;
+
+  @JsonProperty("canManageAgreementDeskRequestSettingMetadata")
+  private SettingsMetadata canManageAgreementDeskRequestSettingMetadata = null;
 
   @JsonProperty("canSendEnvelopesViaSMS")
   private String canSendEnvelopesViaSMS = null;
@@ -233,6 +261,12 @@ public class AccountRoleSettings implements Serializable {
 
   @JsonProperty("enableTransactionPointIntegrationMetadata")
   private SettingsMetadata enableTransactionPointIntegrationMetadata = null;
+
+  @JsonProperty("playbookAccess")
+  private String playbookAccess = null;
+
+  @JsonProperty("playbookAccessMetadata")
+  private SettingsMetadata playbookAccessMetadata = null;
 
   @JsonProperty("powerFormRole")
   private String powerFormRole = null;
@@ -290,6 +324,87 @@ public class AccountRoleSettings implements Serializable {
 
   @JsonProperty("webFormsMetadata")
   private SettingsMetadata webFormsMetadata = null;
+
+
+  /**
+   * accountAgreementsAccessType.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings accountAgreementsAccessType(String accountAgreementsAccessType) {
+    this.accountAgreementsAccessType = accountAgreementsAccessType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accountAgreementsAccessType
+   **/
+  @Schema(description = "")
+  public String getAccountAgreementsAccessType() {
+    return accountAgreementsAccessType;
+  }
+
+  /**
+   * setAccountAgreementsAccessType.
+   **/
+  public void setAccountAgreementsAccessType(String accountAgreementsAccessType) {
+    this.accountAgreementsAccessType = accountAgreementsAccessType;
+  }
+
+
+  /**
+   * accountAgreementsAccessTypeMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings accountAgreementsAccessTypeMetadata(SettingsMetadata accountAgreementsAccessTypeMetadata) {
+    this.accountAgreementsAccessTypeMetadata = accountAgreementsAccessTypeMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accountAgreementsAccessTypeMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getAccountAgreementsAccessTypeMetadata() {
+    return accountAgreementsAccessTypeMetadata;
+  }
+
+  /**
+   * setAccountAgreementsAccessTypeMetadata.
+   **/
+  public void setAccountAgreementsAccessTypeMetadata(SettingsMetadata accountAgreementsAccessTypeMetadata) {
+    this.accountAgreementsAccessTypeMetadata = accountAgreementsAccessTypeMetadata;
+  }
+
+
+  /**
+   * accountManagementGranular.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings accountManagementGranular(AccountManagementGranular accountManagementGranular) {
+    this.accountManagementGranular = accountManagementGranular;
+    return this;
+  }
+
+  /**
+   * .
+   * @return accountManagementGranular
+   **/
+  @Schema(description = "")
+  public AccountManagementGranular getAccountManagementGranular() {
+    return accountManagementGranular;
+  }
+
+  /**
+   * setAccountManagementGranular.
+   **/
+  public void setAccountManagementGranular(AccountManagementGranular accountManagementGranular) {
+    this.accountManagementGranular = accountManagementGranular;
+  }
 
 
   /**
@@ -1589,6 +1704,60 @@ public class AccountRoleSettings implements Serializable {
 
 
   /**
+   * canBulkUploadAgreements.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canBulkUploadAgreements(String canBulkUploadAgreements) {
+    this.canBulkUploadAgreements = canBulkUploadAgreements;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canBulkUploadAgreements
+   **/
+  @Schema(description = "")
+  public String getCanBulkUploadAgreements() {
+    return canBulkUploadAgreements;
+  }
+
+  /**
+   * setCanBulkUploadAgreements.
+   **/
+  public void setCanBulkUploadAgreements(String canBulkUploadAgreements) {
+    this.canBulkUploadAgreements = canBulkUploadAgreements;
+  }
+
+
+  /**
+   * canBulkUploadAgreementsMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canBulkUploadAgreementsMetadata(SettingsMetadata canBulkUploadAgreementsMetadata) {
+    this.canBulkUploadAgreementsMetadata = canBulkUploadAgreementsMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canBulkUploadAgreementsMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanBulkUploadAgreementsMetadata() {
+    return canBulkUploadAgreementsMetadata;
+  }
+
+  /**
+   * setCanBulkUploadAgreementsMetadata.
+   **/
+  public void setCanBulkUploadAgreementsMetadata(SettingsMetadata canBulkUploadAgreementsMetadata) {
+    this.canBulkUploadAgreementsMetadata = canBulkUploadAgreementsMetadata;
+  }
+
+
+  /**
    * canCreateTransaction.
    *
    * @return AccountRoleSettings
@@ -1801,6 +1970,114 @@ public class AccountRoleSettings implements Serializable {
    **/
   public void setCanDeleteTransactionMetadata(SettingsMetadata canDeleteTransactionMetadata) {
     this.canDeleteTransactionMetadata = canDeleteTransactionMetadata;
+  }
+
+
+  /**
+   * canManageAgreementDeskRequest.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canManageAgreementDeskRequest(String canManageAgreementDeskRequest) {
+    this.canManageAgreementDeskRequest = canManageAgreementDeskRequest;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementDeskRequest
+   **/
+  @Schema(description = "")
+  public String getCanManageAgreementDeskRequest() {
+    return canManageAgreementDeskRequest;
+  }
+
+  /**
+   * setCanManageAgreementDeskRequest.
+   **/
+  public void setCanManageAgreementDeskRequest(String canManageAgreementDeskRequest) {
+    this.canManageAgreementDeskRequest = canManageAgreementDeskRequest;
+  }
+
+
+  /**
+   * canManageAgreementDeskRequestMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canManageAgreementDeskRequestMetadata(SettingsMetadata canManageAgreementDeskRequestMetadata) {
+    this.canManageAgreementDeskRequestMetadata = canManageAgreementDeskRequestMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementDeskRequestMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanManageAgreementDeskRequestMetadata() {
+    return canManageAgreementDeskRequestMetadata;
+  }
+
+  /**
+   * setCanManageAgreementDeskRequestMetadata.
+   **/
+  public void setCanManageAgreementDeskRequestMetadata(SettingsMetadata canManageAgreementDeskRequestMetadata) {
+    this.canManageAgreementDeskRequestMetadata = canManageAgreementDeskRequestMetadata;
+  }
+
+
+  /**
+   * canManageAgreementDeskRequestSetting.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canManageAgreementDeskRequestSetting(String canManageAgreementDeskRequestSetting) {
+    this.canManageAgreementDeskRequestSetting = canManageAgreementDeskRequestSetting;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementDeskRequestSetting
+   **/
+  @Schema(description = "")
+  public String getCanManageAgreementDeskRequestSetting() {
+    return canManageAgreementDeskRequestSetting;
+  }
+
+  /**
+   * setCanManageAgreementDeskRequestSetting.
+   **/
+  public void setCanManageAgreementDeskRequestSetting(String canManageAgreementDeskRequestSetting) {
+    this.canManageAgreementDeskRequestSetting = canManageAgreementDeskRequestSetting;
+  }
+
+
+  /**
+   * canManageAgreementDeskRequestSettingMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings canManageAgreementDeskRequestSettingMetadata(SettingsMetadata canManageAgreementDeskRequestSettingMetadata) {
+    this.canManageAgreementDeskRequestSettingMetadata = canManageAgreementDeskRequestSettingMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManageAgreementDeskRequestSettingMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanManageAgreementDeskRequestSettingMetadata() {
+    return canManageAgreementDeskRequestSettingMetadata;
+  }
+
+  /**
+   * setCanManageAgreementDeskRequestSettingMetadata.
+   **/
+  public void setCanManageAgreementDeskRequestSettingMetadata(SettingsMetadata canManageAgreementDeskRequestSettingMetadata) {
+    this.canManageAgreementDeskRequestSettingMetadata = canManageAgreementDeskRequestSettingMetadata;
   }
 
 
@@ -2233,6 +2510,60 @@ public class AccountRoleSettings implements Serializable {
    **/
   public void setEnableTransactionPointIntegrationMetadata(SettingsMetadata enableTransactionPointIntegrationMetadata) {
     this.enableTransactionPointIntegrationMetadata = enableTransactionPointIntegrationMetadata;
+  }
+
+
+  /**
+   * playbookAccess.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings playbookAccess(String playbookAccess) {
+    this.playbookAccess = playbookAccess;
+    return this;
+  }
+
+  /**
+   * .
+   * @return playbookAccess
+   **/
+  @Schema(description = "")
+  public String getPlaybookAccess() {
+    return playbookAccess;
+  }
+
+  /**
+   * setPlaybookAccess.
+   **/
+  public void setPlaybookAccess(String playbookAccess) {
+    this.playbookAccess = playbookAccess;
+  }
+
+
+  /**
+   * playbookAccessMetadata.
+   *
+   * @return AccountRoleSettings
+   **/
+  public AccountRoleSettings playbookAccessMetadata(SettingsMetadata playbookAccessMetadata) {
+    this.playbookAccessMetadata = playbookAccessMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return playbookAccessMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getPlaybookAccessMetadata() {
+    return playbookAccessMetadata;
+  }
+
+  /**
+   * setPlaybookAccessMetadata.
+   **/
+  public void setPlaybookAccessMetadata(SettingsMetadata playbookAccessMetadata) {
+    this.playbookAccessMetadata = playbookAccessMetadata;
   }
 
 
@@ -2763,7 +3094,10 @@ public class AccountRoleSettings implements Serializable {
       return false;
     }
     AccountRoleSettings accountRoleSettings = (AccountRoleSettings) o;
-    return Objects.equals(this.allowAccountManagement, accountRoleSettings.allowAccountManagement) &&
+    return Objects.equals(this.accountAgreementsAccessType, accountRoleSettings.accountAgreementsAccessType) &&
+        Objects.equals(this.accountAgreementsAccessTypeMetadata, accountRoleSettings.accountAgreementsAccessTypeMetadata) &&
+        Objects.equals(this.accountManagementGranular, accountRoleSettings.accountManagementGranular) &&
+        Objects.equals(this.allowAccountManagement, accountRoleSettings.allowAccountManagement) &&
         Objects.equals(this.allowAccountManagementMetadata, accountRoleSettings.allowAccountManagementMetadata) &&
         Objects.equals(this.allowApiAccess, accountRoleSettings.allowApiAccess) &&
         Objects.equals(this.allowApiAccessMetadata, accountRoleSettings.allowApiAccessMetadata) &&
@@ -2811,6 +3145,8 @@ public class AccountRoleSettings implements Serializable {
         Objects.equals(this.allowVaultingMetadata, accountRoleSettings.allowVaultingMetadata) &&
         Objects.equals(this.allowWetSigningOverride, accountRoleSettings.allowWetSigningOverride) &&
         Objects.equals(this.allowWetSigningOverrideMetadata, accountRoleSettings.allowWetSigningOverrideMetadata) &&
+        Objects.equals(this.canBulkUploadAgreements, accountRoleSettings.canBulkUploadAgreements) &&
+        Objects.equals(this.canBulkUploadAgreementsMetadata, accountRoleSettings.canBulkUploadAgreementsMetadata) &&
         Objects.equals(this.canCreateTransaction, accountRoleSettings.canCreateTransaction) &&
         Objects.equals(this.canCreateTransactionMetadata, accountRoleSettings.canCreateTransactionMetadata) &&
         Objects.equals(this.canCreateWorkspaces, accountRoleSettings.canCreateWorkspaces) &&
@@ -2819,6 +3155,10 @@ public class AccountRoleSettings implements Serializable {
         Objects.equals(this.canDeleteDocumentsInTransactionMetadata, accountRoleSettings.canDeleteDocumentsInTransactionMetadata) &&
         Objects.equals(this.canDeleteTransaction, accountRoleSettings.canDeleteTransaction) &&
         Objects.equals(this.canDeleteTransactionMetadata, accountRoleSettings.canDeleteTransactionMetadata) &&
+        Objects.equals(this.canManageAgreementDeskRequest, accountRoleSettings.canManageAgreementDeskRequest) &&
+        Objects.equals(this.canManageAgreementDeskRequestMetadata, accountRoleSettings.canManageAgreementDeskRequestMetadata) &&
+        Objects.equals(this.canManageAgreementDeskRequestSetting, accountRoleSettings.canManageAgreementDeskRequestSetting) &&
+        Objects.equals(this.canManageAgreementDeskRequestSettingMetadata, accountRoleSettings.canManageAgreementDeskRequestSettingMetadata) &&
         Objects.equals(this.canSendEnvelopesViaSMS, accountRoleSettings.canSendEnvelopesViaSMS) &&
         Objects.equals(this.canSendEnvelopesViaSMSMetadata, accountRoleSettings.canSendEnvelopesViaSMSMetadata) &&
         Objects.equals(this.disableDocumentUpload, accountRoleSettings.disableDocumentUpload) &&
@@ -2835,6 +3175,8 @@ public class AccountRoleSettings implements Serializable {
         Objects.equals(this.enableSequentialSigningInterfaceMetadata, accountRoleSettings.enableSequentialSigningInterfaceMetadata) &&
         Objects.equals(this.enableTransactionPointIntegration, accountRoleSettings.enableTransactionPointIntegration) &&
         Objects.equals(this.enableTransactionPointIntegrationMetadata, accountRoleSettings.enableTransactionPointIntegrationMetadata) &&
+        Objects.equals(this.playbookAccess, accountRoleSettings.playbookAccess) &&
+        Objects.equals(this.playbookAccessMetadata, accountRoleSettings.playbookAccessMetadata) &&
         Objects.equals(this.powerFormRole, accountRoleSettings.powerFormRole) &&
         Objects.equals(this.powerFormRoleMetadata, accountRoleSettings.powerFormRoleMetadata) &&
         Objects.equals(this.receiveCompletedSelfSignedDocumentsAsEmailLinks, accountRoleSettings.receiveCompletedSelfSignedDocumentsAsEmailLinks) &&
@@ -2861,7 +3203,7 @@ public class AccountRoleSettings implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowTransactions, allowTransactionsMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canCreateTransaction, canCreateTransactionMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, allowAccountManagement, allowAccountManagementMetadata, allowApiAccess, allowApiAccessMetadata, allowApiAccessToAccount, allowApiAccessToAccountMetadata, allowApiSendingOnBehalfOfOthers, allowApiSendingOnBehalfOfOthersMetadata, allowApiSequentialSigning, allowApiSequentialSigningMetadata, allowAutoTagging, allowAutoTaggingMetadata, allowBulkSending, allowBulkSendingMetadata, allowDocuSignDesktopClient, allowDocuSignDesktopClientMetadata, allowedAddressBookAccess, allowedAddressBookAccessMetadata, allowedClickwrapsAccess, allowedClickwrapsAccessMetadata, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowedTemplateAccess, allowedTemplateAccessMetadata, allowedToBeEnvelopeTransferRecipient, allowedToBeEnvelopeTransferRecipientMetadata, allowEnvelopeSending, allowEnvelopeSendingMetadata, allowESealRecipients, allowESealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelopes, allowPowerFormsAdminToAccessAllPowerFormEnvelopesMetadata, allowSendersToSetRecipientEmailLanguage, allowSendersToSetRecipientEmailLanguageMetadata, allowSignerAttachments, allowSignerAttachmentsMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTaggingInSendAndCorrect, allowTaggingInSendAndCorrectMetadata, allowTransactions, allowTransactionsMetadata, allowVaulting, allowVaultingMetadata, allowWetSigningOverride, allowWetSigningOverrideMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canCreateTransaction, canCreateTransactionMetadata, canCreateWorkspaces, canCreateWorkspacesMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canManageAgreementDeskRequest, canManageAgreementDeskRequestMetadata, canManageAgreementDeskRequestSetting, canManageAgreementDeskRequestSettingMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableApiRequestLogging, enableApiRequestLoggingMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableRecipientViewingNotifications, enableRecipientViewingNotificationsMetadata, enableSequentialSigningInterface, enableSequentialSigningInterfaceMetadata, enableTransactionPointIntegration, enableTransactionPointIntegrationMetadata, playbookAccess, playbookAccessMetadata, powerFormRole, powerFormRoleMetadata, receiveCompletedSelfSignedDocumentsAsEmailLinks, receiveCompletedSelfSignedDocumentsAsEmailLinksMetadata, signingUiVersionMetadata, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, useNewDocuSignExperienceInterface, useNewDocuSignExperienceInterfaceMetadata, useNewSendingInterface, useNewSendingInterfaceMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -2873,6 +3215,9 @@ public class AccountRoleSettings implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class AccountRoleSettings {\n");
     
+    sb.append("    accountAgreementsAccessType: ").append(toIndentedString(accountAgreementsAccessType)).append("\n");
+    sb.append("    accountAgreementsAccessTypeMetadata: ").append(toIndentedString(accountAgreementsAccessTypeMetadata)).append("\n");
+    sb.append("    accountManagementGranular: ").append(toIndentedString(accountManagementGranular)).append("\n");
     sb.append("    allowAccountManagement: ").append(toIndentedString(allowAccountManagement)).append("\n");
     sb.append("    allowAccountManagementMetadata: ").append(toIndentedString(allowAccountManagementMetadata)).append("\n");
     sb.append("    allowApiAccess: ").append(toIndentedString(allowApiAccess)).append("\n");
@@ -2921,6 +3266,8 @@ public class AccountRoleSettings implements Serializable {
     sb.append("    allowVaultingMetadata: ").append(toIndentedString(allowVaultingMetadata)).append("\n");
     sb.append("    allowWetSigningOverride: ").append(toIndentedString(allowWetSigningOverride)).append("\n");
     sb.append("    allowWetSigningOverrideMetadata: ").append(toIndentedString(allowWetSigningOverrideMetadata)).append("\n");
+    sb.append("    canBulkUploadAgreements: ").append(toIndentedString(canBulkUploadAgreements)).append("\n");
+    sb.append("    canBulkUploadAgreementsMetadata: ").append(toIndentedString(canBulkUploadAgreementsMetadata)).append("\n");
     sb.append("    canCreateTransaction: ").append(toIndentedString(canCreateTransaction)).append("\n");
     sb.append("    canCreateTransactionMetadata: ").append(toIndentedString(canCreateTransactionMetadata)).append("\n");
     sb.append("    canCreateWorkspaces: ").append(toIndentedString(canCreateWorkspaces)).append("\n");
@@ -2929,6 +3276,10 @@ public class AccountRoleSettings implements Serializable {
     sb.append("    canDeleteDocumentsInTransactionMetadata: ").append(toIndentedString(canDeleteDocumentsInTransactionMetadata)).append("\n");
     sb.append("    canDeleteTransaction: ").append(toIndentedString(canDeleteTransaction)).append("\n");
     sb.append("    canDeleteTransactionMetadata: ").append(toIndentedString(canDeleteTransactionMetadata)).append("\n");
+    sb.append("    canManageAgreementDeskRequest: ").append(toIndentedString(canManageAgreementDeskRequest)).append("\n");
+    sb.append("    canManageAgreementDeskRequestMetadata: ").append(toIndentedString(canManageAgreementDeskRequestMetadata)).append("\n");
+    sb.append("    canManageAgreementDeskRequestSetting: ").append(toIndentedString(canManageAgreementDeskRequestSetting)).append("\n");
+    sb.append("    canManageAgreementDeskRequestSettingMetadata: ").append(toIndentedString(canManageAgreementDeskRequestSettingMetadata)).append("\n");
     sb.append("    canSendEnvelopesViaSMS: ").append(toIndentedString(canSendEnvelopesViaSMS)).append("\n");
     sb.append("    canSendEnvelopesViaSMSMetadata: ").append(toIndentedString(canSendEnvelopesViaSMSMetadata)).append("\n");
     sb.append("    disableDocumentUpload: ").append(toIndentedString(disableDocumentUpload)).append("\n");
@@ -2945,6 +3296,8 @@ public class AccountRoleSettings implements Serializable {
     sb.append("    enableSequentialSigningInterfaceMetadata: ").append(toIndentedString(enableSequentialSigningInterfaceMetadata)).append("\n");
     sb.append("    enableTransactionPointIntegration: ").append(toIndentedString(enableTransactionPointIntegration)).append("\n");
     sb.append("    enableTransactionPointIntegrationMetadata: ").append(toIndentedString(enableTransactionPointIntegrationMetadata)).append("\n");
+    sb.append("    playbookAccess: ").append(toIndentedString(playbookAccess)).append("\n");
+    sb.append("    playbookAccessMetadata: ").append(toIndentedString(playbookAccessMetadata)).append("\n");
     sb.append("    powerFormRole: ").append(toIndentedString(powerFormRole)).append("\n");
     sb.append("    powerFormRoleMetadata: ").append(toIndentedString(powerFormRoleMetadata)).append("\n");
     sb.append("    receiveCompletedSelfSignedDocumentsAsEmailLinks: ").append(toIndentedString(receiveCompletedSelfSignedDocumentsAsEmailLinks)).append("\n");
