@@ -88,6 +88,9 @@ public class RadioGroup implements Serializable {
   @JsonProperty("shareToRecipientsMetadata")
   private PropertyMetadata shareToRecipientsMetadata = null;
 
+  @JsonProperty("source")
+  private String source = null;
+
   @JsonProperty("tabType")
   private String tabType = null;
 
@@ -754,6 +757,33 @@ public class RadioGroup implements Serializable {
 
 
   /**
+   * source.
+   *
+   * @return RadioGroup
+   **/
+  public RadioGroup source(String source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * .
+   * @return source
+   **/
+  @Schema(description = "")
+  public String getSource() {
+    return source;
+  }
+
+  /**
+   * setSource.
+   **/
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+
+  /**
    * tabType.
    *
    * @return RadioGroup
@@ -1060,6 +1090,7 @@ public class RadioGroup implements Serializable {
         Objects.equals(this.sharedMetadata, radioGroup.sharedMetadata) &&
         Objects.equals(this.shareToRecipients, radioGroup.shareToRecipients) &&
         Objects.equals(this.shareToRecipientsMetadata, radioGroup.shareToRecipientsMetadata) &&
+        Objects.equals(this.source, radioGroup.source) &&
         Objects.equals(this.tabType, radioGroup.tabType) &&
         Objects.equals(this.tabTypeMetadata, radioGroup.tabTypeMetadata) &&
         Objects.equals(this.templateLocked, radioGroup.templateLocked) &&
@@ -1077,7 +1108,7 @@ public class RadioGroup implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, originalValue, originalValueMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata, value, valueMetadata);
+    return Objects.hash(conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, documentId, documentIdMetadata, groupName, groupNameMetadata, originalValue, originalValueMetadata, radios, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, source, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, tooltipMetadata, value, valueMetadata);
   }
 
 
@@ -1112,6 +1143,7 @@ public class RadioGroup implements Serializable {
     sb.append("    sharedMetadata: ").append(toIndentedString(sharedMetadata)).append("\n");
     sb.append("    shareToRecipients: ").append(toIndentedString(shareToRecipients)).append("\n");
     sb.append("    shareToRecipientsMetadata: ").append(toIndentedString(shareToRecipientsMetadata)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    tabType: ").append(toIndentedString(tabType)).append("\n");
     sb.append("    tabTypeMetadata: ").append(toIndentedString(tabTypeMetadata)).append("\n");
     sb.append("    templateLocked: ").append(toIndentedString(templateLocked)).append("\n");

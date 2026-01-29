@@ -5248,6 +5248,7 @@ public class EnvelopesApi {
   private String advancedUpdate = null;
   private String include = null;
   private String includeAnchorTabLocations = null;
+  private String userId = null;
   
  /**
   * setAdvancedUpdate method.
@@ -5295,6 +5296,22 @@ public class EnvelopesApi {
   */
   public String getIncludeAnchorTabLocations() {
     return this.includeAnchorTabLocations;
+  }
+  
+ /**
+  * setUserId method.
+  */
+  public void setUserId(String userId) {
+    this.userId = userId;
+  }
+
+ /**
+  * getUserId method.
+  *
+  * @return String
+  */
+  public String getUserId() {
+    return this.userId;
   }
   }
 
@@ -5362,6 +5379,8 @@ public class EnvelopesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_anchor_tab_locations", options.includeAnchorTabLocations));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("user_id", options.userId));
     }
 
     

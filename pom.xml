@@ -5,7 +5,7 @@
     <artifactId>docusign-esign-java</artifactId>
     <packaging>jar</packaging>
     <name>docusign-esign-java</name>
-    <version>6.5.0</version>
+    <version>6.6.0</version>
     <url>https://developers.docusign.com</url>
     <description>The official Docusign eSignature JAVA client is based on version 2.1 of the Docusign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
 
@@ -210,13 +210,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <fork>true</fork>
-                    <executable>javac</executable>
-                    <compilerArgs>
-                        <arg>-J-Xss4m</arg>
-                    </compilerArgs>
+                        <source>1.8</source>
+                        <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -238,8 +233,6 @@
                 <version>12.1.1</version>
                 <configuration>
                     <failBuildOnCVSS>8</failBuildOnCVSS>
-                    <ossindexAnalyzerEnabled>false</ossindexAnalyzerEnabled>
-                    <failOnError>false</failOnError>
                 </configuration>
                 <executions>
                     <execution>
@@ -298,7 +291,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
+                <version>1.5</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
