@@ -16,6 +16,7 @@ The Docusign SDK makes integrating Docusign into your apps and websites a seamle
 - [API Reference](#apiReference)
 - [Code Examples](#codeExamples)
 - [OAuth Implementations](#oauthImplementations)
+- [Security](#security)
 - [Changelog](#changeLog)
 - [Support](#support)
 - [License](#license)
@@ -57,7 +58,7 @@ This client SDK is provided as open source, which enables you to customize its f
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>6.6.0</version>
+      <version>6.7.0</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
@@ -93,6 +94,53 @@ Explore our GitHub repository for the [Launcher](https://github.com/docusign/cod
 For details regarding which type of OAuth grant will work best for your Docusign integration, see [Choose OAuth Type](https://developers.docusign.com/platform/auth/choose/) in the [Docusign Developer Center](https://developers.docusign.com/).
 
 For security purposes, Docusign recommends using the [Authorization Code Grant](https://developers.docusign.com/platform/auth/authcode/) flow.
+
+<a id="security"></a>
+## Security
+
+This SDK enforces secure-by-default transport behavior:
+
+*   **TLS certificate validation** is enforced by default using the system's trust store and default `HostnameVerifier`.
+*   **HTTPS-only base paths** — `setBasePath()` and the `ApiClient(String basePath)` constructor reject `http://` URLs by default.
+*   **OAuth base path validation** — `setOAuthBasePath()` also enforces HTTPS.
+*   **TLS 1.2 required** — The SDK fails fast if TLSv1.2 is not available on the JVM.
+
+### Testing with self-signed certificates or HTTP endpoints
+
+For local development or testing scenarios that require HTTP or self-signed certificates, use the explicit `ApiClient.insecure()` factory:
+
+```java
+// HTTP endpoint for local testing
+ApiClient client = ApiClient.insecure("http://localhost:8080/restapi");
+
+// Self-signed certificate
+ApiClient client = ApiClient.insecure("https://dev-server.local/restapi");
+
+// Insecure client with default base path
+ApiClient client = ApiClient.insecure();
+client.setBasePath("http://localhost:8080/restapi");
+```
+
+> **Warning:** `ApiClient.insecure()` disables TLS certificate validation and hostname verification. Never use in production.
+
+### Proxy authentication
+
+By default, when proxy credentials are set via system properties (`https.proxyUser` / `https.proxyPassword`), the SDK configures a JVM-wide `Authenticator` scoped to the proxy host and port. This preserves backward compatibility with existing enterprise configurations.
+
+If you prefer per-connection proxy authentication (which avoids JVM-global side effects), enable it via the setter before the first request:
+
+```java
+ApiClient client = new ApiClient();
+client.setPerConnectionProxyAuth(true);
+```
+
+Or use the convenience constructor:
+
+```java
+ApiClient client = new ApiClient(true);
+```
+
+> **Note:** Per-connection proxy auth will become the default in a future major version.
 
 <a id="changeLog"></a>
 ## Changelog

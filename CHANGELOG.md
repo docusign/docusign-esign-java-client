@@ -1,6 +1,23 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.7.0] - eSignature API v2.1-25.4.01.00 - 2026-07-01
+### Changed
+
+- Added support for version v2.1-25.4.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+
+### Security
+
+-   Enforced TLS certificate validation and hostname verification by default using the system's default trust store. Previously, all certificates were trusted without validation.
+-   Enforced HTTPS-only base paths. `setBasePath()` and `setOAuthBasePath()` now reject `http://` URLs. Use `ApiClient.insecure()` for local testing with HTTP or self-signed certificates.
+-   Scoped proxy credentials to the configured proxy host and port. Added `setPerConnectionProxyAuth(true)` to opt in to per-connection proxy authentication, avoiding JVM-wide side effects.
+
+### Breaking Changes
+
+-   `ApiClient(String basePath)` and `setBasePath(String)` throw `IllegalArgumentException` for `http://` URLs. Migrate to `ApiClient.insecure(basePath)`.
+-   Removed constructor overloads accepting `boolean perConnectionProxyAuth`. Use the standard constructor followed by `.setPerConnectionProxyAuth(true)`.
+
 ## [v6.6.0] - eSignature API v2.1-25.4.01.00 - 2026-01-27
 ### Changed
 - Added support for version v2.1-25.4.01.00 of the DocuSign ESignature API.
