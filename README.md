@@ -58,7 +58,7 @@ This client SDK is provided as open source, which enables you to customize its f
     <dependency>
       <groupId>com.docusign</groupId>
       <artifactId>docusign-esign-java</artifactId>
-      <version>6.7.0</version>
+      <version>6.8.0</version>
     </dependency>
     ```
 8. If your project is still open, restart Eclipse.
@@ -66,19 +66,18 @@ This client SDK is provided as open source, which enables you to customize its f
 <a id="dependencies"></a>
 ## SDK Dependencies
 This client has the following external dependencies:
-*   io.swagger.core.v3:swagger-annotations:2.2.8
-*   org.glassfish.jersey.core:jersey-client:3.1.6
-*   org.glassfish.jersey.media:jersey-media-multipart:3.1.6
-*   org.glassfish.jersey.media:jersey-media-json-jackson:3.1.6
-*   org.glassfish.jersey.inject:jersey-hk2:3.1.6
-*   com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.14.2
-*   com.auth0:java-jwt:3.4.1
-*   org.bouncycastle:bcprov-jdk18on:1.78.1
-*   com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.14.2
-*   com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2
-*   com.brsanthu:migbase64:2.2
-*   com.fasterxml.jackson.core:jackson-core:2.17.1
-*   org.json:json:20240303
+*   io.swagger.core.v3:swagger-annotations:2.2.44
+*   org.glassfish.jersey.core:jersey-client:3.1.11
+*   org.glassfish.jersey.media:jersey-media-multipart:3.1.11
+*   org.glassfish.jersey.media:jersey-media-json-jackson:3.1.11
+*   org.glassfish.jersey.inject:jersey-hk2:3.1.11
+*   com.fasterxml.jackson.core:jackson-core:2.18.8
+*   com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.18.8
+*   com.auth0:java-jwt:3.19.4
+*   org.bouncycastle:bcprov-jdk18on:1.83
+*   com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.18.8
+*   com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.8
+*   org.json:json:20251224
 
 
 <a id="apiReference"></a>
