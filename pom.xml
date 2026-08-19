@@ -5,7 +5,7 @@
     <artifactId>docusign-esign-java</artifactId>
     <packaging>jar</packaging>
     <name>docusign-esign-java</name>
-    <version>6.7.0</version>
+    <version>6.8.0</version>
     <url>https://developers.docusign.com</url>
     <description>The official Docusign eSignature JAVA client is based on version 2.1 of the Docusign REST API and provides libraries for JAVA application integration. It is recommended that you use this version of the library for new development.</description>
 
@@ -266,6 +266,7 @@
                     <goal>shade</goal>
                   </goals>
                   <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
                     <shadedArtifactAttached>true</shadedArtifactAttached>
                     <shadedClassifierName>shaded</shadedClassifierName>
                     <artifactSet>
@@ -352,6 +353,11 @@
         </dependency>
         <!-- JSON processing: jackson -->
         <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
             <artifactId>jackson-jakarta-rs-base</artifactId>
             <version>${jackson-version}</version>
@@ -360,12 +366,12 @@
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
-            <version>3.4.1</version>
+            <version>3.19.4</version>
         </dependency>
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk18on</artifactId>
-            <version>1.78.1</version>
+            <version>1.83</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -385,44 +391,28 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.brsanthu</groupId>
-            <artifactId>migbase64</artifactId>
-            <version>2.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>jakarta.ws.rs</groupId>
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>3.1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.brsanthu</groupId>
-            <artifactId>migbase64</artifactId>
-            <version>2.2</version>
-        </dependency>
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.10.2</version>
+            <version>5.14.3</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.17.1</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20240303</version>
+            <version>20251224</version>
         </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <swagger-core-version>2.2.8</swagger-core-version>
-            <jersey-version>3.1.6</jersey-version>
-        <jackson-version>2.14.2</jackson-version>
-        <junit-version>4.13.1</junit-version>
+        <swagger-core-version>2.2.44</swagger-core-version>
+            <jersey-version>3.1.11</jersey-version>
+        <jackson-version>2.18.8</jackson-version>
+        <junit-version>4.13.2</junit-version>
     </properties>
 </project>

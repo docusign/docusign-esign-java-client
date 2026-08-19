@@ -1,6 +1,22 @@
 # DocuSign Java Client Changelog
 See [DocuSign Support Center](https://support.docusign.com/en/releasenotes/) for Product Release Notes.
 
+## [v6.8.0] - eSignature API v2.1-25.4.01.00 - 2026-08-17
+### Changed
+
+- Added support for version v2.1-25.4.01.00 of the DocuSign ESignature API.
+- Updated the SDK release version.
+- Upgraded jackson-core from 2.17.1 to 2.18.8   and unified all Jackson artifacts under a single version property.
+- Upgraded Jersey from 3.1.6 to 3.1.11.
+- Upgraded BouncyCastle from 1.78.1 to 1.83, java-jwt from 3.4.1 to 3.19.4, org.json from 20240303 to 20251224.
+- Removed unused migbase64 dependency.
+
+### Security
+
+-   Fixed jackson-core async parser DoS vulnerabilities (GHSA-r7wm-3cxj-wff9, GHSA-72hv-8253-57qq, CVE-2026-59888) that allowed unbounded memory allocation via chunked input bypassing maxNumberLength constraints.
+
+
+
 ## [v6.7.0] - eSignature API v2.1-25.4.01.00 - 2026-07-01
 ### Changed
 
