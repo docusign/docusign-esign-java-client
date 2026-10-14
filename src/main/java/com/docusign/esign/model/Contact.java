@@ -19,6 +19,9 @@ import java.io.Serializable;
 public class Contact implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("canManage")
+  private String canManage = null;
+
   @JsonProperty("cloudProvider")
   private String cloudProvider = null;
 
@@ -63,6 +66,33 @@ public class Contact implements Serializable {
 
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
+
+
+  /**
+   * canManage.
+   *
+   * @return Contact
+   **/
+  public Contact canManage(String canManage) {
+    this.canManage = canManage;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canManage
+   **/
+  @Schema(description = "")
+  public String getCanManage() {
+    return canManage;
+  }
+
+  /**
+   * setCanManage.
+   **/
+  public void setCanManage(String canManage) {
+    this.canManage = canManage;
+  }
 
 
   /**
@@ -510,7 +540,8 @@ public class Contact implements Serializable {
       return false;
     }
     Contact contact = (Contact) o;
-    return Objects.equals(this.cloudProvider, contact.cloudProvider) &&
+    return Objects.equals(this.canManage, contact.canManage) &&
+        Objects.equals(this.cloudProvider, contact.cloudProvider) &&
         Objects.equals(this.cloudProviderContainerId, contact.cloudProviderContainerId) &&
         Objects.equals(this.contactId, contact.contactId) &&
         Objects.equals(this.contactPhoneNumbers, contact.contactPhoneNumbers) &&
@@ -532,7 +563,7 @@ public class Contact implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup, signingGroupName);
+    return Objects.hash(canManage, cloudProvider, cloudProviderContainerId, contactId, contactPhoneNumbers, contactUri, emails, errorDetails, isOwner, name, notaryContactDetails, organization, roomContactType, shared, signingGroup, signingGroupName);
   }
 
 
@@ -544,6 +575,7 @@ public class Contact implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contact {\n");
     
+    sb.append("    canManage: ").append(toIndentedString(canManage)).append("\n");
     sb.append("    cloudProvider: ").append(toIndentedString(cloudProvider)).append("\n");
     sb.append("    cloudProviderContainerId: ").append(toIndentedString(cloudProviderContainerId)).append("\n");
     sb.append("    contactId: ").append(toIndentedString(contactId)).append("\n");

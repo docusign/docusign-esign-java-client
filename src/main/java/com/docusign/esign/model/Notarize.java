@@ -71,6 +71,9 @@ public class Notarize implements Serializable {
   @JsonProperty("anchorTabProcessorVersionMetadata")
   private PropertyMetadata anchorTabProcessorVersionMetadata = null;
 
+  @JsonProperty("anchorTabScope")
+  private String anchorTabScope = null;
+
   @JsonProperty("anchorUnits")
   private String anchorUnits = null;
 
@@ -696,6 +699,33 @@ public class Notarize implements Serializable {
    **/
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
+  }
+
+
+  /**
+   * anchorTabScope.
+   *
+   * @return Notarize
+   **/
+  public Notarize anchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
+    return this;
+  }
+
+  /**
+   * .
+   * @return anchorTabScope
+   **/
+  @Schema(description = "")
+  public String getAnchorTabScope() {
+    return anchorTabScope;
+  }
+
+  /**
+   * setAnchorTabScope.
+   **/
+  public void setAnchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
   }
 
 
@@ -2497,6 +2527,7 @@ public class Notarize implements Serializable {
         Objects.equals(this.anchorStringMetadata, notarize.anchorStringMetadata) &&
         Objects.equals(this.anchorTabProcessorVersion, notarize.anchorTabProcessorVersion) &&
         Objects.equals(this.anchorTabProcessorVersionMetadata, notarize.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorTabScope, notarize.anchorTabScope) &&
         Objects.equals(this.anchorUnits, notarize.anchorUnits) &&
         Objects.equals(this.anchorUnitsMetadata, notarize.anchorUnitsMetadata) &&
         Objects.equals(this.anchorXOffset, notarize.anchorXOffset) &&
@@ -2569,7 +2600,7 @@ public class Notarize implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorTabScope, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, locked, lockedMetadata, mergeField, mergeFieldXml, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, required, requiredMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2597,6 +2628,7 @@ public class Notarize implements Serializable {
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
     sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabScope: ").append(toIndentedString(anchorTabScope)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");

@@ -242,6 +242,9 @@ public class CarbonCopy implements Serializable {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+  @JsonProperty("signingGroupType")
+  private String signingGroupType = null;
+
   @JsonProperty("signingGroupUsers")
   private java.util.List<UserInfo> signingGroupUsers = null;
 
@@ -2234,6 +2237,33 @@ public class CarbonCopy implements Serializable {
 
 
   /**
+   * signingGroupType.
+   *
+   * @return CarbonCopy
+   **/
+  public CarbonCopy signingGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signingGroupType
+   **/
+  @Schema(description = "")
+  public String getSigningGroupType() {
+    return signingGroupType;
+  }
+
+  /**
+   * setSigningGroupType.
+   **/
+  public void setSigningGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+  }
+
+
+  /**
    * signingGroupUsers.
    *
    * @return CarbonCopy
@@ -2666,6 +2696,7 @@ public class CarbonCopy implements Serializable {
         Objects.equals(this.signingGroupId, carbonCopy.signingGroupId) &&
         Objects.equals(this.signingGroupIdMetadata, carbonCopy.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, carbonCopy.signingGroupName) &&
+        Objects.equals(this.signingGroupType, carbonCopy.signingGroupType) &&
         Objects.equals(this.signingGroupUsers, carbonCopy.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, carbonCopy.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, carbonCopy.socialAuthentications) &&
@@ -2685,7 +2716,7 @@ public class CarbonCopy implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, linkedAccountConfigurationId, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupType, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -2766,6 +2797,7 @@ public class CarbonCopy implements Serializable {
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
     sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupType: ").append(toIndentedString(signingGroupType)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");

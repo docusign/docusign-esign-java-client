@@ -26,6 +26,9 @@ public class AccountIdentityVerificationWorkflow implements Serializable {
   @JsonProperty("defaultName")
   private String defaultName = null;
 
+  @JsonProperty("displayOrder")
+  private String displayOrder = null;
+
   @JsonProperty("inputOptions")
   private java.util.List<AccountIdentityInputOption> inputOptions = null;
 
@@ -102,6 +105,33 @@ public class AccountIdentityVerificationWorkflow implements Serializable {
    **/
   public void setDefaultName(String defaultName) {
     this.defaultName = defaultName;
+  }
+
+
+  /**
+   * displayOrder.
+   *
+   * @return AccountIdentityVerificationWorkflow
+   **/
+  public AccountIdentityVerificationWorkflow displayOrder(String displayOrder) {
+    this.displayOrder = displayOrder;
+    return this;
+  }
+
+  /**
+   * .
+   * @return displayOrder
+   **/
+  @Schema(description = "")
+  public String getDisplayOrder() {
+    return displayOrder;
+  }
+
+  /**
+   * setDisplayOrder.
+   **/
+  public void setDisplayOrder(String displayOrder) {
+    this.displayOrder = displayOrder;
   }
 
 
@@ -363,6 +393,7 @@ public class AccountIdentityVerificationWorkflow implements Serializable {
     AccountIdentityVerificationWorkflow accountIdentityVerificationWorkflow = (AccountIdentityVerificationWorkflow) o;
     return Objects.equals(this.defaultDescription, accountIdentityVerificationWorkflow.defaultDescription) &&
         Objects.equals(this.defaultName, accountIdentityVerificationWorkflow.defaultName) &&
+        Objects.equals(this.displayOrder, accountIdentityVerificationWorkflow.displayOrder) &&
         Objects.equals(this.inputOptions, accountIdentityVerificationWorkflow.inputOptions) &&
         Objects.equals(this.isDisabled, accountIdentityVerificationWorkflow.isDisabled) &&
         Objects.equals(this.ownerType, accountIdentityVerificationWorkflow.ownerType) &&
@@ -378,7 +409,7 @@ public class AccountIdentityVerificationWorkflow implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(defaultDescription, defaultName, inputOptions, isDisabled, ownerType, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
+    return Objects.hash(defaultDescription, defaultName, displayOrder, inputOptions, isDisabled, ownerType, signatureProvider, steps, workflowId, workflowLabel, workflowResourceKey);
   }
 
 
@@ -392,6 +423,7 @@ public class AccountIdentityVerificationWorkflow implements Serializable {
     
     sb.append("    defaultDescription: ").append(toIndentedString(defaultDescription)).append("\n");
     sb.append("    defaultName: ").append(toIndentedString(defaultName)).append("\n");
+    sb.append("    displayOrder: ").append(toIndentedString(displayOrder)).append("\n");
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    isDisabled: ").append(toIndentedString(isDisabled)).append("\n");
     sb.append("    ownerType: ").append(toIndentedString(ownerType)).append("\n");

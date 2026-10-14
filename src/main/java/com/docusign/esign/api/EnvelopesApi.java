@@ -292,6 +292,68 @@ public class EnvelopesApi {
   }
 
   /**
+   * Add metadata in the form of GenAndSend to existing envelopes in docusign..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeArchiveSummary
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeArchiveSummary createArchiveMetadataEnvelopes(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<EnvelopeArchiveSummary> localVarResponse = createArchiveMetadataEnvelopesWithHttpInfo(accountId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Add metadata in the form of GenAndSend to existing envelopes in docusign.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeArchiveSummary
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopeArchiveSummary > createArchiveMetadataEnvelopesWithHttpInfo(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createArchiveMetadataEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/archive_metadata"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopeArchiveSummary> localVarReturnType = new GenericType<EnvelopeArchiveSummary>() {};
+    EnvelopeArchiveSummary localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopeArchiveSummary>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Initiate a new ChunkedUpload..
    * This method initiates a new chunked upload with the first part of the content.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1453,6 +1515,324 @@ public class EnvelopesApi {
   }
 
   /**
+   * Creates new envelopes shares.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesSharesResponse createEnvelopesShares(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    ApiResponse<EnvelopesSharesResponse> localVarResponse = createEnvelopesSharesWithHttpInfo(accountId, envelopeId, envelopesSharesRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Creates new envelopes shares
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesSharesResponse > createEnvelopesSharesWithHttpInfo(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    Object localVarPostBody = envelopesSharesRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createEnvelopesShares");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createEnvelopesShares");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesSharesResponse> localVarReturnType = new GenericType<EnvelopesSharesResponse>() {};
+    EnvelopesSharesResponse localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesSharesResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Generates the document using DocuSign Spring CM template then returns the html content of the document..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] createGenAndArchiveEnvelopes(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<byte[]> localVarResponse = createGenAndArchiveEnvelopesWithHttpInfo(accountId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Generates the document using DocuSign Spring CM template then returns the html content of the document.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<byte[] > createGenAndArchiveEnvelopesWithHttpInfo(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createGenAndArchiveEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/generate_and_archive"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "text/plain"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Generates the document using DocuSign Spring CM template then returns the content of the document based on the return document type..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] createGenAndConvertEnvelopes(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<byte[]> localVarResponse = createGenAndConvertEnvelopesWithHttpInfo(accountId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Generates the document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<byte[] > createGenAndConvertEnvelopesWithHttpInfo(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createGenAndConvertEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/generate_and_convert"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "text/plain"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Generates multiple document using DocuSign Spring CM template then returns the content of the document based on the return document type..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return GeneratedDocumentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public GeneratedDocumentsResult createGenAndConvertMultiEnvelopes(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<GeneratedDocumentsResult> localVarResponse = createGenAndConvertMultiEnvelopesWithHttpInfo(accountId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Generates multiple document using DocuSign Spring CM template then returns the content of the document based on the return document type.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return GeneratedDocumentsResult
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<GeneratedDocumentsResult > createGenAndConvertMultiEnvelopesWithHttpInfo(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createGenAndConvertMultiEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/generate_and_convert_multi"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<GeneratedDocumentsResult> localVarReturnType = new GenericType<GeneratedDocumentsResult>() {};
+    GeneratedDocumentsResult localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GeneratedDocumentsResult>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Generates the documents for an envelope using DocuSign Spring CM then creates the envelope..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeSummary
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeSummary createGenAndSendEnvelopes(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<EnvelopeSummary> localVarResponse = createGenAndSendEnvelopesWithHttpInfo(accountId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Generates the documents for an envelope using DocuSign Spring CM then creates the envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeSummary
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopeSummary > createGenAndSendEnvelopesWithHttpInfo(String accountId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createGenAndSendEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/generate_and_send"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopeSummary> localVarReturnType = new GenericType<EnvelopeSummary>() {};
+    EnvelopeSummary localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopeSummary>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Submits a batch of historical envelopes for republish to an adhoc config..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -1512,6 +1892,76 @@ public class EnvelopesApi {
     GenericType<EnvelopePublishTransaction> localVarReturnType = new GenericType<EnvelopePublishTransaction>() {};
     EnvelopePublishTransaction localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<EnvelopePublishTransaction>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Add metadata in the form of GenAndSend to existing envelopes in docusign..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeSummary
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopeSummary createLinkMetadataEnvelopes(String accountId, String envelopeId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    ApiResponse<EnvelopeSummary> localVarResponse = createLinkMetadataEnvelopesWithHttpInfo(accountId, envelopeId, envelopeGenAndSend);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Add metadata in the form of GenAndSend to existing envelopes in docusign.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopeGenAndSend  (optional)
+   * @return EnvelopeSummary
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopeSummary > createLinkMetadataEnvelopesWithHttpInfo(String accountId, String envelopeId, EnvelopeGenAndSend envelopeGenAndSend) throws ApiException {
+    Object localVarPostBody = envelopeGenAndSend;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createLinkMetadataEnvelopes");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling createLinkMetadataEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/archive_metadata"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopeSummary> localVarReturnType = new GenericType<EnvelopeSummary>() {};
+    EnvelopeSummary localVarResponse = apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopeSummary>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -3313,6 +3763,144 @@ public class EnvelopesApi {
   }
 
   /**
+   * Deletes a single envelope share.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEnvelopesShare(String accountId, String envelopeId, String shareId) throws ApiException {
+    deleteEnvelopesShareWithHttpInfo(accountId, envelopeId, shareId);
+  }
+
+  /**
+   * Deletes a single envelope share
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteEnvelopesShareWithHttpInfo(String accountId, String envelopeId, String shareId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEnvelopesShare");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEnvelopesShare");
+    }
+    
+    // verify the required parameter 'shareId' is set
+    if (shareId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shareId' when calling deleteEnvelopesShare");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "shareId" + "\\}", apiClient.escapeString(shareId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
+   * Deletes existing envelopes shares.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteEnvelopesShares(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    deleteEnvelopesSharesWithHttpInfo(accountId, envelopeId, envelopesSharesRequest);
+  }
+
+  /**
+   * Deletes existing envelopes shares
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteEnvelopesSharesWithHttpInfo(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    Object localVarPostBody = envelopesSharesRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteEnvelopesShares");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling deleteEnvelopesShares");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
    * Deletes an envelope lock..
    * Deletes the lock from the specified envelope. The &#x60;X-DocuSign-Edit&#x60; header must be included in the request.
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -3954,6 +4542,74 @@ public class EnvelopesApi {
     
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
     return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
+   * Return generated html document from archive..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public byte[] getArchiveDocument(String accountId, String documentId) throws ApiException {
+    ApiResponse<byte[]> localVarResponse = getArchiveDocumentWithHttpInfo(accountId, documentId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Return generated html document from archive.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param documentId The ID of the document being accessed. (required)
+   * @return byte[]
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<byte[] > getArchiveDocumentWithHttpInfo(String accountId, String documentId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getArchiveDocument");
+    }
+    
+    // verify the required parameter 'documentId' is set
+    if (documentId == null) {
+      throw new ApiException(400, "Missing the required parameter 'documentId' when calling getArchiveDocument");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/archivedocuments/{documentId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "documentId" + "\\}", apiClient.escapeString(documentId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "text/plain"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<byte[]> localVarReturnType = new GenericType<byte[]>() {};
+    byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -5693,6 +6349,74 @@ public class EnvelopesApi {
   }
 
   /**
+   * Gets the permission level the calling user has for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopesSharePermissionResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesSharePermissionResponse getEnvelopePermission(String accountId, String envelopeId) throws ApiException {
+    ApiResponse<EnvelopesSharePermissionResponse> localVarResponse = getEnvelopePermissionWithHttpInfo(accountId, envelopeId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets the permission level the calling user has for an envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopesSharePermissionResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesSharePermissionResponse > getEnvelopePermissionWithHttpInfo(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopePermission");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopePermission");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/permission"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesSharePermissionResponse> localVarReturnType = new GenericType<EnvelopesSharePermissionResponse>() {};
+    EnvelopesSharePermissionResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesSharePermissionResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
    * Returns the scheduled sending rules for an envelope&#39;s workflow definition..
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -6023,6 +6747,150 @@ public class EnvelopesApi {
     GenericType<WorkflowStep> localVarReturnType = new GenericType<WorkflowStep>() {};
     WorkflowStep localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<WorkflowStep>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Gets a single envelope share by shareId.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @return EnvelopesShareResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesShareResponse getEnvelopesShare(String accountId, String envelopeId, String shareId) throws ApiException {
+    ApiResponse<EnvelopesShareResponse> localVarResponse = getEnvelopesShareWithHttpInfo(accountId, envelopeId, shareId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets a single envelope share by shareId
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @return EnvelopesShareResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesShareResponse > getEnvelopesShareWithHttpInfo(String accountId, String envelopeId, String shareId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopesShare");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopesShare");
+    }
+    
+    // verify the required parameter 'shareId' is set
+    if (shareId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shareId' when calling getEnvelopesShare");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "shareId" + "\\}", apiClient.escapeString(shareId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesShareResponse> localVarReturnType = new GenericType<EnvelopesShareResponse>() {};
+    EnvelopesShareResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesShareResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Gets all shares for an envelope.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesSharesResponse getEnvelopesShares(String accountId, String envelopeId) throws ApiException {
+    ApiResponse<EnvelopesSharesResponse> localVarResponse = getEnvelopesSharesWithHttpInfo(accountId, envelopeId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets all shares for an envelope
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesSharesResponse > getEnvelopesSharesWithHttpInfo(String accountId, String envelopeId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getEnvelopesShares");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling getEnvelopesShares");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesSharesResponse> localVarReturnType = new GenericType<EnvelopesSharesResponse>() {};
+    EnvelopesSharesResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesSharesResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**
@@ -6938,6 +7806,260 @@ public class EnvelopesApi {
     byte[] localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<byte[]>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
+  /// <summary>
+  /// Returns a filtered list of shared envelopes. 
+  /// </summary>
+
+ /**
+  * GetSharedEnvelopesOptions Class.
+  *
+  **/
+  public class GetSharedEnvelopesOptions
+  {
+  private String count = null;
+  private String fromDate = null;
+  private String include = null;
+  private String order = null;
+  private String orderBy = null;
+  private String searchText = null;
+  private String startPosition = null;
+  private String status = null;
+  private String toDate = null;
+  
+ /**
+  * setCount method.
+  */
+  public void setCount(String count) {
+    this.count = count;
+  }
+
+ /**
+  * getCount method.
+  *
+  * @return String
+  */
+  public String getCount() {
+    return this.count;
+  }
+  
+ /**
+  * setFromDate method.
+  */
+  public void setFromDate(String fromDate) {
+    this.fromDate = fromDate;
+  }
+
+ /**
+  * getFromDate method.
+  *
+  * @return String
+  */
+  public String getFromDate() {
+    return this.fromDate;
+  }
+  
+ /**
+  * setInclude method.
+  */
+  public void setInclude(String include) {
+    this.include = include;
+  }
+
+ /**
+  * getInclude method.
+  *
+  * @return String
+  */
+  public String getInclude() {
+    return this.include;
+  }
+  
+ /**
+  * setOrder method.
+  */
+  public void setOrder(String order) {
+    this.order = order;
+  }
+
+ /**
+  * getOrder method.
+  *
+  * @return String
+  */
+  public String getOrder() {
+    return this.order;
+  }
+  
+ /**
+  * setOrderBy method.
+  */
+  public void setOrderBy(String orderBy) {
+    this.orderBy = orderBy;
+  }
+
+ /**
+  * getOrderBy method.
+  *
+  * @return String
+  */
+  public String getOrderBy() {
+    return this.orderBy;
+  }
+  
+ /**
+  * setSearchText method.
+  */
+  public void setSearchText(String searchText) {
+    this.searchText = searchText;
+  }
+
+ /**
+  * getSearchText method.
+  *
+  * @return String
+  */
+  public String getSearchText() {
+    return this.searchText;
+  }
+  
+ /**
+  * setStartPosition method.
+  */
+  public void setStartPosition(String startPosition) {
+    this.startPosition = startPosition;
+  }
+
+ /**
+  * getStartPosition method.
+  *
+  * @return String
+  */
+  public String getStartPosition() {
+    return this.startPosition;
+  }
+  
+ /**
+  * setStatus method.
+  */
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+ /**
+  * getStatus method.
+  *
+  * @return String
+  */
+  public String getStatus() {
+    return this.status;
+  }
+  
+ /**
+  * setToDate method.
+  */
+  public void setToDate(String toDate) {
+    this.toDate = toDate;
+  }
+
+ /**
+  * getToDate method.
+  *
+  * @return String
+  */
+  public String getToDate() {
+    return this.toDate;
+  }
+  }
+
+   /**
+   * Returns a filtered list of shared envelopes..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return EnvelopesInformation
+   */ 
+  public EnvelopesInformation getSharedEnvelopes(String accountId) throws ApiException {
+    return getSharedEnvelopes(accountId, null);
+  }
+
+  /**
+   * Returns a filtered list of shared envelopes..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return EnvelopesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesInformation getSharedEnvelopes(String accountId, EnvelopesApi.GetSharedEnvelopesOptions options) throws ApiException {
+    ApiResponse<EnvelopesInformation> localVarResponse = getSharedEnvelopesWithHttpInfo(accountId, options);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Returns a filtered list of shared envelopes.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param options for modifying the method behavior.
+   * @return EnvelopesInformation
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesInformation > getSharedEnvelopesWithHttpInfo(String accountId, EnvelopesApi.GetSharedEnvelopesOptions options) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getSharedEnvelopes");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/shared"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("count", options.count));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("from_date", options.fromDate));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order", options.order));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("order_by", options.orderBy));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_text", options.searchText));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("status", options.status));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("to_date", options.toDate));
+    }
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesInformation> localVarReturnType = new GenericType<EnvelopesInformation>() {};
+    EnvelopesInformation localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesInformation>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
 
   /**
    * Get encrypted tabs for envelope..
@@ -7635,6 +8757,7 @@ public class EnvelopesApi {
   private String includeAgreementType = null;
   private String includeDocgenFormfields = null;
   private String includeDocumentSize = null;
+  private String includeIsEdited = null;
   private String includeMetadata = null;
   private String includeTabs = null;
   private String recipientId = null;
@@ -7702,6 +8825,22 @@ public class EnvelopesApi {
   */
   public String getIncludeDocumentSize() {
     return this.includeDocumentSize;
+  }
+  
+ /**
+  * setIncludeIsEdited method.
+  */
+  public void setIncludeIsEdited(String includeIsEdited) {
+    this.includeIsEdited = includeIsEdited;
+  }
+
+ /**
+  * getIncludeIsEdited method.
+  *
+  * @return String
+  */
+  public String getIncludeIsEdited() {
+    return this.includeIsEdited;
   }
   
  /**
@@ -7835,6 +8974,8 @@ public class EnvelopesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_docgen_formfields", options.includeDocgenFormfields));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_document_size", options.includeDocumentSize));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_is_edited", options.includeIsEdited));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_metadata", options.includeMetadata));
     }if (options != null) {
@@ -10950,6 +12091,154 @@ public class EnvelopesApi {
     GenericType<WorkflowStep> localVarReturnType = new GenericType<WorkflowStep>() {};
     WorkflowStep localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<WorkflowStep>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Updates a single envelope share.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @param envelopesSharePermissionRequest  (optional)
+   * @return EnvelopesShareResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesShareResponse updateEnvelopesShare(String accountId, String envelopeId, String shareId, EnvelopesSharePermissionRequest envelopesSharePermissionRequest) throws ApiException {
+    ApiResponse<EnvelopesShareResponse> localVarResponse = updateEnvelopesShareWithHttpInfo(accountId, envelopeId, shareId, envelopesSharePermissionRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates a single envelope share
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param shareId  (required)
+   * @param envelopesSharePermissionRequest  (optional)
+   * @return EnvelopesShareResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesShareResponse > updateEnvelopesShareWithHttpInfo(String accountId, String envelopeId, String shareId, EnvelopesSharePermissionRequest envelopesSharePermissionRequest) throws ApiException {
+    Object localVarPostBody = envelopesSharePermissionRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopesShare");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEnvelopesShare");
+    }
+    
+    // verify the required parameter 'shareId' is set
+    if (shareId == null) {
+      throw new ApiException(400, "Missing the required parameter 'shareId' when calling updateEnvelopesShare");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares/{shareId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()))
+      .replaceAll("\\{" + "shareId" + "\\}", apiClient.escapeString(shareId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesShareResponse> localVarReturnType = new GenericType<EnvelopesShareResponse>() {};
+    EnvelopesShareResponse localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesShareResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Updates existing envelopes shares.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public EnvelopesSharesResponse updateEnvelopesShares(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    ApiResponse<EnvelopesSharesResponse> localVarResponse = updateEnvelopesSharesWithHttpInfo(accountId, envelopeId, envelopesSharesRequest);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Updates existing envelopes shares
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param envelopeId The envelopeId Guid of the envelope being accessed. (required)
+   * @param envelopesSharesRequest  (optional)
+   * @return EnvelopesSharesResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<EnvelopesSharesResponse > updateEnvelopesSharesWithHttpInfo(String accountId, String envelopeId, EnvelopesSharesRequest envelopesSharesRequest) throws ApiException {
+    Object localVarPostBody = envelopesSharesRequest;
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateEnvelopesShares");
+    }
+    
+    // verify the required parameter 'envelopeId' is set
+    if (envelopeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'envelopeId' when calling updateEnvelopesShares");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/envelopes/{envelopeId}/shares"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "envelopeId" + "\\}", apiClient.escapeString(envelopeId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<EnvelopesSharesResponse> localVarReturnType = new GenericType<EnvelopesSharesResponse>() {};
+    EnvelopesSharesResponse localVarResponse = apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<EnvelopesSharesResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**

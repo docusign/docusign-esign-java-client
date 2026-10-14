@@ -96,6 +96,9 @@ public class EnvelopeDocument implements Serializable {
   @JsonProperty("isDocGenDocument")
   private String isDocGenDocument = null;
 
+  @JsonProperty("isEdited")
+  private String isEdited = null;
+
   @JsonProperty("isExternallyAvailable")
   private String isExternallyAvailable = null;
 
@@ -850,6 +853,33 @@ public class EnvelopeDocument implements Serializable {
 
 
   /**
+   * isEdited.
+   *
+   * @return EnvelopeDocument
+   **/
+  public EnvelopeDocument isEdited(String isEdited) {
+    this.isEdited = isEdited;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isEdited
+   **/
+  @Schema(description = "")
+  public String getIsEdited() {
+    return isEdited;
+  }
+
+  /**
+   * setIsEdited.
+   **/
+  public void setIsEdited(String isEdited) {
+    this.isEdited = isEdited;
+  }
+
+
+  /**
    * isExternallyAvailable.
    *
    * @return EnvelopeDocument
@@ -1251,6 +1281,7 @@ public class EnvelopeDocument implements Serializable {
         Objects.equals(this.includeInDownloadMetadata, envelopeDocument.includeInDownloadMetadata) &&
         Objects.equals(this.isAceGenDocument, envelopeDocument.isAceGenDocument) &&
         Objects.equals(this.isDocGenDocument, envelopeDocument.isDocGenDocument) &&
+        Objects.equals(this.isEdited, envelopeDocument.isEdited) &&
         Objects.equals(this.isExternallyAvailable, envelopeDocument.isExternallyAvailable) &&
         Objects.equals(this.isFlattened, envelopeDocument.isFlattened) &&
         Objects.equals(this.name, envelopeDocument.name) &&
@@ -1271,7 +1302,7 @@ public class EnvelopeDocument implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(addedRecipientIds, agreementType, agreementTypeSource, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, documentTemplateId, errorDetails, hasDigitalSignature, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, isExternallyAvailable, isFlattened, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
+    return Objects.hash(addedRecipientIds, agreementType, agreementTypeSource, attachmentTabId, authoritativeCopy, authoritativeCopyMetadata, availableDocumentTypes, containsPdfFormFields, display, displayMetadata, docGenDocumentStatus, docGenErrors, docGenFormFields, documentBase64, documentFields, documentId, documentIdGuid, documentTemplateId, errorDetails, hasDigitalSignature, includeInDownload, includeInDownloadMetadata, isAceGenDocument, isDocGenDocument, isEdited, isExternallyAvailable, isFlattened, name, nameMetadata, order, pages, signerMustAcknowledge, signerMustAcknowledgeMetadata, sizeBytes, templateLocked, templateRequired, type, uri);
   }
 
 
@@ -1307,6 +1338,7 @@ public class EnvelopeDocument implements Serializable {
     sb.append("    includeInDownloadMetadata: ").append(toIndentedString(includeInDownloadMetadata)).append("\n");
     sb.append("    isAceGenDocument: ").append(toIndentedString(isAceGenDocument)).append("\n");
     sb.append("    isDocGenDocument: ").append(toIndentedString(isDocGenDocument)).append("\n");
+    sb.append("    isEdited: ").append(toIndentedString(isEdited)).append("\n");
     sb.append("    isExternallyAvailable: ").append(toIndentedString(isExternallyAvailable)).append("\n");
     sb.append("    isFlattened: ").append(toIndentedString(isFlattened)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");

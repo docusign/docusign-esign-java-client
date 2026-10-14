@@ -2,6 +2,7 @@ package com.docusign.esign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.docusign.esign.model.DocGenConditionalRule;
 import com.docusign.esign.model.DocGenFormField;
 import com.docusign.esign.model.DocGenSyntaxError;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,6 +19,9 @@ import java.io.Serializable;
 public class DocGenFormFields implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("docGenConditionalRules")
+  private java.util.List<DocGenConditionalRule> docGenConditionalRules = null;
+
   @JsonProperty("docGenDocumentStatus")
   private String docGenDocumentStatus = null;
 
@@ -29,6 +33,46 @@ public class DocGenFormFields implements Serializable {
 
   @JsonProperty("documentId")
   private String documentId = null;
+
+
+  /**
+   * docGenConditionalRules.
+   *
+   * @return DocGenFormFields
+   **/
+  public DocGenFormFields docGenConditionalRules(java.util.List<DocGenConditionalRule> docGenConditionalRules) {
+    this.docGenConditionalRules = docGenConditionalRules;
+    return this;
+  }
+  
+  /**
+   * addDocGenConditionalRulesItem.
+   *
+   * @return DocGenFormFields
+   **/
+  public DocGenFormFields addDocGenConditionalRulesItem(DocGenConditionalRule docGenConditionalRulesItem) {
+    if (this.docGenConditionalRules == null) {
+      this.docGenConditionalRules = new java.util.ArrayList<>();
+    }
+    this.docGenConditionalRules.add(docGenConditionalRulesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return docGenConditionalRules
+   **/
+  @Schema(description = "")
+  public java.util.List<DocGenConditionalRule> getDocGenConditionalRules() {
+    return docGenConditionalRules;
+  }
+
+  /**
+   * setDocGenConditionalRules.
+   **/
+  public void setDocGenConditionalRules(java.util.List<DocGenConditionalRule> docGenConditionalRules) {
+    this.docGenConditionalRules = docGenConditionalRules;
+  }
 
 
   /**
@@ -179,7 +223,8 @@ public class DocGenFormFields implements Serializable {
       return false;
     }
     DocGenFormFields docGenFormFields = (DocGenFormFields) o;
-    return Objects.equals(this.docGenDocumentStatus, docGenFormFields.docGenDocumentStatus) &&
+    return Objects.equals(this.docGenConditionalRules, docGenFormFields.docGenConditionalRules) &&
+        Objects.equals(this.docGenDocumentStatus, docGenFormFields.docGenDocumentStatus) &&
         Objects.equals(this.docGenErrors, docGenFormFields.docGenErrors) &&
         Objects.equals(this.docGenFormFieldList, docGenFormFields.docGenFormFieldList) &&
         Objects.equals(this.documentId, docGenFormFields.documentId);
@@ -190,7 +235,7 @@ public class DocGenFormFields implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(docGenDocumentStatus, docGenErrors, docGenFormFieldList, documentId);
+    return Objects.hash(docGenConditionalRules, docGenDocumentStatus, docGenErrors, docGenFormFieldList, documentId);
   }
 
 
@@ -202,6 +247,7 @@ public class DocGenFormFields implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormFields {\n");
     
+    sb.append("    docGenConditionalRules: ").append(toIndentedString(docGenConditionalRules)).append("\n");
     sb.append("    docGenDocumentStatus: ").append(toIndentedString(docGenDocumentStatus)).append("\n");
     sb.append("    docGenErrors: ").append(toIndentedString(docGenErrors)).append("\n");
     sb.append("    docGenFormFieldList: ").append(toIndentedString(docGenFormFieldList)).append("\n");

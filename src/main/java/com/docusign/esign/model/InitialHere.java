@@ -71,6 +71,9 @@ public class InitialHere implements Serializable {
   @JsonProperty("anchorTabProcessorVersionMetadata")
   private PropertyMetadata anchorTabProcessorVersionMetadata = null;
 
+  @JsonProperty("anchorTabScope")
+  private String anchorTabScope = null;
+
   @JsonProperty("anchorUnits")
   private String anchorUnits = null;
 
@@ -711,6 +714,33 @@ public class InitialHere implements Serializable {
    **/
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
+  }
+
+
+  /**
+   * anchorTabScope.
+   *
+   * @return InitialHere
+   **/
+  public InitialHere anchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
+    return this;
+  }
+
+  /**
+   * .
+   * @return anchorTabScope
+   **/
+  @Schema(description = "")
+  public String getAnchorTabScope() {
+    return anchorTabScope;
+  }
+
+  /**
+   * setAnchorTabScope.
+   **/
+  public void setAnchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
   }
 
 
@@ -2647,6 +2677,7 @@ public class InitialHere implements Serializable {
         Objects.equals(this.anchorStringMetadata, initialHere.anchorStringMetadata) &&
         Objects.equals(this.anchorTabProcessorVersion, initialHere.anchorTabProcessorVersion) &&
         Objects.equals(this.anchorTabProcessorVersionMetadata, initialHere.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorTabScope, initialHere.anchorTabScope) &&
         Objects.equals(this.anchorUnits, initialHere.anchorUnits) &&
         Objects.equals(this.anchorUnitsMetadata, initialHere.anchorUnitsMetadata) &&
         Objects.equals(this.anchorXOffset, initialHere.anchorXOffset) &&
@@ -2724,7 +2755,7 @@ public class InitialHere implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorTabScope, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, handDrawRequired, height, heightMetadata, mergeField, mergeFieldXml, name, nameMetadata, optional, optionalMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, scaleValue, scaleValueMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -2752,6 +2783,7 @@ public class InitialHere implements Serializable {
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
     sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabScope: ").append(toIndentedString(anchorTabScope)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");

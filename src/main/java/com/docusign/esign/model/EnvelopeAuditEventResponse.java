@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.EnvelopeAuditEvent;
+import com.docusign.esign.model.PaymentAuditEvent;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -19,6 +20,9 @@ public class EnvelopeAuditEventResponse implements Serializable {
 
   @JsonProperty("auditEvents")
   private java.util.List<EnvelopeAuditEvent> auditEvents = null;
+
+  @JsonProperty("paymentEvents")
+  private java.util.List<PaymentAuditEvent> paymentEvents = null;
 
 
   /**
@@ -62,6 +66,46 @@ public class EnvelopeAuditEventResponse implements Serializable {
 
 
   /**
+   * paymentEvents.
+   *
+   * @return EnvelopeAuditEventResponse
+   **/
+  public EnvelopeAuditEventResponse paymentEvents(java.util.List<PaymentAuditEvent> paymentEvents) {
+    this.paymentEvents = paymentEvents;
+    return this;
+  }
+  
+  /**
+   * addPaymentEventsItem.
+   *
+   * @return EnvelopeAuditEventResponse
+   **/
+  public EnvelopeAuditEventResponse addPaymentEventsItem(PaymentAuditEvent paymentEventsItem) {
+    if (this.paymentEvents == null) {
+      this.paymentEvents = new java.util.ArrayList<>();
+    }
+    this.paymentEvents.add(paymentEventsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return paymentEvents
+   **/
+  @Schema(description = "")
+  public java.util.List<PaymentAuditEvent> getPaymentEvents() {
+    return paymentEvents;
+  }
+
+  /**
+   * setPaymentEvents.
+   **/
+  public void setPaymentEvents(java.util.List<PaymentAuditEvent> paymentEvents) {
+    this.paymentEvents = paymentEvents;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -75,7 +119,8 @@ public class EnvelopeAuditEventResponse implements Serializable {
       return false;
     }
     EnvelopeAuditEventResponse envelopeAuditEventResponse = (EnvelopeAuditEventResponse) o;
-    return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents);
+    return Objects.equals(this.auditEvents, envelopeAuditEventResponse.auditEvents) &&
+        Objects.equals(this.paymentEvents, envelopeAuditEventResponse.paymentEvents);
   }
 
   /**
@@ -83,7 +128,7 @@ public class EnvelopeAuditEventResponse implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(auditEvents);
+    return Objects.hash(auditEvents, paymentEvents);
   }
 
 
@@ -96,6 +141,7 @@ public class EnvelopeAuditEventResponse implements Serializable {
     sb.append("class EnvelopeAuditEventResponse {\n");
     
     sb.append("    auditEvents: ").append(toIndentedString(auditEvents)).append("\n");
+    sb.append("    paymentEvents: ").append(toIndentedString(paymentEvents)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ConnectedObjectDetails;
 import com.docusign.esign.model.ErrorDetails;
+import com.docusign.esign.model.ExtendPaymentConfiguration;
 import com.docusign.esign.model.ExtensionData;
 import com.docusign.esign.model.LocalePolicyTab;
 import com.docusign.esign.model.MergeField;
@@ -72,6 +73,9 @@ public class FormulaTab implements Serializable {
 
   @JsonProperty("anchorTabProcessorVersionMetadata")
   private PropertyMetadata anchorTabProcessorVersionMetadata = null;
+
+  @JsonProperty("anchorTabScope")
+  private String anchorTabScope = null;
 
   @JsonProperty("anchorUnits")
   private String anchorUnits = null;
@@ -144,6 +148,9 @@ public class FormulaTab implements Serializable {
 
   @JsonProperty("errorDetails")
   private ErrorDetails errorDetails = null;
+
+  @JsonProperty("extendPaymentConfiguration")
+  private ExtendPaymentConfiguration extendPaymentConfiguration = null;
 
   @JsonProperty("extensionData")
   private ExtensionData extensionData = null;
@@ -852,6 +859,33 @@ public class FormulaTab implements Serializable {
 
 
   /**
+   * anchorTabScope.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab anchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
+    return this;
+  }
+
+  /**
+   * .
+   * @return anchorTabScope
+   **/
+  @Schema(description = "")
+  public String getAnchorTabScope() {
+    return anchorTabScope;
+  }
+
+  /**
+   * setAnchorTabScope.
+   **/
+  public void setAnchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
+  }
+
+
+  /**
    * anchorUnits.
    *
    * @return FormulaTab
@@ -1496,6 +1530,33 @@ public class FormulaTab implements Serializable {
    **/
   public void setErrorDetails(ErrorDetails errorDetails) {
     this.errorDetails = errorDetails;
+  }
+
+
+  /**
+   * extendPaymentConfiguration.
+   *
+   * @return FormulaTab
+   **/
+  public FormulaTab extendPaymentConfiguration(ExtendPaymentConfiguration extendPaymentConfiguration) {
+    this.extendPaymentConfiguration = extendPaymentConfiguration;
+    return this;
+  }
+
+  /**
+   * .
+   * @return extendPaymentConfiguration
+   **/
+  @Schema(description = "")
+  public ExtendPaymentConfiguration getExtendPaymentConfiguration() {
+    return extendPaymentConfiguration;
+  }
+
+  /**
+   * setExtendPaymentConfiguration.
+   **/
+  public void setExtendPaymentConfiguration(ExtendPaymentConfiguration extendPaymentConfiguration) {
+    this.extendPaymentConfiguration = extendPaymentConfiguration;
   }
 
 
@@ -3999,6 +4060,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.anchorStringMetadata, formulaTab.anchorStringMetadata) &&
         Objects.equals(this.anchorTabProcessorVersion, formulaTab.anchorTabProcessorVersion) &&
         Objects.equals(this.anchorTabProcessorVersionMetadata, formulaTab.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorTabScope, formulaTab.anchorTabScope) &&
         Objects.equals(this.anchorUnits, formulaTab.anchorUnits) &&
         Objects.equals(this.anchorUnitsMetadata, formulaTab.anchorUnitsMetadata) &&
         Objects.equals(this.anchorXOffset, formulaTab.anchorXOffset) &&
@@ -4023,6 +4085,7 @@ public class FormulaTab implements Serializable {
         Objects.equals(this.documentId, formulaTab.documentId) &&
         Objects.equals(this.documentIdMetadata, formulaTab.documentIdMetadata) &&
         Objects.equals(this.errorDetails, formulaTab.errorDetails) &&
+        Objects.equals(this.extendPaymentConfiguration, formulaTab.extendPaymentConfiguration) &&
         Objects.equals(this.extensionData, formulaTab.extensionData) &&
         Objects.equals(this.font, formulaTab.font) &&
         Objects.equals(this.fontColor, formulaTab.fontColor) &&
@@ -4121,7 +4184,7 @@ public class FormulaTab implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorTabScope, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, concealValueOnDocument, concealValueOnDocumentMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, disableAutoSize, disableAutoSizeMetadata, documentId, documentIdMetadata, errorDetails, extendPaymentConfiguration, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, formula, formulaMetadata, height, heightMetadata, hidden, hiddenMetadata, isPaymentAmount, isPaymentAmountMetadata, italic, italicMetadata, localePolicy, locked, lockedMetadata, maxLength, maxLengthMetadata, mergeField, mergeFieldXml, name, nameMetadata, originalValue, originalValueMetadata, pageNumber, pageNumberMetadata, paymentDetails, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, requireAll, requireAllMetadata, required, requiredMetadata, requireInitialOnSharedChange, requireInitialOnSharedChangeMetadata, roundDecimalPlaces, roundDecimalPlacesMetadata, senderRequired, senderRequiredMetadata, shared, sharedMetadata, shareToRecipients, shareToRecipientsMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, validationMessage, validationMessageMetadata, validationPattern, validationPatternMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -4149,6 +4212,7 @@ public class FormulaTab implements Serializable {
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
     sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabScope: ").append(toIndentedString(anchorTabScope)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -4173,6 +4237,7 @@ public class FormulaTab implements Serializable {
     sb.append("    documentId: ").append(toIndentedString(documentId)).append("\n");
     sb.append("    documentIdMetadata: ").append(toIndentedString(documentIdMetadata)).append("\n");
     sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
+    sb.append("    extendPaymentConfiguration: ").append(toIndentedString(extendPaymentConfiguration)).append("\n");
     sb.append("    extensionData: ").append(toIndentedString(extensionData)).append("\n");
     sb.append("    font: ").append(toIndentedString(font)).append("\n");
     sb.append("    fontColor: ").append(toIndentedString(fontColor)).append("\n");

@@ -7,6 +7,7 @@ import com.docusign.esign.model.RecipientEmailNotification;
 import com.docusign.esign.model.RecipientPhoneNumber;
 import com.docusign.esign.model.RecipientSignatureProvider;
 import com.docusign.esign.model.Tabs;
+import com.docusign.esign.model.UserInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -66,6 +67,15 @@ public class TemplateRole implements Serializable {
 
   @JsonProperty("signingGroupId")
   private String signingGroupId = null;
+
+  @JsonProperty("signingGroupName")
+  private String signingGroupName = null;
+
+  @JsonProperty("signingGroupType")
+  private String signingGroupType = null;
+
+  @JsonProperty("signingGroupUsers")
+  private java.util.List<UserInfo> signingGroupUsers = null;
 
   @JsonProperty("tabs")
   private Tabs tabs = null;
@@ -503,6 +513,100 @@ public class TemplateRole implements Serializable {
 
 
   /**
+   * signingGroupName.
+   *
+   * @return TemplateRole
+   **/
+  public TemplateRole signingGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+    return this;
+  }
+
+  /**
+   * The display name for the signing group.   Maximum Length: 100 characters. .
+   * @return signingGroupName
+   **/
+  @Schema(description = "The display name for the signing group.   Maximum Length: 100 characters. ")
+  public String getSigningGroupName() {
+    return signingGroupName;
+  }
+
+  /**
+   * setSigningGroupName.
+   **/
+  public void setSigningGroupName(String signingGroupName) {
+    this.signingGroupName = signingGroupName;
+  }
+
+
+  /**
+   * signingGroupType.
+   *
+   * @return TemplateRole
+   **/
+  public TemplateRole signingGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signingGroupType
+   **/
+  @Schema(description = "")
+  public String getSigningGroupType() {
+    return signingGroupType;
+  }
+
+  /**
+   * setSigningGroupType.
+   **/
+  public void setSigningGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+  }
+
+
+  /**
+   * signingGroupUsers.
+   *
+   * @return TemplateRole
+   **/
+  public TemplateRole signingGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
+    return this;
+  }
+  
+  /**
+   * addSigningGroupUsersItem.
+   *
+   * @return TemplateRole
+   **/
+  public TemplateRole addSigningGroupUsersItem(UserInfo signingGroupUsersItem) {
+    if (this.signingGroupUsers == null) {
+      this.signingGroupUsers = new java.util.ArrayList<>();
+    }
+    this.signingGroupUsers.add(signingGroupUsersItem);
+    return this;
+  }
+
+  /**
+   * A complex type that contains information about users in the signing group..
+   * @return signingGroupUsers
+   **/
+  @Schema(description = "A complex type that contains information about users in the signing group.")
+  public java.util.List<UserInfo> getSigningGroupUsers() {
+    return signingGroupUsers;
+  }
+
+  /**
+   * setSigningGroupUsers.
+   **/
+  public void setSigningGroupUsers(java.util.List<UserInfo> signingGroupUsers) {
+    this.signingGroupUsers = signingGroupUsers;
+  }
+
+
+  /**
    * tabs.
    *
    * @return TemplateRole
@@ -558,6 +662,9 @@ public class TemplateRole implements Serializable {
         Objects.equals(this.roleName, templateRole.roleName) &&
         Objects.equals(this.routingOrder, templateRole.routingOrder) &&
         Objects.equals(this.signingGroupId, templateRole.signingGroupId) &&
+        Objects.equals(this.signingGroupName, templateRole.signingGroupName) &&
+        Objects.equals(this.signingGroupType, templateRole.signingGroupType) &&
+        Objects.equals(this.signingGroupUsers, templateRole.signingGroupUsers) &&
         Objects.equals(this.tabs, templateRole.tabs);
   }
 
@@ -566,7 +673,7 @@ public class TemplateRole implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, tabs);
+    return Objects.hash(accessCode, additionalNotifications, clientUserId, defaultRecipient, deliveryMethod, email, emailNotification, embeddedRecipientStartURL, inPersonSignerName, name, phoneNumber, recipientSignatureProviders, roleName, routingOrder, signingGroupId, signingGroupName, signingGroupType, signingGroupUsers, tabs);
   }
 
 
@@ -593,6 +700,9 @@ public class TemplateRole implements Serializable {
     sb.append("    roleName: ").append(toIndentedString(roleName)).append("\n");
     sb.append("    routingOrder: ").append(toIndentedString(routingOrder)).append("\n");
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
+    sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupType: ").append(toIndentedString(signingGroupType)).append("\n");
+    sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    tabs: ").append(toIndentedString(tabs)).append("\n");
     sb.append("}");
     return sb.toString();

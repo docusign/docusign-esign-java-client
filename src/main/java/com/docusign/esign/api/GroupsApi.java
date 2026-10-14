@@ -436,9 +436,9 @@ public class GroupsApi {
    * Retrieves a list of users in a group.
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
-   * @return UsersResponse
+   * @return GroupUsersResponse
    */ 
-  public UsersResponse listGroupUsers(String accountId, String groupId) throws ApiException {
+  public GroupUsersResponse listGroupUsers(String accountId, String groupId) throws ApiException {
     return listGroupUsers(accountId, groupId, null);
   }
 
@@ -448,11 +448,11 @@ public class GroupsApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
    * @param options for modifying the method behavior.
-   * @return UsersResponse
+   * @return GroupUsersResponse
    * @throws ApiException if fails to make API call
    */
-  public UsersResponse listGroupUsers(String accountId, String groupId, GroupsApi.ListGroupUsersOptions options) throws ApiException {
-    ApiResponse<UsersResponse> localVarResponse = listGroupUsersWithHttpInfo(accountId, groupId, options);
+  public GroupUsersResponse listGroupUsers(String accountId, String groupId, GroupsApi.ListGroupUsersOptions options) throws ApiException {
+    ApiResponse<GroupUsersResponse> localVarResponse = listGroupUsersWithHttpInfo(accountId, groupId, options);
     return localVarResponse.getData();
   }
 
@@ -462,10 +462,10 @@ public class GroupsApi {
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param groupId The ID of the group being accessed. (required)
    * @param options for modifying the method behavior.
-   * @return UsersResponse
+   * @return GroupUsersResponse
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<UsersResponse > listGroupUsersWithHttpInfo(String accountId, String groupId, GroupsApi.ListGroupUsersOptions options) throws ApiException {
+  public ApiResponse<GroupUsersResponse > listGroupUsersWithHttpInfo(String accountId, String groupId, GroupsApi.ListGroupUsersOptions options) throws ApiException {
     Object localVarPostBody = "{}";
     
     // verify the required parameter 'accountId' is set
@@ -511,9 +511,9 @@ public class GroupsApi {
 
     String[] localVarAuthNames = new String[] { "docusignAccessCode" };
     
-    GenericType<UsersResponse> localVarReturnType = new GenericType<UsersResponse>() {};
-    UsersResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-    return new ApiResponse<UsersResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+    GenericType<GroupUsersResponse> localVarReturnType = new GenericType<GroupUsersResponse>() {};
+    GroupUsersResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<GroupUsersResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
   /// Gets information about groups associated with the account. Retrieves information about groups associated with the account.

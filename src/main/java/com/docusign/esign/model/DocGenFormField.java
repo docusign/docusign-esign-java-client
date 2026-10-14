@@ -3,9 +3,11 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.ConnectedObjectDetails;
+import com.docusign.esign.model.DocGenFormField;
 import com.docusign.esign.model.DocGenFormFieldOption;
 import com.docusign.esign.model.DocGenFormFieldRowValue;
 import com.docusign.esign.model.DocGenFormFieldValidation;
+import com.docusign.esign.model.DocGenFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -20,14 +22,29 @@ import java.io.Serializable;
 public class DocGenFormField implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("children")
+  private java.util.List<DocGenFormField> children = null;
+
   @JsonProperty("connectedObjectDetails")
   private ConnectedObjectDetails connectedObjectDetails = null;
+
+  @JsonProperty("defaultValue")
+  private String defaultValue = null;
 
   @JsonProperty("description")
   private String description = null;
 
+  @JsonProperty("filter")
+  private Object filter = null;
+
+  @JsonProperty("format")
+  private DocGenFormat format = null;
+
   @JsonProperty("fullyQualifiedPath")
   private String fullyQualifiedPath = null;
+
+  @JsonProperty("hidden")
+  private Boolean hidden = null;
 
   @JsonProperty("label")
   private String label = null;
@@ -44,6 +61,9 @@ public class DocGenFormField implements Serializable {
   @JsonProperty("predefinedValidation")
   private String predefinedValidation = null;
 
+  @JsonProperty("readOnly")
+  private Boolean readOnly = null;
+
   @JsonProperty("required")
   private String required = null;
 
@@ -58,6 +78,46 @@ public class DocGenFormField implements Serializable {
 
   @JsonProperty("value")
   private String value = null;
+
+
+  /**
+   * children.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField children(java.util.List<DocGenFormField> children) {
+    this.children = children;
+    return this;
+  }
+  
+  /**
+   * addChildrenItem.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField addChildrenItem(DocGenFormField childrenItem) {
+    if (this.children == null) {
+      this.children = new java.util.ArrayList<>();
+    }
+    this.children.add(childrenItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return children
+   **/
+  @Schema(description = "")
+  public java.util.List<DocGenFormField> getChildren() {
+    return children;
+  }
+
+  /**
+   * setChildren.
+   **/
+  public void setChildren(java.util.List<DocGenFormField> children) {
+    this.children = children;
+  }
 
 
   /**
@@ -84,6 +144,33 @@ public class DocGenFormField implements Serializable {
    **/
   public void setConnectedObjectDetails(ConnectedObjectDetails connectedObjectDetails) {
     this.connectedObjectDetails = connectedObjectDetails;
+  }
+
+
+  /**
+   * defaultValue.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField defaultValue(String defaultValue) {
+    this.defaultValue = defaultValue;
+    return this;
+  }
+
+  /**
+   * .
+   * @return defaultValue
+   **/
+  @Schema(description = "")
+  public String getDefaultValue() {
+    return defaultValue;
+  }
+
+  /**
+   * setDefaultValue.
+   **/
+  public void setDefaultValue(String defaultValue) {
+    this.defaultValue = defaultValue;
   }
 
 
@@ -115,6 +202,60 @@ public class DocGenFormField implements Serializable {
 
 
   /**
+   * filter.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField filter(Object filter) {
+    this.filter = filter;
+    return this;
+  }
+
+  /**
+   * .
+   * @return filter
+   **/
+  @Schema(description = "")
+  public Object getFilter() {
+    return filter;
+  }
+
+  /**
+   * setFilter.
+   **/
+  public void setFilter(Object filter) {
+    this.filter = filter;
+  }
+
+
+  /**
+   * format.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField format(DocGenFormat format) {
+    this.format = format;
+    return this;
+  }
+
+  /**
+   * .
+   * @return format
+   **/
+  @Schema(description = "")
+  public DocGenFormat getFormat() {
+    return format;
+  }
+
+  /**
+   * setFormat.
+   **/
+  public void setFormat(DocGenFormat format) {
+    this.format = format;
+  }
+
+
+  /**
    * fullyQualifiedPath.
    *
    * @return DocGenFormField
@@ -138,6 +279,33 @@ public class DocGenFormField implements Serializable {
    **/
   public void setFullyQualifiedPath(String fullyQualifiedPath) {
     this.fullyQualifiedPath = fullyQualifiedPath;
+  }
+
+
+  /**
+   * hidden.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField hidden(Boolean hidden) {
+    this.hidden = hidden;
+    return this;
+  }
+
+  /**
+   * .
+   * @return hidden
+   **/
+  @Schema(description = "")
+  public Boolean isHidden() {
+    return hidden;
+  }
+
+  /**
+   * setHidden.
+   **/
+  public void setHidden(Boolean hidden) {
+    this.hidden = hidden;
   }
 
 
@@ -286,6 +454,33 @@ public class DocGenFormField implements Serializable {
    **/
   public void setPredefinedValidation(String predefinedValidation) {
     this.predefinedValidation = predefinedValidation;
+  }
+
+
+  /**
+   * readOnly.
+   *
+   * @return DocGenFormField
+   **/
+  public DocGenFormField readOnly(Boolean readOnly) {
+    this.readOnly = readOnly;
+    return this;
+  }
+
+  /**
+   * .
+   * @return readOnly
+   **/
+  @Schema(description = "")
+  public Boolean isReadOnly() {
+    return readOnly;
+  }
+
+  /**
+   * setReadOnly.
+   **/
+  public void setReadOnly(Boolean readOnly) {
+    this.readOnly = readOnly;
   }
 
 
@@ -451,14 +646,20 @@ public class DocGenFormField implements Serializable {
       return false;
     }
     DocGenFormField docGenFormField = (DocGenFormField) o;
-    return Objects.equals(this.connectedObjectDetails, docGenFormField.connectedObjectDetails) &&
+    return Objects.equals(this.children, docGenFormField.children) &&
+        Objects.equals(this.connectedObjectDetails, docGenFormField.connectedObjectDetails) &&
+        Objects.equals(this.defaultValue, docGenFormField.defaultValue) &&
         Objects.equals(this.description, docGenFormField.description) &&
+        Objects.equals(this.filter, docGenFormField.filter) &&
+        Objects.equals(this.format, docGenFormField.format) &&
         Objects.equals(this.fullyQualifiedPath, docGenFormField.fullyQualifiedPath) &&
+        Objects.equals(this.hidden, docGenFormField.hidden) &&
         Objects.equals(this.label, docGenFormField.label) &&
         Objects.equals(this.name, docGenFormField.name) &&
         Objects.equals(this.options, docGenFormField.options) &&
         Objects.equals(this.order, docGenFormField.order) &&
         Objects.equals(this.predefinedValidation, docGenFormField.predefinedValidation) &&
+        Objects.equals(this.readOnly, docGenFormField.readOnly) &&
         Objects.equals(this.required, docGenFormField.required) &&
         Objects.equals(this.rowValues, docGenFormField.rowValues) &&
         Objects.equals(this.type, docGenFormField.type) &&
@@ -471,7 +672,7 @@ public class DocGenFormField implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(connectedObjectDetails, description, fullyQualifiedPath, label, name, options, order, predefinedValidation, required, rowValues, type, validation, value);
+    return Objects.hash(children, connectedObjectDetails, defaultValue, description, filter, format, fullyQualifiedPath, hidden, label, name, options, order, predefinedValidation, readOnly, required, rowValues, type, validation, value);
   }
 
 
@@ -483,14 +684,20 @@ public class DocGenFormField implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class DocGenFormField {\n");
     
+    sb.append("    children: ").append(toIndentedString(children)).append("\n");
     sb.append("    connectedObjectDetails: ").append(toIndentedString(connectedObjectDetails)).append("\n");
+    sb.append("    defaultValue: ").append(toIndentedString(defaultValue)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    filter: ").append(toIndentedString(filter)).append("\n");
+    sb.append("    format: ").append(toIndentedString(format)).append("\n");
     sb.append("    fullyQualifiedPath: ").append(toIndentedString(fullyQualifiedPath)).append("\n");
+    sb.append("    hidden: ").append(toIndentedString(hidden)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    options: ").append(toIndentedString(options)).append("\n");
     sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("    predefinedValidation: ").append(toIndentedString(predefinedValidation)).append("\n");
+    sb.append("    readOnly: ").append(toIndentedString(readOnly)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    rowValues: ").append(toIndentedString(rowValues)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");

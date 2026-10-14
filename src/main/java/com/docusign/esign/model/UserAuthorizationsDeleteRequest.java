@@ -19,6 +19,9 @@ public class UserAuthorizationsDeleteRequest implements Serializable {
   @JsonProperty("authorizations")
   private java.util.List<String> authorizations = null;
 
+  @JsonProperty("sendNotification")
+  private String sendNotification = null;
+
 
   /**
    * authorizations.
@@ -61,6 +64,33 @@ public class UserAuthorizationsDeleteRequest implements Serializable {
 
 
   /**
+   * sendNotification.
+   *
+   * @return UserAuthorizationsDeleteRequest
+   **/
+  public UserAuthorizationsDeleteRequest sendNotification(String sendNotification) {
+    this.sendNotification = sendNotification;
+    return this;
+  }
+
+  /**
+   * .
+   * @return sendNotification
+   **/
+  @Schema(description = "")
+  public String getSendNotification() {
+    return sendNotification;
+  }
+
+  /**
+   * setSendNotification.
+   **/
+  public void setSendNotification(String sendNotification) {
+    this.sendNotification = sendNotification;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -74,7 +104,8 @@ public class UserAuthorizationsDeleteRequest implements Serializable {
       return false;
     }
     UserAuthorizationsDeleteRequest userAuthorizationsDeleteRequest = (UserAuthorizationsDeleteRequest) o;
-    return Objects.equals(this.authorizations, userAuthorizationsDeleteRequest.authorizations);
+    return Objects.equals(this.authorizations, userAuthorizationsDeleteRequest.authorizations) &&
+        Objects.equals(this.sendNotification, userAuthorizationsDeleteRequest.sendNotification);
   }
 
   /**
@@ -82,7 +113,7 @@ public class UserAuthorizationsDeleteRequest implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(authorizations);
+    return Objects.hash(authorizations, sendNotification);
   }
 
 
@@ -95,6 +126,7 @@ public class UserAuthorizationsDeleteRequest implements Serializable {
     sb.append("class UserAuthorizationsDeleteRequest {\n");
     
     sb.append("    authorizations: ").append(toIndentedString(authorizations)).append("\n");
+    sb.append("    sendNotification: ").append(toIndentedString(sendNotification)).append("\n");
     sb.append("}");
     return sb.toString();
   }

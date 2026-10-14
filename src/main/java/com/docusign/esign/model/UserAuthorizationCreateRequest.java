@@ -29,6 +29,12 @@ public class UserAuthorizationCreateRequest implements Serializable {
   @JsonProperty("startDate")
   private String startDate = null;
 
+  @JsonProperty("taskSource")
+  private String taskSource = null;
+
+  @JsonProperty("taskType")
+  private String taskType = null;
+
 
   /**
    * agentUser.
@@ -139,6 +145,60 @@ public class UserAuthorizationCreateRequest implements Serializable {
 
 
   /**
+   * taskSource.
+   *
+   * @return UserAuthorizationCreateRequest
+   **/
+  public UserAuthorizationCreateRequest taskSource(String taskSource) {
+    this.taskSource = taskSource;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taskSource
+   **/
+  @Schema(description = "")
+  public String getTaskSource() {
+    return taskSource;
+  }
+
+  /**
+   * setTaskSource.
+   **/
+  public void setTaskSource(String taskSource) {
+    this.taskSource = taskSource;
+  }
+
+
+  /**
+   * taskType.
+   *
+   * @return UserAuthorizationCreateRequest
+   **/
+  public UserAuthorizationCreateRequest taskType(String taskType) {
+    this.taskType = taskType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taskType
+   **/
+  @Schema(description = "")
+  public String getTaskType() {
+    return taskType;
+  }
+
+  /**
+   * setTaskType.
+   **/
+  public void setTaskType(String taskType) {
+    this.taskType = taskType;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -155,7 +215,9 @@ public class UserAuthorizationCreateRequest implements Serializable {
     return Objects.equals(this.agentUser, userAuthorizationCreateRequest.agentUser) &&
         Objects.equals(this.endDate, userAuthorizationCreateRequest.endDate) &&
         Objects.equals(this.permission, userAuthorizationCreateRequest.permission) &&
-        Objects.equals(this.startDate, userAuthorizationCreateRequest.startDate);
+        Objects.equals(this.startDate, userAuthorizationCreateRequest.startDate) &&
+        Objects.equals(this.taskSource, userAuthorizationCreateRequest.taskSource) &&
+        Objects.equals(this.taskType, userAuthorizationCreateRequest.taskType);
   }
 
   /**
@@ -163,7 +225,7 @@ public class UserAuthorizationCreateRequest implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agentUser, endDate, permission, startDate);
+    return Objects.hash(agentUser, endDate, permission, startDate, taskSource, taskType);
   }
 
 
@@ -179,6 +241,8 @@ public class UserAuthorizationCreateRequest implements Serializable {
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    permission: ").append(toIndentedString(permission)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    taskSource: ").append(toIndentedString(taskSource)).append("\n");
+    sb.append("    taskType: ").append(toIndentedString(taskType)).append("\n");
     sb.append("}");
     return sb.toString();
   }
