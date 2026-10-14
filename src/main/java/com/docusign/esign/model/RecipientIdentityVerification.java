@@ -19,6 +19,9 @@ import java.io.Serializable;
 public class RecipientIdentityVerification implements Serializable {
   private static final long serialVersionUID = 1L;
 
+  @JsonProperty("hasAutoAttachedRiskAssessment")
+  private String hasAutoAttachedRiskAssessment = null;
+
   @JsonProperty("inputOptions")
   private java.util.List<RecipientIdentityInputOption> inputOptions = null;
 
@@ -30,6 +33,33 @@ public class RecipientIdentityVerification implements Serializable {
 
   @JsonProperty("workflowLabel")
   private String workflowLabel = null;
+
+
+  /**
+   * hasAutoAttachedRiskAssessment.
+   *
+   * @return RecipientIdentityVerification
+   **/
+  public RecipientIdentityVerification hasAutoAttachedRiskAssessment(String hasAutoAttachedRiskAssessment) {
+    this.hasAutoAttachedRiskAssessment = hasAutoAttachedRiskAssessment;
+    return this;
+  }
+
+  /**
+   * .
+   * @return hasAutoAttachedRiskAssessment
+   **/
+  @Schema(description = "")
+  public String getHasAutoAttachedRiskAssessment() {
+    return hasAutoAttachedRiskAssessment;
+  }
+
+  /**
+   * setHasAutoAttachedRiskAssessment.
+   **/
+  public void setHasAutoAttachedRiskAssessment(String hasAutoAttachedRiskAssessment) {
+    this.hasAutoAttachedRiskAssessment = hasAutoAttachedRiskAssessment;
+  }
 
 
   /**
@@ -167,7 +197,8 @@ public class RecipientIdentityVerification implements Serializable {
       return false;
     }
     RecipientIdentityVerification recipientIdentityVerification = (RecipientIdentityVerification) o;
-    return Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions) &&
+    return Objects.equals(this.hasAutoAttachedRiskAssessment, recipientIdentityVerification.hasAutoAttachedRiskAssessment) &&
+        Objects.equals(this.inputOptions, recipientIdentityVerification.inputOptions) &&
         Objects.equals(this.workflowId, recipientIdentityVerification.workflowId) &&
         Objects.equals(this.workflowIdMetadata, recipientIdentityVerification.workflowIdMetadata) &&
         Objects.equals(this.workflowLabel, recipientIdentityVerification.workflowLabel);
@@ -178,7 +209,7 @@ public class RecipientIdentityVerification implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(inputOptions, workflowId, workflowIdMetadata, workflowLabel);
+    return Objects.hash(hasAutoAttachedRiskAssessment, inputOptions, workflowId, workflowIdMetadata, workflowLabel);
   }
 
 
@@ -190,6 +221,7 @@ public class RecipientIdentityVerification implements Serializable {
     StringBuilder sb = new StringBuilder();
     sb.append("class RecipientIdentityVerification {\n");
     
+    sb.append("    hasAutoAttachedRiskAssessment: ").append(toIndentedString(hasAutoAttachedRiskAssessment)).append("\n");
     sb.append("    inputOptions: ").append(toIndentedString(inputOptions)).append("\n");
     sb.append("    workflowId: ").append(toIndentedString(workflowId)).append("\n");
     sb.append("    workflowIdMetadata: ").append(toIndentedString(workflowIdMetadata)).append("\n");

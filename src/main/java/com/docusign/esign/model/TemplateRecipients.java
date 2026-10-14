@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.Agent;
+import com.docusign.esign.model.AuthorizedSignatory;
 import com.docusign.esign.model.CarbonCopy;
 import com.docusign.esign.model.CertifiedDelivery;
 import com.docusign.esign.model.Editor;
@@ -31,6 +32,9 @@ public class TemplateRecipients implements Serializable {
 
   @JsonProperty("agents")
   private java.util.List<Agent> agents = null;
+
+  @JsonProperty("authorizedSignatories")
+  private java.util.List<AuthorizedSignatory> authorizedSignatories = null;
 
   @JsonProperty("carbonCopies")
   private java.util.List<CarbonCopy> carbonCopies = null;
@@ -112,6 +116,46 @@ public class TemplateRecipients implements Serializable {
    **/
   public void setAgents(java.util.List<Agent> agents) {
     this.agents = agents;
+  }
+
+
+  /**
+   * authorizedSignatories.
+   *
+   * @return TemplateRecipients
+   **/
+  public TemplateRecipients authorizedSignatories(java.util.List<AuthorizedSignatory> authorizedSignatories) {
+    this.authorizedSignatories = authorizedSignatories;
+    return this;
+  }
+  
+  /**
+   * addAuthorizedSignatoriesItem.
+   *
+   * @return TemplateRecipients
+   **/
+  public TemplateRecipients addAuthorizedSignatoriesItem(AuthorizedSignatory authorizedSignatoriesItem) {
+    if (this.authorizedSignatories == null) {
+      this.authorizedSignatories = new java.util.ArrayList<>();
+    }
+    this.authorizedSignatories.add(authorizedSignatoriesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return authorizedSignatories
+   **/
+  @Schema(description = "")
+  public java.util.List<AuthorizedSignatory> getAuthorizedSignatories() {
+    return authorizedSignatories;
+  }
+
+  /**
+   * setAuthorizedSignatories.
+   **/
+  public void setAuthorizedSignatories(java.util.List<AuthorizedSignatory> authorizedSignatories) {
+    this.authorizedSignatories = authorizedSignatories;
   }
 
 
@@ -651,6 +695,7 @@ public class TemplateRecipients implements Serializable {
     }
     TemplateRecipients templateRecipients = (TemplateRecipients) o;
     return Objects.equals(this.agents, templateRecipients.agents) &&
+        Objects.equals(this.authorizedSignatories, templateRecipients.authorizedSignatories) &&
         Objects.equals(this.carbonCopies, templateRecipients.carbonCopies) &&
         Objects.equals(this.certifiedDeliveries, templateRecipients.certifiedDeliveries) &&
         Objects.equals(this.currentRoutingOrder, templateRecipients.currentRoutingOrder) &&
@@ -672,7 +717,7 @@ public class TemplateRecipients implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agents, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, notaryWitnesses, participants, recipientCount, seals, signers, witnesses);
+    return Objects.hash(agents, authorizedSignatories, carbonCopies, certifiedDeliveries, currentRoutingOrder, editors, errorDetails, inPersonSigners, intermediaries, notaries, notaryWitnesses, participants, recipientCount, seals, signers, witnesses);
   }
 
 
@@ -685,6 +730,7 @@ public class TemplateRecipients implements Serializable {
     sb.append("class TemplateRecipients {\n");
     
     sb.append("    agents: ").append(toIndentedString(agents)).append("\n");
+    sb.append("    authorizedSignatories: ").append(toIndentedString(authorizedSignatories)).append("\n");
     sb.append("    carbonCopies: ").append(toIndentedString(carbonCopies)).append("\n");
     sb.append("    certifiedDeliveries: ").append(toIndentedString(certifiedDeliveries)).append("\n");
     sb.append("    currentRoutingOrder: ").append(toIndentedString(currentRoutingOrder)).append("\n");

@@ -47,6 +47,12 @@ public class UserAuthorization implements Serializable {
   @JsonProperty("startDate")
   private String startDate = null;
 
+  @JsonProperty("taskSource")
+  private String taskSource = null;
+
+  @JsonProperty("taskType")
+  private String taskType = null;
+
 
   /**
    * agentUser.
@@ -319,6 +325,60 @@ public class UserAuthorization implements Serializable {
 
 
   /**
+   * taskSource.
+   *
+   * @return UserAuthorization
+   **/
+  public UserAuthorization taskSource(String taskSource) {
+    this.taskSource = taskSource;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taskSource
+   **/
+  @Schema(description = "")
+  public String getTaskSource() {
+    return taskSource;
+  }
+
+  /**
+   * setTaskSource.
+   **/
+  public void setTaskSource(String taskSource) {
+    this.taskSource = taskSource;
+  }
+
+
+  /**
+   * taskType.
+   *
+   * @return UserAuthorization
+   **/
+  public UserAuthorization taskType(String taskType) {
+    this.taskType = taskType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return taskType
+   **/
+  @Schema(description = "")
+  public String getTaskType() {
+    return taskType;
+  }
+
+  /**
+   * setTaskType.
+   **/
+  public void setTaskType(String taskType) {
+    this.taskType = taskType;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -341,7 +401,9 @@ public class UserAuthorization implements Serializable {
         Objects.equals(this.modifiedBy, userAuthorization.modifiedBy) &&
         Objects.equals(this.permission, userAuthorization.permission) &&
         Objects.equals(this.principalUser, userAuthorization.principalUser) &&
-        Objects.equals(this.startDate, userAuthorization.startDate);
+        Objects.equals(this.startDate, userAuthorization.startDate) &&
+        Objects.equals(this.taskSource, userAuthorization.taskSource) &&
+        Objects.equals(this.taskType, userAuthorization.taskType);
   }
 
   /**
@@ -349,7 +411,7 @@ public class UserAuthorization implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agentUser, authorizationId, created, createdBy, endDate, modified, modifiedBy, permission, principalUser, startDate);
+    return Objects.hash(agentUser, authorizationId, created, createdBy, endDate, modified, modifiedBy, permission, principalUser, startDate, taskSource, taskType);
   }
 
 
@@ -371,6 +433,8 @@ public class UserAuthorization implements Serializable {
     sb.append("    permission: ").append(toIndentedString(permission)).append("\n");
     sb.append("    principalUser: ").append(toIndentedString(principalUser)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    taskSource: ").append(toIndentedString(taskSource)).append("\n");
+    sb.append("    taskType: ").append(toIndentedString(taskType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

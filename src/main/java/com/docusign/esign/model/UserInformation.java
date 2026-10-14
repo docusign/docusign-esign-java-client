@@ -102,6 +102,9 @@ public class UserInformation implements Serializable {
   @JsonProperty("licenseType")
   private String licenseType = null;
 
+  @JsonProperty("licenseTypes")
+  private java.util.List<String> licenseTypes = null;
+
   @JsonProperty("loginStatus")
   private String loginStatus = null;
 
@@ -911,6 +914,46 @@ public class UserInformation implements Serializable {
 
 
   /**
+   * licenseTypes.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation licenseTypes(java.util.List<String> licenseTypes) {
+    this.licenseTypes = licenseTypes;
+    return this;
+  }
+  
+  /**
+   * addLicenseTypesItem.
+   *
+   * @return UserInformation
+   **/
+  public UserInformation addLicenseTypesItem(String licenseTypesItem) {
+    if (this.licenseTypes == null) {
+      this.licenseTypes = new java.util.ArrayList<>();
+    }
+    this.licenseTypes.add(licenseTypesItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return licenseTypes
+   **/
+  @Schema(description = "")
+  public java.util.List<String> getLicenseTypes() {
+    return licenseTypes;
+  }
+
+  /**
+   * setLicenseTypes.
+   **/
+  public void setLicenseTypes(java.util.List<String> licenseTypes) {
+    this.licenseTypes = licenseTypes;
+  }
+
+
+  /**
    * loginStatus.
    *
    * @return UserInformation
@@ -1544,6 +1587,7 @@ public class UserInformation implements Serializable {
         Objects.equals(this.lastName, userInformation.lastName) &&
         Objects.equals(this.licenseStatus, userInformation.licenseStatus) &&
         Objects.equals(this.licenseType, userInformation.licenseType) &&
+        Objects.equals(this.licenseTypes, userInformation.licenseTypes) &&
         Objects.equals(this.loginStatus, userInformation.loginStatus) &&
         Objects.equals(this.middleName, userInformation.middleName) &&
         Objects.equals(this.password, userInformation.password) &&
@@ -1573,7 +1617,7 @@ public class UserInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isManagedByScim, isMembershipManagedByScim, isNAREnabled, jobTitle, lastLogin, lastName, licenseStatus, licenseType, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
+    return Objects.hash(activationAccessCode, company, connectConfigurations, countryCode, createdDateTime, customSettings, defaultAccountId, email, enableConnectForUser, errorDetails, firstName, forgottenPasswordInfo, groupList, hasRemoteNotary, homeAddress, initialsImageUri, isAdmin, isAlternateAdmin, isManagedByScim, isMembershipManagedByScim, isNAREnabled, jobTitle, lastLogin, lastName, licenseStatus, licenseType, licenseTypes, loginStatus, middleName, password, passwordExpiration, permissionProfileId, permissionProfileName, profileImageUri, sendActivationEmail, sendActivationOnInvalidLogin, signatureImageUri, subscribe, suffixName, title, uri, userAddedToAccountDateTime, userId, userName, userProfileLastModifiedDate, userSettings, userStatus, userType, workAddress);
   }
 
 
@@ -1611,6 +1655,7 @@ public class UserInformation implements Serializable {
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    licenseStatus: ").append(toIndentedString(licenseStatus)).append("\n");
     sb.append("    licenseType: ").append(toIndentedString(licenseType)).append("\n");
+    sb.append("    licenseTypes: ").append(toIndentedString(licenseTypes)).append("\n");
     sb.append("    loginStatus: ").append(toIndentedString(loginStatus)).append("\n");
     sb.append("    middleName: ").append(toIndentedString(middleName)).append("\n");
     sb.append("    password: ").append(toIndentedString(password)).append("\n");

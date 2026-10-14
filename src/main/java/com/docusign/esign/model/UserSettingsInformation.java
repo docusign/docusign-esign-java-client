@@ -299,6 +299,18 @@ public class UserSettingsInformation implements Serializable {
   @JsonProperty("isMembershipManagedByScimMetadata")
   private SettingsMetadata isMembershipManagedByScimMetadata = null;
 
+  @JsonProperty("isMembershipRedacted")
+  private String isMembershipRedacted = null;
+
+  @JsonProperty("isMembershipRedactedMetadata")
+  private SettingsMetadata isMembershipRedactedMetadata = null;
+
+  @JsonProperty("isUserRedacted")
+  private String isUserRedacted = null;
+
+  @JsonProperty("isUserRedactedMetadata")
+  private SettingsMetadata isUserRedactedMetadata = null;
+
   @JsonProperty("locale")
   private String locale = null;
 
@@ -349,6 +361,12 @@ public class UserSettingsInformation implements Serializable {
 
   @JsonProperty("recipientViewedNotificationMetadata")
   private SettingsMetadata recipientViewedNotificationMetadata = null;
+
+  @JsonProperty("redactAtMetadata")
+  private SettingsMetadata redactAtMetadata = null;
+
+  @JsonProperty("redactMembershipAt")
+  private String redactMembershipAt = null;
 
   @JsonProperty("sealIdentifiers")
   private java.util.List<SealIdentifier> sealIdentifiers = null;
@@ -2956,6 +2974,114 @@ public class UserSettingsInformation implements Serializable {
 
 
   /**
+   * isMembershipRedacted.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isMembershipRedacted(String isMembershipRedacted) {
+    this.isMembershipRedacted = isMembershipRedacted;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isMembershipRedacted
+   **/
+  @Schema(description = "")
+  public String getIsMembershipRedacted() {
+    return isMembershipRedacted;
+  }
+
+  /**
+   * setIsMembershipRedacted.
+   **/
+  public void setIsMembershipRedacted(String isMembershipRedacted) {
+    this.isMembershipRedacted = isMembershipRedacted;
+  }
+
+
+  /**
+   * isMembershipRedactedMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isMembershipRedactedMetadata(SettingsMetadata isMembershipRedactedMetadata) {
+    this.isMembershipRedactedMetadata = isMembershipRedactedMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isMembershipRedactedMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getIsMembershipRedactedMetadata() {
+    return isMembershipRedactedMetadata;
+  }
+
+  /**
+   * setIsMembershipRedactedMetadata.
+   **/
+  public void setIsMembershipRedactedMetadata(SettingsMetadata isMembershipRedactedMetadata) {
+    this.isMembershipRedactedMetadata = isMembershipRedactedMetadata;
+  }
+
+
+  /**
+   * isUserRedacted.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isUserRedacted(String isUserRedacted) {
+    this.isUserRedacted = isUserRedacted;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isUserRedacted
+   **/
+  @Schema(description = "")
+  public String getIsUserRedacted() {
+    return isUserRedacted;
+  }
+
+  /**
+   * setIsUserRedacted.
+   **/
+  public void setIsUserRedacted(String isUserRedacted) {
+    this.isUserRedacted = isUserRedacted;
+  }
+
+
+  /**
+   * isUserRedactedMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation isUserRedactedMetadata(SettingsMetadata isUserRedactedMetadata) {
+    this.isUserRedactedMetadata = isUserRedactedMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return isUserRedactedMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getIsUserRedactedMetadata() {
+    return isUserRedactedMetadata;
+  }
+
+  /**
+   * setIsUserRedactedMetadata.
+   **/
+  public void setIsUserRedactedMetadata(SettingsMetadata isUserRedactedMetadata) {
+    this.isUserRedactedMetadata = isUserRedactedMetadata;
+  }
+
+
+  /**
    * locale.
    *
    * @return UserSettingsInformation
@@ -3411,6 +3537,60 @@ public class UserSettingsInformation implements Serializable {
    **/
   public void setRecipientViewedNotificationMetadata(SettingsMetadata recipientViewedNotificationMetadata) {
     this.recipientViewedNotificationMetadata = recipientViewedNotificationMetadata;
+  }
+
+
+  /**
+   * redactAtMetadata.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation redactAtMetadata(SettingsMetadata redactAtMetadata) {
+    this.redactAtMetadata = redactAtMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return redactAtMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getRedactAtMetadata() {
+    return redactAtMetadata;
+  }
+
+  /**
+   * setRedactAtMetadata.
+   **/
+  public void setRedactAtMetadata(SettingsMetadata redactAtMetadata) {
+    this.redactAtMetadata = redactAtMetadata;
+  }
+
+
+  /**
+   * redactMembershipAt.
+   *
+   * @return UserSettingsInformation
+   **/
+  public UserSettingsInformation redactMembershipAt(String redactMembershipAt) {
+    this.redactMembershipAt = redactMembershipAt;
+    return this;
+  }
+
+  /**
+   * .
+   * @return redactMembershipAt
+   **/
+  @Schema(description = "")
+  public String getRedactMembershipAt() {
+    return redactMembershipAt;
+  }
+
+  /**
+   * setRedactMembershipAt.
+   **/
+  public void setRedactMembershipAt(String redactMembershipAt) {
+    this.redactMembershipAt = redactMembershipAt;
   }
 
 
@@ -4613,6 +4793,10 @@ public class UserSettingsInformation implements Serializable {
         Objects.equals(this.isManagedByScimMetadata, userSettingsInformation.isManagedByScimMetadata) &&
         Objects.equals(this.isMembershipManagedByScim, userSettingsInformation.isMembershipManagedByScim) &&
         Objects.equals(this.isMembershipManagedByScimMetadata, userSettingsInformation.isMembershipManagedByScimMetadata) &&
+        Objects.equals(this.isMembershipRedacted, userSettingsInformation.isMembershipRedacted) &&
+        Objects.equals(this.isMembershipRedactedMetadata, userSettingsInformation.isMembershipRedactedMetadata) &&
+        Objects.equals(this.isUserRedacted, userSettingsInformation.isUserRedacted) &&
+        Objects.equals(this.isUserRedactedMetadata, userSettingsInformation.isUserRedactedMetadata) &&
         Objects.equals(this.locale, userSettingsInformation.locale) &&
         Objects.equals(this.localeMetadata, userSettingsInformation.localeMetadata) &&
         Objects.equals(this.localePolicy, userSettingsInformation.localePolicy) &&
@@ -4630,6 +4814,8 @@ public class UserSettingsInformation implements Serializable {
         Objects.equals(this.powerFormModeMetadata, userSettingsInformation.powerFormModeMetadata) &&
         Objects.equals(this.recipientViewedNotification, userSettingsInformation.recipientViewedNotification) &&
         Objects.equals(this.recipientViewedNotificationMetadata, userSettingsInformation.recipientViewedNotificationMetadata) &&
+        Objects.equals(this.redactAtMetadata, userSettingsInformation.redactAtMetadata) &&
+        Objects.equals(this.redactMembershipAt, userSettingsInformation.redactMembershipAt) &&
         Objects.equals(this.sealIdentifiers, userSettingsInformation.sealIdentifiers) &&
         Objects.equals(this.selfSignedRecipientEmailDocument, userSettingsInformation.selfSignedRecipientEmailDocument) &&
         Objects.equals(this.selfSignedRecipientEmailDocumentMetadata, userSettingsInformation.selfSignedRecipientEmailDocumentMetadata) &&
@@ -4677,7 +4863,7 @@ public class UserSettingsInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageAgreementParties, canManageAgreementPartiesMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, isManagedByScim, isManagedByScimMetadata, isMembershipManagedByScim, isMembershipManagedByScimMetadata, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
+    return Objects.hash(accountAgreementsAccessType, accountAgreementsAccessTypeMetadata, accountManagementGranular, adminOnly, adminOnlyMetadata, allowAccessToAllAccountAgreements, allowAccessToAllAccountAgreementsMetadata, allowAutoTagging, allowedDocumentTemplateLibraryAccess, allowedDocumentTemplateLibraryAccessMetadata, allowedOrchestrationAccess, allowedOrchestrationAccessMetadata, allowEnvelopeTransferTo, allowEnvelopeTransferToMetadata, allowEsealRecipients, allowEsealRecipientsMetadata, allowPowerFormsAdminToAccessAllPowerFormEnvelope, allowPowerFormsAdminToAccessAllPowerFormEnvelopeMetadata, allowRecipientLanguageSelection, allowRecipientLanguageSelectionMetadata, allowSendOnBehalfOf, allowSendOnBehalfOfMetadata, allowSupplementalDocuments, allowSupplementalDocumentsMetadata, allowTransactions, allowTransactionsMetadata, anchorTagVersionedPlacementEnabled, apiAccountWideAccess, apiAccountWideAccessMetadata, apiCanExportAC, apiCanExportACMetadata, bulkSend, bulkSendMetadata, canBulkUploadAgreements, canBulkUploadAgreementsMetadata, canChargeAccount, canChargeAccountMetadata, canCreateTransaction, canCreateTransactionMetadata, canDeleteDocumentsInTransaction, canDeleteDocumentsInTransactionMetadata, canDeleteTransaction, canDeleteTransactionMetadata, canEditSharedAddressbook, canEditSharedAddressbookMetadata, canLockEnvelopes, canLockEnvelopesMetadata, canManageAccount, canManageAccountMetadata, canManageAgreementParties, canManageAgreementPartiesMetadata, canManageDistributor, canManageDistributorMetadata, canManageTemplates, canManageTemplatesMetadata, canSendAPIRequests, canSendAPIRequestsMetadata, canSendEnvelope, canSendEnvelopeMetadata, canSendEnvelopesViaSMS, canSendEnvelopesViaSMSMetadata, canSignEnvelope, canSignEnvelopeMetadata, canUseScratchpad, canUseScratchpadMetadata, canUseSmartContracts, canUseSmartContractsMetadata, disableDocumentUpload, disableDocumentUploadMetadata, disableOtherActions, disableOtherActionsMetadata, enableDSPro, enableDSProMetadata, enableKeyTermsSuggestionsByDocumentType, enableKeyTermsSuggestionsByDocumentTypeMetadata, enableSequentialSigningAPI, enableSequentialSigningAPIMetadata, enableSequentialSigningUI, enableSequentialSigningUIMetadata, enableSignerAttachments, enableSignerAttachmentsMetadata, enableSignOnPaperOverride, enableSignOnPaperOverrideMetadata, enableTransactionPoint, enableTransactionPointMetadata, enableVaulting, enableVaultingMetadata, expressSendOnly, isManagedByScim, isManagedByScimMetadata, isMembershipManagedByScim, isMembershipManagedByScimMetadata, isMembershipRedacted, isMembershipRedactedMetadata, isUserRedacted, isUserRedactedMetadata, locale, localeMetadata, localePolicy, manageClickwrapsMode, manageClickwrapsModeMetadata, modifiedBy, modifiedByMetadata, modifiedDate, modifiedDateMetadata, modifiedPage, modifiedPageMetadata, newSendUI, newSendUIMetadata, powerFormMode, powerFormModeMetadata, recipientViewedNotification, recipientViewedNotificationMetadata, redactAtMetadata, redactMembershipAt, sealIdentifiers, selfSignedRecipientEmailDocument, selfSignedRecipientEmailDocumentMetadata, senderEmailNotifications, signerEmailNotifications, supplementalDocumentIncludeInDownload, supplementalDocumentsMustAccept, supplementalDocumentsMustAcceptMetadata, supplementalDocumentsMustRead, supplementalDocumentsMustReadMetadata, supplementalDocumentsMustView, supplementalDocumentsMustViewMetadata, templateActiveCreation, templateActiveCreationMetadata, templateApplyNotify, templateApplyNotifyMetadata, templateAutoMatching, templateAutoMatchingMetadata, templateMatchingSensitivity, templateMatchingSensitivityMetadata, templatePageLevelMatching, templatePageLevelMatchingMetadata, timezoneDST, timezoneDSTMetadata, timezoneMask, timezoneMaskMetadata, timezoneOffset, timezoneOffsetMetadata, timezoneSendingPref, timezoneSendingPrefMetadata, timezoneSigningPref, timezoneSigningPrefMetadata, transactionPointSiteNameURL, transactionPointSiteNameURLMetadata, transactionPointUserName, transactionPointUserNameMetadata, vaultingMode, vaultingModeMetadata, webForms, webFormsMetadata);
   }
 
 
@@ -4781,6 +4967,10 @@ public class UserSettingsInformation implements Serializable {
     sb.append("    isManagedByScimMetadata: ").append(toIndentedString(isManagedByScimMetadata)).append("\n");
     sb.append("    isMembershipManagedByScim: ").append(toIndentedString(isMembershipManagedByScim)).append("\n");
     sb.append("    isMembershipManagedByScimMetadata: ").append(toIndentedString(isMembershipManagedByScimMetadata)).append("\n");
+    sb.append("    isMembershipRedacted: ").append(toIndentedString(isMembershipRedacted)).append("\n");
+    sb.append("    isMembershipRedactedMetadata: ").append(toIndentedString(isMembershipRedactedMetadata)).append("\n");
+    sb.append("    isUserRedacted: ").append(toIndentedString(isUserRedacted)).append("\n");
+    sb.append("    isUserRedactedMetadata: ").append(toIndentedString(isUserRedactedMetadata)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    localeMetadata: ").append(toIndentedString(localeMetadata)).append("\n");
     sb.append("    localePolicy: ").append(toIndentedString(localePolicy)).append("\n");
@@ -4798,6 +4988,8 @@ public class UserSettingsInformation implements Serializable {
     sb.append("    powerFormModeMetadata: ").append(toIndentedString(powerFormModeMetadata)).append("\n");
     sb.append("    recipientViewedNotification: ").append(toIndentedString(recipientViewedNotification)).append("\n");
     sb.append("    recipientViewedNotificationMetadata: ").append(toIndentedString(recipientViewedNotificationMetadata)).append("\n");
+    sb.append("    redactAtMetadata: ").append(toIndentedString(redactAtMetadata)).append("\n");
+    sb.append("    redactMembershipAt: ").append(toIndentedString(redactMembershipAt)).append("\n");
     sb.append("    sealIdentifiers: ").append(toIndentedString(sealIdentifiers)).append("\n");
     sb.append("    selfSignedRecipientEmailDocument: ").append(toIndentedString(selfSignedRecipientEmailDocument)).append("\n");
     sb.append("    selfSignedRecipientEmailDocumentMetadata: ").append(toIndentedString(selfSignedRecipientEmailDocumentMetadata)).append("\n");

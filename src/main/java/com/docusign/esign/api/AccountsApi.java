@@ -598,7 +598,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates ot updates user authorizations.
+   * Creates or updates user authorizations.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -612,7 +612,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates ot updates user authorizations
+   * Creates or updates user authorizations
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1516,7 +1516,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates ot updates user authorizations.
+   * Deletes user authorizations.
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -1530,7 +1530,7 @@ public class AccountsApi {
   }
 
   /**
-   * Creates ot updates user authorizations
+   * Deletes user authorizations
    * 
    * @param accountId The external account number (int) or account ID Guid. (required)
    * @param userId The user ID of the user being accessed. Generally this is the user ID of the authenticated user, but if the authenticated user is an Admin on the account, this may be another user the Admin user is accessing. (required)
@@ -2211,6 +2211,8 @@ public class AccountsApi {
   private String includeClosedUsers = null;
   private String permissions = null;
   private String startPosition = null;
+  private String taskSource = null;
+  private String taskType = null;
   private String userNameSubstring = null;
   
  /**
@@ -2310,6 +2312,38 @@ public class AccountsApi {
   }
   
  /**
+  * setTaskSource method.
+  */
+  public void setTaskSource(String taskSource) {
+    this.taskSource = taskSource;
+  }
+
+ /**
+  * getTaskSource method.
+  *
+  * @return String
+  */
+  public String getTaskSource() {
+    return this.taskSource;
+  }
+  
+ /**
+  * setTaskType method.
+  */
+  public void setTaskType(String taskType) {
+    this.taskType = taskType;
+  }
+
+ /**
+  * getTaskType method.
+  *
+  * @return String
+  */
+  public String getTaskType() {
+    return this.taskType;
+  }
+  
+ /**
   * setUserNameSubstring method.
   */
   public void setUserNameSubstring(String userNameSubstring) {
@@ -2396,6 +2430,10 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("permissions", options.permissions));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("task_source", options.taskSource));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("task_type", options.taskType));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
     }
@@ -3704,6 +3742,8 @@ public class AccountsApi {
   private String includeClosedUsers = null;
   private String permissions = null;
   private String startPosition = null;
+  private String taskSource = null;
+  private String taskType = null;
   private String userNameSubstring = null;
   
  /**
@@ -3803,6 +3843,38 @@ public class AccountsApi {
   }
   
  /**
+  * setTaskSource method.
+  */
+  public void setTaskSource(String taskSource) {
+    this.taskSource = taskSource;
+  }
+
+ /**
+  * getTaskSource method.
+  *
+  * @return String
+  */
+  public String getTaskSource() {
+    return this.taskSource;
+  }
+  
+ /**
+  * setTaskType method.
+  */
+  public void setTaskType(String taskType) {
+    this.taskType = taskType;
+  }
+
+ /**
+  * getTaskType method.
+  *
+  * @return String
+  */
+  public String getTaskType() {
+    return this.taskType;
+  }
+  
+ /**
   * setUserNameSubstring method.
   */
   public void setUserNameSubstring(String userNameSubstring) {
@@ -3889,6 +3961,10 @@ public class AccountsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("permissions", options.permissions));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("start_position", options.startPosition));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("task_source", options.taskSource));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("task_type", options.taskType));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("user_name_substring", options.userNameSubstring));
     }
@@ -4505,108 +4581,6 @@ public class AccountsApi {
     GenericType<PermissionProfileInformation> localVarReturnType = new GenericType<PermissionProfileInformation>() {};
     PermissionProfileInformation localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<PermissionProfileInformation>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
-  }
-  /// <summary>
-  /// Gets recipient names associated with an email address. Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-  /// </summary>
-
- /**
-  * ListRecipientNamesByEmailOptions Class.
-  *
-  **/
-  public class ListRecipientNamesByEmailOptions
-  {
-  private String email = null;
-  
- /**
-  * setEmail method.
-  */
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
- /**
-  * getEmail method.
-  *
-  * @return String
-  */
-  public String getEmail() {
-    return this.email;
-  }
-  }
-
-   /**
-   * Gets recipient names associated with an email address..
-   * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @return RecipientNamesResponse
-   */ 
-  public RecipientNamesResponse listRecipientNamesByEmail(String accountId) throws ApiException {
-    return listRecipientNamesByEmail(accountId, null);
-  }
-
-  /**
-   * Gets recipient names associated with an email address..
-   * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return RecipientNamesResponse
-   * @throws ApiException if fails to make API call
-   */
-  public RecipientNamesResponse listRecipientNamesByEmail(String accountId, AccountsApi.ListRecipientNamesByEmailOptions options) throws ApiException {
-    ApiResponse<RecipientNamesResponse> localVarResponse = listRecipientNamesByEmailWithHttpInfo(accountId, options);
-    return localVarResponse.getData();
-  }
-
-  /**
-   * Gets recipient names associated with an email address.
-   * Retrieves a list of recipients in the specified account that are associated with a email address supplied in the query string.
-   * @param accountId The external account number (int) or account ID Guid. (required)
-   * @param options for modifying the method behavior.
-   * @return RecipientNamesResponse
-   * @throws ApiException if fails to make API call
-   */
-  public ApiResponse<RecipientNamesResponse > listRecipientNamesByEmailWithHttpInfo(String accountId, AccountsApi.ListRecipientNamesByEmailOptions options) throws ApiException {
-    Object localVarPostBody = "{}";
-    
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling listRecipientNamesByEmail");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/v2.1/accounts/{accountId}/recipient_names"
-      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-    if (options != null) {
-      localVarQueryParams.addAll(apiClient.parameterToPair("email", options.email));
-    }
-
-    
-
-    
-
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
-    
-    GenericType<RecipientNamesResponse> localVarReturnType = new GenericType<RecipientNamesResponse>() {};
-    RecipientNamesResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-    return new ApiResponse<RecipientNamesResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
 
   /**

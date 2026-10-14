@@ -29,6 +29,9 @@ public class Reminders implements Serializable {
   @JsonProperty("reminderFrequency")
   private String reminderFrequency = null;
 
+  @JsonProperty("smartReminderEnabled")
+  private String smartReminderEnabled = null;
+
 
   /**
    * maximumReminderCount.
@@ -139,6 +142,33 @@ public class Reminders implements Serializable {
 
 
   /**
+   * smartReminderEnabled.
+   *
+   * @return Reminders
+   **/
+  public Reminders smartReminderEnabled(String smartReminderEnabled) {
+    this.smartReminderEnabled = smartReminderEnabled;
+    return this;
+  }
+
+  /**
+   * .
+   * @return smartReminderEnabled
+   **/
+  @Schema(description = "")
+  public String getSmartReminderEnabled() {
+    return smartReminderEnabled;
+  }
+
+  /**
+   * setSmartReminderEnabled.
+   **/
+  public void setSmartReminderEnabled(String smartReminderEnabled) {
+    this.smartReminderEnabled = smartReminderEnabled;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -155,7 +185,8 @@ public class Reminders implements Serializable {
     return Objects.equals(this.maximumReminderCount, reminders.maximumReminderCount) &&
         Objects.equals(this.reminderDelay, reminders.reminderDelay) &&
         Objects.equals(this.reminderEnabled, reminders.reminderEnabled) &&
-        Objects.equals(this.reminderFrequency, reminders.reminderFrequency);
+        Objects.equals(this.reminderFrequency, reminders.reminderFrequency) &&
+        Objects.equals(this.smartReminderEnabled, reminders.smartReminderEnabled);
   }
 
   /**
@@ -163,7 +194,7 @@ public class Reminders implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(maximumReminderCount, reminderDelay, reminderEnabled, reminderFrequency);
+    return Objects.hash(maximumReminderCount, reminderDelay, reminderEnabled, reminderFrequency, smartReminderEnabled);
   }
 
 
@@ -179,6 +210,7 @@ public class Reminders implements Serializable {
     sb.append("    reminderDelay: ").append(toIndentedString(reminderDelay)).append("\n");
     sb.append("    reminderEnabled: ").append(toIndentedString(reminderEnabled)).append("\n");
     sb.append("    reminderFrequency: ").append(toIndentedString(reminderFrequency)).append("\n");
+    sb.append("    smartReminderEnabled: ").append(toIndentedString(smartReminderEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }

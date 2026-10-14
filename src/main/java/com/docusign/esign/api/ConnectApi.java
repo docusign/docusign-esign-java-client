@@ -179,6 +179,62 @@ public class ConnectApi {
   }
 
   /**
+   * Generates a new connect HMAC Secret..
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void createConnectSecret(String accountId) throws ApiException {
+    createConnectSecretWithHttpInfo(accountId);
+  }
+
+  /**
+   * Generates a new connect HMAC Secret.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> createConnectSecretWithHttpInfo(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling createConnectSecret");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
    * Deletes the specified connect configuration..
    * Deletes the specified DocuSign Connect configuration.  ###### Note: Connect must be enabled for your account to use this function.    
    * @param accountId The external account number (int) or account ID Guid. (required)
@@ -269,6 +325,70 @@ public class ConnectApi {
     // create path and map variables
     String localVarPath = "/v2.1/accounts/{accountId}/connect/oauth"
       .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
+  }
+
+  /**
+   * Delete the connect HMAC Secret for AccountID.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param keyId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void deleteConnectSecret(String accountId, String keyId) throws ApiException {
+    deleteConnectSecretWithHttpInfo(accountId, keyId);
+  }
+
+  /**
+   * Delete the connect HMAC Secret for AccountID
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param keyId  (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> deleteConnectSecretWithHttpInfo(String accountId, String keyId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling deleteConnectSecret");
+    }
+    
+    // verify the required parameter 'keyId' is set
+    if (keyId == null) {
+      throw new ApiException(400, "Missing the required parameter 'keyId' when calling deleteConnectSecret");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret/{keyId}"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "keyId" + "\\}", apiClient.escapeString(keyId.toString()));
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -880,6 +1000,62 @@ public class ConnectApi {
     GenericType<ConnectOAuthConfig> localVarReturnType = new GenericType<ConnectOAuthConfig>() {};
     ConnectOAuthConfig localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<ConnectOAuthConfig>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Get the connect HMAC Secrets for AccountID.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void getConnectSecret(String accountId) throws ApiException {
+    getConnectSecretWithHttpInfo(accountId);
+  }
+
+  /**
+   * Get the connect HMAC Secrets for AccountID
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<Object> getConnectSecretWithHttpInfo(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getConnectSecret");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/connect/secret"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+    return new ApiResponse<Object>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), null);
   }
   /// <summary>
   /// Get the specified Connect log entry. Retrieves the specified Connect log entry for your account.  ###### Note: The &#x60;enableLog&#x60; setting in the Connect configuration must be set to true to enable logging. If logging is not enabled, then no log entries are recorded. 

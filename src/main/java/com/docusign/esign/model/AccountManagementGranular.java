@@ -98,6 +98,9 @@ public class AccountManagementGranular implements Serializable {
   @JsonProperty("allowViewUsers")
   private String allowViewUsers = null;
 
+  @JsonProperty("viewOnlyAccountAdminPages")
+  private String viewOnlyAccountAdminPages = null;
+
 
   /**
    * allowManageAccountSecuritySettings.
@@ -829,6 +832,33 @@ public class AccountManagementGranular implements Serializable {
 
 
   /**
+   * viewOnlyAccountAdminPages.
+   *
+   * @return AccountManagementGranular
+   **/
+  public AccountManagementGranular viewOnlyAccountAdminPages(String viewOnlyAccountAdminPages) {
+    this.viewOnlyAccountAdminPages = viewOnlyAccountAdminPages;
+    return this;
+  }
+
+  /**
+   * .
+   * @return viewOnlyAccountAdminPages
+   **/
+  @Schema(description = "")
+  public String getViewOnlyAccountAdminPages() {
+    return viewOnlyAccountAdminPages;
+  }
+
+  /**
+   * setViewOnlyAccountAdminPages.
+   **/
+  public void setViewOnlyAccountAdminPages(String viewOnlyAccountAdminPages) {
+    this.viewOnlyAccountAdminPages = viewOnlyAccountAdminPages;
+  }
+
+
+  /**
    * Compares objects.
    *
    * @return true or false depending on comparison result.
@@ -868,7 +898,8 @@ public class AccountManagementGranular implements Serializable {
         Objects.equals(this.allowManageStampsMetadata, accountManagementGranular.allowManageStampsMetadata) &&
         Objects.equals(this.allowManageUsers, accountManagementGranular.allowManageUsers) &&
         Objects.equals(this.allowManageUsersMetadata, accountManagementGranular.allowManageUsersMetadata) &&
-        Objects.equals(this.allowViewUsers, accountManagementGranular.allowViewUsers);
+        Objects.equals(this.allowViewUsers, accountManagementGranular.allowViewUsers) &&
+        Objects.equals(this.viewOnlyAccountAdminPages, accountManagementGranular.viewOnlyAccountAdminPages);
   }
 
   /**
@@ -876,7 +907,7 @@ public class AccountManagementGranular implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowManageAccountSecuritySettings, allowManageAccountSecuritySettingsMetadata, allowManageAccountSettings, allowManageAccountSettingsMetadata, allowManageAdmins, allowManageAdminsMetadata, allowManageConnect, allowManageConnectMetadata, allowManageDocumentRetention, allowManageDocumentRetentionMetadata, allowManageEnvelopeTransfer, allowManageEnvelopeTransferMetadata, allowManageGroupsButNotUsers, allowManageGroupsButNotUsersMetadata, allowManageJointAgreements, allowManageJointAgreementsMetadata, allowManageReporting, allowManageReportingMetadata, allowManageSharing, allowManageSharingMetadata, allowManageSigningGroups, allowManageSigningGroupsMetadata, allowManageStamps, allowManageStampsMetadata, allowManageUsers, allowManageUsersMetadata, allowViewUsers);
+    return Objects.hash(allowManageAccountSecuritySettings, allowManageAccountSecuritySettingsMetadata, allowManageAccountSettings, allowManageAccountSettingsMetadata, allowManageAdmins, allowManageAdminsMetadata, allowManageConnect, allowManageConnectMetadata, allowManageDocumentRetention, allowManageDocumentRetentionMetadata, allowManageEnvelopeTransfer, allowManageEnvelopeTransferMetadata, allowManageGroupsButNotUsers, allowManageGroupsButNotUsersMetadata, allowManageJointAgreements, allowManageJointAgreementsMetadata, allowManageReporting, allowManageReportingMetadata, allowManageSharing, allowManageSharingMetadata, allowManageSigningGroups, allowManageSigningGroupsMetadata, allowManageStamps, allowManageStampsMetadata, allowManageUsers, allowManageUsersMetadata, allowViewUsers, viewOnlyAccountAdminPages);
   }
 
 
@@ -915,6 +946,7 @@ public class AccountManagementGranular implements Serializable {
     sb.append("    allowManageUsers: ").append(toIndentedString(allowManageUsers)).append("\n");
     sb.append("    allowManageUsersMetadata: ").append(toIndentedString(allowManageUsersMetadata)).append("\n");
     sb.append("    allowViewUsers: ").append(toIndentedString(allowViewUsers)).append("\n");
+    sb.append("    viewOnlyAccountAdminPages: ").append(toIndentedString(viewOnlyAccountAdminPages)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -72,6 +72,9 @@ public class DateSigned implements Serializable {
   @JsonProperty("anchorTabProcessorVersionMetadata")
   private PropertyMetadata anchorTabProcessorVersionMetadata = null;
 
+  @JsonProperty("anchorTabScope")
+  private String anchorTabScope = null;
+
   @JsonProperty("anchorUnits")
   private String anchorUnits = null;
 
@@ -272,6 +275,9 @@ public class DateSigned implements Serializable {
 
   @JsonProperty("templateRequiredMetadata")
   private PropertyMetadata templateRequiredMetadata = null;
+
+  @JsonProperty("timestampStandardized")
+  private String timestampStandardized = null;
 
   @JsonProperty("tooltip")
   private String tooltip = null;
@@ -742,6 +748,33 @@ public class DateSigned implements Serializable {
    **/
   public void setAnchorTabProcessorVersionMetadata(PropertyMetadata anchorTabProcessorVersionMetadata) {
     this.anchorTabProcessorVersionMetadata = anchorTabProcessorVersionMetadata;
+  }
+
+
+  /**
+   * anchorTabScope.
+   *
+   * @return DateSigned
+   **/
+  public DateSigned anchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
+    return this;
+  }
+
+  /**
+   * .
+   * @return anchorTabScope
+   **/
+  @Schema(description = "")
+  public String getAnchorTabScope() {
+    return anchorTabScope;
+  }
+
+  /**
+   * setAnchorTabScope.
+   **/
+  public void setAnchorTabScope(String anchorTabScope) {
+    this.anchorTabScope = anchorTabScope;
   }
 
 
@@ -2568,6 +2601,33 @@ public class DateSigned implements Serializable {
 
 
   /**
+   * timestampStandardized.
+   *
+   * @return DateSigned
+   **/
+  public DateSigned timestampStandardized(String timestampStandardized) {
+    this.timestampStandardized = timestampStandardized;
+    return this;
+  }
+
+  /**
+   * .
+   * @return timestampStandardized
+   **/
+  @Schema(description = "")
+  public String getTimestampStandardized() {
+    return timestampStandardized;
+  }
+
+  /**
+   * setTimestampStandardized.
+   **/
+  public void setTimestampStandardized(String timestampStandardized) {
+    this.timestampStandardized = timestampStandardized;
+  }
+
+
+  /**
    * tooltip.
    *
    * @return DateSigned
@@ -2948,6 +3008,7 @@ public class DateSigned implements Serializable {
         Objects.equals(this.anchorStringMetadata, dateSigned.anchorStringMetadata) &&
         Objects.equals(this.anchorTabProcessorVersion, dateSigned.anchorTabProcessorVersion) &&
         Objects.equals(this.anchorTabProcessorVersionMetadata, dateSigned.anchorTabProcessorVersionMetadata) &&
+        Objects.equals(this.anchorTabScope, dateSigned.anchorTabScope) &&
         Objects.equals(this.anchorUnits, dateSigned.anchorUnits) &&
         Objects.equals(this.anchorUnitsMetadata, dateSigned.anchorUnitsMetadata) &&
         Objects.equals(this.anchorXOffset, dateSigned.anchorXOffset) &&
@@ -3015,6 +3076,7 @@ public class DateSigned implements Serializable {
         Objects.equals(this.templateLockedMetadata, dateSigned.templateLockedMetadata) &&
         Objects.equals(this.templateRequired, dateSigned.templateRequired) &&
         Objects.equals(this.templateRequiredMetadata, dateSigned.templateRequiredMetadata) &&
+        Objects.equals(this.timestampStandardized, dateSigned.timestampStandardized) &&
         Objects.equals(this.tooltip, dateSigned.tooltip) &&
         Objects.equals(this.toolTipMetadata, dateSigned.toolTipMetadata) &&
         Objects.equals(this.underline, dateSigned.underline) &&
@@ -3035,7 +3097,7 @@ public class DateSigned implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
+    return Objects.hash(agreementAttribute, agreementAttributeLocked, anchorAllowWhiteSpaceInCharacters, anchorAllowWhiteSpaceInCharactersMetadata, anchorCaseSensitive, anchorCaseSensitiveMetadata, anchorHorizontalAlignment, anchorHorizontalAlignmentMetadata, anchorIgnoreIfNotPresent, anchorIgnoreIfNotPresentMetadata, anchorMatchWholeWord, anchorMatchWholeWordMetadata, anchorString, anchorStringMetadata, anchorTabProcessorVersion, anchorTabProcessorVersionMetadata, anchorTabScope, anchorUnits, anchorUnitsMetadata, anchorXOffset, anchorXOffsetMetadata, anchorYOffset, anchorYOffsetMetadata, bold, boldMetadata, caption, captionMetadata, conditionalParentLabel, conditionalParentLabelMetadata, conditionalParentValue, conditionalParentValueMetadata, connectedObjectDetails, customTabId, customTabIdMetadata, documentId, documentIdMetadata, errorDetails, extensionData, font, fontColor, fontColorMetadata, fontMetadata, fontSize, fontSizeMetadata, formOrder, formOrderMetadata, formPageLabel, formPageLabelMetadata, formPageNumber, formPageNumberMetadata, height, heightMetadata, italic, italicMetadata, localePolicy, mergeField, mergeFieldXml, name, nameMetadata, pageNumber, pageNumberMetadata, recipientId, recipientIdGuid, recipientIdGuidMetadata, recipientIdMetadata, smartContractInformation, source, status, statusMetadata, tabFullyQualifiedPath, tabGroupLabels, tabGroupLabelsMetadata, tabId, tabIdMetadata, tabLabel, tabLabelMetadata, tabOrder, tabOrderMetadata, tabType, tabTypeMetadata, templateLocked, templateLockedMetadata, templateRequired, templateRequiredMetadata, timestampStandardized, tooltip, toolTipMetadata, underline, underlineMetadata, value, valueMetadata, warningDetails, width, widthMetadata, xPosition, xPositionMetadata, yPosition, yPositionMetadata);
   }
 
 
@@ -3063,6 +3125,7 @@ public class DateSigned implements Serializable {
     sb.append("    anchorStringMetadata: ").append(toIndentedString(anchorStringMetadata)).append("\n");
     sb.append("    anchorTabProcessorVersion: ").append(toIndentedString(anchorTabProcessorVersion)).append("\n");
     sb.append("    anchorTabProcessorVersionMetadata: ").append(toIndentedString(anchorTabProcessorVersionMetadata)).append("\n");
+    sb.append("    anchorTabScope: ").append(toIndentedString(anchorTabScope)).append("\n");
     sb.append("    anchorUnits: ").append(toIndentedString(anchorUnits)).append("\n");
     sb.append("    anchorUnitsMetadata: ").append(toIndentedString(anchorUnitsMetadata)).append("\n");
     sb.append("    anchorXOffset: ").append(toIndentedString(anchorXOffset)).append("\n");
@@ -3130,6 +3193,7 @@ public class DateSigned implements Serializable {
     sb.append("    templateLockedMetadata: ").append(toIndentedString(templateLockedMetadata)).append("\n");
     sb.append("    templateRequired: ").append(toIndentedString(templateRequired)).append("\n");
     sb.append("    templateRequiredMetadata: ").append(toIndentedString(templateRequiredMetadata)).append("\n");
+    sb.append("    timestampStandardized: ").append(toIndentedString(timestampStandardized)).append("\n");
     sb.append("    tooltip: ").append(toIndentedString(tooltip)).append("\n");
     sb.append("    toolTipMetadata: ").append(toIndentedString(toolTipMetadata)).append("\n");
     sb.append("    underline: ").append(toIndentedString(underline)).append("\n");

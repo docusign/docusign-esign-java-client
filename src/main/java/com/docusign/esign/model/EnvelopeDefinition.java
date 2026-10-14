@@ -149,6 +149,9 @@ public class EnvelopeDefinition implements Serializable {
   @JsonProperty("envelopeAttachments")
   private java.util.List<Attachment> envelopeAttachments = null;
 
+  @JsonProperty("envelopeClassification")
+  private String envelopeClassification = null;
+
   @JsonProperty("envelopeCustomMetadata")
   private EnvelopeCustomMetadata envelopeCustomMetadata = null;
 
@@ -281,9 +284,6 @@ public class EnvelopeDefinition implements Serializable {
   @JsonProperty("statusChangedDateTime")
   private String statusChangedDateTime = null;
 
-  @JsonProperty("statusDateTime")
-  private String statusDateTime = null;
-
   @JsonProperty("templateId")
   private String templateId = null;
 
@@ -307,6 +307,9 @@ public class EnvelopeDefinition implements Serializable {
 
   @JsonProperty("voidedReason")
   private String voidedReason = null;
+
+  @JsonProperty("watermarkLanguage")
+  private String watermarkLanguage = null;
 
   @JsonProperty("workflow")
   private Workflow workflow = null;
@@ -1387,6 +1390,33 @@ public class EnvelopeDefinition implements Serializable {
    **/
   public void setEnvelopeAttachments(java.util.List<Attachment> envelopeAttachments) {
     this.envelopeAttachments = envelopeAttachments;
+  }
+
+
+  /**
+   * envelopeClassification.
+   *
+   * @return EnvelopeDefinition
+   **/
+  public EnvelopeDefinition envelopeClassification(String envelopeClassification) {
+    this.envelopeClassification = envelopeClassification;
+    return this;
+  }
+
+  /**
+   * .
+   * @return envelopeClassification
+   **/
+  @Schema(description = "")
+  public String getEnvelopeClassification() {
+    return envelopeClassification;
+  }
+
+  /**
+   * setEnvelopeClassification.
+   **/
+  public void setEnvelopeClassification(String envelopeClassification) {
+    this.envelopeClassification = envelopeClassification;
   }
 
 
@@ -2618,33 +2648,6 @@ public class EnvelopeDefinition implements Serializable {
 
 
   /**
-   * statusDateTime.
-   *
-   * @return EnvelopeDefinition
-   **/
-  public EnvelopeDefinition statusDateTime(String statusDateTime) {
-    this.statusDateTime = statusDateTime;
-    return this;
-  }
-
-  /**
-   * .
-   * @return statusDateTime
-   **/
-  @Schema(description = "")
-  public String getStatusDateTime() {
-    return statusDateTime;
-  }
-
-  /**
-   * setStatusDateTime.
-   **/
-  public void setStatusDateTime(String statusDateTime) {
-    this.statusDateTime = statusDateTime;
-  }
-
-
-  /**
    * templateId.
    *
    * @return EnvelopeDefinition
@@ -2874,6 +2877,33 @@ public class EnvelopeDefinition implements Serializable {
 
 
   /**
+   * watermarkLanguage.
+   *
+   * @return EnvelopeDefinition
+   **/
+  public EnvelopeDefinition watermarkLanguage(String watermarkLanguage) {
+    this.watermarkLanguage = watermarkLanguage;
+    return this;
+  }
+
+  /**
+   * .
+   * @return watermarkLanguage
+   **/
+  @Schema(description = "")
+  public String getWatermarkLanguage() {
+    return watermarkLanguage;
+  }
+
+  /**
+   * setWatermarkLanguage.
+   **/
+  public void setWatermarkLanguage(String watermarkLanguage) {
+    this.watermarkLanguage = watermarkLanguage;
+  }
+
+
+  /**
    * workflow.
    *
    * @return EnvelopeDefinition
@@ -2952,6 +2982,7 @@ public class EnvelopeDefinition implements Serializable {
         Objects.equals(this.enableWetSign, envelopeDefinition.enableWetSign) &&
         Objects.equals(this.enforceSignerVisibility, envelopeDefinition.enforceSignerVisibility) &&
         Objects.equals(this.envelopeAttachments, envelopeDefinition.envelopeAttachments) &&
+        Objects.equals(this.envelopeClassification, envelopeDefinition.envelopeClassification) &&
         Objects.equals(this.envelopeCustomMetadata, envelopeDefinition.envelopeCustomMetadata) &&
         Objects.equals(this.envelopeDocuments, envelopeDefinition.envelopeDocuments) &&
         Objects.equals(this.envelopeId, envelopeDefinition.envelopeId) &&
@@ -2996,7 +3027,6 @@ public class EnvelopeDefinition implements Serializable {
         Objects.equals(this.signingLocation, envelopeDefinition.signingLocation) &&
         Objects.equals(this.status, envelopeDefinition.status) &&
         Objects.equals(this.statusChangedDateTime, envelopeDefinition.statusChangedDateTime) &&
-        Objects.equals(this.statusDateTime, envelopeDefinition.statusDateTime) &&
         Objects.equals(this.templateId, envelopeDefinition.templateId) &&
         Objects.equals(this.templateRoles, envelopeDefinition.templateRoles) &&
         Objects.equals(this.templatesUri, envelopeDefinition.templatesUri) &&
@@ -3005,6 +3035,7 @@ public class EnvelopeDefinition implements Serializable {
         Objects.equals(this.uSigState, envelopeDefinition.uSigState) &&
         Objects.equals(this.voidedDateTime, envelopeDefinition.voidedDateTime) &&
         Objects.equals(this.voidedReason, envelopeDefinition.voidedReason) &&
+        Objects.equals(this.watermarkLanguage, envelopeDefinition.watermarkLanguage) &&
         Objects.equals(this.workflow, envelopeDefinition.workflow);
   }
 
@@ -3013,7 +3044,7 @@ public class EnvelopeDefinition implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, isTicketRelatedEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, statusDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, uSigState, voidedDateTime, voidedReason, workflow);
+    return Objects.hash(accessControlListBase64, accessibility, allowComments, allowMarkup, allowReassign, allowRecipientRecursion, allowViewHistory, anySigner, asynchronous, attachments, attachmentsUri, authoritativeCopy, authoritativeCopyDefault, autoNavigation, brandId, brandLock, burnDefaultTabData, certificateUri, completedDateTime, compositeTemplates, copyRecipientData, createdDateTime, customFields, customFieldsUri, declinedDateTime, deletedDateTime, deliveredDateTime, disableResponsiveDocument, documentBase64, documents, documentsCombinedUri, documentsUri, emailBlurb, emailSettings, emailSubject, enableWetSign, enforceSignerVisibility, envelopeAttachments, envelopeClassification, envelopeCustomMetadata, envelopeDocuments, envelopeId, envelopeIdStamping, envelopeLocation, envelopeMetadata, envelopeUri, eventNotification, eventNotifications, expireAfter, expireDateTime, expireEnabled, externalEnvelopeId, folders, hasComments, hasFormDataChanged, hasWavFile, holder, initialSentDateTime, is21CFRPart11, isDynamicEnvelope, isSignatureProviderEnvelope, isTicketRelatedEnvelope, lastModifiedDateTime, location, lockInformation, messageLock, notification, notificationUri, password, powerForm, purgeCompletedDate, purgeRequestDate, purgeState, recipients, recipientsLock, recipientsUri, recipientViewRequest, sender, sentDateTime, signerCanSignOnMobile, signingLocation, status, statusChangedDateTime, templateId, templateRoles, templatesUri, transactionId, useDisclosure, uSigState, voidedDateTime, voidedReason, watermarkLanguage, workflow);
   }
 
 
@@ -3063,6 +3094,7 @@ public class EnvelopeDefinition implements Serializable {
     sb.append("    enableWetSign: ").append(toIndentedString(enableWetSign)).append("\n");
     sb.append("    enforceSignerVisibility: ").append(toIndentedString(enforceSignerVisibility)).append("\n");
     sb.append("    envelopeAttachments: ").append(toIndentedString(envelopeAttachments)).append("\n");
+    sb.append("    envelopeClassification: ").append(toIndentedString(envelopeClassification)).append("\n");
     sb.append("    envelopeCustomMetadata: ").append(toIndentedString(envelopeCustomMetadata)).append("\n");
     sb.append("    envelopeDocuments: ").append(toIndentedString(envelopeDocuments)).append("\n");
     sb.append("    envelopeId: ").append(toIndentedString(envelopeId)).append("\n");
@@ -3107,7 +3139,6 @@ public class EnvelopeDefinition implements Serializable {
     sb.append("    signingLocation: ").append(toIndentedString(signingLocation)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    statusChangedDateTime: ").append(toIndentedString(statusChangedDateTime)).append("\n");
-    sb.append("    statusDateTime: ").append(toIndentedString(statusDateTime)).append("\n");
     sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
     sb.append("    templateRoles: ").append(toIndentedString(templateRoles)).append("\n");
     sb.append("    templatesUri: ").append(toIndentedString(templatesUri)).append("\n");
@@ -3116,6 +3147,7 @@ public class EnvelopeDefinition implements Serializable {
     sb.append("    uSigState: ").append(toIndentedString(uSigState)).append("\n");
     sb.append("    voidedDateTime: ").append(toIndentedString(voidedDateTime)).append("\n");
     sb.append("    voidedReason: ").append(toIndentedString(voidedReason)).append("\n");
+    sb.append("    watermarkLanguage: ").append(toIndentedString(watermarkLanguage)).append("\n");
     sb.append("    workflow: ").append(toIndentedString(workflow)).append("\n");
     sb.append("}");
     return sb.toString();

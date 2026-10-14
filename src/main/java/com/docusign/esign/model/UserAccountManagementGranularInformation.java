@@ -96,6 +96,12 @@ public class UserAccountManagementGranularInformation implements Serializable {
   @JsonProperty("canManageUsersMetadata")
   private SettingsMetadata canManageUsersMetadata = null;
 
+  @JsonProperty("canViewOnlyAccountAdminPages")
+  private String canViewOnlyAccountAdminPages = null;
+
+  @JsonProperty("canViewOnlyAccountAdminPagesMetadata")
+  private SettingsMetadata canViewOnlyAccountAdminPagesMetadata = null;
+
   @JsonProperty("canViewUsers")
   private String canViewUsers = null;
 
@@ -803,6 +809,60 @@ public class UserAccountManagementGranularInformation implements Serializable {
 
 
   /**
+   * canViewOnlyAccountAdminPages.
+   *
+   * @return UserAccountManagementGranularInformation
+   **/
+  public UserAccountManagementGranularInformation canViewOnlyAccountAdminPages(String canViewOnlyAccountAdminPages) {
+    this.canViewOnlyAccountAdminPages = canViewOnlyAccountAdminPages;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canViewOnlyAccountAdminPages
+   **/
+  @Schema(description = "")
+  public String getCanViewOnlyAccountAdminPages() {
+    return canViewOnlyAccountAdminPages;
+  }
+
+  /**
+   * setCanViewOnlyAccountAdminPages.
+   **/
+  public void setCanViewOnlyAccountAdminPages(String canViewOnlyAccountAdminPages) {
+    this.canViewOnlyAccountAdminPages = canViewOnlyAccountAdminPages;
+  }
+
+
+  /**
+   * canViewOnlyAccountAdminPagesMetadata.
+   *
+   * @return UserAccountManagementGranularInformation
+   **/
+  public UserAccountManagementGranularInformation canViewOnlyAccountAdminPagesMetadata(SettingsMetadata canViewOnlyAccountAdminPagesMetadata) {
+    this.canViewOnlyAccountAdminPagesMetadata = canViewOnlyAccountAdminPagesMetadata;
+    return this;
+  }
+
+  /**
+   * .
+   * @return canViewOnlyAccountAdminPagesMetadata
+   **/
+  @Schema(description = "")
+  public SettingsMetadata getCanViewOnlyAccountAdminPagesMetadata() {
+    return canViewOnlyAccountAdminPagesMetadata;
+  }
+
+  /**
+   * setCanViewOnlyAccountAdminPagesMetadata.
+   **/
+  public void setCanViewOnlyAccountAdminPagesMetadata(SettingsMetadata canViewOnlyAccountAdminPagesMetadata) {
+    this.canViewOnlyAccountAdminPagesMetadata = canViewOnlyAccountAdminPagesMetadata;
+  }
+
+
+  /**
    * canViewUsers.
    *
    * @return UserAccountManagementGranularInformation
@@ -869,6 +929,8 @@ public class UserAccountManagementGranularInformation implements Serializable {
         Objects.equals(this.canManageStampsMetadata, userAccountManagementGranularInformation.canManageStampsMetadata) &&
         Objects.equals(this.canManageUsers, userAccountManagementGranularInformation.canManageUsers) &&
         Objects.equals(this.canManageUsersMetadata, userAccountManagementGranularInformation.canManageUsersMetadata) &&
+        Objects.equals(this.canViewOnlyAccountAdminPages, userAccountManagementGranularInformation.canViewOnlyAccountAdminPages) &&
+        Objects.equals(this.canViewOnlyAccountAdminPagesMetadata, userAccountManagementGranularInformation.canViewOnlyAccountAdminPagesMetadata) &&
         Objects.equals(this.canViewUsers, userAccountManagementGranularInformation.canViewUsers);
   }
 
@@ -877,7 +939,7 @@ public class UserAccountManagementGranularInformation implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageConnect, canManageConnectMetadata, canManageDocumentRetention, canManageDocumentRetentionMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageGroupsButNotUsers, canManageGroupsButNotUsersMetadata, canManageJointAgreements, canManageJointAgreementsMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageStamps, canManageStampsMetadata, canManageUsers, canManageUsersMetadata, canViewUsers);
+    return Objects.hash(canManageAccountSecuritySettings, canManageAccountSecuritySettingsMetadata, canManageAccountSettings, canManageAccountSettingsMetadata, canManageAdmins, canManageAdminsMetadata, canManageConnect, canManageConnectMetadata, canManageDocumentRetention, canManageDocumentRetentionMetadata, canManageEnvelopeTransfer, canManageEnvelopeTransferMetadata, canManageGroupsButNotUsers, canManageGroupsButNotUsersMetadata, canManageJointAgreements, canManageJointAgreementsMetadata, canManageReporting, canManageReportingMetadata, canManageSharing, canManageSharingMetadata, canManageSigningGroups, canManageSigningGroupsMetadata, canManageStamps, canManageStampsMetadata, canManageUsers, canManageUsersMetadata, canViewOnlyAccountAdminPages, canViewOnlyAccountAdminPagesMetadata, canViewUsers);
   }
 
 
@@ -915,6 +977,8 @@ public class UserAccountManagementGranularInformation implements Serializable {
     sb.append("    canManageStampsMetadata: ").append(toIndentedString(canManageStampsMetadata)).append("\n");
     sb.append("    canManageUsers: ").append(toIndentedString(canManageUsers)).append("\n");
     sb.append("    canManageUsersMetadata: ").append(toIndentedString(canManageUsersMetadata)).append("\n");
+    sb.append("    canViewOnlyAccountAdminPages: ").append(toIndentedString(canViewOnlyAccountAdminPages)).append("\n");
+    sb.append("    canViewOnlyAccountAdminPagesMetadata: ").append(toIndentedString(canViewOnlyAccountAdminPagesMetadata)).append("\n");
     sb.append("    canViewUsers: ").append(toIndentedString(canViewUsers)).append("\n");
     sb.append("}");
     return sb.toString();

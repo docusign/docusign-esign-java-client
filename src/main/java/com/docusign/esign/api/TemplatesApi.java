@@ -1654,6 +1654,7 @@ public class TemplatesApi {
   public class GetOptions
   {
   private String include = null;
+  private String linkConfigurationId = null;
   
  /**
   * setInclude method.
@@ -1669,6 +1670,22 @@ public class TemplatesApi {
   */
   public String getInclude() {
     return this.include;
+  }
+  
+ /**
+  * setLinkConfigurationId method.
+  */
+  public void setLinkConfigurationId(String linkConfigurationId) {
+    this.linkConfigurationId = linkConfigurationId;
+  }
+
+ /**
+  * getLinkConfigurationId method.
+  *
+  * @return String
+  */
+  public String getLinkConfigurationId() {
+    return this.linkConfigurationId;
   }
   }
 
@@ -1732,6 +1749,8 @@ public class TemplatesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include", options.include));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("link_configuration_id", options.linkConfigurationId));
     }
 
     
@@ -1753,6 +1772,134 @@ public class TemplatesApi {
     GenericType<EnvelopeTemplate> localVarReturnType = new GenericType<EnvelopeTemplate>() {};
     EnvelopeTemplate localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
     return new ApiResponse<EnvelopeTemplate>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Gets completion rate for the template.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @return TemplateCompletionRateResponse
+   * @throws ApiException if fails to make API call
+   */
+  public TemplateCompletionRateResponse getCompletionRateForTemplate(String accountId, String templateId) throws ApiException {
+    ApiResponse<TemplateCompletionRateResponse> localVarResponse = getCompletionRateForTemplateWithHttpInfo(accountId, templateId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets completion rate for the template
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @param templateId The ID of the template being accessed. (required)
+   * @return TemplateCompletionRateResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<TemplateCompletionRateResponse > getCompletionRateForTemplateWithHttpInfo(String accountId, String templateId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getCompletionRateForTemplate");
+    }
+    
+    // verify the required parameter 'templateId' is set
+    if (templateId == null) {
+      throw new ApiException(400, "Missing the required parameter 'templateId' when calling getCompletionRateForTemplate");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/{templateId}/insights/completionRate"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()))
+      .replaceAll("\\{" + "templateId" + "\\}", apiClient.escapeString(templateId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<TemplateCompletionRateResponse> localVarReturnType = new GenericType<TemplateCompletionRateResponse>() {};
+    TemplateCompletionRateResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<TemplateCompletionRateResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
+  }
+
+  /**
+   * Gets completion rate for the user.
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return UserCompletionRateResponse
+   * @throws ApiException if fails to make API call
+   */
+  public UserCompletionRateResponse getCompletionRateForTemplateOwner(String accountId) throws ApiException {
+    ApiResponse<UserCompletionRateResponse> localVarResponse = getCompletionRateForTemplateOwnerWithHttpInfo(accountId);
+    return localVarResponse.getData();
+  }
+
+  /**
+   * Gets completion rate for the user
+   * 
+   * @param accountId The external account number (int) or account ID Guid. (required)
+   * @return UserCompletionRateResponse
+   * @throws ApiException if fails to make API call
+   */
+  public ApiResponse<UserCompletionRateResponse > getCompletionRateForTemplateOwnerWithHttpInfo(String accountId) throws ApiException {
+    Object localVarPostBody = "{}";
+    
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling getCompletionRateForTemplateOwner");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/v2.1/accounts/{accountId}/templates/insights/completionRate"
+      .replaceAll("\\{" + "accountId" + "\\}", apiClient.escapeString(accountId.toString()));
+
+    // query params
+    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
+    java.util.List<Pair> localVarCollectionQueryParams = new java.util.ArrayList<Pair>();
+    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
+    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
+
+    
+
+    
+
+    
+
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "docusignAccessCode" };
+    
+    GenericType<UserCompletionRateResponse> localVarReturnType = new GenericType<UserCompletionRateResponse>() {};
+    UserCompletionRateResponse localVarResponse = apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return new ApiResponse<UserCompletionRateResponse>(apiClient.getStatusCode(), apiClient.getResponseHeaders(), localVarResponse);
   }
   /// <summary>
   /// Gets PDF documents from a template. Retrieves one or more PDF documents from the specified template.  You can specify the ID of the document to retrieve or can specify &#x60;combined&#x60; to retrieve all documents in the template as one pdf.
@@ -2971,6 +3118,7 @@ public class TemplatesApi {
   public class ListDocumentsOptions
   {
   private String includeAgreementType = null;
+  private String includeIsEdited = null;
   private String includeTabs = null;
   
  /**
@@ -2987,6 +3135,22 @@ public class TemplatesApi {
   */
   public String getIncludeAgreementType() {
     return this.includeAgreementType;
+  }
+  
+ /**
+  * setIncludeIsEdited method.
+  */
+  public void setIncludeIsEdited(String includeIsEdited) {
+    this.includeIsEdited = includeIsEdited;
+  }
+
+ /**
+  * getIncludeIsEdited method.
+  *
+  * @return String
+  */
+  public String getIncludeIsEdited() {
+    return this.includeIsEdited;
   }
   
  /**
@@ -3066,6 +3230,8 @@ public class TemplatesApi {
 
     if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_agreement_type", options.includeAgreementType));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("include_is_edited", options.includeIsEdited));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("include_tabs", options.includeTabs));
     }
@@ -3397,6 +3563,7 @@ public class TemplatesApi {
   private String include = null;
   private String isDeletedTemplateOnly = null;
   private String isDownload = null;
+  private String linkConfigurationId = null;
   private String modifiedFromDate = null;
   private String modifiedToDate = null;
   private String order = null;
@@ -3554,6 +3721,22 @@ public class TemplatesApi {
   */
   public String getIsDownload() {
     return this.isDownload;
+  }
+  
+ /**
+  * setLinkConfigurationId method.
+  */
+  public void setLinkConfigurationId(String linkConfigurationId) {
+    this.linkConfigurationId = linkConfigurationId;
+  }
+
+ /**
+  * getLinkConfigurationId method.
+  *
+  * @return String
+  */
+  public String getLinkConfigurationId() {
+    return this.linkConfigurationId;
   }
   
  /**
@@ -3848,6 +4031,8 @@ public class TemplatesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("is_deleted_template_only", options.isDeletedTemplateOnly));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("is_download", options.isDownload));
+    }if (options != null) {
+      localVarQueryParams.addAll(apiClient.parameterToPair("link_configuration_id", options.linkConfigurationId));
     }if (options != null) {
       localVarQueryParams.addAll(apiClient.parameterToPair("modified_from_date", options.modifiedFromDate));
     }if (options != null) {
@@ -4888,8 +5073,8 @@ public class TemplatesApi {
    * @return TemplateAutoMatchList
    * @throws ApiException if fails to make API call
    */
-  public TemplateAutoMatchList updateTemplates(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
-    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesWithHttpInfo(accountId, templateAutoMatchList);
+  public TemplateAutoMatchList updateTemplatesAutoMatch(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesAutoMatchWithHttpInfo(accountId, templateAutoMatchList);
     return localVarResponse.getData();
   }
 
@@ -4901,12 +5086,12 @@ public class TemplatesApi {
    * @return TemplateAutoMatchList
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<TemplateAutoMatchList > updateTemplatesWithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+  public ApiResponse<TemplateAutoMatchList > updateTemplatesAutoMatchWithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
     Object localVarPostBody = templateAutoMatchList;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplates");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplatesAutoMatch");
     }
     
     // create path and map variables
@@ -4950,8 +5135,8 @@ public class TemplatesApi {
    * @return TemplateAutoMatchList
    * @throws ApiException if fails to make API call
    */
-  public TemplateAutoMatchList updateTemplatesAutoMatch(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
-    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesAutoMatchWithHttpInfo(accountId, templateAutoMatchList);
+  public TemplateAutoMatchList updateTemplatesAutoMatch_0(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+    ApiResponse<TemplateAutoMatchList> localVarResponse = updateTemplatesAutoMatch_0WithHttpInfo(accountId, templateAutoMatchList);
     return localVarResponse.getData();
   }
 
@@ -4963,12 +5148,12 @@ public class TemplatesApi {
    * @return TemplateAutoMatchList
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<TemplateAutoMatchList > updateTemplatesAutoMatchWithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
+  public ApiResponse<TemplateAutoMatchList > updateTemplatesAutoMatch_0WithHttpInfo(String accountId, TemplateAutoMatchList templateAutoMatchList) throws ApiException {
     Object localVarPostBody = templateAutoMatchList;
     
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
-      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplatesAutoMatch");
+      throw new ApiException(400, "Missing the required parameter 'accountId' when calling updateTemplatesAutoMatch_0");
     }
     
     // create path and map variables

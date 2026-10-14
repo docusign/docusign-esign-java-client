@@ -232,6 +232,9 @@ public class Intermediary implements Serializable {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+  @JsonProperty("signingGroupType")
+  private String signingGroupType = null;
+
   @JsonProperty("signingGroupUsers")
   private java.util.List<UserInfo> signingGroupUsers = null;
 
@@ -2140,6 +2143,33 @@ public class Intermediary implements Serializable {
 
 
   /**
+   * signingGroupType.
+   *
+   * @return Intermediary
+   **/
+  public Intermediary signingGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signingGroupType
+   **/
+  @Schema(description = "")
+  public String getSigningGroupType() {
+    return signingGroupType;
+  }
+
+  /**
+   * setSigningGroupType.
+   **/
+  public void setSigningGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+  }
+
+
+  /**
    * signingGroupUsers.
    *
    * @return Intermediary
@@ -2542,6 +2572,7 @@ public class Intermediary implements Serializable {
         Objects.equals(this.signingGroupId, intermediary.signingGroupId) &&
         Objects.equals(this.signingGroupIdMetadata, intermediary.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, intermediary.signingGroupName) &&
+        Objects.equals(this.signingGroupType, intermediary.signingGroupType) &&
         Objects.equals(this.signingGroupUsers, intermediary.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, intermediary.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, intermediary.socialAuthentications) &&
@@ -2560,7 +2591,7 @@ public class Intermediary implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, allowSystemOverrideForLockedRecipient, autoRespondedReason, bulkSendV2Recipient, clientUserId, completedCount, consentDetailsList, customFields, declinedDateTime, declinedReason, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, note, noteMetadata, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, roleName, routingOrder, routingOrderMetadata, sentDateTime, signedDateTime, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupType, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, templateLocked, templateRequired, totalTabCount, userId, webFormRecipientViewId);
   }
 
 
@@ -2638,6 +2669,7 @@ public class Intermediary implements Serializable {
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
     sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupType: ").append(toIndentedString(signingGroupType)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");

@@ -128,6 +128,9 @@ public class ConnectCustomConfiguration implements Serializable {
   @JsonProperty("salesforceCallBackUrl")
   private String salesforceCallBackUrl = null;
 
+  @JsonProperty("salesforceCodeVerifier")
+  private String salesforceCodeVerifier = null;
+
   @JsonProperty("salesforceDocumentsAsContentFiles")
   private String salesforceDocumentsAsContentFiles = null;
 
@@ -1184,6 +1187,33 @@ public class ConnectCustomConfiguration implements Serializable {
 
 
   /**
+   * salesforceCodeVerifier.
+   *
+   * @return ConnectCustomConfiguration
+   **/
+  public ConnectCustomConfiguration salesforceCodeVerifier(String salesforceCodeVerifier) {
+    this.salesforceCodeVerifier = salesforceCodeVerifier;
+    return this;
+  }
+
+  /**
+   * .
+   * @return salesforceCodeVerifier
+   **/
+  @Schema(description = "")
+  public String getSalesforceCodeVerifier() {
+    return salesforceCodeVerifier;
+  }
+
+  /**
+   * setSalesforceCodeVerifier.
+   **/
+  public void setSalesforceCodeVerifier(String salesforceCodeVerifier) {
+    this.salesforceCodeVerifier = salesforceCodeVerifier;
+  }
+
+
+  /**
    * salesforceDocumentsAsContentFiles.
    *
    * @return ConnectCustomConfiguration
@@ -1542,6 +1572,7 @@ public class ConnectCustomConfiguration implements Serializable {
         Objects.equals(this.salesforceApiVersion, connectCustomConfiguration.salesforceApiVersion) &&
         Objects.equals(this.salesforceAuthcode, connectCustomConfiguration.salesforceAuthcode) &&
         Objects.equals(this.salesforceCallBackUrl, connectCustomConfiguration.salesforceCallBackUrl) &&
+        Objects.equals(this.salesforceCodeVerifier, connectCustomConfiguration.salesforceCodeVerifier) &&
         Objects.equals(this.salesforceDocumentsAsContentFiles, connectCustomConfiguration.salesforceDocumentsAsContentFiles) &&
         Objects.equals(this.senderOverride, connectCustomConfiguration.senderOverride) &&
         Objects.equals(this.senderSelectableItems, connectCustomConfiguration.senderSelectableItems) &&
@@ -1559,7 +1590,7 @@ public class ConnectCustomConfiguration implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, enableOAuthPerConfiguration, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, oAuthConfiguration, password, pausePublish, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
+    return Objects.hash(allowEnvelopePublish, allowSalesforcePublish, allUsers, allUsersExcept, configurationType, connectId, deliveryMode, disabledBy, enableLog, enableOAuthPerConfiguration, envelopeEvents, eventData, events, externalFolderId, externalFolderLabel, groupIds, includeCertificateOfCompletion, includeCertSoapHeader, includeDocumentFields, includeDocuments, includeEnvelopeVoidReason, includeHMAC, includeOAuth, includeSenderAccountasCustomField, includeTimeZoneInformation, integratorManaged, name, oAuthConfiguration, password, pausePublish, recipientEvents, requireMutualTls, requiresAcknowledgement, salesforceApiVersion, salesforceAuthcode, salesforceCallBackUrl, salesforceCodeVerifier, salesforceDocumentsAsContentFiles, senderOverride, senderSelectableItems, sfObjects, signMessageWithX509Certificate, soapNamespace, urlToPublishTo, userIds, userName, useSoapInterface);
   }
 
 
@@ -1607,6 +1638,7 @@ public class ConnectCustomConfiguration implements Serializable {
     sb.append("    salesforceApiVersion: ").append(toIndentedString(salesforceApiVersion)).append("\n");
     sb.append("    salesforceAuthcode: ").append(toIndentedString(salesforceAuthcode)).append("\n");
     sb.append("    salesforceCallBackUrl: ").append(toIndentedString(salesforceCallBackUrl)).append("\n");
+    sb.append("    salesforceCodeVerifier: ").append(toIndentedString(salesforceCodeVerifier)).append("\n");
     sb.append("    salesforceDocumentsAsContentFiles: ").append(toIndentedString(salesforceDocumentsAsContentFiles)).append("\n");
     sb.append("    senderOverride: ").append(toIndentedString(senderOverride)).append("\n");
     sb.append("    senderSelectableItems: ").append(toIndentedString(senderSelectableItems)).append("\n");

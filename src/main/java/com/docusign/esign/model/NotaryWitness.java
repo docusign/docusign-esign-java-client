@@ -302,6 +302,9 @@ public class NotaryWitness implements Serializable {
   @JsonProperty("signingGroupName")
   private String signingGroupName = null;
 
+  @JsonProperty("signingGroupType")
+  private String signingGroupType = null;
+
   @JsonProperty("signingGroupUsers")
   private java.util.List<UserInfo> signingGroupUsers = null;
 
@@ -2842,6 +2845,33 @@ public class NotaryWitness implements Serializable {
 
 
   /**
+   * signingGroupType.
+   *
+   * @return NotaryWitness
+   **/
+  public NotaryWitness signingGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+    return this;
+  }
+
+  /**
+   * .
+   * @return signingGroupType
+   **/
+  @Schema(description = "")
+  public String getSigningGroupType() {
+    return signingGroupType;
+  }
+
+  /**
+   * setSigningGroupType.
+   **/
+  public void setSigningGroupType(String signingGroupType) {
+    this.signingGroupType = signingGroupType;
+  }
+
+
+  /**
    * signingGroupUsers.
    *
    * @return NotaryWitness
@@ -3374,6 +3404,7 @@ public class NotaryWitness implements Serializable {
         Objects.equals(this.signingGroupId, notaryWitness.signingGroupId) &&
         Objects.equals(this.signingGroupIdMetadata, notaryWitness.signingGroupIdMetadata) &&
         Objects.equals(this.signingGroupName, notaryWitness.signingGroupName) &&
+        Objects.equals(this.signingGroupType, notaryWitness.signingGroupType) &&
         Objects.equals(this.signingGroupUsers, notaryWitness.signingGroupUsers) &&
         Objects.equals(this.smsAuthentication, notaryWitness.smsAuthentication) &&
         Objects.equals(this.socialAuthentications, notaryWitness.socialAuthentications) &&
@@ -3396,7 +3427,7 @@ public class NotaryWitness implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, type, userId, webFormRecipientViewId, witnessFor, witnessForGuid);
+    return Objects.hash(accessCode, accessCodeMetadata, addAccessCodeToEmail, additionalNotifications, agentCanEditEmail, agentCanEditName, allowSystemOverrideForLockedRecipient, autoNavigation, autoRespondedReason, bulkRecipientsUri, bulkSendV2Recipient, canSignOffline, clientUserId, completedCount, consentDetailsList, creationReason, customFields, declinedDateTime, declinedReason, defaultRecipient, delegatedBy, delegatedTo, deliveredDateTime, deliveryMethod, deliveryMethodMetadata, designatorId, designatorIdGuid, documentTemplateId, documentVisibility, email, emailMetadata, emailNotification, emailRecipientPostSigningURL, embeddedRecipientStartURL, errorDetails, excludedDocuments, faxNumber, faxNumberMetadata, firstName, firstNameMetadata, fullName, fullNameMetadata, idCheckConfigurationName, idCheckConfigurationNameMetadata, idCheckInformationInput, identityVerification, inheritEmailNotificationConfiguration, isBulkRecipient, isBulkRecipientMetadata, lastName, lastNameMetadata, lockedRecipientPhoneAuthEditable, lockedRecipientSmsEditable, name, nameMetadata, notaryId, notarySignerEmailSent, note, noteMetadata, offlineAttributes, phoneAuthentication, phoneNumber, proofFile, recipientAttachments, recipientAuthenticationStatus, recipientFeatureMetadata, recipientId, recipientIdGuid, recipientSignatureProviders, recipientSuppliesTabs, recipientType, recipientTypeMetadata, requireIdLookup, requireIdLookupMetadata, requireSignerCertificate, requireSignOnPaper, requireUploadSignature, roleName, routingOrder, routingOrderMetadata, sentDateTime, signatureInfo, signedDateTime, signInEachLocation, signInEachLocationMetadata, signingGroupId, signingGroupIdMetadata, signingGroupName, signingGroupType, signingGroupUsers, smsAuthentication, socialAuthentications, status, statusCode, suppressEmails, tabs, templateLocked, templateRequired, totalTabCount, type, userId, webFormRecipientViewId, witnessFor, witnessForGuid);
   }
 
 
@@ -3496,6 +3527,7 @@ public class NotaryWitness implements Serializable {
     sb.append("    signingGroupId: ").append(toIndentedString(signingGroupId)).append("\n");
     sb.append("    signingGroupIdMetadata: ").append(toIndentedString(signingGroupIdMetadata)).append("\n");
     sb.append("    signingGroupName: ").append(toIndentedString(signingGroupName)).append("\n");
+    sb.append("    signingGroupType: ").append(toIndentedString(signingGroupType)).append("\n");
     sb.append("    signingGroupUsers: ").append(toIndentedString(signingGroupUsers)).append("\n");
     sb.append("    smsAuthentication: ").append(toIndentedString(smsAuthentication)).append("\n");
     sb.append("    socialAuthentications: ").append(toIndentedString(socialAuthentications)).append("\n");

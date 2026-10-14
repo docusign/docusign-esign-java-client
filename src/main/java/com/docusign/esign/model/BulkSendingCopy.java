@@ -3,6 +3,7 @@ package com.docusign.esign.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.docusign.esign.model.BulkSendingCopyCustomField;
+import com.docusign.esign.model.BulkSendingCopyPrefillTab;
 import com.docusign.esign.model.BulkSendingCopyRecipient;
 import com.docusign.esign.model.BulksendingCopyDocGenFormField;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -31,6 +32,9 @@ public class BulkSendingCopy implements Serializable {
 
   @JsonProperty("emailSubject")
   private String emailSubject = null;
+
+  @JsonProperty("prefillTabs")
+  private java.util.List<BulkSendingCopyPrefillTab> prefillTabs = null;
 
   @JsonProperty("recipients")
   private java.util.List<BulkSendingCopyRecipient> recipients = null;
@@ -171,6 +175,46 @@ public class BulkSendingCopy implements Serializable {
 
 
   /**
+   * prefillTabs.
+   *
+   * @return BulkSendingCopy
+   **/
+  public BulkSendingCopy prefillTabs(java.util.List<BulkSendingCopyPrefillTab> prefillTabs) {
+    this.prefillTabs = prefillTabs;
+    return this;
+  }
+  
+  /**
+   * addPrefillTabsItem.
+   *
+   * @return BulkSendingCopy
+   **/
+  public BulkSendingCopy addPrefillTabsItem(BulkSendingCopyPrefillTab prefillTabsItem) {
+    if (this.prefillTabs == null) {
+      this.prefillTabs = new java.util.ArrayList<>();
+    }
+    this.prefillTabs.add(prefillTabsItem);
+    return this;
+  }
+
+  /**
+   * .
+   * @return prefillTabs
+   **/
+  @Schema(description = "")
+  public java.util.List<BulkSendingCopyPrefillTab> getPrefillTabs() {
+    return prefillTabs;
+  }
+
+  /**
+   * setPrefillTabs.
+   **/
+  public void setPrefillTabs(java.util.List<BulkSendingCopyPrefillTab> prefillTabs) {
+    this.prefillTabs = prefillTabs;
+  }
+
+
+  /**
    * recipients.
    *
    * @return BulkSendingCopy
@@ -228,6 +272,7 @@ public class BulkSendingCopy implements Serializable {
         Objects.equals(this.docGenFormFields, bulkSendingCopy.docGenFormFields) &&
         Objects.equals(this.emailBlurb, bulkSendingCopy.emailBlurb) &&
         Objects.equals(this.emailSubject, bulkSendingCopy.emailSubject) &&
+        Objects.equals(this.prefillTabs, bulkSendingCopy.prefillTabs) &&
         Objects.equals(this.recipients, bulkSendingCopy.recipients);
   }
 
@@ -236,7 +281,7 @@ public class BulkSendingCopy implements Serializable {
    */
   @Override
   public int hashCode() {
-    return Objects.hash(customFields, docGenFormFields, emailBlurb, emailSubject, recipients);
+    return Objects.hash(customFields, docGenFormFields, emailBlurb, emailSubject, prefillTabs, recipients);
   }
 
 
@@ -252,6 +297,7 @@ public class BulkSendingCopy implements Serializable {
     sb.append("    docGenFormFields: ").append(toIndentedString(docGenFormFields)).append("\n");
     sb.append("    emailBlurb: ").append(toIndentedString(emailBlurb)).append("\n");
     sb.append("    emailSubject: ").append(toIndentedString(emailSubject)).append("\n");
+    sb.append("    prefillTabs: ").append(toIndentedString(prefillTabs)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
     sb.append("}");
     return sb.toString();
